@@ -1,6 +1,6 @@
 <h1 align="center">Carbon for IBM Security</h1>
 
-> Carbon for IBM Security is an open-source Carbon experience framework built by IBM Security. With the Carbon Design System and IBM Design Language as its foundation, the library consists of working code, resources, and a vibrant community of contributors.
+> Carbon for IBM Security is an open-source Carbon experience framework built by IBM Security. With the Carbon Design System and IBM Design Language as its foundation, the framework consists of working code, resources, and a vibrant community of contributors.
 
 <span align="center">
 
@@ -37,7 +37,7 @@ yarn add @carbon/ibm-security
 
 ### Distribution tags
 
-Please use [distribution tags](https://docs.npmjs.com/cli/dist-tag) to install the most relevant version of this library. e.g. `npm i -S @carbon/ibm-security@latest`:
+Please use [distribution tags](https://docs.npmjs.com/cli/dist-tag) to install the most relevant version of this framework. e.g. `npm i -S @carbon/ibm-security@latest`:
 
 - `@latest` - Stable
 - `@canary` - Prerelease

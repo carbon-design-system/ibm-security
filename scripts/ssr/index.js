@@ -1,6 +1,6 @@
 /**
- * @file Server-side rendering test - Ensures library can be loaded in Node.js.
- * @copyright IBM Security 2018
+ * @file Server-side rendering test - Ensures framework can be loaded in Node.js.
+ * @copyright IBM Security 2019
  */
 
 // This test is not run by Jest because Jest's pollyfills mask errors.
