@@ -1,0 +1,14 @@
+////
+/// Wizard component.
+/// @group wizard
+/// @copyright IBM Security 2019
+////
+
+@import '../Tearsheet/index';
+
+@import '../Component/mixins';
+@import 'mixins';
+
+@include component($name: wizard) {
+  @include wizard;
+}

@@ -1,0 +1,104 @@
+/**
+ * @file Status icon.
+ * @copyright IBM Security 2019
+ */
+
+import Checkmark20 from '@carbon/icons-react/lib/checkmark/20';
+
+import classnames from 'classnames';
+import { oneOf, string } from 'prop-types';
+import React, { Component } from 'react';
+
+import { getComponentNamespace } from '../../globals/namespace';
+
+import Icon from '../Icon';
+import Loading from '../Loading';
+
+const namespace = getComponentNamespace('status-icon');
+
+const defaultSize = 'md';
+const SIZE = ['lg', defaultSize, 'sm'];
+
+const STATUS = ['complete', 'error', 'info', 'success', 'unknown', 'warning'];
+
+/**
+ * Status icon component.
+ */
+export default class StatusIcon extends Component {
+  static defaultProps = {
+    className: null,
+    message: null,
+    size: defaultSize,
+    status: undefined,
+  };
+
+  static propTypes = {
+    /** @type {string} Class name. */
+    className: string,
+
+    /** @type {string} Message. */
+    message: string,
+
+    /** @type {string} Size. */
+    size: oneOf(SIZE),
+
+    /** @type {string} Status. */
+    status: oneOf(STATUS),
+  };
+
+  static getDerivedStateFromProps({ status }, state) {
+    return status && state.status !== status
+      ? {
+          status,
+        }
+      : null;
+  }
+
+  state = {
+    status: this.props.status,
+  };
+
+  render() {
+    const { className, message, size } = this.props;
+    const { status } = this.state;
+
+    let statusIcon;
+
+    switch (status) {
+      case STATUS[0]:
+        statusIcon = (
+          <Icon
+            className={`${namespace}__icon ${namespace}__icon--success`}
+            renderIcon={Checkmark20}
+          />
+        );
+        break;
+
+      case undefined:
+        statusIcon = (
+          <Loading className={`${namespace}__icon`} withOverlay={false} />
+        );
+        break;
+
+      default:
+        statusIcon = (
+          <span
+            className={`${namespace}__icon--color ${namespace}__icon--color--${status}`}
+          />
+        );
+    }
+
+    return (
+      <div
+        className={classnames(namespace, className, {
+          [`${namespace}--${size}`]: size,
+        })}
+      >
+        {statusIcon}
+        {message && <span className={` ${namespace}__message`}>{message}</span>}
+      </div>
+    );
+  }
+}
+
+export { SIZE, STATUS };

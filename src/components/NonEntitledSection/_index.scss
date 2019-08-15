@@ -1,0 +1,16 @@
+////
+/// Non etitled section component.
+/// @group ne-section
+/// @copyright IBM Security 2019
+////
+
+@import 'carbon-components/scss/components/button/button';
+
+@import '../IconButton/index';
+
+@import '../Component/mixins';
+@import 'mixins';
+
+@include component($name: ne-section) {
+  @include ne-section;
+}

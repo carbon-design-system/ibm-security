@@ -1,0 +1,14 @@
+////
+/// Stacked notification.
+/// @group stacked-notification
+/// @copyright IBM Security 2019
+////
+
+@import '../Notification/ToastNotification/index';
+
+@import '../Component/mixins';
+@import 'mixins';
+
+@include component($name: stacked-notification) {
+  @include stacked-notification;
+}

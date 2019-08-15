@@ -1,0 +1,18 @@
+////
+/// Small tearsheet component.
+/// @group tearsheet--small
+/// @copyright IBM Security 2019
+////
+
+@import '../../Component/mixins';
+
+@import 'mixins';
+
+@import '../../Button/index';
+@import '../../IconButton/index';
+@import '../../Loading/index';
+@import '../../Tag/index';
+
+@include component($name: #{$tearsheet__name}--small) {
+  @include tearsheet--small;
+}

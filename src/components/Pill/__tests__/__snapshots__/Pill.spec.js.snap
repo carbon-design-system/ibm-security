@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pill renders correctly 1`] = `
+<Decorator
+  active={false}
+  className="security--pill"
+  inert={true}
+  inline={false}
+  noIcon={true}
+  onClick={[Function]}
+  scoreThresholds={
+    Array [
+      0,
+      4,
+      7,
+      10,
+    ]
+  }
+  type="IP"
+  value="127.0.0.1"
+/>
+`;

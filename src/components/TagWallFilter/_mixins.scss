@@ -1,0 +1,24 @@
+////
+/// Tag wall filter mixins.
+/// @tag-wall-filter
+/// @copyright IBM Security 2019
+////
+@import '../../globals/index';
+
+@import './Filter/index';
+
+@mixin tag-wall-filter {
+  &__tag-wall {
+    min-height: $carbon--spacing-06;
+    margin: $carbon--spacing-04 0 $carbon--spacing-03;
+
+    &__label {
+      color: $text-02;
+    }
+  }
+
+  &__description {
+    max-height: 20vh;
+    overflow: auto;
+  }
+}

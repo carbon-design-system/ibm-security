@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon Rendering renders correctly 1`] = `
+<ForwardRef(Add16)
+  aria-hidden={true}
+  className="security--icon class"
+  focusable={false}
+  preserveAspectRatio="xMidYMid meet"
+  style={
+    Object {
+      "willChange": "transform",
+    }
+  }
+/>
+`;
+
+exports[`Icon Rendering renders correctly 2`] = `
+<ForwardRef(Add16)
+  aria-hidden={true}
+  className="security--icon class"
+  focusable={false}
+  preserveAspectRatio="xMidYMid meet"
+  style={
+    Object {
+      "willChange": "transform",
+    }
+  }
+/>
+`;
+
+exports[`Icon Rendering renders the HTML of the node's subtree 1`] = `
+<svg
+  aria-hidden="true"
+  class="security--icon class"
+  focusable="false"
+  height="16"
+  preserveAspectRatio="xMidYMid meet"
+  style="will-change:transform"
+  viewBox="0 0 16 16"
+  width="16"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M9 7V3H7v4H3v2h4v4h2V9h4V7z"
+  />
+</svg>
+`;
+
+exports[`Icon Rendering renders the path variation correctly 1`] = `
+<svg
+  aria-hidden={true}
+  className="security--icon class"
+  focusable={false}
+  height={20}
+  preserveAspectRatio="xMidYMid meet"
+  style={
+    Object {
+      "willChange": "transform",
+    }
+  }
+  viewBox="0 0 32 32"
+  width={20}
+>
+  <path
+    d="M0"
+  />
+</svg>
+`;

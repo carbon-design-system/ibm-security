@@ -1,0 +1,48 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb",
+    "plugin:compat/recommended",
+    "plugin:import/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react/recommended",
+    "plugin:security/recommended",
+    "prettier"
+  ],
+  "plugins": ["compat", "jsx-a11y", "react", "security"],
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "rules": {
+    "global-require": "warn",
+    "no-param-reassign": "warn",
+    "no-shadow": "off",
+    "no-underscore-dangle": "off",
+    "jsx-a11y/label-has-for": [
+      "error",
+      {
+        "allowChildren": false,
+        "components": ["Label"],
+        "required": {
+          "every": ["id"]
+        }
+      }
+    ],
+    "import/no-dynamic-require": "warn",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "react/display-name": "warn",
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "react/prop-types": "warn"
+  }
+}

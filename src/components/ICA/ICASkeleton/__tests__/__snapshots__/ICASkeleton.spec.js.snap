@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ICASkeleton matches default snapshot 1`] = `
+<div
+  className="security--ica-skeleton"
+>
+  <SkeletonText
+    className="security--ica-skeleton__label"
+    heading={false}
+    lineCount={3}
+    paragraph={false}
+    width="100%"
+  />
+  <SkeletonText
+    className="security--ica-skeleton__value"
+    heading={true}
+    lineCount={3}
+    paragraph={false}
+    width="80%"
+  />
+</div>
+`;

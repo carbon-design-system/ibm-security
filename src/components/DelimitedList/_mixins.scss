@@ -1,0 +1,15 @@
+////
+/// DelimitedList component.
+/// @group delimited-list
+/// @copyright IBM Security 2019
+////
+
+@mixin delimited-list {
+  display: flex;
+
+  &__value--truncated {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

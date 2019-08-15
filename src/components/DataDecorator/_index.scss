@@ -1,0 +1,14 @@
+////
+/// DataDecorator component.
+/// @group data--decorator
+/// @copyright IBM Security 2019
+////
+
+@import '../Link/index';
+
+@import '../Component/mixins';
+@import 'mixins';
+
+@include component($name: decorator) {
+  @include decorator;
+}

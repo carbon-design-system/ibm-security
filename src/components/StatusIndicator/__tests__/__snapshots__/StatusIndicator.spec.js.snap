@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatusIndicator renders 1`] = `
+<Fragment>
+  <h1
+    className="security--status-indicator__title"
+  >
+    Status indicator title
+  </h1>
+  <ul
+    className="security--status-indicator"
+  >
+    <StatusStep
+      className=""
+      description="Status step 1"
+      errorMsg={null}
+      key="0"
+      label="Status step 1"
+      status="complete"
+    />
+    <StatusStep
+      className=""
+      description="Status step 2"
+      errorMsg={null}
+      key="1"
+      label="Status step 2"
+      status="current"
+    />
+    <StatusStep
+      className=""
+      description="Status step 3"
+      errorMsg={null}
+      key="2"
+      label="Status step 3"
+      status="failed"
+    />
+    <StatusStep
+      className=""
+      description="Status step 4"
+      errorMsg={null}
+      key="3"
+      label="Status step 4"
+      status="incomplete"
+    />
+    <Button
+      className="security--status-indicator__retry-button"
+      disabled={false}
+      key="security--status-indicator__retry-button"
+      kind="ghost"
+      largeText={null}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="security--status-indicator__step__icon-wrapper"
+      >
+        <Icon
+          className="security--status-indicator__retry-button__icon"
+          height={null}
+          path={null}
+          renderIcon={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+            }
+          }
+          size={20}
+          title="Retry"
+          viewBox="0 0 32 32"
+          width={null}
+        />
+      </span>
+      <span
+        className="security--status-indicator__retry-button__message"
+      >
+        Retry
+      </span>
+    </Button>
+  </ul>
+</Fragment>
+`;

@@ -1,0 +1,14 @@
+////
+/// Filter component.
+/// @group filter
+/// @copyright IBM Security 2019
+////
+
+@import 'carbon-components/scss/components/multi-select/multi-select';
+
+@import '../../Component/mixins';
+@import 'mixins';
+
+@include component($name: $filter__name) {
+  @include filter;
+}

@@ -1,0 +1,14 @@
+////
+/// Pill component.
+/// @group pill
+/// @copyright IBM Security 2019
+////
+
+@import '../Component/mixins';
+@import 'mixins';
+
+@import '../DataDecorator/index';
+
+@include component($name: pill) {
+  @include pill;
+}

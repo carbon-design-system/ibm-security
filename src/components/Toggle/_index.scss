@@ -1,0 +1,32 @@
+////
+/// Toggle component.
+/// @group toggle
+/// @copyright IBM Security 2019
+////
+
+@import 'carbon-components/scss/components/toggle/toggle';
+
+@import '../../globals/index';
+
+/// Carbon style overrides.
+@include export-namespace($name: toggle) {
+  // Tokens to simplify common classes used below.
+  $appearance: #{$prefix}--toggle__appearance;
+  $label: #{$prefix}--toggle__label;
+  $label-text: #{$prefix}--toggle__text;
+
+  // Positions the left label to show.
+  .#{$prefix}--toggle {
+    & + .#{$label} .#{$label-text}--left {
+      padding: 0 $carbon--spacing-04 0 0;
+      left: unset;
+      position: relative;
+    }
+
+    // Always show labels.
+    &:checked + .#{$label} .#{$label-text}--left,
+    &:not(:checked) + .#{$label} .#{$label-text}--right {
+      visibility: visible;
+    }
+  }
+}

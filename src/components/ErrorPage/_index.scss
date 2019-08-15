@@ -1,0 +1,16 @@
+////
+/// ErrorPage section component.
+/// @group error-page
+/// @copyright IBM Security 2019
+////
+
+@import 'carbon-components/scss/components/button/button';
+
+@import '../IconButton/index';
+
+@import '../Component/mixins';
+@import 'mixins';
+
+@include component($name: error-page) {
+  @include error-page;
+}

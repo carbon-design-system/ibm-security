@@ -1,0 +1,11 @@
+////
+/// Search bar component.
+/// @group SearchBar
+/// @copyright IBM Security 2019
+////
+
+@import 'mixins';
+
+@include component($name: search-bar) {
+  @include search-bar;
+}

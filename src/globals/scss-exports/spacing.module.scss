@@ -1,0 +1,31 @@
+////
+/// Spacing exports. Allows importing the spacing values into JavaScript.
+/// @group scss-exports
+/// @copyright IBM Security 2019
+////
+
+@import '@carbon/layout/scss/layout';
+
+@import '../deprecate/index';
+
+@warn deprecate($actual: 'spacing.module.scss', $expected: '@carbon/layout');
+
+/// Baseline spacing.
+/// @type Length
+$spacing--baseline: $carbon--spacing-05;
+
+:export {
+  spacing-baseline: $spacing--baseline;
+
+  spacing-3xs: $carbon--spacing-01;
+  spacing-2xs: $carbon--spacing-02;
+  spacing-xs: $carbon--spacing-03;
+
+  spacing-sm: $carbon--spacing-04;
+  spacing-md: $spacing--baseline;
+  spacing-lg: $carbon--spacing-06;
+
+  spacing-xl: $carbon--spacing-07;
+  spacing-2xl: $carbon--spacing-08;
+  spacing-3xl: $carbon--spacing-09;
+}

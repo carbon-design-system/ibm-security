@@ -1,0 +1,18 @@
+////
+/// Tag wall mixins.
+/// @tag-wall
+/// @copyright IBM Security 2019
+////
+@import '../../globals/index';
+
+@import '../Tag/InteractiveTag/mixins';
+
+@mixin tag-wall {
+  &__label {
+    @include carbon--type-style($name: caption-01);
+  }
+
+  > #{$tag--interactive__namespace} {
+    margin-right: $carbon--spacing-03;
+  }
+}

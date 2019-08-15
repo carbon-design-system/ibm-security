@@ -1,0 +1,482 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Filter render renders correctly 1`] = `
+<Downshift
+  breakingChanges={Object {}}
+  clearSelection={[Function]}
+  defaultHighlightedIndex={null}
+  defaultInputValue=""
+  defaultIsOpen={false}
+  defaultSelectedItem={null}
+  environment={[Window]}
+  getA11yStatusMessage={[Function]}
+  highlightedIndex={null}
+  inputValue=""
+  isOpen={true}
+  itemToString={[Function]}
+  onChange={[Function]}
+  onInputValueChange={[Function]}
+  onOuterClick={[Function]}
+  onSelect={[Function]}
+  onStateChange={[Function]}
+  onUserAction={[Function]}
+  render={[Function]}
+  selectedItemChanged={[Function]}
+  stateReducer={[Function]}
+/>
+`;
+
+exports[`Filter render renders the HTML of the node's subtree 1`] = `
+<div
+  class="security--filter bx--list-box"
+  id="test-id"
+  role="listbox"
+  tabindex="-1"
+>
+  <div
+    aria-controls="test-id__menu"
+    aria-expanded="true"
+    aria-haspopup="true"
+    aria-label="Close menu"
+    aria-owns="test-id__menu"
+    class="bx--list-box__field"
+    data-toggle="true"
+    role="button"
+    tabindex="-1"
+    type="button"
+  >
+    <input
+      aria-autocomplete="list"
+      aria-expanded="true"
+      autocomplete="off"
+      class="security--filter__input-field bx--text-input"
+      id="test-id"
+      placeholder="Label"
+      role="combobox"
+      value=""
+    />
+    <span
+      class="security--filter__search"
+    >
+      <svg
+        aria-hidden="true"
+        class="security--icon security--filter__search__icon"
+        fill="#f3f3f3"
+        focusable="false"
+        height="20"
+        preserveAspectRatio="xMidYMid meet"
+        style="will-change:transform"
+        viewBox="0 0 32 32"
+        width="20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M30 28.59L22.45 21A11 11 0 1 0 21 22.45L28.59 30zM5 14a9 9 0 1 1 9 9 9 9 0 0 1-9-9z"
+        />
+      </svg>
+    </span>
+  </div>
+  <div
+    class="security--filter__list-container"
+    id="test-id__menu"
+    role="listbox"
+  >
+    <div
+      class="security--filter__list-item"
+      id="downshift-0-item-0"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="bx--list-box__menu-item__option"
+      >
+        <div
+          aria-labelledby="downshift-0-item-0"
+          class="security--filter__list-item__entry"
+        >
+          Abuja
+          <span
+            class="security--filter__add"
+          >
+            <svg
+              aria-hidden="true"
+              class="security--icon security--filter__add__icon"
+              focusable="false"
+              height="20"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change:transform"
+              viewBox="0 0 32 32"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17 15V7h-2v8H7v2h8v8h2v-8h8v-2h-8z"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="security--filter__list-item"
+      id="downshift-0-item-1"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="bx--list-box__menu-item__option"
+      >
+        <div
+          aria-labelledby="downshift-0-item-1"
+          class="security--filter__list-item__entry"
+        >
+          Beijing
+          <span
+            class="security--filter__add"
+          >
+            <svg
+              aria-hidden="true"
+              class="security--icon security--filter__add__icon"
+              focusable="false"
+              height="20"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change:transform"
+              viewBox="0 0 32 32"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17 15V7h-2v8H7v2h8v8h2v-8h8v-2h-8z"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="security--filter__list-item"
+      id="downshift-0-item-2"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="bx--list-box__menu-item__option"
+      >
+        <div
+          aria-labelledby="downshift-0-item-2"
+          class="security--filter__list-item__entry"
+        >
+          Berlin
+          <span
+            class="security--filter__add"
+          >
+            <svg
+              aria-hidden="true"
+              class="security--icon security--filter__add__icon"
+              focusable="false"
+              height="20"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change:transform"
+              viewBox="0 0 32 32"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17 15V7h-2v8H7v2h8v8h2v-8h8v-2h-8z"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="security--filter__list-item"
+      id="downshift-0-item-3"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="bx--list-box__menu-item__option"
+      >
+        <div
+          aria-labelledby="downshift-0-item-3"
+          class="security--filter__list-item__entry"
+        >
+          Johannesburg
+          <span
+            class="security--filter__add"
+          >
+            <svg
+              aria-hidden="true"
+              class="security--icon security--filter__add__icon"
+              focusable="false"
+              height="20"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change:transform"
+              viewBox="0 0 32 32"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17 15V7h-2v8H7v2h8v8h2v-8h8v-2h-8z"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="security--filter__list-item"
+      id="downshift-0-item-4"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="bx--list-box__menu-item__option"
+      >
+        <div
+          aria-labelledby="downshift-0-item-4"
+          class="security--filter__list-item__entry"
+        >
+          London
+          <span
+            class="security--filter__add"
+          >
+            <svg
+              aria-hidden="true"
+              class="security--icon security--filter__add__icon"
+              focusable="false"
+              height="20"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change:transform"
+              viewBox="0 0 32 32"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17 15V7h-2v8H7v2h8v8h2v-8h8v-2h-8z"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="security--filter__list-item"
+      id="downshift-0-item-5"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="bx--list-box__menu-item__option"
+      >
+        <div
+          aria-labelledby="downshift-0-item-5"
+          class="security--filter__list-item__entry"
+        >
+          Montreal
+          <span
+            class="security--filter__add"
+          >
+            <svg
+              aria-hidden="true"
+              class="security--icon security--filter__add__icon"
+              focusable="false"
+              height="20"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change:transform"
+              viewBox="0 0 32 32"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17 15V7h-2v8H7v2h8v8h2v-8h8v-2h-8z"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="security--filter__list-item"
+      id="downshift-0-item-6"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="bx--list-box__menu-item__option"
+      >
+        <div
+          aria-labelledby="downshift-0-item-6"
+          class="security--filter__list-item__entry"
+        >
+          New Delhi
+          <span
+            class="security--filter__add"
+          >
+            <svg
+              aria-hidden="true"
+              class="security--icon security--filter__add__icon"
+              focusable="false"
+              height="20"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change:transform"
+              viewBox="0 0 32 32"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17 15V7h-2v8H7v2h8v8h2v-8h8v-2h-8z"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="security--filter__list-item"
+      id="downshift-0-item-7"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="bx--list-box__menu-item__option"
+      >
+        <div
+          aria-labelledby="downshift-0-item-7"
+          class="security--filter__list-item__entry"
+        >
+          New York
+          <span
+            class="security--filter__add"
+          >
+            <svg
+              aria-hidden="true"
+              class="security--icon security--filter__add__icon"
+              focusable="false"
+              height="20"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change:transform"
+              viewBox="0 0 32 32"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17 15V7h-2v8H7v2h8v8h2v-8h8v-2h-8z"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="security--filter__list-item"
+      id="downshift-0-item-8"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="bx--list-box__menu-item__option"
+      >
+        <div
+          aria-labelledby="downshift-0-item-8"
+          class="security--filter__list-item__entry"
+        >
+          Rio de Janeiro
+          <span
+            class="security--filter__add"
+          >
+            <svg
+              aria-hidden="true"
+              class="security--icon security--filter__add__icon"
+              focusable="false"
+              height="20"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change:transform"
+              viewBox="0 0 32 32"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17 15V7h-2v8H7v2h8v8h2v-8h8v-2h-8z"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="security--filter__list-item"
+      id="downshift-0-item-9"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="bx--list-box__menu-item__option"
+      >
+        <div
+          aria-labelledby="downshift-0-item-9"
+          class="security--filter__list-item__entry"
+        >
+          San Fransisco
+          <span
+            class="security--filter__add"
+          >
+            <svg
+              aria-hidden="true"
+              class="security--icon security--filter__add__icon"
+              focusable="false"
+              height="20"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change:transform"
+              viewBox="0 0 32 32"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17 15V7h-2v8H7v2h8v8h2v-8h8v-2h-8z"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="security--filter__list-item"
+      id="downshift-0-item-10"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="bx--list-box__menu-item__option"
+      >
+        <div
+          aria-labelledby="downshift-0-item-10"
+          class="security--filter__list-item__entry"
+        >
+          Tokyo
+          <span
+            class="security--filter__add"
+          >
+            <svg
+              aria-hidden="true"
+              class="security--icon security--filter__add__icon"
+              focusable="false"
+              height="20"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change:transform"
+              viewBox="0 0 32 32"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17 15V7h-2v8H7v2h8v8h2v-8h8v-2h-8z"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

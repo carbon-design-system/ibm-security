@@ -1,0 +1,12 @@
+////
+/// Important Content Area (ICA) skeleton component.
+/// @group ICA
+/// @copyright IBM Security 2019
+////
+
+@import '../../Component/mixins';
+@import 'mixins';
+
+@include component($name: 'ica-skeleton') {
+  @include ica-skeleton;
+}

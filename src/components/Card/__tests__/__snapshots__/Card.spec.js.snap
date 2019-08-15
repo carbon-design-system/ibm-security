@@ -1,0 +1,203 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card renders 1`] = `
+<Fragment>
+  <div
+    className="security--card class"
+  >
+    <div
+      className="security--card__header"
+    >
+      <p
+        className="security--card__header__tag"
+      >
+        Subtitle
+      </p>
+      <img
+        alt="Image label"
+        className="security--card__header__image"
+        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+ICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMTYgMThINmEyIDIgMCAwIDEtMi0yVjZhMiAyIDAgMCAxIDItMmgxMGEyIDIgMCAwIDEgMiAydjEwYTIgMiAwIDAgMS0yIDJ6TTYgNnYxMGgxMFY2em0yMCA2djRoLTR2LTRoNG0wLTJoLTRhMiAyIDAgMCAwLTIgMnY0YTIgMiAwIDAgMCAyIDJoNGEyIDIgMCAwIDAgMi0ydi00YTIgMiAwIDAgMC0yLTJ6bTAgMTJ2NGgtNHYtNGg0bTAtMmgtNGEyIDIgMCAwIDAtMiAydjRhMiAyIDAgMCAwIDIgMmg0YTIgMiAwIDAgMCAyLTJ2LTRhMiAyIDAgMCAwLTItMnptLTEwIDJ2NGgtNHYtNGg0bTAtMmgtNGEyIDIgMCAwIDAtMiAydjRhMiAyIDAgMCAwIDIgMmg0YTIgMiAwIDAgMCAyLTJ2LTRhMiAyIDAgMCAwLTItMnoiLz48L3N2Zz4="
+      />
+      <h1
+        className="security--card__header__title"
+      >
+        Title
+      </h1>
+    </div>
+    <div
+      className="security--card__body"
+    >
+      <p
+        className="security--card__body__text"
+      >
+        Description
+      </p>
+    </div>
+    <div
+      className="security--card__footer"
+    >
+      <span>
+        Label
+      </span>
+    </div>
+    <span>
+      Label
+    </span>
+  </div>
+</Fragment>
+`;
+
+exports[`Card renders the HTML of the node's subtree 1`] = `
+<div
+  class="security--card class"
+>
+  <div
+    class="security--card__header"
+  >
+    <p
+      class="security--card__header__tag"
+    >
+      Subtitle
+    </p>
+    <img
+      alt="Image label"
+      class="security--card__header__image"
+      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+ICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMTYgMThINmEyIDIgMCAwIDEtMi0yVjZhMiAyIDAgMCAxIDItMmgxMGEyIDIgMCAwIDEgMiAydjEwYTIgMiAwIDAgMS0yIDJ6TTYgNnYxMGgxMFY2em0yMCA2djRoLTR2LTRoNG0wLTJoLTRhMiAyIDAgMCAwLTIgMnY0YTIgMiAwIDAgMCAyIDJoNGEyIDIgMCAwIDAgMi0ydi00YTIgMiAwIDAgMC0yLTJ6bTAgMTJ2NGgtNHYtNGg0bTAtMmgtNGEyIDIgMCAwIDAtMiAydjRhMiAyIDAgMCAwIDIgMmg0YTIgMiAwIDAgMCAyLTJ2LTRhMiAyIDAgMCAwLTItMnptLTEwIDJ2NGgtNHYtNGg0bTAtMmgtNGEyIDIgMCAwIDAtMiAydjRhMiAyIDAgMCAwIDIgMmg0YTIgMiAwIDAgMCAyLTJ2LTRhMiAyIDAgMCAwLTItMnoiLz48L3N2Zz4="
+    />
+    <h1
+      class="security--card__header__title"
+    >
+      Title
+    </h1>
+  </div>
+  <div
+    class="security--card__body"
+  >
+    <p
+      class="security--card__body__text"
+    >
+      Description
+    </p>
+  </div>
+  <div
+    class="security--card__footer"
+  >
+    <span>
+      Label
+    </span>
+  </div>
+  <span>
+    Label
+  </span>
+</div>
+`;
+
+exports[`Card renders the link variation 1`] = `
+<Fragment>
+  <a
+    aria-label="Image label"
+    className="security--card class security--card__link"
+    href="#"
+    onClick={[MockFunction]}
+  >
+    <div
+      className="security--card__header"
+    >
+      <p
+        className="security--card__header__tag"
+      >
+        Subtitle
+      </p>
+      <img
+        alt="Image label"
+        className="security--card__header__image"
+        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+ICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMTYgMThINmEyIDIgMCAwIDEtMi0yVjZhMiAyIDAgMCAxIDItMmgxMGEyIDIgMCAwIDEgMiAydjEwYTIgMiAwIDAgMS0yIDJ6TTYgNnYxMGgxMFY2em0yMCA2djRoLTR2LTRoNG0wLTJoLTRhMiAyIDAgMCAwLTIgMnY0YTIgMiAwIDAgMCAyIDJoNGEyIDIgMCAwIDAgMi0ydi00YTIgMiAwIDAgMC0yLTJ6bTAgMTJ2NGgtNHYtNGg0bTAtMmgtNGEyIDIgMCAwIDAtMiAydjRhMiAyIDAgMCAwIDIgMmg0YTIgMiAwIDAgMCAyLTJ2LTRhMiAyIDAgMCAwLTItMnptLTEwIDJ2NGgtNHYtNGg0bTAtMmgtNGEyIDIgMCAwIDAtMiAydjRhMiAyIDAgMCAwIDIgMmg0YTIgMiAwIDAgMCAyLTJ2LTRhMiAyIDAgMCAwLTItMnoiLz48L3N2Zz4="
+      />
+      <h1
+        className="security--card__header__title"
+      >
+        Title
+      </h1>
+    </div>
+    <div
+      className="security--card__body"
+    >
+      <p
+        className="security--card__body__text"
+      >
+        Description
+      </p>
+    </div>
+    <div
+      className="security--card__footer"
+    >
+      <span>
+        Label
+      </span>
+    </div>
+    <span>
+      Label
+    </span>
+  </a>
+</Fragment>
+`;
+
+exports[`Card renders the skeleton variation 1`] = `
+<Card
+  body={null}
+  className="security--card--skeleton"
+  footer={null}
+  header={null}
+  label={null}
+  link={null}
+  onClick={null}
+>
+  <SkeletonText
+    heading={false}
+    lineCount={3}
+    paragraph={false}
+    width="25%"
+  />
+  <SkeletonText
+    heading={true}
+    lineCount={3}
+    paragraph={false}
+    width="25%"
+  />
+  <SkeletonText
+    heading={false}
+    lineCount={3}
+    paragraph={false}
+    width="50%"
+  />
+  <SkeletonText
+    heading={false}
+    lineCount={3}
+    paragraph={false}
+    width="50%"
+  />
+  <SkeletonText
+    heading={false}
+    lineCount={3}
+    paragraph={false}
+    width="75%"
+  />
+  <div
+    className="security--card--skeleton__wrapper"
+  >
+    <SkeletonText
+      className="security--card--skeleton__text--inline"
+      heading={false}
+      lineCount={3}
+      paragraph={false}
+      width="25%"
+    />
+    <SkeletonText
+      heading={false}
+      lineCount={3}
+      paragraph={false}
+      width="25%"
+    />
+  </div>
+</Card>
+`;

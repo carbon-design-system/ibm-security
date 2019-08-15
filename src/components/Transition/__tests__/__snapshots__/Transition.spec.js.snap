@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Transition renders correctly 1`] = `
+<CSSTransitionGroup
+  className="security--transition"
+  component={[Function]}
+  transitionAppear={true}
+  transitionAppearTimeout={160}
+  transitionEnter={true}
+  transitionEnterTimeout={160}
+  transitionLeave={true}
+  transitionLeaveTimeout={160}
+  transitionName={
+    Object {
+      "appear": "class__transition--appear",
+      "appearActive": "class__transition--appear--active",
+      "enter": "class__transition--enter",
+      "enterActive": "class__transition--enter--active",
+      "leave": "class__transition--leave",
+      "leaveActive": "class__transition--leave--active",
+    }
+  }
+>
+  <span>
+    Label
+  </span>
+</CSSTransitionGroup>
+`;

@@ -1,0 +1,1265 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TagWall Rendering renders 1`] = `
+<TagWall
+  addButtonDisabled={false}
+  addLabel="Add"
+  className=""
+  disable={false}
+  itemToString={[Function]}
+  items={
+    Array [
+      Object {
+        "id": "0",
+        "isSelected": true,
+        "label": "Tag 1",
+      },
+      Object {
+        "id": "1",
+        "isSelected": true,
+        "label": "Tag 2",
+      },
+      Object {
+        "id": "2",
+        "isSelected": true,
+        "label": "Tag 3",
+      },
+      Object {
+        "id": "3",
+        "isSelected": false,
+        "label": "Tag 4",
+      },
+      Object {
+        "id": "4",
+        "isSelected": false,
+        "label": "Tag 5",
+      },
+      Object {
+        "id": "5",
+        "isSelected": false,
+        "label": "Tag 6",
+      },
+      Object {
+        "id": "6",
+        "isSelected": false,
+        "label": "Tag 7",
+      },
+      Object {
+        "id": "7",
+        "isSelected": false,
+        "label": "Tag 8",
+      },
+    ]
+  }
+  label="Label"
+  labels={Object {}}
+  onAddButton={[Function]}
+  onChange={[Function]}
+>
+  <section
+    aria-label="Label"
+    className="security--tag-wall"
+  >
+    <h2
+      className="security--tag-wall__label"
+    >
+      Label
+    </h2>
+    <InteractiveTag
+      isSelected={true}
+      key="tag__0"
+      onRemove={[Function]}
+      removable={true}
+      removeBtnLabel=""
+      type="gray"
+    >
+      <Tag
+        className="security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
+        type="gray"
+      >
+        <span
+          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
+        >
+          Tag 1
+          <button
+            aria-label=""
+            className="security--tag--interactive__button"
+            onClick={[Function]}
+          >
+            <Icon
+              className="security--tag--interactive__button__icon"
+              height={null}
+              path={null}
+              renderIcon={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "render": [Function],
+                }
+              }
+              size={20}
+              viewBox="0 0 32 32"
+              width={null}
+            >
+              <ForwardRef(Close16)
+                aria-hidden={true}
+                className="security--icon security--tag--interactive__button__icon"
+                focusable={false}
+                preserveAspectRatio="xMidYMid meet"
+                style={
+                  Object {
+                    "willChange": "transform",
+                  }
+                }
+              >
+                <Icon
+                  aria-hidden={true}
+                  className="security--icon security--tag--interactive__button__icon"
+                  focusable={false}
+                  height={16}
+                  preserveAspectRatio="xMidYMid meet"
+                  style={
+                    Object {
+                      "willChange": "transform",
+                    }
+                  }
+                  viewBox="0 0 16 16"
+                  width={16}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="security--icon security--tag--interactive__button__icon"
+                    focusable={false}
+                    height={16}
+                    preserveAspectRatio="xMidYMid meet"
+                    style={
+                      Object {
+                        "willChange": "transform",
+                      }
+                    }
+                    viewBox="0 0 16 16"
+                    width={16}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                    />
+                  </svg>
+                </Icon>
+              </ForwardRef(Close16)>
+            </Icon>
+          </button>
+        </span>
+      </Tag>
+    </InteractiveTag>
+    <InteractiveTag
+      isSelected={true}
+      key="tag__1"
+      onRemove={[Function]}
+      removable={true}
+      removeBtnLabel=""
+      type="gray"
+    >
+      <Tag
+        className="security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
+        type="gray"
+      >
+        <span
+          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
+        >
+          Tag 2
+          <button
+            aria-label=""
+            className="security--tag--interactive__button"
+            onClick={[Function]}
+          >
+            <Icon
+              className="security--tag--interactive__button__icon"
+              height={null}
+              path={null}
+              renderIcon={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "render": [Function],
+                }
+              }
+              size={20}
+              viewBox="0 0 32 32"
+              width={null}
+            >
+              <ForwardRef(Close16)
+                aria-hidden={true}
+                className="security--icon security--tag--interactive__button__icon"
+                focusable={false}
+                preserveAspectRatio="xMidYMid meet"
+                style={
+                  Object {
+                    "willChange": "transform",
+                  }
+                }
+              >
+                <Icon
+                  aria-hidden={true}
+                  className="security--icon security--tag--interactive__button__icon"
+                  focusable={false}
+                  height={16}
+                  preserveAspectRatio="xMidYMid meet"
+                  style={
+                    Object {
+                      "willChange": "transform",
+                    }
+                  }
+                  viewBox="0 0 16 16"
+                  width={16}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="security--icon security--tag--interactive__button__icon"
+                    focusable={false}
+                    height={16}
+                    preserveAspectRatio="xMidYMid meet"
+                    style={
+                      Object {
+                        "willChange": "transform",
+                      }
+                    }
+                    viewBox="0 0 16 16"
+                    width={16}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                    />
+                  </svg>
+                </Icon>
+              </ForwardRef(Close16)>
+            </Icon>
+          </button>
+        </span>
+      </Tag>
+    </InteractiveTag>
+    <InteractiveTag
+      isSelected={true}
+      key="tag__2"
+      onRemove={[Function]}
+      removable={true}
+      removeBtnLabel=""
+      type="gray"
+    >
+      <Tag
+        className="security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
+        type="gray"
+      >
+        <span
+          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
+        >
+          Tag 3
+          <button
+            aria-label=""
+            className="security--tag--interactive__button"
+            onClick={[Function]}
+          >
+            <Icon
+              className="security--tag--interactive__button__icon"
+              height={null}
+              path={null}
+              renderIcon={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "render": [Function],
+                }
+              }
+              size={20}
+              viewBox="0 0 32 32"
+              width={null}
+            >
+              <ForwardRef(Close16)
+                aria-hidden={true}
+                className="security--icon security--tag--interactive__button__icon"
+                focusable={false}
+                preserveAspectRatio="xMidYMid meet"
+                style={
+                  Object {
+                    "willChange": "transform",
+                  }
+                }
+              >
+                <Icon
+                  aria-hidden={true}
+                  className="security--icon security--tag--interactive__button__icon"
+                  focusable={false}
+                  height={16}
+                  preserveAspectRatio="xMidYMid meet"
+                  style={
+                    Object {
+                      "willChange": "transform",
+                    }
+                  }
+                  viewBox="0 0 16 16"
+                  width={16}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="security--icon security--tag--interactive__button__icon"
+                    focusable={false}
+                    height={16}
+                    preserveAspectRatio="xMidYMid meet"
+                    style={
+                      Object {
+                        "willChange": "transform",
+                      }
+                    }
+                    viewBox="0 0 16 16"
+                    width={16}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                    />
+                  </svg>
+                </Icon>
+              </ForwardRef(Close16)>
+            </Icon>
+          </button>
+        </span>
+      </Tag>
+    </InteractiveTag>
+    <InteractiveTag
+      isSelected={false}
+      key="tag__3"
+      onRemove={[Function]}
+      removable={true}
+      removeBtnLabel=""
+      type="gray"
+    >
+      <Tag
+        className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        type="gray"
+      >
+        <span
+          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        >
+          Tag 4
+          <button
+            aria-label=""
+            className="security--tag--interactive__button"
+            onClick={[Function]}
+          >
+            <Icon
+              className="security--tag--interactive__button__icon"
+              height={null}
+              path={null}
+              renderIcon={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "render": [Function],
+                }
+              }
+              size={20}
+              viewBox="0 0 32 32"
+              width={null}
+            >
+              <ForwardRef(Close16)
+                aria-hidden={true}
+                className="security--icon security--tag--interactive__button__icon"
+                focusable={false}
+                preserveAspectRatio="xMidYMid meet"
+                style={
+                  Object {
+                    "willChange": "transform",
+                  }
+                }
+              >
+                <Icon
+                  aria-hidden={true}
+                  className="security--icon security--tag--interactive__button__icon"
+                  focusable={false}
+                  height={16}
+                  preserveAspectRatio="xMidYMid meet"
+                  style={
+                    Object {
+                      "willChange": "transform",
+                    }
+                  }
+                  viewBox="0 0 16 16"
+                  width={16}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="security--icon security--tag--interactive__button__icon"
+                    focusable={false}
+                    height={16}
+                    preserveAspectRatio="xMidYMid meet"
+                    style={
+                      Object {
+                        "willChange": "transform",
+                      }
+                    }
+                    viewBox="0 0 16 16"
+                    width={16}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                    />
+                  </svg>
+                </Icon>
+              </ForwardRef(Close16)>
+            </Icon>
+          </button>
+        </span>
+      </Tag>
+    </InteractiveTag>
+    <InteractiveTag
+      isSelected={false}
+      key="tag__4"
+      onRemove={[Function]}
+      removable={true}
+      removeBtnLabel=""
+      type="gray"
+    >
+      <Tag
+        className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        type="gray"
+      >
+        <span
+          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        >
+          Tag 5
+          <button
+            aria-label=""
+            className="security--tag--interactive__button"
+            onClick={[Function]}
+          >
+            <Icon
+              className="security--tag--interactive__button__icon"
+              height={null}
+              path={null}
+              renderIcon={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "render": [Function],
+                }
+              }
+              size={20}
+              viewBox="0 0 32 32"
+              width={null}
+            >
+              <ForwardRef(Close16)
+                aria-hidden={true}
+                className="security--icon security--tag--interactive__button__icon"
+                focusable={false}
+                preserveAspectRatio="xMidYMid meet"
+                style={
+                  Object {
+                    "willChange": "transform",
+                  }
+                }
+              >
+                <Icon
+                  aria-hidden={true}
+                  className="security--icon security--tag--interactive__button__icon"
+                  focusable={false}
+                  height={16}
+                  preserveAspectRatio="xMidYMid meet"
+                  style={
+                    Object {
+                      "willChange": "transform",
+                    }
+                  }
+                  viewBox="0 0 16 16"
+                  width={16}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="security--icon security--tag--interactive__button__icon"
+                    focusable={false}
+                    height={16}
+                    preserveAspectRatio="xMidYMid meet"
+                    style={
+                      Object {
+                        "willChange": "transform",
+                      }
+                    }
+                    viewBox="0 0 16 16"
+                    width={16}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                    />
+                  </svg>
+                </Icon>
+              </ForwardRef(Close16)>
+            </Icon>
+          </button>
+        </span>
+      </Tag>
+    </InteractiveTag>
+    <InteractiveTag
+      isSelected={false}
+      key="tag__5"
+      onRemove={[Function]}
+      removable={true}
+      removeBtnLabel=""
+      type="gray"
+    >
+      <Tag
+        className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        type="gray"
+      >
+        <span
+          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        >
+          Tag 6
+          <button
+            aria-label=""
+            className="security--tag--interactive__button"
+            onClick={[Function]}
+          >
+            <Icon
+              className="security--tag--interactive__button__icon"
+              height={null}
+              path={null}
+              renderIcon={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "render": [Function],
+                }
+              }
+              size={20}
+              viewBox="0 0 32 32"
+              width={null}
+            >
+              <ForwardRef(Close16)
+                aria-hidden={true}
+                className="security--icon security--tag--interactive__button__icon"
+                focusable={false}
+                preserveAspectRatio="xMidYMid meet"
+                style={
+                  Object {
+                    "willChange": "transform",
+                  }
+                }
+              >
+                <Icon
+                  aria-hidden={true}
+                  className="security--icon security--tag--interactive__button__icon"
+                  focusable={false}
+                  height={16}
+                  preserveAspectRatio="xMidYMid meet"
+                  style={
+                    Object {
+                      "willChange": "transform",
+                    }
+                  }
+                  viewBox="0 0 16 16"
+                  width={16}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="security--icon security--tag--interactive__button__icon"
+                    focusable={false}
+                    height={16}
+                    preserveAspectRatio="xMidYMid meet"
+                    style={
+                      Object {
+                        "willChange": "transform",
+                      }
+                    }
+                    viewBox="0 0 16 16"
+                    width={16}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                    />
+                  </svg>
+                </Icon>
+              </ForwardRef(Close16)>
+            </Icon>
+          </button>
+        </span>
+      </Tag>
+    </InteractiveTag>
+    <InteractiveTag
+      isSelected={false}
+      key="tag__6"
+      onRemove={[Function]}
+      removable={true}
+      removeBtnLabel=""
+      type="gray"
+    >
+      <Tag
+        className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        type="gray"
+      >
+        <span
+          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        >
+          Tag 7
+          <button
+            aria-label=""
+            className="security--tag--interactive__button"
+            onClick={[Function]}
+          >
+            <Icon
+              className="security--tag--interactive__button__icon"
+              height={null}
+              path={null}
+              renderIcon={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "render": [Function],
+                }
+              }
+              size={20}
+              viewBox="0 0 32 32"
+              width={null}
+            >
+              <ForwardRef(Close16)
+                aria-hidden={true}
+                className="security--icon security--tag--interactive__button__icon"
+                focusable={false}
+                preserveAspectRatio="xMidYMid meet"
+                style={
+                  Object {
+                    "willChange": "transform",
+                  }
+                }
+              >
+                <Icon
+                  aria-hidden={true}
+                  className="security--icon security--tag--interactive__button__icon"
+                  focusable={false}
+                  height={16}
+                  preserveAspectRatio="xMidYMid meet"
+                  style={
+                    Object {
+                      "willChange": "transform",
+                    }
+                  }
+                  viewBox="0 0 16 16"
+                  width={16}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="security--icon security--tag--interactive__button__icon"
+                    focusable={false}
+                    height={16}
+                    preserveAspectRatio="xMidYMid meet"
+                    style={
+                      Object {
+                        "willChange": "transform",
+                      }
+                    }
+                    viewBox="0 0 16 16"
+                    width={16}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                    />
+                  </svg>
+                </Icon>
+              </ForwardRef(Close16)>
+            </Icon>
+          </button>
+        </span>
+      </Tag>
+    </InteractiveTag>
+    <InteractiveTag
+      isSelected={false}
+      key="tag__7"
+      onRemove={[Function]}
+      removable={true}
+      removeBtnLabel=""
+      type="gray"
+    >
+      <Tag
+        className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        type="gray"
+      >
+        <span
+          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        >
+          Tag 8
+          <button
+            aria-label=""
+            className="security--tag--interactive__button"
+            onClick={[Function]}
+          >
+            <Icon
+              className="security--tag--interactive__button__icon"
+              height={null}
+              path={null}
+              renderIcon={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "render": [Function],
+                }
+              }
+              size={20}
+              viewBox="0 0 32 32"
+              width={null}
+            >
+              <ForwardRef(Close16)
+                aria-hidden={true}
+                className="security--icon security--tag--interactive__button__icon"
+                focusable={false}
+                preserveAspectRatio="xMidYMid meet"
+                style={
+                  Object {
+                    "willChange": "transform",
+                  }
+                }
+              >
+                <Icon
+                  aria-hidden={true}
+                  className="security--icon security--tag--interactive__button__icon"
+                  focusable={false}
+                  height={16}
+                  preserveAspectRatio="xMidYMid meet"
+                  style={
+                    Object {
+                      "willChange": "transform",
+                    }
+                  }
+                  viewBox="0 0 16 16"
+                  width={16}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="security--icon security--tag--interactive__button__icon"
+                    focusable={false}
+                    height={16}
+                    preserveAspectRatio="xMidYMid meet"
+                    style={
+                      Object {
+                        "willChange": "transform",
+                      }
+                    }
+                    viewBox="0 0 16 16"
+                    width={16}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                    />
+                  </svg>
+                </Icon>
+              </ForwardRef(Close16)>
+            </Icon>
+          </button>
+        </span>
+      </Tag>
+    </InteractiveTag>
+    <Button
+      disabled={false}
+      kind="ghost"
+      largeText={null}
+      onClick={[Function]}
+      size="small"
+      tabIndex={0}
+      type="button"
+    >
+      <ForwardRef(Button)
+        className="security--button"
+        disabled={false}
+        kind="ghost"
+        onClick={[Function]}
+        size="small"
+        tabIndex={0}
+        type="button"
+      >
+        <button
+          className="security--button bx--btn bx--btn--sm bx--btn--ghost"
+          disabled={false}
+          onClick={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          Add
+        </button>
+      </ForwardRef(Button)>
+    </Button>
+  </section>
+</TagWall>
+`;
+
+exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
+<section
+  aria-label="Label"
+  class="security--tag-wall"
+>
+  <h2
+    class="security--tag-wall__label"
+  >
+    Label
+  </h2>
+  <span
+    class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
+  >
+    Tag 1
+    <button
+      aria-label=""
+      class="security--tag--interactive__button"
+    >
+      <svg
+        aria-hidden="true"
+        class="security--icon security--tag--interactive__button__icon"
+        focusable="false"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        style="will-change: transform;"
+        viewBox="0 0 16 16"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+        />
+      </svg>
+    </button>
+  </span>
+  <span
+    class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
+  >
+    Tag 2
+    <button
+      aria-label=""
+      class="security--tag--interactive__button"
+    >
+      <svg
+        aria-hidden="true"
+        class="security--icon security--tag--interactive__button__icon"
+        focusable="false"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        style="will-change: transform;"
+        viewBox="0 0 16 16"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+        />
+      </svg>
+    </button>
+  </span>
+  <span
+    class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
+  >
+    Tag 3
+    <button
+      aria-label=""
+      class="security--tag--interactive__button"
+    >
+      <svg
+        aria-hidden="true"
+        class="security--icon security--tag--interactive__button__icon"
+        focusable="false"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        style="will-change: transform;"
+        viewBox="0 0 16 16"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+        />
+      </svg>
+    </button>
+  </span>
+  <span
+    class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+  >
+    Tag 4
+    <button
+      aria-label=""
+      class="security--tag--interactive__button"
+    >
+      <svg
+        aria-hidden="true"
+        class="security--icon security--tag--interactive__button__icon"
+        focusable="false"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        style="will-change: transform;"
+        viewBox="0 0 16 16"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+        />
+      </svg>
+    </button>
+  </span>
+  <span
+    class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+  >
+    Tag 5
+    <button
+      aria-label=""
+      class="security--tag--interactive__button"
+    >
+      <svg
+        aria-hidden="true"
+        class="security--icon security--tag--interactive__button__icon"
+        focusable="false"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        style="will-change: transform;"
+        viewBox="0 0 16 16"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+        />
+      </svg>
+    </button>
+  </span>
+  <span
+    class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+  >
+    Tag 6
+    <button
+      aria-label=""
+      class="security--tag--interactive__button"
+    >
+      <svg
+        aria-hidden="true"
+        class="security--icon security--tag--interactive__button__icon"
+        focusable="false"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        style="will-change: transform;"
+        viewBox="0 0 16 16"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+        />
+      </svg>
+    </button>
+  </span>
+  <span
+    class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+  >
+    Tag 7
+    <button
+      aria-label=""
+      class="security--tag--interactive__button"
+    >
+      <svg
+        aria-hidden="true"
+        class="security--icon security--tag--interactive__button__icon"
+        focusable="false"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        style="will-change: transform;"
+        viewBox="0 0 16 16"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+        />
+      </svg>
+    </button>
+  </span>
+  <span
+    class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+  >
+    Tag 8
+    <button
+      aria-label=""
+      class="security--tag--interactive__button"
+    >
+      <svg
+        aria-hidden="true"
+        class="security--icon security--tag--interactive__button__icon"
+        focusable="false"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        style="will-change: transform;"
+        viewBox="0 0 16 16"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+        />
+      </svg>
+    </button>
+  </span>
+  <button
+    class="security--button bx--btn bx--btn--sm bx--btn--ghost"
+    tabindex="0"
+    type="button"
+  >
+    Add
+  </button>
+</section>
+`;
+
+exports[`TagWall Rendering renders the disabled variation 1`] = `
+<TagWall
+  addButtonDisabled={false}
+  addLabel="Add"
+  className=""
+  disable={true}
+  itemToString={[Function]}
+  items={
+    Array [
+      Object {
+        "id": "0",
+        "isSelected": true,
+        "label": "Tag 1",
+      },
+      Object {
+        "id": "1",
+        "isSelected": true,
+        "label": "Tag 2",
+      },
+      Object {
+        "id": "2",
+        "isSelected": true,
+        "label": "Tag 3",
+      },
+      Object {
+        "id": "3",
+        "isSelected": false,
+        "label": "Tag 4",
+      },
+      Object {
+        "id": "4",
+        "isSelected": false,
+        "label": "Tag 5",
+      },
+      Object {
+        "id": "5",
+        "isSelected": false,
+        "label": "Tag 6",
+      },
+      Object {
+        "id": "6",
+        "isSelected": false,
+        "label": "Tag 7",
+      },
+      Object {
+        "id": "7",
+        "isSelected": false,
+        "label": "Tag 8",
+      },
+    ]
+  }
+  label="Label"
+  labels={Object {}}
+  onAddButton={[Function]}
+  onChange={[Function]}
+>
+  <section
+    aria-label="Label"
+    className="security--tag-wall"
+  >
+    <h2
+      className="security--tag-wall__label"
+    >
+      Label
+    </h2>
+    <InteractiveTag
+      isSelected={true}
+      key="tag__0"
+      onRemove={[Function]}
+      removable={false}
+      removeBtnLabel=""
+      type="gray"
+    >
+      <Tag
+        className="security--tag--interactive security--tag--interactive--selected"
+        type="gray"
+      >
+        <span
+          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--selected"
+        >
+          Tag 1
+        </span>
+      </Tag>
+    </InteractiveTag>
+    <InteractiveTag
+      isSelected={true}
+      key="tag__1"
+      onRemove={[Function]}
+      removable={false}
+      removeBtnLabel=""
+      type="gray"
+    >
+      <Tag
+        className="security--tag--interactive security--tag--interactive--selected"
+        type="gray"
+      >
+        <span
+          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--selected"
+        >
+          Tag 2
+        </span>
+      </Tag>
+    </InteractiveTag>
+    <InteractiveTag
+      isSelected={true}
+      key="tag__2"
+      onRemove={[Function]}
+      removable={false}
+      removeBtnLabel=""
+      type="gray"
+    >
+      <Tag
+        className="security--tag--interactive security--tag--interactive--selected"
+        type="gray"
+      >
+        <span
+          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--selected"
+        >
+          Tag 3
+        </span>
+      </Tag>
+    </InteractiveTag>
+    <InteractiveTag
+      isSelected={false}
+      key="tag__3"
+      onRemove={[Function]}
+      removable={false}
+      removeBtnLabel=""
+      type="gray"
+    >
+      <Tag
+        className="security--tag--interactive security--tag--interactive--default"
+        type="gray"
+      >
+        <span
+          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default"
+        >
+          Tag 4
+        </span>
+      </Tag>
+    </InteractiveTag>
+    <InteractiveTag
+      isSelected={false}
+      key="tag__4"
+      onRemove={[Function]}
+      removable={false}
+      removeBtnLabel=""
+      type="gray"
+    >
+      <Tag
+        className="security--tag--interactive security--tag--interactive--default"
+        type="gray"
+      >
+        <span
+          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default"
+        >
+          Tag 5
+        </span>
+      </Tag>
+    </InteractiveTag>
+    <InteractiveTag
+      isSelected={false}
+      key="tag__5"
+      onRemove={[Function]}
+      removable={false}
+      removeBtnLabel=""
+      type="gray"
+    >
+      <Tag
+        className="security--tag--interactive security--tag--interactive--default"
+        type="gray"
+      >
+        <span
+          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default"
+        >
+          Tag 6
+        </span>
+      </Tag>
+    </InteractiveTag>
+    <InteractiveTag
+      isSelected={false}
+      key="tag__6"
+      onRemove={[Function]}
+      removable={false}
+      removeBtnLabel=""
+      type="gray"
+    >
+      <Tag
+        className="security--tag--interactive security--tag--interactive--default"
+        type="gray"
+      >
+        <span
+          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default"
+        >
+          Tag 7
+        </span>
+      </Tag>
+    </InteractiveTag>
+    <InteractiveTag
+      isSelected={false}
+      key="tag__7"
+      onRemove={[Function]}
+      removable={false}
+      removeBtnLabel=""
+      type="gray"
+    >
+      <Tag
+        className="security--tag--interactive security--tag--interactive--default"
+        type="gray"
+      >
+        <span
+          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default"
+        >
+          Tag 8
+        </span>
+      </Tag>
+    </InteractiveTag>
+    <Button
+      disabled={true}
+      kind="ghost"
+      largeText={null}
+      onClick={[Function]}
+      size="small"
+      tabIndex={0}
+      type="button"
+    >
+      <ForwardRef(Button)
+        className="security--button"
+        disabled={true}
+        kind="ghost"
+        onClick={[Function]}
+        size="small"
+        tabIndex={0}
+        type="button"
+      >
+        <button
+          className="security--button bx--btn bx--btn--sm bx--btn--ghost bx--btn--disabled"
+          disabled={true}
+          onClick={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          Add
+        </button>
+      </ForwardRef(Button)>
+    </Button>
+  </section>
+</TagWall>
+`;

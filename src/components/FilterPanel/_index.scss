@@ -1,0 +1,22 @@
+////
+/// Filter panel styles.
+/// @group filter-panel
+/// @copyright IBM Security 2019
+////
+
+@import '../Accordion/index';
+@import '../Button/index';
+@import '../Checkbox/index';
+
+@import './FilterCategory/index';
+@import './FilterSearch/index';
+@import './FilterSelector/index';
+@import './FilterSubcategory/index';
+
+@import '../Component/mixins';
+
+@import 'mixins';
+
+@include component($name: filter-panel) {
+  @include filter-panel;
+}

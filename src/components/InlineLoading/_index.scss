@@ -1,0 +1,17 @@
+////
+/// Inline loading component.
+/// @group inline-loading
+/// @copyright IBM Security 2019
+////
+
+@import 'carbon-components/scss/components/inline-loading/inline-loading';
+
+@include export-namespace($name: inline-loading) {
+  .#{$prefix}--inline-loading .#{$prefix}--loading__stroke {
+    stroke: $interactive-04;
+  }
+
+  .#{$prefix}--inline-loading__checkmark {
+    stroke: $support-02;
+  }
+}

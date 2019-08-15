@@ -1,0 +1,293 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar Rendering disables the submit button with no selected scopes 1`] = `
+<form
+  className="security--search-bar"
+  onSubmit={[Function]}
+>
+  <MultiSelect
+    className="security--search-bar__scopes"
+    compareItems={[Function]}
+    disabled={false}
+    id="security--search-bar__multi-select"
+    initialSelectedItems={Array []}
+    itemToString={[Function]}
+    items={
+      Array [
+        Object {
+          "id": 0,
+          "name": "Scope 1",
+        },
+        Object {
+          "id": 1,
+          "name": "Scope 2",
+        },
+        Object {
+          "id": 2,
+          "name": "Scope 3",
+        },
+      ]
+    }
+    light={false}
+    locale="en"
+    name="search-scopes"
+    onChange={[Function]}
+    open={false}
+    selectionFeedback="top-after-reopen"
+    sortItems={[Function]}
+    title={false}
+    type="default"
+  />
+  <Search
+    className="security--search-bar__input"
+    closeButtonLabelText="Clear"
+    labelText="Label"
+    name="search-input"
+    onChange={[Function]}
+    placeHolderText="Placeholder"
+    showIcon={false}
+    small={false}
+    type="text"
+    value=""
+  />
+  <Button
+    className="security--search-bar__submit"
+    disabled={true}
+    kind="primary"
+    largeText={null}
+    name="search-submit"
+    tabIndex={0}
+    type="submit"
+  >
+    Submit
+  </Button>
+</form>
+`;
+
+exports[`SearchBar Rendering disables the submit button with no value 1`] = `
+<form
+  className="security--search-bar"
+  onSubmit={[Function]}
+>
+  <Search
+    className="security--search-bar__input"
+    closeButtonLabelText="Clear"
+    labelText="Label"
+    name="search-input"
+    onChange={[Function]}
+    placeHolderText="Placeholder"
+    showIcon={false}
+    small={false}
+    type="text"
+    value={null}
+  />
+  <Button
+    className="security--search-bar__submit"
+    disabled={true}
+    kind="primary"
+    largeText={null}
+    name="search-submit"
+    tabIndex={0}
+    type="submit"
+  >
+    Submit
+  </Button>
+</form>
+`;
+
+exports[`SearchBar Rendering renders 1`] = `
+<form
+  className="security--search-bar"
+  onSubmit={[Function]}
+>
+  <Search
+    className="security--search-bar__input"
+    closeButtonLabelText="Clear"
+    labelText="Label"
+    name="search-input"
+    onChange={[Function]}
+    placeHolderText="Placeholder"
+    showIcon={false}
+    small={false}
+    type="text"
+    value=""
+  />
+  <Button
+    className="security--search-bar__submit"
+    disabled={true}
+    kind="primary"
+    largeText={null}
+    name="search-submit"
+    tabIndex={0}
+    type="submit"
+  >
+    Submit
+  </Button>
+</form>
+`;
+
+exports[`SearchBar Rendering renders an initial value 1`] = `
+<form
+  className="security--search-bar"
+  onSubmit={[Function]}
+>
+  <Search
+    className="security--search-bar__input"
+    closeButtonLabelText="Clear"
+    labelText="Label"
+    name="search-input"
+    onChange={[Function]}
+    placeHolderText="Placeholder"
+    showIcon={false}
+    small={false}
+    type="text"
+    value="Initial value"
+  />
+  <Button
+    className="security--search-bar__submit"
+    disabled={false}
+    kind="primary"
+    largeText={null}
+    name="search-submit"
+    tabIndex={0}
+    type="submit"
+  >
+    Submit
+  </Button>
+</form>
+`;
+
+exports[`SearchBar Rendering renders scopes 1`] = `
+<form
+  className="security--search-bar"
+  onSubmit={[Function]}
+>
+  <MultiSelect
+    className="security--search-bar__scopes"
+    compareItems={[Function]}
+    disabled={false}
+    id="security--search-bar__multi-select"
+    initialSelectedItems={Array []}
+    itemToString={[Function]}
+    items={
+      Array [
+        Object {
+          "id": 0,
+          "name": "Scope 1",
+        },
+        Object {
+          "id": 1,
+          "name": "Scope 2",
+        },
+        Object {
+          "id": 2,
+          "name": "Scope 3",
+        },
+      ]
+    }
+    light={false}
+    locale="en"
+    name="search-scopes"
+    onChange={[Function]}
+    open={false}
+    selectionFeedback="top-after-reopen"
+    sortItems={[Function]}
+    title={false}
+    type="default"
+  />
+  <Search
+    className="security--search-bar__input"
+    closeButtonLabelText="Clear"
+    labelText="Label"
+    name="search-input"
+    onChange={[Function]}
+    placeHolderText="Placeholder"
+    showIcon={false}
+    small={false}
+    type="text"
+    value=""
+  />
+  <Button
+    className="security--search-bar__submit"
+    disabled={true}
+    kind="primary"
+    largeText={null}
+    name="search-submit"
+    tabIndex={0}
+    type="submit"
+  >
+    Submit
+  </Button>
+</form>
+`;
+
+exports[`SearchBar Rendering renders selected scopes 1`] = `
+<form
+  className="security--search-bar"
+  onSubmit={[Function]}
+>
+  <MultiSelect
+    className="security--search-bar__scopes"
+    compareItems={[Function]}
+    disabled={false}
+    id="security--search-bar__multi-select"
+    initialSelectedItems={
+      Array [
+        Object {
+          "id": 0,
+          "name": "Scope 1",
+        },
+      ]
+    }
+    itemToString={[Function]}
+    items={
+      Array [
+        Object {
+          "id": 0,
+          "name": "Scope 1",
+        },
+        Object {
+          "id": 1,
+          "name": "Scope 2",
+        },
+        Object {
+          "id": 2,
+          "name": "Scope 3",
+        },
+      ]
+    }
+    light={false}
+    locale="en"
+    name="search-scopes"
+    onChange={[Function]}
+    open={false}
+    selectionFeedback="top-after-reopen"
+    sortItems={[Function]}
+    title={false}
+    type="default"
+  />
+  <Search
+    className="security--search-bar__input"
+    closeButtonLabelText="Clear"
+    labelText="Label"
+    name="search-input"
+    onChange={[Function]}
+    placeHolderText="Placeholder"
+    showIcon={false}
+    small={false}
+    type="text"
+    value=""
+  />
+  <Button
+    className="security--search-bar__submit"
+    disabled={true}
+    kind="primary"
+    largeText={null}
+    name="search-submit"
+    tabIndex={0}
+    type="submit"
+  >
+    Submit
+  </Button>
+</form>
+`;

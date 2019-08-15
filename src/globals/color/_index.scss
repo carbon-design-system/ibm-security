@@ -1,0 +1,15 @@
+////
+/// Colors.
+/// @group colors
+/// @copyright IBM Security 2019
+////
+
+@import '@carbon/colors/scss/colors';
+
+$security-color__gray-90--hover: #353535;
+
+/// TODO: V2 - Remove when Carbon updates skeleton for themes.
+
+/// Skeleton color.
+/// @type String
+$skeleton: rgba($carbon--gray-10, 0.1);

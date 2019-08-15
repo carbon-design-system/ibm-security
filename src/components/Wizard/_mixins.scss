@@ -1,0 +1,13 @@
+////
+/// Wizard mixins.
+/// @group status-icon
+/// @copyright IBM Security 2019
+////
+
+@import '../../globals/index';
+
+@mixin wizard {
+  &__navItem {
+    margin-left: -$carbon--spacing-06;
+  }
+}

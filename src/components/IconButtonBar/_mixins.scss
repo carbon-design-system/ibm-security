@@ -1,0 +1,33 @@
+////
+/// Icon button bar component.
+/// @group IconButtonBar
+/// @copyright IBM Security 2019
+////
+
+$sizes: (
+  'sm': 4,
+  'md': 5,
+  'lg': 6,
+  'xl': 8,
+);
+
+@mixin icon-button-bar {
+  $root: &;
+  display: flex;
+  overflow: none;
+
+  @each $size, $unit in $sizes {
+    &--#{$size} {
+      min-width: carbon--mini-units($unit);
+
+      #{$root}__overflow-menu {
+        height: carbon--mini-units($unit);
+        width: carbon--mini-units($unit);
+      }
+    }
+
+    &__overflow-menu-options--#{$size}.#{$prefix}--overflow-menu-options[data-floating-menu-direction='top']::after {
+      width: carbon--mini-units($unit);
+    }
+  }
+}

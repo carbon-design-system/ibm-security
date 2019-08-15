@@ -1,0 +1,83 @@
+////
+/// Card mixins.
+/// @group card
+/// @copyright IBM Security 2019
+////
+
+@import '../../globals/index';
+
+/// Name.
+/// @type String
+$card__name: card;
+
+@mixin card {
+  /// Header image dimensions.
+  /// @type Length
+  $card__image__sizing__dimensions: carbon--mini-units(
+    $count: 4,
+  );
+
+  @include input__background-color;
+
+  display: flex;
+  width: auto;
+  min-width: carbon--mini-units($count: 24);
+  min-height: $carbon--layout-06;
+  padding: $carbon--spacing-05;
+  color: $body__color__text;
+  background-color: $ui-01;
+  flex-direction: column;
+  word-break: break-word;
+
+  &__link {
+    @include transition($transition-property: background-color);
+
+    display: block;
+    color: inherit;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      background-color: $hover-ui;
+    }
+
+    &:focus {
+      @include focus-outline($type: outline);
+    }
+  }
+
+  &__header {
+    text-transform: capitalize;
+
+    &__image {
+      width: $card__image__sizing__dimensions;
+      height: $card__image__sizing__dimensions;
+      margin-bottom: $carbon--spacing-02;
+    }
+
+    &__title {
+      @include carbon--type-style($name: heading-01);
+      margin-top: 0;
+      margin-bottom: $carbon--spacing-05;
+    }
+
+    &__tag {
+      @include carbon--type-style($name: caption-01);
+    }
+  }
+
+  &__body {
+    display: inline-block;
+
+    &__text {
+      @include carbon--type-style($name: caption-01);
+      margin-bottom: $carbon--spacing-05;
+    }
+  }
+
+  &__footer {
+    @include carbon--type-style($name: label-01);
+
+    margin-top: auto;
+  }
+}

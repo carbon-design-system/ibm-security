@@ -1,0 +1,12 @@
+////
+/// Status indicator component.
+/// @group status-indicator
+/// @copyright IBM Security 2019
+////
+
+@import '../Component/mixins';
+@import 'mixins';
+
+@include component($name: status-indicator) {
+  @include status-indicator;
+}

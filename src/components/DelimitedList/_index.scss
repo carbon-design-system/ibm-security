@@ -1,0 +1,12 @@
+////
+/// DelimitedList component.
+/// @group delimited-list
+/// @copyright IBM Security 2019
+////
+
+@import '../Component/mixins';
+@import 'mixins';
+
+@include component($name: delimited-list) {
+  @include delimited-list;
+}

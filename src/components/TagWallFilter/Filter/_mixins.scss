@@ -1,0 +1,126 @@
+////
+/// Filter mixins.
+/// @filter
+/// @copyright IBM Security 2019
+////
+
+@import '../../../globals/index';
+
+/// Name.
+/// @type String
+$filter__name: filter;
+
+/// Namespace.
+/// @type String
+$filter__namespace: get-component-namespace(
+  $component-name: $filter__name,
+);
+
+@mixin filter {
+  $root: &;
+
+  &.#{$prefix}--list-box {
+    padding-bottom: $carbon--spacing-03;
+    border-color: transparent;
+    outline: none;
+  }
+
+  .#{$prefix}--list-box__field {
+    height: $carbon--layout-04;
+    background: $ui-02;
+    padding: 0;
+  }
+
+  .#{$prefix}--list-box__selection {
+    right: $carbon--spacing-08;
+
+    &:before {
+      content: '';
+      height: $carbon--layout-01;
+      width: 1px;
+      position: absolute;
+      right: 0;
+      background: $ui-04;
+    }
+
+    &:focus {
+      &:before {
+        content: none;
+      }
+    }
+  }
+
+  .#{$prefix}--list-box__menu-item__option {
+    height: carbon--mini-units(3.25);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .#{$prefix}--text-input#{$root}__input-field {
+    border-color: transparent;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: $carbon--spacing-05;
+    height: 100%;
+    top: 0;
+  }
+
+  &__search__icon {
+    fill: $icon-02;
+  }
+
+  &__add {
+    display: flex;
+  }
+
+  &__add__icon {
+    fill: currentColor;
+    visibility: hidden;
+  }
+
+  &__list-item {
+    &:hover {
+      background: $ui-02;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        background: $ui-02;
+        height: 1px;
+        bottom: 0;
+        transform: translateY(1px);
+      }
+    }
+
+    &:focus {
+      @include focus-outline('outline');
+    }
+
+    &:hover,
+    &:focus {
+      #{$root}__add__icon {
+        visibility: visible;
+      }
+    }
+
+    &:first-of-type {
+      .#{$prefix}--list-box__menu-item__option {
+        border-color: transparent;
+      }
+    }
+  }
+
+  &__list-item__entry {
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+  }
+}

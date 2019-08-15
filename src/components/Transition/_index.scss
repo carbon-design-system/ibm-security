@@ -1,0 +1,13 @@
+////
+/// Transition component.
+/// @group transition
+/// @copyright IBM Security 2018
+////
+
+@import '../Component/mixins';
+
+@import 'mixins';
+
+@include component($name: transition) {
+  @include transition;
+}

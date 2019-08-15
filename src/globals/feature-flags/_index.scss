@@ -1,0 +1,44 @@
+////
+/// Feature flags.
+/// @group feature-flags
+/// @copyright IBM Security 2019
+////
+
+@import 'carbon-components/scss/globals/scss/feature-flags';
+@import 'carbon-components/scss/globals/scss/functions';
+
+// TODO: V3 - Deprecate after teams have migrated to `@carbon/grid`.
+
+/// Grid feature flag.
+/// @type String
+$grid__name: css-gridish;
+
+/// Platform feature flag.
+/// @type String
+$platform__name: platform;
+
+// TODO: V3 - Deprecate after teams have migrated to `@carbon/type`.
+
+/// Type feature flag.
+/// @type String
+$type__name: ibm-type;
+
+/// Default feature flag values.
+/// @type Map<String, String>
+$security--default-feature-flags: (
+  #{$grid__name}: true,
+  #{$platform__name}: true,
+  #{$type__name}: true
+);
+
+$security--feature-flags: () !default;
+
+$security--feature-flags: merge-feature-flags(
+  $dst: $security--default-feature-flags,
+  $src: $security--feature-flags,
+);
+
+$feature-flags: merge-feature-flags(
+  $dst: $feature-flags,
+  $src: $security--feature-flags,
+);

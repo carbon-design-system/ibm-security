@@ -1,0 +1,14 @@
+////
+/// Type layout component.
+/// @type-layout
+/// @copyright IBM Security 2019
+////
+
+@import '../StructuredList/index';
+
+@import '../Component/mixins';
+@import 'mixins';
+
+@include component($name: type-layout__container) {
+  @include type-layout__container;
+}

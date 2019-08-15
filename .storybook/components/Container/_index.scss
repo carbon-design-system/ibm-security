@@ -1,0 +1,22 @@
+////
+/// Entry point.
+/// @group addons
+/// @copyright IBM Security 2019
+////
+
+@import '../../../src/index';
+
+.container {
+  display: flex;
+  padding: $spacing-3xl;
+  justify-content: center;
+}
+
+.tearsheet--small__body {
+  /// Body padding.
+  /// @type Length
+  $tearsheet--small__body__sizing__padding: $spacing-md;
+
+  padding-right: $tearsheet--small__body__sizing__padding;
+  padding-left: $tearsheet--small__body__sizing__padding;
+}

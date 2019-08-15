@@ -1,0 +1,18 @@
+# Maintain consistent coding styles between different editors and IDEs
+
+root = true
+
+[*]
+
+# Preference
+indent_style = space
+indent_size = 2
+
+# Keep these unchanged
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false

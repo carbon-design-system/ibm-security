@@ -1,0 +1,13 @@
+////
+/// Icon button bar component.
+/// @group IconButtonBar
+/// @copyright IBM Security 2019
+////
+
+@import '../Component/mixins';
+
+@import 'mixins';
+
+@include component($name: icon-button-bar) {
+  @include icon-button-bar;
+}

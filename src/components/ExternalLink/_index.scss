@@ -1,0 +1,14 @@
+////
+/// External link component.
+/// @group link--external
+/// @copyright IBM Security 2019
+////
+
+@import '../Link/index';
+
+@import '../Component/mixins';
+@import 'mixins';
+
+@include component($name: link--external) {
+  @include link--external;
+}

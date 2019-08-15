@@ -1,0 +1,19 @@
+////
+/// Dropdown component.
+/// @group dropdown
+/// @copyright IBM Security 2019
+////
+
+@import 'carbon-components/scss/components/dropdown/dropdown';
+
+@import '../../globals/index';
+
+@include export-namespace($name: dropdown) {
+  /// Related to https://github.com/carbon-design-system/carbon-components/issues/2398
+  .#{$prefix}--dropdown__wrapper {
+    &,
+    * {
+      box-sizing: border-box;
+    }
+  }
+}

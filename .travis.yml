@@ -1,0 +1,9 @@
+dist: xenial
+git:
+  depth: false
+language: node_js
+
+install: yarn install --offline --frozen-lockfile
+before_script: travis/before_script.sh
+after_success: travis/after_success.sh
+before_deploy: sh travis/before_deploy.sh

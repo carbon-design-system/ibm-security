@@ -1,0 +1,133 @@
+////
+/// Header notification mixins.
+/// @group header__notification
+/// @copyright IBM Security 2019
+////
+
+@import '../../../globals/index';
+
+@import '../mixins';
+
+@mixin header__notification {
+  /// Padding.
+  /// @type Length
+  $header__notification__spacing__padding: $carbon--spacing-05;
+
+  /// Transiton duration.
+  /// @type Length
+  $header__notification__transition-duration: $transition-duration--fast;
+
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+
+  &__content {
+    padding-top: $header__notification__spacing__padding;
+    padding-bottom: $header__notification__spacing__padding;
+    padding-left: $carbon--spacing-03;
+    flex-grow: 1;
+    text-decoration: none;
+    color: inherit;
+    &:focus {
+      @include header__popover__item--focus;
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+
+  &__details {
+    @include carbon--type-style($name: caption-01);
+    display: block;
+    margin-bottom: $carbon--spacing-03;
+
+    @include carbon--theme($theme: $carbon--theme--g10) {
+      color: $text-03;
+    }
+  }
+
+  &__time {
+    @include carbon--font-weight($weight: semibold);
+  }
+
+  &__description {
+    /*hack the div element directly for the tooltip to be inline*/
+    div {
+      display: inline;
+    }
+    &--tooltip {
+      word-break: break-all;
+    }
+  }
+
+  &__tooltip {
+    &:focus {
+      @include header__popover__item--focus;
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+
+    div &--body {
+      position: fixed;
+      z-index: z($layer: overlay);
+      display: none;
+
+      &
+        > button.bx--tooltip__trigger.bx--tooltip__trigger--definition:first-child {
+        width: carbon--mini-units($count: 2);
+
+        &::before,
+        &::after {
+          opacity: 1;
+        }
+
+        &::after {
+          background: $inverse-01;
+          color: $inverse-02;
+        }
+
+        &::before {
+          margin-left: carbon--mini-units($count: -2);
+          border-color: $inverse-01 transparent transparent transparent;
+        }
+      }
+    }
+
+    &:hover > &--body,
+    &:focus > &--body {
+      display: block;
+    }
+  }
+
+  &__button {
+    @include header__popover__button--icon;
+
+    cursor: inherit;
+    flex-shrink: 0;
+    opacity: 0;
+    transform: translate3d(carbon--mini-units($count: 1), 0, 0);
+    transition-duration: $header__notification__transition-duration;
+    transition-property: opacity, transform;
+    transition-timing-function: $header__transition__timing-function;
+
+    &:focus {
+      @include header__popover__item--focus;
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+
+  &__transition {
+    @include transition--opacity;
+
+    &--leave {
+      max-height: $carbon--layout-06;
+      transition-duration: $header__notification__transition-duration;
+      transition-property: max-height, opacity;
+
+      &--active {
+        max-height: 0;
+      }
+    }
+  }
+}

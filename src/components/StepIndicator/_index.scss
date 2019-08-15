@@ -1,0 +1,14 @@
+////
+/// Step indicator component.
+/// @group step-indicator
+/// @copyright IBM Security 2019
+////
+
+@import '../ProgressIndicator/index';
+
+@import '../Component/mixins';
+@import 'mixins';
+
+@include component($name: step-indicator) {
+  @include step-indicator;
+}

@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StepIndicator render renders correctly 1`] = `
+<ProgressIndicator
+  className="security--step-indicator"
+  currentIndex={1}
+>
+  <Step
+    className=""
+    complete={null}
+    current={null}
+    description="Step 1: Getting started with Carbon Design System"
+    disabled={null}
+    invalid={null}
+    label="First step"
+  />
+  <Step
+    className=""
+    complete={null}
+    current={null}
+    description="Step 2: Getting started with Carbon Design System"
+    disabled={null}
+    invalid={null}
+    label="Second step"
+  />
+</ProgressIndicator>
+`;
+
+exports[`StepIndicator render renders if \`currentIndex\` is null 1`] = `
+<ul
+  class="bx--progress security--step-indicator"
+>
+  <li
+    class="bx--progress-step bx--progress-step--incomplete security--step"
+  >
+    <div
+      class="bx--progress-step-button bx--progress-step-button--unclickable"
+      role="button"
+      tabindex="-1"
+    >
+      <svg>
+        <title>
+          Step 2: Getting started with Carbon Design System
+        </title>
+        <path
+          d="M8 1C4.1 1 1 4.1 1 8s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7zm0 13c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z"
+        />
+      </svg>
+      <p
+        class="bx--progress-label"
+      >
+        Second step
+      </p>
+      <span
+        class="bx--progress-line"
+      />
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`StepIndicator render renders the HTML of the node's subtree 1`] = `
+<ul
+  class="bx--progress security--step-indicator"
+>
+  <li
+    class="bx--progress-step bx--progress-step--complete security--step"
+  >
+    <div
+      class="bx--progress-step-button bx--progress-step-button--unclickable"
+      role="button"
+      tabindex="-1"
+    >
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        role="img"
+        style="will-change:transform"
+        viewBox="0 0 16 16"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M8 1C4.1 1 1 4.1 1 8s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7zm0 13c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z"
+        />
+        <path
+          d="M7 10.8L4.5 8.3l.8-.8L7 9.2l3.7-3.7.8.8z"
+        />
+        <title>
+          Step 1: Getting started with Carbon Design System
+        </title>
+      </svg>
+      <p
+        class="bx--progress-label"
+      >
+        First step
+      </p>
+      <span
+        class="bx--progress-line"
+      />
+    </div>
+  </li>
+  <li
+    class="bx--progress-step bx--progress-step--current security--step"
+  >
+    <div
+      class="bx--progress-step-button bx--progress-step-button--unclickable"
+      role="button"
+      tabindex="-1"
+    >
+      <svg>
+        <path
+          d="M 7, 7 m -7, 0 a 7,7 0 1,0 14,0 a 7,7 0 1,0 -14,0"
+        />
+        <title>
+          Step 2: Getting started with Carbon Design System
+        </title>
+      </svg>
+      <p
+        class="bx--progress-label"
+      >
+        Second step
+      </p>
+      <span
+        class="bx--progress-line"
+      />
+    </div>
+  </li>
+</ul>
+`;

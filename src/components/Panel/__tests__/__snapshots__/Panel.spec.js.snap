@@ -1,0 +1,239 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Panel Rendering does not render the open panel if \`shouldPanelOpen\` is false 1`] = `
+<Fragment>
+  <Button
+    disabled={false}
+    kind="primary"
+    largeText={null}
+    onClick={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    Label
+  </Button>
+  <PanelController
+    active={false}
+  >
+    <PanelContainer
+      className={null}
+      closeButton={
+        Object {
+          "label": "Label",
+          "onClick": [Function],
+        }
+      }
+      disableEscape={false}
+      labels={Object {}}
+      primaryButton={null}
+      rootNode={<body />}
+      subtitle="Label"
+      title="Label"
+    >
+      <PanelContent>
+        Label
+      </PanelContent>
+    </PanelContainer>
+  </PanelController>
+</Fragment>
+`;
+
+exports[`Panel Rendering renders correctly 1`] = `
+<Fragment>
+  <Button
+    disabled={false}
+    kind="primary"
+    largeText={null}
+    onClick={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    Label
+  </Button>
+  <PanelController
+    active={false}
+  >
+    <PanelContainer
+      className={null}
+      closeButton={
+        Object {
+          "label": "Label",
+          "onClick": [Function],
+        }
+      }
+      disableEscape={false}
+      labels={Object {}}
+      primaryButton={null}
+      rootNode={<body />}
+      subtitle="Label"
+      title="Label"
+    >
+      <PanelContent>
+        Label
+      </PanelContent>
+    </PanelContainer>
+  </PanelController>
+</Fragment>
+`;
+
+exports[`Panel Rendering renders the HTML of the node's subtree 1`] = `
+<button
+  class="security--button bx--btn bx--btn--primary"
+  tabindex="0"
+  type="button"
+>
+  Label
+</button>
+`;
+
+exports[`Panel Rendering renders the open panel 1`] = `
+<Fragment>
+  <Button
+    disabled={false}
+    kind="primary"
+    largeText={null}
+    onClick={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    Label
+  </Button>
+  <PanelController
+    active={true}
+  >
+    <PanelContainer
+      className={null}
+      closeButton={
+        Object {
+          "label": "Label",
+          "onClick": [Function],
+        }
+      }
+      disableEscape={false}
+      labels={Object {}}
+      primaryButton={null}
+      rootNode={<body />}
+      subtitle="Label"
+      title="Label"
+    >
+      <PanelContent>
+        Label
+      </PanelContent>
+    </PanelContainer>
+  </PanelController>
+</Fragment>
+`;
+
+exports[`Panel Rendering renders the primary button variation 1`] = `
+<Fragment>
+  <Button
+    disabled={false}
+    kind="primary"
+    largeText={null}
+    onClick={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    Label
+  </Button>
+  <PanelController
+    active={true}
+  >
+    <PanelContainer
+      className={null}
+      closeButton={
+        Object {
+          "label": "Label",
+          "onClick": [Function],
+        }
+      }
+      disableEscape={false}
+      labels={Object {}}
+      primaryButton={null}
+      rootNode={<body />}
+      subtitle="Label"
+      title="Label"
+    >
+      <PanelContent>
+        Label
+      </PanelContent>
+    </PanelContainer>
+  </PanelController>
+</Fragment>
+`;
+
+exports[`Panel Rendering renders the secondary button variation 1`] = `
+<Fragment>
+  <Button
+    disabled={false}
+    kind="primary"
+    largeText={null}
+    onClick={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    Label
+  </Button>
+  <PanelController
+    active={true}
+  >
+    <PanelContainer
+      className={null}
+      closeButton={
+        Object {
+          "label": "Label",
+          "onClick": [Function],
+        }
+      }
+      disableEscape={false}
+      labels={Object {}}
+      primaryButton={null}
+      rootNode={<body />}
+      subtitle="Label"
+      title="Label"
+    >
+      <PanelContent>
+        Label
+      </PanelContent>
+    </PanelContainer>
+  </PanelController>
+</Fragment>
+`;
+
+exports[`Panel Rendering renders the secondary button variation 2`] = `
+<Fragment>
+  <Button
+    disabled={false}
+    kind="primary"
+    largeText={null}
+    onClick={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    Label
+  </Button>
+  <PanelController
+    active={true}
+  >
+    <PanelContainer
+      className={null}
+      closeButton={
+        Object {
+          "label": "Label",
+          "onClick": [Function],
+        }
+      }
+      disableEscape={false}
+      labels={Object {}}
+      primaryButton={null}
+      rootNode={<body />}
+      subtitle="Label"
+      title="Label"
+    >
+      <PanelContent>
+        Label
+      </PanelContent>
+    </PanelContainer>
+  </PanelController>
+</Fragment>
+`;

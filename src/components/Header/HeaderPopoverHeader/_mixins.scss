@@ -1,0 +1,18 @@
+////
+/// Header popover header mixins.
+/// @group header__popover__header
+/// @copyright IBM Security 2019
+////
+
+@import '../../../globals/index';
+
+@mixin header__popover__header {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: $carbon--spacing-06;
+
+  &__title {
+    @include carbon--type-style($name: heading-02);
+  }
+}

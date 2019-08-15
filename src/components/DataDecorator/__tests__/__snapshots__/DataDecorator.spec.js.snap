@@ -1,0 +1,152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataDecorator Rendering renders correctly 1`] = `
+<DataDecorator
+  href="#"
+  inline={false}
+  labels={Object {}}
+  onClose={[Function]}
+  onOpen={[MockFunction]}
+  primaryButton={
+    Object {
+      "onClick": [Function],
+    }
+  }
+  score={0}
+  scoreThresholds={
+    Array [
+      0,
+      4,
+      7,
+      10,
+    ]
+  }
+  type="IP"
+  value="10.0.0.0"
+>
+  <Panel
+    onClose={[Function]}
+    onOpen={[MockFunction]}
+    render={[Function]}
+    shouldPanelOpen={true}
+  >
+    <Decorator
+      active={false}
+      className=""
+      inert={false}
+      inline={false}
+      noIcon={false}
+      onClick={[Function]}
+      score={0}
+      scoreThresholds={
+        Array [
+          0,
+          4,
+          7,
+          10,
+        ]
+      }
+      type="IP"
+      value="10.0.0.0"
+    >
+      <button
+        className="security--decorator security--decorator--low"
+        onClick={[Function]}
+      >
+        <span
+          className="security--decorator__icon"
+        >
+          <Icon
+            className=""
+            fillRule="evenodd"
+            height={null}
+            path="M 8.00,3.00
+           C 8.00,3.00 14.00,12.00 14.00,12.00
+             14.00,12.00 2.00,12.00 2.00,12.00
+             2.00,12.00 8.00,3.00 8.00,3.00 Z"
+            renderIcon={null}
+            size={16}
+            viewBox="0 0 16 16"
+            width={null}
+          >
+            <svg
+              aria-hidden={true}
+              className="security--icon"
+              fillRule="evenodd"
+              focusable={false}
+              height={16}
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "willChange": "transform",
+                }
+              }
+              viewBox="0 0 16 16"
+              width={16}
+            >
+              <path
+                d="M 8.00,3.00
+           C 8.00,3.00 14.00,12.00 14.00,12.00
+             14.00,12.00 2.00,12.00 2.00,12.00
+             2.00,12.00 8.00,3.00 8.00,3.00 Z"
+              />
+            </svg>
+          </Icon>
+        </span>
+        <span
+          className="security--decorator__type"
+        >
+          IP
+        </span>
+        <span
+          className="security--decorator__value"
+        >
+          10.0.0.0
+        </span>
+      </button>
+    </Decorator>
+    <PanelController
+      active={false}
+    />
+  </Panel>
+</DataDecorator>
+`;
+
+exports[`DataDecorator Rendering renders the HTML of the node's subtree 1`] = `
+<button
+  class="security--decorator security--decorator--low"
+>
+  <span
+    class="security--decorator__icon"
+  >
+    <svg
+      aria-hidden="true"
+      class="security--icon"
+      fill-rule="evenodd"
+      focusable="false"
+      height="16"
+      preserveAspectRatio="xMidYMid meet"
+      style="will-change: transform;"
+      viewBox="0 0 16 16"
+      width="16"
+    >
+      <path
+        d="M 8.00,3.00
+           C 8.00,3.00 14.00,12.00 14.00,12.00
+             14.00,12.00 2.00,12.00 2.00,12.00
+             2.00,12.00 8.00,3.00 8.00,3.00 Z"
+      />
+    </svg>
+  </span>
+  <span
+    class="security--decorator__type"
+  >
+    IP
+  </span>
+  <span
+    class="security--decorator__value"
+  >
+    10.0.0.0
+  </span>
+</button>
+`;

@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ICA does not render a subset when the total is close to the provided value 1`] = `
+<div
+  className="security--ica "
+>
+  <h4
+    className="security--ica__label"
+  >
+    Label
+     
+  </h4>
+  <span
+    className="security--ica__value"
+  >
+    1.0k
+  </span>
+</div>
+`;
+
+exports[`ICA renders 1`] = `
+<div
+  className="security--ica "
+>
+  <h4
+    className="security--ica__label"
+  >
+    Label
+     
+  </h4>
+  <span
+    className="security--ica__value"
+  >
+    10
+  </span>
+</div>
+`;
+
+exports[`ICA renders a large value 1`] = `
+<div
+  className="security--ica "
+>
+  <h4
+    className="security--ica__label"
+  >
+    Label
+     
+  </h4>
+  <span
+    className="security--ica__value"
+  >
+    1.0k
+  </span>
+</div>
+`;
+
+exports[`ICA renders a percentage 1`] = `
+<div
+  className="security--ica "
+>
+  <h4
+    className="security--ica__label"
+  >
+    Label
+     
+  </h4>
+  <span
+    className="security--ica__value"
+  >
+    <div
+      className="security--ica__percentage"
+    >
+      10
+      <sup
+        className="security--ica__percentage-mark"
+      >
+        %
+      </sup>
+    </div>
+  </span>
+</div>
+`;
+
+exports[`ICA renders a subset of values 1`] = `
+<div
+  className="security--ica "
+>
+  <h4
+    className="security--ica__label"
+  >
+    Label
+     
+  </h4>
+  <span
+    className="security--ica__value"
+  >
+    10
+  </span>
+  <span
+    className="security--ica__total"
+  >
+     / 
+    100
+  </span>
+</div>
+`;
+
+exports[`ICA renders a total when forced 1`] = `
+<div
+  className="security--ica "
+>
+  <h4
+    className="security--ica__label"
+  >
+    Label
+     
+  </h4>
+  <span
+    className="security--ica__value"
+  >
+    10
+  </span>
+  <span
+    className="security--ica__total"
+  >
+     / 
+    10
+  </span>
+</div>
+`;
+
+exports[`ICA renders the null value 1`] = `
+<div
+  className="security--ica "
+>
+  <h4
+    className="security--ica__label"
+  >
+    Label
+     
+  </h4>
+  <span
+    className="security--ica__value"
+  >
+    -
+  </span>
+</div>
+`;
+
+exports[`ICA renders with a value that is same as the total value 1`] = `
+<div
+  className="security--ica "
+>
+  <h4
+    className="security--ica__label"
+  >
+    Label
+     
+  </h4>
+  <span
+    className="security--ica__value"
+  >
+    10
+  </span>
+</div>
+`;

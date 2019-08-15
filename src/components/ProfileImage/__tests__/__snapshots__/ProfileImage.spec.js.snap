@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfileImage renders 1`] = `
+<span
+  className="security--profile-image class"
+>
+  SU
+</span>
+`;
+
+exports[`ProfileImage renders an image 1`] = `
+<img
+  alt="Sample User"
+  className="security--profile-image class"
+  src="http://via.placeholder.com/160x160"
+/>
+`;
+
+exports[`ProfileImage renders the large variation 1`] = `
+<span
+  class="security--profile-image class security--profile-image--large"
+>
+  SU
+</span>
+`;
+
+exports[`ProfileImage renders the large variation with an image 1`] = `
+<img
+  alt="Sample User"
+  className="security--profile-image class security--profile-image--large"
+  src="http://via.placeholder.com/160x160"
+/>
+`;

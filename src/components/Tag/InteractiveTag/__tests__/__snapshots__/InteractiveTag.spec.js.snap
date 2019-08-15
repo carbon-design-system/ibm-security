@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InteractiveTag Rendering renders correctly 1`] = `
+<Tag
+  className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+  type="gray"
+>
+  Label
+  <button
+    aria-label="Remove"
+    className="security--tag--interactive__button"
+    onClick={[MockFunction]}
+  >
+    <Icon
+      className="security--tag--interactive__button__icon"
+      height={null}
+      path={null}
+      renderIcon={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "render": [Function],
+        }
+      }
+      size={20}
+      viewBox="0 0 32 32"
+      width={null}
+    />
+  </button>
+</Tag>
+`;
+
+exports[`InteractiveTag Rendering renders the HTML of the node's subtree 1`] = `
+<span
+  class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+>
+  Label
+  <button
+    aria-label="Remove"
+    class="security--tag--interactive__button"
+  >
+    <svg
+      aria-hidden="true"
+      class="security--icon security--tag--interactive__button__icon"
+      focusable="false"
+      height="16"
+      preserveAspectRatio="xMidYMid meet"
+      style="will-change:transform"
+      viewBox="0 0 16 16"
+      width="16"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+      />
+    </svg>
+  </button>
+</span>
+`;
+
+exports[`InteractiveTag Rendering renders the selected variation correctly 1`] = `
+<Tag
+  className="security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
+  type="gray"
+>
+  Label
+  <button
+    aria-label="Remove"
+    className="security--tag--interactive__button"
+    onClick={[MockFunction]}
+  >
+    <Icon
+      className="security--tag--interactive__button__icon"
+      height={null}
+      path={null}
+      renderIcon={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "render": [Function],
+        }
+      }
+      size={20}
+      viewBox="0 0 32 32"
+      width={null}
+    />
+  </button>
+</Tag>
+`;

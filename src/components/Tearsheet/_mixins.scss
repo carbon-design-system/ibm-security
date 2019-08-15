@@ -1,0 +1,210 @@
+////
+/// Tearsheet mixins.
+/// @group tearsheet
+/// @copyright IBM Security 2019
+////
+
+@import '../../globals/index';
+
+@import '../Panel/mixins';
+
+/// Name.
+/// @type String
+$tearsheet__name: tearsheet;
+
+/// Dimensions.
+/// @type Length
+$tearsheet__sizing__dimensions: $carbon--layout-04;
+
+@mixin tearsheet--base {
+  /// Position.
+  /// @type Length
+  $tearsheet__position: -50%;
+
+  @include input__background-color;
+
+  display: flex;
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  height: calc(100vh - #{$tearsheet__sizing__dimensions});
+  min-height: carbon--mini-units($count: 40);
+  background-color: $ui-01;
+  transform: translate3d(#{$tearsheet__position}, 0, 0);
+  z-index: z($layer: modal);
+
+  &__transition {
+    @include transition--opacity;
+
+    &--appear {
+      transform: translate3d(#{$tearsheet__position}, 100%, 0);
+
+      &--active {
+        @include transition($transition-property: transform);
+        transform: translate3d(#{$tearsheet__position}, 0, 0);
+      }
+    }
+  }
+
+  &__button--close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  > .#{$prefix}--loading-overlay {
+    position: absolute;
+    background-color: $overlay-01;
+  }
+}
+
+@mixin tearsheet__button {
+  width: 100%;
+  align-items: start;
+  flex-direction: column;
+}
+
+@mixin tearsheet {
+  /// Text color.
+  /// @type Length
+  $tearsheet__color__text: $text-01;
+
+  /// Padding.
+  /// @type Length
+  $tearsheet__spacing__padding: $carbon--spacing-06;
+
+  /// Footer padding.
+  /// @type Length
+  $tearsheet__footer__spacing__padding: $carbon--spacing-03;
+
+  @include tearsheet--base;
+
+  width: calc(100vw - #{$tearsheet__sizing__dimensions});
+
+  &__button {
+    @include tearsheet__button;
+    max-width: carbon--mini-units($count: 33);
+
+    &--tertiary {
+      display: flex;
+      flex-wrap: wrap;
+
+      &__text {
+        color: $tearsheet__color__text;
+      }
+    }
+  }
+
+  &__sidebar {
+    position: relative;
+    width: 33%;
+    max-width: carbon--mini-units($count: 33);
+    padding: $tearsheet__spacing__padding;
+    border-right: $border__sizing__width solid $ui-background;
+
+    &__title {
+      @include carbon--type-style($name: productive-heading-03);
+      margin-top: 0;
+      margin-bottom: $carbon--spacing-02;
+    }
+
+    &__subtitle {
+      @include carbon--type-style($name: caption-01);
+      margin-top: 0;
+      margin-bottom: $tearsheet__spacing__padding;
+      color: $text-02;
+    }
+
+    &__footer {
+      display: flex;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding-bottom: $tearsheet__footer__spacing__padding;
+      padding-left: $tearsheet__footer__spacing__padding;
+    }
+
+    /// Carbon button selector.
+    /// @type String
+    $carbon--button: '.#{$prefix}--btn';
+
+    &__button#{$carbon--button} {
+      &,
+      &:focus,
+      &:hover {
+        color: $tearsheet__color__text;
+
+        > #{$carbon--button}__icon > path {
+          fill: currentColor;
+        }
+      }
+
+      &:focus,
+      &:hover {
+        background-color: $hover-danger;
+      }
+    }
+  }
+
+  &__main {
+    position: relative;
+    display: flex;
+    width: 66%;
+    padding-top: $tearsheet__spacing__padding;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__title,
+    &__content {
+      padding-left: $tearsheet__spacing__padding;
+    }
+
+    &__scroll-gradient {
+      width: 100%;
+
+      &__content {
+        padding-right: $tearsheet__spacing__padding;
+      }
+    }
+
+    &__title {
+      @include carbon--type-style($name: productive-heading-04);
+      padding-right: $tearsheet__spacing__padding;
+      margin-top: 0;
+      margin-bottom: $tearsheet__spacing__padding;
+    }
+
+    &__content {
+      display: flex;
+      position: relative;
+      width: 100%;
+      min-height: 0;
+      box-sizing: border-box;
+      flex: 1;
+    }
+  }
+
+  &__container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__start,
+    &__end {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__start {
+      flex-direction: column;
+    }
+
+    &__end {
+      flex-grow: 1;
+      flex-wrap: wrap;
+    }
+  }
+}

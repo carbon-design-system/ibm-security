@@ -1,0 +1,27 @@
+////
+/// Loading component.
+/// @group loading
+/// @copyright IBM Security 2019
+////
+
+@import 'carbon-components/scss/components/loading/loading';
+
+@include export-namespace($name: loading) {
+  .#{$prefix}--loading {
+    /// Dimensions.
+    /// @type Length
+    $loading__sizing__dimensions: $carbon--layout-05;
+
+    /// Small dimensions.
+    /// @type Length
+    $loading--small__sizing__dimensions: $carbon--layout-03;
+
+    width: $loading__sizing__dimensions;
+    height: $loading__sizing__dimensions;
+
+    &--small {
+      width: $loading--small__sizing__dimensions;
+      height: $loading--small__sizing__dimensions;
+    }
+  }
+}

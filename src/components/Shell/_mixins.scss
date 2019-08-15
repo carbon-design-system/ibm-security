@@ -1,0 +1,116 @@
+////
+/// Shell mixins.
+/// @group shell
+/// @copyright IBM Security 2019
+////
+
+@import '../../globals/index';
+
+@import '../Header/mixins';
+@import '../Toolbar/mixins';
+
+@mixin shell {
+  /// Banner height.
+  /// @type Length
+  $shell__banner__sizing__height: carbon--mini-units(
+    $count: 3,
+  );
+
+  &--active {
+    $header: '__header';
+    $toolbar: '__toolbar';
+
+    margin-left: $toolbar__panel__position__horizontal;
+
+    &#{$header} > #{$header__namespace} {
+      width: calc(
+        #{$header__sizing__width} - #{$toolbar__panel__position__horizontal}
+      );
+    }
+
+    &--return {
+      &,
+      &#{$toolbar},
+      &#{$header} > #{$header__namespace},
+      #{$toolbar__namespace}__panel {
+        margin-top: $shell__banner__sizing__height;
+      }
+    }
+  }
+
+  &__banner {
+    /// Banner background size height.
+    /// @type Length
+    $shell__banner__background__sizing__height: $carbon--layout-02;
+
+    /// Banner background size width.
+    /// @type Length
+    $shell__banner__background__sizing__width: $carbon--layout-07;
+
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: $shell__banner__sizing__height;
+    padding-left: $carbon--spacing-05;
+    background-color: $ui-01;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: $shell__banner__background__sizing__width
+      $shell__banner__background__sizing__height;
+    align-items: center;
+    transition: $transition-duration background-size $timing-function;
+    z-index: $header__layer;
+
+    &,
+    &:hover,
+    &:visited {
+      color: inherit;
+    }
+
+    &__icon {
+      fill: $icon-03;
+    }
+
+    &__text {
+      @include carbon--type-style($name: caption-01);
+      padding-left: $carbon--spacing-04;
+      max-width: carbon--mini-units($count: 53);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &:focus,
+    &:hover {
+      background-size: ($shell__banner__background__sizing__width * 2)
+        $shell__banner__background__sizing__height;
+    }
+
+    &:focus {
+      @include focus-outline($type: outline);
+    }
+  }
+
+  &__skip-to-content {
+    display: flex;
+    position: relative;
+    height: 0;
+    justify-content: center;
+
+    &__link {
+      @include hidden;
+
+      margin-top: $header__spacing__padding;
+      margin-left: -$toolbar__sizing__width;
+      transition: unset;
+      z-index: z($layer: floating);
+
+      &:focus {
+        width: auto;
+        padding: $button-padding;
+        clip: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+////
+/// Tag wall.
+/// @group tag-wall
+/// @copyright IBM Security 2019
+////
+
+@import '../Component/mixins';
+
+@import 'mixins';
+
+@import '../Tag/index';
+
+@include component($name: tag-wall) {
+  @include tag-wall;
+}

@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderNotification Rendering renders correctly 1`] = `
+<div
+  className="security--header__notification"
+  role="alert"
+>
+  <a
+    className="security--header__notification__content"
+    onBlur={[Function]}
+    role="button"
+    tabIndex="0"
+  >
+    <span
+      className="security--header__notification__details"
+    >
+      <time
+        className="security--header__notification__time"
+        dateTime="Fri Dec 21 2018 18:57:08 GMT-0600 (Central Standard Time)"
+      >
+        <isc-rel-time
+          datetime="Fri Dec 21 2018 18:57:08 GMT-0600 (Central Standard Time)"
+        />
+      </time>
+       via Application 3
+    </span>
+    <Truncate
+      className="security--header__notification__description"
+      ellipsis={
+        <div
+          className="security--header__notification__tooltip"
+          onFocus={[Function]}
+          onMouseOver={[Function]}
+          role="button"
+          tabIndex="0"
+        >
+          ...
+          <TooltipDefinition
+            align="end"
+            className="security--header__notification__tooltip--body"
+            direction="top"
+            tooltipText="A new request requires approval."
+          >
+            
+          </TooltipDefinition>
+        </div>
+      }
+      lines={2}
+      trimWhitespace={true}
+      width={170}
+    >
+      A new request requires approval.
+    </Truncate>
+  </a>
+  <div
+    className="security--header__notification__wrapper"
+  >
+    <button
+      aria-label="Clear"
+      className="security--header__notification__button"
+      onBlur={[Function]}
+      onClick={[MockFunction]}
+    >
+      <Icon
+        className=""
+        height={null}
+        path={null}
+        renderIcon={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          }
+        }
+        size={20}
+        viewBox="0 0 32 32"
+        width={null}
+      />
+    </button>
+  </div>
+</div>
+`;

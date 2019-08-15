@@ -1,0 +1,79 @@
+////
+/// Components entry point.
+/// @group entry
+/// @copyright IBM Security 2019
+////
+
+// Application.
+@import 'Card/index';
+@import 'DataDecorator/index';
+@import 'DataTable/index';
+@import 'DelimitedList/index';
+@import 'ErrorPage/index';
+@import 'ExternalLink/index';
+@import 'FilterPanel/index';
+@import 'ICA/index';
+@import 'IconButtonBar/index';
+@import 'IconButton/index';
+@import 'InlineLoading/index';
+@import 'NonEntitledSection/index';
+@import 'Notification/index';
+@import 'Panel/index';
+@import 'Pill/index';
+@import 'ProgressIndicator/index';
+@import 'ScrollGradient/index';
+@import 'Search/index';
+@import 'SearchBar/index';
+@import 'StackedNotification/index';
+@import 'StatusIcon/index';
+@import 'StatusIndicator/index';
+@import 'StepIndicator/index';
+@import 'Tag/index';
+@import 'TagWall/index';
+@import 'TagWallFilter/index';
+@import 'Tearsheet/index';
+@import 'Tearsheet/TearsheetSmall/index';
+@import 'Toolbar/index';
+@import 'TypeLayout/index';
+@import 'Wizard/index';
+
+// Platform.
+@import 'Header/index';
+@import 'Nav/index';
+@import 'ProfileImage/index';
+@import 'Shell/index';
+
+/// Carbon proxy.
+@import 'Accordion/index';
+@import 'Button/index';
+@import 'Breadcrumb/index';
+@import 'Checkbox/index';
+@import 'CodeSnippet/index';
+@import 'ContentSwitcher/index';
+@import 'DatePicker/index';
+@import 'Dropdown/index';
+@import 'FileUploader/index';
+@import 'Form/index';
+@import 'Link/index';
+@import 'Loading/index';
+@import 'Modal/index';
+@import 'MultiSelect/index';
+@import 'NumberInput/index';
+@import 'OverflowMenu/index';
+@import 'Pagination/index';
+@import 'RadioButton/index';
+@import 'Select/index';
+@import 'SkeletonText/index';
+@import 'Slider/index';
+@import 'StructuredList/index';
+@import 'Tabs/index';
+@import 'TextArea/index';
+@import 'TextInput/index';
+@import 'Tile/index';
+@import 'TimePicker/index';
+@import 'Toggle/index';
+@import 'Tooltip/index';
+
+/// Hidden Carbon proxy.
+@import 'carbon-components/scss/components/list/list';
+@import 'carbon-components/scss/components/list-box/list-box';

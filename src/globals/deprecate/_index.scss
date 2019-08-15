@@ -1,0 +1,15 @@
+////
+/// Deprecated methods.
+/// @group deprecate
+/// @copyright IBM Security 2019
+////
+
+///
+/// Helper for generating a deprecation warning.
+/// @param {string} $actual The value provided.
+/// @param {string} $expected The expected value.
+/// @return {string} The message generated as a deprecation warning.
+///
+@function deprecate($actual, $expected) {
+  @return '`#{$actual}` has been deprecated in favour of `#{$expected}` — This will be removed in the next major version';
+}

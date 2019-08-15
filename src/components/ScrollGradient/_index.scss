@@ -1,0 +1,11 @@
+////
+/// Scroll gradient styles.
+/// @copyright IBM Security 2019
+////
+
+@import '../Component/mixins';
+@import 'mixins';
+
+@include component($name: scroll-gradient) {
+  @include scroll-gradient;
+}

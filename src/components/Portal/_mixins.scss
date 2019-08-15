@@ -1,0 +1,29 @@
+////
+/// Portal mixins.
+/// @group portal
+/// @copyright IBM Security 2019
+////
+
+@import '../../globals/index';
+
+@mixin portal {
+  &__overlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $overlay-01;
+    justify-content: center;
+    z-index: z($layer: overlay);
+
+    &:focus {
+      outline: unset;
+    }
+  }
+
+  &__container {
+    overflow-y: hidden;
+  }
+}

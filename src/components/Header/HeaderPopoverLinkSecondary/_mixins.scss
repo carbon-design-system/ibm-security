@@ -1,0 +1,16 @@
+////
+/// Header popover secondary link mixins.
+/// @group header__popover__link--secondary
+/// @copyright IBM Security 2019
+////
+
+@import '../../../globals/index';
+
+@mixin header__popover__link--secondary {
+  &,
+  &:focus,
+  &:hover,
+  &:visited {
+    color: $interactive-01;
+  }
+}

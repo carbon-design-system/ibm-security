@@ -1,0 +1,39 @@
+////
+/// Themes entry point.
+/// @group themes
+/// @copyright IBM Security 2019
+////
+
+@import '@carbon/themes/scss/mixins';
+
+/// Security theme.
+/// @type Map<String, Color>
+$security--theme: ();
+
+// Map the theme tokens as custom properties.
+@each $token in map-keys($map: $carbon--theme) {
+  $security--theme: map-merge(
+    $map1: $security--theme,
+    $map2: (
+      $token: var(--#{$token}),
+    ),
+  );
+}
+
+/// Theme definitions.
+/// @type Map<Map, Map>
+$themes: (
+  g10: $carbon--theme--g10,
+  g100: $carbon--theme--g100,
+  g90: $carbon--theme--g90,
+  white: $carbon--theme--white,
+);
+
+// Define the correct theme tokens for each class.
+@each $theme, $token-map in $themes {
+  .theme--#{$theme} {
+    @each $token, $value in $token-map {
+      --#{$token}: #{$value};
+    }
+  }
+}
