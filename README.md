@@ -1,6 +1,6 @@
 <h1 align="center">Carbon for IBM Security</h1>
 
-> Carbon for IBM Security is an open-source experience framework built by IBM Security. With the Carbon Design System and IBM Design Language as its foundation, the library consists of working code, resources, and a vibrant community of contributors.
+> Carbon for IBM Security is an open-source Carbon experience framework built by IBM Security. With the Carbon Design System and IBM Design Language as its foundation, the library consists of working code, resources, and a vibrant community of contributors.
 
 <span align="center">
 
