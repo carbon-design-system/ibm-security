@@ -7,5 +7,6 @@ jobs:
     steps:
       - checkout
       - run: yarn install --offline --frozen-lockfile
-      - run: scripts/ci/before_script.sh
+      - run: scripts/ci/build.sh
+      - run: yarn test
       - run: yarn semantic-release
