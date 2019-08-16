@@ -3,7 +3,7 @@
 jobs:
   build:
     docker:
-      - image: circleci/node
+      - image: circleci/node:11
 
     steps:
       - checkout
