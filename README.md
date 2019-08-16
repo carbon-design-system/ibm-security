@@ -5,7 +5,7 @@
 <span align="center">
 
 [![Licensed under the Apache License, Version 2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
-[![Build Status](https://travis-ci.org/carbon-design-system/ibm-security.svg?branch=master)](https://travis-ci.org/carbon-design-system/ibm-security)
+[![CircleCI](https://circleci.com/gh/carbon-design-system/ibm-security.svg?style=shield)](https://circleci.com/gh/carbon-design-system/ibm-security)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](.github/CONTRIBUTING.md)
 
 </span>
