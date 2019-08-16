@@ -1,19 +1,12 @@
 # https://circleci.com/docs/2.0/language-javascript
 
-version: 2
 jobs:
   build:
     docker:
       - image: circleci/node
 
-    working_directory: ~/repo
     steps:
       - checkout
       - run: yarn install --offline --frozen-lockfile
       - run: travis/before_script.sh
       - run: travis/after_success.sh
-      - run:
-          name: on_success
-          command: travis/after_success.sh
-          when: on_success
-
