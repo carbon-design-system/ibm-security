@@ -4,9 +4,8 @@ jobs:
   build:
     docker:
       - image: circleci/node:11
-
     steps:
       - checkout
       - run: yarn install --offline --frozen-lockfile
-      - run: travis/before_script.sh
-      - run: travis/after_success.sh
+      - run: scripts/ci/before_script.sh
+      - run: yarn semantic-release
