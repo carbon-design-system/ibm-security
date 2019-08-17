@@ -6,6 +6,7 @@
 
 [![Licensed under the Apache License, Version 2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 [![CircleCI](https://circleci.com/gh/carbon-design-system/ibm-security.svg?style=shield)](https://circleci.com/gh/carbon-design-system/ibm-security)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a22469a3-45b0-47af-97a6-99771a66e93a/deploy-status)](https://app.netlify.com/sites/epic-lamport-e7c5f0/deploys)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](.github/CONTRIBUTING.md)
 
 </span>
