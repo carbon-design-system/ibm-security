@@ -2,11 +2,11 @@
 
 jobs:
   build:
-    docker:
-      - image: circleci/node:11
+    # docker:
+    #  - image: circleci/node:11
     steps:
       - checkout
-      - run: yarn install --offline --frozen-lockfile
-      - run: scripts/ci/build.sh
-      - run: yarn test
-      - run: yarn semantic-release
+      - yarn install --offline --frozen-lockfile
+      - scripts/ci/build.sh
+      - yarn test
+      - yarn semantic-release
