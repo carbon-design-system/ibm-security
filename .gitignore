@@ -14,7 +14,7 @@ scss
 storybook-static
 
 # Generated Gridish file.
-./src/globals/grid/css-gridish/bx-grid.sketch
+src/globals/grid/css-gridish/bx-grid.sketch
 
 # Logs.
 *.log
