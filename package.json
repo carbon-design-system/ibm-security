@@ -184,6 +184,9 @@
     ],
     "testURL": "http://localhost/"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:carbon-design-system/ibm-security.git"
