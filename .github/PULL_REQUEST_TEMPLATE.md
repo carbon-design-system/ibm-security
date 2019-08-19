@@ -10,4 +10,4 @@
 
 - <!-- List of instructions for reviewer to test that proposed changes in this PR work properly -->
 
-- Storybook - https://<!-- Deploy preview -->.netlify.com
+- Storybook - https://deploy-preview-<!-- Deploy preview -->--ibm-security.netlify.com
