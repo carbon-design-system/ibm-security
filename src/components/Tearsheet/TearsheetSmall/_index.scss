@@ -11,6 +11,7 @@
 @import '../../Button/index';
 @import '../../IconButton/index';
 @import '../../Loading/index';
+@import '../../ScrollGradient/index';
 @import '../../Tag/index';
 
 @include component($name: #{$tearsheet__name}--small) {
