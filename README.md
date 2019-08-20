@@ -5,14 +5,15 @@
 <span align="center">
 
 [![Licensed under the Apache License, Version 2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
-[![Build Status](https://travis-ci.org/carbon-design-system/ibm-security.svg?branch=master)](https://travis-ci.org/carbon-design-system/ibm-security)
+[![CircleCI](https://circleci.com/gh/carbon-design-system/ibm-security.svg?style=shield)](https://circleci.com/gh/carbon-design-system/ibm-security)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a22469a3-45b0-47af-97a6-99771a66e93a/deploy-status)](https://app.netlify.com/sites/ibm-security/deploys)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](.github/CONTRIBUTING.md)
 
 </span>
 
 ## Getting started
 
-If you're just getting started and looking for React components, take a look at [our Storybook](https://pages.github.com/carbon-design-system/ibm-security).
+If you're just getting started and looking for React components, take a look at [our Storybook](https://ibm-security.carbondesignsystem.com).
 
 If you're trying to find something specific, here's a full list of packages that we support!
 
