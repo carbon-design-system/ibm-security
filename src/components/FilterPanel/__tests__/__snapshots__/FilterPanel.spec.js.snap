@@ -579,14 +579,14 @@ exports[`FilterPanel renders with no title 1`] = `
           "TEARSHEET_SMALL_PRIMARY_BUTTON": "Save",
           "TEARSHEET_SMALL_SECONDARY_BUTTON": "Cancel",
           "TEARSHEET_TERTIARY_BUTTON": "Cancel setup",
-          "TEARSHEET_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit.",
+          "TEARSHEET_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit",
           "WIZARD_BACK_BUTTON": "Back",
           "WIZARD_CANCEL_BUTTON": "Cancel",
           "WIZARD_FINISH_BUTTON": "Finish",
           "WIZARD_NEXT_BUTTON": "Next",
           "WIZARD_TEARSHEET_DELETE_BUTTON": "Delete connection",
           "WIZARD_TERTIARY_BUTTON": "Cancel",
-          "WIZARD_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit.",
+          "WIZARD_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit",
         }
       }
       noFiltersResultsLabel=""
@@ -1183,14 +1183,14 @@ exports[`FilterPanel renders with no title 1`] = `
           "TEARSHEET_SMALL_PRIMARY_BUTTON": "Save",
           "TEARSHEET_SMALL_SECONDARY_BUTTON": "Cancel",
           "TEARSHEET_TERTIARY_BUTTON": "Cancel setup",
-          "TEARSHEET_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit.",
+          "TEARSHEET_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit",
           "WIZARD_BACK_BUTTON": "Back",
           "WIZARD_CANCEL_BUTTON": "Cancel",
           "WIZARD_FINISH_BUTTON": "Finish",
           "WIZARD_NEXT_BUTTON": "Next",
           "WIZARD_TEARSHEET_DELETE_BUTTON": "Delete connection",
           "WIZARD_TERTIARY_BUTTON": "Cancel",
-          "WIZARD_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit.",
+          "WIZARD_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit",
         }
       }
       onChange={[Function]}
@@ -1783,14 +1783,14 @@ exports[`FilterPanel renders with no title 1`] = `
           "TEARSHEET_SMALL_PRIMARY_BUTTON": "Save",
           "TEARSHEET_SMALL_SECONDARY_BUTTON": "Cancel",
           "TEARSHEET_TERTIARY_BUTTON": "Cancel setup",
-          "TEARSHEET_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit.",
+          "TEARSHEET_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit",
           "WIZARD_BACK_BUTTON": "Back",
           "WIZARD_CANCEL_BUTTON": "Cancel",
           "WIZARD_FINISH_BUTTON": "Finish",
           "WIZARD_NEXT_BUTTON": "Next",
           "WIZARD_TEARSHEET_DELETE_BUTTON": "Delete connection",
           "WIZARD_TERTIARY_BUTTON": "Cancel",
-          "WIZARD_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit.",
+          "WIZARD_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit",
         }
       }
       onChange={[Function]}
@@ -2383,14 +2383,14 @@ exports[`FilterPanel renders with title 1`] = `
           "TEARSHEET_SMALL_PRIMARY_BUTTON": "Save",
           "TEARSHEET_SMALL_SECONDARY_BUTTON": "Cancel",
           "TEARSHEET_TERTIARY_BUTTON": "Cancel setup",
-          "TEARSHEET_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit.",
+          "TEARSHEET_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit",
           "WIZARD_BACK_BUTTON": "Back",
           "WIZARD_CANCEL_BUTTON": "Cancel",
           "WIZARD_FINISH_BUTTON": "Finish",
           "WIZARD_NEXT_BUTTON": "Next",
           "WIZARD_TEARSHEET_DELETE_BUTTON": "Delete connection",
           "WIZARD_TERTIARY_BUTTON": "Cancel",
-          "WIZARD_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit.",
+          "WIZARD_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit",
         }
       }
       noFiltersResultsLabel=""
@@ -2987,14 +2987,14 @@ exports[`FilterPanel renders with title 1`] = `
           "TEARSHEET_SMALL_PRIMARY_BUTTON": "Save",
           "TEARSHEET_SMALL_SECONDARY_BUTTON": "Cancel",
           "TEARSHEET_TERTIARY_BUTTON": "Cancel setup",
-          "TEARSHEET_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit.",
+          "TEARSHEET_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit",
           "WIZARD_BACK_BUTTON": "Back",
           "WIZARD_CANCEL_BUTTON": "Cancel",
           "WIZARD_FINISH_BUTTON": "Finish",
           "WIZARD_NEXT_BUTTON": "Next",
           "WIZARD_TEARSHEET_DELETE_BUTTON": "Delete connection",
           "WIZARD_TERTIARY_BUTTON": "Cancel",
-          "WIZARD_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit.",
+          "WIZARD_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit",
         }
       }
       onChange={[Function]}
@@ -3587,14 +3587,14 @@ exports[`FilterPanel renders with title 1`] = `
           "TEARSHEET_SMALL_PRIMARY_BUTTON": "Save",
           "TEARSHEET_SMALL_SECONDARY_BUTTON": "Cancel",
           "TEARSHEET_TERTIARY_BUTTON": "Cancel setup",
-          "TEARSHEET_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit.",
+          "TEARSHEET_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit",
           "WIZARD_BACK_BUTTON": "Back",
           "WIZARD_CANCEL_BUTTON": "Cancel",
           "WIZARD_FINISH_BUTTON": "Finish",
           "WIZARD_NEXT_BUTTON": "Next",
           "WIZARD_TEARSHEET_DELETE_BUTTON": "Delete connection",
           "WIZARD_TERTIARY_BUTTON": "Cancel",
-          "WIZARD_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit.",
+          "WIZARD_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit",
         }
       }
       onChange={[Function]}
@@ -4182,14 +4182,14 @@ exports[`FilterPanel should overwrite \`labels\` when unique props defined 1`] =
           "TEARSHEET_SMALL_PRIMARY_BUTTON": "Save",
           "TEARSHEET_SMALL_SECONDARY_BUTTON": "Cancel",
           "TEARSHEET_TERTIARY_BUTTON": "Cancel setup",
-          "TEARSHEET_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit.",
+          "TEARSHEET_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit",
           "WIZARD_BACK_BUTTON": "Back",
           "WIZARD_CANCEL_BUTTON": "Cancel",
           "WIZARD_FINISH_BUTTON": "Finish",
           "WIZARD_NEXT_BUTTON": "Next",
           "WIZARD_TEARSHEET_DELETE_BUTTON": "Delete connection",
           "WIZARD_TERTIARY_BUTTON": "Cancel",
-          "WIZARD_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit.",
+          "WIZARD_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit",
         }
       }
       noFiltersResultsLabel=""
@@ -4786,14 +4786,14 @@ exports[`FilterPanel should overwrite \`labels\` when unique props defined 1`] =
           "TEARSHEET_SMALL_PRIMARY_BUTTON": "Save",
           "TEARSHEET_SMALL_SECONDARY_BUTTON": "Cancel",
           "TEARSHEET_TERTIARY_BUTTON": "Cancel setup",
-          "TEARSHEET_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit.",
+          "TEARSHEET_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit",
           "WIZARD_BACK_BUTTON": "Back",
           "WIZARD_CANCEL_BUTTON": "Cancel",
           "WIZARD_FINISH_BUTTON": "Finish",
           "WIZARD_NEXT_BUTTON": "Next",
           "WIZARD_TEARSHEET_DELETE_BUTTON": "Delete connection",
           "WIZARD_TERTIARY_BUTTON": "Cancel",
-          "WIZARD_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit.",
+          "WIZARD_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit",
         }
       }
       onChange={[Function]}
@@ -5386,14 +5386,14 @@ exports[`FilterPanel should overwrite \`labels\` when unique props defined 1`] =
           "TEARSHEET_SMALL_PRIMARY_BUTTON": "Save",
           "TEARSHEET_SMALL_SECONDARY_BUTTON": "Cancel",
           "TEARSHEET_TERTIARY_BUTTON": "Cancel setup",
-          "TEARSHEET_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit.",
+          "TEARSHEET_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit",
           "WIZARD_BACK_BUTTON": "Back",
           "WIZARD_CANCEL_BUTTON": "Cancel",
           "WIZARD_FINISH_BUTTON": "Finish",
           "WIZARD_NEXT_BUTTON": "Next",
           "WIZARD_TEARSHEET_DELETE_BUTTON": "Delete connection",
           "WIZARD_TERTIARY_BUTTON": "Cancel",
-          "WIZARD_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit.",
+          "WIZARD_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit",
         }
       }
       onChange={[Function]}
