@@ -1,0 +1,38 @@
+////
+/// Panel v2 mixins.
+/// @group panelv2
+/// @copyright IBM Security 2019
+////
+
+@import '../../globals/index';
+
+@import '../../components/Panel/mixins';
+
+@mixin panelv2 {
+  &__transition {
+    &--appear,
+    &--enter {
+      transform: translate3d($panel__sizing__width, 0, 0);
+      opacity: 0;
+
+      &--active {
+        transform: translate3d(0, 0, 0);
+        transition: all $duration--moderate-02;
+        transition-timing-function: motion(entrance, expressive);
+        opacity: 1;
+      }
+    }
+
+    &--leave {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+
+      &--active {
+        transform: translate3d($panel__sizing__width, 0, 0);
+        transition: all $duration--moderate-02;
+        transition-timing-function: motion(exit, expressive);
+        opacity: 0;
+      }
+    }
+  }
+}

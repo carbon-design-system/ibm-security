@@ -10,13 +10,13 @@
 @import '../../components/IconButton/mixins';
 @import '../../components/Toolbar/mixins';
 
-@mixin panel {
-  /// Width.
-  /// @type Length
-  $panel__sizing__width: carbon--mini-units(
-    $count: 40,
-  );
+/// Width.
+/// @type Length
+$panel__sizing__width: carbon--mini-units(
+  $count: 40,
+);
 
+@mixin panel {
   /// Padding.
   /// @type Length
   $panel__spacing__padding: $carbon--spacing-05;

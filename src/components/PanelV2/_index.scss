@@ -1,0 +1,13 @@
+////
+/// Panel v2 component.
+/// @group panelv2
+/// @copyright IBM Security 2019
+////
+
+@import '../Component/mixins';
+
+@import 'mixins';
+
+@include component($name: panelv2) {
+  @include panelv2;
+}
