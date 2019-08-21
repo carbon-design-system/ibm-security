@@ -1,0 +1,16 @@
+////
+/// Card v2 component.
+/// @group card-v2
+/// @copyright IBM Security 2019
+////
+
+@import 'CardSkeletonV2/index';
+@import '../Button/index';
+
+@import '../Component/mixins';
+
+@import 'mixins';
+
+@include component($name: card-v2) {
+  @include card-v2;
+}

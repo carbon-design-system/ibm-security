@@ -1,0 +1,268 @@
+////
+/// Card v2 mixins.
+/// @group card-v2
+/// @copyright IBM Security 2019
+////
+
+@import '../../globals/index';
+
+/// Transition duration of a single segment.
+/// @type Duration
+/// @access private
+$transition-segment: $duration--moderate-01;
+
+/// Use until Carbon fixes `text-overflow` helper mixin.
+/// @access private
+@mixin card-v2--ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/// Use in place of `transition` mixin for versatibility
+/// @access private
+@mixin card-v2--transition($transition-duration, $transition-delay) {
+  &--enter {
+    opacity: 0;
+
+    &--active {
+      transition-property: opacity;
+      transition-duration: $transition-duration;
+      transition-delay: $transition-delay;
+      transition-timing-function: carbon--motion(entrance, productive);
+      opacity: 1;
+    }
+  }
+
+  &--leave {
+    opacity: 1;
+
+    &--active {
+      transition-property: opacity;
+      transition-duration: $transition-segment;
+      transition-timing-function: carbon--motion(exit, productive);
+      opacity: 0;
+    }
+  }
+}
+
+@mixin card-v2 {
+  height: carbon--mini-units(48);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-width: carbon--mini-units(36);
+
+  .#{$prefix}--loading#{&}--loading {
+    margin: -0.4rem;
+    margin-right: $carbon--spacing-02;
+    min-width: 2rem;
+    min-height: 2rem;
+
+    > svg {
+      margin-right: unset;
+    }
+  }
+
+  &__header {
+    height: carbon--mini-units(4);
+    display: flex;
+    padding: $carbon--spacing-05 $carbon--spacing-05 0 $carbon--spacing-05;
+    box-sizing: border-box;
+  }
+
+  &__title {
+    flex-grow: 1;
+  }
+
+  &__title,
+  &__status {
+    @include carbon--type-style(caption-01);
+    color: $text-02;
+  }
+
+  &__body {
+    height: carbon--mini-units(38);
+    display: flex;
+    overflow: hidden;
+    border-bottom: 1px solid $ui-02;
+    box-sizing: border-box;
+    padding: 0 $carbon--spacing-05 $carbon--spacing-05 $carbon--spacing-05;
+    margin-top: $carbon--spacing-05;
+  }
+
+  &__content {
+    height: carbon--mini-units(42);
+    background-color: rgba($ui-01, 0.5);
+
+    &--link {
+      background-color: $ui-01;
+
+      &,
+      &:active,
+      &:hover,
+      &:focus,
+      &:visited {
+        text-decoration: none;
+        color: $text-01;
+      }
+
+      &:hover {
+        background-color: $hover-ui;
+      }
+    }
+  }
+
+  &__footer {
+    background-color: $ui-01;
+    bottom: 0;
+    display: flex;
+    height: $carbon--layout-04;
+    left: 0;
+    position: absolute;
+    transition: height $transition-segment carbon--motion(entrance, productive)
+      $transition-segment;
+    width: 100%;
+    z-index: 1;
+
+    &-actions {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      position: absolute;
+      top: 0;
+
+      &__transition {
+        @include card-v2--transition(
+          $transition-segment,
+          ($transition-segment * 2)
+        );
+      }
+    }
+
+    &__label {
+      display: flex;
+      flex-grow: 1;
+      align-items: center;
+      padding: 0.875rem 1rem;
+    }
+  }
+
+  &__footer--expanded {
+    $expandedFooter: &;
+    height: 18.25rem;
+    width: 100%;
+    transition-property: height;
+    transition-duration: $transition-segment;
+    transition-timing-function: carbon--motion(exit, productive);
+    transition-delay: $transition-segment;
+
+    &__header {
+      display: flex;
+      position: absolute;
+      top: 0;
+      flex-direction: row;
+      width: 100%;
+
+      &__close {
+        min-width: $carbon--spacing-09;
+      }
+
+      &__label {
+        align-items: center;
+        padding: 0.875rem 1rem;
+
+        &-text {
+          @include card-v2--ellipsis;
+        }
+      }
+
+      &__transition {
+        @include card-v2--transition($transition-segment, $transition-segment);
+      }
+    }
+
+    &__content {
+      padding-top: $carbon--spacing-09;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      #{$expandedFooter}__scroll-gradient {
+        height: 100%;
+
+        .#{$namespace}scroll-gradient {
+          &__before {
+            background-image: linear-gradient(
+              0deg,
+              rgba(0, 0, 0, 0),
+              $ui-01 90%
+            );
+          }
+
+          &__after {
+            background-image: linear-gradient(
+              0deg,
+              $ui-01 10%,
+              rgba(0, 0, 0, 0)
+            );
+          }
+
+          &__content {
+            padding: $carbon--spacing-05;
+            box-sizing: border-box;
+          }
+        }
+      }
+
+      &__transition {
+        @include card-v2--transition(
+          $transition-segment,
+          ($transition-segment * 2)
+        );
+      }
+    }
+  }
+
+  &__primary {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    flex: 1;
+    max-width: unset;
+    overflow: hidden;
+
+    &-text {
+      @include card-v2--ellipsis;
+    }
+
+    .#{$prefix}--btn__icon,
+    .#{$namespace}icon {
+      margin: 0 $carbon--spacing-03 0 0;
+      min-width: 20px;
+      fill: currentColor;
+    }
+  }
+
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $overlay-01;
+    cursor: default;
+    z-index: 1;
+
+    &__transition {
+      @include card-v2--transition(
+        $transition-segment,
+        ($transition-segment * 2)
+      );
+    }
+  }
+
+  &--skeleton &__body {
+    display: block;
+  }
+}

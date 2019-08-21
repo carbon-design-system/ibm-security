@@ -1,0 +1,17 @@
+////
+/// Card skeleton v2 mixins.
+/// @group card-v2-skeleton
+/// @copyright IBM Security 2019
+////
+
+@import '../../../globals/index';
+
+@mixin card-v2--skeleton {
+  &__wrapper {
+    display: flex;
+  }
+
+  &__text--inline {
+    margin-right: $carbon--spacing-03;
+  }
+}
