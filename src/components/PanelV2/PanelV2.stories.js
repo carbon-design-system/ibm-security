@@ -1,5 +1,5 @@
 /**
- * @file PanelV2 v2 stories.
+ * @file Panel v2 stories.
  * @copyright IBM Security 2019
  */
 

@@ -4,4 +4,4 @@
  */
 
 export PanelV2 from './PanelV2';
-export PanelV2Content from './PanelV2Content';
+export PanelV2Content from '../Panel/PanelContent';
