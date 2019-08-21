@@ -80,7 +80,7 @@ storiesOf(experimental('PanelV2'), module)
                   label: text('closeButton.label', closeButtonLabel),
                 }}
                 footer={
-                  <>
+                  <Fragment>
                     <Button
                       id="p1_secondary-button"
                       kind="secondary"
@@ -95,7 +95,7 @@ storiesOf(experimental('PanelV2'), module)
                     >
                       Add
                     </Button>
-                  </>
+                  </Fragment>
                 }
               >
                 <PanelV2Content>{content}</PanelV2Content>

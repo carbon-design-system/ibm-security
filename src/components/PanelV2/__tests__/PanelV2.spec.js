@@ -4,13 +4,11 @@
  */
 
 import { mount } from 'enzyme';
-import React from 'react';
+import React, { Fragment } from 'react';
 
-import { label, buttons, disabledButtons } from '../_mocks_';
+import { label, onClick } from '../_mocks_';
 
-import { PanelV2, PanelV2Content } from '../../..';
-
-const { closeButton, primaryButton, secondaryButton } = buttons;
+import { Button, PanelV2, PanelV2Content } from '../../..';
 
 describe('PanelV2', () => {
   it('renders', () => {
@@ -18,24 +16,21 @@ describe('PanelV2', () => {
       <PanelV2
         title={label}
         subtitle={label}
-        closeButton={closeButton}
-        primaryButton={primaryButton}
-        secondaryButton={secondaryButton}
-      >
-        <PanelV2Content>{label}</PanelV2Content>
-      </PanelV2>
-    );
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('renders disabled buttons', () => {
-    const wrapper = mount(
-      <PanelV2
-        title={label}
-        subtitle={label}
-        closeButton={disabledButtons.closeButton}
-        primaryButton={disabledButtons.primaryButton}
-        secondaryButton={disabledButtons.secondaryButton}
+        closeButton={{ onClick }}
+        footer={
+          <Fragment>
+            <Button
+              id="exampe_secondary-button"
+              kind="secondary"
+              onClick={onClick}
+            >
+              Close
+            </Button>
+            <Button id="exampe_primary-button" onClick={onClick}>
+              Add
+            </Button>
+          </Fragment>
+        }
       >
         <PanelV2Content>{label}</PanelV2Content>
       </PanelV2>
