@@ -6,14 +6,14 @@
 import Add16 from '@carbon/icons-react/lib/add/16';
 
 import { withA11y } from '@storybook/addon-a11y';
-import { boolean, text } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
 import React, { Fragment } from 'react';
 
 import { experimental } from '../../../.storybook';
 
-import { disabled, label } from '../_mocks_';
+import { label } from '../_mocks_';
 import { header, profile, toolbar } from '../Shell/_mocks_';
 import { labels } from './_mocks_';
 
@@ -79,18 +79,24 @@ storiesOf(experimental('PanelV2'), module)
                   onClick: this.closeFirst,
                   label: text('closeButton.label', closeButtonLabel),
                 }}
-                primaryButton={{
-                  icon: Add16,
-                  iconDescription: text('primaryButton.iconDescription', 'Add'),
-                  isDisabled: boolean('primaryButton.isDisabled', !disabled),
-                  label: text('primaryButton.label', 'Add'),
-                  onClick: this.closeFirst,
-                }}
-                secondaryButton={{
-                  isDisabled: boolean('secondaryButton.isDisabled', !disabled),
-                  label: text('secondaryButton.label', 'Cancel'),
-                  onClick: this.closeFirst,
-                }}
+                footer={
+                  <>
+                    <Button
+                      id="p1_secondary-button"
+                      kind="secondary"
+                      onClick={this.closeFirst}
+                    >
+                      Close
+                    </Button>
+                    <Button
+                      id="p1_primary-button"
+                      onClick={this.closeFirst}
+                      renderIcon={Add16}
+                    >
+                      Add
+                    </Button>
+                  </>
+                }
               >
                 <PanelV2Content>{content}</PanelV2Content>
               </PanelV2>
@@ -102,11 +108,11 @@ storiesOf(experimental('PanelV2'), module)
                   onClick: this.closeSecond,
                   label: text('closeButton.label', closeButtonLabel),
                 }}
-                primaryButton={{
-                  isDisabled: boolean('primaryButton.isDisabled', !disabled),
-                  label: text('primaryButton.label', 'Submit'),
-                  onClick: this.closeSecond,
-                }}
+                footer={
+                  <Button id="p2_primary-button" onClick={this.closeSecond}>
+                    Add
+                  </Button>
+                }
               />
               <PanelV2
                 key="p3"

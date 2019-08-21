@@ -13,12 +13,11 @@ import * as defaultLabels from '../../globals/nls';
 
 import { isClient } from '../../globals/utils/capabilities';
 
-import Button from '../Button';
 import IconButton from '../IconButton';
 import Transition from '../Transition';
 import Portal, { PORTAL_EVENTS } from '../Portal';
 
-export const namespace = getComponentNamespace('panel');
+export const namespace = getComponentNamespace('panelv2');
 
 /**
  * Panel v2 container component.
@@ -58,27 +57,18 @@ export default class PanelV2 extends Component {
 
   header = createRef();
 
-  renderPanel = ({
-    labels: {
-      PANEL_CONTAINER_PRIMARY_BUTTON,
-      PANEL_CONTAINER_SECONDARY_BUTTON,
-      PANEL_CONTAINER_CLOSE_BUTTON,
-    },
-  }) => {
+  renderPanel = ({ labels: { PANEL_CONTAINER_CLOSE_BUTTON } }) => {
     const {
       children,
       className,
       closeButton,
       focusTrap,
-      primaryButton,
-      secondaryButton,
+      footer,
       stopPropagation,
       stopPropagationEvents,
       subtitle,
       title,
     } = this.props;
-
-    const panelClasses = classnames(namespace, className);
 
     return (
       <Transition className={namespace}>
@@ -88,7 +78,7 @@ export default class PanelV2 extends Component {
             stopPropagation={stopPropagation}
             stopPropagationEvents={stopPropagationEvents}
           >
-            <section className={panelClasses}>
+            <section className={classnames(namespace, className)}>
               <header ref={this.header} className={`${namespace}__header`}>
                 {title && (
                   <div className={`${namespace}__header__container--title`}>
@@ -111,39 +101,15 @@ export default class PanelV2 extends Component {
               </header>
               <section
                 className={classnames(`${namespace}__body`, {
-                  [`${namespace}__body--footer`]: primaryButton !== null,
+                  [`${namespace}__body--footer`]: footer !== null,
                 })}
                 style={{ marginTop: `${this.state.bodyMargin}px` }}
               >
                 {children}
               </section>
-              {primaryButton && (
-                <footer className={`${namespace}__footer`}>
-                  {secondaryButton && (
-                    <Button
-                      id={secondaryButton.id}
-                      className={`${namespace}__footer__button ${namespace}__footer__button--secondary`}
-                      disabled={secondaryButton.isDisabled}
-                      iconDescription={secondaryButton.iconDescription}
-                      kind="secondary"
-                      onClick={secondaryButton.onClick}
-                      renderIcon={secondaryButton.icon}
-                    >
-                      {PANEL_CONTAINER_SECONDARY_BUTTON}
-                    </Button>
-                  )}
 
-                  <Button
-                    id={primaryButton.id}
-                    className={`${namespace}__footer__button`}
-                    disabled={primaryButton.isDisabled}
-                    iconDescription={primaryButton.iconDescription}
-                    onClick={primaryButton.onClick}
-                    renderIcon={primaryButton.icon}
-                  >
-                    {PANEL_CONTAINER_PRIMARY_BUTTON}
-                  </Button>
-                </footer>
+              {footer && (
+                <footer className={`${namespace}__footer`}>{footer}</footer>
               )}
             </section>
           </Portal>
@@ -153,16 +119,12 @@ export default class PanelV2 extends Component {
   };
 
   render() {
-    const { closeButton, primaryButton, secondaryButton, labels } = this.props;
+    const { closeButton, labels } = this.props;
 
     const componentLabels = {
       ...defaultLabels.labels,
       ...labels,
       ...defaultLabels.filterFalsey({
-        PANEL_CONTAINER_PRIMARY_BUTTON:
-          (primaryButton && primaryButton.label) || '',
-        PANEL_CONTAINER_SECONDARY_BUTTON:
-          (secondaryButton && secondaryButton.label) || '',
         PANEL_CONTAINER_CLOSE_BUTTON: (closeButton && closeButton.label) || '',
       }),
     };
@@ -170,22 +132,7 @@ export default class PanelV2 extends Component {
   }
 }
 
-const buttonType = PropTypes.shape({
-  id: PropTypes.string,
-  onClick: PropTypes.func,
-  label: PropTypes.string,
-  isDisabled: PropTypes.bool,
-  icon: PropTypes.object,
-  iconDescription: PropTypes.string,
-});
-
 PanelV2.propTypes = {
-  /** @type {boolean} Focus trap. */
-  focusTrap: PropTypes.bool,
-
-  /** @type {boolean} The open state. */
-  isOpen: PropTypes.bool,
-
   /** @type {ReactNode} The children of the panel container. */
   children: PropTypes.node,
 
@@ -193,22 +140,31 @@ PanelV2.propTypes = {
   className: PropTypes.string,
 
   /** @type {Object<Object>} An object list of close button props. */
-  closeButton: buttonType.isRequired,
+  closeButton: PropTypes.shape({
+    id: PropTypes.string,
+    onClick: PropTypes.func,
+    label: PropTypes.string,
+    isDisabled: PropTypes.bool,
+    icon: PropTypes.object,
+    iconDescription: PropTypes.string,
+  }),
 
-  /** @type {Object<Object>} An object list of primary button props. */
-  primaryButton: buttonType,
+  /** @type {boolean} Focus trap. */
+  focusTrap: PropTypes.bool,
 
-  /** @type {Object<Object>} An object list of secondary button props. */
-  secondaryButton: buttonType,
+  footer: PropTypes.node,
+
+  /** @type {boolean} The open state. */
+  isOpen: PropTypes.bool,
+
+  /** @type {object} Labels for Panel and children */
+  labels: defaultLabels.propType,
 
   /** @type {string} Child elements. */
   subtitle: PropTypes.node,
 
   /** @type {string} Child elements. */
   title: PropTypes.node,
-
-  /** @type {object} Labels for Panel and children */
-  labels: defaultLabels.propType,
 
   /** @type {boolean} Stop event propagation for events that can bubble. */
   stopPropagation: PropTypes.bool,
@@ -220,13 +176,13 @@ PanelV2.propTypes = {
 PanelV2.defaultProps = {
   children: null,
   className: null,
+  closeButton: undefined,
   focusTrap: true,
+  footer: null,
   isOpen: true,
   labels: {},
-  primaryButton: null,
-  secondaryButton: undefined,
+  subtitle: undefined,
   stopPropagation: false,
   stopPropagationEvents: undefined,
-  subtitle: undefined,
   title: undefined,
 };
