@@ -23,6 +23,9 @@
     margin-left: $toolbar__panel__position__horizontal;
 
     &#{$header} > #{$header__namespace} {
+      transition-property: width;
+      transition-duration: $duration--moderate-02;
+      transition-timing-function: motion(entrance, expressive);
       width: calc(
         #{$header__sizing__width} - #{$toolbar__panel__position__horizontal}
       );
