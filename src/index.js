@@ -6,6 +6,7 @@
 // Application.
 export ErrorPage from './components/ErrorPage';
 export { Card, CardSkeleton } from './components/Card';
+export { CardV2, CardSkeletonV2 } from './components/CardV2';
 export CodeSnippet, { CodeSnippetSkeleton } from './components/CodeSnippet';
 export ContentSwitcher from './components/ContentSwitcher';
 export DataDecorator, { Decorator } from './components/DataDecorator';
