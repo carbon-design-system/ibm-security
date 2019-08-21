@@ -1,5 +1,5 @@
 /**
- * @file Panel entry point.
+ * @file Panel v2 entry point.
  * @copyright IBM Security 2019
  */
 
