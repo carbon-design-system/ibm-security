@@ -13,7 +13,7 @@ exports[`PanelV2 renders 1`] = `
     <React.Fragment>
       <Button
         disabled={false}
-        id="exampe_secondary-button"
+        id="example-secondary-button"
         kind="secondary"
         largeText={null}
         onClick={[Function]}
@@ -24,7 +24,7 @@ exports[`PanelV2 renders 1`] = `
       </Button>
       <Button
         disabled={false}
-        id="exampe_primary-button"
+        id="example-primary-button"
         kind="primary"
         largeText={null}
         onClick={[Function]}
@@ -176,7 +176,7 @@ exports[`PanelV2 renders 1`] = `
                     >
                       <button
                         class="security--button bx--btn bx--btn--secondary"
-                        id="exampe_secondary-button"
+                        id="example-secondary-button"
                         tabindex="0"
                         type="button"
                       >
@@ -184,7 +184,7 @@ exports[`PanelV2 renders 1`] = `
                       </button>
                       <button
                         class="security--button bx--btn bx--btn--primary"
-                        id="exampe_primary-button"
+                        id="example-primary-button"
                         tabindex="0"
                         type="button"
                       >
@@ -263,7 +263,7 @@ exports[`PanelV2 renders 1`] = `
                       >
                         <button
                           class="security--button bx--btn bx--btn--secondary"
-                          id="exampe_secondary-button"
+                          id="example-secondary-button"
                           tabindex="0"
                           type="button"
                         >
@@ -271,7 +271,7 @@ exports[`PanelV2 renders 1`] = `
                         </button>
                         <button
                           class="security--button bx--btn bx--btn--primary"
-                          id="exampe_primary-button"
+                          id="example-primary-button"
                           tabindex="0"
                           type="button"
                         >
@@ -427,7 +427,7 @@ exports[`PanelV2 renders 1`] = `
                     >
                       <Button
                         disabled={false}
-                        id="exampe_secondary-button"
+                        id="example-secondary-button"
                         kind="secondary"
                         largeText={null}
                         onClick={[Function]}
@@ -437,7 +437,7 @@ exports[`PanelV2 renders 1`] = `
                         <ForwardRef(Button)
                           className="security--button"
                           disabled={false}
-                          id="exampe_secondary-button"
+                          id="example-secondary-button"
                           kind="secondary"
                           onClick={[Function]}
                           tabIndex={0}
@@ -446,7 +446,7 @@ exports[`PanelV2 renders 1`] = `
                           <button
                             className="security--button bx--btn bx--btn--secondary"
                             disabled={false}
-                            id="exampe_secondary-button"
+                            id="example-secondary-button"
                             onClick={[Function]}
                             tabIndex={0}
                             type="button"
@@ -457,7 +457,7 @@ exports[`PanelV2 renders 1`] = `
                       </Button>
                       <Button
                         disabled={false}
-                        id="exampe_primary-button"
+                        id="example-primary-button"
                         kind="primary"
                         largeText={null}
                         onClick={[Function]}
@@ -467,7 +467,7 @@ exports[`PanelV2 renders 1`] = `
                         <ForwardRef(Button)
                           className="security--button"
                           disabled={false}
-                          id="exampe_primary-button"
+                          id="example-primary-button"
                           kind="primary"
                           onClick={[Function]}
                           tabIndex={0}
@@ -476,7 +476,7 @@ exports[`PanelV2 renders 1`] = `
                           <button
                             className="security--button bx--btn bx--btn--primary"
                             disabled={false}
-                            id="exampe_primary-button"
+                            id="example-primary-button"
                             onClick={[Function]}
                             tabIndex={0}
                             type="button"

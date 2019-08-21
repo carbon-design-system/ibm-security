@@ -20,13 +20,13 @@ describe('PanelV2', () => {
         footer={
           <Fragment>
             <Button
-              id="exampe_secondary-button"
+              id="example-secondary-button"
               kind="secondary"
               onClick={onClick}
             >
               Close
             </Button>
-            <Button id="exampe_primary-button" onClick={onClick}>
+            <Button id="example-primary-button" onClick={onClick}>
               Add
             </Button>
           </Fragment>
