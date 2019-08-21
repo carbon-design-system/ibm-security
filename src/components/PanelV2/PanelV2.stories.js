@@ -11,7 +11,7 @@ import { storiesOf } from '@storybook/react';
 
 import React, { Fragment } from 'react';
 
-import { patterns } from '../../../.storybook';
+import { experimental } from '../../../.storybook';
 
 import { disabled, label } from '../_mocks_';
 import { header, profile, toolbar } from '../Shell/_mocks_';
@@ -30,96 +30,106 @@ const props = {
 const content =
   'Use the `PanelV2Content` component to have the appropriate formatting applied to content';
 
-storiesOf(patterns('PanelV2'), module)
+storiesOf(experimental('PanelV2'), module)
   .addDecorator(withA11y)
-  .add('Default', () => {
-    class PanelV2Story extends React.Component {
-      state = { firstOpen: false, secondOpen: false, thirdOpen: false };
-      closeFirst = () => {
-        this.setState({ firstOpen: false });
-      };
-      closeSecond = () => {
-        this.setState({ secondOpen: false });
-      };
-      closethird = () => {
-        this.setState({ thirdOpen: false });
-      };
-      openFirst = () => {
-        this.setState({ firstOpen: true });
-      };
-      openSecond = () => {
-        this.setState({ secondOpen: true });
-      };
-      openThird = () => {
-        this.setState({ thirdOpen: true });
-      };
+  .add(
+    'Default',
+    () => {
+      class PanelV2Story extends React.Component {
+        state = { firstOpen: false, secondOpen: false, thirdOpen: false };
+        closeFirst = () => {
+          this.setState({ firstOpen: false });
+        };
+        closeSecond = () => {
+          this.setState({ secondOpen: false });
+        };
+        closethird = () => {
+          this.setState({ thirdOpen: false });
+        };
+        openFirst = () => {
+          this.setState({ firstOpen: true });
+        };
+        openSecond = () => {
+          this.setState({ secondOpen: true });
+        };
+        openThird = () => {
+          this.setState({ thirdOpen: true });
+        };
 
-      render() {
-        return (
-          <Fragment>
-            <Shell header={header} profile={profile} toolbar={toolbar} />
-            <div id="main" style={{ paddingLeft: '5rem' }}>
-              <Button key="b1" onClick={this.openFirst}>
-                Primary and secondary action
-              </Button>
-              <Button key="b2" onClick={this.openSecond}>
-                Primary action
-              </Button>
-              <Button key="b3" onClick={this.openThird}>
-                Default
-              </Button>
-            </div>
-            <PanelV2
-              key="p1"
-              isOpen={this.state.firstOpen}
-              {...props}
-              closeButton={{
-                onClick: this.closeFirst,
-                label: text('closeButton.label', closeButtonLabel),
-              }}
-              primaryButton={{
-                icon: Add16,
-                iconDescription: text('primaryButton.iconDescription', 'Add'),
-                isDisabled: boolean('primaryButton.isDisabled', !disabled),
-                label: text('primaryButton.label', 'Add'),
-                onClick: this.closeFirst,
-              }}
-              secondaryButton={{
-                isDisabled: boolean('secondaryButton.isDisabled', !disabled),
-                label: text('secondaryButton.label', 'Cancel'),
-                onClick: this.closeFirst,
-              }}
-            >
-              <PanelV2Content>{content}</PanelV2Content>
-            </PanelV2>
-            <PanelV2
-              key="p2"
-              isOpen={this.state.secondOpen}
-              {...props}
-              closeButton={{
-                onClick: this.closeSecond,
-                label: text('closeButton.label', closeButtonLabel),
-              }}
-              primaryButton={{
-                isDisabled: boolean('primaryButton.isDisabled', !disabled),
-                label: text('primaryButton.label', 'Submit'),
-                onClick: this.closeSecond,
-              }}
-            />
-            <PanelV2
-              key="p3"
-              isOpen={this.state.thirdOpen}
-              {...props}
-              closeButton={{
-                onClick: this.closethird,
-                label: closeButtonLabel,
-              }}
-            >
-              <PanelV2Content>{content}</PanelV2Content>
-            </PanelV2>
-          </Fragment>
-        );
+        render() {
+          return (
+            <Fragment>
+              <Shell header={header} profile={profile} toolbar={toolbar} />
+              <div id="main" style={{ paddingLeft: '5rem' }}>
+                <Button key="b1" onClick={this.openFirst}>
+                  Primary and secondary action
+                </Button>
+                <Button key="b2" onClick={this.openSecond}>
+                  Primary action
+                </Button>
+                <Button key="b3" onClick={this.openThird}>
+                  Default
+                </Button>
+              </div>
+              <PanelV2
+                key="p1"
+                isOpen={this.state.firstOpen}
+                {...props}
+                closeButton={{
+                  onClick: this.closeFirst,
+                  label: text('closeButton.label', closeButtonLabel),
+                }}
+                primaryButton={{
+                  icon: Add16,
+                  iconDescription: text('primaryButton.iconDescription', 'Add'),
+                  isDisabled: boolean('primaryButton.isDisabled', !disabled),
+                  label: text('primaryButton.label', 'Add'),
+                  onClick: this.closeFirst,
+                }}
+                secondaryButton={{
+                  isDisabled: boolean('secondaryButton.isDisabled', !disabled),
+                  label: text('secondaryButton.label', 'Cancel'),
+                  onClick: this.closeFirst,
+                }}
+              >
+                <PanelV2Content>{content}</PanelV2Content>
+              </PanelV2>
+              <PanelV2
+                key="p2"
+                isOpen={this.state.secondOpen}
+                {...props}
+                closeButton={{
+                  onClick: this.closeSecond,
+                  label: text('closeButton.label', closeButtonLabel),
+                }}
+                primaryButton={{
+                  isDisabled: boolean('primaryButton.isDisabled', !disabled),
+                  label: text('primaryButton.label', 'Submit'),
+                  onClick: this.closeSecond,
+                }}
+              />
+              <PanelV2
+                key="p3"
+                isOpen={this.state.thirdOpen}
+                {...props}
+                closeButton={{
+                  onClick: this.closethird,
+                  label: closeButtonLabel,
+                }}
+              >
+                <PanelV2Content>{content}</PanelV2Content>
+              </PanelV2>
+            </Fragment>
+          );
+        }
       }
+      return <PanelV2Story />;
+    },
+    {
+      info: {
+        text: `
+        The \`PanelV2\` is an experimental component that is subject to change while it is being tested. If you need a stable component, please use the \`Panel\` instead.
+      `,
+      },
     }
-    return <PanelV2Story />;
-  });
+  );
