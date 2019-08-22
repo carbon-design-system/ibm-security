@@ -64,7 +64,7 @@ export {
 export { PanelV2, PanelV2Content } from './components/PanelV2';
 
 export Pill from './components/Pill';
-export Portal from './components/Portal';
+export Portal, { PortalV2 } from './components/Portal';
 
 export {
   ProgressIndicator,

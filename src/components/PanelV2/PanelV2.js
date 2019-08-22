@@ -15,7 +15,7 @@ import { isClient } from '../../globals/utils/capabilities';
 
 import IconButton from '../IconButton';
 import Transition from '../Transition';
-import Portal, { PORTAL_EVENTS } from '../Portal';
+import { PORTAL_EVENTS, PortalV2 } from '../Portal';
 
 export const namespace = getComponentNamespace('panelv2');
 
@@ -73,7 +73,7 @@ export default class PanelV2 extends Component {
     return (
       <Transition className={namespace}>
         {this.state.isOpen && (
-          <Portal
+          <PortalV2
             focusTrap={focusTrap}
             stopPropagation={stopPropagation}
             stopPropagationEvents={stopPropagationEvents}
@@ -112,7 +112,7 @@ export default class PanelV2 extends Component {
                 <footer className={`${namespace}__footer`}>{footer}</footer>
               )}
             </section>
-          </Portal>
+          </PortalV2>
         )}
       </Transition>
     );

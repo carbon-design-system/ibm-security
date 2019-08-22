@@ -7,3 +7,5 @@ import Portal, { PORTAL_EVENTS } from './Portal';
 
 export { PORTAL_EVENTS };
 export default Portal;
+
+export PortalV2 from './PortalV2';
