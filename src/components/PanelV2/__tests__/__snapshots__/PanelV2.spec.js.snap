@@ -109,7 +109,7 @@ exports[`PanelV2 renders 1`] = `
               }
             }
           >
-            <Portal
+            <PortalV2
               focusTrap={true}
               hasOverlay={true}
               initialFocus={null}
@@ -489,7 +489,7 @@ exports[`PanelV2 renders 1`] = `
                   </section>
                 </FocusTrap>
               </Portal>
-            </Portal>
+            </PortalV2>
           </CSSTransitionGroupChild>
         </component>
       </TransitionGroup>
