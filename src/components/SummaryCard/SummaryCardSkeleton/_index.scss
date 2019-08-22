@@ -1,0 +1,15 @@
+////
+/// Summary card skeleton component.
+/// @group summary-card-skeleton
+/// @copyright IBM Security 2019
+////
+
+@import '../../Component/mixins';
+
+@import '../mixins';
+
+@import 'mixins';
+
+@include component($name: summary-card--skeleton) {
+  @include summary-card--skeleton;
+}

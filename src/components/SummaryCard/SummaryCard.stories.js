@@ -1,5 +1,5 @@
 /**
- * @file Card v2 stories.
+ * @file Summary card stories.
  * @copyright IBM Security 2019
  */
 
@@ -19,7 +19,7 @@ import Notification24 from '@carbon/icons-react/lib/notification/24';
 import React from 'react';
 
 import { patterns } from '../../../.storybook';
-import { CardV2, CardSkeletonV2 } from '../..';
+import { SummaryCard, SummaryCardSkeleton } from '../..';
 
 const actions = [
   {
@@ -77,11 +77,11 @@ const primaryActionButton = {
   expandable: true,
 };
 
-storiesOf(patterns('CardV2'), module)
+storiesOf(patterns('SummaryCard'), module)
   .addDecorator(withA11y)
   .addDecorator(centered)
   .add('with primary label', () => (
-    <CardV2
+    <SummaryCard
       loading={boolean('Loading (loading)', true)}
       primaryAction={{
         label: text(
@@ -97,10 +97,10 @@ storiesOf(patterns('CardV2'), module)
       title={text('Title (title)', 'Title')}
     >
       {text('Body content (children)', 'BODY CONTENT')}
-    </CardV2>
+    </SummaryCard>
   ))
   .add('with primary action and expandable content', () => (
-    <CardV2
+    <SummaryCard
       {...expandedProps()}
       loading={boolean('Loading (loading)', false)}
       primaryAction={primaryActionButton}
@@ -118,10 +118,10 @@ storiesOf(patterns('CardV2'), module)
       title={text('Title (title)', 'Title')}
     >
       {text('Body content (children)', 'BODY CONTENT')}
-    </CardV2>
+    </SummaryCard>
   ))
   .add('with custom link component and secondary action', () => (
-    <CardV2
+    <SummaryCard
       {...expandedProps()}
       customLink={customLink}
       href="#"
@@ -136,6 +136,6 @@ storiesOf(patterns('CardV2'), module)
       title={text('Title (title)', 'Title')}
     >
       {text('Body content (children)', 'BODY CONTENT')}
-    </CardV2>
+    </SummaryCard>
   ))
-  .add('skeleton', () => <CardSkeletonV2 />);
+  .add('skeleton', () => <SummaryCardSkeleton />);

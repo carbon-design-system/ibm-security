@@ -1,12 +1,12 @@
 ////
-/// Card skeleton v2 mixins.
-/// @group card-v2-skeleton
+/// Summary card skeleton mixins.
+/// @group summary-card-skeleton
 /// @copyright IBM Security 2019
 ////
 
 @import '../../../globals/index';
 
-@mixin card-v2--skeleton {
+@mixin summary-card--skeleton {
   &__wrapper {
     display: flex;
   }

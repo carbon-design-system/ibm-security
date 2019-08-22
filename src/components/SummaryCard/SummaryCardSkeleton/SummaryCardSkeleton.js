@@ -1,5 +1,5 @@
 /**
- * @file Card v2 skeleton.
+ * @file Summary card skeleton.
  * @copyright IBM Security 2019
  */
 
@@ -10,7 +10,7 @@ import { getComponentNamespace } from '../../../globals/namespace/index';
 import Card from '..';
 import SkeletonText from '../../SkeletonText';
 
-const namespace = getComponentNamespace('card-v2--skeleton');
+const namespace = getComponentNamespace('summary-card--skeleton');
 
 const WIDTHS = {
   sm: '25%',
@@ -23,7 +23,7 @@ const { sm, md, lg } = WIDTHS;
 /**
  * Card skeleton component.
  */
-const CardSkeleton = () => (
+const SummaryCardSkeleton = () => (
   <Card className={namespace}>
     <SkeletonText width={sm} />
     <SkeletonText width={sm} heading />
@@ -38,4 +38,4 @@ const CardSkeleton = () => (
   </Card>
 );
 
-export default CardSkeleton;
+export default SummaryCardSkeleton;

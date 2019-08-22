@@ -1,5 +1,5 @@
 /**
- * @file Card v2.
+ * @file Summary card.
  * @copyright IBM Security 2019
  */
 
@@ -21,7 +21,7 @@ import Tooltip from '../Tooltip';
 
 import { getComponentNamespace } from '../../globals/namespace';
 
-export const namespace = getComponentNamespace('card-v2');
+export const namespace = getComponentNamespace('summary-card');
 
 const transitionSegment = 150; // duration--moderate-01
 
@@ -29,7 +29,7 @@ const loadingIcon = (
   <Loading small withOverlay={false} className={`${namespace}--loading`} />
 );
 
-export class CardV2 extends Component {
+export class SummaryCard extends Component {
   state = { isOpen: false };
 
   toggleOpen = () => {
@@ -253,7 +253,7 @@ export class CardV2 extends Component {
   }
 }
 
-CardV2.defaultProps = {
+SummaryCard.defaultProps = {
   children: undefined,
   className: undefined,
   customLink: {},
@@ -268,7 +268,7 @@ CardV2.defaultProps = {
   title: undefined,
 };
 
-CardV2.propTypes = {
+SummaryCard.propTypes = {
   /** @type {node} The children are rendered in the main content area of the card. */
   children: PropTypes.node,
 
@@ -365,4 +365,4 @@ CardV2.propTypes = {
   }),
 };
 
-export default CardV2;
+export default SummaryCard;

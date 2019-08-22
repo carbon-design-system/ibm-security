@@ -6,7 +6,6 @@
 // Application.
 export ErrorPage from './components/ErrorPage';
 export { Card, CardSkeleton } from './components/Card';
-export { CardV2, CardSkeletonV2 } from './components/CardV2';
 export CodeSnippet, { CodeSnippetSkeleton } from './components/CodeSnippet';
 export ContentSwitcher from './components/ContentSwitcher';
 export DataDecorator, { Decorator } from './components/DataDecorator';
@@ -83,6 +82,7 @@ export StatusIcon from './components/StatusIcon';
 export { StatusStep, StatusIndicator } from './components/StatusIndicator';
 export { Step, StepIndicator } from './components/StepIndicator';
 export Switch from './components/Switch';
+export { SummaryCard, SummaryCardSkeleton } from './components/SummaryCard';
 export Tag, { InteractiveTag, TagSkeleton } from './components/Tag';
 export TagWall from './components/TagWall';
 export TagWallFilter from './components/TagWallFilter';
