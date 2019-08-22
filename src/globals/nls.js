@@ -68,7 +68,7 @@ export const labels = {
   /** @type {string} Text for the tearsheet cancel setup button */
   TEARSHEET_TERTIARY_BUTTON: 'Cancel setup',
   /** @type {string} Secondary text for the tearsheet cancel setup button */
-  TEARSHEET_TERTIARY_SECONDARY_TEXT: 'Information will not be saved upon exit.',
+  TEARSHEET_TERTIARY_SECONDARY_TEXT: 'Information will not be saved upon exit',
 
   // TearsheetSmall
   /** @type {string} label for the tearsheet primary button */
@@ -90,7 +90,7 @@ export const labels = {
   /** @type {string} The cancel setup button for the Wizard component's Tearsheet */
   WIZARD_TERTIARY_BUTTON: 'Cancel',
   /** @type {string} Secondary text for the Wizard component Tearsheet cancel setup button */
-  WIZARD_TERTIARY_SECONDARY_TEXT: 'Information will not be saved upon exit.',
+  WIZARD_TERTIARY_SECONDARY_TEXT: 'Information will not be saved upon exit',
   /** @type {string} The delete button label for the Wizard component's Tearsheet */
   WIZARD_TEARSHEET_DELETE_BUTTON: 'Delete connection',
 
