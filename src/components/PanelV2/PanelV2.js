@@ -152,6 +152,7 @@ PanelV2.propTypes = {
   /** @type {boolean} Focus trap. */
   focusTrap: PropTypes.bool,
 
+  /** @type {node} Footer child elements. */
   footer: PropTypes.node,
 
   /** @type {boolean} The open state. */
@@ -160,10 +161,10 @@ PanelV2.propTypes = {
   /** @type {object} Labels for Panel and children */
   labels: defaultLabels.propType,
 
-  /** @type {string} Child elements. */
+  /** @type {string} Subtitle child elements. */
   subtitle: PropTypes.node,
 
-  /** @type {string} Child elements. */
+  /** @type {string} Title child elements. */
   title: PropTypes.node,
 
   /** @type {boolean} Stop event propagation for events that can bubble. */
