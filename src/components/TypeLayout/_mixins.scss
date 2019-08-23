@@ -61,11 +61,7 @@
       padding: $carbon--spacing-05;
     }
 
-    &--sm {
-      @include carbon--type-style($name: caption-01);
-      padding: $carbon--spacing-02;
-    }
-
+    &--sm,
     &--xs,
     &--xs:first-of-type {
       @include carbon--type-style($name: caption-01);
