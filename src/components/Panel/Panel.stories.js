@@ -24,6 +24,8 @@ import {
   PanelContainer,
   PanelContent,
   PanelController,
+  Select,
+  SelectItem,
 } from '../..';
 
 const closeButtonLabel = 'Close';
@@ -115,6 +117,38 @@ storiesOf(patterns('Panel'), module)
               >
                 <PanelContent>{panelContent}</PanelContent>
               </PanelContainer>
+            </PanelController>
+          </Fragment>
+        )}
+      />
+      <Panel
+        {...panelProps}
+        render={({ active, toggleActive }) => (
+          <Fragment>
+            <Button onClick={toggleActive}>Custom footer</Button>
+            <PanelController active={active}>
+              <PanelContainer
+                {...panelContainerProps}
+                closeButton={{
+                  onClick: toggleActive,
+                  label: text('closeButton.label', closeButtonLabel),
+                }}
+                renderFooter={() => (
+                  <Select id="select" hideLabel>
+                    {new Array(3).fill().map((text = 'Option', id) => {
+                      const key = `select__item--${id}`;
+
+                      return (
+                        <SelectItem
+                          key={key}
+                          text={`${text} ${id + 1}`}
+                          value={id}
+                        />
+                      );
+                    })}
+                  </Select>
+                )}
+              />
             </PanelController>
           </Fragment>
         )}
