@@ -31,6 +31,7 @@ export default class NavItem extends Component {
     link: true,
     onClick: () => {},
     onKeyPress: () => {},
+    renderLink: null,
     tabIndex: 0,
   };
 
@@ -68,6 +69,9 @@ export default class NavItem extends Component {
     /** @type {Function} Handler for keypresses on an item. */
     onKeyPress: func,
 
+    /** @type {Function} Render prop for a custom link. */
+    renderLink: func,
+
     /** @type {number} `tabindex` of an item. */
     tabIndex: number,
   };
@@ -94,6 +98,7 @@ export default class NavItem extends Component {
       handleItemSelect,
       link,
       id,
+      renderLink,
       ...other
     } = this.props;
 
@@ -126,7 +131,10 @@ export default class NavItem extends Component {
         tabIndex={handleDisabled(children ? -1 : tabIndex)}
         {...other}
       >
-        {link ? (
+        {/* eslint-disable no-nested-ternary */}
+        {renderLink ? (
+          renderLink()
+        ) : link ? (
           <a
             id={id}
             className={classnames(linkClassName, {
@@ -156,6 +164,7 @@ export default class NavItem extends Component {
             {children}
           </div>
         )}
+        {/* eslint-enable */}
       </li>
     );
   }

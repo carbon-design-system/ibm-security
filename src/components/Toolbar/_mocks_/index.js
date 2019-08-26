@@ -3,8 +3,11 @@
  * @copyright IBM Security 2018
  */
 
+import React from 'react';
+
 import { icon, url, random } from '../../_mocks_';
 import labels from '../locales/en/Toolbar.json';
+import { namespace } from '../Toolbar';
 
 const externalURL = 'https://www.ibm.com';
 
@@ -95,10 +98,19 @@ const settings = [
       { title: 'Teams' },
     ])
   ),
-  generateNavigationListModel(
-    'Application settings',
-    generateNavigation([{ title: 'Application 1' }])
-  ),
+  {
+    id: '#renderlink-example',
+    navigation: [
+      {
+        renderLink: () => (
+          <a className={`${namespace}__list__item__link`} href="#example">
+            Custom link
+          </a>
+        ),
+      },
+    ],
+    title: 'Application settings',
+  },
   generateNavigationListModel(
     'Legal',
     generateNavigation([

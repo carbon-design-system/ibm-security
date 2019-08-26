@@ -10,7 +10,7 @@ import Menu20 from '@carbon/icons-react/lib/menu/20';
 import Settings20 from '@carbon/icons-react/lib/settings/20';
 
 import classnames from 'classnames';
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { isClient } from '../../globals/utils/capabilities';
 import root from '../../globals/utils/globalRoot';
@@ -151,6 +151,7 @@ export default class Toolbar extends Component {
                 content,
                 icon,
                 id: navigationItemId,
+                renderLink,
                 title: navigationItemTitle,
               }) =>
                 children ? (
@@ -166,16 +167,21 @@ export default class Toolbar extends Component {
                         <NavItem
                           key={navigationListItemId}
                           href={navigationListItemHref}
-                          link={content === undefined}
+                          link={renderLink ? false : content === undefined}
                           handleItemSelect={() => this.toggleContent(content)}
+                          renderLink={renderLink ? renderLink() : null}
                         >
-                          {navigationListItemTitle}
-                          {icon !== undefined && (
-                            <img
-                              alt={navigationListItemTitle}
-                              className={`${namespace}__nav__item__icon`}
-                              src={icon}
-                            />
+                          {!renderLink && (
+                            <Fragment>
+                              {navigationListItemTitle}
+                              {icon !== undefined && (
+                                <img
+                                  alt={navigationListItemTitle}
+                                  className={`${namespace}__nav__item__icon`}
+                                  src={icon}
+                                />
+                              )}
+                            </Fragment>
                           )}
                         </NavItem>
                       )
@@ -185,16 +191,21 @@ export default class Toolbar extends Component {
                   <NavItem
                     key={navigationItemId}
                     href={href}
-                    link={content === undefined}
+                    link={renderLink ? false : content === undefined}
                     handleItemSelect={() => this.toggleContent(content)}
+                    renderLink={renderLink || null}
                   >
-                    {navigationItemTitle}
-                    {icon !== undefined && (
-                      <img
-                        alt={navigationItemTitle}
-                        className={`${namespace}__nav__item__icon`}
-                        src={icon}
-                      />
+                    {!renderLink && (
+                      <Fragment>
+                        {navigationItemTitle}
+                        {icon !== undefined && (
+                          <img
+                            alt={navigationItemTitle}
+                            className={`${namespace}__nav__item__icon`}
+                            src={icon}
+                          />
+                        )}
+                      </Fragment>
                     )}
                   </NavItem>
                 )
@@ -280,6 +291,9 @@ const navigation = {
 
   /** @type {string} Icon. */
   icon: PropTypes.string,
+
+  /** @type {Function} Render prop for a custom link. */
+  renderLink: PropTypes.func,
 };
 
 const panel = () =>
