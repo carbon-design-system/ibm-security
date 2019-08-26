@@ -17,7 +17,7 @@ import { label } from '../_mocks_';
 import { header, profile, toolbar } from '../Shell/_mocks_';
 import { labels } from './_mocks_';
 
-import { Button, PanelV2, PanelV2Content, Shell } from '../..';
+import { Button, CodeSnippet, PanelV2, PanelV2Content, Shell } from '../..';
 
 const closeButtonLabel = 'Close';
 
@@ -27,8 +27,15 @@ const props = {
   labels,
 };
 
-const content =
-  'Use the `PanelV2Content` component to have the appropriate formatting applied to content';
+const content = (
+  <p>
+    Use the{' '}
+    <CodeSnippet type="inline" light>
+      PanelV2Content
+    </CodeSnippet>{' '}
+    component to apply the appropriate formatting to panel content.
+  </p>
+);
 
 storiesOf(experimental('PanelV2'), module)
   .addDecorator(withA11y)
@@ -79,7 +86,7 @@ storiesOf(experimental('PanelV2'), module)
                   onClick: this.closeFirst,
                   label: text('closeButton.label', closeButtonLabel),
                 }}
-                footer={
+                renderFooter={() => (
                   <Fragment>
                     <Button
                       id="p1_secondary-button"
@@ -96,7 +103,7 @@ storiesOf(experimental('PanelV2'), module)
                       Add
                     </Button>
                   </Fragment>
-                }
+                )}
               >
                 <PanelV2Content>{content}</PanelV2Content>
               </PanelV2>
@@ -108,12 +115,14 @@ storiesOf(experimental('PanelV2'), module)
                   onClick: this.closeSecond,
                   label: text('closeButton.label', closeButtonLabel),
                 }}
-                footer={
+                renderFooter={() => (
                   <Button id="p2_primary-button" onClick={this.closeSecond}>
                     Add
                   </Button>
-                }
-              />
+                )}
+              >
+                <PanelV2Content>{content}</PanelV2Content>
+              </PanelV2>
               <PanelV2
                 key="p3"
                 isOpen={this.state.thirdOpen}
@@ -123,7 +132,18 @@ storiesOf(experimental('PanelV2'), module)
                   label: closeButtonLabel,
                 }}
               >
-                <PanelV2Content>{content}</PanelV2Content>
+                <PanelV2Content>
+                  <Fragment>
+                    {content}
+                    <p>
+                      Note that this example intentially does note include the{' '}
+                      <CodeSnippet type="inline" light>
+                        renderFooter
+                      </CodeSnippet>{' '}
+                      prop and therefore does not have a footer.
+                    </p>
+                  </Fragment>
+                </PanelV2Content>
               </PanelV2>
             </Fragment>
           );

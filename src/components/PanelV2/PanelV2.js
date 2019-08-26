@@ -50,11 +50,18 @@ export default class PanelV2 extends Component {
    * Sets the body margin to match the height of the header for fixed scrolling.
    */
   setBodyMargin() {
+    const footerElement = this.footer.current;
+    const headerElement = this.header.current;
+
     this.setState({
-      bodyMargin: this.header.current.clientHeight,
+      bodyMargin: {
+        top: headerElement.clientHeight,
+        bottom: footerElement && footerElement.clientHeight,
+      },
     });
   }
 
+  footer = createRef();
   header = createRef();
 
   renderPanel = ({ labels: { PANEL_CONTAINER_CLOSE_BUTTON } }) => {
@@ -63,7 +70,7 @@ export default class PanelV2 extends Component {
       className,
       closeButton,
       focusTrap,
-      footer,
+      renderFooter,
       stopPropagation,
       stopPropagationEvents,
       subtitle,
@@ -101,15 +108,20 @@ export default class PanelV2 extends Component {
               </header>
               <section
                 className={classnames(`${namespace}__body`, {
-                  [`${namespace}__body--footer`]: footer !== null,
+                  [`${namespace}__body--footer`]: renderFooter,
                 })}
-                style={{ marginTop: `${this.state.bodyMargin}px` }}
+                style={{
+                  marginTop: `${this.state.bodyMargin.top}px`,
+                  marginBottom: `${this.state.bodyMargin.bottom}px`,
+                }}
               >
                 {children}
               </section>
 
-              {footer && (
-                <footer className={`${namespace}__footer`}>{footer}</footer>
+              {renderFooter && (
+                <footer ref={this.footer} className={`${namespace}__footer`}>
+                  {renderFooter()}
+                </footer>
               )}
             </section>
           </PortalV2>
@@ -152,26 +164,26 @@ PanelV2.propTypes = {
   /** @type {boolean} Focus trap. */
   focusTrap: PropTypes.bool,
 
-  /** @type {node} Footer child elements. */
-  footer: PropTypes.node,
-
   /** @type {boolean} The open state. */
   isOpen: PropTypes.bool,
 
   /** @type {object} Labels for Panel and children */
   labels: defaultLabels.propType,
 
-  /** @type {string} Subtitle child elements. */
-  subtitle: PropTypes.node,
-
-  /** @type {string} Title child elements. */
-  title: PropTypes.node,
+  /** @type {Function} Footer render prop. */
+  renderFooter: PropTypes.func,
 
   /** @type {boolean} Stop event propagation for events that can bubble. */
   stopPropagation: PropTypes.bool,
 
   /** @type {array} Array of event types to stop propagation. */
   stopPropagationEvents: PropTypes.arrayOf(PropTypes.oneOf(PORTAL_EVENTS)),
+
+  /** @type {string} Subtitle child elements. */
+  subtitle: PropTypes.node,
+
+  /** @type {string} Title child elements. */
+  title: PropTypes.node,
 };
 
 PanelV2.defaultProps = {
@@ -179,11 +191,11 @@ PanelV2.defaultProps = {
   className: null,
   closeButton: undefined,
   focusTrap: true,
-  footer: null,
   isOpen: true,
   labels: {},
-  subtitle: undefined,
+  renderFooter: null,
   stopPropagation: false,
   stopPropagationEvents: undefined,
+  subtitle: undefined,
   title: undefined,
 };
