@@ -8,7 +8,7 @@ import { storiesOf } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
 
 import { components } from '../../../.storybook';
-
+import { namespace } from './NavItem/NavItem';
 import { Nav, NavItem, NavList } from '../..';
 
 storiesOf(components('Nav'), module)
@@ -41,9 +41,14 @@ storiesOf(components('Nav'), module)
             Nav item 3-2
           </NavItem>
         </NavList>
-        <NavItem key="navitem_0-1" href="#navitem_0-1">
-          Nav item not in a nav list
-        </NavItem>
+        <NavItem
+          key="navitem_0-1"
+          renderLink={() => (
+            <a className={`${namespace}__link`} href="#example">
+              Custom link
+            </a>
+          )}
+        />
       </Nav>
     ),
     {

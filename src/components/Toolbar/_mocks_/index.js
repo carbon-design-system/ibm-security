@@ -7,7 +7,7 @@ import React from 'react';
 
 import { icon, url, random } from '../../_mocks_';
 import labels from '../locales/en/Toolbar.json';
-import { namespace } from '../Toolbar';
+import { namespace as navItemNamespace } from '../../Nav/NavItem/NavItem';
 
 const externalURL = 'https://www.ibm.com';
 
@@ -103,7 +103,7 @@ const settings = [
     navigation: [
       {
         renderLink: () => (
-          <a className={`${namespace}__list__item__link`} href="#example">
+          <a className={`${navItemNamespace}__link`} href="#example">
             Custom link
           </a>
         ),
