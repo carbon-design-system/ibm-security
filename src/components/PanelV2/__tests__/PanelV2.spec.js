@@ -17,7 +17,7 @@ describe('PanelV2', () => {
         title={label}
         subtitle={label}
         closeButton={{ onClick }}
-        footer={
+        renderFooter={() => (
           <Fragment>
             <Button
               id="example-secondary-button"
@@ -30,7 +30,7 @@ describe('PanelV2', () => {
               Add
             </Button>
           </Fragment>
-        }
+        )}
       >
         <PanelV2Content>{label}</PanelV2Content>
       </PanelV2>

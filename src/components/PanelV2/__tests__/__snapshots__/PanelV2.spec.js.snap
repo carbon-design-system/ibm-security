@@ -9,34 +9,9 @@ exports[`PanelV2 renders 1`] = `
     }
   }
   focusTrap={true}
-  footer={
-    <React.Fragment>
-      <Button
-        disabled={false}
-        id="example-secondary-button"
-        kind="secondary"
-        largeText={null}
-        onClick={[Function]}
-        tabIndex={0}
-        type="button"
-      >
-        Close
-      </Button>
-      <Button
-        disabled={false}
-        id="example-primary-button"
-        kind="primary"
-        largeText={null}
-        onClick={[Function]}
-        tabIndex={0}
-        type="button"
-      >
-        Add
-      </Button>
-    </React.Fragment>
-  }
   isOpen={true}
   labels={Object {}}
+  renderFooter={[Function]}
   stopPropagation={false}
   subtitle="Label"
   title="Label"
@@ -161,7 +136,7 @@ exports[`PanelV2 renders 1`] = `
                     </header>
                     <section
                       class="security--panelv2__body security--panelv2__body--footer"
-                      style="margin-top: 0px;"
+                      style="margin-top: 0px; margin-bottom: 0px;"
                     >
                       <div
                         class="security--panel__body--content"
@@ -248,7 +223,7 @@ exports[`PanelV2 renders 1`] = `
                       </header>
                       <section
                         class="security--panelv2__body security--panelv2__body--footer"
-                        style="margin-top: 0px;"
+                        style="margin-top: 0px; margin-bottom: 0px;"
                       >
                         <div
                           class="security--panel__body--content"
@@ -408,6 +383,7 @@ exports[`PanelV2 renders 1`] = `
                       className="security--panelv2__body security--panelv2__body--footer"
                       style={
                         Object {
+                          "marginBottom": "0px",
                           "marginTop": "0px",
                         }
                       }
