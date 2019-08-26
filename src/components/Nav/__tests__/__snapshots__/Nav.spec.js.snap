@@ -125,6 +125,7 @@ exports[`Nav Rendering renders correctly 1`] = `
               link={true}
               onClick={[Function]}
               onKeyPress={[Function]}
+              renderLink={null}
               tabIndex={-1}
             >
               <li
@@ -253,6 +254,7 @@ exports[`Nav Rendering renders correctly 1`] = `
               link={true}
               onClick={[Function]}
               onKeyPress={[Function]}
+              renderLink={null}
               tabIndex={-1}
             >
               <li
@@ -288,6 +290,7 @@ exports[`Nav Rendering renders correctly 1`] = `
         link={true}
         onClick={[Function]}
         onKeyPress={[Function]}
+        renderLink={null}
         tabIndex={0}
       >
         <li
