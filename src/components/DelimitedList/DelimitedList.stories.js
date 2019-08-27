@@ -10,11 +10,14 @@ import { storiesOf } from '@storybook/react';
 
 import React from 'react';
 
+import { settings } from 'carbon-components';
 import { components } from '../../../.storybook';
 
 import { DelimitedList } from '../..';
 
 import props from './_mocks_';
+
+const { prefix } = settings;
 
 const { delimiter, truncate } = DelimitedList.defaultProps;
 
@@ -30,8 +33,12 @@ storiesOf(components('DelimitedList'), module)
   .add(
     'Default',
     () => (
-      <div style={{ width: '360px' }}>
-        <DelimitedList {...storyProps()} />
+      <div className={`${prefix}--grid`}>
+        <div className={`${prefix}--row`}>
+          <div className={`${prefix}--col-sm-2`}>
+            <DelimitedList {...storyProps()} />
+          </div>
+        </div>
       </div>
     ),
     {
