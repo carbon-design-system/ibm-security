@@ -1,5 +1,5 @@
 /**
- * @file Checkbox stories.
+ * @file Copy button stories.
  * @copyright IBM Security 2019
  */
 
