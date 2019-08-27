@@ -6,7 +6,7 @@
 import Close20 from '@carbon/icons-react/lib/close/20';
 
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
+import PropTypes, { func } from 'prop-types';
 import React, { Component, createRef, Fragment } from 'react';
 import { createPortal } from 'react-dom';
 
@@ -102,11 +102,17 @@ export default class PanelContainer extends Component {
    * Sets the body margin to match the height of the header for fixed scrolling.
    */
   setBodyMargin() {
+    const { current: footer } = this.footer;
+
     this.setState({
-      bodyMargin: this.header.current.clientHeight,
+      bodyMargin: {
+        top: this.header.current.clientHeight,
+        bottom: footer && footer.clientHeight,
+      },
     });
   }
 
+  footer = createRef();
   header = createRef();
 
   /**
@@ -132,10 +138,13 @@ export default class PanelContainer extends Component {
       children,
       closeButton,
       primaryButton,
+      renderFooter,
       secondaryButton,
       subtitle,
       title,
     } = this.props;
+
+    const hasFooter = renderFooter || primaryButton;
 
     return (
       <Fragment>
@@ -161,38 +170,46 @@ export default class PanelContainer extends Component {
         </header>
         <section
           className={classnames(`${namespace}__body`, {
-            [`${namespace}__body--footer`]: primaryButton !== null,
+            [`${namespace}__body--footer`]: hasFooter,
           })}
-          style={{ marginTop: `${this.state.bodyMargin}px` }}
+          style={{
+            marginTop: `${this.state.bodyMargin.top}px`,
+            marginBottom: `${this.state.bodyMargin.bottom}px`,
+          }}
         >
           {children}
         </section>
-        {primaryButton && (
-          <footer className={`${namespace}__footer`}>
-            {secondaryButton && (
-              <Button
-                id={secondaryButton.id}
-                className={`${namespace}__footer__button ${namespace}__footer__button--secondary`}
-                disabled={secondaryButton.isDisabled}
-                iconDescription={secondaryButton.iconDescription}
-                kind="secondary"
-                onClick={secondaryButton.onClick}
-                renderIcon={secondaryButton.icon}
-              >
-                {PANEL_CONTAINER_SECONDARY_BUTTON}
-              </Button>
+        {hasFooter && (
+          <footer ref={this.footer} className={`${namespace}__footer`}>
+            {renderFooter ? (
+              renderFooter()
+            ) : (
+              <Fragment>
+                {secondaryButton && (
+                  <Button
+                    id={secondaryButton.id}
+                    className={`${namespace}__footer__button ${namespace}__footer__button--secondary`}
+                    disabled={secondaryButton.isDisabled}
+                    iconDescription={secondaryButton.iconDescription}
+                    kind="secondary"
+                    onClick={secondaryButton.onClick}
+                    renderIcon={secondaryButton.icon}
+                  >
+                    {PANEL_CONTAINER_SECONDARY_BUTTON}
+                  </Button>
+                )}
+                <Button
+                  id={primaryButton.id}
+                  className={`${namespace}__footer__button`}
+                  disabled={primaryButton.isDisabled}
+                  iconDescription={primaryButton.iconDescription}
+                  onClick={primaryButton.onClick}
+                  renderIcon={primaryButton.icon}
+                >
+                  {PANEL_CONTAINER_PRIMARY_BUTTON}
+                </Button>
+              </Fragment>
             )}
-
-            <Button
-              id={primaryButton.id}
-              className={`${namespace}__footer__button`}
-              disabled={primaryButton.isDisabled}
-              iconDescription={primaryButton.iconDescription}
-              onClick={primaryButton.onClick}
-              renderIcon={primaryButton.icon}
-            >
-              {PANEL_CONTAINER_PRIMARY_BUTTON}
-            </Button>
           </footer>
         )}
       </Fragment>
@@ -257,6 +274,9 @@ PanelContainer.propTypes = {
   /** @type {string} Child elements. */
   title: PropTypes.node,
 
+  /** @type {function} Footer render prop. */
+  renderFooter: func,
+
   /** @type {string} Root node to attach the panel to. */
   rootNode: isNode() ? PropTypes.instanceOf(Node) : PropTypes.any,
 
@@ -271,6 +291,7 @@ PanelContainer.defaultProps = {
   secondaryButton: undefined,
   subtitle: undefined,
   title: undefined,
+  renderFooter: null,
   rootNode: isNode() ? document.body : undefined,
   labels: {},
 };

@@ -1,6 +1,6 @@
 {
   "name": "@carbon/ibm-security",
-  "version": "1.0.1-prerelease.1",
+  "version": "1.1.0-prerelease.1",
   "description": "Carbon for IBM Security",
   "license": "Apache-2.0",
   "main": "lib/index.js",
@@ -34,7 +34,7 @@
     "lint:scss": "yarn lint:scss:precommit '**/*.scss'",
     "lint:scss:precommit": "stylelint --fix --ignore-path .gitignore",
     "semantic-release": "semantic-release",
-    "start": "start-storybook -p 3000 -s public",
+    "start": "yarn build:pre:grid && start-storybook -p 3000 -s public",
     "test": "jest spec -ci",
     "test:precommit": "jest --bail --passWithNoTests --testMatch src/**/*.spec.js --findRelatedTests",
     "test:imports": "scripts/checkImports.sh",
