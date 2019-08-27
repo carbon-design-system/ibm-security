@@ -3,7 +3,7 @@
  * @copyright IBM Security 2019
  */
 
-import '../../index.scss';
+// import '../../index.scss';
 
 const Container = ({ children }) => children;
 
