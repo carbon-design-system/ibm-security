@@ -102,12 +102,12 @@ export default class PanelContainer extends Component {
    * Sets the body margin to match the height of the header for fixed scrolling.
    */
   setBodyMargin() {
-    const { current } = this.footer;
+    const { current: footer } = this.footer;
 
     this.setState({
       bodyMargin: {
         top: this.header.current.clientHeight,
-        bottom: current && current.clientHeight,
+        bottom: footer && footer.clientHeight,
       },
     });
   }
@@ -274,7 +274,7 @@ PanelContainer.propTypes = {
   /** @type {string} Child elements. */
   title: PropTypes.node,
 
-  /** @type {Node} Footer render prop. */
+  /** @type {function} Footer render prop. */
   renderFooter: func,
 
   /** @type {string} Root node to attach the panel to. */
