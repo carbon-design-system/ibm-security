@@ -4,7 +4,21 @@
 /// @copyright IBM Security 2018
 ////
 
+// Security variables
+@import '../../globals/variables/index';
+
+// Carbon components
 @import 'carbon-components/scss/components/accordion/accordion';
+
+// Security components
+@import '../../components/SkeletonText/index';
+
+// Carbon mixins
+@import '@carbon/type/scss/index';
+@import '@carbon/layout/scss/spacing';
+
+// Security mixins
+@import '../../globals/namespace/index';
 
 @include export-namespace($name: 'accordion') {
   .#{$prefix}--accordion {
