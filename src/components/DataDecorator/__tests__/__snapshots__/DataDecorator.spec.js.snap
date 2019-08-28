@@ -12,6 +12,7 @@ exports[`DataDecorator Rendering renders correctly 1`] = `
       "onClick": [Function],
     }
   }
+  renderFooter={null}
   score={0}
   scoreThresholds={
     Array [
