@@ -9,7 +9,7 @@ import { action } from '@storybook/addon-actions';
 import centered from '@storybook/addon-centered/react';
 import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 import WithState from 'carbon-components-react/es/tools/withState';
-import ComboBox from '../ComboBox';
+import { ComboBox } from '../..';
 
 import { components } from '../../../.storybook';
 
