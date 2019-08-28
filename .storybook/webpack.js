@@ -20,7 +20,7 @@ module.exports = config => {
         },
         'postcss-loader',
         {
-          loader: 'fast-sass-loader',
+          loader: 'sass-loader',
           options: {
             includePaths: ['node_modules'],
           },

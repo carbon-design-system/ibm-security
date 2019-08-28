@@ -71,7 +71,7 @@ addParameters({
     ),
     storySort: (a, b) =>
       ORDER.indexOf(getCategory(a)) - ORDER.indexOf(getCategory(b)),
-    theme,
+    // theme,
   },
 });
 
