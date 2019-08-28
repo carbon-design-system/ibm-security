@@ -4,8 +4,10 @@
 /// @copyright IBM Security 2019
 ////
 
-@import '../../globals/grid/index';
-@import '../../globals/type/index';
+@import '@carbon/grid/scss/mixins';
+@import '@carbon/theme/scss/mixins';
+@import '@carbon/type/scss/classes';
+@import '@carbon/type/scss/reset';
 
 /// Background color.
 /// @type Color

@@ -4,7 +4,7 @@
 /// @copyright IBM Security 2019
 ////
 
-@import '../../../globals/index';
+@import '@carbon/themes/scss/mixins';
 
 @mixin header__popover__link--secondary {
   &,

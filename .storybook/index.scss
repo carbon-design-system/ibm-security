@@ -4,10 +4,9 @@
 /// @copyright IBM Security 2019
 ////
 
-// @import 'themes/index';
-// @import '../.storybook/components/Container/index';
+@import 'themes/index';
+@import '../.storybook/components/Container/index';
 
-/**
 .grid {
   display: flex;
   padding: $carbon--spacing-09;
@@ -29,4 +28,3 @@
     }
   }
 }
-**/

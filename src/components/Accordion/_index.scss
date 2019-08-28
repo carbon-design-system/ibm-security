@@ -1,10 +1,14 @@
 ////
 /// Accordion component.
 /// @group accordion
-/// @copyright IBM Security 2018
+/// @copyright IBM Security 2019
 ////
 
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/type/scss/styles';
 @import 'carbon-components/scss/components/accordion/accordion';
+
+@import '../../globals/namespace/index';
 
 @include export-namespace($name: 'accordion') {
   .#{$prefix}--accordion {

@@ -4,9 +4,10 @@
 /// @copyright IBM Security 2019
 ////
 
+@import '@carbon/type/scss/styles';
 @import 'carbon-components/scss/components/breadcrumb/breadcrumb';
 
-@import '../../globals/index';
+@import '../../globals/namespace/index';
 
 /// Carbon style overrides.
 @include export-namespace($name: breadcrumb) {
