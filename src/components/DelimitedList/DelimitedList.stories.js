@@ -10,17 +10,20 @@ import { storiesOf } from '@storybook/react';
 
 import React from 'react';
 
+import { settings } from 'carbon-components';
 import { components } from '../../../.storybook';
 
 import { DelimitedList } from '../..';
 
 import props from './_mocks_';
 
+const { prefix } = settings;
+
 const { delimiter, truncate } = DelimitedList.defaultProps;
 
 const storyProps = () => ({
-  items: array('Items (`items`)', props.items),
   delimiter: text('Delimiter (`delimiter`)', delimiter),
+  items: array('Items (`items`)', props.items),
   truncate: boolean('Truncate (`truncate`)', truncate),
 });
 
@@ -29,7 +32,15 @@ storiesOf(components('DelimitedList'), module)
   .addDecorator(centered)
   .add(
     'Default',
-    () => <DelimitedList className="bx--type-body-long-01" {...storyProps()} />,
+    () => (
+      <div className={`${prefix}--grid`}>
+        <div className={`${prefix}--row`}>
+          <div className={`${prefix}--col-sm-2`}>
+            <DelimitedList {...storyProps()} />
+          </div>
+        </div>
+      </div>
+    ),
     {
       info:
         'The `DelimitedList` component truncates an array of items, separated by a delimiter, and includes the total number of items when hovering',
