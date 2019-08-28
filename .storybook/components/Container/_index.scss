@@ -4,7 +4,9 @@
 /// @copyright IBM Security 2019
 ////
 
-@import '../../../src/globals/layout/index';
+@import 'carbon-components/scss/globals/scss/spacing';
+
+@import '../../../src/index';
 
 .container {
   display: flex;
