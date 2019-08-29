@@ -10,6 +10,9 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
 import { number, text } from '@storybook/addon-knobs';
+
+import { components } from '../../../.storybook';
+
 import CopyButton from '../CopyButton';
 
 const props = () => ({
@@ -25,7 +28,7 @@ const props = () => ({
   onClick: action('onClick'),
 });
 
-storiesOf('CopyButton', module)
+storiesOf(components('CopyButton'), module)
   .addDecorator(withA11y)
   .addDecorator(centered)
   .add('Default', () => <CopyButton {...props()} />, {
