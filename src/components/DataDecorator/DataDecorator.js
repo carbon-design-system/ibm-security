@@ -33,6 +33,7 @@ const DataDecorator = props => {
     type,
     value,
     labels,
+    renderFooter,
   } = props;
   const decoratorProps = { className, inline, score, type, value };
   const componentLabels = {
@@ -84,6 +85,7 @@ const DataDecorator = props => {
                   }
                 },
               }}
+              renderFooter={renderFooter}
               secondaryButton={
                 secondaryButton && {
                   ...secondaryButton,
@@ -154,6 +156,9 @@ DataDecorator.propTypes = {
   /** @type {Object<Object>} An object list of primary button props. */
   primaryButton: buttonType,
 
+  /** @type {function} Panel footer render prop. */
+  renderFooter: PropTypes.func,
+
   /** @type {number} The score of the data. */
   score: PropTypes.number,
 
@@ -192,6 +197,7 @@ DataDecorator.defaultProps = {
   onClose: () => {},
   onOpen: () => {},
   primaryButton: { onClick: () => {} },
+  renderFooter: null,
   score: undefined,
   scoreThresholds: [0, 4, 7, 10],
   secondaryButton: undefined,
