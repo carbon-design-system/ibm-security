@@ -9,7 +9,10 @@ export { Card, CardSkeleton } from './components/Card';
 export CodeSnippet, { CodeSnippetSkeleton } from './components/CodeSnippet';
 export ComboBox from './components/ComboBox';
 export ContentSwitcher from './components/ContentSwitcher';
-export DataDecorator, { Decorator } from './components/DataDecorator';
+export DataDecorator, {
+  DataDecoratorV2,
+  Decorator,
+} from './components/DataDecorator';
 
 export {
   DataTable,
