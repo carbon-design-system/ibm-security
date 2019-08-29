@@ -1,0 +1,14 @@
+////
+/// Combo box component.
+/// @group combo-box
+/// @copyright IBM Security 2019
+////
+
+@import 'carbon-components/scss/components/combo-box/combo-box';
+
+/// Carbon style overrides.
+@include export-namespace($name: combo-box) {
+  .#{$prefix}--list-box__menu-item__option {
+    box-sizing: border-box;
+  }
+}

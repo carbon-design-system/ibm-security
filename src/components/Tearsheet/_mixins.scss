@@ -88,8 +88,10 @@ $tearsheet__sizing__dimensions: $carbon--layout-04;
     &--tertiary {
       display: flex;
       flex-wrap: wrap;
+      justify-content: left;
 
       &__text {
+        @include carbon--type-style($name: label-01);
         color: $tearsheet__color__text;
       }
     }
