@@ -13,7 +13,7 @@ import React from 'react';
 
 import { patterns } from '../../../.storybook';
 
-import { DataDecorator, Decorator } from '../..';
+import { Button, DataDecorator, Decorator } from '../..';
 
 import props from './_mocks_';
 
@@ -33,6 +33,7 @@ const storyProps = () => ({
   inert: boolean('Non-interactive (`inert`)', false),
   active: boolean('Active (`active`)', false),
   noIcon: boolean('No icon (`noIcon`)', false),
+  renderFooter: () => <Button size="large">Custom footer</Button>,
 });
 
 storiesOf(patterns('DataDecorator'), module)
