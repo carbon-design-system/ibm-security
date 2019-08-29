@@ -118,7 +118,6 @@ describe('Panel', () => {
       const getElement = element => panel.find(`.${namespace}__${element}`);
 
       selectToggleButton();
-
       expect(getElement('body').prop('style').marginTop).toBe(
         `${getElement('header').getDOMNode().clientHeight}px`
       );
