@@ -4,7 +4,8 @@
 /// @copyright IBM Security 2019
 ////
 
-@import '../../globals/index';
+// Carbon mixins
+@import '@carbon/layout/scss/mini-unit';
 
 @mixin skeleton-text {
   .#{$prefix}--skeleton {

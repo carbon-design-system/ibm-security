@@ -4,10 +4,17 @@
 /// @copyright IBM Security 2018
 ////
 
+// Security variables
+@import '../../globals/variables/index';
+
+// Carbon components
 @import 'carbon-components/scss/components/skeleton/skeleton-text';
 
-@import '../../globals/index';
+// Component mixin
 @import 'mixins';
+
+// Security mixins
+@import '../../globals/namespace/index';
 
 @include export-namespace($name: skeleton-text) {
   @include skeleton-text;

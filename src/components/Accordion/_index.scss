@@ -10,6 +10,8 @@
 
 @import '../../globals/namespace/index';
 
+@import '../../components/SkeletonText/index';
+
 @include export-namespace($name: 'accordion') {
   .#{$prefix}--accordion {
     &__heading {
