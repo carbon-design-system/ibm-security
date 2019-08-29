@@ -4,7 +4,9 @@
 /// @copyright IBM Security 2018
 ////
 
+@import '../../globals/variables/index';
 @import 'carbon-components/scss/components/multi-select/multi-select';
+@import '../../globals/namespace/index';
 
 @include export-namespace($name: multi-select) {
   .#{$prefix}--multi-select {
