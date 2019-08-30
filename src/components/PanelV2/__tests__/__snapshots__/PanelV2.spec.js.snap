@@ -137,7 +137,7 @@ exports[`PanelV2 renders 1`] = `
                     </header>
                     <section
                       class="security--panel__body"
-                      style="margin-top: 0px;"
+                      style="margin-top: 0px; margin-bottom: 0px;"
                     >
                       <div
                         class="security--panel__body--content"
@@ -224,7 +224,7 @@ exports[`PanelV2 renders 1`] = `
                       </header>
                       <section
                         class="security--panel__body"
-                        style="margin-top: 0px;"
+                        style="margin-top: 0px; margin-bottom: 0px;"
                       >
                         <div
                           class="security--panel__body--content"
@@ -384,7 +384,8 @@ exports[`PanelV2 renders 1`] = `
                       className="security--panel__body"
                       style={
                         Object {
-                          "marginTop": "[object Object]px",
+                          "marginBottom": "0px",
+                          "marginTop": "0px",
                         }
                       }
                     >
