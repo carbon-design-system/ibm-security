@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PanelV2 renders 1`] = `
-<PanelV2
+<Panel
   className={null}
   closeButton={
     Object {
@@ -11,13 +11,14 @@ exports[`PanelV2 renders 1`] = `
   focusTrap={true}
   isOpen={true}
   labels={Object {}}
+  primaryButton={null}
   renderFooter={[Function]}
   stopPropagation={false}
   subtitle="Label"
   title="Label"
 >
   <Transition
-    className="security--panelv2"
+    className="security--panel"
     component={[Function]}
     timeout={160}
   >
@@ -32,12 +33,12 @@ exports[`PanelV2 renders 1`] = `
       transitionLeaveTimeout={160}
       transitionName={
         Object {
-          "appear": "security--panelv2__transition--appear",
-          "appearActive": "security--panelv2__transition--appear--active",
-          "enter": "security--panelv2__transition--enter",
-          "enterActive": "security--panelv2__transition--enter--active",
-          "leave": "security--panelv2__transition--leave",
-          "leaveActive": "security--panelv2__transition--leave--active",
+          "appear": "security--panel__transition--appear",
+          "appearActive": "security--panel__transition--appear--active",
+          "enter": "security--panel__transition--enter",
+          "enterActive": "security--panel__transition--enter--active",
+          "leave": "security--panel__transition--leave",
+          "leaveActive": "security--panel__transition--leave--active",
         }
       }
     >
@@ -53,12 +54,12 @@ exports[`PanelV2 renders 1`] = `
         transitionLeaveTimeout={160}
         transitionName={
           Object {
-            "appear": "security--panelv2__transition--appear",
-            "appearActive": "security--panelv2__transition--appear--active",
-            "enter": "security--panelv2__transition--enter",
-            "enterActive": "security--panelv2__transition--enter--active",
-            "leave": "security--panelv2__transition--leave",
-            "leaveActive": "security--panelv2__transition--leave--active",
+            "appear": "security--panel__transition--appear",
+            "appearActive": "security--panel__transition--appear--active",
+            "enter": "security--panel__transition--enter",
+            "enterActive": "security--panel__transition--enter--active",
+            "leave": "security--panel__transition--leave",
+            "leaveActive": "security--panel__transition--leave--active",
           }
         }
       >
@@ -75,16 +76,16 @@ exports[`PanelV2 renders 1`] = `
             leaveTimeout={160}
             name={
               Object {
-                "appear": "security--panelv2__transition--appear",
-                "appearActive": "security--panelv2__transition--appear--active",
-                "enter": "security--panelv2__transition--enter",
-                "enterActive": "security--panelv2__transition--enter--active",
-                "leave": "security--panelv2__transition--leave",
-                "leaveActive": "security--panelv2__transition--leave--active",
+                "appear": "security--panel__transition--appear",
+                "appearActive": "security--panel__transition--appear--active",
+                "enter": "security--panel__transition--enter",
+                "enterActive": "security--panel__transition--enter--active",
+                "leave": "security--panel__transition--leave",
+                "leaveActive": "security--panel__transition--leave--active",
               }
             }
           >
-            <PortalV2
+            <Portal
               focusTrap={true}
               hasOverlay={true}
               initialFocus={null}
@@ -94,28 +95,28 @@ exports[`PanelV2 renders 1`] = `
                   class="security--portal__container"
                 >
                   <section
-                    class="security--panelv2 security--panelv2__transition--appear"
+                    class="security--panel security--panel__transition--appear"
                   >
                     <header
-                      class="security--panelv2__header"
+                      class="security--panel__header"
                     >
                       <div
-                        class="security--panelv2__header__container--title"
+                        class="security--panel__header__container--title"
                       >
                         <div
-                          class="security--panelv2__header--title"
+                          class="security--panel__header--title"
                         >
                           Label
                         </div>
                         <div
-                          class="security--panelv2__header--subtitle"
+                          class="security--panel__header--subtitle"
                         >
                           Label
                         </div>
                       </div>
                       <button
                         aria-label="Close"
-                        class="security--button--icon security--panelv2__button--close"
+                        class="security--button--icon security--panel__button--close"
                       >
                         <svg
                           aria-hidden="true"
@@ -135,8 +136,8 @@ exports[`PanelV2 renders 1`] = `
                       </button>
                     </header>
                     <section
-                      class="security--panelv2__body security--panelv2__body--footer"
-                      style="margin-top: 0px; margin-bottom: 0px;"
+                      class="security--panel__body"
+                      style="margin-top: 0px;"
                     >
                       <div
                         class="security--panel__body--content"
@@ -147,7 +148,7 @@ exports[`PanelV2 renders 1`] = `
                       </div>
                     </section>
                     <footer
-                      class="security--panelv2__footer"
+                      class="security--panel__footer"
                     >
                       <button
                         class="security--button bx--btn bx--btn--secondary"
@@ -181,28 +182,28 @@ exports[`PanelV2 renders 1`] = `
                     class="security--portal__container"
                   >
                     <section
-                      class="security--panelv2 security--panelv2__transition--appear"
+                      class="security--panel security--panel__transition--appear"
                     >
                       <header
-                        class="security--panelv2__header"
+                        class="security--panel__header"
                       >
                         <div
-                          class="security--panelv2__header__container--title"
+                          class="security--panel__header__container--title"
                         >
                           <div
-                            class="security--panelv2__header--title"
+                            class="security--panel__header--title"
                           >
                             Label
                           </div>
                           <div
-                            class="security--panelv2__header--subtitle"
+                            class="security--panel__header--subtitle"
                           >
                             Label
                           </div>
                         </div>
                         <button
                           aria-label="Close"
-                          class="security--button--icon security--panelv2__button--close"
+                          class="security--button--icon security--panel__button--close"
                         >
                           <svg
                             aria-hidden="true"
@@ -222,8 +223,8 @@ exports[`PanelV2 renders 1`] = `
                         </button>
                       </header>
                       <section
-                        class="security--panelv2__body security--panelv2__body--footer"
-                        style="margin-top: 0px; margin-bottom: 0px;"
+                        class="security--panel__body"
+                        style="margin-top: 0px;"
                       >
                         <div
                           class="security--panel__body--content"
@@ -234,7 +235,7 @@ exports[`PanelV2 renders 1`] = `
                         </div>
                       </section>
                       <footer
-                        class="security--panelv2__footer"
+                        class="security--panel__footer"
                       >
                         <button
                           class="security--button bx--btn bx--btn--secondary"
@@ -272,27 +273,27 @@ exports[`PanelV2 renders 1`] = `
                   paused={false}
                 >
                   <section
-                    className="security--panelv2"
+                    className="security--panel"
                   >
                     <header
-                      className="security--panelv2__header"
+                      className="security--panel__header"
                     >
                       <div
-                        className="security--panelv2__header__container--title"
+                        className="security--panel__header__container--title"
                       >
                         <div
-                          className="security--panelv2__header--title"
+                          className="security--panel__header--title"
                         >
                           Label
                         </div>
                         <div
-                          className="security--panelv2__header--subtitle"
+                          className="security--panel__header--subtitle"
                         >
                           Label
                         </div>
                       </div>
                       <IconButton
-                        className="security--panelv2__button--close"
+                        className="security--panel__button--close"
                         iconClassName=""
                         iconSize={20}
                         label="Close"
@@ -311,7 +312,7 @@ exports[`PanelV2 renders 1`] = `
                       >
                         <button
                           aria-label="Close"
-                          className="security--button--icon security--panelv2__button--close"
+                          className="security--button--icon security--panel__button--close"
                           onClick={[Function]}
                         >
                           <Icon
@@ -380,11 +381,10 @@ exports[`PanelV2 renders 1`] = `
                       </IconButton>
                     </header>
                     <section
-                      className="security--panelv2__body security--panelv2__body--footer"
+                      className="security--panel__body"
                       style={
                         Object {
-                          "marginBottom": "0px",
-                          "marginTop": "0px",
+                          "marginTop": "[object Object]px",
                         }
                       }
                     >
@@ -399,7 +399,7 @@ exports[`PanelV2 renders 1`] = `
                       </PanelContent>
                     </section>
                     <footer
-                      className="security--panelv2__footer"
+                      className="security--panel__footer"
                     >
                       <Button
                         disabled={false}
@@ -465,11 +465,11 @@ exports[`PanelV2 renders 1`] = `
                   </section>
                 </FocusTrap>
               </Portal>
-            </PortalV2>
+            </Portal>
           </CSSTransitionGroupChild>
         </component>
       </TransitionGroup>
     </CSSTransitionGroup>
   </Transition>
-</PanelV2>
+</Panel>
 `;

@@ -97,16 +97,9 @@ export const PORTAL_EVENTS = [
 class Portal extends Component {
   componentDidMount() {
     if (isClient()) {
-      const { children, rootNode, hasOverlay } = this.props;
+      const { rootNode, hasOverlay } = this.props;
 
       rootNode.classList.toggle(this.containerClass);
-
-      if (
-        children.props &&
-        children.props.className === getComponentNamespace('panel')
-      ) {
-        rootNode.classList.toggle(this.panelContainerClass);
-      }
 
       if (
         hasOverlay &&
@@ -122,16 +115,9 @@ class Portal extends Component {
 
   componentWillUnmount() {
     if (isClient()) {
-      const { children, rootNode, hasOverlay } = this.props;
+      const { rootNode, hasOverlay } = this.props;
 
       rootNode.classList.toggle(this.containerClass);
-
-      if (
-        children.props &&
-        children.props.className === getComponentNamespace('panel')
-      ) {
-        rootNode.classList.toggle(this.panelContainerClass);
-      }
 
       if (hasOverlay && this.overlay) {
         rootNode.removeChild(this.overlay);
