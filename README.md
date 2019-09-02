@@ -93,3 +93,5 @@ If you experience any issues while using Carbon for IBM Security, please [create
 ## License
 
 Licensed under the [Apache License, Version 2.0](./LICENSE).
+
+[![Netlify](https://www.netlify.com/img/global/badges/netlify-color-accent.svg)](https://www.netlify.com)
