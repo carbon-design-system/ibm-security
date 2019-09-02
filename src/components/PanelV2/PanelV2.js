@@ -18,7 +18,7 @@ import IconButton from '../IconButton';
 import Transition from '../Transition';
 import Portal, { PORTAL_EVENTS } from '../Portal';
 
-export const namespace = getComponentNamespace('panel');
+export const namespace = getComponentNamespace('panel--v2');
 
 /**
  * Panel container component.

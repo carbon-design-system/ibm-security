@@ -1,6 +1,6 @@
 ////
 /// Panel v2 mixins.
-/// @group panelv2
+/// @group panel--v2
 /// @copyright IBM Security 2019
 ////
 
@@ -10,7 +10,7 @@
 @import '../../components/IconButton/mixins';
 @import '../../components/Toolbar/mixins';
 
-@mixin panelv2 {
+@mixin panel--v2 {
   /// Width.
   /// @type Length
   $panel__sizing__width: carbon--mini-units(
