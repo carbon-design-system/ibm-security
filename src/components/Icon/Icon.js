@@ -33,7 +33,7 @@ const Icon = ({
   ...other
 }) => {
   const iconProps = {
-    'aria-hidden': true,
+    'aria-hidden': 'true',
     className: classnames(getComponentNamespace('icon'), className),
     focusable: false,
     preserveAspectRatio: 'xMidYMid meet',
