@@ -101,7 +101,7 @@ exports[`TagWall Rendering renders 1`] = `
               width={null}
             >
               <ForwardRef(Close16)
-                aria-hidden={true}
+                aria-hidden="true"
                 className="security--icon security--tag--interactive__button__icon"
                 focusable={false}
                 preserveAspectRatio="xMidYMid meet"
@@ -112,7 +112,7 @@ exports[`TagWall Rendering renders 1`] = `
                 }
               >
                 <Icon
-                  aria-hidden={true}
+                  aria-hidden="true"
                   className="security--icon security--tag--interactive__button__icon"
                   focusable={false}
                   height={16}
@@ -188,7 +188,7 @@ exports[`TagWall Rendering renders 1`] = `
               width={null}
             >
               <ForwardRef(Close16)
-                aria-hidden={true}
+                aria-hidden="true"
                 className="security--icon security--tag--interactive__button__icon"
                 focusable={false}
                 preserveAspectRatio="xMidYMid meet"
@@ -199,7 +199,7 @@ exports[`TagWall Rendering renders 1`] = `
                 }
               >
                 <Icon
-                  aria-hidden={true}
+                  aria-hidden="true"
                   className="security--icon security--tag--interactive__button__icon"
                   focusable={false}
                   height={16}
@@ -275,7 +275,7 @@ exports[`TagWall Rendering renders 1`] = `
               width={null}
             >
               <ForwardRef(Close16)
-                aria-hidden={true}
+                aria-hidden="true"
                 className="security--icon security--tag--interactive__button__icon"
                 focusable={false}
                 preserveAspectRatio="xMidYMid meet"
@@ -286,7 +286,7 @@ exports[`TagWall Rendering renders 1`] = `
                 }
               >
                 <Icon
-                  aria-hidden={true}
+                  aria-hidden="true"
                   className="security--icon security--tag--interactive__button__icon"
                   focusable={false}
                   height={16}
@@ -362,7 +362,7 @@ exports[`TagWall Rendering renders 1`] = `
               width={null}
             >
               <ForwardRef(Close16)
-                aria-hidden={true}
+                aria-hidden="true"
                 className="security--icon security--tag--interactive__button__icon"
                 focusable={false}
                 preserveAspectRatio="xMidYMid meet"
@@ -373,7 +373,7 @@ exports[`TagWall Rendering renders 1`] = `
                 }
               >
                 <Icon
-                  aria-hidden={true}
+                  aria-hidden="true"
                   className="security--icon security--tag--interactive__button__icon"
                   focusable={false}
                   height={16}
@@ -449,7 +449,7 @@ exports[`TagWall Rendering renders 1`] = `
               width={null}
             >
               <ForwardRef(Close16)
-                aria-hidden={true}
+                aria-hidden="true"
                 className="security--icon security--tag--interactive__button__icon"
                 focusable={false}
                 preserveAspectRatio="xMidYMid meet"
@@ -460,7 +460,7 @@ exports[`TagWall Rendering renders 1`] = `
                 }
               >
                 <Icon
-                  aria-hidden={true}
+                  aria-hidden="true"
                   className="security--icon security--tag--interactive__button__icon"
                   focusable={false}
                   height={16}
@@ -536,7 +536,7 @@ exports[`TagWall Rendering renders 1`] = `
               width={null}
             >
               <ForwardRef(Close16)
-                aria-hidden={true}
+                aria-hidden="true"
                 className="security--icon security--tag--interactive__button__icon"
                 focusable={false}
                 preserveAspectRatio="xMidYMid meet"
@@ -547,7 +547,7 @@ exports[`TagWall Rendering renders 1`] = `
                 }
               >
                 <Icon
-                  aria-hidden={true}
+                  aria-hidden="true"
                   className="security--icon security--tag--interactive__button__icon"
                   focusable={false}
                   height={16}
@@ -623,7 +623,7 @@ exports[`TagWall Rendering renders 1`] = `
               width={null}
             >
               <ForwardRef(Close16)
-                aria-hidden={true}
+                aria-hidden="true"
                 className="security--icon security--tag--interactive__button__icon"
                 focusable={false}
                 preserveAspectRatio="xMidYMid meet"
@@ -634,7 +634,7 @@ exports[`TagWall Rendering renders 1`] = `
                 }
               >
                 <Icon
-                  aria-hidden={true}
+                  aria-hidden="true"
                   className="security--icon security--tag--interactive__button__icon"
                   focusable={false}
                   height={16}
@@ -710,7 +710,7 @@ exports[`TagWall Rendering renders 1`] = `
               width={null}
             >
               <ForwardRef(Close16)
-                aria-hidden={true}
+                aria-hidden="true"
                 className="security--icon security--tag--interactive__button__icon"
                 focusable={false}
                 preserveAspectRatio="xMidYMid meet"
@@ -721,7 +721,7 @@ exports[`TagWall Rendering renders 1`] = `
                 }
               >
                 <Icon
-                  aria-hidden={true}
+                  aria-hidden="true"
                   className="security--icon security--tag--interactive__button__icon"
                   focusable={false}
                   height={16}
