@@ -3,7 +3,7 @@
  * @copyright IBM Security 2019
  */
 
-import centered from '@storybook/addon-centered';
+import centered from '@storybook/addon-centered/react';
 import { storiesOf } from '@storybook/react';
 
 import React from 'react';
