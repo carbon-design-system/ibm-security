@@ -2,7 +2,7 @@
 
 exports[`Icon Rendering renders correctly 1`] = `
 <ForwardRef(Add16)
-  aria-hidden={true}
+  aria-hidden="true"
   className="security--icon class"
   focusable={false}
   preserveAspectRatio="xMidYMid meet"
@@ -16,7 +16,7 @@ exports[`Icon Rendering renders correctly 1`] = `
 
 exports[`Icon Rendering renders correctly 2`] = `
 <ForwardRef(Add16)
-  aria-hidden={true}
+  aria-hidden="true"
   className="security--icon class"
   focusable={false}
   preserveAspectRatio="xMidYMid meet"
@@ -48,7 +48,7 @@ exports[`Icon Rendering renders the HTML of the node's subtree 1`] = `
 
 exports[`Icon Rendering renders the path variation correctly 1`] = `
 <svg
-  aria-hidden={true}
+  aria-hidden="true"
   className="security--icon class"
   focusable={false}
   height={20}

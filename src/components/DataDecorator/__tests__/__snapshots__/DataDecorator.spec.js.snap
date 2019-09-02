@@ -71,7 +71,7 @@ exports[`DataDecorator Rendering renders correctly 1`] = `
             width={null}
           >
             <svg
-              aria-hidden={true}
+              aria-hidden="true"
               className="security--icon"
               fillRule="evenodd"
               focusable={false}

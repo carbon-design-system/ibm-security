@@ -107,27 +107,6 @@ storiesOf(components('DatePicker'), module)
     </DatePicker>
   ))
   .add(
-    'range with calendar and min/max dates',
-    () => (
-      <DatePicker
-        {...props.datePicker()}
-        minDate="1/10/2020"
-        maxDate="1/20/2020"
-        datePickerType="range"
-        dateFormat="m/d/Y"
-      >
-        <DatePickerInput {...props.datePickerInput()} />
-      </DatePicker>
-    ),
-    {
-      info: {
-        text: `
-            A single Date Picker consists of an input field and a calendar.
-          `,
-      },
-    }
-  )
-  .add(
     'range with calendar',
     () => {
       const datePickerInputProps = props.datePickerInput();

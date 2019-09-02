@@ -1279,7 +1279,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                               width={null}
                                             >
                                               <ForwardRef(Close16)
-                                                aria-hidden={true}
+                                                aria-hidden="true"
                                                 className="security--icon security--tag--interactive__button__icon"
                                                 focusable={false}
                                                 preserveAspectRatio="xMidYMid meet"
@@ -1290,7 +1290,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                 }
                                               >
                                                 <Icon
-                                                  aria-hidden={true}
+                                                  aria-hidden="true"
                                                   className="security--icon security--tag--interactive__button__icon"
                                                   focusable={false}
                                                   height={16}
@@ -1490,7 +1490,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                   width={null}
                                                 >
                                                   <ForwardRef(Search20)
-                                                    aria-hidden={true}
+                                                    aria-hidden="true"
                                                     className="security--icon security--filter__search__icon"
                                                     fill="#f3f3f3"
                                                     focusable={false}
@@ -1502,7 +1502,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                     }
                                                   >
                                                     <Icon
-                                                      aria-hidden={true}
+                                                      aria-hidden="true"
                                                       className="security--icon security--filter__search__icon"
                                                       fill="#f3f3f3"
                                                       focusable={false}
@@ -1601,7 +1601,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                           width={null}
                                                         >
                                                           <ForwardRef(Add20)
-                                                            aria-hidden={true}
+                                                            aria-hidden="true"
                                                             className="security--icon security--filter__add__icon"
                                                             focusable={false}
                                                             preserveAspectRatio="xMidYMid meet"
@@ -1612,7 +1612,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                             }
                                                           >
                                                             <Icon
-                                                              aria-hidden={true}
+                                                              aria-hidden="true"
                                                               className="security--icon security--filter__add__icon"
                                                               focusable={false}
                                                               height={20}
@@ -1775,7 +1775,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                 width={null}
                               >
                                 <ForwardRef(Close16)
-                                  aria-hidden={true}
+                                  aria-hidden="true"
                                   className="security--icon"
                                   focusable={false}
                                   preserveAspectRatio="xMidYMid meet"
@@ -1786,7 +1786,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                   }
                                 >
                                   <Icon
-                                    aria-hidden={true}
+                                    aria-hidden="true"
                                     className="security--icon"
                                     focusable={false}
                                     height={16}
@@ -1899,7 +1899,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 2`] = 
               width={null}
             >
               <ForwardRef(Close16)
-                aria-hidden={true}
+                aria-hidden="true"
                 className="security--icon security--tag--interactive__button__icon"
                 focusable={false}
                 preserveAspectRatio="xMidYMid meet"
@@ -1910,7 +1910,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 2`] = 
                 }
               >
                 <Icon
-                  aria-hidden={true}
+                  aria-hidden="true"
                   className="security--icon security--tag--interactive__button__icon"
                   focusable={false}
                   height={16}
@@ -3636,7 +3636,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                 width={null}
                                               >
                                                 <ForwardRef(Close16)
-                                                  aria-hidden={true}
+                                                  aria-hidden="true"
                                                   className="security--icon security--tag--interactive__button__icon"
                                                   focusable={false}
                                                   preserveAspectRatio="xMidYMid meet"
@@ -3647,7 +3647,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                   }
                                                 >
                                                   <Icon
-                                                    aria-hidden={true}
+                                                    aria-hidden="true"
                                                     className="security--icon security--tag--interactive__button__icon"
                                                     focusable={false}
                                                     height={16}
@@ -3847,7 +3847,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                     width={null}
                                                   >
                                                     <ForwardRef(Search20)
-                                                      aria-hidden={true}
+                                                      aria-hidden="true"
                                                       className="security--icon security--filter__search__icon"
                                                       fill="#f3f3f3"
                                                       focusable={false}
@@ -3859,7 +3859,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                       }
                                                     >
                                                       <Icon
-                                                        aria-hidden={true}
+                                                        aria-hidden="true"
                                                         className="security--icon security--filter__search__icon"
                                                         fill="#f3f3f3"
                                                         focusable={false}
@@ -3958,7 +3958,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                             width={null}
                                                           >
                                                             <ForwardRef(Add20)
-                                                              aria-hidden={true}
+                                                              aria-hidden="true"
                                                               className="security--icon security--filter__add__icon"
                                                               focusable={false}
                                                               preserveAspectRatio="xMidYMid meet"
@@ -3969,7 +3969,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                               }
                                                             >
                                                               <Icon
-                                                                aria-hidden={true}
+                                                                aria-hidden="true"
                                                                 className="security--icon security--filter__add__icon"
                                                                 focusable={false}
                                                                 height={20}
@@ -4132,7 +4132,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   width={null}
                                 >
                                   <ForwardRef(Close16)
-                                    aria-hidden={true}
+                                    aria-hidden="true"
                                     className="security--icon"
                                     focusable={false}
                                     preserveAspectRatio="xMidYMid meet"
@@ -4143,7 +4143,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     }
                                   >
                                     <Icon
-                                      aria-hidden={true}
+                                      aria-hidden="true"
                                       className="security--icon"
                                       focusable={false}
                                       height={16}
