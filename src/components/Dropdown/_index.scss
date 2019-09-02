@@ -4,9 +4,9 @@
 /// @copyright IBM Security 2019
 ////
 
+@import '../../globals/variables/index';
 @import 'carbon-components/scss/components/dropdown/dropdown';
-
-@import '../../globals/index';
+@import '../../globals/namespace/index';
 
 @include export-namespace($name: dropdown) {
   /// Related to https://github.com/carbon-design-system/carbon-components/issues/2398
