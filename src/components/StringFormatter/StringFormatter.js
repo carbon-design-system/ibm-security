@@ -33,12 +33,12 @@ StringFormatter.propTypes = {
   /** @type {string} Value to format. */
   value: string.isRequired,
 
-  /** @type {string} width to max the string at. */
+  /** @type {string} Maximum width of value. */
   width: string,
 };
 
 StringFormatter.defaultProps = {
-  className: null,
+  className: '',
   truncate: false,
   width: null,
 };

@@ -4,13 +4,15 @@
 /// @copyright IBM Security 2019
 ////
 
+@import '@carbon/layout/scss/mini-unit';
+
 @import '../Component/mixins';
 
 @include component($name: string-formatter) {
   display: inline-block;
 
   &--truncate {
-    max-width: 80ch;
+    max-width: carbon--mini-units($count: 84);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

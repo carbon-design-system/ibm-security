@@ -8,20 +8,18 @@ import React from 'react';
 
 import { StringFormatter } from '../../..';
 
-import props from '../_mocks_';
-
 describe('StringFormatter', () => {
   let stringFormatter;
 
   beforeEach(() => {
-    stringFormatter = shallow(<StringFormatter {...props} />);
+    stringFormatter = shallow(<StringFormatter value="Value" />);
   });
 
   it('renders', () => {
     expect(stringFormatter).toMatchSnapshot();
   });
 
-  it('renders the truncation variation', () => {
+  it('renders the truncated variation', () => {
     stringFormatter.setProps({ truncate: true });
 
     expect(stringFormatter).toMatchSnapshot();

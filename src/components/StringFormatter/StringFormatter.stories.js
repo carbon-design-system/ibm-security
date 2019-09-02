@@ -14,9 +14,7 @@ import { components } from '../../../.storybook';
 
 import { StringFormatter } from '../..';
 
-import props from './_mocks_';
-
-const { value } = props;
+const value = 'Value';
 
 const storyProps = () => ({
   value: text('Value (`value`)', value),
