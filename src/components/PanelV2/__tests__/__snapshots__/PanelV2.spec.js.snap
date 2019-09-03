@@ -329,7 +329,7 @@ exports[`PanelV2 renders 1`] = `
                             width={null}
                           >
                             <ForwardRef(Close20)
-                              aria-hidden={true}
+                              aria-hidden="true"
                               className="security--icon"
                               focusable={false}
                               preserveAspectRatio="xMidYMid meet"
@@ -340,7 +340,7 @@ exports[`PanelV2 renders 1`] = `
                               }
                             >
                               <Icon
-                                aria-hidden={true}
+                                aria-hidden="true"
                                 className="security--icon"
                                 focusable={false}
                                 height={20}
