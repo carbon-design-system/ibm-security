@@ -55,10 +55,7 @@ $cool-gray-map: map-get(
 /// @type Map<Map, Map>
 $themes: (
   cg10: $security--theme--cg10,
-  g10: $carbon--theme--g10,
   g100: $carbon--theme--g100,
-  g90: $carbon--theme--g90,
-  white: $carbon--theme--white,
 );
 
 // Define the correct theme tokens for each class.
