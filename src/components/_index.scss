@@ -5,6 +5,7 @@
 ////
 
 // Application.
+@import 'Breadcrumb/index';
 @import 'Card/index';
 @import 'DataDecorator/index';
 @import 'DataTable/index';
@@ -16,10 +17,12 @@
 @import 'IconButtonBar/index';
 @import 'IconButton/index';
 @import 'InlineLoading/index';
+@import 'Nav/index';
 @import 'NonEntitledSection/index';
 @import 'Notification/index';
 @import 'Panel/index';
 @import 'Pill/index';
+@import 'ProfileImage/index';
 @import 'ProgressIndicator/index';
 @import 'ScrollGradient/index';
 @import 'Search/index';
@@ -39,14 +42,11 @@
 
 // Platform.
 @import 'Header/index';
-@import 'Nav/index';
-@import 'ProfileImage/index';
 @import 'Shell/index';
 
 /// Carbon proxy.
 @import 'Accordion/index';
 @import 'Button/index';
-@import 'Breadcrumb/index';
 @import 'Checkbox/index';
 @import 'CodeSnippet/index';
 @import 'ComboBox/index';

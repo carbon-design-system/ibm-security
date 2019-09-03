@@ -16,14 +16,12 @@ $carbon--theme: $security--theme;
 
 @include carbon--theme;
 
-@import '../variables/index';
+@import 'carbon-components/scss/globals/scss/theme';
 
 @import '../deprecate/index';
 @import '../namespace/index';
 
 @import '../../components/IconButton/variables';
-
-@import 'carbon-components/scss/globals/scss/theme';
 
 // TODO: V3 - To be removed after the `theme` function is deprecated.
 
