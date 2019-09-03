@@ -25,15 +25,19 @@ $security--theme: ();
 /// @type Map<String, Color>
 $security--theme--cg10: $carbon--theme--g10;
 
-$cool-gray-map: map-get(
+$gray-color-map: map-get(
+  $map: $carbon--colors,
+  $key: 'gray',
+);
+
+$cool-gray-color-map: map-get(
   $map: $carbon--colors,
   $key: 'cool-gray',
 );
 
 // Converts 'gray' color values to 'cool gray'.
 @each $token-key, $token-value in $security--theme--cg10 {
-  @each $color-key, $color-value in map-get($map: $carbon--colors, $key: 'gray')
-  {
+  @each $color-key, $color-value in $gray-color-map {
     $security--theme--cg10: if(
       $token-value == $color-value,
       map-merge(
@@ -41,7 +45,7 @@ $cool-gray-map: map-get(
         $map2: (
           $token-key:
             map-get(
-              $map: $cool-gray-map,
+              $map: $cool-gray-color-map,
               $key: $color-key,
             ),
         ),
