@@ -55,7 +55,7 @@ exports[`Nav Rendering renders correctly 1`] = `
               width={null}
             >
               <ForwardRef(ChevronDown16)
-                aria-hidden={true}
+                aria-hidden="true"
                 className="security--icon security--nav__list__icon"
                 focusable={false}
                 preserveAspectRatio="xMidYMid meet"
@@ -66,7 +66,7 @@ exports[`Nav Rendering renders correctly 1`] = `
                 }
               >
                 <Icon
-                  aria-hidden={true}
+                  aria-hidden="true"
                   className="security--icon security--nav__list__icon"
                   focusable={false}
                   height={16}
@@ -184,7 +184,7 @@ exports[`Nav Rendering renders correctly 1`] = `
               width={null}
             >
               <ForwardRef(ChevronDown16)
-                aria-hidden={true}
+                aria-hidden="true"
                 className="security--icon security--nav__list__icon"
                 focusable={false}
                 preserveAspectRatio="xMidYMid meet"
@@ -195,7 +195,7 @@ exports[`Nav Rendering renders correctly 1`] = `
                 }
               >
                 <Icon
-                  aria-hidden={true}
+                  aria-hidden="true"
                   className="security--icon security--nav__list__icon"
                   focusable={false}
                   height={16}

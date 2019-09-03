@@ -10,7 +10,9 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
 import { number, text } from '@storybook/addon-knobs';
-import CopyButton from '../CopyButton';
+import { CopyButton } from '../..';
+
+import { components } from '../../../.storybook';
 
 const props = () => ({
   feedback: text('The text shown upon clicking (feedback)', 'Copied!'),
@@ -25,12 +27,20 @@ const props = () => ({
   onClick: action('onClick'),
 });
 
-storiesOf('CopyButton', module)
+storiesOf(components('CopyButton'), module)
   .addDecorator(withA11y)
   .addDecorator(centered)
-  .add('Default', () => <CopyButton {...props()} />, {
-    info: {
-      text:
-        'The copy button can be used when the user needs to copy information, such as a code snippet, to their clipboard.',
-    },
-  });
+  .add(
+    'Default',
+    () => (
+      <div style={{ position: 'relative' }}>
+        <CopyButton {...props()} />
+      </div>
+    ),
+    {
+      info: {
+        text:
+          'The copy button can be used when the user needs to copy information, such as a code snippet, to their clipboard.',
+      },
+    }
+  );

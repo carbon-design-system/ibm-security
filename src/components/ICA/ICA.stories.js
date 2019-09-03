@@ -4,7 +4,7 @@
  */
 
 import { withA11y } from '@storybook/addon-a11y';
-import centered from '@storybook/addon-centered';
+import centered from '@storybook/addon-centered/react';
 import { boolean, select, number, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
