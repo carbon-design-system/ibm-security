@@ -4,6 +4,7 @@
 /// @copyright IBM Security 2019
 ////
 
+@import '@carbon/colors/scss/colors';
 @import '@carbon/themes/scss/mixins';
 
 /// Security theme.
@@ -20,9 +21,40 @@ $security--theme: ();
   );
 }
 
+/// Security 'cool gray' theme.
+/// @type Map<String, Color>
+$security--theme--cg10: $carbon--theme--g10;
+
+$cool-gray-map: map-get(
+  $map: $carbon--colors,
+  $key: 'cool-gray',
+);
+
+// Converts 'gray' color values to 'cool gray'.
+@each $token-key, $token-value in $security--theme--cg10 {
+  @each $color-key, $color-value in map-get($map: $carbon--colors, $key: 'gray')
+  {
+    $security--theme--cg10: if(
+      $token-value == $color-value,
+      map-merge(
+        $map1: $security--theme--cg10,
+        $map2: (
+          $token-key:
+            map-get(
+              $map: $cool-gray-map,
+              $key: $color-key,
+            ),
+        ),
+      ),
+      $security--theme--cg10
+    );
+  }
+}
+
 /// Theme definitions.
 /// @type Map<Map, Map>
 $themes: (
+  cg10: $security--theme--cg10,
   g10: $carbon--theme--g10,
   g100: $carbon--theme--g100,
   g90: $carbon--theme--g90,
