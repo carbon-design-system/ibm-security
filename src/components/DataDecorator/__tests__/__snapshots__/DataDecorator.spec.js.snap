@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DataDecorator Rendering renders correctly 1`] = `
+exports[`DataDecorator renders correctly 1`] = `
 <DataDecorator
   href="#"
   inline={false}
   labels={Object {}}
   onClose={[Function]}
-  onOpen={[MockFunction]}
+  onOpen={[Function]}
   primaryButton={
     Object {
       "onClick": [Function],
@@ -66,7 +66,7 @@ exports[`DataDecorator Rendering renders correctly 1`] = `
           width={null}
         >
           <svg
-            aria-hidden={true}
+            aria-hidden="true"
             className="security--icon"
             fillRule="evenodd"
             focusable={false}
@@ -233,7 +233,7 @@ exports[`DataDecorator Rendering renders correctly 1`] = `
 </DataDecorator>
 `;
 
-exports[`DataDecorator Rendering renders the HTML of the node's subtree 1`] = `
+exports[`DataDecorator renders the HTML of the node's subtree 1`] = `
 <button
   class="security--decorator security--decorator--low"
 >

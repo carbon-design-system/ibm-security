@@ -7,7 +7,7 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import Decorator from './Decorator';
-import { PanelV2 } from '../PanelV2';
+import PanelV2 from '../PanelV2';
 import { PORTAL_EVENTS } from '../Portal';
 import * as defaultLabels from '../../globals/nls';
 

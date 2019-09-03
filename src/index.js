@@ -9,6 +9,7 @@ export { Card, CardSkeleton } from './components/Card';
 export CodeSnippet, { CodeSnippetSkeleton } from './components/CodeSnippet';
 export ComboBox from './components/ComboBox';
 export ContentSwitcher from './components/ContentSwitcher';
+export CopyButton from './components/CopyButton';
 export DataDecorator, { Decorator } from './components/DataDecorator';
 
 export {
@@ -62,7 +63,7 @@ export {
   PanelController,
 } from './components/Panel';
 
-export { PanelV2, PanelV2Content } from './components/PanelV2';
+export PanelV2 from './components/PanelV2';
 
 export Pill from './components/Pill';
 export Portal from './components/Portal';

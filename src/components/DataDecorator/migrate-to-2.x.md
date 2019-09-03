@@ -2,7 +2,7 @@
 
 ## `primaryButton` / `secondaryButton` `icon` prop
 
-### `PropTypes`
+### Props
 
 | `1.x`    | `2.x`                                              |
 | -------- | -------------------------------------------------- |

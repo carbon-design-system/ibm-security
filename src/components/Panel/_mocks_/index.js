@@ -17,4 +17,36 @@ const labels = {
   PANEL_CONTAINER_CLOSE_BUTTON: 'Close - labels',
 };
 
-export { active, className, disabled, label, labels };
+const isDisabled = false;
+
+/**
+ * Empty click handler.
+ * @returns {Object} An empty object.
+ */
+const onClick = () => ({});
+
+const buttons = {
+  primaryButton: {
+    isDisabled,
+    onClick,
+  },
+  secondaryButton: {
+    isDisabled,
+    onClick,
+  },
+  closeButton: {
+    isDisabled,
+    onClick,
+  },
+};
+
+const disabledButtons = {};
+
+Object.keys(buttons).forEach(button => {
+  disabledButtons[button] = {
+    isDisabled: !isDisabled,
+    onClick,
+  };
+});
+
+export { active, buttons, className, disabled, disabledButtons, label, labels };

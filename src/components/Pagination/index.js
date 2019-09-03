@@ -1,5 +1,5 @@
 /**
- * @file Pagination v2 entry point.
+ * @file Pagination entry point.
  * @copyright IBM Security 2019
  */
 

@@ -1,14 +1,16 @@
 /**
- * @file Panel v2 tests.
+ * @file Panel tests.
  * @copyright IBM Security 2019
  */
 
 import { mount } from 'enzyme';
-import React, { Fragment } from 'react';
+import React from 'react';
 
-import { label, onClick } from '../_mocks_';
+import { label, buttons, disabledButtons } from '../../Panel/_mocks_';
 
-import { Button, PanelV2, PanelV2Content } from '../../..';
+import { PanelV2, PanelContent } from '../../..';
+
+const { closeButton, primaryButton, secondaryButton } = buttons;
 
 describe('PanelV2', () => {
   it('renders', () => {
@@ -16,23 +18,26 @@ describe('PanelV2', () => {
       <PanelV2
         title={label}
         subtitle={label}
-        closeButton={{ onClick }}
-        renderFooter={() => (
-          <Fragment>
-            <Button
-              id="example-secondary-button"
-              kind="secondary"
-              onClick={onClick}
-            >
-              Close
-            </Button>
-            <Button id="example-primary-button" onClick={onClick}>
-              Add
-            </Button>
-          </Fragment>
-        )}
+        closeButton={closeButton}
+        primaryButton={primaryButton}
+        secondaryButton={secondaryButton}
       >
-        <PanelV2Content>{label}</PanelV2Content>
+        <PanelContent>{label}</PanelContent>
+      </PanelV2>
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('renders disabled buttons', () => {
+    const wrapper = mount(
+      <PanelV2
+        title={label}
+        subtitle={label}
+        closeButton={disabledButtons.closeButton}
+        primaryButton={disabledButtons.primaryButton}
+        secondaryButton={disabledButtons.secondaryButton}
+      >
+        <PanelContent>{label}</PanelContent>
       </PanelV2>
     );
     expect(wrapper).toMatchSnapshot();
