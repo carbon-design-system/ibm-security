@@ -8,7 +8,7 @@ import React, { Fragment } from 'react';
 
 import { label, onClick } from '../_mocks_';
 
-import { Button, PanelV2, PanelV2Content } from '../../..';
+import { Button, PanelV2, PanelContent } from '../../..';
 
 describe('PanelV2', () => {
   it('renders', () => {
@@ -32,7 +32,7 @@ describe('PanelV2', () => {
           </Fragment>
         )}
       >
-        <PanelV2Content>{label}</PanelV2Content>
+        <PanelContent>{label}</PanelContent>
       </PanelV2>
     );
     expect(wrapper).toMatchSnapshot();

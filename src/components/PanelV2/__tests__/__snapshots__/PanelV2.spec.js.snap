@@ -11,7 +11,6 @@ exports[`PanelV2 renders 1`] = `
   focusTrap={true}
   isOpen={true}
   labels={Object {}}
-  primaryButton={null}
   renderFooter={[Function]}
   stopPropagation={false}
   subtitle="Label"

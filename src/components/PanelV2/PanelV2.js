@@ -259,7 +259,7 @@ PanelV2.defaultProps = {
   focusTrap: true,
   isOpen: true,
   labels: {},
-  primaryButton: null,
+  primaryButton: undefined,
   renderFooter: null,
   secondaryButton: undefined,
   stopPropagation: false,
