@@ -12,7 +12,7 @@
   display: inline-block;
 
   &--truncate {
-    max-width: carbon--mini-units($count: 84);
+    max-width: 80ch;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
