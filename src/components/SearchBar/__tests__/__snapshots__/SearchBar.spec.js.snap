@@ -28,6 +28,7 @@ exports[`SearchBar Rendering disables the submit button with no selected scopes 
         },
       ]
     }
+    label="Scopes"
     light={false}
     locale="en"
     name="search-scopes"
@@ -185,6 +186,7 @@ exports[`SearchBar Rendering renders scopes 1`] = `
         },
       ]
     }
+    label="Scopes"
     light={false}
     locale="en"
     name="search-scopes"
@@ -256,6 +258,7 @@ exports[`SearchBar Rendering renders selected scopes 1`] = `
         },
       ]
     }
+    label="Scopes"
     light={false}
     locale="en"
     name="search-scopes"
