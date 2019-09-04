@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import React, { Component, createRef, Fragment } from 'react';
 import Close20 from '@carbon/icons-react/lib/close/20';
 
-import deprecate from 'carbon-components-react/es/prop-types/deprecate';
+import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
 
 import { getComponentNamespace } from '../../globals/namespace';
 import * as defaultLabels from '../../globals/nls';

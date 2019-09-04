@@ -17,7 +17,7 @@ import { label } from '../_mocks_';
 import { header, profile, toolbar } from '../Shell/_mocks_';
 import { labels } from './_mocks_';
 
-import { Button, CodeSnippet, PanelV2, PanelV2Content, Shell } from '../..';
+import { Button, CodeSnippet, PanelV2, PanelContent, Shell } from '../..';
 
 const closeButtonLabel = 'Close';
 
@@ -31,7 +31,7 @@ const content = (
   <p>
     Use the{' '}
     <CodeSnippet type="inline" light>
-      PanelV2Content
+      PanelContent
     </CodeSnippet>{' '}
     component to apply the appropriate formatting to panel content.
   </p>
@@ -99,7 +99,7 @@ storiesOf(patterns('PanelV2'), module)
                   onClick: this.closeFirst,
                 }}
               >
-                <PanelV2Content>
+                <PanelContent>
                   <Fragment>
                     {content}
                     <p>
@@ -114,7 +114,7 @@ storiesOf(patterns('PanelV2'), module)
                       props to render buttons in the footer.
                     </p>
                   </Fragment>
-                </PanelV2Content>
+                </PanelContent>
               </PanelV2>
               <PanelV2
                 key="p2"
@@ -134,7 +134,7 @@ storiesOf(patterns('PanelV2'), module)
                   </Button>
                 )}
               >
-                <PanelV2Content>
+                <PanelContent>
                   <Fragment>
                     {content}
                     <p>
@@ -145,7 +145,7 @@ storiesOf(patterns('PanelV2'), module)
                       prop to render a custom footer.
                     </p>
                   </Fragment>
-                </PanelV2Content>
+                </PanelContent>
               </PanelV2>
               <PanelV2
                 key="p3"
@@ -156,7 +156,7 @@ storiesOf(patterns('PanelV2'), module)
                   label: closeButtonLabel,
                 }}
               >
-                <PanelV2Content>
+                <PanelContent>
                   <Fragment>
                     {content}
                     <p>
@@ -171,7 +171,7 @@ storiesOf(patterns('PanelV2'), module)
                       props and therefore does not have a footer.
                     </p>
                   </Fragment>
-                </PanelV2Content>
+                </PanelContent>
               </PanelV2>
             </Fragment>
           );

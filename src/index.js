@@ -63,7 +63,7 @@ export {
   PanelController,
 } from './components/Panel';
 
-export { PanelV2, PanelV2Content } from './components/PanelV2';
+export PanelV2 from './components/PanelV2';
 
 export Pill from './components/Pill';
 export Portal from './components/Portal';
