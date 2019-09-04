@@ -41,15 +41,15 @@ exports[`Header Rendering renders correctly 1`] = `
   accounts={
     Array [
       Object {
-        "id": 0,
+        "id": "0",
         "name": "Company 1",
       },
       Object {
-        "id": 1,
+        "id": "1",
         "name": "Company 2",
       },
       Object {
-        "id": 2,
+        "id": "2",
         "name": "Company 3",
       },
     ]
