@@ -17,6 +17,7 @@ const {
   placeHolderText,
   selectedScopes,
   scopes,
+  scopesTypeLabel,
   submitLabel,
   value,
 } = props;
@@ -51,12 +52,12 @@ describe('SearchBar', () => {
     });
 
     it('renders scopes', () => {
-      searchBar.setProps({ scopes });
+      searchBar.setProps({ scopes, scopesTypeLabel });
       expect(searchBar).toMatchSnapshot();
     });
 
     it('renders selected scopes', () => {
-      searchBar.setProps({ scopes, selectedScopes });
+      searchBar.setProps({ scopes, scopesTypeLabel, selectedScopes });
 
       expect(searchBar).toMatchSnapshot();
     });
@@ -70,6 +71,7 @@ describe('SearchBar', () => {
     it('disables the submit button with no selected scopes', () => {
       searchBar.setProps({
         scopes,
+        scopesTypeLabel,
         selectedScopes: [],
       });
 
@@ -88,7 +90,7 @@ describe('SearchBar', () => {
     });
 
     it('calls the change handler when the scope changes', () => {
-      searchBar.setProps({ scopes });
+      searchBar.setProps({ scopes, scopesTypeLabel });
 
       simulate('change', { selectedItems: selectedScopes }, '__scopes');
 
