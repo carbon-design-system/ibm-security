@@ -6,7 +6,7 @@
 import Add16 from '@carbon/icons-react/lib/add/16';
 
 import { withA11y } from '@storybook/addon-a11y';
-import { text } from '@storybook/addon-knobs';
+import { boolean, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
 import React, { Fragment } from 'react';
@@ -86,26 +86,35 @@ storiesOf(patterns('PanelV2'), module)
                   onClick: this.closeFirst,
                   label: text('closeButton.label', closeButtonLabel),
                 }}
-                renderFooter={() => (
-                  <Fragment>
-                    <Button
-                      id="p1_secondary-button"
-                      kind="secondary"
-                      onClick={this.closeFirst}
-                    >
-                      Close
-                    </Button>
-                    <Button
-                      id="p1_primary-button"
-                      onClick={this.closeFirst}
-                      renderIcon={Add16}
-                    >
-                      Add
-                    </Button>
-                  </Fragment>
-                )}
+                primaryButton={{
+                  icon: Add16,
+                  iconDescription: text('primaryButton.iconDescription', 'Add'),
+                  isDisabled: boolean('primaryButton.isDisabled', false),
+                  label: text('primaryButton.label', 'Add'),
+                  onClick: this.closeFirst,
+                }}
+                secondaryButton={{
+                  isDisabled: boolean('secondaryButton.isDisabled', false),
+                  label: text('secondaryButton.label', 'Cancel'),
+                  onClick: this.closeFirst,
+                }}
               >
-                <PanelV2Content>{content}</PanelV2Content>
+                <PanelV2Content>
+                  <Fragment>
+                    {content}
+                    <p>
+                      This example uses the{' '}
+                      <CodeSnippet type="inline" light>
+                        primaryButton
+                      </CodeSnippet>{' '}
+                      and{' '}
+                      <CodeSnippet type="inline" light>
+                        secondaryButton
+                      </CodeSnippet>{' '}
+                      props to render buttons in the footer.
+                    </p>
+                  </Fragment>
+                </PanelV2Content>
               </PanelV2>
               <PanelV2
                 key="p2"
@@ -116,12 +125,27 @@ storiesOf(patterns('PanelV2'), module)
                   label: text('closeButton.label', closeButtonLabel),
                 }}
                 renderFooter={() => (
-                  <Button id="p2_primary-button" onClick={this.closeSecond}>
+                  <Button
+                    id="p2_primary-button"
+                    size="large"
+                    onClick={this.closeSecond}
+                  >
                     Add
                   </Button>
                 )}
               >
-                <PanelV2Content>{content}</PanelV2Content>
+                <PanelV2Content>
+                  <Fragment>
+                    {content}
+                    <p>
+                      This example uses the{' '}
+                      <CodeSnippet type="inline" light>
+                        renderFooter
+                      </CodeSnippet>{' '}
+                      prop to render a custom footer.
+                    </p>
+                  </Fragment>
+                </PanelV2Content>
               </PanelV2>
               <PanelV2
                 key="p3"
@@ -136,11 +160,15 @@ storiesOf(patterns('PanelV2'), module)
                   <Fragment>
                     {content}
                     <p>
-                      Note that this example intentially does note include the{' '}
+                      This example intentially does not include the{' '}
                       <CodeSnippet type="inline" light>
                         renderFooter
                       </CodeSnippet>{' '}
-                      prop and therefore does not have a footer.
+                      or{' '}
+                      <CodeSnippet type="inline" light>
+                        primaryButton
+                      </CodeSnippet>{' '}
+                      props and therefore does not have a footer.
                     </p>
                   </Fragment>
                 </PanelV2Content>

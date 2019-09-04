@@ -5,7 +5,7 @@
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { Component, createRef } from 'react';
+import React, { Component, createRef, Fragment } from 'react';
 import Close20 from '@carbon/icons-react/lib/close/20';
 
 import { getComponentNamespace } from '../../globals/namespace';
@@ -13,6 +13,7 @@ import * as defaultLabels from '../../globals/nls';
 
 import { isClient } from '../../globals/utils/capabilities';
 
+import Button from '../Button';
 import IconButton from '../IconButton';
 import Transition from '../Transition';
 import Portal, { PORTAL_EVENTS } from '../Portal';
@@ -64,18 +65,28 @@ export default class PanelV2 extends Component {
   footer = createRef();
   header = createRef();
 
-  renderPanel = ({ labels: { PANEL_CONTAINER_CLOSE_BUTTON } }) => {
+  renderPanel = ({
+    labels: {
+      PANEL_CONTAINER_PRIMARY_BUTTON,
+      PANEL_CONTAINER_SECONDARY_BUTTON,
+      PANEL_CONTAINER_CLOSE_BUTTON,
+    },
+  }) => {
     const {
       children,
       className,
       closeButton,
       focusTrap,
+      primaryButton,
       renderFooter,
+      secondaryButton,
       stopPropagation,
       stopPropagationEvents,
       subtitle,
       title,
     } = this.props;
+
+    const hasFooter = renderFooter || primaryButton;
 
     return (
       <Transition className={namespace}>
@@ -118,9 +129,37 @@ export default class PanelV2 extends Component {
                 {children}
               </section>
 
-              {renderFooter && (
+              {hasFooter && (
                 <footer ref={this.footer} className={`${namespace}__footer`}>
-                  {renderFooter()}
+                  {renderFooter ? (
+                    renderFooter()
+                  ) : (
+                    <Fragment>
+                      {secondaryButton && (
+                        <Button
+                          id={secondaryButton.id}
+                          className={`${namespace}__footer__button ${namespace}__footer__button--secondary`}
+                          disabled={secondaryButton.isDisabled}
+                          iconDescription={secondaryButton.iconDescription}
+                          kind="secondary"
+                          onClick={secondaryButton.onClick}
+                          renderIcon={secondaryButton.icon}
+                        >
+                          {PANEL_CONTAINER_SECONDARY_BUTTON}
+                        </Button>
+                      )}
+                      <Button
+                        id={primaryButton.id}
+                        className={`${namespace}__footer__button`}
+                        disabled={primaryButton.isDisabled}
+                        iconDescription={primaryButton.iconDescription}
+                        onClick={primaryButton.onClick}
+                        renderIcon={primaryButton.icon}
+                      >
+                        {PANEL_CONTAINER_PRIMARY_BUTTON}
+                      </Button>
+                    </Fragment>
+                  )}
                 </footer>
               )}
             </section>
@@ -131,18 +170,31 @@ export default class PanelV2 extends Component {
   };
 
   render() {
-    const { closeButton, labels } = this.props;
+    const { closeButton, primaryButton, secondaryButton, labels } = this.props;
 
     const componentLabels = {
       ...defaultLabels.labels,
       ...labels,
       ...defaultLabels.filterFalsey({
+        PANEL_CONTAINER_PRIMARY_BUTTON:
+          (primaryButton && primaryButton.label) || '',
+        PANEL_CONTAINER_SECONDARY_BUTTON:
+          (secondaryButton && secondaryButton.label) || '',
         PANEL_CONTAINER_CLOSE_BUTTON: (closeButton && closeButton.label) || '',
       }),
     };
     return this.renderPanel({ labels: componentLabels });
   }
 }
+
+const buttonType = PropTypes.shape({
+  id: PropTypes.string,
+  onClick: PropTypes.func,
+  label: PropTypes.string,
+  isDisabled: PropTypes.bool,
+  icon: PropTypes.object,
+  iconDescription: PropTypes.string,
+});
 
 PanelV2.propTypes = {
   /** @type {ReactNode} The children of the panel container. */
@@ -170,8 +222,14 @@ PanelV2.propTypes = {
   /** @type {object} Labels for Panel and children */
   labels: defaultLabels.propType,
 
+  /** @type {Object<Object>} An object list of primary button props. */
+  primaryButton: buttonType,
+
   /** @type {Function} Footer render prop. */
   renderFooter: PropTypes.func,
+
+  /** @type {Object<Object>} An object list of secondary button props. */
+  secondaryButton: buttonType,
 
   /** @type {boolean} Stop event propagation for events that can bubble. */
   stopPropagation: PropTypes.bool,
@@ -193,7 +251,9 @@ PanelV2.defaultProps = {
   focusTrap: true,
   isOpen: true,
   labels: {},
+  primaryButton: null,
   renderFooter: null,
+  secondaryButton: undefined,
   stopPropagation: false,
   stopPropagationEvents: undefined,
   subtitle: undefined,
