@@ -8,6 +8,8 @@ import PropTypes from 'prop-types';
 import React, { Component, createRef, Fragment } from 'react';
 import Close20 from '@carbon/icons-react/lib/close/20';
 
+import deprecate from 'carbon-components-react/es/prop-types/deprecate';
+
 import { getComponentNamespace } from '../../globals/namespace';
 import * as defaultLabels from '../../globals/nls';
 
@@ -223,13 +225,19 @@ PanelV2.propTypes = {
   labels: defaultLabels.propType,
 
   /** @type {Object<Object>} An object list of primary button props. */
-  primaryButton: buttonType,
+  primaryButton: deprecate(
+    buttonType,
+    `\nThe prop \`primaryButton\` for PanelV2 has been deprecated in favor of \`renderFooter\`.`
+  ),
 
   /** @type {Function} Footer render prop. */
   renderFooter: PropTypes.func,
 
   /** @type {Object<Object>} An object list of secondary button props. */
-  secondaryButton: buttonType,
+  secondaryButton: deprecate(
+    buttonType,
+    `\nThe prop \`secondaryButton\` for PanelV2 has been deprecated in favor of \`renderFooter\`.`
+  ),
 
   /** @type {boolean} Stop event propagation for events that can bubble. */
   stopPropagation: PropTypes.bool,
