@@ -1,0 +1,95 @@
+////
+/// Combo button component.
+/// @group combo-button
+/// @copyright IBM Security 2019
+////
+
+@mixin combo-button {
+  &__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+
+    & .#{$prefix}--btn--primary:first-child {
+      display: block;
+      flex: auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    & .#{$prefix}--overflow-menu {
+      width: 3rem;
+      margin-left: 1px;
+
+      &:hover,
+      &.#{$prefix}--overflow-menu--open {
+        background-color: $hover-primary;
+      }
+
+      &:active {
+        background-color: $active-primary;
+      }
+    }
+
+    .#{$prefix}--overflow-menu-options {
+      background-color: $ui-02;
+      width: 100%;
+      outline: unset;
+      box-shadow: unset;
+      display: grid;
+
+      &__option {
+        display: inherit;
+
+        &:hover {
+          background-color: $hover-selected-ui;
+        }
+
+        &:first-child .#{$prefix}--list-box__menu-item {
+          border-top-color: transparent;
+        }
+      }
+
+      &::after {
+        display: none;
+      }
+
+      &__btn {
+        outline: unset;
+        padding: 0;
+        margin: 0 1rem;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        border-top-color: $active-ui;
+        display: flex;
+        width: unset;
+        max-width: unset;
+        justify-content: space-between;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:focus {
+          outline: $focus solid 2px;
+          outline-offset: -2px;
+          margin: 0;
+          padding: 0 1rem;
+          border-color: transparent;
+        }
+
+        &:hover {
+          color: $text-01;
+          background-color: unset;
+        }
+
+        & .#{$prefix}--list-box__menu-item-label {
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        & .#{$prefix}--list-box__menu-item-icon {
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+}

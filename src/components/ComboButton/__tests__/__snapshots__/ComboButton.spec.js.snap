@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComboButton renders 1`] = `
+<div
+  className="security--combo-button__wrapper"
+  data-floating-menu-container={true}
+  data-testid="combo-button"
+>
+  <Button
+    data-testid="combo-button-primary-button"
+    disabled={false}
+    iconDescription="arrow right"
+    kind="primary"
+    label="Start a task"
+    largeText={null}
+    onClick={[Function]}
+    renderIcon={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "render": [Function],
+      }
+    }
+    tabIndex={0}
+    type="button"
+  >
+    Start a task
+  </Button>
+  <ForwardRef(OverflowMenu)
+    className="security--button bx--btn bx--btn--primary"
+    data-testid="combo-button-overflow-button"
+    direction="top"
+    menuOffset={[Function]}
+    menuOptionsClass="bx--list-box__menu"
+    onClose={[Function]}
+    onOpen={[Function]}
+    renderIcon={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "render": [Function],
+      }
+    }
+  >
+    <OverflowMenuItem
+      className="bx--list-box__menu-item"
+      disabled={false}
+      hasDivider={false}
+      isDelete={false}
+      itemText={
+        <React.Fragment>
+          <span
+            className="bx--list-box__menu-item-label"
+            title="Add to folder"
+          >
+            Add to folder
+          </span>
+          <ForwardRef(FolderDetails20)
+            className="bx--list-box__menu-item-icon"
+          />
+        </React.Fragment>
+      }
+      key="Add to folder"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      primaryFocus={true}
+    />
+  </ForwardRef(OverflowMenu)>
+</div>
+`;
+
+exports[`ComboButton renders the HTML of the node's subtree 1`] = `
+<div
+  class="security--combo-button__wrapper"
+  data-floating-menu-container="true"
+  data-testid="combo-button"
+>
+  <button
+    class="security--button bx--btn bx--btn--primary"
+    data-testid="combo-button-primary-button"
+    label="Start a task"
+    tabindex="0"
+    type="button"
+  >
+    Start a task
+    <svg
+      aria-hidden="true"
+      aria-label="arrow right"
+      class="bx--btn__icon"
+      focusable="false"
+      height="20"
+      preserveAspectRatio="xMidYMid meet"
+      role="img"
+      style="will-change:transform"
+      viewBox="0 0 20 20"
+      width="20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M11.8 2.8l-1 1 5.4 5.5H1v1.4h15.2l-5.4 5.5 1 1L19 10z"
+      />
+    </svg>
+  </button>
+  <div
+    aria-expanded="false"
+    aria-haspopup="true"
+    aria-label="Menu"
+    class="security--button bx--btn bx--btn--primary bx--overflow-menu"
+    data-testid="combo-button-overflow-button"
+    role="button"
+    tabindex="0"
+  >
+    <svg
+      aria-label="open and close list of options"
+      class="bx--overflow-menu__icon"
+      focusable="false"
+      height="16"
+      preserveAspectRatio="xMidYMid meet"
+      role="img"
+      style="will-change:transform"
+      viewBox="0 0 16 16"
+      width="16"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M8 5l5 5-.7.7L8 6.4l-4.3 4.3L3 10z"
+      />
+      <title>
+        open and close list of options
+      </title>
+    </svg>
+  </div>
+</div>
+`;
