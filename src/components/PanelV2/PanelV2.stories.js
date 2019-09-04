@@ -11,7 +11,7 @@ import { storiesOf } from '@storybook/react';
 
 import React, { Fragment } from 'react';
 
-import { experimental } from '../../../.storybook';
+import { patterns } from '../../../.storybook';
 
 import { label } from '../_mocks_';
 import { header, profile, toolbar } from '../Shell/_mocks_';
@@ -37,7 +37,7 @@ const content = (
   </p>
 );
 
-storiesOf(experimental('PanelV2'), module)
+storiesOf(patterns('PanelV2'), module)
   .addDecorator(withA11y)
   .add(
     'Default',
