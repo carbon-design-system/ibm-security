@@ -1,0 +1,20 @@
+////
+/// String formatter.
+/// @group string-formatter
+/// @copyright IBM Security 2019
+////
+
+@import '@carbon/layout/scss/mini-unit';
+
+@import '../Component/mixins';
+
+@include component($name: string-formatter) {
+  display: inline-block;
+
+  &--truncate {
+    max-width: 80ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
