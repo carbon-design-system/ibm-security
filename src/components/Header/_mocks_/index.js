@@ -21,7 +21,7 @@ const links = {
 };
 
 const accounts = new Array(3).fill().map((name = `Company`, id) => ({
-  id,
+  id: id.toString(),
   name: `${name} ${id + 1}`,
 }));
 
