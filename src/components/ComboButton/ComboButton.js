@@ -39,7 +39,7 @@ const ComboButton = props => {
   const getMenuOffset = () => {
     const { top } = wrapper.current.getBoundingClientRect();
     return {
-      top: isTop ? top : top * -1,
+      top: isTop ? top : top / -1,
       left: 'auto',
     };
   };
