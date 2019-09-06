@@ -2,7 +2,7 @@
 
 exports[`ComboButton renders 1`] = `
 <div
-  className="security--combo-button__wrapper"
+  className="security--combo-button"
   data-floating-menu-container={true}
 >
   <Button
@@ -38,21 +38,17 @@ exports[`ComboButton renders 1`] = `
     }
   >
     <OverflowMenuItem
-      className="bx--list-box__menu-item"
       disabled={false}
       hasDivider={false}
       isDelete={false}
       itemText={
         <React.Fragment>
           <span
-            className="bx--list-box__menu-item-label"
             title="Add to folder"
           >
             Add to folder
           </span>
-          <ForwardRef(FolderDetails20)
-            className="bx--list-box__menu-item-icon"
-          />
+          <ForwardRef(FolderDetails20) />
         </React.Fragment>
       }
       key="Add to folder"
@@ -66,7 +62,7 @@ exports[`ComboButton renders 1`] = `
 
 exports[`ComboButton renders the HTML of the node's subtree 1`] = `
 <div
-  class="security--combo-button__wrapper"
+  class="security--combo-button"
   data-floating-menu-container="true"
 >
   <button

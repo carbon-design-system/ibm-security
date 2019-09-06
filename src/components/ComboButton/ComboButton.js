@@ -45,17 +45,13 @@ const ComboButton = props => {
   };
 
   const renderActions = items => {
-    const itemClassName = `${prefix}--list-box__menu-item`;
     return items.map((item, index) => (
       <OverflowMenuItem
-        className={itemClassName}
         key={item.label}
         itemText={
           <Fragment>
-            <span className={`${itemClassName}-label`} title={item.label}>
-              {item.label}
-            </span>
-            <item.renderIcon className={`${itemClassName}-icon`} />
+            <span title={item.label}>{item.label}</span>
+            <item.renderIcon />
           </Fragment>
         }
         primaryFocus={index === (isTop ? items.length - 1 : 0)}
@@ -66,7 +62,7 @@ const ComboButton = props => {
 
   return (
     <div
-      className={classnames(`${namespace}__wrapper`, className)}
+      className={classnames(namespace, className)}
       ref={wrapper}
       data-floating-menu-container
     >
