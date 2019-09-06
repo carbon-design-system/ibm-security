@@ -15,6 +15,10 @@ about: Something isn't working as expected? Submit a bug report
 
 ### Steps for reproducing
 
+<!-- Please try to re-create the issue as a reduced test case using our CodeSandbox template - https://codesandbox.io/s/codesandbox-nmmqp -->
+
+[CodeSandbox](https://codesandbox.io/s/<!-- URL -->)
+
 1.  <!-- Step 1 -->
 2.  <!-- Step 2 -->
 3.  <!-- Step 3 -->
