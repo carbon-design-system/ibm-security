@@ -43,9 +43,7 @@ exports[`ComboButton renders 1`] = `
       isDelete={false}
       itemText={
         <React.Fragment>
-          <span
-            title="Add to folder"
-          >
+          <span>
             Add to folder
           </span>
           <ForwardRef(FolderDetails20) />

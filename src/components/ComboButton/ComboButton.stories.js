@@ -34,26 +34,29 @@ storiesOf(patterns('ComboButton'), module)
   .add('default', () => <ComboButton {...props()} actions={actions} />)
   .add('single item', () => <ComboButton {...props()} actions={[actions[0]]} />)
   .add('overflow items', () => {
-    const newActions = [...actions, {
-      label: 'Filter list',
-      renderIcon: Filter20,
-      onClick: action('Filter list 1'),
-    },
-    {
-      label: 'Filter list',
-      renderIcon: Filter20,
-      onClick: action('Filter list 2'),
-    },
-    {
-      label: 'Filter list',
-      renderIcon: Filter20,
-      onClick: action('Filter list 3'),
-    }];
-    newActions.push({
-      label: 'Filter list',
-      renderIcon: Filter20,
-      onClick: () => action('Filter list'),
-    });
+    const newActions = [...actions];
+    newActions.push(
+      {
+        label: 'Filter list 1',
+        renderIcon: Filter20,
+        onClick: () => action('Filter list 1'),
+      },
+      {
+        label: 'Filter list 2',
+        renderIcon: Filter20,
+        onClick: action('Filter list 2'),
+      },
+      {
+        label: 'Filter list 3',
+        renderIcon: Filter20,
+        onClick: action('Filter list 3'),
+      },
+      {
+        label: 'Filter list 4',
+        renderIcon: Filter20,
+        onClick: action('Filter list 4'),
+      }
+    );
     return <ComboButton {...props()} actions={newActions} />;
   });
 

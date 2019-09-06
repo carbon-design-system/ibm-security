@@ -50,7 +50,7 @@ const ComboButton = props => {
         key={item.label}
         itemText={
           <Fragment>
-            <span title={item.label}>{item.label}</span>
+            <span>{item.label}</span>
             <item.renderIcon />
           </Fragment>
         }
