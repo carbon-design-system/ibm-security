@@ -39,7 +39,7 @@ const ComboButton = props => {
   const getMenuOffset = () => {
     const { top } = wrapper.current.getBoundingClientRect();
     return {
-      top: isTop ? top : top / -1,
+      top: isTop ? top : top * -1,
       left: 'auto',
     };
   };
@@ -67,14 +67,12 @@ const ComboButton = props => {
   return (
     <div
       className={classnames(`${namespace}__wrapper`, className)}
-      data-testid="combo-button"
       ref={wrapper}
       data-floating-menu-container
     >
       <Button
         {...firstAction}
         renderIcon={restActions.length > 1 ? null : firstAction.renderIcon}
-        data-testid="combo-button-primary-button"
       >
         {firstAction.label}
       </Button>
@@ -87,7 +85,6 @@ const ComboButton = props => {
             `${prefix}--btn--primary`
           )}
           menuOptionsClass={`${prefix}--list-box__menu`}
-          data-testid="combo-button-overflow-button"
           direction={overflowMenuDirection}
           renderIcon={overflowMenuIcon}
           onClose={() => setOverflowMenuIcon(OVERFLOW_MENU_ICON.CLOSE)}

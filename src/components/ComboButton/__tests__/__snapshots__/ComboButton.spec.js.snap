@@ -4,10 +4,8 @@ exports[`ComboButton renders 1`] = `
 <div
   className="security--combo-button__wrapper"
   data-floating-menu-container={true}
-  data-testid="combo-button"
 >
   <Button
-    data-testid="combo-button-primary-button"
     disabled={false}
     iconDescription="arrow right"
     kind="primary"
@@ -27,7 +25,6 @@ exports[`ComboButton renders 1`] = `
   </Button>
   <ForwardRef(OverflowMenu)
     className="security--button bx--btn bx--btn--primary"
-    data-testid="combo-button-overflow-button"
     direction="top"
     menuOffset={[Function]}
     menuOptionsClass="bx--list-box__menu"
@@ -71,11 +68,9 @@ exports[`ComboButton renders the HTML of the node's subtree 1`] = `
 <div
   class="security--combo-button__wrapper"
   data-floating-menu-container="true"
-  data-testid="combo-button"
 >
   <button
     class="security--button bx--btn bx--btn--primary"
-    data-testid="combo-button-primary-button"
     label="Start a task"
     tabindex="0"
     type="button"
@@ -104,7 +99,6 @@ exports[`ComboButton renders the HTML of the node's subtree 1`] = `
     aria-haspopup="true"
     aria-label="Menu"
     class="security--button bx--btn bx--btn--primary bx--overflow-menu"
-    data-testid="combo-button-overflow-button"
     role="button"
     tabindex="0"
   >
