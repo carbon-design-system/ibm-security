@@ -4,17 +4,40 @@
  */
 
 import { shallow } from 'enzyme';
-import React from 'react';
+import React, { Fragment } from 'react';
+
+import { Filter20 } from '@carbon/icons-react';
 
 import ComboButton from '../';
+import ComboButtonItem from '../../ComboButtonItem';
 
-import actions from '../_mocks_';
+import primaryAction from '../_mocks_';
 
 describe('ComboButton', () => {
   let comboButton;
 
   beforeEach(() => {
-    comboButton = shallow(<ComboButton actions={actions} />);
+    comboButton = shallow(
+      <ComboButton primaryAction={primaryAction}>
+        <ComboButtonItem
+          className="some-class"
+          itemText={
+            <Fragment>
+              <span>Filter list 1</span>
+              <Filter20 />
+            </Fragment>
+          }
+        />
+        <ComboButtonItem
+          className="some-class"
+          itemText={
+            <Fragment>
+              <span>Filter list 2</span>
+            </Fragment>
+          }
+        />
+      </ComboButton>
+    );
   });
 
   it('renders', () => {

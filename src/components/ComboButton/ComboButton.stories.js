@@ -3,10 +3,9 @@
  * @copyright IBM Security 2019
  */
 
-import React from 'react';
+import React, { Fragment } from 'react';
 import centered from '@storybook/addon-centered/react';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 import { withA11y } from '@storybook/addon-a11y';
 import { radios } from '@storybook/addon-knobs';
 import { Filter20 } from '@carbon/icons-react';
@@ -14,13 +13,14 @@ import { Filter20 } from '@carbon/icons-react';
 import { patterns } from '../../../.storybook';
 
 import { TooltipDirection } from '../IconButton/IconButton';
-import { ComboButton } from '../..';
+import { ComboButton, ComboButtonItem } from '../..';
 
-import actions from './_mocks_';
+import primaryAction from './_mocks_';
 
 const props = () => ({
-  overflowMenuDirection: radios(
-    'Direction',
+  primaryAction,
+  direction: radios(
+    'Menu direction (direction)',
     {
       top: TooltipDirection.TOP,
       bottom: TooltipDirection.BOTTOM,
@@ -31,33 +31,16 @@ const props = () => ({
 storiesOf(patterns('ComboButton'), module)
   .addDecorator(withA11y)
   .addDecorator(centered)
-  .add('default', () => <ComboButton {...props()} actions={actions} />)
-  .add('single item', () => <ComboButton {...props()} actions={[actions[0]]} />)
-  .add('overflow items', () => {
-    const newActions = [...actions];
-    newActions.push(
-      {
-        label: 'Filter list 1',
-        renderIcon: Filter20,
-        onClick: () => action('Filter list 1'),
-      },
-      {
-        label: 'Filter list 2',
-        renderIcon: Filter20,
-        onClick: action('Filter list 2'),
-      },
-      {
-        label: 'Filter list 3',
-        renderIcon: Filter20,
-        onClick: action('Filter list 3'),
-      },
-      {
-        label: 'Filter list 4',
-        renderIcon: Filter20,
-        onClick: action('Filter list 4'),
-      }
-    );
-    return <ComboButton {...props()} actions={newActions} />;
-  });
-
-export default actions;
+  .add('default', () => (
+    <ComboButton {...props()}>
+      <ComboButtonItem
+        className="some-class"
+        itemText={
+          <Fragment>
+            <span>Filter list</span>
+            <Filter20 />
+          </Fragment>
+        }
+      />
+    </ComboButton>
+  ));

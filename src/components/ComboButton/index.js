@@ -1,5 +1,5 @@
 /**
- * @file Combo button extry point.
+ * @file Combo button entry point.
  * @copyright IBM Security 2019
  */
 
