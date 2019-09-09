@@ -4,3 +4,4 @@
  */
 
 export default from './ComboButton';
+export ComboButtonItem from './ComboButtonItem/ComboButtonItem';

@@ -5,20 +5,23 @@
 
 import React, { Fragment } from 'react';
 import centered from '@storybook/addon-centered/react';
+import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
-import { radios } from '@storybook/addon-knobs';
-import { Filter20, Folder20 } from '@carbon/icons-react';
+import { radios, text } from '@storybook/addon-knobs';
+import { ArrowRight20, Filter20, Folder20 } from '@carbon/icons-react';
 
 import { patterns } from '../../../.storybook';
 
 import { TooltipDirection } from '../IconButton/IconButton';
 import { ComboButton, ComboButtonItem } from '../..';
 
-import primaryAction from './_mocks_';
-
 const props = () => ({
-  primaryAction,
+  primaryAction: {
+    label: text('Primary button label (primaryAction.label)', 'Start a task'),
+    renderIcon: ArrowRight20,
+    onClick: action('onClick (primaryAction'),
+  },
   direction: radios(
     'Menu direction (direction)',
     {
@@ -28,6 +31,7 @@ const props = () => ({
     TooltipDirection.TOP
   ),
 });
+
 storiesOf(patterns('ComboButton'), module)
   .addDecorator(withA11y)
   .addDecorator(centered)
@@ -45,6 +49,7 @@ storiesOf(patterns('ComboButton'), module)
                 <Filter20 />
               </Fragment>
             }
+            onClick={action('onClick (<ComboButtonItem />')}
           />
         ))}
       <ComboButtonItem
@@ -55,6 +60,8 @@ storiesOf(patterns('ComboButton'), module)
             <Folder20 />
           </Fragment>
         }
+        onClick={action('onClick (<ComboButtonItem />')}
+        primaryFocus
       />
     </ComboButton>
   ));

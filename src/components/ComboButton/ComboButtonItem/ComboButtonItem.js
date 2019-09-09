@@ -6,9 +6,9 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import OverflowMenuItem from '../OverflowMenuItem';
+import OverflowMenuItem from '../../OverflowMenuItem';
 
-import { getComponentNamespace } from '../../globals/namespace';
+import { getComponentNamespace } from '../../../globals/namespace';
 
 export const namespace = getComponentNamespace('combo-button__item');
 

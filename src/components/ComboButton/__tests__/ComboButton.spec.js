@@ -6,19 +6,24 @@
 import { shallow } from 'enzyme';
 import React, { Fragment } from 'react';
 
-import { Filter20 } from '@carbon/icons-react';
+import { ArrowRight20 , Filter20 } from '@carbon/icons-react';
+
 
 import ComboButton from '../';
-import ComboButtonItem from '../../ComboButtonItem';
-
-import primaryAction from '../_mocks_';
+import ComboButtonItem from '../ComboButtonItem';
 
 describe('ComboButton', () => {
   let comboButton;
 
   beforeEach(() => {
     comboButton = shallow(
-      <ComboButton primaryAction={primaryAction}>
+      <ComboButton
+        primaryAction={{
+          label: 'Start a task',
+          renderIcon: ArrowRight20,
+          onClick: () => {},
+        }}
+      >
         <ComboButtonItem
           className="some-class"
           itemText={
