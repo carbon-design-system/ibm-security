@@ -6,6 +6,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
   data-floating-menu-container={true}
 >
   <Button
+    className="security--combo-button__button"
     disabled={false}
     kind="primary"
     label="Start a task"
@@ -23,7 +24,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
     Start a task
   </Button>
   <ForwardRef(OverflowMenu)
-    className="security--button bx--btn bx--btn--primary"
+    className="security--button bx--btn bx--btn--primary security--combo-button__button security--combo-button__overflow-menu"
     direction="top"
     menuOffset={[Function]}
     menuOptionsClass="bx--list-box__menu"
@@ -61,7 +62,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 2
   data-floating-menu-container="true"
 >
   <button
-    class="security--button bx--btn bx--btn--primary"
+    class="security--button security--combo-button__button bx--btn bx--btn--primary"
     label="Start a task"
     tabindex="0"
     type="button"
@@ -87,7 +88,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 2
     aria-expanded="false"
     aria-haspopup="true"
     aria-label="Menu"
-    class="security--button bx--btn bx--btn--primary bx--overflow-menu"
+    class="security--button bx--btn bx--btn--primary security--combo-button__button security--combo-button__overflow-menu bx--overflow-menu"
     role="button"
     tabindex="0"
   >
@@ -120,6 +121,7 @@ exports[`ComboButton renders a combo button without an overflow menu 1`] = `
   data-floating-menu-container={true}
 >
   <Button
+    className="security--combo-button__button"
     disabled={false}
     kind="primary"
     label="Start a task"
