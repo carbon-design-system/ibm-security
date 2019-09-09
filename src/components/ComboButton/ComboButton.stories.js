@@ -48,7 +48,7 @@ storiesOf(patterns('ComboButton'), module)
               index={index}
               itemText={
                 <Fragment>
-                  <span>{text}</span>
+                  <span title={text}>{text}</span>
                   <Filter20 />
                 </Fragment>
               }
@@ -61,7 +61,7 @@ storiesOf(patterns('ComboButton'), module)
         index={5}
         itemText={
           <Fragment>
-            <span>Add to folder</span>
+            <span title="Add to folder">Add to folder</span>
             <Folder20 />
           </Fragment>
         }
