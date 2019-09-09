@@ -42,7 +42,9 @@ const ComboButton = ({ children, className, direction, primaryAction }) => {
     >
       <Button
         {...primaryAction}
-        renderIcon={children.length > 1 ? null : primaryAction.renderIcon}
+        renderIcon={
+          children && children.length > 1 ? null : primaryAction.renderIcon
+        }
       >
         {primaryAction.label}
       </Button>

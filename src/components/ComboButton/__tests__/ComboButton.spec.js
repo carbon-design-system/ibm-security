@@ -5,16 +5,28 @@
 
 import { shallow } from 'enzyme';
 import React, { Fragment } from 'react';
-
-import { ArrowRight20, Filter20 } from '@carbon/icons-react';
+import { ArrowRight20 } from '@carbon/icons-react';
 
 import ComboButton, { ComboButtonItem } from '../';
 
 describe('ComboButton', () => {
-  let comboButton;
+  it('renders a combo button without an overflow menu', () => {
+    const comboButton = shallow(
+      <ComboButton
+        primaryAction={{
+          label: 'Start a task',
+          renderIcon: ArrowRight20,
+          onClick: () => {},
+        }}
+      />
+    );
 
-  beforeEach(() => {
-    comboButton = shallow(
+    expect(comboButton).toMatchSnapshot();
+    expect(comboButton.find('[menuOptionsClass]').exists()).toEqual(false);
+  });
+
+  it('renders a combo button with children and an overflow menu', () => {
+    const comboButton = shallow(
       <ComboButton
         primaryAction={{
           label: 'Start a task',
@@ -26,28 +38,15 @@ describe('ComboButton', () => {
           className="some-class"
           itemText={
             <Fragment>
-              <span>Filter list 1</span>
-              <Filter20 />
-            </Fragment>
-          }
-        />
-        <ComboButtonItem
-          className="some-class"
-          itemText={
-            <Fragment>
-              <span>Filter list 2</span>
+              <span>Filter list</span>
             </Fragment>
           }
         />
       </ComboButton>
     );
-  });
 
-  it('renders', () => {
     expect(comboButton).toMatchSnapshot();
-  });
-
-  it("renders the HTML of the node's subtree", () => {
     expect(comboButton.render()).toMatchSnapshot();
+    expect(comboButton.find('[menuOptionsClass]').exists()).toEqual(true);
   });
 });

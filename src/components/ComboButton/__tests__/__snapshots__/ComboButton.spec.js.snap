@@ -1,18 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ComboButton renders 1`] = `
+exports[`ComboButton renders a combo button with children and an overflow menu 1`] = `
 <div
   className="security--combo-button"
   data-floating-menu-container={true}
 >
   <Button
     disabled={false}
-    iconDescription="arrow right"
     kind="primary"
     label="Start a task"
     largeText={null}
     onClick={[Function]}
-    renderIcon={null}
+    renderIcon={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "render": [Function],
+      }
+    }
     tabIndex={0}
     type="button"
   >
@@ -32,32 +36,26 @@ exports[`ComboButton renders 1`] = `
       }
     }
   >
-    <ComboButtonItem
+    <OverflowMenuItem
       className="some-class"
+      disabled={false}
+      hasDivider={false}
+      isDelete={false}
       itemText={
         <React.Fragment>
           <span>
-            Filter list 1
-          </span>
-          <ForwardRef(Filter20) />
-        </React.Fragment>
-      }
-    />
-    <ComboButtonItem
-      className="some-class"
-      itemText={
-        <React.Fragment>
-          <span>
-            Filter list 2
+            Filter list
           </span>
         </React.Fragment>
       }
+      onClick={[Function]}
+      onKeyDown={[Function]}
     />
   </ForwardRef(OverflowMenu)>
 </div>
 `;
 
-exports[`ComboButton renders the HTML of the node's subtree 1`] = `
+exports[`ComboButton renders a combo button with children and an overflow menu 2`] = `
 <div
   class="security--combo-button"
   data-floating-menu-container="true"
@@ -69,6 +67,21 @@ exports[`ComboButton renders the HTML of the node's subtree 1`] = `
     type="button"
   >
     Start a task
+    <svg
+      aria-hidden="true"
+      class="bx--btn__icon"
+      focusable="false"
+      height="20"
+      preserveAspectRatio="xMidYMid meet"
+      style="will-change:transform"
+      viewBox="0 0 20 20"
+      width="20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M11.8 2.8l-1 1 5.4 5.5H1v1.4h15.2l-5.4 5.5 1 1L19 10z"
+      />
+    </svg>
   </button>
   <div
     aria-expanded="false"
@@ -98,5 +111,30 @@ exports[`ComboButton renders the HTML of the node's subtree 1`] = `
       </title>
     </svg>
   </div>
+</div>
+`;
+
+exports[`ComboButton renders a combo button without an overflow menu 1`] = `
+<div
+  className="security--combo-button"
+  data-floating-menu-container={true}
+>
+  <Button
+    disabled={false}
+    kind="primary"
+    label="Start a task"
+    largeText={null}
+    onClick={[Function]}
+    renderIcon={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "render": [Function],
+      }
+    }
+    tabIndex={0}
+    type="button"
+  >
+    Start a task
+  </Button>
 </div>
 `;
