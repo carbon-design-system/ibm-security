@@ -4,19 +4,20 @@
 /// @copyright IBM Security 2019
 ////
 
+@import '../../globals/index';
+
 @mixin combo-button {
   position: relative;
   display: flex;
   justify-content: flex-end;
+  width: 100%;
 
-  & .#{$prefix}--btn--primary:first-child {
-    display: block;
-    flex: auto;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  & &__button:first-child {
+    @include text-overflow();
+    flex: 1;
   }
 
-  & .#{$prefix}--overflow-menu {
+  & &__overflow-menu {
     width: 3rem;
     margin-left: 1px;
 
@@ -53,7 +54,8 @@
       display: none;
     }
 
-    &__btn {
+    .#{$prefix}--overflow-menu-options__btn {
+      @include text-overflow();
       outline: unset;
       padding: 0;
       margin: 0 1rem;
@@ -64,12 +66,9 @@
       width: unset;
       max-width: unset;
       justify-content: space-between;
-      overflow: hidden;
-      text-overflow: ellipsis;
 
       &:focus {
-        outline: $focus solid 2px;
-        outline-offset: -2px;
+        @include focus-outline('outline');
         margin: 0;
         padding: 0 1rem;
         border-color: transparent;
@@ -80,13 +79,8 @@
         background-color: unset;
       }
 
-      & .#{$prefix}--list-box__menu-item-label {
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-
-      & .#{$prefix}--list-box__menu-item-icon {
-        flex-shrink: 0;
+      & > span + svg {
+        padding-left: $carbon--spacing-03;
       }
     }
   }

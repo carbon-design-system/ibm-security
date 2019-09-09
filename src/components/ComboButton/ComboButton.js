@@ -42,6 +42,7 @@ const ComboButton = ({ children, className, direction, primaryAction }) => {
     >
       <Button
         {...primaryAction}
+        className={`${namespace}__button`}
         renderIcon={
           children && children.length > 1 ? null : primaryAction.renderIcon
         }
@@ -52,9 +53,16 @@ const ComboButton = ({ children, className, direction, primaryAction }) => {
       {children && (
         <OverflowMenu
           className={classnames(
+            // Button-specific classes:
             buttonNamespace,
             `${prefix}--btn`,
-            `${prefix}--btn--primary`
+            `${prefix}--btn--primary`,
+
+            // Button as a child of combo button:
+            `${namespace}__button`,
+
+            // Overflow menu as a child of combo button:
+            `${namespace}__overflow-menu`
           )}
           direction={direction}
           menuOffset={getMenuOffset}
