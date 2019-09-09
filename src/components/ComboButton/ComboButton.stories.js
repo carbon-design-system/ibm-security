@@ -19,6 +19,8 @@ import { ComboButton, ComboButtonItem } from '../..';
 
 const { prefix } = settings;
 
+ComboButtonItem.displayName = 'ComboButtonItem';
+
 const props = () => ({
   primaryAction: {
     label: text('Primary button label (primaryAction.label)', 'Start a task'),
