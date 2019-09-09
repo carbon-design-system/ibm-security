@@ -39,28 +39,33 @@ storiesOf(patterns('ComboButton'), module)
     <ComboButton {...props()}>
       {Array(5)
         .fill(0)
-        .map((item, index) => (
-          <ComboButtonItem
-            className="some-class"
-            key={item.id}
-            itemText={
-              <Fragment>
-                <span>Filter list {index + 1}</span>
-                <Filter20 />
-              </Fragment>
-            }
-            onClick={action('onClick (<ComboButtonItem />')}
-          />
-        ))}
+        .map((item, index) => {
+          const text = `Filter list ${index + 1}`;
+          return (
+            <ComboButtonItem
+              className="some-class"
+              key={item.id}
+              index={index}
+              itemText={
+                <Fragment>
+                  <span>{text}</span>
+                  <Filter20 />
+                </Fragment>
+              }
+              onClick={action(`onClick ("${text}")`)}
+            />
+          );
+        })}
       <ComboButtonItem
         className="some-class"
+        index={5}
         itemText={
           <Fragment>
             <span>Add to folder</span>
             <Folder20 />
           </Fragment>
         }
-        onClick={action('onClick (<ComboButtonItem />')}
+        onClick={action('onClick ("Add to folder")')}
         primaryFocus
       />
     </ComboButton>

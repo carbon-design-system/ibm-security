@@ -6,11 +6,9 @@
 import { shallow } from 'enzyme';
 import React, { Fragment } from 'react';
 
-import { ArrowRight20 , Filter20 } from '@carbon/icons-react';
+import { ArrowRight20, Filter20 } from '@carbon/icons-react';
 
-
-import ComboButton from '../';
-import ComboButtonItem from '../ComboButtonItem';
+import ComboButton, { ComboButtonItem } from '../';
 
 describe('ComboButton', () => {
   let comboButton;

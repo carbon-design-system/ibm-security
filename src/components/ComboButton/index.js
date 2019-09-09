@@ -3,5 +3,7 @@
  * @copyright IBM Security 2019
  */
 
+import OverflowMenuItem from '../OverflowMenuItem';
+
 export default from './ComboButton';
-export ComboButtonItem from './ComboButtonItem/ComboButtonItem';
+export { OverflowMenuItem as ComboButtonItem };
