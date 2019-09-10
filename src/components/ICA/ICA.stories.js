@@ -43,6 +43,11 @@ storiesOf(components('ICA'), module)
     () => (
       <div className="bx--grid bx--grid--full-width">
         <div className="bx--row">
+          <div className="bx--col">
+            <h4>4 spaced</h4>
+          </div>
+        </div>
+        <div className="bx--row">
           {Array(4)
             .fill(0)
             .map(item => (
@@ -54,13 +59,18 @@ storiesOf(components('ICA'), module)
               </div>
             ))}
         </div>
-        <div className="bx--row" style={{ marginTop: '36px' }}>
+        <div className="bx--row">
+          <div className="bx--col">
+            <h4>8 condensed</h4>
+          </div>
+        </div>
+        <div className="bx--row">
           {Array(8)
             .fill(0)
             .map(item => (
               <div
                 key={item.id}
-                className="bx--col-sm-2 bx--col-md-1 bx--col-lg-2"
+                className="bx--col-sm-2 bx--col-md-2 bx--col-lg-2"
               >
                 <ICA {...storyProps({ total })} />
               </div>
