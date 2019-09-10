@@ -2,62 +2,6 @@
 
 exports[`ComboButton renders a combo button with children and an overflow menu 1`] = `
 <div
-  className="security--combo-button"
-  data-floating-menu-container={true}
->
-  <Button
-    className="security--combo-button__button"
-    disabled={false}
-    kind="primary"
-    label="Start a task"
-    largeText={null}
-    onClick={[Function]}
-    renderIcon={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "render": [Function],
-      }
-    }
-    tabIndex={0}
-    type="button"
-  >
-    Start a task
-  </Button>
-  <ForwardRef(OverflowMenu)
-    className="security--button bx--btn bx--btn--primary security--combo-button__button security--combo-button__overflow-menu"
-    direction="top"
-    menuOffset={[Function]}
-    menuOptionsClass="bx--list-box__menu"
-    onClose={[Function]}
-    onOpen={[Function]}
-    renderIcon={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "render": [Function],
-      }
-    }
-  >
-    <OverflowMenuItem
-      className="some-class"
-      disabled={false}
-      hasDivider={false}
-      isDelete={false}
-      itemText={
-        <React.Fragment>
-          <span>
-            Filter list
-          </span>
-        </React.Fragment>
-      }
-      onClick={[Function]}
-      onKeyDown={[Function]}
-    />
-  </ForwardRef(OverflowMenu)>
-</div>
-`;
-
-exports[`ComboButton renders a combo button with children and an overflow menu 2`] = `
-<div
   class="security--combo-button"
   data-floating-menu-container="true"
 >

@@ -45,7 +45,6 @@ describe('ComboButton', () => {
       </ComboButton>
     );
 
-    expect(comboButton).toMatchSnapshot();
     expect(comboButton.render()).toMatchSnapshot();
     expect(comboButton.find('[menuOptionsClass]').exists()).toEqual(true);
   });
