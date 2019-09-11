@@ -3,6 +3,7 @@
  * @copyright IBM Security 2019
  */
 
+import centered from '@storybook/addon-centered/react';
 import { select, text, number } from '@storybook/addon-knobs';
 import { withA11y } from '@storybook/addon-a11y';
 import { storiesOf } from '@storybook/react';
@@ -64,6 +65,7 @@ const props = {
 
 storiesOf(components('Tooltip'), module)
   .addDecorator(withA11y)
+  .addDecorator(centered)
   .add(
     'default (bottom)',
     () => (
