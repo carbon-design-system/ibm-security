@@ -5,7 +5,7 @@
 
 import { shallow } from 'enzyme';
 import React, { Fragment } from 'react';
-import { ArrowRight20 } from '@carbon/icons-react';
+import ArrowRight20 from '@carbon/icons-react/lib/arrow--right/20';
 
 import ComboButton, { ComboButtonItem } from '../';
 

@@ -9,7 +9,9 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
 import { radios, text } from '@storybook/addon-knobs';
-import { ArrowRight20, Filter20, Folder20 } from '@carbon/icons-react';
+import ArrowRight20 from '@carbon/icons-react/lib/arrow--right/20';
+import Filter20 from '@carbon/icons-react/lib/filter/20';
+import Folder20 from '@carbon/icons-react/lib/folder/20';
 import { settings } from 'carbon-components';
 
 import { patterns } from '../../../.storybook';
@@ -52,7 +54,7 @@ storiesOf(patterns('ComboButton'), module)
               return (
                 <ComboButtonItem
                   className="some-class"
-                  key={item.id}
+                  key={`item-${  item.id}`}
                   index={index}
                   itemText={
                     <Fragment>

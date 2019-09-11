@@ -6,7 +6,8 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { useRef, useState } from 'react';
-import { ChevronDown16, ChevronUp16 } from '@carbon/icons-react';
+import ChevronDown16 from '@carbon/icons-react/lib/chevron--down/16';
+import ChevronUp16 from '@carbon/icons-react/lib/chevron--up/16';
 import { settings } from 'carbon-components';
 
 import Button from '../Button';
@@ -43,9 +44,7 @@ const ComboButton = ({ children, className, direction, primaryAction }) => {
       <Button
         {...primaryAction}
         className={`${namespace}__button`}
-        renderIcon={
-          children && children.length > 1 ? null : primaryAction.renderIcon
-        }
+        renderIcon={primaryAction.renderIcon}
       >
         {primaryAction.label}
       </Button>
@@ -101,11 +100,11 @@ ComboButton.propTypes = {
   className: PropTypes.string,
 
   /** @type {string} Overflow menu direction. */
-  direction: PropTypes.oneOf(TooltipDirection.TOP, TooltipDirection.BOTTOM),
+  direction: PropTypes.oneOf([TooltipDirection.TOP, TooltipDirection.BOTTOM]),
 };
 
 ComboButton.defaultProps = {
-  children: null,
+  children: undefined,
   className: '',
   direction: TooltipDirection.TOP,
 };
