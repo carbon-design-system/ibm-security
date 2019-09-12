@@ -3,32 +3,23 @@
  * @copyright IBM Security 2019
  */
 
-import React, { Fragment } from 'react';
+import React from 'react';
 import centered from '@storybook/addon-centered/react';
-import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
-import { radios, text } from '@storybook/addon-knobs';
+import { radios } from '@storybook/addon-knobs';
 import ArrowRight20 from '@carbon/icons-react/lib/arrow--right/20';
 import Filter20 from '@carbon/icons-react/lib/filter/20';
 import Folder20 from '@carbon/icons-react/lib/folder/20';
-import { settings } from 'carbon-components';
 
 import { patterns } from '../../../.storybook';
 
 import { TooltipDirection } from '../IconButton/IconButton';
 import { ComboButton, ComboButtonItem } from '../..';
 
-const { prefix } = settings;
-
 ComboButtonItem.displayName = 'ComboButtonItem';
 
 const props = () => ({
-  primaryAction: {
-    label: text('Primary button label (primaryAction.label)', 'Start a task'),
-    renderIcon: ArrowRight20,
-    onClick: action('onClick (primaryAction'),
-  },
   direction: radios(
     'Menu direction (direction)',
     {
@@ -39,6 +30,11 @@ const props = () => ({
   ),
 });
 
+const itemProps = () => ({
+  className: 'some-class',
+  onClick: () => {},
+});
+
 storiesOf(patterns('ComboButton'), module)
   .addDecorator(withA11y)
   .addDecorator(centered)
@@ -47,42 +43,19 @@ storiesOf(patterns('ComboButton'), module)
     () => (
       <div style={{ width: '300px' }}>
         <ComboButton {...props()}>
-          {Array(5)
-            .fill(0)
-            .map((item, index) => {
-              const text = `Filter list ${index + 1}`;
-              return (
-                <ComboButtonItem
-                  className="some-class"
-                  key={`item-${  item.id}`}
-                  index={index}
-                  itemText={
-                    <Fragment>
-                      <span title={text}>{text}</span>
-                      <Filter20 />
-                    </Fragment>
-                  }
-                  onClick={action(`onClick ("${text}")`)}
-                />
-              );
-            })}
-          <ComboButtonItem
-            className="some-class"
-            index={5}
-            itemText={
-              <Fragment>
-                <span
-                  className={`${prefix}--text-truncate--end`}
-                  title="Add to folder and this text is very long and will be truncated"
-                >
-                  Add to folder and this text is very long and will be truncated
-                </span>
-                <Folder20 />
-              </Fragment>
-            }
-            onClick={action('onClick ("Add to folder...")')}
-            primaryFocus
-          />
+          <ComboButtonItem {...itemProps} renderIcon={ArrowRight20}>
+            <span title="Item 1 (becomes primary)">
+              Item 1 (becomes primary)
+            </span>
+          </ComboButtonItem>
+          <ComboButtonItem primaryFocus {...itemProps}>
+            <span title="Item 2">Item 2</span>
+            <Filter20 />
+          </ComboButtonItem>
+          <ComboButtonItem {...itemProps}>
+            <span title="Item 3">Item 3</span>
+            <Folder20 />
+          </ComboButtonItem>
         </ComboButton>
       </div>
     ),

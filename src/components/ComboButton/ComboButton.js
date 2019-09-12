@@ -10,7 +10,6 @@ import ChevronDown16 from '@carbon/icons-react/lib/chevron--down/16';
 import ChevronUp16 from '@carbon/icons-react/lib/chevron--up/16';
 import { settings } from 'carbon-components';
 
-import Button from '../Button';
 import OverflowMenu from '../OverflowMenu';
 import { TooltipDirection } from '../IconButton/IconButton';
 
@@ -22,7 +21,7 @@ export const namespace = getComponentNamespace('combo-button');
 
 const { prefix } = settings;
 
-const ComboButton = ({ children, className, direction, primaryAction }) => {
+const ComboButton = ({ children, className, direction }) => {
   const [isOpen, setIsOpen] = useState(false);
   const wrapper = useRef(null);
 
@@ -35,21 +34,21 @@ const ComboButton = ({ children, className, direction, primaryAction }) => {
     };
   };
 
+  const childrenArray = React.Children.toArray(children);
+
+  // Take the first child and add the primary prop. Carbon clones their OverflowMenuItems in the OverflowMenu
+  const primaryAction = React.cloneElement(childrenArray[0], { primary: true });
+  const overflowItems = childrenArray.slice(1);
+
   return (
     <div
       className={classnames(namespace, className)}
       ref={wrapper}
       data-floating-menu-container
     >
-      <Button
-        {...primaryAction}
-        className={`${namespace}__button`}
-        renderIcon={primaryAction.renderIcon}
-      >
-        {primaryAction.label}
-      </Button>
+      {primaryAction}
 
-      {children && (
+      {overflowItems && (
         <OverflowMenu
           className={classnames(
             // Button-specific classes:
@@ -70,7 +69,7 @@ const ComboButton = ({ children, className, direction, primaryAction }) => {
           onOpen={() => setIsOpen(true)}
           renderIcon={isOpen ? ChevronUp16 : ChevronDown16}
         >
-          {children}
+          {overflowItems}
         </OverflowMenu>
       )}
     </div>
@@ -78,23 +77,8 @@ const ComboButton = ({ children, className, direction, primaryAction }) => {
 };
 
 ComboButton.propTypes = {
-  /** @type {Object.<string, string>} An object list of props for the primary button. */
-  primaryAction: PropTypes.shape({
-    /** @type {string} Action label. */
-    label: PropTypes.string,
-
-    /** @type {string} Icon description of action icon. */
-    iconDescription: PropTypes.string,
-
-    /** @type {function} Click handler for action. */
-    onClick: PropTypes.func,
-
-    /** @type {function} Icon to render. */
-    renderIcon: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
-  }).isRequired,
-
   /** @type {node} The child nodes. */
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
 
   /** @type {string} Extra classes to add. */
   className: PropTypes.string,
