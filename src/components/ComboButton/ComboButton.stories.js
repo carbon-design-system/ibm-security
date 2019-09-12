@@ -8,6 +8,7 @@ import centered from '@storybook/addon-centered/react';
 import { storiesOf } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
 import { radios } from '@storybook/addon-knobs';
+import { action } from '@storybook/addon-actions';
 import ArrowRight20 from '@carbon/icons-react/lib/arrow--right/20';
 import Filter20 from '@carbon/icons-react/lib/filter/20';
 import Folder20 from '@carbon/icons-react/lib/folder/20';
@@ -32,7 +33,6 @@ const props = () => ({
 
 const itemProps = () => ({
   className: 'some-class',
-  onClick: () => {},
 });
 
 storiesOf(patterns('ComboButton'), module)
@@ -43,16 +43,24 @@ storiesOf(patterns('ComboButton'), module)
     () => (
       <div style={{ width: '300px' }}>
         <ComboButton {...props()}>
-          <ComboButtonItem {...itemProps} renderIcon={ArrowRight20}>
+          <ComboButtonItem
+            {...itemProps}
+            onClick={action('onClick (item 1)')}
+            renderIcon={ArrowRight20}
+          >
             <span title="Item 1 (becomes primary)">
               Item 1 (becomes primary)
             </span>
           </ComboButtonItem>
-          <ComboButtonItem primaryFocus {...itemProps}>
+          <ComboButtonItem
+            primaryFocus
+            onClick={action('onClick (item 2)')}
+            {...itemProps}
+          >
             <span title="Item 2">Item 2</span>
             <Filter20 />
           </ComboButtonItem>
-          <ComboButtonItem {...itemProps}>
+          <ComboButtonItem {...itemProps} onClick={action('onClick (item 3)')}>
             <span title="Item 3">Item 3</span>
             <Folder20 />
           </ComboButtonItem>
