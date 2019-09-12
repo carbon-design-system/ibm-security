@@ -7,12 +7,14 @@
 @import '../../globals/index';
 
 @mixin combo-button {
+  $root: &;
+
   position: relative;
   display: flex;
   justify-content: flex-end;
   width: 100%;
 
-  & &__button:first-child {
+  & &--primary {
     @include text-overflow();
     flex: 1;
   }
@@ -45,7 +47,7 @@
         background-color: $hover-selected-ui;
       }
 
-      &:first-child .#{$prefix}--list-box__menu-item {
+      &:first-child .security--combo-button-item__wrapper {
         border-top-color: transparent;
       }
     }
@@ -53,35 +55,40 @@
     &::after {
       display: none;
     }
+  }
 
-    .#{$prefix}--overflow-menu-options__btn {
-      @include text-overflow();
-      outline: unset;
-      padding: 0;
-      margin: 0 1rem;
-      border-top: 1px solid transparent;
-      border-bottom: 1px solid transparent;
-      border-top-color: $active-ui;
-      display: flex;
-      width: unset;
-      max-width: unset;
-      justify-content: space-between;
+  &-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
 
-      &:focus {
-        @include focus-outline('outline');
-        margin: 0;
-        padding: 0 1rem;
-        border-color: transparent;
-      }
+  & &-item__wrapper {
+    @include text-overflow();
+    outline: unset;
+    padding: 0;
+    margin: 0 1rem;
+    border-top: 1px solid $active-ui;
+    border-bottom: 1px solid transparent;
+    display: flex;
+    width: unset;
+    max-width: unset;
+    justify-content: space-between;
 
-      &:hover {
-        color: $text-01;
-        background-color: unset;
-      }
+    &:focus {
+      @include focus-outline('outline');
+      margin: 0;
+      padding: 0 1rem;
+      border-color: transparent;
+    }
 
-      & > span + svg {
-        padding-left: $carbon--spacing-03;
-      }
+    &:hover {
+      color: $text-01;
+      background-color: unset;
+    }
+
+    & > span + svg {
+      padding-left: $carbon--spacing-03;
     }
   }
 }

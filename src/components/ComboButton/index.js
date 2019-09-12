@@ -5,3 +5,5 @@
 
 export default from './ComboButton';
 export ComboButtonItem from './ComboButtonItem';
+
+// export { OverflowMenuItem as ComboButtonItem } from '../OverflowMenuItem';

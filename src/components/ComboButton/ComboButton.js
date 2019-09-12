@@ -10,7 +10,9 @@ import ChevronDown16 from '@carbon/icons-react/lib/chevron--down/16';
 import ChevronUp16 from '@carbon/icons-react/lib/chevron--up/16';
 import { settings } from 'carbon-components';
 
+import Button from '../Button';
 import OverflowMenu from '../OverflowMenu';
+import OverflowMenuItem from '../OverflowMenuItem';
 import { TooltipDirection } from '../IconButton/IconButton';
 
 import { namespace as buttonNamespace } from '../Button/Button';
@@ -36,9 +38,27 @@ const ComboButton = ({ children, className, direction }) => {
 
   const childrenArray = React.Children.toArray(children);
 
-  // Take the first child and add the primary prop. Carbon clones their OverflowMenuItems in the OverflowMenu
+  // Save first child (e.g., primary action) to use as a `Button`:
   const primaryAction = React.cloneElement(childrenArray[0], { primary: true });
+
+  // Save remaining children to be displayed in the `OverflowMenu`:
   const overflowItems = childrenArray.slice(1);
+
+  // Create `OverflowMenuItem` components:
+  const childrenWithProps = React.Children.toArray(overflowItems).map(
+    (item, index) => {
+      const { children, primaryFocus, className, ...rest } = item.props;
+      return (
+        <OverflowMenuItem
+          {...rest}
+          className={classnames(className, `${namespace}-item__wrapper`)}
+          itemText={children}
+          key={item.id}
+          primaryFocus={!primaryFocus && index === 0 ? true : primaryFocus}
+        />
+      );
+    }
+  );
 
   return (
     <div
@@ -46,12 +66,16 @@ const ComboButton = ({ children, className, direction }) => {
       ref={wrapper}
       data-floating-menu-container
     >
-      {primaryAction}
+      {primaryAction && (
+        <Button className={`${namespace}--primary`} {...primaryAction.rest}>
+          {React.Children.toArray(primaryAction)}
+        </Button>
+      )}
 
       {overflowItems && (
         <OverflowMenu
           className={classnames(
-            // Button-specific classes:
+            // Button-specific classes for styling:
             buttonNamespace,
             `${prefix}--btn`,
             `${prefix}--btn--primary`,
@@ -69,7 +93,7 @@ const ComboButton = ({ children, className, direction }) => {
           onOpen={() => setIsOpen(true)}
           renderIcon={isOpen ? ChevronUp16 : ChevronDown16}
         >
-          {overflowItems}
+          {childrenWithProps}
         </OverflowMenu>
       )}
     </div>
@@ -88,7 +112,6 @@ ComboButton.propTypes = {
 };
 
 ComboButton.defaultProps = {
-  children: undefined,
   className: '',
   direction: TooltipDirection.TOP,
 };
