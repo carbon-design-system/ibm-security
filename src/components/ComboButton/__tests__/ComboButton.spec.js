@@ -4,7 +4,7 @@
  */
 
 import { shallow } from 'enzyme';
-import React, { Fragment } from 'react';
+import React from 'react';
 import ArrowRight20 from '@carbon/icons-react/lib/arrow--right/20';
 
 import ComboButton, { ComboButtonItem } from '../';
@@ -12,13 +12,11 @@ import ComboButton, { ComboButtonItem } from '../';
 describe('ComboButton', () => {
   it('renders a combo button without an overflow menu', () => {
     const comboButton = shallow(
-      <ComboButton
-        primaryAction={{
-          label: 'Start a task',
-          renderIcon: ArrowRight20,
-          onClick: () => {},
-        }}
-      />
+      <ComboButton>
+        <ComboButtonItem className="some-class" renderIcon={ArrowRight20}>
+          Start a task
+        </ComboButtonItem>
+      </ComboButton>
     );
 
     expect(comboButton.render()).toMatchSnapshot();
@@ -27,21 +25,13 @@ describe('ComboButton', () => {
 
   it('renders a combo button with children and an overflow menu', () => {
     const comboButton = shallow(
-      <ComboButton
-        primaryAction={{
-          label: 'Start a task',
-          renderIcon: ArrowRight20,
-          onClick: () => {},
-        }}
-      >
-        <ComboButtonItem
-          className="some-class"
-          itemText={
-            <Fragment>
-              <span>Filter list</span>
-            </Fragment>
-          }
-        />
+      <ComboButton>
+        <ComboButtonItem className="some-class" renderIcon={ArrowRight20}>
+          Start a task
+        </ComboButtonItem>
+        <ComboButtonItem className="some-class">
+          <span>Filter list</span>
+        </ComboButtonItem>
       </ComboButton>
     );
 

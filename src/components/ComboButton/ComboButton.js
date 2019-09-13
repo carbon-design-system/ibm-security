@@ -39,20 +39,37 @@ const ComboButton = ({ children, className, direction }) => {
   const childrenArray = React.Children.toArray(children);
 
   // Save first child (e.g., primary action) to use as a `Button`:
-  const primaryAction = React.cloneElement(childrenArray[0], { primary: true });
+  const primaryAction = React.cloneElement(childrenArray[0]);
+  const primaryActionWithProps = React.Children.toArray(primaryAction).map(
+    button => {
+      const { children, ...rest } = button.props;
+      return (
+        <Button
+          {...rest}
+          key={`primary-action-button-${  button.id}`}
+          className={`${namespace}--primary`}
+        >
+          {React.Children.toArray(children)}
+        </Button>
+      );
+    }
+  );
 
   // Save remaining children to be displayed in the `OverflowMenu`:
-  const overflowItems = childrenArray.slice(1);
+  let overflowItems;
+  if (childrenArray.length > 1) {
+    overflowItems = childrenArray.slice(1);
+  }
 
   // Create `OverflowMenuItem` components:
-  const childrenWithProps = React.Children.toArray(overflowItems).map(
+  const overflowMenuItemWithProps = React.Children.toArray(overflowItems).map(
     (item, index) => {
       const { children, primaryFocus, className, ...rest } = item.props;
       return (
         <OverflowMenuItem
           {...rest}
           className={classnames(className, `${namespace}-item__wrapper`)}
-          itemText={children}
+          itemText={React.Children.toArray(children)}
           key={item.id}
           primaryFocus={!primaryFocus && index === 0 ? true : primaryFocus}
         />
@@ -66,13 +83,9 @@ const ComboButton = ({ children, className, direction }) => {
       ref={wrapper}
       data-floating-menu-container
     >
-      {primaryAction && (
-        <Button className={`${namespace}--primary`} {...primaryAction.rest}>
-          {React.Children.toArray(primaryAction)}
-        </Button>
-      )}
+      {primaryActionWithProps}
 
-      {overflowItems && (
+      {overflowMenuItemWithProps !== undefined && (
         <OverflowMenu
           className={classnames(
             // Button-specific classes for styling:
@@ -93,7 +106,7 @@ const ComboButton = ({ children, className, direction }) => {
           onOpen={() => setIsOpen(true)}
           renderIcon={isOpen ? ChevronUp16 : ChevronDown16}
         >
-          {childrenWithProps}
+          {overflowMenuItemWithProps}
         </OverflowMenu>
       )}
     </div>

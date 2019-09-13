@@ -19,10 +19,6 @@ import { ComboButton, ComboButtonItem } from '../..';
 
 ComboButtonItem.displayName = 'ComboButtonItem';
 
-ComboButton.__docgenInfo = {
-  ...ComboButton.__docgenInfo,
-};
-
 const props = () => ({
   direction: radios(
     'Menu direction (direction)',
@@ -46,14 +42,15 @@ storiesOf(patterns('ComboButton'), module)
             onClick={action('onClick (item 1)')}
             renderIcon={ArrowRight20}
           >
-            <span title="Item 1 (becomes primary)">
-              Item 1 (becomes primary)
+            <span title="Item 1 (becomes primary button and text will be truncated)">
+              Item 1 (becomes primary button and text will be truncated)
             </span>
           </ComboButtonItem>
           {Array(5)
             .fill(0)
             .map((item, index) => {
-              const text = `Filter list ${index + 1}`;
+              const text = `Item ${index +
+                1} - text may be long and will be truncated`;
               return (
                 <ComboButtonItem
                   className="some-class"

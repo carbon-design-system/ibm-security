@@ -15,8 +15,11 @@
   width: 100%;
 
   & &--primary {
-    @include text-overflow();
     flex: 1;
+  }
+
+  * {
+    @include text-overflow();
   }
 
   & &__overflow-menu {
@@ -88,7 +91,8 @@
     }
 
     & > span + svg {
-      padding-left: $carbon--spacing-03;
+      margin-left: $carbon--spacing-03;
+      flex-shrink: 0;
     }
   }
 }
