@@ -40,12 +40,34 @@ const ComboButton = ({ children, className, direction }) => {
 
   // Save first child (e.g., primary action) to use as a `Button`:
   const primaryActionWithProps = [childrenArray[0]].map(button => {
-    const { children, ...rest } = button.props;
+    // Need to explicitly define props, versus using `...rest`,
+    // because otherwise `OverflowMenuItem`-related props from
+    // may trigger invalid DOM warnings.
+    const {
+      children,
+      disabled,
+      iconDescription,
+      largeText,
+      onClick,
+      onFocus,
+      renderIcon: Icon,
+      size,
+      tabIndex,
+    } = button.props;
     return (
       <Button
-        {...rest}
-        key={`primary-action-button-${button.id}`}
         className={`${namespace}--primary`}
+        disabled={disabled}
+        iconDescription={iconDescription}
+        kind="primary"
+        key={`primary-action-button-${button.id}`}
+        largeText={largeText}
+        onClick={onClick}
+        onFocus={onFocus}
+        renderIcon={Icon}
+        size={size}
+        tabIndex={tabIndex}
+        type="button"
       >
         {React.Children.toArray(children)}
       </Button>
@@ -60,14 +82,29 @@ const ComboButton = ({ children, className, direction }) => {
 
     // Create `OverflowMenuItem` components:
     overflowMenuItemWithProps = overflowItems.map((item, index) => {
-      const { children, primaryFocus, className, ...rest } = item.props;
+      // Need to explicitly define props, versus using `...rest`,
+      // because otherwise `Button`-related props from
+      // may trigger invalid DOM warnings.
+      const {
+        children,
+        className,
+        disabled,
+        isDelete,
+        primaryFocus,
+        onClick,
+        onKeyDown,
+      } = item.props;
       return (
         <OverflowMenuItem
-          {...rest}
           className={classnames(className, `${namespace}-item__wrapper`)}
+          disabled={disabled}
+          isDelete={isDelete}
           itemText={React.Children.toArray(children)}
           key={`overflow-menu-item-${item.id}`}
+          onClick={onClick}
+          onKeyDown={onKeyDown}
           primaryFocus={!primaryFocus && index === 0 ? true : primaryFocus}
+          requireTitle
         />
       );
     });
