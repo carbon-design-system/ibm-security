@@ -5,7 +5,7 @@
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { useRef, useState } from 'react';
+import React, { Fragment, useRef, useState } from 'react';
 import ChevronDown16 from '@carbon/icons-react/lib/chevron--down/16';
 import ChevronUp16 from '@carbon/icons-react/lib/chevron--up/16';
 import { settings } from 'carbon-components';
@@ -41,7 +41,7 @@ const ComboButton = ({ children, className, direction }) => {
   // Save first child (e.g., primary action) to use as a `Button`:
   const primaryActionWithProps = [childrenArray[0]].map(button => {
     // Need to explicitly define props, versus using `...rest`,
-    // because otherwise `OverflowMenuItem`-related props from
+    // because otherwise unused `OverflowMenuItem`-related props from
     // may trigger invalid DOM warnings.
     const {
       children,
@@ -83,7 +83,7 @@ const ComboButton = ({ children, className, direction }) => {
     // Create `OverflowMenuItem` components:
     overflowMenuItemWithProps = overflowItems.map((item, index) => {
       // Need to explicitly define props, versus using `...rest`,
-      // because otherwise `Button`-related props from
+      // because otherwise unused `Button`-related props from
       // may trigger invalid DOM warnings.
       const {
         children,
@@ -93,18 +93,24 @@ const ComboButton = ({ children, className, direction }) => {
         primaryFocus,
         onClick,
         onKeyDown,
+        renderIcon: Icon,
       } = item.props;
+
       return (
         <OverflowMenuItem
           className={classnames(className, `${namespace}-item__wrapper`)}
           disabled={disabled}
           isDelete={isDelete}
-          itemText={React.Children.toArray(children)}
+          itemText={
+            <Fragment>
+              {children}
+              <Icon />
+            </Fragment>
+          }
           key={item.id}
           onClick={onClick}
           onKeyDown={onKeyDown}
           primaryFocus={!primaryFocus && index === 0 ? true : primaryFocus}
-          requireTitle
         />
       );
     });

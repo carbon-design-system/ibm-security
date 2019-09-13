@@ -55,9 +55,9 @@ storiesOf(patterns('ComboButton'), module)
                   key={item.id}
                   index={index}
                   onClick={action(`onClick ("${text}")`)}
+                  renderIcon={Filter20}
                 >
                   <span title={text}>{text}</span>
-                  <Filter20 />
                 </ComboButtonItem>
               );
             })}
