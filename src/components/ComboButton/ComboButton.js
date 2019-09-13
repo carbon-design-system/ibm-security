@@ -39,21 +39,18 @@ const ComboButton = ({ children, className, direction }) => {
   const childrenArray = React.Children.toArray(children);
 
   // Save first child (e.g., primary action) to use as a `Button`:
-  const primaryActionWithProps = [childrenArray[0]].map(
-  const primaryActionWithProps = React.Children.toArray(primaryAction).map(
-    button => {
-      const { children, ...rest } = button.props;
-      return (
-        <Button
-          {...rest}
-          key={`primary-action-button-${button.id}`}
-          className={`${namespace}--primary`}
-        >
-          {React.Children.toArray(children)}
-        </Button>
-      );
-    }
-  );
+  const primaryActionWithProps = [childrenArray[0]].map(button => {
+    const { children, ...rest } = button.props;
+    return (
+      <Button
+        {...rest}
+        key={`primary-action-button-${button.id}`}
+        className={`${namespace}--primary`}
+      >
+        {React.Children.toArray(children)}
+      </Button>
+    );
+  });
 
   // Save remaining children to be displayed in the `OverflowMenu`:
   let overflowItems;
@@ -62,20 +59,18 @@ const ComboButton = ({ children, className, direction }) => {
     overflowItems = childrenArray.slice(1);
 
     // Create `OverflowMenuItem` components:
-    overflowMenuItemWithProps = React.Children.toArray(overflowItems).map(
-      (item, index) => {
-        const { children, primaryFocus, className, ...rest } = item.props;
-        return (
-          <OverflowMenuItem
-            {...rest}
-            className={classnames(className, `${namespace}-item__wrapper`)}
-            itemText={React.Children.toArray(children)}
-            key={`overflow-menu-item-${item.id}`}
-            primaryFocus={!primaryFocus && index === 0 ? true : primaryFocus}
-          />
-        );
-      }
-    );
+    overflowMenuItemWithProps = overflowItems.map((item, index) => {
+      const { children, primaryFocus, className, ...rest } = item.props;
+      return (
+        <OverflowMenuItem
+          {...rest}
+          className={classnames(className, `${namespace}-item__wrapper`)}
+          itemText={React.Children.toArray(children)}
+          key={`overflow-menu-item-${item.id}`}
+          primaryFocus={!primaryFocus && index === 0 ? true : primaryFocus}
+        />
+      );
+    });
   }
 
   return (
