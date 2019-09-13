@@ -17,8 +17,6 @@ import { patterns } from '../../../.storybook';
 import { TooltipDirection } from '../IconButton/IconButton';
 import { ComboButton, ComboButtonItem } from '../..';
 
-ComboButtonItem.displayName = 'ComboButtonItem';
-
 const props = () => ({
   direction: radios(
     'Menu direction (direction)',
