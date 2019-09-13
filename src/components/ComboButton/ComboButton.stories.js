@@ -37,7 +37,7 @@ storiesOf(patterns('ComboButton'), module)
       <div style={{ width: '300px' }}>
         <ComboButton {...props()}>
           <ComboButtonItem
-            onClick={action('onClick (item 1)')}
+            onClick={action('onClick (Item 1 - primary button)')}
             renderIcon={ArrowRight20}
           >
             <span title="Item 1 (becomes primary button and text will be truncated)">
@@ -48,13 +48,13 @@ storiesOf(patterns('ComboButton'), module)
             .fill(0)
             .map((item, index) => {
               const text = `Item ${index +
-                1} - text may be long and will be truncated`;
+                2} - text may be long and will be truncated`;
               return (
                 <ComboButtonItem
                   className="some-class"
                   key={item.id}
                   index={index}
-                  onClick={action(`onClick ("${text}")`)}
+                  onClick={action(`onClick (${text})`)}
                   renderIcon={Filter20}
                 >
                   <span title={text}>{text}</span>

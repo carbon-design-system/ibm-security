@@ -50,7 +50,7 @@
         background-color: $hover-selected-ui;
       }
 
-      &:first-child .security--combo-button-item__wrapper {
+      &:first-child #{$root}-item__wrapper {
         border-top-color: transparent;
       }
     }
@@ -93,6 +93,15 @@
     & > span + svg {
       margin-left: $carbon--spacing-03;
       flex-shrink: 0;
+    }
+
+    &:disabled,
+    &:disabled:hover {
+      color: $text-03;
+
+      svg {
+        fill: $text-03;
+      }
     }
   }
 }

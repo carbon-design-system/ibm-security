@@ -45,28 +45,21 @@ const ComboButton = ({ children, className, direction }) => {
     // may trigger invalid DOM warnings.
     const {
       children,
+      className,
       disabled,
       iconDescription,
-      largeText,
       onClick,
-      onFocus,
       renderIcon: Icon,
-      size,
-      tabIndex,
     } = button.props;
     return (
       <Button
-        className={`${namespace}--primary`}
+        className={classnames(className, `${namespace}--primary`)}
         disabled={disabled}
         iconDescription={iconDescription}
         kind="primary"
         key={button.id}
-        largeText={largeText}
         onClick={onClick}
-        onFocus={onFocus}
         renderIcon={Icon}
-        size={size}
-        tabIndex={tabIndex}
         type="button"
       >
         {React.Children.toArray(children)}
@@ -89,10 +82,8 @@ const ComboButton = ({ children, className, direction }) => {
         children,
         className,
         disabled,
-        isDelete,
-        primaryFocus,
         onClick,
-        onKeyDown,
+        primaryFocus,
         renderIcon: Icon,
       } = item.props;
 
@@ -100,7 +91,6 @@ const ComboButton = ({ children, className, direction }) => {
         <OverflowMenuItem
           className={classnames(className, `${namespace}-item__wrapper`)}
           disabled={disabled}
-          isDelete={isDelete}
           itemText={
             <Fragment>
               {children}
@@ -109,7 +99,6 @@ const ComboButton = ({ children, className, direction }) => {
           }
           key={item.id}
           onClick={onClick}
-          onKeyDown={onKeyDown}
           primaryFocus={!primaryFocus && index === 0 ? true : primaryFocus}
         />
       );
