@@ -29,9 +29,7 @@ describe('ComboButton', () => {
         <ComboButtonItem className="some-class" renderIcon={ArrowRight20}>
           Start a task
         </ComboButtonItem>
-        <ComboButtonItem className="some-class">
-          <span>Filter list</span>
-        </ComboButtonItem>
+        <ComboButtonItem className="some-class">Filter list</ComboButtonItem>
       </ComboButton>
     );
 

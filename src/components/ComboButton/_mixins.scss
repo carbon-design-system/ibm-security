@@ -15,11 +15,9 @@
   width: 100%;
 
   & &--primary {
-    flex: 1;
-  }
-
-  * {
     @include text-overflow();
+    display: flex;
+    flex: 1;
   }
 
   & &__overflow-menu {

@@ -13,8 +13,8 @@ const ComboButtonItem = props => {
 };
 
 ComboButtonItem.propTypes = {
-  /** @type {ReactNode} Child elements. */
-  children: PropTypes.node.isRequired,
+  /** @type {string} Text content. */
+  children: PropTypes.string.isRequired,
 
   /** @type {string} Extra classes to add. */
   className: PropTypes.string,

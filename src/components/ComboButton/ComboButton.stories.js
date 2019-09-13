@@ -40,9 +40,7 @@ storiesOf(patterns('ComboButton'), module)
             onClick={action('onClick (Item 1 - primary button)')}
             renderIcon={ArrowRight20}
           >
-            <span title="Item 1 (becomes primary button and text will be truncated)">
-              Item 1 (becomes primary button and text will be truncated)
-            </span>
+            Item 1 (becomes primary button and text will be truncated)
           </ComboButtonItem>
           {Array(5)
             .fill(0)
@@ -57,7 +55,7 @@ storiesOf(patterns('ComboButton'), module)
                   onClick={action(`onClick (${text})`)}
                   renderIcon={Filter20}
                 >
-                  <span title={text}>{text}</span>
+                  {text}
                 </ComboButtonItem>
               );
             })}
@@ -72,10 +70,6 @@ storiesOf(patterns('ComboButton'), module)
       The first child of the \`ComboButton\` will be marked as the "primary" action, and will appear as a \`Button\` next to the \`OverflowMenu\` of additional actions.
       
       If there is only one child of \`ComboButton\`, then an \`OverflowMenu\` will not be rendered.
-      
-      The \`ComboButtonItem\` component accepts nodes as children, which you can use to add a \`span\` element with an icon component as shown in the story example.
-
-      Please note: in order to properly truncate the text content of the nodes you pass in, you should consider applying either the \`textOverflow()\` scss mixin provided via [Carbon's helper mixins](https://github.com/carbon-design-system/carbon/blob/master/packages/components/src/globals/scss/_helper-mixins.scss), or you can use one of [Carbon's helper classes](https://github.com/carbon-design-system/carbon/blob/master/packages/components/src/globals/scss/_helper-classes.scss) directly (like \`.bx--text-truncate--end\` shown in this story example).
     `,
       },
     }

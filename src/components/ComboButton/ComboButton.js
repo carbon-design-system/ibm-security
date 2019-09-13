@@ -62,7 +62,9 @@ const ComboButton = ({ children, className, direction }) => {
         renderIcon={Icon}
         type="button"
       >
-        {React.Children.toArray(children)}
+        <span className={`${prefix}--text-truncate--end`} title={children}>
+          {children}
+        </span>
       </Button>
     );
   });
@@ -93,7 +95,12 @@ const ComboButton = ({ children, className, direction }) => {
           disabled={disabled}
           itemText={
             <Fragment>
-              {children}
+              <span
+                className={`${prefix}--text-truncate--end`}
+                title={children}
+              >
+                {children}
+              </span>
               <Icon />
             </Fragment>
           }
