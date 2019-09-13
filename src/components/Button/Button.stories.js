@@ -106,6 +106,7 @@ storiesOf(components('Button'), module)
     'default',
     () => {
       const regularProps = props.regular();
+
       return (
         <div
           style={{
