@@ -60,7 +60,7 @@ const ComboButton = ({ children, className, direction }) => {
         disabled={disabled}
         iconDescription={iconDescription}
         kind="primary"
-        key={`primary-action-button-${button.id}`}
+        key={button.id}
         largeText={largeText}
         onClick={onClick}
         onFocus={onFocus}
@@ -100,7 +100,7 @@ const ComboButton = ({ children, className, direction }) => {
           disabled={disabled}
           isDelete={isDelete}
           itemText={React.Children.toArray(children)}
-          key={`overflow-menu-item-${item.id}`}
+          key={item.id}
           onClick={onClick}
           onKeyDown={onKeyDown}
           primaryFocus={!primaryFocus && index === 0 ? true : primaryFocus}

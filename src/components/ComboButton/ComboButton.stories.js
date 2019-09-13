@@ -52,7 +52,7 @@ storiesOf(patterns('ComboButton'), module)
               return (
                 <ComboButtonItem
                   className="some-class"
-                  key={`combo-button-item-'${item.id}`}
+                  key={item.id}
                   index={index}
                   onClick={action(`onClick ("${text}")`)}
                 >
