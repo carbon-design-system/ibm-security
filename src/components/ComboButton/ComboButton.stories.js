@@ -65,12 +65,12 @@ storiesOf(patterns('ComboButton'), module)
     {
       info: {
         text: `
-      The \`ComboButton\` accepts \`ComboButtonItem\` components as children.
+          The \`ComboButton\` accepts \`ComboButtonItem\` components as children.
 
-      The first child of the \`ComboButton\` will be marked as the "primary" action, and will appear as a \`Button\` next to the \`OverflowMenu\` of additional actions.
-      
-      If there is only one child of \`ComboButton\`, then an \`OverflowMenu\` will not be rendered.
-    `,
+          The first child of the \`ComboButton\` will be marked as the "primary" action, and will appear as a \`Button\` next to the \`OverflowMenu\` of additional actions.
+          
+          If there is only one child of \`ComboButton\`, then an \`OverflowMenu\` will not be rendered.
+        `,
       },
     }
   );
