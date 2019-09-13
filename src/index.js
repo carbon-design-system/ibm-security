@@ -8,6 +8,7 @@ export ErrorPage from './components/ErrorPage';
 export { Card, CardSkeleton } from './components/Card';
 export CodeSnippet, { CodeSnippetSkeleton } from './components/CodeSnippet';
 export ComboBox from './components/ComboBox';
+export ComboButton, { ComboButtonItem } from './components/ComboButton';
 export ContentSwitcher from './components/ContentSwitcher';
 export CopyButton from './components/CopyButton';
 export DataDecorator, { Decorator } from './components/DataDecorator';

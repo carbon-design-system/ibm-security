@@ -1,0 +1,12 @@
+////
+/// Combo button component.
+/// @group combo-button
+/// @copyright IBM Security 2019
+////
+
+@import '../Component/mixins';
+@import 'mixins';
+
+@include component($name: combo-button) {
+  @include combo-button;
+}
