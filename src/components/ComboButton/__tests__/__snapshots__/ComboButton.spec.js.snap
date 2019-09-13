@@ -85,33 +85,5 @@ exports[`ComboButton renders a combo button without an overflow menu 1`] = `
       />
     </svg>
   </button>
-  <div
-    aria-expanded="false"
-    aria-haspopup="true"
-    aria-label="Menu"
-    class="security--button bx--btn bx--btn--primary security--combo-button__button security--combo-button__overflow-menu bx--overflow-menu"
-    role="button"
-    tabindex="0"
-  >
-    <svg
-      aria-label="open and close list of options"
-      class="bx--overflow-menu__icon"
-      focusable="false"
-      height="16"
-      preserveAspectRatio="xMidYMid meet"
-      role="img"
-      style="will-change:transform"
-      viewBox="0 0 16 16"
-      width="16"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
-      />
-      <title>
-        open and close list of options
-      </title>
-    </svg>
-  </div>
 </div>
 `;

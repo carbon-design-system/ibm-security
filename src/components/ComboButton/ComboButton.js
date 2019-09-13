@@ -46,7 +46,7 @@ const ComboButton = ({ children, className, direction }) => {
       return (
         <Button
           {...rest}
-          key={`primary-action-button-${  button.id}`}
+          key={`primary-action-button-${button.id}`}
           className={`${namespace}--primary`}
         >
           {React.Children.toArray(children)}
@@ -57,25 +57,26 @@ const ComboButton = ({ children, className, direction }) => {
 
   // Save remaining children to be displayed in the `OverflowMenu`:
   let overflowItems;
+  let overflowMenuItemWithProps;
   if (childrenArray.length > 1) {
     overflowItems = childrenArray.slice(1);
-  }
 
-  // Create `OverflowMenuItem` components:
-  const overflowMenuItemWithProps = React.Children.toArray(overflowItems).map(
-    (item, index) => {
-      const { children, primaryFocus, className, ...rest } = item.props;
-      return (
-        <OverflowMenuItem
-          {...rest}
-          className={classnames(className, `${namespace}-item__wrapper`)}
-          itemText={React.Children.toArray(children)}
-          key={item.id}
-          primaryFocus={!primaryFocus && index === 0 ? true : primaryFocus}
-        />
-      );
-    }
-  );
+    // Create `OverflowMenuItem` components:
+    overflowMenuItemWithProps = React.Children.toArray(overflowItems).map(
+      (item, index) => {
+        const { children, primaryFocus, className, ...rest } = item.props;
+        return (
+          <OverflowMenuItem
+            {...rest}
+            className={classnames(className, `${namespace}-item__wrapper`)}
+            itemText={React.Children.toArray(children)}
+            key={`overflow-menu-item-${item.id}`}
+            primaryFocus={!primaryFocus && index === 0 ? true : primaryFocus}
+          />
+        );
+      }
+    );
+  }
 
   return (
     <div
