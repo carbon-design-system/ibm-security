@@ -39,7 +39,7 @@ const ComboButton = ({ children, className, direction }) => {
   const childrenArray = React.Children.toArray(children);
 
   // Save first child (e.g., primary action) to use as a `Button`:
-  const primaryAction = React.cloneElement(childrenArray[0]);
+  const primaryActionWithProps = [childrenArray[0]].map(
   const primaryActionWithProps = React.Children.toArray(primaryAction).map(
     button => {
       const { children, ...rest } = button.props;
