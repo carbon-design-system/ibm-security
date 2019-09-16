@@ -74,9 +74,15 @@ const storyProps = {
     ),
     scopeToString: ({ name }) => name,
   }),
+  translationIds: {
+    'close.menu': 'Close the menu',
+    'open.menu': 'Open the menu',
+    'clear.all': 'Clear all scopes',
+    'clear.selection': 'Clear scope',
+  },
 };
 
-const { regular, scopes: scopesProps } = storyProps;
+const { regular, scopes: scopesProps, translationIds } = storyProps;
 
 storiesOf(patterns('SearchBar'), module)
   .addDecorator(withA11y)
@@ -85,12 +91,17 @@ storiesOf(patterns('SearchBar'), module)
     <SearchBarWithStateHandlers {...regular()} value={value} />
   ))
   .add('Scopes', () => (
-    <SearchBarWithStateHandlers {...regular()} {...scopesProps()} />
+    <SearchBarWithStateHandlers
+      {...regular()}
+      {...scopesProps()}
+      translateWithId={id => translationIds[id]}
+    />
   ))
   .add('Selected scopes', () => (
     <SearchBarWithStateHandlers
       {...regular()}
       {...scopesProps()}
       selectedScopes={selectedScopes}
+      translateWithId={id => translationIds[id]}
     />
   ));

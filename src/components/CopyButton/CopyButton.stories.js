@@ -10,9 +10,10 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
 import { number, text } from '@storybook/addon-knobs';
-import { CopyButton } from '../..';
 
 import { components } from '../../../.storybook';
+
+import { CopyButton } from '../..';
 
 const props = () => ({
   feedback: text('The text shown upon clicking (feedback)', 'Copied!'),
