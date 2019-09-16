@@ -1,0 +1,175 @@
+////
+/// Panel v2 mixins.
+/// @group panelv2
+/// @copyright IBM Security 2019
+////
+
+@import '../../globals/index';
+
+@import '../../components/Header/mixins';
+@import '../../components/IconButton/mixins';
+@import '../../components/Toolbar/mixins';
+
+@mixin panelv2 {
+  /// Width.
+  /// @type Length
+  $panel__sizing__width: carbon--mini-units(
+    $count: 40,
+  );
+
+  /// Padding.
+  /// @type Length
+  $panel__spacing__padding: $carbon--spacing-05;
+
+  /// Header width.
+  /// @type Length
+  $panel__header__sizing__width: $panel__sizing__width -
+    ($panel__spacing__padding * 2);
+
+  /// Content border color.
+  /// @type Color
+  $panel__content__color__border: $ui-04;
+
+  /// Content border sizing.
+  /// @type Color
+  $panel__content__sizing__border: carbon--mini-units(
+    $count: 0.125,
+  );
+
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: $panel__sizing__width;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $ui-01;
+  z-index: z($layer: floating);
+
+  @include rtl {
+    right: unset;
+    left: 0;
+  }
+
+  &__container #{$header__namespace}__container {
+    width: calc(
+      #{$header__sizing__width} - #{$toolbar__panel__position__horizontal} - #{$panel__sizing__width}
+    );
+
+    > #{$header__namespace} {
+      width: inherit;
+    }
+  }
+
+  &__button--close:only-child {
+    @include rtl {
+      margin-right: auto;
+      margin-left: unset;
+    }
+
+    margin-left: auto;
+  }
+
+  &__header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: $panel__header__sizing__width;
+    padding-top: $panel__spacing__padding;
+    padding-bottom: $panel__spacing__padding;
+    margin-right: $panel__spacing__padding;
+    margin-left: $panel__spacing__padding;
+    box-sizing: border-box;
+    justify-content: space-between;
+    border-bottom: $panel__content__sizing__border solid
+      $panel__content__color__border;
+
+    &__container--title {
+      width: $panel__header__sizing__width -
+        carbon--mini-units($count: $button--icon__sizing__dimensions) -
+        $panel__spacing__padding;
+    }
+
+    &--title,
+    &--subtitle {
+      color: $text-01;
+      word-break: break-word;
+    }
+
+    &--title {
+      @include carbon--type-style($name: productive-heading-03);
+
+      display: block;
+      margin-bottom: $carbon--spacing-04;
+    }
+
+    &--subtitle {
+      @include carbon--type-style($name: body-short-01);
+    }
+  }
+
+  &__body {
+    padding-right: $panel__spacing__padding;
+    padding-left: $panel__spacing__padding;
+    margin-top: carbon--mini-units($count: 11);
+    flex-grow: 1;
+    overflow-y: auto;
+
+    &--content {
+      @include carbon--type-style($name: caption-01);
+
+      padding-top: $panel__spacing__padding;
+      padding-bottom: $panel__spacing__padding;
+      border-bottom: $panel__content__sizing__border solid
+        $panel__content__color__border;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    &--footer {
+      margin-bottom: $carbon--layout-04;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: $panel__sizing__width;
+
+    .#{$namespace}button {
+      max-width: $panel__sizing__width;
+      flex-grow: 1;
+    }
+  }
+
+  &__transition {
+    &--appear,
+    &--enter {
+      transform: translate3d($panel__sizing__width, 0, 0);
+      opacity: 0;
+
+      &--active {
+        transform: translate3d(0, 0, 0);
+        transition: all $duration--moderate-02;
+        transition-timing-function: motion(entrance, expressive);
+        opacity: 1;
+      }
+    }
+
+    &--leave {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+
+      &--active {
+        transform: translate3d($panel__sizing__width, 0, 0);
+        transition: all $duration--moderate-02;
+        transition-timing-function: motion(exit, expressive);
+        opacity: 0;
+      }
+    }
+  }
+}
