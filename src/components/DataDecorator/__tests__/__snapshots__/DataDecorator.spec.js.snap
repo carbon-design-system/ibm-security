@@ -1,17 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DataDecorator Rendering renders correctly 1`] = `
+exports[`DataDecorator renders correctly 1`] = `
 <DataDecorator
   href="#"
   inline={false}
   labels={Object {}}
   onClose={[Function]}
-  onOpen={[MockFunction]}
-  primaryButton={
-    Object {
-      "onClick": [Function],
-    }
-  }
+  onOpen={[Function]}
   renderFooter={null}
   score={0}
   scoreThresholds={
@@ -22,98 +17,218 @@ exports[`DataDecorator Rendering renders correctly 1`] = `
       10,
     ]
   }
+  stopPropagation={false}
   type="IP"
   value="10.0.0.0"
 >
-  <Panel
-    onClose={[Function]}
-    onOpen={[MockFunction]}
-    render={[Function]}
-    shouldPanelOpen={true}
+  <Decorator
+    active={false}
+    className=""
+    inert={false}
+    inline={false}
+    noIcon={false}
+    onClick={[Function]}
+    score={0}
+    scoreThresholds={
+      Array [
+        0,
+        4,
+        7,
+        10,
+      ]
+    }
+    type="IP"
+    value="10.0.0.0"
   >
-    <Decorator
-      active={false}
-      className=""
-      inert={false}
-      inline={false}
-      noIcon={false}
+    <button
+      className="security--decorator security--decorator--low"
       onClick={[Function]}
-      score={0}
-      scoreThresholds={
-        Array [
-          0,
-          4,
-          7,
-          10,
-        ]
-      }
-      type="IP"
-      value="10.0.0.0"
     >
-      <button
-        className="security--decorator security--decorator--low"
-        onClick={[Function]}
+      <span
+        className="security--decorator__icon"
       >
-        <span
-          className="security--decorator__icon"
+        <Icon
+          className=""
+          fillRule="evenodd"
+          height={null}
+          path="M 8.00,3.00
+           C 8.00,3.00 14.00,12.00 14.00,12.00
+             14.00,12.00 2.00,12.00 2.00,12.00
+             2.00,12.00 8.00,3.00 8.00,3.00 Z"
+          renderIcon={null}
+          size={16}
+          viewBox="0 0 16 16"
+          width={null}
         >
-          <Icon
-            className=""
+          <svg
+            aria-hidden="true"
+            className="security--icon"
             fillRule="evenodd"
-            height={null}
-            path="M 8.00,3.00
-           C 8.00,3.00 14.00,12.00 14.00,12.00
-             14.00,12.00 2.00,12.00 2.00,12.00
-             2.00,12.00 8.00,3.00 8.00,3.00 Z"
-            renderIcon={null}
-            size={16}
-            viewBox="0 0 16 16"
-            width={null}
-          >
-            <svg
-              aria-hidden="true"
-              className="security--icon"
-              fillRule="evenodd"
-              focusable={false}
-              height={16}
-              preserveAspectRatio="xMidYMid meet"
-              style={
-                Object {
-                  "willChange": "transform",
-                }
+            focusable={false}
+            height={16}
+            preserveAspectRatio="xMidYMid meet"
+            style={
+              Object {
+                "willChange": "transform",
               }
-              viewBox="0 0 16 16"
-              width={16}
-            >
-              <path
-                d="M 8.00,3.00
+            }
+            viewBox="0 0 16 16"
+            width={16}
+          >
+            <path
+              d="M 8.00,3.00
            C 8.00,3.00 14.00,12.00 14.00,12.00
              14.00,12.00 2.00,12.00 2.00,12.00
              2.00,12.00 8.00,3.00 8.00,3.00 Z"
-              />
-            </svg>
-          </Icon>
-        </span>
-        <span
-          className="security--decorator__type"
+            />
+          </svg>
+        </Icon>
+      </span>
+      <span
+        className="security--decorator__type"
+      >
+        IP
+      </span>
+      <span
+        className="security--decorator__value"
+      >
+        10.0.0.0
+      </span>
+    </button>
+  </Decorator>
+  <PanelV2
+    className={null}
+    closeButton={
+      Object {
+        "onClick": [Function],
+      }
+    }
+    focusTrap={true}
+    isOpen={false}
+    labels={
+      Object {
+        "DATA_DECORATOR_CLOSE_BUTTON": "Close",
+        "DATA_DECORATOR_PRIMARY_BUTTON": "",
+        "DATA_DECORATOR_SECONDARY_BUTTON": "",
+        "ERRORS": Object {
+          "403": Object {
+            "ERRORMESSAGE": "You do not have the correct subscription to access this content. Please contact your administrator.",
+            "ERRORNAME": "Access denied",
+            "TITLE": "403",
+          },
+          "404": Object {
+            "ERRORMESSAGE": "We could not find the page you were looking for, but here are some helpful places to start from:",
+            "ERRORNAME": "Page not found",
+            "TITLE": "404",
+          },
+          "500": Object {
+            "ERRORMESSAGE": "An internal server error occurred when trying to access this content.",
+            "ERRORNAME": "Internal server error",
+            "TITLE": "500",
+          },
+          "default": Object {
+            "TITLE": "UnknownError",
+          },
+        },
+        "FILTER_PANEL_CATEGORY_COLLAPSE_LABEL": "",
+        "FILTER_PANEL_CATEGORY_EXPAND_LABEL": "",
+        "FILTER_PANEL_SEARCH_CLOSE_BUTTON": "Clear search",
+        "FILTER_PANEL_SEARCH_LABEL": "",
+        "FILTER_PANEL_SEARCH_NO_RESULTS_LABEL": "",
+        "PANEL_CONTAINER_CLOSE_BUTTON": "Close",
+        "PANEL_CONTAINER_PRIMARY_BUTTON": "",
+        "PANEL_CONTAINER_SECONDARY_BUTTON": "",
+        "SEARCH_CLOSE_BUTTON": "Clear search",
+        "SEARCH_LABEL": "",
+        "SEARCH_PLACEHOLDER_LABEL": "",
+        "TAG_REMOVE_BUTTON": "Remove",
+        "TAG_WALL_ADD_BUTTON": "",
+        "TAG_WALL_LABEL": "",
+        "TAG_WALL_REMOVE_BUTTON": "",
+        "TEARSHEET_CLOSE_BUTTON": "Close",
+        "TEARSHEET_DELETE_BUTTON": "Delete",
+        "TEARSHEET_PRIMARY_BUTTON": "Okay",
+        "TEARSHEET_SECONDARY_BUTTON": "Cancel",
+        "TEARSHEET_SMALL_CLOSE_BUTTON": "Close",
+        "TEARSHEET_SMALL_PRIMARY_BUTTON": "Save",
+        "TEARSHEET_SMALL_SECONDARY_BUTTON": "Cancel",
+        "TEARSHEET_TERTIARY_BUTTON": "Cancel setup",
+        "TEARSHEET_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit",
+        "WIZARD_BACK_BUTTON": "Back",
+        "WIZARD_CANCEL_BUTTON": "Cancel",
+        "WIZARD_FINISH_BUTTON": "Finish",
+        "WIZARD_NEXT_BUTTON": "Next",
+        "WIZARD_TEARSHEET_DELETE_BUTTON": "Delete connection",
+        "WIZARD_TERTIARY_BUTTON": "Cancel",
+        "WIZARD_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit",
+      }
+    }
+    primaryButton={
+      Object {
+        "onClick": [Function],
+      }
+    }
+    renderFooter={null}
+    stopPropagation={false}
+    title="10.0.0.0"
+  >
+    <Transition
+      className="security--panelv2"
+      component={[Function]}
+      timeout={160}
+    >
+      <CSSTransitionGroup
+        className="security--transition"
+        component={[Function]}
+        transitionAppear={true}
+        transitionAppearTimeout={160}
+        transitionEnter={true}
+        transitionEnterTimeout={160}
+        transitionLeave={true}
+        transitionLeaveTimeout={160}
+        transitionName={
+          Object {
+            "appear": "security--panelv2__transition--appear",
+            "appearActive": "security--panelv2__transition--appear--active",
+            "enter": "security--panelv2__transition--enter",
+            "enterActive": "security--panelv2__transition--enter--active",
+            "leave": "security--panelv2__transition--leave",
+            "leaveActive": "security--panelv2__transition--leave--active",
+          }
+        }
+      >
+        <TransitionGroup
+          childFactory={[Function]}
+          className="security--transition"
+          component={[Function]}
+          transitionAppear={true}
+          transitionAppearTimeout={160}
+          transitionEnter={true}
+          transitionEnterTimeout={160}
+          transitionLeave={true}
+          transitionLeaveTimeout={160}
+          transitionName={
+            Object {
+              "appear": "security--panelv2__transition--appear",
+              "appearActive": "security--panelv2__transition--appear--active",
+              "enter": "security--panelv2__transition--enter",
+              "enterActive": "security--panelv2__transition--enter--active",
+              "leave": "security--panelv2__transition--leave",
+              "leaveActive": "security--panelv2__transition--leave--active",
+            }
+          }
         >
-          IP
-        </span>
-        <span
-          className="security--decorator__value"
-        >
-          10.0.0.0
-        </span>
-      </button>
-    </Decorator>
-    <PanelController
-      active={false}
-    />
-  </Panel>
+          <component
+            className="security--transition"
+          />
+        </TransitionGroup>
+      </CSSTransitionGroup>
+    </Transition>
+  </PanelV2>
 </DataDecorator>
 `;
 
-exports[`DataDecorator Rendering renders the HTML of the node's subtree 1`] = `
+exports[`DataDecorator renders the HTML of the node's subtree 1`] = `
 <button
   class="security--decorator security--decorator--low"
 >

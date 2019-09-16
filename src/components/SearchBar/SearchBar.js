@@ -79,6 +79,9 @@ export default class SearchBar extends React.Component {
     /** @type {string} The name text for the search scope type. */
     // eslint-disable-next-line react/require-default-props
     scopesTypeLabel: conditionalScopePropValidator,
+
+    /** @type {func} Callback function for translating MultiSelect's child ListBoxMenuIcon SVG title. */
+    translateWithId: PropTypes.func, // eslint-disable-line react/require-default-props
   };
 
   static defaultProps = {
@@ -142,6 +145,7 @@ export default class SearchBar extends React.Component {
       scopeToString,
       scopesTypeLabel,
       selectedScopes,
+      translateWithId,
     } = this.props;
 
     if (scopes.length === 0) return null;
@@ -156,6 +160,7 @@ export default class SearchBar extends React.Component {
         initialSelectedItems={selectedScopes}
         items={scopes}
         itemToString={scopeToString}
+        translateWithId={translateWithId}
       />
     );
   }
