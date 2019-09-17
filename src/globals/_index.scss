@@ -4,25 +4,21 @@
 /// @copyright IBM Security 2019
 ////
 
-@import 'theme/index';
-
 @import 'variables/index';
+
+@import 'carbon-components/scss/globals/scss/helper-mixins';
 
 @import 'color/index';
 @import 'grid/index';
 @import 'layout/index';
 @import 'motion/index';
+@import 'theme/index';
 @import 'type/index';
-
-@import 'carbon-components/scss/globals/scss/css--body';
-
-@import 'carbon-components/scss/globals/scss/helper-mixins';
-@import 'carbon-components/scss/globals/scss/vars';
-
-@import '../platform/index';
 
 @import 'border/index';
 @import 'deprecate/index';
 @import 'feature-flags/index';
 @import 'namespace/index';
 @import 'rtl/index';
+
+@import '../platform/index';

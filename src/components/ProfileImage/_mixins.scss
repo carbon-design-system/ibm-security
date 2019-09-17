@@ -4,7 +4,9 @@
 /// @copyright IBM Security 2019
 ////
 
-@import '../../globals/index';
+@import '@carbon/layout/scss/mini-unit';
+@import '@carbon/themes/scss/tokens';
+@import '@carbon/type/scss/styles';
 
 @mixin profile-image {
   @include carbon--type-style($name: body-short-01);

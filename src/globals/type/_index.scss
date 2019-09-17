@@ -4,10 +4,16 @@
 /// @copyright IBM Security 2019
 ////
 
-@import '../variables/index';
-
 @import '@carbon/type/scss/type';
 @import '@carbon/type/scss/classes';
+
+/// `@font-face` declarations.
+/// @type boolean
+$css--font-face: true !default;
+
+/// IBM Plex.
+/// @type boolean
+$css--plex: true;
 
 @import 'carbon-components/scss/globals/scss/css--font-face';
 

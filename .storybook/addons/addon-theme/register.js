@@ -12,6 +12,7 @@ import { action, getStoredTheme, namespace, themes, title } from '.';
 
 import { Form, Select, SelectItem } from '../../../src';
 
+// TODO: `modular-styles` - Revert.
 // import '../../../src/index.scss';
 
 const { addPanel, getChannel, register } = addons;
