@@ -4,9 +4,13 @@
 /// @copyright IBM Security 2019
 ////
 
-@import '../../globals/index';
-
 @import '../Panel/mixins';
+
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/type/scss/index';
+@import '@carbon/themes/scss/tokens';
+@import '../../globals/motion/index';
+@import '../../globals/border/index';
 
 /// Name.
 /// @type String
