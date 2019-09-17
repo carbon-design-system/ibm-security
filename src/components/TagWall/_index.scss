@@ -5,10 +5,10 @@
 ////
 
 @import '../Component/mixins';
+@import '../Tag/index';
+@import '../Button/index';
 
 @import 'mixins';
-
-@import '../Tag/index';
 
 @include component($name: tag-wall) {
   @include tag-wall;

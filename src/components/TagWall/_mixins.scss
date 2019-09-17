@@ -3,9 +3,9 @@
 /// @tag-wall
 /// @copyright IBM Security 2019
 ////
-@import '../../globals/index';
 
-@import '../Tag/InteractiveTag/mixins';
+@import '@carbon/type/scss/index';
+@import '@carbon/layout/scss/spacing';
 
 @mixin tag-wall {
   &__label {
