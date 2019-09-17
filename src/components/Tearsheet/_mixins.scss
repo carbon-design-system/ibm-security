@@ -25,7 +25,8 @@ $tearsheet__sizing__dimensions: $carbon--layout-04;
   /// @type Length
   $tearsheet__position: -50%;
 
-  @include input__background-color;
+  // Todo: Modular styles, re-enable once we've fixed this mixin
+  //@include input__background-color;
 
   display: flex;
   position: fixed;
