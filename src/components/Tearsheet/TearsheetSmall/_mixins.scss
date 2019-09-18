@@ -50,6 +50,7 @@
     min-height: 0;
     margin-bottom: $carbon--layout-06;
     flex-grow: 1;
+    overflow: auto;
   }
 
   &__description {
