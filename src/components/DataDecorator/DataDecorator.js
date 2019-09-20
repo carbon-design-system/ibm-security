@@ -205,13 +205,13 @@ DataDecorator.propTypes = {
     `\nThe prop \`secondaryButton\` for DataDecorator has been deprecated in favor of \`renderFooter\`.`
   ),
 
-  /** @type {ReactNode} Subtitle child elements. */
+  /** @type {ReactNode} Child elements for the panel's subtitle. */
   subtitle: PropTypes.node,
 
   /** @type {string} The type of data. */
   type: PropTypes.string.isRequired,
 
-  /** @value {string} The value of the data. */
+  /** @type {string} The value of the data. */
   value: PropTypes.string.isRequired,
 
   /** @type {boolean} Stop event propagation for events that can bubble. */
