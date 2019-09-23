@@ -3,12 +3,14 @@
  * @copyright IBM Security 2019
  */
 
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import React, { Fragment } from 'react';
+
+import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
 
 import Decorator from './Decorator';
-import { Panel, PanelContainer, PanelController } from '../Panel';
-
+import PanelV2 from '../PanelV2';
+import { PORTAL_EVENTS } from '../Portal';
 import * as defaultLabels from '../../globals/nls';
 
 const { defaultProps, propTypes } = Decorator;
@@ -18,112 +20,124 @@ const { defaultProps, propTypes } = Decorator;
  * @param {Object.<string, *>} props DataDecorator props.
  * @returns {DataDecorator} DataDecorator instance.
  */
-const DataDecorator = props => {
-  const {
-    children,
-    className,
-    closeButton,
-    inline,
-    onClose,
-    onOpen,
-    primaryButton,
-    score,
-    secondaryButton,
-    subtitle,
-    type,
-    value,
-    labels,
-    renderFooter,
-  } = props;
-  const decoratorProps = { className, inline, score, type, value };
-  const componentLabels = {
-    ...defaultLabels.labels,
-    ...labels,
-    ...defaultLabels.filterFalsey({
-      DATA_DECORATOR_PRIMARY_BUTTON:
-        (primaryButton && primaryButton.label) || '',
-      DATA_DECORATOR_SECONDARY_BUTTON:
-        (secondaryButton && secondaryButton.label) || '',
-      DATA_DECORATOR_CLOSE_BUTTON: (closeButton && closeButton.label) || '',
-    }),
+class DataDecorator extends Component {
+  state = { isOpen: false };
+
+  toggleOpen = () => (this.state.isOpen ? this.close() : this.open());
+
+  open = () => {
+    this.props.onOpen();
+    this.setState({ isOpen: true });
   };
-  return (
-    <Panel
-      onClose={onClose}
-      onOpen={onOpen}
-      render={({ active, handleClose, toggleActive }) => (
-        <Fragment>
-          <Decorator
-            {...decoratorProps}
-            active={active}
-            onClick={event => {
-              event.stopPropagation();
-              toggleActive();
-            }}
-          />
-          <PanelController active={active}>
-            <PanelContainer
-              closeButton={{
-                onClick: event => {
-                  handleClose(event, type, value);
-                  if (closeButton && closeButton.onClick) {
-                    closeButton.onClick(event, type, value);
-                  }
-                },
-              }}
-              primaryButton={{
-                ...primaryButton,
-                onClick: event => {
-                  if (
-                    primaryButton.closePanel === undefined ||
-                    primaryButton.closePanel
-                  ) {
-                    handleClose(event, type, value);
-                  }
-                  if (primaryButton.onClick) {
-                    primaryButton.onClick(event, type, value);
-                  }
-                },
-              }}
-              renderFooter={renderFooter}
-              secondaryButton={
-                secondaryButton && {
-                  ...secondaryButton,
-                  onClick: event => {
-                    if (
-                      secondaryButton.closePanel === undefined ||
-                      secondaryButton.closePanel
-                    ) {
-                      handleClose(event, type, value);
-                    }
-                    if (secondaryButton.onClick) {
-                      secondaryButton.onClick(event, type, value);
-                    }
-                  },
-                }
+
+  close = () => {
+    this.props.onClose();
+    this.setState({ isOpen: false });
+  };
+
+  render() {
+    const {
+      children,
+      className,
+      closeButton,
+      inline,
+      labels,
+      noIcon,
+      primaryButton,
+      renderFooter,
+      score,
+      secondaryButton,
+      stopPropagation,
+      stopPropagationEvents,
+      subtitle,
+      type,
+      value,
+    } = this.props;
+    const decoratorProps = { className, inline, noIcon, score, type, value };
+    const componentLabels = {
+      ...defaultLabels.labels,
+      ...labels,
+      ...defaultLabels.filterFalsey({
+        DATA_DECORATOR_PRIMARY_BUTTON:
+          (primaryButton && primaryButton.label) || '',
+        DATA_DECORATOR_SECONDARY_BUTTON:
+          (secondaryButton && secondaryButton.label) || '',
+        DATA_DECORATOR_CLOSE_BUTTON: (closeButton && closeButton.label) || '',
+      }),
+    };
+    return (
+      <Fragment>
+        <Decorator
+          {...decoratorProps}
+          active={this.state.isOpen}
+          onClick={event => {
+            event.stopPropagation();
+            this.toggleOpen();
+          }}
+        />
+        <PanelV2
+          isOpen={this.state.isOpen}
+          stopPropagation={stopPropagation}
+          stopPropagationEvents={stopPropagationEvents}
+          closeButton={{
+            onClick: event => {
+              this.close(event, type, value);
+              if (closeButton && closeButton.onClick) {
+                closeButton.onClick(event, type, value);
               }
-              subtitle={subtitle}
-              title={value}
-              labels={{
-                ...componentLabels,
-                ...defaultLabels.filterFalsey({
-                  PANEL_CONTAINER_PRIMARY_BUTTON:
-                    componentLabels.DATA_DECORATOR_PRIMARY_BUTTON,
-                  PANEL_CONTAINER_SECONDARY_BUTTON:
-                    componentLabels.DATA_DECORATOR_SECONDARY_BUTTON,
-                  PANEL_CONTAINER_CLOSE_BUTTON:
-                    componentLabels.DATA_DECORATOR_CLOSE_BUTTON,
-                }),
-              }}
-            >
-              {children}
-            </PanelContainer>
-          </PanelController>
-        </Fragment>
-      )}
-    />
-  );
-};
+            },
+          }}
+          primaryButton={{
+            ...primaryButton,
+            onClick: event => {
+              if (
+                primaryButton.closePanel === undefined ||
+                primaryButton.closePanel
+              ) {
+                this.close(event, type, value);
+              }
+              if (primaryButton.onClick) {
+                primaryButton.onClick(event, type, value);
+              }
+            },
+          }}
+          renderFooter={renderFooter}
+          secondaryButton={
+            secondaryButton && {
+              ...secondaryButton,
+              onClick: event => {
+                if (
+                  secondaryButton.closePanel === undefined ||
+                  secondaryButton.closePanel
+                ) {
+                  this.close(event, type, value);
+                }
+                if (secondaryButton.onClick) {
+                  secondaryButton.onClick(event, type, value);
+                }
+              },
+            }
+          }
+          subtitle={subtitle}
+          title={value}
+          labels={{
+            ...componentLabels,
+            ...defaultLabels.filterFalsey({
+              PANEL_CONTAINER_PRIMARY_BUTTON:
+                componentLabels.DATA_DECORATOR_PRIMARY_BUTTON,
+              PANEL_CONTAINER_SECONDARY_BUTTON:
+                componentLabels.DATA_DECORATOR_SECONDARY_BUTTON,
+              PANEL_CONTAINER_CLOSE_BUTTON:
+                componentLabels.DATA_DECORATOR_CLOSE_BUTTON,
+            }),
+          }}
+        >
+          {children}
+        </PanelV2>
+      </Fragment>
+    );
+  }
+}
 
 const buttonType = PropTypes.shape({
   closePanel: PropTypes.bool,
@@ -138,6 +152,9 @@ DataDecorator.propTypes = {
   /** @type {ReactNode} The children of the DataDecorator. */
   children: PropTypes.node,
 
+  /** @type {string} class name for rendered content. */
+  className: PropTypes.string,
+
   /** @type {Object<Object>} An object list of close button props. */
   closeButton: buttonType,
 
@@ -147,6 +164,9 @@ DataDecorator.propTypes = {
   /** @type {object} Labels for DataDecorator and children */
   labels: defaultLabels.propType,
 
+  /** @type {boolean} Whether the rendered Decorator includes an icon */
+  noIcon: PropTypes.bool,
+
   /** @type {Function} The function to call when the DataDecorator Panel closes. */
   onClose: PropTypes.func,
 
@@ -154,7 +174,10 @@ DataDecorator.propTypes = {
   onOpen: PropTypes.func,
 
   /** @type {Object<Object>} An object list of primary button props. */
-  primaryButton: buttonType,
+  primaryButton: deprecate(
+    buttonType,
+    `\nThe prop \`primaryButton\` for DataDecorator has been deprecated in favor of \`renderFooter\`.`
+  ),
 
   /** @type {function} Panel footer render prop. */
   renderFooter: PropTypes.func,
@@ -177,7 +200,10 @@ DataDecorator.propTypes = {
   },
 
   /** @type {Object<Object>} An object list of secondary button props. */
-  secondaryButton: buttonType,
+  secondaryButton: deprecate(
+    buttonType,
+    `\nThe prop \`secondaryButton\` for DataDecorator has been deprecated in favor of \`renderFooter\`.`
+  ),
 
   /** @type {string} The data subtitle */
   subtitle: PropTypes.string,
@@ -187,21 +213,31 @@ DataDecorator.propTypes = {
 
   /** @value {string} The value of the data. */
   value: PropTypes.string.isRequired,
+
+  /** @type {boolean} Stop event propagation for events that can bubble. */
+  stopPropagation: PropTypes.bool,
+
+  /** @type {array} Array of event types to stop propagation. */
+  stopPropagationEvents: PropTypes.arrayOf(PropTypes.oneOf(PORTAL_EVENTS)),
 };
 
 DataDecorator.defaultProps = {
   children: undefined,
+  className: undefined,
   closeButton: undefined,
   inline: defaultProps.inline,
   labels: {},
+  noIcon: false,
   onClose: () => {},
   onOpen: () => {},
-  primaryButton: { onClick: () => {} },
+  primaryButton: undefined,
   renderFooter: null,
   score: undefined,
   scoreThresholds: [0, 4, 7, 10],
   secondaryButton: undefined,
   subtitle: undefined,
+  stopPropagation: false,
+  stopPropagationEvents: undefined,
 };
 
 export default DataDecorator;
