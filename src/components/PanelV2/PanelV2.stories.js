@@ -69,7 +69,7 @@ const content = (
 storiesOf(patterns('PanelV2'), module)
   .addParameters({
     info: {
-      // Make a default for all stories in this book,
+      // Reposition info button so that panel footer isn't covered:
       styles: {
         button: {
           base: {
@@ -153,15 +153,15 @@ storiesOf(patterns('PanelV2'), module)
                   <Fragment>
                     {content}
                     <p>
-                      This example uses the{' '}
+                      {`This example uses the `}
                       <CodeSnippet type="inline" light>
                         primaryButton
-                      </CodeSnippet>{' '}
-                      and{' '}
+                      </CodeSnippet>
+                      {` and `}
                       <CodeSnippet type="inline" light>
                         secondaryButton
-                      </CodeSnippet>{' '}
-                      props to render buttons in the footer.
+                      </CodeSnippet>
+                      {` props to render buttons in the footer.`}
                     </p>
                   </Fragment>
                 </PanelContent>
@@ -180,7 +180,7 @@ storiesOf(patterns('PanelV2'), module)
                       onClick={action('onClick (Item 1 - primary button)')}
                       renderIcon={ArrowRight20}
                     >
-                      Item 1 (becomes primary button and text will be truncated)
+                      {`Item 1 (becomes primary button and text will be truncated)`}
                     </ComboButtonItem>
                     {Array(5)
                       .fill(0)
@@ -206,15 +206,15 @@ storiesOf(patterns('PanelV2'), module)
                   <Fragment>
                     {content}
                     <p>
-                      This example uses the{' '}
+                      {`This example uses the `}
                       <CodeSnippet type="inline" light>
                         renderFooter
-                      </CodeSnippet>{' '}
-                      prop to render a{' '}
+                      </CodeSnippet>
+                      {` prop to render a `}
                       <CodeSnippet type="inline" light>
                         ComboButton
-                      </CodeSnippet>{' '}
-                      in a custom footer.
+                      </CodeSnippet>
+                      {` in a custom footer.`}
                     </p>
                   </Fragment>
                 </PanelContent>
@@ -232,15 +232,15 @@ storiesOf(patterns('PanelV2'), module)
                   <Fragment>
                     {content}
                     <p>
-                      This example intentially does not include the{' '}
+                      {`This example intentially does not include the `}
                       <CodeSnippet type="inline" light>
                         renderFooter
-                      </CodeSnippet>{' '}
-                      or{' '}
+                      </CodeSnippet>
+                      {` or `}
                       <CodeSnippet type="inline" light>
                         primaryButton
-                      </CodeSnippet>{' '}
-                      props and therefore does not have a footer.
+                      </CodeSnippet>
+                      {` props and therefore does not have a footer.`}
                     </p>
                   </Fragment>
                 </PanelContent>
