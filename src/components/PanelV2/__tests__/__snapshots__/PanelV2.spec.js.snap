@@ -102,11 +102,11 @@ exports[`PanelV2 renders 1`] = `
                       <div
                         class="security--panelv2__header__container--title"
                       >
-                        <h1
+                        <h2
                           class="security--panelv2__header--title"
                         >
                           Label
-                        </h1>
+                        </h2>
                         <div
                           class="security--panelv2__header--subtitle"
                         >
@@ -189,11 +189,11 @@ exports[`PanelV2 renders 1`] = `
                         <div
                           class="security--panelv2__header__container--title"
                         >
-                          <h1
+                          <h2
                             class="security--panelv2__header--title"
                           >
                             Label
-                          </h1>
+                          </h2>
                           <div
                             class="security--panelv2__header--subtitle"
                           >
@@ -280,11 +280,11 @@ exports[`PanelV2 renders 1`] = `
                       <div
                         className="security--panelv2__header__container--title"
                       >
-                        <h1
+                        <h2
                           className="security--panelv2__header--title"
                         >
                           Label
-                        </h1>
+                        </h2>
                         <div
                           className="security--panelv2__header--subtitle"
                         >

@@ -103,7 +103,7 @@ export default class PanelV2 extends Component {
                 {title && (
                   <div className={`${namespace}__header__container--title`}>
                     {typeof title === 'string' ? (
-                      <h1 className={`${namespace}__header--title`}>{title}</h1>
+                      <h2 className={`${namespace}__header--title`}>{title}</h2>
                     ) : (
                       <div className={`${namespace}__header--title`}>
                         {title}
