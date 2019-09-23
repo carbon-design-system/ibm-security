@@ -19,6 +19,8 @@ import { Checkbox, CheckboxSkeleton } from '../..';
 
 const { prefix } = settings;
 
+Checkbox.displayName = 'Checkbox';
+
 const props = () => ({
   className: 'some-class',
   labelText: text('Label text (labelText)', 'Checkbox label'),
