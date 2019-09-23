@@ -140,7 +140,7 @@
     bottom: 0;
     width: $panel__sizing__width;
 
-    .#{$namespace}button {
+    .#{$namespace}button:not(.#{$namespace}combo-button__overflow-menu) {
       max-width: $panel__sizing__width;
       flex-grow: 1;
     }

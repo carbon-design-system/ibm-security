@@ -5,11 +5,18 @@
 
 import Add16 from '@carbon/icons-react/lib/add/16';
 
+import { action } from '@storybook/addon-actions';
 import { withA11y } from '@storybook/addon-a11y';
-import { boolean, text } from '@storybook/addon-knobs';
+import { boolean, radios, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
 import React, { Fragment } from 'react';
+
+import ArrowRight20 from '@carbon/icons-react/lib/arrow--right/20';
+import Filter20 from '@carbon/icons-react/lib/filter/20';
+import { spacing04, spacing05 } from '@carbon/layout/lib';
+import { g100 } from '@carbon/themes/lib';
+import { styles } from '@carbon/type/lib';
 
 import { patterns } from '../../../.storybook';
 
@@ -17,7 +24,18 @@ import { label } from '../_mocks_';
 import { header, profile, toolbar } from '../Shell/_mocks_';
 import { labels } from './_mocks_';
 
-import { Button, CodeSnippet, PanelV2, PanelContent, Shell } from '../..';
+import { TooltipDirection } from '../IconButton/IconButton';
+import {
+  Button,
+  ComboButton,
+  ComboButtonItem,
+  CodeSnippet,
+  PanelV2,
+  PanelContent,
+  Shell,
+} from '../..';
+
+const { interactive01, text01 } = g100;
 
 const closeButtonLabel = 'Close';
 
@@ -26,6 +44,17 @@ const props = {
   subtitle: label,
   labels,
 };
+
+const comboButtonProps = () => ({
+  direction: radios(
+    'Menu direction (direction)',
+    {
+      top: TooltipDirection.TOP,
+      bottom: TooltipDirection.BOTTOM,
+    },
+    TooltipDirection.TOP
+  ),
+});
 
 const content = (
   <p>
@@ -38,6 +67,27 @@ const content = (
 );
 
 storiesOf(patterns('PanelV2'), module)
+  .addParameters({
+    info: {
+      // Reposition info button so that panel footer isn't covered:
+      styles: {
+        button: {
+          base: {
+            padding: `${spacing04} ${spacing05}`,
+            color: text01,
+            background: interactive01,
+            ...styles.bodyShort01,
+          },
+          topRight: {
+            top: 'auto',
+            left: 0,
+            bottom: 0,
+            borderRadius: 0,
+          },
+        },
+      },
+    },
+  })
   .addDecorator(withA11y)
   .add(
     'Default',
@@ -103,15 +153,15 @@ storiesOf(patterns('PanelV2'), module)
                   <Fragment>
                     {content}
                     <p>
-                      This example uses the{' '}
+                      {`This example uses the `}
                       <CodeSnippet type="inline" light>
                         primaryButton
-                      </CodeSnippet>{' '}
-                      and{' '}
+                      </CodeSnippet>
+                      {` and `}
                       <CodeSnippet type="inline" light>
                         secondaryButton
-                      </CodeSnippet>{' '}
-                      props to render buttons in the footer.
+                      </CodeSnippet>
+                      {` props to render buttons in the footer.`}
                     </p>
                   </Fragment>
                 </PanelContent>
@@ -125,24 +175,46 @@ storiesOf(patterns('PanelV2'), module)
                   label: text('closeButton.label', closeButtonLabel),
                 }}
                 renderFooter={() => (
-                  <Button
-                    id="p2_primary-button"
-                    size="large"
-                    onClick={this.closeSecond}
-                  >
-                    Add
-                  </Button>
+                  <ComboButton {...comboButtonProps()}>
+                    <ComboButtonItem
+                      onClick={action('onClick (Item 1 - primary button)')}
+                      renderIcon={ArrowRight20}
+                    >
+                      {`Item 1 (becomes primary button and text will be truncated)`}
+                    </ComboButtonItem>
+                    {Array(5)
+                      .fill(0)
+                      .map((item, index) => {
+                        const text = `Item ${index +
+                          2} - text may be long and will be truncated`;
+                        return (
+                          <ComboButtonItem
+                            className="some-class"
+                            key={item.id}
+                            index={index}
+                            onClick={action(`onClick (${text})`)}
+                            renderIcon={Filter20}
+                          >
+                            {text}
+                          </ComboButtonItem>
+                        );
+                      })}
+                  </ComboButton>
                 )}
               >
                 <PanelContent>
                   <Fragment>
                     {content}
                     <p>
-                      This example uses the{' '}
+                      {`This example uses the `}
                       <CodeSnippet type="inline" light>
                         renderFooter
-                      </CodeSnippet>{' '}
-                      prop to render a custom footer.
+                      </CodeSnippet>
+                      {` prop to render a `}
+                      <CodeSnippet type="inline" light>
+                        ComboButton
+                      </CodeSnippet>
+                      {` in a custom footer.`}
                     </p>
                   </Fragment>
                 </PanelContent>
@@ -160,15 +232,15 @@ storiesOf(patterns('PanelV2'), module)
                   <Fragment>
                     {content}
                     <p>
-                      This example intentially does not include the{' '}
+                      {`This example intentially does not include the `}
                       <CodeSnippet type="inline" light>
                         renderFooter
-                      </CodeSnippet>{' '}
-                      or{' '}
+                      </CodeSnippet>
+                      {` or `}
                       <CodeSnippet type="inline" light>
                         primaryButton
-                      </CodeSnippet>{' '}
-                      props and therefore does not have a footer.
+                      </CodeSnippet>
+                      {` props and therefore does not have a footer.`}
                     </p>
                   </Fragment>
                 </PanelContent>
