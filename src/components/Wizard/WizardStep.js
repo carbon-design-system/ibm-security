@@ -34,8 +34,8 @@ WizardStep.propTypes = {
   /** @type {function(state: Object): Promise} this is called after each step. You can do async work here or save your changes
    * depending on whether you are using a sequential wizard or not. */
   next: PropTypes.func,
-  /** @type {function(state: Object): boolean} Validator. When it returns true, the "Next" or "Save" button becomes active
-   * depending on whether you are using a sequential or not. */
+
+  /** @type {function(state: Object): boolean} Pure and synchronous predicate function to validate the wizard's state against the current step, occuring after every state change (for example, every user keystroke). This should not be used as a hook to trigger any side effects, nor allow the return value to depend on anything else other than the argument. When it returns `true`, parts of the wizard (buttons, navigation, etc.) become active. */
   validate: PropTypes.func,
 };
 
