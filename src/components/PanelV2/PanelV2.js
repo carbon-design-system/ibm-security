@@ -245,10 +245,10 @@ PanelV2.propTypes = {
   /** @type {array} Array of event types to stop propagation. */
   stopPropagationEvents: PropTypes.arrayOf(PropTypes.oneOf(PORTAL_EVENTS)),
 
-  /** @type {string} Subtitle child elements. */
+  /** @type {ReactNode} Subtitle child elements. */
   subtitle: PropTypes.node,
 
-  /** @type {string} Title child elements. */
+  /** @type {ReactNode} Title child elements. */
   title: PropTypes.node,
 };
 
