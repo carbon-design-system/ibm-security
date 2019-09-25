@@ -35,7 +35,7 @@ WizardStep.propTypes = {
    * depending on whether you are using a sequential wizard or not. */
   next: PropTypes.func,
 
-  /** @type {function(state: Object): boolean} Pure function for the contents of the wizard step that determines the overall wizard's state. When it returns `true`, parts of the wizard (buttons, navigation, etc.) become active. */
+  /** @type {function(state: Object): boolean} Pure and synchronous predicate function to validate the wizard's state against the current step, occuring after every state change (for example, every user keystroke). This should not be used as a hook to trigger any side effects, nor allow the return value to depend on anything else other than the argument. When it returns `true`, parts of the wizard (buttons, navigation, etc.) become active. */
   validate: PropTypes.func,
 };
 
