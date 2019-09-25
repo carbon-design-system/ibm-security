@@ -77,10 +77,10 @@ const IconButtonBar = ({
 
   return (
     <div className={iconButtonBarClasses}>
-      {!isMaxLength && actions.map(renderIconButton)}
+      {!isMaxLength && actions.map(action => renderIconButton(action))}
       {isMaxLength && (
         <Fragment>
-          {actions.slice(0, length - 1).map(renderIconButton)}
+          {actions.slice(0, length - 1).map(action => renderIconButton(action))}
           <OverflowMenu
             className={`${namespace}__overflow-menu`}
             direction={overflowMenuDirection}
