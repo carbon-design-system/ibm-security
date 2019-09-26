@@ -34,14 +34,26 @@ $tearsheet__sizing__dimensions: $carbon--layout-04;
   z-index: z($layer: modal);
 
   &__transition {
-    @include transition--opacity;
+    &--enter,
+    &--leave {
+      &--active {
+        @include transition($transition-property: transform);
+      }
+    }
 
-    &--appear {
+    &--enter {
       transform: translate3d(#{$tearsheet__position}, 100%, 0);
 
       &--active {
-        @include transition($transition-property: transform);
         transform: translate3d(#{$tearsheet__position}, 0, 0);
+      }
+    }
+
+    &--leave {
+      transform: translate3d(#{$tearsheet__position}, 0, 0);
+
+      &--active {
+        transform: translate3d(#{$tearsheet__position}, 100%, 0);
       }
     }
   }
