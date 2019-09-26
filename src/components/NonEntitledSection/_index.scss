@@ -11,6 +11,6 @@
 @import '../Component/mixins';
 @import 'mixins';
 
-@include component($name: ne-section) {
+@include security--component($name: ne-section) {
   @include ne-section;
 }

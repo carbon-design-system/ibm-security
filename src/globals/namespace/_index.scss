@@ -8,7 +8,8 @@
 
 /// The prefix used to namespace all selectors in the CSS.
 /// @type String
-$namespace: 'security--' !default;
+/// @access private
+$namespace: 'security--';
 
 ///
 /// Appends the namespace for a component to another namespace.

@@ -7,6 +7,6 @@
 @import '../../Component/mixins';
 @import 'mixins';
 
-@include component($name: $tag--interactive__name) {
+@include security--component($name: $tag--interactive__name) {
   @include tag--interactive;
 }
