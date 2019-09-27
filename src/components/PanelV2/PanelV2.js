@@ -102,7 +102,13 @@ export default class PanelV2 extends Component {
               <header ref={this.header} className={`${namespace}__header`}>
                 {title && (
                   <div className={`${namespace}__header__container--title`}>
-                    <div className={`${namespace}__header--title`}>{title}</div>
+                    {typeof title === 'string' ? (
+                      <h2 className={`${namespace}__header--title`}>{title}</h2>
+                    ) : (
+                      <div className={`${namespace}__header--title`}>
+                        {title}
+                      </div>
+                    )}
                     {subtitle && (
                       <div className={`${namespace}__header--subtitle`}>
                         {subtitle}
@@ -245,10 +251,10 @@ PanelV2.propTypes = {
   /** @type {array} Array of event types to stop propagation. */
   stopPropagationEvents: PropTypes.arrayOf(PropTypes.oneOf(PORTAL_EVENTS)),
 
-  /** @type {string} Subtitle child elements. */
+  /** @type {ReactNode} Subtitle child elements. */
   subtitle: PropTypes.node,
 
-  /** @type {string} Title child elements. */
+  /** @type {ReactNode} Title child elements. */
   title: PropTypes.node,
 };
 
