@@ -6,3 +6,12 @@
 
 @import '../../globals/variables/index';
 @import 'carbon-components/scss/components/checkbox/checkbox';
+
+/// Carbon style overrides.
+@include export-namespace($name: checkbox) {
+  // TODO - remove issue is resolved in Carbon: https://github.com/carbon-design-system/carbon/issues/4074
+  .#{$prefix}--checkbox-label::after {
+    width: 0.575rem;
+    height: 0.3rem;
+  }
+}

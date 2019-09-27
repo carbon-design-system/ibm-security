@@ -38,6 +38,7 @@ const IconButtonBar = ({
   const renderIconButton = action => (
     <IconButton
       {...action}
+      key={action.label || `${namespace}__button--icon`}
       size={size}
       tooltip={tooltip}
       tooltipDirection={iconTooltipDirection}

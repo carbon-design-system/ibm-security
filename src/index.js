@@ -8,7 +8,9 @@ export ErrorPage from './components/ErrorPage';
 export { Card, CardSkeleton } from './components/Card';
 export CodeSnippet, { CodeSnippetSkeleton } from './components/CodeSnippet';
 export ComboBox from './components/ComboBox';
+export ComboButton, { ComboButtonItem } from './components/ComboButton';
 export ContentSwitcher from './components/ContentSwitcher';
+export CopyButton from './components/CopyButton';
 export DataDecorator, { Decorator } from './components/DataDecorator';
 
 export {
@@ -62,6 +64,8 @@ export {
   PanelController,
 } from './components/Panel';
 
+export PanelV2 from './components/PanelV2';
+
 export Pill from './components/Pill';
 export Portal from './components/Portal';
 
@@ -82,6 +86,7 @@ export StackedNotification from './components/StackedNotification';
 export StatusIcon from './components/StatusIcon';
 export { StatusStep, StatusIndicator } from './components/StatusIndicator';
 export { Step, StepIndicator } from './components/StepIndicator';
+export StringFormatter from './components/StringFormatter';
 export Switch from './components/Switch';
 export Tag, { InteractiveTag, TagSkeleton } from './components/Tag';
 export TagWall from './components/TagWall';
