@@ -4,9 +4,14 @@
 /// @copyright IBM Security 2019
 ////
 
-@import '../../globals/index';
-
 @import '../Panel/mixins';
+
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/layout/scss/mini-unit';
+@import '@carbon/type/scss/index';
+@import '@carbon/themes/scss/tokens';
+@import '../../globals/motion/index';
+@import '../../globals/border/index';
 
 /// Name.
 /// @type String
@@ -21,7 +26,8 @@ $tearsheet__sizing__dimensions: $carbon--layout-04;
   /// @type Length
   $tearsheet__position: -50%;
 
-  @include input__background-color;
+  // Todo: Modular styles, re-enable once we've fixed this mixin
+  //@include input__background-color;
 
   display: flex;
   position: fixed;

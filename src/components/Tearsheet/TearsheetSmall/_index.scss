@@ -4,15 +4,17 @@
 /// @copyright IBM Security 2019
 ////
 
+@import '../../../globals/variables/index';
+
 @import '../../Component/mixins';
-
-@import 'mixins';
-
 @import '../../Button/index';
 @import '../../IconButton/index';
 @import '../../Loading/index';
-@import '../../ScrollGradient/index';
 @import '../../Tag/index';
+@import '../../ScrollGradient/index';
+@import '../../TagWallFilter/Filter/mixins';
+
+@import 'mixins';
 
 @include component($name: #{$tearsheet__name}--small) {
   @include tearsheet--small;

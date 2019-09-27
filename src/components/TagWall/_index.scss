@@ -4,11 +4,13 @@
 /// @copyright IBM Security 2019
 ////
 
+@import '../../globals/variables/index';
+
 @import '../Component/mixins';
+@import '../Tag/index';
+@import '../Button/index';
 
 @import 'mixins';
-
-@import '../Tag/index';
 
 @include component($name: tag-wall) {
   @include tag-wall;
