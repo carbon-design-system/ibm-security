@@ -3,6 +3,7 @@
  * @copyright IBM Security 2019
  */
 
+import { breakpoints } from '@carbon/layout';
 import marked from 'marked';
 
 import centered from '@storybook/addon-centered/react';
@@ -11,8 +12,13 @@ import React from 'react';
 
 import README from '../README.md';
 
+const { margin, width } = breakpoints.lg;
+
 storiesOf('Getting Started', module)
   .addDecorator(centered)
   .add('README', () => (
-    <div dangerouslySetInnerHTML={{ __html: marked(README) }} />
+    <div
+      style={{ margin, width }}
+      dangerouslySetInnerHTML={{ __html: marked(README) }}
+    />
   ));
