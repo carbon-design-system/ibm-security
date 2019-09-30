@@ -4,12 +4,18 @@
 /// @copyright IBM Security 2019
 ////
 
+@import '@carbon/layout/scss/spacing';
+
 @import '../../Component/mixins';
 
 @import '../mixins';
 
-@import 'mixins';
-
 @include component($name: #{$card__name}--skeleton) {
-  @include card--skeleton;
+  &__wrapper {
+    display: flex;
+  }
+
+  &__text--inline {
+    margin-right: $carbon--spacing-03;
+  }
 }
