@@ -4,7 +4,7 @@
  */
 
 import classnames from 'classnames';
-import { bool, oneOf } from 'prop-types';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import CarbonButton from 'carbon-components-react/lib/components/Button';
@@ -13,8 +13,6 @@ import { getComponentNamespace } from '../../globals/namespace';
 import deprecatedProp from '../../globals/prop-types';
 
 export const namespace = getComponentNamespace('button');
-
-const { defaultProps, propTypes } = CarbonButton;
 
 // TODO: V3 - Remove deprecated props `largeText`.
 
@@ -33,17 +31,48 @@ const Button = ({ className, largeText, size, ...other }) => {
   );
 };
 
+/* eslint-disable react/require-default-props */
 Button.defaultProps = {
-  ...defaultProps,
   largeText: null,
+  icon: 'None',
+  kind: 'primary',
+  disabled: false,
+  size: 'default',
 };
 
 Button.propTypes = {
-  ...propTypes,
+  /**
+   * Optional className
+   */
+  className: PropTypes.string,
+
+  /**
+   * Choose an icon type to better communicate what the button does
+   */
+  icon: PropTypes.oneOf(['None', 'Add16', 'Add24', 'Search16', 'Search24']),
+
+  /**
+   * Choose button type
+   */
+  kind: PropTypes.oneOf(['primary', 'secondary', 'danger', 'ghost']),
+
+  /**
+   * Property to disable the button
+   */
+  disabled: PropTypes.bool,
+
+  /**
+   * Icon description for screen readers, if using icons
+   */
+  iconDescription: PropTypes.string,
 
   // It's not possible to add to Carbon's values here, so the `PropType` is recreated to include the large variant.
-  size: oneOf(['default', 'field', 'large', 'small']),
-  largeText: deprecatedProp('size="large"', bool),
+  /**
+   * Choose the size of the button
+   */
+  size: PropTypes.oneOf(['default', 'field', 'large', 'small']),
+
+  largeText: deprecatedProp('size="large"', PropTypes.bool),
 };
 
 export default Button;
