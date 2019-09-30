@@ -126,10 +126,9 @@ class Tearsheet extends Component {
                 <footer className={`${namespace}__sidebar__footer`}>
                   {!hideDeleteButton && (
                     <Button
-                      className={`${namespace}__sidebar__button`}
                       disabled={isDisabled}
                       iconDescription={componentLabels.TEARSHEET_DELETE_BUTTON}
-                      kind="ghost"
+                      kind="ghost-danger"
                       onClick={onDeleteButtonClick}
                       renderIcon={icon}
                     >
