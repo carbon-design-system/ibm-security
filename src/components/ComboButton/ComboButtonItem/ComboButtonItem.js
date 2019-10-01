@@ -22,6 +22,9 @@ ComboButtonItem.propTypes = {
   /** @type {boolean} Whether or not an item is disabled. */
   disabled: PropTypes.bool,
 
+  /** @type {boolean} URL for an <a> element inside the combo button item. */
+  href: PropTypes.string,
+
   /** @type {string} Descriptive text for icon rendered inside a button. */
   iconDescription: PropTypes.string,
 
@@ -38,6 +41,7 @@ ComboButtonItem.propTypes = {
 ComboButtonItem.defaultProps = {
   className: '',
   disabled: false,
+  href: undefined,
   iconDescription: '',
   onClick: () => {},
   primaryFocus: false,
