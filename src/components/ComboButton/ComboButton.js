@@ -36,9 +36,7 @@ const ComboButton = ({ children, className, direction }) => {
     };
   };
 
-  const childrenArray = React.Children.toArray(children).filter(child =>
-    Boolean(child)
-  );
+  const childrenArray = React.Children.toArray(children).filter(Boolean);
 
   // Save first child (e.g., primary action) to use as a `Button`:
   const primaryActionWithProps = [childrenArray[0]].map(button => {
