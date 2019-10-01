@@ -25,7 +25,6 @@ const Button = ({ className, largeText, size, kind, ...other }) => {
   const isKind = value => kind === value;
   const isGhostDanger = isKind('ghost-danger');
 
-  console.log(!isGhostDanger ? kind : null);
 
   return (
     <CarbonButton
