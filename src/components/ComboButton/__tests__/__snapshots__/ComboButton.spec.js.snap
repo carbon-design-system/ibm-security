@@ -13,6 +13,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
       className="security--combo-button--primary"
       disabled={false}
       iconDescription=""
+      key="Start a task"
       kind="primary"
       largeText={null}
       onClick={[Function]}
@@ -212,6 +213,7 @@ exports[`ComboButton renders a combo button without an overflow menu 1`] = `
       className="security--combo-button--primary"
       disabled={false}
       iconDescription=""
+      key="Start a task"
       kind="primary"
       largeText={null}
       onClick={[Function]}
