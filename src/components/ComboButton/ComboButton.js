@@ -36,7 +36,9 @@ const ComboButton = ({ children, className, direction }) => {
     };
   };
 
-  const childrenArray = React.Children.toArray(children);
+  const childrenArray = React.Children.toArray(children).filter(child =>
+    Boolean(child)
+  );
 
   // Save first child (e.g., primary action) to use as a `Button`:
   const primaryActionWithProps = [childrenArray[0]].map(button => {
@@ -47,6 +49,7 @@ const ComboButton = ({ children, className, direction }) => {
       children,
       className,
       disabled,
+      href,
       iconDescription,
       onClick,
       renderIcon: Icon,
@@ -55,9 +58,10 @@ const ComboButton = ({ children, className, direction }) => {
       <Button
         className={classnames(className, `${namespace}--primary`)}
         disabled={disabled}
+        href={href}
         iconDescription={iconDescription}
         kind="primary"
-        key={button.id}
+        key={children}
         onClick={onClick}
         renderIcon={Icon}
         type="button"
@@ -84,6 +88,7 @@ const ComboButton = ({ children, className, direction }) => {
         children,
         className,
         disabled,
+        href,
         onClick,
         primaryFocus,
         renderIcon: Icon,
@@ -93,6 +98,7 @@ const ComboButton = ({ children, className, direction }) => {
         <OverflowMenuItem
           className={classnames(className, `${namespace}-item__wrapper`)}
           disabled={disabled}
+          href={href}
           itemText={
             <Fragment>
               <span
@@ -104,7 +110,7 @@ const ComboButton = ({ children, className, direction }) => {
               {!Icon ? null : <Icon />}
             </Fragment>
           }
-          key={item.id}
+          key={children}
           onClick={onClick}
           primaryFocus={!primaryFocus && index === 0 ? true : primaryFocus}
         />
