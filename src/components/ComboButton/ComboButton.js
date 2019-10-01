@@ -61,7 +61,7 @@ const ComboButton = ({ children, className, direction }) => {
         href={href}
         iconDescription={iconDescription}
         kind="primary"
-        key={children}
+        key={button.id}
         onClick={onClick}
         renderIcon={Icon}
         type="button"
@@ -110,7 +110,7 @@ const ComboButton = ({ children, className, direction }) => {
               {!Icon ? null : <Icon />}
             </Fragment>
           }
-          key={children}
+          key={item.id}
           onClick={onClick}
           primaryFocus={!primaryFocus && index === 0 ? true : primaryFocus}
         />
