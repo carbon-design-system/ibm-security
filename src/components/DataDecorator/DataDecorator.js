@@ -42,6 +42,7 @@ class DataDecorator extends Component {
       closeButton,
       inline,
       labels,
+      noIcon,
       primaryButton,
       renderFooter,
       score,
@@ -52,7 +53,7 @@ class DataDecorator extends Component {
       type,
       value,
     } = this.props;
-    const decoratorProps = { className, inline, score, type, value };
+    const decoratorProps = { className, inline, noIcon, score, type, value };
     const componentLabels = {
       ...defaultLabels.labels,
       ...labels,
@@ -163,6 +164,9 @@ DataDecorator.propTypes = {
   /** @type {object} Labels for DataDecorator and children */
   labels: defaultLabels.propType,
 
+  /** @type {boolean} Whether the rendered Decorator includes an icon */
+  noIcon: PropTypes.bool,
+
   /** @type {Function} The function to call when the DataDecorator Panel closes. */
   onClose: PropTypes.func,
 
@@ -201,13 +205,13 @@ DataDecorator.propTypes = {
     `\nThe prop \`secondaryButton\` for DataDecorator has been deprecated in favor of \`renderFooter\`.`
   ),
 
-  /** @type {string} The data subtitle */
-  subtitle: PropTypes.string,
+  /** @type {ReactNode} Child elements for the panel's subtitle. */
+  subtitle: PropTypes.node,
 
   /** @type {string} The type of data. */
   type: PropTypes.string.isRequired,
 
-  /** @value {string} The value of the data. */
+  /** @type {string} The value of the data. */
   value: PropTypes.string.isRequired,
 
   /** @type {boolean} Stop event propagation for events that can bubble. */
@@ -223,6 +227,7 @@ DataDecorator.defaultProps = {
   closeButton: undefined,
   inline: defaultProps.inline,
   labels: {},
+  noIcon: false,
   onClose: () => {},
   onOpen: () => {},
   primaryButton: undefined,

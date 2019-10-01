@@ -53,7 +53,7 @@ storiesOf(patterns('ComboButton'), module)
                   key={item.id}
                   index={index}
                   onClick={action(`onClick (${text})`)}
-                  renderIcon={Filter20}
+                  renderIcon={index % 2 === 0 ? Filter20 : null} // Show icon at even indexes.
                 >
                   {text}
                 </ComboButtonItem>

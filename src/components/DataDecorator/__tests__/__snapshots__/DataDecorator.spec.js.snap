@@ -5,6 +5,7 @@ exports[`DataDecorator renders correctly 1`] = `
   href="#"
   inline={false}
   labels={Object {}}
+  noIcon={false}
   onClose={[Function]}
   onOpen={[Function]}
   renderFooter={null}

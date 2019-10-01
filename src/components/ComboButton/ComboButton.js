@@ -101,7 +101,7 @@ const ComboButton = ({ children, className, direction }) => {
               >
                 {children}
               </span>
-              <Icon />
+              {!Icon ? null : <Icon />}
             </Fragment>
           }
           key={item.id}
