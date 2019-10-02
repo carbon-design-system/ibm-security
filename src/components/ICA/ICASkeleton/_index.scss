@@ -7,6 +7,6 @@
 @import '../../Component/mixins';
 @import 'mixins';
 
-@include component($name: 'ica-skeleton') {
+@include security--component($name: 'ica-skeleton') {
   @include ica-skeleton;
 }
