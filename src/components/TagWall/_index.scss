@@ -12,6 +12,6 @@
 
 @import 'mixins';
 
-@include component($name: tag-wall) {
+@include security--component($name: tag-wall) {
   @include tag-wall;
 }

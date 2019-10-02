@@ -8,6 +8,6 @@
 
 @import 'mixins';
 
-@include component($name: panelv2) {
+@include security--component($name: panelv2) {
   @include panelv2;
 }

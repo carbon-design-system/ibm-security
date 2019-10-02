@@ -13,6 +13,6 @@
 
 @import 'mixins';
 
-@include component($name: $tearsheet__name) {
+@include security--component($name: $tearsheet__name) {
   @include tearsheet;
 }

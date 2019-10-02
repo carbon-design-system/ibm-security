@@ -8,6 +8,6 @@
 @import 'ICASkeleton/index';
 @import 'mixins';
 
-@include component($name: ica) {
+@include security--component($name: ica) {
   @include ica;
 }
