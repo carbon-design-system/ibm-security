@@ -12,7 +12,7 @@
 
 @import '../../Component/mixins';
 
-@include component($name: filter-subcategory) {
+@include security--component($name: filter-subcategory) {
   /// Scroller padding.
   /// @type Length
   $filter-subcategory__spacing__padding: $carbon--spacing-05;

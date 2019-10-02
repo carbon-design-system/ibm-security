@@ -9,6 +9,6 @@
 @import '../Component/mixins';
 @import 'mixins';
 
-@include component($name: portal) {
+@include security--component($name: portal) {
   @include portal;
 }

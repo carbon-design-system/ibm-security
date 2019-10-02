@@ -14,7 +14,7 @@
 
 @import '../Component/mixins';
 
-@include component($name: filter-panel) {
+@include security--component($name: filter-panel) {
   &__title {
     @include carbon--type-style($name: body-short-01);
   }

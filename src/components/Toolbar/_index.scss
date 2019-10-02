@@ -11,6 +11,6 @@
 
 @import 'mixins';
 
-@include component($name: toolbar) {
+@include security--component($name: toolbar) {
   @include toolbar;
 }

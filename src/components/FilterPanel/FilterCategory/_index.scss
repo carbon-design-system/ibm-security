@@ -14,7 +14,7 @@
 
 @import '../../Component/mixins';
 
-@include component($name: filter-category) {
+@include security--component($name: filter-category) {
   /// Padding.
   /// @type Length
   $filter-category__spacing__padding: $carbon--spacing-03;

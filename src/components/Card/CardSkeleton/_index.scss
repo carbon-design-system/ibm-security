@@ -10,7 +10,7 @@
 
 @import '../mixins';
 
-@include component($name: #{$card__name}--skeleton) {
+@include security--component($name: #{$card__name}--skeleton) {
   &__wrapper {
     display: flex;
   }

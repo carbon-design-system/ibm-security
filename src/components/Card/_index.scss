@@ -11,6 +11,6 @@
 
 @import 'mixins';
 
-@include component($name: $card__name) {
+@include security--component($name: $card__name) {
   @include card;
 }

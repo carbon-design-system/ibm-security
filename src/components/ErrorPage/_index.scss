@@ -9,6 +9,6 @@
 @import '../Component/mixins';
 @import 'mixins';
 
-@include component($name: error-page) {
+@include security--component($name: error-page) {
   @include error-page;
 }

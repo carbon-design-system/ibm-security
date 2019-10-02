@@ -6,7 +6,7 @@
 
 @import '../Component/mixins';
 
-@include component($name: delimited-list) {
+@include security--component($name: delimited-list) {
   display: flex;
 
   &__value--truncated {

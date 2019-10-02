@@ -13,7 +13,7 @@
 
 @import '../Component/mixins';
 
-@include component($name: link--external) {
+@include security--component($name: link--external) {
   @include carbon--type-style($name: body-short-01);
   position: relative;
   box-shadow: none;

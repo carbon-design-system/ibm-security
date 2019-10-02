@@ -16,6 +16,6 @@
 
 @import 'mixins';
 
-@include component($name: #{$tearsheet__name}--small) {
+@include security--component($name: #{$tearsheet__name}--small) {
   @include tearsheet--small;
 }

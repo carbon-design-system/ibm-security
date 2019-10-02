@@ -6,6 +6,6 @@
 @import '../Component/mixins';
 @import 'mixins';
 
-@include component($name: scroll-gradient) {
+@include security--component($name: scroll-gradient) {
   @include scroll-gradient;
 }

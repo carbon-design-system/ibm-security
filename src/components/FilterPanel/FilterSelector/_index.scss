@@ -12,7 +12,7 @@
 
 @import '../../Component/mixins';
 
-@include component($name: filter-selector) {
+@include security--component($name: filter-selector) {
   @include carbon--type-style($name: body-short-01);
   display: flex;
 

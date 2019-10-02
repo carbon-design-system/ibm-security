@@ -13,7 +13,7 @@
 
 @import '../Component/mixins';
 
-@include component($name: combo-button) {
+@include security--component($name: combo-button) {
   $root: &;
 
   position: relative;
