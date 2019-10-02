@@ -7,6 +7,6 @@
 @import '../Component/mixins';
 @import 'mixins';
 
-@include component($name: delimited-list) {
+@include security--component($name: delimited-list) {
   @include delimited-list;
 }

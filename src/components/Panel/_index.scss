@@ -11,6 +11,6 @@
 
 @import 'mixins';
 
-@include component($name: panel) {
+@include security--component($name: panel) {
   @include panel;
 }

@@ -8,7 +8,7 @@
 
 @import '../Component/mixins';
 
-@include component($name: string-formatter) {
+@include security--component($name: string-formatter) {
   display: inline-block;
 
   &--truncate {

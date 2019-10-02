@@ -9,6 +9,6 @@
 
 @import '../DataDecorator/index';
 
-@include component($name: pill) {
+@include security--component($name: pill) {
   @include pill;
 }

@@ -9,6 +9,6 @@
 @import '../Component/mixins';
 @import 'mixins';
 
-@include component($name: link--external) {
+@include security--component($name: link--external) {
   @include link--external;
 }
