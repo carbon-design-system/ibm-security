@@ -9,6 +9,6 @@
 @import '../../Component/mixins';
 @import 'mixins';
 
-@include component($name: $filter__name) {
+@include security--component($name: $filter__name) {
   @include filter;
 }

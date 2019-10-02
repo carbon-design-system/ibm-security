@@ -8,6 +8,6 @@
 
 @import 'mixins';
 
-@include component($name: filter-search) {
+@include security--component($name: filter-search) {
   @include filter-search;
 }

@@ -14,6 +14,6 @@
 @import '../../ScrollGradient/index';
 @import '../../Tag/index';
 
-@include component($name: #{$tearsheet__name}--small) {
+@include security--component($name: #{$tearsheet__name}--small) {
   @include tearsheet--small;
 }
