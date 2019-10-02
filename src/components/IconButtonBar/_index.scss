@@ -8,6 +8,6 @@
 
 @import 'mixins';
 
-@include component($name: icon-button-bar) {
+@include security--component($name: icon-button-bar) {
   @include icon-button-bar;
 }
