@@ -7,6 +7,6 @@
 @import '../Component/mixins';
 @import 'mixins';
 
-@include component($name: combo-button) {
+@include security--component($name: combo-button) {
   @include combo-button;
 }

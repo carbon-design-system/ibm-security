@@ -6,6 +6,6 @@
 
 @import 'mixins';
 
-@include component($name: search-bar) {
+@include security--component($name: search-bar) {
   @include search-bar;
 }
