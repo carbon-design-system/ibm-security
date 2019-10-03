@@ -1,53 +1,26 @@
 ////
 /// Accordion component.
 /// @group accordion
-/// @copyright IBM Security 2018
+/// @copyright IBM Security 2019
 ////
 
 @import 'carbon-components/scss/components/accordion/accordion';
 
 @include export-namespace($name: 'accordion') {
   .#{$prefix}--accordion {
-    &__heading {
-      flex-direction: row;
-    }
-
-    &__arrow {
-      margin: 0 0 0 $carbon--spacing-03;
-      transform: rotate(0deg);
-    }
-
     &__item--active {
       .#{$prefix}--accordion__title {
         font-weight: 600;
       }
-
-      .#{$prefix}--accordion__arrow {
-        transform: rotate(90deg);
-      }
     }
 
-    // TODO - needs to be fixed on Carbon's side.
-    &--accordion__title {
-      @include carbon--type-style($name: body-long-01);
-    }
-
-    &__content {
-      margin-left: $carbon--spacing-06;
-
-      // TODO - needs to be fixed on Carbon's side.
-      p {
-        @include carbon--type-style($name: body-long-01);
+    // Prevents gaps between closed accordion items.
+    &__content > * {
+      &:first-child {
+        margin-top: 0;
       }
-
-      // Prevents gaps between closed accordion items.
-      & > * {
-        &:first-child {
-          margin-top: 0;
-        }
-        &:last-child {
-          margin-bottom: 0;
-        }
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }
