@@ -13,6 +13,6 @@
 
 @import 'mixins';
 
-@include component($name: shell) {
+@include security--component($name: shell) {
   @include shell;
 }

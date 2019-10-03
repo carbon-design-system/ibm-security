@@ -10,4 +10,6 @@ const title = 'You have 4 unread notifications';
 const subtitle =
   'Roius abnta mod tempor adsfiso incidfid idunt ut labnt empor uilt labnore...';
 
-export { iconDescription, title, subtitle };
+const caption = '';
+
+export { iconDescription, title, subtitle, caption };
