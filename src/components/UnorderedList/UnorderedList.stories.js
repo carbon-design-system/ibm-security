@@ -11,7 +11,7 @@ import { storiesOf } from '@storybook/react';
 import { components } from '../../../.storybook';
 
 import ListItem from '../ListItem';
-import UnorderedList from '../UnorderedList';
+import { ListItem, UnorderedList } from '../../';
 
 storiesOf(components('UnorderedList'), module)
   .add(
