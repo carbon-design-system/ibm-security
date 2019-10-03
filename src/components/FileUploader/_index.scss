@@ -4,8 +4,8 @@
 /// @copyright IBM Security 2019
 ////
 
+@import '@carbon/colors/scss/colors';
 @import 'carbon-components/scss/components/file-uploader/file-uploader';
-@import '../../globals/index';
 
 @include export-namespace($name: file-uploader) {
   .#{$prefix}--file__state-container .#{$prefix}--file-close {

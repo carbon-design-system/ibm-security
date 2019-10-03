@@ -4,19 +4,22 @@
 /// @copyright IBM Security 2019
 ////
 
-@import '../Accordion/index';
-@import '../Button/index';
-@import '../Checkbox/index';
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/type/scss/styles';
 
-@import './FilterCategory/index';
-@import './FilterSearch/index';
-@import './FilterSelector/index';
-@import './FilterSubcategory/index';
+@import 'FilterCategory/index';
+@import 'FilterSearch/index';
+@import 'FilterSelector/index';
+@import 'FilterSubcategory/index';
 
 @import '../Component/mixins';
 
-@import 'mixins';
-
 @include security--component($name: filter-panel) {
-  @include filter-panel;
+  &__title {
+    @include carbon--type-style($name: body-short-01);
+  }
+
+  &__search {
+    margin-bottom: $carbon--spacing-05;
+  }
 }
