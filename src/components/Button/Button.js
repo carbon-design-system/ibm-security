@@ -22,7 +22,6 @@ const Button = ({ className, largeText, size, kind, ...other }) => {
   const isSize = value => size === value;
   const isLarge = isSize('large') || largeText || isSize('lg') || isSize('xlg');
 
-  const isKind = value => kind === value;
 
 const isGhostDanger = kind === 'ghost-danger';
 
