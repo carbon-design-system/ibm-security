@@ -1,0 +1,103 @@
+////
+/// Theme mixins.
+/// @group theme
+/// @copyright IBM Security 2019
+////
+
+@import '@carbon/colors/scss/colors';
+@import '@carbon/themes/scss/mixins';
+
+/// Security theme.
+/// @type Map<String, Color>
+$security--theme: () !default;
+
+// Map the theme tokens as custom properties.
+@each $token in map-keys($map: $carbon--theme) {
+  $security--theme: map-merge(
+    $map1: $security--theme,
+    $map2: (
+      $token: var(--#{$token}),
+    ),
+  );
+}
+
+$gray-color-map: map-get(
+  $map: $carbon--colors,
+  $key: 'gray',
+);
+
+$cool-gray-color-map: map-get(
+  $map: $carbon--colors,
+  $key: 'cool-gray',
+);
+
+@function security--cool-gray($theme) {
+  $theme--cool-gray: $theme;
+
+  // Converts 'gray' color values to 'cool gray'.
+  @each $token-key, $token-value in $theme {
+    @each $color-key,
+      $color-value in map-get($map: $carbon--colors, $key: 'gray')
+    {
+      $theme--cool-gray: if(
+        $token-value == $color-value,
+        map-merge(
+          $map1: $theme--cool-gray,
+          $map2: (
+            $token-key:
+              map-get(
+                $map:
+                  map-get(
+                    $map: $carbon--colors,
+                    $key: 'cool-gray',
+                  ),
+                $key: $color-key,
+              ),
+          ),
+        ),
+        $theme--cool-gray
+      );
+    }
+  }
+
+  @return $theme--cool-gray;
+}
+
+/// Security 'cool gray' theme.
+/// @type Map<String, Color>
+$security--theme--cg10: security--cool-gray(
+  $theme: $carbon--theme--g10,
+);
+
+/// Theme definitions.
+/// @type Map<Map, Map>
+$security--themes: (
+  cg10: $security--theme--cg10,
+  g100: $carbon--theme--g100,
+);
+
+@mixin security--map-token($token-map) {
+  @each $token, $value in $token-map {
+    --#{$token}: #{$value};
+  }
+}
+
+@mixin security--theme--cg100 {
+  .security--theme--cg10 & {
+    @include security--map-token(
+      $token-map:
+        security--cool-gray(
+          $theme: map-get($map: $security--themes, $key: g100)
+        )
+    );
+  }
+
+  @if ($security--theme == $security--theme--cg10) {
+    @include security--map-token(
+      $token-map:
+        security--cool-gray(
+          $theme: map-get($map: $security--themes, $key: g100)
+        )
+    );
+  }
+}

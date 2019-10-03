@@ -36,15 +36,18 @@
     $count: 0.125,
   );
 
+  @include security--theme--cg100;
+
   display: flex;
   position: fixed;
   top: 0;
   right: 0;
   height: 100%;
   width: $panel__sizing__width;
+  color: $body__color__text;
+  background-color: $ui-01;
   flex-direction: column;
   justify-content: space-between;
-  background-color: $ui-01;
   z-index: z($layer: floating);
 
   @include rtl {

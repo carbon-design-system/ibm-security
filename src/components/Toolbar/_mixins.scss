@@ -6,6 +6,8 @@
 
 @import '../../globals/index';
 
+@import '../../globals/theme/mixins';
+
 @import '../../platform/body/mixins';
 @import '../Header/mixins';
 
@@ -143,6 +145,11 @@ $toolbar__panel__transition__timing-function: $timing-function;
     padding-left: unset;
   }
 
+  &,
+  &__panel {
+    @include security--theme--cg100;
+  }
+
   &__group {
     padding-left: unset;
     margin-top: unset;
@@ -189,9 +196,9 @@ $toolbar__panel__transition__timing-function: $timing-function;
 
   &__panel {
     @include toolbar--base;
-    top: $toolbar__spacing__position__vertical;
+    top: 0;
     left: $toolbar__panel__position__horizontal;
-    bottom: $toolbar__spacing__position__vertical;
+    bottom: 0;
     width: $toolbar__panel__sizing__width;
     background-color: $ui-01;
     box-sizing: border-box;

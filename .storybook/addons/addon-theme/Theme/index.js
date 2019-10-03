@@ -5,6 +5,8 @@
 
 import { Component } from 'react';
 
+import { getComponentNamespace } from '../../../../src/globals/namespace';
+
 /**
  * Theme class.
  * @class
@@ -33,7 +35,8 @@ export default class Theme extends Component {
    * Toggles the theme.
    * @param {string} theme The theme to toggle.
    */
-  toggle = theme => this.root.classList.toggle(`theme--${theme}`);
+  toggle = theme =>
+    this.root.classList.toggle(getComponentNamespace(`theme--${theme}`));
 
   render = () => this.props.children;
 }

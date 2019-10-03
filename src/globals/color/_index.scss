@@ -5,11 +5,7 @@
 ////
 
 @import '@carbon/colors/scss/colors';
+@import '@carbon/themes/scss/tokens';
 
-$security-color__gray-90--hover: #353535;
-
-/// TODO: V2 - Remove when Carbon updates skeleton for themes.
-
-/// Skeleton color.
-/// @type String
-$skeleton: rgba($carbon--gray-10, 0.1);
+/// TODO: V2 - Deprecate in favor of `$hover-ui`.
+$security-color__gray-90--hover: $hover-ui;

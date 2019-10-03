@@ -6,9 +6,7 @@
 
 @import '@carbon/themes/scss/mixins';
 
-/// Security theme.
-/// @type Map<String, Color>
-$security--theme: $carbon--theme--g100 !default;
+@import 'mixins';
 
 /// Carbon theme.
 /// @type Map<String, Color>
@@ -20,6 +18,8 @@ $carbon--theme: $security--theme;
 
 @import '../deprecate/index';
 @import '../namespace/index';
+
+@import '../../components/Component/mixins';
 
 @import '../../components/IconButton/variables';
 
@@ -126,5 +126,12 @@ $theme: dark !default;
 @include export-namespace($name: theme) {
   .#{$namespace}input__background__color--light {
     @include input__background-color;
+  }
+}
+
+// Define the correct theme tokens for each class.
+@each $theme, $token-map in $security--themes {
+  @include security--component($name: theme--#{$theme}) {
+    @include security--map-token($token-map: $token-map);
   }
 }
