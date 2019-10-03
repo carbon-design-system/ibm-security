@@ -1,5 +1,5 @@
 /**
- * @file List Item entry point.
+ * @file List item entry point.
  * @copyright IBM Security 2019
  */
 
