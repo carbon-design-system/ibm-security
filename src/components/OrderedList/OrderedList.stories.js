@@ -1,4 +1,9 @@
-import React from 'react';
+/**
+ * @file Ordered list stories.
+ * @copyright IBM Security 2019
+ */
+ 
+ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import { components } from '../../../.storybook';
