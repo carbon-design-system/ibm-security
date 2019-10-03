@@ -71,6 +71,9 @@ Button.propTypes = {
    */
   size: PropTypes.oneOf(['default', 'field', 'large', 'small']),
 
+  /**
+   * Deprecated prop. Use 'size' instead.
+   */
   largeText: deprecatedProp('size="large"', PropTypes.bool),
 };
 
