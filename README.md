@@ -87,10 +87,6 @@ To add all of the components' processed and minified styles, reference `@carbon/
 - [Migration guides](docs/migration)
   - [`v1` to `v2`](docs/migration/migrate-to-2.x.md)
 
-## Tutorial
-
-A guide to create a React app with the Carbon Design System.
-
 ## Carbon Developer Essentials
 
 If you are new to the Carbon Design System, we recommend that you take the [Carbon Developer Essentials - React Tutorial](https://www.carbondesignsystem.com/tutorial/react/overview). The tutorial shows you how use the Carbon Design System to build a small React application, and you will receive a badge upon completion and approval.
