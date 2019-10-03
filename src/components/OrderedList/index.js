@@ -1,5 +1,5 @@
 /**
- * @file Ordered List entry point.
+ * @file Ordered list entry point.
  * @copyright IBM Security 2019
  */
 
