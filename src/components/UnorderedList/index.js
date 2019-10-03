@@ -1,5 +1,5 @@
 /**
- * @file Unordered List entry point.
+ * @file Unordered list entry point.
  * @copyright IBM Security 2019
  */
 
