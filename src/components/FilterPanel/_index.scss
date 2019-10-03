@@ -17,6 +17,6 @@
 
 @import 'mixins';
 
-@include component($name: filter-panel) {
+@include security--component($name: filter-panel) {
   @include filter-panel;
 }
