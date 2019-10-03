@@ -66,7 +66,6 @@ Button.propTypes = {
    */
   iconDescription: PropTypes.string,
 
-  // It's not possible to add to Carbon's values here, so the `PropType` is recreated to include the large variant.
   /**
    * Choose the size of the button
    */
