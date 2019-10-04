@@ -29,9 +29,9 @@ storiesOf(components('UnorderedList'), module)
     {
       info: {
         text:
-          'Lists consist of related content grouped together and organized ' +
-          'vertically. Unordered lists are used to present content of equal ' +
-          'status or value.',
+          `Lists consist of related content grouped together and organized 
+          vertically. Unordered lists are used to present content of equal 
+          status or value.`,
       },
     }
   )
@@ -51,9 +51,9 @@ storiesOf(components('UnorderedList'), module)
     {
       info: {
         text:
-          'Lists consist of related content grouped together and organized ' +
-          'vertically. Unordered lists are used to present content of equal ' +
-          'status or value.',
+          `Lists consist of related content grouped together and organized 
+          vertically. Unordered lists are used to present content of equal 
+          status or value.`,
       },
     }
   );
