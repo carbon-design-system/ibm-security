@@ -9,7 +9,7 @@ import { storiesOf } from '@storybook/react';
 import { components } from '../../../.storybook';
 
 import OrderedList from '../OrderedList';
-import { ListItem, OrderedList } from '../../';
+import { ListItem, OrderedList } from '../..';
 
 storiesOf(components('OrderedList'), module)
   .add(
