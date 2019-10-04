@@ -39,7 +39,7 @@ const getStatusIcon = (status, description) => {
         <InlineLoading
           className={`${namespace}-wrapper`}
           description={description}
-          success
+          status="finished"
         />
       );
     case STATUS.FAILED:
