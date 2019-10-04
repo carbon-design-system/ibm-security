@@ -9,6 +9,6 @@
 @import '../Component/mixins';
 @import 'mixins';
 
-@include component($name: stacked-notification) {
+@include security--component($name: stacked-notification) {
   @include stacked-notification;
 }

@@ -19,6 +19,6 @@
 
 @import 'mixins';
 
-@include component($name: $header__name) {
+@include security--component($name: $header__name) {
   @include header;
 }

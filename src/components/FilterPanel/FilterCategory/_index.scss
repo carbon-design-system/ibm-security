@@ -8,6 +8,6 @@
 
 @import 'mixins';
 
-@include component($name: filter-category) {
+@include security--component($name: filter-category) {
   @include filter-category;
 }

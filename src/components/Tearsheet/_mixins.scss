@@ -138,27 +138,6 @@ $tearsheet__sizing__dimensions: $carbon--layout-04;
       padding-bottom: $tearsheet__footer__spacing__padding;
       padding-left: $tearsheet__footer__spacing__padding;
     }
-
-    /// Carbon button selector.
-    /// @type String
-    $carbon--button: '.#{$prefix}--btn';
-
-    &__button#{$carbon--button} {
-      &,
-      &:focus,
-      &:hover {
-        color: $tearsheet__color__text;
-
-        > #{$carbon--button}__icon > path {
-          fill: currentColor;
-        }
-      }
-
-      &:focus,
-      &:hover {
-        background-color: $hover-danger;
-      }
-    }
   }
 
   &__main {
