@@ -29,6 +29,7 @@
     flex-grow: 1;
     text-decoration: none;
     color: inherit;
+
     &:focus {
       @include header__popover__item--focus;
       transform: translate3d(0, 0, 0);
@@ -40,10 +41,6 @@
     @include carbon--type-style($name: caption-01);
     display: block;
     margin-bottom: $carbon--spacing-03;
-
-    @include carbon--theme($theme: $carbon--theme--g10) {
-      color: $text-02;
-    }
   }
 
   &__time {
