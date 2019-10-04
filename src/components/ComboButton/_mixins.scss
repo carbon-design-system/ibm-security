@@ -20,6 +20,10 @@
     flex: 1;
   }
 
+  &__icon {
+    fill: $icon-03;
+  }
+
   & &__overflow-menu {
     width: 3rem;
     margin-left: 1px;
