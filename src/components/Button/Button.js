@@ -22,9 +22,7 @@ const Button = ({ className, largeText, size, kind, ...other }) => {
   const isSize = value => size === value;
   const isLarge = isSize('large') || largeText || isSize('lg') || isSize('xlg');
 
-
-const isGhostDanger = kind === 'ghost-danger';
-
+  const isGhostDanger = kind === 'ghost-danger';
 
   return (
     <CarbonButton
