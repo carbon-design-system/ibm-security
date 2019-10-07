@@ -9,27 +9,17 @@
 
 /// Security theme.
 /// @type Map<String, Color>
-$security--theme: () !default;
+$security--theme: $carbon--theme--g100 !default;
 
 // Map the theme tokens as custom properties.
-@each $token in map-keys($map: $carbon--theme) {
+@each $token, $value in $security--theme {
   $security--theme: map-merge(
     $map1: $security--theme,
     $map2: (
-      $token: var(--#{$token}),
+      $token: var(--#{$token}, $value),
     ),
   );
 }
-
-$gray-color-map: map-get(
-  $map: $carbon--colors,
-  $key: 'gray',
-);
-
-$cool-gray-color-map: map-get(
-  $map: $carbon--colors,
-  $key: 'cool-gray',
-);
 
 @function security--cool-gray($theme) {
   $theme--cool-gray: $theme;
@@ -84,15 +74,6 @@ $security--themes: (
 
 @mixin security--theme--cg100 {
   .security--theme--cg10 & {
-    @include security--map-token(
-      $token-map:
-        security--cool-gray(
-          $theme: map-get($map: $security--themes, $key: g100)
-        )
-    );
-  }
-
-  @if ($security--theme == $security--theme--cg10) {
     @include security--map-token(
       $token-map:
         security--cool-gray(
