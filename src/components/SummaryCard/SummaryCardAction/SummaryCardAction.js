@@ -10,9 +10,9 @@ import { settings } from 'carbon-components';
 
 import Button from '../../Button';
 
-const { prefix } = settings;
-
 import { getComponentNamespace } from '../../../globals/namespace/index';
+
+const { prefix } = settings;
 
 const namespace = getComponentNamespace('summary-card-action');
 
