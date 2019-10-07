@@ -1,0 +1,15 @@
+////
+/// Summary card component.
+/// @group summary-card
+/// @copyright IBM Security 2019
+////
+
+@import '../Button/index';
+
+@import '../Component/mixins';
+
+@import 'mixins';
+
+@include security--component($name: summary-card) {
+  @include summary-card;
+}
