@@ -7,13 +7,15 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
 import { color, boolean } from '@storybook/addon-knobs';
-import { g100 } from '@carbon/themes';
 
 import { components } from '../../../.storybook';
+
+import theme from '../../globals/theme';
+
 import { ScrollGradient } from '../..';
 import { className, children } from './_mocks_';
 
-const gradientColor = g100.uiBackground;
+const gradientColor = theme.uiBackground;
 
 const style = {
   width: '300px',

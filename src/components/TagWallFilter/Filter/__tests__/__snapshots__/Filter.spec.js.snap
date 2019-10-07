@@ -61,7 +61,7 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
       <svg
         aria-hidden="true"
         class="security--icon security--filter__search__icon"
-        fill="#f3f3f3"
+        fill="var(--icon-01, #f3f3f3)"
         focusable="false"
         height="20"
         preserveAspectRatio="xMidYMid meet"

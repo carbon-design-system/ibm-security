@@ -562,7 +562,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                           <svg
                             aria-hidden="true"
                             class="security--icon security--filter__search__icon"
-                            fill="#f3f3f3"
+                            fill="var(--icon-01, #f3f3f3)"
                             focusable="false"
                             height="20"
                             preserveAspectRatio="xMidYMid meet"
@@ -859,7 +859,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                       <svg
                                         aria-hidden="true"
                                         class="security--icon security--filter__search__icon"
-                                        fill="#f3f3f3"
+                                        fill="var(--icon-01, #f3f3f3)"
                                         focusable="false"
                                         height="20"
                                         preserveAspectRatio="xMidYMid meet"
@@ -1079,7 +1079,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                         <svg
                                           aria-hidden="true"
                                           class="security--icon security--filter__search__icon"
-                                          fill="#f3f3f3"
+                                          fill="var(--icon-01, #f3f3f3)"
                                           focusable="false"
                                           height="20"
                                           preserveAspectRatio="xMidYMid meet"
@@ -1340,7 +1340,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                           >
                             <ScrollGradient
                               className="security--tearsheet--small__content"
-                              color="#282828"
+                              color="var(--ui-01, #282828)"
                               direction="Y"
                               getScrollElementRef={[Function]}
                               hideStartGradient={false}
@@ -1356,7 +1356,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                   role="presentation"
                                   style={
                                     Object {
-                                      "backgroundImage": "linear-gradient(0deg, rgba(0,0,0,0), #282828 90%)",
+                                      "backgroundImage": "linear-gradient(0deg, rgba(0,0,0,0), var(--ui-01, #282828) 90%)",
                                     }
                                   }
                                 />
@@ -1476,7 +1476,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                               >
                                                 <Icon
                                                   className="security--filter__search__icon"
-                                                  fill="#f3f3f3"
+                                                  fill="var(--icon-01, #f3f3f3)"
                                                   height={null}
                                                   path={null}
                                                   renderIcon={
@@ -1492,7 +1492,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                   <ForwardRef(Search20)
                                                     aria-hidden="true"
                                                     className="security--icon security--filter__search__icon"
-                                                    fill="#f3f3f3"
+                                                    fill="var(--icon-01, #f3f3f3)"
                                                     focusable={false}
                                                     preserveAspectRatio="xMidYMid meet"
                                                     style={
@@ -1504,7 +1504,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                     <Icon
                                                       aria-hidden="true"
                                                       className="security--icon security--filter__search__icon"
-                                                      fill="#f3f3f3"
+                                                      fill="var(--icon-01, #f3f3f3)"
                                                       focusable={false}
                                                       height={20}
                                                       preserveAspectRatio="xMidYMid meet"
@@ -1520,7 +1520,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                       <svg
                                                         aria-hidden={true}
                                                         className="security--icon security--filter__search__icon"
-                                                        fill="#f3f3f3"
+                                                        fill="var(--icon-01, #f3f3f3)"
                                                         focusable={false}
                                                         height={20}
                                                         preserveAspectRatio="xMidYMid meet"
@@ -1666,7 +1666,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                   role="presentation"
                                   style={
                                     Object {
-                                      "backgroundImage": "linear-gradient(0deg, #282828 10%, rgba(0,0,0,0))",
+                                      "backgroundImage": "linear-gradient(0deg, var(--ui-01, #282828) 10%, rgba(0,0,0,0))",
                                     }
                                   }
                                 />
@@ -2286,7 +2286,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                             <svg
                               aria-hidden="true"
                               class="security--icon security--filter__search__icon"
-                              fill="#f3f3f3"
+                              fill="var(--icon-01, #f3f3f3)"
                               focusable="false"
                               height="20"
                               preserveAspectRatio="xMidYMid meet"
@@ -2497,7 +2497,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                             <svg
                               aria-hidden="true"
                               class="security--icon security--filter__search__icon"
-                              fill="#f3f3f3"
+                              fill="var(--icon-01, #f3f3f3)"
                               focusable="false"
                               height="20"
                               preserveAspectRatio="xMidYMid meet"
@@ -2794,7 +2794,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         <svg
                                           aria-hidden="true"
                                           class="security--icon security--filter__search__icon"
-                                          fill="#f3f3f3"
+                                          fill="var(--icon-01, #f3f3f3)"
                                           focusable="false"
                                           height="20"
                                           preserveAspectRatio="xMidYMid meet"
@@ -3005,7 +3005,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         <svg
                                           aria-hidden="true"
                                           class="security--icon security--filter__search__icon"
-                                          fill="#f3f3f3"
+                                          fill="var(--icon-01, #f3f3f3)"
                                           focusable="false"
                                           height="20"
                                           preserveAspectRatio="xMidYMid meet"
@@ -3225,7 +3225,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           <svg
                                             aria-hidden="true"
                                             class="security--icon security--filter__search__icon"
-                                            fill="#f3f3f3"
+                                            fill="var(--icon-01, #f3f3f3)"
                                             focusable="false"
                                             height="20"
                                             preserveAspectRatio="xMidYMid meet"
@@ -3436,7 +3436,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           <svg
                                             aria-hidden="true"
                                             class="security--icon security--filter__search__icon"
-                                            fill="#f3f3f3"
+                                            fill="var(--icon-01, #f3f3f3)"
                                             focusable="false"
                                             height="20"
                                             preserveAspectRatio="xMidYMid meet"
@@ -3697,7 +3697,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                             >
                               <ScrollGradient
                                 className="security--tearsheet--small__content"
-                                color="#282828"
+                                color="var(--ui-01, #282828)"
                                 direction="Y"
                                 getScrollElementRef={[Function]}
                                 hideStartGradient={false}
@@ -3713,7 +3713,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     role="presentation"
                                     style={
                                       Object {
-                                        "backgroundImage": "linear-gradient(0deg, rgba(0,0,0,0), #282828 90%)",
+                                        "backgroundImage": "linear-gradient(0deg, rgba(0,0,0,0), var(--ui-01, #282828) 90%)",
                                       }
                                     }
                                   />
@@ -3833,7 +3833,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                 >
                                                   <Icon
                                                     className="security--filter__search__icon"
-                                                    fill="#f3f3f3"
+                                                    fill="var(--icon-01, #f3f3f3)"
                                                     height={null}
                                                     path={null}
                                                     renderIcon={
@@ -3849,7 +3849,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                     <ForwardRef(Search20)
                                                       aria-hidden="true"
                                                       className="security--icon security--filter__search__icon"
-                                                      fill="#f3f3f3"
+                                                      fill="var(--icon-01, #f3f3f3)"
                                                       focusable={false}
                                                       preserveAspectRatio="xMidYMid meet"
                                                       style={
@@ -3861,7 +3861,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                       <Icon
                                                         aria-hidden="true"
                                                         className="security--icon security--filter__search__icon"
-                                                        fill="#f3f3f3"
+                                                        fill="var(--icon-01, #f3f3f3)"
                                                         focusable={false}
                                                         height={20}
                                                         preserveAspectRatio="xMidYMid meet"
@@ -3877,7 +3877,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                         <svg
                                                           aria-hidden={true}
                                                           className="security--icon security--filter__search__icon"
-                                                          fill="#f3f3f3"
+                                                          fill="var(--icon-01, #f3f3f3)"
                                                           focusable={false}
                                                           height={20}
                                                           preserveAspectRatio="xMidYMid meet"
@@ -4023,7 +4023,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     role="presentation"
                                     style={
                                       Object {
-                                        "backgroundImage": "linear-gradient(0deg, #282828 10%, rgba(0,0,0,0))",
+                                        "backgroundImage": "linear-gradient(0deg, var(--ui-01, #282828) 10%, rgba(0,0,0,0))",
                                       }
                                     }
                                   />

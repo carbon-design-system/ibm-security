@@ -4,7 +4,6 @@
  */
 
 import Close16 from '@carbon/icons-react/lib/close/16';
-import { g100 } from '@carbon/themes';
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
@@ -12,6 +11,7 @@ import React, { PureComponent } from 'react';
 
 import { getComponentNamespace } from '../../../globals/namespace';
 import * as defaultLabels from '../../../globals/nls';
+import theme from '../../../globals/theme';
 import { isNode } from '../../../globals/utils/capabilities';
 
 import Button from '../../Button';
@@ -113,7 +113,7 @@ class TearsheetSmall extends PureComponent {
               <section className={`${namespace}__body`}>
                 <ScrollGradient
                   className={`${namespace}__content`}
-                  color={g100.ui01}
+                  color={theme.ui01}
                 >
                   {this.renderBody()}
                 </ScrollGradient>

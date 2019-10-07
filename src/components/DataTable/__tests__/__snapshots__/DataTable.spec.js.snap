@@ -278,7 +278,7 @@ exports[`DataTable Rendering renders 1`] = `
           >
             <ScrollGradient
               className="security--data-table__table-wrapper"
-              color="#282828"
+              color="var(--ui-01, #282828)"
               direction="X"
               getScrollElementRef={[Function]}
               hideStartGradient={false}
@@ -294,7 +294,7 @@ exports[`DataTable Rendering renders 1`] = `
                   role="presentation"
                   style={
                     Object {
-                      "backgroundImage": "linear-gradient(-90deg, rgba(0,0,0,0), #282828 90%)",
+                      "backgroundImage": "linear-gradient(-90deg, rgba(0,0,0,0), var(--ui-01, #282828) 90%)",
                     }
                   }
                 />
@@ -1618,7 +1618,7 @@ exports[`DataTable Rendering renders 1`] = `
                   role="presentation"
                   style={
                     Object {
-                      "backgroundImage": "linear-gradient(-90deg, #282828 10%, rgba(0,0,0,0))",
+                      "backgroundImage": "linear-gradient(-90deg, var(--ui-01, #282828) 10%, rgba(0,0,0,0))",
                     }
                   }
                 />
@@ -1902,7 +1902,7 @@ exports[`DataTable Rendering renders a custom table 1`] = `
           >
             <ScrollGradient
               className="security--data-table__table-wrapper"
-              color="#282828"
+              color="var(--ui-01, #282828)"
               direction="X"
               getScrollElementRef={[Function]}
               hideStartGradient={false}
@@ -1918,7 +1918,7 @@ exports[`DataTable Rendering renders a custom table 1`] = `
                   role="presentation"
                   style={
                     Object {
-                      "backgroundImage": "linear-gradient(-90deg, rgba(0,0,0,0), #282828 90%)",
+                      "backgroundImage": "linear-gradient(-90deg, rgba(0,0,0,0), var(--ui-01, #282828) 90%)",
                     }
                   }
                 />
@@ -3242,7 +3242,7 @@ exports[`DataTable Rendering renders a custom table 1`] = `
                   role="presentation"
                   style={
                     Object {
-                      "backgroundImage": "linear-gradient(-90deg, #282828 10%, rgba(0,0,0,0))",
+                      "backgroundImage": "linear-gradient(-90deg, var(--ui-01, #282828) 10%, rgba(0,0,0,0))",
                     }
                   }
                 />
@@ -3526,7 +3526,7 @@ exports[`DataTable Rendering renders a selectable table 1`] = `
           >
             <ScrollGradient
               className="security--data-table__table-wrapper"
-              color="#282828"
+              color="var(--ui-01, #282828)"
               direction="X"
               getScrollElementRef={[Function]}
               hideStartGradient={false}
@@ -3542,7 +3542,7 @@ exports[`DataTable Rendering renders a selectable table 1`] = `
                   role="presentation"
                   style={
                     Object {
-                      "backgroundImage": "linear-gradient(-90deg, rgba(0,0,0,0), #282828 90%)",
+                      "backgroundImage": "linear-gradient(-90deg, rgba(0,0,0,0), var(--ui-01, #282828) 90%)",
                     }
                   }
                 />
@@ -4866,7 +4866,7 @@ exports[`DataTable Rendering renders a selectable table 1`] = `
                   role="presentation"
                   style={
                     Object {
-                      "backgroundImage": "linear-gradient(-90deg, #282828 10%, rgba(0,0,0,0))",
+                      "backgroundImage": "linear-gradient(-90deg, var(--ui-01, #282828) 10%, rgba(0,0,0,0))",
                     }
                   }
                 />
@@ -5150,7 +5150,7 @@ exports[`DataTable Rendering renders a sortable table 1`] = `
           >
             <ScrollGradient
               className="security--data-table__table-wrapper"
-              color="#282828"
+              color="var(--ui-01, #282828)"
               direction="X"
               getScrollElementRef={[Function]}
               hideStartGradient={false}
@@ -5166,7 +5166,7 @@ exports[`DataTable Rendering renders a sortable table 1`] = `
                   role="presentation"
                   style={
                     Object {
-                      "backgroundImage": "linear-gradient(-90deg, rgba(0,0,0,0), #282828 90%)",
+                      "backgroundImage": "linear-gradient(-90deg, rgba(0,0,0,0), var(--ui-01, #282828) 90%)",
                     }
                   }
                 />
@@ -6490,7 +6490,7 @@ exports[`DataTable Rendering renders a sortable table 1`] = `
                   role="presentation"
                   style={
                     Object {
-                      "backgroundImage": "linear-gradient(-90deg, #282828 10%, rgba(0,0,0,0))",
+                      "backgroundImage": "linear-gradient(-90deg, var(--ui-01, #282828) 10%, rgba(0,0,0,0))",
                     }
                   }
                 />

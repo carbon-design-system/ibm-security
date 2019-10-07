@@ -6,13 +6,12 @@
 import Add16 from '@carbon/icons-react/lib/add/16';
 import Subtract16 from '@carbon/icons-react/lib/subtract/16';
 
-import { g100 } from '@carbon/themes';
-
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
 import * as defaultLabels from '../../../globals/nls';
 import { getComponentNamespace } from '../../../globals/namespace';
+import theme from '../../../globals/theme';
 
 import { AccordionItem } from '../../Accordion';
 import Button from '../../Button';
@@ -110,7 +109,7 @@ class FilterSubcategory extends Component {
         <ul className={`${namespace}__filter-list`}>
           <ScrollGradient
             scrollElementClassName={`${namespace}__scroller`}
-            color={g100.uiBackground}
+            color={theme.uiBackground}
             getScrollElementRef={this.setReference}
           >
             <div

@@ -6,11 +6,12 @@
 import Close20 from '@carbon/icons-react/lib/close/20';
 import Notification20 from '@carbon/icons-react/lib/notification/20';
 import Settings20 from '@carbon/icons-react/lib/settings/20';
-import { g10 } from '@carbon/themes';
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component, Fragment } from 'react';
+
+import theme from '../../globals/theme';
 
 import { defaultProps, namespace, propTypes } from './constants';
 
@@ -325,7 +326,7 @@ export default class Header extends Component {
             </button>
           </div>
         )}
-        <ScrollGradient color={g10.ui01}>
+        <ScrollGradient color={theme.inverse02}>
           <ul className={`${namespace}__popover__list`}>
             <Transition
               className={`${namespace}__notification`}
