@@ -13,6 +13,7 @@ import { namespace } from './constants';
 
 import Table from './Table';
 import TableOverflowCell from './TableOverflowCell';
+import TableToolbarDownload from './TableToolbarDownload';
 
 const {
   TableActionList,
@@ -211,6 +212,7 @@ export const dataTableExports = {
   TableToolbarContent,
   TableToolbarSearch,
   TableToolbarMenu,
+  TableToolbarDownload,
 };
 
 // Exports each proxied subcomponent to the `DataTable` object.
@@ -241,4 +243,5 @@ export {
   TableToolbarContent,
   TableToolbarSearch,
   TableToolbarMenu,
+  TableToolbarDownload,
 };
