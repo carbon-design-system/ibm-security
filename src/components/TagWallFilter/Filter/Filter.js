@@ -13,7 +13,7 @@ import Downshift from 'downshift';
 import ListBox from 'carbon-components-react/lib/components/ListBox';
 import { defaultFilterItems } from 'carbon-components-react/lib/components/ComboBox/tools/filter';
 
-import theme from '../../../globals/theme';
+import theme from '../../../globals/themes';
 
 import { defaultItemToString } from './tools/itemToString';
 import { defaultSortItems, defaultCompareItems } from './tools/sorting';

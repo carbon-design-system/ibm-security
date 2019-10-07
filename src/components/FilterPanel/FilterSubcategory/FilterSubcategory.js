@@ -11,7 +11,7 @@ import React, { Component } from 'react';
 
 import * as defaultLabels from '../../../globals/nls';
 import { getComponentNamespace } from '../../../globals/namespace';
-import theme from '../../../globals/theme';
+import theme from '../../../globals/themes';
 
 import { AccordionItem } from '../../Accordion';
 import Button from '../../Button';

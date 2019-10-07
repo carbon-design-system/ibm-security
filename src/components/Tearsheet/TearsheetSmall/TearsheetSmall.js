@@ -11,7 +11,7 @@ import React, { PureComponent } from 'react';
 
 import { getComponentNamespace } from '../../../globals/namespace';
 import * as defaultLabels from '../../../globals/nls';
-import theme from '../../../globals/theme';
+import theme from '../../../globals/themes';
 import { isNode } from '../../../globals/utils/capabilities';
 
 import Button from '../../Button';

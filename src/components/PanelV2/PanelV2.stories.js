@@ -19,7 +19,7 @@ import { styles } from '@carbon/type/lib';
 
 import { patterns } from '../../../.storybook';
 
-import theme from '../../globals/theme';
+import theme from '../../globals/themes';
 
 import { label } from '../_mocks_';
 import { header, profile, toolbar } from '../Shell/_mocks_';
