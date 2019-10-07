@@ -8,14 +8,18 @@ import { storiesOf } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
 import { action } from '@storybook/addon-actions';
 import centered from '@storybook/addon-centered/react';
-import { boolean, number, text } from '@storybook/addon-knobs';
+import { number, select, text } from '@storybook/addon-knobs';
 
 import { components } from '../../../.storybook';
 
 import { Button, InlineLoading } from '../../';
 
 const props = () => ({
-  success: boolean('Loading successful state (success)', false),
+  status: select(
+    'Loading status (status)',
+    ['inactive', 'active', 'finished', 'error'],
+    'active'
+  ),
   description: text(
     'Loading progress description (description)',
     'Loading data...'
@@ -92,7 +96,7 @@ storiesOf(components('InlineLoading'), module)
                 <InlineLoading
                   style={{ marginLeft: '1rem' }}
                   description="Submitting..."
-                  success={success}
+                  status={success ? 'finished' : 'active'}
                 />
               ) : (
                 <Button onClick={handleSubmit}>Submit</Button>
