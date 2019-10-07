@@ -6,8 +6,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { settings } from 'carbon-components';
 
 import Button from '../../Button';
+
+const { prefix } = settings;
 
 import { getComponentNamespace } from '../../../globals/namespace/index';
 
@@ -17,10 +20,15 @@ const SummaryCardAction = ({ className, children, ...rest }) => (
   <Button
     {...rest}
     className={classnames(namespace, className)}
+    kind="ghost"
     tooltipPosition="bottom"
     tooltipAlignment="center"
   >
-    {children}
+    {typeof children === 'string' ? (
+      <div className={`${prefix}--text-truncate--end`}>{children}</div>
+    ) : (
+      children
+    )}
   </Button>
 );
 

@@ -43,16 +43,26 @@
   &-body {
     height: carbon--mini-units(38);
     display: flex;
+    // `hidden` because the ScrollGradient will handle overflow:
     overflow: hidden;
     border-bottom: 1px solid $ui-02;
     padding: 0 $carbon--spacing-05 $carbon--spacing-05 $carbon--spacing-05;
     margin-top: $carbon--spacing-05;
   }
 
+  &-footer {
+    display: flex;
+    background-color: $ui-01;
+  }
+
   // why is the carbon button not 48px width with centered icon?
   &-action {
-    width: 3rem;
-    display: inline-flex;
-    justify-content: center;
+    flex: 1;
+
+    &.bx--btn--icon-only {
+      justify-content: center;
+      width: 3rem;
+      flex: 0 0 auto;
+    }
   }
 }

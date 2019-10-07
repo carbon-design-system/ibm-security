@@ -94,7 +94,6 @@ export SummaryCard, {
   SummaryCardDetails,
   SummaryCardFooter,
   SummaryCardHeader,
-  SummaryCardPrimaryAction,
   SummaryCardSkeleton,
 } from './components/SummaryCard';
 export Tag, { InteractiveTag, TagSkeleton } from './components/Tag';

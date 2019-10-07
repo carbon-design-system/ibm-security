@@ -9,7 +9,6 @@ import SummaryCardBody from './SummaryCardBody/SummaryCardBody';
 import SummaryCardDetails from './SummaryCardDetails/SummaryCardDetails';
 import SummaryCardFooter from './SummaryCardFooter/SummaryCardFooter';
 import SummaryCardHeader from './SummaryCardHeader/SummaryCardHeader';
-import SummaryCardPrimaryAction from './SummaryCardPrimaryAction/SummaryCardPrimaryAction';
 import SummaryCardSkeleton from './SummaryCardSkeleton/SummaryCardSkeleton';
 
 export default SummaryCard;
@@ -20,6 +19,5 @@ export {
   SummaryCardDetails,
   SummaryCardFooter,
   SummaryCardHeader,
-  SummaryCardPrimaryAction,
   SummaryCardSkeleton,
 };

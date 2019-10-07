@@ -6,13 +6,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { g100 } from '@carbon/themes';
 
+import ScrollGradient from '../../ScrollGradient';
 import { getComponentNamespace } from '../../../globals/namespace/index';
 
 const namespace = getComponentNamespace('summary-card-body');
 
-const SummaryCardBody = ({ children, className }) => (
-  <div className={classnames(namespace, className)}>{children}</div>
+const SummaryCardBody = ({ children, className, scrollGradientColor }) => (
+  <div className={classnames(namespace, className)}>
+    <ScrollGradient color={scrollGradientColor || g100.uiBackground}>
+      {children}
+    </ScrollGradient>
+  </div>
 );
 
 SummaryCardBody.propTypes = {
@@ -21,10 +27,13 @@ SummaryCardBody.propTypes = {
 
   /** @type {string} The class. */
   className: PropTypes.string,
+
+  scrollGradientColor: PropTypes.string,
 };
 
 SummaryCardBody.defaultProps = {
   className: '',
+  scrollGradientColor: undefined,
 };
 
 export default SummaryCardBody;
