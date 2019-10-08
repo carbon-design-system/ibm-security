@@ -9,6 +9,6 @@
 @import '../Component/mixins';
 @import 'mixins';
 
-@include component($name: type-layout__container) {
+@include security--component($name: type-layout__container) {
   @include type-layout__container;
 }

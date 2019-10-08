@@ -16,16 +16,20 @@ export const namespace = getComponentNamespace('button');
 
 // TODO: V3 - Remove deprecated props `largeText`.
 
-const Button = ({ className, largeText, size, ...other }) => {
+const Button = ({ className, largeText, size, kind, ...other }) => {
   const isSize = value => size === value;
   const isLarge = isSize('large') || largeText || isSize('lg') || isSize('xlg');
+
+  const isGhostDanger = kind === 'ghost-danger';
 
   return (
     <CarbonButton
       className={classnames(namespace, className, {
         [`${namespace}--large`]: isLarge,
+        [`${namespace}--ghost-danger`]: isGhostDanger,
       })}
       size={!isLarge ? size : null}
+      kind={!isGhostDanger ? kind : 'ghost'}
       {...other}
     />
   );
