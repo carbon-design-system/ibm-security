@@ -8,7 +8,7 @@ import { debounce } from 'throttle-debounce';
 import { Table as CarbonTable } from 'carbon-components-react/lib/components/DataTable';
 import { tableWrapperNamespace, overflowCellNamespace } from './constants';
 import { carbonPrefix } from '../../globals/namespace';
-import theme from '../../globals/themes';
+import theme from '../../globals/theme';
 import ScrollGradient from '../ScrollGradient/ScrollGradient';
 
 /**

@@ -11,7 +11,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component, Fragment } from 'react';
 
-import theme from '../../globals/themes';
+import theme from '../../globals/theme';
 
 import { defaultProps, namespace, propTypes } from './constants';
 

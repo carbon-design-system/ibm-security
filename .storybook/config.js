@@ -23,7 +23,7 @@ import Container from './components/Container';
 import { HIERARCHY_ROOT_SEPARATOR, ORDER } from '.';
 
 import random from '../src/globals/random';
-import theme from '../src/globals/themes';
+import theme from '../src/globals/theme';
 
 const { interactive01, text04 } = theme;
 

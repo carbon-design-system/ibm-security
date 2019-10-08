@@ -10,7 +10,7 @@ import { color, boolean } from '@storybook/addon-knobs';
 
 import { components } from '../../../.storybook';
 
-import theme from '../../globals/themes';
+import theme from '../../globals/theme';
 
 import { ScrollGradient } from '../..';
 import { className, children } from './_mocks_';

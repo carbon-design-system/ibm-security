@@ -17,7 +17,7 @@ import ScrollGradient from '../ScrollGradient';
 import Transition from '../Transition';
 
 import * as defaultLabels from '../../globals/nls';
-import theme from '../../globals/themes';
+import theme from '../../globals/theme';
 
 import { getComponentNamespace } from '../../globals/namespace';
 
