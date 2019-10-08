@@ -37,31 +37,19 @@ storiesOf(patterns('SummaryCard'), module)
         />
 
         <SummaryCardBody>
-          Muffin lollipop jelly pastry sesame snaps pie gummies chocolate bar.
-          Apple pie liquorice pudding topping cake marshmallow liquorice cake
-          cheesecake. Marzipan dessert bear claw cheesecake cake carrot cake
-          brownie. Biscuit bear claw cupcake jelly-o dessert croissant cookie.
-          Muffin danish fruitcake dessert halvah. Toffee topping cheesecake
-          marshmallow pudding liquorice gummies soufflé croissant. Gummies apple
-          pie ice cream cake marzipan cake topping gummies. Cake brownie
-          pudding. Dragée lemon drops dragée. Lemon drops fruitcake liquorice
-          chupa chups gummi bears cotton candy muffin dragée. Lemon drops
-          gingerbread wafer cookie bonbon liquorice lemon drops tart gummies.
-          Croissant bonbon sweet sweet roll. Muffin lollipop jelly pastry sesame
-          snaps pie gummies chocolate bar. Apple pie liquorice pudding topping
-          cake marshmallow liquorice cake cheesecake. Marzipan dessert bear claw
-          cheesecake cake carrot cake brownie. Biscuit bear claw cupcake jelly-o
-          dessert croissant cookie. Muffin danish fruitcake dessert halvah.
-          Toffee topping cheesecake marshmallow pudding liquorice gummies
-          soufflé croissant. Gummies apple pie ice cream cake marzipan cake
-          topping gummies. Cake brownie pudding. Dragée lemon drops dragée.
-          Lemon drops fruitcake liquorice chupa chups gummi bears cotton candy
-          muffin dragée. Lemon drops gingerbread wafer cookie bonbon liquorice
-          lemon drops tart gummies. Croissant bonbon sweet sweet roll.
+          {text(
+            'SummaryCardBody content (children)',
+            'This is the content inside SummaryCardBody.'
+          )}
         </SummaryCardBody>
 
         <SummaryCardFooter>
-          <SummaryCardAction>This should be truncated</SummaryCardAction>
+          <SummaryCardAction>
+            {text(
+              'SummaryCardAction content (children)',
+              'Text inside a SummaryCardAction.'
+            )}
+          </SummaryCardAction>
 
           <SummaryCardAction
             iconDescription="blah"

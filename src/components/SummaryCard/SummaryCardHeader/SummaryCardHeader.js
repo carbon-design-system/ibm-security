@@ -22,10 +22,10 @@ SummaryCardHeader.propTypes = {
   /** @type {string} Extra class names to add. */
   className: PropTypes.string,
 
-  /** @type {object} The status of the Card. */
+  /** @type {node} The status of the Card. */
   status: PropTypes.node,
 
-  /** @type {object} The title of the summary card. */
+  /** @type {string} The title of the summary card. */
   title: PropTypes.string.isRequired,
 };
 

@@ -33,21 +33,16 @@ const SummaryCardAction = ({ className, children, ...rest }) => (
 );
 
 SummaryCardAction.propTypes = {
+  /** @type {object} Children of the actions list. */
+  children: PropTypes.node,
+
   /** @type {string} Extra class names to add. */
   className: PropTypes.string,
-
-  /** @type {object} Children of the actions list. */
-  children: PropTypes.node.isRequired,
-
-  href: PropTypes.string,
-
-  onClick: PropTypes.func,
 };
 
 SummaryCardAction.defaultProps = {
+  children: null,
   className: '',
-  href: undefined,
-  onClick: () => {},
 };
 
 export default SummaryCardAction;

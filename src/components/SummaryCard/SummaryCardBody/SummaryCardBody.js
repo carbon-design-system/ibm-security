@@ -22,12 +22,13 @@ const SummaryCardBody = ({ children, className, scrollGradientColor }) => (
 );
 
 SummaryCardBody.propTypes = {
-  /** @type {node} The children are rendered in the main content area of the card. */
+  /** @type {node} The children rendered in the main content area of the card. */
   children: PropTypes.node.isRequired,
 
-  /** @type {string} The class. */
+  /** @type {string} Extra class names to add.. */
   className: PropTypes.string,
 
+  /** @type {string} The fade out color (can be any valid css value). */
   scrollGradientColor: PropTypes.string,
 };
 
