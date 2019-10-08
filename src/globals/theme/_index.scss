@@ -11,7 +11,7 @@
 $security--theme: $carbon--theme--g100 !default;
 
 // Map the theme tokens as CSS custom properties.
-@each $token, $value in $security--theme {
+@each $token, $value in $carbon--theme--g100 {
   $security--theme: map-merge(
     $map1: $security--theme,
     $map2: (
@@ -26,10 +26,11 @@ $carbon--theme: $security--theme;
 
 @include carbon--theme;
 
+@import '../variables/index';
+
 @import 'carbon-components/scss/globals/scss/theme';
 
 @import '../deprecate/index';
-
 @import '../../components/Component/mixins';
 
 @import 'mixins';
