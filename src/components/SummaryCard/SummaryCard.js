@@ -11,20 +11,9 @@ import { getComponentNamespace } from '../../globals/namespace';
 
 export const namespace = getComponentNamespace('summary-card');
 
-export class SummaryCard extends Component {
-  state = { isOpen: false };
-
-  toggleOpen = () => {
-    this.setState({ isOpen: !this.state.isOpen });
-  };
-
-  render() {
-    const { className, children } = this.props;
-    const cardClasses = classnames(namespace, className);
-
-    return <div className={cardClasses}>{children}</div>;
-  }
-}
+const SummaryCard = ({ children, className }) => (
+  <section className={classnames(namespace, className)}>{children}</section>
+);
 
 SummaryCard.defaultProps = {
   className: '',

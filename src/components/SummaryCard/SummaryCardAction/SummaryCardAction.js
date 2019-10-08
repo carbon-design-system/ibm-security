@@ -19,16 +19,16 @@ const namespace = getComponentNamespace('summary-card-action');
 const SummaryCardAction = ({ className, children, ...rest }) => (
   <Button
     {...rest}
-    className={classnames(namespace, className)}
+    className={classnames(
+      namespace,
+      className,
+      `${prefix}--text-truncate--end`
+    )}
     kind="ghost"
     tooltipPosition="bottom"
     tooltipAlignment="center"
   >
-    {typeof children === 'string' ? (
-      <div className={`${prefix}--text-truncate--end`}>{children}</div>
-    ) : (
-      children
-    )}
+    <span>{children}</span>
   </Button>
 );
 
