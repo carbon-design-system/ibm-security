@@ -7,5 +7,5 @@
 @import '@carbon/colors/scss/colors';
 @import '@carbon/themes/scss/tokens';
 
-/// TODO: V2 - Deprecate in favor of `$hover-ui`.
+/// TODO: `2.x` - Deprecate in favor of `$hover-ui`.
 $security-color__gray-90--hover: $hover-ui;

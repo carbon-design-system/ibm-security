@@ -1,0 +1,58 @@
+////
+/// Theme variables.
+/// @group theme
+/// @copyright IBM Security 2019
+////
+
+@import '@carbon/colors/scss/colors';
+@import '@carbon/themes/scss/theme-maps';
+
+/// Converts themes with 'gray' color values to 'cool gray'.
+/// @param {Map<string, Color>} $theme A theme map with gray values to convert.
+/// @returns {Map<string, Color>} The converted theme.
+/// @access private
+@function security--cool-gray($theme) {
+  $theme--cool-gray: $theme;
+
+  @each $token-key, $token-value in $theme {
+    @each $color-key,
+      $color-value in map-get($map: $carbon--colors, $key: 'gray')
+    {
+      $theme--cool-gray: if(
+        $token-value == $color-value,
+        map-merge(
+          $map1: $theme--cool-gray,
+          $map2: (
+            $token-key:
+              map-get(
+                $map:
+                  map-get(
+                    $map: $carbon--colors,
+                    $key: 'cool-gray',
+                  ),
+                $key: $color-key,
+              ),
+          ),
+        ),
+        $theme--cool-gray
+      );
+    }
+  }
+
+  @return $theme--cool-gray;
+}
+
+/// 'Cool gray' theme.
+/// @type Map<String, Color>
+/// @access private
+$-theme--cg10: security--cool-gray(
+  $theme: $carbon--theme--g10,
+);
+
+/// Supported theme definitions.
+/// @type Map<Map, Map>
+/// @access private
+$security--themes: (
+  theme--cg10: $-theme--cg10,
+  theme--g100: $carbon--theme--g100,
+);

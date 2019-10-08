@@ -6,7 +6,19 @@
 
 @import '@carbon/themes/scss/mixins';
 
-@import 'mixins';
+/// Default theme.
+/// @type Map<String, Color>
+$security--theme: $carbon--theme--g100 !default;
+
+// Map the theme tokens as CSS custom properties.
+@each $token, $value in $security--theme {
+  $security--theme: map-merge(
+    $map1: $security--theme,
+    $map2: (
+      $token: var(--#{$token}, $value),
+    ),
+  );
+}
 
 /// Carbon theme.
 /// @type Map<String, Color>
@@ -14,124 +26,40 @@ $carbon--theme: $security--theme;
 
 @include carbon--theme;
 
-@import '../variables/index';
+@import 'carbon-components/scss/globals/scss/theme';
 
 @import '../deprecate/index';
-@import '../namespace/index';
 
 @import '../../components/Component/mixins';
 
-@import '../../components/IconButton/variables';
+@import 'mixins';
+@import 'variables';
 
-@import 'carbon-components/scss/globals/scss/theme';
-
-// TODO: V3 - To be removed after the `theme` function is deprecated.
+// TODO: `2.x` - To be removed after the `theme` function is deprecated.
 
 /// Dark theme.
 /// @type String
-$theme: dark !default;
-
-/// Changes background color for form elements.
-/// @param {Color} [$background-color=$ui-02] The background color to use.
-/// @example scss
-///   body {
-///     @include input__background-color;
-///   }
-@mixin input__background-color($background-color: $ui-02) {
-  %input__background-color {
-    background-color: $background-color;
-  }
-
-  // Carbon components.
-  .#{$prefix} {
-    /// `DatePicker`.
-    &--date-picker__input,
-
-    /// `Dropdown`.
-    &--dropdown,
-
-    /// `MultiSelect`.
-    &--list-box,
-
-    /// `NumberInput`.
-    &--number input[type='number'],
-
-    /// `Search`.
-    &--search-input,
-
-    /// `Select`.
-    &--select-input,
-
-    /// `TextArea`.
-    &--text-area,
-
-    /// `TextInput` and `Slider`.
-    &--text-input {
-      @extend %input__background-color;
-    }
-  }
-
-  /// `IconButton`
-  #{$button--icon__namespace} {
-    &:focus,
-    &:hover {
-      @extend %input__background-color;
-    }
-  }
-}
+/// @access private
+$theme: dark;
 
 /// Handles theme switching between light and dark.
 /// @param {Color} $light The light color to use.
 /// @param {Color} $dark The dark color to use.
 /// @returns {Color} The determined theme color to use.
+/// @access private
 @function theme($light, $dark) {
   @warn deprecate($actual: 'theme', $expected: '@carbon/themes');
 
   @return if($theme == dark, $dark, $light);
 }
 
-/// Mixin to declare alternative styles under different themes.
-/// @param {String} [$name=$theme] Theme name to declare the alternative style under.
-/// @content
-/// @example scss
-///   body {
-///     @include theme($name: light) {
-///       color: $color;
-///     }
-///   }
-/// @output css
-///   .theme--light body {
-///     color: #000;
-///   }
-@mixin theme($name: $theme) {
-  $root: &;
-
-  @at-root {
-    @include namespace(theme--#{$name}) {
-      #{$root} {
-        @content;
-      }
-    }
+// Outputs the relevant classes for each supported theme.
+@each $theme, $tokens in $security--themes {
+  @include security--component($name: $theme) {
+    @include security--generate-css-custom-properties($theme: $tokens);
   }
 }
 
-/// Determines which token to use depending on a theme set.
-/// @param {Color} $token The color token to validate.
-/// @param {Map<string, Color>} [$themes=()] A map of token values to use based on themes.
-/// @returns {Color} The determined token color to use.
-@function theme-token($token, $themes: ()) {
-  @return if(map-has-key($themes, $theme), map-get($themes, $theme), $token);
-}
-
-@include export-namespace($name: theme) {
-  .#{$namespace}input__background__color--light {
-    @include input__background-color;
-  }
-}
-
-// Define the correct theme tokens for each class.
-@each $theme, $token-map in $security--themes {
-  @include security--component($name: theme--#{$theme}) {
-    @include security--map-token($token-map: $token-map);
-  }
+@include security--component($name: input__background__color--light) {
+  @include input__background-color;
 }
