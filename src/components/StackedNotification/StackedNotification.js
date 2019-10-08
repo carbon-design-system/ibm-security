@@ -34,6 +34,7 @@ const StackedNotification = ({
       caption={caption}
       iconDescription={iconDescription}
       onClick={onCloseButtonClick}
+      hideCloseButton={hideCloseButton}
       {...other}
     />
   );

@@ -9,6 +9,6 @@
 @import '../Component/mixins';
 @import 'mixins';
 
-@include component($name: decorator) {
+@include security--component($name: decorator) {
   @include decorator;
 }

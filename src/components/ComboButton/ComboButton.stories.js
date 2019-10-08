@@ -36,10 +36,7 @@ storiesOf(patterns('ComboButton'), module)
     () => (
       <div style={{ width: '300px' }}>
         <ComboButton {...props()}>
-          <ComboButtonItem
-            onClick={action('onClick (Item 1 - primary button)')}
-            renderIcon={ArrowRight20}
-          >
+          <ComboButtonItem href="#" renderIcon={ArrowRight20}>
             Item 1 (becomes primary button and text will be truncated)
           </ComboButtonItem>
           {Array(5)
@@ -50,7 +47,7 @@ storiesOf(patterns('ComboButton'), module)
               return (
                 <ComboButtonItem
                   className="some-class"
-                  key={item.id}
+                  key={text}
                   index={index}
                   onClick={action(`onClick (${text})`)}
                   renderIcon={index % 2 === 0 ? Filter20 : null} // Show icon at even indexes.

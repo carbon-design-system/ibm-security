@@ -8,6 +8,6 @@
 
 @import 'mixins';
 
-@include component($name: transition) {
+@include security--component($name: transition) {
   @include transition;
 }
