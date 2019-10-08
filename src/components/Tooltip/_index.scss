@@ -11,7 +11,7 @@
 
 @include export-namespace($name: tooltip) {
   // TODO - V2: Carbon needs to address inverse theming.
-  // See: https://github.com/carbon-design-system/carbon/blob/master/packages/components/src/components/tooltip/_tooltip.scss#L373
+  // See: https://github.com/carbon-design-system/carbon/tree/master/packages/components/src/components/tooltip/_tooltip.scss#L373
   @include carbon--theme($carbon--theme--g10) {
     .#{$prefix}--tooltip {
       &__label .#{$prefix}--tooltip__trigger {
