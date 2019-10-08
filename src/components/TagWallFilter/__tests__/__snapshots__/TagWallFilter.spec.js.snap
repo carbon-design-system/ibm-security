@@ -654,15 +654,15 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                   aria-hidden="true"
                   class="security--icon"
                   focusable="false"
-                  height="16"
+                  height="20"
                   preserveAspectRatio="xMidYMid meet"
                   style="will-change: transform;"
-                  viewBox="0 0 16 16"
-                  width="16"
+                  viewBox="0 0 32 32"
+                  width="20"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z"
                   />
                 </svg>
               </button>
@@ -951,15 +951,15 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                               aria-hidden="true"
                               class="security--icon"
                               focusable="false"
-                              height="16"
+                              height="20"
                               preserveAspectRatio="xMidYMid meet"
                               style="will-change: transform;"
-                              viewBox="0 0 16 16"
-                              width="16"
+                              viewBox="0 0 32 32"
+                              width="20"
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                                d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z"
                               />
                             </svg>
                           </button>
@@ -1171,15 +1171,15 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                 aria-hidden="true"
                                 class="security--icon"
                                 focusable="false"
-                                height="16"
+                                height="20"
                                 preserveAspectRatio="xMidYMid meet"
                                 style="will-change: transform;"
-                                viewBox="0 0 16 16"
-                                width="16"
+                                viewBox="0 0 32 32"
+                                width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                                  d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z"
                                 />
                               </svg>
                             </button>
@@ -1774,7 +1774,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                 viewBox="0 0 32 32"
                                 width={null}
                               >
-                                <ForwardRef(Close16)
+                                <ForwardRef(Close20)
                                   aria-hidden="true"
                                   className="security--icon"
                                   focusable={false}
@@ -1789,38 +1789,38 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                     aria-hidden="true"
                                     className="security--icon"
                                     focusable={false}
-                                    height={16}
+                                    height={20}
                                     preserveAspectRatio="xMidYMid meet"
                                     style={
                                       Object {
                                         "willChange": "transform",
                                       }
                                     }
-                                    viewBox="0 0 16 16"
-                                    width={16}
+                                    viewBox="0 0 32 32"
+                                    width={20}
                                     xmlns="http://www.w3.org/2000/svg"
                                   >
                                     <svg
                                       aria-hidden={true}
                                       className="security--icon"
                                       focusable={false}
-                                      height={16}
+                                      height={20}
                                       preserveAspectRatio="xMidYMid meet"
                                       style={
                                         Object {
                                           "willChange": "transform",
                                         }
                                       }
-                                      viewBox="0 0 16 16"
-                                      width={16}
+                                      viewBox="0 0 32 32"
+                                      width={20}
                                       xmlns="http://www.w3.org/2000/svg"
                                     >
                                       <path
-                                        d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                                        d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z"
                                       />
                                     </svg>
                                   </Icon>
-                                </ForwardRef(Close16)>
+                                </ForwardRef(Close20)>
                               </Icon>
                             </button>
                           </IconButton>
@@ -2378,15 +2378,15 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                     aria-hidden="true"
                     class="security--icon"
                     focusable="false"
-                    height="16"
+                    height="20"
                     preserveAspectRatio="xMidYMid meet"
                     style="will-change: transform;"
-                    viewBox="0 0 16 16"
-                    width="16"
+                    viewBox="0 0 32 32"
+                    width="20"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                      d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z"
                     />
                   </svg>
                 </button>
@@ -2589,15 +2589,15 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                     aria-hidden="true"
                     class="security--icon"
                     focusable="false"
-                    height="16"
+                    height="20"
                     preserveAspectRatio="xMidYMid meet"
                     style="will-change: transform;"
-                    viewBox="0 0 16 16"
-                    width="16"
+                    viewBox="0 0 32 32"
+                    width="20"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                      d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z"
                     />
                   </svg>
                 </button>
@@ -2886,15 +2886,15 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 aria-hidden="true"
                                 class="security--icon"
                                 focusable="false"
-                                height="16"
+                                height="20"
                                 preserveAspectRatio="xMidYMid meet"
                                 style="will-change: transform;"
-                                viewBox="0 0 16 16"
-                                width="16"
+                                viewBox="0 0 32 32"
+                                width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                                  d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z"
                                 />
                               </svg>
                             </button>
@@ -3097,15 +3097,15 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 aria-hidden="true"
                                 class="security--icon"
                                 focusable="false"
-                                height="16"
+                                height="20"
                                 preserveAspectRatio="xMidYMid meet"
                                 style="will-change: transform;"
-                                viewBox="0 0 16 16"
-                                width="16"
+                                viewBox="0 0 32 32"
+                                width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                                  d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z"
                                 />
                               </svg>
                             </button>
@@ -3317,15 +3317,15 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   aria-hidden="true"
                                   class="security--icon"
                                   focusable="false"
-                                  height="16"
+                                  height="20"
                                   preserveAspectRatio="xMidYMid meet"
                                   style="will-change: transform;"
-                                  viewBox="0 0 16 16"
-                                  width="16"
+                                  viewBox="0 0 32 32"
+                                  width="20"
                                   xmlns="http://www.w3.org/2000/svg"
                                 >
                                   <path
-                                    d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z"
                                   />
                                 </svg>
                               </button>
@@ -3528,15 +3528,15 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   aria-hidden="true"
                                   class="security--icon"
                                   focusable="false"
-                                  height="16"
+                                  height="20"
                                   preserveAspectRatio="xMidYMid meet"
                                   style="will-change: transform;"
-                                  viewBox="0 0 16 16"
-                                  width="16"
+                                  viewBox="0 0 32 32"
+                                  width="20"
                                   xmlns="http://www.w3.org/2000/svg"
                                 >
                                   <path
-                                    d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z"
                                   />
                                 </svg>
                               </button>
@@ -4131,7 +4131,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   viewBox="0 0 32 32"
                                   width={null}
                                 >
-                                  <ForwardRef(Close16)
+                                  <ForwardRef(Close20)
                                     aria-hidden="true"
                                     className="security--icon"
                                     focusable={false}
@@ -4146,38 +4146,38 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       aria-hidden="true"
                                       className="security--icon"
                                       focusable={false}
-                                      height={16}
+                                      height={20}
                                       preserveAspectRatio="xMidYMid meet"
                                       style={
                                         Object {
                                           "willChange": "transform",
                                         }
                                       }
-                                      viewBox="0 0 16 16"
-                                      width={16}
+                                      viewBox="0 0 32 32"
+                                      width={20}
                                       xmlns="http://www.w3.org/2000/svg"
                                     >
                                       <svg
                                         aria-hidden={true}
                                         className="security--icon"
                                         focusable={false}
-                                        height={16}
+                                        height={20}
                                         preserveAspectRatio="xMidYMid meet"
                                         style={
                                           Object {
                                             "willChange": "transform",
                                           }
                                         }
-                                        viewBox="0 0 16 16"
-                                        width={16}
+                                        viewBox="0 0 32 32"
+                                        width={20}
                                         xmlns="http://www.w3.org/2000/svg"
                                       >
                                         <path
-                                          d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                                          d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z"
                                         />
                                       </svg>
                                     </Icon>
-                                  </ForwardRef(Close16)>
+                                  </ForwardRef(Close20)>
                                 </Icon>
                               </button>
                             </IconButton>
