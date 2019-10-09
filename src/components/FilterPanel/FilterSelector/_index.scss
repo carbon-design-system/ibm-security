@@ -8,6 +8,6 @@
 
 @import 'mixins';
 
-@include component($name: filter-selector) {
+@include security--component($name: filter-selector) {
   @include filter-selector;
 }
