@@ -26,6 +26,7 @@
   display: flex;
   min-width: carbon--mini-units(36);
   flex-direction: column;
+  overflow: hidden;
 
   &-body {
     // `hidden` because the ScrollGradient will handle overflow:
@@ -48,6 +49,8 @@
       @include carbon--type-style(caption-01);
       color: $text-02;
       flex-grow: 1;
+      margin: 0;
+      padding: 0;
     }
   }
 
@@ -65,8 +68,6 @@
 
     &.#{$prefix}--btn--icon-only {
       justify-content: center;
-
-      // why is the carbon button not 48px width with centered icon?
       width: $footer--height;
       flex: 0 0 auto;
 
@@ -78,37 +79,64 @@
     }
   }
 
-  &-action__overlay {
-    position: absolute;
-    background-color: $overlay-01;
+  &-action-overlay {
     cursor: default;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: $ui-01;
     z-index: z($layer: overlay);
-    top: -($header--height + $body--height);
+    top: -($body--height - 1rem);
     bottom: $footer--height;
     right: 0;
     left: 0;
-    padding: $carbon--spacing-05;
+
+    &__content {
+      padding: $carbon--spacing-05;
+    }
+
+    &__close-button {
+      align-self: flex-end;
+
+      &,
+      &:hover,
+      &:focus {
+        color: $text-01;
+
+        .#{$prefix}--btn__icon path {
+          fill: $icon-01;
+        }
+      }
+
+      .#{$prefix}--btn__icon {
+        margin-left: 0;
+        height: 1.25rem;
+        width: 1.25rem;
+      }
+    }
 
     &__transition {
+      &--appear,
       &--enter {
+        transform: translate3d(0, $body--height, 0);
         opacity: 0;
 
         &--active {
-          transition-property: opacity;
-          transition-duration: $duration--moderate-01;
-          transition-delay: $duration--moderate-01 * 2;
-          transition-timing-function: carbon--motion(entrance, productive);
+          transform: translate3d(0, 0, 0);
+          transition: all $duration--moderate-02;
+          transition-timing-function: motion(entrance, expressive);
           opacity: 1;
         }
       }
 
       &--leave {
+        transform: translate3d(0, 0, 0);
         opacity: 1;
 
         &--active {
-          transition-property: opacity;
-          transition-duration: $duration--moderate-01;
-          transition-timing-function: carbon--motion(exit, productive);
+          transform: translate3d(0, $body--height, 0);
+          transition: all $duration--moderate-02;
+          transition-timing-function: motion(exit, expressive);
           opacity: 0;
         }
       }

@@ -8,6 +8,8 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { settings } from 'carbon-components';
 
+import Close20 from '@carbon/icons-react/lib/close/20';
+
 import Button from '../../Button';
 import Transition from '../../Transition';
 
@@ -65,12 +67,21 @@ class SummaryCardAction extends Component {
         {expandedContent && (
           <Transition
             appearTimeout={transitionSegment * 3}
-            className={`${namespace}__overlay`}
+            className={`${namespace}-overlay`}
             enterTimeout={transitionSegment * 3}
             leaveTimeout={transitionSegment * 3}
           >
             {this.state.isOpen && (
-              <div className={`${namespace}__overlay`}>{expandedContent}</div>
+              <div className={`${namespace}-overlay`}>
+                <Button
+                  className={`${namespace}-overlay__close-button`}
+                  renderIcon={Close20}
+                  iconDescription="close"
+                  onClick={this.toggleOpen}
+                  kind="ghost"
+                />
+                <div className={`${namespace}-overlay__content`}>{expandedContent}</div>
+              </div>
             )}
           </Transition>
         )}
