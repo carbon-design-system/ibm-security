@@ -4,19 +4,22 @@
  */
 
 import classnames from 'classnames';
-import { bool, string } from 'prop-types';
+import { bool, string, number } from 'prop-types';
 import React from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
 
 const namespace = getComponentNamespace('string-formatter');
 
-const StringFormatter = ({ className, truncate, value, width }) => (
+const StringFormatter = ({ className, lines, truncate, value, width }) => (
   <span
     className={classnames(namespace, className, {
       [`${namespace}--truncate`]: truncate,
     })}
-    style={{ maxWidth: width }}
+    style={{
+      maxWidth: width,
+      WebkitLineClamp: lines,
+    }}
     title={truncate && value}
   >
     {value}
@@ -26,6 +29,9 @@ const StringFormatter = ({ className, truncate, value, width }) => (
 StringFormatter.propTypes = {
   /** @type {string} Optional class name. */
   className: string,
+
+  /** @type {number} Optional class name. */
+  lines: number,
 
   /** @type {boolean} Whether or not the value should be truncated. */
   truncate: bool,
@@ -39,6 +45,7 @@ StringFormatter.propTypes = {
 
 StringFormatter.defaultProps = {
   className: '',
+  lines: 1,
   truncate: false,
   width: null,
 };
