@@ -19,8 +19,6 @@ import { styles } from '@carbon/type/lib';
 
 import { patterns } from '../../../.storybook';
 
-import theme from '../../globals/theme';
-
 import { label } from '../_mocks_';
 import { header, profile, toolbar } from '../Shell/_mocks_';
 import { labels } from './_mocks_';
@@ -34,6 +32,7 @@ import {
   PanelV2,
   PanelContent,
   Shell,
+  theme,
 } from '../..';
 
 const { interactive01, text04 } = theme;
