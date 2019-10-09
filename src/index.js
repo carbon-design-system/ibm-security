@@ -92,7 +92,6 @@ export SummaryCard, {
   SummaryCardAction,
   SummaryCardBody,
   SummaryCardContent,
-  SummaryCardDetails,
   SummaryCardFooter,
   SummaryCardHeader,
   SummaryCardSkeleton,

@@ -19,7 +19,6 @@ import {
   SummaryCardAction,
   SummaryCardBody,
   SummaryCardContent,
-  SummaryCardDetails,
   SummaryCardFooter,
   SummaryCardHeader,
   Tooltip,
@@ -28,68 +27,52 @@ import {
 storiesOf(patterns('SummaryCard'), module)
   .addDecorator(withA11y)
   .addDecorator(centered)
-  .add('with primary label', () => {
-    class SummaryCardWrapper extends React.Component {
-      state = { isOpen: false };
+  .add('with primary label', () => (
+    <div style={{ width: '320px' }}>
+      <SummaryCard>
+        <SummaryCardBody>
+          <SummaryCardHeader
+            title={text('SummaryCardHeader title (title)', 'my title')}
+            status={
+              <Tooltip showIcon iconDescription="Status">
+                Tooltip content
+              </Tooltip>
+            }
+          />
+          <SummaryCardContent>
+            {text(
+              'SummaryCardContent (children)',
+              'This is the content inside SummaryCardBody.'
+            )}
+          </SummaryCardContent>
+        </SummaryCardBody>
 
-      toggleOpen = () => {
-        this.setState({ isOpen: !this.state.isOpen });
-      };
-
-      render() {
-        return (
-          <div style={{ width: '320px' }}>
-            <SummaryCard>
-              <SummaryCardBody>
-                <SummaryCardHeader
-                  title={text('SummaryCardHeader title (title)', 'my title')}
-                  status={
-                    <Tooltip showIcon iconDescription="Status">
-                      Tooltip content
-                    </Tooltip>
-                  }
-                />
-                <SummaryCardContent>
-                  {text(
-                    'SummaryCardContent (children)',
-                    'This is the content inside SummaryCardBody.'
-                  )}
-                </SummaryCardContent>
-                <SummaryCardDetails
-                  ariaLabel="test-label"
-                  isOpen={this.state.isOpen}
-                >
-                  {text(
-                    'SummaryCardDetails content (children)',
-                    'This is the revealed content inside SummaryCardDetails, which overlays SummaryCardContent.'
-                  )}
-                </SummaryCardDetails>
-              </SummaryCardBody>
-
-              <SummaryCardFooter>
-                <SummaryCardAction id="test-label" onClick={this.toggleOpen}>
-                  {text(
-                    'SummaryCardAction content (children)',
-                    'Text inside a SummaryCardAction.'
-                  )}
-                </SummaryCardAction>
-                <SummaryCardAction
-                  iconDescription="Icon description"
-                  renderIcon={Folder20}
-                  hasIconOnly
-                  onClick={action('onClick')}
-                />
-                <SummaryCardAction
-                  iconDescription="Icon description"
-                  renderIcon={Folder20}
-                  hasIconOnly
-                  onClick={action('onClick')}
-                />
-              </SummaryCardFooter>
-            </SummaryCard>
-          </div>
-        );
-      }
-    }
-    return <SummaryCardWrapper />;
-  });
+        <SummaryCardFooter>
+          <SummaryCardAction
+            id="test-label"
+            expandedContent={text(
+              'SummaryCardDetails content (children)',
+              'This is the revealed content inside SummaryCardDetails, which overlays SummaryCardContent.'
+            )}
+          >
+            {text(
+              'SummaryCardAction content (children)',
+              'Text inside a SummaryCardAction.'
+            )}
+          </SummaryCardAction>
+          <SummaryCardAction
+            iconDescription="Icon description"
+            renderIcon={Folder20}
+            hasIconOnly
+            onClick={action('onClick')}
+          />
+          <SummaryCardAction
+            iconDescription="Icon description"
+            renderIcon={Folder20}
+            hasIconOnly
+            onClick={action('onClick')}
+          />
+        </SummaryCardFooter>
+      </SummaryCard>
+    </div>
+  ));

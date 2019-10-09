@@ -7,7 +7,7 @@
 @import '../../globals/index';
 
 @mixin summary-card {
-  height: carbon--mini-units(48);
+  height: auto;
   min-width: carbon--mini-units(36);
 
   &-body {
@@ -15,7 +15,6 @@
     height: carbon--mini-units(38);
     display: flex;
     flex-direction: column;
-    position: relative;
   }
 
   &-content {
@@ -42,19 +41,17 @@
     }
   }
 
-  &-details {
+  &-action__overlay {
     position: absolute;
     background-color: $overlay-01;
     cursor: default;
     z-index: z($layer: overlay);
-    top: 0;
-    bottom: 0;
+    top: -19rem;
+    bottom: 3rem;
     right: 0;
     left: 0;
     padding: $carbon--spacing-05;
-  }
 
-  &-details__overlay {
     &__transition {
       &--enter {
         opacity: 0;
