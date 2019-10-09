@@ -6,7 +6,6 @@
 import SummaryCard from './SummaryCard';
 import SummaryCardAction from './SummaryCardAction/SummaryCardAction';
 import SummaryCardBody from './SummaryCardBody/SummaryCardBody';
-import SummaryCardContent from './SummaryCardContent/SummaryCardContent';
 import SummaryCardFooter from './SummaryCardFooter/SummaryCardFooter';
 import SummaryCardHeader from './SummaryCardHeader/SummaryCardHeader';
 import SummaryCardSkeleton from './SummaryCardSkeleton/SummaryCardSkeleton';
@@ -16,7 +15,6 @@ export {
   SummaryCard,
   SummaryCardAction,
   SummaryCardBody,
-  SummaryCardContent,
   SummaryCardFooter,
   SummaryCardHeader,
   SummaryCardSkeleton,

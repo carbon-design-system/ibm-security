@@ -18,7 +18,6 @@ import {
   SummaryCard,
   SummaryCardAction,
   SummaryCardBody,
-  SummaryCardContent,
   SummaryCardFooter,
   SummaryCardHeader,
   Tooltip,
@@ -30,28 +29,25 @@ storiesOf(patterns('SummaryCard'), module)
   .add('with primary label', () => (
     <div style={{ width: '320px' }}>
       <SummaryCard>
+        <SummaryCardHeader
+          title={text('SummaryCardHeader title (title)', 'my title')}
+          status={
+            <Tooltip showIcon iconDescription="Status">
+              Tooltip content
+            </Tooltip>
+          }
+        />
         <SummaryCardBody>
-          <SummaryCardHeader
-            title={text('SummaryCardHeader title (title)', 'my title')}
-            status={
-              <Tooltip showIcon iconDescription="Status">
-                Tooltip content
-              </Tooltip>
-            }
-          />
-          <SummaryCardContent>
-            {text(
-              'SummaryCardContent (children)',
-              'This is the content inside SummaryCardBody.'
-            )}
-          </SummaryCardContent>
+          {text(
+            'SummaryCardBody (children)',
+            'This is the content inside SummaryCardBody.'
+          )}
         </SummaryCardBody>
-
         <SummaryCardFooter>
           <SummaryCardAction
             id="test-label"
             expandedContent={text(
-              'SummaryCardDetails content (children)',
+              'SummaryCardAction expanded content (expandedContent)',
               'This is the revealed content inside SummaryCardDetails, which overlays SummaryCardContent.'
             )}
           >
