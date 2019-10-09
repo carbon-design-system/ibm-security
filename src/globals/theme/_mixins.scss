@@ -83,7 +83,7 @@
 /// @access private
 /// @example scss
 ///   body {
-///     @include security--theme--cg100;
+///     @include security--theme--cg10__cg100;
 ///   }
 /// @output css
 ///   .security--theme--cg10 body {
@@ -91,7 +91,7 @@
 ///     --interactive-02: #697077;
 ///     --interactive-03: #ffffff;
 ///   }
-@mixin security--theme--cg100 {
+@mixin security--theme--cg10__cg100 {
   #{get-component-namespace($component-name: theme--cg10)} & {
     @include security--generate-css-custom-properties(
       $theme:

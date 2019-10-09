@@ -146,7 +146,7 @@ $toolbar__panel__transition__timing-function: $timing-function;
 
   &,
   &__panel {
-    @include security--theme--cg100;
+    @include security--theme--cg10__cg100;
   }
 
   &__group {
