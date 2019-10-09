@@ -7,7 +7,7 @@ import { action } from '@storybook/addon-actions';
 import { withA11y } from '@storybook/addon-a11y';
 import centered from '@storybook/addon-centered/react';
 import { storiesOf } from '@storybook/react';
-import { boolean, text } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
 
 import Folder20 from '@carbon/icons-react/lib/folder/20';
 
@@ -22,7 +22,6 @@ import {
   SummaryCardDetails,
   SummaryCardFooter,
   SummaryCardHeader,
-  SummaryCardSkeleton,
   Tooltip,
 } from '../..';
 
@@ -78,11 +77,13 @@ storiesOf(patterns('SummaryCard'), module)
                   iconDescription="Icon description"
                   renderIcon={Folder20}
                   hasIconOnly
+                  onClick={action('onClick')}
                 />
                 <SummaryCardAction
                   iconDescription="Icon description"
                   renderIcon={Folder20}
                   hasIconOnly
+                  onClick={action('onClick')}
                 />
               </SummaryCardFooter>
             </SummaryCard>

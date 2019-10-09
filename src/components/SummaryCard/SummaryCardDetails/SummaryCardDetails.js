@@ -27,7 +27,6 @@ const SummaryCardDetails = ({ ariaLabel, children, className, isOpen }) => (
         aria-labelledby={ariaLabel}
         className={classnames(namespace, className, `${namespace}__overlay`)}
         role="dialog"
-        tabIndex={0}
       >
         {children}
       </div>
