@@ -34,7 +34,7 @@ const TableToolbarDownload = ({ headers, rows, title, filename }) => {
   }
   options.filename = filename;
 
-  options.headers = headers.map(head => head.header);
+  options.headers = headers.map(({ header }) => header);
 
   const csvExporter = new ExportToCsv(options);
 
