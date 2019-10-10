@@ -37,6 +37,7 @@ export {
   TableToolbarContent,
   TableToolbarSearch,
   TableToolbarMenu,
+  TableToolbarDownload,
 } from './components/DataTable';
 
 export DelimitedList from './components/DelimitedList';
