@@ -30,37 +30,26 @@ class SummaryCardAction extends Component {
 
   render() {
     const {
-      as,
       children,
       className,
-      disabled,
+      closeButtonIconDescription,
       expandedContent,
-      hasIconOnly,
-      href,
-      iconDescription,
       onClick,
-      renderIcon,
+      ...rest
     } = this.props;
 
     return (
       <Fragment>
         <Button
+          {...rest}
           aria-expanded={expandedContent ? this.state.isOpen : undefined}
-          as={as}
           className={classnames(
             namespace,
             className,
             `${prefix}--text-truncate--end`
           )}
-          disabled={disabled}
-          hasIconOnly={hasIconOnly}
-          href={href}
-          iconDescription={iconDescription}
           kind="ghost"
-          tooltipPosition="bottom"
-          tooltipAlignment="center"
           onClick={expandedContent ? this.toggleOpen : onClick}
-          renderIcon={renderIcon}
         >
           <span>{children}</span>
         </Button>
@@ -76,11 +65,13 @@ class SummaryCardAction extends Component {
                 <Button
                   className={`${namespace}-overlay__close-button`}
                   renderIcon={Close20}
-                  iconDescription="close"
+                  iconDescription={closeButtonIconDescription}
                   onClick={this.toggleOpen}
                   kind="ghost"
                 />
-                <div className={`${namespace}-overlay__content`}>{expandedContent}</div>
+                <div className={`${namespace}-overlay__content`}>
+                  {expandedContent}
+                </div>
               </div>
             )}
           </Transition>
@@ -91,54 +82,35 @@ class SummaryCardAction extends Component {
 }
 
 SummaryCardAction.propTypes = {
-  /** @type {Function|string} Specify how the button itself should be rendered. Make sure to apply all props to the root node and render children appropriately. */
-  as: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-
   /** @type {object} Children of the actions list. */
   children: PropTypes.node,
 
   /** @type {string} Extra class names to add. */
   className: PropTypes.string,
 
-  /** @type {boolean} Whether or not the action is disabled. */
-  disabled: PropTypes.bool,
-
-  /** @type {node} Provide content to show if action is clicked. */
-  expandedContent: PropTypes.node,
-
-  /** @type {boolean} Specify if the button is an icon-only button. */
-  hasIconOnly: PropTypes.bool,
-
-  /** @type {string} Optionally specify an href for your Button to become an <a> element. */
-  href: PropTypes.string,
-
-  /** @type {string} If specifying the `renderIcon` prop, provide a description for that icon that can be read by screen readers. */
-  iconDescription: props => {
-    if (props.renderIcon && !props.children && !props.iconDescription) {
+  /** @type {string} Provide the close button with an icon description for assistive tech. */
+  closeButtonIconDescription: props => {
+    if (props.expandedContent && !props.closeButtonIconDescription) {
       return new Error(
-        'renderIcon property specified without also providing an iconDescription property.'
+        'A `closeButtonIconDescription` should be provided if using `expandedContent`.'
       );
     }
     return undefined;
   },
 
-  onClick: PropTypes.func,
+  /** @type {node} Provide content to show if action is clicked. */
+  expandedContent: PropTypes.node,
 
-  /** @type {Function|object} Optional prop to allow overriding the icon rendering. Can be a React component class. */
-  renderIcon: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+  /** @type {Function} Click handler for the action button. */
+  onClick: PropTypes.func,
 };
 
 SummaryCardAction.defaultProps = {
-  as: undefined,
   children: null,
   className: '',
-  disabled: false,
+  closeButtonIconDescription: 'close',
   expandedContent: undefined,
-  hasIconOnly: false,
-  href: undefined,
-  iconDescription: undefined,
   onClick: () => {},
-  renderIcon: undefined,
 };
 
 export default SummaryCardAction;

@@ -29,6 +29,8 @@
   overflow: hidden;
 
   &-body {
+    @include carbon--type-style($name: body-long-01);
+
     // `hidden` because the ScrollGradient will handle overflow:
     overflow: hidden;
 
@@ -71,6 +73,17 @@
       width: $footer--height;
       flex: 0 0 auto;
 
+      &,
+      &:hover,
+      &:focus,
+      &:active {
+        color: $text-01;
+
+        .#{$prefix}--btn__icon path {
+          fill: $icon-01;
+        }
+      }
+
       // TODO -- https://github.com/carbon-design-system/carbon/issues/4245
       // Carbon has a `border: 0` reset applied with too high of specificity.
       &.#{$prefix}--btn--icon-only:focus {
@@ -86,12 +99,13 @@
     flex-direction: column;
     background-color: $ui-01;
     z-index: z($layer: overlay);
-    top: -($body--height - 1rem);
+    top: -($body--height - $carbon--spacing-05);
     bottom: $footer--height;
     right: 0;
     left: 0;
 
     &__content {
+      @include carbon--type-style($name: body-long-01);
       padding: $carbon--spacing-05;
     }
 
@@ -100,7 +114,8 @@
 
       &,
       &:hover,
-      &:focus {
+      &:focus,
+      &:active {
         color: $text-01;
 
         .#{$prefix}--btn__icon path {
@@ -110,8 +125,8 @@
 
       .#{$prefix}--btn__icon {
         margin-left: 0;
-        height: 1.25rem;
-        width: 1.25rem;
+        height: carbon--mini-units(2.5);
+        width: carbon--mini-units(2.5);
       }
     }
 
