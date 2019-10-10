@@ -30,7 +30,7 @@ StringFormatter.propTypes = {
   /** @type {string} Optional class name. */
   className: string,
 
-  /** @type {number} Optional class name. */
+  /** @type {number} Number of lines to clamp value. */
   lines: number,
 
   /** @type {boolean} Whether or not the value should be truncated. */
