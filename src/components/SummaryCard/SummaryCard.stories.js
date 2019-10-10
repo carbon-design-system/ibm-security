@@ -19,6 +19,7 @@ import {
   SummaryCardBody,
   SummaryCardFooter,
   SummaryCardHeader,
+  SummaryCardSkeleton,
   Tooltip,
 } from '../..';
 
@@ -27,7 +28,7 @@ storiesOf(patterns('SummaryCard'), module)
   .add('with primary label', () => (
     <div className="bx--grid bx--grid--full-width">
       <div className="bx--row">
-        <div className="bx--col-sm-1 bx--col-md-2 bx--col-lg-">
+        <div className="bx--col-sm-1 bx--col-md-2 bx--col-lg-4">
           <SummaryCard>
             <SummaryCardHeader
               title={text('SummaryCardHeader title (title)', 'my title')}
@@ -74,6 +75,15 @@ storiesOf(patterns('SummaryCard'), module)
               />
             </SummaryCardFooter>
           </SummaryCard>
+        </div>
+      </div>
+    </div>
+  ))
+  .add('with skeleton', () => (
+    <div className="bx--grid bx--grid--full-width">
+      <div className="bx--row">
+        <div className="bx--col-sm-1 bx--col-md-2 bx--col-lg-4">
+          <SummaryCardSkeleton />
         </div>
       </div>
     </div>
