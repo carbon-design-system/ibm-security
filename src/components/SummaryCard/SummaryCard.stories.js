@@ -54,7 +54,7 @@ storiesOf(patterns('SummaryCard'), module)
               >
                 {text(
                   'SummaryCardAction content (children)',
-                  'Text inside a SummaryCardAction, which will be truncated.'
+                  'This is text inside a SummaryCardAction'
                 )}
               </SummaryCardAction>
               <SummaryCardAction

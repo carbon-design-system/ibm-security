@@ -9,7 +9,7 @@ import classnames from 'classnames';
 
 import { getComponentNamespace } from '../../globals/namespace';
 
-export const namespace = getComponentNamespace('summary-card');
+const namespace = getComponentNamespace('summary-card');
 
 const SummaryCard = ({ children, className }) => (
   <section className={classnames(namespace, className)}>{children}</section>

@@ -63,10 +63,11 @@
   }
 
   &-action {
+    @include text-overflow;
+    flex: 1;
+
     // Required for truncation:
     display: inline-block;
-
-    flex: 1;
 
     &.#{$prefix}--btn--icon-only {
       justify-content: center;
@@ -104,13 +105,20 @@
     right: 0;
     left: 0;
 
+    &__header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__title,
     &__content {
       @include carbon--type-style($name: body-long-01);
+      margin: 0;
       padding: $carbon--spacing-05;
     }
 
     &__close-button {
-      align-self: flex-end;
+      align-self: flex-start;
 
       &,
       &:hover,

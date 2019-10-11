@@ -6,7 +6,6 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { settings } from 'carbon-components';
 
 import Close20 from '@carbon/icons-react/lib/close/20';
 
@@ -14,8 +13,6 @@ import Button from '../../Button';
 import Transition from '../../Transition';
 
 import { getComponentNamespace } from '../../../globals/namespace/index';
-
-const { prefix } = settings;
 
 const namespace = getComponentNamespace('summary-card-action');
 
@@ -38,21 +35,23 @@ class SummaryCardAction extends Component {
       ...rest
     } = this.props;
 
+    const { isOpen } = this.state;
+
     return (
       <Fragment>
         <Button
           {...rest}
-          aria-expanded={expandedContent ? this.state.isOpen : undefined}
-          className={classnames(
-            namespace,
-            className,
-            `${prefix}--text-truncate--end`
-          )}
+          aria-expanded={expandedContent ? isOpen : undefined}
+          className={classnames(namespace, className)}
           kind="ghost"
-          onClick={expandedContent ? event => {
-            onClick(event);
-            this.toggleOpen();
-           } : onClick}
+          onClick={
+            expandedContent
+              ? event => {
+                  onClick(event);
+                  this.toggleOpen();
+                }
+              : onClick
+          }
         >
           <span>{children}</span>
         </Button>
@@ -63,15 +62,22 @@ class SummaryCardAction extends Component {
             enterTimeout={transitionSegment * 3}
             leaveTimeout={transitionSegment * 3}
           >
-            {this.state.isOpen && (
+            {isOpen && (
               <div className={`${namespace}-overlay`}>
-                <Button
-                  className={`${namespace}-overlay__close-button`}
-                  renderIcon={Close20}
-                  iconDescription={closeButtonIconDescription}
-                  onClick={this.toggleOpen}
-                  kind="ghost"
-                />
+                <div className={`${namespace}-overlay__header`}>
+                  {typeof children === 'string' && (
+                    <h3 className={`${namespace}-overlay__title`}>
+                      {children}
+                    </h3>
+                  )}
+                  <Button
+                    className={`${namespace}-overlay__close-button`}
+                    renderIcon={Close20}
+                    iconDescription={closeButtonIconDescription}
+                    onClick={this.toggleOpen}
+                    kind="ghost"
+                  />
+                </div>
                 <div className={`${namespace}-overlay__content`}>
                   {expandedContent}
                 </div>
