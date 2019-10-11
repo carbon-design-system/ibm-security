@@ -49,7 +49,10 @@ class SummaryCardAction extends Component {
             `${prefix}--text-truncate--end`
           )}
           kind="ghost"
-          onClick={expandedContent ? this.toggleOpen : onClick}
+          onClick={expandedContent ? event => {
+            onClick(event);
+            this.toggleOpen();
+           } : onClick}
         >
           <span>{children}</span>
         </Button>
