@@ -31,6 +31,7 @@ class SummaryCardAction extends Component {
       className,
       closeButtonIconDescription,
       expandedContent,
+      hasIconOnly,
       onClick,
       ...rest
     } = this.props;
@@ -42,7 +43,10 @@ class SummaryCardAction extends Component {
         <Button
           {...rest}
           aria-expanded={expandedContent ? isOpen : undefined}
-          className={classnames(namespace, className)}
+          className={classnames(namespace, className, {
+            [`${namespace}--icon-only`]: hasIconOnly,
+          })}
+          hasIconOnly={hasIconOnly}
           kind="ghost"
           onClick={
             expandedContent
@@ -110,6 +114,9 @@ SummaryCardAction.propTypes = {
   /** @type {node} Provide content to show if action is clicked. */
   expandedContent: PropTypes.node,
 
+  /** @type {bool} Whether or not the action has an icon only. */
+  hasIconOnly: PropTypes.bool,
+
   /** @type {Function} Click handler for the action button. */
   onClick: PropTypes.func,
 };
@@ -119,6 +126,7 @@ SummaryCardAction.defaultProps = {
   className: '',
   closeButtonIconDescription: 'close',
   expandedContent: undefined,
+  hasIconOnly: false,
   onClick: () => {},
 };
 

@@ -69,7 +69,9 @@
     // Required for truncation:
     display: inline-block;
 
-    &.#{$prefix}--btn--icon-only {
+    &--icon-only {
+      // TODO -- https://github.com/carbon-design-system/carbon/issues/4245
+      // Required until highly specific reset from Carbon is fixed.
       justify-content: center;
       width: $footer--height;
       flex: 0 0 auto;
@@ -86,7 +88,7 @@
       }
 
       // TODO -- https://github.com/carbon-design-system/carbon/issues/4245
-      // Carbon has a `border: 0` reset applied with too high of specificity.
+      // Required until highly specific reset from Carbon is fixed.
       &.#{$prefix}--btn--icon-only:focus {
         border: 3px solid $focus;
       }
