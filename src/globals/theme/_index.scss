@@ -49,6 +49,7 @@ $theme: dark;
 /// @param {Color} $dark The dark color to use.
 /// @returns {Color} The determined theme color to use.
 /// @access private
+/// @deprecated
 @function theme($light, $dark) {
   @warn deprecate($actual: 'theme', $expected: '@carbon/themes');
 
