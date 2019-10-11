@@ -22,7 +22,7 @@ const TableToolbarDownload = ({ headers, rows, title, filename }) => {
   const csvRows = rows.map(row => {
     const newRow = {};
     headers.forEach(({ key }) => {
-      newRow[key] = row[key];
+      if (row[key]) newRow[key] = row[key];
     });
     return newRow;
   });

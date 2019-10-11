@@ -100,7 +100,7 @@ storiesOf(components('DataTable'), module)
     {
       info: {
         text: `
-        DataTable with action menu and filtering.
+        DataTable with action menu, filtering, and CSV exporting.
         You can find more detailed information surrounding usage of this component
         at the following url: ${readmeURL}
       `,
