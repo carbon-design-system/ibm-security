@@ -23,7 +23,7 @@ If your project is using Sass, you can include the corresponding default theme b
 @import '@carbon/ibm-security/scss/globals/theme/index';
 ```
 
-By default, the gray 100 theme will be initialized. If you would like to include another theme, you can do so by applying the following classes. For example:
+By default, the gray 100 theme will be initialized. If you would like to include another theme, you can do so by applying theming classes. For example:
 
 - Cool gray 10 - `security--theme--cg10`
 - Gray 100 - `security--theme--g100`
