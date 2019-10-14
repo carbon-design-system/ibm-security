@@ -6,8 +6,9 @@
 import Launch16 from '@carbon/icons-react/lib/launch/16';
 
 import classnames from 'classnames';
-import { bool, func, node, number, string } from 'prop-types';
+import { bool, elementType, func, node, number, string } from 'prop-types';
 import React, { Component } from 'react';
+import NavItemLink from '../NavItemLink';
 
 import Icon from '../../Icon';
 
@@ -25,7 +26,9 @@ export default class NavItem extends Component {
     className: '',
     current: null,
     disabled: false,
+    element: 'a',
     handleItemSelect: null,
+    href: undefined,
     id: namespace,
     label: '',
     link: true,
@@ -50,8 +53,14 @@ export default class NavItem extends Component {
     /** @type {bool} Whether the item is disabled. */
     disabled: bool,
 
+    /** @type {elementType} The base element to use to build the link. Defaults to `a`, can also accept alternative tag names or custom components like `Link` from `react-router`. */
+    element: elementType,
+
     /** @type {Function} Click handler of an item. */
     handleItemSelect: func,
+
+    /** @type {string} The href of the nav item. */
+    href: string,
 
     /** @type {string} Identifier. */
     id: string,
@@ -83,6 +92,7 @@ export default class NavItem extends Component {
   render() {
     const {
       className,
+      element,
       tabIndex,
       children,
       disabled,
@@ -124,16 +134,16 @@ export default class NavItem extends Component {
         onKeyPress={event => handleDisabled(onClick(event, href))}
         role="menuitem"
         tabIndex={handleDisabled(children ? -1 : tabIndex)}
-        {...other}
       >
         {link ? (
-          <a
+          <NavItemLink
             id={id}
             className={classnames(linkClassName, {
               [`${namespace}__link--external`]: externalLink,
-              [`${namespace}__link--external`]: externalLink,
             })}
+            element={element}
             href={href}
+            {...other}
             {...externalLinkProps}
           >
             {children}
@@ -143,7 +153,7 @@ export default class NavItem extends Component {
                 renderIcon={Launch16}
               />
             )}
-          </a>
+          </NavItemLink>
         ) : (
           <div
             id={id}
