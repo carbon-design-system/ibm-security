@@ -68,6 +68,7 @@ const props = {
   ) => {
     return {
       className: 'some-class',
+      loading: boolean('Button loading state (loading)', false),
       kind: select('Button kind (kind)', kinds, 'primary'),
       disabled: boolean('Disabled (disabled)', false),
       size: select('Button size (size)', sizes, 'default'),
