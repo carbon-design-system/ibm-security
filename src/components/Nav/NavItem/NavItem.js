@@ -96,6 +96,7 @@ export default class NavItem extends Component {
       tabIndex,
       children,
       disabled,
+      label,
       onClick,
       onKeyPress,
       href,
@@ -130,6 +131,7 @@ export default class NavItem extends Component {
     return (
       <li
         className={classNames}
+        label={label}
         onClick={event => handleDisabled(onClick(event, href))}
         onKeyPress={event => handleDisabled(onClick(event, href))}
         role="menuitem"
