@@ -7,9 +7,6 @@ exports[`HeaderNotification Rendering renders correctly 1`] = `
 >
   <a
     className="security--header__notification__content"
-    onBlur={[Function]}
-    role="button"
-    tabIndex="0"
   >
     <span
       className="security--header__notification__details"
@@ -24,33 +21,15 @@ exports[`HeaderNotification Rendering renders correctly 1`] = `
       </time>
        via Application 3
     </span>
-    <Truncate
+    <StringFormatter
+      aria-label="A new request requires approval."
       className="security--header__notification__description"
-      ellipsis={
-        <div
-          className="security--header__notification__tooltip"
-          onFocus={[Function]}
-          onMouseOver={[Function]}
-          role="button"
-          tabIndex="0"
-        >
-          ...
-          <TooltipDefinition
-            align="end"
-            className="security--header__notification__tooltip--body"
-            direction="top"
-            tooltipText="A new request requires approval."
-          >
-            
-          </TooltipDefinition>
-        </div>
-      }
       lines={2}
-      trimWhitespace={true}
-      width={170}
-    >
-      A new request requires approval.
-    </Truncate>
+      title="A new request requires approval."
+      truncate={true}
+      value="A new request requires approval."
+      width={null}
+    />
   </a>
   <div
     className="security--header__notification__wrapper"
@@ -58,7 +37,6 @@ exports[`HeaderNotification Rendering renders correctly 1`] = `
     <button
       aria-label="Clear"
       className="security--header__notification__button"
-      onBlur={[Function]}
       onClick={[MockFunction]}
     >
       <Icon
