@@ -115,6 +115,7 @@ exports[`FilterSubcategory Events collapses expanded truncated list of filters 1
     iconDescription="View more"
     kind="ghost"
     largeText={null}
+    loading={false}
     onClick={[Function]}
     renderIcon={
       Object {
@@ -505,6 +506,7 @@ exports[`FilterSubcategory Events expands truncated list of filters 1`] = `
     iconDescription="View less"
     kind="ghost"
     largeText={null}
+    loading={false}
     onClick={[Function]}
     renderIcon={
       Object {
@@ -995,6 +997,7 @@ exports[`FilterSubcategory Rendering truncates long list of filters 1`] = `
     iconDescription="View more"
     kind="ghost"
     largeText={null}
+    loading={false}
     onClick={[Function]}
     renderIcon={
       Object {
