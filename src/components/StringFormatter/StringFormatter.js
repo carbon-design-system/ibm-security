@@ -11,7 +11,14 @@ import { getComponentNamespace } from '../../globals/namespace';
 
 const namespace = getComponentNamespace('string-formatter');
 
-const StringFormatter = ({ className, lines, truncate, value, width }) => (
+const StringFormatter = ({
+  className,
+  lines,
+  truncate,
+  value,
+  width,
+  other,
+}) => (
   <span
     className={classnames(namespace, className, {
       [`${namespace}--truncate`]: truncate,
@@ -21,6 +28,7 @@ const StringFormatter = ({ className, lines, truncate, value, width }) => (
       WebkitLineClamp: lines,
     }}
     title={truncate && value}
+    {...other}
   >
     {value}
   </span>
