@@ -17,7 +17,7 @@ const StringFormatter = ({
   truncate,
   value,
   width,
-  other,
+  ...other
 }) => (
   <span
     className={classnames(namespace, className, {
