@@ -136,7 +136,7 @@ exports[`Nav Rendering renders correctly 1`] = `
                 role="menuitem"
                 tabIndex={-1}
               >
-                <Link
+                <ForwardRef(NavItemLink)
                   className="security--nav__list__item__link"
                   element="a"
                   href="#0"
@@ -149,7 +149,7 @@ exports[`Nav Rendering renders correctly 1`] = `
                   >
                     Label
                   </a>
-                </Link>
+                </ForwardRef(NavItemLink)>
               </li>
             </NavItem>
           </ul>
@@ -272,7 +272,7 @@ exports[`Nav Rendering renders correctly 1`] = `
                 role="menuitem"
                 tabIndex={-1}
               >
-                <Link
+                <ForwardRef(NavItemLink)
                   className="security--nav__list__item__link"
                   element="a"
                   href="#1"
@@ -285,7 +285,7 @@ exports[`Nav Rendering renders correctly 1`] = `
                   >
                     Label
                   </a>
-                </Link>
+                </ForwardRef(NavItemLink)>
               </li>
             </NavItem>
           </ul>
@@ -315,7 +315,7 @@ exports[`Nav Rendering renders correctly 1`] = `
           role="menuitem"
           tabIndex={-1}
         >
-          <Link
+          <ForwardRef(NavItemLink)
             className="security--nav__list__item__link"
             element="a"
             href="#2"
@@ -328,7 +328,7 @@ exports[`Nav Rendering renders correctly 1`] = `
             >
               Label
             </a>
-          </Link>
+          </ForwardRef(NavItemLink)>
         </li>
       </NavItem>
     </ul>
