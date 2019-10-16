@@ -88,7 +88,7 @@ To add all of the components' processed and minified styles, reference `@carbon/
 - [Guidelines for making contributions](.github/CONTRIBUTING.md) to this repo
 - [Migration guides](docs/migration)
   - [`v1` to `v2`](docs/migration/migrate-to-2.x.md)
-- [Themes](docs/themes.md)
+- [Themes](docs/themes)
 
 ### Carbon Developer Essentials
 

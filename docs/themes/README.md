@@ -10,10 +10,8 @@ By default, a set of color tokens are provided that
 are predefined for a specific theme. Currently, we offer the following color
 themes:
 
-- Cool gray 10
-- Gray 100
-
-You can preview all of the token values for the gray 100 theme on the [Carbon Design System website](https://www.carbondesignsystem.com/guidelines/color/usage).
+- [Cool gray 10](themes.md)
+- [Gray 100](themes.md)
 
 ### Sass
 
@@ -22,6 +20,8 @@ If your project is using Sass, you can include the corresponding default theme b
 ```scss
 @import '@carbon/ibm-security/scss/globals/theme/index';
 ```
+
+### CSS
 
 By default, the gray 100 theme will be initialized. If you would like to include another theme, you can do so by applying theming classes. For example:
 

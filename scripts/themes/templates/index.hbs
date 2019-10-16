@@ -1,0 +1,7 @@
+## Themes
+
+| Token | {{#each themes}}{{ this }} | {{/each}}
+| ----- | {{#each themes}} --- | {{/each}}
+{{#each tokens}}
+| {{ @key }} | {{#each this}}`{{ this }}` | {{/each}}
+{{/each}}
