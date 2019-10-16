@@ -33,6 +33,7 @@
     "lint:js:precommit": "eslint --ignore-path .gitignore --fix",
     "lint:scss": "yarn lint:scss:precommit '**/*.scss'",
     "lint:scss:precommit": "stylelint --fix --ignore-path .gitignore",
+    "lint-staged": "lint-staged",
     "semantic-release": "semantic-release",
     "start": "run-s build:pre:grid && start-storybook -p 3000 -s public",
     "test": "jest spec -ci",

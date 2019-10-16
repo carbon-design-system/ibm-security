@@ -3,6 +3,9 @@
  * @copyright IBM Security 2019
  */
 
+const { colors } = require('@carbon/colors');
+const { formatTokenName } = require('@carbon/themes');
+
 const { readFileSync, writeFileSync } = require('fs');
 const { compile } = require('handlebars');
 const { resolve } = require('path');
@@ -25,7 +28,19 @@ themes.forEach(theme => {
   const { value } = themeMap[theme];
 
   Object.keys(value).forEach(token => {
-    tokens[token].push(value[token].value.hex);
+    let { hex: color } = value[token].value;
+
+    Object.keys(colors).forEach(swatch => {
+      const colorGrades = colors[swatch];
+
+      Object.keys(colorGrades).forEach(colorGrade => {
+        if (colorGrades[colorGrade] === color) {
+          color = formatTokenName(`${swatch}${colorGrade}`);
+        }
+      });
+    });
+
+    tokens[token].push(color);
   });
 });
 
