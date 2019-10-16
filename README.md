@@ -63,7 +63,7 @@ import { ComponentName } from '@carbon/ibm-security';
 const { ComponentName } = require('@carbon/ibm-security');
 ```
 
-[Babel](https://babeljs.io) builds both of these variants and imports `carbon-components-react` in the respective version using a [plugin](https://github.com/carbon-design-system/ibm-security/tree/master/babel/carbon-components-react-import.babel-plugin.js), so that no further transpilation is required.
+[Babel](https://babeljs.io) builds both of these variants and imports `carbon-components-react` in the respective version using a [plugin](https://github.com/carbon-design-system/ibm-security/blob/dev/babel/carbon-imports.babel-plugin.js), so that no further transpilation is required.
 
 ### SCSS
 
