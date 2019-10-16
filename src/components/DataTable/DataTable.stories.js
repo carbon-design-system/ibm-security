@@ -100,8 +100,9 @@ storiesOf(components('DataTable'), module)
     {
       info: {
         text: `
-        DataTable with action menu, filtering, and CSV exporting.
-        You can find more detailed information surrounding usage of this component
+        DataTable with action menu, filtering, and CSV exporting. Note, the TableToolbarDownload 
+        component expects the same rows and header props as provided to the parent Datatable component.
+        You can find more detailed information surrounding usage of the Datatable component
         at the following url: ${readmeURL}
       `,
       },
