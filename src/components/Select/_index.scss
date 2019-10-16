@@ -5,3 +5,9 @@
 ////
 
 @import 'carbon-components/scss/components/select/select';
+
+@include export-namespace($name: select) {
+  .#{$prefix}--select-input {
+    text-rendering: auto;
+  }
+}

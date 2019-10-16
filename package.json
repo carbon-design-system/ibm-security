@@ -1,6 +1,6 @@
 {
   "name": "@carbon/ibm-security",
-  "version": "1.4.1-prerelease.6",
+  "version": "1.5.1-prerelease.2",
   "description": "Carbon for IBM Security",
   "license": "Apache-2.0",
   "main": "lib/index.js",
