@@ -1,59 +1,48 @@
 /**
- * Copyright IBM Corp. 2016, 2018
- *
- * This source code is licensed under the Apache-2.0 license found in the
- * LICENSE file in the root directory of this source tree.
-/**
  * @file Unordered list stories.
  * @copyright IBM Security 2019
  */
 
-import React from 'react';
+import { withA11y } from '@storybook/addon-a11y';
+import centered from '@storybook/addon-centered/react';
 import { storiesOf } from '@storybook/react';
+
+import React from 'react';
 
 import { components } from '../../../.storybook';
 
-import ListItem from '../ListItem';
 import { ListItem, UnorderedList } from '../..';
 
 storiesOf(components('UnorderedList'), module)
+  .addDecorator(withA11y)
+  .addDecorator(centered)
   .add(
-    'default',
+    'Default',
     () => (
       <UnorderedList>
-        <ListItem>Unordered List level 1</ListItem>
-        <ListItem>Unordered List level 1</ListItem>
-        <ListItem>Unordered List level 1</ListItem>
+        <ListItem>UnorderedList level 1</ListItem>
+        <ListItem>UnorderedList level 1</ListItem>
       </UnorderedList>
     ),
     {
-      info: {
-        text:
-          `Lists consist of related content grouped together and organized 
-          vertically. Unordered lists are used to present content of equal 
-          status or value.`,
-      },
+      info:
+        'Lists consist of related content grouped together and organized vertically. Unordered lists are used to present content of equal status or value.',
     }
   )
   .add(
-    'nested',
+    'Nested',
     () => (
       <UnorderedList>
-        <ListItem>Unordered List level 1</ListItem>
+        <ListItem>UnorderedList level 1</ListItem>
         <UnorderedList nested>
-          <ListItem>Unordered List level 2</ListItem>
-          <ListItem>Unordered List level 2</ListItem>
+          <ListItem>UnorderedList level 2</ListItem>
+          <ListItem>UnorderedList level 2</ListItem>
         </UnorderedList>
-        <ListItem>Unordered List level 1</ListItem>
-        <ListItem>Unordered List level 1</ListItem>
+        <ListItem>UnorderedList level 1</ListItem>
       </UnorderedList>
     ),
     {
-      info: {
-        text:
-          `Lists consist of related content grouped together and organized 
-          vertically. Unordered lists are used to present content of equal 
-          status or value.`,
-      },
+      info:
+        'Lists consist of related content grouped together and organized vertically. Unordered lists are used to present content of equal status or value.',
     }
   );
