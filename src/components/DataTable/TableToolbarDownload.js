@@ -18,7 +18,7 @@ const options = {
   useBom: true,
 };
 
-const TableToolbarDownload = ({ headers, rows, title, filename }) => {
+const TableToolbarDownload = ({ headers, rows, title, filename, label }) => {
   const csvRows = rows.map(row => {
     const newRow = {};
     headers.forEach(({ key }) => {
@@ -41,6 +41,7 @@ const TableToolbarDownload = ({ headers, rows, title, filename }) => {
     <IconButton
       size="lg"
       renderIcon={Download16}
+      label={label}
       onClick={() => {
         csvExporter.generateCsv(csvRows);
       }}
@@ -81,11 +82,15 @@ TableToolbarDownload.propTypes = {
 
   /** @type {string} the filename used for the generated CSV file */
   filename: PropTypes.string,
+
+  /** @type {string} the aria-label for the button */
+  label: PropTypes.string,
 };
 
 TableToolbarDownload.defaultProps = {
   title: '',
   filename: 'DataTable',
+  label: 'Download',
 };
 
 export default TableToolbarDownload;
