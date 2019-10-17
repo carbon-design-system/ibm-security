@@ -8,22 +8,20 @@ import centered from '@storybook/addon-centered/react';
 import { array, boolean, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
+import { settings } from 'carbon-components';
 import React from 'react';
 
-import { settings } from 'carbon-components';
 import { components } from '../../../.storybook';
 
 import { DelimitedList } from '../..';
 
 import props from './_mocks_';
 
-const { prefix } = settings;
-
 const { delimiter, truncate } = DelimitedList.defaultProps;
 
 const storyProps = () => ({
-  delimiter: text('Delimiter (`delimiter`)', delimiter),
   items: array('Items (`items`)', props.items),
+  delimiter: text('Delimiter (`delimiter`)', delimiter),
   truncate: boolean('Truncate (`truncate`)', truncate),
 });
 
@@ -33,13 +31,10 @@ storiesOf(components('DelimitedList'), module)
   .add(
     'Default',
     () => (
-      <div className={`${prefix}--grid`}>
-        <div className={`${prefix}--row`}>
-          <div className={`${prefix}--col-sm-2`}>
-            <DelimitedList {...storyProps()} />
-          </div>
-        </div>
-      </div>
+      <DelimitedList
+        className={`${settings.prefix}--col-sm-2`}
+        {...storyProps()}
+      />
     ),
     {
       info:
