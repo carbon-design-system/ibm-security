@@ -63,8 +63,6 @@
 
     &--incomplete #{$step}__icon {
       fill: $disabled-03;
-      padding-top: $carbon--spacing-03;
-      padding-bottom: $carbon--spacing-03;
     }
 
     &__icon-wrapper {

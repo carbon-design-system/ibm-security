@@ -3,7 +3,7 @@
  * @copyright IBM Security 2019
  */
 
-import Close16 from '@carbon/icons-react/lib/close/16';
+import Close20 from '@carbon/icons-react/lib/close/20';
 import { g100 } from '@carbon/themes';
 
 import classnames from 'classnames';
@@ -146,7 +146,7 @@ class TearsheetSmall extends PureComponent {
                   className={`${namespace}__button--close`}
                   label={componentLabels.TEARSHEET_SMALL_CLOSE_BUTTON}
                   onClick={closeButton.onClick}
-                  renderIcon={Close16}
+                  renderIcon={Close20}
                   size="lg"
                   tooltip={false}
                 />
