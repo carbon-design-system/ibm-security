@@ -1,7 +1,7 @@
 ## Themes
 
-| Token | {{#each themes}}{{ this }} | {{/each}}
+| Token | {{#each themes}}{{ this }} theme | {{/each}}
 | ----- | {{#each themes}} --- | {{/each}}
 {{#each tokens}}
-| {{ this.token }} | {{#each this.themes}} <span style="color: {{ this.hex }}">\|\|\|\|\|</span> {{ this.color }} | {{/each}}
+| `{{ this.token }}` | {{#each this.themes}} `{{ this.color }}` (`{{ this.hex }}`) | {{/each}}
 {{/each}}
