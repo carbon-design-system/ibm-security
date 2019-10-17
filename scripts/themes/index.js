@@ -18,17 +18,17 @@ const { value: themeMap } = renderSync({
 
 const themes = Object.keys(themeMap);
 
-const tokens = {};
-
-Object.keys(themeMap[themes[0]].value).forEach(token => {
-  tokens[token] = [];
-});
+const tokens = Object.keys(themeMap[themes[0]].value).map(token => ({
+  themes: [],
+  token,
+}));
 
 themes.forEach(theme => {
   const { value } = themeMap[theme];
 
-  Object.keys(value).forEach(token => {
-    let { hex: color } = value[token].value;
+  Object.keys(value).forEach((token, index) => {
+    const { hex } = value[token].value;
+    let color = hex;
 
     Object.keys(colors).forEach(swatch => {
       const colorGrades = colors[swatch];
@@ -40,7 +40,7 @@ themes.forEach(theme => {
       });
     });
 
-    tokens[token].push(color);
+    tokens[index].themes.push({ color, hex });
   });
 });
 

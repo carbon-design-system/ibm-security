@@ -3,5 +3,5 @@
 | Token | {{#each themes}}{{ this }} | {{/each}}
 | ----- | {{#each themes}} --- | {{/each}}
 {{#each tokens}}
-| {{ @key }} | {{#each this}} `{{ this }}` | {{/each}}
+| {{ this.token }} | {{#each this.themes}} <span style="color: {{ this.hex }}">\|\|\|\|\|</span> {{ this.color }} | {{/each}}
 {{/each}}
