@@ -1,126 +1,65 @@
 ## Themes
 
-| Token                                                    | theme--cg10                                                  | theme--g100 |
-| -------------------------------------------------------- | ------------------------------------------------------------ | ----------- |
-| interactive-01                                           | <span style="color: #0062ff">\|\|\|\|\|</span> blue-60       |
-| <span style="color: #0062ff">\|\|\|\|\|</span> blue-60   |
-| interactive-02                                           | <span style="color: #373d42">\|\|\|\|\|</span> cool-gray-80  |
-| <span style="color: #6f6f6f">\|\|\|\|\|</span> gray-60   |
-| interactive-03                                           | <span style="color: #0062ff">\|\|\|\|\|</span> blue-60       |
-| <span style="color: #ffffff">\|\|\|\|\|</span> white-0   |
-| interactive-04                                           | <span style="color: #0062ff">\|\|\|\|\|</span> blue-60       |
-| <span style="color: #408bfc">\|\|\|\|\|</span> blue-50   |
-| ui-background                                            | <span style="color: #f2f4f8">\|\|\|\|\|</span> cool-gray-10  |
-| <span style="color: #171717">\|\|\|\|\|</span> gray-100  |
-| ui-01                                                    | <span style="color: #ffffff">\|\|\|\|\|</span> white-0       |
-| <span style="color: #282828">\|\|\|\|\|</span> gray-90   |
-| ui-02                                                    | <span style="color: #f2f4f8">\|\|\|\|\|</span> cool-gray-10  |
-| <span style="color: #3d3d3d">\|\|\|\|\|</span> gray-80   |
-| ui-03                                                    | <span style="color: #d5d9e0">\|\|\|\|\|</span> cool-gray-20  |
-| <span style="color: #3d3d3d">\|\|\|\|\|</span> gray-80   |
-| ui-04                                                    | <span style="color: #868d95">\|\|\|\|\|</span> cool-gray-50  |
-| <span style="color: #6f6f6f">\|\|\|\|\|</span> gray-60   |
-| ui-05                                                    | <span style="color: #13171a">\|\|\|\|\|</span> cool-gray-100 |
-| <span style="color: #f3f3f3">\|\|\|\|\|</span> gray-10   |
-| text-01                                                  | <span style="color: #13171a">\|\|\|\|\|</span> cool-gray-100 |
-| <span style="color: #f3f3f3">\|\|\|\|\|</span> gray-10   |
-| text-02                                                  | <span style="color: #50565b">\|\|\|\|\|</span> cool-gray-70  |
-| <span style="color: #bebebe">\|\|\|\|\|</span> gray-30   |
-| text-03                                                  | <span style="color: #868d95">\|\|\|\|\|</span> cool-gray-50  |
-| <span style="color: #6f6f6f">\|\|\|\|\|</span> gray-60   |
-| text-04                                                  | <span style="color: #ffffff">\|\|\|\|\|</span> white-0       |
-| <span style="color: #ffffff">\|\|\|\|\|</span> white-0   |
-| icon-01                                                  | <span style="color: #13171a">\|\|\|\|\|</span> cool-gray-100 |
-| <span style="color: #f3f3f3">\|\|\|\|\|</span> gray-10   |
-| icon-02                                                  | <span style="color: #50565b">\|\|\|\|\|</span> cool-gray-70  |
-| <span style="color: #bebebe">\|\|\|\|\|</span> gray-30   |
-| icon-03                                                  | <span style="color: #ffffff">\|\|\|\|\|</span> white-0       |
-| <span style="color: #ffffff">\|\|\|\|\|</span> white-0   |
-| link-01                                                  | <span style="color: #0062ff">\|\|\|\|\|</span> blue-60       |
-| <span style="color: #6ea6ff">\|\|\|\|\|</span> blue-40   |
-| inverse-link                                             | <span style="color: #6ea6ff">\|\|\|\|\|</span> blue-40       |
-| <span style="color: #0062ff">\|\|\|\|\|</span> blue-60   |
-| field-01                                                 | <span style="color: #ffffff">\|\|\|\|\|</span> white-0       |
-| <span style="color: #282828">\|\|\|\|\|</span> gray-90   |
-| field-02                                                 | <span style="color: #f2f4f8">\|\|\|\|\|</span> cool-gray-10  |
-| <span style="color: #3d3d3d">\|\|\|\|\|</span> gray-80   |
-| inverse-01                                               | <span style="color: #ffffff">\|\|\|\|\|</span> white-0       |
-| <span style="color: #171717">\|\|\|\|\|</span> gray-100  |
-| inverse-02                                               | <span style="color: #373d42">\|\|\|\|\|</span> cool-gray-80  |
-| <span style="color: #f3f3f3">\|\|\|\|\|</span> gray-10   |
-| support-01                                               | <span style="color: #da1e28">\|\|\|\|\|</span> red-60        |
-| <span style="color: #fb4b53">\|\|\|\|\|</span> red-50    |
-| support-02                                               | <span style="color: #24a148">\|\|\|\|\|</span> green-50      |
-| <span style="color: #3dbb61">\|\|\|\|\|</span> green-40  |
-| support-03                                               | <span style="color: #fdd13a">\|\|\|\|\|</span> yellow-20     |
-| <span style="color: #fdd13a">\|\|\|\|\|</span> yellow-20 |
-| support-04                                               | <span style="color: #054ada">\|\|\|\|\|</span> blue-70       |
-| <span style="color: #408bfc">\|\|\|\|\|</span> blue-50   |
-| inverse-support-01                                       | <span style="color: #fb4b53">\|\|\|\|\|</span> red-50        |
-| <span style="color: #da1e28">\|\|\|\|\|</span> red-60    |
-| inverse-support-02                                       | <span style="color: #3dbb61">\|\|\|\|\|</span> green-40      |
-| <span style="color: #24a148">\|\|\|\|\|</span> green-50  |
-| inverse-support-03                                       | <span style="color: #fdd13a">\|\|\|\|\|</span> yellow-20     |
-| <span style="color: #fdd13a">\|\|\|\|\|</span> yellow-20 |
-| inverse-support-04                                       | <span style="color: #408bfc">\|\|\|\|\|</span> blue-50       |
-| <span style="color: #0062ff">\|\|\|\|\|</span> blue-60   |
-| overlay-01                                               | <span style="color: #171717">\|\|\|\|\|</span> gray-100      |
-| <span style="color: #171717">\|\|\|\|\|</span> gray-100  |
-| focus                                                    | <span style="color: #0062ff">\|\|\|\|\|</span> blue-60       |
-| <span style="color: #ffffff">\|\|\|\|\|</span> white-0   |
-| inverse-focus-ui                                         | <span style="color: #ffffff">\|\|\|\|\|</span> white-0       |
-| <span style="color: #0062ff">\|\|\|\|\|</span> blue-60   |
-| hover-primary                                            | <span style="color: #0353e9">\|\|\|\|\|</span> #0353e9       |
-| <span style="color: #0353e9">\|\|\|\|\|</span> #0353e9   |
-| active-primary                                           | <span style="color: #0530ad">\|\|\|\|\|</span> blue-80       |
-| <span style="color: #0530ad">\|\|\|\|\|</span> blue-80   |
-| hover-primary-text                                       | <span style="color: #054ada">\|\|\|\|\|</span> blue-70       |
-| <span style="color: #97c1ff">\|\|\|\|\|</span> blue-30   |
-| hover-secondary                                          | <span style="color: #4c4c4c">\|\|\|\|\|</span> #4c4c4c       |
-| <span style="color: #606060">\|\|\|\|\|</span> #606060   |
-| active-secondary                                         | <span style="color: #697077">\|\|\|\|\|</span> cool-gray-60  |
-| <span style="color: #3d3d3d">\|\|\|\|\|</span> gray-80   |
-| hover-tertiary                                           | <span style="color: #0353e9">\|\|\|\|\|</span> #0353e9       |
-| <span style="color: #f3f3f3">\|\|\|\|\|</span> gray-10   |
-| active-tertiary                                          | <span style="color: #0530ad">\|\|\|\|\|</span> blue-80       |
-| <span style="color: #bebebe">\|\|\|\|\|</span> gray-30   |
-| hover-ui                                                 | <span style="color: #e5e5e5">\|\|\|\|\|</span> #e5e5e5       |
-| <span style="color: #353535">\|\|\|\|\|</span> #353535   |
-| active-ui                                                | <span style="color: #b9bfc7">\|\|\|\|\|</span> cool-gray-30  |
-| <span style="color: #565656">\|\|\|\|\|</span> gray-70   |
-| selected-ui                                              | <span style="color: #d5d9e0">\|\|\|\|\|</span> cool-gray-20  |
-| <span style="color: #3d3d3d">\|\|\|\|\|</span> gray-80   |
-| inverse-hover-ui                                         | <span style="color: #4c4c4c">\|\|\|\|\|</span> #4c4c4c       |
-| <span style="color: #e5e5e5">\|\|\|\|\|</span> #e5e5e5   |
-| hover-selected-ui                                        | <span style="color: #cacaca">\|\|\|\|\|</span> #cacaca       |
-| <span style="color: #4c4c4c">\|\|\|\|\|</span> #4c4c4c   |
-| hover-danger                                             | <span style="color: #ba1b23">\|\|\|\|\|</span> #ba1b23       |
-| <span style="color: #ba1b23">\|\|\|\|\|</span> #ba1b23   |
-| active-danger                                            | <span style="color: #750e13">\|\|\|\|\|</span> red-80        |
-| <span style="color: #750e13">\|\|\|\|\|</span> red-80    |
-| hover-row                                                | <span style="color: #e5e5e5">\|\|\|\|\|</span> #e5e5e5       |
-| <span style="color: #353535">\|\|\|\|\|</span> #353535   |
-| visited-link                                             | <span style="color: #8a3ffc">\|\|\|\|\|</span> purple-60     |
-| <span style="color: #bb8eff">\|\|\|\|\|</span> purple-40 |
-| disabled-01                                              | <span style="color: #ffffff">\|\|\|\|\|</span> white-0       |
-| <span style="color: #282828">\|\|\|\|\|</span> gray-90   |
-| disabled-02                                              | <span style="color: #b9bfc7">\|\|\|\|\|</span> cool-gray-30  |
-| <span style="color: #3d3d3d">\|\|\|\|\|</span> gray-80   |
-| disabled-03                                              | <span style="color: #868d95">\|\|\|\|\|</span> cool-gray-50  |
-| <span style="color: #6f6f6f">\|\|\|\|\|</span> gray-60   |
-| highlight                                                | <span style="color: #c9deff">\|\|\|\|\|</span> blue-20       |
-| <span style="color: #0530ad">\|\|\|\|\|</span> blue-80   |
-| skeleton-01                                              | <span style="color: #e5e5e5">\|\|\|\|\|</span> #e5e5e5       |
-| <span style="color: #353535">\|\|\|\|\|</span> #353535   |
-| skeleton-02                                              | <span style="color: #b9bfc7">\|\|\|\|\|</span> cool-gray-30  |
-| <span style="color: #3d3d3d">\|\|\|\|\|</span> gray-80   |
-| brand-01                                                 | <span style="color: #0062ff">\|\|\|\|\|</span> blue-60       |
-| <span style="color: #0062ff">\|\|\|\|\|</span> blue-60   |
-| brand-02                                                 | <span style="color: #373d42">\|\|\|\|\|</span> cool-gray-80  |
-| <span style="color: #6f6f6f">\|\|\|\|\|</span> gray-60   |
-| brand-03                                                 | <span style="color: #0062ff">\|\|\|\|\|</span> blue-60       |
-| <span style="color: #ffffff">\|\|\|\|\|</span> white-0   |
-| active-01                                                | <span style="color: #b9bfc7">\|\|\|\|\|</span> cool-gray-30  |
-| <span style="color: #565656">\|\|\|\|\|</span> gray-70   |
-| hover-field                                              | <span style="color: #e5e5e5">\|\|\|\|\|</span> #e5e5e5       |
-| <span style="color: #353535">\|\|\|\|\|</span> #353535   |
+| Token              | theme--cg10                                                  | theme--g100                                              |
+| ------------------ | ------------------------------------------------------------ | -------------------------------------------------------- |
+| interactive-01     | <span style="color: #0062ff">\|\|\|\|\|</span> blue-60       | <span style="color: #0062ff">\|\|\|\|\|</span> blue-60   |
+| interactive-02     | <span style="color: #373d42">\|\|\|\|\|</span> cool-gray-80  | <span style="color: #6f6f6f">\|\|\|\|\|</span> gray-60   |
+| interactive-03     | <span style="color: #0062ff">\|\|\|\|\|</span> blue-60       | <span style="color: #ffffff">\|\|\|\|\|</span> white-0   |
+| interactive-04     | <span style="color: #0062ff">\|\|\|\|\|</span> blue-60       | <span style="color: #408bfc">\|\|\|\|\|</span> blue-50   |
+| ui-background      | <span style="color: #f2f4f8">\|\|\|\|\|</span> cool-gray-10  | <span style="color: #171717">\|\|\|\|\|</span> gray-100  |
+| ui-01              | <span style="color: #ffffff">\|\|\|\|\|</span> white-0       | <span style="color: #282828">\|\|\|\|\|</span> gray-90   |
+| ui-02              | <span style="color: #f2f4f8">\|\|\|\|\|</span> cool-gray-10  | <span style="color: #3d3d3d">\|\|\|\|\|</span> gray-80   |
+| ui-03              | <span style="color: #d5d9e0">\|\|\|\|\|</span> cool-gray-20  | <span style="color: #3d3d3d">\|\|\|\|\|</span> gray-80   |
+| ui-04              | <span style="color: #868d95">\|\|\|\|\|</span> cool-gray-50  | <span style="color: #6f6f6f">\|\|\|\|\|</span> gray-60   |
+| ui-05              | <span style="color: #13171a">\|\|\|\|\|</span> cool-gray-100 | <span style="color: #f3f3f3">\|\|\|\|\|</span> gray-10   |
+| text-01            | <span style="color: #13171a">\|\|\|\|\|</span> cool-gray-100 | <span style="color: #f3f3f3">\|\|\|\|\|</span> gray-10   |
+| text-02            | <span style="color: #50565b">\|\|\|\|\|</span> cool-gray-70  | <span style="color: #bebebe">\|\|\|\|\|</span> gray-30   |
+| text-03            | <span style="color: #868d95">\|\|\|\|\|</span> cool-gray-50  | <span style="color: #6f6f6f">\|\|\|\|\|</span> gray-60   |
+| text-04            | <span style="color: #ffffff">\|\|\|\|\|</span> white-0       | <span style="color: #ffffff">\|\|\|\|\|</span> white-0   |
+| icon-01            | <span style="color: #13171a">\|\|\|\|\|</span> cool-gray-100 | <span style="color: #f3f3f3">\|\|\|\|\|</span> gray-10   |
+| icon-02            | <span style="color: #50565b">\|\|\|\|\|</span> cool-gray-70  | <span style="color: #bebebe">\|\|\|\|\|</span> gray-30   |
+| icon-03            | <span style="color: #ffffff">\|\|\|\|\|</span> white-0       | <span style="color: #ffffff">\|\|\|\|\|</span> white-0   |
+| link-01            | <span style="color: #0062ff">\|\|\|\|\|</span> blue-60       | <span style="color: #6ea6ff">\|\|\|\|\|</span> blue-40   |
+| inverse-link       | <span style="color: #6ea6ff">\|\|\|\|\|</span> blue-40       | <span style="color: #0062ff">\|\|\|\|\|</span> blue-60   |
+| field-01           | <span style="color: #ffffff">\|\|\|\|\|</span> white-0       | <span style="color: #282828">\|\|\|\|\|</span> gray-90   |
+| field-02           | <span style="color: #f2f4f8">\|\|\|\|\|</span> cool-gray-10  | <span style="color: #3d3d3d">\|\|\|\|\|</span> gray-80   |
+| inverse-01         | <span style="color: #ffffff">\|\|\|\|\|</span> white-0       | <span style="color: #171717">\|\|\|\|\|</span> gray-100  |
+| inverse-02         | <span style="color: #373d42">\|\|\|\|\|</span> cool-gray-80  | <span style="color: #f3f3f3">\|\|\|\|\|</span> gray-10   |
+| support-01         | <span style="color: #da1e28">\|\|\|\|\|</span> red-60        | <span style="color: #fb4b53">\|\|\|\|\|</span> red-50    |
+| support-02         | <span style="color: #24a148">\|\|\|\|\|</span> green-50      | <span style="color: #3dbb61">\|\|\|\|\|</span> green-40  |
+| support-03         | <span style="color: #fdd13a">\|\|\|\|\|</span> yellow-20     | <span style="color: #fdd13a">\|\|\|\|\|</span> yellow-20 |
+| support-04         | <span style="color: #054ada">\|\|\|\|\|</span> blue-70       | <span style="color: #408bfc">\|\|\|\|\|</span> blue-50   |
+| inverse-support-01 | <span style="color: #fb4b53">\|\|\|\|\|</span> red-50        | <span style="color: #da1e28">\|\|\|\|\|</span> red-60    |
+| inverse-support-02 | <span style="color: #3dbb61">\|\|\|\|\|</span> green-40      | <span style="color: #24a148">\|\|\|\|\|</span> green-50  |
+| inverse-support-03 | <span style="color: #fdd13a">\|\|\|\|\|</span> yellow-20     | <span style="color: #fdd13a">\|\|\|\|\|</span> yellow-20 |
+| inverse-support-04 | <span style="color: #408bfc">\|\|\|\|\|</span> blue-50       | <span style="color: #0062ff">\|\|\|\|\|</span> blue-60   |
+| overlay-01         | <span style="color: #171717">\|\|\|\|\|</span> gray-100      | <span style="color: #171717">\|\|\|\|\|</span> gray-100  |
+| focus              | <span style="color: #0062ff">\|\|\|\|\|</span> blue-60       | <span style="color: #ffffff">\|\|\|\|\|</span> white-0   |
+| inverse-focus-ui   | <span style="color: #ffffff">\|\|\|\|\|</span> white-0       | <span style="color: #0062ff">\|\|\|\|\|</span> blue-60   |
+| hover-primary      | <span style="color: #0353e9">\|\|\|\|\|</span> #0353e9       | <span style="color: #0353e9">\|\|\|\|\|</span> #0353e9   |
+| active-primary     | <span style="color: #0530ad">\|\|\|\|\|</span> blue-80       | <span style="color: #0530ad">\|\|\|\|\|</span> blue-80   |
+| hover-primary-text | <span style="color: #054ada">\|\|\|\|\|</span> blue-70       | <span style="color: #97c1ff">\|\|\|\|\|</span> blue-30   |
+| hover-secondary    | <span style="color: #4c4c4c">\|\|\|\|\|</span> #4c4c4c       | <span style="color: #606060">\|\|\|\|\|</span> #606060   |
+| active-secondary   | <span style="color: #697077">\|\|\|\|\|</span> cool-gray-60  | <span style="color: #3d3d3d">\|\|\|\|\|</span> gray-80   |
+| hover-tertiary     | <span style="color: #0353e9">\|\|\|\|\|</span> #0353e9       | <span style="color: #f3f3f3">\|\|\|\|\|</span> gray-10   |
+| active-tertiary    | <span style="color: #0530ad">\|\|\|\|\|</span> blue-80       | <span style="color: #bebebe">\|\|\|\|\|</span> gray-30   |
+| hover-ui           | <span style="color: #e5e5e5">\|\|\|\|\|</span> #e5e5e5       | <span style="color: #353535">\|\|\|\|\|</span> #353535   |
+| active-ui          | <span style="color: #b9bfc7">\|\|\|\|\|</span> cool-gray-30  | <span style="color: #565656">\|\|\|\|\|</span> gray-70   |
+| selected-ui        | <span style="color: #d5d9e0">\|\|\|\|\|</span> cool-gray-20  | <span style="color: #3d3d3d">\|\|\|\|\|</span> gray-80   |
+| inverse-hover-ui   | <span style="color: #4c4c4c">\|\|\|\|\|</span> #4c4c4c       | <span style="color: #e5e5e5">\|\|\|\|\|</span> #e5e5e5   |
+| hover-selected-ui  | <span style="color: #cacaca">\|\|\|\|\|</span> #cacaca       | <span style="color: #4c4c4c">\|\|\|\|\|</span> #4c4c4c   |
+| hover-danger       | <span style="color: #ba1b23">\|\|\|\|\|</span> #ba1b23       | <span style="color: #ba1b23">\|\|\|\|\|</span> #ba1b23   |
+| active-danger      | <span style="color: #750e13">\|\|\|\|\|</span> red-80        | <span style="color: #750e13">\|\|\|\|\|</span> red-80    |
+| hover-row          | <span style="color: #e5e5e5">\|\|\|\|\|</span> #e5e5e5       | <span style="color: #353535">\|\|\|\|\|</span> #353535   |
+| visited-link       | <span style="color: #8a3ffc">\|\|\|\|\|</span> purple-60     | <span style="color: #bb8eff">\|\|\|\|\|</span> purple-40 |
+| disabled-01        | <span style="color: #ffffff">\|\|\|\|\|</span> white-0       | <span style="color: #282828">\|\|\|\|\|</span> gray-90   |
+| disabled-02        | <span style="color: #b9bfc7">\|\|\|\|\|</span> cool-gray-30  | <span style="color: #3d3d3d">\|\|\|\|\|</span> gray-80   |
+| disabled-03        | <span style="color: #868d95">\|\|\|\|\|</span> cool-gray-50  | <span style="color: #6f6f6f">\|\|\|\|\|</span> gray-60   |
+| highlight          | <span style="color: #c9deff">\|\|\|\|\|</span> blue-20       | <span style="color: #0530ad">\|\|\|\|\|</span> blue-80   |
+| skeleton-01        | <span style="color: #e5e5e5">\|\|\|\|\|</span> #e5e5e5       | <span style="color: #353535">\|\|\|\|\|</span> #353535   |
+| skeleton-02        | <span style="color: #b9bfc7">\|\|\|\|\|</span> cool-gray-30  | <span style="color: #3d3d3d">\|\|\|\|\|</span> gray-80   |
+| brand-01           | <span style="color: #0062ff">\|\|\|\|\|</span> blue-60       | <span style="color: #0062ff">\|\|\|\|\|</span> blue-60   |
+| brand-02           | <span style="color: #373d42">\|\|\|\|\|</span> cool-gray-80  | <span style="color: #6f6f6f">\|\|\|\|\|</span> gray-60   |
+| brand-03           | <span style="color: #0062ff">\|\|\|\|\|</span> blue-60       | <span style="color: #ffffff">\|\|\|\|\|</span> white-0   |
+| active-01          | <span style="color: #b9bfc7">\|\|\|\|\|</span> cool-gray-30  | <span style="color: #565656">\|\|\|\|\|</span> gray-70   |
+| hover-field        | <span style="color: #e5e5e5">\|\|\|\|\|</span> #e5e5e5       | <span style="color: #353535">\|\|\|\|\|</span> #353535   |
