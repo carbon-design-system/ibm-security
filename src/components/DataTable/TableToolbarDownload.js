@@ -22,7 +22,7 @@ const TableToolbarDownload = ({ headers, rows, title, filename, label }) => {
   const csvRows = rows.map(row => {
     const newRow = {};
     headers.forEach(({ key }) => {
-      if (row[key]) newRow[key] = row[key];
+      newRow[key] = row[key] ? row[key] : '';
     });
     return newRow;
   });
@@ -43,7 +43,8 @@ const TableToolbarDownload = ({ headers, rows, title, filename, label }) => {
       renderIcon={Download16}
       label={label}
       onClick={() => {
-        csvExporter.generateCsv(csvRows);
+        if (rows.length > 0 && headers.length > 0)
+          csvExporter.generateCsv(csvRows);
       }}
     />
   );
