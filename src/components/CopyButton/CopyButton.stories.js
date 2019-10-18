@@ -5,7 +5,6 @@
 
 import React from 'react';
 import centered from '@storybook/addon-centered/react';
-import { withA11y } from '@storybook/addon-a11y';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
@@ -29,7 +28,6 @@ const props = () => ({
 });
 
 storiesOf(components('CopyButton'), module)
-  .addDecorator(withA11y)
   .addDecorator(centered)
   .add(
     'Default',

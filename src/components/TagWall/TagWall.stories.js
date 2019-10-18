@@ -3,7 +3,6 @@
  * @copyright IBM Security 2019
  */
 
-import { withA11y } from '@storybook/addon-a11y';
 import { action } from '@storybook/addon-actions';
 import centered from '@storybook/addon-centered/react';
 import { boolean, text } from '@storybook/addon-knobs';
@@ -29,6 +28,5 @@ const storyProps = () => ({
 });
 
 storiesOf(patterns('TagWall'), module)
-  .addDecorator(withA11y)
   .addDecorator(centered)
   .add('Default', () => <TagWall {...storyProps()} />);

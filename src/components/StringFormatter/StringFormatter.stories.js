@@ -3,7 +3,6 @@
  * @copyright IBM Security 2019
  */
 
-import { withA11y } from '@storybook/addon-a11y';
 import centered from '@storybook/addon-centered/react';
 import { boolean, text, number } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
@@ -23,7 +22,6 @@ const storyProps = () => ({
 
 storiesOf(components('StringFormatter'), module)
   .addDecorator(centered)
-  .addDecorator(withA11y)
   .add('Default', () => (
     <div className="bx--type-body-short-01">
       <StringFormatter {...storyProps()} />

@@ -3,7 +3,6 @@
  * @copyright IBM Security 2019
  */
 
-import { withA11y } from '@storybook/addon-a11y';
 import { action } from '@storybook/addon-actions';
 import { text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
@@ -85,7 +84,6 @@ const storyProps = {
 const { regular, scopes: scopesProps, translationIds } = storyProps;
 
 storiesOf(patterns('SearchBar'), module)
-  .addDecorator(withA11y)
   .add('Default', () => <SearchBarWithStateHandlers {...regular()} />)
   .add('Initial value', () => (
     <SearchBarWithStateHandlers {...regular()} value={value} />

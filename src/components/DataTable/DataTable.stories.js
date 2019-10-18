@@ -4,7 +4,6 @@
  */
 
 import { storiesOf } from '@storybook/react';
-import { withA11y } from '@storybook/addon-a11y';
 
 import { components } from '../../../.storybook';
 
@@ -16,7 +15,6 @@ const readmeURL = 'https://goo.gl/dq6CEK';
 
 /* eslint-disable global-require */
 storiesOf(components('DataTable'), module)
-  .addDecorator(withA11y)
   .add('default', () => require('./stories/default').default(props()), {
     info: {
       /* eslint-disable no-useless-escape */

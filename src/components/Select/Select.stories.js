@@ -5,7 +5,6 @@
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withA11y } from '@storybook/addon-a11y';
 import { action } from '@storybook/addon-actions';
 import { boolean, text } from '@storybook/addon-knobs';
 import centered from '@storybook/addon-centered/react';
@@ -38,7 +37,6 @@ const props = {
 };
 
 storiesOf(components('Select'), module)
-  .addDecorator(withA11y)
   .addDecorator(centered)
   .add(
     'Default',

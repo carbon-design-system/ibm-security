@@ -4,7 +4,6 @@
  */
 
 import { action } from '@storybook/addon-actions';
-import { withA11y } from '@storybook/addon-a11y';
 import { boolean, select, text } from '@storybook/addon-knobs';
 import centered from '@storybook/addon-centered/react';
 import { storiesOf } from '@storybook/react';
@@ -47,7 +46,6 @@ const props = {
 };
 
 storiesOf(components('RadioButtonGroup'), module)
-  .addDecorator(withA11y)
   .addDecorator(centered)
   .add(
     'Default',

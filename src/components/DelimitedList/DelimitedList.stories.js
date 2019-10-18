@@ -3,7 +3,6 @@
  * @copyright IBM Security 2019
  */
 
-import { withA11y } from '@storybook/addon-a11y';
 import centered from '@storybook/addon-centered/react';
 import { array, boolean, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
@@ -26,7 +25,6 @@ const storyProps = () => ({
 });
 
 storiesOf(components('DelimitedList'), module)
-  .addDecorator(withA11y)
   .addDecorator(centered)
   .add(
     'Default',

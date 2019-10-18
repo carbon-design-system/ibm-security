@@ -6,7 +6,6 @@
 import React from 'react';
 import centered from '@storybook/addon-centered/react';
 import { storiesOf } from '@storybook/react';
-import { withA11y } from '@storybook/addon-a11y';
 import { radios } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import ArrowRight20 from '@carbon/icons-react/lib/arrow--right/20';
@@ -29,7 +28,6 @@ const props = () => ({
 });
 
 storiesOf(patterns('ComboButton'), module)
-  .addDecorator(withA11y)
   .addDecorator(centered)
   .add(
     'default',

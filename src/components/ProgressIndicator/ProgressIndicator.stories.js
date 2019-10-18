@@ -5,7 +5,6 @@
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withA11y } from '@storybook/addon-a11y';
 import { number } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
@@ -23,7 +22,6 @@ import { components } from '../../../.storybook';
 const { prefix } = settings;
 
 storiesOf(components('ProgressIndicator'), module)
-  .addDecorator(withA11y)
   .add(
     'Default',
     () => (

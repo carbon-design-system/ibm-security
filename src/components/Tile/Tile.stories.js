@@ -3,7 +3,6 @@
  * @copyright IBM Security 2019
  */
 
-import { withA11y } from '@storybook/addon-a11y';
 import { action } from '@storybook/addon-actions';
 import centered from '@storybook/addon-centered/react';
 import { boolean, number, select, text } from '@storybook/addon-knobs';
@@ -68,7 +67,6 @@ const props = {
 
 storiesOf(components('Tile'), module)
   .addDecorator(centered)
-  .addDecorator(withA11y)
   .add('Default', () => <Tile>Default tile</Tile>, {
     info: {
       text: `

@@ -10,7 +10,6 @@ import Add32 from '@carbon/icons-react/lib/add/32';
 import { white } from '@carbon/colors';
 import { miniUnits } from '@carbon/layout';
 
-import { withA11y } from '@storybook/addon-a11y';
 import centered from '@storybook/addon-centered/react';
 import { storiesOf } from '@storybook/react';
 
@@ -29,7 +28,6 @@ const iconProps = {
 };
 
 storiesOf(components('Icon'), module)
-  .addDecorator(withA11y)
   .addDecorator(centered)
   .add(
     'default',

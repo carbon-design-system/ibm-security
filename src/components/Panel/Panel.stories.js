@@ -5,7 +5,6 @@
 
 import Add16 from '@carbon/icons-react/lib/add/16';
 
-import { withA11y } from '@storybook/addon-a11y';
 import { action } from '@storybook/addon-actions';
 import centered from '@storybook/addon-centered/react';
 import { boolean, text } from '@storybook/addon-knobs';
@@ -45,7 +44,6 @@ const panelContent =
 const footerLabel = 'Custom footer';
 
 storiesOf(patterns('Panel'), module)
-  .addDecorator(withA11y)
   .addDecorator(centered)
   .add(
     'Default',

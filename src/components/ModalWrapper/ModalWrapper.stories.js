@@ -8,7 +8,6 @@ import AddFilled16 from '@carbon/icons-react/lib/add--filled/16';
 import Search16 from '@carbon/icons-react/lib/search/16';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { withA11y } from '@storybook/addon-a11y';
 import { boolean, text, select } from '@storybook/addon-knobs';
 
 import { settings } from 'carbon-components';
@@ -81,7 +80,6 @@ const props = () => {
 };
 
 storiesOf(components('ModalWrapper'), module)
-  .addDecorator(withA11y)
   .add(
     'transactional/passive modal',
     () => (

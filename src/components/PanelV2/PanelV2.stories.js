@@ -6,7 +6,6 @@
 import Add16 from '@carbon/icons-react/lib/add/16';
 
 import { action } from '@storybook/addon-actions';
-import { withA11y } from '@storybook/addon-a11y';
 import { boolean, radios, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
@@ -88,7 +87,7 @@ storiesOf(patterns('PanelV2'), module)
       },
     },
   })
-  .addDecorator(withA11y)
+
   .add(
     'Default',
     () => {

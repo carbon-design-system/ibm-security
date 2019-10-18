@@ -3,7 +3,6 @@
  * @copyright IBM Security 2019
  */
 
-import { withA11y } from '@storybook/addon-a11y';
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import centered from '@storybook/addon-centered/react';
@@ -92,7 +91,6 @@ class ControlledPasswordInputApp extends React.Component {
 }
 
 storiesOf(components('TextInput'), module)
-  .addDecorator(withA11y)
   .addDecorator(centered)
   .addDecorator(story => <div style={{ width: '300px' }}>{story()}</div>)
   .add(
