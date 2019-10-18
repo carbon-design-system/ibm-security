@@ -3,7 +3,6 @@
  * @copyright IBM Security 2019
  */
 
-import centered from '@storybook/addon-centered/react';
 import { select, text, number } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import OverflowMenuVertical16 from '@carbon/icons-react/lib/overflow-menu--vertical/16';
@@ -63,7 +62,6 @@ const props = {
 };
 
 storiesOf(components('Tooltip'), module)
-  .addDecorator(centered)
   .add(
     'default (bottom)',
     () => (

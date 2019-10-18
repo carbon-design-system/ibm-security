@@ -6,7 +6,7 @@
 import React, { PureComponent } from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import centered from '@storybook/addon-centered/react';
+
 import { number, select, text } from '@storybook/addon-knobs';
 
 import { components } from '../../../.storybook';
@@ -31,7 +31,6 @@ const props = () => ({
 });
 
 storiesOf(components('InlineLoading'), module)
-  .addDecorator(centered)
   .add(
     'Inline loading',
     () => (

@@ -4,7 +4,7 @@
  */
 
 import { action } from '@storybook/addon-actions';
-import centered from '@storybook/addon-centered/react';
+
 import { boolean, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
@@ -27,6 +27,6 @@ const storyProps = () => ({
   onAddButton: action('onAddButton'),
 });
 
-storiesOf(patterns('TagWall'), module)
-  .addDecorator(centered)
-  .add('Default', () => <TagWall {...storyProps()} />);
+storiesOf(patterns('TagWall'), module).add('Default', () => (
+  <TagWall {...storyProps()} />
+));

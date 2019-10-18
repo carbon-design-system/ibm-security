@@ -6,7 +6,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import centered from '@storybook/addon-centered/react';
 import { boolean, text } from '@storybook/addon-knobs';
 import WithState from 'carbon-components-react/es/tools/withState';
 import { ComboBox } from '../..';
@@ -61,7 +60,6 @@ const itemToElement = item => {
 };
 
 storiesOf(components('ComboBox'), module)
-  .addDecorator(centered)
   .add(
     'Default',
     () => (

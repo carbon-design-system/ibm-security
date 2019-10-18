@@ -7,7 +7,6 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
-import centered from '@storybook/addon-centered/react';
 import { boolean, select, text, object } from '@storybook/addon-knobs';
 
 import { components } from '../../../.storybook';
@@ -72,7 +71,6 @@ const props = () => ({
 });
 
 storiesOf(components('MultiSelect'), module)
-  .addDecorator(centered)
   .add(
     'default',
     () => {

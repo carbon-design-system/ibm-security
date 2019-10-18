@@ -8,6 +8,7 @@ import { g100 } from '@carbon/themes/lib';
 import { styles } from '@carbon/type/lib';
 
 import { withA11y } from '@storybook/addon-a11y';
+import centered from '@storybook/addon-centered/react';
 import { withInfo } from '@storybook/addon-info';
 import { withKnobs } from '@storybook/addon-knobs';
 import { addDecorator, configure, addParameters } from '@storybook/react';
@@ -55,7 +56,14 @@ addDecorator(
 addDecorator(withTheme);
 addDecorator(withMarkup);
 
+addDecorator(centered);
 addDecorator(story => <Container>{story()}</Container>);
+
+export const disableCentered = () => {
+  centered: {
+    disable: true;
+  }
+};
 
 /**
  * Returns the Storybook category.

@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import centered from '@storybook/addon-centered/react';
+
 import { storiesOf } from '@storybook/react';
 import { checkA11y } from '@storybook/addon-a11y';
 import { boolean, object } from '@storybook/addon-knobs';
@@ -22,7 +22,7 @@ const profileImageProps = () => ({
 
 storiesOf(components('ProfileImage'), module)
   .addDecorator(checkA11y)
-  .addDecorator(centered)
+
   .add('default', () => (
     <ProfileImage
       {...profileImageProps()}

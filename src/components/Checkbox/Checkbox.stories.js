@@ -10,7 +10,6 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 
 import { settings } from 'carbon-components';
-import centered from '@storybook/addon-centered/react';
 
 import { components } from '../../../.storybook';
 
@@ -31,7 +30,6 @@ const props = () => ({
 });
 
 storiesOf(components('Checkbox'), module)
-  .addDecorator(centered)
   .add(
     'checked',
     () => {

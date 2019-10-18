@@ -4,7 +4,7 @@
  */
 
 import { action } from '@storybook/addon-actions';
-import centered from '@storybook/addon-centered/react';
+
 import { boolean, number, select, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
@@ -66,7 +66,6 @@ const props = {
 };
 
 storiesOf(components('Tile'), module)
-  .addDecorator(centered)
   .add('Default', () => <Tile>Default tile</Tile>, {
     info: {
       text: `

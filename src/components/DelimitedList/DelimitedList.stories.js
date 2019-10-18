@@ -3,7 +3,6 @@
  * @copyright IBM Security 2019
  */
 
-import centered from '@storybook/addon-centered/react';
 import { array, boolean, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
@@ -24,18 +23,16 @@ const storyProps = () => ({
   truncate: boolean('Truncate (`truncate`)', truncate),
 });
 
-storiesOf(components('DelimitedList'), module)
-  .addDecorator(centered)
-  .add(
-    'Default',
-    () => (
-      <DelimitedList
-        className={`${settings.prefix}--col-sm-2`}
-        {...storyProps()}
-      />
-    ),
-    {
-      info:
-        'The `DelimitedList` component truncates an array of items, separated by a delimiter, and includes the total number of items when hovering',
-    }
-  );
+storiesOf(components('DelimitedList'), module).add(
+  'Default',
+  () => (
+    <DelimitedList
+      className={`${settings.prefix}--col-sm-2`}
+      {...storyProps()}
+    />
+  ),
+  {
+    info:
+      'The `DelimitedList` component truncates an array of items, separated by a delimiter, and includes the total number of items when hovering',
+  }
+);

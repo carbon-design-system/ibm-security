@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import centered from '@storybook/addon-centered/react';
+
 import { action } from '@storybook/addon-actions';
 import { boolean, number, select, text } from '@storybook/addon-knobs';
 
@@ -91,7 +91,6 @@ class ControlledPasswordInputApp extends React.Component {
 }
 
 storiesOf(components('TextInput'), module)
-  .addDecorator(centered)
   .addDecorator(story => <div style={{ width: '300px' }}>{story()}</div>)
   .add(
     'Default',

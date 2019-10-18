@@ -4,7 +4,7 @@
  */
 
 import { action } from '@storybook/addon-actions';
-import centered from '@storybook/addon-centered/react';
+
 import { boolean, select, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
@@ -79,7 +79,6 @@ const OverflowMenuExample = ({ overflowMenuProps, overflowMenuItemProps }) => (
 );
 
 storiesOf(components('OverflowMenu'), module)
-  .addDecorator(centered)
   .add(
     'basic',
     () => (

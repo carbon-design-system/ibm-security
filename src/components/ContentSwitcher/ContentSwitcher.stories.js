@@ -8,7 +8,6 @@ import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 
 import React from 'react';
-import centered from '@storybook/addon-centered/react';
 
 import { components } from '../../../.storybook';
 
@@ -25,7 +24,6 @@ const props = {
 };
 
 storiesOf(components('ContentSwitcher'), module)
-  .addDecorator(centered)
   .add(
     'Default',
     () => {

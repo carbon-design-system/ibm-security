@@ -6,7 +6,7 @@
 import Add16 from '@carbon/icons-react/lib/add/16';
 
 import { action } from '@storybook/addon-actions';
-import centered from '@storybook/addon-centered/react';
+
 import { boolean, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
@@ -43,117 +43,105 @@ const panelContent =
 
 const footerLabel = 'Custom footer';
 
-storiesOf(patterns('Panel'), module)
-  .addDecorator(centered)
-  .add(
-    'Default',
-    () => (
-      <Fragment>
-        <Panel
-          {...panelProps}
-          render={({ active, handleClose, toggleActive }) => (
-            <Fragment>
-              <Button onClick={toggleActive}>
-                Primary and secondary action
-              </Button>
-              <PanelController active={active}>
-                <PanelContainer
-                  {...panelContainerProps}
-                  closeButton={{
-                    onClick: toggleActive,
-                    label: text('closeButton.label', closeButtonLabel),
-                  }}
-                  primaryButton={{
-                    icon: Add16,
-                    iconDescription: text(
-                      'primaryButton.iconDescription',
-                      'Add'
-                    ),
-                    isDisabled: boolean('primaryButton.isDisabled', !disabled),
-                    label: text('primaryButton.label', 'Add'),
-                    onClick: handleClose,
-                  }}
-                  secondaryButton={{
-                    isDisabled: boolean(
-                      'secondaryButton.isDisabled',
-                      !disabled
-                    ),
-                    label: text('secondaryButton.label', 'Cancel'),
-                    onClick: handleClose,
-                  }}
-                >
-                  <PanelContent>{panelContent}</PanelContent>
-                </PanelContainer>
-              </PanelController>
-            </Fragment>
-          )}
-        />
-        <Panel
-          {...panelProps}
-          render={({ active, toggleActive }) => (
-            <Fragment>
-              <Button onClick={toggleActive}>Primary action</Button>
-              <PanelController active={active}>
-                <PanelContainer
-                  {...panelContainerProps}
-                  closeButton={{
-                    onClick: toggleActive,
-                    label: text('closeButton.label', closeButtonLabel),
-                  }}
-                  primaryButton={{
-                    isDisabled: boolean('primaryButton.isDisabled', !disabled),
-                    label: text('primaryButton.label', 'Submit'),
-                    onClick: toggleActive,
-                  }}
-                />
-              </PanelController>
-            </Fragment>
-          )}
-        />
-        <Panel
-          {...panelProps}
-          render={({ active, toggleActive }) => (
-            <Fragment>
-              <Button onClick={toggleActive}>Default</Button>
-              <PanelController active={active}>
-                <PanelContainer
-                  {...panelContainerProps}
-                  closeButton={{
-                    onClick: toggleActive,
-                    label: closeButtonLabel,
-                  }}
-                >
-                  <PanelContent>{panelContent}</PanelContent>
-                </PanelContainer>
-              </PanelController>
-            </Fragment>
-          )}
-        />
-        <Panel
-          {...panelProps}
-          render={({ active, toggleActive }) => (
-            <Fragment>
-              <Button onClick={toggleActive}>{footerLabel}</Button>
-              <PanelController active={active}>
-                <PanelContainer
-                  {...panelContainerProps}
-                  closeButton={{
-                    onClick: toggleActive,
-                    label: text('closeButton.label', closeButtonLabel),
-                  }}
-                  renderFooter={() => (
-                    <Button size="large">{footerLabel}</Button>
-                  )}
-                />
-              </PanelController>
-            </Fragment>
-          )}
-        />
-      </Fragment>
-    ),
+storiesOf(patterns('Panel'), module).add(
+  'Default',
+  () => (
+    <Fragment>
+      <Panel
+        {...panelProps}
+        render={({ active, handleClose, toggleActive }) => (
+          <Fragment>
+            <Button onClick={toggleActive}>Primary and secondary action</Button>
+            <PanelController active={active}>
+              <PanelContainer
+                {...panelContainerProps}
+                closeButton={{
+                  onClick: toggleActive,
+                  label: text('closeButton.label', closeButtonLabel),
+                }}
+                primaryButton={{
+                  icon: Add16,
+                  iconDescription: text('primaryButton.iconDescription', 'Add'),
+                  isDisabled: boolean('primaryButton.isDisabled', !disabled),
+                  label: text('primaryButton.label', 'Add'),
+                  onClick: handleClose,
+                }}
+                secondaryButton={{
+                  isDisabled: boolean('secondaryButton.isDisabled', !disabled),
+                  label: text('secondaryButton.label', 'Cancel'),
+                  onClick: handleClose,
+                }}
+              >
+                <PanelContent>{panelContent}</PanelContent>
+              </PanelContainer>
+            </PanelController>
+          </Fragment>
+        )}
+      />
+      <Panel
+        {...panelProps}
+        render={({ active, toggleActive }) => (
+          <Fragment>
+            <Button onClick={toggleActive}>Primary action</Button>
+            <PanelController active={active}>
+              <PanelContainer
+                {...panelContainerProps}
+                closeButton={{
+                  onClick: toggleActive,
+                  label: text('closeButton.label', closeButtonLabel),
+                }}
+                primaryButton={{
+                  isDisabled: boolean('primaryButton.isDisabled', !disabled),
+                  label: text('primaryButton.label', 'Submit'),
+                  onClick: toggleActive,
+                }}
+              />
+            </PanelController>
+          </Fragment>
+        )}
+      />
+      <Panel
+        {...panelProps}
+        render={({ active, toggleActive }) => (
+          <Fragment>
+            <Button onClick={toggleActive}>Default</Button>
+            <PanelController active={active}>
+              <PanelContainer
+                {...panelContainerProps}
+                closeButton={{
+                  onClick: toggleActive,
+                  label: closeButtonLabel,
+                }}
+              >
+                <PanelContent>{panelContent}</PanelContent>
+              </PanelContainer>
+            </PanelController>
+          </Fragment>
+        )}
+      />
+      <Panel
+        {...panelProps}
+        render={({ active, toggleActive }) => (
+          <Fragment>
+            <Button onClick={toggleActive}>{footerLabel}</Button>
+            <PanelController active={active}>
+              <PanelContainer
+                {...panelContainerProps}
+                closeButton={{
+                  onClick: toggleActive,
+                  label: text('closeButton.label', closeButtonLabel),
+                }}
+                renderFooter={() => <Button size="large">{footerLabel}</Button>}
+              />
+            </PanelController>
+          </Fragment>
+        )}
+      />
+    </Fragment>
+  ),
 
-    {
-      info:
-        "View the 'Story' addon panel for guidance on using the `renderFooter` prop",
-    }
-  );
+  {
+    info:
+      "View the 'Story' addon panel for guidance on using the `renderFooter` prop",
+  }
+);

@@ -4,7 +4,6 @@
  */
 
 import React from 'react';
-import centered from '@storybook/addon-centered/react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { boolean, text, number } from '@storybook/addon-knobs';
@@ -25,7 +24,6 @@ const props = {
 };
 
 storiesOf(components('Accordion'), module)
-  .addDecorator(centered)
   .add(
     'Default',
     () => (

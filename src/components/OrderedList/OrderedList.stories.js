@@ -3,7 +3,6 @@
  * @copyright IBM Security 2019
  */
 
-import centered from '@storybook/addon-centered/react';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
@@ -12,7 +11,6 @@ import { components } from '../../../.storybook';
 import { ListItem, OrderedList } from '../..';
 
 storiesOf(components('OrderedList'), module)
-  .addDecorator(centered)
   .add(
     'Default',
     () => (

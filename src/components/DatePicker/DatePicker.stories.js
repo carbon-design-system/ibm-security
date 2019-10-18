@@ -6,7 +6,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action, decorateAction } from '@storybook/addon-actions';
-import centered from '@storybook/addon-centered/react';
+
 import { boolean, select, text } from '@storybook/addon-knobs';
 
 import { DatePicker, DatePickerInput, DatePickerSkeleton } from '.';
@@ -65,7 +65,6 @@ const props = {
 };
 
 storiesOf(components('DatePicker'), module)
-  .addDecorator(centered)
   .add(
     'simple',
     () => (

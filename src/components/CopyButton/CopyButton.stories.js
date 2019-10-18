@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import centered from '@storybook/addon-centered/react';
+
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
@@ -27,19 +27,17 @@ const props = () => ({
   onClick: action('onClick'),
 });
 
-storiesOf(components('CopyButton'), module)
-  .addDecorator(centered)
-  .add(
-    'Default',
-    () => (
-      <div style={{ position: 'relative' }}>
-        <CopyButton {...props()} />
-      </div>
-    ),
-    {
-      info: {
-        text:
-          'The copy button can be used when the user needs to copy information, such as a code snippet, to their clipboard.',
-      },
-    }
-  );
+storiesOf(components('CopyButton'), module).add(
+  'Default',
+  () => (
+    <div style={{ position: 'relative' }}>
+      <CopyButton {...props()} />
+    </div>
+  ),
+  {
+    info: {
+      text:
+        'The copy button can be used when the user needs to copy information, such as a code snippet, to their clipboard.',
+    },
+  }
+);

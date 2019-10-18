@@ -5,7 +5,7 @@
 
 import { action } from '@storybook/addon-actions';
 import { boolean, number, text } from '@storybook/addon-knobs';
-import centered from '@storybook/addon-centered/react';
+
 import { storiesOf } from '@storybook/react';
 
 import React from 'react';
@@ -37,7 +37,6 @@ const props = () => ({
 });
 
 storiesOf(components('Slider'), module)
-  .addDecorator(centered)
   .add('default', () => <Slider id="slider" {...props()} />, {
     info: {
       text: `

@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import centered from '@storybook/addon-centered/react';
+
 import { storiesOf } from '@storybook/react';
 import { radios } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
@@ -27,45 +27,43 @@ const props = () => ({
   ),
 });
 
-storiesOf(patterns('ComboButton'), module)
-  .addDecorator(centered)
-  .add(
-    'default',
-    () => (
-      <div style={{ width: '300px' }}>
-        <ComboButton {...props()}>
-          <ComboButtonItem href="#" renderIcon={ArrowRight20}>
-            Item 1 (becomes primary button and text will be truncated)
-          </ComboButtonItem>
-          {Array(5)
-            .fill(0)
-            .map((item, index) => {
-              const text = `Item ${index +
-                2} - text may be long and will be truncated`;
-              return (
-                <ComboButtonItem
-                  className="some-class"
-                  key={text}
-                  index={index}
-                  onClick={action(`onClick (${text})`)}
-                  renderIcon={index % 2 === 0 ? Filter20 : null} // Show icon at even indexes.
-                >
-                  {text}
-                </ComboButtonItem>
-              );
-            })}
-        </ComboButton>
-      </div>
-    ),
-    {
-      info: {
-        text: `
+storiesOf(patterns('ComboButton'), module).add(
+  'default',
+  () => (
+    <div style={{ width: '300px' }}>
+      <ComboButton {...props()}>
+        <ComboButtonItem href="#" renderIcon={ArrowRight20}>
+          Item 1 (becomes primary button and text will be truncated)
+        </ComboButtonItem>
+        {Array(5)
+          .fill(0)
+          .map((item, index) => {
+            const text = `Item ${index +
+              2} - text may be long and will be truncated`;
+            return (
+              <ComboButtonItem
+                className="some-class"
+                key={text}
+                index={index}
+                onClick={action(`onClick (${text})`)}
+                renderIcon={index % 2 === 0 ? Filter20 : null} // Show icon at even indexes.
+              >
+                {text}
+              </ComboButtonItem>
+            );
+          })}
+      </ComboButton>
+    </div>
+  ),
+  {
+    info: {
+      text: `
           The \`ComboButton\` accepts \`ComboButtonItem\` components as children.
 
           The first child of the \`ComboButton\` will be marked as the "primary" action, and will appear as a \`Button\` next to the \`OverflowMenu\` of additional actions.
           
           If there is only one child of \`ComboButton\`, then an \`OverflowMenu\` will not be rendered.
         `,
-      },
-    }
-  );
+    },
+  }
+);

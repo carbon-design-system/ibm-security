@@ -4,7 +4,7 @@
  */
 
 import { action } from '@storybook/addon-actions';
-import centered from '@storybook/addon-centered/react';
+
 import { text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
@@ -65,7 +65,6 @@ const {
 const { basic, retry: retryProps } = statusIndicatorProps;
 
 storiesOf(patterns('StatusIndicator'), module)
-  .addDecorator(centered)
   .add('Default', () => (
     <StatusIndicator {...basic()}>
       {statusStepsProps().map(({ key, ...props }) => (
