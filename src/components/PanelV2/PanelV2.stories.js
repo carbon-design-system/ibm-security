@@ -17,7 +17,7 @@ import { spacing04, spacing05 } from '@carbon/layout/lib';
 import { g100 } from '@carbon/themes/lib';
 import { styles } from '@carbon/type/lib';
 
-import { patterns } from '../../../.storybook';
+import { disableCentered, patterns } from '../../../.storybook';
 
 import { label } from '../_mocks_';
 import { header, profile, toolbar } from '../Shell/_mocks_';
@@ -65,7 +65,7 @@ const content = (
   </p>
 );
 
-storiesOf(patterns('PanelV2'), module)
+disableCentered(storiesOf(patterns('PanelV2'), module))
   .addParameters({
     info: {
       // Reposition info button so that panel footer isn't covered:

@@ -31,6 +31,6 @@ const props = () => ({
   ],
 });
 
-storiesOf(patterns('ErrorPage'), module)
-  .addParameters(disableCentered)
-  .add('default', () => <ErrorPage {...props()} />);
+disableCentered(storiesOf(patterns('ErrorPage'), module)).add('default', () => (
+  <ErrorPage {...props()} />
+));

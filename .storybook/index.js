@@ -45,11 +45,12 @@ const getComponentsCategory = bindCategory(COMPONENTS);
 const getPatternsCategory = bindCategory(PATTERNS);
 
 // Configuration for disabling the centering addon in individual stories.
-const disableCentered = {
-  centered: {
-    disable: true,
-  },
-};
+const disableCentered = stories =>
+  stories.addParameters({
+    centered: {
+      disable: true,
+    },
+  });
 
 export {
   disableCentered,
