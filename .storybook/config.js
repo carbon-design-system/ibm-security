@@ -59,12 +59,6 @@ addDecorator(withMarkup);
 addDecorator(centered);
 addDecorator(story => <Container>{story()}</Container>);
 
-export const disableCentered = () => {
-  centered: {
-    disable: true;
-  }
-};
-
 /**
  * Returns the Storybook category.
  * @param {Array<*>} story The story to retrieve the category from.
