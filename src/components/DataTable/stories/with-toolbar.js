@@ -20,13 +20,18 @@ import {
   TableToolbarContent,
   TableToolbarSearch,
   TableToolbarMenu,
+  TableToolbarDownload,
 } from '../../..';
-import { headers, missingDataCharacter, rows } from '../_mocks_';
+import {
+  headers as mockHeaders,
+  missingDataCharacter,
+  rows as mockRows,
+} from '../_mocks_';
 
 const toolbarStory = props => (
   <DataTable
-    rows={rows}
-    headers={headers}
+    rows={mockRows}
+    headers={mockHeaders}
     {...props}
     render={({
       rows,
@@ -40,6 +45,12 @@ const toolbarStory = props => (
         <TableToolbar>
           <TableToolbarContent>
             <TableToolbarSearch onChange={onInputChange} />
+            <TableToolbarDownload
+              rows={mockRows}
+              headers={mockHeaders}
+              title="My CSV"
+              filename="my_exports"
+            />
             <TableToolbarMenu>
               <TableToolbarAction onClick={action('Action 1 Click')}>
                 Action 1
