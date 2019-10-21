@@ -3,8 +3,11 @@
  * @copyright IBM Security 2019
  */
 
-// TODO: Modular styles - Revert.
+// TODO: `modular-styles` - Revert.
 // import '../../index.scss';
+
+// TODO: `modular-styles` - Remove import.
+// import '../../../src/components/ICA/_index.scss';
 
 const Container = ({ children }) => children;
 
