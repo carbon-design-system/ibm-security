@@ -943,6 +943,11 @@
   resolved "https://registry.yarnpkg.com/@carbon/layout/-/layout-10.5.0.tgz#02b79bb4713ea750622e432c9e8ada626cdb6555"
   integrity sha512-Ri4lJLDlSrZwvMUWvz4mowY47yegaN4nVhoimxx2252UwJK4Q5EIp8oXkFW6caonM01VU3AJmfUIowU/fdDLWg==
 
+"@carbon/motion@^10.4.0":
+  version "10.4.0"
+  resolved "https://registry.yarnpkg.com/@carbon/motion/-/motion-10.4.0.tgz#6365b8bded801902dc0a40355cd0525308e1e55b"
+  integrity sha512-k3EBP0wKQe+MtsAKayBjABwrK/5Z8uPzewdNRBWmeKXcdLliWaT3qbo5aJ2/bkSA8ZU2kdNGzyzjeYCRtFdEpg==
+
 "@carbon/themes@^10.6.1":
   version "10.6.1"
   resolved "https://registry.yarnpkg.com/@carbon/themes/-/themes-10.6.1.tgz#4d472fad0f0c2b4a026f0bd9d772c249d029c64b"

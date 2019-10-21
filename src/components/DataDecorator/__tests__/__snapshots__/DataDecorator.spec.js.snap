@@ -174,7 +174,7 @@ exports[`DataDecorator renders correctly 1`] = `
     title="10.0.0.0"
   >
     <Transition
-      className="security--panelv2"
+      className="security--panel--v2"
       component={[Function]}
       timeout={160}
     >
@@ -189,12 +189,12 @@ exports[`DataDecorator renders correctly 1`] = `
         transitionLeaveTimeout={160}
         transitionName={
           Object {
-            "appear": "security--panelv2__transition--appear",
-            "appearActive": "security--panelv2__transition--appear--active",
-            "enter": "security--panelv2__transition--enter",
-            "enterActive": "security--panelv2__transition--enter--active",
-            "leave": "security--panelv2__transition--leave",
-            "leaveActive": "security--panelv2__transition--leave--active",
+            "appear": "security--panel--v2__transition--appear",
+            "appearActive": "security--panel--v2__transition--appear--active",
+            "enter": "security--panel--v2__transition--enter",
+            "enterActive": "security--panel--v2__transition--enter--active",
+            "leave": "security--panel--v2__transition--leave",
+            "leaveActive": "security--panel--v2__transition--leave--active",
           }
         }
       >
@@ -210,12 +210,12 @@ exports[`DataDecorator renders correctly 1`] = `
           transitionLeaveTimeout={160}
           transitionName={
             Object {
-              "appear": "security--panelv2__transition--appear",
-              "appearActive": "security--panelv2__transition--appear--active",
-              "enter": "security--panelv2__transition--enter",
-              "enterActive": "security--panelv2__transition--enter--active",
-              "leave": "security--panelv2__transition--leave",
-              "leaveActive": "security--panelv2__transition--leave--active",
+              "appear": "security--panel--v2__transition--appear",
+              "appearActive": "security--panel--v2__transition--appear--active",
+              "enter": "security--panel--v2__transition--enter",
+              "enterActive": "security--panel--v2__transition--enter--active",
+              "leave": "security--panel--v2__transition--leave",
+              "leaveActive": "security--panel--v2__transition--leave--active",
             }
           }
         >
