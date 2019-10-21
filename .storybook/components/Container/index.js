@@ -7,7 +7,7 @@
 // import '../../index.scss';
 
 // TODO: `modular-styles` - Remove import.
-// import '../../../src/components/NonEntitledSection/_index.scss';
+import '../../../src/components/Notification/_index.scss';
 
 const Container = ({ children }) => children;
 

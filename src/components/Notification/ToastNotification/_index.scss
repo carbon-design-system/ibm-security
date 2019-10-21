@@ -4,12 +4,18 @@
 /// @copyright IBM Security 2019
 ////
 
-@import '../../../globals/index';
+@import '@carbon/colors/scss/colors';
+@import '@carbon/layout/scss/convert';
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/themes/scss/tokens';
+@import '@carbon/type/scss/styles';
+
+@import '../../../globals/namespace';
 
 @include export-namespace($name: toast-notification) {
   .#{$prefix}--toast-notification {
     display: flex;
-    width: rem(288px);
+    width: carbon--rem($px: 288px);
     height: auto;
     padding-left: $carbon--spacing-05;
     color: $carbon--gray-100;
@@ -49,10 +55,10 @@
     cursor: pointer;
     margin-left: auto;
     padding: 0;
-    height: rem(48px);
-    width: rem(48px);
-    min-height: rem(48px);
-    min-width: rem(48px);
+    height: carbon--rem($px: 48px);
+    width: carbon--rem($px: 48px);
+    min-height: carbon--rem($px: 48px);
+    min-width: carbon--rem($px: 48px);
 
     &:focus {
       background-color: $carbon--gray-10;
