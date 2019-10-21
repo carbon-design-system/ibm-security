@@ -7,6 +7,8 @@
 @import '@carbon/layout/scss/mini-unit';
 @import 'carbon-components/scss/globals/scss/helper-mixins';
 
+@import '../../SkeletonText/index';
+
 @import '../../Component/mixins';
 
 @include security--component($name: ica-skeleton) {
