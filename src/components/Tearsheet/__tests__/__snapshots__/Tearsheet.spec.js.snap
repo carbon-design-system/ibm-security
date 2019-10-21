@@ -51,10 +51,9 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
           className="security--tearsheet__sidebar__footer"
         >
           <Button
-            className="security--tearsheet__sidebar__button"
             disabled={false}
             iconDescription="Delete - prop"
-            kind="ghost"
+            kind="ghost-danger"
             largeText={null}
             onClick={[MockFunction]}
             renderIcon={
@@ -215,10 +214,9 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
           className="security--tearsheet__sidebar__footer"
         >
           <Button
-            className="security--tearsheet__sidebar__button"
             disabled={false}
             iconDescription="Delete"
-            kind="ghost"
+            kind="ghost-danger"
             largeText={null}
             onClick={[MockFunction]}
             renderIcon={

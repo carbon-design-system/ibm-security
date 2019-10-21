@@ -28,6 +28,7 @@ const kinds = {
   'Secondary button (secondary)': 'secondary',
   'Danger button (danger)': 'danger',
   'Ghost button (ghost)': 'ghost',
+  'Ghost danger button (ghost-danger)': 'ghost-danger',
 };
 
 const sizes = {

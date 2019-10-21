@@ -9,7 +9,6 @@ dist
 es
 lib
 node_modules
-macros
 scss
 storybook-static
 

@@ -12,6 +12,27 @@
   /// @type Length
   $button__spacing__padding: $carbon--spacing-05;
 
+  /// Selector.
+  /// @type String
+  $carbon--button__selector: '.#{$prefix}--btn';
+
+  &--ghost-danger {
+    &,
+    &:focus,
+    &:hover {
+      color: $text-01;
+
+      > #{$carbon--button__selector}__icon > path {
+        fill: currentColor;
+      }
+    }
+
+    &:focus,
+    &:hover {
+      background-color: $hover-danger;
+    }
+  }
+
   &--large {
     @include carbon--type-style($name: body-short-02);
 
@@ -20,10 +41,6 @@
     padding: $button__spacing__padding;
     align-items: start;
     flex-direction: column;
-
-    /// Selector.
-    /// @type String
-    $carbon--button__selector: '.#{$prefix}--btn';
 
     > #{$carbon--button__selector}__icon {
       position: absolute;
