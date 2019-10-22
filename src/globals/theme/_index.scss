@@ -8,12 +8,13 @@
 
 /// Default theme.
 /// @type Map<String, Color>
-$security--theme: $carbon--theme--g100 !default;
+/// @access private
+$-theme: $carbon--theme--g100 !default;
 
 // Map the theme tokens as CSS custom properties.
 @each $token, $value in $carbon--theme--g100 {
-  $security--theme: map-merge(
-    $map1: $security--theme,
+  $-theme: map-merge(
+    $map1: $-theme,
     $map2: (
       $token: var(--#{$token}, $value),
     ),
@@ -22,7 +23,7 @@ $security--theme: $carbon--theme--g100 !default;
 
 /// Carbon theme.
 /// @type Map<String, Color>
-$carbon--theme: $security--theme;
+$carbon--theme: $-theme;
 
 @include carbon--theme;
 

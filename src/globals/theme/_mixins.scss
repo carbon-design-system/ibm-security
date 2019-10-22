@@ -65,7 +65,7 @@
 /// @access private
 /// @example scss
 ///   body {
-///     @include security--generate-css-custom-properties($theme: $security--theme);
+///     @include security--generate-css-custom-properties($theme: $-theme);
 ///   }
 /// @output css
 ///   body {
