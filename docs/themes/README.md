@@ -2,8 +2,6 @@
 
 > Themes for applying color in Carbon for IBM Security
 
-Also refer to [themes in Carbon](https://github.com/carbon-design-system/carbon/tree/master/packages/themes).
-
 ## Usage
 
 Themes are offered by outputting [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) for theme tokens.
@@ -59,3 +57,5 @@ import { theme } from '@carbon/ibm-security';
 // Specific token values.
 const { interactive01, interactive02 } = theme;
 ```
+
+Also refer to [themes in Carbon](https://github.com/carbon-design-system/carbon/blob/master/packages/themes).

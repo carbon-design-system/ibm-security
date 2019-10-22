@@ -85,7 +85,7 @@ storiesOf(components('ICA'), module)
         
         These two row examples show different combinations of breakpoints and spans set per column with specific class names.
         
-        For more information the 16 column IBM grid, please review the [\`@carbon/grid\` package documentation](https://github.com/carbon-design-system/carbon/tree/master/packages/grid).
+        For more information the 16 column IBM grid, please review the [\`@carbon/grid\` package documentation](https://github.com/carbon-design-system/carbon/blob/master/packages/grid).
       `,
       },
     }
