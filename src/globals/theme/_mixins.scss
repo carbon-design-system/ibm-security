@@ -79,6 +79,14 @@
   }
 }
 
+%security--theme--cg10__cg10 {
+  #{get-component-namespace($component-name: theme--cg10)} & {
+    @include security--generate-css-custom-properties(
+      $theme: map-get($map: $security--themes, $key: theme--cg10)
+    );
+  }
+}
+
 %security--theme--cg10__cg100 {
   #{get-component-namespace($component-name: theme--cg10)} & {
     @include security--generate-css-custom-properties(
@@ -88,6 +96,10 @@
         )
     );
   }
+}
+
+@mixin security--theme--cg10__cg10 {
+  @extend %security--theme--cg10__cg10;
 }
 
 /// Mixin to apply 'cool gray 100' theme to children of the selector within the 'cool gray 10' theme.

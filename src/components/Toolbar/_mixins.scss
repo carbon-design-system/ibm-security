@@ -176,6 +176,11 @@ $toolbar__panel__transition__timing-function: $timing-function;
         opacity: 0.95;
       }
     }
+
+    &::after,
+    &::before {
+      @include security--theme--cg10__cg10;
+    }
   }
 
   &__icon {
