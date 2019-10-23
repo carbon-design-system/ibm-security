@@ -45,7 +45,7 @@
 /// 'Cool gray' theme.
 /// @type Map<String, Color>
 /// @access private
-$-theme--cg10: security--cool-gray(
+$security--theme--cg10: security--cool-gray(
   $theme: $carbon--theme--g10,
 );
 
@@ -53,6 +53,6 @@ $-theme--cg10: security--cool-gray(
 /// @type Map<Map, Map>
 /// @access private
 $security--themes: (
-  theme--cg10: $-theme--cg10,
+  theme--cg10: $security--theme--cg10,
   theme--g100: $carbon--theme--g100,
 );

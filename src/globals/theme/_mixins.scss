@@ -79,25 +79,40 @@
   }
 }
 
-%security--theme--cg10__cg10 {
+/// Mixin to generate CSS custom properties for the 'cool gray 10' theme.
+/// @param {Map<String, Color>} $theme The theme to generate the CSS custom properties from.
+/// @access private
+@mixin security--theme--cg10($theme) {
   #{get-component-namespace($component-name: theme--cg10)} & {
-    @include security--generate-css-custom-properties(
-      $theme: map-get($map: $security--themes, $key: theme--cg10)
-    );
+    @include security--generate-css-custom-properties($theme: $theme);
   }
+}
+
+%security--theme--cg10__cg10 {
+  @include security--theme--cg10($theme: $security--theme--cg10);
 }
 
 %security--theme--cg10__cg100 {
-  #{get-component-namespace($component-name: theme--cg10)} & {
-    @include security--generate-css-custom-properties(
-      $theme:
-        security--cool-gray(
-          $theme: map-get($map: $security--themes, $key: theme--g100)
-        )
-    );
-  }
+  @include security--theme--cg10(
+    $theme:
+      security--cool-gray(
+        $theme: map-get($map: $security--themes, $key: theme--g100)
+      )
+  );
 }
 
+/// Mixin to apply 'cool gray 10' theme to children of the selector within the 'cool gray 10' theme.
+/// @access private
+/// @example scss
+///   body {
+///     @include security--theme--cg10__cg10;
+///   }
+/// @output css
+///   .security--theme--cg10 body {
+///     --interactive-01: #0062ff;
+///     --interactive-02: #373d42;
+///     --interactive-03: #0062ff;
+///   }
 @mixin security--theme--cg10__cg10 {
   @extend %security--theme--cg10__cg10;
 }
