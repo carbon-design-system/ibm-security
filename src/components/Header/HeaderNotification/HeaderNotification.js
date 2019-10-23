@@ -19,6 +19,7 @@ const HeaderNotification = ({
   product,
   viaLabel,
   href,
+  tooltipDirection,
 }) => (
   <div className={namespace} role="alert">
     <a {...(href ? { href } : {})} className={`${namespace}__content`}>
@@ -32,9 +33,8 @@ const HeaderNotification = ({
         className={`${namespace}__description`}
         lines={2}
         truncate
-        title={description}
-        aria-label={description}
         value={description}
+        tooltipDirection={tooltipDirection}
       />
     </a>
     <div className={`${namespace}__wrapper`}>

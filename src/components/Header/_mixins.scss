@@ -251,7 +251,6 @@ $header__transition__timing-function: $timing-function;
         padding-left: $carbon--spacing-05;
         color: unset;
         text-decoration: initial;
-        overflow: hidden;
         transition: $header__transition__duration background-color
           $header__transition__timing-function;
 

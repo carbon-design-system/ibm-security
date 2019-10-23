@@ -22,10 +22,9 @@ exports[`HeaderNotification Rendering renders correctly 1`] = `
        via Application 3
     </span>
     <StringFormatter
-      aria-label="A new request requires approval."
       className="security--header__notification__description"
       lines={2}
-      title="A new request requires approval."
+      tooltipDirection="bottom"
       truncate={true}
       value="A new request requires approval."
       width={null}
