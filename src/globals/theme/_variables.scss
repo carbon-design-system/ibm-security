@@ -7,6 +7,22 @@
 @import '@carbon/colors/scss/colors';
 @import '@carbon/themes/scss/theme-maps';
 
+/// 'Cool gray' theme overrides.
+/// @type Map<String, Color>
+/// @access private
+$security--cool-gray__overrides: (
+  hover-ui: $carbon--cool-gray-30,
+);
+
+@function security--merge-theme($theme, $token-key, $token) {
+  @return map-merge(
+    $map1: $theme,
+    $map2: (
+      $token-key: $token,
+    )
+  );
+}
+
 /// Converts themes with 'gray' color values to 'cool gray'.
 /// @param {Map<string, Color>} $theme A theme map with gray values to convert.
 /// @returns {Map<string, Color>} The converted theme.
@@ -18,23 +34,38 @@
     @each $color-key,
       $color-value in map-get($map: $carbon--colors, $key: 'gray')
     {
+      $theme__override: map-get(
+        $map: $security--cool-gray__overrides,
+        $key: $token-key,
+      );
+
       $theme--cool-gray: if(
-        $token-value == $color-value,
-        map-merge(
-          $map1: $theme--cool-gray,
-          $map2: (
-            $token-key:
-              map-get(
-                $map:
-                  map-get(
-                    $map: $carbon--colors,
-                    $key: 'cool-gray',
-                  ),
-                $key: $color-key,
-              ),
+        $condition: $theme__override,
+        $if_true:
+          security--merge-theme(
+            $theme: $theme--cool-gray,
+            $token-key: $token-key,
+            $token: $theme__override,
           ),
-        ),
-        $theme--cool-gray
+        $if_false:
+          if(
+            $condition: $token-value == $color-value,
+            $if_true:
+              security--merge-theme(
+                $theme: $theme--cool-gray,
+                $token-key: $token-key,
+                $token:
+                  map-get(
+                    $map:
+                      map-get(
+                        $map: $carbon--colors,
+                        $key: 'cool-gray',
+                      ),
+                    $key: $color-key,
+                  ),
+              ),
+            $if_false: $theme--cool-gray,
+          ),
       );
     }
   }
