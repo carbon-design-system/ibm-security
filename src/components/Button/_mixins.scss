@@ -22,19 +22,16 @@
   $carbon--button__selector: '.#{$prefix}--btn';
 
   &--ghost-danger {
-    &,
+    color: $text-01;
+
     &:focus,
     &:hover {
-      color: $text-01;
-
-      > #{$carbon--button__selector}__icon > path {
-        fill: currentColor;
-      }
+      color: $text-04;
+      background-color: $hover-danger;
     }
 
-    &:focus,
-    &:hover {
-      background-color: $hover-danger;
+    &:hover > #{$carbon--button__selector}__icon > path {
+      fill: currentColor;
     }
   }
 

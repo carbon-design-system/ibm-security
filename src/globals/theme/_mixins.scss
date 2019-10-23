@@ -79,6 +79,17 @@
   }
 }
 
+%security--theme--cg10__cg100 {
+  #{get-component-namespace($component-name: theme--cg10)} & {
+    @include security--generate-css-custom-properties(
+      $theme:
+        security--cool-gray(
+          $theme: map-get($map: $security--themes, $key: theme--g100)
+        )
+    );
+  }
+}
+
 /// Mixin to apply 'cool gray 100' theme to children of the selector within the 'cool gray 10' theme.
 /// @access private
 /// @example scss
@@ -92,12 +103,5 @@
 ///     --interactive-03: #ffffff;
 ///   }
 @mixin security--theme--cg10__cg100 {
-  #{get-component-namespace($component-name: theme--cg10)} & {
-    @include security--generate-css-custom-properties(
-      $theme:
-        security--cool-gray(
-          $theme: map-get($map: $security--themes, $key: theme--g100)
-        )
-    );
-  }
+  @extend %security--theme--cg10__cg100;
 }

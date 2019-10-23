@@ -7,7 +7,6 @@ import Add20 from '@carbon/icons-react/lib/add/20';
 import Add24 from '@carbon/icons-react/lib/add/24';
 import Add32 from '@carbon/icons-react/lib/add/32';
 
-import { white } from '@carbon/colors';
 import { miniUnits } from '@carbon/layout';
 
 import { withA11y } from '@storybook/addon-a11y';
@@ -18,6 +17,8 @@ import React from 'react';
 
 import { components } from '../../../.storybook';
 
+import theme from '../../globals/theme';
+
 import { className } from '../_mocks_';
 import { renderIcon } from '../Icon/_mocks_';
 
@@ -25,7 +26,7 @@ import { Icon } from '../..';
 
 const iconProps = {
   className,
-  style: { fill: white, margin: miniUnits(1) },
+  style: { fill: theme.icon01, margin: miniUnits(1) },
 };
 
 storiesOf(components('Icon'), module)
