@@ -43,7 +43,7 @@
 | `active-secondary`   | `cool-gray-60` (`#697077`)  | `gray-80` (`#3d3d3d`)   |
 | `hover-tertiary`     | `#0353e9` (`#0353e9`)       | `gray-10` (`#f3f3f3`)   |
 | `active-tertiary`    | `blue-80` (`#0530ad`)       | `gray-30` (`#bebebe`)   |
-| `hover-ui`           | `#e5e5e5` (`#e5e5e5`)       | `#353535` (`#353535`)   |
+| `hover-ui`           | `cool-gray-30` (`#b9bfc7`)  | `#353535` (`#353535`)   |
 | `active-ui`          | `cool-gray-30` (`#b9bfc7`)  | `gray-70` (`#565656`)   |
 | `selected-ui`        | `cool-gray-20` (`#d5d9e0`)  | `gray-80` (`#3d3d3d`)   |
 | `inverse-hover-ui`   | `#4c4c4c` (`#4c4c4c`)       | `#e5e5e5` (`#e5e5e5`)   |
