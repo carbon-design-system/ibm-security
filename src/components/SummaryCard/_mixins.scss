@@ -34,7 +34,7 @@
   flex-direction: column;
   overflow: hidden;
 
-  &-body {
+  &__body {
     @include carbon--type-style($name: body-long-01);
 
     // `hidden` because the ScrollGradient will handle overflow:
@@ -48,7 +48,7 @@
     margin: 0;
   }
 
-  &-header {
+  &__header {
     height: $header--height;
     display: flex;
     padding: $carbon--spacing-05 $carbon--spacing-05 0 $carbon--spacing-05;
@@ -62,13 +62,13 @@
     }
   }
 
-  &-footer {
+  &__footer {
     position: relative;
     display: flex;
     background-color: $ui-01;
   }
 
-  &-action {
+  &__action {
     @include text-overflow;
     flex: 1;
 
@@ -101,7 +101,7 @@
     }
   }
 
-  &-action-overlay {
+  &__action-overlay {
     cursor: default;
     position: absolute;
     display: flex;

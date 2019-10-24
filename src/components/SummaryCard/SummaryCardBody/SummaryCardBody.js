@@ -11,7 +11,7 @@ import ScrollGradient from '../../ScrollGradient';
 
 import { getComponentNamespace } from '../../../globals/namespace/index';
 
-const namespace = getComponentNamespace('summary-card-body');
+const namespace = getComponentNamespace('summary-card__body');
 
 const SummaryCardBody = ({ children, className }) => (
   <div className={classnames(namespace, className)}>
