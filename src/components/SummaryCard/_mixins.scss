@@ -10,21 +10,27 @@
   /// Summary card header height.
   /// @type Length
   /// @access private
-  $header--height: carbon--mini-units(4);
+  $header--height: carbon--mini-units(
+    $count: 4,
+  );
 
   /// Summary card body height.
   /// @type Length
   /// @access private
-  $body--height: carbon--mini-units(38);
+  $body--height: carbon--mini-units(
+    $count: 38,
+  );
 
   /// Summary card footer height.
   /// @type Length
   /// @access private
-  $footer--height: carbon--mini-units(6);
+  $footer--height: carbon--mini-units(
+    $count: 6,
+  );
 
   position: relative;
   display: flex;
-  min-width: carbon--mini-units(36);
+  min-width: carbon--mini-units($count: 36);
   flex-direction: column;
   overflow: hidden;
 
@@ -48,7 +54,7 @@
     padding: $carbon--spacing-05 $carbon--spacing-05 0 $carbon--spacing-05;
 
     &__title {
-      @include carbon--type-style(caption-01);
+      @include carbon--type-style($name: caption-01);
       color: $text-02;
       flex-grow: 1;
       margin: 0;

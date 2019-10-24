@@ -6,7 +6,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { g100 } from '@carbon/themes';
 
 import ScrollGradient from '../../ScrollGradient';
 
@@ -14,9 +13,9 @@ import { getComponentNamespace } from '../../../globals/namespace/index';
 
 const namespace = getComponentNamespace('summary-card-body');
 
-const SummaryCardBody = ({ children, className, scrollGradientColor }) => (
+const SummaryCardBody = ({ children, className }) => (
   <div className={classnames(namespace, className)}>
-    <ScrollGradient color={scrollGradientColor}>{children}</ScrollGradient>
+    <ScrollGradient>{children}</ScrollGradient>
   </div>
 );
 
@@ -26,14 +25,10 @@ SummaryCardBody.propTypes = {
 
   /** @type {string} Extra class names to add.. */
   className: PropTypes.string,
-
-  /** @type {string} The fade out color (can be any valid css value). */
-  scrollGradientColor: PropTypes.string,
 };
 
 SummaryCardBody.defaultProps = {
   className: '',
-  scrollGradientColor: g100.uiBackground,
 };
 
 export default SummaryCardBody;
