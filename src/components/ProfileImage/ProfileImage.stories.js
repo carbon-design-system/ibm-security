@@ -3,45 +3,25 @@
  * @copyright IBM Security 2019
  */
 
-import React from 'react';
-
-import { storiesOf } from '@storybook/react';
-import { checkA11y } from '@storybook/addon-a11y';
 import { boolean, object } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
+
+import React from 'react';
 
 import { components } from '../../../.storybook';
 
 import { ProfileImage } from '../..';
 
-import { className, large, profile, profileWithImage } from './_mocks_';
+import { className, large, profile } from './_mocks_';
 
 const profileImageProps = () => ({
   className,
   large: boolean('Large (large)', large),
 });
 
-storiesOf(components('ProfileImage'), module)
-  .addDecorator(checkA11y)
-
-  .add('default', () => (
-    <ProfileImage
-      {...profileImageProps()}
-      profile={object('Profile (profile)', profile)}
-    />
-  ))
-  .add(
-    'with image',
-    () => (
-      <ProfileImage
-        {...profileImageProps()}
-        profile={object('Profile (profile)', profileWithImage)}
-      />
-    ),
-    {
-      info: {
-        text: `
-          Basic implementation of a Profile Image component with an image.
-        `,
-      },
-    }
-  );
+storiesOf(components('ProfileImage'), module).add('default', () => (
+  <ProfileImage
+    {...profileImageProps()}
+    profile={object('Profile (profile)', profile)}
+  />
+));
