@@ -1,6 +1,6 @@
 {
   "name": "@carbon/ibm-security",
-  "version": "1.4.1-prerelease.5",
+  "version": "1.6.1",
   "description": "Carbon for IBM Security",
   "license": "Apache-2.0",
   "main": "lib/index.js",
@@ -52,6 +52,7 @@
     "carbon-components-react": "^7.6.4",
     "classnames": "^2.2.5",
     "downshift": "^1.31.14",
+    "export-to-csv": "^0.2.1",
     "flatpickr": "^4.6.1",
     "focus-trap-react": "^6.0.0",
     "invariant": "^2.2.3",
