@@ -24,34 +24,39 @@
 
   // Carbon components.
   .#{$prefix} {
-    /// `DatePicker`.
+    // `DatePicker`.
     &--date-picker__input,
 
-    /// `Dropdown`.
+    // `Dropdown`.
     &--dropdown,
-
-    /// `MultiSelect`.
-    &--list-box,
 
     /// `NumberInput`.
     &--number input[type='number'],
 
-    /// `Search`.
+    // `Search`.
     &--search-input,
 
-    /// `Select`.
+    // `Select`.
     &--select-input,
 
-    /// `TextArea`.
+    // `TextArea`.
     &--text-area,
 
-    /// `TextInput` and `Slider`.
+    // `TextInput` and `Slider`.
     &--text-input {
       @extend %input__background-color;
     }
+
+    // `MultiSelect`.
+    &--list-box {
+      &,
+      &__menu {
+        @extend %input__background-color;
+      }
+    }
   }
 
-  /// `IconButton`
+  // `IconButton`
   #{$button--icon__namespace} {
     &:focus,
     &:hover {

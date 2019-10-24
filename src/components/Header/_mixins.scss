@@ -68,7 +68,7 @@ $header__transition__timing-function: $timing-function;
   /// Height.
   /// @type Length
   $header__sizing__height: carbon--mini-units(
-    $count: 5,
+    $count: 6,
   );
 
   /// Group margin.
@@ -97,7 +97,6 @@ $header__transition__timing-function: $timing-function;
   width: inherit;
   padding-top: inherit;
   align-items: center;
-  height: inherit;
   background-color: inherit;
   color: inherit;
   z-index: $header__layer;

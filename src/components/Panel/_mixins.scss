@@ -62,7 +62,7 @@
 
   &__container #{$header__namespace}__container {
     width: calc(
-      #{$header__sizing__width} - #{$toolbar__panel__position__horizontal} - #{$panel__sizing__width}
+      #{$header__sizing__width} - #{$toolbar__sizing__width} - #{$panel__sizing__width}
     );
 
     > #{$header__namespace} {

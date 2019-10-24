@@ -21,12 +21,10 @@
     $header: '__header';
     $toolbar: '__toolbar';
 
-    margin-left: $toolbar__panel__position__horizontal;
+    margin-left: $toolbar__sizing__width;
 
     &#{$header} > #{$header__namespace} {
-      width: calc(
-        #{$header__sizing__width} - #{$toolbar__panel__position__horizontal}
-      );
+      width: calc(#{$header__sizing__width} - #{$toolbar__sizing__width});
     }
 
     &--return {
