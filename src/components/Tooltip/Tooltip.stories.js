@@ -3,18 +3,19 @@
  * @copyright IBM Security 2019
  */
 
+import OverflowMenuVertical16 from '@carbon/icons-react/lib/overflow-menu--vertical/16';
+import { withA11y } from '@storybook/addon-a11y';
 import centered from '@storybook/addon-centered/react';
 import { select, text, number } from '@storybook/addon-knobs';
-import { withA11y } from '@storybook/addon-a11y';
 import { storiesOf } from '@storybook/react';
-import OverflowMenuVertical16 from '@carbon/icons-react/lib/overflow-menu--vertical/16';
 
 import { settings } from 'carbon-components';
+
 import React from 'react';
 
 import { components } from '../../../.storybook';
 
-import { Tooltip } from '../..';
+import { Link, Tooltip } from '../..';
 
 const { prefix } = settings;
 
@@ -61,7 +62,13 @@ const props = {
     tabIndex: number('Tab index (tabIndex in <Tooltip>)', 0),
     renderIcon: OverflowMenuVertical16,
   }),
+  link: () => ({
+    href: '#',
+    children: 'Link',
+  }),
 };
+
+const { customIcon, customIconOnly, link, withIcon, withoutIcon } = props;
 
 storiesOf(components('Tooltip'), module)
   .addDecorator(withA11y)
@@ -69,16 +76,14 @@ storiesOf(components('Tooltip'), module)
   .add(
     'default (bottom)',
     () => (
-      <Tooltip {...props.withIcon()}>
+      <Tooltip {...withIcon()}>
         <p>
           This is some tooltip text. This box shows the maximum amount of text
           that should appear inside. If more room is needed please use a modal
           instead.
         </p>
         <div className={`${prefix}--tooltip__footer`}>
-          <a href="/" className={`${prefix}--link`}>
-            Learn More
-          </a>
+          <Link {...link()} />
           <button
             className={`${prefix}--btn ${prefix}--btn--primary`}
             type="button"
@@ -100,16 +105,14 @@ storiesOf(components('Tooltip'), module)
   .add(
     'no icon',
     () => (
-      <Tooltip {...props.withoutIcon()}>
+      <Tooltip {...withoutIcon()}>
         <p>
           This is some tooltip text. This box shows the maximum amount of text
           that should appear inside. If more room is needed please use a modal
           instead.
         </p>
         <div className={`${prefix}--tooltip__footer`}>
-          <a href="/" className={`${prefix}--link`}>
-            Learn More
-          </a>
+          <Link {...link()} />
           <button
             className={`${prefix}--btn ${prefix}--btn--primary`}
             type="button"
@@ -131,16 +134,14 @@ storiesOf(components('Tooltip'), module)
   .add(
     'custom icon',
     () => (
-      <Tooltip {...props.customIcon()}>
+      <Tooltip {...customIcon()}>
         <p>
           This is some tooltip text. This box shows the maximum amount of text
           that should appear inside. If more room is needed please use a modal
           instead.
         </p>
         <div className={`${prefix}--tooltip__footer`}>
-          <a href="/" className={`${prefix}--link`}>
-            Learn More
-          </a>
+          <Link {...link()} />
           <button
             className={`${prefix}--btn ${prefix}--btn--primary`}
             type="button"
@@ -162,16 +163,14 @@ storiesOf(components('Tooltip'), module)
   .add(
     'only custom icon',
     () => (
-      <Tooltip {...props.customIconOnly()}>
+      <Tooltip {...customIconOnly()}>
         <p>
           This is some tooltip text. This box shows the maximum amount of text
           that should appear inside. If more room is needed please use a modal
           instead.
         </p>
         <div className={`${prefix}--tooltip__footer`}>
-          <a href="/" className={`${prefix}--link`}>
-            Learn More
-          </a>
+          <Link {...link()} />
           <button
             className={`${prefix}--btn ${prefix}--btn--primary`}
             type="button"
