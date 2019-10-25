@@ -11,4 +11,3 @@ import '@storybook/addon-a11y/register';
 import '@storybook/addon-viewport/register';
 
 import './addons/addon-theme/register';
-import './addons/addon-markup/register';

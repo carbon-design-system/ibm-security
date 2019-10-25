@@ -16,7 +16,6 @@ import { addDecorator, configure, addParameters } from '@storybook/react';
 import escapeStringRegexp from 'escape-string-regexp';
 import React from 'react';
 
-import withMarkup from './addons/addon-markup';
 import withTheme from './addons/addon-theme';
 
 import theme from './theme';
@@ -54,7 +53,6 @@ addDecorator(
 );
 
 addDecorator(withTheme);
-addDecorator(withMarkup);
 
 addDecorator(centered);
 addDecorator(story => <Container>{story()}</Container>);
