@@ -4,6 +4,8 @@
 /// @copyright IBM Security 2019
 ////
 
+@import '@carbon/layout/scss/spacing';
+
 @import '../../globals/index';
 
 @import '../../platform/body/mixins';
@@ -427,6 +429,7 @@ $header__transition__timing-function: $timing-function;
               background-color: $header__popover__color__border;
               height: $header__popover__sizing__border;
               content: '';
+              transform: translate3d(0, -#{$carbon--spacing-01}, 0);
             }
           }
 

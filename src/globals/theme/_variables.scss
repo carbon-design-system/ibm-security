@@ -15,7 +15,7 @@ $-cool-gray-10--hover: $carbon--cool-gray-20;
 /// 'Cool gray 10' theme overrides.
 /// @type Map<String, Color>
 /// @access private
-$-cool-gray-10__overrides: (
+$security--cool-gray-10__overrides: (
   hover-ui: $-cool-gray-10--hover,
   hover-secondary: $carbon--cool-gray-90,
   hover-selected-ui: $carbon--cool-gray-30,
@@ -41,28 +41,30 @@ $-cool-gray-10__overrides: (
 /// @param {Map<string, Color>} $theme A theme map with gray values to convert.
 /// @returns {Map<string, Color>} The converted theme.
 /// @access private
-@function security--cool-gray(
-  $theme,
-  $theme__overrides: $-cool-gray-10__overrides
-) {
+@function security--cool-gray($theme, $overrides: null) {
   $theme--cool-gray: $theme;
 
   @each $token-key, $token-value in $theme {
     @each $color-key,
       $color-value in map-get($map: $carbon--colors, $key: 'gray')
     {
-      $theme__override: map-get(
-        $map: $theme__overrides,
-        $key: $token-key,
+      $override: if(
+        $condition: $overrides,
+        $if_true:
+          map-get(
+            $map: $overrides,
+            $key: $token-key,
+          ),
+        $if_false: $overrides,
       );
 
       $theme--cool-gray: if(
-        $condition: $theme__override,
+        $condition: $override,
         $if_true:
           security--merge-theme(
             $theme: $theme--cool-gray,
             $token-key: $token-key,
-            $token: $theme__override,
+            $token: $override,
           ),
         $if_false:
           if(
@@ -95,6 +97,7 @@ $-cool-gray-10__overrides: (
 /// @access private
 $security--theme--cg10: security--cool-gray(
   $theme: $carbon--theme--g10,
+  $overrides: $security--cool-gray-10__overrides,
 );
 
 /// Supported theme definitions.

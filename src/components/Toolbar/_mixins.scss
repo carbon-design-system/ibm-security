@@ -183,13 +183,8 @@ $toolbar__panel__transition__timing-function: $timing-function;
   }
 
   &__nav__item__icon {
-    width: carbon--mini-units($count: 2.5);
-    height: carbon--mini-units($count: 2.5);
-    padding-right: $carbon--spacing-03;
-
-    @include rtl {
-      padding-left: $carbon--spacing-03;
-    }
+    width: carbon--mini-units($count: 2);
+    height: carbon--mini-units($count: 2);
   }
 
   &__panel {
@@ -198,6 +193,8 @@ $toolbar__panel__transition__timing-function: $timing-function;
     left: $toolbar__sizing__width;
     bottom: 0;
     width: $toolbar__panel__sizing__width;
+    padding-top: $toolbar__spacing__position__vertical;
+    padding-bottom: $toolbar__spacing__position__vertical;
     background-color: $ui-01;
     box-sizing: border-box;
     z-index: z($layer: modal);
