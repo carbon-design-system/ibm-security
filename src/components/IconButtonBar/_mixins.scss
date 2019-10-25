@@ -25,7 +25,7 @@
     /// Variation dimensions.
     /// @type Length
     $icon-button-bar__sizing__dimensions: carbon--mini-units(
-      $count: icon-button-bar__unit,
+      $count: $icon-button-bar__unit,
     );
 
     &--#{icon-button-bar__size} {
