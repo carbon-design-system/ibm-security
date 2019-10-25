@@ -46,6 +46,7 @@
     "@carbon/icons-react": "^10.6.1",
     "@carbon/import-once": "^10.3.0",
     "@carbon/layout": "^10.5.0",
+    "@carbon/motion": "^10.4.0",
     "@carbon/themes": "^10.6.1",
     "@carbon/type": "^10.5.1",
     "carbon-components": "^10.6.4",

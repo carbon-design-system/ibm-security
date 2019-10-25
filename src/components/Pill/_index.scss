@@ -4,11 +4,27 @@
 /// @copyright IBM Security 2019
 ////
 
-@import '../Component/mixins';
-@import 'mixins';
+@import '@carbon/colors/scss/colors';
+@import '@carbon/layout/scss/mini-unit';
+@import '@carbon/layout/scss/spacing';
+
+@import '../../globals/namespace/index';
 
 @import '../DataDecorator/index';
 
+@import '../Component/mixins';
+
 @include security--component($name: pill) {
-  @include pill;
+  border-radius: carbon--mini-units($count: 12.5);
+  padding: 0 $carbon--spacing-03;
+
+  .#{$namespace}decorator__value {
+    color: $carbon--white-0;
+  }
+
+  &--inline {
+    border-radius: carbon--mini-units($count: 6.25);
+    display: inline-flex;
+    padding: 0 $carbon--spacing-02;
+  }
 }
