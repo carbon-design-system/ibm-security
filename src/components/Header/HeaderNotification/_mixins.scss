@@ -29,6 +29,11 @@
     text-align: left;
     line-height: initial;
 
+    &:focus {
+      outline: 2px solid $inverse-link;
+      outline-offset: 2px;
+    }
+
     // Tooltip top variation arrow:
     &.#{$prefix}--tooltip__trigger--definition.#{$prefix}--tooltip--top.#{$prefix}--tooltip--align-start::before {
       border-color: $inverse-01 transparent transparent transparent;
