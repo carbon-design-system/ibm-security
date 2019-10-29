@@ -11,6 +11,6 @@
 /// @param {string} $url The URL to assist with migrating.
 /// @return {string} The message generated as a deprecation warning.
 ///
-@function deprecate($actual, $expected, $url) {
+@function deprecate($actual, $expected, $url: null) {
   @return '`#{$actual}` has been deprecated in favour of `#{$expected}` — This will be removed in the next major version. #{$url}';
 }
