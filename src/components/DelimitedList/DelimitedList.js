@@ -43,7 +43,7 @@ class DelimitedList extends Component {
   };
 
   render() {
-    const { className, delimiter, items, truncate } = this.props;
+    const { className, delimiter, items, truncate, ...other } = this.props;
 
     const classes = classnames(namespace, className);
     const valueClasses = classnames(`${namespace}__value`, {
@@ -54,6 +54,7 @@ class DelimitedList extends Component {
       <div
         className={classes}
         title={this.state.hasOverflow ? items.join(delimiter) : undefined}
+        {...other}
       >
         <div ref={this.element} className={valueClasses}>
           {items.length > 0 ? items.join(delimiter) : '–'}

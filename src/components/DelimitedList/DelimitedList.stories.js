@@ -3,10 +3,11 @@
  * @copyright IBM Security 2019
  */
 
+import { breakpoints } from '@carbon/layout';
+
 import { array, boolean, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
-import { settings } from 'carbon-components';
 import React from 'react';
 
 import { components, info } from '../../../.storybook';
@@ -21,13 +22,13 @@ const props = () => ({
   items: array('Items (items)', mocks.items),
   truncate: boolean('Truncate (truncate)', truncate),
   delimiter: text('Delimiter (delimiter)', delimiter),
+  style: { width: breakpoints.sm.width },
 });
 
 storiesOf(components('DelimitedList'), module).add(
   'Default',
-  () => (
-    <DelimitedList className={`${settings.prefix}--col-sm-2`} {...props()} />
-  ),
+  () => <DelimitedList {...props()} />,
+
   info(
     'Delimited lists truncates an array of items, separated by a delimited, and include the total number of items when hovering.'
   )
