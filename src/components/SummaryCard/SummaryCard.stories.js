@@ -4,7 +4,6 @@
  */
 
 import { action } from '@storybook/addon-actions';
-import { withA11y } from '@storybook/addon-a11y';
 import { storiesOf } from '@storybook/react';
 import { text } from '@storybook/addon-knobs';
 
@@ -24,7 +23,6 @@ import {
 } from '../..';
 
 storiesOf(patterns('SummaryCard'), module)
-  .addDecorator(withA11y)
   .add('with primary label', () => (
     <div className="bx--grid bx--grid--full-width">
       <div className="bx--row">
@@ -54,7 +52,7 @@ storiesOf(patterns('SummaryCard'), module)
               >
                 {text(
                   'SummaryCardAction content (children)',
-                  'This is text inside a SummaryCardAction'
+                  'Text inside a SummaryCardAction (when expanded, it is alos the overlay heading)'
                 )}
               </SummaryCardAction>
               <SummaryCardAction

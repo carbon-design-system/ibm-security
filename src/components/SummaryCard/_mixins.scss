@@ -135,6 +135,10 @@
       padding: $carbon--spacing-05;
     }
 
+    &__content {
+      overflow-y: auto;
+    }
+
     &__close-button {
       align-self: flex-start;
 
