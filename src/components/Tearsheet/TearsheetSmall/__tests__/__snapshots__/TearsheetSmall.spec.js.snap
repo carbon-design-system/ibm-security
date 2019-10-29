@@ -41,7 +41,11 @@ exports[`TearsheetSmall renders 1`] = `
           getScrollElementRef={[Function]}
           hideStartGradient={false}
           onScroll={[Function]}
-        />
+        >
+          <div
+            className="security--tearsheet--small__scroll-gradient__content"
+          />
+        </ScrollGradient>
       </section>
       <footer
         className="security--tearsheet--small__footer"
@@ -135,7 +139,11 @@ exports[`TearsheetSmall renders disabled buttons 1`] = `
           getScrollElementRef={[Function]}
           hideStartGradient={false}
           onScroll={[Function]}
-        />
+        >
+          <div
+            className="security--tearsheet--small__scroll-gradient__content"
+          />
+        </ScrollGradient>
       </section>
       <footer
         className="security--tearsheet--small__footer"
@@ -219,7 +227,11 @@ exports[`TearsheetSmall renders loading state 1`] = `
           getScrollElementRef={[Function]}
           hideStartGradient={false}
           onScroll={[Function]}
-        />
+        >
+          <div
+            className="security--tearsheet--small__scroll-gradient__content"
+          />
+        </ScrollGradient>
       </section>
       <footer
         className="security--tearsheet--small__footer"
@@ -313,7 +325,11 @@ exports[`TearsheetSmall should override \`labels\` if button label property prov
           getScrollElementRef={[Function]}
           hideStartGradient={false}
           onScroll={[Function]}
-        />
+        >
+          <div
+            className="security--tearsheet--small__scroll-gradient__content"
+          />
+        </ScrollGradient>
       </section>
       <footer
         className="security--tearsheet--small__footer"
