@@ -28,7 +28,7 @@
       $count: $icon-button-bar__unit,
     );
 
-    &--#{icon-button-bar__size} {
+    &--#{$icon-button-bar__size} {
       min-width: $icon-button-bar__sizing__dimensions;
 
       #{$root}__overflow-menu {
