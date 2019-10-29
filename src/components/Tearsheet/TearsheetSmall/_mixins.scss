@@ -53,6 +53,11 @@
     flex-grow: 1;
   }
 
+  &__scroll-gradient__content {
+    padding-right: $tearsheet--small__spacing__padding;
+    padding-left: $tearsheet--small__spacing__padding;
+  }
+
   &__description {
     @include carbon--type-style($name: body-short-01);
   }
