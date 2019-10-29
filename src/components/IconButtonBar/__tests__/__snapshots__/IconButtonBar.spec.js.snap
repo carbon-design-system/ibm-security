@@ -48,7 +48,7 @@ exports[`IconButtonBar renders the 'lg' variation 1`] = `
     className="security--icon-button-bar__overflow-menu"
     direction="top"
     flipped={true}
-    menuOptionsClass="security--icon-button-bar__overflow-menu-options--lg"
+    menuOptionsClass="security--icon-button-bar__overflow-menu-options security--icon-button-bar__overflow-menu-options--lg"
     renderIcon={[Function]}
   >
     <OverflowMenuItem
@@ -123,7 +123,7 @@ exports[`IconButtonBar renders the 'md' variation 1`] = `
     className="security--icon-button-bar__overflow-menu"
     direction="top"
     flipped={true}
-    menuOptionsClass="security--icon-button-bar__overflow-menu-options--md"
+    menuOptionsClass="security--icon-button-bar__overflow-menu-options security--icon-button-bar__overflow-menu-options--md"
     renderIcon={[Function]}
   >
     <OverflowMenuItem
@@ -198,7 +198,7 @@ exports[`IconButtonBar renders the 'sm' variation 1`] = `
     className="security--icon-button-bar__overflow-menu"
     direction="top"
     flipped={true}
-    menuOptionsClass="security--icon-button-bar__overflow-menu-options--sm"
+    menuOptionsClass="security--icon-button-bar__overflow-menu-options security--icon-button-bar__overflow-menu-options--sm"
     renderIcon={[Function]}
   >
     <OverflowMenuItem
@@ -273,7 +273,7 @@ exports[`IconButtonBar renders the 'xl' variation 1`] = `
     className="security--icon-button-bar__overflow-menu"
     direction="top"
     flipped={true}
-    menuOptionsClass="security--icon-button-bar__overflow-menu-options--xl"
+    menuOptionsClass="security--icon-button-bar__overflow-menu-options security--icon-button-bar__overflow-menu-options--xl"
     renderIcon={[Function]}
   >
     <OverflowMenuItem
@@ -308,7 +308,7 @@ exports[`IconButtonBar renders the length of '1' variation 1`] = `
     className="security--icon-button-bar__overflow-menu"
     direction="top"
     flipped={true}
-    menuOptionsClass="security--icon-button-bar__overflow-menu-options--lg"
+    menuOptionsClass="security--icon-button-bar__overflow-menu-options security--icon-button-bar__overflow-menu-options--lg"
     renderIcon={[Function]}
   >
     <OverflowMenuItem
@@ -383,7 +383,7 @@ exports[`IconButtonBar renders the length of '2' variation 1`] = `
     className="security--icon-button-bar__overflow-menu"
     direction="top"
     flipped={true}
-    menuOptionsClass="security--icon-button-bar__overflow-menu-options--lg"
+    menuOptionsClass="security--icon-button-bar__overflow-menu-options security--icon-button-bar__overflow-menu-options--lg"
     renderIcon={[Function]}
   >
     <OverflowMenuItem
@@ -468,7 +468,7 @@ exports[`IconButtonBar renders the length of '3' variation 1`] = `
     className="security--icon-button-bar__overflow-menu"
     direction="top"
     flipped={true}
-    menuOptionsClass="security--icon-button-bar__overflow-menu-options--lg"
+    menuOptionsClass="security--icon-button-bar__overflow-menu-options security--icon-button-bar__overflow-menu-options--lg"
     renderIcon={[Function]}
   >
     <OverflowMenuItem
