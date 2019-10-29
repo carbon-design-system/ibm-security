@@ -4,7 +4,7 @@
 
 The Storybook environment is a searchable single source of truth for UI components with detailed information on their props, documentation, and example use cases on how to consume Carbon for IBM Security.
 
-Addons enable advanced functionality including:
+Storybook addons enable advanced functionality, including:
 
 1. [Knobs](https://github.com/storybookjs/storybook/tree/master/addons/knobs) - Interact with and edit component props dynamically
 2. [Actions](https://github.com/storybookjs/storybook/tree/master/addons/actions) - Get feedback on data received by event handlers when an action is performed
