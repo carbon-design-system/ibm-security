@@ -190,6 +190,7 @@ export const TagWallFilter = ({
   filterFieldClearAllTooltip,
 }) => {
   const tearsheetProps = {
+    flush: true,
     focusTrap,
     heading,
     description,
