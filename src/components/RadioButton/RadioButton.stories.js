@@ -6,8 +6,6 @@
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { boolean, select, text } from '@storybook/addon-knobs';
-import { withA11y } from '@storybook/addon-a11y';
-import centered from '@storybook/addon-centered/react';
 
 import React from 'react';
 
@@ -36,8 +34,6 @@ const radioProps = () => ({
 });
 
 storiesOf(components('RadioButton'), module)
-  .addDecorator(withA11y)
-  .addDecorator(centered)
   .add('Default', () => <RadioButton id="radio-1" {...radioProps()} />, {
     info: {
       text: `

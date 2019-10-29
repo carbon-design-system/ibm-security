@@ -5,10 +5,8 @@
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withA11y } from '@storybook/addon-a11y';
 import { action } from '@storybook/addon-actions';
 import { boolean, select, text } from '@storybook/addon-knobs';
-import centered from '@storybook/addon-centered/react';
 
 import { components } from '../../../.storybook';
 
@@ -38,8 +36,6 @@ const notificationProps = () => ({
 });
 
 storiesOf(components('Notifications'), module)
-  .addDecorator(withA11y)
-  .addDecorator(centered)
   .add('Toast', () => (
     <ToastNotification
       {...notificationProps()}

@@ -5,7 +5,6 @@
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withA11y } from '@storybook/addon-a11y';
 
 import { components } from '../../../.storybook';
 
@@ -19,7 +18,6 @@ import {
 import rows from './_mocks_';
 
 storiesOf(components('TypeLayout'), module)
-  .addDecorator(withA11y)
   .add(`default`, () => (
     <TypeLayout>
       <TypeLayoutBody>
