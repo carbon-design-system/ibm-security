@@ -61,7 +61,7 @@ const disableCentered = stories =>
  * @param {string} info The information to apply to individual stories.
  * @returns {Object<string, string>} The configuration containing information to apply.
  */
-const withInfo = info => ({
+const info = info => ({
   info,
 });
 
@@ -69,7 +69,7 @@ export {
   disableCentered,
   getComponentsCategory as components,
   getPatternsCategory as patterns,
+  info,
   HIERARCHY_ROOT_SEPARATOR,
   ORDER,
-  withInfo,
 };

@@ -2,7 +2,7 @@
 
 > Storybook is an open source tool for efficiently developing and organizing React user interface (UI) components in isolation.
 
-The Storybook environment is a searchable single source of truth for UI components with detailed information on their props, documentation, and example use cases on how to consume Carbon for IBM Security.
+The Storybook environment is a searchable, single source of truth for UI components with detailed information on their props and types, documentation, and example use cases on how to consume Carbon for IBM Security.
 
 Storybook addons enable advanced functionality, including:
 

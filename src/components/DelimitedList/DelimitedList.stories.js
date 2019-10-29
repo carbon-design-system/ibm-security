@@ -9,7 +9,7 @@ import { storiesOf } from '@storybook/react';
 import { settings } from 'carbon-components';
 import React from 'react';
 
-import { components, withInfo } from '../../../.storybook';
+import { components, info } from '../../../.storybook';
 
 import { DelimitedList } from '../..';
 
@@ -28,7 +28,7 @@ storiesOf(components('DelimitedList'), module).add(
   () => (
     <DelimitedList className={`${settings.prefix}--col-sm-2`} {...props()} />
   ),
-  withInfo(
+  info(
     'Delimited lists truncates an array of items, separated by a delimited, and include the total number of items when hovering.'
   )
 );
