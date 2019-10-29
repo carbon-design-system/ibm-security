@@ -10,3 +10,8 @@
 /// TODO: `2.x` - Deprecate in favor of `$hover-ui`.
 /// @deprecated
 $security-color__gray-90--hover: $hover-ui;
+
+/// 'Cool gray 10' hover.
+/// @type Color
+/// @access private
+$security--cool-gray-10--hover: #e0e4ea;

@@ -7,19 +7,16 @@
 @import '@carbon/colors/scss/colors';
 @import '@carbon/themes/scss/theme-maps';
 
-/// 'Cool gray 10' hover.
-/// @type Color
-/// @access private
-$-cool-gray-10--hover: $carbon--cool-gray-20;
+@import '../color/index';
 
 /// 'Cool gray 10' theme overrides.
 /// @type Map<String, Color>
 /// @access private
 $security--cool-gray-10__overrides: (
-  hover-ui: $-cool-gray-10--hover,
+  hover-ui: $security--cool-gray-10--hover,
   hover-secondary: $carbon--cool-gray-90,
   hover-selected-ui: $carbon--cool-gray-30,
-  hover-row: $-cool-gray-10--hover,
+  hover-row: $security--cool-gray-10--hover,
 );
 
 /// Alias for merging themes and tokens.

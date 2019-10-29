@@ -61,6 +61,7 @@ class TearsheetSmall extends PureComponent {
 
   render() {
     const {
+      flush,
       focusTrap,
       heading,
       description,
@@ -115,7 +116,13 @@ class TearsheetSmall extends PureComponent {
                   className={`${namespace}__content`}
                   color={theme.ui01}
                 >
-                  {this.renderBody()}
+                  <div
+                    className={classnames({
+                      [`${namespace}__scroll-gradient__content`]: !flush,
+                    })}
+                  >
+                    {this.renderBody()}
+                  </div>
                 </ScrollGradient>
               </section>
               <footer className={`${namespace}__footer`}>
@@ -174,6 +181,9 @@ TearsheetSmall.propTypes = {
   /** @type {Node} The root node for rendering the modal */
   rootNode: isNode() ? PropTypes.instanceOf(Node) : PropTypes.any,
 
+  /** Specify whether the content's padding is flush */
+  flush: PropTypes.bool,
+
   /** @type {boolean} Focus trap. */
   focusTrap: PropTypes.bool,
 
@@ -230,6 +240,7 @@ TearsheetSmall.propTypes = {
 TearsheetSmall.defaultProps = {
   body: '',
   children: undefined,
+  flush: false,
   focusTrap: true,
   heading: '',
   description: '',
