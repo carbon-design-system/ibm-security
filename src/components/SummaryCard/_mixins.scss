@@ -28,6 +28,13 @@
     $count: 6,
   );
 
+  /// Summary card overlay z-index.
+  /// @type Value
+  /// @access private
+  $overlay--z-index: z(
+    $layer: overlay,
+  );
+
   position: relative;
   display: flex;
   min-width: carbon--mini-units($count: 36);
@@ -71,6 +78,9 @@
   &__action {
     @include text-overflow;
     flex: 1;
+
+    // Ensure that actions are always on top of the overlay:
+    z-index: $overlay--z-index + 1;
 
     // Required for truncation:
     display: inline-block;
@@ -172,5 +182,17 @@
         }
       }
     }
+  }
+
+  &__action-overlay--transparent {
+    position: absolute;
+    background-color: $overlay-01;
+    top: -($body--height + $header--height);
+    bottom: $footer--height;
+    right: 0;
+    left: 0;
+
+    // Ensure that this transparent div is always beneath the overlay and actions:
+    z-index: $overlay--z-index - 1;
   }
 }

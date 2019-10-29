@@ -67,25 +67,29 @@ class SummaryCardAction extends Component {
             leaveTimeout={transitionSegment * 3}
           >
             {isOpen && (
-              <div className={`${namespace}-overlay`}>
-                <div className={`${namespace}-overlay__header`}>
-                  {typeof children === 'string' && (
-                    <h3 className={`${namespace}-overlay__title`}>
-                      {children}
-                    </h3>
-                  )}
-                  <Button
-                    className={`${namespace}-overlay__close-button`}
-                    renderIcon={Close20}
-                    iconDescription={closeButtonIconDescription}
-                    onClick={this.toggleOpen}
-                    kind="ghost"
-                  />
+              <>
+                <div className={`${namespace}-overlay`}>
+                  <div className={`${namespace}-overlay__header`}>
+                    {typeof children === 'string' && (
+                      <h3 className={`${namespace}-overlay__title`}>
+                        {children}
+                      </h3>
+                    )}
+                    <Button
+                      className={`${namespace}-overlay__close-button`}
+                      renderIcon={Close20}
+                      iconDescription={closeButtonIconDescription}
+                      onClick={this.toggleOpen}
+                      kind="ghost"
+                    />
+                  </div>
+                  <div className={`${namespace}-overlay__content`}>
+                    {expandedContent}
+                  </div>
                 </div>
-                <div className={`${namespace}-overlay__content`}>
-                  {expandedContent}
-                </div>
-              </div>
+
+                <div className={`${namespace}-overlay--transparent`} />
+              </>
             )}
           </Transition>
         )}
