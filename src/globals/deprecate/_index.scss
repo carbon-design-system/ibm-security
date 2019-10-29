@@ -8,8 +8,9 @@
 /// Helper for generating a deprecation warning.
 /// @param {string} $actual The value provided.
 /// @param {string} $expected The expected value.
+/// @param {string} $url The URL to assist with migrating.
 /// @return {string} The message generated as a deprecation warning.
 ///
-@function deprecate($actual, $expected) {
-  @return '`#{$actual}` has been deprecated in favour of `#{$expected}` — This will be removed in the next major version';
+@function deprecate($actual, $expected, $url) {
+  @return '`#{$actual}` has been deprecated in favour of `#{$expected}` — This will be removed in the next major version. #{$url}';
 }
