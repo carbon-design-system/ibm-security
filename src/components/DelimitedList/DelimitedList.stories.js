@@ -19,8 +19,8 @@ const { delimiter, truncate } = DelimitedList.defaultProps;
 
 const props = () => ({
   items: array('Items (items)', mocks.items),
-  delimiter: text('Delimiter (delimiter)', delimiter),
   truncate: boolean('Truncate (truncate)', truncate),
+  delimiter: text('Delimiter (delimiter)', delimiter),
 });
 
 storiesOf(components('DelimitedList'), module).add(
