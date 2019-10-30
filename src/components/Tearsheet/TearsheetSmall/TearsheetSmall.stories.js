@@ -3,7 +3,6 @@
  * @copyright IBM Security 2019
  */
 
-import { withA11y } from '@storybook/addon-a11y';
 import { action } from '@storybook/addon-actions';
 import { boolean, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
@@ -29,7 +28,6 @@ const { closeButton, primaryButton, secondaryButton } = buttons;
 const focusTrap = boolean('focusTrap', false);
 
 storiesOf(patterns('TearsheetSmall'), module)
-  .addDecorator(withA11y)
   .add('Default', () => (
     <TearsheetSmall
       focusTrap={focusTrap}

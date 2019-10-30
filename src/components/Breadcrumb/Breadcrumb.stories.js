@@ -4,7 +4,6 @@
  */
 
 import React from 'react';
-import { withA11y } from '@storybook/addon-a11y';
 import { boolean, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
@@ -38,7 +37,6 @@ const props = {
 const { breadcrumb, item } = props;
 
 storiesOf(components('Breadcrumb'), module)
-  .addDecorator(withA11y)
   .add(
     'Default',
     () => (

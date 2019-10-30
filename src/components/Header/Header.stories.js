@@ -5,11 +5,10 @@
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withA11y } from '@storybook/addon-a11y';
 import { action } from '@storybook/addon-actions';
 import { object } from '@storybook/addon-knobs';
 
-import { patterns } from '../../../.storybook';
+import { disableCentered, patterns } from '../../../.storybook';
 
 import Header from './';
 
@@ -28,8 +27,7 @@ const headerProps = {
   links,
 };
 
-storiesOf(patterns('Header'), module)
-  .addDecorator(withA11y)
+disableCentered(storiesOf(patterns('Header'), module))
   .add('default', () => <Header {...headerProps} />, {
     info: {
       text: `

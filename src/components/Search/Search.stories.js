@@ -5,7 +5,6 @@
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withA11y } from '@storybook/addon-a11y';
 import { boolean, text } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
@@ -34,7 +33,6 @@ const props = () => ({
 });
 
 storiesOf(components('Search'), module)
-  .addDecorator(withA11y)
   .add('Default', () => <Search {...props()} id="search-1" />, {
     info: {
       text: `

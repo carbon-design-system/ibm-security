@@ -43,7 +43,7 @@ class DelimitedList extends Component {
   };
 
   render() {
-    const { className, delimiter, items, truncate } = this.props;
+    const { className, delimiter, items, truncate, ...other } = this.props;
 
     const classes = classnames(namespace, className);
     const valueClasses = classnames(`${namespace}__value`, {
@@ -54,6 +54,7 @@ class DelimitedList extends Component {
       <div
         className={classes}
         title={this.state.hasOverflow ? items.join(delimiter) : undefined}
+        {...other}
       >
         <div ref={this.element} className={valueClasses}>
           {items.length > 0 ? items.join(delimiter) : '–'}
@@ -67,16 +68,16 @@ class DelimitedList extends Component {
 }
 
 DelimitedList.propTypes = {
-  /** @type {string} class name for rendered content. */
+  /** Provide an optional class to be applied to the containing node */
   className: PropTypes.string,
 
-  /** @type {string} Delimiter used when rendering the list. */
+  /** Delimiter used when rendering the items */
   delimiter: PropTypes.string,
 
-  /** @type {array<string>} List of items. */
+  /** Array of items to render */
   items: PropTypes.arrayOf(PropTypes.any),
 
-  /** @type {boolean} Truncate the list if it overflows. */
+  /** Specify whether the `DelimitedList` is truncated if it overflows */
   truncate: PropTypes.bool,
 };
 

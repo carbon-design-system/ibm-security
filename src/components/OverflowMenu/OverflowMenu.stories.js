@@ -4,8 +4,7 @@
  */
 
 import { action } from '@storybook/addon-actions';
-import { withA11y } from '@storybook/addon-a11y';
-import centered from '@storybook/addon-centered/react';
+
 import { boolean, select, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
@@ -80,8 +79,6 @@ const OverflowMenuExample = ({ overflowMenuProps, overflowMenuItemProps }) => (
 );
 
 storiesOf(components('OverflowMenu'), module)
-  .addDecorator(withA11y)
-  .addDecorator(centered)
   .add(
     'basic',
     () => (
