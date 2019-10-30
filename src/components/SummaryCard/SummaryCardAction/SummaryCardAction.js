@@ -8,8 +8,10 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import Close20 from '@carbon/icons-react/lib/close/20';
+import { g100 } from '@carbon/themes';
 
 import Button from '../../Button';
+import ScrollGradient from '../../ScrollGradient';
 import Transition from '../../Transition';
 
 import { getComponentNamespace } from '../../../globals/namespace/index';
@@ -84,7 +86,9 @@ class SummaryCardAction extends Component {
                     />
                   </div>
                   <div className={`${namespace}-overlay__content`}>
-                    {expandedContent}
+                    <ScrollGradient color={g100.ui01}>
+                      {expandedContent}
+                    </ScrollGradient>
                   </div>
                 </div>
 

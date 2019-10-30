@@ -5,7 +5,7 @@
 
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
-import { text } from '@storybook/addon-knobs';
+// import { text } from '@storybook/addon-knobs';
 
 import Folder20 from '@carbon/icons-react/lib/folder/20';
 
@@ -21,40 +21,75 @@ import {
   SummaryCardSkeleton,
   Tooltip,
 } from '../..';
+import { lorem } from '../_mocks_';
 
 storiesOf(patterns('SummaryCard'), module)
   .add('with primary label', () => (
     <div className="bx--grid bx--grid--full-width">
       <div className="bx--row">
-        <div className="bx--col-sm-1 bx--col-md-2 bx--col-lg-4">
+        <div className="bx--col-sm-4 bx--col-md-4 bx--col-lg-4">
           <SummaryCard>
             <SummaryCardHeader
-              title={text('SummaryCardHeader title (title)', 'my title')}
+              title="Summary card"
               status={
                 <Tooltip showIcon iconDescription="Status">
                   Tooltip content
                 </Tooltip>
               }
             />
-            <SummaryCardBody>
-              {text(
-                'SummaryCardBody (children)',
-                'This is the content inside SummaryCardBody.'
-              )}
-            </SummaryCardBody>
+            <SummaryCardBody>{lorem}</SummaryCardBody>
             <SummaryCardFooter>
-              <SummaryCardAction
-                id="test-label"
-                expandedContent={text(
-                  'SummaryCardAction expanded content (expandedContent)',
-                  'This is the revealed content that overlays SummaryCardContent.'
-                )}
-              >
-                {text(
-                  'SummaryCardAction content (children)',
-                  'Text inside a SummaryCardAction (when expanded, it is alos the overlay heading)'
-                )}
+              <SummaryCardAction expandedContent={lorem}>
+                Button label that is long and will be truncated
               </SummaryCardAction>
+              <SummaryCardAction
+                iconDescription="Icon description"
+                renderIcon={Folder20}
+                hasIconOnly
+                onClick={action('onClick')}
+                tooltipPosition="bottom"
+                tooltipAlignment="center"
+              />
+              <SummaryCardAction
+                iconDescription="Icon description"
+                renderIcon={Folder20}
+                hasIconOnly
+                onClick={action('onClick')}
+                tooltipPosition="bottom"
+                tooltipAlignment="center"
+              />
+            </SummaryCardFooter>
+          </SummaryCard>
+        </div>
+        <div className="bx--col-sm-4 bx--col-md-4 bx--col-lg-4">
+          <SummaryCard>
+            <SummaryCardHeader
+              title="Summary card with no footer"
+              status={
+                <Tooltip showIcon iconDescription="Status">
+                  Tooltip content
+                </Tooltip>
+              }
+            />
+            <SummaryCardBody>{lorem.repeat(5)}</SummaryCardBody>
+          </SummaryCard>
+        </div>
+        <div className="bx--col-sm-4 bx--col-md-4 bx--col-lg-4">
+          <SummaryCard>
+            <SummaryCardHeader title="Summary card with no status" />
+            <SummaryCardBody>{lorem.repeat(3)}</SummaryCardBody>
+            <SummaryCardFooter>
+              <SummaryCardAction loading expandedContent={lorem.repeat(5)}>
+                Button label
+              </SummaryCardAction>
+              <SummaryCardAction
+                iconDescription="Icon description"
+                renderIcon={Folder20}
+                hasIconOnly
+                onClick={action('onClick')}
+                tooltipPosition="bottom"
+                tooltipAlignment="center"
+              />
               <SummaryCardAction
                 iconDescription="Icon description"
                 renderIcon={Folder20}

@@ -37,6 +37,7 @@
 
   position: relative;
   display: flex;
+  height: $header--height + $body--height + $footer--height;
   min-width: carbon--mini-units($count: 36);
   flex-direction: column;
   overflow: hidden;
@@ -48,9 +49,10 @@
     overflow: hidden;
 
     display: flex;
-    height: $body--height;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
     width: 100%;
-    border-bottom: 1px solid $ui-02;
     padding: $carbon--spacing-05;
     margin: 0;
   }
@@ -73,6 +75,7 @@
     position: relative;
     display: flex;
     background-color: $ui-01;
+    border-top: 1px solid $ui-02;
   }
 
   &__action {
@@ -81,6 +84,9 @@
 
     // Ensure that actions are always on top of the overlay:
     z-index: $overlay--z-index + 1;
+
+    // Ensure that animating overlay doesn't show through due to transparent background:
+    background-color: inherit;
 
     // Required for truncation:
     display: inline-block;
@@ -132,11 +138,15 @@
     &__content {
       @include carbon--type-style($name: body-long-01);
       margin: 0;
+    }
+
+    &__title {
       padding: $carbon--spacing-05;
     }
 
     &__content {
-      overflow-y: auto;
+      height: $body--height - $header--height - $footer--height - 1rem;
+      padding: 0 $carbon--spacing-05;
     }
 
     &__close-button {

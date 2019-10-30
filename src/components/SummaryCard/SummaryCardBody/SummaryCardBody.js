@@ -6,6 +6,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { g100 } from '@carbon/themes';
 
 import ScrollGradient from '../../ScrollGradient';
 
@@ -15,7 +16,7 @@ const namespace = getComponentNamespace('summary-card__body');
 
 const SummaryCardBody = ({ children, className }) => (
   <div className={classnames(namespace, className)}>
-    <ScrollGradient>{children}</ScrollGradient>
+    <ScrollGradient color={g100.uiBackground}>{children}</ScrollGradient>
   </div>
 );
 
