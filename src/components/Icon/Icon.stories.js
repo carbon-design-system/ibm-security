@@ -9,8 +9,6 @@ import Add32 from '@carbon/icons-react/lib/add/32';
 
 import { miniUnits } from '@carbon/layout';
 
-import { withA11y } from '@storybook/addon-a11y';
-import centered from '@storybook/addon-centered/react';
 import { storiesOf } from '@storybook/react';
 
 import React from 'react';
@@ -29,23 +27,20 @@ const iconProps = {
   style: { fill: theme.icon01, margin: miniUnits(1) },
 };
 
-storiesOf(components('Icon'), module)
-  .addDecorator(withA11y)
-  .addDecorator(centered)
-  .add(
-    'default',
-    () =>
-      [renderIcon, Add20, Add24, Add32].map((size, index) => {
-        const key = `icon__${index}`;
+storiesOf(components('Icon'), module).add(
+  'default',
+  () =>
+    [renderIcon, Add20, Add24, Add32].map((size, index) => {
+      const key = `icon__${index}`;
 
-        return <Icon key={key} renderIcon={size} {...iconProps} />;
-      }),
+      return <Icon key={key} renderIcon={size} {...iconProps} />;
+    }),
 
-    {
-      info: {
-        text: `
+  {
+    info: {
+      text: `
           Basic implementation of an Icon component.
         `,
-      },
-    }
-  );
+    },
+  }
+);

@@ -3,7 +3,6 @@
  * @copyright IBM Security 2019
  */
 
-import { withA11y } from '@storybook/addon-a11y';
 import { boolean, select, number, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
@@ -28,7 +27,6 @@ const storyProps = ({ value = icaValue, total } = {}) => ({
 });
 
 storiesOf(components('ICA'), module)
-  .addDecorator(withA11y)
   .add('default', () => <ICA {...storyProps()} />)
   .add('with null value', () => <ICA {...storyProps({ value: null })} />)
   .add('with 1000 value', () => (

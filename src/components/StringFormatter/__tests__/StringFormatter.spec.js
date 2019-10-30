@@ -28,7 +28,9 @@ describe('StringFormatter', () => {
 
   it('renders the correct amount of lines', () => {
     stringFormatter.setProps({ truncate: true, lines: 4 });
-    const stringFormatterStyle = stringFormatter.prop('style');
-    expect(stringFormatterStyle).toHaveProperty('WebkitLineClamp', 4);
+    expect(stringFormatter.find('span').prop('style')).toHaveProperty(
+      'WebkitLineClamp',
+      4
+    );
   });
 });

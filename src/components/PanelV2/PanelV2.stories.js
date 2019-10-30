@@ -6,7 +6,6 @@
 import Add16 from '@carbon/icons-react/lib/add/16';
 
 import { action } from '@storybook/addon-actions';
-import { withA11y } from '@storybook/addon-a11y';
 import { boolean, radios, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
@@ -17,7 +16,7 @@ import Filter20 from '@carbon/icons-react/lib/filter/20';
 import { spacing04, spacing05 } from '@carbon/layout/lib';
 import { styles } from '@carbon/type/lib';
 
-import { patterns } from '../../../.storybook';
+import { disableCentered, patterns } from '../../../.storybook';
 
 import { label } from '../_mocks_';
 import { header, profile, toolbar } from '../Shell/_mocks_';
@@ -66,7 +65,7 @@ const content = (
   </p>
 );
 
-storiesOf(patterns('PanelV2'), module)
+disableCentered(storiesOf(patterns('PanelV2'), module))
   .addParameters({
     info: {
       // Reposition info button so that panel footer isn't covered:
@@ -88,7 +87,7 @@ storiesOf(patterns('PanelV2'), module)
       },
     },
   })
-  .addDecorator(withA11y)
+
   .add(
     'Default',
     () => {

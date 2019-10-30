@@ -6,6 +6,8 @@
 import { spacing04, spacing05 } from '@carbon/layout/lib';
 import { styles } from '@carbon/type/lib';
 
+import { withA11y } from '@storybook/addon-a11y';
+import centered from '@storybook/addon-centered/react';
 import { withInfo } from '@storybook/addon-info';
 import { withKnobs } from '@storybook/addon-knobs';
 import { addDecorator, configure, addParameters } from '@storybook/react';
@@ -13,7 +15,6 @@ import { addDecorator, configure, addParameters } from '@storybook/react';
 import escapeStringRegexp from 'escape-string-regexp';
 import React from 'react';
 
-import withMarkup from './addons/addon-markup';
 import withTheme from './addons/addon-theme';
 
 import storybookTheme from './theme';
@@ -26,6 +27,9 @@ import random from '../src/globals/random';
 import theme from '../src/globals/theme';
 
 const { interactive01, text04 } = theme;
+
+addDecorator(withKnobs);
+addDecorator(withA11y);
 
 addDecorator(
   withInfo({
@@ -48,9 +52,9 @@ addDecorator(
   })
 );
 
-addDecorator(withKnobs);
-addDecorator(withMarkup);
 addDecorator(withTheme);
+
+addDecorator(centered);
 addDecorator(story => <Container>{story()}</Container>);
 
 /**

@@ -22,6 +22,39 @@
   box-sizing: border-box;
   justify-content: space-between;
 
+  // Inverse styling for string formatter's tooltip defintion:
+  .#{$namespace}string-formatter__tooltip.#{$prefix}--tooltip--definition
+    .#{$prefix}--tooltip__trigger {
+    color: currentColor;
+    text-align: left;
+    line-height: initial;
+
+    &:focus {
+      outline: 2px solid $inverse-focus-ui;
+      outline-offset: 2px;
+    }
+
+    // Tooltip top variation arrow:
+    &.#{$prefix}--tooltip__trigger--definition.#{$prefix}--tooltip--top.#{$prefix}--tooltip--align-start::before {
+      border-color: $inverse-01 transparent transparent transparent;
+    }
+
+    // Tooltip bottom variation arrow:
+    &.#{$prefix}--tooltip__trigger--definition.#{$prefix}--tooltip--bottom.#{$prefix}--tooltip--align-start::before {
+      border-color: transparent transparent $inverse-01 transparent;
+    }
+
+    // Tooltip content:
+    & + .#{$prefix}--assistive-text,
+    &:focus
+      + .#{$prefix}--assistive-text
+      &:hover
+      + .#{$prefix}--assistive-text {
+      background-color: $inverse-01;
+      color: $inverse-02;
+    }
+  }
+
   &__content {
     padding-top: $header__notification__spacing__padding;
     padding-bottom: $header__notification__spacing__padding;
@@ -45,55 +78,6 @@
 
   &__time {
     @include carbon--font-weight($weight: semibold);
-  }
-
-  &__description {
-    /*hack the div element directly for the tooltip to be inline*/
-    div {
-      display: inline;
-    }
-    &--tooltip {
-      word-break: break-all;
-    }
-  }
-
-  &__tooltip {
-    &:focus {
-      @include header__popover__item--focus;
-      transform: translate3d(0, 0, 0);
-      opacity: 1;
-    }
-
-    div &--body {
-      position: fixed;
-      z-index: z($layer: overlay);
-      display: none;
-
-      &
-        > button.bx--tooltip__trigger.bx--tooltip__trigger--definition:first-child {
-        width: carbon--mini-units($count: 2);
-
-        &::before,
-        &::after {
-          opacity: 1;
-        }
-
-        &::after {
-          background: $inverse-01;
-          color: $inverse-02;
-        }
-
-        &::before {
-          margin-left: carbon--mini-units($count: -2);
-          border-color: $inverse-01 transparent transparent transparent;
-        }
-      }
-    }
-
-    &:hover > &--body,
-    &:focus > &--body {
-      display: block;
-    }
   }
 
   &__button {

@@ -7,10 +7,9 @@ import Camera20 from '@carbon/icons-react/lib/camera/20';
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withA11y } from '@storybook/addon-a11y';
 import { action } from '@storybook/addon-actions';
 
-import { patterns } from '../../../.storybook';
+import { disableCentered, patterns } from '../../../.storybook';
 
 import Shell from '.';
 
@@ -30,8 +29,7 @@ const shellProps = {
   toolbar,
 };
 
-storiesOf(patterns('Shell'), module)
-  .addDecorator(withA11y)
+disableCentered(storiesOf(patterns('Shell'), module))
   .add('default', () => <Shell {...shellProps} />, {
     info: {
       text: `

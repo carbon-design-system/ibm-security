@@ -4,7 +4,6 @@
  */
 
 import { action } from '@storybook/addon-actions';
-import { withA11y } from '@storybook/addon-a11y';
 import { text, object } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
@@ -50,7 +49,6 @@ storiesOf(patterns('FilterPanel'), module)
       {story()}
     </div>
   ))
-  .addDecorator(withA11y)
   .add(
     'default',
     () => (

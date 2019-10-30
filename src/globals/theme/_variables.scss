@@ -13,10 +13,13 @@
 /// @type Map<String, Color>
 /// @access private
 $security--cool-gray-10__overrides: (
+  hover-field: $security--cool-gray-10--hover,
   hover-ui: $security--cool-gray-10--hover,
-  hover-secondary: $carbon--cool-gray-90,
-  hover-selected-ui: $carbon--cool-gray-30,
+  hover-secondary: $security--cool-gray-80--hover,
+  hover-selected-ui: $security--cool-gray-20--hover,
   hover-row: $security--cool-gray-10--hover,
+  inverse-hover-ui: $security--cool-gray-80--hover,
+  skeleton-01: $security--cool-gray-10--hover,
 );
 
 /// Alias for merging themes and tokens.

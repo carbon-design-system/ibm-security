@@ -3,8 +3,6 @@
  * @copyright IBM Security 2019
  */
 
-import { checkA11y } from '@storybook/addon-a11y';
-import centered from '@storybook/addon-centered/react';
 import { boolean, object } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
@@ -21,12 +19,9 @@ const profileImageProps = () => ({
   large: boolean('Large (large)', large),
 });
 
-storiesOf(components('ProfileImage'), module)
-  .addDecorator(checkA11y)
-  .addDecorator(centered)
-  .add('default', () => (
-    <ProfileImage
-      {...profileImageProps()}
-      profile={object('Profile (profile)', profile)}
-    />
-  ));
+storiesOf(components('ProfileImage'), module).add('default', () => (
+  <ProfileImage
+    {...profileImageProps()}
+    profile={object('Profile (profile)', profile)}
+  />
+));

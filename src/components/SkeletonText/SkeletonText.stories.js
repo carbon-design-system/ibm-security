@@ -6,7 +6,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { boolean, number, select } from '@storybook/addon-knobs';
-import { withA11y } from '@storybook/addon-a11y';
 
 import { components } from '../../../.storybook';
 
@@ -28,20 +27,18 @@ const props = () => ({
   ),
 });
 
-storiesOf(components('SkeletonText'), module)
-  .addDecorator(withA11y)
-  .add(
-    'Default',
-    () => (
-      <div style={{ width: '300px' }}>
-        <SkeletonText {...props()} />
-      </div>
-    ),
-    {
-      info: {
-        text: `
+storiesOf(components('SkeletonText'), module).add(
+  'Default',
+  () => (
+    <div style={{ width: '300px' }}>
+      <SkeletonText {...props()} />
+    </div>
+  ),
+  {
+    info: {
+      text: `
             Skeleton states are used as a progressive loading state while the user waits for content to load.
           `,
-      },
-    }
-  );
+    },
+  }
+);

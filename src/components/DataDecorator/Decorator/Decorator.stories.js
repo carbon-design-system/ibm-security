@@ -3,9 +3,7 @@
  * @copyright IBM Security 2019
  */
 
-import { withA11y } from '@storybook/addon-a11y';
 import { action } from '@storybook/addon-actions';
-import centered from '@storybook/addon-centered/react';
 import { boolean, number, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
@@ -36,8 +34,6 @@ const storyProps = () => ({
 });
 
 storiesOf(components('Decorator'), module)
-  .addDecorator(withA11y)
-  .addDecorator(centered)
   .add('Default', () => <Decorator {...storyProps()} />)
   .add('Inline', () => (
     <p className="bx--type-body-long-01">

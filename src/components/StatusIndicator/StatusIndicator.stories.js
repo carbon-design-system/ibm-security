@@ -3,10 +3,8 @@
  * @copyright IBM Security 2019
  */
 
-import { withA11y } from '@storybook/addon-a11y';
 import { action } from '@storybook/addon-actions';
-import centered from '@storybook/addon-centered/react';
-import { withInfo } from '@storybook/addon-info';
+
 import { text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
@@ -67,9 +65,6 @@ const {
 const { basic, retry: retryProps } = statusIndicatorProps;
 
 storiesOf(patterns('StatusIndicator'), module)
-  .addDecorator(withA11y)
-  .addDecorator(withInfo)
-  .addDecorator(centered)
   .add('Default', () => (
     <StatusIndicator {...basic()}>
       {statusStepsProps().map(({ key, ...props }) => (
