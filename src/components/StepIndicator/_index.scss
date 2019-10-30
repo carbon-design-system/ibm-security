@@ -4,11 +4,59 @@
 /// @copyright IBM Security 2019
 ////
 
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/themes/scss/tokens';
+
+@import 'carbon-components/scss/globals/scss/helper-mixins';
+@import 'carbon-components/scss/globals/scss/vars';
+
 @import '../ProgressIndicator/index';
 
 @import '../Component/mixins';
-@import 'mixins';
 
 @include security--component($name: step-indicator) {
-  @include step-indicator;
+  &.#{$prefix}--progress {
+    flex-direction: column;
+
+    .#{$prefix}--progress-step {
+      flex-direction: column;
+      max-width: 30rem;
+      min-width: unset;
+      width: 100%;
+      margin: $carbon--spacing-02 0;
+
+      svg {
+        position: absolute;
+        top: 2px;
+        margin: 0;
+      }
+    }
+
+    .#{$prefix}--progress-line {
+      @include hidden;
+    }
+
+    .#{$prefix}--progress-label {
+      position: unset;
+      max-width: unset;
+      min-width: unset;
+      width: 100%;
+      margin: 0;
+      padding-left: $carbon--spacing-07;
+
+      &:hover {
+        cursor: default; // Because element is not clickable.
+        box-shadow: none;
+        color: unset;
+      }
+    }
+
+    .#{$prefix}--progress-step--disabled {
+      .#{$prefix}--progress-label:hover,
+      svg:hover {
+        cursor: default; // Because element is not clickable.
+        color: $disabled-03;
+      }
+    }
+  }
 }

@@ -4,18 +4,19 @@
 /// @copyright IBM Security 2018
 ////
 
-// Security variables
-@import '../../globals/variables/index';
-
-// Carbon components
+@import '@carbon/layout/scss/mini-unit';
 @import 'carbon-components/scss/components/skeleton/skeleton-text';
 
-// Component mixin
-@import 'mixins';
-
-// Security mixins
 @import '../../globals/namespace/index';
 
 @include export-namespace($name: skeleton-text) {
-  @include skeleton-text;
+  .#{$prefix}--skeleton {
+    &__text {
+      height: carbon--mini-units($count: 1);
+    }
+
+    &__heading {
+      height: carbon--mini-units($count: 2);
+    }
+  }
 }

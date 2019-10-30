@@ -4,9 +4,112 @@
 /// @copyright IBM Security 2019
 ////
 
+@import '@carbon/layout/scss/mini-unit';
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/themes/scss/tokens';
+@import '@carbon/type/scss/scale';
+@import '@carbon/type/scss/styles';
+
+@import 'carbon-components/scss/globals/scss/vars';
+
+@import '../Button/index';
+
 @import '../Component/mixins';
-@import 'mixins';
 
 @include security--component($name: status-indicator) {
-  @include status-indicator;
+  $root: &;
+  $step: #{$root}__step;
+  $loading: #{$prefix}--inline-loading;
+
+  display: flex;
+  flex-direction: column;
+  padding-left: $carbon--spacing-03;
+  list-style: none;
+
+  &__title {
+    @include carbon--type-style($name: heading-02);
+    margin: 0 0 $carbon--spacing-04 $carbon--spacing-05;
+    color: $text-01;
+    font-weight: semibold;
+  }
+
+  /// Because this icon is increasing in size,
+  /// need to reduce the `top` value.
+  .#{$loading}__checkmark {
+    stroke-width: 1;
+
+    &-container {
+      top: $carbon--spacing-03;
+    }
+  }
+
+  /// Styles for elements in each step.
+  &__step {
+    width: 100%;
+    margin: $carbon--spacing-02 0;
+
+    &-wrapper {
+      display: flex;
+      width: 100%;
+      align-items: center;
+    }
+
+    &__label,
+    .#{$loading}__text {
+      @include carbon--type-scale($step: 2);
+      color: $text-01;
+      margin: 0 $carbon--spacing-03;
+    }
+
+    &__icon,
+    .#{$loading}__svg {
+      width: carbon--mini-units(2.5);
+      height: carbon--mini-units(2.5);
+    }
+
+    &--incomplete #{$step}__label {
+      color: $disabled-03;
+    }
+
+    &--incomplete #{$step}__icon {
+      fill: $disabled-03;
+    }
+
+    &__icon-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: $carbon--layout-03;
+      height: $carbon--layout-03;
+    }
+
+    &--failed__icon {
+      fill: $support-01;
+    }
+
+    &__error-message {
+      @include carbon--type-scale($step: 1);
+      display: inline-block;
+      color: $support-01;
+      margin-left: $carbon--spacing-08;
+      margin-top: 0;
+    }
+  }
+
+  /// The "Retry" ghost button.
+  &__retry-button {
+    justify-content: left;
+    align-items: left;
+    padding: 0;
+
+    &__icon {
+      fill: $interactive-04;
+    }
+
+    &__message {
+      @include carbon--type-scale($step: 2);
+      margin-left: $carbon--spacing-03;
+    }
+  }
 }
