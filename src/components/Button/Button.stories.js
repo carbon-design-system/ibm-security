@@ -8,9 +8,7 @@ import Add24 from '@carbon/icons-react/lib/add/24';
 import Search16 from '@carbon/icons-react/lib/search/16';
 import Search24 from '@carbon/icons-react/lib/search/24';
 
-import { withA11y } from '@storybook/addon-a11y';
 import { action } from '@storybook/addon-actions';
-import centered from '@storybook/addon-centered/react';
 import { boolean, select, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
@@ -101,8 +99,6 @@ const CustomLink = ({ children, href, ...other }) => (
 /* eslint-enable react/prop-types */
 
 storiesOf(components('Button'), module)
-  .addDecorator(withA11y)
-  .addDecorator(centered)
   .add(
     'default',
     () => {

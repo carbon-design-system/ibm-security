@@ -3,10 +3,9 @@
  * @copyright IBM Security 2019
  */
 
-import { withA11y } from '@storybook/addon-a11y';
 import { action } from '@storybook/addon-actions';
 import { boolean, number, text } from '@storybook/addon-knobs';
-import centered from '@storybook/addon-centered/react';
+
 import { storiesOf } from '@storybook/react';
 
 import React from 'react';
@@ -38,8 +37,6 @@ const props = () => ({
 });
 
 storiesOf(components('Slider'), module)
-  .addDecorator(withA11y)
-  .addDecorator(centered)
   .add('default', () => <Slider id="slider" {...props()} />, {
     info: {
       text: `

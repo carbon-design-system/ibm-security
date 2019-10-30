@@ -10,5 +10,11 @@
 @include export-namespace($name: select) {
   .#{$prefix}--select-input {
     text-rendering: auto;
+
+    // TODO - remove when Carbon fix is released.
+    // https://github.com/carbon-design-system/carbon/pull/4343
+    &:focus {
+      color: $text-01;
+    }
   }
 }

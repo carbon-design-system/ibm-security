@@ -6,7 +6,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { boolean } from '@storybook/addon-knobs';
-import { withA11y } from '@storybook/addon-a11y';
 
 import { components } from '../../../.storybook';
 
@@ -19,7 +18,6 @@ const props = () => ({
 });
 
 storiesOf(components('Loading'), module)
-  .addDecorator(withA11y)
   .add(
     'Default',
     () => {

@@ -8,7 +8,6 @@ import CheckmarkFilled16 from '@carbon/icons-react/lib/checkmark--filled/16';
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { settings } from 'carbon-components';
-import { withA11y } from '@storybook/addon-a11y';
 
 import { components } from '../../../.storybook';
 
@@ -27,7 +26,6 @@ const { prefix } = settings;
 /* eslint-disable react/jsx-key, react/no-array-index-key */
 
 storiesOf(components('StructuredList'), module)
-  .addDecorator(withA11y)
   .add(
     'Simple',
     () => (

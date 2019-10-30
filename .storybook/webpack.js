@@ -7,7 +7,7 @@ module.exports = config => {
   [
     {
       test: /\.stories\.js$/,
-      use: '@storybook/addon-storysource/loader',
+      use: '@storybook/source-loader',
     },
     {
       sideEffects: true,

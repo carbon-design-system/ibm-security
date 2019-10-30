@@ -5,7 +5,6 @@
 /* eslint-disable compat/compat */
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withA11y } from '@storybook/addon-a11y';
 import { object, boolean, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import FormGroup from 'carbon-components-react/lib/components/FormGroup';
@@ -237,7 +236,6 @@ const markdown = (useDefault = true) =>
   `;
 
 storiesOf(patterns('Wizard'), module)
-  .addDecorator(withA11y)
   .add(
     'default',
     () => {

@@ -5,7 +5,6 @@
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withA11y } from '@storybook/addon-a11y';
 import { color, boolean } from '@storybook/addon-knobs';
 import { g100 } from '@carbon/themes';
 
@@ -21,7 +20,6 @@ const style = {
 };
 
 storiesOf(components('ScrollGradient'), module)
-  .addDecorator(withA11y)
   .add(
     'vertical scrolling',
     () => (

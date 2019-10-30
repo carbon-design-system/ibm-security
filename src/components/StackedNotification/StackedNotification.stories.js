@@ -5,8 +5,7 @@
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withA11y } from '@storybook/addon-a11y';
-import centered from '@storybook/addon-centered/react';
+
 import { text, boolean } from '@storybook/addon-knobs';
 
 import { iconDescription, title, subtitle, caption } from './_mocks_';
@@ -23,7 +22,6 @@ const props = () => ({
   hideCloseButton: boolean('Hide close button (hideCloseButton)', false),
 });
 
-storiesOf(components('StackedNotification'), module)
-  .addDecorator(centered)
-  .addDecorator(withA11y)
-  .add('Default', () => <StackedNotification {...props()} />);
+storiesOf(components('StackedNotification'), module).add('Default', () => (
+  <StackedNotification {...props()} />
+));

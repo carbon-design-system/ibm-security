@@ -3,16 +3,15 @@
  * @copyright IBM Security 2019
  */
 
-import React, { PureComponent } from 'react';
-import { storiesOf } from '@storybook/react';
-import { withA11y } from '@storybook/addon-a11y';
 import { action } from '@storybook/addon-actions';
-import centered from '@storybook/addon-centered/react';
 import { number, select, text } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
+
+import React, { PureComponent } from 'react';
 
 import { components } from '../../../.storybook';
 
-import { Button, InlineLoading } from '../../';
+import { Button, InlineLoading } from '../..';
 
 const props = () => ({
   status: select(
@@ -32,24 +31,10 @@ const props = () => ({
 });
 
 storiesOf(components('InlineLoading'), module)
-  .addDecorator(withA11y)
-  .addDecorator(centered)
-  .add(
-    'Inline loading',
-    () => (
-      <div>
-        <InlineLoading {...props()} />
-      </div>
-    ),
-    {
-      info: {
-        text: `
-            Inline Loading spinners are used when creating, updating, or deleting an item.
-            They help notify users that their change is underway, with different states for 'loading' and 'success'.
-          `,
-      },
-    }
-  )
+  .add('default', () => <InlineLoading {...props()} />, {
+    info:
+      "Basic implementation of an Inline Loading component. Inline Loading spinners are used when creating, updating, or deleting an item. They help notify users that their change is underway, with different states for 'loading' and 'success'.",
+  })
   .add(
     'UX example',
     () => {
