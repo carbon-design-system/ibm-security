@@ -101,7 +101,8 @@
   @include security--theme--cg10(
     $theme:
       security--cool-gray(
-        $theme: map-get($map: $security--themes, $key: theme--g100)
+        $theme: map-get($map: $security--themes, $key: theme--g100),
+        $grade: 100
       )
   );
 }
