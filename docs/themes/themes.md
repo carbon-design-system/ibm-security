@@ -1,65 +1,65 @@
 ## Themes
 
-| Token                | theme--cg10 theme           | theme--g100 theme       |
-| -------------------- | --------------------------- | ----------------------- |
-| `interactive-01`     | `blue-60` (`#0062ff`)       | `blue-60` (`#0062ff`)   |
-| `interactive-02`     | `cool-gray-80` (`#373d42`)  | `gray-60` (`#6f6f6f`)   |
-| `interactive-03`     | `blue-60` (`#0062ff`)       | `white-0` (`#ffffff`)   |
-| `interactive-04`     | `blue-60` (`#0062ff`)       | `blue-50` (`#408bfc`)   |
-| `ui-background`      | `cool-gray-10` (`#f2f4f8`)  | `gray-100` (`#171717`)  |
-| `ui-01`              | `white-0` (`#ffffff`)       | `gray-90` (`#282828`)   |
-| `ui-02`              | `cool-gray-10` (`#f2f4f8`)  | `gray-80` (`#3d3d3d`)   |
-| `ui-03`              | `cool-gray-20` (`#d5d9e0`)  | `gray-80` (`#3d3d3d`)   |
-| `ui-04`              | `cool-gray-50` (`#868d95`)  | `gray-60` (`#6f6f6f`)   |
-| `ui-05`              | `cool-gray-100` (`#13171a`) | `gray-10` (`#f3f3f3`)   |
-| `text-01`            | `cool-gray-100` (`#13171a`) | `gray-10` (`#f3f3f3`)   |
-| `text-02`            | `cool-gray-70` (`#50565b`)  | `gray-30` (`#bebebe`)   |
-| `text-03`            | `cool-gray-50` (`#868d95`)  | `gray-60` (`#6f6f6f`)   |
-| `text-04`            | `white-0` (`#ffffff`)       | `white-0` (`#ffffff`)   |
-| `icon-01`            | `cool-gray-100` (`#13171a`) | `gray-10` (`#f3f3f3`)   |
-| `icon-02`            | `cool-gray-70` (`#50565b`)  | `gray-30` (`#bebebe`)   |
-| `icon-03`            | `white-0` (`#ffffff`)       | `white-0` (`#ffffff`)   |
-| `link-01`            | `blue-60` (`#0062ff`)       | `blue-40` (`#6ea6ff`)   |
-| `inverse-link`       | `blue-40` (`#6ea6ff`)       | `blue-60` (`#0062ff`)   |
-| `field-01`           | `white-0` (`#ffffff`)       | `gray-90` (`#282828`)   |
-| `field-02`           | `cool-gray-10` (`#f2f4f8`)  | `gray-80` (`#3d3d3d`)   |
-| `inverse-01`         | `white-0` (`#ffffff`)       | `gray-100` (`#171717`)  |
-| `inverse-02`         | `cool-gray-80` (`#373d42`)  | `gray-10` (`#f3f3f3`)   |
-| `support-01`         | `red-60` (`#da1e28`)        | `red-50` (`#fb4b53`)    |
-| `support-02`         | `green-50` (`#24a148`)      | `green-40` (`#3dbb61`)  |
-| `support-03`         | `yellow-20` (`#fdd13a`)     | `yellow-20` (`#fdd13a`) |
-| `support-04`         | `blue-70` (`#054ada`)       | `blue-50` (`#408bfc`)   |
-| `inverse-support-01` | `red-50` (`#fb4b53`)        | `red-60` (`#da1e28`)    |
-| `inverse-support-02` | `green-40` (`#3dbb61`)      | `green-50` (`#24a148`)  |
-| `inverse-support-03` | `yellow-20` (`#fdd13a`)     | `yellow-20` (`#fdd13a`) |
-| `inverse-support-04` | `blue-50` (`#408bfc`)       | `blue-60` (`#0062ff`)   |
-| `overlay-01`         | `gray-100` (`#171717`)      | `gray-100` (`#171717`)  |
-| `focus`              | `blue-60` (`#0062ff`)       | `white-0` (`#ffffff`)   |
-| `inverse-focus-ui`   | `white-0` (`#ffffff`)       | `blue-60` (`#0062ff`)   |
-| `hover-primary`      | `#0353e9` (`#0353e9`)       | `#0353e9` (`#0353e9`)   |
-| `active-primary`     | `blue-80` (`#0530ad`)       | `blue-80` (`#0530ad`)   |
-| `hover-primary-text` | `blue-70` (`#054ada`)       | `blue-30` (`#97c1ff`)   |
-| `hover-secondary`    | `#464c51` (`#464c51`)       | `#606060` (`#606060`)   |
-| `active-secondary`   | `cool-gray-60` (`#697077`)  | `gray-80` (`#3d3d3d`)   |
-| `hover-tertiary`     | `#0353e9` (`#0353e9`)       | `gray-10` (`#f3f3f3`)   |
-| `active-tertiary`    | `blue-80` (`#0530ad`)       | `gray-30` (`#bebebe`)   |
-| `hover-ui`           | `#e0e4ea` (`#e0e4ea`)       | `#353535` (`#353535`)   |
-| `active-ui`          | `cool-gray-30` (`#b9bfc7`)  | `gray-70` (`#565656`)   |
-| `selected-ui`        | `cool-gray-20` (`#d5d9e0`)  | `gray-80` (`#3d3d3d`)   |
-| `inverse-hover-ui`   | `#464c51` (`#464c51`)       | `#e5e5e5` (`#e5e5e5`)   |
-| `hover-selected-ui`  | `#c4c9d1` (`#c4c9d1`)       | `#4c4c4c` (`#4c4c4c`)   |
-| `hover-danger`       | `#ba1b23` (`#ba1b23`)       | `#ba1b23` (`#ba1b23`)   |
-| `active-danger`      | `red-80` (`#750e13`)        | `red-80` (`#750e13`)    |
-| `hover-row`          | `#e0e4ea` (`#e0e4ea`)       | `#353535` (`#353535`)   |
-| `visited-link`       | `purple-60` (`#8a3ffc`)     | `purple-40` (`#bb8eff`) |
-| `disabled-01`        | `white-0` (`#ffffff`)       | `gray-90` (`#282828`)   |
-| `disabled-02`        | `cool-gray-30` (`#b9bfc7`)  | `gray-80` (`#3d3d3d`)   |
-| `disabled-03`        | `cool-gray-50` (`#868d95`)  | `gray-60` (`#6f6f6f`)   |
-| `highlight`          | `blue-20` (`#c9deff`)       | `blue-80` (`#0530ad`)   |
-| `skeleton-01`        | `#e0e4ea` (`#e0e4ea`)       | `#353535` (`#353535`)   |
-| `skeleton-02`        | `cool-gray-30` (`#b9bfc7`)  | `gray-80` (`#3d3d3d`)   |
-| `brand-01`           | `blue-60` (`#0062ff`)       | `blue-60` (`#0062ff`)   |
-| `brand-02`           | `cool-gray-80` (`#373d42`)  | `gray-60` (`#6f6f6f`)   |
-| `brand-03`           | `blue-60` (`#0062ff`)       | `white-0` (`#ffffff`)   |
-| `active-01`          | `cool-gray-30` (`#b9bfc7`)  | `gray-70` (`#565656`)   |
-| `hover-field`        | `#e0e4ea` (`#e0e4ea`)       | `#353535` (`#353535`)   |
+| Token                | theme--cg10 theme | theme--g100 theme |
+| -------------------- | ----------------- | ----------------- |
+| `interactive-01`     | `blue-60`         | `blue-60`         |
+| `interactive-02`     | `cool-gray-80`    | `gray-60`         |
+| `interactive-03`     | `blue-60`         | `white-0`         |
+| `interactive-04`     | `blue-60`         | `blue-50`         |
+| `ui-background`      | `cool-gray-10`    | `gray-100`        |
+| `ui-01`              | `white-0`         | `gray-90`         |
+| `ui-02`              | `cool-gray-10`    | `gray-80`         |
+| `ui-03`              | `cool-gray-20`    | `gray-80`         |
+| `ui-04`              | `cool-gray-50`    | `gray-60`         |
+| `ui-05`              | `cool-gray-100`   | `gray-10`         |
+| `text-01`            | `cool-gray-100`   | `gray-10`         |
+| `text-02`            | `cool-gray-70`    | `gray-30`         |
+| `text-03`            | `cool-gray-50`    | `gray-60`         |
+| `text-04`            | `white-0`         | `white-0`         |
+| `icon-01`            | `cool-gray-100`   | `gray-10`         |
+| `icon-02`            | `cool-gray-70`    | `gray-30`         |
+| `icon-03`            | `white-0`         | `white-0`         |
+| `link-01`            | `blue-60`         | `blue-40`         |
+| `inverse-link`       | `blue-40`         | `blue-60`         |
+| `field-01`           | `white-0`         | `gray-90`         |
+| `field-02`           | `cool-gray-10`    | `gray-80`         |
+| `inverse-01`         | `white-0`         | `gray-100`        |
+| `inverse-02`         | `cool-gray-80`    | `gray-10`         |
+| `support-01`         | `red-60`          | `red-50`          |
+| `support-02`         | `green-50`        | `green-40`        |
+| `support-03`         | `yellow-20`       | `yellow-20`       |
+| `support-04`         | `blue-70`         | `blue-50`         |
+| `inverse-support-01` | `red-50`          | `red-60`          |
+| `inverse-support-02` | `green-40`        | `green-50`        |
+| `inverse-support-03` | `yellow-20`       | `yellow-20`       |
+| `inverse-support-04` | `blue-50`         | `blue-60`         |
+| `overlay-01`         | `gray-100`        | `gray-100`        |
+| `focus`              | `blue-60`         | `white-0`         |
+| `inverse-focus-ui`   | `white-0`         | `blue-60`         |
+| `hover-primary`      | `#0353e9`         | `#0353e9`         |
+| `active-primary`     | `blue-80`         | `blue-80`         |
+| `hover-primary-text` | `blue-70`         | `blue-30`         |
+| `hover-secondary`    | `#464c51`         | `#606060`         |
+| `active-secondary`   | `cool-gray-60`    | `gray-80`         |
+| `hover-tertiary`     | `#0353e9`         | `gray-10`         |
+| `active-tertiary`    | `blue-80`         | `gray-30`         |
+| `hover-ui`           | `#e0e4ea`         | `#353535`         |
+| `active-ui`          | `cool-gray-30`    | `gray-70`         |
+| `selected-ui`        | `cool-gray-20`    | `gray-80`         |
+| `inverse-hover-ui`   | `#464c51`         | `#e5e5e5`         |
+| `hover-selected-ui`  | `#c4c9d1`         | `#4c4c4c`         |
+| `hover-danger`       | `#ba1b23`         | `#ba1b23`         |
+| `active-danger`      | `red-80`          | `red-80`          |
+| `hover-row`          | `#e0e4ea`         | `#353535`         |
+| `visited-link`       | `purple-60`       | `purple-40`       |
+| `disabled-01`        | `white-0`         | `gray-90`         |
+| `disabled-02`        | `cool-gray-30`    | `gray-80`         |
+| `disabled-03`        | `cool-gray-50`    | `gray-60`         |
+| `highlight`          | `blue-20`         | `blue-80`         |
+| `skeleton-01`        | `#e0e4ea`         | `#353535`         |
+| `skeleton-02`        | `cool-gray-30`    | `gray-80`         |
+| `brand-01`           | `blue-60`         | `blue-60`         |
+| `brand-02`           | `cool-gray-80`    | `gray-60`         |
+| `brand-03`           | `blue-60`         | `white-0`         |
+| `active-01`          | `cool-gray-30`    | `gray-70`         |
+| `hover-field`        | `#e0e4ea`         | `#353535`         |

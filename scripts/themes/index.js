@@ -33,8 +33,7 @@ themes.forEach(theme => {
   Object.keys(tokenObject)
     .map(tokenValue => tokenObject[tokenValue])
     .forEach(({ value }, index) => {
-      const { hex } = value;
-      let color = hex;
+      let { hex: color } = value;
 
       Object.entries(colors).forEach(([swatch, colorGrades]) => {
         Object.entries(colorGrades).forEach(([colorGrade, colorValue]) => {
@@ -44,7 +43,7 @@ themes.forEach(theme => {
         });
       });
 
-      tokens[index].themes.push({ color, hex });
+      tokens[index].themes.push(color);
     });
 });
 
