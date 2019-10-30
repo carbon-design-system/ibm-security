@@ -48,6 +48,7 @@ exports[`StatusIndicator renders 1`] = `
       key="security--status-indicator__retry-button"
       kind="ghost"
       largeText={null}
+      loading={false}
       tabIndex={0}
       type="button"
     >
