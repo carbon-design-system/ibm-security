@@ -30,8 +30,6 @@ class FilterSubcategory extends Component {
 
   state = { isExpanded: false };
 
-  componentDidMount = () => this.updateListContainerHeight();
-
   componentDidUpdate = () => this.updateListContainerHeight();
 
   /**
