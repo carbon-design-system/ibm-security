@@ -27,7 +27,7 @@ storiesOf(components('Accordion'), module)
   .add(
     'Default',
     () => (
-      <Accordion>
+      <Accordion right={boolean('Right align accordion ')}>
         <AccordionItem
           title={text('The title (title)', 'Section 1 title')}
           open={boolean('Open the section (open)', false)}
