@@ -6,10 +6,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { boolean, number, text } from '@storybook/addon-knobs';
-import { withA11y } from '@storybook/addon-a11y';
 import { action } from '@storybook/addon-actions';
-
-import centered from '@storybook/addon-centered/react';
 
 import { components } from '../../../.storybook';
 
@@ -36,8 +33,6 @@ const TextAreaProps = () => ({
 });
 
 storiesOf(components('TextArea'), module)
-  .addDecorator(centered)
-  .addDecorator(withA11y)
   .add('Default', () => <TextArea {...TextAreaProps()} />, {
     info: {
       text: `

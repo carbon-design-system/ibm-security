@@ -7,24 +7,51 @@ import classnames from 'classnames';
 import { bool, string, number } from 'prop-types';
 import React from 'react';
 
+import TooltipDefinition from '../TooltipDefinition';
+
 import { getComponentNamespace } from '../../globals/namespace';
 
 const namespace = getComponentNamespace('string-formatter');
 
-const StringFormatter = ({ className, lines, truncate, value, width }) => (
-  <span
-    className={classnames(namespace, className, {
-      [`${namespace}--truncate`]: truncate,
-    })}
-    style={{
-      maxWidth: width,
-      WebkitLineClamp: lines,
-    }}
-    title={truncate && value}
-  >
-    {value}
-  </span>
-);
+const StringFormatter = ({
+  className,
+  lines,
+  truncate,
+  value,
+  width,
+  tooltipDirection,
+  ...other
+}) => {
+  const content = (
+    <span
+      className={classnames(namespace, className, {
+        [`${namespace}--truncate`]: truncate,
+      })}
+      style={{
+        maxWidth: width,
+        WebkitLineClamp: lines,
+      }}
+      {...other}
+    >
+      {value}
+    </span>
+  );
+
+  if (truncate) {
+    return (
+      <TooltipDefinition
+        align="start"
+        direction={tooltipDirection}
+        tooltipText={value}
+        className={`${namespace}__tooltip`}
+      >
+        {content}
+      </TooltipDefinition>
+    );
+  }
+
+  return content;
+};
 
 StringFormatter.propTypes = {
   /** @type {string} Optional class name. */
@@ -41,6 +68,9 @@ StringFormatter.propTypes = {
 
   /** @type {string} Maximum width of value. */
   width: string,
+
+  /** @type {string} The direction of the tooltip defintion. */
+  tooltipDirection: string,
 };
 
 StringFormatter.defaultProps = {
@@ -48,6 +78,7 @@ StringFormatter.defaultProps = {
   lines: 1,
   truncate: false,
   width: null,
+  tooltipDirection: 'bottom',
 };
 
 export default StringFormatter;

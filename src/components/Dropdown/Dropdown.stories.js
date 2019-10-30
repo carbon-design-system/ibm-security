@@ -6,9 +6,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { withA11y } from '@storybook/addon-a11y';
 import { boolean, select, text } from '@storybook/addon-knobs';
-import centered from '@storybook/addon-centered/react';
+
 import { Dropdown, DropdownSkeleton } from '../../';
 
 import { components } from '../../../.storybook';
@@ -66,8 +65,6 @@ const itemToElement = item => {
 };
 
 storiesOf(components('Dropdown'), module)
-  .addDecorator(centered)
-  .addDecorator(withA11y)
   .add(
     'default',
     () => (

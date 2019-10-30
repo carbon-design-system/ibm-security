@@ -9,7 +9,6 @@ import { action } from '@storybook/addon-actions';
 import { boolean, text } from '@storybook/addon-knobs';
 
 import { settings } from 'carbon-components';
-import { withA11y } from '@storybook/addon-a11y';
 
 import { components } from '../../../.storybook';
 
@@ -56,24 +55,21 @@ const props = () => ({
   onSecondarySubmit: action('onSecondarySubmit'),
 });
 
-storiesOf(components('Modal'), module)
-  .addDecorator(withA11y)
-  .add(
-    'Default',
-    () => (
-      <Modal {...props()}>
-        <p className={`${prefix}--modal-content__text`}>
-          Please see ModalWrapper for more examples and demo of the
-          functionality.
-        </p>
-      </Modal>
-    ),
-    {
-      info: {
-        text: `
+storiesOf(components('Modal'), module).add(
+  'Default',
+  () => (
+    <Modal {...props()}>
+      <p className={`${prefix}--modal-content__text`}>
+        Please see ModalWrapper for more examples and demo of the functionality.
+      </p>
+    </Modal>
+  ),
+  {
+    info: {
+      text: `
             Modals communicate information via a secondary window and allow the user to maintain the context of a particular task.
             Use the Modal Wrapper component to encapsulate your Modal within a button.
           `,
-      },
-    }
-  );
+    },
+  }
+);

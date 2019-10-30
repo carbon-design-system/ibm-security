@@ -44,9 +44,32 @@ const getComponentsCategory = bindCategory(COMPONENTS);
  */
 const getPatternsCategory = bindCategory(PATTERNS);
 
+/**
+ * Configuration for disabling the centering addon in individual stories.
+ * @param {Object<string, Object>} stories The collection of stories to disable the addon for.
+ * @returns {Object<string, Object>} The collection of stories.
+ */
+const disableCentered = stories =>
+  stories.addParameters({
+    centered: {
+      disable: true,
+    },
+  });
+
+/**
+ * Configuration for applying information to individual stories.
+ * @param {string} info The information to apply to individual stories.
+ * @returns {Object<string, string>} The configuration containing information to apply.
+ */
+const info = info => ({
+  info,
+});
+
 export {
+  disableCentered,
   getComponentsCategory as components,
   getPatternsCategory as patterns,
+  info,
   HIERARCHY_ROOT_SEPARATOR,
   ORDER,
 };

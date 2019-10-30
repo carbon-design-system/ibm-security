@@ -7,7 +7,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { boolean, object } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
-import { withA11y } from '@storybook/addon-a11y';
+
 import { compose } from 'recompose';
 
 import { patterns } from '../../../.storybook';
@@ -45,9 +45,9 @@ const filterItems = selectedItemsMap => ([items, item]) => {
 };
 const selectFirst = ([items]) => items;
 
-storiesOf(patterns('TagWallFilter'), module)
-  .addDecorator(withA11y)
-  .add(`TagWall with Filter list for multiselect`, () => {
+storiesOf(patterns('TagWallFilter'), module).add(
+  `TagWall with Filter list for multiselect`,
+  () => {
     const selectedItems = object('selectedItems', [
       { id: 'item-0', label: 'Lima' },
     ]);
@@ -96,4 +96,5 @@ storiesOf(patterns('TagWallFilter'), module)
         />
       )
     );
-  });
+  }
+);

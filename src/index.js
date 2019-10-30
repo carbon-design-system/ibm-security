@@ -186,6 +186,7 @@ export Toggle, { ToggleSkeleton } from './components/Toggle';
 export TextArea, { TextAreaSkeleton } from './components/TextArea';
 export ToggleSmall, { ToggleSmallSkeleton } from './components/ToggleSmall';
 export Tooltip from './components/Tooltip';
+export TooltipDefintion from './components/TooltipDefinition';
 export Transition from './components/Transition';
 
 // Hidden Carbon proxy.
