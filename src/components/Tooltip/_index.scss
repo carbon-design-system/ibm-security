@@ -5,26 +5,3 @@
 ////
 
 @import 'carbon-components/scss/components/tooltip/tooltip';
-
-@import '../../globals/index';
-@import 'mixins';
-
-@include export-namespace($name: tooltip) {
-  // TODO - V2: Carbon needs to address inverse theming.
-  // See: https://github.com/carbon-design-system/carbon/tree/master/packages/components/src/components/tooltip/_tooltip.scss#L373
-  @include carbon--theme($carbon--theme--g10) {
-    .#{$prefix}--tooltip {
-      &__label .#{$prefix}--tooltip__trigger {
-        margin-left: $carbon--spacing-03;
-      }
-
-      .#{$prefix}--link {
-        color: $interactive-01;
-
-        &:visited {
-          color: $interactive-01;
-        }
-      }
-    }
-  }
-}
