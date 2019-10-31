@@ -68,6 +68,10 @@ $tearsheet__sizing__dimensions: $carbon--layout-04;
     position: absolute;
     background-color: $overlay-01;
   }
+
+  &__loading .#{$prefix}--loading__stroke {
+    stroke: $inverse-focus-ui;
+  }
 }
 
 @mixin tearsheet__button {

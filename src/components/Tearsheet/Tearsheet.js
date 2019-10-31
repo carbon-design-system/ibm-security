@@ -107,7 +107,7 @@ class Tearsheet extends Component {
               aria-hidden={false}
             >
               {this.state.loading && (
-                <Loading>
+                <Loading className={`${namespace}__loading`}>
                   <div className={`${namespace}__loading__message`}>
                     {this.state.loadingMessage}
                   </div>
