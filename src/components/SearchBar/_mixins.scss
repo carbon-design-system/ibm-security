@@ -25,15 +25,6 @@
     width: auto;
   }
 
-  &__submit {
-    border: 0;
-
-    &:disabled,
-    &:disabled:hover {
-      background-color: $disabled-02;
-    }
-  }
-
   &__scopes.#{$prefix}--list-box {
     flex: 0 0 carbon--mini-units(28);
     border: 0;
