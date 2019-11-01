@@ -1,12 +1,12 @@
 /**
  * @file Accordion stories.
- * @copyright IBM Security 2018
+ * @copyright IBM Security 2019
  */
-
-import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { boolean, text, number } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
+
+import React from 'react';
 
 import { components, info } from '../../../.storybook';
 
