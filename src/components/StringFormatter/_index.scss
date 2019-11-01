@@ -5,11 +5,16 @@
 ////
 
 @import '@carbon/layout/scss/mini-unit';
+@import 'carbon-components/scss/globals/scss/vars';
+
+@import '../TooltipDefinition/index';
 
 @import '../Component/mixins';
 
 @include security--component($name: string-formatter) {
   display: inline-block;
+  line-height: initial;
+  text-align: left;
 
   &--truncate {
     max-width: 80ch;
@@ -17,5 +22,9 @@
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
+  }
+
+  &__tooltip > .#{$prefix}--tooltip__trigger {
+    border-width: 0;
   }
 }
