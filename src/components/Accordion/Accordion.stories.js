@@ -8,7 +8,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { boolean, text, number } from '@storybook/addon-knobs';
 
-import { components } from '../../../.storybook';
+import { components, info } from '../../../.storybook';
 
 import {
   Accordion,
@@ -16,7 +16,7 @@ import {
   AccordionSkeleton,
   Select,
   SelectItem,
-} from '../../';
+} from '../..';
 
 const props = {
   onClick: action('onClick'),
@@ -82,13 +82,10 @@ storiesOf(components('Accordion'), module)
         </AccordionItem>
       </Accordion>
     ),
-    {
-      info: {
-        text: `
-          Accordions allow users to expand and collapse sections of content.
-        `,
-      },
-    }
+    info(
+      'Accordions allow users to expand and collapse sections of content.',
+      'accordion--default'
+    )
   )
   .add(
     'with skeleton',
