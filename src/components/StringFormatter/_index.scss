@@ -13,7 +13,6 @@
 
 @include security--component($name: string-formatter) {
   display: inline-block;
-  line-height: initial;
   text-align: left;
 
   &--truncate {
@@ -25,6 +24,9 @@
   }
 
   &__tooltip > .#{$prefix}--tooltip__trigger {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
     border-width: 0;
   }
 }
