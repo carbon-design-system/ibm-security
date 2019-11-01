@@ -210,6 +210,7 @@ exports[`Header Rendering renders correctly 1`] = `
               href="#"
               kind="primary"
               largeText={null}
+              loading={false}
               tabIndex={0}
               type="button"
             >
@@ -248,6 +249,7 @@ exports[`Header Rendering renders correctly 1`] = `
               href="#"
               kind="secondary"
               largeText={null}
+              loading={false}
               tabIndex={0}
               type="button"
             >

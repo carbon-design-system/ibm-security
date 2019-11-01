@@ -82,6 +82,7 @@ storiesOf(patterns('TearsheetSmall'), module)
     () =>
       boolean('isOpen', true) && (
         <TearsheetSmall
+          flush={boolean('Flush (flush)', TearsheetSmall.defaultProps.flush)}
           focusTrap={focusTrap}
           heading={heading}
           description={description}

@@ -337,21 +337,27 @@ export default class Header extends Component {
                     new Date(b.datetime).getTime() -
                     new Date(a.datetime).getTime()
                 )
-                .map(({ datetime, description, href, id, label, product }) => (
-                  <li key={id} className={`${namespace}__popover__list-item`}>
-                    <HeaderNotification
-                      clearButtonLabel={`${labels.notifications.clear} '${description}'`}
-                      dateTime={datetime}
-                      description={description}
-                      href={href}
-                      onClearButtonClick={() => this.clearNotification(id)}
-                      product={product}
-                      timeLabel={label}
-                      viaLabel={labels.notifications.via}
-                      tabIndex="0"
-                    />
-                  </li>
-                ))}
+                .map(
+                  (
+                    { datetime, description, href, id, label, product },
+                    index
+                  ) => (
+                    <li key={id} className={`${namespace}__popover__list-item`}>
+                      <HeaderNotification
+                        clearButtonLabel={`${labels.notifications.clear} '${description}'`}
+                        dateTime={datetime}
+                        description={description}
+                        href={href}
+                        onClearButtonClick={() => this.clearNotification(id)}
+                        product={product}
+                        timeLabel={label}
+                        viaLabel={labels.notifications.via}
+                        tabIndex="0"
+                        tooltipDirection={index === 0 ? 'bottom' : 'top'}
+                      />
+                    </li>
+                  )
+                )}
             </Transition>
           </ul>
         </ScrollGradient>
