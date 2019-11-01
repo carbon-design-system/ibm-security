@@ -3,10 +3,11 @@
  * @copyright IBM Security 2018
  */
 
-import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { boolean, text, number, select } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
+
+import React from 'react';
 
 import { components } from '../../../.storybook';
 
@@ -16,11 +17,12 @@ import {
   AccordionSkeleton,
   Select,
   SelectItem,
-} from '../../';
+} from '../..';
 
 const props = {
   onClick: action('onClick'),
   onHeadingClick: action('onHeadingClick'),
+  style: { width: '100vw' },
 };
 
 const alignment = {

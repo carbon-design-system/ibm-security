@@ -51,7 +51,7 @@ storiesOf(components('CodeSnippet'), module)
     () => (
       <div>
         <CodeSnippet type="inline" {...props.inline()}>
-          {'node -v'}
+          node -v
         </CodeSnippet>
       </div>
     ),
@@ -69,9 +69,10 @@ storiesOf(components('CodeSnippet'), module)
     'single line',
     () => (
       <CodeSnippet type="single" {...props.single()}>
-        {
-          'node -v Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, veritatis voluptate id incidunt molestiae officia possimus, quasi itaque alias, architecto hic, dicta fugit? Debitis delectus quidem explicabo vitae fuga laboriosam!'
-        }
+        node -v Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Blanditiis, veritatis voluptate id incidunt molestiae officia possimus,
+        quasi itaque alias, architecto hic, dicta fugit? Debitis delectus quidem
+        explicabo vitae fuga laboriosam!
       </CodeSnippet>
     ),
     {

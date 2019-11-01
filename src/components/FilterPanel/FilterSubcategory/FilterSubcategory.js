@@ -26,11 +26,7 @@ import ScrollGradient from '../../ScrollGradient';
 export const namespace = getComponentNamespace('filter-subcategory');
 
 class FilterSubcategory extends Component {
-  static visibleFiltersContainerClassName = `${namespace}__filters--visible`;
-
   state = { isExpanded: false };
-
-  componentDidMount = () => this.updateListContainerHeight();
 
   componentDidUpdate = () => this.updateListContainerHeight();
 
@@ -41,6 +37,8 @@ class FilterSubcategory extends Component {
   setReference = element => {
     this.listContainer = element;
   };
+
+  static visibleFiltersContainerClassName = `${namespace}__filters--visible`;
 
   /**
    * @type {HTMLElement} Reference to list container.
@@ -58,6 +56,7 @@ class FilterSubcategory extends Component {
    */
   updateListContainerHeight = () => {
     const { listContainer } = this;
+
     if (listContainer) {
       listContainer.style.height = `${
         listContainer.querySelector(
