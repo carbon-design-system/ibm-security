@@ -6,7 +6,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { boolean, text, number } from '@storybook/addon-knobs';
+import { boolean, text, number, select } from '@storybook/addon-knobs';
 
 import { components } from '../../../.storybook';
 
@@ -23,11 +23,22 @@ const props = {
   onHeadingClick: action('onHeadingClick'),
 };
 
+const alignment = {
+  'Left align': 'left',
+  'Right align': 'right',
+};
+
 storiesOf(components('Accordion'), module)
   .add(
     'Default',
     () => (
-      <Accordion right={boolean('Right align accordion ')}>
+      <Accordion
+        alignment={select(
+          'Accordion heading alignment (alignment)',
+          alignment,
+          'left'
+        )}
+      >
         <AccordionItem
           title={text('The title (title)', 'Section 1 title')}
           open={boolean('Open the section (open)', false)}

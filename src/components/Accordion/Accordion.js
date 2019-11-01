@@ -15,20 +15,27 @@ const namespace = getComponentNamespace('accordion');
 
 const { defaultProps, propTypes } = CarbonAccordion;
 
-const Accordion = ({ className, right, ...rest }) => {
+const Accordion = ({ className, alignment, ...rest }) => {
+  const isRightAligned = alignment === 'right';
+
   const accordionClasses = classnames(namespace, className, {
-    [`${namespace}--right`]: right,
+    [`${namespace}--right`]: isRightAligned,
+    [`${namespace}--left`]: !isRightAligned,
   });
 
   return (
-    <CarbonAccordion className={accordionClasses} right={right} {...rest} />
+    <CarbonAccordion
+      className={accordionClasses}
+      alignment={alignment}
+      {...rest}
+    />
   );
 };
 
 Accordion.defaultProps = {
   ...defaultProps,
   className: '',
-  right: false,
+  alignment: 'left',
 };
 
 Accordion.propTypes = {
@@ -37,8 +44,8 @@ Accordion.propTypes = {
   /** Extra class names to add. */
   className: PropTypes.string,
 
-  /** Whether or not the accordion is right aligned. */
-  right: PropTypes.bool,
+  /** Specify the alignment of the accordion heading title and chevron. */
+  alignment: PropTypes.oneOf(['left', 'right']),
 };
 
 export default Accordion;
