@@ -4,17 +4,10 @@
 /// @copyright IBM Security 2019
 ////
 
-@import 'themes/index';
 @import '../.storybook/components/Container/index';
 
 * {
   box-sizing: border-box;
-}
-
-.grid {
-  display: flex;
-  padding: $carbon--spacing-09;
-  justify-content: center;
 }
 
 .wizard__form {

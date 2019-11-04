@@ -3,7 +3,6 @@
  * @copyright IBM Security 2019
  */
 
-import { withA11y } from '@storybook/addon-a11y';
 import { action } from '@storybook/addon-actions';
 import { text, boolean } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
@@ -113,7 +112,6 @@ const buttons = () => ({
 });
 
 storiesOf(patterns('Tearsheet'), module)
-  .addDecorator(withA11y)
   .add(
     'Basic',
     () => (

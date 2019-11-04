@@ -55,6 +55,7 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
             iconDescription="Delete - prop"
             kind="ghost-danger"
             largeText={null}
+            loading={false}
             onClick={[MockFunction]}
             renderIcon={
               Object {
@@ -100,7 +101,7 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
         >
           <ScrollGradient
             className="security--tearsheet__main__scroll-gradient"
-            color="#282828"
+            color="#262626"
             direction="Y"
             getScrollElementRef={[Function]}
             hideStartGradient={false}
@@ -136,6 +137,7 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
               disabled={false}
               kind="secondary"
               largeText={null}
+              loading={false}
               onClick={[MockFunction]}
               size="large"
               tabIndex={0}
@@ -148,6 +150,7 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
               disabled={false}
               kind="primary"
               largeText={null}
+              loading={false}
               onClick={[MockFunction]}
               size="large"
               tabIndex={0}
@@ -218,6 +221,7 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
             iconDescription="Delete"
             kind="ghost-danger"
             largeText={null}
+            loading={false}
             onClick={[MockFunction]}
             renderIcon={
               Object {
@@ -263,7 +267,7 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
         >
           <ScrollGradient
             className="security--tearsheet__main__scroll-gradient"
-            color="#282828"
+            color="#262626"
             direction="Y"
             getScrollElementRef={[Function]}
             hideStartGradient={false}
@@ -299,6 +303,7 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
               disabled={false}
               kind="secondary"
               largeText={null}
+              loading={false}
               onClick={[MockFunction]}
               size="large"
               tabIndex={0}
@@ -311,6 +316,7 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
               disabled={false}
               kind="primary"
               largeText={null}
+              loading={false}
               onClick={[MockFunction]}
               size="large"
               tabIndex={0}

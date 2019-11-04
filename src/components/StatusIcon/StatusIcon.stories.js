@@ -3,8 +3,6 @@
  * @copyright IBM Security 2019
  */
 
-import { withA11y } from '@storybook/addon-a11y';
-import centered from '@storybook/addon-centered/react';
 import { select, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
@@ -24,8 +22,6 @@ const storyProps = () => ({
 const status = STATUS[0];
 
 storiesOf(components('StatusIcon'), module)
-  .addDecorator(withA11y)
-  .addDecorator(centered)
   .add('Default', () => <StatusIcon {...storyProps()} />)
   .add('Status', () => (
     <StatusIcon

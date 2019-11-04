@@ -5,10 +5,9 @@
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withA11y } from '@storybook/addon-a11y';
 import { text, select } from '@storybook/addon-knobs';
 
-import { patterns } from '../../../.storybook';
+import { disableCentered, patterns } from '../../../.storybook';
 
 import { ErrorPage } from '../..';
 
@@ -32,6 +31,6 @@ const props = () => ({
   ],
 });
 
-storiesOf(patterns('ErrorPage'), module)
-  .addDecorator(withA11y)
-  .add('default', () => <ErrorPage {...props()} />);
+disableCentered(storiesOf(patterns('ErrorPage'), module)).add('default', () => (
+  <ErrorPage {...props()} />
+));

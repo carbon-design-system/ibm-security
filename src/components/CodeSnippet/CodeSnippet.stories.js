@@ -3,11 +3,9 @@
  * @copyright IBM Security 2019
  */
 
-import { withA11y } from '@storybook/addon-a11y';
 import { action } from '@storybook/addon-actions';
 import { boolean, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
-import centered from '@storybook/addon-centered/react';
 
 import React from 'react';
 import { components } from '../../../.storybook';
@@ -48,14 +46,12 @@ const props = {
 };
 
 storiesOf(components('CodeSnippet'), module)
-  .addDecorator(withA11y)
-  .addDecorator(centered)
   .add(
     'inline',
     () => (
       <div>
         <CodeSnippet type="inline" {...props.inline()}>
-          {'node -v'}
+          node -v
         </CodeSnippet>
       </div>
     ),
@@ -73,9 +69,10 @@ storiesOf(components('CodeSnippet'), module)
     'single line',
     () => (
       <CodeSnippet type="single" {...props.single()}>
-        {
-          'node -v Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, veritatis voluptate id incidunt molestiae officia possimus, quasi itaque alias, architecto hic, dicta fugit? Debitis delectus quidem explicabo vitae fuga laboriosam!'
-        }
+        node -v Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Blanditiis, veritatis voluptate id incidunt molestiae officia possimus,
+        quasi itaque alias, architecto hic, dicta fugit? Debitis delectus quidem
+        explicabo vitae fuga laboriosam!
       </CodeSnippet>
     ),
     {

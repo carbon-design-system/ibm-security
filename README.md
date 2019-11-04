@@ -79,6 +79,19 @@ To add all of the components' styles, import the entry point:
 @import '@carbon/ibm-security/scss/index';
 ```
 
+#### Feature flags
+
+Carbon for IBM Security takes advantage of feature flags to conditionally enable or disable features. To configure feature flags, you will need to update the `$security--feature-flags` map before importing any Sass files. For example:
+
+```scss
+$security--feature-flags: (
+  css-gridish: false,
+  ibm-type: false,
+);
+
+@import '@carbon/ibm-security/scss/index';
+```
+
 ### CSS
 
 To add all of the components' processed and minified styles, reference `@carbon/ibm-security/css/index.min.css`.
@@ -88,6 +101,7 @@ To add all of the components' processed and minified styles, reference `@carbon/
 - [Guidelines for making contributions](.github/CONTRIBUTING.md) to this repo
 - [Migration guides](docs/migration)
   - [`v1` to `v2`](docs/migration/migrate-to-2.x.md)
+- [Storybook](docs/storybook.md)
 
 ### Carbon Developer Essentials
 

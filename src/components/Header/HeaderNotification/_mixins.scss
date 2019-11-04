@@ -4,6 +4,8 @@
 /// @copyright IBM Security 2019
 ////
 
+@import 'carbon-components/scss/globals/scss/vars';
+
 @import '../../../globals/index';
 
 @import '../mixins';
@@ -29,10 +31,41 @@
     flex-grow: 1;
     text-decoration: none;
     color: inherit;
+
     &:focus {
       @include header__popover__item--focus;
       transform: translate3d(0, 0, 0);
       opacity: 1;
+    }
+
+    // TODO: `cool-gray` - To be removed with theming.
+
+    /// Tooltip selector.
+    /// @type String
+    $carbon--tooltip: '.#{$prefix}--tooltip';
+
+    > #{$carbon--tooltip}--definition > #{$carbon--tooltip}__trigger {
+      color: currentColor;
+
+      &:focus {
+        outline-color: $inverse-focus-ui;
+      }
+
+      &#{$carbon--tooltip}--bottom,
+      &#{$carbon--tooltip}--top {
+        + .#{$prefix}--assistive-text {
+          background-color: $inverse-01;
+          color: $inverse-02;
+        }
+      }
+
+      &#{$carbon--tooltip}--bottom::before {
+        border-bottom-color: $inverse-01;
+      }
+
+      &#{$carbon--tooltip}--top::before {
+        border-top-color: $inverse-01;
+      }
     }
   }
 
@@ -48,55 +81,6 @@
 
   &__time {
     @include carbon--font-weight($weight: semibold);
-  }
-
-  &__description {
-    /*hack the div element directly for the tooltip to be inline*/
-    div {
-      display: inline;
-    }
-    &--tooltip {
-      word-break: break-all;
-    }
-  }
-
-  &__tooltip {
-    &:focus {
-      @include header__popover__item--focus;
-      transform: translate3d(0, 0, 0);
-      opacity: 1;
-    }
-
-    div &--body {
-      position: fixed;
-      z-index: z($layer: overlay);
-      display: none;
-
-      &
-        > button.bx--tooltip__trigger.bx--tooltip__trigger--definition:first-child {
-        width: carbon--mini-units($count: 2);
-
-        &::before,
-        &::after {
-          opacity: 1;
-        }
-
-        &::after {
-          background: $inverse-01;
-          color: $inverse-02;
-        }
-
-        &::before {
-          margin-left: carbon--mini-units($count: -2);
-          border-color: $inverse-01 transparent transparent transparent;
-        }
-      }
-    }
-
-    &:hover > &--body,
-    &:focus > &--body {
-      display: block;
-    }
   }
 
   &__button {

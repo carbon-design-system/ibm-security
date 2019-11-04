@@ -10,7 +10,7 @@ exports[`FilterSubcategory Events collapses expanded truncated list of filters 1
     className="security--filter-subcategory__filter-list"
   >
     <ScrollGradient
-      color="#171717"
+      color="#161616"
       direction="Y"
       getScrollElementRef={[Function]}
       hideStartGradient={false}
@@ -115,6 +115,7 @@ exports[`FilterSubcategory Events collapses expanded truncated list of filters 1
     iconDescription="View more"
     kind="ghost"
     largeText={null}
+    loading={false}
     onClick={[Function]}
     renderIcon={
       Object {
@@ -140,7 +141,7 @@ exports[`FilterSubcategory Events expands truncated list of filters 1`] = `
     className="security--filter-subcategory__filter-list"
   >
     <ScrollGradient
-      color="#171717"
+      color="#161616"
       direction="Y"
       getScrollElementRef={[Function]}
       hideStartGradient={false}
@@ -505,6 +506,7 @@ exports[`FilterSubcategory Events expands truncated list of filters 1`] = `
     iconDescription="View less"
     kind="ghost"
     largeText={null}
+    loading={false}
     onClick={[Function]}
     renderIcon={
       Object {
@@ -529,7 +531,7 @@ exports[`FilterSubcategory Rendering does not render when count is 0 1`] = `
     className="security--filter-subcategory__filter-list"
   >
     <ScrollGradient
-      color="#171717"
+      color="#161616"
       direction="Y"
       getScrollElementRef={[Function]}
       hideStartGradient={false}
@@ -554,7 +556,7 @@ exports[`FilterSubcategory Rendering does not render with no filters 1`] = `
     className="security--filter-subcategory__filter-list"
   >
     <ScrollGradient
-      color="#171717"
+      color="#161616"
       direction="Y"
       getScrollElementRef={[Function]}
       hideStartGradient={false}
@@ -580,7 +582,7 @@ exports[`FilterSubcategory Rendering does not truncate short list of filters 1`]
     className="security--filter-subcategory__filter-list"
   >
     <ScrollGradient
-      color="#171717"
+      color="#161616"
       direction="Y"
       getScrollElementRef={[Function]}
       hideStartGradient={false}
@@ -657,7 +659,7 @@ exports[`FilterSubcategory Rendering renders 1`] = `
     className="security--filter-subcategory__filter-list"
   >
     <ScrollGradient
-      color="#171717"
+      color="#161616"
       direction="Y"
       getScrollElementRef={[Function]}
       hideStartGradient={false}
@@ -735,7 +737,7 @@ exports[`FilterSubcategory Rendering renders open subcategory 1`] = `
     className="security--filter-subcategory__filter-list"
   >
     <ScrollGradient
-      color="#171717"
+      color="#161616"
       direction="Y"
       getScrollElementRef={[Function]}
       hideStartGradient={false}
@@ -812,7 +814,7 @@ exports[`FilterSubcategory Rendering should not override \`labels\` if unique pr
     className="security--filter-subcategory__filter-list"
   >
     <ScrollGradient
-      color="#171717"
+      color="#161616"
       direction="Y"
       getScrollElementRef={[Function]}
       hideStartGradient={false}
@@ -890,7 +892,7 @@ exports[`FilterSubcategory Rendering truncates long list of filters 1`] = `
     className="security--filter-subcategory__filter-list"
   >
     <ScrollGradient
-      color="#171717"
+      color="#161616"
       direction="Y"
       getScrollElementRef={[Function]}
       hideStartGradient={false}
@@ -995,6 +997,7 @@ exports[`FilterSubcategory Rendering truncates long list of filters 1`] = `
     iconDescription="View more"
     kind="ghost"
     largeText={null}
+    loading={false}
     onClick={[Function]}
     renderIcon={
       Object {
