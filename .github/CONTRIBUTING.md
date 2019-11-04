@@ -38,7 +38,24 @@ npm run start
 yarn start
 ```
 
-Once it's done building, you can start editing source code or creating new components. The system is set up to automatically bundle your changes.
+This will start a development server where you can see any changes you are making to components in our React components Storybook.
+
+Once it's done building, you can edit source code or create new components. The system is set up to automatically bundle your changes.
+
+### Storybook
+
+Here are some Storybook quick tips:
+
+- Write individual stories in sentence case, for example 'Default', and only create explicit variations as required.
+- Follow existing writing styles for `propTypes`.
+- Include a one-sentence description for additional information.
+- Create action handlers to display data received by event handers.
+
+#### Knobs
+
+- Create knobs for props that visibly modify a component, and ensure the appropriate type is used.
+- Order knobs for props by functional value.
+- Include a descriptive label and indicate the prop's name.
 
 ## 5. Test your JavaScript code
 
