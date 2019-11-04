@@ -9,6 +9,7 @@
 
 @import '../namespace/index';
 
+@import 'functions';
 @import 'variables';
 
 /// Changes background color for form elements.
@@ -93,20 +94,6 @@
   }
 }
 
-%security--theme--cg10__cg10 {
-  @include security--theme--cg10($theme: $security--theme--cg10);
-}
-
-%security--theme--cg10__cg100 {
-  @include security--theme--cg10(
-    $theme:
-      security--cool-gray(
-        $theme: map-get($map: $security--themes, $key: theme--g100),
-        $grade: 100
-      )
-  );
-}
-
 /// Mixin to apply 'cool gray 10' theme to children of the selector within the 'cool gray 10' theme.
 /// @access private
 /// @example scss
@@ -120,7 +107,7 @@
 ///     --interactive-03: #0062ff;
 ///   }
 @mixin security--theme--cg10__cg10 {
-  @extend %security--theme--cg10__cg10;
+  @include security--theme--cg10($theme: $security--theme--cg10);
 }
 
 /// Mixin to apply 'cool gray 100' theme to children of the selector within the 'cool gray 10' theme.
@@ -136,5 +123,11 @@
 ///     --interactive-03: #ffffff;
 ///   }
 @mixin security--theme--cg10__cg100 {
-  @extend %security--theme--cg10__cg100;
+  @include security--theme--cg10(
+    $theme:
+      security--cool-gray(
+        $theme: map-get($map: $security--themes, $key: theme--g100),
+        $grade: 100
+      )
+  );
 }
