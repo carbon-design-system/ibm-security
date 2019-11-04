@@ -59,14 +59,14 @@ const disableCentered = stories =>
 /**
  * Configuration for applying information to individual stories.
  * @param {string} description The information to apply to individual stories.
- * @param {string} id The Carbon component story to redirect to.
+ * @param {Object.<string, string>} carbon - An object containing Carbon information to redirect to.
  * @returns {Object<string, string>} The configuration containing information to apply.
  */
-const info = (description, id) => ({
-  info: id
+const info = (description, carbon = null) => ({
+  info: carbon
     ? `${description}
 
-Also refer to http://react.carbondesignsystem.com/?path=/story/${id}`
+Also refer to http://react.carbondesignsystem.com/?path=/story/${carbon.story}--${carbon.id}`
     : description,
 });
 

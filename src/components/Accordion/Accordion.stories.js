@@ -25,6 +25,10 @@ const props = {
   style: { width: '100vw' },
 };
 
+const story = 'accordion';
+const description =
+  'Accordions allow users to expand and collapse sections of content.';
+
 storiesOf(components('Accordion'), module)
   .add(
     'Default',
@@ -84,10 +88,10 @@ storiesOf(components('Accordion'), module)
         </AccordionItem>
       </Accordion>
     ),
-    info(
-      'Accordions allow users to expand and collapse sections of content.',
-      'accordion--default'
-    )
+    info(description, {
+      story,
+      id: 'default',
+    })
   )
   .add(
     'with skeleton',
@@ -99,11 +103,8 @@ storiesOf(components('Accordion'), module)
         />
       </div>
     ),
-    {
-      info: {
-        text: `
-          Accordions allow users to expand and collapse sections of content.
-        `,
-      },
-    }
+    info(description, {
+      story,
+      id: 'skeleton',
+    })
   );
