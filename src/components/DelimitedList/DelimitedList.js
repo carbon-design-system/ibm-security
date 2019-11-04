@@ -68,24 +68,24 @@ class DelimitedList extends Component {
 }
 
 DelimitedList.propTypes = {
-  /** Provide an optional class to be applied to the containing node */
-  className: PropTypes.string,
-
-  /** Delimiter used when rendering the items */
-  delimiter: PropTypes.string,
-
   /** Array of items to render */
   items: PropTypes.arrayOf(PropTypes.any),
 
   /** Specify whether the `DelimitedList` is truncated if it overflows */
   truncate: PropTypes.bool,
+
+  /** Delimiter used when rendering the items */
+  delimiter: PropTypes.string,
+
+  /** Provide an optional class to be applied to the containing node */
+  className: PropTypes.string,
 };
 
 DelimitedList.defaultProps = {
-  className: undefined,
-  delimiter: ', ',
   items: [],
   truncate: true,
+  delimiter: ', ',
+  className: undefined,
 };
 
 export default DelimitedList;

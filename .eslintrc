@@ -2,6 +2,7 @@
   "parser": "babel-eslint",
   "extends": [
     "airbnb",
+    "eslint:recommended",
     "plugin:compat/recommended",
     "plugin:import/recommended",
     "plugin:jsx-a11y/recommended",
@@ -16,6 +17,14 @@
   },
   "rules": {
     "global-require": "warn",
+    "no-console": [
+      "error",
+      { "allow": [
+          "log",
+          "warn"
+        ]
+      }
+    ],
     "no-param-reassign": "warn",
     "no-shadow": "off",
     "no-underscore-dangle": "off",

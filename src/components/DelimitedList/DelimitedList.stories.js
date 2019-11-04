@@ -28,8 +28,7 @@ const props = () => ({
 storiesOf(components('DelimitedList'), module).add(
   'Default',
   () => <DelimitedList {...props()} />,
-
   info(
-    'Delimited lists truncates an array of items, separated by a delimited, and include the total number of items when hovering.'
+    'Delimited lists truncates an array of items, separated by a delimiter, and include the total number of items when hovering.'
   )
 );
