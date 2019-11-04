@@ -16,13 +16,13 @@ const namespace = getComponentNamespace('string-formatter');
 const StringFormatter = ({
   className,
   lines,
+  tooltipDirection,
   truncate,
   value,
   width,
-  tooltipDirection,
   ...other
 }) => {
-  const content = (
+  const children = (
     <span
       className={classnames(namespace, className, {
         [`${namespace}--truncate`]: truncate,
@@ -37,20 +37,18 @@ const StringFormatter = ({
     </span>
   );
 
-  if (truncate) {
-    return (
-      <TooltipDefinition
-        align="start"
-        direction={tooltipDirection}
-        tooltipText={value}
-        className={`${namespace}__tooltip`}
-      >
-        {content}
-      </TooltipDefinition>
-    );
-  }
-
-  return content;
+  return truncate ? (
+    <TooltipDefinition
+      className={`${namespace}__tooltip`}
+      align="start"
+      direction={tooltipDirection}
+      tooltipText={value}
+    >
+      {children}
+    </TooltipDefinition>
+  ) : (
+    children
+  );
 };
 
 StringFormatter.propTypes = {
@@ -60,6 +58,9 @@ StringFormatter.propTypes = {
   /** @type {number} Number of lines to clamp value. */
   lines: number,
 
+  /** @type {string} The direction of the tooltip defintion. */
+  tooltipDirection: string,
+
   /** @type {boolean} Whether or not the value should be truncated. */
   truncate: bool,
 
@@ -68,17 +69,14 @@ StringFormatter.propTypes = {
 
   /** @type {string} Maximum width of value. */
   width: string,
-
-  /** @type {string} The direction of the tooltip defintion. */
-  tooltipDirection: string,
 };
 
 StringFormatter.defaultProps = {
   className: '',
   lines: 1,
+  tooltipDirection: 'bottom',
   truncate: false,
   width: null,
-  tooltipDirection: 'bottom',
 };
 
 export default StringFormatter;

@@ -2,6 +2,7 @@
  * @file Accordion stories.
  * @copyright IBM Security 2019
  */
+
 import { action } from '@storybook/addon-actions';
 import { boolean, text, number } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
@@ -21,6 +22,7 @@ import {
 const props = {
   onClick: action('onClick'),
   onHeadingClick: action('onHeadingClick'),
+  style: { width: '100vw' },
 };
 
 storiesOf(components('Accordion'), module)
