@@ -76,7 +76,6 @@ exports[`StepIndicator render renders the HTML of the node's subtree 1`] = `
         focusable="false"
         height="16"
         preserveAspectRatio="xMidYMid meet"
-        role="img"
         style="will-change:transform"
         viewBox="0 0 16 16"
         width="16"

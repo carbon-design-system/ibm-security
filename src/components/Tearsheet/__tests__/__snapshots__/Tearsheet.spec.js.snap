@@ -101,7 +101,7 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
         >
           <ScrollGradient
             className="security--tearsheet__main__scroll-gradient"
-            color="#282828"
+            color="#262626"
             direction="Y"
             getScrollElementRef={[Function]}
             hideStartGradient={false}
@@ -267,7 +267,7 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
         >
           <ScrollGradient
             className="security--tearsheet__main__scroll-gradient"
-            color="#282828"
+            color="#262626"
             direction="Y"
             getScrollElementRef={[Function]}
             hideStartGradient={false}
