@@ -1,6 +1,6 @@
 ////
 /// Search bar mixins.
-/// @group textinput
+/// @group search-bar
 /// @copyright IBM Security 2019
 ////
 
@@ -23,15 +23,6 @@
   &__input {
     flex: 1 1 auto;
     width: auto;
-  }
-
-  &__submit {
-    border: 0;
-
-    &:disabled,
-    &:disabled:hover {
-      background-color: $disabled-02;
-    }
   }
 
   &__scopes.#{$prefix}--list-box {

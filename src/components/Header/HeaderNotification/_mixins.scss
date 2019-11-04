@@ -4,6 +4,8 @@
 /// @copyright IBM Security 2019
 ////
 
+@import 'carbon-components/scss/globals/scss/vars';
+
 @import '../../../globals/index';
 
 @import '../mixins';
@@ -22,39 +24,6 @@
   box-sizing: border-box;
   justify-content: space-between;
 
-  // Inverse styling for string formatter's tooltip defintion:
-  .#{$namespace}string-formatter__tooltip.#{$prefix}--tooltip--definition
-    .#{$prefix}--tooltip__trigger {
-    color: currentColor;
-    text-align: left;
-    line-height: initial;
-
-    &:focus {
-      outline: 2px solid $inverse-focus-ui;
-      outline-offset: 2px;
-    }
-
-    // Tooltip top variation arrow:
-    &.#{$prefix}--tooltip__trigger--definition.#{$prefix}--tooltip--top.#{$prefix}--tooltip--align-start::before {
-      border-color: $inverse-01 transparent transparent transparent;
-    }
-
-    // Tooltip bottom variation arrow:
-    &.#{$prefix}--tooltip__trigger--definition.#{$prefix}--tooltip--bottom.#{$prefix}--tooltip--align-start::before {
-      border-color: transparent transparent $inverse-01 transparent;
-    }
-
-    // Tooltip content:
-    & + .#{$prefix}--assistive-text,
-    &:focus
-      + .#{$prefix}--assistive-text
-      &:hover
-      + .#{$prefix}--assistive-text {
-      background-color: $inverse-01;
-      color: $inverse-02;
-    }
-  }
-
   &__content {
     padding-top: $header__notification__spacing__padding;
     padding-bottom: $header__notification__spacing__padding;
@@ -67,6 +36,36 @@
       @include header__popover__item--focus;
       transform: translate3d(0, 0, 0);
       opacity: 1;
+    }
+
+    // TODO: `cool-gray` - To be removed with theming.
+
+    /// Tooltip selector.
+    /// @type String
+    $carbon--tooltip: '.#{$prefix}--tooltip';
+
+    > #{$carbon--tooltip}--definition > #{$carbon--tooltip}__trigger {
+      color: currentColor;
+
+      &:focus {
+        outline-color: $inverse-focus-ui;
+      }
+
+      &#{$carbon--tooltip}--bottom,
+      &#{$carbon--tooltip}--top {
+        + .#{$prefix}--assistive-text {
+          background-color: $inverse-01;
+          color: $inverse-02;
+        }
+      }
+
+      &#{$carbon--tooltip}--bottom::before {
+        border-bottom-color: $inverse-01;
+      }
+
+      &#{$carbon--tooltip}--top::before {
+        border-top-color: $inverse-01;
+      }
     }
   }
 

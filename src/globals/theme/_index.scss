@@ -5,14 +5,20 @@
 ////
 
 @import '@carbon/themes/scss/mixins';
+@import '@carbon/type/scss/styles';
 
 /// Default theme.
 /// @type Map<String, Color>
 /// @access private
-$-theme: $carbon--theme--g100 !default;
+$-theme: $carbon--theme--g100;
+
+// Remove the type tokens.
+@each $token in map-keys($map: $tokens) {
+  $-theme: map-remove($-theme, $token);
+}
 
 // Map the theme tokens as CSS custom properties.
-@each $token, $value in $carbon--theme--g100 {
+@each $token, $value in $-theme {
   $-theme: map-merge(
     $map1: $-theme,
     $map2: (

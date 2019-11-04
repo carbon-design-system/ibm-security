@@ -15,6 +15,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
       iconDescription=""
       kind="primary"
       largeText={null}
+      loading={false}
       onClick={[Function]}
       renderIcon={
         Object {
@@ -198,6 +199,7 @@ exports[`ComboButton renders a combo button without an overflow menu 1`] = `
       iconDescription=""
       kind="primary"
       largeText={null}
+      loading={false}
       onClick={[Function]}
       renderIcon={
         Object {
