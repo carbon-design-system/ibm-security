@@ -6,9 +6,11 @@
 
 @import 'carbon-components/scss/components/accordion/accordion';
 
+@import '../../globals/namespace/index';
+
 @include export-namespace($name: 'accordion') {
   .#{$prefix}--accordion {
-    &.#{$namespace}accordion--left {
+    &.#{$namespace}accordion--start {
       .#{$prefix}--accordion__heading {
         flex-direction: row;
       }

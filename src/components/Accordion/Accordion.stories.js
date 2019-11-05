@@ -25,9 +25,9 @@ const props = {
   style: { width: '100vw' },
 };
 
-const alignment = {
-  'Left align': 'left',
-  'Right align': 'right',
+const align = {
+  Start: 'start',
+  End: 'end',
 };
 
 storiesOf(components('Accordion'), module)
@@ -35,11 +35,7 @@ storiesOf(components('Accordion'), module)
     'Default',
     () => (
       <Accordion
-        alignment={select(
-          'Accordion heading alignment (alignment)',
-          alignment,
-          'left'
-        )}
+        align={select('Accordion heading alignment (align)', align, 'start')}
       >
         <AccordionItem
           title={text('The title (title)', 'Section 1 title')}
