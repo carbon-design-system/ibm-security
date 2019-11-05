@@ -26,7 +26,7 @@ class WizardStep extends Component {
 }
 
 WizardStep.propTypes = {
-  /** Provide a title for the step */
+  /** Specify a title for the step */
   title: PropTypes.string.isRequired,
 
   /** Pass in the nodes that will be rendered within the content of the step */

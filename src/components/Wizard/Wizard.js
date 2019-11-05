@@ -336,62 +336,58 @@ class Wizard extends Component {
 }
 
 Wizard.propTypes = {
-  /** @type {boolean} Focus trap. */
-  focusTrap: PropTypes.bool,
-
-  /** @type {string} The title of the Wizard. */
+  /** Specify a title */
   title: PropTypes.string.isRequired,
 
-  /** @type {string} The subtitle of the Wizard. */
+  /** Specify a subtitle */
   subTitle: PropTypes.string,
 
-  /** @type {Array<Object>} An object list of step props. __(deprecated)__ */
-  steps: PropTypes.arrayOf(PropTypes.shape(WizardStep.propTypes)),
-
-  /** @type {boolean} The open state.
-   * Leave this property undefined, to give control over the open state to the Wizard component.
-   * When defined at component creation time, the open state is controlled only by this property.
-   */
-  isOpen: PropTypes.bool,
-
-  /** @type {function(wizardState: Object): any} This is called whenever the wizard closes (or wants to close) */
-  onClose: PropTypes.func,
-
-  /** @type {Object} The initial state object of the wizard
-   * (useful to prefill some values in your forms). */
-  initState: PropTypes.instanceOf(Object),
-
-  /** @type {DOM Node} Target to render the wizard. */
-  rootNode: isNode() ? PropTypes.instanceOf(Node) : PropTypes.any,
-
-  /** @type {...React.Element(WizardStep)} Provide one element of the WizardStep component for each step of your wizard (see the WizardStep docs).
-   */
+  /** Provide the contents of the `Wizard` */
   children: PropTypes.node,
 
-  /** @type {function(wizardState: Object): Promise} onDelete handler, enables edit mode */
-  onDelete: PropTypes.func,
+  /** Specify the initial state object of the `Wizard` */
+  initState: PropTypes.instanceOf(Object),
 
-  /** @type {boolean} Defines whether the wizard is sequential or not. */
+  /** Specify whether the `Wizard` is currently open */
+  isOpen: PropTypes.bool,
+
+  /** Specify whether the `Wizard` is sequential */
   isSequential: PropTypes.bool,
 
-  /** @type {Object} The labels to be used with the wizard
-   * (useful to override default labels)
-   */
+  /** Provide an optional `onClose` hook that is called each time the `Wizard` is closed */
+  onClose: PropTypes.func,
+
+  /**  Provide an optional `onDelete` hook that is called each time delete button is selected */
+  onDelete: PropTypes.func,
+
+  /** Specify whether the `Wizard` should trap focus */
+  focusTrap: PropTypes.bool,
+
+  /** Specify the target element to render the `Wizard` to */
+  rootNode: isNode() ? PropTypes.instanceOf(Node) : PropTypes.any,
+
+  /** Specify an object for translating default labels */
   labels: defaultLabels.propType,
+
+  /**
+   * Deprecated in favor of `children`.
+   * Specify the steps of the `Wizard`
+   */
+  steps: PropTypes.arrayOf(PropTypes.shape(WizardStep.propTypes)),
 };
 
 Wizard.defaultProps = {
+  subTitle: '',
+  children: undefined,
+  initState: {},
+  isOpen: undefined,
+  isSequential: undefined,
+  onClose: () => {},
+  onDelete: () => Promise.resolve(),
   focusTrap: true,
   rootNode: isClient() ? document.body : undefined,
-  subTitle: '',
-  isOpen: undefined,
-  initState: {},
-  onClose: () => {},
-  steps: [],
-  children: undefined,
-  onDelete: () => Promise.resolve(),
-  isSequential: undefined,
   labels: {},
+  steps: [],
 };
 
 export default Wizard;
