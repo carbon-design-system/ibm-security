@@ -39,7 +39,7 @@ storiesOf(patterns('SummaryCard'), module)
             />
             <SummaryCardBody>{lorem}</SummaryCardBody>
             <SummaryCardFooter>
-              <SummaryCardAction expandedContent={lorem}>
+              <SummaryCardAction expandedContent={lorem} renderIcon={Folder20}>
                 Button label that is long and will be truncated
               </SummaryCardAction>
               <SummaryCardAction

@@ -6,6 +6,14 @@
 
 @import '../../globals/index';
 
+/// Use until Carbon fixes `text-overflow` helper mixin.
+/// @access private
+@mixin summary-card--ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @mixin summary-card {
   /// Summary card header height.
   /// @type Length
@@ -79,8 +87,9 @@
   }
 
   &__action {
-    @include text-overflow;
     flex: 1;
+    max-width: unset;
+    overflow: hidden;
 
     // Ensure that actions are always on top of the overlay:
     z-index: $overlay--z-index + 1;
@@ -88,8 +97,15 @@
     // Ensure that animating overlay doesn't show through due to transparent background:
     background-color: inherit;
 
-    // Required for truncation:
-    display: inline-block;
+    &__text {
+      @include summary-card--ellipsis;
+    }
+
+    // Accommodates the loading spinner:
+    &.#{$namespace}button--loading {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
 
     &--icon-only {
       // TODO -- https://github.com/carbon-design-system/carbon/issues/4245

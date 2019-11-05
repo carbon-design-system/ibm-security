@@ -59,7 +59,7 @@ class SummaryCardAction extends Component {
               : onClick
           }
         >
-          <span>{children}</span>
+          <span className={`${namespace}__text`}>{children}</span>
         </Button>
         {expandedContent && (
           <Transition
