@@ -1,14 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`StatusIndicator renders 1`] = `
-<Fragment>
+<div
+  className="security--status-indicator"
+>
   <h1
     className="security--status-indicator__title"
   >
     Status indicator title
   </h1>
   <ul
-    className="security--status-indicator"
+    className="security--status-indicator__list"
   >
     <StatusStep
       className=""
@@ -43,40 +45,22 @@ exports[`StatusIndicator renders 1`] = `
       status="incomplete"
     />
     <Button
-      className="security--status-indicator__retry-button"
+      className="security--status-indicator__button"
       disabled={false}
-      key="security--status-indicator__retry-button"
       kind="ghost"
       largeText={null}
       loading={false}
+      renderIcon={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "render": [Function],
+        }
+      }
       tabIndex={0}
       type="button"
     >
-      <span
-        className="security--status-indicator__step__icon-wrapper"
-      >
-        <Icon
-          className="security--status-indicator__retry-button__icon"
-          height={null}
-          path={null}
-          renderIcon={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "render": [Function],
-            }
-          }
-          size={20}
-          title="Retry"
-          viewBox="0 0 32 32"
-          width={null}
-        />
-      </span>
-      <span
-        className="security--status-indicator__retry-button__message"
-      >
-        Retry
-      </span>
+      Retry
     </Button>
   </ul>
-</Fragment>
+</div>
 `;

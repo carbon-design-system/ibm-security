@@ -4,102 +4,114 @@
 /// @copyright IBM Security 2019
 ////
 
+@import '@carbon/layout/scss/mini-unit';
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/type/scss/styles';
+
+@import 'carbon-components/scss/globals/scss/vars';
+
 @import '../../globals/index';
+
+@import '../../platform/body/mixins';
 
 @mixin status-indicator {
   $root: &;
-  $step: #{$root}__step;
-  $loading: #{$prefix}--inline-loading;
+
+  /// Margin.
+  /// @type Length
+  $status-indicator__spacing__margin: $carbon--spacing-02;
 
   display: flex;
   flex-direction: column;
-  padding-left: $carbon--spacing-03;
-  list-style: none;
 
   &__title {
     @include carbon--type-style($name: heading-02);
-    margin: 0 0 $carbon--spacing-04 $carbon--spacing-05;
-    color: $text-01;
-    font-weight: semibold;
+
+    margin-top: 0;
+    margin-bottom: $status-indicator__spacing__margin;
   }
 
-  /// Because this icon is increasing in size,
-  /// need to reduce the `top` value.
-  .#{$loading}__checkmark {
-    stroke-width: 1;
-
-    &-container {
-      top: $carbon--spacing-03;
-    }
+  &__list {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
   }
 
-  /// Styles for elements in each step.
   &__step {
-    width: 100%;
-    margin: $carbon--spacing-02 0;
+    /// Error color.
+    /// @type Color
+    $status-indicator--error__color: $support-01;
 
+    &__icon-wrapper,
     &-wrapper {
       display: flex;
-      width: 100%;
       align-items: center;
-    }
 
-    &__label,
-    .#{$loading}__text {
-      @include carbon--type-scale($step: 2);
-      color: $text-01;
-      margin: 0 $carbon--spacing-03;
-    }
-
-    &__icon,
-    .#{$loading}__svg {
-      width: carbon--mini-units(2.5);
-      height: carbon--mini-units(2.5);
-    }
-
-    &--incomplete #{$step}__label {
-      color: $disabled-03;
-    }
-
-    &--incomplete #{$step}__icon {
-      fill: $disabled-03;
+      > .#{$prefix}--inline-loading__text {
+        color: $body__color__text;
+      }
     }
 
     &__icon-wrapper {
-      position: relative;
-      display: flex;
+      /// Wrapper dimensions.
+      /// @type Length
+      $status-indicator__wrapper__sizing__dimensions: carbon--mini-units(
+        $count: 4,
+      );
+
+      width: $status-indicator__wrapper__sizing__dimensions;
+      height: $status-indicator__wrapper__sizing__dimensions;
       justify-content: center;
-      align-items: center;
-      width: $carbon--layout-03;
-      height: $carbon--layout-03;
+    }
+
+    &__icon {
+      /// Icon dimensions.
+      /// @type Length
+      $status-indicator__icon__sizing__dimensions: carbon--mini-units(
+        $count: 2,
+      );
+
+      width: $status-indicator__icon__sizing__dimensions;
+      height: $status-indicator__icon__sizing__dimensions;
+    }
+
+    &__label {
+      @include carbon--type-style($name: body-short-01);
+      margin-top: 0;
+      margin-bottom: 0;
     }
 
     &--failed__icon {
-      fill: $support-01;
+      fill: $status-indicator--error__color;
+    }
+
+    &--incomplete {
+      /// Incomplete color.
+      /// @type Color
+      $status-indicator__icon--incomplete__color: $disabled-03;
+
+      &__icon {
+        fill: $status-indicator__icon--incomplete__color;
+      }
+
+      &__label {
+        color: $status-indicator__icon--incomplete__color;
+      }
     }
 
     &__error-message {
-      @include carbon--type-scale($step: 1);
+      @include carbon--type-style($name: label-01);
+
       display: inline-block;
-      color: $support-01;
-      margin-left: $carbon--spacing-08;
       margin-top: 0;
+      margin-bottom: $status-indicator__spacing__margin;
+      margin-left: $carbon--spacing-07;
+      color: $status-indicator--error__color;
     }
   }
 
-  /// The "Retry" ghost button.
-  &__retry-button {
-    justify-content: left;
-    align-items: left;
-    padding: 0;
-
-    &__icon {
-      fill: $interactive-04;
-    }
-
-    &__message {
-      @include carbon--type-scale($step: 2);
-      margin-left: $carbon--spacing-03;
-    }
+  &__button {
+    margin-top: $status-indicator__spacing__margin;
   }
 }
