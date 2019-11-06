@@ -9,13 +9,13 @@ import { storiesOf } from '@storybook/react';
 
 import { settings } from 'carbon-components';
 import FormGroup from 'carbon-components-react/lib/components/FormGroup';
-import React from 'react';
+import React, { Fragment } from 'react';
 import { withReducer } from 'recompose';
 
 import 'prismjs';
 import 'prismjs/components/prism-jsx';
 
-import { patterns } from '../../../.storybook';
+import { info, patterns } from '../../../.storybook';
 
 import {
   Button,
@@ -29,32 +29,49 @@ import {
 
 const { prefix } = settings;
 
-const props = () => ({
-  title: text('Title (title)', WizardComponent.displayName),
-  subTitle: text('Subtitle (subTitle)', 'Subtitle'),
-  focusTrap: boolean('Trap focus (focusTrap)', false),
-});
+const {
+  defaultProps: { focusTrap, isOpen, isSequential },
+  displayName,
+} = WizardComponent;
 
-const sleep = async ms => {
-  return new Promise(resolve => setTimeout(resolve, ms));
+const sleep = async (duration = 1000) =>
+  new Promise(resolve => setTimeout(resolve, duration));
+
+const value = state => state || '';
+
+const props = {
+  wizard: () => ({
+    title: text('Title (title)', displayName),
+    subTitle: text('Subtitle (subTitle)', 'Subtitle'),
+    isOpen: boolean('Open (isOpen)', !isOpen),
+    isSequential: boolean('Sequential (isSequential)', !isSequential),
+    focusTrap: boolean('Trap focus (focusTrap)', !focusTrap),
+    onClose: action('onClose'),
+  }),
+  steps: () =>
+    new Array(2).fill().map((step = 'Step', index) => {
+      const name = `${step} ${index + 1}`;
+      const id = `input__${index}`;
+
+      return {
+        key: `step__${index}`,
+        title: `${name} title`,
+        renderMain: (state, setState) => (
+          <TextInput
+            id={id}
+            labelText={`${name} Text Input`}
+            value={value(state[id])}
+            onChange={({ target: { value } }) => setState({ [`${id}`]: value })}
+          />
+        ),
+
+        next: async state => sleep().then(() => action('next')(state)),
+        validate: state => value(state[id]).trim().length >= 3,
+      };
+    }),
 };
 
-const labels = {
-  WIZARD_MODAL_HEADING: 'Unsaved Changes',
-  WIZARD_MODAL_BODY: 'Discard unsaved changes?',
-  WIZARD_MODAL_PRIMARY_BUTTON: 'Discard',
-  WIZARD_MODAL_SECONDARY_BUTTON: 'Cancel',
-  WIZARD_FINISH_BUTTON: 'Finish',
-  WIZARD_NEXT_BUTTON: 'Next',
-  WIZARD_SAVE_BUTTON: 'Save',
-  WIZARD_CANCEL_BUTTON: 'Cancel',
-  WIZARD_BACK_BUTTON: 'Back',
-  WIZARD_REVERT_BUTTON: 'Revert',
-  WIZARD_CLOSE_BUTTON: 'Close',
-  WIZARD_TEARSHEET_DELETE_BUTTON: 'Delete connection',
-};
-
-const steps = [
+let steps = [
   {
     title: 'First Step',
     renderMain: (state, setState) => (
@@ -91,43 +108,6 @@ const steps = [
   },
 ];
 
-const editableSteps = [
-  {
-    title: 'Configure connection',
-    renderMain: (state, setState) => (
-      <section>
-        <p>Please fill out the form.</p>
-        <TextInput
-          id="input1"
-          labelText="Name"
-          value={state.input1Value}
-          onChange={({ target }) => setState({ input1Value: target.value })}
-        />
-      </section>
-    ),
-    next: async state => sleep(1000).then(() => action('Save')(state)),
-    validate: ({ input1Value = '' }) => input1Value.trim().length >= 3,
-  },
-  {
-    title: 'Attribute mapping',
-    renderMain: ({ input1Value, checkboxValue = false }, setState) => (
-      <section>
-        <p>Hi {input1Value}.</p>
-        <p>Is your name correct? </p>
-
-        <Checkbox
-          id="name-checkbox"
-          labelText="My name is correct."
-          checked={checkboxValue}
-          onChange={checked => setState({ checkboxValue: checked })}
-        />
-      </section>
-    ),
-    validate: ({ checkboxValue = false }) => checkboxValue,
-    next: async state => sleep(10000).then(() => action('Save')(state)),
-  },
-];
-
 const reducers = {
   TOGGLE_OPEN: state => ({ ...state, isOpen: !state.isOpen }),
   UPDATE_INIT_STATE: (state, { initState = {} } = {}) => ({
@@ -150,18 +130,18 @@ const enhanceWithState = (initState = {}) =>
 
 function WizardWrapper({ state, dispatch, ...otherProps }) {
   return (
-    <div>
+    <Fragment>
       <Button
         onClick={() =>
           dispatch({ type: 'TOGGLE_OPEN' }, ({ isOpen }) =>
             action('isOpen')(isOpen)
           )
         }
-        kind={state.isOpen ? 'secondary' : 'primary'}
       >
-        {state.isOpen ? 'Close' : 'Open'}
+        Launch Wizard
       </Button>
       <WizardComponent
+        {...props.wizard()}
         {...otherProps}
         initState={state.initState}
         isOpen={state.isOpen}
@@ -172,10 +152,8 @@ function WizardWrapper({ state, dispatch, ...otherProps }) {
           );
           dispatch({ type: 'TOGGLE_OPEN' });
         }}
-        loadingMessage="Saving..."
-        {...props()}
       />
-    </div>
+    </Fragment>
   );
 }
 
@@ -230,10 +208,18 @@ const markdown = (useDefault = true) =>
   `;
 
 storiesOf(patterns('Wizard'), module)
-  .add(
+  .add('First', () => (
+    <WizardComponent {...props.wizard()}>
+      {props.steps().map(step => (
+        <WizardStep key={step.key} {...step} />
+      ))}
+    </WizardComponent>
+  ))
+  /* .add(
     'Default',
     () => {
-      WizardComponent.displayName = 'Wizard';
+      // WizardComponent.displayName = 'Wizard';
+
       WizardComponent.__docgenInfo = {
         ...WizardComponent.__docgenInfo,
         props: {
@@ -248,11 +234,11 @@ storiesOf(patterns('Wizard'), module)
           },
         },
       };
+
       return (
         <WizardComponent
+          {...props.wizard()}
           initState={object('initState', {})}
-          isOpen={boolean('isOpen', true)}
-          onClose={action('onClose')}
           onDelete={
             boolean('editMode', false)
               ? componentState =>
@@ -264,149 +250,17 @@ storiesOf(patterns('Wizard'), module)
                   })
               : undefined
           }
-          labels={labels}
-          {...props()}
         >
           <WizardStep {...steps[0]} />
           <WizardStep {...steps[1]} />
         </WizardComponent>
       );
     },
-    {
-      info: {
-        text: `## Default use of the Wizard Component
+    info(`## Default use of the Wizard Component
         ${markdown(true)}
-        `,
-      },
-    }
-  )
-  .add(
-    'Dynamic',
-    () => {
-      WizardComponent.displayName = 'Wizard';
-      WizardComponent.__docgenInfo = {
-        ...WizardComponent.__docgenInfo,
-        props: {
-          ...WizardComponent.__docgenInfo.props,
-          rootNode: {
-            ...WizardComponent.__docgenInfo.props.rootNode,
-            defaultValue: { value: 'document.body', computed: true },
-          },
-          steps: {
-            ...WizardComponent.__docgenInfo.props.steps,
-            type: { name: 'array' },
-          },
-        },
-      };
-      return (
-        <WizardComponent
-          initState={object('initState', {
-            eggs: false,
-            oats: false,
-            salad: false,
-            soup: false,
-          })}
-          isOpen={boolean('isOpen', true)}
-          onClose={action('onClose')}
-          labels={labels}
-          loadingMessage="Loading..."
-          {...props()}
-        >
-          <WizardStep
-            title="First Step"
-            renderMain={(state, setState) => (
-              <FormGroup legendText="Select type of meal">
-                <RadioButtonGroup
-                  onChange={value => {
-                    setState({ mealType: value });
-                  }}
-                  defaultSelected={state.mealType}
-                  name="radio-button-group"
-                  legend="Group Legend"
-                >
-                  <RadioButton
-                    value="breakfast"
-                    labelText="Breakfast"
-                    id="option-breakfast"
-                  />
-                  <RadioButton
-                    value="lunch"
-                    labelText="Lunch"
-                    id="option-lunch"
-                  />
-                  <RadioButton
-                    value="disabled"
-                    labelText="Dinner"
-                    id="option-dinner"
-                    disabled
-                  />
-                </RadioButtonGroup>
-              </FormGroup>
-            )}
-            next={async state => sleep(1000).then(() => action('next')(state))}
-            validate={({ mealType }) => mealType !== undefined}
-          />
-          <WizardStep
-            title="Second Step"
-            renderMain={(state, setState) => {
-              const MEAL_MENU = {
-                breakfast: (
-                  <fieldset className={`${prefix}--fieldset`}>
-                    <legend className={`${prefix}--label`}>
-                      Select breakfast options
-                    </legend>
-                    <Checkbox
-                      id="checkbox-eggs"
-                      labelText="Eggs"
-                      checked={state.eggs}
-                      onChange={eggs => setState({ eggs })}
-                    />
-                    <Checkbox
-                      id="checkbox-oats"
-                      labelText="Oats"
-                      checked={state.oats}
-                      onChange={oats => setState({ oats })}
-                    />
-                  </fieldset>
-                ),
-                lunch: (
-                  <fieldset className={`${prefix}--fieldset`}>
-                    <legend className={`${prefix}--label`}>
-                      Select lunch options
-                    </legend>
-                    <Checkbox
-                      id="checkbox-soup"
-                      labelText="Soup"
-                      checked={state.soup}
-                      onChange={soup => setState({ soup })}
-                    />
-                    <Checkbox
-                      id="checkbox-salad"
-                      labelText="Salad"
-                      checked={state.salad}
-                      onChange={salad => setState({ salad })}
-                    />
-                  </fieldset>
-                ),
-              };
+        `)
+  ) */
 
-              return MEAL_MENU[state.mealType];
-            }}
-            next={async state =>
-              sleep(1000).then(() => action('next_done')(state))
-            }
-          />
-        </WizardComponent>
-      );
-    },
-    {
-      info: {
-        text: `
-          Dynamic content.
-        `,
-      },
-    }
-  )
   .add(
     'Trigger',
     () => {
@@ -426,91 +280,14 @@ storiesOf(patterns('Wizard'), module)
       };
       WizardWithState.defaultProps = WizardComponent.defaultProps;
       return (
-        <WizardWithState labels={labels} {...props()}>
+        <WizardWithState {...props.wizard()}>
           {steps.map(step => (
             <WizardStep key={step.title} {...step} />
           ))}
         </WizardWithState>
       );
     },
-    {
-      info: {
-        text: `## Wizard with open/close button
+    info(`## Wizard with open/close button
         ${markdown(false)}
-        `,
-      },
-    }
-  )
-  .add(
-    'Editable',
-    () => {
-      const Wizard = ({ initState, ...otherProps }) => {
-        const [state] = React.useState(initState);
-        return (
-          <WizardComponent {...otherProps} initState={state} {...props()} />
-        );
-      };
-      Wizard.displayName = 'Wizard';
-      Wizard.__docgenInfo = {
-        ...WizardComponent.__docgenInfo,
-        props: {
-          ...WizardComponent.__docgenInfo.props,
-          steps: {
-            ...WizardComponent.__docgenInfo.props.steps,
-            type: { name: 'array' },
-          },
-        },
-      };
-      Wizard.defaultProps = WizardComponent.defaultProps;
-
-      const selectFn = value => {
-        switch (value) {
-          case 'true': {
-            return true;
-          }
-          case 'false': {
-            return false;
-          }
-          default: {
-            return undefined;
-          }
-        }
-      };
-
-      return (
-        <Wizard
-          initState={object('initState', {
-            input1Value: 'Placeholder text',
-            checkboxValue: false,
-          })}
-          isSequential={selectFn(
-            select('isSequential', ['true', 'false', 'unset'], 'unset')
-          )}
-          onDelete={
-            boolean('deleteMode', true)
-              ? componentState =>
-                  new Promise(resolve => {
-                    action('onDelete')(componentState);
-                    setTimeout(() => {
-                      resolve();
-                    }, 3000);
-                  })
-              : undefined
-          }
-          labels={labels}
-          {...props()}
-        >
-          {editableSteps.map(step => (
-            <WizardStep key={step.title} {...step} />
-          ))}
-        </Wizard>
-      );
-    },
-    {
-      info: {
-        text: `## Editable Wizard
-        ${markdown(false)}
-        `,
-      },
-    }
+        `)
   );
