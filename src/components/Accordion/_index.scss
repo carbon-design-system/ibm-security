@@ -29,6 +29,10 @@
       }
     }
 
+    &__heading {
+      align-items: center;
+    }
+
     &__item--active &__title {
       font-weight: 600;
     }
