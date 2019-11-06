@@ -34,7 +34,6 @@ const story = 'accordion';
 const description =
   'Accordions allow users to expand and collapse sections of content.';
 
-
 storiesOf(components('Accordion'), module)
   .add(
     'Default',
