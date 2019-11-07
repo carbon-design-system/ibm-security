@@ -11,9 +11,26 @@
 
 @import '../../globals/index';
 
+@mixin security--decorator__padding($decorator__spacing__padding) {
+  &__icon {
+    padding-left: $decorator__spacing__padding;
+  }
+
+  &__type,
+  &__value {
+    padding-right: $decorator__spacing__padding;
+    padding-left: $decorator__spacing__padding;
+  }
+}
+
 @mixin decorator {
   $root: &;
+
   @include carbon--type-style($name: body-short-01);
+  @include security--decorator__padding(
+    $decorator__spacing__padding: $carbon--spacing-03
+  );
+
   display: inline-flex;
   box-sizing: border-box;
   font-family: carbon--font-family($name: sans);
@@ -67,22 +84,15 @@
       $count: 2.5,
     );
 
-    /// Inline padding.
-    /// @type Length
-    $data-decorator--inline__spacing__padding: $carbon--spacing-02;
-
     @include carbon--type-style($name: caption-01);
 
-    display: inline-block;
     height: $data-decorator--inline__sizing__height;
+    vertical-align: middle;
 
     > #{$root} {
-      &__icon,
-      &__type,
-      &__value {
-        padding-right: $data-decorator--inline__spacing__padding;
-        padding-left: $data-decorator--inline__spacing__padding;
-      }
+      @include security--decorator__padding(
+        $decorator__spacing__padding: $carbon--spacing-02
+      );
 
       &__type,
       &__value {
@@ -140,26 +150,21 @@
   &__type,
   &__value {
     display: inherit;
+    height: inherit;
     align-items: center;
     transition-duration: 0.2s;
     transition-property: background-color;
     transition-timing-function: $timing-function;
   }
 
-  &__icon {
-    padding-left: $carbon--spacing-03;
-  }
-
   &__type {
     color: $text-02;
-    padding: 0 $carbon--spacing-03;
     border-right: 1px solid $ui-01;
     white-space: nowrap;
   }
 
   &__value {
     color: $link-01;
-    padding: 0 $carbon--spacing-03;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
