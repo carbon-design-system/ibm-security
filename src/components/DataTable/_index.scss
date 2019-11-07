@@ -4,6 +4,7 @@
 /// @copyright IBM Security 2019
 ////
 
+@import 'carbon-components/scss/globals/scss/layout';
 @import 'carbon-components/scss/components/data-table-v2/data-table-v2';
 
 @import '../Search/index';
@@ -35,7 +36,7 @@
       border-top: 1px solid transparent;
 
       .#{$prefix}--overflow-menu {
-        z-index: z($layer: dropdown);
+        z-index: z($layer: overlay);
         margin-left: auto;
       }
     }
