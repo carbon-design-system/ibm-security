@@ -6,6 +6,9 @@
 
 /* stylelint-disable no-descending-specificity */
 
+@import '@carbon/layout/scss/mini-unit';
+@import '@carbon/layout/scss/spacing';
+
 @import '../../globals/index';
 
 @mixin decorator {
@@ -58,26 +61,32 @@
   }
 
   &--inline {
+    /// Inline height.
+    /// @type Length
+    $data-decorator--inline__sizing__height: carbon--mini-units(
+      $count: 2.5,
+    );
+
+    /// Inline padding.
+    /// @type Length
+    $data-decorator--inline__spacing__padding: $carbon--spacing-02;
+
     @include carbon--type-style($name: caption-01);
 
     display: inline-block;
-    height: carbon--mini-units(2.5);
-    overflow: hidden;
-    vertical-align: middle;
+    height: $data-decorator--inline__sizing__height;
 
-    #{$root}__type,
-    #{$root}__value {
-      line-height: carbon--mini-units(2.5);
-      padding: 0 $carbon--spacing-02;
-    }
+    > #{$root} {
+      &__icon,
+      &__type,
+      &__value {
+        padding-right: $data-decorator--inline__spacing__padding;
+        padding-left: $data-decorator--inline__spacing__padding;
+      }
 
-    #{$root}__icon {
-      padding: 0 $carbon--spacing-02;
-      vertical-align: top;
-
-      .#{$namespace}icon {
-        display: inline-block;
-        vertical-align: middle;
+      &__type,
+      &__value {
+        line-height: $data-decorator--inline__sizing__height;
       }
     }
   }
@@ -130,7 +139,6 @@
   &__icon,
   &__type,
   &__value {
-    height: inherit;
     display: inherit;
     align-items: center;
     transition-duration: 0.2s;
