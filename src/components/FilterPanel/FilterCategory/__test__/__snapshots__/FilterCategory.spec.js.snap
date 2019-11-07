@@ -15,7 +15,10 @@ exports[`FilterCategory does not render without filters 1`] = `
       0
     </span>
   </h2>
-  <Accordion />
+  <Accordion
+    align="start"
+    className=""
+  />
 </div>
 `;
 
@@ -34,7 +37,10 @@ exports[`FilterCategory does not render without subcategories 1`] = `
       0
     </span>
   </h2>
-  <Accordion />
+  <Accordion
+    align="start"
+    className=""
+  />
 </div>
 `;
 
@@ -53,7 +59,10 @@ exports[`FilterCategory renders 1`] = `
       260
     </span>
   </h2>
-  <Accordion>
+  <Accordion
+    align="start"
+    className=""
+  >
     <FilterSubcategory
       filterData={
         Object {
@@ -1885,7 +1894,10 @@ exports[`FilterCategory should not overwrite \`labels\` when unique props define
       260
     </span>
   </h2>
-  <Accordion>
+  <Accordion
+    align="start"
+    className=""
+  >
     <FilterSubcategory
       filterData={
         Object {
