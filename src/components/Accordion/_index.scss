@@ -13,6 +13,7 @@
     &.#{$namespace}accordion--start {
       .#{$prefix}--accordion__heading {
         flex-direction: row;
+        align-items: center;
       }
 
       .#{$prefix}--accordion__arrow {
@@ -27,10 +28,6 @@
       .#{$prefix}--accordion__content {
         margin-left: $carbon--spacing-06;
       }
-    }
-
-    &__heading {
-      align-items: center;
     }
 
     &__item--active &__title {
