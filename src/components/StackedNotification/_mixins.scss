@@ -6,6 +6,6 @@
 
 @mixin stacked-notification {
   border: none;
-  box-shadow: $carbon--spacing-02 $carbon--spacing-02 0 $carbon--gray-50,
-    $carbon--spacing-03 $carbon--spacing-03 0 $carbon--gray-80;
+  box-shadow: $carbon--spacing-02 $carbon--spacing-02 0 $ui-04,
+    $carbon--spacing-03 $carbon--spacing-03 0 $ui-03;
 }

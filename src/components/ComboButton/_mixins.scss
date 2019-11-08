@@ -39,11 +39,10 @@
   }
 
   .#{$prefix}--overflow-menu-options {
-    background-color: $ui-02;
-    width: 100%;
-    outline: unset;
-    box-shadow: unset;
     display: grid;
+    width: 100%;
+    background-color: $ui-02;
+    outline: unset;
 
     &__option {
       display: inherit;
