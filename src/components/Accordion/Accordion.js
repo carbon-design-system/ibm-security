@@ -15,15 +15,14 @@ const namespace = getComponentNamespace('accordion');
 
 const { defaultProps, propTypes } = CarbonAccordion;
 
-const Accordion = ({ className, align, ...other }) => {
-  const accordionClasses = classnames(namespace, className, {
-    [`${namespace}--${align}`]: align,
-  });
-
-  return (
-    <CarbonAccordion className={accordionClasses} align={align} {...other} />
-  );
-};
+const Accordion = ({ className, align, ...other }) => (
+  <CarbonAccordion
+    className={classnames(namespace, className, {
+      [`${namespace}--${align}`]: align,
+    })}
+    {...other}
+  />
+);
 
 Accordion.defaultProps = {
   ...defaultProps,
