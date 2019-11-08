@@ -36,7 +36,6 @@ const props = () => ({
 });
 
 storiesOf(components('Pagination'), module)
-  .addDecorator(story => <div style={{ width: '800px' }}>{story()}</div>)
   .add('Pagination', () => <Pagination {...props()} />, {
     info: {
       text: `

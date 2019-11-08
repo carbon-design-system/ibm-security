@@ -3,6 +3,8 @@
  * @copyright IBM Security 2019
  */
 
+import { DocsPage } from '@storybook/addon-docs/blocks';
+
 // Category labels.
 const CATEGORIES = {
   COMPONENTS: 'Components',
@@ -72,14 +74,12 @@ Also refer to http://react.carbondesignsystem.com/?path=/story/${carbon.story}--
 
 /**
  * Configuration for applying metadata information to stories.
+ * @param {Component} component The component to pull metadata from.
  * @param {string} title The title to apply to stories.
- * @param {string} info The information to apply to stories.
  * @returns {Object<string, string>} The configuration containing information to apply.
  */
-const meta = (title, info) => ({
-  parameters: {
-    info,
-  },
+const meta = (component, title) => ({
+  component,
   title,
 });
 

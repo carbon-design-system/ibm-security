@@ -94,4 +94,4 @@ export const trigger = () => {
   );
 };
 
-export default meta(patterns('Wizard'));
+export default meta(Wizard, patterns('Wizard'));

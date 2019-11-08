@@ -12,7 +12,7 @@ import { isClient } from '../../globals/utils/capabilities';
 const namespace = getComponentNamespace('delimited-list');
 
 /**
- * Delimited List component.
+ * Delimited lists truncates an array of items, separated by a delimiter, and include the total number of items when hovering.
  */
 class DelimitedList extends Component {
   state = { hasOverflow: false };

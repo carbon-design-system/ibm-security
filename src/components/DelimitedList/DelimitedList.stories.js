@@ -24,7 +24,4 @@ const props = () => ({
 
 export const Default = () => <DelimitedList {...props()} />;
 
-export default meta(
-  components('DelimitedList'),
-  'Delimited lists truncates an array of items, separated by a delimiter, and include the total number of items when hovering.'
-);
+export default meta(DelimitedList, components('DelimitedList'));

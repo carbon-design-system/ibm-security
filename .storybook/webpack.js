@@ -6,10 +6,6 @@
 module.exports = config => {
   [
     {
-      test: /\.stories\.js$/,
-      use: '@storybook/source-loader',
-    },
-    {
       sideEffects: true,
       test: /\.scss$/,
       use: [
