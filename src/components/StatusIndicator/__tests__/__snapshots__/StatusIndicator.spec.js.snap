@@ -45,7 +45,7 @@ exports[`StatusIndicator renders 1`] = `
       status="incomplete"
     />
     <Button
-      className="security--status-indicator__button"
+      className="security--status-indicator__button--retry"
       disabled={false}
       kind="ghost"
       largeText={null}

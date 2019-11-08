@@ -81,7 +81,7 @@ class StatusIndicator extends Component {
           {children}
           {this.state.retry && (
             <Button
-              className={`${namespace}__button`}
+              className={`${namespace}__button--retry`}
               kind="ghost"
               onClick={this.state.retry.action}
               onKeyPress={this.state.retry.action}
