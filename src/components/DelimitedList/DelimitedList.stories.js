@@ -4,13 +4,10 @@
  */
 
 import { breakpoints } from '@carbon/layout';
-
 import { array, boolean, text } from '@storybook/addon-knobs';
-import { storiesOf } from '@storybook/react';
-
 import React from 'react';
 
-import { components, info } from '../../../.storybook';
+import { components, meta } from '../../../.storybook';
 
 import { DelimitedList } from '../..';
 
@@ -25,10 +22,9 @@ const props = () => ({
   style: { width: breakpoints.sm.width },
 });
 
-storiesOf(components('DelimitedList'), module).add(
-  'Default',
-  () => <DelimitedList {...props()} />,
-  info(
-    'Delimited lists truncates an array of items, separated by a delimiter, and include the total number of items when hovering.'
-  )
+export const Default = () => <DelimitedList {...props()} />;
+
+export default meta(
+  components('DelimitedList'),
+  'Delimited lists truncates an array of items, separated by a delimiter, and include the total number of items when hovering.'
 );

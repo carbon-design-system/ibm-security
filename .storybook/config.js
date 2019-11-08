@@ -53,7 +53,6 @@ addDecorator(
 );
 
 addDecorator(withTheme);
-
 addDecorator(centered);
 addDecorator(story => <Container>{story()}</Container>);
 
@@ -79,12 +78,4 @@ addParameters({
   },
 });
 
-/**
- * Finds each component story and loads them into Storybook.
- */
-function loadStories() {
-  const req = require.context('../src/components', true, /\.stories\.js$/);
-  req.keys().forEach(filename => req(filename));
-}
-
-configure(loadStories, module);
+configure(require.context('../src', true, /\.stories\.(js|mdx)$/), module);

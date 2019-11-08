@@ -5,12 +5,11 @@
 
 import { action } from '@storybook/addon-actions';
 import { boolean, text } from '@storybook/addon-knobs';
-import { storiesOf } from '@storybook/react';
 
 import { settings } from 'carbon-components';
 import React, { Fragment, useState } from 'react';
 
-import { patterns } from '../../../.storybook';
+import { meta, patterns } from '../../../.storybook';
 
 import { Button, CodeSnippet, TextInput, Wizard, WizardStep } from '../..';
 
@@ -77,20 +76,22 @@ const props = {
 
 const { steps, wizard } = props;
 
-storiesOf(patterns('Wizard'), module)
-  .add('Default', () => (
-    <Wizard {...wizard()}>{steps().map(step => step)}</Wizard>
-  ))
-  .add('Trigger', () => {
-    const [isWizardOpen, setIsOpen] = useState(!isOpen);
-    const toggleWizard = () => setIsOpen(!isWizardOpen);
+export const Default = () => (
+  <Wizard {...wizard()}>{steps().map(step => step)}</Wizard>
+);
 
-    return (
-      <Fragment>
-        <Button onClick={toggleWizard}>Launch Wizard</Button>
-        <Wizard {...wizard()} isOpen={isWizardOpen} onClose={toggleWizard}>
-          {steps().map(step => step)}
-        </Wizard>
-      </Fragment>
-    );
-  });
+export const trigger = () => {
+  const [isWizardOpen, setIsOpen] = useState(!isOpen);
+  const toggleWizard = () => setIsOpen(!isWizardOpen);
+
+  return (
+    <Fragment>
+      <Button onClick={toggleWizard}>Launch Wizard</Button>
+      <Wizard {...wizard()} isOpen={isWizardOpen} onClose={toggleWizard}>
+        {steps().map(step => step)}
+      </Wizard>
+    </Fragment>
+  );
+};
+
+export default meta(patterns('Wizard'));

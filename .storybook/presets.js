@@ -3,4 +3,7 @@
  * @copyright IBM Security 2019
  */
 
-module.exports = [require('path').resolve('./.storybook/preset')];
+module.exports = [
+  '@storybook/addon-docs/react/preset',
+  require('path').resolve('./.storybook/preset'),
+];

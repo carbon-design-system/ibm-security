@@ -86,6 +86,7 @@
     "@storybook/addon-a11y": "^5.2.4",
     "@storybook/addon-actions": "^5.2.4",
     "@storybook/addon-centered": "^5.2.4",
+    "@storybook/addon-docs": "^5.2.5",
     "@storybook/addon-info": "^5.2.4",
     "@storybook/addon-knobs": "^5.2.4",
     "@storybook/addon-options": "^5.2.4",
