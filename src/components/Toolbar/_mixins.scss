@@ -4,6 +4,8 @@
 /// @copyright IBM Security 2019
 ////
 
+@import 'carbon-components/scss/globals/scss/layout';
+
 @import '../../globals/index';
 
 @import '../../platform/body/mixins';
@@ -124,6 +126,10 @@ $toolbar__panel__transition__timing-function: $timing-function;
   /// @type Length
   $toolbar__spacing__position__vertical: $header__spacing__padding;
 
+  /// Layer.
+  /// @type Length
+  $toolbar__layer: ($header__layer + 2);
+
   @include toolbar--base;
   top: 0;
   bottom: 0;
@@ -134,7 +140,7 @@ $toolbar__panel__transition__timing-function: $timing-function;
   width: $toolbar__sizing__width;
   background-color: $ui-background;
   box-sizing: initial;
-  z-index: z(overlay) + 1;
+  z-index: $toolbar__layer;
 
   @include rtl {
     right: 0;
@@ -194,11 +200,11 @@ $toolbar__panel__transition__timing-function: $timing-function;
     bottom: $toolbar__spacing__position__vertical;
     width: $toolbar__panel__sizing__width;
     background-color: $ui-01;
-    box-sizing: border-box;
-    z-index: z($layer: modal);
     box-shadow: $toolbar__panel__box-shadow;
+    box-sizing: border-box;
     overflow-x: hidden;
     overflow-y: auto;
+    z-index: $toolbar__layer - 1;
 
     @include rtl {
       right: $toolbar__panel__position__horizontal;
