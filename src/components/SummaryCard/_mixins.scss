@@ -161,7 +161,7 @@
     }
 
     &__content {
-      height: $body--height - $header--height - $footer--height - 1rem;
+	height: $body--height - $header--height - $footer--height - carbon--mini-units($count: 2);
       padding: 0 $carbon--spacing-05;
     }
 
@@ -181,8 +181,8 @@
 
       .#{$prefix}--btn__icon {
         margin-left: 0;
-        height: carbon--mini-units(2.5);
-        width: carbon--mini-units(2.5);
+        height: carbon--mini-units($count: 2.5);
+        width: carbon--mini-units($count: 2.5);
       }
     }
 

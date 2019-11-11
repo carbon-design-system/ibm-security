@@ -5,7 +5,6 @@
 
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
-// import { text } from '@storybook/addon-knobs';
 
 import Folder20 from '@carbon/icons-react/lib/folder/20';
 
