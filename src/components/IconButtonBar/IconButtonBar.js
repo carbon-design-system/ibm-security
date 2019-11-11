@@ -33,9 +33,13 @@ const IconButtonBar = ({
 
   const menuOptionsNamespace = `${namespace}__overflow-menu-options`;
 
-  const iconButtonBarMenuOptionsClasses = classnames(menuOptionsNamespace, {
-    [`${menuOptionsNamespace}--${size}`]: size,
-  });
+  const iconButtonBarMenuOptionsClasses = classnames(
+    menuOptionsNamespace,
+    `${menuOptionsNamespace}--${overflowMenuDirection}`,
+    {
+      [`${menuOptionsNamespace}--${size}`]: size,
+    }
+  );
 
   const renderIconButton = action => (
     <IconButton
