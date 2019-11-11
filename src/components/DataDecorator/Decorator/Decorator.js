@@ -37,10 +37,10 @@ class Decorator extends Component {
       {!noIcon && (
         <span className={`${namespace}__icon`}>
           <Icon
-            size={inline ? 12 : 16}
-            viewBox={inline ? '0 0 12 12' : '0 0 16 16'}
-            path={path}
             fillRule="evenodd"
+            path={path}
+            size={inline ? 12 : 16}
+            viewBox="0 0 16 16"
           />
         </span>
       )}
