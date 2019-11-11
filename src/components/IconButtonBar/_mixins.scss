@@ -39,7 +39,8 @@
   }
 
   &__overflow-menu-options {
-    box-shadow: unset;
+    // Inverts Carbon's box-shadow for menu that opens up:
+    box-shadow: 0 -2px 6px 0 rgba(0, 0, 0, 0.3);
 
     &.#{$prefix}--overflow-menu-options::after {
       height: 0;
