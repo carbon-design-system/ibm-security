@@ -3,11 +3,11 @@
  * @copyright IBM Security 2019
  */
 
-import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { action, decorateAction } from '@storybook/addon-actions';
-
 import { boolean, select, text } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
+
+import React from 'react';
 
 import { DatePicker, DatePickerInput, DatePickerSkeleton } from '.';
 
@@ -77,30 +77,16 @@ storiesOf(components('DatePicker'), module)
       </DatePicker>
     ),
     {
-      info: {
-        text:
-          'A simple Date Picker consists of an input field and no calendar.',
-      },
+      info: 'A simple Date Picker consists of an input field and no calendar.',
     }
   )
   .add('single with calendar', () => (
     <DatePicker
       {...props.datePicker()}
-      datePickerType="range"
+      datePickerType="single"
       dateFormat={text('The date format (dateFormat in <DatePicker>)', 'm/d/Y')}
-      iconDescription={text(
-        'Icon description (iconDescription in <DatePicker>)',
-        'Icon description'
-      )}
     >
-      <DatePickerInput
-        {...props.datePickerInput()}
-        id="date-picker-input-id-start"
-      />
-      <DatePickerInput
-        {...props.datePickerInput()}
-        id="date-picker-input-id-end"
-      />
+      <DatePickerInput {...props.datePickerInput()} />
     </DatePicker>
   ))
   .add(
@@ -128,11 +114,7 @@ storiesOf(components('DatePicker'), module)
       );
     },
     {
-      info: {
-        text: `
-            A range Date Picker consists of two input fields and a calendar.
-          `,
-      },
+      info: 'A range Date Picker consists of two input fields and a calendar.',
     }
   )
   .add(
@@ -159,17 +141,10 @@ storiesOf(components('DatePicker'), module)
       );
     },
     {
-      info: {
-        text: `
-            A range Date Picker consists of two input fields and a calendar, and optionally, the minDate and maxDate fields.
-          `,
-      },
+      info:
+        'A range Date Picker consists of two input fields and a calendar, and optionally, the minDate and maxDate fields.',
     }
   )
   .add('skeleton', () => <DatePickerSkeleton range />, {
-    info: {
-      text: `
-            Placeholder skeleton state to use when content is loading.
-            `,
-    },
+    info: 'Placeholder skeleton state to use when content is loading.',
   });
