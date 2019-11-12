@@ -60,7 +60,7 @@ const ICA = ({
   } else {
     if (isDevelopment()) {
       console.warn(
-        `Locale "${locale}" for ICA component is not recognized. Using fallback locale "${ICA.defaultProps.locale}. For list of supported locales go to: https://github.com/carbon-design-system/ibm-security/blob/master/src/components/ICA`
+        `Locale "${locale}" for ICA component is not recognized. Using fallback locale "${ICA.defaultProps.locale}. For list of supported locales go to: https://github.com/carbon-design-system/ibm-security/tree/master/src/components/ICA`
       );
     }
     numeral.locale(ICA.defaultProps.locale);

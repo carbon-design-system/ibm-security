@@ -8,6 +8,7 @@
 @import '@carbon/themes/scss/tokens';
 
 /// TODO: `2.x` - Deprecate in favor of `$hover-ui`.
+/// @type Color
 /// @deprecated
 $security-color__gray-90--hover: $hover-ui;
 

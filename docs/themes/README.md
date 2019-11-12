@@ -58,4 +58,4 @@ import { theme } from '@carbon/ibm-security';
 const { interactive01, interactive02 } = theme;
 ```
 
-Also refer to [themes in Carbon](https://github.com/carbon-design-system/carbon/blob/master/packages/themes).
+Also refer to [themes in Carbon](https://github.com/carbon-design-system/carbon/tree/master/packages/themes).
