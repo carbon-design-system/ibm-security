@@ -161,7 +161,8 @@
     }
 
     &__content {
-	height: $body--height - $header--height - $footer--height - carbon--mini-units($count: 2);
+      height: $body--height - $header--height - $footer--height -
+        carbon--mini-units($count: 2);
       padding: 0 $carbon--spacing-05;
     }
 
