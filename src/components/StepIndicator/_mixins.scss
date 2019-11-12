@@ -4,50 +4,81 @@
 /// @copyright IBM Security 2019
 ////
 
+@import '@carbon/layout/scss/mini-unit';
+@import '@carbon/layout/scss/spacing';
+@import 'carbon-components/scss/globals/scss/vars';
+
 @import '../../globals/index';
 
+@import '../../globals/namespace/index';
+
 @mixin step-indicator {
-  &.#{$prefix}--progress {
-    flex-direction: column;
+  flex-direction: column;
 
-    .#{$prefix}--progress-step {
-      flex-direction: column;
-      max-width: 30rem;
-      min-width: unset;
-      width: 100%;
-      margin: $carbon--spacing-02 0;
+  > #{get-component-namespace($component-name: step)} {
+    /// Progress indicator selector.
+    /// @type String
+    $carbon--progress-indicator: '.#{$prefix}--progress';
 
-      svg {
-        position: absolute;
-        top: 2px;
-        margin: 0;
+    /// Progress indicator step selector.
+    /// @type String
+    $carbon--progress-indicator__step: '#{$carbon--progress-indicator}-step';
+
+    /// Step margin.
+    /// @type Length
+    $step-indicator__step__spacing__margin: $carbon--spacing-02;
+
+    width: 100%;
+    min-width: unset;
+    margin-top: $step-indicator__step__spacing__margin;
+    margin-bottom: $step-indicator__step__spacing__margin;
+
+    > #{$carbon--progress-indicator__step} {
+      &-button {
+        align-items: center;
+
+        > svg {
+          position: absolute;
+          margin-top: 0;
+          margin-right: 0;
+        }
+
+        > #{$carbon--progress-indicator} {
+          &-label {
+            max-width: unset;
+            padding-left: $carbon--spacing-07;
+            margin-top: 0;
+
+            &:hover {
+              box-shadow: unset;
+              color: unset;
+              cursor: default;
+            }
+          }
+
+          &-line {
+            @include hidden;
+          }
+        }
       }
     }
 
-    .#{$prefix}--progress-line {
-      @include hidden;
-    }
-
-    .#{$prefix}--progress-label {
-      position: unset;
-      max-width: unset;
-      min-width: unset;
-      width: 100%;
-      margin: 0;
-      padding-left: $carbon--spacing-07;
-
-      &:hover {
-        cursor: default; // Because element is not clickable.
-        box-shadow: none;
-        color: unset;
+    &#{$carbon--progress-indicator__step} {
+      &--current svg {
+        transform: translate3d(#{carbon--mini-units($count: 0.125)}, 0, 0);
       }
-    }
 
-    .#{$prefix}--progress-step--disabled {
-      .#{$prefix}--progress-label:hover,
-      svg:hover {
-        cursor: default; // Because element is not clickable.
-        color: $disabled-03;
+      &--disabled {
+        #{$carbon--progress-indicator}-label,
+        svg {
+          &:hover {
+            color: $disabled-03;
+          }
+        }
+
+        svg:hover {
+          cursor: default;
+        }
       }
     }
   }
