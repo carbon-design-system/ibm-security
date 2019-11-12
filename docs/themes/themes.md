@@ -65,34 +65,34 @@
 | `brand-03`                | `blue-60`         | `white-0`         |
 | `active-01`               | `cool-gray-30`    | `gray-70`         |
 | `hover-field`             | `#e0e4ea`         | `#353535`         |
-| `caption-01`              | `|`               |
-| `label-01`                | `|`               |
-| `helper-text-01`          | `|`               |
-| `body-short-01`           | `|`               |
-| `body-long-01`            | `|`               |
-| `body-short-02`           | `|`               |
-| `body-long-02`            | `|`               |
-| `code-01`                 | `|`               |
-| `code-02`                 | `|`               |
-| `heading-01`              | `|`               |
-| `productive-heading-01`   | `|`               |
-| `heading-02`              | `|`               |
-| `productive-heading-02`   | `|`               |
-| `productive-heading-03`   | `|`               |
-| `productive-heading-04`   | `|`               |
-| `productive-heading-05`   | `|`               |
-| `productive-heading-06`   | `|`               |
-| `productive-heading-07`   | `|`               |
-| `expressive-heading-01`   | `|`               |
-| `expressive-heading-02`   | `|`               |
-| `expressive-heading-03`   | `|`               |
-| `expressive-heading-04`   | `|`               |
-| `expressive-heading-05`   | `|`               |
-| `expressive-heading-06`   | `|`               |
-| `expressive-paragraph-01` | `|`               |
-| `quotation-01`            | `|`               |
-| `quotation-02`            | `|`               |
-| `display-01`              | `|`               |
-| `display-02`              | `|`               |
-| `display-03`              | `|`               |
-| `display-04`              | `|`               |
+| `caption-01`              | `colors`          | `colors`          |
+| `label-01`                | `colors`          | `colors`          |
+| `helper-text-01`          | `colors`          | `colors`          |
+| `body-short-01`           | `colors`          | `colors`          |
+| `body-long-01`            | `colors`          | `colors`          |
+| `body-short-02`           | `colors`          | `colors`          |
+| `body-long-02`            | `colors`          | `colors`          |
+| `code-01`                 | `colors`          | `colors`          |
+| `code-02`                 | `colors`          | `colors`          |
+| `heading-01`              | `colors`          | `colors`          |
+| `productive-heading-01`   | `colors`          | `colors`          |
+| `heading-02`              | `colors`          | `colors`          |
+| `productive-heading-02`   | `colors`          | `colors`          |
+| `productive-heading-03`   | `colors`          | `colors`          |
+| `productive-heading-04`   | `colors`          | `colors`          |
+| `productive-heading-05`   | `colors`          | `colors`          |
+| `productive-heading-06`   | `colors`          | `colors`          |
+| `productive-heading-07`   | `colors`          | `colors`          |
+| `expressive-heading-01`   | `colors`          | `colors`          |
+| `expressive-heading-02`   | `colors`          | `colors`          |
+| `expressive-heading-03`   | `colors`          | `colors`          |
+| `expressive-heading-04`   | `colors`          | `colors`          |
+| `expressive-heading-05`   | `colors`          | `colors`          |
+| `expressive-heading-06`   | `colors`          | `colors`          |
+| `expressive-paragraph-01` | `colors`          | `colors`          |
+| `quotation-01`            | `colors`          | `colors`          |
+| `quotation-02`            | `colors`          | `colors`          |
+| `display-01`              | `colors`          | `colors`          |
+| `display-02`              | `colors`          | `colors`          |
+| `display-03`              | `colors`          | `colors`          |
+| `display-04`              | `colors`          | `colors`          |
