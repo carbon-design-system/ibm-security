@@ -92,12 +92,7 @@ const IconButtonBar = ({
             direction={overflowMenuDirection}
             flipped
             menuOptionsClass={iconButtonBarMenuOptionsClasses}
-            renderIcon={() =>
-              renderIconButton({
-                renderIcon: getOverflowMenuIcon(),
-                tooltip: false,
-              })
-            }
+            renderIcon={getOverflowMenuIcon()}
           >
             {renderMenuItems()}
           </OverflowMenu>
