@@ -1,6 +1,6 @@
 {
   hooks: {
     commitmsg: 'commitlint -E HUSKY_GIT_PARAMS',
-    'pre-commit': 'yarn pre-commit',
+    'pre-commit': 'yarn docs && git add && yarn lint-staged',
   }
 }
