@@ -5,5 +5,5 @@ Passing a message into this component directly via the `children` prop has been 
 ## Example
 
 ```js
-<LoadingMessage>LoadingMessage</LoadingMessage>;
+<LoadingMessage>LoadingMessage</LoadingMessage>
 ```
