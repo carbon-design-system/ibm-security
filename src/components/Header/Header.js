@@ -470,17 +470,30 @@ export default class Header extends Component {
     const { brand } = labels;
 
     const link = links.product;
-    const { company, product } = brand;
+    const { company, domain, product } = brand;
 
     const { isUserActive } = this.state;
     const classes = classnames(`${namespace}__container`, className);
+
+    const domainElement = title => (
+      <span className={`${namespace}__link__title--domain`}>{title}</span>
+    );
 
     return (
       <div className={classes}>
         <header className={namespace} role="banner">
           <Link className={`${namespace}__link`} href={link}>
             {`${company} `}
-            <span className={`${namespace}__link__title`}>{product}</span>
+            {domain ? (
+              <Fragment>
+                {domainElement(`${domain} `)}
+                <span className={`${namespace}__link__title--product`}>
+                  {product}
+                </span>
+              </Fragment>
+            ) : (
+              domainElement(product)
+            )}
           </Link>
           <ul
             className={`${namespace}__group  ${isUserActive &&
