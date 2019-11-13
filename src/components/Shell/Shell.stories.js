@@ -29,7 +29,7 @@ const shellProps = {
   toolbar,
 };
 
-disableCentered(storiesOf(patterns('Shell'), module))
+disableCentered(storiesOf(patterns('Shell (Security version)'), module))
   .add('default', () => <Shell {...shellProps} />, {
     info: {
       text: `
