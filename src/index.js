@@ -3,6 +3,9 @@
  * @copyright IBM Security 2019
  */
 
+// Globals.
+export theme from './globals/theme';
+
 // Application.
 export ErrorPage from './components/ErrorPage';
 export { Card, CardSkeleton } from './components/Card';

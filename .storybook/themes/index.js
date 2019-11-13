@@ -6,5 +6,6 @@
 export const defaultTheme = 'Gray 100';
 
 export default {
+  'Cool Gray 10': 'cg10',
   [defaultTheme]: 'g100',
 };

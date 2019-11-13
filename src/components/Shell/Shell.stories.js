@@ -116,9 +116,10 @@ disableCentered(storiesOf(patterns('Shell'), module))
             {
               id: 'example-addon',
               tooltip: 'Example Addon Action',
-              render: ({ className }) => (
+              render: ({ className, iconClassName }) => (
                 <IconButton
                   className={className}
+                  iconClassName={iconClassName}
                   label="Example Addon"
                   onClick={action('addon click')}
                   onFocus={action('addon hovered')}

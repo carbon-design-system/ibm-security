@@ -1,6 +1,6 @@
 /**
  * Replacement for Feature flags in carbon-components-react:
- * https://github.com/carbon-design-system/carbon-components-react/tree/master/src/internal/FeatureFlags.js
+ * https://github.com/carbon-design-system/carbon-components-react/blob/master/src/internal/FeatureFlags.js
  */
 
 /**

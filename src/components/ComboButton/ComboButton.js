@@ -116,6 +116,8 @@ const ComboButton = ({ children, className, direction }) => {
     });
   }
 
+  const overflowIcon = Icon => <Icon className={`${namespace}__icon`} />;
+
   return (
     <div
       className={classnames(namespace, className)}
@@ -143,7 +145,9 @@ const ComboButton = ({ children, className, direction }) => {
           menuOptionsClass={`${prefix}--list-box__menu`}
           onClose={() => setIsOpen(false)}
           onOpen={() => setIsOpen(true)}
-          renderIcon={isOpen ? ChevronUp16 : ChevronDown16}
+          renderIcon={() =>
+            isOpen ? overflowIcon(ChevronUp16) : overflowIcon(ChevronDown16)
+          }
         >
           {overflowMenuItemWithProps}
         </OverflowMenu>
