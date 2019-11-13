@@ -1,0 +1,133 @@
+////
+/// Theme mixins.
+/// @group theme
+/// @copyright IBM Security 2019
+////
+
+@import '@carbon/themes/scss/theme-maps';
+@import '../../components/IconButton/variables';
+
+@import '../namespace/index';
+
+@import 'functions';
+@import 'variables';
+
+/// Changes background color for form elements.
+/// @param {Color} [$background-color=$ui-02] The background color to use.
+/// @example scss
+///   body {
+///     @include input__background-color;
+///   }
+@mixin input__background-color($background-color: $ui-02) {
+  %input__background-color {
+    background-color: $background-color;
+  }
+
+  // Carbon components.
+  .#{$prefix} {
+    // `DatePicker`.
+    &--date-picker__input,
+
+    // `Dropdown`.
+    &--dropdown,
+
+    /// `NumberInput`.
+    &--number input[type='number'],
+
+    // `Search`.
+    &--search-input,
+
+    // `Select`.
+    &--select-input,
+
+    // `TextArea`.
+    &--text-area,
+
+    // `TextInput` and `Slider`.
+    &--text-input {
+      @extend %input__background-color;
+    }
+
+    // `MultiSelect`.
+    &--list-box {
+      &,
+      &__menu {
+        @extend %input__background-color;
+      }
+    }
+  }
+
+  // `IconButton`
+  #{$button--icon__namespace} {
+    &:focus,
+    &:hover {
+      @extend %input__background-color;
+    }
+  }
+}
+
+/// Mixin to generate CSS custom properties from a theme.
+/// @param {Map<String, Color>} $theme The theme to generate the CSS custom properties from.
+/// @access private
+/// @example scss
+///   body {
+///     @include security--generate-css-custom-properties($theme: $-theme);
+///   }
+/// @output css
+///   body {
+///     --interactive-01: #0062ff;
+///     --interactive-02: #6f6f6f;
+///     --interactive-03: #ffffff;
+///   }
+@mixin security--generate-css-custom-properties($theme) {
+  @each $token, $value in security--type-tokens-remove($theme: $theme) {
+    --#{$token}: #{$value};
+  }
+}
+
+/// Mixin to generate CSS custom properties for the 'cool gray 10' theme.
+/// @param {Map<String, Color>} $theme The theme to generate the CSS custom properties from.
+/// @access private
+@mixin security--theme--cg10($theme) {
+  #{get-component-namespace($component-name: theme--cg10)} & {
+    @include security--generate-css-custom-properties($theme: $theme);
+  }
+}
+
+/// Mixin to apply 'cool gray 10' theme to children of the selector within the 'cool gray 10' theme.
+/// @access private
+/// @example scss
+///   body {
+///     @include security--theme--cg10__cg10;
+///   }
+/// @output css
+///   .security--theme--cg10 body {
+///     --interactive-01: #0062ff;
+///     --interactive-02: #373d42;
+///     --interactive-03: #0062ff;
+///   }
+@mixin security--theme--cg10__cg10 {
+  @include security--theme--cg10($theme: $security--theme--cg10);
+}
+
+/// Mixin to apply 'cool gray 100' theme to children of the selector within the 'cool gray 10' theme.
+/// @access private
+/// @example scss
+///   body {
+///     @include security--theme--cg10__cg100;
+///   }
+/// @output css
+///   .security--theme--cg10 body {
+///     --interactive-01: #0062ff;
+///     --interactive-02: #697077;
+///     --interactive-03: #ffffff;
+///   }
+@mixin security--theme--cg10__cg100 {
+  @include security--theme--cg10(
+    $theme:
+      security--cool-gray(
+        $theme: map-get($map: $security--themes, $key: theme--g100),
+        $grade: 100
+      )
+  );
+}

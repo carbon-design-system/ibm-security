@@ -14,7 +14,6 @@ import React, { Fragment } from 'react';
 import ArrowRight20 from '@carbon/icons-react/lib/arrow--right/20';
 import Filter20 from '@carbon/icons-react/lib/filter/20';
 import { spacing04, spacing05 } from '@carbon/layout/lib';
-import { g100 } from '@carbon/themes/lib';
 import { styles } from '@carbon/type/lib';
 
 import { disableCentered, patterns } from '../../../.storybook';
@@ -32,9 +31,10 @@ import {
   PanelV2,
   PanelContent,
   Shell,
+  theme,
 } from '../..';
 
-const { interactive01, text01 } = g100;
+const { interactive01, text04 } = theme;
 
 const closeButtonLabel = 'Close';
 
@@ -73,7 +73,7 @@ disableCentered(storiesOf(patterns('PanelV2'), module))
         button: {
           base: {
             padding: `${spacing04} ${spacing05}`,
-            color: text01,
+            color: text04,
             background: interactive01,
             ...styles.bodyShort01,
           },

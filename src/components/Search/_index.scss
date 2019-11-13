@@ -5,35 +5,3 @@
 ////
 
 @import 'carbon-components/scss/components/search/search';
-
-@include export-namespace($name: search) {
-  // TODO - Will be fixed in Carbon: https://github.com/carbon-design-system/carbon-components/issues/2042
-  .#{$prefix}--search-button {
-    border: 0;
-    transition: $transition--base;
-    min-width: $carbon--layout-04;
-    margin-left: $carbon--spacing-01;
-    background-color: $ui-01;
-    position: relative;
-    padding: 0;
-    outline: 1px solid transparent;
-    order: 2;
-
-    &:hover {
-      cursor: pointer;
-      background-color: $hover-secondary;
-    }
-
-    &:focus {
-      @include focus-outline($type: 'outline');
-    }
-
-    svg {
-      position: relative;
-      box-sizing: border-box;
-      vertical-align: middle;
-      transition: $transition--base;
-      fill: $icon-03;
-    }
-  }
-}

@@ -104,6 +104,7 @@ To add all of the components' processed and minified styles, reference `@carbon/
 - [Migration guides](docs/migration)
   - [`v1` to `v2`](docs/migration/migrate-to-2.x.md)
 - [Storybook](docs/storybook.md)
+- [Themes](docs/themes)
 
 ### Carbon Developer Essentials
 

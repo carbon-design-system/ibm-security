@@ -4,12 +4,13 @@
 /// @copyright IBM Security 2019
 ////
 
+@import '@carbon/layout/scss/spacing';
 @import 'carbon-components/scss/globals/scss/layout';
 
 @import '../../globals/index';
+@import '../../globals/theme/mixins';
 
 @import '../../platform/body/mixins';
-@import '../Header/mixins';
 
 /// Name.
 /// @type String
@@ -23,18 +24,12 @@ $toolbar__namespace: get-component-namespace(
 
 /// Horizontal position.
 /// @type Length
-$toolbar__spacing__position__horizontal: $carbon--spacing-03;
+$toolbar__spacing__position__horizontal: $carbon--spacing-02;
 
 /// Width.
 /// @type Length
 $toolbar__sizing__width: carbon--mini-units(
-  $count: 5,
-);
-
-/// Panel horizontal position.
-/// @type Length
-$toolbar__panel__position__horizontal: (
-  $toolbar__spacing__position__horizontal + $toolbar__sizing__width
+  $count: 6,
 );
 
 /// Panel width.
@@ -124,7 +119,7 @@ $toolbar__panel__transition__timing-function: $timing-function;
 
   /// Vertical position.
   /// @type Length
-  $toolbar__spacing__position__vertical: $header__spacing__padding;
+  $toolbar__spacing__position__vertical: $spacing-03;
 
   /// Layer.
   /// @type Length
@@ -134,12 +129,11 @@ $toolbar__panel__transition__timing-function: $timing-function;
   top: 0;
   bottom: 0;
   left: 0;
-  padding-top: $toolbar__spacing__position__vertical;
-  padding-bottom: $toolbar__spacing__position__vertical;
-  padding-left: $toolbar__spacing__position__horizontal;
   width: $toolbar__sizing__width;
+  padding: $toolbar__spacing__position__vertical
+    $toolbar__spacing__position__horizontal;
   background-color: $ui-background;
-  box-sizing: initial;
+  box-sizing: border-box;
   z-index: $toolbar__layer;
 
   @include rtl {
@@ -147,6 +141,11 @@ $toolbar__panel__transition__timing-function: $timing-function;
     left: unset;
     padding-right: $toolbar__spacing__position__horizontal;
     padding-left: unset;
+  }
+
+  &,
+  &__panel {
+    @include security--theme--cg10__cg100;
   }
 
   &__group {
@@ -176,6 +175,11 @@ $toolbar__panel__transition__timing-function: $timing-function;
         opacity: 0.95;
       }
     }
+
+    &::after,
+    &::before {
+      @include security--theme--cg10__cg10;
+    }
   }
 
   &__icon {
@@ -184,21 +188,18 @@ $toolbar__panel__transition__timing-function: $timing-function;
   }
 
   &__nav__item__icon {
-    width: carbon--mini-units($count: 2.5);
-    height: carbon--mini-units($count: 2.5);
-    padding-right: $carbon--spacing-03;
-
-    @include rtl {
-      padding-left: $carbon--spacing-03;
-    }
+    width: carbon--mini-units($count: 2);
+    height: carbon--mini-units($count: 2);
   }
 
   &__panel {
     @include toolbar--base;
-    top: $toolbar__spacing__position__vertical;
-    left: $toolbar__panel__position__horizontal;
-    bottom: $toolbar__spacing__position__vertical;
+    top: 0;
+    left: $toolbar__sizing__width;
+    bottom: 0;
     width: $toolbar__panel__sizing__width;
+    padding-top: $toolbar__spacing__position__vertical;
+    padding-bottom: $toolbar__spacing__position__vertical;
     background-color: $ui-01;
     box-shadow: $toolbar__panel__box-shadow;
     box-sizing: border-box;
@@ -207,7 +208,7 @@ $toolbar__panel__transition__timing-function: $timing-function;
     z-index: $toolbar__layer - 1;
 
     @include rtl {
-      right: $toolbar__panel__position__horizontal;
+      right: $toolbar__sizing__width;
       left: unset;
       box-shadow: reverse-box-shadow($box-shadow: $toolbar__panel__box-shadow);
     }
