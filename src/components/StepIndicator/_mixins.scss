@@ -69,15 +69,16 @@
       }
 
       &--disabled {
+        &,
+        svg:hover {
+          cursor: default;
+        }
+
         #{$carbon--progress-indicator}-label,
         svg {
           &:hover {
             color: $disabled-03;
           }
-        }
-
-        svg:hover {
-          cursor: default;
         }
       }
     }
