@@ -7,7 +7,7 @@
 // import '../../index.scss';
 
 // TODO: `modular-styles` - Remove import.
-// import '../../../src/components/Wizard/_index.scss';
+import '../../../src/components/DatePicker/_index.scss';
 
 const Container = ({ children }) => children;
 

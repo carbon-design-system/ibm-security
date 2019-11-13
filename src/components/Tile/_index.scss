@@ -5,36 +5,3 @@
 ////
 
 @import 'carbon-components/scss/components/tile/tile';
-
-@include export-namespace($name: tile) {
-  .#{$prefix}--tile-group {
-    border: 0;
-  }
-
-  // TODO - V2: remove when this issue is resolved in Carbon - https://github.com/carbon-design-system/carbon/issues/3270
-  .#{$prefix}--tile--clickable {
-    color: $link-01;
-    text-decoration: none;
-    outline: none;
-    transition: $duration--fast-01 motion(standard, productive);
-
-    &:hover {
-      color: $link-01;
-      text-decoration: underline;
-    }
-
-    &:active,
-    &:active:visited {
-      color: $text-01;
-      text-decoration: underline;
-    }
-
-    &:focus {
-      @include focus-outline('outline');
-    }
-
-    &:visited {
-      color: $link-01;
-    }
-  }
-}
