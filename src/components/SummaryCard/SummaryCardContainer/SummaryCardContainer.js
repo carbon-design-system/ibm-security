@@ -9,24 +9,34 @@ import { appendComponentNamespace } from '../../../globals/namespace';
 
 import { namespace as summaryCardSelectNamespace } from '../SummaryCardSelect/SummaryCardSelect';
 
+const resetSelectedIds = state => state([]);
+
 const SummaryCardContainer = ({ render }) => {
-  const [selectedIds, setSelectedIds] = useState([]);
+  const [selectedIds, setSelectedIds] = resetSelectedIds(useState);
+
+  const isIdSelected = id => selectedIds.includes(id);
 
   const onSelect = id =>
     setSelectedIds(
-      selectedIds.includes(id)
+      isIdSelected(id)
         ? selectedIds.filter(selectedId => selectedId !== id)
         : selectedIds.concat(id)
     );
 
-  const getBatchActionProps = ({ ...props }) => ({
-    ...props,
-    shouldShowBatchActions: selectedIds.length > 0,
-    totalSelected: selectedIds.length,
-  });
+  const getBatchActionProps = ({ ...props }) => {
+    const { length: totalSelected } = selectedIds;
+
+    return {
+      ...props,
+      onCancel: () => resetSelectedIds(setSelectedIds),
+      shouldShowBatchActions: totalSelected > 0,
+      totalSelected,
+    };
+  };
 
   const getSelectionProps = ({ id, ...props }) => ({
     ...props,
+    checked: isIdSelected(id),
     id: appendComponentNamespace(summaryCardSelectNamespace, id),
     onChange: () => onSelect(id),
   });

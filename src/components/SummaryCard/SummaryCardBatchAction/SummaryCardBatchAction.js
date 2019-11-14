@@ -5,8 +5,10 @@
 
 import React from 'react';
 
-import Button from '../../Button';
+import { TableBatchAction } from '../../DataTable';
 
-const SummaryCardBatchAction = ({ ...props }) => <Button {...props} />;
+const SummaryCardBatchAction = ({ ...props }) => (
+  <TableBatchAction {...props} />
+);
 
 export default SummaryCardBatchAction;

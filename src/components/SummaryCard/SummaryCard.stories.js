@@ -27,7 +27,9 @@ import {
 
 import { lorem } from '../_mocks_';
 
-const ids = [0, 1];
+const ids = new Array(5)
+  .fill()
+  .map((title = 'summary-card', id) => `${title}__${id}`);
 
 storiesOf(patterns('SummaryCard'), module)
   .add('Multiselect', () => (

@@ -5,7 +5,10 @@
 
 import React from 'react';
 
-const SummaryCardBatchActions = ({ shouldShowBatchActions, ...props }) =>
-  shouldShowBatchActions && <div {...props} />;
+import { TableBatchActions } from '../../DataTable';
+
+const SummaryCardBatchActions = ({ ...props }) => (
+  <TableBatchActions {...props} />
+);
 
 export default SummaryCardBatchActions;
