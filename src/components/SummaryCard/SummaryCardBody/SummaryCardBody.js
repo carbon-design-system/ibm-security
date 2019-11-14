@@ -1,5 +1,5 @@
 /**
- * @file Summary card container.
+ * @file Summary card body.
  * @copyright IBM Security 2019
  */
 
