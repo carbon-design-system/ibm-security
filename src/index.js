@@ -95,6 +95,8 @@ export Switch from './components/Switch';
 
 export SummaryCard, {
   SummaryCardAction,
+  SummaryCardBatchAction,
+  SummaryCardBatchActions,
   SummaryCardBody,
   SummaryCardContainer,
   SummaryCardFooter,

@@ -14,6 +14,8 @@ import { patterns } from '../../../.storybook';
 import {
   SummaryCard,
   SummaryCardAction,
+  SummaryCardBatchAction,
+  SummaryCardBatchActions,
   SummaryCardBody,
   SummaryCardContainer,
   SummaryCardFooter,
@@ -31,8 +33,14 @@ storiesOf(patterns('SummaryCard'), module)
   .add('Multiselect', () => (
     <SummaryCardContainer
       ids={ids}
-      render={({ getSelectionProps }) => (
+      render={({ getBatchActionProps, getSelectionProps, selectedIds }) => (
         <Fragment>
+          <SummaryCardBatchActions {...getBatchActionProps()}>
+            <SummaryCardBatchAction onClick={() => console.log(selectedIds)}>
+              SummarCardBatchAction
+            </SummaryCardBatchAction>
+          </SummaryCardBatchActions>
+
           {ids.map(id => (
             <SummaryCard key={id}>
               <SummaryCardHeader
