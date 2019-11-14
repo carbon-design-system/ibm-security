@@ -4,6 +4,8 @@
 /// @copyright IBM Security 2019
 ////
 
+@import '@carbon/layout/scss/spacing';
+
 @import '../../globals/index';
 
 /// Use until Carbon fixes `text-overflow` helper mixin.
@@ -84,6 +86,17 @@
     display: flex;
     background-color: $ui-01;
     border-top: 1px solid $ui-02;
+  }
+
+  &__select {
+    /// Summary card select padding.
+    /// @type Length
+    $summary-card__select__spacing__padding: $carbon--spacing-03;
+
+    display: flex;
+    padding-right: $summary-card__select__spacing__padding;
+    padding-left: $summary-card__select__spacing__padding;
+    align-items: center;
   }
 
   &__action {

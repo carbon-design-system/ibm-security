@@ -7,7 +7,7 @@ import Folder20 from '@carbon/icons-react/lib/folder/20';
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import { patterns } from '../../../.storybook';
 
@@ -25,43 +25,39 @@ import {
 
 import { lorem } from '../_mocks_';
 
+const ids = [0, 1];
+
 storiesOf(patterns('SummaryCard'), module)
   .add('Multiselect', () => (
     <SummaryCardContainer
+      ids={ids}
       render={({ getSelectionProps }) => (
-        <SummaryCard>
-          <SummaryCardHeader
-            title="Summary card"
-            status={
-              <Tooltip showIcon iconDescription="Status">
-                Tooltip content
-              </Tooltip>
-            }
-          />
-          <SummaryCardBody>{lorem}</SummaryCardBody>
-          <SummaryCardFooter>
-            <SummaryCardSelect {...getSelectionProps()} />
-            <SummaryCardAction expandedContent={lorem} renderIcon={Folder20}>
-              Button label that is long and will be truncated
-            </SummaryCardAction>
-            <SummaryCardAction
-              iconDescription="Icon description"
-              renderIcon={Folder20}
-              hasIconOnly
-              onClick={action('onClick')}
-              tooltipPosition="bottom"
-              tooltipAlignment="center"
-            />
-            <SummaryCardAction
-              iconDescription="Icon description"
-              renderIcon={Folder20}
-              hasIconOnly
-              onClick={action('onClick')}
-              tooltipPosition="bottom"
-              tooltipAlignment="center"
-            />
-          </SummaryCardFooter>
-        </SummaryCard>
+        <Fragment>
+          {ids.map(id => (
+            <SummaryCard key={id}>
+              <SummaryCardHeader
+                title={`SummaryCardHeader ${id}`}
+                status={
+                  <Tooltip
+                    showIcon
+                    iconDescription={`Tooltip iconDescription ${id}`}
+                  >
+                    {`Tooltip ${id}`}
+                  </Tooltip>
+                }
+              />
+              <SummaryCardBody>{`SummaryCardBody ${id}`}</SummaryCardBody>
+              <SummaryCardFooter>
+                <SummaryCardSelect {...getSelectionProps({ id })} />
+                <SummaryCardAction
+                  expandedContent={`SummaryCardAction expandedContent ${id}`}
+                >
+                  {`SummaryCardAction ${id}`}
+                </SummaryCardAction>
+              </SummaryCardFooter>
+            </SummaryCard>
+          ))}
+        </Fragment>
       )}
     />
   ))

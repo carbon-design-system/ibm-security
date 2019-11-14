@@ -5,6 +5,21 @@
 
 import React from 'react';
 
-const SummaryCardSelect = ({ ...props }) => <div {...props} />;
+import Checkbox from '../../Checkbox';
+
+import { appendComponentNamespace } from '../../../globals/namespace';
+
+import { namespace as summaryCardNamespace } from '../SummaryCard';
+
+export const namespace = appendComponentNamespace(
+  summaryCardNamespace,
+  'select'
+);
+
+const SummaryCardSelect = ({ ...props }) => (
+  <div className={namespace}>
+    <Checkbox labelText="Select" {...props} />
+  </div>
+);
 
 export default SummaryCardSelect;
