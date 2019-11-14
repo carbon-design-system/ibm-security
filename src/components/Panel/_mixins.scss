@@ -9,8 +9,14 @@
 @import '@carbon/type/scss/index';
 @import '@carbon/themes/scss/tokens';
 @import 'carbon-components/scss/globals/scss/layout';
+
 @import '../../globals/rtl/index';
+@import '../../globals/theme/mixins';
+
+@import '../../platform/body/mixins';
+
 @import '../Header/mixins';
+@import '../IconButton/mixins';
 @import '../Toolbar/mixins';
 
 @mixin panel {
@@ -39,15 +45,18 @@
     $count: 0.125,
   );
 
+  @include security--theme--cg10__cg100;
+
   display: flex;
   position: fixed;
   top: 0;
   right: 0;
   height: 100%;
   width: $panel__sizing__width;
+  color: $body__color__text;
+  background-color: $ui-01;
   flex-direction: column;
   justify-content: space-between;
-  background-color: $ui-01;
   z-index: z($layer: floating);
 
   @include rtl {
@@ -57,7 +66,7 @@
 
   &__container #{$header__namespace}__container {
     width: calc(
-      #{$header__sizing__width} - #{$toolbar__panel__position__horizontal} - #{$panel__sizing__width}
+      #{$header__sizing__width} - #{$toolbar__sizing__width} - #{$panel__sizing__width}
     );
 
     > #{$header__namespace} {

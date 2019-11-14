@@ -7,10 +7,18 @@
 @import '@carbon/themes/scss/tokens';
 
 @mixin header__popover__link--secondary {
+  // Color.
+  /// @type Color
+  $header__popover__link--secondary__color: $inverse-link;
+
   &,
   &:focus,
   &:hover,
   &:visited {
-    color: $interactive-01;
+    color: $header__popover__link--secondary__color;
+  }
+
+  &:focus {
+    outline-color: $header__popover__link--secondary__color;
   }
 }

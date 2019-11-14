@@ -20,7 +20,5 @@ const storyProps = () => ({
 });
 
 storiesOf(components('StringFormatter'), module).add('Default', () => (
-  <div className="bx--type-body-short-01">
-    <StringFormatter {...storyProps()} />
-  </div>
+  <StringFormatter {...storyProps()} />
 ));

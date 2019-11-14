@@ -65,6 +65,7 @@
 
   &__content {
     flex-grow: inherit;
+    overflow-x: auto;
 
     #{$filter__namespace}__search-field {
       background-color: $carbon--gray-70;

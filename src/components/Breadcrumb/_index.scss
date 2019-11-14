@@ -5,6 +5,7 @@
 ////
 
 @import '@carbon/type/scss/styles';
+@import '@carbon/themes/scss/tokens';
 @import 'carbon-components/scss/components/breadcrumb/breadcrumb';
 
 @import '../../globals/namespace/index';
@@ -28,6 +29,10 @@
       max-width: 40ex;
       overflow: hidden;
       text-overflow: ellipsis;
+
+      &:visited {
+        color: $link-01;
+      }
     }
   }
 }

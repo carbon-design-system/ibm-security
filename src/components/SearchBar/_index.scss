@@ -9,8 +9,6 @@
 
 @import 'carbon-components/scss/globals/scss/vars';
 
-@import '../../globals/rtl/index';
-
 @import '../Button/index';
 @import '../MultiSelect/index';
 @import '../Search/index';
@@ -19,34 +17,9 @@
 
 @include security--component($name: search-bar) {
   display: flex;
-  color: currentColor;
-
-  &__input,
-  &__scopes {
-    margin-right: 1px;
-
-    @include rtl {
-      margin-right: unset;
-      margin-left: 1px;
-    }
-  }
-
-  &__input {
-    flex: 1 1 auto;
-    width: auto;
-  }
-
-  &__submit {
-    border: 0;
-
-    &:disabled,
-    &:disabled:hover {
-      background-color: $disabled-02;
-    }
-  }
 
   &__scopes.#{$prefix}--list-box {
-    flex: 0 0 carbon--mini-units($count: 28);
+    flex: 0 0 carbon--mini-units(28);
     border: 0;
 
     &,
@@ -54,10 +27,5 @@
       height: 100%;
       max-height: unset;
     }
-  }
-
-  .#{$prefix}--search-close:hover {
-    background-color: unset;
-    border: 0;
   }
 }

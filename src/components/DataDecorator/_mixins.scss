@@ -1,21 +1,41 @@
 ////
-/// DataDecorator mixins.
+/// Decorator mixins.
 /// @group decorator
 /// @copyright IBM Security 2019
 ////
 
 /* stylelint-disable no-descending-specificity */
 
+@import '@carbon/layout/scss/mini-unit';
+@import '@carbon/layout/scss/spacing';
+
 @import '../../globals/index';
+
+@mixin security--decorator__padding($decorator__spacing__padding) {
+  &__icon {
+    padding-left: $decorator__spacing__padding;
+  }
+
+  &__type,
+  &__value {
+    padding-right: $decorator__spacing__padding;
+    padding-left: $decorator__spacing__padding;
+  }
+}
 
 @mixin decorator {
   $root: &;
+
   @include carbon--type-style($name: body-short-01);
+  @include security--decorator__padding(
+    $decorator__spacing__padding: $carbon--spacing-03
+  );
+
   display: inline-flex;
   box-sizing: border-box;
   font-family: carbon--font-family($name: sans);
   height: carbon--mini-units(3.25);
-  background-color: $security-color__gray-90--hover;
+  background-color: $hover-ui;
   font-style: normal;
   font-stretch: normal;
   text-align: left;
@@ -36,14 +56,16 @@
   &--active:hover,
   &:focus:active {
     background-color: $ui-05;
-    color: $text-03;
 
-    #{$root}__type {
-      border-right: 1px solid $ui-04;
-    }
+    > #{$root} {
+      &__type,
+      &__value {
+        color: $active-ui;
+      }
 
-    #{$root}__value {
-      color: $ui-background;
+      &__type {
+        border-right: 1px solid $ui-04;
+      }
     }
   }
 
@@ -58,26 +80,25 @@
   }
 
   &--inline {
+    /// Inline height.
+    /// @type Length
+    $data-decorator--inline__sizing__height: carbon--mini-units(
+      $count: 2.5,
+    );
+
     @include carbon--type-style($name: caption-01);
 
-    display: inline-block;
-    height: carbon--mini-units(2.5);
-    overflow: hidden;
+    height: $data-decorator--inline__sizing__height;
     vertical-align: middle;
 
-    #{$root}__type,
-    #{$root}__value {
-      line-height: carbon--mini-units(2.5);
-      padding: 0 $carbon--spacing-02;
-    }
+    > #{$root} {
+      @include security--decorator__padding(
+        $decorator__spacing__padding: $carbon--spacing-02
+      );
 
-    #{$root}__icon {
-      padding: 0 $carbon--spacing-02;
-      vertical-align: top;
-
-      .#{$namespace}icon {
-        display: inline-block;
-        vertical-align: middle;
+      &__type,
+      &__value {
+        line-height: $data-decorator--inline__sizing__height;
       }
     }
   }
@@ -130,28 +151,22 @@
   &__icon,
   &__type,
   &__value {
-    height: inherit;
     display: inherit;
+    height: inherit;
     align-items: center;
     transition-duration: 0.2s;
     transition-property: background-color;
     transition-timing-function: $timing-function;
   }
 
-  &__icon {
-    padding-left: $carbon--spacing-03;
-  }
-
   &__type {
     color: $text-02;
-    padding: 0 $carbon--spacing-03;
     border-right: 1px solid $ui-01;
     white-space: nowrap;
   }
 
   &__value {
-    color: $link-01;
-    padding: 0 $carbon--spacing-03;
+    color: $support-04;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;

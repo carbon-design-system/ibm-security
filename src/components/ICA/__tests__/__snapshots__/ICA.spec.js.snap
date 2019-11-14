@@ -142,7 +142,7 @@ exports[`ICA renders the null value 1`] = `
   <span
     className="security--ica__value"
   >
-    -
+    –
   </span>
 </div>
 `;

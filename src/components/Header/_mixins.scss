@@ -47,32 +47,30 @@ $header__transition__duration: $transition-duration--fast;
 $header__transition__timing-function: $timing-function;
 
 @mixin header__popover__button--icon {
-  @include carbon--theme($theme: $carbon--theme--g10) {
-    @include button--icon;
-    margin-left: auto;
-    color: $text-01;
+  @include button--icon;
 
-    transition: $header__transition__duration background-color
-      $header__transition__timing-function;
+  margin-left: auto;
+  color: $inverse-01;
+  transition: $header__transition__duration background-color
+    $header__transition__timing-function;
 
-    &:focus,
-    &:hover {
-      background-color: $ui-03;
-    }
+  &:focus,
+  &:hover {
+    background-color: $inverse-hover-ui;
+    outline-color: $inverse-focus-ui;
   }
 }
 
 @mixin header__popover__item--focus {
-  @include carbon--theme($theme: $carbon--theme--g10) {
-    @include focus-outline($type: outline);
-  }
+  @include focus-outline($type: outline);
+  outline-color: $inverse-focus-ui;
 }
 
 @mixin header {
   /// Height.
   /// @type Length
   $header__sizing__height: carbon--mini-units(
-    $count: 5,
+    $count: 6,
   );
 
   /// Group margin.
@@ -101,7 +99,6 @@ $header__transition__timing-function: $timing-function;
   width: inherit;
   padding-top: inherit;
   align-items: center;
-  height: inherit;
   background-color: inherit;
   color: inherit;
   z-index: $header__layer;
@@ -115,7 +112,6 @@ $header__transition__timing-function: $timing-function;
 
   &__link {
     @include carbon--type-style($name: body-short-01);
-
     margin-left: $header__group__spacing__margin;
 
     &,
@@ -128,7 +124,7 @@ $header__transition__timing-function: $timing-function;
       color: $text-02;
     }
 
-    &__title {
+    &__title--domain {
       @include carbon--type-style($name: heading-01);
     }
   }
@@ -184,285 +180,277 @@ $header__transition__timing-function: $timing-function;
   }
 
   &__popover {
-    @include carbon--theme($theme: $carbon--theme--g10) {
-      // Popover border color.
-      /// @type Color
-      $header__popover__color__border: $ui-02;
+    // Popover border color.
+    /// @type Color
+    $header__popover__color__border: $inverse-hover-ui;
 
-      /// Profile active background color.
-      /// @type Color
-      $header__popover__color__background--active: $ui-02;
+    /// Profile active background color.
+    /// @type Color
+    $header__popover__color__background--active: $inverse-hover-ui;
 
-      @include carbon--type-style($name: body-short-01);
-      position: absolute;
-      right: 0;
-      width: 100%;
-      max-width: 100%;
-      color: $text-01;
-      background-color: $ui-01;
+    @include carbon--type-style($name: body-short-01);
+    position: absolute;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+    color: $inverse-01;
+    background-color: $inverse-02;
 
-      @include carbon--breakpoint($name: lg) {
-        right: carbon--mini-units($count: 1);
-        width: carbon--mini-units($count: 34);
+    @include carbon--breakpoint($name: lg) {
+      right: carbon--mini-units($count: 1);
+      width: carbon--mini-units($count: 34);
+    }
+
+    &--focus:focus {
+      outline: none;
+    }
+
+    &__container {
+      display: flex;
+      padding: $header__popover__spacing__padding;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    &__title {
+      @include carbon--type-style($name: productive-heading-03);
+    }
+
+    &__content {
+      display: flex;
+      padding-right: $carbon--spacing-02;
+      padding-left: $header__popover__spacing__padding;
+      align-items: center;
+    }
+
+    &__button {
+      @include header__popover__button--icon;
+    }
+
+    &__label {
+      @include carbon--type-style($name: heading-01);
+    }
+
+    &__list {
+      max-height: carbon--mini-units($count: 70);
+      padding-left: unset;
+      list-style: none;
+    }
+
+    &__list-item {
+      /// Notification padding.
+      /// @type Length
+      $header__notification__spacing__padding: $carbon--spacing-06;
+
+      display: block;
+      position: relative;
+      padding-right: $header__notification__spacing__padding;
+      padding-left: $carbon--spacing-05;
+      color: unset;
+      text-decoration: initial;
+      transition: $header__transition__duration background-color
+        $header__transition__timing-function;
+
+      #{$root}__notification {
+        box-shadow: inset 0 -#{$header__popover__sizing__border} 0 0
+          $header__popover__color__border;
+
+        &__wrapper {
+          margin-right: -$header__notification__spacing__padding;
+        }
+
+        &__button {
+          display: flex;
+          width: $carbon--layout-04;
+          height: 100%;
+          flex-direction: column;
+          justify-content: center;
+        }
       }
 
-      &--focus:focus {
-        outline: none;
+      &:focus,
+      &:hover {
+        background-color: $header__popover__color__background--active;
+
+        #{$root}__notification__button {
+          transform: translate3d(0, 0, 0);
+          opacity: 1;
+        }
       }
 
-      &__container {
-        display: flex;
-        padding: $header__popover__spacing__padding;
-        align-items: center;
-        flex-wrap: wrap;
+      &:focus {
+        @include focus-outline($type: outline);
       }
 
-      &__title {
-        @include carbon--type-style($name: productive-heading-03);
+      &:last-of-type #{$root}__notification {
+        box-shadow: none;
+      }
+    }
+
+    &__icon {
+      fill: currentColor;
+    }
+
+    &__profile {
+      &--large {
+        margin-right: $header__profile__spacing__margin;
       }
 
-      &__content {
-        display: flex;
-        padding-right: $carbon--spacing-02;
-        padding-left: $header__popover__spacing__padding;
-        align-items: center;
+      &__header {
+        &__icon {
+          margin-right: $header__profile__spacing__margin;
+          margin-bottom: auto;
+          flex: none;
+        }
+
+        &__title,
+        &__email {
+          display: block;
+          word-break: break-all;
+          word-wrap: anywhere;
+        }
+
+        &__title {
+          @include carbon--type-style($name: productive-heading-03);
+        }
+
+        &__email {
+          @include carbon--type-style($name: caption-01);
+        }
       }
 
-      &__button {
-        @include header__popover__button--icon;
-      }
+      &__body {
+        &--account {
+          padding-right: $header__popover__spacing__padding;
+          padding-bottom: $header__profile__spacing__margin;
+          padding-left: $header__popover__spacing__padding;
+        }
 
-      &__label {
-        @include carbon--type-style($name: heading-01);
-      }
+        &__label {
+          @include carbon--type-style($name: caption-01);
+        }
 
-      &__list {
-        max-height: carbon--mini-units($count: 70);
-        padding-left: unset;
-        list-style: none;
-      }
+        &__name {
+          @include carbon--type-style($name: body-short-02);
+          text-align: left;
+          width: carbon--mini-units($count: 26);
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
 
-      &__list-item {
-        /// Notification padding.
-        /// @type Length
-        $header__notification__spacing__padding: $carbon--spacing-06;
+        &__accordion {
+          /// Accordion selector.
+          /// @type String
+          $carbon--accordion: '.#{$prefix}--accordion';
 
-        display: block;
-        position: relative;
-        padding-right: $header__notification__spacing__padding;
-        padding-left: $carbon--spacing-05;
-        color: unset;
-        text-decoration: initial;
-        transition: $header__transition__duration background-color
-          $header__transition__timing-function;
-
-        #{$root}__notification {
-          box-shadow: inset 0 -#{$header__popover__sizing__border} 0 0
-            $header__popover__color__border;
-
-          &__wrapper {
-            margin-right: -$header__notification__spacing__padding;
+          > #{$carbon--accordion}__item--active #{$carbon--accordion}__arrow {
+            transform: rotate3d(0, 0, 1, 270deg);
           }
+
+          &__item {
+            &:last-child {
+              border-width: 0;
+            }
+
+            #{$carbon--accordion} {
+              &__arrow,
+              &__heading {
+                color: inherit;
+              }
+
+              &__arrow {
+                margin-right: $header__profile__spacing__margin;
+                margin-left: unset;
+                fill: currentColor;
+                transform: rotate3d(0, 0, 1, 90deg);
+              }
+
+              &__heading {
+                flex-direction: row-reverse;
+
+                &:focus,
+                &:hover {
+                  &::before {
+                    background-color: $header__popover__color__background--active;
+                  }
+                }
+
+                &:focus::before {
+                  @include header__popover__item--focus;
+                }
+              }
+
+              &__title {
+                margin-left: $header__popover__spacing__padding;
+              }
+
+              &__content {
+                padding: unset;
+                margin-left: unset;
+              }
+            }
+          }
+        }
+
+        &__list {
+          padding-left: unset;
+          list-style: none;
+        }
+
+        &__account {
+          position: relative;
 
           &__button {
-            display: flex;
-            width: $carbon--layout-04;
-            height: 100%;
-            flex-direction: column;
-            justify-content: center;
-          }
-        }
+            @include button-reset;
+            @include carbon--type-style($name: body-short-01);
 
-        &:focus,
-        &:hover {
-          background-color: $header__popover__color__background--active;
-
-          #{$root}__notification__button {
-            transform: translate3d(0, 0, 0);
-            opacity: 1;
-          }
-        }
-
-        &:focus {
-          @include focus-outline($type: outline);
-        }
-
-        &:last-of-type #{$root}__notification {
-          box-shadow: none;
-        }
-      }
-
-      &__icon {
-        fill: currentColor;
-      }
-
-      &__profile {
-        // Popover secondary text.
-        /// @type Color
-        $header__popover__color__text--secondary: $text-03;
-
-        &--large {
-          margin-right: $header__profile__spacing__margin;
-        }
-
-        &__header {
-          &__icon {
-            margin-right: $header__profile__spacing__margin;
-            margin-bottom: auto;
+            padding: $header__profile__spacing__margin
+              $header__popover__spacing__padding;
             color: inherit;
-            background-color: $carbon--gray-20;
-            flex: none;
-          }
-
-          &__title,
-          &__email {
-            display: block;
-            word-break: break-all;
-            word-wrap: anywhere;
-          }
-
-          &__title {
-            @include carbon--type-style($name: productive-heading-03);
-          }
-
-          &__email {
-            @include carbon--type-style($name: caption-01);
-            color: $header__popover__color__text--secondary;
-          }
-        }
-
-        &__body {
-          &--account {
-            padding-right: $header__popover__spacing__padding;
-            padding-bottom: $header__profile__spacing__margin;
-            padding-left: $header__popover__spacing__padding;
-          }
-
-          &__label {
-            @include carbon--type-style($name: caption-01);
-            color: $header__popover__color__text--secondary;
-          }
-
-          &__name {
-            @include carbon--type-style($name: body-short-02);
             text-align: left;
-            width: carbon--mini-units($count: 26);
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-          }
 
-          &__accordion {
-            /// Accordion selector.
-            /// @type String
-            $carbon--accordion: '.#{$prefix}--accordion';
-
-            > #{$carbon--accordion}__item--active #{$carbon--accordion}__arrow {
-              transform: rotate3d(0, 0, 1, 270deg);
+            &:focus,
+            &:hover {
+              background-color: $header__popover__color__background--active;
             }
 
-            &__item {
-              &:last-child {
-                border-width: 0;
-              }
+            &:focus {
+              @include header__popover__item--focus;
+            }
 
-              #{$carbon--accordion} {
-                &__arrow,
-                &__heading {
-                  color: inherit;
-                }
-
-                &__arrow {
-                  margin-right: $header__profile__spacing__margin;
-                  margin-left: unset;
-                  fill: currentColor;
-                  transform: rotate3d(0, 0, 1, 90deg);
-                }
-
-                &__heading {
-                  flex-direction: row-reverse;
-
-                  &:focus,
-                  &:hover {
-                    &::before {
-                      background-color: $header__popover__color__background--active;
-                    }
-                  }
-
-                  &:focus::before {
-                    @include header__popover__item--focus;
-                  }
-                }
-
-                &__title {
-                  margin-left: $header__popover__spacing__padding;
-                }
-
-                &__content {
-                  padding: unset;
-                  margin-left: unset;
-                }
-              }
+            &::before {
+              display: inline-block;
+              position: absolute;
+              right: $header__popover__spacing__padding;
+              bottom: 0;
+              left: $header__popover__spacing__padding;
+              background-color: $header__popover__color__border;
+              height: $header__popover__sizing__border;
+              content: '';
+              transform: translate3d(0, -#{$carbon--spacing-01}, 0);
             }
           }
 
-          &__list {
-            padding-left: unset;
-            list-style: none;
+          &:last-of-type &__button::before {
+            height: 0;
           }
-
-          &__account {
-            position: relative;
-
-            &__button {
-              @include button-reset;
-              @include carbon--type-style($name: body-short-01);
-
-              padding: $header__profile__spacing__margin
-                $header__popover__spacing__padding;
-              text-align: left;
-
-              &:focus,
-              &:hover {
-                background-color: $header__popover__color__background--active;
-              }
-
-              &:focus {
-                @include header__popover__item--focus;
-              }
-
-              &::before {
-                display: inline-block;
-                position: absolute;
-                right: $header__popover__spacing__padding;
-                bottom: 0;
-                left: $header__popover__spacing__padding;
-                background-color: $header__popover__color__border;
-                height: $header__popover__sizing__border;
-                content: '';
-              }
-            }
-
-            &:last-of-type &__button::before {
-              height: 0;
-            }
-          }
-        }
-
-        &__footer__logout {
-          margin-left: auto;
         }
       }
 
-      &__footer {
-        @include carbon--type-style($name: body-short-01);
-        display: flex;
-        padding: $carbon--spacing-04 $header__popover__spacing__padding;
-        align-items: center;
-        border-top: $header__popover__sizing__border solid
-          $header__popover__color__border;
-        justify-content: space-between;
+      &__footer__logout {
+        margin-left: auto;
       }
+    }
+
+    &__footer {
+      @include carbon--type-style($name: body-short-01);
+      display: flex;
+      padding: $carbon--spacing-04 $header__popover__spacing__padding;
+      align-items: center;
+      border-top: $header__popover__sizing__border solid
+        $header__popover__color__border;
+      justify-content: space-between;
     }
   }
 
