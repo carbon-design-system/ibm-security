@@ -8,22 +8,6 @@
 
 @mixin search-bar {
   display: flex;
-  color: currentColor;
-
-  &__input,
-  &__scopes {
-    margin-right: 1px;
-
-    @include rtl {
-      margin-right: unset;
-      margin-left: 1px;
-    }
-  }
-
-  &__input {
-    flex: 1 1 auto;
-    width: auto;
-  }
 
   &__scopes.#{$prefix}--list-box {
     flex: 0 0 carbon--mini-units(28);
@@ -34,10 +18,5 @@
       height: 100%;
       max-height: unset;
     }
-  }
-
-  .#{$prefix}--search-close:hover {
-    background-color: unset;
-    border: 0;
   }
 }

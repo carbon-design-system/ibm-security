@@ -69,6 +69,8 @@ const { ComponentName } = require('@carbon/ibm-security');
 
 To add a component style to your build, import the component directly. Importing a component this way will bring in any dependencies that component has as well. The import system removes duplicate dependencies, so shared dependencies between components will not create extra CSS.
 
+In addition, to resolve your `@import` declarations, you will need to setup `node-sass` so that `node_modules` is included in the [`includePaths`](https://github.com/sass/node-sass#includepaths) option.
+
 ```scss
 @import '@carbon/ibm-security/scss/components/ComponentName/index';
 ```
@@ -102,6 +104,7 @@ To add all of the components' processed and minified styles, reference `@carbon/
 - [Migration guides](docs/migration)
   - [`v1` to `v2`](docs/migration/migrate-to-2.x.md)
 - [Storybook](docs/storybook.md)
+- [Themes](docs/themes)
 
 ### Carbon Developer Essentials
 

@@ -59,7 +59,8 @@ exports[`Header Rendering renders correctly 1`] = `
     Object {
       "brand": Object {
         "company": "IBM",
-        "product": "Security Application",
+        "domain": "Security",
+        "product": "Application",
       },
       "notifications": Object {
         "button": "Toggle notifications",
@@ -186,9 +187,14 @@ exports[`Header Rendering renders correctly 1`] = `
         >
           IBM 
           <span
-            className="security--header__link__title"
+            className="security--header__link__title--domain"
           >
-            Security Application
+            Security 
+          </span>
+          <span
+            className="security--header__link__title--product"
+          >
+            Application
           </span>
         </a>
       </Link>
