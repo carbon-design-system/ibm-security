@@ -3,26 +3,68 @@
  * @copyright IBM Security 2019
  */
 
+import Folder20 from '@carbon/icons-react/lib/folder/20';
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
-
-import Folder20 from '@carbon/icons-react/lib/folder/20';
 
 import React from 'react';
 
 import { patterns } from '../../../.storybook';
+
 import {
   SummaryCard,
   SummaryCardAction,
   SummaryCardBody,
+  SummaryCardContainer,
   SummaryCardFooter,
   SummaryCardHeader,
+  SummaryCardSelect,
   SummaryCardSkeleton,
   Tooltip,
 } from '../..';
+
 import { lorem } from '../_mocks_';
 
 storiesOf(patterns('SummaryCard'), module)
+  .add('Multiselect', () => (
+    <SummaryCardContainer
+      render={({ getSelectionProps }) => (
+        <SummaryCard>
+          <SummaryCardHeader
+            title="Summary card"
+            status={
+              <Tooltip showIcon iconDescription="Status">
+                Tooltip content
+              </Tooltip>
+            }
+          />
+          <SummaryCardBody>{lorem}</SummaryCardBody>
+          <SummaryCardFooter>
+            <SummaryCardSelect {...getSelectionProps()} />
+            <SummaryCardAction expandedContent={lorem} renderIcon={Folder20}>
+              Button label that is long and will be truncated
+            </SummaryCardAction>
+            <SummaryCardAction
+              iconDescription="Icon description"
+              renderIcon={Folder20}
+              hasIconOnly
+              onClick={action('onClick')}
+              tooltipPosition="bottom"
+              tooltipAlignment="center"
+            />
+            <SummaryCardAction
+              iconDescription="Icon description"
+              renderIcon={Folder20}
+              hasIconOnly
+              onClick={action('onClick')}
+              tooltipPosition="bottom"
+              tooltipAlignment="center"
+            />
+          </SummaryCardFooter>
+        </SummaryCard>
+      )}
+    />
+  ))
   .add('with primary label', () => (
     <div className="bx--grid bx--grid--full-width">
       <div className="bx--row">

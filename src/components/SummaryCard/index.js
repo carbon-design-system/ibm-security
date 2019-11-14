@@ -4,18 +4,23 @@
  */
 
 import SummaryCard from './SummaryCard';
-import SummaryCardAction from './SummaryCardAction/SummaryCardAction';
-import SummaryCardBody from './SummaryCardBody/SummaryCardBody';
-import SummaryCardFooter from './SummaryCardFooter/SummaryCardFooter';
-import SummaryCardHeader from './SummaryCardHeader/SummaryCardHeader';
-import SummaryCardSkeleton from './SummaryCardSkeleton/SummaryCardSkeleton';
+import SummaryCardAction from './SummaryCardAction';
+import SummaryCardBody from './SummaryCardBody';
+import SummaryCardContainer from './SummaryCardContainer';
+import SummaryCardFooter from './SummaryCardFooter';
+import SummaryCardHeader from './SummaryCardHeader';
+import SummaryCardSelect from './SummaryCardSelect';
+import SummaryCardSkeleton from './SummaryCardSkeleton';
 
-export default SummaryCard;
 export {
   SummaryCard,
   SummaryCardAction,
   SummaryCardBody,
+  SummaryCardContainer,
   SummaryCardFooter,
   SummaryCardHeader,
+  SummaryCardSelect,
   SummaryCardSkeleton,
 };
+
+export default SummaryCard;
