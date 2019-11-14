@@ -1,14 +1,15 @@
 /**
  * @file Accordion stories.
- * @copyright IBM Security 2018
+ * @copyright IBM Security 2019
  */
 
-import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { boolean, text, number } from '@storybook/addon-knobs';
+import { boolean, text, number, select } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
 
-import { components } from '../../../.storybook';
+import React from 'react';
+
+import { components, info } from '../../../.storybook';
 
 import {
   Accordion,
@@ -16,18 +17,30 @@ import {
   AccordionSkeleton,
   Select,
   SelectItem,
-} from '../../';
+} from '../..';
 
 const props = {
   onClick: action('onClick'),
   onHeadingClick: action('onHeadingClick'),
+  style: { width: '100vw' },
 };
+
+const align = {
+  Start: 'start',
+  End: 'end',
+};
+
+const story = 'accordion';
+const description =
+  'Accordions allow users to expand and collapse sections of content.';
 
 storiesOf(components('Accordion'), module)
   .add(
     'Default',
     () => (
-      <Accordion>
+      <Accordion
+        align={select('Accordion heading alignment (align)', align, 'start')}
+      >
         <AccordionItem
           title={text('The title (title)', 'Section 1 title')}
           open={boolean('Open the section (open)', false)}
@@ -82,13 +95,10 @@ storiesOf(components('Accordion'), module)
         </AccordionItem>
       </Accordion>
     ),
-    {
-      info: {
-        text: `
-          Accordions allow users to expand and collapse sections of content.
-        `,
-      },
-    }
+    info(description, {
+      story,
+      id: 'default',
+    })
   )
   .add(
     'with skeleton',
@@ -100,11 +110,8 @@ storiesOf(components('Accordion'), module)
         />
       </div>
     ),
-    {
-      info: {
-        text: `
-          Accordions allow users to expand and collapse sections of content.
-        `,
-      },
-    }
+    info(description, {
+      story,
+      id: 'skeleton',
+    })
   );

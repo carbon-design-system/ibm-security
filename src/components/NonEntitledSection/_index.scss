@@ -16,9 +16,9 @@
 @import '../Component/mixins';
 
 @include security--component($name: ne-section) {
-  @include carbon--grid;
-
   $root: &;
+
+  @include carbon--grid();
 
   min-height: carbon--mini-units($count: 25);
   background-position: center right;
@@ -54,7 +54,6 @@
   }
 
   &__link {
-    @include carbon--type-scale($step: 1);
     display: inline-flex;
     margin: 0 0 $carbon--spacing-02 0;
     padding: 0;

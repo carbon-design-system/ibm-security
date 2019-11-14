@@ -14,7 +14,6 @@ import React, { Fragment } from 'react';
 import ArrowRight20 from '@carbon/icons-react/lib/arrow--right/20';
 import Filter20 from '@carbon/icons-react/lib/filter/20';
 import { spacing04, spacing05 } from '@carbon/layout/lib';
-import { g100 } from '@carbon/themes/lib';
 import { styles } from '@carbon/type/lib';
 
 import { disableCentered, patterns } from '../../../.storybook';
@@ -32,9 +31,10 @@ import {
   PanelV2,
   PanelContent,
   Shell,
+  theme,
 } from '../..';
 
-const { interactive01, text01 } = g100;
+const { interactive01, text04 } = theme;
 
 const closeButtonLabel = 'Close';
 
@@ -73,7 +73,7 @@ disableCentered(storiesOf(patterns('PanelV2'), module))
         button: {
           base: {
             padding: `${spacing04} ${spacing05}`,
-            color: text01,
+            color: text04,
             background: interactive01,
             ...styles.bodyShort01,
           },
@@ -152,15 +152,15 @@ disableCentered(storiesOf(patterns('PanelV2'), module))
                   <Fragment>
                     {content}
                     <p>
-                      {`This example uses the `}
+                      This example uses the
                       <CodeSnippet type="inline" light>
                         primaryButton
                       </CodeSnippet>
-                      {` and `}
+                      and
                       <CodeSnippet type="inline" light>
                         secondaryButton
                       </CodeSnippet>
-                      {` props to render buttons in the footer.`}
+                      props to render buttons in the footer.
                     </p>
                   </Fragment>
                 </PanelContent>
@@ -179,7 +179,7 @@ disableCentered(storiesOf(patterns('PanelV2'), module))
                       onClick={action('onClick (Item 1 - primary button)')}
                       renderIcon={ArrowRight20}
                     >
-                      {`Item 1 (becomes primary button and text will be truncated)`}
+                      Item 1 (becomes primary button and text will be truncated)
                     </ComboButtonItem>
                     {Array(5)
                       .fill(0)
@@ -205,15 +205,15 @@ disableCentered(storiesOf(patterns('PanelV2'), module))
                   <Fragment>
                     {content}
                     <p>
-                      {`This example uses the `}
+                      This example uses the
                       <CodeSnippet type="inline" light>
                         renderFooter
                       </CodeSnippet>
-                      {` prop to render a `}
+                      prop to render a
                       <CodeSnippet type="inline" light>
                         ComboButton
                       </CodeSnippet>
-                      {` in a custom footer.`}
+                      in a custom footer.
                     </p>
                   </Fragment>
                 </PanelContent>
@@ -231,15 +231,15 @@ disableCentered(storiesOf(patterns('PanelV2'), module))
                   <Fragment>
                     {content}
                     <p>
-                      {`This example intentially does not include the `}
+                      This example intentially does not include the
                       <CodeSnippet type="inline" light>
                         renderFooter
                       </CodeSnippet>
-                      {` or `}
+                      or
                       <CodeSnippet type="inline" light>
                         primaryButton
                       </CodeSnippet>
-                      {` props and therefore does not have a footer.`}
+                      props and therefore does not have a footer.
                     </p>
                   </Fragment>
                 </PanelContent>

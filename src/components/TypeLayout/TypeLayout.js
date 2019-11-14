@@ -54,7 +54,7 @@ const cloneChildren = (children, size) =>
     return cloneElement(child, props);
   });
 
-// TODO: V3 - Remove deprecated prop `bordered`.
+// TODO: `2.x` - Remove deprecated prop `bordered`.
 
 /**
  * Type layout component.

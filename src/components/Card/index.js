@@ -3,7 +3,7 @@
  * @copyright IBM Security 2019
  */
 
-// TODO:V3 - Fix export.
+// TODO: `2.x` - Fix export.
 import Card from './Card';
 import CardSkeleton from './CardSkeleton/CardSkeleton';
 

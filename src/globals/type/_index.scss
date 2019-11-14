@@ -21,7 +21,7 @@ $css--plex: true;
 @import '../feature-flags/index';
 @import '../namespace/index';
 
-// TODO: V3 - To be removed.
+// TODO: `2.x` - To be removed.
 
 /// Monospaced font family.
 /// @type string
@@ -97,7 +97,7 @@ $type-style-deprecation-map: (
   @include carbon--type-style($name: $name);
 }
 
-// TODO: V3 - Deprecate after teams have migrated to `@carbon/type`.
+// TODO: `2.x` - Deprecate after teams have migrated to `@carbon/type`.
 
 @if feature-flag-enabled($feature: $type__name) {
   @include export-namespace($name: $type__name) {

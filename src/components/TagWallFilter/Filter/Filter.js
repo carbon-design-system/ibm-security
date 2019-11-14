@@ -11,8 +11,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Downshift from 'downshift';
 import ListBox from 'carbon-components-react/lib/components/ListBox';
-import { g100 } from '@carbon/themes';
 import { defaultFilterItems } from 'carbon-components-react/lib/components/ComboBox/tools/filter';
+
+import theme from '../../../globals/theme';
 
 import { defaultItemToString } from './tools/itemToString';
 import { defaultSortItems, defaultCompareItems } from './tools/sorting';
@@ -207,7 +208,7 @@ class Filter extends React.Component {
                       this.state.inputValue !== '',
                   })}
                   renderIcon={Search20}
-                  fill={g100.icon01}
+                  fill={theme.icon01}
                 />
               </span>
             </Field>

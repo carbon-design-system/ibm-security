@@ -15,6 +15,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
       iconDescription=""
       kind="primary"
       largeText={null}
+      loading={false}
       onClick={[Function]}
       renderIcon={
         Object {
@@ -100,12 +101,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
       menuOptionsClass="bx--list-box__menu"
       onClose={[Function]}
       onOpen={[Function]}
-      renderIcon={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "render": [Function],
-        }
-      }
+      renderIcon={[Function]}
     >
       <OverflowMenu
         ariaLabel="Menu"
@@ -122,12 +118,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
         onKeyDown={[Function]}
         onOpen={[Function]}
         open={false}
-        renderIcon={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "render": [Function],
-          }
-        }
+        renderIcon={[Function]}
         tabIndex={0}
       >
         <ClickListener
@@ -145,52 +136,46 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
             role="button"
             tabIndex={0}
           >
-            <ForwardRef(ChevronDown16)
+            <renderIcon
               aria-label="open and close list of options"
               className="bx--overflow-menu__icon"
               focusable="false"
               onClick={[Function]}
               onKeyDown={[Function]}
             >
-              <Icon
-                aria-label="open and close list of options"
-                className="bx--overflow-menu__icon"
-                focusable="false"
-                height={16}
-                onClick={[Function]}
-                onKeyDown={[Function]}
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 16 16"
-                width={16}
-                xmlns="http://www.w3.org/2000/svg"
+              <ForwardRef(ChevronDown16)
+                className="security--combo-button__icon"
               >
-                <svg
-                  aria-label="open and close list of options"
-                  className="bx--overflow-menu__icon"
-                  focusable="false"
+                <Icon
+                  className="security--combo-button__icon"
                   height={16}
-                  onClick={[Function]}
-                  onKeyDown={[Function]}
                   preserveAspectRatio="xMidYMid meet"
-                  role="img"
-                  style={
-                    Object {
-                      "willChange": "transform",
-                    }
-                  }
                   viewBox="0 0 16 16"
                   width={16}
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path
-                    d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
-                  />
-                  <title>
-                    open and close list of options
-                  </title>
-                </svg>
-              </Icon>
-            </ForwardRef(ChevronDown16)>
+                  <svg
+                    aria-hidden={true}
+                    className="security--combo-button__icon"
+                    focusable="false"
+                    height={16}
+                    preserveAspectRatio="xMidYMid meet"
+                    style={
+                      Object {
+                        "willChange": "transform",
+                      }
+                    }
+                    viewBox="0 0 16 16"
+                    width={16}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+                    />
+                  </svg>
+                </Icon>
+              </ForwardRef(ChevronDown16)>
+            </renderIcon>
           </div>
         </ClickListener>
       </OverflowMenu>
@@ -214,6 +199,7 @@ exports[`ComboButton renders a combo button without an overflow menu 1`] = `
       iconDescription=""
       kind="primary"
       largeText={null}
+      loading={false}
       onClick={[Function]}
       renderIcon={
         Object {

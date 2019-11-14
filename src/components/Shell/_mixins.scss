@@ -12,6 +12,7 @@
 @import 'carbon-components/scss/globals/scss/layout';
 
 @import '../../globals/motion/index';
+@import '../../globals/theme/mixins';
 
 @import '../Header/mixins';
 @import '../Toolbar/mixins';
@@ -27,12 +28,10 @@
     $header: '__header';
     $toolbar: '__toolbar';
 
-    margin-left: $toolbar__panel__position__horizontal;
+    margin-left: $toolbar__sizing__width;
 
     &#{$header} > #{$header__namespace} {
-      width: calc(
-        #{$header__sizing__width} - #{$toolbar__panel__position__horizontal}
-      );
+      width: calc(#{$header__sizing__width} - #{$toolbar__sizing__width});
     }
 
     &--return {
@@ -54,6 +53,8 @@
     /// @type Length
     $shell__banner__background__sizing__width: $carbon--layout-07;
 
+    @include security--theme--cg10__cg100;
+
     display: flex;
     position: fixed;
     top: 0;
@@ -72,7 +73,7 @@
     &,
     &:hover,
     &:visited {
-      color: inherit;
+      color: $text-01;
     }
 
     &__icon {

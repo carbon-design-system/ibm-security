@@ -4,17 +4,4 @@
 /// @copyright IBM Security 2019
 ////
 
-@import '../../globals/variables/index';
 @import 'carbon-components/scss/components/inline-loading/inline-loading';
-@import '@carbon/themes/scss/tokens';
-@import '../../globals/namespace/index';
-
-@include export-namespace($name: inline-loading) {
-  .#{$prefix}--inline-loading .#{$prefix}--loading__stroke {
-    stroke: $interactive-04;
-  }
-
-  .#{$prefix}--inline-loading__checkmark {
-    stroke: $support-02;
-  }
-}

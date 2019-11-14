@@ -10,6 +10,7 @@
 @import 'carbon-components/scss/globals/scss/helper-mixins';
 @import 'carbon-components/scss/globals/scss/layout';
 
+@import '../../globals/layout/index';
 @import '../../globals/motion/index';
 
 @import '../Tooltip/mixins';
@@ -45,9 +46,17 @@ $button--icon__transition__timing-function: $timing-function;
   /// @type Length
   $button--icon__tooltip__position--center: 50%;
 
+  /// Sizing.
+  /// @type Length
+  $button--icon__tooltip__position__sizing: carbon--mini-units(
+    $count: 0.5,
+  );
+
   /// Tooltip end position.
   /// @type Length
-  $button--icon__tooltip__position--end: 100%;
+  $button--icon__tooltip__position--end: calc(
+    100% + #{$button--icon__tooltip__position__sizing}
+  );
 
   @include button-reset;
   @include button--icon__size($count: $button--icon__sizing__dimensions);
