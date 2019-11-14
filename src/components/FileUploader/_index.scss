@@ -9,7 +9,7 @@
 
 @import 'carbon-components/scss/globals/scss/vars';
 
-@import '../../globals/namespace';
+@import '../../globals/namespace/index';
 
 @include export-namespace($name: file-uploader) {
   .#{$prefix}--file__state-container .#{$prefix}--file-close {

@@ -8,7 +8,7 @@
 
 @import 'carbon-components/scss/globals/scss/vars';
 
-@import '../../globals/namespace';
+@import '../../globals/namespace/index';
 
 /// Carbon style overrides.
 @include export-namespace($name: checkbox) {
