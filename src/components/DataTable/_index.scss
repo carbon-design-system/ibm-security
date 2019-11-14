@@ -4,28 +4,21 @@
 /// @copyright IBM Security 2019
 ////
 
-@import 'carbon-components/scss/globals/scss/layout';
+@import '@carbon/themes/scss/tokens';
+
 @import 'carbon-components/scss/components/data-table-v2/data-table-v2';
 
+@import 'carbon-components/scss/globals/scss/layout';
+@import 'carbon-components/scss/globals/scss/vars';
+
+@import '../../globals/namespace/index';
+
+@import '../Checkbox/index';
+@import '../IconButton/index';
 @import '../Search/index';
 
 @include export-namespace($name: data-table) {
   .#{$prefix}--data-table-container {
-    /// TODO - V2: waiting for Carbon reset fix: https://github.com/carbon-design-system/carbon-components/issues/2373
-    .#{$prefix}--toolbar-search-container-expandable
-      .#{$prefix}--search
-      .#{$prefix}--search-magnifier {
-      height: unset;
-      width: unset;
-    }
-
-    /// TODO - V2: waiting for Carbon reset fix: https://github.com/carbon-design-system/carbon-components/issues/2373
-    .#{$prefix}--data-table--sort th,
-    .#{$prefix}--data-table--sort
-      th:first-of-type:not(.#{$prefix}--table-column-checkbox) {
-      height: unset;
-    }
-
     /// Need to override because the overflow cell does not have a thead td.
     tbody tr:hover td.#{$namespace}data-table__overflow-cell:hover {
       border-top: 1px solid transparent;

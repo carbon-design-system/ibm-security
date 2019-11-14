@@ -4,8 +4,10 @@
 /// @copyright IBM Security 2019
 ////
 
-@import '../../globals/variables/index';
+@import '@carbon/themes/scss/tokens';
 @import 'carbon-components/scss/components/select/select';
+
+@import 'carbon-components/scss/globals/scss/vars';
 
 @include export-namespace($name: select) {
   .#{$prefix}--select-input {

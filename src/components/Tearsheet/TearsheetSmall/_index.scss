@@ -4,15 +4,12 @@
 /// @copyright IBM Security 2019
 ////
 
-@import '../../../globals/variables/index';
-
-@import '../../Component/mixins';
 @import '../../Button/index';
 @import '../../IconButton/index';
 @import '../../Loading/index';
-@import '../../Tag/index';
 @import '../../ScrollGradient/index';
-@import '../../TagWallFilter/Filter/mixins';
+
+@import '../../Component/mixins';
 
 @import 'mixins';
 

@@ -7,6 +7,10 @@
 @import '@carbon/colors/scss/colors';
 @import 'carbon-components/scss/components/file-uploader/file-uploader';
 
+@import 'carbon-components/scss/globals/scss/vars';
+
+@import '../../globals/namespace';
+
 @include export-namespace($name: file-uploader) {
   .#{$prefix}--file__state-container .#{$prefix}--file-close {
     fill: $carbon--gray-10;

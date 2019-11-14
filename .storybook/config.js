@@ -75,9 +75,7 @@ addParameters({
     ),
     storySort: (a, b) =>
       ORDER.indexOf(getCategory(a)) - ORDER.indexOf(getCategory(b)),
-
-    // TODO: `modular-styles` - Revert.
-    // theme: storybookTheme,
+    theme: storybookTheme,
   },
 });
 

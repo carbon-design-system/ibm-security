@@ -11,6 +11,9 @@
 
 @import 'carbon-components/scss/globals/scss/helper-mixins';
 
+@import '../Button/index';
+@import '../OverflowMenu/index';
+
 @import '../Component/mixins';
 
 @include security--component($name: combo-button) {

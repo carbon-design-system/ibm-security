@@ -8,6 +8,8 @@
 @import '@carbon/layout/scss/mini-unit';
 @import '@carbon/type/scss/index';
 
+@import 'carbon-components/scss/globals/scss/vars';
+
 @import '../mixins';
 
 @mixin tearsheet--small {

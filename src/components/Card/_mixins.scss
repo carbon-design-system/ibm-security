@@ -12,6 +12,8 @@
 @import 'carbon-components/scss/globals/scss/helper-mixins';
 
 @import '../../globals/motion/index';
+@import '../../globals/theme/mixins';
+
 @import '../../platform/body/mixins';
 
 /// Name.
@@ -25,8 +27,7 @@ $card__name: card;
     $count: 4,
   );
 
-  // TODO: Modular styles - Re-enable once the mixin is fixed
-  // @include input__background-color;
+  @include input__background-color;
 
   display: flex;
   width: auto;
