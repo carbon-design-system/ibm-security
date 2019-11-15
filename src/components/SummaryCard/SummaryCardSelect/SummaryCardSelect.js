@@ -18,7 +18,7 @@ export const namespace = appendComponentNamespace(
 
 const SummaryCardSelect = ({ ...props }) => (
   <div className={namespace}>
-    <Checkbox labelText="Select" {...props} />
+    <Checkbox {...props} />
   </div>
 );
 

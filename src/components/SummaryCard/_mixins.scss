@@ -17,6 +17,13 @@
 }
 
 @mixin summary-card {
+  /// Container height.
+  /// @type Length
+  /// @access private
+  $summary-card__container__sizing__height: carbon--mini-units(
+    $count: 6,
+  );
+
   /// Summary card header height.
   /// @type Length
   /// @access private
@@ -51,6 +58,14 @@
   min-width: carbon--mini-units($count: 36);
   flex-direction: column;
   overflow: hidden;
+
+  &__container {
+    padding-top: $summary-card__container__sizing__height;
+  }
+
+  &__batch-actions {
+    height: $summary-card__container__sizing__height;
+  }
 
   &__body {
     @include carbon--type-style($name: body-long-01);

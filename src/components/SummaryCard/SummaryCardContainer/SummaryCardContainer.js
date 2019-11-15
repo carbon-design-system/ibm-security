@@ -3,10 +3,11 @@
  * @copyright IBM Security 2019
  */
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import { appendComponentNamespace } from '../../../globals/namespace';
 
+import { namespace as summaryCardNamespace } from '../SummaryCard';
 import { namespace as summaryCardSelectNamespace } from '../SummaryCardSelect/SummaryCardSelect';
 
 const resetSelectedIds = state => state([]);
@@ -47,7 +48,13 @@ const SummaryCardContainer = ({ render }) => {
     selectedIds,
   };
 
-  return render(renderProps);
+  return (
+    <div
+      className={appendComponentNamespace(summaryCardNamespace, 'container')}
+    >
+      {render(renderProps)}
+    </div>
+  );
 };
 
 export default SummaryCardContainer;

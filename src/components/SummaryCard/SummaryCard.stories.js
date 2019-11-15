@@ -58,7 +58,10 @@ storiesOf(patterns('SummaryCard'), module)
               />
               <SummaryCardBody>{`SummaryCardBody ${id}`}</SummaryCardBody>
               <SummaryCardFooter>
-                <SummaryCardSelect {...getSelectionProps({ id })} />
+                <SummaryCardSelect
+                  labelText={`SummaryCardSelect ${id}`}
+                  {...getSelectionProps({ id })}
+                />
                 <SummaryCardAction
                   expandedContent={`SummaryCardAction expandedContent ${id}`}
                 >
