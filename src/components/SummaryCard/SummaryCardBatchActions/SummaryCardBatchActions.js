@@ -25,11 +25,11 @@ const translationKeys = [
 const SummaryCardBatchActions = ({ translateWithId: t, ...props }) => (
   <TableBatchActions
     className={appendComponentNamespace(summaryCardNamespace, 'batch-actions')}
-    translateWithId={(id, state) => {
-      return t
+    translateWithId={(id, state) =>
+      t
         ? t(translationKeys[carbonTranslationKeys.indexOf(id)], state)
-        : translateWithId(id, state);
-    }}
+        : translateWithId(id, state)
+    }
     {...props}
   />
 );
