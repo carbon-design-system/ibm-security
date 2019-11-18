@@ -12,10 +12,11 @@ import { namespace as summaryCardSelectNamespace } from '../SummaryCardSelect/Su
 
 const resetSelectedIds = state => state([]);
 
-const SummaryCardContainer = ({ render }) => {
+const SummaryCardContainer = ({ ids, render }) => {
   const [selectedIds, setSelectedIds] = resetSelectedIds(useState);
 
   const isIdSelected = id => selectedIds.includes(id);
+  const { length: totalSelected } = selectedIds;
 
   const onSelect = id =>
     setSelectedIds(
@@ -24,16 +25,12 @@ const SummaryCardContainer = ({ render }) => {
         : selectedIds.concat(id)
     );
 
-  const getBatchActionProps = ({ ...props }) => {
-    const { length: totalSelected } = selectedIds;
-
-    return {
-      ...props,
-      onCancel: () => resetSelectedIds(setSelectedIds),
-      shouldShowBatchActions: totalSelected > 0,
-      totalSelected,
-    };
-  };
+  const getBatchActionProps = ({ ...props }) => ({
+    ...props,
+    onCancel: () => resetSelectedIds(setSelectedIds),
+    shouldShowBatchActions: totalSelected > 0,
+    totalSelected,
+  });
 
   const getSelectionProps = ({ id, ...props }) => ({
     ...props,
@@ -45,6 +42,7 @@ const SummaryCardContainer = ({ render }) => {
   const renderProps = {
     getBatchActionProps,
     getSelectionProps,
+    ids,
     selectedIds,
   };
 

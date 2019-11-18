@@ -31,15 +31,29 @@ const ids = new Array(5)
   .fill()
   .map((title = 'summary-card', id) => `${title}__${id}`);
 
+const summaryCardTranslationIds = {
+  'security.summary-card.batch.cancel': 'batch.cancel',
+  'security.summary-card.batch.item.selected': 'item.selected',
+  'security.summary-card.batch.items.selected': 'items.selected',
+};
+
 storiesOf(patterns('SummaryCard'), module)
   .add('Multiselect', () => (
     <SummaryCardContainer
       ids={ids}
-      render={({ getBatchActionProps, getSelectionProps, selectedIds }) => (
+      render={({
+        getBatchActionProps,
+        getSelectionProps,
+        ids,
+        selectedIds,
+      }) => (
         <Fragment>
-          <SummaryCardBatchActions {...getBatchActionProps()}>
+          <SummaryCardBatchActions
+            translateWithId={id => summaryCardTranslationIds[id]}
+            {...getBatchActionProps()}
+          >
             <SummaryCardBatchAction onClick={() => console.log(selectedIds)}>
-              SummarCardBatchAction
+              SummaryCardBatchAction
             </SummaryCardBatchAction>
           </SummaryCardBatchActions>
 
