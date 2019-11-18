@@ -22,18 +22,14 @@ const translationKeys = [
   'security.summary-card.batch.item.selected',
 ];
 
-const transformedTranslationKeys = {};
-
-carbonTranslationKeys.forEach((translationKey, index) => {
-  transformedTranslationKeys[translationKey] = translationKeys[index];
-});
-
 const SummaryCardBatchActions = ({ translateWithId: t, ...props }) => (
   <TableBatchActions
     className={appendComponentNamespace(summaryCardNamespace, 'batch-actions')}
-    translateWithId={(id, state) =>
-      t ? t(transformedTranslationKeys[id], state) : translateWithId(id, state)
-    }
+    translateWithId={(id, state) => {
+      return t
+        ? t(translationKeys[carbonTranslationKeys.indexOf(id)], state)
+        : translateWithId(id, state);
+    }}
     {...props}
   />
 );
