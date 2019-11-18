@@ -18,19 +18,19 @@ const SummaryCardContainer = ({ ids, render }) => {
   const isIdSelected = id => selectedIds.includes(id);
   const { length: totalSelected } = selectedIds;
 
-  const onSelect = id =>
-    setSelectedIds(
-      isIdSelected(id)
-        ? selectedIds.filter(selectedId => selectedId !== id)
-        : selectedIds.concat(id)
-    );
-
   const getBatchActionProps = ({ ...props }) => ({
     ...props,
     onCancel: () => resetSelectedIds(setSelectedIds),
     shouldShowBatchActions: totalSelected > 0,
     totalSelected,
   });
+
+  const onSelect = id =>
+    setSelectedIds(
+      isIdSelected(id)
+        ? selectedIds.filter(selectedId => selectedId !== id)
+        : selectedIds.concat(id)
+    );
 
   const getSelectionProps = ({ id, ...props }) => ({
     ...props,

@@ -23,12 +23,7 @@ TableBatchActions.translationKeys.forEach((translationKey, index) => {
   transformedTranslationKeys[translationKey] = translationKeys[index];
 });
 
-const translateWithId = (id, state) => {
-  console.log(id);
-  console.log(state);
-
-  return transformedTranslationKeys[id];
-};
+const translateWithId = id => transformedTranslationKeys[id];
 
 const SummaryCardBatchActions = ({ translateWithId: t, ...props }) => (
   <TableBatchActions
