@@ -13,25 +13,9 @@ import { getComponentNamespace } from '../../globals/namespace';
 
 export const namespace = getComponentNamespace('scroll-gradient');
 
+const scrollDirection = { X: 'X', Y: 'Y' };
+
 class ScrollGradient extends Component {
-  /** @enum Possible scroll directions  */
-  static ScrollDirection = { X: 'X', Y: 'Y' };
-
-  /** @enum Scroll position states */
-  static ScrollStates = {
-    // No scrolling required because content fits within container.
-    NONE: 'NONE',
-
-    // Scroll position is a the start of the scrollable content.
-    INITIAL: 'INITIAL',
-
-    // Scroll position is neither at start or end of scrollable content.
-    STARTED: 'STARTED',
-
-    // Scroll position is a the end of the scrollable content.
-    END: 'END',
-  };
-
   static propTypes = {
     /** @type {string} Fade out color. Any valid CSS color value works */
     color: PropTypes.string.isRequired,
@@ -65,7 +49,7 @@ class ScrollGradient extends Component {
     className: undefined,
     children: undefined,
     scrollElementClassName: undefined,
-    direction: ScrollGradient.ScrollDirection.Y,
+    direction: scrollDirection.Y,
     hideStartGradient: false,
     onScroll: () => {},
     getScrollElementRef: () => {},
@@ -136,6 +120,24 @@ class ScrollGradient extends Component {
   setRefs = element => {
     this.scrollContainer = element;
     this.props.getScrollElementRef(element);
+  };
+
+  /** @enum Possible scroll directions  */
+  static ScrollDirection = scrollDirection;
+
+  /** @enum Scroll position states */
+  static ScrollStates = {
+    // No scrolling required because content fits within container.
+    NONE: 'NONE',
+
+    // Scroll position is a the start of the scrollable content.
+    INITIAL: 'INITIAL',
+
+    // Scroll position is neither at start or end of scrollable content.
+    STARTED: 'STARTED',
+
+    // Scroll position is a the end of the scrollable content.
+    END: 'END',
   };
 
   /**
