@@ -26,7 +26,7 @@ const description = "Carbon's `UIShell` component.";
 const story = 'ui-shell';
 
 disableCentered(
-  storiesOf(patterns('UIShell (Carbon version)'), module)
+  storiesOf(patterns('UIShell (Carbon)'), module)
     .add(
       'Header Base',
       () => (
