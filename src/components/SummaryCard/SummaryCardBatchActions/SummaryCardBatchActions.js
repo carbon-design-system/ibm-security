@@ -11,6 +11,11 @@ import { TableBatchActions } from '../../DataTable';
 
 import { namespace as summaryCardNamespace } from '../SummaryCard';
 
+const {
+  defaultProps: { translateWithId },
+  translationKeys: carbonTranslationKeys,
+} = TableBatchActions;
+
 const translationKeys = [
   'security.summary-card.batch.cancel',
   'security.summary-card.batch.items.selected',
@@ -19,16 +24,16 @@ const translationKeys = [
 
 const transformedTranslationKeys = {};
 
-TableBatchActions.translationKeys.forEach((translationKey, index) => {
+carbonTranslationKeys.forEach((translationKey, index) => {
   transformedTranslationKeys[translationKey] = translationKeys[index];
 });
-
-const translateWithId = id => transformedTranslationKeys[id];
 
 const SummaryCardBatchActions = ({ translateWithId: t, ...props }) => (
   <TableBatchActions
     className={appendComponentNamespace(summaryCardNamespace, 'batch-actions')}
-    translateWithId={(id, state) => t(translateWithId(id), state)}
+    translateWithId={(id, state) =>
+      t ? t(transformedTranslationKeys[id], state) : translateWithId(id, state)
+    }
     {...props}
   />
 );
