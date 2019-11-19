@@ -7,7 +7,7 @@
       channel: 'canary',
     },
     {
-      name: '3.x',
+      name: '2.x',
       prerelease: 'alpha',
       channel: 'next',
     },
