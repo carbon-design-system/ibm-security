@@ -23,10 +23,8 @@ const ids = new Array(5)
   .map((title = 'summary-card', id) => `${title}__${id}`);
 
 describe('SummaryCardContainer', () => {
-  let summaryCardContainer;
-
   beforeEach(() => {
-    summaryCardContainer = render(
+    render(
       <SummaryCardContainer
         ids={ids}
         render={({
@@ -48,6 +46,7 @@ describe('SummaryCardContainer', () => {
                 <SummaryCardBody>{`SummaryCardBody ${id}`}</SummaryCardBody>
                 <SummaryCardFooter>
                   <SummaryCardSelect
+                    data-testid={`SummaryCardSelect__${id}`}
                     labelText={`SummaryCardSelect ${id}`}
                     {...getSelectionProps({ id })}
                   />
@@ -63,7 +62,7 @@ describe('SummaryCardContainer', () => {
     );
   });
 
-  it('renders', () => summaryCardContainer);
-
-  it('renders the ... variation', () => summaryCardContainer);
+  it('...', () => {
+    expect(true).toBe(true);
+  });
 });
