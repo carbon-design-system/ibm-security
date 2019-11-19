@@ -197,6 +197,7 @@ export ToggleSmall, { ToggleSmallSkeleton } from './components/ToggleSmall';
 export Tooltip from './components/Tooltip';
 export TooltipDefintion from './components/TooltipDefinition';
 export Transition from './components/Transition';
+export * from './components/UIShell';
 
 // Hidden Carbon proxy.
 export FormItem from 'carbon-components-react/lib/components/FormItem';

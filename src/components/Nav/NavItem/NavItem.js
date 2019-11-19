@@ -20,23 +20,6 @@ export const namespace = getComponentNamespace('nav__list__item');
  * Navigation item component.
  */
 export default class NavItem extends Component {
-  static defaultProps = {
-    activeHref: '#',
-    children: null,
-    className: '',
-    current: null,
-    disabled: false,
-    element: 'a',
-    handleItemSelect: null,
-    href: undefined,
-    id: namespace,
-    label: '',
-    link: true,
-    onClick: () => {},
-    onKeyPress: () => {},
-    tabIndex: 0,
-  };
-
   static propTypes = {
     /** @type {string} Hypertext reference for active page. */
     activeHref: string,
@@ -79,6 +62,23 @@ export default class NavItem extends Component {
 
     /** @type {number} `tabindex` of an item. */
     tabIndex: number,
+  };
+
+  static defaultProps = {
+    activeHref: '#',
+    children: null,
+    className: '',
+    current: null,
+    disabled: false,
+    element: 'a',
+    handleItemSelect: null,
+    href: undefined,
+    id: namespace,
+    label: '',
+    link: true,
+    onClick: () => {},
+    onKeyPress: () => {},
+    tabIndex: 0,
   };
 
   state = {
