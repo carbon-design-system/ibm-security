@@ -50,26 +50,14 @@ storiesOf(patterns('SummaryCard'), module)
 
           {ids.map(id => (
             <SummaryCard key={id}>
-              <SummaryCardHeader
-                title={`SummaryCardHeader ${id}`}
-                status={
-                  <Tooltip
-                    showIcon
-                    iconDescription={`Tooltip iconDescription ${id}`}
-                  >
-                    {`Tooltip ${id}`}
-                  </Tooltip>
-                }
-              />
+              <SummaryCardHeader title={`SummaryCardHeader ${id}`} />
               <SummaryCardBody>{`SummaryCardBody ${id}`}</SummaryCardBody>
               <SummaryCardFooter>
                 <SummaryCardSelect
                   labelText={`SummaryCardSelect ${id}`}
                   {...getSelectionProps({ id })}
                 />
-                <SummaryCardAction
-                  expandedContent={`SummaryCardAction expandedContent ${id}`}
-                >
+                <SummaryCardAction>
                   {`SummaryCardAction ${id}`}
                 </SummaryCardAction>
               </SummaryCardFooter>
