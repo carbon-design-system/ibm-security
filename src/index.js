@@ -3,6 +3,9 @@
  * @copyright IBM Security 2019
  */
 
+// Globals.
+export theme from './globals/theme';
+
 // Application.
 export ErrorPage from './components/ErrorPage';
 export { Card, CardSkeleton } from './components/Card';
@@ -188,6 +191,7 @@ export ToggleSmall, { ToggleSmallSkeleton } from './components/ToggleSmall';
 export Tooltip from './components/Tooltip';
 export TooltipDefintion from './components/TooltipDefinition';
 export Transition from './components/Transition';
+export * from './components/UIShell';
 
 // Hidden Carbon proxy.
 export FormItem from 'carbon-components-react/lib/components/FormItem';

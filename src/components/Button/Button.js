@@ -17,7 +17,7 @@ export const namespace = getComponentNamespace('button');
 
 const { defaultProps, propTypes } = CarbonButton;
 
-// TODO: V3 - Remove deprecated props `largeText`.
+// TODO: `2.x` - Remove deprecated props `largeText`.
 
 const Button = ({
   className,

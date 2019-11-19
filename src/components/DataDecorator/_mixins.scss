@@ -35,7 +35,7 @@
   box-sizing: border-box;
   font-family: carbon--font-family($name: sans);
   height: carbon--mini-units(3.25);
-  background-color: $security-color__gray-90--hover;
+  background-color: $hover-ui;
   font-style: normal;
   font-stretch: normal;
   text-align: left;
@@ -56,14 +56,16 @@
   &--active:hover,
   &:focus:active {
     background-color: $ui-05;
-    color: $text-03;
 
-    #{$root}__type {
-      border-right: 1px solid $ui-04;
-    }
+    > #{$root} {
+      &__type,
+      &__value {
+        color: $active-ui;
+      }
 
-    #{$root}__value {
-      color: $ui-background;
+      &__type {
+        border-right: 1px solid $ui-04;
+      }
     }
   }
 
@@ -164,7 +166,7 @@
   }
 
   &__value {
-    color: $link-01;
+    color: $support-04;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;

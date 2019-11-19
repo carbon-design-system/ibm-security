@@ -20,6 +20,10 @@
     flex: 1;
   }
 
+  &__icon {
+    fill: $icon-03;
+  }
+
   & &__overflow-menu {
     width: 3rem;
     margin-left: 1px;
@@ -35,11 +39,10 @@
   }
 
   .#{$prefix}--overflow-menu-options {
-    background-color: $ui-02;
-    width: 100%;
-    outline: unset;
-    box-shadow: unset;
     display: grid;
+    width: 100%;
+    background-color: $ui-02;
+    outline: unset;
 
     &__option {
       display: inherit;
