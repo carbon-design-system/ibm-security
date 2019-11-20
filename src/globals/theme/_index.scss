@@ -8,11 +8,17 @@
 
 @import 'functions';
 
+// TODO: `2.x` - To be removed.
+
+/// Security theme.
+/// @type Map<String, Color>
+$security--theme: $carbon--theme--g100 !default;
+
 /// Default theme.
 /// @type Map<String, Color>
 /// @access private
 $-theme: security--type-tokens-remove(
-  $theme: $carbon--theme--g100,
+  $theme: $security--theme,
 );
 
 // Map the theme tokens as CSS custom properties.
