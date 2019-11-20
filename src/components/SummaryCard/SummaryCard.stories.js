@@ -156,15 +156,15 @@ storiesOf(patterns('SummaryCard'), module)
                 className={`${prefix}--col-md-4 ${prefix}--col-lg-4`}
               >
                 <SummaryCard>
-                  <SummaryCardHeader title={`SummaryCardHeader ${id}`} />
-                  <SummaryCardBody>{`SummaryCardBody ${id}`}</SummaryCardBody>
+                  <SummaryCardHeader title={`${id} SummaryCardHeader`} />
+                  <SummaryCardBody>{`${id} SummaryCardBody`}</SummaryCardBody>
                   <SummaryCardFooter>
                     <SummaryCardSelect
-                      labelText={`SummaryCardSelect ${id}`}
+                      labelText="Select"
                       {...getSelectionProps({ id })}
                     />
                     <SummaryCardAction>
-                      {`SummaryCardAction ${id}`}
+                      {`${id} SummaryCardAction`}
                     </SummaryCardAction>
                   </SummaryCardFooter>
                 </SummaryCard>
