@@ -135,12 +135,16 @@ storiesOf(patterns('SummaryCard'), module)
       render={({
         getBatchActionProps,
         getSelectionProps,
-        selectedIds,
+        selectedSummaryCards,
         summaryCards,
       }) => (
         <Fragment>
           <SummaryCardBatchActions {...getBatchActionProps()}>
-            <SummaryCardBatchAction onClick={() => console.log(selectedIds)}>
+            <SummaryCardBatchAction
+              onClick={() =>
+                action('SummaryCardBatchAction onClick')(selectedSummaryCards)
+              }
+            >
               SummaryCardBatchAction
             </SummaryCardBatchAction>
           </SummaryCardBatchActions>

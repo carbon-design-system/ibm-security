@@ -10,31 +10,39 @@ import { appendComponentNamespace } from '../../../globals/namespace';
 import { namespace as summaryCardNamespace } from '../SummaryCard';
 import { namespace as summaryCardSelectNamespace } from '../SummaryCardSelect/SummaryCardSelect';
 
-const resetSelectedIds = state => state([]);
+const getSummaryCard = (summaryCards, selectedId) =>
+  summaryCards.filter(({ id }) => id === selectedId);
+
+const resetSelectedSummaryCards = state => state([]);
 
 const SummaryCardContainer = ({ render, summaryCards }) => {
-  const [selectedIds, setSelectedIds] = resetSelectedIds(useState);
+  const [
+    selectedSummaryCards,
+    setSelectedSummaryCards,
+  ] = resetSelectedSummaryCards(useState);
 
-  const isIdSelected = id => selectedIds.includes(id);
-  const { length: totalSelected } = selectedIds;
+  const isSummaryCardSelected = selectedId =>
+    getSummaryCard(selectedSummaryCards, selectedId).length > 0;
+
+  const { length: totalSelected } = selectedSummaryCards;
 
   const getBatchActionProps = ({ ...props }) => ({
     ...props,
-    onCancel: () => resetSelectedIds(setSelectedIds),
+    onCancel: () => resetSelectedSummaryCards(setSelectedSummaryCards),
     shouldShowBatchActions: totalSelected > 0,
     totalSelected,
   });
 
-  const onSelect = id =>
-    setSelectedIds(
-      isIdSelected(id)
-        ? selectedIds.filter(selectedId => selectedId !== id)
-        : selectedIds.concat(id)
+  const onSelect = selectedId =>
+    setSelectedSummaryCards(
+      isSummaryCardSelected(selectedId)
+        ? selectedSummaryCards.filter(({ id }) => id !== selectedId)
+        : selectedSummaryCards.concat(getSummaryCard(summaryCards, selectedId))
     );
 
   const getSelectionProps = ({ id, ...props }) => ({
     ...props,
-    checked: isIdSelected(id),
+    checked: isSummaryCardSelected(id),
     id: appendComponentNamespace(summaryCardSelectNamespace, id),
     onChange: () => onSelect(id),
   });
@@ -42,7 +50,7 @@ const SummaryCardContainer = ({ render, summaryCards }) => {
   const renderProps = {
     getBatchActionProps,
     getSelectionProps,
-    selectedIds,
+    selectedSummaryCards,
     summaryCards,
   };
 
