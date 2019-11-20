@@ -12,7 +12,7 @@ import { namespace as summaryCardSelectNamespace } from '../SummaryCardSelect/Su
 
 const resetSelectedIds = state => state([]);
 
-const SummaryCardContainer = ({ ids, render }) => {
+const SummaryCardContainer = ({ render, summaryCards }) => {
   const [selectedIds, setSelectedIds] = resetSelectedIds(useState);
 
   const isIdSelected = id => selectedIds.includes(id);
@@ -42,8 +42,8 @@ const SummaryCardContainer = ({ ids, render }) => {
   const renderProps = {
     getBatchActionProps,
     getSelectionProps,
-    ids,
     selectedIds,
+    summaryCards,
   };
 
   return (

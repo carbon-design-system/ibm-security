@@ -30,9 +30,9 @@ import { lorem } from '../_mocks_';
 
 const { prefix } = settings;
 
-const ids = new Array(3)
+const summaryCards = new Array(3)
   .fill()
-  .map((title = 'summary-card', id) => `${title}__${id}`);
+  .map((title = 'summary-card', id) => ({ id: `${title}__${id}` }));
 
 storiesOf(patterns('SummaryCard'), module)
   .addDecorator(story => (
@@ -132,12 +132,11 @@ storiesOf(patterns('SummaryCard'), module)
   ))
   .add('Multiselect', () => (
     <SummaryCardContainer
-      ids={ids}
       render={({
         getBatchActionProps,
         getSelectionProps,
-        ids,
         selectedIds,
+        summaryCards,
       }) => (
         <Fragment>
           <SummaryCardBatchActions {...getBatchActionProps()}>
@@ -147,7 +146,7 @@ storiesOf(patterns('SummaryCard'), module)
           </SummaryCardBatchActions>
 
           <div className="bx--row">
-            {ids.map(id => (
+            {summaryCards.map(({ id }) => (
               <div
                 key={id}
                 className={`${prefix}--col-md-4 ${prefix}--col-lg-4`}
@@ -170,6 +169,7 @@ storiesOf(patterns('SummaryCard'), module)
           </div>
         </Fragment>
       )}
+      summaryCards={summaryCards}
     />
   ))
   .add('with skeleton', () => (

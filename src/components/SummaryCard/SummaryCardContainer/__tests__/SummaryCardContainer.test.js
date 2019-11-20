@@ -18,20 +18,19 @@ import {
   SummaryCardSelect,
 } from '../../../..';
 
-const ids = new Array(5)
+const summaryCards = new Array(5)
   .fill()
-  .map((title = 'summary-card', id) => `${title}__${id}`);
+  .map((title = 'summary-card', id) => ({ id: `${title}__${id}` }));
 
 describe('SummaryCardContainer', () => {
   beforeEach(() => {
     render(
       <SummaryCardContainer
-        ids={ids}
         render={({
           getBatchActionProps,
           getSelectionProps,
-          ids,
           selectedIds,
+          summaryCards,
         }) => (
           <Fragment>
             <SummaryCardBatchActions {...getBatchActionProps()}>
@@ -40,7 +39,7 @@ describe('SummaryCardContainer', () => {
               </SummaryCardBatchAction>
             </SummaryCardBatchActions>
 
-            {ids.map(id => (
+            {summaryCards.map(({ id }) => (
               <SummaryCard key={id}>
                 <SummaryCardHeader title={`SummaryCardHeader ${id}`} />
                 <SummaryCardBody>{`SummaryCardBody ${id}`}</SummaryCardBody>
@@ -58,6 +57,7 @@ describe('SummaryCardContainer', () => {
             ))}
           </Fragment>
         )}
+        summaryCards={summaryCards}
       />
     );
   });
