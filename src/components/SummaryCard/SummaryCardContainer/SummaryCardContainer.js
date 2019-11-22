@@ -15,37 +15,43 @@ const getSummaryCard = (summaryCards, selectedId) =>
 
 const resetSelectedSummaryCards = state => state([]);
 
-const SummaryCardContainer = ({ render, summaryCards }) => {
+export default function SummaryCardContainer({ render, summaryCards }) {
   const [
     selectedSummaryCards,
     setSelectedSummaryCards,
   ] = resetSelectedSummaryCards(useState);
 
-  const isSummaryCardSelected = selectedId =>
-    getSummaryCard(selectedSummaryCards, selectedId).length > 0;
-
   const { length: totalSelected } = selectedSummaryCards;
 
-  const getBatchActionProps = ({ ...props }) => ({
-    ...props,
-    onCancel: () => resetSelectedSummaryCards(setSelectedSummaryCards),
-    shouldShowBatchActions: totalSelected > 0,
-    totalSelected,
-  });
+  function getBatchActionProps({ ...props }) {
+    return {
+      ...props,
+      onCancel: () => resetSelectedSummaryCards(setSelectedSummaryCards),
+      shouldShowBatchActions: totalSelected > 0,
+      totalSelected,
+    };
+  }
 
-  const onSelect = selectedId =>
-    setSelectedSummaryCards(
+  function isSummaryCardSelected(selectedId) {
+    return getSummaryCard(selectedSummaryCards, selectedId).length > 0;
+  }
+
+  function onSelect(selectedId) {
+    return setSelectedSummaryCards(
       isSummaryCardSelected(selectedId)
         ? selectedSummaryCards.filter(({ id }) => id !== selectedId)
         : selectedSummaryCards.concat(getSummaryCard(summaryCards, selectedId))
     );
+  }
 
-  const getSelectionProps = ({ id, ...props }) => ({
-    ...props,
-    checked: isSummaryCardSelected(id),
-    id: appendComponentNamespace(summaryCardSelectNamespace, id),
-    onChange: () => onSelect(id),
-  });
+  function getSelectionProps({ id, ...props }) {
+    return {
+      ...props,
+      checked: isSummaryCardSelected(id),
+      id: appendComponentNamespace(summaryCardSelectNamespace, id),
+      onChange: () => onSelect(id),
+    };
+  }
 
   const renderProps = {
     getBatchActionProps,
@@ -61,6 +67,4 @@ const SummaryCardContainer = ({ render, summaryCards }) => {
       {render(renderProps)}
     </div>
   );
-};
-
-export default SummaryCardContainer;
+}

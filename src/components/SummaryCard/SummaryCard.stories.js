@@ -145,7 +145,7 @@ storiesOf(patterns('SummaryCard'), module)
                 action('SummaryCardBatchAction onClick')(selectedSummaryCards)
               }
             >
-              SummaryCardBatchAction
+              Action
             </SummaryCardBatchAction>
           </SummaryCardBatchActions>
 
