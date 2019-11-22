@@ -3,6 +3,7 @@
  * @copyright IBM Security 2019
  */
 
+import Delete16 from '@carbon/icons-react/lib/delete/16';
 import Folder20 from '@carbon/icons-react/lib/folder/20';
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
@@ -144,6 +145,7 @@ storiesOf(patterns('SummaryCard'), module)
               onClick={() =>
                 action('SummaryCardBatchAction onClick')(selectedSummaryCards)
               }
+              renderIcon={Delete16}
             >
               Action
             </SummaryCardBatchAction>

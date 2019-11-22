@@ -4,18 +4,13 @@
 /// @copyright IBM Security 2019
 ////
 
+@import 'carbon-components/scss/globals/scss/helper-mixins';
+@import 'carbon-components/scss/globals/scss/vars';
+
 @import '@carbon/layout/scss/mini-unit';
 @import '@carbon/layout/scss/spacing';
 
 @import '../../globals/index';
-
-/// Use until Carbon fixes `text-overflow` helper mixin.
-/// @access private
-@mixin summary-card--ellipsis {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 
 @mixin summary-card {
   /// Container height.
@@ -113,6 +108,12 @@
     padding-right: $summary-card__select__spacing__padding;
     padding-left: $summary-card__select__spacing__padding;
     align-items: center;
+
+    &__checkbox {
+      @include text-overflow;
+
+      max-width: carbon--mini-units($count: 20);
+    }
   }
 
   &__action {
@@ -127,7 +128,7 @@
     background-color: inherit;
 
     &__text {
-      @include summary-card--ellipsis;
+      @include text-overflow;
     }
 
     // Accommodates the loading spinner:
