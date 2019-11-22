@@ -124,7 +124,7 @@ const ComboButton = ({ children, className, direction }) => {
       ref={wrapper}
       data-floating-menu-container
     >
-      <div className={`this ${namespace}__group`}>
+      <div className={`${namespace}__group`}>
         {primaryActionWithProps}
 
         {overflowMenuItemWithProps !== undefined && (
