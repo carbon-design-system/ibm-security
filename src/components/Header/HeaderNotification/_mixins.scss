@@ -4,6 +4,7 @@
 /// @copyright IBM Security 2019
 ////
 
+@import '@carbon/themes/scss/tokens';
 @import 'carbon-components/scss/globals/scss/vars';
 
 @import '../../../globals/index';
@@ -38,8 +39,6 @@
       opacity: 1;
     }
 
-    // TODO: `cool-gray` - To be removed with theming.
-
     /// Tooltip selector.
     /// @type String
     $carbon--tooltip: '.#{$prefix}--tooltip';
@@ -73,10 +72,6 @@
     @include carbon--type-style($name: caption-01);
     display: block;
     margin-bottom: $carbon--spacing-03;
-
-    @include carbon--theme($theme: $carbon--theme--g10) {
-      color: $text-02;
-    }
   }
 
   &__time {
