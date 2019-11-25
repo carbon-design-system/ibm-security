@@ -30,7 +30,7 @@ const props = () => ({
 storiesOf(patterns('ComboButton'), module).add(
   'default',
   () => (
-    <div style={{ width: '300px' }}>
+    <div style={{ width: 300 }}>
       <ComboButton {...props()}>
         <ComboButtonItem href="#" renderIcon={ArrowRight20}>
           Item 1 (becomes primary button and text will be truncated)
@@ -61,7 +61,7 @@ storiesOf(patterns('ComboButton'), module).add(
           The \`ComboButton\` accepts \`ComboButtonItem\` components as children.
 
           The first child of the \`ComboButton\` will be marked as the "primary" action, and will appear as a \`Button\` next to the \`OverflowMenu\` of additional actions.
-          
+
           If there is only one child of \`ComboButton\`, then an \`OverflowMenu\` will not be rendered.
         `,
     },
