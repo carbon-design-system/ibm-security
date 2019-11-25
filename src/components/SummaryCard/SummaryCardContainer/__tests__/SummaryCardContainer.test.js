@@ -62,7 +62,15 @@ describe('SummaryCardContainer', () => {
     );
   });
 
-  it('...', () => {
-    expect(true).toBe(true);
+  describe('Rendering', () => {
+    it('...', () => {
+      expect(true).toBe(true);
+    });
+  });
+
+  describe('Events', () => {
+    it('...', () => {
+      expect(true).toBe(true);
+    });
   });
 });
