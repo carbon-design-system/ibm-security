@@ -61,8 +61,10 @@ describe('SummaryCardContainer', () => {
       />
     );
 
-    batchActions = container.getByTestId(batchActionsId);
-    select = container.getByTestId(`${selectId}${summaryCards[0].id}`);
+    const { getByTestId } = container;
+
+    batchActions = getByTestId(batchActionsId);
+    select = getByTestId(`${selectId}${summaryCards[0].id}`);
   });
 
   describe('Rendering', () => {
