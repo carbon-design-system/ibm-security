@@ -10,7 +10,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
     data-floating-menu-container={true}
   >
     <div
-      className="this security--combo-button__group"
+      className="security--combo-button__group"
     >
       <Button
         className="security--combo-button--primary"
@@ -198,7 +198,7 @@ exports[`ComboButton renders a combo button without an overflow menu 1`] = `
     data-floating-menu-container={true}
   >
     <div
-      className="this security--combo-button__group"
+      className="security--combo-button__group"
     >
       <Button
         className="security--combo-button--primary"
