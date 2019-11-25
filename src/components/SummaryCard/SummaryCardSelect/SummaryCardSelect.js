@@ -4,6 +4,7 @@
  */
 
 import classnames from 'classnames';
+import { string } from 'prop-types';
 import React from 'react';
 
 import Checkbox from '../../Checkbox';
@@ -25,5 +26,10 @@ const SummaryCardSelect = ({ className, ...props }) => (
     />
   </div>
 );
+
+SummaryCardSelect.propTypes = {
+  /** Provide an optional class to be applied to the containing node */
+  className: string,
+};
 
 export default SummaryCardSelect;

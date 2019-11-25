@@ -29,11 +29,10 @@ import {
 
 import { lorem } from '../_mocks_';
 
-const { prefix } = settings;
+import props from './SummaryCardContainer/_mocks_';
+import summaryCardSelectProps from './SummaryCardSelect/_mocks_';
 
-const summaryCards = new Array(3)
-  .fill()
-  .map((title = 'summary-card', id) => ({ id: `${title}__${id}` }));
+const { prefix } = settings;
 
 storiesOf(patterns('SummaryCard'), module)
   .addDecorator(story => (
@@ -158,16 +157,14 @@ storiesOf(patterns('SummaryCard'), module)
                 className={`${prefix}--col-md-4 ${prefix}--col-lg-4`}
               >
                 <SummaryCard>
-                  <SummaryCardHeader title={`${id} SummaryCardHeader`} />
-                  <SummaryCardBody>{`${id} SummaryCardBody`}</SummaryCardBody>
+                  <SummaryCardHeader title={id} />
+                  <SummaryCardBody>SummaryCardBody</SummaryCardBody>
                   <SummaryCardFooter>
                     <SummaryCardSelect
-                      labelText="Select"
+                      {...summaryCardSelectProps}
                       {...getSelectionProps({ id })}
                     />
-                    <SummaryCardAction>
-                      {`${id} SummaryCardAction`}
-                    </SummaryCardAction>
+                    <SummaryCardAction>SummaryCardAction</SummaryCardAction>
                   </SummaryCardFooter>
                 </SummaryCard>
               </div>
@@ -175,7 +172,7 @@ storiesOf(patterns('SummaryCard'), module)
           </div>
         </Fragment>
       )}
-      summaryCards={summaryCards}
+      summaryCards={props.summaryCards}
     />
   ))
   .add('with skeleton', () => (

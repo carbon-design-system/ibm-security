@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SummaryCardContainer Rendering renders 1`] = `
+<div
+  class="security--summary-card__container"
+>
+  <div
+    class="bx--batch-actions security--summary-card__batch-actions"
+  >
+    <div
+      class="bx--action-list"
+    >
+      <button
+        class="bx--btn bx--btn--primary"
+        tabindex="0"
+        type="button"
+      >
+        SummaryCardBatchAction
+        <svg
+          aria-hidden="true"
+          class="bx--btn__icon"
+          focusable="false"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          style="will-change: transform;"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8 1C4.2 1 1 4.2 1 8s3.2 7 7 7 7-3.2 7-7-3.2-7-7-7zm4 8H9v3H7V9H4V7h3V4h2v3h3v2z"
+          />
+        </svg>
+      </button>
+      <button
+        class="bx--batch-summary__cancel bx--btn bx--btn--primary"
+        tabindex="0"
+        type="button"
+      >
+        Cancel
+      </button>
+    </div>
+    <div
+      class="bx--batch-summary"
+    >
+      <p
+        class="bx--batch-summary__para"
+      >
+        <span>
+          0 item selected
+        </span>
+      </p>
+    </div>
+  </div>
+  <section
+    class="security--summary-card"
+  >
+    <div
+      class="security--summary-card__footer"
+    >
+      <div
+        class="security--summary-card__select"
+      >
+        <div
+          class="bx--form-item bx--checkbox-wrapper"
+        >
+          <input
+            class="bx--checkbox"
+            id="security--summary-card__select__summary-card__0"
+            type="checkbox"
+          />
+          <label
+            class="bx--checkbox-label security--summary-card__select__checkbox"
+            for="security--summary-card__select__summary-card__0"
+          >
+            <span
+              class="bx--checkbox-label-text"
+            >
+              Select
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    class="security--summary-card"
+  >
+    <div
+      class="security--summary-card__footer"
+    >
+      <div
+        class="security--summary-card__select"
+      >
+        <div
+          class="bx--form-item bx--checkbox-wrapper"
+        >
+          <input
+            class="bx--checkbox"
+            id="security--summary-card__select__summary-card__1"
+            type="checkbox"
+          />
+          <label
+            class="bx--checkbox-label security--summary-card__select__checkbox"
+            for="security--summary-card__select__summary-card__1"
+          >
+            <span
+              class="bx--checkbox-label-text"
+            >
+              Select
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    class="security--summary-card"
+  >
+    <div
+      class="security--summary-card__footer"
+    >
+      <div
+        class="security--summary-card__select"
+      >
+        <div
+          class="bx--form-item bx--checkbox-wrapper"
+        >
+          <input
+            class="bx--checkbox"
+            id="security--summary-card__select__summary-card__2"
+            type="checkbox"
+          />
+          <label
+            class="bx--checkbox-label security--summary-card__select__checkbox"
+            for="security--summary-card__select__summary-card__2"
+          >
+            <span
+              class="bx--checkbox-label-text"
+            >
+              Select
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    class="security--summary-card"
+  >
+    <div
+      class="security--summary-card__footer"
+    >
+      <div
+        class="security--summary-card__select"
+      >
+        <div
+          class="bx--form-item bx--checkbox-wrapper"
+        >
+          <input
+            class="bx--checkbox"
+            id="security--summary-card__select__summary-card__3"
+            type="checkbox"
+          />
+          <label
+            class="bx--checkbox-label security--summary-card__select__checkbox"
+            for="security--summary-card__select__summary-card__3"
+          >
+            <span
+              class="bx--checkbox-label-text"
+            >
+              Select
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    class="security--summary-card"
+  >
+    <div
+      class="security--summary-card__footer"
+    >
+      <div
+        class="security--summary-card__select"
+      >
+        <div
+          class="bx--form-item bx--checkbox-wrapper"
+        >
+          <input
+            class="bx--checkbox"
+            id="security--summary-card__select__summary-card__4"
+            type="checkbox"
+          />
+          <label
+            class="bx--checkbox-label security--summary-card__select__checkbox"
+            for="security--summary-card__select__summary-card__4"
+          >
+            <span
+              class="bx--checkbox-label-text"
+            >
+              Select
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

@@ -8,69 +8,53 @@ import React, { Fragment } from 'react';
 
 import {
   SummaryCard,
-  SummaryCardAction,
   SummaryCardBatchAction,
   SummaryCardBatchActions,
-  SummaryCardBody,
   SummaryCardContainer,
   SummaryCardFooter,
-  SummaryCardHeader,
   SummaryCardSelect,
 } from '../../../..';
 
-const summaryCards = new Array(5)
-  .fill()
-  .map((title = 'summary-card', id) => ({ id: `${title}__${id}` }));
+import props from '../_mocks_';
+import summaryCardSelectProps from '../../SummaryCardSelect/_mocks_';
 
 describe('SummaryCardContainer', () => {
+  let summaryCardContainer;
+
   beforeEach(() => {
-    render(
+    summaryCardContainer = render(
       <SummaryCardContainer
-        render={({
-          getBatchActionProps,
-          getSelectionProps,
-          selectedIds,
-          summaryCards,
-        }) => (
+        render={({ getBatchActionProps, getSelectionProps, summaryCards }) => (
           <Fragment>
             <SummaryCardBatchActions {...getBatchActionProps()}>
-              <SummaryCardBatchAction onClick={() => console.log(selectedIds)}>
+              <SummaryCardBatchAction>
                 SummaryCardBatchAction
               </SummaryCardBatchAction>
             </SummaryCardBatchActions>
-
             {summaryCards.map(({ id }) => (
               <SummaryCard key={id}>
-                <SummaryCardHeader title={`SummaryCardHeader ${id}`} />
-                <SummaryCardBody>{`SummaryCardBody ${id}`}</SummaryCardBody>
                 <SummaryCardFooter>
                   <SummaryCardSelect
-                    data-testid={`SummaryCardSelect__${id}`}
-                    labelText={`SummaryCardSelect ${id}`}
+                    {...summaryCardSelectProps}
                     {...getSelectionProps({ id })}
                   />
-                  <SummaryCardAction>
-                    {`SummaryCardAction ${id}`}
-                  </SummaryCardAction>
                 </SummaryCardFooter>
               </SummaryCard>
             ))}
           </Fragment>
         )}
-        summaryCards={summaryCards}
+        summaryCards={props.summaryCards}
       />
     );
   });
 
   describe('Rendering', () => {
-    it('...', () => {
-      expect(true).toBe(true);
+    it('renders', () => {
+      expect(summaryCardContainer.container.firstChild).toMatchSnapshot();
     });
   });
 
   describe('Events', () => {
-    it('...', () => {
-      expect(true).toBe(true);
-    });
+    // it('', () => {});
   });
 });

@@ -13,6 +13,7 @@ import { namespace as summaryCardNamespace } from '../SummaryCard';
 
 const {
   defaultProps: { translateWithId },
+  propTypes,
   translationKeys: carbonTranslationKeys,
 } = TableBatchActions;
 
@@ -34,6 +35,7 @@ const SummaryCardBatchActions = ({ translateWithId: t, ...props }) => (
   />
 );
 
+SummaryCardBatchActions.propTypes = propTypes;
 SummaryCardBatchActions.translationKeys = translationKeys;
 
 export default SummaryCardBatchActions;

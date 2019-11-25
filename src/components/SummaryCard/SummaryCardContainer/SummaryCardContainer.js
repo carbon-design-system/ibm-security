@@ -3,6 +3,7 @@
  * @copyright IBM Security 2019
  */
 
+import { arrayOf, shape, string } from 'prop-types';
 import React, { useState } from 'react';
 
 import { appendComponentNamespace } from '../../../globals/namespace';
@@ -15,7 +16,7 @@ const getSummaryCard = (summaryCards, selectedId) =>
 
 const resetSelectedSummaryCards = state => state([]);
 
-export default function SummaryCardContainer({ render, summaryCards }) {
+function SummaryCardContainer({ render, summaryCards }) {
   const [
     selectedSummaryCards,
     setSelectedSummaryCards,
@@ -68,3 +69,14 @@ export default function SummaryCardContainer({ render, summaryCards }) {
     </div>
   );
 }
+
+SummaryCardContainer.propTypes = {
+  /** Provide a list of all the summary cards to render in the container */
+  summaryCards: arrayOf(
+    shape({
+      id: string.isRequired,
+    })
+  ).isRequired,
+};
+
+export default SummaryCardContainer;
