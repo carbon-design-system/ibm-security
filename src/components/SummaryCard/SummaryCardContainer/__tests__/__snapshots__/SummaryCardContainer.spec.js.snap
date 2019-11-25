@@ -6,6 +6,7 @@ exports[`SummaryCardContainer Rendering renders 1`] = `
 >
   <div
     class="bx--batch-actions security--summary-card__batch-actions"
+    data-testid="batchActions"
   >
     <div
       class="bx--action-list"
@@ -66,6 +67,7 @@ exports[`SummaryCardContainer Rendering renders 1`] = `
         >
           <input
             class="bx--checkbox"
+            data-testid="select__summary-card__0"
             id="security--summary-card__select__summary-card__0"
             type="checkbox"
           />
@@ -97,6 +99,7 @@ exports[`SummaryCardContainer Rendering renders 1`] = `
         >
           <input
             class="bx--checkbox"
+            data-testid="select__summary-card__1"
             id="security--summary-card__select__summary-card__1"
             type="checkbox"
           />
@@ -128,6 +131,7 @@ exports[`SummaryCardContainer Rendering renders 1`] = `
         >
           <input
             class="bx--checkbox"
+            data-testid="select__summary-card__2"
             id="security--summary-card__select__summary-card__2"
             type="checkbox"
           />
@@ -159,6 +163,7 @@ exports[`SummaryCardContainer Rendering renders 1`] = `
         >
           <input
             class="bx--checkbox"
+            data-testid="select__summary-card__3"
             id="security--summary-card__select__summary-card__3"
             type="checkbox"
           />
@@ -190,6 +195,7 @@ exports[`SummaryCardContainer Rendering renders 1`] = `
         >
           <input
             class="bx--checkbox"
+            data-testid="select__summary-card__4"
             id="security--summary-card__select__summary-card__4"
             type="checkbox"
           />
