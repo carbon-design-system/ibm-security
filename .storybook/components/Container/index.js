@@ -7,7 +7,7 @@
 // import '../../index.scss';
 
 // TODO: `modular-styles` - Remove import.
-/// import '../../../src/components/.../_index.scss';
+import '../../../src/components/IconButtonBar/_index.scss';
 
 const Container = ({ children }) => children;
 

@@ -25,13 +25,6 @@ const STATUS = ['complete', 'error', 'info', 'success', 'unknown', 'warning'];
  * Status icon component.
  */
 export default class StatusIcon extends Component {
-  static defaultProps = {
-    className: null,
-    message: null,
-    size: defaultSize,
-    status: undefined,
-  };
-
   static propTypes = {
     /** @type {string} Class name. */
     className: string,
@@ -44,6 +37,13 @@ export default class StatusIcon extends Component {
 
     /** @type {string} Status. */
     status: oneOf(STATUS),
+  };
+
+  static defaultProps = {
+    className: null,
+    message: null,
+    size: defaultSize,
+    status: undefined,
   };
 
   static getDerivedStateFromProps({ status }, state) {

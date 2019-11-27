@@ -44,13 +44,9 @@
         width: $icon-button-bar__sizing__dimensions;
       }
     }
-  }
 
-  &__overflow-menu-options {
-    box-shadow: unset;
-
-    &.#{$prefix}--overflow-menu-options::after {
-      height: 0;
+    &__overflow-menu-options--#{$icon-button-bar__size}.#{$prefix}--overflow-menu-options::after {
+      width: $icon-button-bar__sizing__dimensions;
     }
   }
 }
