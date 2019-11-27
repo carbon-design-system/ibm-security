@@ -104,7 +104,7 @@ export TagWall from './components/TagWall';
 export TagWallFilter from './components/TagWallFilter';
 export { Tearsheet, TearsheetSmall } from './components/Tearsheet';
 export TextInput, { TextInputSkeleton } from './components/TextInput';
-
+export TimeEstimator from './components/TimeEstimator';
 export {
   TypeLayout,
   TypeLayoutBody,

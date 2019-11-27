@@ -1,0 +1,24 @@
+////
+/// Time estimator.
+/// @group time-estimator
+/// @copyright IBM Security 2019
+////
+
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/themes/scss/tokens';
+@import '@carbon/type/scss/styles';
+
+@import '../Component/mixins';
+
+@include security--component($name: time-estimator) {
+  @include carbon--type-style($name: label-01);
+
+  display: flex;
+  color: $text-02;
+  align-items: center;
+
+  &__icon {
+    margin-right: $carbon--spacing-03;
+    fill: $icon-01;
+  }
+}
