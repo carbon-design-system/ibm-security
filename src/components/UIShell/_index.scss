@@ -1,0 +1,20 @@
+////
+/// UI shell component.
+/// @group ui-shell
+/// @copyright IBM Security 2019
+////
+
+@import 'carbon-components/scss/components/ui-shell/ui-shell';
+@import 'carbon-components/scss/globals/scss/vars';
+
+@import '../../globals/namespace/index';
+
+@include export-namespace($name: ui-shell) {
+  /// TODO - remove when Carbon fixes. https://github.com/carbon-design-system/carbon/issues/4673
+  .#{$prefix}--header__menu-bar,
+  .#{$prefix}--header__menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}

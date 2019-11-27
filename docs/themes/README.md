@@ -57,5 +57,3 @@ import { theme } from '@carbon/ibm-security';
 // Specific token values.
 const { interactive01, interactive02 } = theme;
 ```
-
-Also refer to [themes in Carbon](https://github.com/carbon-design-system/carbon/tree/master/packages/themes).
