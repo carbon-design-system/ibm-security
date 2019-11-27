@@ -6,9 +6,9 @@
 
 @import '../../globals/index';
 
-@include carbon--grid();
-
 @mixin ne-section {
+  @include carbon--grid;
+
   $root: &;
 
   min-height: carbon--mini-units($count: 25);

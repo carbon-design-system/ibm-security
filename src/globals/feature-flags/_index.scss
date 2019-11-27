@@ -7,12 +7,6 @@
 @import 'carbon-components/scss/globals/scss/feature-flags';
 @import 'carbon-components/scss/globals/scss/functions';
 
-// TODO: `2.x` - Deprecate after teams have migrated to `@carbon/grid`.
-
-/// Grid feature flag.
-/// @type String
-$grid__name: css-gridish;
-
 /// Platform feature flag.
 /// @type String
 $platform__name: platform;
@@ -26,7 +20,6 @@ $type__name: ibm-type;
 /// Default feature flag values.
 /// @type Map<String, String>
 $security--default-feature-flags: (
-  #{$grid__name}: true,
   #{$platform__name}: true,
   #{$type__name}: true
 );
