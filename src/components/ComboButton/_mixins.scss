@@ -9,15 +9,19 @@
 @mixin combo-button {
   $root: &;
 
+  display: inline-flex;
   position: relative;
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
 
   & &--primary {
     @include text-overflow();
     display: flex;
     flex: 1;
+  }
+
+  &__group {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
   }
 
   &__icon {
