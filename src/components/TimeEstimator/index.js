@@ -14,7 +14,7 @@ import { getComponentNamespace } from '../../globals/namespace';
 const namespace = getComponentNamespace('time-estimator');
 
 /**
- * Time estimators estimate the amount of time it takes to complete a flow.
+ * Time estimators display the estimated amount of time it takes to complete a flow.
  */
 const TimeEstimator = ({ children, className, ...props }) => (
   <span className={classnames(namespace, className)} {...props}>
@@ -24,7 +24,10 @@ const TimeEstimator = ({ children, className, ...props }) => (
 );
 
 TimeEstimator.propTypes = {
+  /** Provide the contents of the `TimeEstimator` */
   children: node.isRequired,
+
+  /** Provide an optional class to be applied to the containing node */
   className: string,
 };
 
