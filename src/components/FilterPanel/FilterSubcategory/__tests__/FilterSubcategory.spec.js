@@ -91,10 +91,8 @@ describe('FilterSubcategory', () => {
       filterSubcategory.setProps({
         subcategory: { ...MockFilterData.subcategories.TRUNCATED, open: true },
       });
-      filterSubcategory
-        .find(`.${namespace}__button--toggle`)
-        .simulate('click')
-        .simulate('click');
+      filterSubcategory.find(`.${namespace}__button--toggle`).simulate('click');
+      filterSubcategory.find(`.${namespace}__button--toggle`).simulate('click');
       expect(filterSubcategory).toMatchSnapshot();
     });
   });
