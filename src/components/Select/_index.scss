@@ -9,6 +9,8 @@
 
 @import 'carbon-components/scss/globals/scss/vars';
 
+@import '../../globals/namespace/index';
+
 @include export-namespace($name: select) {
   .#{$prefix}--select-input {
     text-rendering: auto;
