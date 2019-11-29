@@ -1,0 +1,20 @@
+/**
+ * @file Trending card stories.
+ * @copyright IBM Security 2019
+ */
+
+import { text } from '@storybook/addon-knobs';
+import React from 'react';
+
+import { components, meta } from '../../../.storybook';
+
+import { TrendingCard } from '../..';
+
+const props = () => ({
+  title: text('Title (title)', 'Title'),
+  subtitle: text('Subtitle (subtitle)', 'Subtitle'),
+});
+
+export const Default = () => <TrendingCard {...props()} />;
+
+export default meta(components('TrendingCard'));

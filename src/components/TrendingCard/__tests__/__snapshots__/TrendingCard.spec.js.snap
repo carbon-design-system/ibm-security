@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TrendingCard renders 1`] = `
+<div
+  class="security--trending-card"
+>
+  <h3
+    class="security--trending-card__title"
+  >
+    Title
+  </h3>
+  <span
+    class="security--trending-card__subtitle"
+  >
+    Subtitle
+  </span>
+</div>
+`;

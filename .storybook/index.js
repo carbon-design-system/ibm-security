@@ -70,11 +70,22 @@ Also refer to http://react.carbondesignsystem.com/?path=/story/${carbon.story}--
     : description,
 });
 
+/**
+ * Configuration for applying metadata information to stories.
+ * @param {Component} component The component to pull metadata from.
+ * @param {string} title The title to apply to stories.
+ * @returns {Object<string, string>} The configuration containing information to apply.
+ */
+const meta = title => ({
+  title,
+});
+
 export {
   disableCentered,
   getComponentsCategory as components,
   getPatternsCategory as patterns,
-  info,
   HIERARCHY_ROOT_SEPARATOR,
+  info,
+  meta,
   ORDER,
 };
