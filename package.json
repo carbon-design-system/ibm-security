@@ -36,8 +36,8 @@
     "lint-staged": "lint-staged",
     "semantic-release": "semantic-release",
     "start": "run-s build:pre:grid && start-storybook -p 3000 -s public",
-    "test": "jest spec --ci",
-    "test:precommit": "jest --bail --passWithNoTests --testMatch src/**/*.spec.js --findRelatedTests",
+    "test": "jest spec -ci",
+    "test:precommit": "jest -b --findRelatedTests --passWithNoTests --testMatch src/**/*.spec.js",
     "test:imports": "scripts/checkImports.sh",
     "test:ssr": "node scripts/ssr"
   },
