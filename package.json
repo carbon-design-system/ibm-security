@@ -37,7 +37,7 @@
     "semantic-release": "semantic-release",
     "start": "run-s build:pre:grid && start-storybook -p 3000 -s public",
     "test": "jest spec --ci",
-    "test:precommit": "jest --b --findRelatedTests --passWithNoTests --testMatch src/**/*.spec.js",
+    "test:precommit": "jest -b --passWithNoTests --testMatch src/**/*.spec.js --findRelatedTests",
     "test:imports": "scripts/checkImports.sh",
     "test:ssr": "node scripts/ssr"
   },
