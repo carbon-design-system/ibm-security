@@ -37,7 +37,7 @@ TrendingCard.propTypes = {
   /** Specify the content of the subtitle */
   subtitle: node,
 
-  /** Specify the base element to use to build the link. This can also accept alternative tag names or custom components like `Link` from `react-router` */
+  /** Specify the base element to use to build the link. This can also accept custom components like `Link` from `react-router` */
   element: elementType,
 
   /** Provide an optional class to be applied to the containing node */

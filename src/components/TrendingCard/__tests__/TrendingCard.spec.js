@@ -12,4 +12,10 @@ describe('TrendingCard', () => {
   it('renders', () => {
     expect(render(<TrendingCard />).container.firstChild).toMatchSnapshot();
   });
+
+  it('renders a custom link', () => {
+    expect(
+      render(<TrendingCard element="Link" />).container.firstChild
+    ).toMatchSnapshot();
+  });
 });

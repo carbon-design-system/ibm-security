@@ -17,3 +17,21 @@ exports[`TrendingCard renders 1`] = `
   </span>
 </a>
 `;
+
+exports[`TrendingCard renders a custom link 1`] = `
+<a
+  class="security--trending-card"
+  href="#"
+>
+  <h3
+    class="security--trending-card__title"
+  >
+    Title
+  </h3>
+  <span
+    class="security--trending-card__subtitle"
+  >
+    Subtitle
+  </span>
+</a>
+`;
