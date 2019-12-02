@@ -19,7 +19,7 @@ exports[`TrendingCard renders 1`] = `
 `;
 
 exports[`TrendingCard renders a custom link 1`] = `
-<a
+<link
   class="security--trending-card"
   href="#"
 >
@@ -33,5 +33,5 @@ exports[`TrendingCard renders a custom link 1`] = `
   >
     Subtitle
   </span>
-</a>
+</link>
 `;

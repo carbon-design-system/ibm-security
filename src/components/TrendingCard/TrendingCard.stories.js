@@ -16,6 +16,8 @@ const props = () => ({
   subtitle: text('Subtitle (subtitle)', 'Subtitle'),
 });
 
-export const Default = ({ other }) => <TrendingCard {...props()} {...other} />;
+export const Default = ({ element }) => (
+  <TrendingCard {...props()} element={element} />
+);
 
 export default meta(components('TrendingCard'));
