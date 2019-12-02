@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TrendingCard renders 1`] = `
-<div
+<a
   class="security--trending-card"
+  href="#"
 >
   <h3
     class="security--trending-card__title"
@@ -14,5 +15,5 @@ exports[`TrendingCard renders 1`] = `
   >
     Subtitle
   </span>
-</div>
+</a>
 `;

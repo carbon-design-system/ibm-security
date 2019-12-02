@@ -12,6 +12,7 @@ import { TrendingCard } from '../..';
 
 const props = () => ({
   title: text('Title (title)', 'Title'),
+  href: text('Link (href)', '#'),
   subtitle: text('Subtitle (subtitle)', 'Subtitle'),
 });
 

@@ -4,9 +4,9 @@
  */
 
 import classnames from 'classnames';
-import { node, string } from 'prop-types';
+import { elementType, node, string } from 'prop-types';
 
-import React from 'react';
+import React, { createElement, Fragment } from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
 
@@ -15,16 +15,19 @@ const namespace = getComponentNamespace('trending-card');
 /**
  * Trending cards provide summary information of trending items with the ability to navigate to the details.
  */
-const TrendingCard = ({ className, title, subtitle, ...props }) => (
-  <div className={classnames(namespace, className)} {...props}>
-    <h3 className={`${namespace}__title`}>{title}</h3>
-
-    {subtitle && <span className={`${namespace}__subtitle`}>{subtitle}</span>}
-  </div>
-);
+const TrendingCard = ({ className, element, title, subtitle, ...other }) =>
+  createElement(
+    element,
+    { className: classnames(namespace, className), ...other },
+    <Fragment>
+      <h3 className={`${namespace}__title`}>{title}</h3>
+      {subtitle && <span className={`${namespace}__subtitle`}>{subtitle}</span>}
+    </Fragment>
+  );
 
 TrendingCard.defaultProps = {
   subtitle: null,
+  element: 'a',
 };
 
 TrendingCard.propTypes = {
@@ -33,6 +36,9 @@ TrendingCard.propTypes = {
 
   /** Specify the content of the subtitle */
   subtitle: node,
+
+  /** Specify the base element to use to build the link. This can also accept alternative tag names or custom components like `Link` from `react-router` */
+  element: elementType,
 
   /** Provide an optional class to be applied to the containing node */
   className: string,

@@ -8,17 +8,27 @@
 @import '@carbon/themes/scss/tokens';
 @import '@carbon/type/scss/styles';
 
+@import 'carbon-components/scss/globals/scss/helper-mixins';
+
+@import '../../platform/body/mixins';
 @import '../Component/mixins';
 
 @include security--component($name: trending-card) {
+  display: block;
   padding: $carbon--spacing-05;
   background-color: $ui-01;
+  text-decoration: unset;
+
+  &:focus {
+    @include focus-outline;
+  }
 
   &__title {
     @include carbon--type-style($name: body-long-01);
 
     margin-top: 0;
     margin-bottom: $carbon--spacing-02;
+    color: $body__color__text;
   }
 
   &__subtitle {
