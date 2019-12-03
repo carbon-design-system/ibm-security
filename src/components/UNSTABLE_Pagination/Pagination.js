@@ -21,7 +21,9 @@ function UNSTABLE_Pagination({
   itemRangeText,
   itemText,
   page,
+  pageRangeText,
   pageSize: currentPageSize, // TODO: use state
+  pageText,
   pagesUnknown,
   totalItems,
   ...rest
@@ -52,6 +54,11 @@ function UNSTABLE_Pagination({
         {children}
       </div>
       <div className={`${namespace}__right`}>
+        <span className={`${namespace}__text`}>
+          {pagesUnknown
+            ? pageText(currentPage)
+            : pageRangeText(currentPage, totalPages)}
+        </span>
         <Button
           className={classnames(
             `${namespace}__button`,
@@ -82,7 +89,7 @@ function UNSTABLE_Pagination({
           renderIcon={CaretRight16}
           tooltipAlignment="center"
           tooltipPosition="top"
-          iconDescription={backwardText}
+          iconDescription={forwardText}
         />
       </div>
     </section>
@@ -97,7 +104,9 @@ UNSTABLE_Pagination.defaultProps = {
   itemRangeText: (min, max, total) => `${min}–${max} of ${total} items`,
   itemText: (min, max) => `${min}–${max} items`,
   page: 1,
+  pageRangeText: (current, total) => `${current} of ${total} pages`,
   pageSize: 10,
+  pageText: page => `page ${page}`,
   pagesUnknown: false,
   totalItems: undefined,
 };
@@ -119,7 +128,7 @@ UNSTABLE_Pagination.propTypes = {
   className: PropTypes.string,
 
   /**
-   *
+   * `true` if the backward/forward buttons should be disabled.
    */
   disabled: PropTypes.bool,
 
@@ -139,15 +148,35 @@ UNSTABLE_Pagination.propTypes = {
    */
   itemText: PropTypes.func,
 
-  /** The current page. */
+  /**
+   * The current page.
+   */
   page: PropTypes.number,
+
+  /**
+   * The function returning a translatable text showing where the current page is,
+   * in a manner of the total number of pages.
+   */
+  pageRangeText: PropTypes.func,
 
   /**
    * The number dictating how many items a page contains.
    */
   pageSize: PropTypes.number,
 
-  /** `true` if total number of pages is unknown. */
+  /**
+   * The choices for `pageSize`.
+   */
+  pageSizes: PropTypes.arrayOf(PropTypes.number).isRequired,
+
+  /**
+   * The translatable text showing the current page.
+   */
+  pageText: PropTypes.func,
+
+  /**
+   * `true` if total number of pages is unknown.
+   */
   pagesUnknown: PropTypes.bool,
 
   /**

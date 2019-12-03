@@ -22,7 +22,7 @@
       display: inline-block;
     }
 
-    margin-left: $carbon--spacing-05;
+    margin: 0 $carbon--spacing-05;
     color: $text-02;
   }
 
@@ -31,6 +31,7 @@
     display: flex;
     height: 100%;
     align-items: center;
+    overflow: hidden;
   }
 
   &__left {
@@ -46,11 +47,16 @@
     margin-left: rem(1px);
   }
 
+  &__button {
+    width: 3rem;
+    justify-content: center;
+  }
+
   &__button,
   &__button:disabled {
     background: none;
     border: 0;
-    border-left: 1px solid $ui-01;
+    border-left: 1px solid $ui-03;
   }
 
   &__button:hover {
@@ -67,5 +73,6 @@
     cursor: not-allowed;
     fill: $disabled-02;
     background: $ui-01;
+    border-left: 1px solid $ui-03;
   }
 }
