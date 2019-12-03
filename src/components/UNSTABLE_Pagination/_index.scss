@@ -4,4 +4,10 @@
 /// @copyright IBM Security 2019
 ////
 
-@import 'carbon-components/scss/components/pagination/pagination';
+@import '../Component/mixins';
+
+@import 'mixins';
+
+@include security--component($name: unstable-pagination) {
+  @include unstable-pagination;
+}

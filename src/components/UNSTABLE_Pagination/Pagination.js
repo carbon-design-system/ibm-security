@@ -6,10 +6,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { CaretRight24, CaretLeft24 } from '@carbon/icons-react';
-import { carbonPrefix, getComponentNamespace } from '../../globals/namespace';
+import { CaretRight16, CaretLeft16 } from '@carbon/icons-react';
+import { Button } from 'carbon-components-react';
+import { getComponentNamespace } from '../../globals/namespace';
 
-export const namespace = getComponentNamespace('UNSTABLE_pagination');
+export const namespace = getComponentNamespace('unstable-pagination');
 
 function UNSTABLE_Pagination({
   backwardText,
@@ -34,53 +35,56 @@ function UNSTABLE_Pagination({
   const forwardButtonDisabled = disabled || currentPage === totalPages;
 
   return (
-    <section
-      className={classnames(namespace, `${carbonPrefix}pagination`, className)}
-      {...rest}
-    >
-      <span className={`${carbonPrefix}pagination__text`}>
-        {pagesUnknown || !totalItems
-          ? itemText(
-              currentPageSize * (currentPage - 1) + 1,
-              currentPage * currentPageSize
-            )
-          : itemRangeText(
-              Math.min(currentPageSize * (currentPage - 1) + 1, totalItems),
-              Math.min(currentPage * currentPageSize, totalItems),
-              totalItems
-            )}
-      </span>
-      {children}
-      <button
-        type="button"
-        className={classnames(
-          `${carbonPrefix}pagination__button`,
-          `${carbonPrefix}pagination__button--backward`,
-          {
-            [`${carbonPrefix}pagination__button--no-index`]: backButtonDisabled,
-          }
-        )}
-        onClick={() => setCurrentPage(currentPage - 1)}
-        aria-label={backwardText}
-        disabled={backButtonDisabled}
-      >
-        <CaretLeft24 />
-      </button>
-      <button
-        type="button"
-        className={classnames(
-          `${carbonPrefix}pagination__button`,
-          `${carbonPrefix}pagination__button--forward`,
-          {
-            [`${carbonPrefix}pagination__button--no-index`]: forwardButtonDisabled,
-          }
-        )}
-        aria-label={forwardText}
-        onClick={() => setCurrentPage(currentPage + 1)}
-        disabled={forwardButtonDisabled}
-      >
-        <CaretRight24 />
-      </button>
+    <section className={classnames(namespace, className)} {...rest}>
+      <div className={`${namespace}__left`}>
+        <span className={`${namespace}__text`}>
+          {pagesUnknown || !totalItems
+            ? itemText(
+                currentPageSize * (currentPage - 1) + 1,
+                currentPage * currentPageSize
+              )
+            : itemRangeText(
+                Math.min(currentPageSize * (currentPage - 1) + 1, totalItems),
+                Math.min(currentPage * currentPageSize, totalItems),
+                totalItems
+              )}
+        </span>
+        {children}
+      </div>
+      <div className={`${namespace}__right`}>
+        <Button
+          className={classnames(
+            `${namespace}__button`,
+            `${namespace}__button--backward`,
+            {
+              [`${namespace}__button--no-index`]: backButtonDisabled,
+            }
+          )}
+          onClick={() => setCurrentPage(currentPage - 1)}
+          disabled={backButtonDisabled}
+          hasIconOnly
+          renderIcon={CaretLeft16}
+          tooltipAlignment="center"
+          tooltipPosition="top"
+          iconDescription={backwardText}
+        />
+        <Button
+          className={classnames(
+            `${namespace}__button`,
+            `${namespace}__button--forward`,
+            {
+              [`${namespace}__button--no-index`]: forwardButtonDisabled,
+            }
+          )}
+          onClick={() => setCurrentPage(currentPage + 1)}
+          disabled={forwardButtonDisabled}
+          hasIconOnly
+          renderIcon={CaretRight16}
+          tooltipAlignment="center"
+          tooltipPosition="top"
+          iconDescription={backwardText}
+        />
+      </div>
     </section>
   );
 }
