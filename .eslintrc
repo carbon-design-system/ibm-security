@@ -45,6 +45,6 @@
     ],
     "react/prop-types": "warn",
     "camelcase": "warn",
-    "react/jsx-pascal-case": "warn",
+    "react/jsx-pascal-case": "warn"
   }
 }
