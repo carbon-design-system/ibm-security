@@ -43,6 +43,8 @@
         "extensions": [".js", ".jsx"]
       }
     ],
-    "react/prop-types": "warn"
+    "react/prop-types": "warn",
+    "camelcase": "warn",
+    "react/jsx-pascal-case": "warn",
   }
 }
