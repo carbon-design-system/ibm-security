@@ -72,7 +72,6 @@ Also refer to http://react.carbondesignsystem.com/?path=/story/${carbon.story}--
 
 /**
  * Configuration for applying metadata information to stories.
- * @param {Component} component The component to pull metadata from.
  * @param {string} title The title to apply to stories.
  * @returns {Object<string, string>} The configuration containing information to apply.
  */
