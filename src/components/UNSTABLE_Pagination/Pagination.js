@@ -51,7 +51,13 @@ function UNSTABLE_Pagination({
                 totalItems
               )}
         </span>
-        {children}
+        {children({
+          currentPage: page,
+          onSetPage: setCurrentPage,
+          totalPages,
+          // onNextPage: () => setCurrentPage(Math.min(totalPages, currentPage + 1)),
+          // onPrevPage: () => setCurrentPage(Math.max(0, currentPage - 1)),
+        })}
       </div>
       <div className={`${namespace}__right`}>
         <span className={`${namespace}__text`}>

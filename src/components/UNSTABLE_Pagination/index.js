@@ -4,5 +4,6 @@
  */
 
 import UNSTABLE_Pagination from './Pagination';
+import PageChanger from './PageChanger';
 
-export default UNSTABLE_Pagination;
+export { PageChanger, UNSTABLE_Pagination };
