@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { action } from '@storybook/addon-actions';
+
 import {
   DataTable,
   OverflowMenu,
@@ -18,6 +18,7 @@ import {
   TableOverflowCell,
   TableRow,
 } from '../../..';
+
 import { headers, missingDataCharacter, rows } from '../_mocks_';
 
 const overflowStory = props => (
@@ -47,24 +48,18 @@ const overflowStory = props => (
                 ))}
 
                 <TableOverflowCell>
-                  <OverflowMenu
-                    flipped
-                    floatingMenu
-                    ariaLabel="Actions"
-                    menuOffsetFlip={menu => ({ left: 61 - menu.clientWidth })}
-                  >
-                    <OverflowMenuItem
-                      itemText="Action 1"
-                      onClick={action('Overflow action clicked')}
-                    />
-                    <OverflowMenuItem
-                      itemText="Action 2"
-                      onClick={action('Overflow action clicked')}
-                    />
-                    <OverflowMenuItem
-                      itemText="Action 3"
-                      onClick={action('Overflow action clicked')}
-                    />
+                  <OverflowMenu flipped>
+                    {new Array(3).fill().map((itemText = 'Action', index) => {
+                      const key = `overflowMenuItem__index`;
+
+                      return (
+                        <OverflowMenuItem
+                          key={key}
+                          itemText={`${itemText} ${index + 1}`}
+                          primaryFocus={index === 0}
+                        />
+                      );
+                    })}
                   </OverflowMenu>
                 </TableOverflowCell>
               </TableRow>

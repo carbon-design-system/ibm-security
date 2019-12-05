@@ -11,9 +11,13 @@
 
 @import '../Search/index';
 
-@import '../../globals/namespace/index';
+@import '../Component/mixins';
 
-@include export-namespace($name: data-table) {
+@include security--component($name: data-table) {
+  &__overflow-cell .#{$prefix}--overflow-menu {
+    z-index: z($layer: overlay);
+  }
+
   .#{$prefix}--data-table {
     background-color: $ui-03;
 
