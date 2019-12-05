@@ -4,16 +4,12 @@
 /// @copyright IBM Security 2019
 ////
 
-@import '@carbon/themes/scss/mixins';
-
 @import '../../globals/index';
 @import '../../globals/theme/mixins';
 
 @import '../../components/Header/mixins';
 @import '../../components/IconButton/mixins';
 @import '../../components/Toolbar/mixins';
-
-@import '../../platform/body/mixins';
 
 @mixin panel {
   /// Width.
@@ -148,9 +144,36 @@
     bottom: 0;
     width: $panel__sizing__width;
 
-    &__button {
+    .#{$namespace}button:not(.#{$namespace}combo-button__overflow-menu) {
       max-width: $panel__sizing__width;
       flex-grow: 1;
+    }
+  }
+
+  &__transition {
+    &--appear,
+    &--enter {
+      transform: translate3d($panel__sizing__width, 0, 0);
+      opacity: 0;
+
+      &--active {
+        transform: translate3d(0, 0, 0);
+        transition: all $duration--moderate-02;
+        transition-timing-function: motion(entrance, expressive);
+        opacity: 1;
+      }
+    }
+
+    &--leave {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+
+      &--active {
+        transform: translate3d($panel__sizing__width, 0, 0);
+        transition: all $duration--moderate-02;
+        transition-timing-function: motion(exit, expressive);
+        opacity: 0;
+      }
     }
   }
 }

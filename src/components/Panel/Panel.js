@@ -3,98 +3,264 @@
  * @copyright IBM Security 2019
  */
 
+import Close20 from '@carbon/icons-react/lib/close/20';
+
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import { Component } from 'react';
+import React, { Component, createRef, Fragment } from 'react';
+
+import { getComponentNamespace } from '../../globals/namespace';
+import * as defaultLabels from '../../globals/nls';
+import deprecatedProp from '../../globals/prop-types';
+import { isClient } from '../../globals/utils/capabilities';
+
+import Button from '../Button';
+import IconButton from '../IconButton';
+import Transition from '../Transition';
+import Portal, { PORTAL_EVENTS } from '../Portal';
+
+const namespace = getComponentNamespace('panel');
 
 /**
- * Panel component.
- * @param {Object.<string, *>} props Panel props.
- * @returns {Panel} Panel instance.
+ * Panel container component.
+ * @param {Object.<string, *>} props Panel container props.
+ * @returns {Panel} Panel container instance.
  */
 export default class Panel extends Component {
-  static propTypes = {
-    /** @type {Node} Child elements. */
-    children: PropTypes.node,
+  state = { bodyMargin: 0, isOpen: this.props.isOpen };
 
-    /** @type {function(...args)} Function to call when the panel closes. */
-    onClose: PropTypes.func,
-
-    /** @type {function(...args)} Function to call when the panel opens. */
-    onOpen: PropTypes.func,
-
-    /** @type {function(...props)} Render function for the contents of the table. */
-    render: PropTypes.func,
-
-    /** @type {bool} specifies whether the Panel should open or not */
-    shouldPanelOpen: PropTypes.bool,
-  };
-
-  static defaultProps = {
-    children: undefined,
-    onClose: () => {},
-    onOpen: () => {},
-    render: undefined,
-    shouldPanelOpen: true,
-  };
-
-  state = { active: false };
-
-  /**
-   * Handles when the panel has been requested to close.
-   * @param {Event} event Event object generated from close request.
-   * @param {...any} args The arguments passed via render props.
-   */
-  handleClose = (event, ...args) => {
-    event.stopPropagation();
-    if (this.state.active) {
-      this.props.onClose(event, ...args);
-      this.setState({ active: false });
-    }
-  };
-
-  /**
-   * Handles when the panel has been requested to open.
-   * @param {Event} event Event object generated from open request.
-   * @param {...any} args The arguments passed via render props.
-   */
-  handleOpen = (event, ...args) => {
-    event.stopPropagation();
-    if (!this.state.active) {
-      this.props.onOpen(event, ...args);
-      this.setState({ active: true });
-    }
-  };
-
-  /**
-   * Handles when the panel has been requested to toggle.
-   * @param {Event} event Event object generated from toggle request.
-   * @param {...any} args The arguments passed via render props.
-   */
-  toggleActive = (event, ...args) => {
-    if (this.state.active) {
-      this.props.onClose(event, ...args);
-      this.setState({ active: !this.state.active });
-    } else if (this.props.shouldPanelOpen) {
-      this.props.onOpen(event, ...args);
-      this.setState({ active: !this.state.active });
-    }
-  };
-
-  render() {
-    const { children, render } = this.props;
-    const renderProps = {
-      active: this.state.active,
-      handleClose: this.handleClose,
-      handleOpen: this.handleOpen,
-      toggleActive: this.toggleActive,
-    };
-
-    if (render !== undefined) {
-      return render(renderProps);
-    }
-    if (children !== undefined) {
-      return children(renderProps);
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (prevState.isOpen !== nextProps.isOpen) {
+      return { isOpen: nextProps.isOpen };
     }
     return null;
   }
+
+  componentDidMount() {
+    if (isClient() && this.state.isOpen) {
+      this.setBodyMargin();
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.isOpen && !prevState.isOpen && isClient()) {
+      this.setBodyMargin();
+    }
+  }
+
+  /**
+   * Sets the body margin to match the height of the header for fixed scrolling.
+   */
+  setBodyMargin() {
+    const footerElement = this.footer.current;
+    const headerElement = this.header.current;
+
+    this.setState({
+      bodyMargin: {
+        top: headerElement.clientHeight,
+        bottom: footerElement && footerElement.clientHeight,
+      },
+    });
+  }
+
+  footer = createRef();
+  header = createRef();
+
+  renderPanel = ({
+    labels: {
+      PANEL_CONTAINER_PRIMARY_BUTTON,
+      PANEL_CONTAINER_SECONDARY_BUTTON,
+      PANEL_CONTAINER_CLOSE_BUTTON,
+    },
+  }) => {
+    const {
+      children,
+      className,
+      closeButton,
+      focusTrap,
+      primaryButton,
+      renderFooter,
+      secondaryButton,
+      stopPropagation,
+      stopPropagationEvents,
+      subtitle,
+      title,
+    } = this.props;
+
+    const hasFooter = renderFooter || primaryButton;
+
+    return (
+      <Transition className={namespace}>
+        {this.state.isOpen && (
+          <Portal
+            focusTrap={focusTrap}
+            stopPropagation={stopPropagation}
+            stopPropagationEvents={stopPropagationEvents}
+          >
+            <section className={classnames(namespace, className)}>
+              <header ref={this.header} className={`${namespace}__header`}>
+                {title && (
+                  <div className={`${namespace}__header__container--title`}>
+                    {typeof title === 'string' ? (
+                      <h2 className={`${namespace}__header--title`}>{title}</h2>
+                    ) : (
+                      <div className={`${namespace}__header--title`}>
+                        {title}
+                      </div>
+                    )}
+                    {subtitle && (
+                      <div className={`${namespace}__header--subtitle`}>
+                        {subtitle}
+                      </div>
+                    )}
+                  </div>
+                )}
+                <IconButton
+                  id={closeButton.id}
+                  className={`${namespace}__button--close`}
+                  label={PANEL_CONTAINER_CLOSE_BUTTON}
+                  onClick={closeButton.onClick}
+                  renderIcon={closeButton.icon || Close20}
+                  tooltip={false}
+                />
+              </header>
+              <section
+                className={classnames(`${namespace}__body`, {
+                  [`${namespace}__body--footer`]: renderFooter,
+                })}
+                style={{
+                  marginTop: `${this.state.bodyMargin.top}px`,
+                  marginBottom: `${this.state.bodyMargin.bottom}px`,
+                }}
+              >
+                {children}
+              </section>
+
+              {hasFooter && (
+                <footer ref={this.footer} className={`${namespace}__footer`}>
+                  {renderFooter ? (
+                    renderFooter()
+                  ) : (
+                    <Fragment>
+                      {secondaryButton && (
+                        <Button
+                          id={secondaryButton.id}
+                          className={`${namespace}__footer__button ${namespace}__footer__button--secondary`}
+                          disabled={secondaryButton.isDisabled}
+                          iconDescription={secondaryButton.iconDescription}
+                          kind="secondary"
+                          onClick={secondaryButton.onClick}
+                          renderIcon={secondaryButton.icon}
+                        >
+                          {PANEL_CONTAINER_SECONDARY_BUTTON}
+                        </Button>
+                      )}
+                      <Button
+                        id={primaryButton.id}
+                        className={`${namespace}__footer__button`}
+                        disabled={primaryButton.isDisabled}
+                        iconDescription={primaryButton.iconDescription}
+                        onClick={primaryButton.onClick}
+                        renderIcon={primaryButton.icon}
+                      >
+                        {PANEL_CONTAINER_PRIMARY_BUTTON}
+                      </Button>
+                    </Fragment>
+                  )}
+                </footer>
+              )}
+            </section>
+          </Portal>
+        )}
+      </Transition>
+    );
+  };
+
+  render() {
+    const { closeButton, primaryButton, secondaryButton, labels } = this.props;
+
+    const componentLabels = {
+      ...defaultLabels.labels,
+      ...labels,
+      ...defaultLabels.filterFalsey({
+        PANEL_CONTAINER_PRIMARY_BUTTON:
+          (primaryButton && primaryButton.label) || '',
+        PANEL_CONTAINER_SECONDARY_BUTTON:
+          (secondaryButton && secondaryButton.label) || '',
+        PANEL_CONTAINER_CLOSE_BUTTON: (closeButton && closeButton.label) || '',
+      }),
+    };
+    return this.renderPanel({ labels: componentLabels });
+  }
 }
+
+const buttonType = PropTypes.shape({
+  id: PropTypes.string,
+  onClick: PropTypes.func,
+  label: PropTypes.string,
+  isDisabled: PropTypes.bool,
+  icon: PropTypes.object,
+  iconDescription: PropTypes.string,
+});
+
+// TODO: `3.x` - Remove deprecated props `primaryButton` and `secondaryButton`.
+const deprecatedButton = deprecatedProp('renderFooter', buttonType);
+
+Panel.propTypes = {
+  /** @type {ReactNode} The children of the panel container. */
+  children: PropTypes.node,
+
+  /** @type {string} Class name. */
+  className: PropTypes.string,
+
+  /** @type {Object<Object>} An object list of close button props. */
+  closeButton: buttonType,
+
+  /** @type {boolean} Focus trap. */
+  focusTrap: PropTypes.bool,
+
+  /** @type {boolean} The open state. */
+  isOpen: PropTypes.bool,
+
+  /** @type {object} Labels for Panel and children */
+  labels: defaultLabels.propType,
+
+  /** @type {Object<Object>} An object list of primary button props. */
+  primaryButton: deprecatedButton,
+
+  /** @type {Function} Footer render prop. */
+  renderFooter: PropTypes.func,
+
+  /** @type {Object<Object>} An object list of secondary button props. */
+  secondaryButton: deprecatedButton,
+
+  /** @type {boolean} Stop event propagation for events that can bubble. */
+  stopPropagation: PropTypes.bool,
+
+  /** @type {array} Array of event types to stop propagation. */
+  stopPropagationEvents: PropTypes.arrayOf(PropTypes.oneOf(PORTAL_EVENTS)),
+
+  /** @type {ReactNode} Subtitle child elements. */
+  subtitle: PropTypes.node,
+
+  /** @type {ReactNode} Title child elements. */
+  title: PropTypes.node,
+};
+
+Panel.defaultProps = {
+  children: null,
+  className: null,
+  closeButton: undefined,
+  focusTrap: true,
+  isOpen: true,
+  labels: {},
+  primaryButton: undefined,
+  renderFooter: null,
+  secondaryButton: undefined,
+  stopPropagation: false,
+  stopPropagationEvents: undefined,
+  subtitle: undefined,
+  title: undefined,
+};
+
+export { buttonType, deprecatedButton, namespace };

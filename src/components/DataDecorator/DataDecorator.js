@@ -1,17 +1,18 @@
 /**
- * @file DataDecorator
+ * @file Data decorator
  * @copyright IBM Security 2019
  */
 
-import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
+import React, { Component, Fragment } from 'react';
 
-import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
+import * as defaultLabels from '../../globals/nls';
 
 import Decorator from './Decorator';
-import PanelV2 from '../PanelV2';
+import Panel from '../Panel';
 import { PORTAL_EVENTS } from '../Portal';
-import * as defaultLabels from '../../globals/nls';
+
+import { buttonType, deprecatedButton } from '../Panel/Panel';
 
 const { defaultProps, propTypes } = Decorator;
 
@@ -75,7 +76,7 @@ class DataDecorator extends Component {
             this.toggleOpen();
           }}
         />
-        <PanelV2
+        <Panel
           isOpen={this.state.isOpen}
           stopPropagation={stopPropagation}
           stopPropagationEvents={stopPropagationEvents}
@@ -133,20 +134,13 @@ class DataDecorator extends Component {
           }}
         >
           {children}
-        </PanelV2>
+        </Panel>
       </Fragment>
     );
   }
 }
 
-const buttonType = PropTypes.shape({
-  closePanel: PropTypes.bool,
-  onClick: PropTypes.func,
-  label: PropTypes.string,
-  isDisabled: PropTypes.bool,
-  icon: PropTypes.object,
-  iconDescription: PropTypes.string,
-});
+// TODO: `3.x` - Remove deprecated props `primaryButton` and `secondaryButton`.
 
 DataDecorator.propTypes = {
   /** @type {ReactNode} The children of the DataDecorator. */
@@ -174,10 +168,7 @@ DataDecorator.propTypes = {
   onOpen: PropTypes.func,
 
   /** @type {Object<Object>} An object list of primary button props. */
-  primaryButton: deprecate(
-    buttonType,
-    `\nThe prop \`primaryButton\` for DataDecorator has been deprecated in favor of \`renderFooter\`.`
-  ),
+  primaryButton: deprecatedButton,
 
   /** @type {function} Panel footer render prop. */
   renderFooter: PropTypes.func,
@@ -200,10 +191,7 @@ DataDecorator.propTypes = {
   },
 
   /** @type {Object<Object>} An object list of secondary button props. */
-  secondaryButton: deprecate(
-    buttonType,
-    `\nThe prop \`secondaryButton\` for DataDecorator has been deprecated in favor of \`renderFooter\`.`
-  ),
+  secondaryButton: deprecatedButton,
 
   /** @type {ReactNode} Child elements for the panel's subtitle. */
   subtitle: PropTypes.node,
