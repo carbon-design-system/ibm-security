@@ -87,152 +87,142 @@ disableCentered(storiesOf(patterns('Panel'), module))
     },
   })
 
-  .add(
-    'Default',
-    () => {
-      class PanelStory extends React.Component {
-        state = { firstOpen: false, secondOpen: false, thirdOpen: false };
-        closeFirst = () => {
-          this.setState({ firstOpen: false });
-        };
-        closeSecond = () => {
-          this.setState({ secondOpen: false });
-        };
-        closethird = () => {
-          this.setState({ thirdOpen: false });
-        };
-        openFirst = () => {
-          this.setState({ firstOpen: true });
-        };
-        openSecond = () => {
-          this.setState({ secondOpen: true });
-        };
-        openThird = () => {
-          this.setState({ thirdOpen: true });
-        };
+  .add('Default', () => {
+    class PanelStory extends React.Component {
+      state = { firstOpen: false, secondOpen: false, thirdOpen: false };
+      closeFirst = () => {
+        this.setState({ firstOpen: false });
+      };
+      closeSecond = () => {
+        this.setState({ secondOpen: false });
+      };
+      closethird = () => {
+        this.setState({ thirdOpen: false });
+      };
+      openFirst = () => {
+        this.setState({ firstOpen: true });
+      };
+      openSecond = () => {
+        this.setState({ secondOpen: true });
+      };
+      openThird = () => {
+        this.setState({ thirdOpen: true });
+      };
 
-        render() {
-          return (
-            <Fragment>
-              <Shell header={header} profile={profile} toolbar={toolbar} />
-              <div id="main" style={{ paddingLeft: '5rem' }}>
-                <Button key="b1" onClick={this.openFirst}>
-                  Primary and secondary action
-                </Button>
-                <Button key="b2" onClick={this.openSecond}>
-                  Primary action
-                </Button>
-                <Button key="b3" onClick={this.openThird}>
-                  Default
-                </Button>
-              </div>
-              <Panel
-                key="p1"
-                isOpen={this.state.firstOpen}
-                {...props}
-                closeButton={{
-                  onClick: this.closeFirst,
-                  label: text('closeButton.label', closeButtonLabel),
-                }}
-                renderFooter={() => (
-                  <Fragment>
-                    <Button kind="secondary">Close</Button>
-                    <Button>Add</Button>
-                  </Fragment>
-                )}
-              >
-                <PanelContent>{content}</PanelContent>
-              </Panel>
-              <Panel
-                key="p2"
-                isOpen={this.state.secondOpen}
-                {...props}
-                closeButton={{
-                  onClick: this.closeSecond,
-                  label: text('closeButton.label', closeButtonLabel),
-                }}
-                renderFooter={() => (
-                  <ComboButton {...comboButtonProps()}>
-                    <ComboButtonItem
-                      onClick={action('onClick (Item 1 - primary button)')}
-                      renderIcon={ArrowRight20}
-                    >
-                      Item 1 (becomes primary button and text will be truncated)
-                    </ComboButtonItem>
-                    {Array(5)
-                      .fill(0)
-                      .map((item, index) => {
-                        const text = `Item ${index +
-                          2} - text may be long and will be truncated`;
-                        return (
-                          <ComboButtonItem
-                            className="some-class"
-                            key={item.id}
-                            index={index}
-                            onClick={action(`onClick (${text})`)}
-                            renderIcon={Filter20}
-                          >
-                            {text}
-                          </ComboButtonItem>
-                        );
-                      })}
-                  </ComboButton>
-                )}
-              >
-                <PanelContent>
-                  <Fragment>
-                    {content}
-                    <p>
-                      This example uses the
-                      <CodeSnippet type="inline" light>
-                        renderFooter
-                      </CodeSnippet>
-                      prop to render a
-                      <CodeSnippet type="inline" light>
-                        ComboButton
-                      </CodeSnippet>
-                      in a custom footer.
-                    </p>
-                  </Fragment>
-                </PanelContent>
-              </Panel>
-              <Panel
-                key="p3"
-                isOpen={this.state.thirdOpen}
-                {...props}
-                closeButton={{
-                  onClick: this.closethird,
-                  label: closeButtonLabel,
-                }}
-              >
-                <PanelContent>
-                  <Fragment>
-                    {content}
-                    <p>
-                      This example intentially does not include the
-                      <CodeSnippet type="inline" light>
-                        renderFooter
-                      </CodeSnippet>
-                      or
-                      <CodeSnippet type="inline" light>
-                        primaryButton
-                      </CodeSnippet>
-                      props and therefore does not have a footer.
-                    </p>
-                  </Fragment>
-                </PanelContent>
-              </Panel>
-            </Fragment>
-          );
-        }
+      render() {
+        return (
+          <Fragment>
+            <Shell header={header} profile={profile} toolbar={toolbar} />
+            <div id="main" style={{ paddingLeft: '5rem' }}>
+              <Button key="b1" onClick={this.openFirst}>
+                Primary and secondary action
+              </Button>
+              <Button key="b2" onClick={this.openSecond}>
+                Primary action
+              </Button>
+              <Button key="b3" onClick={this.openThird}>
+                Default
+              </Button>
+            </div>
+            <Panel
+              key="p1"
+              isOpen={this.state.firstOpen}
+              {...props}
+              closeButton={{
+                onClick: this.closeFirst,
+                label: text('closeButton.label', closeButtonLabel),
+              }}
+              renderFooter={() => (
+                <Fragment>
+                  <Button kind="secondary">Close</Button>
+                  <Button>Add</Button>
+                </Fragment>
+              )}
+            >
+              <PanelContent>{content}</PanelContent>
+            </Panel>
+            <Panel
+              key="p2"
+              isOpen={this.state.secondOpen}
+              {...props}
+              closeButton={{
+                onClick: this.closeSecond,
+                label: text('closeButton.label', closeButtonLabel),
+              }}
+              renderFooter={() => (
+                <ComboButton {...comboButtonProps()}>
+                  <ComboButtonItem
+                    onClick={action('onClick (Item 1 - primary button)')}
+                    renderIcon={ArrowRight20}
+                  >
+                    Item 1 (becomes primary button and text will be truncated)
+                  </ComboButtonItem>
+                  {Array(5)
+                    .fill(0)
+                    .map((item, index) => {
+                      const text = `Item ${index +
+                        2} - text may be long and will be truncated`;
+                      return (
+                        <ComboButtonItem
+                          className="some-class"
+                          key={item.id}
+                          index={index}
+                          onClick={action(`onClick (${text})`)}
+                          renderIcon={Filter20}
+                        >
+                          {text}
+                        </ComboButtonItem>
+                      );
+                    })}
+                </ComboButton>
+              )}
+            >
+              <PanelContent>
+                <Fragment>
+                  {content}
+                  <p>
+                    This example uses the
+                    <CodeSnippet type="inline" light>
+                      renderFooter
+                    </CodeSnippet>
+                    prop to render a
+                    <CodeSnippet type="inline" light>
+                      ComboButton
+                    </CodeSnippet>
+                    in a custom footer.
+                  </p>
+                </Fragment>
+              </PanelContent>
+            </Panel>
+            <Panel
+              key="p3"
+              isOpen={this.state.thirdOpen}
+              {...props}
+              closeButton={{
+                onClick: this.closethird,
+                label: closeButtonLabel,
+              }}
+            >
+              <PanelContent>
+                <Fragment>
+                  {content}
+                  <p>
+                    This example intentially does not include the
+                    <CodeSnippet type="inline" light>
+                      renderFooter
+                    </CodeSnippet>
+                    or
+                    <CodeSnippet type="inline" light>
+                      primaryButton
+                    </CodeSnippet>
+                    props and therefore does not have a footer.
+                  </p>
+                </Fragment>
+              </PanelContent>
+            </Panel>
+          </Fragment>
+        );
       }
-      return <PanelStory />;
-    },
-    {
-      info: {
-        text: `
-        The \`Panel\` is an experimental component that is subject to change while it is being tested. If you need a stable component, please use the \`Panel\` instead.
-      `,
-      },
     }
-  );
+    return <PanelStory />;
+  });

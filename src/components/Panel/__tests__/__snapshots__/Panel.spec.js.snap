@@ -3,11 +3,7 @@
 exports[`Panel renders 1`] = `
 <Panel
   className={null}
-  closeButton={
-    Object {
-      "onClick": [Function],
-    }
-  }
+  closeButton={[Function]}
   focusTrap={true}
   isOpen={true}
   labels={Object {}}
@@ -151,7 +147,6 @@ exports[`Panel renders 1`] = `
                     >
                       <button
                         class="security--button bx--btn bx--btn--secondary"
-                        id="example-secondary-button"
                         tabindex="0"
                         type="button"
                       >
@@ -159,7 +154,6 @@ exports[`Panel renders 1`] = `
                       </button>
                       <button
                         class="security--button bx--btn bx--btn--primary"
-                        id="example-primary-button"
                         tabindex="0"
                         type="button"
                       >
@@ -238,7 +232,6 @@ exports[`Panel renders 1`] = `
                       >
                         <button
                           class="security--button bx--btn bx--btn--secondary"
-                          id="example-secondary-button"
                           tabindex="0"
                           type="button"
                         >
@@ -246,7 +239,6 @@ exports[`Panel renders 1`] = `
                         </button>
                         <button
                           class="security--button bx--btn bx--btn--primary"
-                          id="example-primary-button"
                           tabindex="0"
                           type="button"
                         >
@@ -296,7 +288,7 @@ exports[`Panel renders 1`] = `
                         iconClassName=""
                         iconSize={20}
                         label="Close"
-                        onClick={[Function]}
+                        onClick={null}
                         path={null}
                         renderIcon={
                           Object {
@@ -312,7 +304,7 @@ exports[`Panel renders 1`] = `
                         <button
                           aria-label="Close"
                           className="security--button--icon security--panel__button--close"
-                          onClick={[Function]}
+                          onClick={null}
                         >
                           <Icon
                             className=""
@@ -403,7 +395,6 @@ exports[`Panel renders 1`] = `
                     >
                       <Button
                         disabled={false}
-                        id="example-secondary-button"
                         kind="secondary"
                         largeText={null}
                         loading={false}
@@ -414,7 +405,6 @@ exports[`Panel renders 1`] = `
                         <ForwardRef(Button)
                           className="security--button"
                           disabled={false}
-                          id="example-secondary-button"
                           kind="secondary"
                           onClick={[Function]}
                           tabIndex={0}
@@ -423,7 +413,6 @@ exports[`Panel renders 1`] = `
                           <button
                             className="security--button bx--btn bx--btn--secondary"
                             disabled={false}
-                            id="example-secondary-button"
                             onClick={[Function]}
                             tabIndex={0}
                             type="button"
@@ -434,7 +423,6 @@ exports[`Panel renders 1`] = `
                       </Button>
                       <Button
                         disabled={false}
-                        id="example-primary-button"
                         kind="primary"
                         largeText={null}
                         loading={false}
@@ -445,7 +433,6 @@ exports[`Panel renders 1`] = `
                         <ForwardRef(Button)
                           className="security--button"
                           disabled={false}
-                          id="example-primary-button"
                           kind="primary"
                           onClick={[Function]}
                           tabIndex={0}
@@ -454,7 +441,6 @@ exports[`Panel renders 1`] = `
                           <button
                             className="security--button bx--btn bx--btn--primary"
                             disabled={false}
-                            id="example-primary-button"
                             onClick={[Function]}
                             tabIndex={0}
                             type="button"

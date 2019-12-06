@@ -16,19 +16,13 @@ describe('Panel', () => {
       <Panel
         title={label}
         subtitle={label}
-        closeButton={{ onClick }}
+        closeButton={onClick}
         renderFooter={() => (
           <Fragment>
-            <Button
-              id="example-secondary-button"
-              kind="secondary"
-              onClick={onClick}
-            >
+            <Button kind="secondary" onClick={onClick}>
               Close
             </Button>
-            <Button id="example-primary-button" onClick={onClick}>
-              Add
-            </Button>
+            <Button onClick={onClick}>Add</Button>
           </Fragment>
         )}
       >
