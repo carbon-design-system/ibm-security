@@ -208,7 +208,7 @@ export OrderedList from 'carbon-components-react/lib/components/OrderedList';
 export TabContent from 'carbon-components-react/lib/components/TabContent';
 export UnorderedList from 'carbon-components-react/lib/components/UnorderedList';
 
-// Unstable experiemental components
+// Unstable experimental components
 export {
   PageChanger,
   UNSTABLE_Pagination,

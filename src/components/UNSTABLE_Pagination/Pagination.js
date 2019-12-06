@@ -23,6 +23,7 @@ function UNSTABLE_Pagination({
   page,
   pageRangeText,
   pageSize: currentPageSize, // TODO: use state
+  pageSizes,
   pageText,
   pagesUnknown,
   totalItems,
@@ -51,20 +52,32 @@ function UNSTABLE_Pagination({
                 totalItems
               )}
         </span>
-        {children({
-          currentPage: page,
-          onSetPage: setCurrentPage,
-          totalPages,
-          // onNextPage: () => setCurrentPage(Math.min(totalPages, currentPage + 1)),
-          // onPrevPage: () => setCurrentPage(Math.max(0, currentPage - 1)),
-        })}
+        {pageSizes && <span>[where sizes will go]</span>}
       </div>
       <div className={`${namespace}__right`}>
-        <span className={`${namespace}__text`}>
-          {pagesUnknown
-            ? pageText(currentPage)
-            : pageRangeText(currentPage, totalPages)}
-        </span>
+        <>
+          {pagesUnknown && (
+            <span className={`${namespace}__text`}>
+              {pageText(currentPage)}
+            </span>
+          )}
+          {children &&
+            (children({
+              currentPage: page,
+              onSetPage: setCurrentPage,
+              totalPages,
+            }),
+            (
+              <span className={`${namespace}__text`}>
+                {pageRangeText(totalPages)}
+              </span>
+            ))}
+          {!children && (
+            <span className={`${namespace}__text`}>
+              {pageRangeText(currentPage, totalPages)}
+            </span>
+          )}
+        </>
         <Button
           className={classnames(
             `${namespace}__button`,
@@ -105,6 +118,7 @@ function UNSTABLE_Pagination({
 UNSTABLE_Pagination.defaultProps = {
   backwardText: 'Previous page',
   className: '',
+  children: undefined,
   disabled: false,
   forwardText: 'Next page',
   itemRangeText: (min, max, total) => `${min}–${max} of ${total} items`,
@@ -112,6 +126,7 @@ UNSTABLE_Pagination.defaultProps = {
   page: 1,
   pageRangeText: (current, total) => `${current} of ${total} pages`,
   pageSize: 10,
+  pageSizes: null,
   pageText: page => `page ${page}`,
   pagesUnknown: false,
   totalItems: undefined,
@@ -126,7 +141,7 @@ UNSTABLE_Pagination.propTypes = {
   /**
    * The children of the pagination component.
    */
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 
   /**
    * Extra classes to add.
@@ -173,7 +188,7 @@ UNSTABLE_Pagination.propTypes = {
   /**
    * The choices for `pageSize`.
    */
-  pageSizes: PropTypes.arrayOf(PropTypes.number).isRequired,
+  pageSizes: PropTypes.arrayOf(PropTypes.number),
 
   /**
    * The translatable text showing the current page.
