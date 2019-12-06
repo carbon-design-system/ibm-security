@@ -4,17 +4,22 @@
 /// @copyright IBM Security 2019
 ////
 
+@import 'carbon-components/scss/globals/scss/helper-mixins';
+@import 'carbon-components/scss/globals/scss/vars';
+
+@import '@carbon/layout/scss/mini-unit';
+@import '@carbon/layout/scss/spacing';
+
 @import '../../globals/index';
 
-/// Use until Carbon fixes `text-overflow` helper mixin.
-/// @access private
-@mixin summary-card--ellipsis {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 @mixin summary-card {
+  /// Container height.
+  /// @type Length
+  /// @access private
+  $summary-card__container__sizing__height: carbon--mini-units(
+    $count: 6,
+  );
+
   /// Summary card header height.
   /// @type Length
   /// @access private
@@ -49,6 +54,14 @@
   min-width: carbon--mini-units($count: 36);
   flex-direction: column;
   overflow: hidden;
+
+  &__container {
+    padding-top: $summary-card__container__sizing__height;
+  }
+
+  &__batch-actions {
+    height: $summary-card__container__sizing__height;
+  }
 
   &__body {
     @include carbon--type-style($name: body-long-01);
@@ -86,6 +99,23 @@
     border-top: 1px solid $ui-02;
   }
 
+  &__select {
+    /// Summary card select padding.
+    /// @type Length
+    $summary-card__select__spacing__padding: $carbon--spacing-03;
+
+    display: flex;
+    padding-right: $summary-card__select__spacing__padding;
+    padding-left: $summary-card__select__spacing__padding;
+    align-items: center;
+
+    &__checkbox {
+      @include text-overflow;
+
+      max-width: carbon--mini-units($count: 20);
+    }
+  }
+
   &__action {
     flex: 1;
     max-width: unset;
@@ -98,7 +128,7 @@
     background-color: inherit;
 
     &__text {
-      @include summary-card--ellipsis;
+      @include text-overflow;
     }
 
     // Accommodates the loading spinner:

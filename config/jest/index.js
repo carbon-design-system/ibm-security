@@ -1,6 +1,6 @@
 /**
  * @file Jest configuration.
- * @copyright IBM Security 2018
+ * @copyright IBM Security 2019
  */
 
 import Enzyme from 'enzyme';
