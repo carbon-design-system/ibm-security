@@ -56,36 +56,23 @@ function UNSTABLE_Pagination({
       </div>
       <div className={`${namespace}__right`}>
         <>
-          {/**
-           * If `pagesUnknown={true}` & `children={undefined}`, only display current page.
-           */}
-          {pagesUnknown && !children && (
-            <span className={`${namespace}__text`}>
-              {pageText(currentPage)}
-            </span>
-          )}
-
-          {/**
-           * If `children` exist...
-           */}
           {children &&
             (children({
               currentPage: page,
               onSetPage: setCurrentPage,
               totalPages,
             }),
-            (
+            !pagesUnknown && (
               <span className={`${namespace}__text`}>
                 {pageRangeText(totalPages)}
               </span>
             ))}
 
-          {/**
-           * If `children={undefined}` yet `totalPages` are known...
-           */}
           {!children && (
             <span className={`${namespace}__text`}>
-              {pageRangeText(currentPage, totalPages)}
+              {pagesUnknown
+                ? pageText(currentPage)
+                : pageRangeText(currentPage, totalPages)}
             </span>
           )}
         </>

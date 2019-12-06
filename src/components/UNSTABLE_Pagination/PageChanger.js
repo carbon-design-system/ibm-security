@@ -44,7 +44,7 @@ PageChanger.propTypes = {
 };
 
 PageChanger.defaultProps = {
-  className: '',
+  className: null,
   totalPages: null,
 };
 
