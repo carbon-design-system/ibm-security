@@ -19,7 +19,8 @@ storiesOf(components('UNSTABLE Pagination'), module)
           labelText=""
           id="select-1"
           onChange={event => onSetPage(event.target.value)}
-          totalPages={totalPages} // TODO
+          // TODO: handle `totalPages` like this?
+          totalPages={totalPages}
         />
       )}
     </UNSTABLE_Pagination>

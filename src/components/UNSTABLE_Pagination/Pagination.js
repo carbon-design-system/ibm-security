@@ -30,7 +30,7 @@ function UNSTABLE_Pagination({
   ...rest
 }) {
   const [currentPage, setCurrentPage] = useState(page);
-  // const [currentPageSize, setCurrentPageSize] = useState(pageSize);
+  // TODO: const [currentPageSize, setCurrentPageSize] = useState(pageSize);
 
   const totalPages = Math.max(Math.ceil(totalItems / currentPageSize), 1);
 
@@ -56,11 +56,18 @@ function UNSTABLE_Pagination({
       </div>
       <div className={`${namespace}__right`}>
         <>
-          {pagesUnknown && (
+          {/**
+           * If `pagesUnknown={true}` & `children={undefined}`, only display current page.
+           */}
+          {pagesUnknown && !children && (
             <span className={`${namespace}__text`}>
               {pageText(currentPage)}
             </span>
           )}
+
+          {/**
+           * If `children` exist...
+           */}
           {children &&
             (children({
               currentPage: page,
@@ -72,6 +79,10 @@ function UNSTABLE_Pagination({
                 {pageRangeText(totalPages)}
               </span>
             ))}
+
+          {/**
+           * If `children={undefined}` yet `totalPages` are known...
+           */}
           {!children && (
             <span className={`${namespace}__text`}>
               {pageRangeText(currentPage, totalPages)}
@@ -117,7 +128,7 @@ function UNSTABLE_Pagination({
 
 UNSTABLE_Pagination.defaultProps = {
   backwardText: 'Previous page',
-  className: '',
+  className: null,
   children: undefined,
   disabled: false,
   forwardText: 'Next page',
