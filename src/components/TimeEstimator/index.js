@@ -16,8 +16,8 @@ const namespace = getComponentNamespace('time-estimator');
 /**
  * Time estimators display the estimated amount of time it takes to complete a flow.
  */
-const TimeEstimator = ({ children, className, ...props }) => (
-  <span className={classnames(namespace, className)} {...props}>
+const TimeEstimator = ({ children, className, ...other }) => (
+  <span className={classnames(namespace, className)} {...other}>
     <Time16 className={`${namespace}__icon`} />
     {children}
   </span>
