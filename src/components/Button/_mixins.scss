@@ -18,19 +18,16 @@
   $button__spacing__padding: $carbon--spacing-05;
 
   &--ghost-danger {
-    &,
+    color: $text-01;
+
     &:focus,
     &:hover {
-      color: $text-01;
-
-      > .#{$prefix}--btn__icon > path {
-        fill: currentColor;
-      }
+      color: $text-04;
+      background-color: $hover-danger;
     }
 
-    &:focus,
-    &:hover {
-      background-color: $hover-danger;
+    &:hover > .#{$prefix}--btn__icon > path {
+      fill: currentColor;
     }
   }
 

@@ -3,6 +3,9 @@
  * @copyright IBM Security 2019
  */
 
+// Globals.
+export theme from './globals/theme';
+
 // Application.
 export ErrorPage from './components/ErrorPage';
 export { Card, CardSkeleton } from './components/Card';
@@ -89,6 +92,19 @@ export { StatusStep, StatusIndicator } from './components/StatusIndicator';
 export { Step, StepIndicator } from './components/StepIndicator';
 export StringFormatter from './components/StringFormatter';
 export Switch from './components/Switch';
+
+export SummaryCard, {
+  SummaryCardAction,
+  SummaryCardBatchAction,
+  SummaryCardBatchActions,
+  SummaryCardBody,
+  SummaryCardContainer,
+  SummaryCardFooter,
+  SummaryCardHeader,
+  SummaryCardSelect,
+  SummaryCardSkeleton,
+} from './components/SummaryCard';
+
 export Tag, { InteractiveTag, TagSkeleton } from './components/Tag';
 export TagWall from './components/TagWall';
 export TagWallFilter from './components/TagWallFilter';
@@ -181,6 +197,7 @@ export ToggleSmall, { ToggleSmallSkeleton } from './components/ToggleSmall';
 export Tooltip from './components/Tooltip';
 export TooltipDefintion from './components/TooltipDefinition';
 export Transition from './components/Transition';
+export * from './components/UIShell';
 
 // Hidden Carbon proxy.
 export FormItem from 'carbon-components-react/lib/components/FormItem';

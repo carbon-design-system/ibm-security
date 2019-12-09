@@ -22,16 +22,15 @@ If you just want to try out Carbon for IBM Security, you can also use
 
 If you're trying to find something specific, here's a full list of packages that we support!
 
-| Package name                                                                                             | Description                                        |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| [`carbon-components`](https://github.com/carbon-design-system/carbon/tree/master/packages/components)    | Carbon component styles                            |
-| [`carbon-components-react`](https://github.com/carbon-design-system/carbon/tree/master/packages/react)   | Carbon React components                            |
-| [`@carbon/colors`](https://github.com/carbon-design-system/carbon/tree/master/packages/colors)           | Work with IBM Design Language colors               |
-| [`@carbon/grid`](https://github.com/carbon-design-system/carbon/tree/master/packages/grid)               | Build layouts using the grid system                |
-| [`@carbon/icons-react`](https://github.com/carbon-design-system/carbon/tree/master/packages/icons-react) | Iconography assets                                 |
-| [`@carbon/layout`](https://github.com/carbon-design-system/carbon/tree/master/packages/layout)           | Layout-based units and spacing scale               |
-| [`@carbon/themes`](https://github.com/carbon-design-system/carbon/tree/master/packages/themes)           | Color tokens available in the Carbon Design System |
-| [`@carbon/type`](https://github.com/carbon-design-system/carbon/tree/master/packages/type)               | Type tokens used alongside IBM Plex                |
+| Package name                                                                                             | Description                          |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| [`carbon-components`](https://github.com/carbon-design-system/carbon/tree/master/packages/components)    | Carbon component styles              |
+| [`carbon-components-react`](https://github.com/carbon-design-system/carbon/tree/master/packages/react)   | Carbon React components              |
+| [`@carbon/colors`](https://github.com/carbon-design-system/carbon/tree/master/packages/colors)           | Work with IBM Design Language colors |
+| [`@carbon/grid`](https://github.com/carbon-design-system/carbon/tree/master/packages/grid)               | Build layouts using the grid system  |
+| [`@carbon/icons-react`](https://github.com/carbon-design-system/carbon/tree/master/packages/icons-react) | Iconography assets                   |
+| [`@carbon/layout`](https://github.com/carbon-design-system/carbon/tree/master/packages/layout)           | Layout-based units and spacing scale |
+| [`@carbon/type`](https://github.com/carbon-design-system/carbon/tree/master/packages/type)               | Type tokens used alongside IBM Plex  |
 
 To install Carbon for IBM Security in your project, you'll need to run one of the following commands using a package manager:
 
@@ -69,6 +68,8 @@ const { ComponentName } = require('@carbon/ibm-security');
 
 To add a component style to your build, import the component directly. Importing a component this way will bring in any dependencies that component has as well. The import system removes duplicate dependencies, so shared dependencies between components will not create extra CSS.
 
+In addition, to resolve your `@import` declarations, you will need to setup `node-sass` so that `node_modules` is included in the [`includePaths`](https://github.com/sass/node-sass#includepaths) option.
+
 ```scss
 @import '@carbon/ibm-security/scss/components/ComponentName/index';
 ```
@@ -102,6 +103,10 @@ To add all of the components' processed and minified styles, reference `@carbon/
 - [Migration guides](docs/migration)
   - [`v1` to `v2`](docs/migration/migrate-to-2.x.md)
 - [Storybook](docs/storybook.md)
+
+### Themes
+
+Themes are used for applying color in Carbon for IBM Security and offered by outputting [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) for theme tokens. Check out our [theming documentation](docs/themes) for guidelines.
 
 ### Carbon Developer Essentials
 

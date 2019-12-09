@@ -29,7 +29,7 @@ const shellProps = {
   toolbar,
 };
 
-disableCentered(storiesOf(patterns('Shell'), module))
+disableCentered(storiesOf(patterns('Shell (Security)'), module))
   .add('default', () => <Shell {...shellProps} />, {
     info: {
       text: `
@@ -116,9 +116,10 @@ disableCentered(storiesOf(patterns('Shell'), module))
             {
               id: 'example-addon',
               tooltip: 'Example Addon Action',
-              render: ({ className }) => (
+              render: ({ className, iconClassName }) => (
                 <IconButton
                   className={className}
+                  iconClassName={iconClassName}
                   label="Example Addon"
                   onClick={action('addon click')}
                   onFocus={action('addon hovered')}

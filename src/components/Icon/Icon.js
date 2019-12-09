@@ -16,7 +16,7 @@ const sizePropType = oneOfType([number, string]);
 const renderIconDefaultProp = null;
 const renderIconPropType = oneOfType([func, object]);
 
-// TODO: V3 - Remove deprecated props `height` and `width`.
+// TODO: `2.x` - Remove deprecated props `height` and `width`.
 
 /**
  * Icon component.

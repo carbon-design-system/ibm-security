@@ -1,5 +1,9 @@
 {
-  "brand": { "company": "IBM", "product": "Security Application" },
+  "brand": {
+    "company": "IBM",
+    "domain": "Security",
+    "product": "Application"
+  },
   "notifications": {
     "button": "Toggle notifications",
     "title": "Notifications",

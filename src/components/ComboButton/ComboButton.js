@@ -5,7 +5,7 @@
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { Fragment, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import ChevronDown16 from '@carbon/icons-react/lib/chevron--down/16';
 import ChevronUp16 from '@carbon/icons-react/lib/chevron--up/16';
 import { settings } from 'carbon-components';
@@ -98,7 +98,7 @@ const ComboButton = ({ children, className, direction }) => {
           disabled={disabled}
           href={href}
           itemText={
-            <Fragment>
+            <>
               <span
                 className={`${prefix}--text-truncate--end`}
                 title={children}
@@ -106,7 +106,7 @@ const ComboButton = ({ children, className, direction }) => {
                 {children}
               </span>
               {!Icon ? null : <Icon />}
-            </Fragment>
+            </>
           }
           key={item.id}
           onClick={onClick}
@@ -116,38 +116,44 @@ const ComboButton = ({ children, className, direction }) => {
     });
   }
 
+  const overflowIcon = Icon => <Icon className={`${namespace}__icon`} />;
+
   return (
     <div
       className={classnames(namespace, className)}
       ref={wrapper}
       data-floating-menu-container
     >
-      {primaryActionWithProps}
+      <div className={`${namespace}__group`}>
+        {primaryActionWithProps}
 
-      {overflowMenuItemWithProps !== undefined && (
-        <OverflowMenu
-          className={classnames(
-            // Button-specific classes for styling:
-            buttonNamespace,
-            `${prefix}--btn`,
-            `${prefix}--btn--primary`,
+        {overflowMenuItemWithProps !== undefined && (
+          <OverflowMenu
+            className={classnames(
+              // Button-specific classes for styling:
+              buttonNamespace,
+              `${prefix}--btn`,
+              `${prefix}--btn--primary`,
 
-            // Button as a child of combo button:
-            `${namespace}__button`,
+              // Button as a child of combo button:
+              `${namespace}__button`,
 
-            // Overflow menu as a child of combo button:
-            `${namespace}__overflow-menu`
-          )}
-          direction={direction}
-          menuOffset={getMenuOffset}
-          menuOptionsClass={`${prefix}--list-box__menu`}
-          onClose={() => setIsOpen(false)}
-          onOpen={() => setIsOpen(true)}
-          renderIcon={isOpen ? ChevronUp16 : ChevronDown16}
-        >
-          {overflowMenuItemWithProps}
-        </OverflowMenu>
-      )}
+              // Overflow menu as a child of combo button:
+              `${namespace}__overflow-menu`
+            )}
+            direction={direction}
+            menuOffset={getMenuOffset}
+            menuOptionsClass={`${prefix}--list-box__menu`}
+            onClose={() => setIsOpen(false)}
+            onOpen={() => setIsOpen(true)}
+            renderIcon={() =>
+              isOpen ? overflowIcon(ChevronUp16) : overflowIcon(ChevronDown16)
+            }
+          >
+            {overflowMenuItemWithProps}
+          </OverflowMenu>
+        )}
+      </div>
     </div>
   );
 };

@@ -30,6 +30,9 @@ const propTypes = {
       /** @type {string} The company. */
       company: PropTypes.string.isRequired,
 
+      /** The domain. */
+      domain: PropTypes.string,
+
       /** @type {string} The product name. */
       product: PropTypes.string.isRequired,
     }).isRequired,

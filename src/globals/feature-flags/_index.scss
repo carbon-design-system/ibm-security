@@ -7,7 +7,7 @@
 @import 'carbon-components/scss/globals/scss/feature-flags';
 @import 'carbon-components/scss/globals/scss/functions';
 
-// TODO: V3 - Deprecate after teams have migrated to `@carbon/grid`.
+// TODO: `2.x` - Deprecate after teams have migrated to `@carbon/grid`.
 
 /// Grid feature flag.
 /// @type String
@@ -17,7 +17,7 @@ $grid__name: css-gridish;
 /// @type String
 $platform__name: platform;
 
-// TODO: V3 - Deprecate after teams have migrated to `@carbon/type`.
+// TODO: `2.x` - Deprecate after teams have migrated to `@carbon/type`.
 
 /// Type feature flag.
 /// @type String
