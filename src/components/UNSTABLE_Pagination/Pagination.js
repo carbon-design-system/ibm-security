@@ -37,6 +37,13 @@ function UNSTABLE_Pagination({
   const backButtonDisabled = disabled || currentPage === 1;
   const forwardButtonDisabled = disabled || currentPage === totalPages;
 
+  console.log(
+    'parent says currentPage is... ',
+    currentPage,
+    ' of type ',
+    typeof currentPage
+  );
+
   return (
     <section className={classnames(namespace, className)} {...rest}>
       <div className={`${namespace}__left`}>
@@ -57,16 +64,17 @@ function UNSTABLE_Pagination({
       <div className={`${namespace}__right`}>
         <>
           {children &&
-            (children({
-              currentPage: page,
+            children({
+              currentPage,
               onSetPage: setCurrentPage,
               totalPages,
-            }),
-            !pagesUnknown && (
-              <span className={`${namespace}__text`}>
-                {pageRangeText(totalPages)}
-              </span>
-            ))}
+            })}
+
+          {children && !pagesUnknown && (
+            <span className={`${namespace}__text`}>
+              {pageRangeText(currentPage, totalPages)}
+            </span>
+          )}
 
           {!children && (
             <span className={`${namespace}__text`}>

@@ -14,13 +14,15 @@ storiesOf(components('UNSTABLE Pagination'), module)
   .addDecorator(story => <div style={{ width: '800px' }}>{story()}</div>)
   .add('default', () => (
     <UNSTABLE_Pagination totalItems={350} pageSizes={[10, 20]}>
-      {({ onSetPage, totalPages }) => (
+      {({ currentPage, onSetPage, totalPages }) => (
         <PageChanger
           labelText=""
           id="select-1"
-          onChange={event => onSetPage(event.target.value)}
-          // TODO: handle `totalPages` like this?
+          // TODO: event.target.value is always a string?
+          onChange={event => onSetPage(Number(event.target.value))}
+          // TODO: fix totalPages?
           totalPages={totalPages}
+          value={currentPage}
         />
       )}
     </UNSTABLE_Pagination>
