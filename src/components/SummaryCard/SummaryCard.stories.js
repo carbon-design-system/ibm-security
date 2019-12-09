@@ -45,7 +45,7 @@ storiesOf(patterns('SummaryCard'), module)
       <div className={`${prefix}--col-md-4 ${prefix}--col-lg-4`}>
         <SummaryCard>
           <SummaryCardHeader
-            title="Summary card"
+            title="Summary card that is super long and will wrap the next time and needs to be truncated"
             status={
               <Tooltip showIcon iconDescription="Status">
                 Tooltip content

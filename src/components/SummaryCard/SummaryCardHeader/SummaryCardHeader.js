@@ -11,8 +11,8 @@ import { getComponentNamespace } from '../../../globals/namespace/index';
 
 const namespace = getComponentNamespace('summary-card__header');
 
-const SummaryCardHeader = ({ className, title, status }) => (
-  <div className={classnames(namespace, className)}>
+const SummaryCardHeader = ({ className, title, status, ...other }) => (
+  <div className={classnames(namespace, className)} {...other}>
     <h2 className={`${namespace}__title`}>{title}</h2>
     {status}
   </div>
@@ -30,7 +30,7 @@ SummaryCardHeader.propTypes = {
 };
 
 SummaryCardHeader.defaultProps = {
-  className: '',
+  className: null,
   status: undefined,
 };
 
