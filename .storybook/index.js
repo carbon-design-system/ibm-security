@@ -77,8 +77,8 @@ Also refer to http://react.carbondesignsystem.com/?path=/story/${carbon.story}--
  * @returns {Object<string, string>} The configuration containing information to apply.
  */
 const meta = (title, description) => ({
-  title,
   parameters: info(description),
+  title,
 });
 
 export {
