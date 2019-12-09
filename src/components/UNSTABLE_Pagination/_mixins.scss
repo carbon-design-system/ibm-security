@@ -16,6 +16,7 @@
   justify-content: space-between;
   border-top: 1px solid $ui-03;
   height: rem(48px);
+  overflow: hidden;
 
   &__text {
     @include carbon--breakpoint('md') {
