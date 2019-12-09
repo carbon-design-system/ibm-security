@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { CaretRight16, CaretLeft16 } from '@carbon/icons-react';
-import { Button } from 'carbon-components-react';
+import { Button, Select, SelectItem } from 'carbon-components-react';
 import { getComponentNamespace } from '../../globals/namespace';
 
 export const namespace = getComponentNamespace('unstable-pagination');
@@ -18,11 +18,12 @@ function UNSTABLE_Pagination({
   className,
   disabled,
   forwardText,
+  id,
   itemRangeText,
   itemText,
   page,
   pageRangeText,
-  pageSize: currentPageSize, // TODO: use state
+  pageSize,
   pageSizes,
   pageText,
   pagesUnknown,
@@ -30,19 +31,12 @@ function UNSTABLE_Pagination({
   ...rest
 }) {
   const [currentPage, setCurrentPage] = useState(page);
-  // TODO: const [currentPageSize, setCurrentPageSize] = useState(pageSize);
+  const [currentPageSize, setCurrentPageSize] = useState(pageSize);
 
   const totalPages = Math.max(Math.ceil(totalItems / currentPageSize), 1);
 
   const backButtonDisabled = disabled || currentPage === 1;
   const forwardButtonDisabled = disabled || currentPage === totalPages;
-
-  console.log(
-    'parent says currentPage is... ',
-    currentPage,
-    ' of type ',
-    typeof currentPage
-  );
 
   return (
     <section className={classnames(namespace, className)} {...rest}>
@@ -59,7 +53,22 @@ function UNSTABLE_Pagination({
                 totalItems
               )}
         </span>
-        {pageSizes && <span>[where sizes will go]</span>}
+        {pageSizes && (
+          <Select
+            id={`${namespace}__page-sizer__input-${id}`}
+            className={`${namespace}__page-sizer`}
+            labelText=""
+            hideLabel
+            noLabel
+            inline
+            onChange={event => setCurrentPageSize(Number(event.target.value))}
+            value={currentPageSize}
+          >
+            {pageSizes.map(size => (
+              <SelectItem key={size} value={size} text={String(size)} />
+            ))}
+          </Select>
+        )}
       </div>
       <div className={`${namespace}__right`}>
         <>
@@ -127,6 +136,7 @@ UNSTABLE_Pagination.defaultProps = {
   children: undefined,
   disabled: false,
   forwardText: 'Next page',
+  id: 1,
   itemRangeText: (min, max, total) => `${min}–${max} of ${total} items`,
   itemText: (min, max) => `${min}–${max} items`,
   page: 1,
@@ -163,6 +173,9 @@ UNSTABLE_Pagination.propTypes = {
    * The description for the forward icon.
    */
   forwardText: PropTypes.string,
+
+  /** The unique ID of this component instance. */
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
   /**
    * The function returning a translatable text showing where the current page is,

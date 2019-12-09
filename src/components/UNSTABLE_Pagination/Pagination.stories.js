@@ -16,7 +16,6 @@ storiesOf(components('UNSTABLE Pagination'), module)
     <UNSTABLE_Pagination totalItems={350} pageSizes={[10, 20]}>
       {({ currentPage, onSetPage, totalPages }) => (
         <PageSelector
-          labelText=""
           id="select-1"
           // TODO: event.target.value is always a string?
           onChange={event => onSetPage(Number(event.target.value))}

@@ -76,11 +76,13 @@
     border-left: 1px solid $ui-03;
   }
 
-  &__page-selector {
-    padding-right: $carbon--spacing-04;
+  &__page-selector,
+  &__page-sizer {
+    padding: 0 $carbon--spacing-04;
   }
 
-  &__page-selector .#{$prefix}--select-input {
+  &__page-selector .#{$prefix}--select-input,
+  &__page-sizer .#{$prefix}--select-input {
     width: 100%;
   }
 }

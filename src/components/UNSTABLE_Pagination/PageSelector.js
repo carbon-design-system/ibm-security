@@ -32,6 +32,7 @@ function PageSelector({ className, id, labelText, totalPages, ...rest }) {
     <Select
       className={classnames(namespace, className)}
       hideLabel
+      id={`${namespace}__input-${id}`}
       inline
       labelText={labelText}
       {...rest}
