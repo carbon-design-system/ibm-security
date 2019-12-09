@@ -6,7 +6,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { CaretRight16, CaretLeft16 } from '@carbon/icons-react';
+import { CaretRight24, CaretLeft24 } from '@carbon/icons-react';
 import { Button, Select, SelectItem } from 'carbon-components-react';
 import { getComponentNamespace } from '../../globals/namespace';
 
@@ -19,6 +19,7 @@ function UNSTABLE_Pagination({
   disabled,
   forwardText,
   id,
+  itemsPerPageText,
   itemRangeText,
   itemText,
   page,
@@ -41,6 +42,31 @@ function UNSTABLE_Pagination({
   return (
     <section className={classnames(namespace, className)} {...rest}>
       <div className={`${namespace}__left`}>
+        {pageSizes && (
+          <>
+            <label
+              id={`${namespace}__page-sizer__counter-${id}`}
+              className={`${namespace}__text`}
+              htmlFor={`${namespace}__page-sizer__input-${id}`}
+            >
+              {itemsPerPageText}
+            </label>
+            <Select
+              id={`${namespace}__page-sizer__input-${id}`}
+              className={`${namespace}__page-sizer`}
+              labelText=""
+              hideLabel
+              noLabel
+              inline
+              onChange={event => setCurrentPageSize(Number(event.target.value))}
+              value={currentPageSize}
+            >
+              {pageSizes.map(size => (
+                <SelectItem key={size} value={size} text={String(size)} />
+              ))}
+            </Select>
+          </>
+        )}
         <span className={`${namespace}__text`}>
           {pagesUnknown || !totalItems
             ? itemText(
@@ -53,22 +79,6 @@ function UNSTABLE_Pagination({
                 totalItems
               )}
         </span>
-        {pageSizes && (
-          <Select
-            id={`${namespace}__page-sizer__input-${id}`}
-            className={`${namespace}__page-sizer`}
-            labelText=""
-            hideLabel
-            noLabel
-            inline
-            onChange={event => setCurrentPageSize(Number(event.target.value))}
-            value={currentPageSize}
-          >
-            {pageSizes.map(size => (
-              <SelectItem key={size} value={size} text={String(size)} />
-            ))}
-          </Select>
-        )}
       </div>
       <div className={`${namespace}__right`}>
         <>
@@ -104,7 +114,7 @@ function UNSTABLE_Pagination({
           onClick={() => setCurrentPage(currentPage - 1)}
           disabled={backButtonDisabled}
           hasIconOnly
-          renderIcon={CaretLeft16}
+          renderIcon={CaretLeft24}
           tooltipAlignment="center"
           tooltipPosition="top"
           iconDescription={backwardText}
@@ -120,7 +130,7 @@ function UNSTABLE_Pagination({
           onClick={() => setCurrentPage(currentPage + 1)}
           disabled={forwardButtonDisabled}
           hasIconOnly
-          renderIcon={CaretRight16}
+          renderIcon={CaretRight24}
           tooltipAlignment="center"
           tooltipPosition="top"
           iconDescription={forwardText}
@@ -137,6 +147,7 @@ UNSTABLE_Pagination.defaultProps = {
   disabled: false,
   forwardText: 'Next page',
   id: 1,
+  itemsPerPageText: 'Items per page:',
   itemRangeText: (min, max, total) => `${min}–${max} of ${total} items`,
   itemText: (min, max) => `${min}–${max} items`,
   page: 1,
@@ -176,6 +187,11 @@ UNSTABLE_Pagination.propTypes = {
 
   /** The unique ID of this component instance. */
   id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+
+  /**
+   * The translatable text indicating the number of items per page.
+   */
+  itemsPerPageText: PropTypes.string,
 
   /**
    * The function returning a translatable text showing where the current page is,

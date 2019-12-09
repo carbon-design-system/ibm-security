@@ -31,11 +31,14 @@
     display: flex;
     height: 100%;
     align-items: center;
-    overflow: hidden;
+
+    & > .#{$prefix}--form-item {
+      height: 100%;
+    }
   }
 
   &__left {
-    padding: 0 $carbon--spacing-05;
+    padding: 0 $carbon--spacing-05 0 0;
   }
 
   &__left &__text {
@@ -48,8 +51,26 @@
   }
 
   &__button {
-    width: 3rem;
+    @include reset;
+    border: none;
+    background: none;
+    cursor: pointer;
+    height: 100%;
+    margin: 0;
+    padding: 0 rem(14px);
+    border-left: 1px solid $ui-03;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    fill: $ui-05;
+    transition: outline $duration--fast-02 motion(standard, productive);
+    transition: background-color $duration--fast-02 motion(standard, productive);
+
+    // Required to prevent tooltip trigger button from shrinking icon:
+    &.#{$prefix}--btn .#{$prefix}--btn__icon {
+      height: unset;
+      width: unset;
+    }
   }
 
   &__button,
@@ -63,6 +84,11 @@
     background: $hover-ui;
   }
 
+  &__button.#{$prefix}--btn--icon-only.#{$prefix}--tooltip__trigger:focus {
+    outline: none;
+    border: 2px solid $focus;
+  }
+
   &__button--no-index {
     fill: $disabled-02;
     cursor: not-allowed;
@@ -73,16 +99,49 @@
     cursor: not-allowed;
     fill: $disabled-02;
     background: $ui-01;
-    border-left: 1px solid $ui-03;
   }
 
   &__page-selector,
   &__page-sizer {
-    padding: 0 $carbon--spacing-04;
+    height: 100%;
+    align-items: center;
+
+    .#{$prefix}--select-input--inline__wrapper {
+      display: flex;
+      height: 100%;
+    }
+
+    .#{$prefix}--select-input {
+      @include type-style('body-short-01');
+      width: auto;
+      min-width: auto;
+      height: 100%;
+      padding: 0 2.5rem 0 $spacing-md;
+      margin-right: -0.65rem;
+      @include carbon--breakpoint('md') {
+        padding-right: carbon--mini-units(4.5);
+        margin-right: 0;
+      }
+
+      &:hover {
+        background: $hover-ui;
+      }
+    }
+
+    .#{$prefix}--select__arrow {
+      top: 50%;
+      transform: translateY(-50%);
+      @include carbon--breakpoint('md') {
+        right: $carbon--spacing-05;
+      }
+    }
   }
 
-  &__page-selector .#{$prefix}--select-input,
-  &__page-sizer .#{$prefix}--select-input {
-    width: 100%;
+  &__page-selector {
+    border-left: 1px solid $ui-02;
+  }
+
+  &__page-sizer {
+    border-right: 1px solid $ui-02;
   }
 }
