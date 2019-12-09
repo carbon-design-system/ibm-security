@@ -72,7 +72,7 @@ function UNSTABLE_Pagination({
 
           {children && !pagesUnknown && (
             <span className={`${namespace}__text`}>
-              {pageRangeText(currentPage, totalPages)}
+              {pageRangeText('', totalPages)}
             </span>
           )}
 

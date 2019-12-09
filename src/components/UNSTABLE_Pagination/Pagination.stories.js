@@ -6,7 +6,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { UNSTABLE_Pagination, PageChanger } from '../..';
+import { UNSTABLE_Pagination, PageSelector } from '../..';
 
 import { components } from '../../../.storybook';
 
@@ -15,7 +15,7 @@ storiesOf(components('UNSTABLE Pagination'), module)
   .add('default', () => (
     <UNSTABLE_Pagination totalItems={350} pageSizes={[10, 20]}>
       {({ currentPage, onSetPage, totalPages }) => (
-        <PageChanger
+        <PageSelector
           labelText=""
           id="select-1"
           // TODO: event.target.value is always a string?

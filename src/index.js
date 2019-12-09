@@ -210,6 +210,6 @@ export UnorderedList from 'carbon-components-react/lib/components/UnorderedList'
 
 // Unstable experimental components
 export {
-  PageChanger,
+  PageSelector,
   UNSTABLE_Pagination,
 } from './components/UNSTABLE_Pagination';

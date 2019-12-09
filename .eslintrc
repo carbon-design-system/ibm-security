@@ -17,6 +17,7 @@
   "rules": {
     "global-require": "warn",
     "no-param-reassign": "warn",
+    "no-plusplus": "off",
     "no-shadow": "off",
     "no-underscore-dangle": "off",
     "jsx-a11y/label-has-for": [

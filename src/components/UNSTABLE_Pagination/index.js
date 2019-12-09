@@ -4,6 +4,6 @@
  */
 
 import UNSTABLE_Pagination from './Pagination';
-import PageChanger from './PageChanger';
+import PageSelector from './PageSelector';
 
-export { PageChanger, UNSTABLE_Pagination };
+export { PageSelector, UNSTABLE_Pagination };

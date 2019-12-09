@@ -75,4 +75,12 @@
     background: $ui-01;
     border-left: 1px solid $ui-03;
   }
+
+  &__page-selector {
+    padding-right: $carbon--spacing-04;
+  }
+
+  &__page-selector .#{$prefix}--select-input {
+    width: 100%;
+  }
 }

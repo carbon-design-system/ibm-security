@@ -1,5 +1,5 @@
 /**
- * @file Page changer.
+ * @file Page selector.
  * @copyright IBM Security 2019
  */
 
@@ -12,10 +12,10 @@ import { namespace as paginationNamespace } from './Pagination';
 
 const namespace = appendComponentNamespace(
   paginationNamespace,
-  '__page-changer'
+  'page-selector'
 );
 
-function PageChanger({ className, totalPages, ...rest }) {
+function PageSelector({ className, id, totalPages, ...rest }) {
   const renderPages = total => {
     let counter = 1;
     const itemArr = [];
@@ -23,29 +23,39 @@ function PageChanger({ className, totalPages, ...rest }) {
       itemArr.push(
         <SelectItem key={counter} value={counter} text={String(counter)} />
       );
-      counter++; // eslint-disable-line
+      counter++;
     }
     return itemArr;
   };
 
   return (
-    <Select className={classnames(namespace, className)} {...rest}>
+    <Select
+      className={classnames(namespace, className)}
+      hideLabel
+      inline
+      labelText={`Page number, of ${totalPages} pages`}
+      {...rest}
+    >
       {renderPages(totalPages)}
     </Select>
   );
 }
 
-PageChanger.propTypes = {
+PageSelector.propTypes = {
   /** Extra class names to add. */
   className: PropTypes.string,
+
+  /** The unique ID of this component instance. */
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
   /** Total number of pages. */
   totalPages: PropTypes.number,
 };
 
-PageChanger.defaultProps = {
+PageSelector.defaultProps = {
   className: null,
+  id: 1,
   totalPages: null,
 };
 
-export default PageChanger;
+export default PageSelector;
