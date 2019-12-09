@@ -60,16 +60,7 @@ export {
 } from './components/Notification';
 export NumberInput, { NumberInputSkeleton } from './components/NumberInput';
 export Pagination from './components/Pagination';
-
-export {
-  Panel,
-  PanelContainer,
-  PanelContent,
-  PanelController,
-} from './components/Panel';
-
-export PanelV2 from './components/PanelV2';
-
+export Panel, { PanelContent } from './components/Panel';
 export Pill from './components/Pill';
 export Portal from './components/Portal';
 

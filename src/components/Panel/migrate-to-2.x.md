@@ -1,5 +1,7 @@
 # `Panel`
 
-## `PanelContainer`
+## Props
 
-Also refer to [`DataDecorator`](../DataDecorator/migrate-to-2.x.md).
+| `1.x`                                 | `2.x`          |
+| ------------------------------------- | -------------- |
+| `primaryButton` and `secondaryButton` | `renderFooter` |

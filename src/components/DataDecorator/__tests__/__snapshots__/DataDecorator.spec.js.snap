@@ -97,7 +97,7 @@ exports[`DataDecorator renders correctly 1`] = `
       </span>
     </button>
   </Decorator>
-  <PanelV2
+  <Panel
     className={null}
     closeButton={
       Object {
@@ -174,7 +174,7 @@ exports[`DataDecorator renders correctly 1`] = `
     title="10.0.0.0"
   >
     <Transition
-      className="security--panelv2"
+      className="security--panel"
       component={[Function]}
       timeout={160}
     >
@@ -189,12 +189,12 @@ exports[`DataDecorator renders correctly 1`] = `
         transitionLeaveTimeout={160}
         transitionName={
           Object {
-            "appear": "security--panelv2__transition--appear",
-            "appearActive": "security--panelv2__transition--appear--active",
-            "enter": "security--panelv2__transition--enter",
-            "enterActive": "security--panelv2__transition--enter--active",
-            "leave": "security--panelv2__transition--leave",
-            "leaveActive": "security--panelv2__transition--leave--active",
+            "appear": "security--panel__transition--appear",
+            "appearActive": "security--panel__transition--appear--active",
+            "enter": "security--panel__transition--enter",
+            "enterActive": "security--panel__transition--enter--active",
+            "leave": "security--panel__transition--leave",
+            "leaveActive": "security--panel__transition--leave--active",
           }
         }
       >
@@ -210,12 +210,12 @@ exports[`DataDecorator renders correctly 1`] = `
           transitionLeaveTimeout={160}
           transitionName={
             Object {
-              "appear": "security--panelv2__transition--appear",
-              "appearActive": "security--panelv2__transition--appear--active",
-              "enter": "security--panelv2__transition--enter",
-              "enterActive": "security--panelv2__transition--enter--active",
-              "leave": "security--panelv2__transition--leave",
-              "leaveActive": "security--panelv2__transition--leave--active",
+              "appear": "security--panel__transition--appear",
+              "appearActive": "security--panel__transition--appear--active",
+              "enter": "security--panel__transition--enter",
+              "enterActive": "security--panel__transition--enter--active",
+              "leave": "security--panel__transition--leave",
+              "leaveActive": "security--panel__transition--leave--active",
             }
           }
         >
@@ -225,7 +225,7 @@ exports[`DataDecorator renders correctly 1`] = `
         </TransitionGroup>
       </CSSTransitionGroup>
     </Transition>
-  </PanelV2>
+  </Panel>
 </DataDecorator>
 `;
 
