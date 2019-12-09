@@ -15,7 +15,7 @@ const namespace = appendComponentNamespace(
   'page-selector'
 );
 
-function PageSelector({ className, id, totalPages, ...rest }) {
+function PageSelector({ className, id, labelText, totalPages, ...rest }) {
   const renderPages = total => {
     let counter = 1;
     const itemArr = [];
@@ -33,7 +33,7 @@ function PageSelector({ className, id, totalPages, ...rest }) {
       className={classnames(namespace, className)}
       hideLabel
       inline
-      labelText={`Page number, of ${totalPages} pages`}
+      labelText={labelText}
       {...rest}
     >
       {renderPages(totalPages)}
@@ -48,6 +48,9 @@ PageSelector.propTypes = {
   /** The unique ID of this component instance. */
   id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
+  /** Translatable string to label the page selector element. */
+  labelText: PropTypes.string,
+
   /** Total number of pages. */
   totalPages: PropTypes.number,
 };
@@ -55,6 +58,7 @@ PageSelector.propTypes = {
 PageSelector.defaultProps = {
   className: null,
   id: 1,
+  labelText: 'Current page number',
   totalPages: null,
 };
 
