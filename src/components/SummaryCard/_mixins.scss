@@ -85,7 +85,6 @@
 
     &__title {
       @include carbon--type-style($name: caption-01);
-      @include text-overflow;
       color: $text-02;
       flex-grow: 1;
       margin: 0;

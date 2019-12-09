@@ -7,31 +7,54 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
+import StringFormatter from '../../StringFormatter';
+
 import { getComponentNamespace } from '../../../globals/namespace/index';
 
 const namespace = getComponentNamespace('summary-card__header');
 
-const SummaryCardHeader = ({ className, title, status, ...other }) => (
+const SummaryCardHeader = ({
+  className,
+  status,
+  title,
+  titleTooltipDirection,
+  truncate,
+  ...other
+}) => (
   <div className={classnames(namespace, className)} {...other}>
-    <h2 className={`${namespace}__title`}>{title}</h2>
+    <h2 className={`${namespace}__title`}>
+      <StringFormatter
+        truncate={truncate}
+        value={title}
+        tooltipDirection={titleTooltipDirection}
+      />
+    </h2>
     {status}
   </div>
 );
 
 SummaryCardHeader.propTypes = {
-  /** @type {string} Extra class names to add. */
+  /** Extra class names to add. */
   className: PropTypes.string,
 
-  /** @type {node} The status of the Card. */
+  /** The status of the Card. */
   status: PropTypes.node,
 
-  /** @type {string} The title of the summary card. */
+  /** The title of the summary card. */
   title: PropTypes.string.isRequired,
+
+  /** Specify the direction of the title's tooltip. Can be either top or bottom. */
+  titleTooltipDirection: PropTypes.oneOf(['top', 'bottom']),
+
+  /** Whether or not the value should be truncated. */
+  truncate: PropTypes.bool,
 };
 
 SummaryCardHeader.defaultProps = {
   className: null,
   status: undefined,
+  titleTooltipDirection: 'bottom',
+  truncate: false,
 };
 
 export default SummaryCardHeader;
