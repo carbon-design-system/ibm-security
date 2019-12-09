@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TimeEstimator renders 1`] = `
+exports[`TimeIndicator renders 1`] = `
 <span
-  class="security--time-estimator"
+  class="security--time-indicator"
 >
   <svg
     aria-hidden="true"
-    class="security--time-estimator__icon"
+    class="security--time-indicator__icon"
     focusable="false"
     height="16"
     preserveAspectRatio="xMidYMid meet"
@@ -22,6 +22,6 @@ exports[`TimeEstimator renders 1`] = `
       d="M20.59 22L15 16.41V7h2v8.58l5 5.01L20.59 22z"
     />
   </svg>
-  10 min setup
+  10 minute setup
 </span>
 `;

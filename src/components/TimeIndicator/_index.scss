@@ -1,6 +1,6 @@
 ////
-/// Time estimator.
-/// @group time-estimator
+/// Time indicator.
+/// @group time-indicator
 /// @copyright IBM Security 2019
 ////
 
@@ -10,7 +10,7 @@
 
 @import '../Component/mixins';
 
-@include security--component($name: time-estimator) {
+@include security--component($name: time-indicator) {
   @include carbon--type-style($name: label-01);
 
   display: flex;

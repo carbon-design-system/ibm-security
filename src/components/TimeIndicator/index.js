@@ -1,5 +1,5 @@
 /**
- * @file Time estimator.
+ * @file Time indicator.
  * @copyright IBM Security 2019
  */
 
@@ -11,24 +11,28 @@ import React from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
 
-const namespace = getComponentNamespace('time-estimator');
+const namespace = getComponentNamespace('time-indicator');
 
 /**
- * Time estimators display the estimated amount of time it takes to complete a flow.
+ * Time indicators display an estimated amount of time it takes to complete a flow. If there is unavailable space to accommodate the text, `minute` should be abbreviated to `min`.
  */
-const TimeEstimator = ({ children, className, ...other }) => (
+const TimeIndicator = ({ children, className, ...other }) => (
   <span className={classnames(namespace, className)} {...other}>
     <Time16 className={`${namespace}__icon`} />
     {children}
   </span>
 );
 
-TimeEstimator.propTypes = {
-  /** Provide the contents of the `TimeEstimator` */
+TimeIndicator.defaultProps = {
+  className: null,
+};
+
+TimeIndicator.propTypes = {
+  /** Provide the contents of the `TimeIndicator` */
   children: node.isRequired,
 
   /** Provide an optional class to be applied to the containing node */
   className: string,
 };
 
-export default TimeEstimator;
+export default TimeIndicator;
