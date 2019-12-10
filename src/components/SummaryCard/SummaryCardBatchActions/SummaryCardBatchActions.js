@@ -23,7 +23,7 @@ const translationKeys = [
   'security.summary-card.batch.item.selected',
 ];
 
-const SummaryCardBatchActions = ({ translateWithId: t, ...props }) => (
+const SummaryCardBatchActions = ({ translateWithId: t, ...other }) => (
   <TableBatchActions
     className={appendComponentNamespace(summaryCardNamespace, 'batch-actions')}
     translateWithId={(id, state) =>
@@ -31,7 +31,7 @@ const SummaryCardBatchActions = ({ translateWithId: t, ...props }) => (
         ? t(translationKeys[carbonTranslationKeys.indexOf(id)], state)
         : translateWithId(id, state)
     }
-    {...props}
+    {...other}
   />
 );
 

@@ -131,7 +131,7 @@ SummaryCardAction.propTypes = {
 
 SummaryCardAction.defaultProps = {
   children: null,
-  className: '',
+  className: null,
   closeButtonIconDescription: 'close',
   expandedContent: undefined,
   hasIconOnly: false,

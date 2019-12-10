@@ -18,11 +18,11 @@ export const namespace = appendComponentNamespace(
   'select'
 );
 
-const SummaryCardSelect = ({ className, ...props }) => (
+const SummaryCardSelect = ({ className, ...other }) => (
   <div className={namespace}>
     <Checkbox
       className={classnames(`${namespace}__checkbox`, className)}
-      {...props}
+      {...other}
     />
   </div>
 );
@@ -30,6 +30,10 @@ const SummaryCardSelect = ({ className, ...props }) => (
 SummaryCardSelect.propTypes = {
   /** Provide an optional class to be applied to the containing node */
   className: string,
+};
+
+SummaryCardSelect.defaultProps = {
+  className: null,
 };
 
 export default SummaryCardSelect;
