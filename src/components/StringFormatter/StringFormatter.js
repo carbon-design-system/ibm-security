@@ -4,7 +4,7 @@
  */
 
 import classnames from 'classnames';
-import { bool, string, number } from 'prop-types';
+import { bool, string, number, oneOf } from 'prop-types';
 import React from 'react';
 
 import TooltipDefinition from '../TooltipDefinition';
@@ -22,7 +22,7 @@ const StringFormatter = ({
   width,
   ...other
 }) => {
-  const children = (
+  const content = (
     <span
       className={classnames(namespace, className, {
         [`${namespace}--truncate`]: truncate,
@@ -44,10 +44,10 @@ const StringFormatter = ({
       direction={tooltipDirection}
       tooltipText={value}
     >
-      {children}
+      {content}
     </TooltipDefinition>
   ) : (
-    children
+    content
   );
 };
 
@@ -58,21 +58,21 @@ StringFormatter.propTypes = {
   /** @type {number} Number of lines to clamp value. */
   lines: number,
 
-  /** @type {string} The direction of the tooltip defintion. */
-  tooltipDirection: string,
+  /** Specify the direction of the tooltip. Can be either top or bottom. */
+  tooltipDirection: oneOf(['top', 'bottom']),
 
-  /** @type {boolean} Whether or not the value should be truncated. */
+  /** Whether or not the value should be truncated. */
   truncate: bool,
 
-  /** @type {string} Value to format. */
+  /** Value to format. */
   value: string.isRequired,
 
-  /** @type {string} Maximum width of value. */
+  /** Maximum width of value. */
   width: string,
 };
 
 StringFormatter.defaultProps = {
-  className: '',
+  className: null,
   lines: 1,
   tooltipDirection: 'bottom',
   truncate: false,
