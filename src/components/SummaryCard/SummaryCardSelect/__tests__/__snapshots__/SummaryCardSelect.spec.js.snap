@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SummaryCardSelect renders 1`] = `
+<div
+  class="security--summary-card__select"
+>
+  <div
+    class="bx--form-item bx--checkbox-wrapper"
+  >
+    <input
+      class="bx--checkbox"
+      id="summaryCardSelect"
+      type="checkbox"
+    />
+    <label
+      class="bx--checkbox-label security--summary-card__select__checkbox className"
+      for="summaryCardSelect"
+    >
+      <span
+        class="bx--checkbox-label-text"
+      >
+        Select
+      </span>
+    </label>
+  </div>
+</div>
+`;

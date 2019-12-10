@@ -92,19 +92,25 @@ export { StatusStep, StatusIndicator } from './components/StatusIndicator';
 export { Step, StepIndicator } from './components/StepIndicator';
 export StringFormatter from './components/StringFormatter';
 export Switch from './components/Switch';
+
 export SummaryCard, {
   SummaryCardAction,
+  SummaryCardBatchAction,
+  SummaryCardBatchActions,
   SummaryCardBody,
+  SummaryCardContainer,
   SummaryCardFooter,
   SummaryCardHeader,
+  SummaryCardSelect,
   SummaryCardSkeleton,
 } from './components/SummaryCard';
+
 export Tag, { InteractiveTag, TagSkeleton } from './components/Tag';
 export TagWall from './components/TagWall';
 export TagWallFilter from './components/TagWallFilter';
 export { Tearsheet, TearsheetSmall } from './components/Tearsheet';
 export TextInput, { TextInputSkeleton } from './components/TextInput';
-
+export TimeIndicator from './components/TimeIndicator';
 export {
   TypeLayout,
   TypeLayoutBody,
