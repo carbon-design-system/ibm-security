@@ -5,8 +5,7 @@
 
 import classnames from 'classnames';
 import { elementType, node, string } from 'prop-types';
-
-import React, { createElement, Fragment } from 'react';
+import React, { Fragment } from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
 
@@ -16,7 +15,7 @@ const namespace = getComponentNamespace('trending-card');
  * Trending cards provide summary information of trending items with the ability to navigate to the details.
  */
 const TrendingCard = ({ className, element, title, subtitle, ...other }) =>
-  createElement(
+  React.createElement(
     element,
     { className: classnames(namespace, className), ...other },
     <Fragment>
@@ -28,6 +27,7 @@ const TrendingCard = ({ className, element, title, subtitle, ...other }) =>
 TrendingCard.defaultProps = {
   subtitle: null,
   element: 'a',
+  className: null,
 };
 
 TrendingCard.propTypes = {

@@ -24,6 +24,7 @@
   }
 
   &__tooltip > .#{$prefix}--tooltip__trigger {
+    color: currentColor;
     font-size: inherit;
     font-weight: inherit;
     line-height: inherit;

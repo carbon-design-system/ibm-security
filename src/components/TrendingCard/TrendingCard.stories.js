@@ -20,4 +20,7 @@ export const Default = ({ element }) => (
   <TrendingCard {...props()} element={element} />
 );
 
-export default meta(components('TrendingCard'));
+export default meta(
+  components('TrendingCard'),
+  'Trending cards provide summary information of trending items with the ability to navigate to the details.'
+);
