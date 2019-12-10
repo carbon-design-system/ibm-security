@@ -17,9 +17,7 @@ storiesOf(components('UNSTABLE Pagination'), module)
       {({ currentPage, onSetPage, totalPages }) => (
         <PageSelector
           id="select-1"
-          // TODO: event.target.value is always a string?
           onChange={event => onSetPage(Number(event.target.value))}
-          // TODO: fix totalPages?
           totalPages={totalPages}
           value={currentPage}
         />
