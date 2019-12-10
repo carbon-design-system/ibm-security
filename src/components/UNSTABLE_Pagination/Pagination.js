@@ -39,6 +39,10 @@ function UNSTABLE_Pagination({
   const backButtonDisabled = disabled || currentPage === 1;
   const forwardButtonDisabled = disabled || currentPage === totalPages;
 
+  function onSetPage(newPage) {
+    setCurrentPage(Number(newPage));
+  }
+
   return (
     <section className={classnames(namespace, className)} {...rest}>
       <div className={`${namespace}__left`}>
@@ -85,7 +89,7 @@ function UNSTABLE_Pagination({
           {children &&
             children({
               currentPage,
-              onSetPage: setCurrentPage,
+              onSetPage,
               totalPages,
             })}
 

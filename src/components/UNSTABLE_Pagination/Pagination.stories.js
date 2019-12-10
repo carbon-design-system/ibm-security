@@ -17,13 +17,13 @@ storiesOf(components('UNSTABLE Pagination'), module)
       {({ currentPage, onSetPage, totalPages }) => (
         <PageSelector
           id="select-1"
-          onChange={event => onSetPage(Number(event.target.value))}
+          onChange={event => onSetPage(event.target.value)}
           totalPages={totalPages}
           value={currentPage}
         />
       )}
     </UNSTABLE_Pagination>
   ))
-  .add('with no page selector', () => (
-    <UNSTABLE_Pagination totalItems={350} pageSizes={[10, 15, 20, 25]} />
+  .add('with no page selector or sizer', () => (
+    <UNSTABLE_Pagination totalItems={350} />
   ));
