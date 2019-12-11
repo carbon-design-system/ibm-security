@@ -2,8 +2,6 @@
 
 ## `InlineNotification`
 
-This component no longer includes an option to pass in an action button.
-
 ### Props
 
 | Prop                  | `1.x`    | `2.x`    |
@@ -11,3 +9,11 @@ This component no longer includes an option to pass in an action button.
 | `actionButtonLabel`   | Required | N/A      |
 | `onActionButtonClick` | Required | N/A      |
 | `title`               | N/A      | Required |
+
+## `ToastNotification`
+
+### Imports
+
+| `1.x`                                                                                   | `2.x`                                                                |
+| --------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `@import '@carbon/ibm-security/scss/components/Notification/InlineNotification/index';` | `@import '@carbon/ibm-security/scss/components/Notification/index';` |
