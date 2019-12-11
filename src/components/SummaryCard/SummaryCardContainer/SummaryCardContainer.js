@@ -16,7 +16,7 @@ const getSummaryCard = (summaryCards, selectedId) =>
 
 const resetSelectedSummaryCards = state => state([]);
 
-function SummaryCardContainer({ render, summaryCards }) {
+function SummaryCardContainer({ render, summaryCards, ...other }) {
   const [
     selectedSummaryCards,
     setSelectedSummaryCards,
@@ -64,6 +64,7 @@ function SummaryCardContainer({ render, summaryCards }) {
   return (
     <div
       className={appendComponentNamespace(summaryCardNamespace, 'container')}
+      {...other}
     >
       {render(renderProps)}
     </div>

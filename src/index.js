@@ -110,7 +110,7 @@ export TagWall from './components/TagWall';
 export TagWallFilter from './components/TagWallFilter';
 export { Tearsheet, TearsheetSmall } from './components/Tearsheet';
 export TextInput, { TextInputSkeleton } from './components/TextInput';
-
+export TimeIndicator from './components/TimeIndicator';
 export {
   TypeLayout,
   TypeLayoutBody,

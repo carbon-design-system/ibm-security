@@ -11,8 +11,10 @@ import { getComponentNamespace } from '../../globals/namespace';
 
 export const namespace = getComponentNamespace('summary-card');
 
-const SummaryCard = ({ children, className }) => (
-  <section className={classnames(namespace, className)}>{children}</section>
+const SummaryCard = ({ children, className, ...other }) => (
+  <section className={classnames(namespace, className)} {...other}>
+    {children}
+  </section>
 );
 
 SummaryCard.defaultProps = {
