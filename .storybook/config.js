@@ -59,8 +59,8 @@ addDecorator(story => <Container>{story()}</Container>);
 
 /**
  * Returns the Storybook content.
- * @param {Array<*>} story The story to retrieve the category from.
- * @returns {string} The formatted category name.
+ * @param {Array<*>} story The story to retrieve the metadata from.
+ * @returns {Object.<string, string>} The formatted metadata.
  */
 function getStoryMetadata(story) {
   const { kind } = story[1];
