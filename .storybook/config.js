@@ -58,14 +58,18 @@ addDecorator(centered);
 addDecorator(story => <Container>{story()}</Container>);
 
 /**
- * Returns the Storybook category.
+ * Returns the Storybook content.
  * @param {Array<*>} story The story to retrieve the category from.
  * @returns {string} The formatted category name.
  */
-function getCategory(story) {
+function getStoryMetadata(story) {
   const { kind } = story[1];
+  const separator = kind.indexOf(HIERARCHY_ROOT_SEPARATOR);
 
-  return kind.substring(0, kind.indexOf(HIERARCHY_ROOT_SEPARATOR));
+  return {
+    category: kind.substring(0, separator),
+    name: kind.substring(separator + 1, kind.length),
+  };
 }
 
 addParameters({
@@ -73,8 +77,14 @@ addParameters({
     hierarchyRootSeparator: new RegExp(
       escapeStringRegexp(HIERARCHY_ROOT_SEPARATOR)
     ),
-    storySort: (a, b) =>
-      ORDER.indexOf(getCategory(a)) - ORDER.indexOf(getCategory(b)),
+    storySort: (a, b) => {
+      const { category: aCategory, name: aName } = getStoryMetadata(a);
+      const { category: bCategory, name: bName } = getStoryMetadata(b);
+
+      return (
+        ORDER.indexOf(aCategory) - ORDER.indexOf(bCategory) || aName < bName
+      );
+    },
     theme: storybookTheme,
   },
 });
