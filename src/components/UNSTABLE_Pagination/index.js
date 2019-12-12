@@ -6,4 +6,4 @@
 import UNSTABLE_Pagination from './Pagination';
 import PageSelector from './PageSelector';
 
-export { PageSelector, UNSTABLE_Pagination };
+export { UNSTABLE_Pagination as default, PageSelector };
