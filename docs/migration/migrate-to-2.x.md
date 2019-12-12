@@ -27,6 +27,7 @@ Remove any `@ibmduo`-scoped packages if they're listed as a dependency
 | `Breadcrumb`          | [Migrate](../../src/components/Breadcrumb/migrate-to-2.x.md)    |
 | `Button`              | [Migrate](../../src/components/Button/migrate-to-2.x.md)        |
 | `CallToActionSection` | Removed                                                         |
+| `Card`                | [Migrate](../../src/components/Card/migrate-to-2.x.md)          |
 | `DataDecorator`       | [Migrate](../../src/components/DataDecorator/migrate-to-2.x.md) |
 | `DataTable`           | [Migrate](../../src/components/DataTable/migrate-to-2.x.md)     |
 | `Header`              | [Migrate](../../src/components/Header/migrate-to-2.x.md)        |

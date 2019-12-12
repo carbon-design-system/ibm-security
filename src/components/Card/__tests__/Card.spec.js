@@ -8,7 +8,7 @@ import React from 'react';
 
 import { children, className } from '../../_mocks_';
 
-import { Card, CardSkeleton } from '../';
+import { Card, CardSkeleton } from '../../..';
 
 import { image, label, link, tag, text as bodyText, title } from '../_mocks_';
 
