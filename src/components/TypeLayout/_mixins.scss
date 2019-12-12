@@ -84,7 +84,7 @@
     max-width: unset;
   }
 
-  &--bordered &__row {
+  &--border &__row {
     border-bottom: 1px solid $ui-02;
 
     &:last-child {

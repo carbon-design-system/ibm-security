@@ -17,7 +17,6 @@ exports[`ExternalLink Rendering renders correctly 1`] = `
   >
     <Icon
       className="security--link--external__icon"
-      height={null}
       path={null}
       renderIcon={
         Object {
@@ -27,7 +26,6 @@ exports[`ExternalLink Rendering renders correctly 1`] = `
       }
       size={20}
       viewBox="0 0 32 32"
-      width={null}
     />
   </span>
 </Link>

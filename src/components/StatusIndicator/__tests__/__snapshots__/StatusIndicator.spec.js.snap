@@ -48,7 +48,6 @@ exports[`StatusIndicator renders 1`] = `
       className="security--status-indicator__button--retry"
       disabled={false}
       kind="ghost"
-      largeText={null}
       loading={false}
       renderIcon={
         Object {

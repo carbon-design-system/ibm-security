@@ -51,7 +51,6 @@ exports[`DataDecorator renders correctly 1`] = `
         <Icon
           className=""
           fillRule="evenodd"
-          height={null}
           path="M 8.00,3.00
            C 8.00,3.00 14.00,12.00 14.00,12.00
              14.00,12.00 2.00,12.00 2.00,12.00
@@ -59,7 +58,6 @@ exports[`DataDecorator renders correctly 1`] = `
           renderIcon={null}
           size={16}
           viewBox="0 0 16 16"
-          width={null}
         >
           <svg
             aria-hidden="true"

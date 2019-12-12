@@ -11,27 +11,22 @@ import CarbonButton from 'carbon-components-react/lib/components/Button';
 import InlineLoading from '../InlineLoading';
 
 import { getComponentNamespace } from '../../globals/namespace';
-import deprecatedProp from '../../globals/prop-types';
 
 export const namespace = getComponentNamespace('button');
 
 const { defaultProps, propTypes } = CarbonButton;
 
-// TODO: `2.x` - Remove deprecated props `largeText`.
-
 const Button = ({
   className,
   disabled,
-  largeText,
   loading,
   kind,
   renderIcon,
   size,
   ...other
 }) => {
-  const isSize = value => size === value;
-  const isLarge = isSize('large') || largeText || isSize('lg') || isSize('xlg');
   const isGhostDanger = kind === 'ghost-danger';
+  const isLarge = size === 'large';
 
   const buttonClasses = classnames(namespace, className, {
     [`${namespace}--ghost-danger`]: isGhostDanger,
@@ -54,7 +49,6 @@ const Button = ({
 Button.defaultProps = {
   ...defaultProps,
   disabled: false,
-  largeText: null,
   loading: false,
   renderIcon: undefined,
 };
@@ -73,7 +67,6 @@ Button.propTypes = {
 
   // It's not possible to add to Carbon's values here, so the `PropType` is recreated to include the large variant.
   size: PropTypes.oneOf(['default', 'field', 'large', 'small']),
-  largeText: deprecatedProp('size="large"', PropTypes.bool),
 };
 
 export default Button;

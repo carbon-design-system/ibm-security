@@ -8,7 +8,6 @@ import React, { Children, cloneElement, isValidElement } from 'react';
 import { bool, node, oneOf, string } from 'prop-types';
 
 import { getComponentNamespace } from '../../globals/namespace';
-import deprecatedProp from '../../globals/prop-types';
 
 import {
   StructuredListBody,
@@ -54,24 +53,15 @@ const cloneChildren = (children, size) =>
     return cloneElement(child, props);
   });
 
-// TODO: `2.x` - Remove deprecated prop `bordered`.
-
 /**
  * Type layout component.
  */
-const TypeLayout = ({
-  border,
-  bordered,
-  children,
-  className,
-  size,
-  ...other
-}) => (
+const TypeLayout = ({ border, children, className, size, ...other }) => (
   <StructuredListWrapper
     className={classnames(
       namespace,
       {
-        [`${namespace}--bordered`]: border || bordered,
+        [`${namespace}--border`]: border,
         [`${namespace}--${size}`]: size,
       },
       className
@@ -115,7 +105,6 @@ const propTypes = {
 
 TypeLayout.defaultProps = {
   border: false,
-  bordered: null,
   className: '',
   children: null,
   size: 'md',
@@ -128,7 +117,6 @@ const borderPropType = bool;
 TypeLayout.propTypes = {
   /** @type {boolean} Bordered option for type layout. */
   border: borderPropType,
-  bordered: deprecatedProp('border', borderPropType),
   className,
   children,
 

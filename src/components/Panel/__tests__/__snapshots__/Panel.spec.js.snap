@@ -308,7 +308,6 @@ exports[`Panel renders 1`] = `
                         >
                           <Icon
                             className=""
-                            height={null}
                             path={null}
                             renderIcon={
                               Object {
@@ -318,7 +317,6 @@ exports[`Panel renders 1`] = `
                             }
                             size={20}
                             viewBox="0 0 32 32"
-                            width={null}
                           >
                             <ForwardRef(Close20)
                               aria-hidden="true"
@@ -396,7 +394,6 @@ exports[`Panel renders 1`] = `
                       <Button
                         disabled={false}
                         kind="secondary"
-                        largeText={null}
                         loading={false}
                         onClick={[Function]}
                         tabIndex={0}
@@ -424,7 +421,6 @@ exports[`Panel renders 1`] = `
                       <Button
                         disabled={false}
                         kind="primary"
-                        largeText={null}
                         loading={false}
                         onClick={[Function]}
                         tabIndex={0}
