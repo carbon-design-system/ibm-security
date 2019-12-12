@@ -4,7 +4,11 @@
 /// @copyright IBM Security 2019
 ////
 
-@import '../../globals/index';
+@import 'carbon-components/scss/globals/scss/vars';
+
+@import '../../globals/layout/index';
+@import '../../globals/theme/index';
+@import '../../globals/type/index';
 
 @mixin unstable-pagination {
   @include reset;

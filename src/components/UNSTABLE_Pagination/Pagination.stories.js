@@ -31,9 +31,9 @@ storiesOf(components('UNSTABLE Pagination'), module)
         text: `
             🚨 This component is *experimental* and may change. 🚨
 
-            \`UNSTABLE_Pagination\` accepts a render prop \`children\`, allowing a child component to pass information back to the parent component.
+            \`UNSTABLE_Pagination\` accepts a render prop \`children\`.
 
-            In this case, you can wrap the \`children\` in a function to handle information:
+            In this case, you can wrap the \`children\` (\`PageSelector\`) in a function, allowing it to pass information back to the parent component.
 
             \`\`\`jsx
             <UNSTABLE_Pagination totalItems={350} pageSizes={[10, 15, 20, 25]}>
