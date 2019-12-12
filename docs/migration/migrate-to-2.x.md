@@ -33,7 +33,7 @@ Remove any `@ibmduo`-scoped packages if they're listed as a dependency
 | `Header`              | [Migrate](../../src/components/Header/migrate-to-2.x.md)        |
 | `Icon`                | [Migrate](../../src/components/Icon/migrate-to-2.x.md)          |
 | `IconButton`          | [Migrate](../../src/components/IconButton/migrate-to-2.x.md)    |
-| `InlineNotification`  | [Migrate](../../src/components/Notification/migrate-to-2.x.md)  |
+| `Notification`        | [Migrate](../../src/components/Notification/migrate-to-2.x.md)  |
 | `Loading`             | [Migrate](../../src/components/Loading/migrate-to-2.x.md)       |
 | `MultiSelect`         | [Migrate](../../src/components/MultiSelect/migrate-to-2.x.md)   |
 | `Pagination`          | [Migrate](../../src/components/Pagination/migrate-to-2.x.md)    |
