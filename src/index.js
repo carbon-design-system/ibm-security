@@ -7,8 +7,7 @@
 export theme from './globals/theme';
 
 // Application.
-export ErrorPage from './components/ErrorPage';
-export { Card, CardSkeleton } from './components/Card';
+export Card, { CardSkeleton } from './components/Card';
 export CodeSnippet, { CodeSnippetSkeleton } from './components/CodeSnippet';
 export ComboBox from './components/ComboBox';
 export ComboButton, { ComboButtonItem } from './components/ComboButton';
@@ -44,6 +43,7 @@ export {
 } from './components/DataTable';
 
 export DelimitedList from './components/DelimitedList';
+export ErrorPage from './components/ErrorPage';
 export ExternalLink from './components/ExternalLink';
 export FilterPanel from './components/FilterPanel';
 export { ICA, ICASkeleton } from './components/ICA';
