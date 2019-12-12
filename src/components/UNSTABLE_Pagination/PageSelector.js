@@ -17,13 +17,11 @@ const namespace = appendComponentNamespace(
 
 function PageSelector({ className, id, labelText, totalPages, ...rest }) {
   const renderPages = total => {
-    let counter = 1;
     const itemArr = [];
-    while (counter <= total) {
+    for (let counter = 1; counter <= total; counter += 1) {
       itemArr.push(
         <SelectItem key={counter} value={counter} text={String(counter)} />
       );
-      counter++;
     }
     return itemArr;
   };
