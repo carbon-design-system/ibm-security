@@ -35,9 +35,13 @@
     @include focus-outline($type: outline);
   }
 
+  &__title,
+  &__subtitle {
+    @include text-overflow;
+  }
+
   &__title {
     @include carbon--type-style($name: body-long-01);
-    @include text-overflow;
 
     margin-top: 0;
     margin-bottom: $carbon--spacing-02;
