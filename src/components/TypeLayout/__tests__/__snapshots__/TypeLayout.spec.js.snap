@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TypeLayout render renders correct classes if \`size\` or \`bordered\` are set 1`] = `
+exports[`TypeLayout render renders correct classes if \`size\` or \`border\` are set 1`] = `
 <section
   aria-label="Structured list section"
-  class="bx--structured-list security--type-layout__container security--type-layout__container--bordered security--type-layout__container--sm"
+  class="bx--structured-list security--type-layout__container security--type-layout__container--border security--type-layout__container--sm"
 >
   <div
     class="bx--structured-list-tbody security--type-layout__container__body"

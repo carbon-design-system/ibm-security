@@ -1279,7 +1279,6 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                           >
                                             <Icon
                                               className="security--tag--interactive__button__icon"
-                                              height={null}
                                               path={null}
                                               renderIcon={
                                                 Object {
@@ -1289,7 +1288,6 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                               }
                                               size={20}
                                               viewBox="0 0 32 32"
-                                              width={null}
                                             >
                                               <ForwardRef(Close16)
                                                 aria-hidden="true"
@@ -1493,7 +1491,6 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                   <Icon
                                                     className="security--filter__search__icon"
                                                     fill="var(--icon-01, #f4f4f4)"
-                                                    height={null}
                                                     path={null}
                                                     renderIcon={
                                                       Object {
@@ -1503,7 +1500,6 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                     }
                                                     size={20}
                                                     viewBox="0 0 32 32"
-                                                    width={null}
                                                   >
                                                     <ForwardRef(Search20)
                                                       aria-hidden="true"
@@ -1604,7 +1600,6 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                         >
                                                           <Icon
                                                             className="security--filter__add__icon"
-                                                            height={null}
                                                             path={null}
                                                             renderIcon={
                                                               Object {
@@ -1614,7 +1609,6 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                             }
                                                             size={20}
                                                             viewBox="0 0 32 32"
-                                                            width={null}
                                                           >
                                                             <ForwardRef(Add20)
                                                               aria-hidden="true"
@@ -1697,7 +1691,6 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                               className="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary"
                               disabled={false}
                               kind="secondary"
-                              largeText={null}
                               loading={false}
                               onClick={[MockFunction]}
                               size="large"
@@ -1728,7 +1721,6 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                               className="security--tearsheet--small__footer__button"
                               disabled={false}
                               kind="primary"
-                              largeText={null}
                               loading={false}
                               onClick={[MockFunction]}
                               size="large"
@@ -1781,7 +1773,6 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                             >
                               <Icon
                                 className=""
-                                height={null}
                                 path={null}
                                 renderIcon={
                                   Object {
@@ -1791,7 +1782,6 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                 }
                                 size={20}
                                 viewBox="0 0 32 32"
-                                width={null}
                               >
                                 <ForwardRef(Close20)
                                   aria-hidden="true"
@@ -1905,7 +1895,6 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 2`] = 
           >
             <Icon
               className="security--tag--interactive__button__icon"
-              height={null}
               path={null}
               renderIcon={
                 Object {
@@ -1915,7 +1904,6 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 2`] = 
               }
               size={20}
               viewBox="0 0 32 32"
-              width={null}
             >
               <ForwardRef(Close16)
                 aria-hidden="true"
@@ -3670,7 +3658,6 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                             >
                                               <Icon
                                                 className="security--tag--interactive__button__icon"
-                                                height={null}
                                                 path={null}
                                                 renderIcon={
                                                   Object {
@@ -3680,7 +3667,6 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                 }
                                                 size={20}
                                                 viewBox="0 0 32 32"
-                                                width={null}
                                               >
                                                 <ForwardRef(Close16)
                                                   aria-hidden="true"
@@ -3884,7 +3870,6 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                     <Icon
                                                       className="security--filter__search__icon"
                                                       fill="var(--icon-01, #f4f4f4)"
-                                                      height={null}
                                                       path={null}
                                                       renderIcon={
                                                         Object {
@@ -3894,7 +3879,6 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                       }
                                                       size={20}
                                                       viewBox="0 0 32 32"
-                                                      width={null}
                                                     >
                                                       <ForwardRef(Search20)
                                                         aria-hidden="true"
@@ -3995,7 +3979,6 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                           >
                                                             <Icon
                                                               className="security--filter__add__icon"
-                                                              height={null}
                                                               path={null}
                                                               renderIcon={
                                                                 Object {
@@ -4005,7 +3988,6 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                               }
                                                               size={20}
                                                               viewBox="0 0 32 32"
-                                                              width={null}
                                                             >
                                                               <ForwardRef(Add20)
                                                                 aria-hidden="true"
@@ -4088,7 +4070,6 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 className="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary"
                                 disabled={false}
                                 kind="secondary"
-                                largeText={null}
                                 loading={false}
                                 onClick={[MockFunction]}
                                 size="large"
@@ -4119,7 +4100,6 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 className="security--tearsheet--small__footer__button"
                                 disabled={false}
                                 kind="primary"
-                                largeText={null}
                                 loading={false}
                                 onClick={[MockFunction]}
                                 size="large"
@@ -4172,7 +4152,6 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               >
                                 <Icon
                                   className=""
-                                  height={null}
                                   path={null}
                                   renderIcon={
                                     Object {
@@ -4182,7 +4161,6 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   }
                                   size={20}
                                   viewBox="0 0 32 32"
-                                  width={null}
                                 >
                                   <ForwardRef(Close20)
                                     aria-hidden="true"

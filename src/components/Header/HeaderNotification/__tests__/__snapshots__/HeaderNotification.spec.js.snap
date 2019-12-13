@@ -40,7 +40,6 @@ exports[`HeaderNotification Rendering renders correctly 1`] = `
     >
       <Icon
         className=""
-        height={null}
         path={null}
         renderIcon={
           Object {
@@ -50,7 +49,6 @@ exports[`HeaderNotification Rendering renders correctly 1`] = `
         }
         size={20}
         viewBox="0 0 32 32"
-        width={null}
       />
     </button>
   </div>

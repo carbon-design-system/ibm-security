@@ -88,7 +88,6 @@ exports[`TagWall Rendering renders 1`] = `
           >
             <Icon
               className="security--tag--interactive__button__icon"
-              height={null}
               path={null}
               renderIcon={
                 Object {
@@ -98,7 +97,6 @@ exports[`TagWall Rendering renders 1`] = `
               }
               size={20}
               viewBox="0 0 32 32"
-              width={null}
             >
               <ForwardRef(Close16)
                 aria-hidden="true"
@@ -175,7 +173,6 @@ exports[`TagWall Rendering renders 1`] = `
           >
             <Icon
               className="security--tag--interactive__button__icon"
-              height={null}
               path={null}
               renderIcon={
                 Object {
@@ -185,7 +182,6 @@ exports[`TagWall Rendering renders 1`] = `
               }
               size={20}
               viewBox="0 0 32 32"
-              width={null}
             >
               <ForwardRef(Close16)
                 aria-hidden="true"
@@ -262,7 +258,6 @@ exports[`TagWall Rendering renders 1`] = `
           >
             <Icon
               className="security--tag--interactive__button__icon"
-              height={null}
               path={null}
               renderIcon={
                 Object {
@@ -272,7 +267,6 @@ exports[`TagWall Rendering renders 1`] = `
               }
               size={20}
               viewBox="0 0 32 32"
-              width={null}
             >
               <ForwardRef(Close16)
                 aria-hidden="true"
@@ -349,7 +343,6 @@ exports[`TagWall Rendering renders 1`] = `
           >
             <Icon
               className="security--tag--interactive__button__icon"
-              height={null}
               path={null}
               renderIcon={
                 Object {
@@ -359,7 +352,6 @@ exports[`TagWall Rendering renders 1`] = `
               }
               size={20}
               viewBox="0 0 32 32"
-              width={null}
             >
               <ForwardRef(Close16)
                 aria-hidden="true"
@@ -436,7 +428,6 @@ exports[`TagWall Rendering renders 1`] = `
           >
             <Icon
               className="security--tag--interactive__button__icon"
-              height={null}
               path={null}
               renderIcon={
                 Object {
@@ -446,7 +437,6 @@ exports[`TagWall Rendering renders 1`] = `
               }
               size={20}
               viewBox="0 0 32 32"
-              width={null}
             >
               <ForwardRef(Close16)
                 aria-hidden="true"
@@ -523,7 +513,6 @@ exports[`TagWall Rendering renders 1`] = `
           >
             <Icon
               className="security--tag--interactive__button__icon"
-              height={null}
               path={null}
               renderIcon={
                 Object {
@@ -533,7 +522,6 @@ exports[`TagWall Rendering renders 1`] = `
               }
               size={20}
               viewBox="0 0 32 32"
-              width={null}
             >
               <ForwardRef(Close16)
                 aria-hidden="true"
@@ -610,7 +598,6 @@ exports[`TagWall Rendering renders 1`] = `
           >
             <Icon
               className="security--tag--interactive__button__icon"
-              height={null}
               path={null}
               renderIcon={
                 Object {
@@ -620,7 +607,6 @@ exports[`TagWall Rendering renders 1`] = `
               }
               size={20}
               viewBox="0 0 32 32"
-              width={null}
             >
               <ForwardRef(Close16)
                 aria-hidden="true"
@@ -697,7 +683,6 @@ exports[`TagWall Rendering renders 1`] = `
           >
             <Icon
               className="security--tag--interactive__button__icon"
-              height={null}
               path={null}
               renderIcon={
                 Object {
@@ -707,7 +692,6 @@ exports[`TagWall Rendering renders 1`] = `
               }
               size={20}
               viewBox="0 0 32 32"
-              width={null}
             >
               <ForwardRef(Close16)
                 aria-hidden="true"
@@ -764,7 +748,6 @@ exports[`TagWall Rendering renders 1`] = `
     <Button
       disabled={false}
       kind="ghost"
-      largeText={null}
       loading={false}
       onClick={[Function]}
       size="small"
@@ -1235,7 +1218,6 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     <Button
       disabled={true}
       kind="ghost"
-      largeText={null}
       loading={false}
       onClick={[Function]}
       size="small"

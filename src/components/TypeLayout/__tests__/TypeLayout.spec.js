@@ -47,7 +47,7 @@ describe('TypeLayout', () => {
       expect(typeLayout.render()).toMatchSnapshot();
     });
 
-    it('renders correct classes if `size` or `bordered` are set', () => {
+    it('renders correct classes if `size` or `border` are set', () => {
       typeLayout.setProps({ size: 'sm', border: true });
       expect(typeLayout.render()).toMatchSnapshot();
     });

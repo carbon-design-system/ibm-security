@@ -63,8 +63,6 @@ const render = ({
         <IconButton
           label={label}
           onClick={action(label)}
-          width={16}
-          height={16}
           name="settings"
           size="lg"
         />

@@ -13,7 +13,6 @@ exports[`InteractiveTag Rendering renders correctly 1`] = `
   >
     <Icon
       className="security--tag--interactive__button__icon"
-      height={null}
       path={null}
       renderIcon={
         Object {
@@ -23,7 +22,6 @@ exports[`InteractiveTag Rendering renders correctly 1`] = `
       }
       size={20}
       viewBox="0 0 32 32"
-      width={null}
     />
   </button>
 </Tag>
@@ -70,7 +68,6 @@ exports[`InteractiveTag Rendering renders the selected variation correctly 1`] =
   >
     <Icon
       className="security--tag--interactive__button__icon"
-      height={null}
       path={null}
       renderIcon={
         Object {
@@ -80,7 +77,6 @@ exports[`InteractiveTag Rendering renders the selected variation correctly 1`] =
       }
       size={20}
       viewBox="0 0 32 32"
-      width={null}
     />
   </button>
 </Tag>

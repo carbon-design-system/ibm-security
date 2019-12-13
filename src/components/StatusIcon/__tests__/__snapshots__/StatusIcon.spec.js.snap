@@ -20,7 +20,6 @@ exports[`StatusIcon renders the 'complete' variation 1`] = `
 >
   <Icon
     className="security--status-icon__icon security--status-icon__icon--success"
-    height={null}
     path={null}
     renderIcon={
       Object {
@@ -30,7 +29,6 @@ exports[`StatusIcon renders the 'complete' variation 1`] = `
     }
     size={20}
     viewBox="0 0 32 32"
-    width={null}
   />
   <span
     className=" security--status-icon__message"
