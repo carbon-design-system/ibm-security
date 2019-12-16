@@ -160,7 +160,6 @@ UNSTABLE_Pagination.defaultProps = {
   pageSizes: undefined,
   pageText: page => `page ${page}`,
   pagesUnknown: false,
-  totalItems: undefined,
 };
 
 UNSTABLE_Pagination.propTypes = {
@@ -242,7 +241,7 @@ UNSTABLE_Pagination.propTypes = {
   /**
    * The total number of items.
    */
-  totalItems: PropTypes.number,
+  totalItems: PropTypes.number.isRequired,
 };
 
 export default UNSTABLE_Pagination;
