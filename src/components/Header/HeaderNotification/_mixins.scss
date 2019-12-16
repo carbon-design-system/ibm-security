@@ -38,33 +38,35 @@
       transform: translate3d(0, 0, 0);
       opacity: 1;
     }
+  }
 
-    /// Tooltip selector.
-    /// @type String
-    $carbon--tooltip: '.#{$prefix}--tooltip';
+  /// Tooltip selector.
+  /// @type String
+  $carbon--tooltip: '.#{$prefix}--tooltip';
 
-    > #{$carbon--tooltip}--definition > #{$carbon--tooltip}__trigger {
-      color: currentColor;
+  &__description
+    > #{$carbon--tooltip}--definition
+    > #{$carbon--tooltip}__trigger {
+    color: currentColor;
 
-      &:focus {
-        outline-color: $inverse-focus-ui;
+    &:focus {
+      outline-color: $inverse-focus-ui;
+    }
+
+    &#{$carbon--tooltip}--bottom,
+    &#{$carbon--tooltip}--top {
+      + .#{$prefix}--assistive-text {
+        background-color: $inverse-01;
+        color: $inverse-02;
       }
+    }
 
-      &#{$carbon--tooltip}--bottom,
-      &#{$carbon--tooltip}--top {
-        + .#{$prefix}--assistive-text {
-          background-color: $inverse-01;
-          color: $inverse-02;
-        }
-      }
+    &#{$carbon--tooltip}--bottom::before {
+      border-bottom-color: $inverse-01;
+    }
 
-      &#{$carbon--tooltip}--bottom::before {
-        border-bottom-color: $inverse-01;
-      }
-
-      &#{$carbon--tooltip}--top::before {
-        border-top-color: $inverse-01;
-      }
+    &#{$carbon--tooltip}--top::before {
+      border-top-color: $inverse-01;
     }
   }
 

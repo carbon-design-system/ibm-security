@@ -25,12 +25,4 @@ describe('StringFormatter', () => {
 
     expect(stringFormatter).toMatchSnapshot();
   });
-
-  it('renders the correct amount of lines', () => {
-    stringFormatter.setProps({ truncate: true, lines: 4 });
-    expect(stringFormatter.find('span').prop('style')).toHaveProperty(
-      'WebkitLineClamp',
-      4
-    );
-  });
 });

@@ -25,8 +25,8 @@ const SummaryCardHeader = ({
     <h2 className={`${namespace}__title`}>
       <StringFormatter
         truncate={truncate}
-        value={title}
         tooltipDirection={titleTooltipDirection}
+        value={title}
       />
     </h2>
     {status}

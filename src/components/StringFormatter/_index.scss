@@ -17,10 +17,6 @@
 
   &--truncate {
     max-width: 80ch;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
   }
 
   &__tooltip > .#{$prefix}--tooltip__trigger {

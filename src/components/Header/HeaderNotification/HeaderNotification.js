@@ -32,9 +32,9 @@ const HeaderNotification = ({
       <StringFormatter
         className={`${namespace}__description`}
         lines={2}
-        truncate
         value={description}
         tooltipDirection={tooltipDirection}
+        truncate
       />
     </a>
     <div className={`${namespace}__wrapper`}>

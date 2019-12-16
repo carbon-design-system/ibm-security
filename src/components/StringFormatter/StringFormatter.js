@@ -6,6 +6,7 @@
 import classnames from 'classnames';
 import { bool, string, number, oneOf } from 'prop-types';
 import React from 'react';
+import TruncateMarkup from 'react-truncate-markup';
 
 import TooltipDefinition from '../TooltipDefinition';
 
@@ -29,7 +30,6 @@ const StringFormatter = ({
       })}
       style={{
         maxWidth: width,
-        WebkitLineClamp: lines,
       }}
       {...other}
     >
@@ -38,45 +38,54 @@ const StringFormatter = ({
   );
 
   return truncate ? (
-    <TooltipDefinition
-      className={`${namespace}__tooltip`}
-      align="start"
-      direction={tooltipDirection}
-      tooltipText={value}
+    <TruncateMarkup
+      ellipsis={
+        <TooltipDefinition
+          className={`${namespace}__tooltip`}
+          align="end"
+          direction={tooltipDirection}
+          tooltipText={value}
+        >
+          …
+        </TooltipDefinition>
+      }
+      lines={lines}
     >
       {content}
-    </TooltipDefinition>
+    </TruncateMarkup>
   ) : (
     content
   );
 };
 
+const defaultTooltipDirection = 'bottom';
+
 StringFormatter.propTypes = {
-  /** @type {string} Optional class name. */
-  className: string,
-
-  /** @type {number} Number of lines to clamp value. */
-  lines: number,
-
-  /** Specify the direction of the tooltip. Can be either top or bottom. */
-  tooltipDirection: oneOf(['top', 'bottom']),
-
-  /** Whether or not the value should be truncated. */
-  truncate: bool,
-
-  /** Value to format. */
+  /** The value to be formatted */
   value: string.isRequired,
 
-  /** Maximum width of value. */
+  /** Specify whether the value is truncated if it overflows */
+  truncate: bool,
+
+  /** Provide the number of lines to clamp the value */
+  lines: number,
+
+  /** Specify the maximum width of the value */
   width: string,
+
+  /** Specify the direction of the tooltip. This can be either top or bottom */
+  tooltipDirection: oneOf(['top', defaultTooltipDirection]),
+
+  /** Provide an optional class to be applied to the containing node */
+  className: string,
 };
 
 StringFormatter.defaultProps = {
-  className: null,
-  lines: 1,
-  tooltipDirection: 'bottom',
   truncate: false,
+  lines: 1,
   width: null,
+  tooltipDirection: defaultTooltipDirection,
+  className: null,
 };
 
 export default StringFormatter;

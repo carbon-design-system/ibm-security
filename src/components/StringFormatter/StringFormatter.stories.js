@@ -13,10 +13,10 @@ import { StringFormatter } from '../..';
 import value from './_mocks_';
 
 const storyProps = () => ({
-  lines: number('Lines (`lines`)', 1),
-  truncate: boolean('Truncate (`truncate`)', true),
   value: text('Value (`value`)', value),
-  width: text('Width (`width`)', `200px`),
+  truncate: boolean('Truncate (`truncate`)', true),
+  lines: number('Lines (`lines`)', 1),
+  width: text('Width (`width`)', '200px'),
 });
 
 storiesOf(components('StringFormatter'), module).add('Default', () => (
