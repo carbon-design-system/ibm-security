@@ -4,6 +4,7 @@ exports[`TrendingCard renders 1`] = `
 <a
   class="security--trending-card"
   href="#"
+  style="width: 20rem;"
 >
   <h3
     class="security--trending-card__title"
@@ -22,6 +23,7 @@ exports[`TrendingCard renders a custom link 1`] = `
 <link
   class="security--trending-card"
   href="#"
+  style="width: 20rem;"
 >
   <h3
     class="security--trending-card__title"

@@ -3,6 +3,8 @@
  * @copyright IBM Security 2019
  */
 
+import { breakpoints } from '@carbon/layout';
+
 import { text } from '@storybook/addon-knobs';
 import React from 'react';
 
@@ -14,6 +16,7 @@ const props = () => ({
   title: text('Title (title)', 'Title'),
   href: text('Link (href)', '#'),
   subtitle: text('Subtitle (subtitle)', 'Subtitle'),
+  style: { width: breakpoints.sm.width },
 });
 
 export const Default = ({ element }) => (
