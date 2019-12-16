@@ -15,7 +15,14 @@ const namespace = appendComponentNamespace(
   'page-selector'
 );
 
-function PageSelector({ className, id, labelText, totalPages, ...rest }) {
+function PageSelector({
+  className,
+  id,
+  labelText,
+  totalPages,
+  value,
+  ...rest
+}) {
   const renderPages = total => {
     const pages = [];
     for (let counter = 1; counter <= total; counter += 1) {
@@ -33,6 +40,7 @@ function PageSelector({ className, id, labelText, totalPages, ...rest }) {
       id={`${namespace}__input-${id}`}
       inline
       labelText={labelText}
+      value={value}
       {...rest}
     >
       {renderPages(totalPages)}
@@ -51,14 +59,16 @@ PageSelector.propTypes = {
   labelText: PropTypes.string,
 
   /** Total number of pages. */
-  totalPages: PropTypes.number,
+  totalPages: PropTypes.number.isRequired,
+
+  /** Specify the value, or current selected page, of the page selector. */
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
 
 PageSelector.defaultProps = {
   className: null,
   id: 1,
   labelText: 'Current page number',
-  totalPages: null,
 };
 
 export default PageSelector;

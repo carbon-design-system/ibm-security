@@ -28,6 +28,7 @@ storiesOf(components('UNSTABLE Pagination'), module)
     ),
     {
       info: {
+        propTables: [UNSTABLE_Pagination, PageSelector],
         text: `
             🚨 This component is *experimental* and may change. 🚨
 
