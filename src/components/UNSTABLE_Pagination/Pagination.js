@@ -157,7 +157,7 @@ UNSTABLE_Pagination.defaultProps = {
   page: 1,
   pageRangeText: (current, total) => `${current} of ${total} pages`,
   pageSize: 10,
-  pageSizes: null,
+  pageSizes: undefined,
   pageText: page => `page ${page}`,
   pagesUnknown: false,
   totalItems: undefined,
