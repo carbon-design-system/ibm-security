@@ -111,6 +111,8 @@ export TagWallFilter from './components/TagWallFilter';
 export { Tearsheet, TearsheetSmall } from './components/Tearsheet';
 export TextInput, { TextInputSkeleton } from './components/TextInput';
 export TimeIndicator from './components/TimeIndicator';
+export TrendingCard from './components/TrendingCard';
+
 export {
   TypeLayout,
   TypeLayoutBody,
