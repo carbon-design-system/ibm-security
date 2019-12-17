@@ -14,8 +14,8 @@ import theme from '../../../globals/theme';
 
 const namespace = getComponentNamespace('summary-card__body');
 
-const SummaryCardBody = ({ children, className }) => (
-  <div className={classnames(namespace, className)}>
+const SummaryCardBody = ({ children, className, ...other }) => (
+  <div className={classnames(namespace, className)} {...other}>
     <ScrollGradient color={theme.uiBackground}>{children}</ScrollGradient>
   </div>
 );
@@ -29,7 +29,7 @@ SummaryCardBody.propTypes = {
 };
 
 SummaryCardBody.defaultProps = {
-  className: '',
+  className: null,
 };
 
 export default SummaryCardBody;
