@@ -17,10 +17,10 @@ const namespace = appendComponentNamespace(
 
 function PageSelector({
   className,
+  currentPage,
   id,
   labelText,
   totalPages,
-  value,
   ...rest
 }) {
   const renderPages = total => {
@@ -40,7 +40,7 @@ function PageSelector({
       id={`${namespace}__input-${id}`}
       inline
       labelText={labelText}
-      value={value}
+      value={currentPage}
       {...rest}
     >
       {renderPages(totalPages)}
@@ -51,6 +51,11 @@ function PageSelector({
 PageSelector.propTypes = {
   /** Extra class names to add. */
   className: PropTypes.string,
+
+  /**
+   * The current page.
+   */
+  currentPage: PropTypes.number.isRequired,
 
   /** The unique ID of this component instance. */
   id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
@@ -63,9 +68,6 @@ PageSelector.propTypes = {
    * This value is calculated using a valid `totalItems` prop passed to the parent `UNSTABLE_Pagination.`
    */
   totalPages: PropTypes.number.isRequired,
-
-  /** Specify the value, or current selected page, of the page selector. */
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
 
 PageSelector.defaultProps = {

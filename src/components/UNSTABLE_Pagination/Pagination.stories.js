@@ -14,15 +14,13 @@ import { components } from '../../../.storybook';
 
 const props = () => ({
   disabled: boolean('Disable backward/forward buttons (disabled)', false),
-  page: number('The current page (page)', 1),
   pagesUnknown: boolean('Total number of items unknown (pagesUnknown)', false),
-  pageInputDisabled: boolean('Disable page input (pageInputDisabled)', false),
   backwardText: text(
     'The description for the backward icon (backwardText)',
     'Previous page'
   ),
   forwardText: text(
-    'The description for the backward icon (forwardText)',
+    'The description for the forward icon (forwardText)',
     'Next page'
   ),
   pageSize: number('Number of items per page (pageSize)', 10),
@@ -45,10 +43,10 @@ storiesOf(components('UNSTABLE Pagination'), module)
       >
         {({ currentPage, onSetPage, totalPages }) => (
           <PageSelector
+            currentPage={currentPage}
             id="select-1"
             onChange={event => onSetPage(event.target.value)}
             totalPages={totalPages}
-            value={currentPage}
           />
         )}
       </UNSTABLE_Pagination>
@@ -81,10 +79,10 @@ storiesOf(components('UNSTABLE Pagination'), module)
                 */}
               {({ currentPage, onSetPage, totalPages }) => (
                 <PageSelector
+                  currentPage={currentPage}
                   id="select-1"
                   onChange={event => onSetPage(event.target.value)}
                   totalPages={totalPages}
-                  value={currentPage}
                 />
               )}
             </UNSTABLE_Pagination>

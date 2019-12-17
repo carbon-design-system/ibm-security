@@ -19,10 +19,10 @@ function UNSTABLE_Pagination({
   disabled,
   forwardText,
   id,
+  initialPage,
   itemsPerPageText,
   itemRangeText,
   itemText,
-  page,
   pageRangeText,
   pageSize,
   pageSizes,
@@ -31,7 +31,7 @@ function UNSTABLE_Pagination({
   totalItems,
   ...rest
 }) {
-  const [currentPage, setCurrentPage] = useState(page);
+  const [currentPage, setCurrentPage] = useState(initialPage);
   const [currentPageSize, setCurrentPageSize] = useState(pageSize);
 
   const totalPages = totalItems
@@ -175,7 +175,7 @@ UNSTABLE_Pagination.defaultProps = {
   itemsPerPageText: 'Items per page:',
   itemRangeText: (min, max, total) => `${min}–${max} of ${total} items`,
   itemText: (min, max) => `${min}–${max} items`,
-  page: 1,
+  initialPage: 1,
   pageRangeText: (current, total) => `${current} of ${total} pages`,
   pageSize: 10,
   pageSizes: undefined,
@@ -230,9 +230,9 @@ UNSTABLE_Pagination.propTypes = {
   itemText: PropTypes.func,
 
   /**
-   * The current page.
+   * The initial active page when the component is first mounted.
    */
-  page: PropTypes.number,
+  initialPage: PropTypes.number,
 
   /**
    * The function returning a translatable text showing where the current page is,
