@@ -74,23 +74,28 @@ function UNSTABLE_Pagination({
           </>
         )}
         <span className={`${namespace}__text`}>
-          {/* eslint-disable no-nested-ternary */}
-          {totalItems
-            ? pagesUnknown
-              ? itemText(
-                  currentPageSize * (currentPage - 1) + 1,
-                  currentPage * currentPageSize
-                )
-              : itemRangeText(
-                  Math.min(currentPageSize * (currentPage - 1) + 1, totalItems),
-                  Math.min(currentPage * currentPageSize, totalItems),
-                  totalItems
-                )
-            : itemText(
+          <>
+            {totalItems &&
+              !pagesUnknown &&
+              itemRangeText(
+                Math.min(currentPageSize * (currentPage - 1) + 1, totalItems),
+                Math.min(currentPage * currentPageSize, totalItems),
+                totalItems
+              )}
+
+            {totalItems &&
+              pagesUnknown &&
+              itemText(
                 currentPageSize * (currentPage - 1) + 1,
                 currentPage * currentPageSize
               )}
-          {/* eslint-enable no-nested-ternary */}
+
+            {!totalItems &&
+              itemText(
+                currentPageSize * (currentPage - 1) + 1,
+                currentPage * currentPageSize
+              )}
+          </>
         </span>
       </div>
       <div className={`${namespace}__right`}>
