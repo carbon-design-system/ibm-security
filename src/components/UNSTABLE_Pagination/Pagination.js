@@ -34,7 +34,9 @@ function UNSTABLE_Pagination({
   const [currentPage, setCurrentPage] = useState(page);
   const [currentPageSize, setCurrentPageSize] = useState(pageSize);
 
-  const totalPages = Math.max(Math.ceil(totalItems / currentPageSize), 1);
+  const totalPages = totalItems
+    ? Math.max(Math.ceil(totalItems / currentPageSize), 1)
+    : undefined;
 
   const backButtonDisabled = disabled || currentPage === 1;
   const forwardButtonDisabled = disabled || currentPage === totalPages;
@@ -72,36 +74,50 @@ function UNSTABLE_Pagination({
           </>
         )}
         <span className={`${namespace}__text`}>
-          {pagesUnknown || !totalItems
-            ? itemText(
+          {/* eslint-disable no-nested-ternary */}
+          {totalItems
+            ? pagesUnknown
+              ? itemText(
+                  currentPageSize * (currentPage - 1) + 1,
+                  currentPage * currentPageSize
+                )
+              : itemRangeText(
+                  Math.min(currentPageSize * (currentPage - 1) + 1, totalItems),
+                  Math.min(currentPage * currentPageSize, totalItems),
+                  totalItems
+                )
+            : itemText(
                 currentPageSize * (currentPage - 1) + 1,
                 currentPage * currentPageSize
-              )
-            : itemRangeText(
-                Math.min(currentPageSize * (currentPage - 1) + 1, totalItems),
-                Math.min(currentPage * currentPageSize, totalItems),
-                totalItems
               )}
+          {/* eslint-enable no-nested-ternary */}
         </span>
       </div>
       <div className={`${namespace}__right`}>
         <>
           {children &&
+            totalItems &&
             children({
               currentPage,
               onSetPage,
               totalPages,
             })}
 
-          {children && !pagesUnknown && (
+          {children && totalItems && !pagesUnknown && (
             <span className={`${namespace}__text`}>
               {pageRangeText('', totalPages)}
             </span>
           )}
 
+          {children && !totalItems && (
+            <span className={`${namespace}__text`}>
+              {pageText(currentPage)}
+            </span>
+          )}
+
           {!children && (
             <span className={`${namespace}__text`}>
-              {pagesUnknown
+              {!totalItems
                 ? pageText(currentPage)
                 : pageRangeText(currentPage, totalPages)}
             </span>
@@ -160,6 +176,7 @@ UNSTABLE_Pagination.defaultProps = {
   pageSizes: undefined,
   pageText: page => `page ${page}`,
   pagesUnknown: false,
+  totalItems: undefined,
 };
 
 UNSTABLE_Pagination.propTypes = {
@@ -240,8 +257,11 @@ UNSTABLE_Pagination.propTypes = {
 
   /**
    * The total number of items.
+   * You need to provide total items to calculate total page,
+   * which is required by a child like the `PageSelector`
+   * to know how many pages to display.
    */
-  totalItems: PropTypes.number.isRequired,
+  totalItems: PropTypes.number,
 };
 
 export default UNSTABLE_Pagination;

@@ -58,7 +58,10 @@ PageSelector.propTypes = {
   /** Translatable string to label the page selector element. */
   labelText: PropTypes.string,
 
-  /** Total number of pages. */
+  /**
+   * Total number of pages.
+   * This value is calculated using a valid `totalItems` prop passed to the parent `UNSTABLE_Pagination.`
+   */
   totalPages: PropTypes.number.isRequired,
 
   /** Specify the value, or current selected page, of the page selector. */
