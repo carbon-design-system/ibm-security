@@ -5,7 +5,7 @@
 
 import classnames from 'classnames';
 import { bool, string, number, oneOf } from 'prop-types';
-import React from 'react';
+import React, { Fragment, useState } from 'react';
 import TruncateMarkup from 'react-truncate-markup';
 
 import TooltipDefinition from '../TooltipDefinition';
@@ -23,6 +23,8 @@ const StringFormatter = ({
   width,
   ...other
 }) => {
+  const [truncated, setTruncated] = useState(null);
+
   const content = (
     <span
       className={classnames(namespace, className, {
@@ -37,24 +39,32 @@ const StringFormatter = ({
     </span>
   );
 
-  return truncate ? (
-    <TruncateMarkup
-      ellipsis={
-        <TooltipDefinition
-          className={`${namespace}__tooltip`}
-          align="end"
-          direction={tooltipDirection}
-          tooltipText={value}
-        >
-          …
-        </TooltipDefinition>
-      }
-      lines={lines}
+  return truncated ? (
+    <TooltipDefinition
+      className={`${namespace}__tooltip`}
+      align="end"
+      direction={tooltipDirection}
+      tooltipText={value}
     >
-      {content}
-    </TruncateMarkup>
+      {truncated}
+    </TooltipDefinition>
   ) : (
-    content
+    <Fragment>
+      {truncate ? (
+        <TruncateMarkup
+          ellipsis={root => {
+            setTruncated(`${root.props.children}…`);
+
+            return '';
+          }}
+          lines={lines}
+        >
+          {content}
+        </TruncateMarkup>
+      ) : (
+        content
+      )}
+    </Fragment>
   );
 };
 
