@@ -21,7 +21,7 @@ function PageSelector({
   id,
   labelText,
   totalPages,
-  ...rest
+  ...other
 }) {
   const renderPages = total => {
     const pages = [];
@@ -41,7 +41,7 @@ function PageSelector({
       inline
       labelText={labelText}
       value={currentPage}
-      {...rest}
+      {...other}
     >
       {renderPages(totalPages)}
     </Select>
@@ -65,7 +65,7 @@ PageSelector.propTypes = {
 
   /**
    * Total number of pages.
-   * This value is calculated using a valid `totalItems` prop passed to the parent `UNSTABLE_Pagination.`
+   * This value is calculated using a valid `totalItems` prop passed to the parent `UNSTABLE__Pagination.`
    */
   totalPages: PropTypes.number.isRequired,
 };

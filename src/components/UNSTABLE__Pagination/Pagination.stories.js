@@ -8,7 +8,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { array, boolean, number, text } from '@storybook/addon-knobs';
 
-import { UNSTABLE_Pagination, PageSelector } from '../..';
+import { UNSTABLE__Pagination, PageSelector } from '../..';
 
 import { components } from '../../../.storybook';
 
@@ -36,7 +36,7 @@ storiesOf(components('UNSTABLE Pagination'), module)
   .add(
     'default',
     () => (
-      <UNSTABLE_Pagination
+      <UNSTABLE__Pagination
         {...props()}
         totalItems={350}
         pageSizes={array('Choices of `pageSize` (pageSizes)', [10, 20, 30])}
@@ -49,25 +49,25 @@ storiesOf(components('UNSTABLE Pagination'), module)
             totalPages={totalPages}
           />
         )}
-      </UNSTABLE_Pagination>
+      </UNSTABLE__Pagination>
     ),
     {
       info: {
-        propTables: [UNSTABLE_Pagination, PageSelector],
+        propTables: [UNSTABLE__Pagination, PageSelector],
         text: `
             🚨 This component is *experimental* and may change. 🚨
 
-            \`UNSTABLE_Pagination\` accepts a render prop \`children\`.
+            \`UNSTABLE__Pagination\` accepts a render prop \`children\`.
 
             In this case, you can wrap the \`children\` (\`PageSelector\`) in a function, allowing it to pass information back to the parent component.
 
             \`\`\`jsx
             {/** 
-              * Provide \`totalItems\` to \`UNSTABLE_Pagination\` when using the \`PageSelector\` child.
-              * \`UNSTABLE_Pagination\` uses \`totalItems\` to calculate \`totalPages\`.
+              * Provide \`totalItems\` to \`UNSTABLE__Pagination\` when using the \`PageSelector\` child.
+              * \`UNSTABLE__Pagination\` uses \`totalItems\` to calculate \`totalPages\`.
               * And then, \`PageSelector\` uses the calculated \`totalPages\` to accurately display page options.
               */}
-            <UNSTABLE_Pagination
+            <UNSTABLE__Pagination
               totalItems={350}
               pageSizes={[10, 15, 20, 25]}
             >
@@ -85,7 +85,7 @@ storiesOf(components('UNSTABLE Pagination'), module)
                   totalPages={totalPages}
                 />
               )}
-            </UNSTABLE_Pagination>
+            </UNSTABLE__Pagination>
             \`\`\`
           `,
       },
@@ -93,13 +93,13 @@ storiesOf(components('UNSTABLE Pagination'), module)
   )
   .add(
     'with no page selector or sizer',
-    () => <UNSTABLE_Pagination {...props()} totalItems={350} />,
+    () => <UNSTABLE__Pagination {...props()} totalItems={350} />,
     {
       info: {
         text: `
           🚨 This component is *experimental* and may change. 🚨
 
-          Without \`children\`, \`UNSTABLE_Pagination\` renders without a page selector. 
+          Without \`children\`, \`UNSTABLE__Pagination\` renders without a page selector. 
         `,
       },
     }

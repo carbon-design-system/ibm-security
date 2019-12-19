@@ -12,7 +12,7 @@ import { getComponentNamespace } from '../../globals/namespace';
 
 export const namespace = getComponentNamespace('unstable-pagination');
 
-function UNSTABLE_Pagination({
+function UNSTABLE__Pagination({
   backwardText,
   children,
   className,
@@ -29,7 +29,7 @@ function UNSTABLE_Pagination({
   pageText,
   pagesUnknown,
   totalItems,
-  ...rest
+  ...other
 }) {
   const [currentPage, setCurrentPage] = useState(initialPage);
   const [currentPageSize, setCurrentPageSize] = useState(pageSize);
@@ -46,7 +46,7 @@ function UNSTABLE_Pagination({
   }
 
   return (
-    <section className={classnames(namespace, className)} {...rest}>
+    <section className={classnames(namespace, className)} {...other}>
       <div className={`${namespace}__left`}>
         {pageSizes && (
           <>
@@ -165,7 +165,7 @@ function UNSTABLE_Pagination({
   );
 }
 
-UNSTABLE_Pagination.defaultProps = {
+UNSTABLE__Pagination.defaultProps = {
   backwardText: 'Previous page',
   className: null,
   children: undefined,
@@ -184,7 +184,7 @@ UNSTABLE_Pagination.defaultProps = {
   totalItems: undefined,
 };
 
-UNSTABLE_Pagination.propTypes = {
+UNSTABLE__Pagination.propTypes = {
   /**
    * The description for the backward icon.
    */
@@ -193,7 +193,7 @@ UNSTABLE_Pagination.propTypes = {
   /**
    * The children of the pagination component.
    */
-  children: PropTypes.node,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
 
   /**
    * Extra classes to add.
@@ -269,4 +269,4 @@ UNSTABLE_Pagination.propTypes = {
   totalItems: PropTypes.number,
 };
 
-export default UNSTABLE_Pagination;
+export default UNSTABLE__Pagination;
