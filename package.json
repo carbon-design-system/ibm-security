@@ -1,6 +1,6 @@
 {
   "name": "@carbon/ibm-security",
-  "version": "1.11.1-prerelease.2",
+  "version": "1.13.0-prerelease.2",
   "description": "Carbon for IBM Security",
   "license": "Apache-2.0",
   "main": "lib/index.js",
@@ -48,6 +48,7 @@
     "@carbon/icons-react": "^10.6.1",
     "@carbon/import-once": "^10.3.0",
     "@carbon/layout": "^10.5.0",
+    "@carbon/motion": "^10.4.0",
     "@carbon/themes": "^10.7.0",
     "@carbon/type": "^10.6.0",
     "carbon-components": "^10.7.4",

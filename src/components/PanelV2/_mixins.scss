@@ -85,6 +85,7 @@
     margin-right: $panel__spacing__padding;
     margin-left: $panel__spacing__padding;
     box-sizing: border-box;
+    flex-direction: row-reverse;
     justify-content: space-between;
     border-bottom: $panel__content__sizing__border solid
       $panel__content__color__border;
