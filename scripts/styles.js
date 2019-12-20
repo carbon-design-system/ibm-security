@@ -11,13 +11,17 @@ const distIndex = dir => path.resolve(dir, 'index.css');
 
 readFile(srcIndex, async (err, css) => {
   if (err) throw err;
-  const result = await postcss([
-    postcssNodeSass({ includePaths: ['node_modules'] }),
-    autoprefixer,
-  ]).process(css, {
-    from: srcIndex,
-    to: distIndex(distDir),
-    syntax: postcssScss,
-  });
-  outputFile(distIndex(distDir), result, { encoding: 'utf8' });
+  try {
+    const result = await postcss([
+      postcssNodeSass({ includePaths: ['node_modules'] }),
+      autoprefixer,
+    ]).process(css, {
+      from: srcIndex,
+      to: distIndex(distDir),
+      syntax: postcssScss,
+    });
+    outputFile(distIndex(distDir), result, { encoding: 'utf8' });
+  } catch (error) {
+    console.error(error);
+  }
 });
