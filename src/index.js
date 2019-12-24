@@ -114,6 +114,16 @@ export { Wizard, WizardStep } from './components/Wizard';
 export Header from './components/Header';
 export Nav, { NavItem, NavList } from './components/Nav';
 export ProfileImage from './components/ProfileImage';
+
+export SecurityShell, {
+  SecurityShellHeader,
+  SecurityShellHeaderAction,
+  SecurityShellHeaderActions,
+  SecurityShellHeaderName,
+  SecurityShellToolbar,
+  SecurityShellToolbarAction,
+} from './components/SecurityShell';
+
 export Shell from './components/Shell';
 export Toolbar from './components/Toolbar';
 
