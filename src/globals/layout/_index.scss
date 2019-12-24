@@ -10,18 +10,3 @@
 
 @import 'carbon-components/scss/globals/scss/layout';
 @import 'carbon-components/scss/globals/scss/spacing';
-
-@import '../deprecate/index';
-
-// TODO: `2.x` - To be removed.
-
-///
-/// Deprecation warning method for `get-fixed-size`.
-/// @param {Length} $unitQuantity The deprecated unit quantity parameter.
-/// @return {Length} The correct `mini-unit` size.
-///
-@function get-fixed-size($unitQuantity) {
-  @warn deprecate($actual: 'get-fixed-size($unitQuantity: #{$unitQuantity})', $expected: 'carbon--mini-units($count: #{$unitQuantity})');
-
-  @return carbon--mini-units($count: $unitQuantity);
-}
