@@ -3,10 +3,13 @@
  * @copyright IBM Security 2019
  */
 
+import Close20 from '@carbon/icons-react/lib/close/20';
+
 import React from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
 
+import IconButton from '../IconButton';
 import Link from '../Link';
 
 const namespace = getComponentNamespace('header');
@@ -55,8 +58,23 @@ const SecurityShellToolbar = ({ children, ...other }) => (
   </nav>
 );
 
-const SecurityShellToolbarAction = ({ children, ...other }) => (
-  <li {...other}>{children}</li>
+const SecurityShellToolbarAction = ({
+  isActive,
+  children,
+  renderIcon,
+  ...other
+}) => (
+  <li>
+    <IconButton
+      iconClassName={`${toolbarNamespace}__icon`}
+      renderIcon={isActive ? Close20 : renderIcon}
+      tooltipDirection={IconButton.TooltipDirection.RIGHT}
+      {...other}
+    />
+    <aside className={`${toolbarNamespace}__panel`} role="menu">
+      <span className={`${toolbarNamespace}__content`}>{children}</span>
+    </aside>
+  </li>
 );
 
 export default SecurityShell;

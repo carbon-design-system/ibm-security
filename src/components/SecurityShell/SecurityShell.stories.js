@@ -3,9 +3,13 @@
  * @copyright IBM Security 2019
  */
 
+import Help20 from '@carbon/icons-react/lib/help/20';
+import Menu20 from '@carbon/icons-react/lib/menu/20';
+import Settings20 from '@carbon/icons-react/lib/settings/20';
+
 import React from 'react';
 
-import { patterns, meta } from '../../../.storybook';
+import { disableCentered, patterns, meta } from '../../../.storybook';
 
 import {
   SecurityShell,
@@ -20,9 +24,18 @@ import {
 export const Default = () => (
   <SecurityShell>
     <SecurityShellToolbar>
-      <SecurityShellToolbarAction>Action 1</SecurityShellToolbarAction>
-      <SecurityShellToolbarAction>Action 2</SecurityShellToolbarAction>
-      <SecurityShellToolbarAction>Action 3</SecurityShellToolbarAction>
+      <SecurityShellToolbarAction aria-label="Toggle menu" renderIcon={Menu20}>
+        SecurityShellToolbarAction 1
+      </SecurityShellToolbarAction>
+      <SecurityShellToolbarAction
+        aria-label="Toggle settings"
+        renderIcon={Settings20}
+      >
+        SecurityShellToolbarAction 2
+      </SecurityShellToolbarAction>
+      <SecurityShellToolbarAction aria-label="Toggle help" renderIcon={Help20}>
+        SecurityShellToolbarAction 3
+      </SecurityShellToolbarAction>
     </SecurityShellToolbar>
 
     <SecurityShellHeader>
@@ -39,4 +52,8 @@ export const Default = () => (
   </SecurityShell>
 );
 
-export default meta(patterns('SecurityShell'));
+export default meta(
+  patterns('SecurityShell'),
+  'SecurityShell',
+  disableCentered()
+);

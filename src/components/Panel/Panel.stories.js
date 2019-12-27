@@ -14,7 +14,7 @@ import { storiesOf } from '@storybook/react';
 
 import React, { Fragment } from 'react';
 
-import { disableCentered, patterns } from '../../../.storybook';
+import { disableCenteredStories, patterns } from '../../../.storybook';
 
 import { label } from '../_mocks_';
 import { header, profile, toolbar } from '../Shell/_mocks_';
@@ -64,7 +64,7 @@ const content = (
   </p>
 );
 
-disableCentered(storiesOf(patterns('Panel'), module))
+disableCenteredStories(storiesOf(patterns('Panel'), module))
   .addParameters({
     info: {
       // Reposition info button so that panel footer isn't covered:
