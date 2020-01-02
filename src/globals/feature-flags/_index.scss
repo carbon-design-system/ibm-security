@@ -13,10 +13,7 @@ $platform__name: platform;
 
 /// Default feature flag values.
 /// @type Map<String, String>
-$security--default-feature-flags: (
-  #{$platform__name}: true,
-  #{$type__name}: true
-);
+$security--default-feature-flags: (#{$platform__name}: true);
 
 $security--feature-flags: () !default;
 
