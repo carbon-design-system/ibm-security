@@ -33,11 +33,9 @@ const tokens = Object.keys(themeMap[themes[0]].value)
 themes.forEach(theme => {
   const { value: tokenObject } = themeMap[theme];
 
-  // TODO - currently only handling color tokens.
-  const isColor = tokenValue => tokenObject[tokenValue].type === 'SassColor';
-
   Object.keys(tokenObject)
-    .filter(isColor)
+    // TODO - currently only handling color tokens.
+    .filter(tokenValue => tokenObject[tokenValue].type === 'SassColor')
     .map(tokenValue => tokenObject[tokenValue])
     .forEach(({ value }, index) => {
       let { hex: color = 'colors' } = value;
