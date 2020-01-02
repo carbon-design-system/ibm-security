@@ -41,7 +41,7 @@ exports[`Icon Rendering renders the HTML of the node's subtree 1`] = `
   xmlns="http://www.w3.org/2000/svg"
 >
   <path
-    d="M9 7V3H7v4H3v2h4v4h2V9h4V7z"
+    d="M9 7L9 3 7 3 7 7 3 7 3 9 7 9 7 13 9 13 9 9 13 9 13 7z"
   />
 </svg>
 `;
