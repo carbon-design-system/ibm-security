@@ -18,6 +18,7 @@ Remove any `@ibmduo`-scoped packages if they're listed as a dependency
 | Color  | [Migrate](2.x-color.md)  |
 | Grid   | [Migrate](2.x-grid.md)   |
 | Layout | [Migrate](2.x-layout.md) |
+| Themes | [Migrate](2.x-themes.md) |
 | Type   | [Migrate](2.x-type.md)   |
 
 ## Components

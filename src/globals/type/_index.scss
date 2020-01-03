@@ -17,24 +17,6 @@
 
 // TODO: `2.x` - To be removed.
 
-/// Monospaced font family.
-/// @type string
-$font-family-mono: carbon--font-family(
-  $name: mono,
-);
-
-/// Sans serif font family.
-/// @type string
-$font-family-sans-serif: carbon--font-family(
-  $name: sans,
-);
-
-/// Serif font family.
-/// @type string
-$font-family-serif: carbon--font-family(
-  $name: serif,
-);
-
 /// Font family deprecation mappings.
 /// @type Map<string, string>
 $font-family-deprecation-map: (
