@@ -10,24 +10,15 @@
 
 @include export-namespace($name: 'accordion') {
   .#{$prefix}--accordion {
-    &.#{$namespace}accordion--start {
-      .#{$prefix}--accordion__heading {
-        flex-direction: row;
-        align-items: center;
-      }
+    &.#{$prefix}--accordion--start .#{$prefix}--accordion__heading {
+      align-items: center;
+    }
 
-      .#{$prefix}--accordion__arrow {
-        margin: 0 0 0 $carbon--spacing-03;
-        transform: rotate(0deg);
-      }
-
-      .#{$prefix}--accordion__item--active .#{$prefix}--accordion__arrow {
-        transform: rotate(90deg);
-      }
-
-      .#{$prefix}--accordion__content {
-        margin-left: $carbon--spacing-06;
-      }
+    // TODO - fix in Carbon.
+    &.#{$prefix}--accordion--end
+      .#{$prefix}--skeleton__text.#{$prefix}--accordion__title {
+      margin-right: $carbon--spacing-03;
+      margin-left: 0;
     }
 
     &__item--active &__title {
