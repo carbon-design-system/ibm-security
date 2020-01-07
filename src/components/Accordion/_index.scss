@@ -14,11 +14,10 @@
       align-items: center;
     }
 
-    // TODO - fix in Carbon.
-    &.#{$prefix}--accordion--end
-      .#{$prefix}--skeleton__text.#{$prefix}--accordion__title {
-      margin-right: $carbon--spacing-03;
-      margin-left: 0;
+    // TODO - fix in Carbon: https://github.com/carbon-design-system/carbon/issues/4962
+    &.#{$prefix}--accordion--end.#{$prefix}--skeleton
+      .#{$prefix}--accordion__arrow {
+      margin-left: $carbon--spacing-03;
     }
 
     &__item--active &__title {
