@@ -5,7 +5,7 @@
 
 import Close20 from '@carbon/icons-react/lib/close/20';
 
-import React from 'react';
+import React, { useState } from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
 
@@ -34,11 +34,18 @@ const SecurityShellHeaderAction = ({ children, ...other }) => (
   </li>
 );
 
-const SecurityShellHeaderActions = ({ children, ...other }) => (
-  <ul className={`${namespace}__group`} {...other}>
-    {children}
-  </ul>
-);
+const SecurityShellHeaderActions = ({ children, ...other }) => {
+  const [isActive, setIsActive] = useState(null);
+
+  return (
+    <ul className={`${namespace}__group`} {...other}>
+      {children({
+        isActive,
+        setIsActive: event => setIsActive(event.target.id),
+      })}
+    </ul>
+  );
+};
 
 const SecurityShellHeaderName = ({ children, offering, prefix, ...other }) => (
   <Link className={`${namespace}__link`} {...other}>
@@ -50,32 +57,56 @@ const SecurityShellHeaderName = ({ children, offering, prefix, ...other }) => (
   </Link>
 );
 
+const SecurityShellHeaderPanel = ({ children, ...other }) => (
+  <div className={`${namespace}__popover`} {...other}>
+    {children}
+  </div>
+);
+
 const toolbarNamespace = getComponentNamespace('toolbar');
 
-const SecurityShellToolbar = ({ children, ...other }) => (
-  <nav className={toolbarNamespace} {...other}>
-    <ul className={`${toolbarNamespace}__group`}>{children}</ul>
-  </nav>
-);
+const SecurityShellToolbar = ({ children, ...other }) => {
+  const [isActive, setIsActive] = useState(null);
+
+  return (
+    <nav className={toolbarNamespace} {...other}>
+      <ul className={`${toolbarNamespace}__group`}>
+        {children({
+          isActive,
+          setIsActive: event => setIsActive(event.target.id),
+        })}
+      </ul>
+    </nav>
+  );
+};
 
 const SecurityShellToolbarAction = ({
-  isActive,
+  id,
   children,
+  isActive: activeAction,
   renderIcon,
   ...other
-}) => (
-  <li>
-    <IconButton
-      iconClassName={`${toolbarNamespace}__icon`}
-      renderIcon={isActive ? Close20 : renderIcon}
-      tooltipDirection={IconButton.TooltipDirection.RIGHT}
-      {...other}
-    />
-    <aside className={`${toolbarNamespace}__panel`} role="menu">
-      <span className={`${toolbarNamespace}__content`}>{children}</span>
-    </aside>
-  </li>
-);
+}) => {
+  const isActive = activeAction === id;
+
+  return (
+    <li>
+      <IconButton
+        id={id}
+        iconClassName={`${toolbarNamespace}__icon`}
+        renderIcon={isActive ? Close20 : renderIcon}
+        tooltipDirection={IconButton.TooltipDirection.RIGHT}
+        {...other}
+      />
+
+      {isActive && (
+        <aside className={`${toolbarNamespace}__panel`} role="menu">
+          <span className={`${toolbarNamespace}__content`}>{children}</span>
+        </aside>
+      )}
+    </li>
+  );
+};
 
 export default SecurityShell;
 
@@ -84,6 +115,7 @@ export {
   SecurityShellHeaderAction,
   SecurityShellHeaderActions,
   SecurityShellHeaderName,
+  SecurityShellHeaderPanel,
   SecurityShellToolbar,
   SecurityShellToolbarAction,
 };
