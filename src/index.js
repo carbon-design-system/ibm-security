@@ -102,6 +102,8 @@ export TagWallFilter from './components/TagWallFilter';
 export { Tearsheet, TearsheetSmall } from './components/Tearsheet';
 export TextInput, { TextInputSkeleton } from './components/TextInput';
 export TimeIndicator from './components/TimeIndicator';
+export TrendingCard from './components/TrendingCard';
+
 export {
   TypeLayout,
   TypeLayoutBody,
@@ -204,3 +206,8 @@ export OrderedList from 'carbon-components-react/lib/components/OrderedList';
 
 export TabContent from 'carbon-components-react/lib/components/TabContent';
 export UnorderedList from 'carbon-components-react/lib/components/UnorderedList';
+
+// Unstable experimental components
+export UNSTABLE__Pagination, {
+  PageSelector,
+} from './components/UNSTABLE__Pagination';

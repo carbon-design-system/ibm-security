@@ -88,7 +88,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M11.8 2.8l-1 1 5.4 5.5H1v1.4h15.2l-5.4 5.5 1 1L19 10z"
+                    d="M11.8 2.8L10.8 3.8 16.2 9.3 1 9.3 1 10.7 16.2 10.7 10.8 16.2 11.8 17.2 19 10z"
                   />
                 </svg>
               </Icon>
@@ -112,6 +112,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
           flipped={false}
           iconDescription="open and close list of options"
           innerRef={null}
+          light={false}
           menuOffset={[Function]}
           menuOffsetFlip={[Function]}
           menuOptionsClass="bx--list-box__menu"
@@ -126,7 +127,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
           <ClickListener
             onClickOutside={[Function]}
           >
-            <div
+            <button
               aria-expanded={false}
               aria-haspopup={true}
               aria-label="Menu"
@@ -135,7 +136,6 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
               onClose={[Function]}
               onKeyDown={[Function]}
               open={false}
-              role="button"
               tabIndex={0}
             >
               <renderIcon
@@ -172,13 +172,13 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+                        d="M8 11L3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z"
                       />
                     </svg>
                   </Icon>
                 </ForwardRef(ChevronDown16)>
               </renderIcon>
-            </div>
+            </button>
           </ClickListener>
         </OverflowMenu>
       </ForwardRef(OverflowMenu)>
@@ -275,7 +275,7 @@ exports[`ComboButton renders a combo button without an overflow menu 1`] = `
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M11.8 2.8l-1 1 5.4 5.5H1v1.4h15.2l-5.4 5.5 1 1L19 10z"
+                    d="M11.8 2.8L10.8 3.8 16.2 9.3 1 9.3 1 10.7 16.2 10.7 10.8 16.2 11.8 17.2 19 10z"
                   />
                 </svg>
               </Icon>

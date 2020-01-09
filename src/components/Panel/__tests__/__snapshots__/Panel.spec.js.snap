@@ -95,20 +95,6 @@ exports[`Panel renders 1`] = `
                     <header
                       class="security--panel__header"
                     >
-                      <div
-                        class="security--panel__header__container--title"
-                      >
-                        <h2
-                          class="security--panel__header--title"
-                        >
-                          Label
-                        </h2>
-                        <div
-                          class="security--panel__header--subtitle"
-                        >
-                          Label
-                        </div>
-                      </div>
                       <button
                         aria-label="Close"
                         class="security--button--icon security--panel__button--close"
@@ -125,10 +111,24 @@ exports[`Panel renders 1`] = `
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
-                            d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z"
+                            d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
                           />
                         </svg>
                       </button>
+                      <div
+                        class="security--panel__header__container--title"
+                      >
+                        <h2
+                          class="security--panel__header--title"
+                        >
+                          Label
+                        </h2>
+                        <div
+                          class="security--panel__header--subtitle"
+                        >
+                          Label
+                        </div>
+                      </div>
                     </header>
                     <section
                       class="security--panel__body security--panel__body--footer"
@@ -180,20 +180,6 @@ exports[`Panel renders 1`] = `
                       <header
                         class="security--panel__header"
                       >
-                        <div
-                          class="security--panel__header__container--title"
-                        >
-                          <h2
-                            class="security--panel__header--title"
-                          >
-                            Label
-                          </h2>
-                          <div
-                            class="security--panel__header--subtitle"
-                          >
-                            Label
-                          </div>
-                        </div>
                         <button
                           aria-label="Close"
                           class="security--button--icon security--panel__button--close"
@@ -210,10 +196,24 @@ exports[`Panel renders 1`] = `
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z"
+                              d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
                             />
                           </svg>
                         </button>
+                        <div
+                          class="security--panel__header__container--title"
+                        >
+                          <h2
+                            class="security--panel__header--title"
+                          >
+                            Label
+                          </h2>
+                          <div
+                            class="security--panel__header--subtitle"
+                          >
+                            Label
+                          </div>
+                        </div>
                       </header>
                       <section
                         class="security--panel__body security--panel__body--footer"
@@ -269,20 +269,6 @@ exports[`Panel renders 1`] = `
                     <header
                       className="security--panel__header"
                     >
-                      <div
-                        className="security--panel__header__container--title"
-                      >
-                        <h2
-                          className="security--panel__header--title"
-                        >
-                          Label
-                        </h2>
-                        <div
-                          className="security--panel__header--subtitle"
-                        >
-                          Label
-                        </div>
-                      </div>
                       <IconButton
                         className="security--panel__button--close"
                         iconClassName=""
@@ -360,7 +346,7 @@ exports[`Panel renders 1`] = `
                                   xmlns="http://www.w3.org/2000/svg"
                                 >
                                   <path
-                                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z"
+                                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
                                   />
                                 </svg>
                               </Icon>
@@ -368,6 +354,20 @@ exports[`Panel renders 1`] = `
                           </Icon>
                         </button>
                       </IconButton>
+                      <div
+                        className="security--panel__header__container--title"
+                      >
+                        <h2
+                          className="security--panel__header--title"
+                        >
+                          Label
+                        </h2>
+                        <div
+                          className="security--panel__header--subtitle"
+                        >
+                          Label
+                        </div>
+                      </div>
                     </header>
                     <section
                       className="security--panel__body security--panel__body--footer"
