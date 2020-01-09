@@ -19,4 +19,6 @@ $body__color__text: $text-01;
   @include carbon--grid;
   @include carbon--type-reset;
   @include carbon--type-classes;
+  @include carbon--font-face-mono();
+  @include carbon--font-face-sans();
 }

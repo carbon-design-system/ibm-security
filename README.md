@@ -86,7 +86,7 @@ Carbon for IBM Security takes advantage of feature flags to conditionally enable
 
 ```scss
 $security--feature-flags: (
-  ibm-type: false,
+  grid-columns-16: true,
 );
 
 @import '@carbon/ibm-security/scss/index';
