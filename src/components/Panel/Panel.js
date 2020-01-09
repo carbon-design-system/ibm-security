@@ -99,6 +99,14 @@ export default class Panel extends Component {
           >
             <section className={classnames(namespace, className)}>
               <header ref={this.header} className={`${namespace}__header`}>
+                <IconButton
+                  id={closeButton.id}
+                  className={`${namespace}__button--close`}
+                  label={PANEL_CONTAINER_CLOSE_BUTTON}
+                  onClick={closeButton.onClick}
+                  renderIcon={closeButton.icon || Close20}
+                  tooltip={false}
+                />
                 {title && (
                   <div className={`${namespace}__header__container--title`}>
                     {typeof title === 'string' ? (
@@ -115,14 +123,6 @@ export default class Panel extends Component {
                     )}
                   </div>
                 )}
-                <IconButton
-                  id={closeButton.id}
-                  className={`${namespace}__button--close`}
-                  label={PANEL_CONTAINER_CLOSE_BUTTON}
-                  onClick={closeButton.onClick}
-                  renderIcon={closeButton.icon || Close20}
-                  tooltip={false}
-                />
               </header>
               <section
                 className={classnames(`${namespace}__body`, {
