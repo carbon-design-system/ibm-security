@@ -8,7 +8,7 @@
 
 @import 'functions';
 
-// TODO: `2.x` - To be removed.
+// TODO: `3.x` - To be removed.
 
 /// Security theme.
 /// @type Map<String, Color>
@@ -46,26 +46,6 @@ $carbon--theme: $-theme;
 
 @import 'mixins';
 @import 'variables';
-
-// TODO: `2.x` - To be removed after the `theme` function is deprecated.
-
-/// Dark theme.
-/// @type String
-/// @access private
-/// @deprecated
-$theme: dark;
-
-/// Handles theme switching between light and dark.
-/// @param {Color} $light The light color to use.
-/// @param {Color} $dark The dark color to use.
-/// @returns {Color} The determined theme color to use.
-/// @access private
-/// @deprecated
-@function theme($light, $dark) {
-  @warn deprecate($actual: 'theme', $expected: '@carbon/themes');
-
-  @return if($theme == dark, $dark, $light);
-}
 
 // Outputs the relevant classes for each supported theme.
 @each $theme, $tokens in $security--themes {
