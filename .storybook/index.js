@@ -60,7 +60,7 @@ const disableCentered = () => ({
  * @returns {Object<string, Object>} The collection of stories.
  */
 const disableCenteredStories = stories =>
-  stories.addParameters(disableCentered);
+  stories.addParameters(disableCentered());
 
 /**
  * Configuration for applying information to individual stories.
