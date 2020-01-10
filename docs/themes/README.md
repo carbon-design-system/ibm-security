@@ -15,10 +15,12 @@ By default, a set of color tokens are provided that are predefined for a specifi
 
 ### CSS
 
-By default, the gray 100 theme will be initialized. If you would like to include another theme, you can do so by applying theming classes. For example:
+Currently, only 2 themes are supported: **Gray 100**, activated by default, and **Cool gray 10**. You can use the theme classes to switch between themes:
 
-- Cool gray 10 - `security--theme--cg10`
-- Gray 100 - `security--theme--g100`
+| Name               | Class                   |
+| ------------------ | ----------------------- |
+| Gray 100 (default) | `security--theme--g100` |
+| Cool gray 10       | `security--theme--cg10` |
 
 #### Tokens
 
