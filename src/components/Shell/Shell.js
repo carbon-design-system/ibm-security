@@ -1,6 +1,6 @@
 /**
  * @file Shell.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2020
  */
 
 import ArrowLeft16 from '@carbon/icons-react/lib/arrow--left/16';
@@ -13,14 +13,17 @@ import React, { Fragment } from 'react';
 import { getComponentNamespace } from '../../globals/namespace';
 
 import Button from '../Button';
-import Header from '../Header';
 import Icon from '../Icon';
 import Link from '../Link';
+import SecurityHeader from '../SecurityHeader';
 import Toolbar from '../Toolbar';
 
 export const namespace = getComponentNamespace('shell');
 
-const { defaultProps: headerDefaultProps, propTypes: headerPropTypes } = Header;
+const {
+  defaultProps: headerDefaultProps,
+  propTypes: headerPropTypes,
+} = SecurityHeader;
 
 const Shell = ({
   header,
@@ -98,7 +101,7 @@ const Shell = ({
             {...toolbar}
           />
         )}
-        <Header
+        <SecurityHeader
           accounts={accounts}
           className={classnames({
             [`${activeClass}${headerNamespace}`]: profile,

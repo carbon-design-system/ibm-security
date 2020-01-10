@@ -1,10 +1,10 @@
 /**
  * @file Header mocks.
- * @copyright IBM Security 2018
+ * @copyright IBM Security 2020
  */
 
 import { url } from '../../_mocks_';
-import labels from '../locales/en/Header.json';
+import labels from '../locales/en/SecurityHeader.json';
 
 const hasSearch = true;
 const hasSearchError = false;

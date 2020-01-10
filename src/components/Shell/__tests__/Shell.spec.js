@@ -1,18 +1,15 @@
 /**
  * @file Shell tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2020
  */
 
 import { mount } from 'enzyme';
 import React from 'react';
 
-import Header from '../../Header';
-import Toolbar from '../../Toolbar';
+import { SecurityHeader, Shell, Toolbar } from '../../..';
 
 import { namespace } from '../Shell';
 import { header, profile, toolbar } from '../_mocks_';
-
-import { Shell } from '../../..';
 
 describe('Shell', () => {
   const shell = mount(<Shell header={header} toolbar={toolbar} />);
@@ -24,7 +21,7 @@ describe('Shell', () => {
     const headerNamespace = '__header';
 
     const hasHeaderClass = (className = `${activeClass}${headerNamespace}`) =>
-      getElement(Header).hasClass(className);
+      getElement(SecurityHeader).hasClass(className);
 
     it('should render the toolbar when a user is logged in', () => {
       const doesToolbarExist = () => getToolbar().exists();

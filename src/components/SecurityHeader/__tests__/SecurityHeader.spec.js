@@ -1,6 +1,6 @@
 /**
  * @file Header tests.
- * @copyright IBM Security 2018
+ * @copyright IBM Security 2020
  */
 
 import { mount, shallow } from 'enzyme';
@@ -8,7 +8,7 @@ import React from 'react';
 
 import { className } from '../../_mocks_';
 
-import Header from '../';
+import { SecurityHeader } from '../../..';
 
 import {
   labels,
@@ -23,11 +23,11 @@ import { defaultProps, namespace } from '../constants';
 
 const { fn } = jest;
 
-describe('Header', () => {
+describe('SecurityHeader', () => {
   const onNotificationClear = fn(defaultProps.onNotificationClear);
 
   const header = mount(
-    <Header
+    <SecurityHeader
       className={className}
       labels={labels}
       links={links}
@@ -57,7 +57,7 @@ describe('Header', () => {
         sign_in: '/sign/in/link',
       };
       const wrapper = shallow(
-        <Header
+        <SecurityHeader
           labels={labels}
           links={linksProp}
           renderLoginAndSignup={() => (
@@ -83,8 +83,9 @@ describe('Header', () => {
         registration: '/some/link',
         sign_in: '/sign/in/link',
       };
+
       const wrapper = shallow(
-        <Header
+        <SecurityHeader
           labels={labels}
           links={linksProp}
           renderLoginAndSignup={(links, labels) => (
@@ -190,7 +191,7 @@ describe('Header', () => {
 
     it('renders the correct items when a user has a list of accounts', () => {
       const headerWithAccount = mount(
-        <Header
+        <SecurityHeader
           className={className}
           labels={labels}
           links={links}
