@@ -8,7 +8,6 @@
 @import '@carbon/type/scss/classes';
 @import '@carbon/type/scss/font-face/mono';
 @import '@carbon/type/scss/font-face/sans';
-@import '@carbon/type/scss/reset';
 
 // TODO: Remove when fix is released in `@carbon/type` - https://github.com/carbon-design-system/carbon/pull/4927
 
@@ -31,3 +30,5 @@ $expressive-heading-02: map-merge(
       ),
   ),
 );
+
+@import '@carbon/type/scss/reset';
