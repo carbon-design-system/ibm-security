@@ -24,6 +24,7 @@ import {
 
 import FilterPanel from './FilterPanel';
 import FilterSearch from './FilterSearch';
+import FilterAccordion from './FilterAccordion';
 
 const FilterPanelWithState = compose(
   // Maintain a state attribute called filterData.
@@ -47,7 +48,7 @@ FilterPanelWithState.__docgenInfo = FilterPanel.__docgenInfo;
 
 storiesOf(patterns('FilterPanel'), module)
   .addDecorator(story => (
-    <div style={{ padding: '1rem', maxWidth: '18rem', margin: '0 auto' }}>
+    <div style={{ padding: '1rem', width: '16rem', margin: '0 auto' }}>
       {story()}
     </div>
   ))
@@ -64,6 +65,13 @@ storiesOf(patterns('FilterPanel'), module)
         )}
         onChange={action('FilterSearch onChange')}
       />
+      <FilterAccordion title="Accordion group 1">content</FilterAccordion>
+      <FilterAccordion
+        title="Accordion group 2 with a very long title"
+        count={10}
+      >
+        more content
+      </FilterAccordion>
     </FilterPanel>
   ))
   .add(

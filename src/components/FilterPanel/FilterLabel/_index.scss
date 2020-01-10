@@ -1,5 +1,5 @@
 ////
-/// Filter search styles.
+/// Filter label styles.
 /// @group filter-panel
 /// @copyright IBM Security 2020
 ////
@@ -8,6 +8,6 @@
 
 @import 'mixins';
 
-@include security--component($name: filter-search) {
-  @include filter-search;
+@include security--component($name: filter-label) {
+  @include filter-label;
 }

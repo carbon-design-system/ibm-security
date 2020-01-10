@@ -5,4 +5,6 @@
 
 export default from './FilterPanel';
 
+export FilterAccordion from './FilterAccordion';
+export FilterLabel from './FilterLabel';
 export FilterSearch from './FilterSearch';

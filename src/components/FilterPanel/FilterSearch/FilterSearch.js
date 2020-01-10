@@ -30,7 +30,7 @@ const FilterSearch = ({ children, className, ...other }) => {
     >
       <Search
         {...other}
-        small
+        size="sm"
         className={classnames(`${namespace}__input`, className)}
       />
       {displayResults && children && (
