@@ -1,3 +1,8 @@
+/**
+ * @file Filter panel component.
+ * @copyright IBM Security 2020
+ */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 

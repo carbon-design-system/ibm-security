@@ -1,21 +1,16 @@
 ////
-/// Filter search mixins.
+/// Legacy filter search mixins.
 /// @group filter-panel
 /// @copyright IBM Security 2019
 ////
 
 @import '../../../../globals/index';
+@import '../../FilterSearch/mixins';
 
-@mixin filter-search {
+@mixin LEGACY-filter-search {
   /// Padding.
   /// @type Length
   $filter-search__spacing__padding: $carbon--spacing-03;
-
-  position: relative;
-
-  &__input {
-    margin-bottom: $filter-search__spacing__padding;
-  }
 
   &__list {
     padding-left: 0;
@@ -36,16 +31,6 @@
   }
 
   &__results {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    max-height: 0;
-    padding: $filter-search__spacing__padding;
-    background-color: $ui-01;
-    box-sizing: border-box;
-    z-index: z($layer: dropdown);
-
     &--none {
       @include carbon--type-style($name: caption-01);
     }

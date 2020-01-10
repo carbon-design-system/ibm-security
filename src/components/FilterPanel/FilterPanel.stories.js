@@ -1,11 +1,11 @@
 /**
  * @file Filter panel stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2020
  */
 
+import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text, object } from '@storybook/addon-knobs';
-import { storiesOf } from '@storybook/react';
 
 import { compose, withState, withHandlers, getDisplayName } from 'recompose';
 import React from 'react';
@@ -23,6 +23,7 @@ import {
 } from './_mocks_';
 
 import FilterPanel from './FilterPanel';
+import FilterSearch from './FilterSearch';
 
 const FilterPanelWithState = compose(
   // Maintain a state attribute called filterData.
@@ -52,7 +53,17 @@ storiesOf(patterns('FilterPanel'), module)
   ))
   .add('default', () => (
     <FilterPanel title={text('FilterPanel title (title)', title)}>
-      hello world
+      <FilterSearch
+        labelText={text(
+          'FilterSearch label text (labelText)',
+          filterSearchLabel
+        )}
+        placeHolderText={text(
+          'FilterSearch placeholder text (placeHolderText)',
+          filterSearchLabel
+        )}
+        onChange={action('FilterSearch onChange')}
+      />
     </FilterPanel>
   ))
   .add(

@@ -4,3 +4,5 @@
  */
 
 export default from './FilterPanel';
+
+export FilterSearch from './FilterSearch';

@@ -1,0 +1,24 @@
+////
+/// Filter search mixins.
+/// @group filter-panel
+/// @copyright IBM Security 2019
+////
+
+@import '../../../globals/index';
+
+@mixin filter-search {
+  position: relative;
+
+  &__results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: carbon--mini-units($count: 38);
+    padding: $carbon--spacing-03;
+    background-color: $ui-01;
+    box-sizing: border-box;
+    overflow-y: auto;
+    z-index: z($layer: dropdown);
+  }
+}
