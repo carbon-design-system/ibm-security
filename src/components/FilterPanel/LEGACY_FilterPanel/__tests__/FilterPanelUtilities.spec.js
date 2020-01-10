@@ -3,7 +3,7 @@
  * @copyright IBM Security 2019
  */
 
-import { filterData } from '../_mocks_';
+import { filterData } from '../../_mocks_';
 import {
   getFilterCategoriesArray,
   getFilterSubcategoriesArray,

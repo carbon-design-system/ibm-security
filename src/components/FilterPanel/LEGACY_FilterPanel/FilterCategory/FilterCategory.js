@@ -9,7 +9,7 @@ import { Accordion } from '../../../Accordion';
 import {
   filterCategoryPropTypes,
   filterDataPropTypes,
-} from '../../FilterPanelUtilities';
+} from '../FilterPanelUtilities';
 import { getComponentNamespace } from '../../../../globals/namespace';
 import FilterSubcategory from '../FilterSubcategory/FilterSubcategory';
 import * as defaultLabels from '../../../../globals/nls';

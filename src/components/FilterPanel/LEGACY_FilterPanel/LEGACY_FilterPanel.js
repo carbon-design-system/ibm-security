@@ -11,7 +11,7 @@ import {
   filterDataPropTypes,
   filterDataDefaultProps,
   getFilterCategoriesArray,
-} from '../FilterPanelUtilities';
+} from './FilterPanelUtilities';
 import { getComponentNamespace } from '../../../globals/namespace';
 import * as defaultLabels from '../../../globals/nls';
 

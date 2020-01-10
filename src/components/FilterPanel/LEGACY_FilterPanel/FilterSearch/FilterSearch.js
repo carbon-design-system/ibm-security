@@ -11,10 +11,7 @@ import { getComponentNamespace } from '../../../../globals/namespace';
 import * as defaultLabels from '../../../../globals/nls';
 
 import FilterSelector from '../FilterSelector';
-import {
-  filterDataPropTypes,
-  getFiltersArray,
-} from '../../FilterPanelUtilities';
+import { filterDataPropTypes, getFiltersArray } from '../FilterPanelUtilities';
 import Search from '../../../Search';
 
 export const namespace = getComponentNamespace('filter-search');

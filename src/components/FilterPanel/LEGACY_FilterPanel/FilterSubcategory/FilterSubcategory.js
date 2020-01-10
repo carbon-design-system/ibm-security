@@ -19,7 +19,7 @@ import FilterSelector from '../FilterSelector';
 import {
   filterSubcategoryPropTypes,
   filterDataPropTypes,
-} from '../../FilterPanelUtilities';
+} from '../FilterPanelUtilities';
 import ScrollGradient from '../../../ScrollGradient';
 
 export const namespace = getComponentNamespace('filter-subcategory');

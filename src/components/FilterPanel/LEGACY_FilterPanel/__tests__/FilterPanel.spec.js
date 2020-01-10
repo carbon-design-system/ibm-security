@@ -15,7 +15,7 @@ import {
   filterSearchLabel,
   filter,
   labels,
-} from '../_mocks_';
+} from '../../_mocks_';
 
 describe('FilterPanel', () => {
   let filterPanel;
