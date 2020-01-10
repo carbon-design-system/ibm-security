@@ -359,23 +359,19 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
                 </option>
               </select>
               <svg
-                aria-label="open list of options"
+                aria-hidden="true"
                 class="bx--select__arrow"
                 focusable="false"
                 height="16"
                 preserveAspectRatio="xMidYMid meet"
-                role="img"
                 style="will-change:transform"
                 viewBox="0 0 16 16"
                 width="16"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+                  d="M8 11L3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z"
                 />
-                <title>
-                  open list of options
-                </title>
               </svg>
             </div>
           </div>
@@ -433,23 +429,19 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
                 </option>
               </select>
               <svg
-                aria-label="open list of options"
+                aria-hidden="true"
                 class="bx--select__arrow"
                 focusable="false"
                 height="16"
                 preserveAspectRatio="xMidYMid meet"
-                role="img"
                 style="will-change:transform"
                 viewBox="0 0 16 16"
                 width="16"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+                  d="M8 11L3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z"
                 />
-                <title>
-                  open list of options
-                </title>
               </svg>
             </div>
           </div>
@@ -477,7 +469,7 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M19 23l-8-7 8-7v14z"
+            d="M19 23L11 16 19 9 19 23z"
           />
         </svg>
       </button>
@@ -497,7 +489,7 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M13 9l8 7-8 7V9z"
+            d="M13 9L21 16 13 23 13 9z"
           />
         </svg>
       </button>

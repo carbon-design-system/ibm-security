@@ -47,7 +47,6 @@ exports[`SearchBar Rendering disables the submit button with no selected scopes 
     onChange={[Function]}
     placeHolderText="Placeholder"
     showIcon={false}
-    small={false}
     type="text"
     value=""
   />
@@ -79,7 +78,6 @@ exports[`SearchBar Rendering disables the submit button with no value 1`] = `
     onChange={[Function]}
     placeHolderText="Placeholder"
     showIcon={false}
-    small={false}
     type="text"
     value={null}
   />
@@ -111,7 +109,6 @@ exports[`SearchBar Rendering renders 1`] = `
     onChange={[Function]}
     placeHolderText="Placeholder"
     showIcon={false}
-    small={false}
     type="text"
     value=""
   />
@@ -143,7 +140,6 @@ exports[`SearchBar Rendering renders an initial value 1`] = `
     onChange={[Function]}
     placeHolderText="Placeholder"
     showIcon={false}
-    small={false}
     type="text"
     value="Initial value"
   />
@@ -209,7 +205,6 @@ exports[`SearchBar Rendering renders scopes 1`] = `
     onChange={[Function]}
     placeHolderText="Placeholder"
     showIcon={false}
-    small={false}
     type="text"
     value=""
   />
@@ -282,7 +277,6 @@ exports[`SearchBar Rendering renders selected scopes 1`] = `
     onChange={[Function]}
     placeHolderText="Placeholder"
     showIcon={false}
-    small={false}
     type="text"
     value=""
   />
