@@ -1,6 +1,6 @@
 /**
  * @file UI shell stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2020
  */
 
 import { storiesOf } from '@storybook/react';
