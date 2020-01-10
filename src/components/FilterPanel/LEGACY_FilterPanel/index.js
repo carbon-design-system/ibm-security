@@ -1,3 +1,3 @@
-import FilterPanel from './LEGACY_FilterPanel';
+import FilterPanel from './FilterPanel';
 
 export default FilterPanel;
