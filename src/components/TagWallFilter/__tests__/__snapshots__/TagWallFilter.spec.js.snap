@@ -505,7 +505,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                              d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
                             />
                           </svg>
                         </button>
@@ -576,7 +576,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M30 28.59L22.45 21A11 11 0 1 0 21 22.45L28.59 30zM5 14a9 9 0 1 1 9 9 9 9 0 0 1-9-9z"
+                                d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
                               />
                             </svg>
                           </span>
@@ -615,7 +615,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                     xmlns="http://www.w3.org/2000/svg"
                                   >
                                     <path
-                                      d="M17 15V7h-2v8H7v2h8v8h2v-8h8v-2h-8z"
+                                      d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
                                     />
                                   </svg>
                                 </span>
@@ -667,7 +667,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z"
+                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
                   />
                 </svg>
               </button>
@@ -806,7 +806,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                         xmlns="http://www.w3.org/2000/svg"
                                       >
                                         <path
-                                          d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                                          d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
                                         />
                                       </svg>
                                     </button>
@@ -877,7 +877,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                           xmlns="http://www.w3.org/2000/svg"
                                         >
                                           <path
-                                            d="M30 28.59L22.45 21A11 11 0 1 0 21 22.45L28.59 30zM5 14a9 9 0 1 1 9 9 9 9 0 0 1-9-9z"
+                                            d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
                                           />
                                         </svg>
                                       </span>
@@ -916,7 +916,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                 xmlns="http://www.w3.org/2000/svg"
                                               >
                                                 <path
-                                                  d="M17 15V7h-2v8H7v2h8v8h2v-8h8v-2h-8z"
+                                                  d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
                                                 />
                                               </svg>
                                             </span>
@@ -968,7 +968,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z"
+                                d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
                               />
                             </svg>
                           </button>
@@ -1030,7 +1030,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                           xmlns="http://www.w3.org/2000/svg"
                                         >
                                           <path
-                                            d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                                            d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
                                           />
                                         </svg>
                                       </button>
@@ -1101,7 +1101,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                             xmlns="http://www.w3.org/2000/svg"
                                           >
                                             <path
-                                              d="M30 28.59L22.45 21A11 11 0 1 0 21 22.45L28.59 30zM5 14a9 9 0 1 1 9 9 9 9 0 0 1-9-9z"
+                                              d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
                                             />
                                           </svg>
                                         </span>
@@ -1140,7 +1140,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                   xmlns="http://www.w3.org/2000/svg"
                                                 >
                                                   <path
-                                                    d="M17 15V7h-2v8H7v2h8v8h2v-8h8v-2h-8z"
+                                                    d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
                                                   />
                                                 </svg>
                                               </span>
@@ -1192,7 +1192,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z"
+                                  d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
                                 />
                               </svg>
                             </button>
@@ -1333,7 +1333,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                     xmlns="http://www.w3.org/2000/svg"
                                                   >
                                                     <path
-                                                      d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                                                      d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
                                                     />
                                                   </svg>
                                                 </Icon>
@@ -1550,7 +1550,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                           xmlns="http://www.w3.org/2000/svg"
                                                         >
                                                           <path
-                                                            d="M30 28.59L22.45 21A11 11 0 1 0 21 22.45L28.59 30zM5 14a9 9 0 1 1 9 9 9 9 0 0 1-9-9z"
+                                                            d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
                                                           />
                                                         </svg>
                                                       </Icon>
@@ -1658,7 +1658,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                                   xmlns="http://www.w3.org/2000/svg"
                                                                 >
                                                                   <path
-                                                                    d="M17 15V7h-2v8H7v2h8v8h2v-8h8v-2h-8z"
+                                                                    d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
                                                                   />
                                                                 </svg>
                                                               </Icon>
@@ -1835,7 +1835,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                       xmlns="http://www.w3.org/2000/svg"
                                     >
                                       <path
-                                        d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z"
+                                        d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
                                       />
                                     </svg>
                                   </Icon>
@@ -1959,7 +1959,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 2`] = 
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                      d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
                     />
                   </svg>
                 </Icon>
@@ -2251,7 +2251,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                                d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
                               />
                             </svg>
                           </button>
@@ -2322,7 +2322,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M30 28.59L22.45 21A11 11 0 1 0 21 22.45L28.59 30zM5 14a9 9 0 1 1 9 9 9 9 0 0 1-9-9z"
+                                  d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
                                 />
                               </svg>
                             </span>
@@ -2361,7 +2361,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       xmlns="http://www.w3.org/2000/svg"
                                     >
                                       <path
-                                        d="M17 15V7h-2v8H7v2h8v8h2v-8h8v-2h-8z"
+                                        d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
                                       />
                                     </svg>
                                   </span>
@@ -2413,7 +2413,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z"
+                      d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
                     />
                   </svg>
                 </button>
@@ -2466,7 +2466,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                                d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
                               />
                             </svg>
                           </button>
@@ -2537,7 +2537,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M30 28.59L22.45 21A11 11 0 1 0 21 22.45L28.59 30zM5 14a9 9 0 1 1 9 9 9 9 0 0 1-9-9z"
+                                  d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
                                 />
                               </svg>
                             </span>
@@ -2576,7 +2576,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       xmlns="http://www.w3.org/2000/svg"
                                     >
                                       <path
-                                        d="M17 15V7h-2v8H7v2h8v8h2v-8h8v-2h-8z"
+                                        d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
                                       />
                                     </svg>
                                   </span>
@@ -2628,7 +2628,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z"
+                      d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
                     />
                   </svg>
                 </button>
@@ -2767,7 +2767,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           xmlns="http://www.w3.org/2000/svg"
                                         >
                                           <path
-                                            d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                                            d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
                                           />
                                         </svg>
                                       </button>
@@ -2838,7 +2838,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                             xmlns="http://www.w3.org/2000/svg"
                                           >
                                             <path
-                                              d="M30 28.59L22.45 21A11 11 0 1 0 21 22.45L28.59 30zM5 14a9 9 0 1 1 9 9 9 9 0 0 1-9-9z"
+                                              d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
                                             />
                                           </svg>
                                         </span>
@@ -2877,7 +2877,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                   xmlns="http://www.w3.org/2000/svg"
                                                 >
                                                   <path
-                                                    d="M17 15V7h-2v8H7v2h8v8h2v-8h8v-2h-8z"
+                                                    d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
                                                   />
                                                 </svg>
                                               </span>
@@ -2929,7 +2929,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z"
+                                  d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
                                 />
                               </svg>
                             </button>
@@ -2982,7 +2982,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           xmlns="http://www.w3.org/2000/svg"
                                         >
                                           <path
-                                            d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                                            d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
                                           />
                                         </svg>
                                       </button>
@@ -3053,7 +3053,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                             xmlns="http://www.w3.org/2000/svg"
                                           >
                                             <path
-                                              d="M30 28.59L22.45 21A11 11 0 1 0 21 22.45L28.59 30zM5 14a9 9 0 1 1 9 9 9 9 0 0 1-9-9z"
+                                              d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
                                             />
                                           </svg>
                                         </span>
@@ -3092,7 +3092,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                   xmlns="http://www.w3.org/2000/svg"
                                                 >
                                                   <path
-                                                    d="M17 15V7h-2v8H7v2h8v8h2v-8h8v-2h-8z"
+                                                    d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
                                                   />
                                                 </svg>
                                               </span>
@@ -3144,7 +3144,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z"
+                                  d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
                                 />
                               </svg>
                             </button>
@@ -3206,7 +3206,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                             xmlns="http://www.w3.org/2000/svg"
                                           >
                                             <path
-                                              d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                                              d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
                                             />
                                           </svg>
                                         </button>
@@ -3277,7 +3277,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                               xmlns="http://www.w3.org/2000/svg"
                                             >
                                               <path
-                                                d="M30 28.59L22.45 21A11 11 0 1 0 21 22.45L28.59 30zM5 14a9 9 0 1 1 9 9 9 9 0 0 1-9-9z"
+                                                d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
                                               />
                                             </svg>
                                           </span>
@@ -3316,7 +3316,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                     xmlns="http://www.w3.org/2000/svg"
                                                   >
                                                     <path
-                                                      d="M17 15V7h-2v8H7v2h8v8h2v-8h8v-2h-8z"
+                                                      d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
                                                     />
                                                   </svg>
                                                 </span>
@@ -3368,7 +3368,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   xmlns="http://www.w3.org/2000/svg"
                                 >
                                   <path
-                                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z"
+                                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
                                   />
                                 </svg>
                               </button>
@@ -3421,7 +3421,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                             xmlns="http://www.w3.org/2000/svg"
                                           >
                                             <path
-                                              d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                                              d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
                                             />
                                           </svg>
                                         </button>
@@ -3492,7 +3492,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                               xmlns="http://www.w3.org/2000/svg"
                                             >
                                               <path
-                                                d="M30 28.59L22.45 21A11 11 0 1 0 21 22.45L28.59 30zM5 14a9 9 0 1 1 9 9 9 9 0 0 1-9-9z"
+                                                d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
                                               />
                                             </svg>
                                           </span>
@@ -3531,7 +3531,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                     xmlns="http://www.w3.org/2000/svg"
                                                   >
                                                     <path
-                                                      d="M17 15V7h-2v8H7v2h8v8h2v-8h8v-2h-8z"
+                                                      d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
                                                     />
                                                   </svg>
                                                 </span>
@@ -3583,7 +3583,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   xmlns="http://www.w3.org/2000/svg"
                                 >
                                   <path
-                                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z"
+                                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
                                   />
                                 </svg>
                               </button>
@@ -3724,7 +3724,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                       xmlns="http://www.w3.org/2000/svg"
                                                     >
                                                       <path
-                                                        d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                                                        d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
                                                       />
                                                     </svg>
                                                   </Icon>
@@ -3941,7 +3941,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                             xmlns="http://www.w3.org/2000/svg"
                                                           >
                                                             <path
-                                                              d="M30 28.59L22.45 21A11 11 0 1 0 21 22.45L28.59 30zM5 14a9 9 0 1 1 9 9 9 9 0 0 1-9-9z"
+                                                              d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
                                                             />
                                                           </svg>
                                                         </Icon>
@@ -4049,7 +4049,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                                     xmlns="http://www.w3.org/2000/svg"
                                                                   >
                                                                     <path
-                                                                      d="M17 15V7h-2v8H7v2h8v8h2v-8h8v-2h-8z"
+                                                                      d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
                                                                     />
                                                                   </svg>
                                                                 </Icon>
@@ -4226,7 +4226,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         xmlns="http://www.w3.org/2000/svg"
                                       >
                                         <path
-                                          d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z"
+                                          d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
                                         />
                                       </svg>
                                     </Icon>
