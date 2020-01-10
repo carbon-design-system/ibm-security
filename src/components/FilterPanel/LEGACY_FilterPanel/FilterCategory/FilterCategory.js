@@ -5,14 +5,14 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Accordion } from '../../Accordion';
+import { Accordion } from '../../../Accordion';
 import {
   filterCategoryPropTypes,
   filterDataPropTypes,
-} from '../FilterPanelUtilities';
-import { getComponentNamespace } from '../../../globals/namespace';
+} from '../../FilterPanelUtilities';
+import { getComponentNamespace } from '../../../../globals/namespace';
 import FilterSubcategory from '../FilterSubcategory/FilterSubcategory';
-import * as defaultLabels from '../../../globals/nls';
+import * as defaultLabels from '../../../../globals/nls';
 
 const namespace = getComponentNamespace('filter-category');
 

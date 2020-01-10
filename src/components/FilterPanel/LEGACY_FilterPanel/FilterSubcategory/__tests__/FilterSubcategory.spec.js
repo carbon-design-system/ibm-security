@@ -12,7 +12,7 @@ import {
   filtersExpandLabel,
   filtersCollapseLabel,
   labels,
-} from '../../_mocks_';
+} from '../../../_mocks_';
 
 import { namespace } from '../FilterSubcategory';
 import FilterSubcategory from '..';

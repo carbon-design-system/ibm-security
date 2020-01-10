@@ -33,6 +33,7 @@ const FilterPanelWithState = compose(
     onChange: ({ onChange, onFilterToggle, filterData }) => filter => {
       onChange(filter);
 
+      // eslint-disable-next-line no-param-reassign
       filterData.filters[filter.id].enabled = !filterData.filters[filter.id]
         .enabled;
       onFilterToggle(filterData);
@@ -49,8 +50,13 @@ storiesOf(patterns('FilterPanel'), module)
       {story()}
     </div>
   ))
+  .add('default', () => (
+    <FilterPanel title={text('FilterPanel title (title)', title)}>
+      hello world
+    </FilterPanel>
+  ))
   .add(
-    'default',
+    'with deprecated FilterData',
     () => (
       <FilterPanelWithState
         onChange={action('onChange')}

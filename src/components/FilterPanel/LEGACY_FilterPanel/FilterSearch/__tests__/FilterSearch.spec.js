@@ -11,7 +11,7 @@ import {
   noFiltersResultsLabel,
   filterSearchLabel,
   labels,
-} from '../../_mocks_';
+} from '../../../_mocks_';
 
 const props = {
   filterData,

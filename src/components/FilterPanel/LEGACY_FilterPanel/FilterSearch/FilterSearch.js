@@ -7,12 +7,15 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-import { getComponentNamespace } from '../../../globals/namespace';
-import * as defaultLabels from '../../../globals/nls';
+import { getComponentNamespace } from '../../../../globals/namespace';
+import * as defaultLabels from '../../../../globals/nls';
 
 import FilterSelector from '../FilterSelector';
-import { filterDataPropTypes, getFiltersArray } from '../FilterPanelUtilities';
-import Search from '../../Search';
+import {
+  filterDataPropTypes,
+  getFiltersArray,
+} from '../../FilterPanelUtilities';
+import Search from '../../../Search';
 
 export const namespace = getComponentNamespace('filter-search');
 

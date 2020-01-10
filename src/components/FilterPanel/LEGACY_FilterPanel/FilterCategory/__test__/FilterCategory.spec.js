@@ -12,7 +12,7 @@ import {
   filtersCollapseLabel,
   filtersExpandLabel,
   labels,
-} from '../../_mocks_';
+} from '../../../_mocks_';
 
 const uniqueProps = {
   filtersCollapseLabel,

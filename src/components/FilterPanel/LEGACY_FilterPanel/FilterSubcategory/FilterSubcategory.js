@@ -9,18 +9,18 @@ import Subtract16 from '@carbon/icons-react/lib/subtract/16';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import * as defaultLabels from '../../../globals/nls';
-import { getComponentNamespace } from '../../../globals/namespace';
-import theme from '../../../globals/theme';
+import * as defaultLabels from '../../../../globals/nls';
+import { getComponentNamespace } from '../../../../globals/namespace';
+import theme from '../../../../globals/theme';
 
-import { AccordionItem } from '../../Accordion';
-import Button from '../../Button';
+import { AccordionItem } from '../../../Accordion';
+import Button from '../../../Button';
 import FilterSelector from '../FilterSelector';
 import {
   filterSubcategoryPropTypes,
   filterDataPropTypes,
-} from '../FilterPanelUtilities';
-import ScrollGradient from '../../ScrollGradient';
+} from '../../FilterPanelUtilities';
+import ScrollGradient from '../../../ScrollGradient';
 
 export const namespace = getComponentNamespace('filter-subcategory');
 

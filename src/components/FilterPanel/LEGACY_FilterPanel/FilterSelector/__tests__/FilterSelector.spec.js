@@ -6,7 +6,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import FilterSelector from '..';
-import { MockFilterData } from '../../_mocks_';
+import { MockFilterData } from '../../../_mocks_';
 import { namespace } from '../FilterSelector';
 
 describe('FilterSelector', () => {

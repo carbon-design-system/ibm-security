@@ -6,10 +6,10 @@
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
-import { getComponentNamespace } from '../../../globals/namespace';
+import { getComponentNamespace } from '../../../../globals/namespace';
 
-import Checkbox from '../../Checkbox';
-import { filterFiltersPropTypes } from '../FilterPanelUtilities';
+import Checkbox from '../../../Checkbox';
+import { filterFiltersPropTypes } from '../../FilterPanelUtilities';
 
 export const namespace = getComponentNamespace('filter-selector');
 
