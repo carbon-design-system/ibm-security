@@ -1,6 +1,6 @@
 /**
  * @file Entry point.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2020
  */
 
 // Globals.
@@ -113,7 +113,6 @@ export {
 export { Wizard, WizardStep } from './components/Wizard';
 
 // Platform.
-export Header from './components/Header';
 export Nav, { NavItem, NavList } from './components/Nav';
 export ProfileImage from './components/ProfileImage';
 
@@ -127,6 +126,7 @@ export SecurityShell, {
   SecurityShellToolbarAction,
 } from './components/SecurityShell';
 
+export SecurityHeader from './components/SecurityHeader';
 export Shell from './components/Shell';
 export Toolbar from './components/Toolbar';
 

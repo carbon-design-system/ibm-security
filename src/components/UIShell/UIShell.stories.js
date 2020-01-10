@@ -1,6 +1,6 @@
 /**
  * @file UI shell stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2020
  */
 
 import { storiesOf } from '@storybook/react';
@@ -9,7 +9,7 @@ import React from 'react';
 import { disableCenteredStories, info, patterns } from '../../../.storybook';
 
 import {
-  CarbonHeader,
+  Header,
   HeaderContainer,
   HeaderMenuButton,
   HeaderName,
@@ -30,11 +30,11 @@ disableCenteredStories(
     .add(
       'Header Base',
       () => (
-        <CarbonHeader aria-label="IBM Platform Name">
+        <Header aria-label="IBM Platform Name">
           <HeaderName href="#" prefix="IBM">
             [Platform]
           </HeaderName>
-        </CarbonHeader>
+        </Header>
       ),
       info(description, {
         story,
@@ -47,7 +47,7 @@ disableCenteredStories(
         <HeaderContainer
           render={({ isSideNavExpanded, onClickSideNavExpand }) => (
             <>
-              <CarbonHeader aria-label="IBM Platform Name">
+              <Header aria-label="IBM Platform Name">
                 <SkipToContent />
                 <HeaderMenuButton
                   aria-label="Open menu"
@@ -85,7 +85,7 @@ disableCenteredStories(
                     </HeaderSideNavItems>
                   </SideNavItems>
                 </SideNav>
-              </CarbonHeader>
+              </Header>
             </>
           )}
         />

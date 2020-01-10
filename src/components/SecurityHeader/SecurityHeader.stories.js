@@ -1,6 +1,6 @@
 /**
  * @file Header stories.
- * @copyright IBM Security 2018
+ * @copyright IBM Security 2020
  */
 
 import React from 'react';
@@ -10,7 +10,7 @@ import { object } from '@storybook/addon-knobs';
 
 import { disableCenteredStories, patterns } from '../../../.storybook';
 
-import Header from './';
+import { SecurityHeader } from '../..';
 
 import {
   labels,
@@ -27,8 +27,8 @@ const headerProps = {
   links,
 };
 
-disableCenteredStories(storiesOf(patterns('Header'), module))
-  .add('default', () => <Header {...headerProps} />, {
+disableCenteredStories(storiesOf(patterns('SecurityHeader'), module))
+  .add('default', () => <SecurityHeader {...headerProps} />, {
     info: {
       text: `
           Basic implementation of the header.
@@ -37,7 +37,9 @@ disableCenteredStories(storiesOf(patterns('Header'), module))
   })
   .add(
     'with active user',
-    () => <Header {...headerProps} profile={object('profile', profile)} />,
+    () => (
+      <SecurityHeader {...headerProps} profile={object('profile', profile)} />
+    ),
     {
       info: {
         text: `
@@ -49,7 +51,7 @@ disableCenteredStories(storiesOf(patterns('Header'), module))
   .add(
     'with notifications',
     () => (
-      <Header
+      <SecurityHeader
         {...headerProps}
         notifications={notifications}
         onNotificationClear={action('onNotificationClear')}
@@ -68,7 +70,7 @@ disableCenteredStories(storiesOf(patterns('Header'), module))
   .add(
     'with profile account',
     () => (
-      <Header
+      <SecurityHeader
         {...headerProps}
         onAccountClick={action('onAccountClick')}
         profile={object('profile', profileWithAccount)}
@@ -85,7 +87,7 @@ disableCenteredStories(storiesOf(patterns('Header'), module))
   .add(
     'with account list',
     () => (
-      <Header
+      <SecurityHeader
         {...headerProps}
         accounts={object('accounts', accounts)}
         onAccountClick={action('onAccountClick')}
@@ -103,7 +105,7 @@ disableCenteredStories(storiesOf(patterns('Header'), module))
   .add(
     'with account list and long account name',
     () => (
-      <Header
+      <SecurityHeader
         {...headerProps}
         accounts={object('accounts', accounts)}
         onAccountClick={action('onAccountClick')}

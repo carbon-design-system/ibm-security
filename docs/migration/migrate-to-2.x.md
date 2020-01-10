@@ -23,25 +23,25 @@ Remove any `@ibmduo`-scoped packages if they're listed as a dependency
 
 ## Components
 
-| Name                  | `2.x`                                                           |
-| --------------------- | --------------------------------------------------------------- |
-| `Breadcrumb`          | [Migrate](../../src/components/Breadcrumb/migrate-to-2.x.md)    |
-| `Button`              | [Migrate](../../src/components/Button/migrate-to-2.x.md)        |
-| `CallToActionSection` | Removed                                                         |
-| `Card`                | [Migrate](../../src/components/Card/migrate-to-2.x.md)          |
-| `DataDecorator`       | [Migrate](../../src/components/DataDecorator/migrate-to-2.x.md) |
-| `DataTable`           | [Migrate](../../src/components/DataTable/migrate-to-2.x.md)     |
-| `Header`              | [Migrate](../../src/components/Header/migrate-to-2.x.md)        |
-| `Icon`                | [Migrate](../../src/components/Icon/migrate-to-2.x.md)          |
-| `IconButton`          | [Migrate](../../src/components/IconButton/migrate-to-2.x.md)    |
-| `Notification`        | [Migrate](../../src/components/Notification/migrate-to-2.x.md)  |
-| `Loading`             | [Migrate](../../src/components/Loading/migrate-to-2.x.md)       |
-| `MultiSelect`         | [Migrate](../../src/components/MultiSelect/migrate-to-2.x.md)   |
-| `Pagination`          | [Migrate](../../src/components/Pagination/migrate-to-2.x.md)    |
-| `Panel`               | [Migrate](../../src/components/Panel/migrate-to-2.x.md)         |
-| `PanelContainer`      | Removed                                                         |
-| `PanelController`     | Removed                                                         |
-| `Search`              | [Migrate](../../src/components/Search/migrate-to-2.x.md)        |
-| `Tag`                 | [Migrate](../../src/components/Tag/migrate-to-2.x.md)           |
-| `TextInput`           | [Migrate](../../src/components/TextInput/migrate-to-2.x.md)     |
-| `TypeLayout`          | [Migrate](../../src/components/TypeLayout/migrate-to-2.x.md)    |
+| Name                  | `2.x`                                                            |
+| --------------------- | ---------------------------------------------------------------- |
+| `Breadcrumb`          | [Migrate](../../src/components/Breadcrumb/migrate-to-2.x.md)     |
+| `Button`              | [Migrate](../../src/components/Button/migrate-to-2.x.md)         |
+| `CallToActionSection` | Removed                                                          |
+| `Card`                | [Migrate](../../src/components/Card/migrate-to-2.x.md)           |
+| `DataDecorator`       | [Migrate](../../src/components/DataDecorator/migrate-to-2.x.md)  |
+| `DataTable`           | [Migrate](../../src/components/DataTable/migrate-to-2.x.md)      |
+| `Header`              | [Migrate](../../src/components/SecurityHeader/migrate-to-2.x.md) |
+| `Icon`                | [Migrate](../../src/components/Icon/migrate-to-2.x.md)           |
+| `IconButton`          | [Migrate](../../src/components/IconButton/migrate-to-2.x.md)     |
+| `Notification`        | [Migrate](../../src/components/Notification/migrate-to-2.x.md)   |
+| `Loading`             | [Migrate](../../src/components/Loading/migrate-to-2.x.md)        |
+| `MultiSelect`         | [Migrate](../../src/components/MultiSelect/migrate-to-2.x.md)    |
+| `Pagination`          | [Migrate](../../src/components/Pagination/migrate-to-2.x.md)     |
+| `Panel`               | [Migrate](../../src/components/Panel/migrate-to-2.x.md)          |
+| `PanelContainer`      | Removed                                                          |
+| `PanelController`     | Removed                                                          |
+| `Search`              | [Migrate](../../src/components/Search/migrate-to-2.x.md)         |
+| `Tag`                 | [Migrate](../../src/components/Tag/migrate-to-2.x.md)            |
+| `TextInput`           | [Migrate](../../src/components/TextInput/migrate-to-2.x.md)      |
+| `TypeLayout`          | [Migrate](../../src/components/TypeLayout/migrate-to-2.x.md)     |

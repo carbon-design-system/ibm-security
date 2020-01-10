@@ -1,13 +1,13 @@
 ////
 /// Shell mixins.
 /// @group shell
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2020
 ////
 
 @import '../../globals/index';
 @import '../../globals/theme/mixins';
 
-@import '../Header/mixins';
+@import '../SecurityHeader/mixins';
 @import '../Toolbar/mixins';
 
 @mixin shell {

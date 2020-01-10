@@ -1,7 +1,7 @@
 ////
 /// Components entry point.
 /// @group entry
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2020
 ////
 
 // Application.
@@ -43,9 +43,9 @@
 @import 'Wizard/index';
 
 // Platform.
-@import 'Header/index';
 @import 'Nav/index';
 @import 'ProfileImage/index';
+@import 'SecurityHeader/index';
 @import 'Shell/index';
 
 /// Carbon proxy.

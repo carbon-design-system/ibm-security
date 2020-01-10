@@ -1,6 +1,6 @@
 /**
  * @file Header.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2020
  */
 
 import Close20 from '@carbon/icons-react/lib/close/20';
@@ -53,7 +53,7 @@ const renderPopover = (children, state) => (
  * Header class.
  * @className
  */
-export default class Header extends Component {
+export default class SecurityHeader extends Component {
   static propTypes = {
     ...propTypes,
     /**
@@ -80,8 +80,8 @@ export default class Header extends Component {
 
   state = {
     isActive: { notifications: false, profile: false },
-    isUserActive: Header.getIsUserActive(this.props.profile),
-    accountList: Header.getAccountList({
+    isUserActive: SecurityHeader.getIsUserActive(this.props.profile),
+    accountList: SecurityHeader.getAccountList({
       accounts: this.props.accounts,
       profile: this.props.profile,
     }),
@@ -89,8 +89,8 @@ export default class Header extends Component {
 
   static getDerivedStateFromProps(nextProps) {
     return {
-      isUserActive: Header.getIsUserActive(nextProps.profile),
-      accountList: Header.getAccountList({
+      isUserActive: SecurityHeader.getIsUserActive(nextProps.profile),
+      accountList: SecurityHeader.getAccountList({
         accounts: nextProps.accounts,
         profile: nextProps.profile,
       }),

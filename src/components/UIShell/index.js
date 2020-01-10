@@ -1,11 +1,11 @@
 /**
  * @file UI shell entry point.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2020
  */
 
 export Content from 'carbon-components-react/lib/components/UIShell/Content';
 
-export CarbonHeader from 'carbon-components-react/lib/components/UIShell/Header';
+export Header from 'carbon-components-react/lib/components/UIShell/Header';
 export HeaderContainer from 'carbon-components-react/lib/components/UIShell//HeaderContainer';
 export HeaderGlobalAction from 'carbon-components-react/lib/components/UIShell//HeaderGlobalAction';
 export HeaderGlobalBar from 'carbon-components-react/lib/components/UIShell//HeaderGlobalBar';
