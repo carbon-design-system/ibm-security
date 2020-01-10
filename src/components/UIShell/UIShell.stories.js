@@ -9,7 +9,7 @@ import React from 'react';
 import { disableCentered, info, patterns } from '../../../.storybook';
 
 import {
-  CarbonHeader,
+  Header,
   HeaderContainer,
   HeaderMenuButton,
   HeaderName,
@@ -30,11 +30,11 @@ disableCentered(
     .add(
       'Header Base',
       () => (
-        <CarbonHeader aria-label="IBM Platform Name">
+        <Header aria-label="IBM Platform Name">
           <HeaderName href="#" prefix="IBM">
             [Platform]
           </HeaderName>
-        </CarbonHeader>
+        </Header>
       ),
       info(description, {
         story,
@@ -47,7 +47,7 @@ disableCentered(
         <HeaderContainer
           render={({ isSideNavExpanded, onClickSideNavExpand }) => (
             <>
-              <CarbonHeader aria-label="IBM Platform Name">
+              <Header aria-label="IBM Platform Name">
                 <SkipToContent />
                 <HeaderMenuButton
                   aria-label="Open menu"
@@ -85,7 +85,7 @@ disableCentered(
                     </HeaderSideNavItems>
                   </SideNavItems>
                 </SideNav>
-              </CarbonHeader>
+              </Header>
             </>
           )}
         />

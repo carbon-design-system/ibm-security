@@ -1,9 +1,13 @@
 /**
  * @file Shell mocks.
- * @copyright IBM Security 2018
+ * @copyright IBM Security 2020
  */
 
-import { labels as headerLabels, links, profile } from '../../Header/_mocks_';
+import {
+  labels as headerLabels,
+  links,
+  profile,
+} from '../../SecurityHeader/_mocks_';
 
 import {
   labels as toolbarLabels,

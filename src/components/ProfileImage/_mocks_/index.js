@@ -1,10 +1,10 @@
 /**
  * @file Profile image mocks.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2020
  */
 
 import { className } from '../../_mocks_';
-import { profile } from '../../Header/_mocks_';
+import { profile } from '../../SecurityHeader/_mocks_';
 
 const large = true;
 

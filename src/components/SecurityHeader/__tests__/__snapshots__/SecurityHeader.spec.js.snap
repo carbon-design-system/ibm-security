@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header Render Props tests should render labels by render prop 1`] = `
+exports[`SecurityHeader Render Props tests should render labels by render prop 1`] = `
 <div
   id="render-prop-output"
 >
@@ -17,7 +17,7 @@ exports[`Header Render Props tests should render labels by render prop 1`] = `
 </div>
 `;
 
-exports[`Header Render Props tests should render login and signup buttons via a render prop 1`] = `
+exports[`SecurityHeader Render Props tests should render login and signup buttons via a render prop 1`] = `
 <div
   id="render-prop-output"
 >
@@ -36,8 +36,8 @@ exports[`Header Render Props tests should render login and signup buttons via a 
 </div>
 `;
 
-exports[`Header Rendering renders correctly 1`] = `
-<Header
+exports[`SecurityHeader Rendering renders correctly 1`] = `
+<SecurityHeader
   accounts={
     Array [
       Object {
@@ -280,5 +280,5 @@ exports[`Header Rendering renders correctly 1`] = `
       </ul>
     </header>
   </div>
-</Header>
+</SecurityHeader>
 `;
