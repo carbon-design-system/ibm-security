@@ -44,7 +44,7 @@ FilterSearch.propTypes = {
   ...Search.propTypes,
 
   /**
-   * Extra classes to add.
+   * Optional class name.
    */
   className: PropTypes.string,
 

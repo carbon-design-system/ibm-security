@@ -25,6 +25,7 @@ import {
 import FilterPanel from './FilterPanel';
 import FilterSearch from './FilterSearch';
 import FilterAccordion from './FilterAccordion';
+import FilterAccordionItem from './FilterAccordionItem';
 
 const FilterPanelWithState = compose(
   // Maintain a state attribute called filterData.
@@ -65,7 +66,26 @@ storiesOf(patterns('FilterPanel'), module)
         )}
         onChange={action('FilterSearch onChange')}
       />
-      <FilterAccordion title="Accordion group 1">content</FilterAccordion>
+      <FilterAccordion title="Accordion group 1">
+        <FilterAccordionItem
+          title="Accordion 1"
+          count="(10)"
+          expandLabel="View more"
+          collapseLabel="View less"
+        >
+          <span>content</span>
+          <span>content</span>
+          <span>content</span>
+          <span>content</span>
+          <span>content</span>
+          <span>content</span>
+          <span>content</span>
+          <span>content</span>
+          <span>content</span>
+          <span>content</span>
+          <span>content</span>
+        </FilterAccordionItem>
+      </FilterAccordion>
       <FilterAccordion
         title="Accordion group 2 with a very long title"
         count={10}

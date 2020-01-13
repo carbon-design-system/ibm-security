@@ -5,6 +5,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 import LegacyFilterPanel from './LEGACY_FilterPanel';
 import { getComponentNamespace } from '../../globals/namespace';
@@ -13,14 +14,14 @@ import deprecatedProp from '../../globals/prop-types';
 export const namespace = getComponentNamespace('filter-panel');
 
 const FilterPanel = props => {
-  const { title, children, filterData } = props;
+  const { title, children, className, filterData } = props;
 
   if (filterData) {
     return <LegacyFilterPanel {...props} />;
   }
 
   return (
-    <aside className={namespace}>
+    <aside className={classnames(namespace, className)}>
       {title && <h1 className={`${namespace}__title`}>{title}</h1>}
       {children}
     </aside>
@@ -29,17 +30,22 @@ const FilterPanel = props => {
 
 FilterPanel.propTypes = {
   /**
-   * Optional title for the filter panel
+   * Optional title for the filter panel.
    */
   title: PropTypes.string,
 
   /**
-   * Filter panel content
+   * Filter panel content.
    */
   children: PropTypes.node,
 
   /**
-   * (Deprecated) filter data object
+   * Optional class name.
+   */
+  className: PropTypes.string,
+
+  /**
+   * (Deprecated) filter data object.
    */
   filterData: deprecatedProp('children', PropTypes.object),
 };
@@ -47,6 +53,7 @@ FilterPanel.propTypes = {
 FilterPanel.defaultProps = {
   title: undefined,
   children: undefined,
+  className: undefined,
   filterData: undefined,
 };
 

@@ -1,0 +1,12 @@
+////
+/// Filter accordion item styles.
+/// @copyright IBM Security 2020
+////
+
+@import '../../Component/mixins';
+
+@import 'mixins';
+
+@include security--component($name: filter-accordion-item) {
+  @include filter-accordion-item;
+}
