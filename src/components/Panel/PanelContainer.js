@@ -3,6 +3,8 @@
  * @copyright IBM Security 2019
  */
 
+/* eslint-disable no-useless-computed-key, react/require-default-props */
+
 import Close20 from '@carbon/icons-react/lib/close/20';
 
 import classnames from 'classnames';
@@ -338,7 +340,6 @@ PanelContainer.propTypes = {
    * Required props for the accessibility label of the header
    */
   ['aria-label']: requiredIfGivenPropExists(
-    // eslint-disable-line
     'hasScrollingContent',
     PropTypes.string
   ),
@@ -358,3 +359,5 @@ PanelContainer.defaultProps = {
   hasScrollingContent: false,
   panelAriaLabel: undefined,
 };
+
+/* eslint-enable */
