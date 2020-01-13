@@ -10,6 +10,9 @@ import PropTypes, { func } from 'prop-types';
 import React, { Component, createRef, Fragment } from 'react';
 import { createPortal } from 'react-dom';
 
+import requiredIfGivenPropExists from 'carbon-components-react/es/prop-types/requiredIfGivenPropExists';
+import setupGetInstanceId from 'carbon-components-react/es/tools/setupGetInstanceId';
+
 import { getComponentNamespace } from '../../globals/namespace';
 import * as defaultLabels from '../../globals/nls';
 
@@ -20,6 +23,7 @@ import Button from '../Button';
 import IconButton from '../IconButton';
 
 export const namespace = getComponentNamespace('panel');
+const getInstanceId = setupGetInstanceId();
 
 /**
  * Panel container component.
@@ -112,6 +116,10 @@ export default class PanelContainer extends Component {
     });
   }
 
+  panelInstanceId = `panel-${getInstanceId()}`;
+  panelTitleId = `${namespace}__title--${this.panelInstanceId}`;
+  panelSubtitleId = `${namespace}__subtitle--${this.panelInstanceId}`;
+
   footer = createRef();
   header = createRef();
 
@@ -142,18 +150,50 @@ export default class PanelContainer extends Component {
       secondaryButton,
       subtitle,
       title,
+      hasScrollingContent,
+      panelAriaLabel,
+
+      // Explicitly define so they aren't in `...other`.
+      disableEscape,
+      labels,
+      rootNode,
+
+      // Required because it may include `aria-label`, etc.
+      ...other
     } = this.props;
 
     const hasFooter = renderFooter || primaryButton;
 
+    const ariaLabel =
+      title || this.props['aria-label'] || panelAriaLabel || subtitle;
+
+    const getAriaLabelledBy = title ? this.paneltitleId : this.panelSubtitleId;
+
+    const hasScrollingContentProps = hasScrollingContent
+      ? {
+          tabIndex: 0,
+          role: 'region',
+          'aria-label': ariaLabel,
+          'aria-labelledby': getAriaLabelledBy,
+        }
+      : {};
+
     return (
-      <Fragment>
+      <div role="dialog" aria-label={ariaLabel} aria-modal="true" {...other}>
         <header ref={this.header} className={`${namespace}__header`}>
           {title && (
             <div className={`${namespace}__header__container--title`}>
-              <div className={`${namespace}__header--title`}>{title}</div>
+              <div
+                id={this.panelTitleId}
+                className={`${namespace}__header--title`}
+              >
+                {title}
+              </div>
               {subtitle && (
-                <div className={`${namespace}__header--subtitle`}>
+                <div
+                  id={this.panelSubtitleId}
+                  className={`${namespace}__header--subtitle`}
+                >
                   {subtitle}
                 </div>
               )}
@@ -176,6 +216,8 @@ export default class PanelContainer extends Component {
             marginTop: `${this.state.bodyMargin.top}px`,
             marginBottom: `${this.state.bodyMargin.bottom}px`,
           }}
+          {...hasScrollingContentProps}
+          aria-labelledby={getAriaLabelledBy}
         >
           {children}
         </section>
@@ -212,7 +254,7 @@ export default class PanelContainer extends Component {
             )}
           </footer>
         )}
-      </Fragment>
+      </div>
     );
   };
 
@@ -281,6 +323,25 @@ PanelContainer.propTypes = {
   rootNode: isNode() ? PropTypes.instanceOf(Node) : PropTypes.any,
 
   labels: defaultLabels.propType,
+
+  /**
+   * Specify whether the panel contains scrolling content
+   */
+  hasScrollingContent: PropTypes.bool,
+
+  /**
+   * Specify a label to be read by screen readers on the panel root node
+   */
+  panelAriaLabel: PropTypes.string,
+
+  /**
+   * Required props for the accessibility label of the header
+   */
+  ['aria-label']: requiredIfGivenPropExists(
+    // eslint-disable-line
+    'hasScrollingContent',
+    PropTypes.string
+  ),
 };
 
 PanelContainer.defaultProps = {
@@ -294,4 +355,6 @@ PanelContainer.defaultProps = {
   renderFooter: null,
   rootNode: isNode() ? document.body : undefined,
   labels: {},
+  hasScrollingContent: false,
+  panelAriaLabel: undefined,
 };
