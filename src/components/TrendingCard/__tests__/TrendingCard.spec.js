@@ -15,7 +15,7 @@ describe('TrendingCard', () => {
 
   it('renders a custom link', () => {
     expect(
-      render(<TrendingCard element="Link" />).container.firstChild
+      render(<TrendingCard element="a" />).container.firstChild
     ).toMatchSnapshot();
   });
 });
