@@ -15,12 +15,12 @@ By default, a set of color tokens are provided that are predefined for a specifi
 
 ### CSS
 
-Currently, only 2 themes are supported: **Gray 100** (activated by default) and **Cool gray 10**. You can use the theme classes to switch between themes:
+Currently, only 2 themes are supported: **Gray 100**, activated by default, and **Cool gray 10**. You can use the theme classes to switch between themes:
 
-|Theme name              |Theme class                 |
-| -----------------------|----------------------------|
-|Gray 100 *(default)*    |`security--theme--g100`     |
-|Cool gray 10            |`security--theme--cg10`     |
+| Name               | Class                   |
+| ------------------ | ----------------------- |
+| Gray 100 (default) | `security--theme--g100` |
+| Cool gray 10       | `security--theme--cg10` |
 
 #### Tokens
 
