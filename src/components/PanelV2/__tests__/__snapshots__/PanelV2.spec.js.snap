@@ -140,8 +140,6 @@ exports[`PanelV2 renders 1`] = `
                     >
                       <div
                         class="security--panel__body--content"
-                        role="tabpanel"
-                        tabindex="0"
                       >
                         Label
                       </div>
@@ -227,8 +225,6 @@ exports[`PanelV2 renders 1`] = `
                       >
                         <div
                           class="security--panel__body--content"
-                          role="tabpanel"
-                          tabindex="0"
                         >
                           Label
                         </div>
@@ -391,8 +387,6 @@ exports[`PanelV2 renders 1`] = `
                       <PanelContent>
                         <div
                           className="security--panel__body--content"
-                          role="tabpanel"
-                          tabIndex="0"
                         >
                           Label
                         </div>
