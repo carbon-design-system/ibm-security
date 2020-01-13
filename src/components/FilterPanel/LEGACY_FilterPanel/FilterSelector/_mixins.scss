@@ -4,38 +4,8 @@
 /// @copyright IBM Security 2019
 ////
 
-@import '../../../../globals/index';
+@import '../../FilterCheckbox/mixins';
 
 @mixin filter-selector {
-  @include carbon--type-style($name: body-short-01);
-  display: flex;
-
-  &__checkbox-wrapper {
-    max-width: 100%;
-  }
-
-  &__checkbox {
-    &,
-    > span {
-      width: 100%;
-    }
-
-    > span {
-      display: flex;
-      align-items: center;
-    }
-  }
-
-  &__count {
-    @include carbon--type-style($name: caption-01);
-    margin-left: $carbon--spacing-04;
-    color: $text-02;
-  }
-
-  &__label {
-    flex: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
+  @include filter-checkbox;
 }

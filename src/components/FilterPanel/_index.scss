@@ -10,9 +10,10 @@
 
 @import './LEGACY_FilterPanel/index';
 
+@import './FilterLabel/index';
 @import './FilterAccordion/index';
 @import './FilterAccordionItem/index';
-@import './FilterLabel/index';
+@import './FilterCheckbox/index';
 @import './FilterSearch/index';
 
 @import '../Component/mixins';

@@ -65,7 +65,11 @@ const FilterAccordionItem = ({
   return (
     <AccordionItem
       title={
-        <FilterLabel count={count} countClassName={`${namespace}__count`}>
+        <FilterLabel
+          count={count}
+          className={`${namespace}__label`}
+          countClassName={`${namespace}__count`}
+        >
           {title}
         </FilterLabel>
       }
@@ -152,7 +156,7 @@ FilterAccordionItem.propTypes = {
   scrollGradientColor: PropTypes.string,
 
   /**
-   * Optional count of unique value.
+   * Optional count of unique values.
    */
   count: PropTypes.number,
 

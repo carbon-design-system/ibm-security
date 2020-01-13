@@ -4,33 +4,23 @@
  */
 
 import PropTypes from 'prop-types';
-import React, { Fragment } from 'react';
+import React from 'react';
 
 import { getComponentNamespace } from '../../../../globals/namespace';
 
-import Checkbox from '../../../Checkbox';
 import { filterFiltersPropTypes } from '../FilterPanelUtilities';
+import FilterCheckbox from '../../FilterCheckbox';
 
 export const namespace = getComponentNamespace('filter-selector');
 
 const FilterSelector = ({ filter, onChange }) => (
-  <div className={namespace}>
-    <Checkbox
-      checked={filter.enabled}
-      className={`${namespace}__checkbox`}
-      onChange={() => onChange(filter)}
-      id={`filter-selector-${filter.id}`}
-      wrapperClassName={`${namespace}__checkbox-wrapper`}
-      labelText={
-        <Fragment>
-          <span className={`${namespace}__label`} title={filter.name}>
-            {filter.name}
-          </span>
-          <span className={`${namespace}__count`}>({filter.count})</span>
-        </Fragment>
-      }
-    />
-  </div>
+  <FilterCheckbox
+    checked={filter.enabled}
+    onChange={() => onChange(filter)}
+    id={`filter-selector-${filter.id}`}
+    count={filter.count}
+    labelText={filter.name}
+  />
 );
 
 FilterSelector.propTypes = {

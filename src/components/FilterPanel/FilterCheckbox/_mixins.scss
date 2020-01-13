@@ -1,0 +1,30 @@
+////
+/// Filter checkbox mixins.
+/// @group filter-panel
+/// @copyright IBM Security 2020
+////
+
+@import '../../../globals/index';
+
+@mixin filter-checkbox {
+  &__wrapper {
+    @include carbon--type-style($name: body-short-01);
+    display: flex;
+    max-width: 100%;
+  }
+
+  &__count {
+    @include carbon--type-style($name: caption-01);
+  }
+
+  // Checkbox component styles override
+  &,
+  > span {
+    width: 100%;
+  }
+
+  > span {
+    display: flex;
+    align-items: center;
+  }
+}

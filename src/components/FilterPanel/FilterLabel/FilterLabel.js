@@ -7,7 +7,7 @@ import { getComponentNamespace } from '../../../globals/namespace';
 const namespace = getComponentNamespace('filter-label');
 
 const FilterLabel = ({ children, count, className, countClassName }) =>
-  children && (
+  children ? (
     <span className={classnames(namespace, className)}>
       <span className={`${namespace}__text`} title={children}>
         {children}
@@ -18,7 +18,7 @@ const FilterLabel = ({ children, count, className, countClassName }) =>
         </span>
       )}
     </span>
-  );
+  ) : null;
 
 FilterLabel.propTypes = {
   /**
