@@ -1,3 +1,8 @@
+/**
+ * @file Filter group component.
+ * @copyright IBM Security 2020
+ */
+
 import React from 'react';
 import PropType from 'prop-types';
 import classnames from 'classnames';

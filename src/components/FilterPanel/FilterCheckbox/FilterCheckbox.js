@@ -1,5 +1,5 @@
 /**
- * @file Filter checkbox.
+ * @file Filter checkbox component.
  * @copyright IBM Security 2020
  */
 

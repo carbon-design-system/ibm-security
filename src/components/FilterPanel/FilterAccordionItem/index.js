@@ -1,3 +1,6 @@
-import FilterAccordionItem from './FilterAccordiontItem';
+/**
+ * @file Filter accordion item entry point.
+ * @copyright IBM Security 2020
+ */
 
-export default FilterAccordionItem;
+export default from './FilterAccordiontItem';

@@ -1,6 +1,6 @@
 /**
- * @file Filter panel entry point.
- * @copyright IBM Security 2019
+ * @file Filter panel and subcomponents entry point.
+ * @copyright IBM Security 2020
  */
 export {
   FilterPanel,
