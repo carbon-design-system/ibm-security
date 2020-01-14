@@ -7,7 +7,6 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import FilterSelector from '..';
 import { MockFilterData } from '../../../_mocks_';
-import { namespace } from '../FilterSelector';
 
 describe('FilterSelector', () => {
   let filterSelector;
@@ -35,7 +34,7 @@ describe('FilterSelector', () => {
     it('invokes `onChange` when filter is clicked', () => {
       const onChange = jest.fn();
       filterSelector.setProps({ onChange });
-      filterSelector.find(`.${namespace}__checkbox`).simulate('change');
+      filterSelector.find('FilterCheckbox').simulate('change');
       expect(onChange).toHaveBeenCalledWith(MockFilterData.filters.DEFAULT);
     });
   });

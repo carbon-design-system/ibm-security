@@ -1,65 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FilterSelector Rendering renders checked filter 1`] = `
-<div
-  className="security--filter-selector"
->
-  <Checkbox
-    checked={true}
-    className="security--filter-selector__checkbox"
-    id="filter-selector-SELECTED"
-    indeterminate={false}
-    labelText={
-      <React.Fragment>
-        <span
-          className="security--filter-selector__label"
-          title="Selected filter"
-        >
-          Selected filter
-        </span>
-        <span
-          className="security--filter-selector__count"
-        >
-          (
-          10
-          )
-        </span>
-      </React.Fragment>
-    }
-    onChange={[Function]}
-    wrapperClassName="security--filter-selector__checkbox-wrapper"
-  />
-</div>
+<FilterCheckbox
+  checked={true}
+  count={10}
+  id="filter-selector-SELECTED"
+  indeterminate={false}
+  labelText="Selected filter"
+  onChange={[Function]}
+/>
 `;
 
 exports[`FilterSelector Rendering renders unchecked filter 1`] = `
-<div
-  className="security--filter-selector"
->
-  <Checkbox
-    checked={false}
-    className="security--filter-selector__checkbox"
-    id="filter-selector-DEFAULT"
-    indeterminate={false}
-    labelText={
-      <React.Fragment>
-        <span
-          className="security--filter-selector__label"
-          title="Filter"
-        >
-          Filter
-        </span>
-        <span
-          className="security--filter-selector__count"
-        >
-          (
-          10
-          )
-        </span>
-      </React.Fragment>
-    }
-    onChange={[Function]}
-    wrapperClassName="security--filter-selector__checkbox-wrapper"
-  />
-</div>
+<FilterCheckbox
+  checked={false}
+  count={10}
+  id="filter-selector-DEFAULT"
+  indeterminate={false}
+  labelText="Filter"
+  onChange={[Function]}
+/>
 `;

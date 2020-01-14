@@ -10,7 +10,7 @@ exports[`FilterSearch Events displays search results when value typed in 1`] = `
     labelText="Find filter..."
     onChange={[Function]}
     placeHolderText="Find filter..."
-    small={true}
+    size="sm"
     type="text"
     value="filter 10"
   />
@@ -65,7 +65,7 @@ exports[`FilterSearch Events hides results when filter has been toggled 1`] = `
     labelText="Find filter..."
     onChange={[Function]}
     placeHolderText="Find filter..."
-    small={true}
+    size="sm"
     type="text"
     value=""
   />
@@ -82,7 +82,7 @@ exports[`FilterSearch Rendering accepts initial search value 1`] = `
     labelText="Find filter..."
     onChange={[Function]}
     placeHolderText="Find filter..."
-    small={true}
+    size="sm"
     type="text"
     value="filter 10"
   />
@@ -137,7 +137,7 @@ exports[`FilterSearch Rendering displays message when no filters match search va
     labelText="Find filter..."
     onChange={[Function]}
     placeHolderText="Find filter..."
-    small={true}
+    size="sm"
     type="text"
     value="should not match a filter"
   />
@@ -163,7 +163,7 @@ exports[`FilterSearch Rendering partially matches any string 1`] = `
     labelText="Find filter..."
     onChange={[Function]}
     placeHolderText="Find filter..."
-    small={true}
+    size="sm"
     type="text"
     value="FiLTer 1"
   />
@@ -618,7 +618,7 @@ exports[`FilterSearch Rendering partially matches any string 2`] = `
     labelText="Find filter..."
     onChange={[Function]}
     placeHolderText="Find filter..."
-    small={true}
+    size="sm"
     type="text"
     value="FiLTer 1"
   />
@@ -1073,7 +1073,7 @@ exports[`FilterSearch Rendering renders 1`] = `
     labelText="Find filter..."
     onChange={[Function]}
     placeHolderText="Find filter..."
-    small={true}
+    size="sm"
     type="text"
     value=""
   />
@@ -1090,7 +1090,7 @@ exports[`FilterSearch Rendering should not overwrite \`labels\` when unique prop
     labelText="Find filter..."
     onChange={[Function]}
     placeHolderText="Find filter..."
-    small={true}
+    size="sm"
     type="text"
     value=""
   />
