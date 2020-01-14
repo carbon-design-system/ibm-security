@@ -21,7 +21,7 @@ exports[`TrendingCard renders 1`] = `
 
 exports[`TrendingCard renders a custom link 1`] = `
 <a
-  class="security--trending-card"
+  class="bx--link security--trending-card"
   href="#"
   style="width: 20rem;"
 >

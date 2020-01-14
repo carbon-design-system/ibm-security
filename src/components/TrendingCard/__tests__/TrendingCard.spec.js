@@ -7,6 +7,7 @@ import { render } from '@testing-library/react';
 import React from 'react';
 
 import { Default as TrendingCard } from '../TrendingCard.stories';
+import Link from '../../Link';
 
 describe('TrendingCard', () => {
   it('renders', () => {
@@ -15,7 +16,7 @@ describe('TrendingCard', () => {
 
   it('renders a custom link', () => {
     expect(
-      render(<TrendingCard element="a" />).container.firstChild
+      render(<TrendingCard element={Link} />).container.firstChild
     ).toMatchSnapshot();
   });
 });
