@@ -52,7 +52,6 @@
     "@carbon/motion": "10.5.0",
     "@carbon/themes": "10.9.0",
     "@carbon/type": "10.8.0",
-    "axe-core": "^3.4.1",
     "carbon-components": "10.10.0-alpha.0",
     "carbon-components-react": "7.9.0",
     "classnames": "^2.2.5",
@@ -70,6 +69,7 @@
     "throttle-debounce": "^2.0.1"
   },
   "devDependencies": {
+    "axe-core": "^3.4.1",
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
