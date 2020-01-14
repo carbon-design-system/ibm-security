@@ -10,7 +10,6 @@ export {
   SecurityShellHeaderAction,
   SecurityShellHeaderActions,
   SecurityShellHeaderName,
-  SecurityShellHeaderPanel,
   SecurityShellToolbar,
   SecurityShellToolbarAction,
 } from './SecurityShell';

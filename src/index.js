@@ -121,7 +121,6 @@ export SecurityShell, {
   SecurityShellHeaderAction,
   SecurityShellHeaderActions,
   SecurityShellHeaderName,
-  SecurityShellHeaderPanel,
   SecurityShellToolbar,
   SecurityShellToolbarAction,
 } from './components/SecurityShell';

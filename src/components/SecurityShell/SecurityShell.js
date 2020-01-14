@@ -28,11 +28,29 @@ const SecurityShellHeader = ({ children, ...other }) => (
   </div>
 );
 
-const SecurityShellHeaderAction = ({ children, ...other }) => (
-  <li className={`${namespace}__list__item`} {...other}>
-    {children}
-  </li>
-);
+const SecurityShellHeaderAction = ({
+  children,
+  id,
+  isActive: activeAction,
+  popover,
+  ...other
+}) => {
+  const isActive = activeAction === id;
+
+  return (
+    <li className={`${namespace}__list__item`} {...other}>
+      <>
+        {children}
+
+        {isActive && (
+          <div className={`${namespace}__popover`} {...other}>
+            {popover}
+          </div>
+        )}
+      </>
+    </li>
+  );
+};
 
 const SecurityShellHeaderActions = ({ children, ...other }) => {
   const [isActive, setIsActive] = useState(null);
@@ -57,12 +75,6 @@ const SecurityShellHeaderName = ({ children, offering, prefix, ...other }) => (
   </Link>
 );
 
-const SecurityShellHeaderPanel = ({ children, ...other }) => (
-  <div className={`${namespace}__popover`} {...other}>
-    {children}
-  </div>
-);
-
 const toolbarNamespace = getComponentNamespace('toolbar');
 
 const SecurityShellToolbar = ({ children, ...other }) => {
@@ -81,8 +93,8 @@ const SecurityShellToolbar = ({ children, ...other }) => {
 };
 
 const SecurityShellToolbarAction = ({
-  id,
   children,
+  id,
   isActive: activeAction,
   renderIcon,
   ...other
@@ -101,7 +113,7 @@ const SecurityShellToolbarAction = ({
 
       {isActive && (
         <aside className={`${toolbarNamespace}__panel`} role="menu">
-          <span className={`${toolbarNamespace}__content`}>{children}</span>
+          {children}
         </aside>
       )}
     </li>
@@ -115,7 +127,6 @@ export {
   SecurityShellHeaderAction,
   SecurityShellHeaderActions,
   SecurityShellHeaderName,
-  SecurityShellHeaderPanel,
   SecurityShellToolbar,
   SecurityShellToolbarAction,
 };

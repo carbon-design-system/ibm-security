@@ -5,6 +5,7 @@
 
 import Help20 from '@carbon/icons-react/lib/help/20';
 import Menu20 from '@carbon/icons-react/lib/menu/20';
+import Notification20 from '@carbon/icons-react/lib/notification/20';
 import Settings20 from '@carbon/icons-react/lib/settings/20';
 
 import React from 'react';
@@ -13,12 +14,15 @@ import { disableCentered, patterns, meta } from '../../../.storybook';
 
 import {
   Button,
+  IconButton,
+  Nav,
+  NavItem,
+  NavList,
   SecurityShell,
   SecurityShellHeader,
   SecurityShellHeaderAction,
   SecurityShellHeaderActions,
   SecurityShellHeaderName,
-  SecurityShellHeaderPanel,
   SecurityShellToolbar,
   SecurityShellToolbarAction,
 } from '../..';
@@ -35,7 +39,18 @@ export const Default = () => (
             onClick={setIsActive}
             renderIcon={Menu20}
           >
-            SecurityShellToolbarAction 1
+            <Nav heading="Heading">
+              <NavList title="List">
+                <NavItem>Item 1</NavItem>
+                <NavItem>Item 2</NavItem>
+              </NavList>
+              <NavItem>Item 3</NavItem>
+            </Nav>
+
+            <Nav>
+              <NavItem>Item 4</NavItem>
+              <NavItem>Item 5</NavItem>
+            </Nav>
           </SecurityShellToolbarAction>
           <SecurityShellToolbarAction
             id="1"
@@ -44,7 +59,7 @@ export const Default = () => (
             onClick={setIsActive}
             renderIcon={Settings20}
           >
-            SecurityShellToolbarAction 2
+            Action 2
           </SecurityShellToolbarAction>
           <SecurityShellToolbarAction
             id="2"
@@ -53,7 +68,7 @@ export const Default = () => (
             onClick={setIsActive}
             renderIcon={Help20}
           >
-            SecurityShellToolbarAction 3
+            Action 3
           </SecurityShellToolbarAction>
         </>
       )}
@@ -65,7 +80,7 @@ export const Default = () => (
       </SecurityShellHeaderName>
 
       <SecurityShellHeaderActions>
-        {({ setIsActive }) => (
+        {({ isActive, setIsActive }) => (
           <>
             <SecurityShellHeaderAction>
               <Button kind="secondary">Action 1</Button>
@@ -73,11 +88,17 @@ export const Default = () => (
             <SecurityShellHeaderAction>
               <Button>Action 2</Button>
             </SecurityShellHeaderAction>
-            <SecurityShellHeaderAction id="3" onClick={setIsActive}>
-              <Button>Action 3</Button>
-              <SecurityShellHeaderPanel>
-                SecurityShellHeaderPanel
-              </SecurityShellHeaderPanel>
+            <SecurityShellHeaderAction
+              id="3"
+              isActive={isActive}
+              popover="Action 3"
+            >
+              <IconButton
+                id="3"
+                onClick={setIsActive}
+                renderIcon={Notification20}
+                state={isActive}
+              />
             </SecurityShellHeaderAction>
           </>
         )}
