@@ -22,12 +22,14 @@ import {
   labels,
 } from './_mocks_';
 
-import FilterPanel from './FilterPanel';
-import FilterSearch from './FilterSearch';
-import FilterAccordion from './FilterAccordion';
-import FilterAccordionItem from './FilterAccordionItem';
-import FilterCheckbox from './FilterCheckbox';
-import FilterGroup from './FilterGroup';
+import {
+  FilterPanel,
+  FilterSearch,
+  FilterAccordion,
+  FilterAccordionItem,
+  FilterCheckbox,
+  FilterGroup,
+} from '.';
 
 const FilterPanelWithState = compose(
   // Maintain a state attribute called filterData.

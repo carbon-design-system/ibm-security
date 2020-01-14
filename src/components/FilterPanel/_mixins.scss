@@ -10,8 +10,4 @@
   &__title {
     @include carbon--type-style($name: body-short-01);
   }
-
-  &__search {
-    margin-bottom: $carbon--spacing-05;
-  }
 }

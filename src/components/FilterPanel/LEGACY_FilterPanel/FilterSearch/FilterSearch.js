@@ -113,7 +113,7 @@ class FilterSearch extends Component {
           onChange={this.onFilterSearch}
           placeHolderText={SEARCH_PLACEHOLDER_LABEL}
           value={searchValue}
-          small
+          size="sm"
         />
         {resultsPanelVisible && (
           <div className={resultsContainerClassNames}>

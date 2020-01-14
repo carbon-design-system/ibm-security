@@ -11,6 +11,13 @@ import LegacyFilterPanel from './LEGACY_FilterPanel';
 import { getComponentNamespace } from '../../globals/namespace';
 import deprecatedProp from '../../globals/prop-types';
 
+import FilterAccordion from './FilterAccordion';
+import FilterAccordionItem from './FilterAccordionItem';
+import FilterCheckbox from './FilterCheckbox';
+import FilterGroup from './FilterGroup';
+import FilterLabel from './FilterLabel';
+import FilterSearch from './FilterSearch';
+
 export const namespace = getComponentNamespace('filter-panel');
 
 const FilterPanel = props => {
@@ -57,4 +64,19 @@ FilterPanel.defaultProps = {
   filterData: undefined,
 };
 
-export default FilterPanel;
+FilterPanel.FilterAccordion = FilterAccordion;
+FilterPanel.FilterAccordionItem = FilterAccordionItem;
+FilterPanel.FilterCheckbox = FilterCheckbox;
+FilterPanel.FilterGroup = FilterGroup;
+FilterPanel.FilterLabel = FilterLabel;
+FilterPanel.FilterSearch = FilterSearch;
+
+export {
+  FilterPanel,
+  FilterAccordion,
+  FilterAccordionItem,
+  FilterCheckbox,
+  FilterGroup,
+  FilterLabel,
+  FilterSearch,
+};
