@@ -1,13 +1,13 @@
 /**
  * @file Trending card tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2020
  */
 
 import { render } from '@testing-library/react';
 import React from 'react';
 
+import { Link } from '../../..';
 import { Default as TrendingCard } from '../TrendingCard.stories';
-import Link from '../../Link';
 
 describe('TrendingCard', () => {
   it('renders', () => {
