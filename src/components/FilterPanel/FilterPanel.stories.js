@@ -27,6 +27,7 @@ import FilterSearch from './FilterSearch';
 import FilterAccordion from './FilterAccordion';
 import FilterAccordionItem from './FilterAccordionItem';
 import FilterCheckbox from './FilterCheckbox';
+import FilterGroup from './FilterGroup';
 
 const FilterPanelWithState = compose(
   // Maintain a state attribute called filterData.
@@ -66,7 +67,41 @@ storiesOf(patterns('FilterPanel'), module)
           filterSearchLabel
         )}
         onChange={action('FilterSearch onChange')}
-      />
+      >
+        <FilterGroup title="Filter accordion item">
+          <FilterCheckbox
+            labelText="Filter checkbox"
+            id="filter-checkbox"
+            count={10}
+            onChange={action('FilterCheckbox onChange')}
+          />
+          <FilterCheckbox
+            labelText="Long filter checkbox  label"
+            id="long-filter-checkbox"
+            count={10}
+            onChange={action('FilterCheckbox onChange')}
+          />
+          <FilterCheckbox
+            labelText="Checked"
+            id="checked"
+            count={10}
+            defaultChecked
+            onChange={action('FilterCheckbox onChange')}
+          />
+        </FilterGroup>
+        <FilterGroup title="Truncated accordion item">
+          {new Array(3).fill(null).map((value, index) => (
+            <FilterCheckbox
+              // eslint-disable-next-line react/no-array-index-key
+              key={index}
+              labelText={`Filter ${index + 1}`}
+              id={`filter-checkbox-${index + 1}`}
+              count={10}
+              onChange={action('FilterCheckbox onChange')}
+            />
+          ))}
+        </FilterGroup>
+      </FilterSearch>
 
       <FilterAccordion title="Filter accordion" count={150}>
         <FilterAccordionItem
@@ -149,6 +184,7 @@ storiesOf(patterns('FilterPanel'), module)
       </FilterAccordion>
     </FilterPanel>
   ))
+
   .add(
     'with deprecated FilterData',
     () => (

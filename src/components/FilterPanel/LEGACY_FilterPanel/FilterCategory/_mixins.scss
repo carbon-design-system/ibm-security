@@ -5,15 +5,16 @@
 ////
 
 @import '../../../../globals/index';
-@import '../../FilterAccordion/mixins';
+@import '../../FilterGroup/mixins';
 
 @mixin filter-category {
-  @include filter-accordion;
+  @include filter-group;
 
   &__title {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-top: $carbon--spacing-03;
   }
 
   &__count {

@@ -7,17 +7,8 @@
 @import '../../../globals/index';
 
 @mixin filter-accordion {
-  /// Padding.
-  /// @type Length
-  $filter-accordion__spacing__padding: $carbon--spacing-03;
-
-  padding-top: $filter-accordion__spacing__padding;
-  padding-bottom: $filter-accordion__spacing__padding;
-  border-top: 1px solid $ui-03;
-
   &__title {
-    @include carbon--type-style($name: caption-01);
-    @include carbon--font-weight($weight: semibold);
+    margin-top: $carbon--spacing-03;
     margin-bottom: $carbon--spacing-05;
   }
 }

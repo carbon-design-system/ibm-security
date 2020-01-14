@@ -4,19 +4,18 @@ import classnames from 'classnames';
 
 import { Accordion } from '../../Accordion';
 import { getComponentNamespace } from '../../../globals/namespace';
-import FilterLabel from '../FilterLabel/FilterLabel';
+import FilterGroup from '../FilterGroup';
 
 const namespace = getComponentNamespace('filter-accordion');
 
-const FilterAccordion = ({ title, count, children, className }) => (
-  <div className={classnames(namespace, className)}>
-    {title && (
-      <h2 className={`${namespace}__title`}>
-        <FilterLabel count={count}>{title}</FilterLabel>
-      </h2>
-    )}
+const FilterAccordion = ({ children, className, ...other }) => (
+  <FilterGroup
+    {...other}
+    className={classnames(namespace, className)}
+    titleClassName={`${namespace}__title`}
+  >
     <Accordion>{children}</Accordion>
-  </div>
+  </FilterGroup>
 );
 
 FilterAccordion.propTypes = {

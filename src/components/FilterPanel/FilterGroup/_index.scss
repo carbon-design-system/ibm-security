@@ -1,0 +1,12 @@
+////
+/// Filter group styles.
+/// @copyright IBM Security 2020
+////
+
+@import '../../Component/mixins';
+
+@import 'mixins';
+
+@include security--component($name: filter-group) {
+  @include filter-group;
+}

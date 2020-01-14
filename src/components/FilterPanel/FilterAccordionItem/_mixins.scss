@@ -52,7 +52,6 @@
 
   // Reduce the width of the label so long labels with counts overflow out of the panel.
   #{$carbon--accordion}__title {
-    @debug &;
     width: calc(100% - 2.8em);
   }
 

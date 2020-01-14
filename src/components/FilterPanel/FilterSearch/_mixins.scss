@@ -8,6 +8,7 @@
 
 @mixin filter-search {
   position: relative;
+  margin-bottom: $carbon--spacing-05;
 
   &__results {
     position: absolute;
