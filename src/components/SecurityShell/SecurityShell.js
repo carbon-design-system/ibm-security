@@ -1,6 +1,6 @@
 /**
  * @file Shell.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2020
  */
 
 import Close20 from '@carbon/icons-react/lib/close/20';

@@ -1,6 +1,6 @@
 /**
  * @file Shell entry point.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2020
  */
 
 export default from './SecurityShell';

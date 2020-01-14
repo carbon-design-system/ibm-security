@@ -1,6 +1,6 @@
 /**
  * @file Shell stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2020
  */
 
 import Help20 from '@carbon/icons-react/lib/help/20';
