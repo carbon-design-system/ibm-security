@@ -19,4 +19,20 @@ describe('TrendingCard', () => {
       render(<TrendingCard element={Link} />).container.firstChild
     ).toMatchSnapshot();
   });
+
+  describe('automated accessibility testing', () => {
+    it('should have no Axe violations', async () => {
+      const { container } = render(<TrendingCard />);
+      await expect(container).toHaveNoAxeViolations();
+    });
+
+    it('should have no DAP violations', async () => {
+      const { container } = render(
+        <main>
+          <TrendingCard />
+        </main>
+      );
+      await expect(container).toHaveNoDAPViolations('TrendingCard');
+    });
+  });
 });

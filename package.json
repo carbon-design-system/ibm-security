@@ -52,6 +52,7 @@
     "@carbon/motion": "10.5.0",
     "@carbon/themes": "10.9.0",
     "@carbon/type": "10.8.0",
+    "axe-core": "^3.4.1",
     "carbon-components": "10.10.0-alpha.0",
     "carbon-components-react": "7.9.0",
     "classnames": "^2.2.5",
@@ -86,6 +87,7 @@
     "@babel/register": "^7.4.0",
     "@commitlint/cli": "^8.0.0",
     "@commitlint/config-conventional": "^8.0.0",
+    "@ibma/aat": "https://able.ibm.com/tools/dist/ibma-aat-2.0.3-alpha.tgz",
     "@semantic-release/git": "^7.1.0-beta.3",
     "@storybook/addon-a11y": "^5.2.4",
     "@storybook/addon-actions": "^5.2.4",
@@ -179,7 +181,8 @@
     "coverageDirectory": "<rootDir>/../coverage",
     "rootDir": "src",
     "setupFilesAfterEnv": [
-      "<rootDir>/../config/jest",
+      "<rootDir>/../config/jest/index.js",
+      "<rootDir>/../config/jest/setupAfterEnv.js",
       "jest-canvas-mock"
     ],
     "snapshotSerializers": [
