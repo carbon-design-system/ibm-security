@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { render, wait, act } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import FilterSearch from '../FilterSearch';
 import Checkbox from '../../../Checkbox';
@@ -63,5 +64,14 @@ describe('FilterSearch', () => {
       jest.runAllTimers();
     });
     expect(getByTestId('result-content')).toBeVisible();
+  });
+
+  it('invokes onChange when the user types a value into the search', () => {
+    const onChangeMock = jest.fn();
+    const { getByLabelText } = render(
+      <FilterSearch labelText="search label" onChange={onChangeMock} />
+    );
+    userEvent.type(getByLabelText(/search label/i), 'search term');
+    expect(onChangeMock).toHaveBeenCalledTimes('search term'.length);
   });
 });
