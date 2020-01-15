@@ -96,9 +96,11 @@ const SecurityShellToolbarAction = ({
   children,
   id,
   isActive: activeAction,
+  onClick: setIsActive,
   renderIcon,
   ...other
 }) => {
+  const [isAlreadyActive, setIsAlreadyActive] = useState(true);
   const isActive = activeAction === id;
 
   return (
@@ -106,12 +108,21 @@ const SecurityShellToolbarAction = ({
       <IconButton
         id={id}
         iconClassName={`${toolbarNamespace}__icon`}
-        renderIcon={isActive ? Close20 : renderIcon}
+        onClick={event => {
+          setIsActive(event);
+
+          if (isActive && isAlreadyActive) {
+            setIsAlreadyActive(false);
+          } else if (!isAlreadyActive) {
+            setIsAlreadyActive(true);
+          }
+        }}
+        renderIcon={isActive && isAlreadyActive ? Close20 : renderIcon}
         tooltipDirection={IconButton.TooltipDirection.RIGHT}
         {...other}
       />
 
-      {isActive && (
+      {isActive && isAlreadyActive && (
         <aside className={`${toolbarNamespace}__panel`} role="menu">
           {children}
         </aside>
