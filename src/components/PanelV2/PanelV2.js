@@ -11,8 +11,8 @@ import React, { Component, createRef, Fragment } from 'react';
 import Close20 from '@carbon/icons-react/lib/close/20';
 
 import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
-import requiredIfGivenPropExists from 'carbon-components-react/es/prop-types/requiredIfGivenPropExists';
-import setupGetInstanceId from 'carbon-components-react/es/tools/setupGetInstanceId';
+import requiredIfGivenPropExists from 'carbon-components-react/lib/prop-types/requiredIfGivenPropExists';
+import setupGetInstanceId from 'carbon-components-react/lib/tools/setupGetInstanceId';
 
 import { getComponentNamespace } from '../../globals/namespace';
 import * as defaultLabels from '../../globals/nls';

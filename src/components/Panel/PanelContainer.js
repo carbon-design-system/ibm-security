@@ -12,8 +12,8 @@ import PropTypes, { func } from 'prop-types';
 import React, { Component, createRef, Fragment } from 'react';
 import { createPortal } from 'react-dom';
 
-import requiredIfGivenPropExists from 'carbon-components-react/es/prop-types/requiredIfGivenPropExists';
-import setupGetInstanceId from 'carbon-components-react/es/tools/setupGetInstanceId';
+import requiredIfGivenPropExists from 'carbon-components-react/lib/prop-types/requiredIfGivenPropExists';
+import setupGetInstanceId from 'carbon-components-react/lib/tools/setupGetInstanceId';
 
 import { getComponentNamespace } from '../../globals/namespace';
 import * as defaultLabels from '../../globals/nls';
