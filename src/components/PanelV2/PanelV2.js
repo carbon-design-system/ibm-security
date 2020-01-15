@@ -96,7 +96,6 @@ export default class PanelV2 extends Component {
       subtitle,
       title,
       hasScrollingContent,
-      panelAriaLabel,
 
       // Explicitly define so it isn't in `...other`.
       labels,
@@ -106,10 +105,9 @@ export default class PanelV2 extends Component {
 
     const hasFooter = renderFooter || primaryButton;
 
-    const ariaLabel =
-      title || this.props['aria-label'] || panelAriaLabel || subtitle;
+    const ariaLabel = title || this.props['aria-label'] || subtitle;
 
-    const getAriaLabelledBy = title ? this.paneltitleId : this.panelSubtitleId;
+    const getAriaLabelledBy = title ? this.panelTitleId : this.panelSubtitleId;
 
     const hasScrollingContentProps = hasScrollingContent
       ? {
@@ -312,11 +310,6 @@ PanelV2.propTypes = {
   hasScrollingContent: PropTypes.bool,
 
   /**
-   * Specify a label to be read by screen readers on the panel root node
-   */
-  panelAriaLabel: PropTypes.string,
-
-  /**
    * Required props for the accessibility label of the header
    */
   ['aria-label']: requiredIfGivenPropExists(
@@ -340,7 +333,6 @@ PanelV2.defaultProps = {
   subtitle: undefined,
   title: undefined,
   hasScrollingContent: false,
-  panelAriaLabel: undefined,
 };
 
 /* eslint-enable */

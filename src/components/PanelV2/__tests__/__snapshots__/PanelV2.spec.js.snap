@@ -141,6 +141,7 @@ exports[`PanelV2 renders 1`] = `
                       </div>
                     </header>
                     <section
+                      aria-labelledby="security--panelv2__title--panel-1"
                       class="security--panelv2__body security--panelv2__body--footer"
                       style="margin-top: 0px; margin-bottom: 0px;"
                     >
@@ -231,6 +232,7 @@ exports[`PanelV2 renders 1`] = `
                         </div>
                       </header>
                       <section
+                        aria-labelledby="security--panelv2__title--panel-1"
                         class="security--panelv2__body security--panelv2__body--footer"
                         style="margin-top: 0px; margin-bottom: 0px;"
                       >
@@ -393,6 +395,7 @@ exports[`PanelV2 renders 1`] = `
                       </div>
                     </header>
                     <section
+                      aria-labelledby="security--panelv2__title--panel-1"
                       className="security--panelv2__body security--panelv2__body--footer"
                       style={
                         Object {
