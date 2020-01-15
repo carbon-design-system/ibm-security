@@ -40,7 +40,7 @@ const FilterPanel = props => {
   };
 
   return (
-    <aside className={namespace}>
+    <aside className={namespace} data-testid="legacy-filter-panel">
       {title && <h1 className={`${namespace}__title`}>{title}</h1>}
       <div className={`${namespace}__search`}>
         <FilterSearch

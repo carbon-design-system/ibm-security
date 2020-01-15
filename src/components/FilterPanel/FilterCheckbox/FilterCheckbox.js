@@ -26,10 +26,7 @@ const FilterCheckbox = ({
     className={classnames(namespace, className)}
     wrapperClassName={classnames(`${namespace}__wrapper`, wrapperClassName)}
     labelText={
-      <FilterLabel
-        count={(count || Number.isInteger(count)) && `(${count})`}
-        countClassName={`${namespace}__count`}
-      >
+      <FilterLabel count={count} countClassName={`${namespace}__count`}>
         {labelText}
       </FilterLabel>
     }

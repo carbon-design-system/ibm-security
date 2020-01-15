@@ -11,30 +11,29 @@ import { getComponentNamespace } from '../../../globals/namespace';
 
 const namespace = getComponentNamespace('filter-label');
 
-const FilterLabel = ({ children, count, className, countClassName }) =>
-  children ? (
-    <span className={classnames(namespace, className)}>
-      <span className={`${namespace}__text`} title={children}>
-        {children}
-      </span>
-      {(count || Number.isInteger(count)) && (
-        <span className={classnames(`${namespace}__count`, countClassName)}>
-          {count}
-        </span>
-      )}
+const FilterLabel = ({ children, count, className, countClassName }) => (
+  <span className={classnames(namespace, className)}>
+    <span className={`${namespace}__text`} title={children}>
+      {children}
     </span>
-  ) : null;
+    {!Number.isNaN(parseInt(count, 10)) && (
+      <span className={classnames(`${namespace}__count`, countClassName)}>
+        {count}
+      </span>
+    )}
+  </span>
+);
 
 FilterLabel.propTypes = {
   /**
    * Label text.
    */
-  children: PropTypes.string,
+  children: PropTypes.node,
 
   /**
    * Label count.
    */
-  count: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  count: PropTypes.number,
 
   /**
    * Optional class name.

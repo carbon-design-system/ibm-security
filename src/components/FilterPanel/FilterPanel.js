@@ -39,7 +39,7 @@ FilterPanel.propTypes = {
   /**
    * Optional title for the filter panel.
    */
-  title: PropTypes.string,
+  title: PropTypes.node,
 
   /**
    * Filter panel content.

@@ -16,7 +16,7 @@ import Button from '../../Button';
 import { getComponentNamespace } from '../../../globals/namespace';
 import FilterLabel from '../FilterLabel/FilterLabel';
 
-const namespace = getComponentNamespace('filter-accordion-item');
+export const namespace = getComponentNamespace('filter-accordion-item');
 
 const FilterAccordionItem = ({
   children,
@@ -133,7 +133,7 @@ FilterAccordionItem.propTypes = {
   /**
    * Accordion item title.
    */
-  title: PropTypes.string,
+  title: PropTypes.node,
 
   /**
    * View more label for truncated content.

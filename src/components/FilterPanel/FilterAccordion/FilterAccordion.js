@@ -27,7 +27,7 @@ FilterAccordion.propTypes = {
   /**
    * Container title.
    */
-  title: PropTypes.string,
+  title: PropTypes.node,
 
   /**
    * Unique count.

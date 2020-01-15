@@ -15,12 +15,11 @@ const FilterSearch = ({ children, className, ...other }) => {
   const [displayResults, setDisplayResults] = React.useState(false);
 
   const hideResultsIfLostFocus = ({ currentTarget }) =>
-    setTimeout(
-      () =>
-        !currentTarget.contains(document.activeElement) &&
-        setDisplayResults(false),
-      300
-    );
+    setTimeout(() => {
+      if (!currentTarget.contains(document.activeElement)) {
+        setDisplayResults(false);
+      }
+    }, 300);
 
   return (
     <div

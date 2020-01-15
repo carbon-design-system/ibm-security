@@ -99,6 +99,7 @@
     "@storybook/theming": "^5.2.4",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^8.0.3",
     "autoprefixer": "^9.4.10",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.7.1",
@@ -177,6 +178,7 @@
     "collectCoverage": true,
     "coverageDirectory": "<rootDir>/../coverage",
     "rootDir": "src",
+    "watchman": false,
     "setupFilesAfterEnv": [
       "<rootDir>/../config/jest",
       "jest-canvas-mock"
