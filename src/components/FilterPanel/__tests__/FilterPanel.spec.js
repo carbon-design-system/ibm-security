@@ -6,7 +6,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import { FilterPanel } from '../FilterPanel';
+import FilterPanel from '..';
 import * as mockProps from '../_mocks_';
 
 describe('FilterPanel', () => {
