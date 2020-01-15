@@ -3,4 +3,4 @@
  * @copyright IBM Security 2020
  */
 
-export default from './FilterLabel';
+export { default } from './FilterLabel';

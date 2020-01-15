@@ -3,7 +3,7 @@
  * @copyright IBM Security 2020
  */
 export {
-  FilterPanel,
+  default,
   FilterAccordion,
   FilterAccordionItem,
   FilterCheckbox,

@@ -46,7 +46,7 @@ export {
 export DelimitedList from './components/DelimitedList';
 export ExternalLink from './components/ExternalLink';
 export {
-  FilterPanel,
+  default,
   FilterAccordion,
   FilterAccordionItem,
   FilterCheckbox,

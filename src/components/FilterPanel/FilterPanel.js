@@ -72,7 +72,6 @@ FilterPanel.FilterLabel = FilterLabel;
 FilterPanel.FilterSearch = FilterSearch;
 
 export {
-  FilterPanel,
   FilterAccordion,
   FilterAccordionItem,
   FilterCheckbox,
@@ -80,3 +79,5 @@ export {
   FilterLabel,
   FilterSearch,
 };
+
+export default FilterPanel;

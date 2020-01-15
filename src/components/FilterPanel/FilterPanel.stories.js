@@ -22,8 +22,7 @@ import {
   labels,
 } from './_mocks_';
 
-import {
-  FilterPanel,
+import FilterPanel, {
   FilterSearch,
   FilterAccordion,
   FilterAccordionItem,
