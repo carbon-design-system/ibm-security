@@ -22,7 +22,6 @@ const FilterCheckbox = ({
   ...other
 }) => (
   <Checkbox
-    {...other}
     className={classnames(namespace, className)}
     wrapperClassName={classnames(`${namespace}__wrapper`, wrapperClassName)}
     labelText={
@@ -30,6 +29,7 @@ const FilterCheckbox = ({
         {labelText}
       </FilterLabel>
     }
+    {...other}
   />
 );
 

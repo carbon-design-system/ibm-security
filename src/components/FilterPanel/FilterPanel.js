@@ -14,17 +14,17 @@ import deprecatedProp from '../../globals/prop-types';
 export const namespace = getComponentNamespace('filter-panel');
 
 const FilterPanel = props => {
-  const { title, children, className, filterData } = props;
+  const { title, children, className, filterData, ...other } = props;
 
   if (filterData) {
     return <LegacyFilterPanel {...props} />;
   }
 
   return (
-    <aside className={classnames(namespace, className)}>
+    <section className={classnames(namespace, className)} {...other}>
       {title && <h1 className={`${namespace}__title`}>{title}</h1>}
       {children}
-    </aside>
+    </section>
   );
 };
 

@@ -15,9 +15,9 @@ const namespace = getComponentNamespace('filter-accordion');
 
 const FilterAccordion = ({ children, className, ...other }) => (
   <FilterGroup
-    {...other}
     className={classnames(namespace, className)}
     titleClassName={`${namespace}__title`}
+    {...other}
   >
     <Accordion>{children}</Accordion>
   </FilterGroup>
@@ -32,7 +32,7 @@ FilterAccordion.propTypes = {
   /**
    * Unique count.
    */
-  count: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  count: PropTypes.number,
 
   /**
    * Optional class name.

@@ -1,6 +1,6 @@
 /**
  * @file Filter Panel tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2020
  */
 
 import React from 'react';

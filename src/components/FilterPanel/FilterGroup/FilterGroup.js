@@ -12,8 +12,15 @@ import FilterLabel from '../FilterLabel';
 
 const namespace = getComponentNamespace('filter-group');
 
-const FilterGroup = ({ title, count, className, titleClassName, children }) => (
-  <div className={classnames(namespace, className)}>
+const FilterGroup = ({
+  title,
+  count,
+  className,
+  titleClassName,
+  children,
+  ...other
+}) => (
+  <div className={classnames(namespace, className)} {...other}>
     <h2 className={classnames(`${namespace}__title`, titleClassName)}>
       <FilterLabel count={count}>{title}</FilterLabel>
     </h2>
@@ -30,7 +37,7 @@ FilterGroup.propTypes = {
   /**
    * Optional group count.
    */
-  count: PropType.oneOfType([PropType.number, PropType.string]),
+  count: PropType.number,
 
   /**
    * Optional class name.
