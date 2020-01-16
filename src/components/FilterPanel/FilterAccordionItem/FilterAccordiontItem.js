@@ -26,7 +26,9 @@ const FilterAccordionItem = ({
   open,
   scrollGradientColor,
   count,
+  countLabel,
   className,
+  ...other
 }) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
   const [listContainer, setListContainer] = React.useState(null);
@@ -72,6 +74,7 @@ const FilterAccordionItem = ({
       title={
         <FilterLabel
           count={count}
+          countLabel={countLabel}
           className={`${namespace}__label`}
           countClassName={`${namespace}__count`}
         >
@@ -80,6 +83,7 @@ const FilterAccordionItem = ({
       }
       className={classnames(namespace, className)}
       open={open}
+      {...other}
     >
       <ul className={`${namespace}__list`}>
         <ScrollGradient
@@ -166,6 +170,11 @@ FilterAccordionItem.propTypes = {
   count: PropTypes.number,
 
   /**
+   * Function returning a translated text labeling the count for accessibility.
+   */
+  countLabel: PropTypes.func,
+
+  /**
    * Optional class name.
    */
   className: PropTypes.string,
@@ -179,6 +188,7 @@ FilterAccordionItem.defaultProps = {
   open: false,
   scrollGradientColor: theme.uiBackground,
   count: undefined,
+  countLabel: count => `${count} items`,
   className: undefined,
 };
 

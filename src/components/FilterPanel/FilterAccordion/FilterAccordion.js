@@ -17,23 +17,12 @@ const FilterAccordion = ({ children, className, ...other }) => (
   <FilterGroup
     className={classnames(namespace, className)}
     titleClassName={`${namespace}__title`}
-    {...other}
   >
-    <Accordion>{children}</Accordion>
+    <Accordion {...other}>{children}</Accordion>
   </FilterGroup>
 );
 
 FilterAccordion.propTypes = {
-  /**
-   * Container title.
-   */
-  title: PropTypes.node,
-
-  /**
-   * Unique count.
-   */
-  count: PropTypes.number,
-
   /**
    * Optional class name.
    */
@@ -46,8 +35,6 @@ FilterAccordion.propTypes = {
 };
 
 FilterAccordion.defaultProps = {
-  title: undefined,
-  count: undefined,
   className: undefined,
   children: undefined,
 };

@@ -33,6 +33,13 @@ describe('FilterLabel', () => {
     expect(container).toHaveTextContent('0');
   });
 
+  it('adds custom count label', () => {
+    const { getByLabelText } = render(
+      <FilterLabel count={100} countLabel={count => `${count} chickens`} />
+    );
+    expect(getByLabelText(/\(100 chickens\)/i)).toHaveTextContent('100');
+  });
+
   it('adds custom class name', () => {
     const { container } = render(<FilterLabel className="custom-class" />);
     expect(container.querySelector('.custom-class')).toBeInTheDocument();

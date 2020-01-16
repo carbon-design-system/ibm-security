@@ -14,6 +14,7 @@ const namespace = getComponentNamespace('filter-label');
 const FilterLabel = ({
   children,
   count,
+  countLabel,
   className,
   countClassName,
   ...other
@@ -23,7 +24,10 @@ const FilterLabel = ({
       {children}
     </span>
     {!Number.isNaN(parseInt(count, 10)) && (
-      <span className={classnames(`${namespace}__count`, countClassName)}>
+      <span
+        className={classnames(`${namespace}__count`, countClassName)}
+        aria-label={`(${countLabel(count)})`}
+      >
         {count}
       </span>
     )}
@@ -42,6 +46,11 @@ FilterLabel.propTypes = {
   count: PropTypes.number,
 
   /**
+   * Function returning a translated text labeling the count for accessibility.
+   */
+  countLabel: PropTypes.func,
+
+  /**
    * Optional class name.
    */
   className: PropTypes.string,
@@ -55,6 +64,7 @@ FilterLabel.propTypes = {
 FilterLabel.defaultProps = {
   children: undefined,
   count: undefined,
+  countLabel: count => `${count} items`,
   className: undefined,
   countClassName: undefined,
 };

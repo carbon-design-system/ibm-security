@@ -28,9 +28,9 @@ const FilterSearch = ({ children, className, ...other }) => {
       onFocus={() => setDisplayResults(true)}
     >
       <Search
-        {...other}
         size="sm"
         className={classnames(`${namespace}__input`, className)}
+        {...other}
       />
       {displayResults && children && (
         <div className={`${namespace}__results`}>{children}</div>
@@ -40,17 +40,10 @@ const FilterSearch = ({ children, className, ...other }) => {
 };
 
 FilterSearch.propTypes = {
-  ...Search.propTypes,
-
   /**
    * Optional class name.
    */
   className: PropTypes.string,
-
-  /**
-   * Function to call when the search value changes.
-   */
-  onChange: PropTypes.func,
 
   /**
    * Results container content.
@@ -59,8 +52,6 @@ FilterSearch.propTypes = {
 };
 
 FilterSearch.defaultProps = {
-  ...Search.defaultProps,
-  onChange: () => {},
   className: undefined,
   children: undefined,
 };

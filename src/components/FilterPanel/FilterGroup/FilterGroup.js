@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import PropType from 'prop-types';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import { getComponentNamespace } from '../../../globals/namespace';
@@ -15,6 +15,7 @@ const namespace = getComponentNamespace('filter-group');
 const FilterGroup = ({
   title,
   count,
+  countLabel,
   className,
   titleClassName,
   children,
@@ -22,7 +23,9 @@ const FilterGroup = ({
 }) => (
   <div className={classnames(namespace, className)} {...other}>
     <h2 className={classnames(`${namespace}__title`, titleClassName)}>
-      <FilterLabel count={count}>{title}</FilterLabel>
+      <FilterLabel count={count} countLabel={countLabel}>
+        {title}
+      </FilterLabel>
     </h2>
     <div className={`${namespace}__content`}>{children}</div>
   </div>
@@ -32,32 +35,38 @@ FilterGroup.propTypes = {
   /**
    * Group title.
    */
-  title: PropType.node,
+  title: PropTypes.node,
 
   /**
    * Optional group count.
    */
-  count: PropType.number,
+  count: PropTypes.number,
+
+  /**
+   * Function returning a translated text labeling the count for accessibility.
+   */
+  countLabel: PropTypes.func,
 
   /**
    * Optional class name.
    */
-  className: PropType.string,
+  className: PropTypes.string,
 
   /**
    * Optional class name for the title.
    */
-  titleClassName: PropType.string,
+  titleClassName: PropTypes.string,
 
   /**
    * Group content.
    */
-  children: PropType.node,
+  children: PropTypes.node,
 };
 
 FilterGroup.defaultProps = {
   title: undefined,
   count: undefined,
+  countLabel: count => `${count} items`,
   className: undefined,
   titleClassName: undefined,
   children: undefined,

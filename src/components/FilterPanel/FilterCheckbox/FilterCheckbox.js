@@ -19,13 +19,18 @@ const FilterCheckbox = ({
   wrapperClassName,
   labelText,
   count,
+  countLabel,
   ...other
 }) => (
   <Checkbox
     className={classnames(namespace, className)}
     wrapperClassName={classnames(`${namespace}__wrapper`, wrapperClassName)}
     labelText={
-      <FilterLabel count={count} countClassName={`${namespace}__count`}>
+      <FilterLabel
+        count={count}
+        countLabel={countLabel}
+        countClassName={`${namespace}__count`}
+      >
         {labelText}
       </FilterLabel>
     }
@@ -40,11 +45,17 @@ FilterCheckbox.propTypes = {
    * Optional count.
    */
   count: PropTypes.number,
+
+  /**
+   * Function returning a translated text labeling the count for accessibility.
+   */
+  countLabel: PropTypes.func,
 };
 
 FilterCheckbox.defaultProps = {
   ...Checkbox.defaultProps,
   count: undefined,
+  countLabel: count => `${count} items`,
 };
 
 export default FilterCheckbox;

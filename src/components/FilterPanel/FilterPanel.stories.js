@@ -11,6 +11,9 @@ import { compose, withState, withHandlers, getDisplayName } from 'recompose';
 import React from 'react';
 
 import { patterns } from '../../../.storybook';
+import Checkbox from '../Checkbox';
+import Search from '../Search';
+import { AccordionItem, Accordion } from '../Accordion';
 
 import {
   filterData,
@@ -30,7 +33,13 @@ import FilterPanel, {
   FilterGroup,
 } from '.';
 
-const FilterPanelWithState = compose(
+// Ensure that passed down props are shown in types table.
+FilterCheckbox.__docgenInfo = Checkbox.__docgenInfo;
+FilterAccordion.__docgenInfo = Accordion.__docgenInfo;
+FilterAccordionItem.__docgenInfo = AccordionItem.__docgenInfo;
+FilterSearch.__docgenInfo = Search.__docgenInfo;
+
+const LegacyFilterPanelWithState = compose(
   // Maintain a state attribute called filterData.
   withState('filterData', 'onFilterToggle', ({ filterData }) => filterData),
 
@@ -47,8 +56,8 @@ const FilterPanelWithState = compose(
   })
 )(FilterPanel);
 
-FilterPanelWithState.displayName = getDisplayName(FilterPanel);
-FilterPanelWithState.__docgenInfo = FilterPanel.__docgenInfo;
+LegacyFilterPanelWithState.displayName = getDisplayName(FilterPanel);
+LegacyFilterPanelWithState.__docgenInfo = FilterPanel.__docgenInfo;
 
 storiesOf(patterns('FilterPanel'), module)
   .addDecorator(story => (
@@ -68,23 +77,24 @@ storiesOf(patterns('FilterPanel'), module)
           filterSearchLabel
         )}
         onChange={action('FilterSearch onChange')}
+        id="filter-search"
       >
         <FilterGroup title="Filter accordion item">
           <FilterCheckbox
             labelText="Filter checkbox"
-            id="filter-checkbox"
+            id="result-filter-checkbox"
             count={10}
             onChange={action('FilterCheckbox onChange')}
           />
           <FilterCheckbox
             labelText="Long filter checkbox  label"
-            id="long-filter-checkbox"
+            id="result-long-filter-checkbox"
             count={10}
             onChange={action('FilterCheckbox onChange')}
           />
           <FilterCheckbox
             labelText="Checked"
-            id="checked"
+            id="result-checked"
             count={10}
             defaultChecked
             onChange={action('FilterCheckbox onChange')}
@@ -96,7 +106,7 @@ storiesOf(patterns('FilterPanel'), module)
               // eslint-disable-next-line react/no-array-index-key
               key={index}
               labelText={`Filter ${index + 1}`}
-              id={`filter-checkbox-${index + 1}`}
+              id={`result-filter-checkbox-${index + 1}`}
               count={10}
               onChange={action('FilterCheckbox onChange')}
             />
@@ -162,6 +172,7 @@ storiesOf(patterns('FilterPanel'), module)
               // eslint-disable-next-line react/no-array-index-key
               key={index}
               labelText={`Filter ${index + 1}`}
+              id={`1-filter-${index + 1}`}
               count={10}
             />
           ))}
@@ -178,6 +189,7 @@ storiesOf(patterns('FilterPanel'), module)
               // eslint-disable-next-line react/no-array-index-key
               key={index}
               labelText={`Filter ${index + 1}`}
+              id={`2-filter-${index + 1}`}
               count={10}
             />
           ))}
@@ -189,7 +201,7 @@ storiesOf(patterns('FilterPanel'), module)
   .add(
     'with deprecated FilterData',
     () => (
-      <FilterPanelWithState
+      <LegacyFilterPanelWithState
         onChange={action('onChange')}
         title={text('title', title)}
         filtersExpandLabel={text('filtersExpandLabel', filtersExpandLabel)}
