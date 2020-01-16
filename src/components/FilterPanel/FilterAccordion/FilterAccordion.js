@@ -13,16 +13,41 @@ import FilterGroup from '../FilterGroup';
 
 const namespace = getComponentNamespace('filter-accordion');
 
-const FilterAccordion = ({ children, className, ...other }) => (
+const FilterAccordion = ({
+  children,
+  className,
+  title,
+  count,
+  countLabel,
+  ...other
+}) => (
   <FilterGroup
     className={classnames(namespace, className)}
     titleClassName={`${namespace}__title`}
+    title={title}
+    count={count}
+    countLabel={countLabel}
   >
     <Accordion {...other}>{children}</Accordion>
   </FilterGroup>
 );
 
 FilterAccordion.propTypes = {
+  /**
+   * Accordion title.
+   */
+  title: PropTypes.node,
+
+  /**
+   * Optional accordion count.
+   */
+  count: PropTypes.number,
+
+  /**
+   * Function returning a translated text labeling the count for accessibility.
+   */
+  countLabel: PropTypes.func,
+
   /**
    * Optional class name.
    */
@@ -35,6 +60,9 @@ FilterAccordion.propTypes = {
 };
 
 FilterAccordion.defaultProps = {
+  title: undefined,
+  count: undefined,
+  countLabel: count => `${count} items`,
   className: undefined,
   children: undefined,
 };

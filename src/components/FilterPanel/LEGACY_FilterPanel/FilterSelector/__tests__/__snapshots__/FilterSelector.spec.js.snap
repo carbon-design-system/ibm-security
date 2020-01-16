@@ -4,6 +4,7 @@ exports[`FilterSelector Rendering renders checked filter 1`] = `
 <FilterCheckbox
   checked={true}
   count={10}
+  countLabel={[Function]}
   id="filter-selector-SELECTED"
   indeterminate={false}
   labelText="Selected filter"
@@ -15,6 +16,7 @@ exports[`FilterSelector Rendering renders unchecked filter 1`] = `
 <FilterCheckbox
   checked={false}
   count={10}
+  countLabel={[Function]}
   id="filter-selector-DEFAULT"
   indeterminate={false}
   labelText="Filter"
