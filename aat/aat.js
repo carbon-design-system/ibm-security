@@ -38,9 +38,9 @@ module.exports = {
 
   // optional - Where the scan results should be saved.
   // Default: results
-  outputFolder: '.aat/results',
+  outputFolder: 'results',
 
   // optional - Where the baseline results should be loaded from
   // Default: baselines
-  baselineFolder: '.aat/baselines',
+  baselineFolder: 'baselines',
 };

@@ -181,8 +181,7 @@
     "coverageDirectory": "<rootDir>/../coverage",
     "rootDir": "src",
     "setupFilesAfterEnv": [
-      "<rootDir>/../config/jest/index.js",
-      "<rootDir>/../config/jest/setupAfterEnv.js",
+      "<rootDir>/../config/jest",
       "jest-canvas-mock"
     ],
     "snapshotSerializers": [
