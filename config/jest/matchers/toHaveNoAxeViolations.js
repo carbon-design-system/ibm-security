@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-const axe = require('axe-core');
+import axe from 'axe-core';
 
 function formatOutput(violations) {
   const firstViolation = violations[0];

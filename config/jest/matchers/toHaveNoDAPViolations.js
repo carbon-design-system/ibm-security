@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-const AAT = require('@ibma/aat');
+import AAT from '@ibma/aat';
 
 async function toHaveNoDAPViolations(node, label) {
   const results = await AAT.getCompliance(node, label);
