@@ -6,7 +6,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { withA11y } from '@storybook/addon-a11y';
+
 import { boolean, select, text, object } from '@storybook/addon-knobs';
 
 import { components } from '../../../.storybook';
@@ -41,12 +41,14 @@ const types = {
 };
 
 const props = () => ({
+  id: text('MultiSelect ID (id)', 'carbon-multiselect-example'),
+  titleText: text('Title (titleText)', 'Multiselect title'),
+  helperText: text('Helper text (helperText)', 'This is not helper text'),
   filterable: boolean(
     'Filterable (`<MultiSelect.Filterable>` instead of `<MultiSelect>`)',
     false
   ),
   disabled: boolean('Disabled (disabled)', false),
-  id: 'multiselect',
   light: boolean('Light variant (light)', false),
   useTitleInItem: boolean('Show tooltip on hover', false),
   type: select('UI type (Only for `<MultiSelect>`) (type)', types, 'default'),
@@ -62,12 +64,13 @@ const props = () => ({
     {
       'close.menu': 'Close menu',
       'open.menu': 'Open menu',
+      'clear.all': 'Clear all',
+      'clear.selection': 'Clear selection',
     }
   ),
 });
 
 storiesOf(components('MultiSelect'), module)
-  .addDecorator(withA11y)
   .add(
     'default',
     () => {

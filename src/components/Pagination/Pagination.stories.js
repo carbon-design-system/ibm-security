@@ -7,7 +7,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { array, boolean, number, text } from '@storybook/addon-knobs';
-import { withA11y } from '@storybook/addon-a11y';
+
 import { Pagination } from '../..';
 
 import { components } from '../../../.storybook';
@@ -36,7 +36,6 @@ const props = () => ({
 });
 
 storiesOf(components('Pagination'), module)
-  .addDecorator(withA11y)
   .addDecorator(story => <div style={{ width: '800px' }}>{story()}</div>)
   .add('Pagination', () => <Pagination {...props()} />, {
     info: {

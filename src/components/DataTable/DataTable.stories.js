@@ -4,7 +4,6 @@
  */
 
 import { storiesOf } from '@storybook/react';
-import { withA11y } from '@storybook/addon-a11y';
 
 import { components } from '../../../.storybook';
 
@@ -16,7 +15,6 @@ const readmeURL = 'https://goo.gl/dq6CEK';
 
 /* eslint-disable global-require */
 storiesOf(components('DataTable'), module)
-  .addDecorator(withA11y)
   .add('default', () => require('./stories/default').default(props()), {
     info: {
       /* eslint-disable no-useless-escape */
@@ -100,8 +98,9 @@ storiesOf(components('DataTable'), module)
     {
       info: {
         text: `
-        DataTable with action menu and filtering.
-        You can find more detailed information surrounding usage of this component
+        DataTable with action menu, filtering, and CSV exporting. Note, the TableToolbarDownload 
+        component expects the same rows and header props as provided to the parent Datatable component.
+        You can find more detailed information surrounding usage of the Datatable component
         at the following url: ${readmeURL}
       `,
       },

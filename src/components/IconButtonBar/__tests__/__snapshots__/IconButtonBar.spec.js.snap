@@ -48,8 +48,13 @@ exports[`IconButtonBar renders the 'lg' variation 1`] = `
     className="security--icon-button-bar__overflow-menu"
     direction="top"
     flipped={true}
-    menuOptionsClass="security--icon-button-bar__overflow-menu-options--lg"
-    renderIcon={[Function]}
+    menuOptionsClass="security--icon-button-bar__overflow-menu-options security--icon-button-bar__overflow-menu-options--top security--icon-button-bar__overflow-menu-options--lg"
+    renderIcon={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "render": [Function],
+      }
+    }
   >
     <OverflowMenuItem
       disabled={false}
@@ -123,8 +128,13 @@ exports[`IconButtonBar renders the 'md' variation 1`] = `
     className="security--icon-button-bar__overflow-menu"
     direction="top"
     flipped={true}
-    menuOptionsClass="security--icon-button-bar__overflow-menu-options--md"
-    renderIcon={[Function]}
+    menuOptionsClass="security--icon-button-bar__overflow-menu-options security--icon-button-bar__overflow-menu-options--top security--icon-button-bar__overflow-menu-options--md"
+    renderIcon={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "render": [Function],
+      }
+    }
   >
     <OverflowMenuItem
       disabled={false}
@@ -198,8 +208,13 @@ exports[`IconButtonBar renders the 'sm' variation 1`] = `
     className="security--icon-button-bar__overflow-menu"
     direction="top"
     flipped={true}
-    menuOptionsClass="security--icon-button-bar__overflow-menu-options--sm"
-    renderIcon={[Function]}
+    menuOptionsClass="security--icon-button-bar__overflow-menu-options security--icon-button-bar__overflow-menu-options--top security--icon-button-bar__overflow-menu-options--sm"
+    renderIcon={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "render": [Function],
+      }
+    }
   >
     <OverflowMenuItem
       disabled={false}
@@ -273,8 +288,13 @@ exports[`IconButtonBar renders the 'xl' variation 1`] = `
     className="security--icon-button-bar__overflow-menu"
     direction="top"
     flipped={true}
-    menuOptionsClass="security--icon-button-bar__overflow-menu-options--xl"
-    renderIcon={[Function]}
+    menuOptionsClass="security--icon-button-bar__overflow-menu-options security--icon-button-bar__overflow-menu-options--top security--icon-button-bar__overflow-menu-options--xl"
+    renderIcon={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "render": [Function],
+      }
+    }
   >
     <OverflowMenuItem
       disabled={false}
@@ -308,8 +328,13 @@ exports[`IconButtonBar renders the length of '1' variation 1`] = `
     className="security--icon-button-bar__overflow-menu"
     direction="top"
     flipped={true}
-    menuOptionsClass="security--icon-button-bar__overflow-menu-options--lg"
-    renderIcon={[Function]}
+    menuOptionsClass="security--icon-button-bar__overflow-menu-options security--icon-button-bar__overflow-menu-options--top security--icon-button-bar__overflow-menu-options--lg"
+    renderIcon={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "render": [Function],
+      }
+    }
   >
     <OverflowMenuItem
       disabled={false}
@@ -383,8 +408,13 @@ exports[`IconButtonBar renders the length of '2' variation 1`] = `
     className="security--icon-button-bar__overflow-menu"
     direction="top"
     flipped={true}
-    menuOptionsClass="security--icon-button-bar__overflow-menu-options--lg"
-    renderIcon={[Function]}
+    menuOptionsClass="security--icon-button-bar__overflow-menu-options security--icon-button-bar__overflow-menu-options--top security--icon-button-bar__overflow-menu-options--lg"
+    renderIcon={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "render": [Function],
+      }
+    }
   >
     <OverflowMenuItem
       disabled={false}
@@ -468,8 +498,13 @@ exports[`IconButtonBar renders the length of '3' variation 1`] = `
     className="security--icon-button-bar__overflow-menu"
     direction="top"
     flipped={true}
-    menuOptionsClass="security--icon-button-bar__overflow-menu-options--lg"
-    renderIcon={[Function]}
+    menuOptionsClass="security--icon-button-bar__overflow-menu-options security--icon-button-bar__overflow-menu-options--top security--icon-button-bar__overflow-menu-options--lg"
+    renderIcon={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "render": [Function],
+      }
+    }
   >
     <OverflowMenuItem
       disabled={false}

@@ -31,9 +31,15 @@ const IconButtonBar = ({
     [`${namespace}--${size}`]: size,
   });
 
-  const iconButtonBarMenuOptionsClasses = classnames({
-    [`${namespace}__overflow-menu-options--${size}`]: size,
-  });
+  const menuOptionsNamespace = `${namespace}__overflow-menu-options`;
+
+  const iconButtonBarMenuOptionsClasses = classnames(
+    menuOptionsNamespace,
+    `${menuOptionsNamespace}--${overflowMenuDirection}`,
+    {
+      [`${menuOptionsNamespace}--${size}`]: size,
+    }
+  );
 
   const renderIconButton = action => (
     <IconButton
@@ -86,12 +92,7 @@ const IconButtonBar = ({
             direction={overflowMenuDirection}
             flipped
             menuOptionsClass={iconButtonBarMenuOptionsClasses}
-            renderIcon={() =>
-              renderIconButton({
-                renderIcon: getOverflowMenuIcon(),
-                tooltip: false,
-              })
-            }
+            renderIcon={getOverflowMenuIcon()}
           >
             {renderMenuItems()}
           </OverflowMenu>

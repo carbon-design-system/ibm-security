@@ -17,6 +17,20 @@
   /// @type Length
   $button__spacing__padding: $carbon--spacing-05;
 
+  &--ghost-danger {
+    color: $text-01;
+
+    &:focus,
+    &:hover {
+      color: $text-04;
+      background-color: $hover-danger;
+    }
+
+    &:hover > .#{$prefix}--btn__icon > path {
+      fill: currentColor;
+    }
+  }
+
   &--large {
     @include carbon--type-style($name: body-short-02);
 
@@ -26,16 +40,23 @@
     align-items: start;
     flex-direction: column;
 
-    /// Selector.
-    /// @type String
-    $carbon--button__selector: '.#{$prefix}--btn';
-
-    > #{$carbon--button__selector}__icon {
+    > .#{$prefix}--btn__icon {
       position: absolute;
       bottom: $button__spacing__padding;
       width: unset;
       height: unset;
       margin-left: unset;
+    }
+  }
+
+  &--loading {
+    &.#{$prefix}--btn:disabled,
+    &.#{$prefix}--btn.#{$prefix}--btn--disabled {
+      color: $link-01;
+    }
+
+    .#{$prefix}--inline-loading {
+      width: auto;
     }
   }
 }

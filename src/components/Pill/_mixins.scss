@@ -10,10 +10,6 @@
   border-radius: carbon--mini-units($count: 12.5);
   padding: 0 $carbon--spacing-03;
 
-  .#{$namespace}decorator__value {
-    color: $carbon--white-0;
-  }
-
   &--inline {
     border-radius: carbon--mini-units($count: 6.25);
     display: inline-flex;

@@ -4,9 +4,10 @@
  */
 
 import { spacing04, spacing05 } from '@carbon/layout/lib';
-import { g100 } from '@carbon/themes/lib';
 import { styles } from '@carbon/type/lib';
 
+import { withA11y } from '@storybook/addon-a11y';
+import centered from '@storybook/addon-centered/react';
 import { withInfo } from '@storybook/addon-info';
 import { withKnobs } from '@storybook/addon-knobs';
 import { addDecorator, configure, addParameters } from '@storybook/react';
@@ -14,18 +15,21 @@ import { addDecorator, configure, addParameters } from '@storybook/react';
 import escapeStringRegexp from 'escape-string-regexp';
 import React from 'react';
 
-import withMarkup from './addons/addon-markup';
 import withTheme from './addons/addon-theme';
 
-import theme from './theme';
+import storybookTheme from './theme';
 
 import Container from './components/Container';
 
 import { HIERARCHY_ROOT_SEPARATOR, ORDER } from '.';
 
 import random from '../src/globals/random';
+import theme from '../src/globals/theme';
 
-const { interactive01, text01 } = g100;
+const { interactive01, text04 } = theme;
+
+addDecorator(withKnobs);
+addDecorator(withA11y);
 
 addDecorator(
   withInfo({
@@ -33,7 +37,7 @@ addDecorator(
       button: {
         base: {
           padding: `${spacing04} ${spacing05}`,
-          color: text01,
+          color: text04,
           background: interactive01,
           zIndex: random(100000),
           ...styles.bodyShort01,
@@ -48,9 +52,9 @@ addDecorator(
   })
 );
 
-addDecorator(withKnobs);
-addDecorator(withMarkup);
 addDecorator(withTheme);
+
+addDecorator(centered);
 addDecorator(story => <Container>{story()}</Container>);
 
 /**
@@ -71,19 +75,8 @@ addParameters({
     ),
     storySort: (a, b) =>
       ORDER.indexOf(getCategory(a)) - ORDER.indexOf(getCategory(b)),
-    theme,
+    theme: storybookTheme,
   },
 });
 
-/**
- * Finds each component story and loads them into Storybook.
- */
-function loadStories() {
-  require('./GetStarted.stories.js');
-
-  const req = require.context('../src/components', true, /\.stories\.js$/);
-
-  req.keys().forEach(filename => req(filename));
-}
-
-configure(loadStories, module);
+configure(require.context('../src', true, /\.stories\.js$/), module);

@@ -77,7 +77,7 @@ exports[`Nav Rendering renders correctly 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+                d="M8 11L3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z"
               />
             </svg>
           </Icon>
@@ -98,6 +98,7 @@ exports[`Nav Rendering renders correctly 1`] = `
         className=""
         current={null}
         disabled={false}
+        element="a"
         handleItemSelect={null}
         href="#"
         id="security--nav__list__item"
@@ -116,13 +117,20 @@ exports[`Nav Rendering renders correctly 1`] = `
           role="menuitem"
           tabIndex={-1}
         >
-          <a
+          <NavItemLink
             className="security--nav__list__item__link"
+            element="a"
             href="#"
             id="security--nav__list__item"
           >
-            Label
-          </a>
+            <a
+              className="security--nav__list__item__link"
+              href="#"
+              id="security--nav__list__item"
+            >
+              Label
+            </a>
+          </NavItemLink>
         </li>
       </NavItem>
     </ul>
@@ -151,7 +159,7 @@ exports[`Nav Rendering renders the HTML of the node's subtree 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+        d="M8 11L3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z"
       />
     </svg>
     <div

@@ -51,11 +51,11 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
           className="security--tearsheet__sidebar__footer"
         >
           <Button
-            className="security--tearsheet__sidebar__button"
             disabled={false}
             iconDescription="Delete - prop"
-            kind="ghost"
+            kind="ghost-danger"
             largeText={null}
+            loading={false}
             onClick={[MockFunction]}
             renderIcon={
               Object {
@@ -101,7 +101,7 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
         >
           <ScrollGradient
             className="security--tearsheet__main__scroll-gradient"
-            color="#282828"
+            color="var(--ui-01, #262626)"
             direction="Y"
             getScrollElementRef={[Function]}
             hideStartGradient={false}
@@ -137,6 +137,7 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
               disabled={false}
               kind="secondary"
               largeText={null}
+              loading={false}
               onClick={[MockFunction]}
               size="large"
               tabIndex={0}
@@ -149,6 +150,7 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
               disabled={false}
               kind="primary"
               largeText={null}
+              loading={false}
               onClick={[MockFunction]}
               size="large"
               tabIndex={0}
@@ -215,11 +217,11 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
           className="security--tearsheet__sidebar__footer"
         >
           <Button
-            className="security--tearsheet__sidebar__button"
             disabled={false}
             iconDescription="Delete"
-            kind="ghost"
+            kind="ghost-danger"
             largeText={null}
+            loading={false}
             onClick={[MockFunction]}
             renderIcon={
               Object {
@@ -265,7 +267,7 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
         >
           <ScrollGradient
             className="security--tearsheet__main__scroll-gradient"
-            color="#282828"
+            color="var(--ui-01, #262626)"
             direction="Y"
             getScrollElementRef={[Function]}
             hideStartGradient={false}
@@ -301,6 +303,7 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
               disabled={false}
               kind="secondary"
               largeText={null}
+              loading={false}
               onClick={[MockFunction]}
               size="large"
               tabIndex={0}
@@ -313,6 +316,7 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
               disabled={false}
               kind="primary"
               largeText={null}
+              loading={false}
               onClick={[MockFunction]}
               size="large"
               tabIndex={0}

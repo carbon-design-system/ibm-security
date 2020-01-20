@@ -3,6 +3,9 @@
  * @copyright IBM Security 2019
  */
 
+// Globals.
+export theme from './globals/theme';
+
 // Application.
 export ErrorPage from './components/ErrorPage';
 export { Card, CardSkeleton } from './components/Card';
@@ -37,6 +40,7 @@ export {
   TableToolbarContent,
   TableToolbarSearch,
   TableToolbarMenu,
+  TableToolbarDownload,
 } from './components/DataTable';
 
 export DelimitedList from './components/DelimitedList';
@@ -88,11 +92,26 @@ export { StatusStep, StatusIndicator } from './components/StatusIndicator';
 export { Step, StepIndicator } from './components/StepIndicator';
 export StringFormatter from './components/StringFormatter';
 export Switch from './components/Switch';
+
+export SummaryCard, {
+  SummaryCardAction,
+  SummaryCardBatchAction,
+  SummaryCardBatchActions,
+  SummaryCardBody,
+  SummaryCardContainer,
+  SummaryCardFooter,
+  SummaryCardHeader,
+  SummaryCardSelect,
+  SummaryCardSkeleton,
+} from './components/SummaryCard';
+
 export Tag, { InteractiveTag, TagSkeleton } from './components/Tag';
 export TagWall from './components/TagWall';
 export TagWallFilter from './components/TagWallFilter';
 export { Tearsheet, TearsheetSmall } from './components/Tearsheet';
 export TextInput, { TextInputSkeleton } from './components/TextInput';
+export TimeIndicator from './components/TimeIndicator';
+export TrendingCard from './components/TrendingCard';
 
 export {
   TypeLayout,
@@ -178,7 +197,9 @@ export Toggle, { ToggleSkeleton } from './components/Toggle';
 export TextArea, { TextAreaSkeleton } from './components/TextArea';
 export ToggleSmall, { ToggleSmallSkeleton } from './components/ToggleSmall';
 export Tooltip from './components/Tooltip';
+export TooltipDefintion from './components/TooltipDefinition';
 export Transition from './components/Transition';
+export * from './components/UIShell';
 
 // Hidden Carbon proxy.
 export FormItem from 'carbon-components-react/lib/components/FormItem';
@@ -194,3 +215,8 @@ export OrderedList from 'carbon-components-react/lib/components/OrderedList';
 
 export TabContent from 'carbon-components-react/lib/components/TabContent';
 export UnorderedList from 'carbon-components-react/lib/components/UnorderedList';
+
+// Unstable experimental components
+export UNSTABLE__Pagination, {
+  PageSelector,
+} from './components/UNSTABLE__Pagination';

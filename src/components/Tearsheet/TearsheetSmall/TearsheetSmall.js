@@ -3,8 +3,7 @@
  * @copyright IBM Security 2019
  */
 
-import Close16 from '@carbon/icons-react/lib/close/16';
-import { g100 } from '@carbon/themes';
+import Close20 from '@carbon/icons-react/lib/close/20';
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
@@ -12,6 +11,7 @@ import React, { PureComponent } from 'react';
 
 import { getComponentNamespace } from '../../../globals/namespace';
 import * as defaultLabels from '../../../globals/nls';
+import theme from '../../../globals/theme';
 import { isNode } from '../../../globals/utils/capabilities';
 
 import Button from '../../Button';
@@ -61,6 +61,7 @@ class TearsheetSmall extends PureComponent {
 
   render() {
     const {
+      flush,
       focusTrap,
       heading,
       description,
@@ -113,9 +114,15 @@ class TearsheetSmall extends PureComponent {
               <section className={`${namespace}__body`}>
                 <ScrollGradient
                   className={`${namespace}__content`}
-                  color={g100.ui01}
+                  color={theme.ui01}
                 >
-                  {this.renderBody()}
+                  <div
+                    className={classnames({
+                      [`${namespace}__scroll-gradient__content`]: !flush,
+                    })}
+                  >
+                    {this.renderBody()}
+                  </div>
                 </ScrollGradient>
               </section>
               <footer className={`${namespace}__footer`}>
@@ -146,7 +153,7 @@ class TearsheetSmall extends PureComponent {
                   className={`${namespace}__button--close`}
                   label={componentLabels.TEARSHEET_SMALL_CLOSE_BUTTON}
                   onClick={closeButton.onClick}
-                  renderIcon={Close16}
+                  renderIcon={Close20}
                   size="lg"
                   tooltip={false}
                 />
@@ -173,6 +180,9 @@ export const buttonType = PropTypes.shape({
 TearsheetSmall.propTypes = {
   /** @type {Node} The root node for rendering the modal */
   rootNode: isNode() ? PropTypes.instanceOf(Node) : PropTypes.any,
+
+  /** Specify whether the content's padding is flush */
+  flush: PropTypes.bool,
 
   /** @type {boolean} Focus trap. */
   focusTrap: PropTypes.bool,
@@ -230,6 +240,7 @@ TearsheetSmall.propTypes = {
 TearsheetSmall.defaultProps = {
   body: '',
   children: undefined,
+  flush: false,
   focusTrap: true,
   heading: '',
   description: '',

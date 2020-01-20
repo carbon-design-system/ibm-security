@@ -4,7 +4,6 @@
  */
 
 import { action } from '@storybook/addon-actions';
-import { withA11y } from '@storybook/addon-a11y';
 import { text, object } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
@@ -50,7 +49,6 @@ storiesOf(patterns('FilterPanel'), module)
       {story()}
     </div>
   ))
-  .addDecorator(withA11y)
   .add(
     'default',
     () => (
@@ -76,7 +74,7 @@ storiesOf(patterns('FilterPanel'), module)
         text: `## Basic implementation of Filter Panel
 
           The most crucial requirement for this component is the structure of the filter data. Be sure to
-          check out type definitions for [filter data](https://github.com/carbon-design-system/ibm-security/tree/master/src/components/FilterPanel/FilterPanelUtilities.js#L60).
+          check out type definitions for [filter data](https://github.com/carbon-design-system/ibm-security/blob/master/src/components/FilterPanel/FilterPanelUtilities.js#L60).
           Using the unique prop for each label will override the version passed in the \`labels\` prop.`,
       },
     }

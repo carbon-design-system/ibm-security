@@ -6,11 +6,12 @@
 import Close20 from '@carbon/icons-react/lib/close/20';
 import Notification20 from '@carbon/icons-react/lib/notification/20';
 import Settings20 from '@carbon/icons-react/lib/settings/20';
-import { g10 } from '@carbon/themes';
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component, Fragment } from 'react';
+
+import theme from '../../globals/theme';
 
 import { defaultProps, namespace, propTypes } from './constants';
 
@@ -325,7 +326,7 @@ export default class Header extends Component {
             </button>
           </div>
         )}
-        <ScrollGradient color={g10.ui01}>
+        <ScrollGradient color={theme.inverse02}>
           <ul className={`${namespace}__popover__list`}>
             <Transition
               className={`${namespace}__notification`}
@@ -337,21 +338,27 @@ export default class Header extends Component {
                     new Date(b.datetime).getTime() -
                     new Date(a.datetime).getTime()
                 )
-                .map(({ datetime, description, href, id, label, product }) => (
-                  <li key={id} className={`${namespace}__popover__list-item`}>
-                    <HeaderNotification
-                      clearButtonLabel={`${labels.notifications.clear} '${description}'`}
-                      dateTime={datetime}
-                      description={description}
-                      href={href}
-                      onClearButtonClick={() => this.clearNotification(id)}
-                      product={product}
-                      timeLabel={label}
-                      viaLabel={labels.notifications.via}
-                      tabIndex="0"
-                    />
-                  </li>
-                ))}
+                .map(
+                  (
+                    { datetime, description, href, id, label, product },
+                    index
+                  ) => (
+                    <li key={id} className={`${namespace}__popover__list-item`}>
+                      <HeaderNotification
+                        clearButtonLabel={`${labels.notifications.clear} '${description}'`}
+                        dateTime={datetime}
+                        description={description}
+                        href={href}
+                        onClearButtonClick={() => this.clearNotification(id)}
+                        product={product}
+                        timeLabel={label}
+                        viaLabel={labels.notifications.via}
+                        tabIndex="0"
+                        tooltipDirection={index === 0 ? 'bottom' : 'top'}
+                      />
+                    </li>
+                  )
+                )}
             </Transition>
           </ul>
         </ScrollGradient>
@@ -463,17 +470,30 @@ export default class Header extends Component {
     const { brand } = labels;
 
     const link = links.product;
-    const { company, product } = brand;
+    const { company, domain, product } = brand;
 
     const { isUserActive } = this.state;
     const classes = classnames(`${namespace}__container`, className);
+
+    const domainElement = title => (
+      <span className={`${namespace}__link__title--domain`}>{title}</span>
+    );
 
     return (
       <div className={classes}>
         <header className={namespace} role="banner">
           <Link className={`${namespace}__link`} href={link}>
             {`${company} `}
-            <span className={`${namespace}__link__title`}>{product}</span>
+            {domain ? (
+              <Fragment>
+                {domainElement(`${domain} `)}
+                <span className={`${namespace}__link__title--product`}>
+                  {product}
+                </span>
+              </Fragment>
+            ) : (
+              domainElement(product)
+            )}
           </Link>
           <ul
             className={`${namespace}__group  ${isUserActive &&

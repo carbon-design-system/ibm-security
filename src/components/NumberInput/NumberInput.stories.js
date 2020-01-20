@@ -4,9 +4,8 @@
  */
 
 import { storiesOf } from '@storybook/react';
-import { withA11y } from '@storybook/addon-a11y';
 import { action } from '@storybook/addon-actions';
-import centered from '@storybook/addon-centered/react';
+
 import { boolean, number, text, object } from '@storybook/addon-knobs';
 
 import React from 'react';
@@ -46,8 +45,6 @@ const props = () => ({
 });
 
 storiesOf(components('NumberInput'), module)
-  .addDecorator(withA11y)
-  .addDecorator(centered)
   .add(
     'Default',
     () => {

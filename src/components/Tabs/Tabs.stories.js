@@ -7,7 +7,6 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { boolean, number, text } from '@storybook/addon-knobs';
-import { withA11y } from '@storybook/addon-a11y';
 
 import { components } from '../../../.storybook';
 
@@ -54,7 +53,6 @@ const TabContentRenderedOnlyWhenSelected = ({ selected, children, ...other }) =>
   );
 
 storiesOf(components('Tabs'), module)
-  .addDecorator(withA11y)
   .add(
     'Default',
     () => (

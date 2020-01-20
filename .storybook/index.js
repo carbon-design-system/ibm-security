@@ -44,9 +44,49 @@ const getComponentsCategory = bindCategory(COMPONENTS);
  */
 const getPatternsCategory = bindCategory(PATTERNS);
 
+/**
+ * Configuration for disabling the centering addon in individual stories.
+ * @param {Object<string, Object>} stories The collection of stories to disable the addon for.
+ * @returns {Object<string, Object>} The collection of stories.
+ */
+const disableCentered = stories =>
+  stories.addParameters({
+    centered: {
+      disable: true,
+    },
+  });
+
+/**
+ * Configuration for applying information to individual stories.
+ * @param {string} description The information to apply to individual stories.
+ * @param {Object.<string, string>} carbon - An object containing Carbon information to redirect to.
+ * @returns {Object<string, string>} The configuration containing information to apply.
+ */
+const info = (description, carbon = null) => ({
+  info: carbon
+    ? `${description}
+
+Also refer to http://react.carbondesignsystem.com/?path=/story/${carbon.story}--${carbon.id}`
+    : description,
+});
+
+/**
+ * Configuration for applying metadata information to stories.
+ * @param {string} title The title to apply to stories.
+ * @param {string} description The information to apply to individual stories.
+ * @returns {Object<string, string>} The configuration containing information to apply.
+ */
+const meta = (title, description) => ({
+  parameters: info(description),
+  title,
+});
+
 export {
+  disableCentered,
   getComponentsCategory as components,
   getPatternsCategory as patterns,
   HIERARCHY_ROOT_SEPARATOR,
+  info,
+  meta,
   ORDER,
 };

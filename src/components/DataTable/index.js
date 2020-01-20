@@ -28,4 +28,5 @@ export {
   TableToolbarContent,
   TableToolbarSearch,
   TableToolbarMenu,
+  TableToolbarDownload,
 } from './DataTable';

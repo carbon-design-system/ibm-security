@@ -42,7 +42,7 @@ const truncateValue = (percentage, value) => {
       </div>
     );
 
-  return value === null ? '-' : numeral(value).format(getFormat(value));
+  return value === null ? '–' : numeral(value).format(getFormat(value));
 };
 
 const ICA = ({

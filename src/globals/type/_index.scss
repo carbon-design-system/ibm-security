@@ -15,7 +15,23 @@
 @import '../feature-flags/index';
 @import '../namespace/index';
 
-// TODO: V3 - To be removed.
+// TODO: Remove when fix is released in `@carbon/type` (https://github.com/carbon-design-system/carbon/pull/4927)
+
+$expressive-heading-01: map-merge(
+  $heading-01,
+  (
+    line-height: carbon--rem(20px),
+  )
+);
+
+$expressive-heading-02: map-merge(
+  $heading-02,
+  (
+    line-height: carbon--rem(24px),
+  )
+);
+
+// TODO: `2.x` - To be removed.
 
 /// Monospaced font family.
 /// @type string
@@ -91,7 +107,7 @@ $type-style-deprecation-map: (
   @include carbon--type-style($name: $name);
 }
 
-// TODO: V3 - Deprecate after teams have migrated to `@carbon/type`.
+// TODO: `2.x` - Deprecate after teams have migrated to `@carbon/type`.
 
 @if feature-flag-enabled($feature: $type__name) {
   @include export-namespace($name: $type__name) {

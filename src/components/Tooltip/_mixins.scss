@@ -4,6 +4,9 @@
 /// @copyright IBM Security 2019
 ////
 
+@import '@carbon/layout/scss/mini-unit';
+@import '@carbon/layout/scss/spacing';
+
 @import '../../globals/index';
 
 @import '../Toolbar/mixins';
@@ -15,7 +18,7 @@ $tooltip__color__background: $inverse-02;
 /// Arrow dimensions.
 /// @type Length
 $tooltip__arrow__sizing__border: carbon--mini-units(
-  $count: 0.375,
+  $count: 0.5,
 );
 
 @mixin tooltip__arrow {
@@ -31,36 +34,15 @@ $tooltip__arrow__sizing__border: carbon--mini-units(
 }
 
 @mixin tooltip {
-  /// Box shadow.
-  /// @type List<Length|Length|Length|Length|Color>
-  $tooltip__box-shadow: (
-    carbon--mini-units(
-        $count: 0.25,
-      )
-      0 0 0 $overlay-01
-  );
-
-  /// Padding.
-  /// @type Length
-  $tooltip__spacing__padding: $carbon--spacing-05;
-
   @include carbon--type-style($name: body-short-01);
-
-  @include rtl {
-    box-shadow: reverse-box-shadow($box-shadow: $tooltip__box-shadow);
-  }
 
   display: flex;
   position: absolute;
-
-  height: carbon--mini-units($count: 4);
-  padding-right: $tooltip__spacing__padding;
-  padding-left: $tooltip__spacing__padding;
+  padding: $carbon--spacing-01 $carbon--spacing-05;
   color: $inverse-01;
   background-color: $tooltip__color__background;
   align-items: center;
   border-radius: carbon--mini-units($count: 0.25);
-  box-shadow: $tooltip__box-shadow;
   opacity: 0;
   pointer-events: none;
   transition-duration: $transition-duration--fast;

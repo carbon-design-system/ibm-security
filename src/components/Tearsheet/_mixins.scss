@@ -4,6 +4,8 @@
 /// @copyright IBM Security 2019
 ////
 
+@import 'carbon-components/scss/globals/scss/layout';
+
 @import '../../globals/index';
 
 @import '../Panel/mixins';
@@ -67,6 +69,10 @@ $tearsheet__sizing__dimensions: $carbon--layout-04;
   > .#{$prefix}--loading-overlay {
     position: absolute;
     background-color: $overlay-01;
+  }
+
+  &__loading .#{$prefix}--loading__stroke {
+    stroke: $inverse-focus-ui;
   }
 }
 
@@ -137,27 +143,6 @@ $tearsheet__sizing__dimensions: $carbon--layout-04;
       left: 0;
       padding-bottom: $tearsheet__footer__spacing__padding;
       padding-left: $tearsheet__footer__spacing__padding;
-    }
-
-    /// Carbon button selector.
-    /// @type String
-    $carbon--button: '.#{$prefix}--btn';
-
-    &__button#{$carbon--button} {
-      &,
-      &:focus,
-      &:hover {
-        color: $tearsheet__color__text;
-
-        > #{$carbon--button}__icon > path {
-          fill: currentColor;
-        }
-      }
-
-      &:focus,
-      &:hover {
-        background-color: $hover-danger;
-      }
     }
   }
 

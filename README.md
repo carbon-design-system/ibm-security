@@ -22,14 +22,15 @@ If you just want to try out Carbon for IBM Security, you can also use
 
 If you're trying to find something specific, here's a full list of packages that we support!
 
-| Package name                                                                             | Description                                       |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| [Colors](https://github.com/carbon-design-system/carbon/tree/master/packages/colors)     | Work with IBM Design Language colors              |
-| [Grid](https://github.com/carbon-design-system/carbon/tree/master/packages/grid)         | Build layouts using the grid system               |
-| [Layout](https://github.com/carbon-design-system/carbon/tree/master/packages/layout)     | Layout-based units and spacing scale              |
-| [Icons](https://github.com/carbon-design-system/carbon/tree/master/packages/icons-react) | Iconography assets                                |
-| [Themes](https://github.com/carbon-design-system/carbon/tree/master/packages/themes)     | Color tokens available in Carbon for IBM Security |
-| [Type](https://github.com/carbon-design-system/carbon/tree/master/packages/type)         | Type tokens used alongside IBM Plex               |
+| Package name                                                                                             | Description                          |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| [`carbon-components`](https://github.com/carbon-design-system/carbon/tree/master/packages/components)    | Carbon component styles              |
+| [`carbon-components-react`](https://github.com/carbon-design-system/carbon/tree/master/packages/react)   | Carbon React components              |
+| [`@carbon/colors`](https://github.com/carbon-design-system/carbon/tree/master/packages/colors)           | Work with IBM Design Language colors |
+| [`@carbon/grid`](https://github.com/carbon-design-system/carbon/tree/master/packages/grid)               | Build layouts using the grid system  |
+| [`@carbon/icons-react`](https://github.com/carbon-design-system/carbon/tree/master/packages/icons-react) | Iconography assets                   |
+| [`@carbon/layout`](https://github.com/carbon-design-system/carbon/tree/master/packages/layout)           | Layout-based units and spacing scale |
+| [`@carbon/type`](https://github.com/carbon-design-system/carbon/tree/master/packages/type)               | Type tokens used alongside IBM Plex  |
 
 To install Carbon for IBM Security in your project, you'll need to run one of the following commands using a package manager:
 
@@ -61,11 +62,13 @@ import { ComponentName } from '@carbon/ibm-security';
 const { ComponentName } = require('@carbon/ibm-security');
 ```
 
-[Babel](https://babeljs.io) builds both of these variants and imports `carbon-components-react` in the respective version using a [plugin](https://github.com/carbon-design-system/ibm-security/blob/master/babel/carbon-components-react-import.babel-plugin.js), so that no further transpilation is required.
+[Babel](https://babeljs.io) builds both of these variants and imports `carbon-components-react` in the respective version using a [plugin](https://github.com/carbon-design-system/ibm-security/blob/master/babel/carbon-imports.babel-plugin.js), so that no further transpilation is required.
 
 ### SCSS
 
 To add a component style to your build, import the component directly. Importing a component this way will bring in any dependencies that component has as well. The import system removes duplicate dependencies, so shared dependencies between components will not create extra CSS.
+
+In addition, to resolve your `@import` declarations, you will need to setup `node-sass` so that `node_modules` is included in the [`includePaths`](https://github.com/sass/node-sass#includepaths) option.
 
 ```scss
 @import '@carbon/ibm-security/scss/components/ComponentName/index';
@@ -74,6 +77,19 @@ To add a component style to your build, import the component directly. Importing
 To add all of the components' styles, import the entry point:
 
 ```scss
+@import '@carbon/ibm-security/scss/index';
+```
+
+#### Feature flags
+
+Carbon for IBM Security takes advantage of feature flags to conditionally enable or disable features. To configure feature flags, you will need to update the `$security--feature-flags` map before importing any Sass files. For example:
+
+```scss
+$security--feature-flags: (
+  css-gridish: false,
+  ibm-type: false,
+);
+
 @import '@carbon/ibm-security/scss/index';
 ```
 
@@ -86,6 +102,17 @@ To add all of the components' processed and minified styles, reference `@carbon/
 - [Guidelines for making contributions](.github/CONTRIBUTING.md) to this repo
 - [Migration guides](docs/migration)
   - [`v1` to `v2`](docs/migration/migrate-to-2.x.md)
+- [Storybook](docs/storybook.md)
+
+### Themes
+
+Themes are used for applying color in Carbon for IBM Security and offered by outputting [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) for theme tokens. Check out our [theming documentation](docs/themes) for guidelines.
+
+### Carbon Developer Essentials
+
+You can learn web development best practices and the ins and outs of using Carbon components by [creating a React app with the Carbon Design System](https://www.carbondesignsystem.com/tutorial/react/overview).
+
+If you want to show the world your new skills, you can [apply for an IBM Digital Badge](https://www.carbondesignsystem.com/tutorial/react/wrapping-up).
 
 ## Contributing
 

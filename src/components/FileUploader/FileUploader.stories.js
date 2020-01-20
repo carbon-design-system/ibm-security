@@ -5,7 +5,6 @@
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withA11y } from '@storybook/addon-a11y';
 import { action } from '@storybook/addon-actions';
 import { array, boolean, number, select, text } from '@storybook/addon-knobs';
 
@@ -75,7 +74,6 @@ const props = {
 };
 
 storiesOf(components('FileUploader'), module)
-  .addDecorator(withA11y)
   .add(
     'FileUploaderButton',
     () => <FileUploaderButton {...props.fileUploaderButton()} />,

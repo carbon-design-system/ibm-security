@@ -1,37 +1,40 @@
 /**
  * @file Accordion stories.
- * @copyright IBM Security 2018
+ * @copyright IBM Security 2019
  */
 
-import React from 'react';
-import centered from '@storybook/addon-centered/react';
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { boolean, text, number } from '@storybook/addon-knobs';
-import { withA11y } from '@storybook/addon-a11y';
+import { boolean, text, number, select } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
 
-import { components } from '../../../.storybook';
+import React from 'react';
 
-import {
-  Accordion,
-  AccordionItem,
-  AccordionSkeleton,
-  Select,
-  SelectItem,
-} from '../../';
+import { components, info } from '../../../.storybook';
+
+import { Accordion, AccordionItem, AccordionSkeleton, Button } from '../..';
 
 const props = {
   onClick: action('onClick'),
   onHeadingClick: action('onHeadingClick'),
+  style: { width: '100vw' },
 };
 
+const align = {
+  Start: 'start',
+  End: 'end',
+};
+
+const story = 'accordion';
+const description =
+  'Accordions allow users to expand and collapse sections of content.';
+
 storiesOf(components('Accordion'), module)
-  .addDecorator(withA11y)
-  .addDecorator(centered)
   .add(
     'Default',
     () => (
-      <Accordion>
+      <Accordion
+        align={select('Accordion heading alignment (align)', align, 'start')}
+      >
         <AccordionItem
           title={text('The title (title)', 'Section 1 title')}
           open={boolean('Open the section (open)', false)}
@@ -53,27 +56,13 @@ storiesOf(components('Accordion'), module)
           </p>
         </AccordionItem>
         <AccordionItem title="Section 3 title" {...props}>
-          <Select
-            onChange={action('onChange')}
-            id="select-1"
-            defaultValue="placeholder-item"
-          >
-            <SelectItem
-              disabled
-              hidden
-              value="placeholder-item"
-              text="Choose an option"
-            />
-            <SelectItem value="option-1" text="Option 1" />
-            <SelectItem value="option-2" text="Option 2" />
-            <SelectItem value="option-3" text="Option 3" />
-          </Select>
+          <Button>This is a button.</Button>
         </AccordionItem>
         <AccordionItem
           title={
-            <h4>
+            <span>
               Section 4 title (<em>the title can be a node</em>)
-            </h4>
+            </span>
           }
           {...props}
         >
@@ -86,29 +75,24 @@ storiesOf(components('Accordion'), module)
         </AccordionItem>
       </Accordion>
     ),
-    {
-      info: {
-        text: `
-          Accordions allow users to expand and collapse sections of content.
-        `,
-      },
-    }
+    info(description, {
+      story,
+      id: 'default',
+    })
   )
   .add(
     'with skeleton',
     () => (
       <div style={{ width: '500px' }}>
         <AccordionSkeleton
+          align={select('Accordion heading alignment (align)', align, 'start')}
           open={boolean('Show first item opened (open)', true)}
           count={number('Set number of items (count)', 4)}
         />
       </div>
     ),
-    {
-      info: {
-        text: `
-          Accordions allow users to expand and collapse sections of content.
-        `,
-      },
-    }
+    info(description, {
+      story,
+      id: 'skeleton',
+    })
   );

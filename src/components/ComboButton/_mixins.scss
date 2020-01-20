@@ -9,10 +9,8 @@
 @mixin combo-button {
   $root: &;
 
+  display: inline-flex;
   position: relative;
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
 
   & &--primary {
     @include text-overflow();
@@ -20,8 +18,19 @@
     flex: 1;
   }
 
+  &__group {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  &__icon {
+    fill: $icon-03;
+  }
+
   & &__overflow-menu {
     width: 3rem;
+    background-color: $interactive-01;
     margin-left: 1px;
 
     &:hover,
@@ -35,11 +44,10 @@
   }
 
   .#{$prefix}--overflow-menu-options {
-    background-color: $ui-02;
-    width: 100%;
-    outline: unset;
-    box-shadow: unset;
     display: grid;
+    width: 100%;
+    background-color: $ui-02;
+    outline: unset;
 
     &__option {
       display: inherit;

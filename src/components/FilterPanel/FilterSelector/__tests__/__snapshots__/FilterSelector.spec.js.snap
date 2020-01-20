@@ -4,7 +4,7 @@ exports[`FilterSelector Rendering renders checked filter 1`] = `
 <div
   className="security--filter-selector"
 >
-  <ForwardRef(Checkbox)
+  <Checkbox
     checked={true}
     className="security--filter-selector__checkbox"
     id="filter-selector-SELECTED"
@@ -36,7 +36,7 @@ exports[`FilterSelector Rendering renders unchecked filter 1`] = `
 <div
   className="security--filter-selector"
 >
-  <ForwardRef(Checkbox)
+  <Checkbox
     checked={false}
     className="security--filter-selector__checkbox"
     id="filter-selector-DEFAULT"
