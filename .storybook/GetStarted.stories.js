@@ -1,6 +1,6 @@
 /**
- * @file Getting started stories.
- * @copyright IBM Security 2019
+ * @file Get started.
+ * @copyright IBM Security 2020
  */
 
 import { breakpoints } from '@carbon/layout';
@@ -12,9 +12,11 @@ import React from 'react';
 
 import README from '../README.md';
 
+import { HIERARCHY_ROOT_SEPARATOR } from '.';
+
 const { margin, width } = breakpoints.lg;
 
-storiesOf('Getting Started', module)
+storiesOf(`About${HIERARCHY_ROOT_SEPARATOR}Get Started`, module)
   .addDecorator(centered)
   .add('README', () => (
     <div

@@ -79,7 +79,7 @@ addParameters({
  * Finds each component story and loads them into Storybook.
  */
 function loadStories() {
-  require('./GettingStarted.stories.js');
+  require('./GetStarted.stories.js');
 
   const req = require.context('../src/components', true, /\.stories\.js$/);
 
