@@ -191,13 +191,12 @@ $header__transition__timing-function: $timing-function;
     @include carbon--type-style($name: body-short-01);
     position: absolute;
     right: 0;
-    width: auto;
-    max-width: 50%;
-    min-width: 17rem;
+    width: 100%;
+    max-width: 100%;
     color: $inverse-01;
     background-color: $inverse-02;
 
-    @include carbon--breakpoint($name: lg) {
+    @include carbon--breakpoint($name: md) {
       right: carbon--mini-units($count: 1);
       width: carbon--mini-units($count: 34);
     }
