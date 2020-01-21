@@ -191,8 +191,9 @@ $header__transition__timing-function: $timing-function;
     @include carbon--type-style($name: body-short-01);
     position: absolute;
     right: 0;
-    width: 100%;
-    max-width: 100%;
+    width: auto;
+    max-width: 50%;
+    min-width: 17rem;
     color: $inverse-01;
     background-color: $inverse-02;
 
