@@ -10,6 +10,11 @@ export {
   SecurityShellHeaderAction,
   SecurityShellHeaderActions,
   SecurityShellHeaderName,
+  SecurityShellHeaderPopoverContent,
+  SecurityShellHeaderPopoverFooter,
+  SecurityShellHeaderPopoverHeader,
+  SecurityShellHeaderPopoverNotification,
+  SecurityShellHeaderPopoverNotifications,
   SecurityShellToolbar,
   SecurityShellToolbarAction,
 } from './SecurityShell';

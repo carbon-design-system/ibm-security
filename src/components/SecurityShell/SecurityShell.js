@@ -8,9 +8,13 @@ import Close20 from '@carbon/icons-react/lib/close/20';
 import React, { useState } from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
+import theme from '../../globals/theme';
 
+import HeaderNotification from '../SecurityHeader/HeaderNotification';
+import Icon from '../Icon';
 import IconButton from '../IconButton';
 import Link from '../Link';
+import ScrollGradient from '../ScrollGradient';
 
 const namespace = getComponentNamespace('header');
 
@@ -64,6 +68,54 @@ const SecurityShellHeaderActions = ({ children, ...other }) => {
     </ul>
   );
 };
+
+const SecurityShellHeaderPopoverContent = ({ children, ...other }) => (
+  <div className={`${namespace}__popover__content`} {...other}>
+    {children}
+  </div>
+);
+
+const SecurityShellHeaderPopoverFooter = ({ children, ...other }) => (
+  <footer className={`${namespace}__popover__footer`} {...other}>
+    {children}
+  </footer>
+);
+
+const SecurityShellHeaderPopoverHeader = ({ children, ...other }) => (
+  <section className={`${namespace}__popover__header`} {...other}>
+    <span className={`${namespace}__popover__header__title`}>{children}</span>
+  </section>
+);
+
+const SecurityShellHeaderPopoverNotification = ({ ...other }) => (
+  <li className={`${namespace}__popover__list-item`}>
+    <HeaderNotification {...other} />
+  </li>
+);
+
+const SecurityShellHeaderPopoverNotifications = ({
+  ariaLabel,
+  children,
+  onClear,
+  title,
+  ...other
+}) => (
+  <>
+    <SecurityShellHeaderPopoverContent {...other}>
+      <span className={`${namespace}__popover__label`}>{title}</span>
+      <button
+        className={`${namespace}__popover__button`}
+        aria-label={ariaLabel}
+        onClick={onClear}
+      >
+        <Icon renderIcon={Close20} />
+      </button>
+    </SecurityShellHeaderPopoverContent>
+    <ScrollGradient color={theme.inverse02}>
+      <ul className={`${namespace}__popover__list`}>{children}</ul>
+    </ScrollGradient>
+  </>
+);
 
 const SecurityShellHeaderName = ({ children, offering, prefix, ...other }) => (
   <Link className={`${namespace}__link`} {...other}>
@@ -138,6 +190,11 @@ export {
   SecurityShellHeaderAction,
   SecurityShellHeaderActions,
   SecurityShellHeaderName,
+  SecurityShellHeaderPopoverContent,
+  SecurityShellHeaderPopoverHeader,
+  SecurityShellHeaderPopoverFooter,
+  SecurityShellHeaderPopoverNotification,
+  SecurityShellHeaderPopoverNotifications,
   SecurityShellToolbar,
   SecurityShellToolbarAction,
 };
