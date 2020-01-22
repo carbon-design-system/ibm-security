@@ -5,7 +5,7 @@
 
 import Close20 from '@carbon/icons-react/lib/close/20';
 
-import React, { useState } from 'react';
+import React, { Children, cloneElement, useState } from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
 import theme from '../../globals/theme';
@@ -17,6 +17,7 @@ import Link from '../Link';
 import ScrollGradient from '../ScrollGradient';
 
 const namespace = getComponentNamespace('header');
+const shellNamespace = getComponentNamespace('security-shell');
 
 const SecurityShell = ({ children, ...other }) => (
   <div className={getComponentNamespace('shell')} {...other}>
@@ -25,7 +26,7 @@ const SecurityShell = ({ children, ...other }) => (
 );
 
 const SecurityShellHeader = ({ children, ...other }) => (
-  <div className={`${namespace}__container`}>
+  <div className={`${namespace}__container ${shellNamespace}__header`}>
     <header className={namespace} role="banner" {...other}>
       {children}
     </header>
@@ -39,33 +40,35 @@ const SecurityShellHeaderAction = ({
   popover,
   ...other
 }) => {
-  const isActive = activeAction === id;
+  const isActive = popover && activeAction === id;
 
   return (
-    <li className={`${namespace}__list__item`} {...other}>
-      <>
-        {children}
+    <>
+      {children}
 
-        {isActive && (
-          <div className={`${namespace}__popover`} {...other}>
-            {popover}
-          </div>
-        )}
-      </>
-    </li>
+      {isActive && (
+        <div
+          className={`${namespace}__popover ${shellNamespace}__popover`}
+          {...other}
+        >
+          {popover}
+        </div>
+      )}
+    </>
   );
 };
 
 const SecurityShellHeaderActions = ({ children, ...other }) => {
-  const [isActive, setIsActive] = useState(null);
+  // const [isActive, setIsActive] = useState(null);
 
   return (
-    <ul className={`${namespace}__group`} {...other}>
-      {children({
-        isActive,
-        setIsActive: event => setIsActive(event.target.id),
-      })}
-    </ul>
+    <div className={`${namespace}__group ${shellNamespace}__group`} {...other}>
+      {Children.map(children, (child, index) =>
+        cloneElement(child, {
+          id: `${shellNamespace}__header__action--${index}`,
+        })
+      )}
+    </div>
   );
 };
 
@@ -133,7 +136,10 @@ const SecurityShellToolbar = ({ children, ...other }) => {
   const [isActive, setIsActive] = useState(null);
 
   return (
-    <nav className={toolbarNamespace} {...other}>
+    <nav
+      className={`${toolbarNamespace} ${shellNamespace}__toolbar`}
+      {...other}
+    >
       <ul className={`${toolbarNamespace}__group`}>
         {children({
           isActive,

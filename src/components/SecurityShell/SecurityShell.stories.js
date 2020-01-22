@@ -97,88 +97,76 @@ export const Default = () => (
       </SecurityShellHeaderName>
 
       <SecurityShellHeaderActions>
-        {({ isActive, setIsActive }) => (
-          <>
-            <SecurityShellHeaderAction>
-              <Button kind="secondary">Action 1</Button>
-            </SecurityShellHeaderAction>
+        <SecurityShellHeaderAction>
+          <Button kind="secondary">Action 1</Button>
+        </SecurityShellHeaderAction>
 
-            <SecurityShellHeaderAction>
-              <Button>Action 2</Button>
-            </SecurityShellHeaderAction>
+        <SecurityShellHeaderAction>
+          <Button>Action 2</Button>
+        </SecurityShellHeaderAction>
 
-            <SecurityShellHeaderAction
-              id="3"
-              isActive={isActive}
-              popover={
-                <>
-                  <SecurityShellHeaderPopoverHeader>
-                    Notifications
-                  </SecurityShellHeaderPopoverHeader>
+        <SecurityShellHeaderAction
+          popover={
+            <>
+              <SecurityShellHeaderPopoverHeader>
+                Notifications
+              </SecurityShellHeaderPopoverHeader>
 
-                  <SecurityShellHeaderPopoverNotifications
-                    onClear={action('onClear')}
-                    title="Today"
-                  >
-                    <SecurityShellHeaderPopoverNotification
-                      description="Notification 1"
-                      product="Offering 1"
-                      viaLabel="via"
-                    />
+              <SecurityShellHeaderPopoverNotifications
+                onClear={action('onClear')}
+                title="Today"
+              >
+                <SecurityShellHeaderPopoverNotification
+                  description="Notification 1"
+                  product="Offering 1"
+                  viaLabel="via"
+                />
 
-                    <SecurityShellHeaderPopoverNotification
-                      description="Notification 2"
-                      product="Offering 2"
-                      viaLabel="via"
-                    />
+                <SecurityShellHeaderPopoverNotification
+                  description="Notification 2"
+                  product="Offering 2"
+                  viaLabel="via"
+                />
 
-                    <SecurityShellHeaderPopoverNotification
-                      description="Notification 3"
-                      product="Offering 3"
-                      viaLabel="via"
-                    />
-                  </SecurityShellHeaderPopoverNotifications>
+                <SecurityShellHeaderPopoverNotification
+                  description="Notification 3"
+                  product="Offering 3"
+                  viaLabel="via"
+                />
+              </SecurityShellHeaderPopoverNotifications>
 
-                  <SecurityShellHeaderPopoverFooter>
-                    <Link href="#5">Link 1</Link>
+              <SecurityShellHeaderPopoverFooter>
+                <Link href="#3">Link 1</Link>
 
-                    <Link href="#6">Link 2</Link>
-                  </SecurityShellHeaderPopoverFooter>
-                </>
-              }
-            >
-              <IconButton
-                id="3"
-                onClick={setIsActive}
-                renderIcon={Notification20}
-              />
-            </SecurityShellHeaderAction>
+                <Link href="#4">Link 2</Link>
+              </SecurityShellHeaderPopoverFooter>
+            </>
+          }
+        >
+          <IconButton renderIcon={Notification20} />
+        </SecurityShellHeaderAction>
 
-            <SecurityShellHeaderAction
-              id="4"
-              isActive={isActive}
-              popover={
-                <>
-                  <SecurityShellHeaderPopoverHeader>
-                    Profile
-                  </SecurityShellHeaderPopoverHeader>
+        <SecurityShellHeaderAction
+          popover={
+            <>
+              <SecurityShellHeaderPopoverHeader>
+                Profile
+              </SecurityShellHeaderPopoverHeader>
 
-                  <SecurityShellHeaderPopoverContent>
-                    SecurityShellHeaderPopoverContent
-                  </SecurityShellHeaderPopoverContent>
+              <SecurityShellHeaderPopoverContent>
+                SecurityShellHeaderPopoverContent
+              </SecurityShellHeaderPopoverContent>
 
-                  <SecurityShellHeaderPopoverFooter>
-                    <Link href="#7">Edit profile</Link>
+              <SecurityShellHeaderPopoverFooter>
+                <Link href="#5">Edit profile</Link>
 
-                    <Link href="#8">Sign out</Link>
-                  </SecurityShellHeaderPopoverFooter>
-                </>
-              }
-            >
-              <IconButton id="4" onClick={setIsActive} renderIcon={User20} />
-            </SecurityShellHeaderAction>
-          </>
-        )}
+                <Link href="#6">Sign out</Link>
+              </SecurityShellHeaderPopoverFooter>
+            </>
+          }
+        >
+          <IconButton renderIcon={User20} />
+        </SecurityShellHeaderAction>
       </SecurityShellHeaderActions>
     </SecurityShellHeader>
   </SecurityShell>
