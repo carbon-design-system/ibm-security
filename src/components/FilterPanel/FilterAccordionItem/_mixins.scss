@@ -44,6 +44,13 @@
       padding-top: $filter-accordion-item__content__spacing__padding;
       padding-bottom: $filter-accordion-item__content__spacing__padding;
       color: $text-02;
+
+      // Increase outline spacing horizontally so that it does not overlap with the count on the
+      // accordion heading label.
+      &::before {
+        left: -$carbon--spacing-01;
+        width: calc(100% + #{$carbon--spacing-03});
+      }
     }
 
     &__content {
