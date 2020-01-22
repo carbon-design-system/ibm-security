@@ -9,12 +9,12 @@ import React from 'react';
 import { getComponentNamespace } from '../../../../globals/namespace';
 
 import { filterFiltersPropTypes } from '../FilterPanelUtilities';
-import FilterCheckbox from '../../FilterCheckbox';
+import FilterPanelCheckbox from '../../FilterPanelCheckbox';
 
 export const namespace = getComponentNamespace('filter-selector');
 
 const FilterSelector = ({ filter, onChange }) => (
-  <FilterCheckbox
+  <FilterPanelCheckbox
     checked={filter.enabled}
     onChange={() => onChange(filter)}
     id={`filter-selector-${filter.id}`}

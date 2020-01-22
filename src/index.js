@@ -46,12 +46,12 @@ export {
 export DelimitedList from './components/DelimitedList';
 export ExternalLink from './components/ExternalLink';
 export FilterPanel, {
-  FilterAccordion,
-  FilterAccordionItem,
-  FilterCheckbox,
-  FilterGroup,
-  FilterLabel,
-  FilterSearch,
+  FilterPanelAccordion,
+  FilterPanelAccordionItem,
+  FilterPanelCheckbox,
+  FilterPanelGroup,
+  FilterPanelLabel,
+  FilterPanelSearch,
 } from './components/FilterPanel';
 export { ICA, ICASkeleton } from './components/ICA';
 export Icon from './components/Icon';

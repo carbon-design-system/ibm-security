@@ -26,18 +26,18 @@ import {
 } from './_mocks_';
 
 import FilterPanel, {
-  FilterSearch,
-  FilterAccordion,
-  FilterAccordionItem,
-  FilterCheckbox,
-  FilterGroup,
+  FilterPanelSearch,
+  FilterPanelAccordion,
+  FilterPanelAccordionItem,
+  FilterPanelCheckbox,
+  FilterPanelGroup,
 } from '.';
 
 // Ensure that passed down props are shown in types table.
-FilterCheckbox.__docgenInfo = Checkbox.__docgenInfo;
-FilterAccordion.__docgenInfo = Accordion.__docgenInfo;
-FilterAccordionItem.__docgenInfo = AccordionItem.__docgenInfo;
-FilterSearch.__docgenInfo = Search.__docgenInfo;
+FilterPanelCheckbox.__docgenInfo = Checkbox.__docgenInfo;
+FilterPanelAccordion.__docgenInfo = Accordion.__docgenInfo;
+FilterPanelAccordionItem.__docgenInfo = AccordionItem.__docgenInfo;
+FilterPanelSearch.__docgenInfo = Search.__docgenInfo;
 
 const LegacyFilterPanelWithState = compose(
   // Maintain a state attribute called filterData.
@@ -67,108 +67,108 @@ storiesOf(patterns('FilterPanel'), module)
   ))
   .add('default', () => (
     <FilterPanel title={text('FilterPanel title (title)', title)}>
-      <FilterSearch
+      <FilterPanelSearch
         labelText={text(
-          'FilterSearch label text (labelText)',
+          'FilterPanelSearch label text (labelText)',
           filterSearchLabel
         )}
         placeHolderText={text(
-          'FilterSearch placeholder text (placeHolderText)',
+          'FilterPanelSearch placeholder text (placeHolderText)',
           filterSearchLabel
         )}
-        onChange={action('FilterSearch onChange')}
+        onChange={action('FilterPanelSearch onChange')}
         id="filter-search"
       >
-        <FilterGroup title="Filter accordion item">
-          <FilterCheckbox
+        <FilterPanelGroup title="Filter accordion item">
+          <FilterPanelCheckbox
             labelText="Filter checkbox"
             id="result-filter-checkbox"
             count={10}
-            onChange={action('FilterCheckbox onChange')}
+            onChange={action('FilterPanelCheckbox onChange')}
           />
-          <FilterCheckbox
+          <FilterPanelCheckbox
             labelText="Long filter checkbox  label"
             id="result-long-filter-checkbox"
             count={10}
-            onChange={action('FilterCheckbox onChange')}
+            onChange={action('FilterPanelCheckbox onChange')}
           />
-          <FilterCheckbox
+          <FilterPanelCheckbox
             labelText="Checked"
             id="result-checked"
             count={10}
             defaultChecked
-            onChange={action('FilterCheckbox onChange')}
+            onChange={action('FilterPanelCheckbox onChange')}
           />
-        </FilterGroup>
-        <FilterGroup title="Truncated accordion item">
+        </FilterPanelGroup>
+        <FilterPanelGroup title="Truncated accordion item">
           {new Array(3).fill(null).map((value, index) => (
-            <FilterCheckbox
+            <FilterPanelCheckbox
               // eslint-disable-next-line react/no-array-index-key
               key={index}
               labelText={`Filter ${index + 1}`}
               id={`result-filter-checkbox-${index + 1}`}
               count={10}
-              onChange={action('FilterCheckbox onChange')}
+              onChange={action('FilterPanelCheckbox onChange')}
             />
           ))}
-        </FilterGroup>
-      </FilterSearch>
+        </FilterPanelGroup>
+      </FilterPanelSearch>
 
-      <FilterAccordion title="Filter accordion" count={150}>
-        <FilterAccordionItem
+      <FilterPanelAccordion title="Filter accordion" count={150}>
+        <FilterPanelAccordionItem
           open
           title="Filter accordion item"
           count={3}
           expandLabel="View more"
           collapseLabel="View less"
         >
-          <FilterCheckbox
+          <FilterPanelCheckbox
             labelText="Filter checkbox"
             id="filter-checkbox"
             count={10}
-            onChange={action('FilterCheckbox onChange')}
+            onChange={action('FilterPanelCheckbox onChange')}
           />
-          <FilterCheckbox
+          <FilterPanelCheckbox
             labelText="Long filter checkbox  label"
             id="long-filter-checkbox"
             count={10}
-            onChange={action('FilterCheckbox onChange')}
+            onChange={action('FilterPanelCheckbox onChange')}
           />
-          <FilterCheckbox
+          <FilterPanelCheckbox
             labelText="Checked"
             id="checked"
             count={10}
             defaultChecked
-            onChange={action('FilterCheckbox onChange')}
+            onChange={action('FilterPanelCheckbox onChange')}
           />
-        </FilterAccordionItem>
-        <FilterAccordionItem
+        </FilterPanelAccordionItem>
+        <FilterPanelAccordionItem
           title="Truncated accordion item"
           count={12}
           expandLabel="View more"
           collapseLabel="View less"
         >
           {new Array(12).fill(null).map((value, index) => (
-            <FilterCheckbox
+            <FilterPanelCheckbox
               // eslint-disable-next-line react/no-array-index-key
               key={index}
               labelText={`Filter ${index + 1}`}
               id={`filter-checkbox-${index + 1}`}
               count={10}
-              onChange={action('FilterCheckbox onChange')}
+              onChange={action('FilterPanelCheckbox onChange')}
             />
           ))}
-        </FilterAccordionItem>
-      </FilterAccordion>
-      <FilterAccordion title="Filter accordion 2" count={100}>
-        <FilterAccordionItem
+        </FilterPanelAccordionItem>
+      </FilterPanelAccordion>
+      <FilterPanelAccordion title="Filter accordion 2" count={100}>
+        <FilterPanelAccordionItem
           title="Filter accordion item 1"
           count={4}
           expandLabel="View more"
           collapseLabel="View less"
         >
           {new Array(4).fill(null).map((value, index) => (
-            <FilterCheckbox
+            <FilterPanelCheckbox
               // eslint-disable-next-line react/no-array-index-key
               key={index}
               labelText={`Filter ${index + 1}`}
@@ -176,16 +176,16 @@ storiesOf(patterns('FilterPanel'), module)
               count={10}
             />
           ))}
-        </FilterAccordionItem>
+        </FilterPanelAccordionItem>
 
-        <FilterAccordionItem
+        <FilterPanelAccordionItem
           title="Filter accordion item 2"
           count={6}
           expandLabel="View more"
           collapseLabel="View less"
         >
           {new Array(6).fill(null).map((value, index) => (
-            <FilterCheckbox
+            <FilterPanelCheckbox
               // eslint-disable-next-line react/no-array-index-key
               key={index}
               labelText={`Filter ${index + 1}`}
@@ -193,8 +193,8 @@ storiesOf(patterns('FilterPanel'), module)
               count={10}
             />
           ))}
-        </FilterAccordionItem>
-      </FilterAccordion>
+        </FilterPanelAccordionItem>
+      </FilterPanelAccordion>
     </FilterPanel>
   ))
 

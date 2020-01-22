@@ -34,7 +34,7 @@ describe('FilterSelector', () => {
     it('invokes `onChange` when filter is clicked', () => {
       const onChange = jest.fn();
       filterSelector.setProps({ onChange });
-      filterSelector.find('FilterCheckbox').simulate('change');
+      filterSelector.find('FilterPanelCheckbox').simulate('change');
       expect(onChange).toHaveBeenCalledWith(MockFilterData.filters.DEFAULT);
     });
   });

@@ -5,9 +5,11 @@
 ////
 
 @import '../../../../globals/index';
-@import '../../FilterSearch/mixins';
+@import '../../FilterPanelSearch/mixins';
 
 @mixin LEGACY-filter-search {
+  @include filter-panel-search;
+
   /// Padding.
   /// @type Length
   $filter-search__spacing__padding: $carbon--spacing-03;

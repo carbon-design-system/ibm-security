@@ -4,10 +4,10 @@
 ////
 
 @import '../../../../globals/index';
-@import '../../FilterAccordionItem/mixins';
+@import '../../FilterPanelAccordionItem/mixins';
 
 @mixin filter-subcategory {
-  @include filter-accordion-item;
+  @include filter-panel-accordion-item;
 
   &__filter-list {
     width: calc(100% + #{$carbon--spacing-05 / 2});

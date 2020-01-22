@@ -5,10 +5,10 @@
 ////
 
 @import '../../../../globals/index';
-@import '../../FilterGroup/mixins';
+@import '../../FilterPanelGroup/mixins';
 
 @mixin filter-category {
-  @include filter-group;
+  @include filter-panel-group;
 
   &__title {
     display: flex;

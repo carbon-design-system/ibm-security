@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FilterSelector Rendering renders checked filter 1`] = `
-<FilterCheckbox
+<FilterPanelCheckbox
   checked={true}
   count={10}
   countLabel={[Function]}
@@ -13,7 +13,7 @@ exports[`FilterSelector Rendering renders checked filter 1`] = `
 `;
 
 exports[`FilterSelector Rendering renders unchecked filter 1`] = `
-<FilterCheckbox
+<FilterPanelCheckbox
   checked={false}
   count={10}
   countLabel={[Function]}

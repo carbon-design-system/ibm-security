@@ -4,8 +4,8 @@
 /// @copyright IBM Security 2020
 ////
 
-@import '../../FilterCheckbox/mixins';
+@import '../../FilterPanelCheckbox/mixins';
 
 @mixin filter-selector {
-  @include filter-checkbox;
+  @include filter-panel-checkbox;
 }

@@ -4,9 +4,11 @@
  */
 export { default } from './FilterPanel';
 
-export { default as FilterAccordion } from './FilterAccordion';
-export { default as FilterAccordionItem } from './FilterAccordionItem';
-export { default as FilterCheckbox } from './FilterCheckbox';
-export { default as FilterGroup } from './FilterGroup';
-export { default as FilterLabel } from './FilterLabel';
-export { default as FilterSearch } from './FilterSearch';
+export { default as FilterPanelAccordion } from './FilterPanelAccordion';
+export {
+  default as FilterPanelAccordionItem,
+} from './FilterPanelAccordionItem';
+export { default as FilterPanelCheckbox } from './FilterPanelCheckbox';
+export { default as FilterPanelGroup } from './FilterPanelGroup';
+export { default as FilterPanelLabel } from './FilterPanelLabel';
+export { default as FilterPanelSearch } from './FilterPanelSearch';
