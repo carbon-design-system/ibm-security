@@ -3,38 +3,68 @@
  * @copyright IBM Security 2019
  */
 
-import { mount } from 'enzyme';
-import React, { Fragment } from 'react';
-
-import { label, onClick } from '../_mocks_';
+import { cleanup, render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import React from 'react';
 
 import { Button, PanelV2, PanelContent } from '../../..';
 
+const PanelExample = () => (
+  <PanelV2
+    title="Title"
+    subtitle="Subtitle"
+    className="custom-class"
+    closeButton={{
+      label: 'Close',
+      onClick: () => {},
+    }}
+    renderFooter={() => <Button onClick={() => {}}>Add</Button>}
+  >
+    <PanelContent>Content</PanelContent>
+  </PanelV2>
+);
+
 describe('PanelV2', () => {
-  it('renders', () => {
-    const wrapper = mount(
-      <PanelV2
-        title={label}
-        subtitle={label}
-        closeButton={{ onClick }}
-        renderFooter={() => (
-          <Fragment>
-            <Button
-              id="example-secondary-button"
-              kind="secondary"
-              onClick={onClick}
-            >
-              Close
-            </Button>
-            <Button id="example-primary-button" onClick={onClick}>
-              Add
-            </Button>
-          </Fragment>
-        )}
-      >
-        <PanelContent>{label}</PanelContent>
-      </PanelV2>
+  afterEach(cleanup);
+
+  test('should render as expected', async () => {
+    const main = document.createElement('main');
+    render(<PanelExample open />, {
+      container: document.body.appendChild(main),
+    });
+    await expect(document.body).toMatchSnapshot();
+  });
+
+  test('should have no Axe or DAP violations', async () => {
+    const main = document.createElement('main');
+    render(<PanelExample open />, {
+      container: document.body.appendChild(main),
+    });
+    await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations('PanelV2');
+  });
+
+  test('should invoke `onClose`', () => {
+    const main = document.createElement('main');
+    const onCloseMock = jest.fn();
+    render(
+      <PanelExample
+        open
+        closeButton={{
+          label: 'Close',
+          onClick: onCloseMock,
+        }}
+      />,
+      { container: document.body.appendChild(main) }
     );
-    expect(wrapper).toMatchSnapshot();
+
+    userEvent.click(
+      document.body.querySelector('.security--panelv2__button--close')
+    );
+
+    expect(onCloseMock).toHaveBeenCalled();
+    // await expect(
+    //   document.body.querySelector(".security--panelv2")
+    // ).not.toBeInTheDocument();
   });
 });
