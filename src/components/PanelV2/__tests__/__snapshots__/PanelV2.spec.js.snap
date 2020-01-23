@@ -6,7 +6,7 @@ exports[`PanelV2 should render as expected 1`] = `
 >
   <main />
   <section
-    class="security--panelv2 custom-class security--panelv2__transition--appear"
+    class="security--panelv2 security--panelv2__transition--appear"
   >
     <header
       class="security--panelv2__header"
