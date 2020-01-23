@@ -96,23 +96,28 @@ describe('PanelV2', () => {
 
     userEvent.tab();
 
+    // The close button:
     expect(getByLabelText(/test close/i)).toHaveFocus();
 
     userEvent.tab();
 
-    // The "tabpanel" wrapper:
+    // The `PanelContent` wrapper:
     expect(getByText(/test content text/i)).toHaveFocus();
 
     userEvent.tab();
 
+    // The button inside the `PanelContent` wrapper:
     expect(getByText(/test content button/i)).toHaveFocus();
 
     userEvent.tab();
 
+    // The footer button:
     expect(getByText(/test footer button/i)).toHaveFocus();
 
     userEvent.tab();
 
+    // Loop complete.
+    // The close button:
     expect(getByLabelText(/test close/i)).toHaveFocus();
   });
 });
