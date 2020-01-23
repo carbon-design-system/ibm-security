@@ -13,7 +13,6 @@ describe('PanelV2', () => {
   afterEach(cleanup);
 
   test('should render as expected', async () => {
-    const main = document.createElement('main');
     render(
       <PanelV2
         title="Title"
@@ -25,10 +24,7 @@ describe('PanelV2', () => {
         renderFooter={() => <Button onClick={() => {}}>Add</Button>}
       >
         <PanelContent>Content</PanelContent>
-      </PanelV2>,
-      {
-        container: document.body.appendChild(main),
-      }
+      </PanelV2>
     );
     await expect(document.body).toMatchSnapshot();
   });
@@ -48,6 +44,7 @@ describe('PanelV2', () => {
         <PanelContent>Content</PanelContent>
       </PanelV2>,
       {
+        // DAP requires that there be a landmark 'MAIN' in the DOM:
         container: document.body.appendChild(main),
       }
     );
@@ -73,4 +70,8 @@ describe('PanelV2', () => {
     expect(onCloseMock).toHaveBeenCalled();
     expect(getByText(/test title/i)).toBeInTheDocument();
   });
+
+  // TODO: Add test to tab to main content
+
+  // TODO: Add test to tab through panel
 });

@@ -4,7 +4,7 @@ exports[`PanelV2 should render as expected 1`] = `
 <body
   class="security--portal__container"
 >
-  <main />
+  <div />
   <section
     class="security--panelv2 security--panelv2__transition--appear"
   >
