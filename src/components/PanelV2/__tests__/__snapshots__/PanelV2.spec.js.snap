@@ -12,7 +12,7 @@ exports[`PanelV2 should render as expected 1`] = `
       class="security--panelv2__header"
     >
       <button
-        aria-label="Close"
+        aria-label="test close"
         class="security--button--icon security--panelv2__button--close"
       >
         <svg
@@ -37,12 +37,12 @@ exports[`PanelV2 should render as expected 1`] = `
         <h2
           class="security--panelv2__header--title"
         >
-          Title
+          test title
         </h2>
         <div
           class="security--panelv2__header--subtitle"
         >
-          Subtitle
+          test subtitle
         </div>
       </div>
     </header>
@@ -55,7 +55,7 @@ exports[`PanelV2 should render as expected 1`] = `
         role="tabpanel"
         tabindex="0"
       >
-        Content
+        test content
       </div>
     </section>
     <footer
@@ -66,7 +66,7 @@ exports[`PanelV2 should render as expected 1`] = `
         tabindex="0"
         type="button"
       >
-        Add
+        test footer button
       </button>
     </footer>
   </section>

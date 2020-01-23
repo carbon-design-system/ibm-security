@@ -15,15 +15,14 @@ describe('PanelV2', () => {
   test('should render as expected', async () => {
     render(
       <PanelV2
-        title="Title"
-        subtitle="Subtitle"
+        title="test title"
+        subtitle="test subtitle"
         closeButton={{
-          label: 'Close',
-          onClick: () => {},
+          label: 'test close',
         }}
-        renderFooter={() => <Button onClick={() => {}}>Add</Button>}
+        renderFooter={() => <Button>test footer button</Button>}
       >
-        <PanelContent>Content</PanelContent>
+        <PanelContent>test content</PanelContent>
       </PanelV2>
     );
     await expect(document.body).toMatchSnapshot();
@@ -37,14 +36,13 @@ describe('PanelV2', () => {
         subtitle="test subtitle"
         closeButton={{
           label: 'test close',
-          onClick: () => {},
         }}
-        renderFooter={() => <Button onClick={() => {}}>Add</Button>}
+        renderFooter={() => <Button>test footer button</Button>}
       >
-        <PanelContent>Content</PanelContent>
+        <PanelContent>test content</PanelContent>
       </PanelV2>,
       {
-        // DAP requires that there be a landmark 'MAIN' in the DOM:
+        // DAP requires a landmark '<main>' in the DOM:
         container: document.body.appendChild(main),
       }
     );
@@ -52,12 +50,10 @@ describe('PanelV2', () => {
     await expect(document.body).toHaveNoDAPViolations('PanelV2');
   });
 
-  test('should invoke `onClose`', () => {
+  test('should invoke close mock when close button is clicked', () => {
     const onCloseMock = jest.fn();
-    const { getByLabelText, getByText } = render(
+    const { getByLabelText } = render(
       <PanelV2
-        open
-        title="test title"
         closeButton={{
           label: 'test close',
           onClick: onCloseMock,
@@ -66,12 +62,57 @@ describe('PanelV2', () => {
     );
 
     userEvent.click(getByLabelText(/test close/i));
-
     expect(onCloseMock).toHaveBeenCalled();
-    expect(getByText(/test title/i)).toBeInTheDocument();
   });
 
-  // TODO: Add test to tab to main content
+  test('should not render panel when `isOpen` is set to `false`', () => {
+    const { queryByText } = render(
+      <PanelV2
+        title="test title"
+        isOpen={false}
+        closeButton={{
+          label: 'test close',
+        }}
+      />
+    );
 
-  // TODO: Add test to tab through panel
+    expect(queryByText(/test title/i)).not.toBeInTheDocument();
+  });
+
+  it('should cycle panel elements in tab order', () => {
+    const { getByLabelText, getByText } = render(
+      <PanelV2
+        closeButton={{
+          label: 'test close',
+        }}
+        renderFooter={() => <Button>test footer button</Button>}
+      >
+        <PanelContent>
+          test content text
+          <Button>test content button</Button>
+        </PanelContent>
+      </PanelV2>
+    );
+
+    userEvent.tab();
+
+    expect(getByLabelText(/test close/i)).toHaveFocus();
+
+    userEvent.tab();
+
+    // The "tabpanel" wrapper:
+    expect(getByText(/test content text/i)).toHaveFocus();
+
+    userEvent.tab();
+
+    expect(getByText(/test content button/i)).toHaveFocus();
+
+    userEvent.tab();
+
+    expect(getByText(/test footer button/i)).toHaveFocus();
+
+    userEvent.tab();
+
+    expect(getByLabelText(/test close/i)).toHaveFocus();
+  });
 });
