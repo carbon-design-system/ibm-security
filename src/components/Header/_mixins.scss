@@ -196,7 +196,7 @@ $header__transition__timing-function: $timing-function;
     color: $inverse-01;
     background-color: $inverse-02;
 
-    @include carbon--breakpoint($name: lg) {
+    @include carbon--breakpoint($name: md) {
       right: carbon--mini-units($count: 1);
       width: carbon--mini-units($count: 34);
     }
