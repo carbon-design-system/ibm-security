@@ -3,9 +3,9 @@
     'master',
     'next',
     {
+      channel: 'canary',
       name: 'dev',
       prerelease: 'prerelease',
-      channel: 'canary',
     },
   ],
   plugins: [
