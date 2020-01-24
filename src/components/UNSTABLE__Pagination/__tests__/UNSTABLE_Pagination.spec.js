@@ -31,6 +31,66 @@ describe('UNSTABLE_Pagination', () => {
     await expect(document.body).toHaveNoDAPViolations('UNSTABLE_Pagination');
   });
 
+  test('should cycle panel elements in tab order', () => {
+    const { getByLabelText } = render(
+      <UNSTABLE__Pagination
+        // Note that we are starting on page 2
+        // so that the previous button will be interactive:
+        initialPage={2}
+        backwardText="test previous button"
+        forwardText="test next button"
+        totalItems={20}
+        pageSize={5}
+        pageSizes={[5, 10]}
+      >
+        {({ currentPage, onSetPage, totalPages }) => (
+          <PageSelector
+            currentPage={currentPage}
+            labelText="test page selector"
+            onChange={event => onSetPage(event.target.value)}
+            totalPages={totalPages}
+          />
+        )}
+      </UNSTABLE__Pagination>
+    );
+
+    userEvent.tab();
+
+    // The "items per page" select element:
+    expect(
+      document.getElementById(
+        'security--unstable-pagination__page-sizer__input-1'
+      )
+    ).toHaveFocus();
+
+    userEvent.tab();
+
+    // The "page selector" select element:
+    expect(getByLabelText(/test page selector/i)).toHaveFocus();
+
+    userEvent.tab();
+
+    // The "previous" page button:
+    expect(
+      getByLabelText(/test previous button/i).closest('button')
+    ).toHaveFocus();
+
+    userEvent.tab();
+
+    // The "next" page button:
+    expect(getByLabelText(/test next button/i).closest('button')).toHaveFocus();
+
+    userEvent.tab();
+
+    // Loop complete.
+    // The "items per page" select element:
+    expect(
+      document.getElementById(
+        'security--unstable-pagination__page-sizer__input-1'
+      )
+    ).toHaveFocus();
+  });
+
   test('should update number of selectable pages when "items per page" select is changed', () => {
     const { queryByDisplayValue, getByLabelText } = render(
       <UNSTABLE__Pagination totalItems={20} pageSize={5} pageSizes={[5, 10]}>
