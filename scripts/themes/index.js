@@ -20,10 +20,12 @@ const { value: themeMap } = renderSync({
 // List of themes.
 const themes = Object.keys(themeMap);
 
+const filterColor = ({ type }) => type === 'SassColor';
+
 // Generates the data for themes and tokens to template with Handlebars.
 const tokens = Object.keys(themeMap[themes[0]].value)
   // TODO - currently only handling color tokens.
-  .filter(token => themeMap[themes[0]].value[token].type === 'SassColor')
+  .filter(token => filterColor(themeMap[themes[0]].value[token]))
   .map(token => ({
     themes: [],
     token,
@@ -35,7 +37,7 @@ themes.forEach(theme => {
 
   Object.keys(tokenObject)
     // TODO - currently only handling color tokens.
-    .filter(tokenValue => tokenObject[tokenValue].type === 'SassColor')
+    .filter(tokenValue => filterColor(tokenObject[tokenValue]))
     .map(tokenValue => tokenObject[tokenValue])
     .forEach(({ value }, index) => {
       let { hex: color = 'colors' } = value;
