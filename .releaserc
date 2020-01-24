@@ -1,15 +1,11 @@
 {
   branches: [
     'master',
+    'next',
     {
+      channel: 'canary',
       name: 'dev',
       prerelease: 'prerelease',
-      channel: 'canary',
-    },
-    {
-      name: '3.x',
-      prerelease: 'alpha',
-      channel: 'next',
     },
   ],
   plugins: [
