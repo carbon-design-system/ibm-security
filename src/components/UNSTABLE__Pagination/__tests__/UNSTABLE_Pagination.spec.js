@@ -31,7 +31,7 @@ describe('UNSTABLE_Pagination', () => {
     await expect(document.body).toHaveNoDAPViolations('UNSTABLE_Pagination');
   });
 
-  test('should cycle panel elements in tab order', () => {
+  test('should cycle pagination elements in tab order', () => {
     const { getByLabelText } = render(
       <UNSTABLE__Pagination
         // Note that we are starting on page 2
