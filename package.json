@@ -68,7 +68,6 @@
     "throttle-debounce": "^2.0.1"
   },
   "devDependencies": {
-    "axe-core": "^3.4.1",
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
@@ -102,6 +101,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "autoprefixer": "^9.4.10",
+    "axe-core": "^3.4.1",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.7.1",
     "babel-loader": "^8.0.5",
@@ -149,7 +149,7 @@
     "rollup-plugin-node-resolve": "^4.2.4",
     "rollup-plugin-postcss": "^1.6.2",
     "sass-extract": "^2.1.0",
-    "semantic-release": "^16.0.0-beta.22",
+    "semantic-release": "^16.0.3",
     "style-loader": "^0.23.1",
     "stylelint": "^9.1.1",
     "stylelint-config-recommended-scss": "^3.2.0",
