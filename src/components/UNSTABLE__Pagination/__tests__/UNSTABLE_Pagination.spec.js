@@ -258,7 +258,7 @@ describe('UNSTABLE_Pagination', () => {
     expect(getByText(/1–5 items/i)).toBeInTheDocument();
   });
 
-  test("should not display 'items per page' or page sizer select if `pageSizes` is `undefined`", () => {
+  test('should not display `itemsPerPageText` or page sizer select if `pageSizes` is `undefined`', () => {
     const { queryByText } = render(
       <UNSTABLE__Pagination
         pageSize={5}
@@ -301,7 +301,7 @@ describe('UNSTABLE_Pagination', () => {
         pageSizes={[5]}
         // Note that `pagesUnknown` has been set to `true`:
         pagesUnknown
-        // Note that `totalItems` is not provided.
+        // Note that `totalItems` is not provided and is therefore `undefined`.
       >
         {({ currentPage, onSetPage, totalPages }) => (
           <PageSelector
@@ -318,8 +318,8 @@ describe('UNSTABLE_Pagination', () => {
     // because `pagesUnknown={true}`:
     expect(queryByText(/of 2 pages/i)).not.toBeInTheDocument();
 
-    // Expect default text "1-5 items" with 5 being derived from page size,
-    // not the total items:
+    // Expect default text "1-5 items" with 5 being derived from page size.
+    // The max in the range is NOT derived from the total items:
     expect(getByText(/1–5 items/i)).toBeInTheDocument();
 
     rerender(
