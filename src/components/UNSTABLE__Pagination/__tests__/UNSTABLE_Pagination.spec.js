@@ -31,7 +31,7 @@ describe('UNSTABLE_Pagination', () => {
     await expect(document.body).toHaveNoDAPViolations('UNSTABLE_Pagination');
   });
 
-  test("should update number of selectable pages when 'items per page' select is changed", () => {
+  test('should update number of selectable pages when "items per page" select is changed', () => {
     const { queryByDisplayValue, getByLabelText } = render(
       <UNSTABLE__Pagination totalItems={20} pageSize={5} pageSizes={[5, 10]}>
         {({ currentPage, onSetPage, totalPages }) => (
@@ -217,7 +217,7 @@ describe('UNSTABLE_Pagination', () => {
       />
     );
 
-    // Expect "previous" button to NOT disabled:
+    // Expect "previous" button to NOT be disabled:
     expect(
       getByText(/test previous button/i).closest('button')
     ).not.toHaveAttribute('disabled');
@@ -226,5 +226,128 @@ describe('UNSTABLE_Pagination', () => {
     expect(getByText(/test next button/i).closest('button')).toHaveAttribute(
       'disabled'
     );
+  });
+
+  test('should not display page selector if total items not provided', () => {
+    const { queryByLabelText, getByText } = render(
+      <UNSTABLE__Pagination
+        pageSize={5}
+        pageSizes={[5]}
+        pageText={page => `test page ${page}`}
+      >
+        {({ currentPage, onSetPage, totalPages }) => (
+          <PageSelector
+            currentPage={currentPage}
+            labelText="test page selector"
+            onChange={event => onSetPage(event.target.value)}
+            totalPages={totalPages}
+          />
+        )}
+      </UNSTABLE__Pagination>
+    );
+
+    // Expect page selector to not be shown,
+    // because without `totalItems`, can't calculate selectable pages:
+    expect(queryByLabelText(/test page selector/i)).not.toBeInTheDocument();
+
+    // Expect pageText value (with 1 being the current/default page):
+    expect(getByText(/test page 1/i)).toBeInTheDocument();
+
+    // Expect default text "1-5 items" with 5 being derived from page size,
+    // not the total items:
+    expect(getByText(/1–5 items/i)).toBeInTheDocument();
+  });
+
+  test("should not display 'items per page' or page sizer select if `pageSizes` is `undefined`", () => {
+    const { queryByText } = render(
+      <UNSTABLE__Pagination
+        pageSize={5}
+        pageSizes={undefined}
+        totalItems={10}
+        itemsPerPageText="test items per page"
+      />
+    );
+
+    // Expect `itemsPerPageText` to not be in document:
+    expect(queryByText(/test items per page/i)).not.toBeInTheDocument();
+
+    // Expect page sizer select to not be in the document:
+    expect(
+      document.getElementById(
+        'security--unstable-pagination__page-sizer__input-1'
+      )
+    ).not.toBeInTheDocument();
+  });
+
+  test('should display `pageRangeText` only (without a page select) if page selector child not provided', () => {
+    const { getByText } = render(
+      <UNSTABLE__Pagination
+        pageSize={5}
+        pageSizes={[5]}
+        totalItems={10}
+        pageRangeText={(current, total) => `test ${current} of ${total} pages`}
+      />
+    );
+
+    // Expect `pageRangeText` as-is, with 1 being the current page
+    // and 2 being the total pages, based on the a page size of 5 for 10 total items.
+    expect(getByText(/test 1 of 2 pages/i)).toBeInTheDocument();
+  });
+
+  test('should not display total pages or total items if `pagesUnknown` is `true`, even if `totalItems` is provided', () => {
+    const { getByText, queryByText, rerender } = render(
+      <UNSTABLE__Pagination
+        pageSize={5}
+        pageSizes={[5]}
+        // Note that `pagesUnknown` has been set to `true`:
+        pagesUnknown
+        // Note that `totalItems` is not provided.
+      >
+        {({ currentPage, onSetPage, totalPages }) => (
+          <PageSelector
+            currentPage={currentPage}
+            labelText="test page selector"
+            onChange={event => onSetPage(event.target.value)}
+            totalPages={totalPages}
+          />
+        )}
+      </UNSTABLE__Pagination>
+    );
+
+    // Expect default "of 2 pages" text not to be shown,
+    // because `pagesUnknown={true}`:
+    expect(queryByText(/of 2 pages/i)).not.toBeInTheDocument();
+
+    // Expect default text "1-5 items" with 5 being derived from page size,
+    // not the total items:
+    expect(getByText(/1–5 items/i)).toBeInTheDocument();
+
+    rerender(
+      <UNSTABLE__Pagination
+        pageSize={5}
+        pageSizes={[5]}
+        // Note that `pagesUnknown` has been set to `true`:
+        pagesUnknown
+        // Note that `totalItems` is now provided:
+        totalItems={10}
+      >
+        {({ currentPage, onSetPage, totalPages }) => (
+          <PageSelector
+            currentPage={currentPage}
+            labelText="test page selector"
+            onChange={event => onSetPage(event.target.value)}
+            totalPages={totalPages}
+          />
+        )}
+      </UNSTABLE__Pagination>
+    );
+
+    // Still expect default "of 2 pages" text not to be shown,
+    // because `pagesUnknown={true}` (despite the fact that `totalItems` is provided):
+    expect(queryByText(/of 2 pages/i)).not.toBeInTheDocument();
+
+    // Still expect default text "1-5 items" with 5 being derived from page size,
+    // not the total items (despite the fact that `totalItems` is provided):
+    expect(getByText(/1–5 items/i)).toBeInTheDocument();
   });
 });
