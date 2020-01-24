@@ -3,31 +3,13 @@
  * @copyright IBM Security 2019
  */
 
-import { cleanup, render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 import { Button, PanelV2, PanelContent } from '../../..';
 
 describe('PanelV2', () => {
-  afterEach(cleanup);
-
-  test('should render as expected', async () => {
-    render(
-      <PanelV2
-        title="test title"
-        subtitle="test subtitle"
-        closeButton={{
-          label: 'test close',
-        }}
-        renderFooter={() => <Button>test footer button</Button>}
-      >
-        <PanelContent>test content</PanelContent>
-      </PanelV2>
-    );
-    await expect(document.body).toMatchSnapshot();
-  });
-
   test('should have no Axe or DAP violations', async () => {
     const main = document.createElement('main');
     render(
@@ -62,7 +44,7 @@ describe('PanelV2', () => {
     );
 
     userEvent.click(getByLabelText(/test close/i));
-    expect(onCloseMock).toHaveBeenCalled();
+    expect(onCloseMock).toHaveBeenCalledTimes(1);
   });
 
   test('should not render panel when `isOpen` is set to `false`', () => {
