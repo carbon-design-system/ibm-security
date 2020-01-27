@@ -1,0 +1,13 @@
+////
+/// Filter selector styles.
+/// @group filter-panel
+/// @copyright IBM Security 2019
+////
+
+@import '../../../Component/mixins';
+
+@import 'mixins';
+
+@include security--component($name: filter-selector) {
+  @include filter-selector;
+}
