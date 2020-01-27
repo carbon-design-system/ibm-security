@@ -7,7 +7,7 @@ import ArrowLeft16 from '@carbon/icons-react/lib/arrow--left/16';
 import Close20 from '@carbon/icons-react/lib/close/20';
 
 import dataUri from 'data-uri.macro';
-import React, { Children, cloneElement, useState } from 'react';
+import React, { Children, cloneElement, useRef, useState } from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
 import theme from '../../globals/theme';
@@ -38,17 +38,33 @@ const SecurityShellHeader = ({ children, ...other }) => (
 );
 
 const SecurityShellHeaderAction = ({
+  activeAction,
   children,
   id,
-  isActive: activeAction,
   popover,
+  setActiveAction,
   ...other
 }) => {
   const isActive = popover && activeAction === id;
+  const ref = useRef(null);
+
+  const onClick = () => {
+    if (isActive) {
+      setActiveAction(null);
+    } else {
+      setActiveAction(id);
+
+      ref.current.focus();
+    }
+  };
 
   return (
     <>
-      {children}
+      {cloneElement(children, {
+        onClick,
+        onFocus: () => console.log('onFocus'),
+        ref,
+      })}
 
       {isActive && (
         <div
@@ -63,7 +79,7 @@ const SecurityShellHeaderAction = ({
 };
 
 const SecurityShellHeaderActions = ({ children, ...other }) => {
-  // const [isActive, setIsActive] = useState(null);
+  const [activeAction, setActiveAction] = useState(null);
 
   return (
     <div
@@ -72,7 +88,9 @@ const SecurityShellHeaderActions = ({ children, ...other }) => {
     >
       {Children.map(children, (child, index) =>
         cloneElement(child, {
+          activeAction,
           id: `${securityShellNamespace}__header__action--${index}`,
+          setActiveAction,
         })
       )}
     </div>
@@ -167,7 +185,7 @@ const SecurityShellSkipToContent = ({ ...other }) => (
 const toolbarNamespace = getComponentNamespace('toolbar');
 
 const SecurityShellToolbar = ({ children, ...other }) => {
-  const [isActive, setIsActive] = useState(null);
+  const [activeAction, setActiveAction] = useState(null);
 
   return (
     <nav
@@ -175,46 +193,50 @@ const SecurityShellToolbar = ({ children, ...other }) => {
       {...other}
     >
       <ul className={`${toolbarNamespace}__group`}>
-        {children({
-          isActive,
-          setIsActive: event => setIsActive(event.target.id),
-        })}
+        {Children.map(children, (child, index) =>
+          cloneElement(child, {
+            activeAction,
+            id: `${securityShellNamespace}__toolbar__action--${index}`,
+            setActiveAction,
+          })
+        )}
       </ul>
     </nav>
   );
 };
 
 const SecurityShellToolbarAction = ({
+  activeAction,
   children,
   id,
-  isActive: activeAction,
-  onClick: setIsActive,
   renderIcon,
+  setActiveAction,
   ...other
 }) => {
-  const [isAlreadyActive, setIsAlreadyActive] = useState(true);
   const isActive = activeAction === id;
+  const ref = useRef(null);
 
   return (
     <li>
       <IconButton
         id={id}
         iconClassName={`${toolbarNamespace}__icon`}
-        onClick={event => {
-          setIsActive(event);
+        onClick={() => {
+          if (isActive) {
+            setActiveAction(null);
+          } else {
+            setActiveAction(id);
 
-          if (isActive && isAlreadyActive) {
-            setIsAlreadyActive(false);
-          } else if (!isAlreadyActive) {
-            setIsAlreadyActive(true);
+            ref.current.focus();
           }
         }}
-        renderIcon={isActive && isAlreadyActive ? Close20 : renderIcon}
+        ref={ref}
+        renderIcon={isActive ? Close20 : renderIcon}
         tooltipDirection={IconButton.TooltipDirection.RIGHT}
         {...other}
       />
 
-      {isActive && isAlreadyActive && (
+      {isActive && (
         <aside className={`${toolbarNamespace}__panel`} role="menu">
           {children}
         </aside>

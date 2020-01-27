@@ -46,57 +46,38 @@ export const Default = () => (
     </SecurityShellReturnToBanner>
 
     <SecurityShellToolbar>
-      {({ isActive, setIsActive }) => (
-        <>
-          <SecurityShellToolbarAction
-            id="0"
-            aria-label="Toggle menu"
-            isActive={isActive}
-            onClick={setIsActive}
-            renderIcon={Menu20}
-          >
-            <Nav heading="Heading">
-              <NavList title="List">
-                <NavItem>Item 1</NavItem>
+      <SecurityShellToolbarAction
+        id="0"
+        aria-label="Toggle menu"
+        renderIcon={Menu20}
+      >
+        <Nav heading="Heading">
+          <NavList title="List">
+            <NavItem>Item 1</NavItem>
 
-                <NavItem>Item 2</NavItem>
-              </NavList>
+            <NavItem>Item 2</NavItem>
+          </NavList>
 
-              <NavItem>Item 3</NavItem>
-            </Nav>
+          <NavItem>Item 3</NavItem>
+        </Nav>
 
-            <Nav>
-              <NavItem>Item 4</NavItem>
+        <Nav>
+          <NavItem>Item 4</NavItem>
 
-              <NavItem>Item 5</NavItem>
-            </Nav>
-          </SecurityShellToolbarAction>
+          <NavItem>Item 5</NavItem>
+        </Nav>
+      </SecurityShellToolbarAction>
 
-          <SecurityShellToolbarAction
-            id="1"
-            aria-label="Toggle settings"
-            isActive={isActive}
-            onClick={setIsActive}
-            renderIcon={Settings20}
-          >
-            Action 2
-          </SecurityShellToolbarAction>
+      <SecurityShellToolbarAction
+        aria-label="Toggle settings"
+        renderIcon={Settings20}
+      >
+        Action 2
+      </SecurityShellToolbarAction>
 
-          <SecurityShellToolbarAction
-            id="2"
-            aria-label="Toggle help"
-            isActive={isActive}
-            onClick={event => {
-              action('onClick')(event);
-
-              setIsActive(event);
-            }}
-            renderIcon={Help20}
-          >
-            Action 3
-          </SecurityShellToolbarAction>
-        </>
-      )}
+      <SecurityShellToolbarAction aria-label="Toggle help" renderIcon={Help20}>
+        Action 3
+      </SecurityShellToolbarAction>
     </SecurityShellToolbar>
 
     <SecurityShellHeader>

@@ -5,7 +5,7 @@
 
 import classnames from 'classnames';
 import { bool, func, oneOf, string } from 'prop-types';
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
 
@@ -34,43 +34,51 @@ export const TooltipDirection = tooltipDirections.reduce(
 /**
  * Icon button component.
  */
-const IconButton = ({
-  className,
-  iconClassName,
-  iconSize,
-  label,
-  onClick,
-  path,
-  renderIcon,
-  size,
-  state,
-  tooltip,
-  tooltipDirection,
-  ...other
-}) => {
-  const hasTooltip = label && tooltip;
+const IconButton = forwardRef(
+  (
+    {
+      className,
+      iconClassName,
+      iconSize,
+      label,
+      onClick,
+      path,
+      renderIcon,
+      size,
+      state,
+      tooltip,
+      tooltipDirection,
+      ...other
+    },
+    ref
+  ) => {
+    const hasTooltip = label && tooltip;
 
-  return (
-    <button
-      className={classnames(namespace, className, {
-        [`${namespace}--active`]: state,
-        [`${namespace}--${size}`]: size,
-        [`${namespace}--tooltip`]: hasTooltip,
-        [`${namespace}--tooltip--${tooltipDirection}`]: hasTooltip,
-      })}
-      aria-label={label}
-      onClick={onClick}
-      {...other}
-    >
-      <Icon
-        className={iconClassName}
-        path={path}
-        renderIcon={renderIcon}
-        size={iconSize}
-      />
-    </button>
-  );
-};
+    return (
+      <button
+        className={classnames(namespace, className, {
+          [`${namespace}--active`]: state,
+          [`${namespace}--${size}`]: size,
+          [`${namespace}--tooltip`]: hasTooltip,
+          [`${namespace}--tooltip--${tooltipDirection}`]: hasTooltip,
+        })}
+        aria-label={label}
+        onClick={onClick}
+        ref={ref}
+        {...other}
+      >
+        <Icon
+          className={iconClassName}
+          path={path}
+          renderIcon={renderIcon}
+          size={iconSize}
+        />
+      </button>
+    );
+  }
+);
+
+IconButton.displayName = 'IconButton';
 
 IconButton.defaultProps = {
   className: null,
