@@ -46,11 +46,7 @@ export const Default = () => (
     </SecurityShellReturnToBanner>
 
     <SecurityShellToolbar>
-      <SecurityShellToolbarAction
-        id="0"
-        aria-label="Toggle menu"
-        renderIcon={Menu20}
-      >
+      <SecurityShellToolbarAction aria-label="Toggle menu" renderIcon={Menu20}>
         <Nav heading="Heading">
           <NavList title="List">
             <NavItem>Item 1</NavItem>
