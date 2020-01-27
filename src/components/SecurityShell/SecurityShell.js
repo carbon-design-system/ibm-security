@@ -139,6 +139,7 @@ const SecurityShellSkipToContent = ({ ...other }) => (
   <div className={`${shellNamespace}__skip-to-content`}>
     <Button
       className={`${shellNamespace}__skip-to-content__link`}
+      // eslint-disable-next-line jsx-a11y/tabindex-no-positive
       tabIndex={1}
       {...other}
     />
