@@ -31,6 +31,7 @@ import {
   SecurityShellHeaderPopoverHeader,
   SecurityShellHeaderPopoverNotification,
   SecurityShellHeaderPopoverNotifications,
+  SecurityShellReturnToBanner,
   SecurityShellSkipToContent,
   SecurityShellToolbar,
   SecurityShellToolbarAction,
@@ -39,6 +40,10 @@ import {
 export const Default = () => (
   <SecurityShell>
     <SecurityShellSkipToContent>Skip to content</SecurityShellSkipToContent>
+
+    <SecurityShellReturnToBanner href="#">
+      Return to Application / View
+    </SecurityShellReturnToBanner>
 
     <SecurityShellToolbar>
       {({ isActive, setIsActive }) => (
@@ -95,7 +100,7 @@ export const Default = () => (
     </SecurityShellToolbar>
 
     <SecurityShellHeader>
-      <SecurityShellHeaderName href="#0" offering="Cloud Pak for" prefix="IBM">
+      <SecurityShellHeaderName href="#" offering="Cloud Pak for" prefix="IBM">
         Security
       </SecurityShellHeaderName>
 
@@ -139,9 +144,9 @@ export const Default = () => (
               </SecurityShellHeaderPopoverNotifications>
 
               <SecurityShellHeaderPopoverFooter>
-                <Link href="#1">Link 1</Link>
+                <Link href="#0">Link 1</Link>
 
-                <Link href="#2">Link 2</Link>
+                <Link href="#0">Link 2</Link>
               </SecurityShellHeaderPopoverFooter>
             </>
           }
@@ -161,9 +166,9 @@ export const Default = () => (
               </SecurityShellHeaderPopoverContent>
 
               <SecurityShellHeaderPopoverFooter>
-                <Link href="#3">Edit profile</Link>
+                <Link href="#0">Edit profile</Link>
 
-                <Link href="#4">Sign out</Link>
+                <Link href="#0">Sign out</Link>
               </SecurityShellHeaderPopoverFooter>
             </>
           }

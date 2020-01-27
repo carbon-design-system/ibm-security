@@ -126,6 +126,7 @@ export SecurityShell, {
   SecurityShellHeaderPopoverHeader,
   SecurityShellHeaderPopoverNotification,
   SecurityShellHeaderPopoverNotifications,
+  SecurityShellReturnToBanner,
   SecurityShellSkipToContent,
   SecurityShellToolbar,
   SecurityShellToolbarAction,

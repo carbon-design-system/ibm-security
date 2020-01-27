@@ -3,8 +3,10 @@
  * @copyright IBM Security 2020
  */
 
+import ArrowLeft16 from '@carbon/icons-react/lib/arrow--left/16';
 import Close20 from '@carbon/icons-react/lib/close/20';
 
+import dataUri from 'data-uri.macro';
 import React, { Children, cloneElement, useState } from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
@@ -22,7 +24,7 @@ const shellNamespace = getComponentNamespace('shell');
 const securityShellNamespace = getComponentNamespace('security-shell');
 
 const SecurityShell = ({ children, ...other }) => (
-  <div className={shellNamespace} {...other}>
+  <div className={`${shellNamespace} ${securityShellNamespace}`} {...other}>
     {children}
   </div>
 );
@@ -135,6 +137,22 @@ const SecurityShellHeaderName = ({ children, offering, prefix, ...other }) => (
   </Link>
 );
 
+const SecurityShellReturnToBanner = ({ children, ...other }) => (
+  <Link
+    className={`${shellNamespace}__banner ${securityShellNamespace}__banner`}
+    style={{
+      backgroundImage: `url(${dataUri('../../images/aurora-banner@2x.png')})`,
+    }}
+    {...other}
+  >
+    <Icon
+      className={`${shellNamespace}__banner__icon`}
+      renderIcon={ArrowLeft16}
+    />
+    <span className={`${shellNamespace}__banner__text`}>{children}</span>
+  </Link>
+);
+
 const SecurityShellSkipToContent = ({ ...other }) => (
   <div className={`${shellNamespace}__skip-to-content`}>
     <Button
@@ -217,6 +235,7 @@ export {
   SecurityShellHeaderPopoverFooter,
   SecurityShellHeaderPopoverNotification,
   SecurityShellHeaderPopoverNotifications,
+  SecurityShellReturnToBanner,
   SecurityShellSkipToContent,
   SecurityShellToolbar,
   SecurityShellToolbarAction,

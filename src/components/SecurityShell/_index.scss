@@ -5,6 +5,7 @@
 ////
 
 @import '../SecurityHeader/mixins';
+@import '../Shell/mixins';
 @import '../Toolbar/mixins';
 
 @include security--component($name: security-shell) {
@@ -12,20 +13,28 @@
   /// @type Length
   $shell__toolbar__spacing: $toolbar__sizing__width;
 
+  $root: &;
+  $toolbar: '#{&}__toolbar';
+  $header: '#{&}__header';
+
+  &__banner ~ {
+    #{$toolbar},
+    #{$toolbar} #{$toolbar__namespace}__panel,
+    #{$header} > #{$header__namespace} {
+      margin-top: $shell__banner__sizing__height;
+    }
+  }
+
+  #{$toolbar} + #{$header} {
+    width: calc(#{$header__sizing__width} - #{$shell__toolbar__spacing});
+    margin-left: $shell__toolbar__spacing;
+  }
+
   &__group {
     position: relative;
-
-    > * {
-      height: inherit;
-    }
   }
 
   &__popover {
     top: $header__sizing__height;
-  }
-
-  &__toolbar + &__header {
-    width: calc(#{$header__sizing__width} - #{$shell__toolbar__spacing});
-    margin-left: $shell__toolbar__spacing;
   }
 }

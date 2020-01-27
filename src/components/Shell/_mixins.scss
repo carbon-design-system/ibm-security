@@ -10,13 +10,13 @@
 @import '../SecurityHeader/mixins';
 @import '../Toolbar/mixins';
 
-@mixin shell {
-  /// Banner height.
-  /// @type Length
-  $shell__banner__sizing__height: carbon--mini-units(
-    $count: 3,
-  );
+/// Banner height.
+/// @type Length
+$shell__banner__sizing__height: carbon--mini-units(
+  $count: 3,
+);
 
+@mixin shell {
   &--active {
     $header: '__header';
     $toolbar: '__toolbar';
