@@ -141,4 +141,8 @@ describe('SummaryCard', () => {
   //   // verify it can't be focused
   //   // verify it can't be interactived with
   // });
+
+  // test closing the expanded content
+
+  // test tabbing around expanded content?
 });
