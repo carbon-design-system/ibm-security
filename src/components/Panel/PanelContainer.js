@@ -153,19 +153,11 @@ export default class PanelContainer extends Component {
       subtitle,
       title,
       hasScrollingContent,
-
-      // Explicitly define so they aren't in `...other`.
-      disableEscape,
-      labels,
-      rootNode,
-
-      // Required because it may include `aria-label`, etc.
-      ...other
     } = this.props;
 
     const hasFooter = renderFooter || primaryButton;
 
-    const ariaLabel = title || this.props['aria-label'] || subtitle;
+    const ariaLabel = this.props['aria-label'] || title || subtitle;
 
     const getAriaLabelledBy = title ? this.panelTitleId : this.panelSubtitleId;
 
@@ -179,7 +171,7 @@ export default class PanelContainer extends Component {
       : {};
 
     return (
-      <div role="dialog" aria-label={ariaLabel} aria-modal="true" {...other}>
+      <div role="dialog" aria-label={ariaLabel} aria-modal="true">
         <header ref={this.header} className={`${namespace}__header`}>
           {title && (
             <div className={`${namespace}__header__container--title`}>

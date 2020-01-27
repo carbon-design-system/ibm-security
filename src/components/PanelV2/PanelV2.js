@@ -96,16 +96,11 @@ export default class PanelV2 extends Component {
       subtitle,
       title,
       hasScrollingContent,
-
-      // Explicitly define so it isn't in `...other`.
-      labels,
-
-      ...other
     } = this.props;
 
     const hasFooter = renderFooter || primaryButton;
 
-    const ariaLabel = title || this.props['aria-label'] || subtitle;
+    const ariaLabel = this.props['aria-label'] || title || subtitle;
 
     const getAriaLabelledBy = title ? this.panelTitleId : this.panelSubtitleId;
 
@@ -131,7 +126,6 @@ export default class PanelV2 extends Component {
               role="dialog"
               aria-label={ariaLabel}
               aria-modal="true"
-              {...other}
             >
               <header ref={this.header} className={`${namespace}__header`}>
                 <IconButton
