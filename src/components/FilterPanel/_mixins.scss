@@ -1,7 +1,7 @@
 ////
 /// Filter panel mixins.
 /// @group filter-panel
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2020
 ////
 
 @import '../../globals/index';
@@ -9,9 +9,5 @@
 @mixin filter-panel {
   &__title {
     @include carbon--type-style($name: body-short-01);
-  }
-
-  &__search {
-    margin-bottom: $carbon--spacing-05;
   }
 }
