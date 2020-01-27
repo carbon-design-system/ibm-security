@@ -15,6 +15,7 @@ export {
   SecurityShellHeaderPopoverHeader,
   SecurityShellHeaderPopoverNotification,
   SecurityShellHeaderPopoverNotifications,
+  SecurityShellSkipToContent,
   SecurityShellToolbar,
   SecurityShellToolbarAction,
 } from './SecurityShell';

@@ -10,6 +10,7 @@ import React, { Children, cloneElement, useState } from 'react';
 import { getComponentNamespace } from '../../globals/namespace';
 import theme from '../../globals/theme';
 
+import Button from '../Button';
 import HeaderNotification from '../SecurityHeader/HeaderNotification';
 import Icon from '../Icon';
 import IconButton from '../IconButton';
@@ -17,16 +18,17 @@ import Link from '../Link';
 import ScrollGradient from '../ScrollGradient';
 
 const namespace = getComponentNamespace('header');
-const shellNamespace = getComponentNamespace('security-shell');
+const shellNamespace = getComponentNamespace('shell');
+const securityShellNamespace = getComponentNamespace('security-shell');
 
 const SecurityShell = ({ children, ...other }) => (
-  <div className={getComponentNamespace('shell')} {...other}>
+  <div className={shellNamespace} {...other}>
     {children}
   </div>
 );
 
 const SecurityShellHeader = ({ children, ...other }) => (
-  <div className={`${namespace}__container ${shellNamespace}__header`}>
+  <div className={`${namespace}__container ${securityShellNamespace}__header`}>
     <header className={namespace} role="banner" {...other}>
       {children}
     </header>
@@ -48,7 +50,7 @@ const SecurityShellHeaderAction = ({
 
       {isActive && (
         <div
-          className={`${namespace}__popover ${shellNamespace}__popover`}
+          className={`${namespace}__popover ${securityShellNamespace}__popover`}
           {...other}
         >
           {popover}
@@ -62,10 +64,13 @@ const SecurityShellHeaderActions = ({ children, ...other }) => {
   // const [isActive, setIsActive] = useState(null);
 
   return (
-    <div className={`${namespace}__group ${shellNamespace}__group`} {...other}>
+    <div
+      className={`${namespace}__group ${securityShellNamespace}__group`}
+      {...other}
+    >
       {Children.map(children, (child, index) =>
         cloneElement(child, {
-          id: `${shellNamespace}__header__action--${index}`,
+          id: `${securityShellNamespace}__header__action--${index}`,
         })
       )}
     </div>
@@ -130,6 +135,16 @@ const SecurityShellHeaderName = ({ children, offering, prefix, ...other }) => (
   </Link>
 );
 
+const SecurityShellSkipToContent = ({ ...other }) => (
+  <div className={`${shellNamespace}__skip-to-content`}>
+    <Button
+      className={`${shellNamespace}__skip-to-content__link`}
+      tabIndex={1}
+      {...other}
+    />
+  </div>
+);
+
 const toolbarNamespace = getComponentNamespace('toolbar');
 
 const SecurityShellToolbar = ({ children, ...other }) => {
@@ -137,7 +152,7 @@ const SecurityShellToolbar = ({ children, ...other }) => {
 
   return (
     <nav
-      className={`${toolbarNamespace} ${shellNamespace}__toolbar`}
+      className={`${toolbarNamespace} ${securityShellNamespace}__toolbar`}
       {...other}
     >
       <ul className={`${toolbarNamespace}__group`}>
@@ -201,6 +216,7 @@ export {
   SecurityShellHeaderPopoverFooter,
   SecurityShellHeaderPopoverNotification,
   SecurityShellHeaderPopoverNotifications,
+  SecurityShellSkipToContent,
   SecurityShellToolbar,
   SecurityShellToolbarAction,
 };

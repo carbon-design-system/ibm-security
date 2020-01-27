@@ -126,6 +126,7 @@ export SecurityShell, {
   SecurityShellHeaderPopoverHeader,
   SecurityShellHeaderPopoverNotification,
   SecurityShellHeaderPopoverNotifications,
+  SecurityShellSkipToContent,
   SecurityShellToolbar,
   SecurityShellToolbarAction,
 } from './components/SecurityShell';
