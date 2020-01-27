@@ -3,6 +3,7 @@
  * @copyright IBM Security 2019
  */
 
+import Add16 from '@carbon/icons-react/lib/add/16';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
@@ -10,7 +11,7 @@ import React from 'react';
 import { Button, PanelV2, PanelContent } from '../../..';
 
 describe('PanelV2', () => {
-  test('should have no Axe or DAP violations', async () => {
+  test('should have no Axe or DAP violations with custom footer via `renderFooter`', async () => {
     const main = document.createElement('main');
     render(
       <PanelV2
@@ -20,6 +21,56 @@ describe('PanelV2', () => {
           label: 'test close',
         }}
         renderFooter={() => <Button>test footer button</Button>}
+      >
+        <PanelContent>test content</PanelContent>
+      </PanelV2>,
+      {
+        // DAP requires a landmark '<main>' in the DOM:
+        container: document.body.appendChild(main),
+      }
+    );
+    await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations('PanelV2');
+  });
+
+  test('should have no Axe or DAP violations with `title` as a `node`', async () => {
+    const main = document.createElement('main');
+    render(
+      <PanelV2
+        title={<span>test title</span>}
+        subtitle="test subtitle"
+        closeButton={{
+          label: 'test close',
+        }}
+      >
+        <PanelContent>test content</PanelContent>
+      </PanelV2>,
+      {
+        // DAP requires a landmark '<main>' in the DOM:
+        container: document.body.appendChild(main),
+      }
+    );
+    await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations('PanelV2');
+  });
+
+  test('should have no Axe or DAP violations with deprecated `primaryButton` & `secondaryButton`', async () => {
+    const main = document.createElement('main');
+    render(
+      <PanelV2
+        title="test title"
+        subtitle="test subtitle"
+        closeButton={{
+          label: 'test close',
+        }}
+        primaryButton={{
+          icon: Add16,
+          iconDescription: 'test icon description add',
+          label: 'test primary button label',
+        }}
+        secondaryButton={{
+          label: 'test secondary button label',
+        }}
       >
         <PanelContent>test content</PanelContent>
       </PanelV2>,
@@ -61,7 +112,7 @@ describe('PanelV2', () => {
     expect(queryByText(/test title/i)).not.toBeInTheDocument();
   });
 
-  it('should cycle panel elements in tab order', () => {
+  test('should cycle panel elements in tab order', () => {
     const { getByLabelText, getByText } = render(
       <PanelV2
         closeButton={{
