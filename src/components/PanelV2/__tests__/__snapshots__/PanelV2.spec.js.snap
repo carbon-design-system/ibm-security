@@ -284,7 +284,6 @@ exports[`PanelV2 renders 1`] = `
                     aria-label="Label"
                     aria-modal="true"
                     className="security--panelv2"
-                    isOpen={true}
                     role="dialog"
                   >
                     <header
