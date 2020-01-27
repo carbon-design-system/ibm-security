@@ -18,7 +18,7 @@ import {
 } from '../../..';
 
 describe('SummaryCard', () => {
-  test('should have no Axe or DAP violations with custom footer via `renderFooter`', async () => {
+  test('should have no Axe or DAP violations`', async () => {
     const main = document.createElement('main');
     render(
       <SummaryCard>
@@ -128,7 +128,17 @@ describe('SummaryCard', () => {
     expect(titleSelector).toHaveFocus();
   });
 
-  // test that expanded content is not visible until action is clicked & expanded
+  // test('should only show expandable content when corresponding action is activated', () => {
+  //   // render
+  //   // check expandable content is not there
+  //   // click on action button
+  //   // check that expandable content IS there
+  // });
 
-  // if something is loading it can't be focused
+  // test('should not allow a loading action button to be focussed or interactive', () => {
+  //   // render
+  //   // find loading action
+  //   // verify it can't be focused
+  //   // verify it can't be interactived with
+  // });
 });
