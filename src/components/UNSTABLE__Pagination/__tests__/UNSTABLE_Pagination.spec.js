@@ -339,7 +339,7 @@ describe('UNSTABLE_Pagination', () => {
     ).not.toBeInTheDocument();
   });
 
-  test('should display `pageRangeText` only (without a page select) if page selector child not provided', () => {
+  test('should display `pageRangeText` only (without a page `<select>`) if page selector child not provided', () => {
     const { getByText } = render(
       <UNSTABLE__Pagination
         pageSize={5}
@@ -354,8 +354,8 @@ describe('UNSTABLE_Pagination', () => {
     expect(getByText(/test 1 of 2 pages/i)).toBeInTheDocument();
   });
 
-  test('should not display total pages or total items if `pagesUnknown` is `true`, even if `totalItems` is provided', () => {
-    const { getByText, queryByText, rerender } = render(
+  test('should not display total pages or total items if `pagesUnknown` is `true`', () => {
+    const { getByText, queryByText } = render(
       <UNSTABLE__Pagination
         pageSize={5}
         pageSizes={[5]}
@@ -381,8 +381,10 @@ describe('UNSTABLE_Pagination', () => {
     // Expect default text "1-5 items" with 5 being derived from page size.
     // The max in the range is NOT derived from the total items:
     expect(getByText(/1–5 items/i)).toBeInTheDocument();
+  });
 
-    rerender(
+  test('should not display total pages or total items if `pagesUnknown` is `true`, even if `totalItems` is provided', () => {
+    const { getByText, queryByText } = render(
       <UNSTABLE__Pagination
         pageSize={5}
         pageSizes={[5]}
