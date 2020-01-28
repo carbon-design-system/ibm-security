@@ -3,12 +3,17 @@
  * @copyright IBM Security 2019
  */
 
+/* eslint-disable no-useless-computed-key, react/require-default-props */
+
 import Close20 from '@carbon/icons-react/lib/close/20';
 
 import classnames from 'classnames';
 import PropTypes, { func } from 'prop-types';
 import React, { Component, createRef, Fragment } from 'react';
 import { createPortal } from 'react-dom';
+
+import requiredIfGivenPropExists from 'carbon-components-react/lib/prop-types/requiredIfGivenPropExists';
+import setupGetInstanceId from 'carbon-components-react/lib/tools/setupGetInstanceId';
 
 import { getComponentNamespace } from '../../globals/namespace';
 import * as defaultLabels from '../../globals/nls';
@@ -20,6 +25,7 @@ import Button from '../Button';
 import IconButton from '../IconButton';
 
 export const namespace = getComponentNamespace('panel');
+const getInstanceId = setupGetInstanceId();
 
 /**
  * Panel container component.
@@ -112,6 +118,10 @@ export default class PanelContainer extends Component {
     });
   }
 
+  panelInstanceId = `panel-${getInstanceId()}`;
+  panelTitleId = `${namespace}__title--${this.panelInstanceId}`;
+  panelSubtitleId = `${namespace}__subtitle--${this.panelInstanceId}`;
+
   footer = createRef();
   header = createRef();
 
@@ -142,18 +152,40 @@ export default class PanelContainer extends Component {
       secondaryButton,
       subtitle,
       title,
+      hasScrollingContent,
     } = this.props;
 
     const hasFooter = renderFooter || primaryButton;
 
+    const ariaLabel = this.props['aria-label'] || title || subtitle;
+
+    const getAriaLabelledBy = title ? this.panelTitleId : this.panelSubtitleId;
+
+    const hasScrollingContentProps = hasScrollingContent
+      ? {
+          tabIndex: 0,
+          role: 'region',
+          'aria-label': ariaLabel,
+          'aria-labelledby': getAriaLabelledBy,
+        }
+      : {};
+
     return (
-      <Fragment>
+      <div role="dialog" aria-label={ariaLabel} aria-modal="true">
         <header ref={this.header} className={`${namespace}__header`}>
           {title && (
             <div className={`${namespace}__header__container--title`}>
-              <div className={`${namespace}__header--title`}>{title}</div>
+              <div
+                id={this.panelTitleId}
+                className={`${namespace}__header--title`}
+              >
+                {title}
+              </div>
               {subtitle && (
-                <div className={`${namespace}__header--subtitle`}>
+                <div
+                  id={this.panelSubtitleId}
+                  className={`${namespace}__header--subtitle`}
+                >
                   {subtitle}
                 </div>
               )}
@@ -176,6 +208,8 @@ export default class PanelContainer extends Component {
             marginTop: `${this.state.bodyMargin.top}px`,
             marginBottom: `${this.state.bodyMargin.bottom}px`,
           }}
+          {...hasScrollingContentProps}
+          aria-labelledby={getAriaLabelledBy}
         >
           {children}
         </section>
@@ -212,7 +246,7 @@ export default class PanelContainer extends Component {
             )}
           </footer>
         )}
-      </Fragment>
+      </div>
     );
   };
 
@@ -281,6 +315,19 @@ PanelContainer.propTypes = {
   rootNode: isNode() ? PropTypes.instanceOf(Node) : PropTypes.any,
 
   labels: defaultLabels.propType,
+
+  /**
+   * Specify whether the panel contains scrolling content
+   */
+  hasScrollingContent: PropTypes.bool,
+
+  /**
+   * Required props for the accessibility label of the header
+   */
+  ['aria-label']: requiredIfGivenPropExists(
+    'hasScrollingContent',
+    PropTypes.string
+  ),
 };
 
 PanelContainer.defaultProps = {
@@ -294,4 +341,7 @@ PanelContainer.defaultProps = {
   renderFooter: null,
   rootNode: isNode() ? document.body : undefined,
   labels: {},
+  hasScrollingContent: false,
 };
+
+/* eslint-enable */
