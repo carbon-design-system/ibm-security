@@ -52,7 +52,6 @@
     "@carbon/motion": "10.5.0",
     "@carbon/themes": "10.9.0",
     "@carbon/type": "10.8.0",
-    "@testing-library/user-event": "^8.0.3",
     "carbon-components": "10.10.0-alpha.0",
     "carbon-components-react": "7.9.0",
     "classnames": "^2.2.5",
