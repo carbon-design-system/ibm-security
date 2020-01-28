@@ -1,0 +1,12 @@
+////
+/// Filter subcategory styles.
+/// @copyright IBM Security 2019
+////
+
+@import '../../../Component/mixins';
+
+@import 'mixins';
+
+@include security--component($name: filter-subcategory) {
+  @include filter-subcategory;
+}
