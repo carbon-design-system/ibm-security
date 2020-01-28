@@ -184,15 +184,4 @@ describe('SummaryCard', () => {
     // Expect expanded content to be visible.
     expect(getByText(/test expanded action content/i)).toBeVisible();
   });
-
-  // test('should not allow a loading action button to be focussed or interactive', () => {
-  //   // render
-  //   // find loading action
-  //   // verify it can't be focused
-  //   // verify it can't be interactived with
-  // });
-
-  // test closing the expanded content
-
-  // test tabbing around expanded content?
 });
