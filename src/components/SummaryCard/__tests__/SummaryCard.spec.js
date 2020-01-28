@@ -155,33 +155,4 @@ describe('SummaryCard', () => {
     // The title.
     expect(titleSelector).toHaveFocus();
   });
-
-  test('should only show expandable content when corresponding action is activated', () => {
-    const { getByText, queryByText } = render(
-      <SummaryCard>
-        <SummaryCardHeader title="test summary card title" />
-        <SummaryCardBody>test card body content</SummaryCardBody>
-        <SummaryCardFooter>
-          <SummaryCardAction
-            closeButtonIconDescription="test close button"
-            expandedContent="test expanded action content"
-            renderIcon={Folder20}
-          >
-            test button
-          </SummaryCardAction>
-        </SummaryCardFooter>
-      </SummaryCard>
-    );
-
-    // Expect expanded content to NOT be in the document.
-    expect(
-      queryByText(/test expanded action content/i)
-    ).not.toBeInTheDocument();
-
-    // Click on the action button to show expanded content.
-    userEvent.click(getByText(/test button/i).closest('button'));
-
-    // Expect expanded content to be visible.
-    expect(getByText(/test expanded action content/i)).toBeVisible();
-  });
 });
