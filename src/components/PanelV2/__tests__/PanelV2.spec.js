@@ -54,7 +54,7 @@ describe('PanelV2', () => {
     );
     await expect(document.body).toHaveNoAxeViolations();
     await expect(document.body).toHaveNoDAPViolations(
-      'PanelV2 with title as node'
+      'PanelV2 with title or subtitle as node'
     );
   });
 
