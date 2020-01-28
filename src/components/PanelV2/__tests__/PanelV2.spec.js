@@ -35,12 +35,12 @@ describe('PanelV2', () => {
     );
   });
 
-  test('should have no Axe or DAP violations with `title` as a `node`', async () => {
+  test('should have no Axe or DAP violations with `title` or `subtitle` as a `node`', async () => {
     const main = document.createElement('main');
     render(
       <PanelV2
         title={<span>test title</span>}
-        subtitle="test subtitle"
+        subtitle={<span>test subtitle</span>}
         closeButton={{
           label: 'test close',
         }}
