@@ -162,7 +162,7 @@ export default class PanelContainer extends Component {
     const getAriaLabelledBy =
       title || subtitle
         ? {
-            'aria-labelledBy': title ? this.panelTitleId : this.panelSubtitleId,
+            'aria-labelledby': title ? this.panelTitleId : this.panelSubtitleId,
           }
         : {};
 
@@ -171,7 +171,6 @@ export default class PanelContainer extends Component {
           tabIndex: 0,
           role: 'region',
           'aria-label': ariaLabel,
-          'aria-labelledby': getAriaLabelledBy,
         }
       : {};
 

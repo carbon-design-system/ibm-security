@@ -105,7 +105,7 @@ export default class PanelV2 extends Component {
     const getAriaLabelledBy =
       title || subtitle
         ? {
-            'aria-labelledBy': title ? this.panelTitleId : this.panelSubtitleId,
+            'aria-labelledby': title ? this.panelTitleId : this.panelSubtitleId,
           }
         : {};
 
