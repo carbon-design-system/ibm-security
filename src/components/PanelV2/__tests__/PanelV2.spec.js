@@ -58,6 +58,37 @@ describe('PanelV2', () => {
     );
   });
 
+  test('should have no Axe or DAP violations when there is scrolling content', async () => {
+    const main = document.createElement('main');
+    render(
+      <PanelV2
+        // Note that title (or subtitle) should be provided here
+        // to generate a valid `aria-labelledBy` for tabbable scrolling content:
+        title="test title"
+        closeButton={{
+          label: 'test close',
+        }}
+        // Note that `hasScrollingContent={true}` so the `PanelContent` wrapper is tabbable:
+        hasScrollingContent
+        // `aria-label` provided because there is scrolling content:
+        aria-label="test aria-label"
+      >
+        <PanelContent>
+          test content text
+          <Button>test content button</Button>
+        </PanelContent>
+      </PanelV2>,
+      {
+        // DAP requires a landmark '<main>' in the DOM:
+        container: document.body.appendChild(main),
+      }
+    );
+    await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations(
+      'PanelV2 with hasScrollingContent'
+    );
+  });
+
   test('should have no Axe or DAP violations with deprecated `primaryButton` & `secondaryButton`', async () => {
     const main = document.createElement('main');
     render(
