@@ -18,7 +18,6 @@ import { styles } from '@carbon/type/lib';
 
 import { disableCentered, patterns } from '../../../.storybook';
 
-import { label } from '../_mocks_';
 import { header, profile, toolbar } from '../Shell/_mocks_';
 import { labels } from './_mocks_';
 
@@ -39,8 +38,9 @@ const { interactive01, text04 } = theme;
 const closeButtonLabel = 'Close';
 
 const props = {
-  title: label,
-  subtitle: label,
+  title: 'Example title',
+  subtitle: 'Example subtitle',
+  ['aria-label']: 'Example aria-label', // eslint-disable-line no-useless-computed-key
   labels,
 };
 
