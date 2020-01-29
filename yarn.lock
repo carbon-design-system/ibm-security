@@ -2299,7 +2299,7 @@
     "@testing-library/dom" "^6.3.0"
     "@types/testing-library__react" "^9.1.0"
 
-"@testing-library/user-event@^8.0.3":
+"@testing-library/user-event@^8.1.0":
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-8.1.0.tgz#6362a9a01c5a4f612e8ef6eafd69e71e355c9f09"
   integrity sha512-42VHeLj4877FYIlehDQEP24rmixcfkRpPSil8icNKFJfU4pNArI0EPaKCoAaDr/p6NThW+QHFRiwws80PUNFtg==
