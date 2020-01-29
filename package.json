@@ -27,7 +27,7 @@
     "build:post:clean-css": "cleancss -O2 -o css/index.min.css css/index.css",
     "build:post:storybook": "run-s build:pre:grid && build-storybook -s public",
     "debug:scss": "node scripts/debugScss.js",
-    "docs": "node scripts/themes && git add .",
+    "docs": "node scripts/themes && git add docs/",
     "format": "yarn format:precommit '**/*.{js,md,scss}'",
     "format:precommit": "prettier --ignore-path .gitignore --write",
     "lint:js": "yarn lint:js:precommit .",
