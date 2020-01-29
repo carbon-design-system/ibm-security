@@ -159,14 +159,18 @@ export default class PanelContainer extends Component {
 
     const ariaLabel = this.props['aria-label'] || title || subtitle;
 
-    const getAriaLabelledBy = title ? this.panelTitleId : this.panelSubtitleId;
+    const getAriaLabelledBy =
+      title || subtitle
+        ? {
+            'aria-labelledby': title ? this.panelTitleId : this.panelSubtitleId,
+          }
+        : {};
 
     const hasScrollingContentProps = hasScrollingContent
       ? {
           tabIndex: 0,
           role: 'region',
           'aria-label': ariaLabel,
-          'aria-labelledby': getAriaLabelledBy,
         }
       : {};
 
@@ -209,7 +213,7 @@ export default class PanelContainer extends Component {
             marginBottom: `${this.state.bodyMargin.bottom}px`,
           }}
           {...hasScrollingContentProps}
-          aria-labelledby={getAriaLabelledBy}
+          {...getAriaLabelledBy}
         >
           {children}
         </section>
