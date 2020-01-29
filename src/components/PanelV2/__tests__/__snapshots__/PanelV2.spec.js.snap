@@ -9,6 +9,7 @@ exports[`PanelV2 renders 1`] = `
     }
   }
   focusTrap={true}
+  hasScrollingContent={false}
   isOpen={true}
   labels={Object {}}
   renderFooter={[Function]}
@@ -94,7 +95,10 @@ exports[`PanelV2 renders 1`] = `
                   class="security--portal__container"
                 >
                   <section
+                    aria-label="Label"
+                    aria-modal="true"
                     class="security--panelv2 security--panelv2__transition--appear"
+                    role="dialog"
                   >
                     <header
                       class="security--panelv2__header"
@@ -124,24 +128,25 @@ exports[`PanelV2 renders 1`] = `
                       >
                         <h2
                           class="security--panelv2__header--title"
+                          id="security--panelv2__title--panel-1"
                         >
                           Label
                         </h2>
                         <div
                           class="security--panelv2__header--subtitle"
+                          id="security--panelv2__subtitle--panel-1"
                         >
                           Label
                         </div>
                       </div>
                     </header>
                     <section
+                      aria-labelledby="security--panelv2__title--panel-1"
                       class="security--panelv2__body security--panelv2__body--footer"
                       style="margin-top: 0px; margin-bottom: 0px;"
                     >
                       <div
                         class="security--panel__body--content"
-                        role="tabpanel"
-                        tabindex="0"
                       >
                         Label
                       </div>
@@ -181,7 +186,10 @@ exports[`PanelV2 renders 1`] = `
                     class="security--portal__container"
                   >
                     <section
+                      aria-label="Label"
+                      aria-modal="true"
                       class="security--panelv2 security--panelv2__transition--appear"
+                      role="dialog"
                     >
                       <header
                         class="security--panelv2__header"
@@ -211,24 +219,25 @@ exports[`PanelV2 renders 1`] = `
                         >
                           <h2
                             class="security--panelv2__header--title"
+                            id="security--panelv2__title--panel-1"
                           >
                             Label
                           </h2>
                           <div
                             class="security--panelv2__header--subtitle"
+                            id="security--panelv2__subtitle--panel-1"
                           >
                             Label
                           </div>
                         </div>
                       </header>
                       <section
+                        aria-labelledby="security--panelv2__title--panel-1"
                         class="security--panelv2__body security--panelv2__body--footer"
                         style="margin-top: 0px; margin-bottom: 0px;"
                       >
                         <div
                           class="security--panel__body--content"
-                          role="tabpanel"
-                          tabindex="0"
                         >
                           Label
                         </div>
@@ -272,7 +281,10 @@ exports[`PanelV2 renders 1`] = `
                   paused={false}
                 >
                   <section
+                    aria-label="Label"
+                    aria-modal="true"
                     className="security--panelv2"
+                    role="dialog"
                   >
                     <header
                       className="security--panelv2__header"
@@ -369,17 +381,20 @@ exports[`PanelV2 renders 1`] = `
                       >
                         <h2
                           className="security--panelv2__header--title"
+                          id="security--panelv2__title--panel-1"
                         >
                           Label
                         </h2>
                         <div
                           className="security--panelv2__header--subtitle"
+                          id="security--panelv2__subtitle--panel-1"
                         >
                           Label
                         </div>
                       </div>
                     </header>
                     <section
+                      aria-labelledby="security--panelv2__title--panel-1"
                       className="security--panelv2__body security--panelv2__body--footer"
                       style={
                         Object {
@@ -391,8 +406,6 @@ exports[`PanelV2 renders 1`] = `
                       <PanelContent>
                         <div
                           className="security--panel__body--content"
-                          role="tabpanel"
-                          tabIndex="0"
                         >
                           Label
                         </div>
