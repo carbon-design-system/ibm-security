@@ -18,11 +18,7 @@ const namespace = getComponentNamespace('panel');
  */
 const PanelContent = props => {
   const classes = classnames(`${namespace}__body--content`, props.className);
-  return (
-    <div tabIndex="0" role="tabpanel" className={classes}>
-      {props.children}
-    </div>
-  );
+  return <div className={classes}>{props.children}</div>;
 };
 
 PanelContent.defaultProps = {

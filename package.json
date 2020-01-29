@@ -1,6 +1,6 @@
 {
   "name": "@carbon/ibm-security",
-  "version": "1.16.0-prerelease.1",
+  "version": "1.16.0-prerelease.3",
   "description": "Carbon for IBM Security",
   "license": "Apache-2.0",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "build:post:clean-css": "cleancss -O2 -o css/index.min.css css/index.css",
     "build:post:storybook": "run-s build:pre:grid && build-storybook -s public",
     "debug:scss": "node scripts/debugScss.js",
-    "docs": "node scripts/themes && git add .",
+    "docs": "node scripts/themes && git add docs/themes/themes.md",
     "format": "yarn format:precommit '**/*.{js,md,scss}'",
     "format:precommit": "prettier --ignore-path .gitignore --write",
     "lint:js": "yarn lint:js:precommit .",
