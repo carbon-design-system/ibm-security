@@ -9,6 +9,8 @@ import React from 'react';
 
 import { UNSTABLE__Pagination, PageSelector } from '../../..';
 
+import { namespace } from '../Pagination';
+
 describe('UNSTABLE_Pagination', () => {
   test('should have no Axe or DAP violations', async () => {
     const main = document.createElement('main');
@@ -54,14 +56,15 @@ describe('UNSTABLE_Pagination', () => {
       </UNSTABLE__Pagination>
     );
 
+    // Find the "page sizer" select that defines "items per page":
+    const pageSizer = document.getElementById(
+      `${namespace}__page-sizer__input-1`
+    );
+
     userEvent.tab();
 
     // The "items per page" select element:
-    expect(
-      document.getElementById(
-        'security--unstable-pagination__page-sizer__input-1'
-      )
-    ).toHaveFocus();
+    expect(pageSizer).toHaveFocus();
 
     userEvent.tab();
 
@@ -84,11 +87,7 @@ describe('UNSTABLE_Pagination', () => {
 
     // Loop complete.
     // The "items per page" select element:
-    expect(
-      document.getElementById(
-        'security--unstable-pagination__page-sizer__input-1'
-      )
-    ).toHaveFocus();
+    expect(pageSizer).toHaveFocus();
   });
 
   test('should update number of selectable pages when "items per page" select is changed', () => {
@@ -107,7 +106,7 @@ describe('UNSTABLE_Pagination', () => {
 
     // Find the "page sizer" select that defines "items per page":
     const pageSizer = document.getElementById(
-      'security--unstable-pagination__page-sizer__input-1'
+      `${namespace}__page-sizer__input-1`
     );
 
     // Extract default "page sizer" values:
@@ -333,9 +332,7 @@ describe('UNSTABLE_Pagination', () => {
 
     // Expect page sizer select to not be in the document:
     expect(
-      document.getElementById(
-        'security--unstable-pagination__page-sizer__input-1'
-      )
+      document.getElementById(`${namespace}__page-sizer__input-1`)
     ).not.toBeInTheDocument();
   });
 
