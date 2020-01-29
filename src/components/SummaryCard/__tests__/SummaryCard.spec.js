@@ -17,6 +17,9 @@ import {
   Tooltip,
 } from '../../..';
 
+import { carbonPrefix } from '../../../globals/namespace';
+import { namespace as headerNamespace } from '../SummaryCardHeader/SummaryCardHeader';
+
 describe('SummaryCard', () => {
   test('should have no Axe or DAP violations`', async () => {
     const main = document.createElement('main');
@@ -117,7 +120,7 @@ describe('SummaryCard', () => {
     );
 
     const titleSelector = document.querySelector(
-      '.security--summary-card__header__title button.bx--tooltip--a11y'
+      `.${headerNamespace}__title button.${carbonPrefix}tooltip--a11y`
     );
 
     userEvent.tab();
