@@ -85,7 +85,9 @@ describe('SummaryCard', () => {
     userEvent.click(getByText(/test button/i).closest('button'));
 
     await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('SummaryCard');
+    await expect(document.body).toHaveNoDAPViolations(
+      'SummaryCard with expandable content'
+    );
   });
 
   test('should cycle summary card elements in tab order', () => {

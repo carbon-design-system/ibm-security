@@ -8,11 +8,14 @@ import React from 'react';
 
 import { SummaryCardBatchActions } from '../../../..';
 
+import { batchActionsNamespace } from '../SummaryCardBatchActions';
+
 describe('SummaryCardBatchActions', () => {
-  it('renders', () => {
+  test('should have class with security namespace', () => {
+    render(<SummaryCardBatchActions />);
+
     expect(
-      render(<SummaryCardBatchActions onCancel={jest.fn()} totalSelected={0} />)
-        .container.firstChild
-    ).toMatchSnapshot();
+      document.querySelector(`.${batchActionsNamespace}`)
+    ).toBeInTheDocument();
   });
 });

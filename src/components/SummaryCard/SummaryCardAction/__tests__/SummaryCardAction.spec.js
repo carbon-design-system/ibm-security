@@ -12,18 +12,29 @@ import { SummaryCardAction } from '../../../..';
 describe('SummaryCardAction', () => {
   test('should not be interactive when loading', () => {
     const { getByText } = render(
-      <SummaryCardAction loading>test button</SummaryCardAction>
+      <div>
+        <SummaryCardAction loading>test button</SummaryCardAction>
+        <button>test example button</button>
+      </div>
     );
-
-    userEvent.tab();
-
-    // The loading button cannot be focussed:
-    expect(getByText(/test button/i)).not.toHaveFocus();
 
     // Expect button to have `disabled` attribute:
     expect(getByText(/test button/i).closest('button')).toHaveAttribute(
       'disabled'
     );
+
+    userEvent.tab();
+
+    // Expect the loading button, listed first, not to be focussed:
+    expect(getByText(/test button/i)).not.toHaveFocus();
+
+    // Expect the example button, listed second, to be focussed:
+    expect(getByText(/test example button/i)).toHaveFocus();
+
+    userEvent.tab();
+
+    // Expect the example button to still be focussed:
+    expect(getByText(/test example button/i)).toHaveFocus();
   });
 
   test('should only show expandable content when activated', () => {
