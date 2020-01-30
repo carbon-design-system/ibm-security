@@ -9,7 +9,15 @@ import React from 'react';
 
 import { SummaryCardAction } from '../../../..';
 
+import { namespace } from '../SummaryCardAction';
+
 describe('SummaryCardAction', () => {
+  test('should have root class with security namespace', () => {
+    render(<SummaryCardAction>test button</SummaryCardAction>);
+
+    expect(document.querySelector(`.${namespace}`)).toBeInTheDocument();
+  });
+
   test('should not be interactive when loading', () => {
     const { getByText } = render(
       <div>

@@ -16,7 +16,7 @@ import Transition from '../../Transition';
 
 import { getComponentNamespace } from '../../../globals/namespace/index';
 
-const namespace = getComponentNamespace('summary-card__action');
+export const namespace = getComponentNamespace('summary-card__action');
 
 const transitionSegment = 150; // duration--moderate-01
 

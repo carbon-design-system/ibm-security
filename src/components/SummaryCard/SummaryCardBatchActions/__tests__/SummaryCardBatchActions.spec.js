@@ -8,14 +8,12 @@ import React from 'react';
 
 import { SummaryCardBatchActions } from '../../../..';
 
-import { batchActionsNamespace } from '../SummaryCardBatchActions';
+import { namespace } from '../SummaryCardBatchActions';
 
 describe('SummaryCardBatchActions', () => {
-  test('should have class with security namespace', () => {
+  test('should have root class with security namespace', () => {
     render(<SummaryCardBatchActions />);
 
-    expect(
-      document.querySelector(`.${batchActionsNamespace}`)
-    ).toBeInTheDocument();
+    expect(document.querySelector(`.${namespace}`)).toBeInTheDocument();
   });
 });

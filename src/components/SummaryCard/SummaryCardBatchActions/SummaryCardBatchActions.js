@@ -11,7 +11,7 @@ import { TableBatchActions } from '../../DataTable';
 
 import { namespace as summaryCardNamespace } from '../SummaryCard';
 
-export const batchActionsNamespace = appendComponentNamespace(
+export const namespace = appendComponentNamespace(
   summaryCardNamespace,
   'batch-actions'
 );
@@ -30,7 +30,7 @@ const translationKeys = [
 
 const SummaryCardBatchActions = ({ translateWithId: t, ...other }) => (
   <TableBatchActions
-    className={batchActionsNamespace}
+    className={namespace}
     translateWithId={(id, state) =>
       t
         ? t(translationKeys[carbonTranslationKeys.indexOf(id)], state)

@@ -1,18 +1,18 @@
 /**
- * @file Summary card body tests.
+ * @file Summary card footer tests.
  * @copyright IBM Security 2019
  */
 
 import { render } from '@testing-library/react';
 import React from 'react';
 
-import { SummaryCardBody } from '../../../..';
+import { SummaryCardFooter } from '../../../..';
 
-import { namespace } from '../SummaryCardBody';
+import { namespace } from '../SummaryCardFooter';
 
-describe('SummaryCardBody', () => {
+describe('SummaryCardFooter', () => {
   test('should have root class with security namespace', () => {
-    render(<SummaryCardBody />);
+    render(<SummaryCardFooter />);
 
     expect(document.querySelector(`.${namespace}`)).toBeInTheDocument();
   });
