@@ -300,6 +300,8 @@ describe('UNSTABLE_Pagination', () => {
         pageSizes={[5]}
         pageText={page => `test page ${page}`}
       >
+        {/* Note that a PageSelector is provided,
+        but it will not be shown because `totalItems` is `undefined`: */}
         {({ currentPage, onSetPage, totalPages }) => (
           <PageSelector
             currentPage={currentPage}
