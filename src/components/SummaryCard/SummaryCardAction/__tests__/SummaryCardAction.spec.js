@@ -21,20 +21,22 @@ describe('SummaryCardAction', () => {
   test('should not be interactive when loading', () => {
     const { getByText } = render(
       <div>
-        <SummaryCardAction loading>test button</SummaryCardAction>
+        {/* This button is NOT interactive: */}
+        <SummaryCardAction loading>test loading button</SummaryCardAction>
+        {/* This button is interactive: */}
         <button>test example button</button>
       </div>
     );
 
     // Expect button to have `disabled` attribute:
-    expect(getByText(/test button/i).closest('button')).toHaveAttribute(
+    expect(getByText(/test loading button/i).closest('button')).toHaveAttribute(
       'disabled'
     );
 
     userEvent.tab();
 
     // Expect the loading button, listed first, not to be focussed:
-    expect(getByText(/test button/i)).not.toHaveFocus();
+    expect(getByText(/test loading button/i)).not.toHaveFocus();
 
     // Expect the example button, listed second, to be focussed:
     expect(getByText(/test example button/i)).toHaveFocus();
