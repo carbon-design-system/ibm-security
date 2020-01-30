@@ -1,6 +1,6 @@
 /**
  * @file Summary card header tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2020
  */
 
 import { render } from '@testing-library/react';
