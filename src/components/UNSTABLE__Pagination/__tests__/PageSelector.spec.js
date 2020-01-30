@@ -1,6 +1,6 @@
 /**
- * @file UNSTABLE pagination tests.
- * @copyright IBM Security 2019
+ * @file Page selector tests.
+ * @copyright IBM Security 2020
  */
 
 import { render } from '@testing-library/react';
