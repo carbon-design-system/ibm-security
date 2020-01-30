@@ -33,6 +33,12 @@ describe('UNSTABLE_Pagination', () => {
     await expect(document.body).toHaveNoDAPViolations('UNSTABLE_Pagination');
   });
 
+  test('should have root class with security namespace', () => {
+    render(<UNSTABLE__Pagination totalItems={40} pageSizes={[10, 20]} />);
+
+    expect(document.querySelector(`.${namespace}`)).toBeInTheDocument();
+  });
+
   test('should cycle pagination elements in tab order', () => {
     const { getByLabelText } = render(
       <UNSTABLE__Pagination

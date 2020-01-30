@@ -10,7 +10,7 @@ import { Select, SelectItem } from '../Select';
 import { appendComponentNamespace } from '../../globals/namespace/index';
 import { namespace as paginationNamespace } from './Pagination';
 
-const namespace = appendComponentNamespace(
+export const namespace = appendComponentNamespace(
   paginationNamespace,
   'page-selector'
 );
