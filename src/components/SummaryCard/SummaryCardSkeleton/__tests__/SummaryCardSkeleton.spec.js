@@ -10,7 +10,7 @@ import { SummaryCardSkeleton } from '../../../..';
 
 import { namespace } from '../SummaryCardSkeleton';
 
-describe('SummaryCardHeader', () => {
+describe('SummaryCardSkeleton', () => {
   test('should have no Axe or DAP violations`', async () => {
     const main = document.createElement('main');
     render(<SummaryCardSkeleton />, {
