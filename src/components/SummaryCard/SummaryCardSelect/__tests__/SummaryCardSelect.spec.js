@@ -4,17 +4,17 @@
  */
 
 import { render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 import { SummaryCardSelect } from '../../../..';
 
-import props from '../_mocks_';
-
 describe('SummaryCardSelect', () => {
-  it('renders', () => {
-    expect(
-      render(<SummaryCardSelect className="className" {...props} />).container
-        .firstChild
-    ).toMatchSnapshot();
+  test('should be checked when clicked', () => {
+    const { getByLabelText } = render(
+      <SummaryCardSelect id="summary-select" labelText="test select" />
+    );
+    userEvent.click(getByLabelText(/test select/i));
+    expect(getByLabelText(/test select/i)).toBeChecked();
   });
 });

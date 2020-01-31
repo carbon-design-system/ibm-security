@@ -3,8 +3,8 @@
  * @copyright IBM Security 2019
  */
 
-import { fireEvent, render } from '@testing-library/react';
-import { settings } from 'carbon-components';
+import { render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React, { Fragment } from 'react';
 
 import {
@@ -16,41 +16,107 @@ import {
   SummaryCardSelect,
 } from '../../../..';
 
-import props from '../_mocks_';
-import summaryCardSelectProps from '../../SummaryCardSelect/_mocks_';
-
-const { click } = fireEvent;
-const { summaryCards } = props;
+const summaryCards = [
+  {
+    id: '0',
+  },
+  {
+    id: '1',
+  },
+];
 
 describe('SummaryCardContainer', () => {
-  const batchActionsActiveClass = `${settings.prefix}--batch-actions--active`;
-  const batchActionsId = 'batchActions';
-  const selectId = 'select__';
-
-  let batchActions;
-  let container;
-  let select;
-
-  beforeEach(() => {
-    container = render(
+  test('should have no Axe or DAP violations', async () => {
+    const main = document.createElement('main');
+    render(
       <SummaryCardContainer
         render={({ getBatchActionProps, getSelectionProps, summaryCards }) => (
           <Fragment>
-            <SummaryCardBatchActions
-              data-testid={batchActionsId}
-              {...getBatchActionProps()}
-            >
-              <SummaryCardBatchAction>
-                SummaryCardBatchAction
-              </SummaryCardBatchAction>
+            <SummaryCardBatchActions {...getBatchActionProps()}>
+              <SummaryCardBatchAction>test batch action</SummaryCardBatchAction>
             </SummaryCardBatchActions>
             {summaryCards.map(({ id }) => (
               <SummaryCard key={id}>
                 <SummaryCardFooter>
                   <SummaryCardSelect
-                    data-testid={`${selectId}${id}`}
-                    {...summaryCardSelectProps}
                     {...getSelectionProps({ id })}
+                    id={`summary-select-${id}`}
+                    labelText={`test select ${id}`}
+                  />
+                </SummaryCardFooter>
+              </SummaryCard>
+            ))}
+          </Fragment>
+        )}
+        summaryCards={summaryCards}
+      />,
+      {
+        // DAP requires a landmark '<main>' in the DOM:
+        container: document.body.appendChild(main),
+      }
+    );
+
+    await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations('SummaryCardContainer');
+  });
+
+  test('should have no Axe or DAP violations when cards are selected', async () => {
+    const main = document.createElement('main');
+    const { getByText } = render(
+      <SummaryCardContainer
+        render={({ getBatchActionProps, getSelectionProps, summaryCards }) => (
+          <Fragment>
+            <SummaryCardBatchActions {...getBatchActionProps()}>
+              <SummaryCardBatchAction>test batch action</SummaryCardBatchAction>
+            </SummaryCardBatchActions>
+            {summaryCards.map(({ id }) => (
+              <SummaryCard key={id}>
+                <SummaryCardFooter>
+                  <SummaryCardSelect
+                    {...getSelectionProps({ id })}
+                    id={`summary-select--${id}`}
+                    labelText={`test select ${id}`}
+                  />
+                </SummaryCardFooter>
+              </SummaryCard>
+            ))}
+          </Fragment>
+        )}
+        summaryCards={summaryCards}
+      />,
+      {
+        // DAP requires a landmark '<main>' in the DOM:
+        container: document.body.appendChild(main),
+      }
+    );
+
+    // Currently there's no way to load the page
+    // with summary cards pre-checked AND batch action toolbar updated.
+    // Therefore, we have to select both cards first:
+    userEvent.click(getByText(/test select 0/i));
+    userEvent.click(getByText(/test select 1/i));
+
+    await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations(
+      'SummaryCardContainer with selected cards'
+    );
+  });
+
+  test('should cycle elements in tab order', () => {
+    const { getByLabelText } = render(
+      <SummaryCardContainer
+        render={({ getBatchActionProps, getSelectionProps, summaryCards }) => (
+          <Fragment>
+            <SummaryCardBatchActions {...getBatchActionProps()}>
+              <SummaryCardBatchAction>test batch action</SummaryCardBatchAction>
+            </SummaryCardBatchActions>
+            {summaryCards.map(({ id }) => (
+              <SummaryCard key={id}>
+                <SummaryCardFooter>
+                  <SummaryCardSelect
+                    {...getSelectionProps({ id })}
+                    id={`summary-select--${id}`}
+                    labelText={`test select ${id}`}
                   />
                 </SummaryCardFooter>
               </SummaryCard>
@@ -61,39 +127,159 @@ describe('SummaryCardContainer', () => {
       />
     );
 
-    const { getByTestId } = container;
+    userEvent.tab();
 
-    batchActions = getByTestId(batchActionsId);
-    select = getByTestId(`${selectId}${summaryCards[0].id}`);
+    // The first summary card select:
+    expect(getByLabelText(/test select 0/i)).toHaveFocus();
+
+    userEvent.tab();
+
+    // Loop complete.
+    // The first summary card select:
+    expect(getByLabelText(/test select 1/i)).toHaveFocus();
+
+    userEvent.tab();
   });
 
-  describe('Rendering', () => {
-    it('renders', () => {
-      expect(container.container.firstChild).toMatchSnapshot();
-    });
+  test('should cycle elements in tab order when the batch actions toolbar is activated', () => {
+    const { getByLabelText, getByText } = render(
+      <SummaryCardContainer
+        render={({ getBatchActionProps, getSelectionProps, summaryCards }) => (
+          <Fragment>
+            <SummaryCardBatchActions {...getBatchActionProps()}>
+              <SummaryCardBatchAction>test batch action</SummaryCardBatchAction>
+            </SummaryCardBatchActions>
+            {summaryCards.map(({ id }) => (
+              <SummaryCard key={id}>
+                <SummaryCardFooter>
+                  <SummaryCardSelect
+                    {...getSelectionProps({ id })}
+                    id={`summary-select--${id}`}
+                    labelText={`test select ${id}`}
+                  />
+                </SummaryCardFooter>
+              </SummaryCard>
+            ))}
+          </Fragment>
+        )}
+        summaryCards={summaryCards}
+      />
+    );
 
-    it("doesn't show batch actions when nothing is selected", () => {
-      expect(batchActions).not.toHaveClass(batchActionsActiveClass);
-    });
+    // Currently there's no way to load the page
+    // with summary cards pre-checked AND batch action toolbar updated.
+    // Therefore, we have to select both cards first:
+    userEvent.click(getByText(/test select 0/i));
+    userEvent.click(getByText(/test select 1/i));
 
-    it('shows batch actions when summary cards are selected', () => {
-      click(select);
+    userEvent.tab();
 
-      expect(batchActions).toHaveClass(batchActionsActiveClass);
-    });
+    // The batch action button:
+    expect(getByText(/test batch action/i)).toHaveFocus();
 
-    it('selects a specific summary card', () => {
-      click(select);
+    userEvent.tab();
 
-      expect(select).toBeChecked();
-    });
+    // The batch actions cancel button:
+    expect(getByText(/Cancel/i)).toHaveFocus();
 
-    it('resets selected summary cards', () => {
-      click(select);
+    userEvent.tab();
 
-      click(container.getByText('Cancel'));
+    // The first summary card select:
+    expect(getByLabelText(/test select 0/i)).toHaveFocus();
 
-      expect(select).not.toBeChecked();
-    });
+    userEvent.tab();
+
+    // The first summary card select:
+    expect(getByLabelText(/test select 1/i)).toHaveFocus();
+
+    userEvent.tab();
+
+    // Loop complete.
+    // The batch action button:
+    expect(getByText(/test batch action/i)).toHaveFocus();
+  });
+
+  test('should update batch actions when a summary card is selected', () => {
+    const { getByLabelText, queryByText } = render(
+      <SummaryCardContainer
+        render={({ getBatchActionProps, getSelectionProps, summaryCards }) => (
+          <Fragment>
+            <SummaryCardBatchActions {...getBatchActionProps()}>
+              <SummaryCardBatchAction>test batch action</SummaryCardBatchAction>
+            </SummaryCardBatchActions>
+            {summaryCards.map(({ id }) => (
+              <SummaryCard key={id}>
+                <SummaryCardFooter>
+                  <SummaryCardSelect
+                    {...getSelectionProps({ id })}
+                    id={`summary-select--${id}`}
+                    labelText={`test select ${id}`}
+                  />
+                </SummaryCardFooter>
+              </SummaryCard>
+            ))}
+          </Fragment>
+        )}
+        summaryCards={summaryCards}
+      />
+    );
+
+    // We can't check `not.toBeVisible` because the batch actions
+    // are absolutely positioned & not hidden/removed from the DOM.
+    // So instead, we query the default batch actions text with 0 selected:
+    expect(queryByText(/0 item selected/i)).toBeInTheDocument();
+
+    userEvent.click(getByLabelText(/test select 0/i));
+
+    // Expect first summary card to be selected:
+    expect(getByLabelText(/test select 0/i)).toBeChecked();
+
+    // Expect the batch actions text to be updated:
+    expect(queryByText(/1 item selected/i)).toBeInTheDocument();
+  });
+
+  test('should clear batch selections when the cancel button is clicked', () => {
+    const { getByLabelText, getByText, queryByText } = render(
+      <SummaryCardContainer
+        render={({ getBatchActionProps, getSelectionProps, summaryCards }) => (
+          <Fragment>
+            <SummaryCardBatchActions {...getBatchActionProps()}>
+              <SummaryCardBatchAction>test batch action</SummaryCardBatchAction>
+            </SummaryCardBatchActions>
+            {summaryCards.map(({ id }) => (
+              <SummaryCard key={id}>
+                <SummaryCardFooter>
+                  <SummaryCardSelect
+                    {...getSelectionProps({ id })}
+                    id={`summary-select--${id}`}
+                    labelText={`test select ${id}`}
+                  />
+                </SummaryCardFooter>
+              </SummaryCard>
+            ))}
+          </Fragment>
+        )}
+        summaryCards={summaryCards}
+      />
+    );
+
+    // Currently there's no way to load the page
+    // with summary cards pre-checked AND batch action toolbar updated.
+    // Therefore, we have to select both cards first:
+    userEvent.click(getByText(/test select 0/i));
+    userEvent.click(getByText(/test select 1/i));
+
+    // Expect both summary cards to be selected at first:
+    expect(queryByText(/2 items selected/i)).toBeInTheDocument();
+
+    // Clear batch actions selections:
+    userEvent.click(getByText(/Cancel/i));
+
+    // Expect the batch actions text to be updated:
+    expect(queryByText(/0 item selected/i)).toBeInTheDocument();
+
+    // Expect both summary cards to not be selected:
+    expect(getByLabelText(/test select 0/i)).not.toBeChecked();
+    expect(getByLabelText(/test select 1/i)).not.toBeChecked();
   });
 });

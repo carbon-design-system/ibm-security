@@ -80,4 +80,10 @@ SummaryCardContainer.propTypes = {
   ).isRequired,
 };
 
-export default SummaryCardContainer;
+export default (() => {
+  const forwardRef = (props, ref) => (
+    <SummaryCardContainer {...props} innerRef={ref} />
+  );
+  forwardRef.displayName = 'SummaryCardContainer';
+  return React.forwardRef(forwardRef);
+})();
