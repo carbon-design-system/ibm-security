@@ -16,6 +16,6 @@ describe('SummaryCardSkeleton', () => {
       container: document.body.appendChild(main),
     });
     await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('SummaryCard');
+    await expect(document.body).toHaveNoDAPViolations('SummaryCardSkeleton');
   });
 });
