@@ -11,7 +11,7 @@ import { TableBatchActions } from '../../DataTable';
 
 import { namespace as summaryCardNamespace } from '../SummaryCard';
 
-export const namespace = appendComponentNamespace(
+const namespace = appendComponentNamespace(
   summaryCardNamespace,
   'batch-actions'
 );

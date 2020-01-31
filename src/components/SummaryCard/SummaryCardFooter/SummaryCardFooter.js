@@ -9,7 +9,7 @@ import classnames from 'classnames';
 
 import { getComponentNamespace } from '../../../globals/namespace/index';
 
-export const namespace = getComponentNamespace('summary-card__footer');
+const namespace = getComponentNamespace('summary-card__footer');
 
 const SummaryCardFooter = ({ className, children, ...other }) => (
   <div className={classnames(namespace, className)} {...other}>

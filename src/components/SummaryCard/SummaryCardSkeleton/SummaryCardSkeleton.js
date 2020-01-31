@@ -10,7 +10,7 @@ import { getComponentNamespace } from '../../../globals/namespace/index';
 import Card from '..';
 import SkeletonText from '../../SkeletonText';
 
-export const namespace = getComponentNamespace('summary-card--skeleton');
+const namespace = getComponentNamespace('summary-card--skeleton');
 
 const WIDTHS = {
   sm: '25%',

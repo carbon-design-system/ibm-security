@@ -8,8 +8,6 @@ import React from 'react';
 
 import { SummaryCardSkeleton } from '../../../..';
 
-import { namespace } from '../SummaryCardSkeleton';
-
 describe('SummaryCardSkeleton', () => {
   test('should have no Axe or DAP violations`', async () => {
     const main = document.createElement('main');
@@ -19,11 +17,5 @@ describe('SummaryCardSkeleton', () => {
     });
     await expect(document.body).toHaveNoAxeViolations();
     await expect(document.body).toHaveNoDAPViolations('SummaryCard');
-  });
-
-  test('should have root class with security namespace', () => {
-    render(<SummaryCardSkeleton />);
-
-    expect(document.querySelector(`.${namespace}`)).toBeInTheDocument();
   });
 });
