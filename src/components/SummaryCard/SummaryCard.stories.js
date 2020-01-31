@@ -162,9 +162,8 @@ storiesOf(patterns('SummaryCard'), module)
                   <SummaryCardBody>SummaryCardBody</SummaryCardBody>
                   <SummaryCardFooter>
                     <SummaryCardSelect
-                      {...getSelectionProps({ id })}
                       {...summaryCardSelectProps}
-                      defaultChecked
+                      {...getSelectionProps({ id })}
                     />
                     <SummaryCardAction>SummaryCardAction</SummaryCardAction>
                   </SummaryCardFooter>
