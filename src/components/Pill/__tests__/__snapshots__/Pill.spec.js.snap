@@ -16,6 +16,7 @@ exports[`Pill renders correctly 1`] = `
       10,
     ]
   }
+  title=""
   type="IP"
   value="127.0.0.1"
 />
