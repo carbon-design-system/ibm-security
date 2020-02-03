@@ -35,7 +35,7 @@ exports[`SummaryCardContainer Rendering renders 1`] = `
       </button>
       <button
         class="bx--batch-summary__cancel bx--btn bx--btn--primary"
-        tabindex="0"
+        tabindex="-1"
         type="button"
       >
         Cancel

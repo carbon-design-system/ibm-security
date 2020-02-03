@@ -78,7 +78,7 @@ exports[`TagWall Rendering renders 1`] = `
         filter={false}
         type="gray"
       >
-        <button
+        <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
         >
           Tag 1
@@ -150,7 +150,7 @@ exports[`TagWall Rendering renders 1`] = `
               </ForwardRef(Close16)>
             </Icon>
           </button>
-        </button>
+        </span>
       </Tag>
     </InteractiveTag>
     <InteractiveTag
@@ -166,7 +166,7 @@ exports[`TagWall Rendering renders 1`] = `
         filter={false}
         type="gray"
       >
-        <button
+        <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
         >
           Tag 2
@@ -238,7 +238,7 @@ exports[`TagWall Rendering renders 1`] = `
               </ForwardRef(Close16)>
             </Icon>
           </button>
-        </button>
+        </span>
       </Tag>
     </InteractiveTag>
     <InteractiveTag
@@ -254,7 +254,7 @@ exports[`TagWall Rendering renders 1`] = `
         filter={false}
         type="gray"
       >
-        <button
+        <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
         >
           Tag 3
@@ -326,7 +326,7 @@ exports[`TagWall Rendering renders 1`] = `
               </ForwardRef(Close16)>
             </Icon>
           </button>
-        </button>
+        </span>
       </Tag>
     </InteractiveTag>
     <InteractiveTag
@@ -342,7 +342,7 @@ exports[`TagWall Rendering renders 1`] = `
         filter={false}
         type="gray"
       >
-        <button
+        <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
         >
           Tag 4
@@ -414,7 +414,7 @@ exports[`TagWall Rendering renders 1`] = `
               </ForwardRef(Close16)>
             </Icon>
           </button>
-        </button>
+        </span>
       </Tag>
     </InteractiveTag>
     <InteractiveTag
@@ -430,7 +430,7 @@ exports[`TagWall Rendering renders 1`] = `
         filter={false}
         type="gray"
       >
-        <button
+        <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
         >
           Tag 5
@@ -502,7 +502,7 @@ exports[`TagWall Rendering renders 1`] = `
               </ForwardRef(Close16)>
             </Icon>
           </button>
-        </button>
+        </span>
       </Tag>
     </InteractiveTag>
     <InteractiveTag
@@ -518,7 +518,7 @@ exports[`TagWall Rendering renders 1`] = `
         filter={false}
         type="gray"
       >
-        <button
+        <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
         >
           Tag 6
@@ -590,7 +590,7 @@ exports[`TagWall Rendering renders 1`] = `
               </ForwardRef(Close16)>
             </Icon>
           </button>
-        </button>
+        </span>
       </Tag>
     </InteractiveTag>
     <InteractiveTag
@@ -606,7 +606,7 @@ exports[`TagWall Rendering renders 1`] = `
         filter={false}
         type="gray"
       >
-        <button
+        <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
         >
           Tag 7
@@ -678,7 +678,7 @@ exports[`TagWall Rendering renders 1`] = `
               </ForwardRef(Close16)>
             </Icon>
           </button>
-        </button>
+        </span>
       </Tag>
     </InteractiveTag>
     <InteractiveTag
@@ -694,7 +694,7 @@ exports[`TagWall Rendering renders 1`] = `
         filter={false}
         type="gray"
       >
-        <button
+        <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
         >
           Tag 8
@@ -766,7 +766,7 @@ exports[`TagWall Rendering renders 1`] = `
               </ForwardRef(Close16)>
             </Icon>
           </button>
-        </button>
+        </span>
       </Tag>
     </InteractiveTag>
     <Button
@@ -813,206 +813,206 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
   >
     Label
   </h2>
-  <button
+  <span
     class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
   >
     Tag 1
-  </button>
-  <button
-    aria-label=""
-    class="security--tag--interactive__button"
-  >
-    <svg
-      aria-hidden="true"
-      class="security--icon security--tag--interactive__button__icon"
-      focusable="false"
-      height="16"
-      preserveAspectRatio="xMidYMid meet"
-      style="will-change: transform;"
-      viewBox="0 0 16 16"
-      width="16"
-      xmlns="http://www.w3.org/2000/svg"
+    <button
+      aria-label=""
+      class="security--tag--interactive__button"
     >
-      <path
-        d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
-      />
-    </svg>
-  </button>
-  <button
+      <svg
+        aria-hidden="true"
+        class="security--icon security--tag--interactive__button__icon"
+        focusable="false"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        style="will-change: transform;"
+        viewBox="0 0 16 16"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+        />
+      </svg>
+    </button>
+  </span>
+  <span
     class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
   >
     Tag 2
-  </button>
-  <button
-    aria-label=""
-    class="security--tag--interactive__button"
-  >
-    <svg
-      aria-hidden="true"
-      class="security--icon security--tag--interactive__button__icon"
-      focusable="false"
-      height="16"
-      preserveAspectRatio="xMidYMid meet"
-      style="will-change: transform;"
-      viewBox="0 0 16 16"
-      width="16"
-      xmlns="http://www.w3.org/2000/svg"
+    <button
+      aria-label=""
+      class="security--tag--interactive__button"
     >
-      <path
-        d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
-      />
-    </svg>
-  </button>
-  <button
+      <svg
+        aria-hidden="true"
+        class="security--icon security--tag--interactive__button__icon"
+        focusable="false"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        style="will-change: transform;"
+        viewBox="0 0 16 16"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+        />
+      </svg>
+    </button>
+  </span>
+  <span
     class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
   >
     Tag 3
-  </button>
-  <button
-    aria-label=""
-    class="security--tag--interactive__button"
-  >
-    <svg
-      aria-hidden="true"
-      class="security--icon security--tag--interactive__button__icon"
-      focusable="false"
-      height="16"
-      preserveAspectRatio="xMidYMid meet"
-      style="will-change: transform;"
-      viewBox="0 0 16 16"
-      width="16"
-      xmlns="http://www.w3.org/2000/svg"
+    <button
+      aria-label=""
+      class="security--tag--interactive__button"
     >
-      <path
-        d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
-      />
-    </svg>
-  </button>
-  <button
+      <svg
+        aria-hidden="true"
+        class="security--icon security--tag--interactive__button__icon"
+        focusable="false"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        style="will-change: transform;"
+        viewBox="0 0 16 16"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+        />
+      </svg>
+    </button>
+  </span>
+  <span
     class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
   >
     Tag 4
-  </button>
-  <button
-    aria-label=""
-    class="security--tag--interactive__button"
-  >
-    <svg
-      aria-hidden="true"
-      class="security--icon security--tag--interactive__button__icon"
-      focusable="false"
-      height="16"
-      preserveAspectRatio="xMidYMid meet"
-      style="will-change: transform;"
-      viewBox="0 0 16 16"
-      width="16"
-      xmlns="http://www.w3.org/2000/svg"
+    <button
+      aria-label=""
+      class="security--tag--interactive__button"
     >
-      <path
-        d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
-      />
-    </svg>
-  </button>
-  <button
+      <svg
+        aria-hidden="true"
+        class="security--icon security--tag--interactive__button__icon"
+        focusable="false"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        style="will-change: transform;"
+        viewBox="0 0 16 16"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+        />
+      </svg>
+    </button>
+  </span>
+  <span
     class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
   >
     Tag 5
-  </button>
-  <button
-    aria-label=""
-    class="security--tag--interactive__button"
-  >
-    <svg
-      aria-hidden="true"
-      class="security--icon security--tag--interactive__button__icon"
-      focusable="false"
-      height="16"
-      preserveAspectRatio="xMidYMid meet"
-      style="will-change: transform;"
-      viewBox="0 0 16 16"
-      width="16"
-      xmlns="http://www.w3.org/2000/svg"
+    <button
+      aria-label=""
+      class="security--tag--interactive__button"
     >
-      <path
-        d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
-      />
-    </svg>
-  </button>
-  <button
+      <svg
+        aria-hidden="true"
+        class="security--icon security--tag--interactive__button__icon"
+        focusable="false"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        style="will-change: transform;"
+        viewBox="0 0 16 16"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+        />
+      </svg>
+    </button>
+  </span>
+  <span
     class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
   >
     Tag 6
-  </button>
-  <button
-    aria-label=""
-    class="security--tag--interactive__button"
-  >
-    <svg
-      aria-hidden="true"
-      class="security--icon security--tag--interactive__button__icon"
-      focusable="false"
-      height="16"
-      preserveAspectRatio="xMidYMid meet"
-      style="will-change: transform;"
-      viewBox="0 0 16 16"
-      width="16"
-      xmlns="http://www.w3.org/2000/svg"
+    <button
+      aria-label=""
+      class="security--tag--interactive__button"
     >
-      <path
-        d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
-      />
-    </svg>
-  </button>
-  <button
+      <svg
+        aria-hidden="true"
+        class="security--icon security--tag--interactive__button__icon"
+        focusable="false"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        style="will-change: transform;"
+        viewBox="0 0 16 16"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+        />
+      </svg>
+    </button>
+  </span>
+  <span
     class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
   >
     Tag 7
-  </button>
-  <button
-    aria-label=""
-    class="security--tag--interactive__button"
-  >
-    <svg
-      aria-hidden="true"
-      class="security--icon security--tag--interactive__button__icon"
-      focusable="false"
-      height="16"
-      preserveAspectRatio="xMidYMid meet"
-      style="will-change: transform;"
-      viewBox="0 0 16 16"
-      width="16"
-      xmlns="http://www.w3.org/2000/svg"
+    <button
+      aria-label=""
+      class="security--tag--interactive__button"
     >
-      <path
-        d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
-      />
-    </svg>
-  </button>
-  <button
+      <svg
+        aria-hidden="true"
+        class="security--icon security--tag--interactive__button__icon"
+        focusable="false"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        style="will-change: transform;"
+        viewBox="0 0 16 16"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+        />
+      </svg>
+    </button>
+  </span>
+  <span
     class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
   >
     Tag 8
-  </button>
-  <button
-    aria-label=""
-    class="security--tag--interactive__button"
-  >
-    <svg
-      aria-hidden="true"
-      class="security--icon security--tag--interactive__button__icon"
-      focusable="false"
-      height="16"
-      preserveAspectRatio="xMidYMid meet"
-      style="will-change: transform;"
-      viewBox="0 0 16 16"
-      width="16"
-      xmlns="http://www.w3.org/2000/svg"
+    <button
+      aria-label=""
+      class="security--tag--interactive__button"
     >
-      <path
-        d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
-      />
-    </svg>
-  </button>
+      <svg
+        aria-hidden="true"
+        class="security--icon security--tag--interactive__button__icon"
+        focusable="false"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        style="will-change: transform;"
+        viewBox="0 0 16 16"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+        />
+      </svg>
+    </button>
+  </span>
   <button
     class="security--button bx--btn bx--btn--sm bx--btn--ghost"
     tabindex="0"
@@ -1101,11 +1101,11 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         filter={false}
         type="gray"
       >
-        <button
+        <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--selected"
         >
           Tag 1
-        </button>
+        </span>
       </Tag>
     </InteractiveTag>
     <InteractiveTag
@@ -1121,11 +1121,11 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         filter={false}
         type="gray"
       >
-        <button
+        <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--selected"
         >
           Tag 2
-        </button>
+        </span>
       </Tag>
     </InteractiveTag>
     <InteractiveTag
@@ -1141,11 +1141,11 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         filter={false}
         type="gray"
       >
-        <button
+        <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--selected"
         >
           Tag 3
-        </button>
+        </span>
       </Tag>
     </InteractiveTag>
     <InteractiveTag
@@ -1161,11 +1161,11 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         filter={false}
         type="gray"
       >
-        <button
+        <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default"
         >
           Tag 4
-        </button>
+        </span>
       </Tag>
     </InteractiveTag>
     <InteractiveTag
@@ -1181,11 +1181,11 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         filter={false}
         type="gray"
       >
-        <button
+        <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default"
         >
           Tag 5
-        </button>
+        </span>
       </Tag>
     </InteractiveTag>
     <InteractiveTag
@@ -1201,11 +1201,11 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         filter={false}
         type="gray"
       >
-        <button
+        <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default"
         >
           Tag 6
-        </button>
+        </span>
       </Tag>
     </InteractiveTag>
     <InteractiveTag
@@ -1221,11 +1221,11 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         filter={false}
         type="gray"
       >
-        <button
+        <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default"
         >
           Tag 7
-        </button>
+        </span>
       </Tag>
     </InteractiveTag>
     <InteractiveTag
@@ -1241,11 +1241,11 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         filter={false}
         type="gray"
       >
-        <button
+        <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default"
         >
           Tag 8
-        </button>
+        </span>
       </Tag>
     </InteractiveTag>
     <Button
