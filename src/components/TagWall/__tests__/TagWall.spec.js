@@ -9,6 +9,7 @@ import React from 'react';
 import { Button, InteractiveTag, TagWall } from '../../..';
 
 import { type } from '../TagWall';
+import { namespace as interactiveTagNamespace } from '../../Tag/InteractiveTag/InteractiveTag';
 
 import props from '../_mocks_';
 
@@ -38,11 +39,12 @@ describe('TagWall', () => {
   describe('Events', () => {
     const { fn } = jest;
 
+    // Get the "close" button:
     const getButton = () =>
       tagWall
         .find(InteractiveTag)
         .first()
-        .find('button');
+        .find(`button.${interactiveTagNamespace}__button`);
 
     it('should call the `onChange` method', () => {
       const onChange = fn();

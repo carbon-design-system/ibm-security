@@ -485,7 +485,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                       class="security--tag-wall security--tag-wall-filter__tag-wall"
                     >
                       
-                      <span
+                      <button
                         class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
                       >
                         Y
@@ -509,7 +509,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                             />
                           </svg>
                         </button>
-                      </span>
+                      </button>
                     </section>
                   </div>
                 </div>
@@ -786,7 +786,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                   class="security--tag-wall security--tag-wall-filter__tag-wall"
                                 >
                                   
-                                  <span
+                                  <button
                                     class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
                                   >
                                     Y
@@ -810,7 +810,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                         />
                                       </svg>
                                     </button>
-                                  </span>
+                                  </button>
                                 </section>
                               </div>
                             </div>
@@ -1010,7 +1010,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                     class="security--tag-wall security--tag-wall-filter__tag-wall"
                                   >
                                     
-                                    <span
+                                    <button
                                       class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
                                     >
                                       Y
@@ -1034,7 +1034,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                           />
                                         </svg>
                                       </button>
-                                    </span>
+                                    </button>
                                   </section>
                                 </div>
                               </div>
@@ -1266,9 +1266,10 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                     >
                                       <Tag
                                         className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                                        filter={false}
                                         type="gray"
                                       >
-                                        <span
+                                        <button
                                           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
                                         >
                                           Y
@@ -1340,7 +1341,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                               </ForwardRef(Close16)>
                                             </Icon>
                                           </button>
-                                        </span>
+                                        </button>
                                       </Tag>
                                     </InteractiveTag>
                                   </section>
@@ -1892,9 +1893,10 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 2`] = 
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        filter={false}
         type="gray"
       >
-        <span
+        <button
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
         >
           Y
@@ -1966,7 +1968,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 2`] = 
               </ForwardRef(Close16)>
             </Icon>
           </button>
-        </span>
+        </button>
       </Tag>
     </InteractiveTag>
   </section>
@@ -2231,7 +2233,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                         class="security--tag-wall security--tag-wall-filter__tag-wall"
                       >
                         
-                        <span
+                        <button
                           class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
                         >
                           Y
@@ -2255,7 +2257,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               />
                             </svg>
                           </button>
-                        </span>
+                        </button>
                       </section>
                     </div>
                   </div>
@@ -2446,7 +2448,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                         class="security--tag-wall security--tag-wall-filter__tag-wall"
                       >
                         
-                        <span
+                        <button
                           class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
                         >
                           X
@@ -2470,7 +2472,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               />
                             </svg>
                           </button>
-                        </span>
+                        </button>
                       </section>
                     </div>
                   </div>
@@ -2747,7 +2749,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     class="security--tag-wall security--tag-wall-filter__tag-wall"
                                   >
                                     
-                                    <span
+                                    <button
                                       class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
                                     >
                                       Y
@@ -2771,7 +2773,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           />
                                         </svg>
                                       </button>
-                                    </span>
+                                    </button>
                                   </section>
                                 </div>
                               </div>
@@ -2962,7 +2964,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     class="security--tag-wall security--tag-wall-filter__tag-wall"
                                   >
                                     
-                                    <span
+                                    <button
                                       class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
                                     >
                                       X
@@ -2986,7 +2988,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           />
                                         </svg>
                                       </button>
-                                    </span>
+                                    </button>
                                   </section>
                                 </div>
                               </div>
@@ -3186,7 +3188,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       class="security--tag-wall security--tag-wall-filter__tag-wall"
                                     >
                                       
-                                      <span
+                                      <button
                                         class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
                                       >
                                         Y
@@ -3210,7 +3212,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                             />
                                           </svg>
                                         </button>
-                                      </span>
+                                      </button>
                                     </section>
                                   </div>
                                 </div>
@@ -3401,7 +3403,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       class="security--tag-wall security--tag-wall-filter__tag-wall"
                                     >
                                       
-                                      <span
+                                      <button
                                         class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
                                       >
                                         X
@@ -3425,7 +3427,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                             />
                                           </svg>
                                         </button>
-                                      </span>
+                                      </button>
                                     </section>
                                   </div>
                                 </div>
@@ -3657,9 +3659,10 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       >
                                         <Tag
                                           className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                                          filter={false}
                                           type="gray"
                                         >
-                                          <span
+                                          <button
                                             className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
                                           >
                                             X
@@ -3731,7 +3734,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                 </ForwardRef(Close16)>
                                               </Icon>
                                             </button>
-                                          </span>
+                                          </button>
                                         </Tag>
                                       </InteractiveTag>
                                     </section>
