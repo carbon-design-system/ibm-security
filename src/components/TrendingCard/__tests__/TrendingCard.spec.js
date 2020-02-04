@@ -3,6 +3,7 @@
  * @copyright IBM Security 2020
  */
 
+import classnames from 'classnames';
 import { render } from '@testing-library/react';
 import React from 'react';
 
@@ -30,8 +31,14 @@ describe('TrendingCard', () => {
     const { getByText, queryByTestId } = render(
       <TrendingCard
         title="test title"
-        element={({ children, ...other }) => (
-          <Link data-testid="test-data-id" href="#test-href" {...other}>
+        className="test-trending-card-class"
+        element={({ children, className, ...other }) => (
+          <Link
+            className={classnames('test-custom-link-class', className)}
+            data-testid="test-data-id"
+            href="#test-href"
+            {...other}
+          >
             {children}
           </Link>
         )}
@@ -40,6 +47,13 @@ describe('TrendingCard', () => {
 
     // Expect trending card to preserve an extra attribute from custom link:
     expect(queryByTestId('test-data-id')).toBeInTheDocument();
+
+    // Expect trending card to preserve and consolidate custom classes
+    // added to both the wrapper and the custom link:
+    expect(getByText(/test title/i).closest('a')).toHaveClass(
+      'test-trending-card-class',
+      'test-custom-link-class'
+    );
 
     // Expect trending card to preserve href from custom link:
     expect(getByText(/test title/i).closest('a')).toHaveAttribute(
