@@ -10,7 +10,7 @@ import { appendComponentNamespace } from '../../../globals/namespace';
 
 import Link from '../../Link';
 
-import { headerNamespace } from '../Shell';
+import { headerNamespace } from '../ShellHeader';
 
 const namespace = appendComponentNamespace(headerNamespace, 'link');
 

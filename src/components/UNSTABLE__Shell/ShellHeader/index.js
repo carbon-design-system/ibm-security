@@ -6,15 +6,20 @@
 import { node } from 'prop-types';
 import React from 'react';
 
-import { appendComponentNamespace } from '../../../globals/namespace';
+import {
+  appendComponentNamespace,
+  getComponentNamespace,
+} from '../../../globals/namespace';
 
-import { headerNamespace, namespace as shellNamespace } from '../Shell';
+import { namespace } from '../Shell';
+
+export const headerNamespace = getComponentNamespace('header');
 
 function ShellHeader({ children, ...other }) {
   return (
     <div
       className={`${headerNamespace}__container ${appendComponentNamespace(
-        shellNamespace,
+        namespace,
         'header'
       )}`}
     >

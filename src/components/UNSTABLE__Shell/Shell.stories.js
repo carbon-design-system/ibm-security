@@ -23,13 +23,13 @@ import {
   Nav,
   NavItem,
   NavList,
+  NotificationsPopover,
+  PopoverContent,
+  PopoverFooter,
+  PopoverHeader,
+  PopoverNotification,
   ShellHeader,
   ShellHeaderName,
-  ShellHeaderPopoverContent,
-  ShellHeaderPopoverFooter,
-  ShellHeaderPopoverHeader,
-  ShellHeaderPopoverNotification,
-  ShellHeaderPopoverNotifications,
   ShellReturnToBanner,
   ShellSkipToContent,
   ShellToolbar,
@@ -90,36 +90,33 @@ export const Default = () => (
         <HeaderAction
           popover={
             <>
-              <ShellHeaderPopoverHeader>Notifications</ShellHeaderPopoverHeader>
+              <PopoverHeader>Notifications</PopoverHeader>
 
-              <ShellHeaderPopoverNotifications
-                onClear={action('onClear')}
-                title="Today"
-              >
-                <ShellHeaderPopoverNotification
+              <NotificationsPopover onClear={action('onClear')} title="Today">
+                <PopoverNotification
                   description="Notification 1"
                   product="Offering 1"
                   viaLabel="via"
                 />
 
-                <ShellHeaderPopoverNotification
+                <PopoverNotification
                   description="Notification 2"
                   product="Offering 2"
                   viaLabel="via"
                 />
 
-                <ShellHeaderPopoverNotification
+                <PopoverNotification
                   description="Notification 3"
                   product="Offering 3"
                   viaLabel="via"
                 />
-              </ShellHeaderPopoverNotifications>
+              </NotificationsPopover>
 
-              <ShellHeaderPopoverFooter>
+              <PopoverFooter>
                 <Link href="#0">Link 1</Link>
 
                 <Link href="#0">Link 2</Link>
-              </ShellHeaderPopoverFooter>
+              </PopoverFooter>
             </>
           }
         >
@@ -129,17 +126,15 @@ export const Default = () => (
         <HeaderAction
           popover={
             <>
-              <ShellHeaderPopoverHeader>Profile</ShellHeaderPopoverHeader>
+              <PopoverHeader>Profile</PopoverHeader>
 
-              <ShellHeaderPopoverContent>
-                ShellHeaderPopoverContent
-              </ShellHeaderPopoverContent>
+              <PopoverContent>PopoverContent</PopoverContent>
 
-              <ShellHeaderPopoverFooter>
+              <PopoverFooter>
                 <Link href="#0">Edit profile</Link>
 
                 <Link href="#0">Sign out</Link>
-              </ShellHeaderPopoverFooter>
+              </PopoverFooter>
             </>
           }
         >

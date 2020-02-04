@@ -21,12 +21,14 @@ import {
 
 const suffix = 'banner';
 const legacyNamespace = appendComponentNamespace(legacyShellNamespace, suffix);
-const namespace = appendComponentNamespace(shellNamespace, suffix);
 
 function ShellReturnToBanner({ children, ...other }) {
   return (
     <Link
-      className={`${legacyNamespace} ${namespace}`}
+      className={`${legacyNamespace} ${appendComponentNamespace(
+        shellNamespace,
+        suffix
+      )}`}
       style={{
         backgroundImage: `url(${dataUri(
           '../../../images/aurora-banner@2x.png'

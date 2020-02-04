@@ -56,8 +56,12 @@ ToolbarAction.propTypes = {
   children: node.isRequired,
   id: string.isRequired,
   renderIcon: node.isRequired,
-  activeAction: string.isRequired,
+  activeAction: string,
   setActiveAction: func.isRequired,
+};
+
+ToolbarAction.defaultProps = {
+  activeAction: null,
 };
 
 export default ToolbarAction;

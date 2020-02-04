@@ -8,7 +8,8 @@ import React, { Children, cloneElement, useState } from 'react';
 
 import { appendComponentNamespace } from '../../../globals/namespace';
 
-import { headerNamespace, namespace as shellNamespace } from '../Shell';
+import { namespace as shellNamespace } from '../Shell';
+import { headerNamespace } from '../ShellHeader';
 
 const suffix = 'group';
 
