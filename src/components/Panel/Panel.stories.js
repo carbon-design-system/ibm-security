@@ -3,25 +3,25 @@
  * @copyright IBM Security 2019
  */
 
+import Add16 from '@carbon/icons-react/lib/add/16';
 import ArrowRight20 from '@carbon/icons-react/lib/arrow--right/20';
 import Filter20 from '@carbon/icons-react/lib/filter/20';
+
 import { spacing04, spacing05 } from '@carbon/layout/lib';
 import { styles } from '@carbon/type/lib';
 
 import { action } from '@storybook/addon-actions';
-import { radios, text } from '@storybook/addon-knobs';
+import { boolean, radios, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
 import React, { Fragment } from 'react';
 
 import { disableCenteredStories, patterns } from '../../../.storybook';
 
-import { label } from '../_mocks_';
 import { header, profile, toolbar } from '../Shell/_mocks_';
 import { labels } from './_mocks_';
 
 import { TooltipDirection } from '../IconButton/IconButton';
-
 import {
   Button,
   ComboButton,
@@ -37,11 +37,12 @@ const { interactive01, text04 } = theme;
 
 const closeButtonLabel = 'Close';
 
-const props = {
-  title: label,
-  subtitle: label,
+const props = () => ({
+  title: text('title', 'Example title'),
+  subtitle: text('subtitle', 'Example subtitle'),
+  ['aria-label']: text('aria-label', 'Example aria-label'), // eslint-disable-line no-useless-computed-key
   labels,
-};
+});
 
 const comboButtonProps = () => ({
   direction: radios(
@@ -127,24 +128,45 @@ disableCenteredStories(storiesOf(patterns('Panel'), module))
             <Panel
               key="p1"
               isOpen={this.state.firstOpen}
-              {...props}
+              {...props()}
               closeButton={{
                 onClick: this.closeFirst,
                 label: text('closeButton.label', closeButtonLabel),
               }}
-              renderFooter={() => (
-                <Fragment>
-                  <Button kind="secondary">Close</Button>
-                  <Button>Add</Button>
-                </Fragment>
-              )}
+              primaryButton={{
+                icon: Add16,
+                iconDescription: text('primaryButton.iconDescription', 'Add'),
+                isDisabled: boolean('primaryButton.isDisabled', false),
+                label: text('primaryButton.label', 'Add'),
+                onClick: this.closeFirst,
+              }}
+              secondaryButton={{
+                isDisabled: boolean('secondaryButton.isDisabled', false),
+                label: text('secondaryButton.label', 'Cancel'),
+                onClick: this.closeFirst,
+              }}
             >
-              <PanelContent>{content}</PanelContent>
+              <PanelContent>
+                <Fragment>
+                  {content}
+                  <p>
+                    This example uses the
+                    <CodeSnippet type="inline" light>
+                      primaryButton
+                    </CodeSnippet>
+                    and
+                    <CodeSnippet type="inline" light>
+                      secondaryButton
+                    </CodeSnippet>
+                    props to render buttons in the footer.
+                  </p>
+                </Fragment>
+              </PanelContent>
             </Panel>
             <Panel
               key="p2"
               isOpen={this.state.secondOpen}
-              {...props}
+              {...props()}
               closeButton={{
                 onClick: this.closeSecond,
                 label: text('closeButton.label', closeButtonLabel),
@@ -197,7 +219,7 @@ disableCenteredStories(storiesOf(patterns('Panel'), module))
             <Panel
               key="p3"
               isOpen={this.state.thirdOpen}
-              {...props}
+              {...props()}
               closeButton={{
                 onClick: this.closethird,
                 label: closeButtonLabel,

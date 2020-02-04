@@ -5,6 +5,9 @@
 
 import Close20 from '@carbon/icons-react/lib/close/20';
 
+import requiredIfGivenPropExists from 'carbon-components-react/lib/prop-types/requiredIfGivenPropExists';
+import setupGetInstanceId from 'carbon-components-react/lib/tools/setupGetInstanceId';
+
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component, createRef, Fragment } from 'react';
@@ -19,6 +22,7 @@ import IconButton from '../IconButton';
 import Transition from '../Transition';
 import Portal, { PORTAL_EVENTS } from '../Portal';
 
+const getInstanceId = setupGetInstanceId();
 const namespace = getComponentNamespace('panel');
 
 /**
@@ -63,6 +67,10 @@ export default class Panel extends Component {
     });
   }
 
+  panelInstanceId = `panel-${getInstanceId()}`;
+  panelTitleId = `${namespace}__title--${this.panelInstanceId}`;
+  panelSubtitleId = `${namespace}__subtitle--${this.panelInstanceId}`;
+
   footer = createRef();
   header = createRef();
 
@@ -85,9 +93,27 @@ export default class Panel extends Component {
       stopPropagationEvents,
       subtitle,
       title,
+      hasScrollingContent,
     } = this.props;
 
     const hasFooter = renderFooter || primaryButton;
+
+    const ariaLabel = this.props['aria-label'] || title || subtitle;
+
+    const getAriaLabelledBy =
+      title || subtitle
+        ? {
+            'aria-labelledby': title ? this.panelTitleId : this.panelSubtitleId,
+          }
+        : {};
+
+    const hasScrollingContentProps = hasScrollingContent
+      ? {
+          tabIndex: 0,
+          role: 'region',
+          'aria-label': ariaLabel,
+        }
+      : {};
 
     return (
       <Transition className={namespace}>
@@ -97,7 +123,12 @@ export default class Panel extends Component {
             stopPropagation={stopPropagation}
             stopPropagationEvents={stopPropagationEvents}
           >
-            <section className={classnames(namespace, className)}>
+            <section
+              className={classnames(namespace, className)}
+              role="dialog"
+              aria-label={ariaLabel}
+              aria-modal="true"
+            >
               <header ref={this.header} className={`${namespace}__header`}>
                 <IconButton
                   id={closeButton.id}
@@ -110,14 +141,25 @@ export default class Panel extends Component {
                 {title && (
                   <div className={`${namespace}__header__container--title`}>
                     {typeof title === 'string' ? (
-                      <h2 className={`${namespace}__header--title`}>{title}</h2>
+                      <h2
+                        id={this.panelTitleId}
+                        className={`${namespace}__header--title`}
+                      >
+                        {title}
+                      </h2>
                     ) : (
-                      <div className={`${namespace}__header--title`}>
+                      <div
+                        id={this.panelTitleId}
+                        className={`${namespace}__header--title`}
+                      >
                         {title}
                       </div>
                     )}
                     {subtitle && (
-                      <div className={`${namespace}__header--subtitle`}>
+                      <div
+                        id={this.panelSubtitleId}
+                        className={`${namespace}__header--subtitle`}
+                      >
                         {subtitle}
                       </div>
                     )}
@@ -132,6 +174,8 @@ export default class Panel extends Component {
                   marginTop: `${this.state.bodyMargin.top}px`,
                   marginBottom: `${this.state.bodyMargin.bottom}px`,
                 }}
+                {...hasScrollingContentProps}
+                {...getAriaLabelledBy}
               >
                 {children}
               </section>
@@ -245,6 +289,20 @@ Panel.propTypes = {
 
   /** @type {ReactNode} Title child elements. */
   title: PropTypes.node,
+
+  /**
+   * Specify whether the panel contains scrolling content
+   */
+  hasScrollingContent: PropTypes.bool,
+
+  /**
+   * Required props for the accessibility label of the header
+   */
+  // eslint-disable-next-line react/require-default-props
+  'aria-label': requiredIfGivenPropExists(
+    'hasScrollingContent',
+    PropTypes.string
+  ),
 };
 
 Panel.defaultProps = {
@@ -261,6 +319,7 @@ Panel.defaultProps = {
   stopPropagationEvents: undefined,
   subtitle: undefined,
   title: undefined,
+  hasScrollingContent: false,
 };
 
 export { buttonType, deprecatedButton, namespace };

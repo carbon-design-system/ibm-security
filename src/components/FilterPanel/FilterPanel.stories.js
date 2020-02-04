@@ -1,16 +1,19 @@
 /**
  * @file Filter panel stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2020
  */
 
+import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text, object } from '@storybook/addon-knobs';
-import { storiesOf } from '@storybook/react';
 
 import { compose, withState, withHandlers, getDisplayName } from 'recompose';
 import React from 'react';
 
 import { patterns } from '../../../.storybook';
+import Checkbox from '../Checkbox';
+import Search from '../Search';
+import { AccordionItem, Accordion } from '../Accordion';
 
 import {
   filterData,
@@ -22,9 +25,21 @@ import {
   labels,
 } from './_mocks_';
 
-import FilterPanel from './FilterPanel';
+import FilterPanel, {
+  FilterPanelSearch,
+  FilterPanelAccordion,
+  FilterPanelAccordionItem,
+  FilterPanelCheckbox,
+  FilterPanelGroup,
+} from '.';
 
-const FilterPanelWithState = compose(
+// Ensure that passed down props are shown in types table.
+FilterPanelCheckbox.__docgenInfo = Checkbox.__docgenInfo;
+FilterPanelAccordion.__docgenInfo = Accordion.__docgenInfo;
+FilterPanelAccordionItem.__docgenInfo = AccordionItem.__docgenInfo;
+FilterPanelSearch.__docgenInfo = Search.__docgenInfo;
+
+const LegacyFilterPanelWithState = compose(
   // Maintain a state attribute called filterData.
   withState('filterData', 'onFilterToggle', ({ filterData }) => filterData),
 
@@ -33,6 +48,7 @@ const FilterPanelWithState = compose(
     onChange: ({ onChange, onFilterToggle, filterData }) => filter => {
       onChange(filter);
 
+      // eslint-disable-next-line no-param-reassign
       filterData.filters[filter.id].enabled = !filterData.filters[filter.id]
         .enabled;
       onFilterToggle(filterData);
@@ -40,19 +56,152 @@ const FilterPanelWithState = compose(
   })
 )(FilterPanel);
 
-FilterPanelWithState.displayName = getDisplayName(FilterPanel);
-FilterPanelWithState.__docgenInfo = FilterPanel.__docgenInfo;
+LegacyFilterPanelWithState.displayName = getDisplayName(FilterPanel);
+LegacyFilterPanelWithState.__docgenInfo = FilterPanel.__docgenInfo;
 
 storiesOf(patterns('FilterPanel'), module)
   .addDecorator(story => (
-    <div style={{ padding: '1rem', maxWidth: '18rem', margin: '0 auto' }}>
+    <div style={{ padding: '1rem', width: '16rem', margin: '0 auto' }}>
       {story()}
     </div>
   ))
+  .add('default', () => (
+    <FilterPanel title={text('FilterPanel title (title)', title)}>
+      <FilterPanelSearch
+        labelText={text(
+          'FilterPanelSearch label text (labelText)',
+          filterSearchLabel
+        )}
+        placeHolderText={text(
+          'FilterPanelSearch placeholder text (placeHolderText)',
+          filterSearchLabel
+        )}
+        onChange={action('FilterPanelSearch onChange')}
+        id="filter-search"
+      >
+        <FilterPanelGroup title="Filter accordion item">
+          <FilterPanelCheckbox
+            labelText="Filter checkbox"
+            id="result-filter-checkbox"
+            count={10}
+            onChange={action('FilterPanelCheckbox onChange')}
+          />
+          <FilterPanelCheckbox
+            labelText="Long filter checkbox  label"
+            id="result-long-filter-checkbox"
+            count={10}
+            onChange={action('FilterPanelCheckbox onChange')}
+          />
+          <FilterPanelCheckbox
+            labelText="Checked"
+            id="result-checked"
+            count={10}
+            defaultChecked
+            onChange={action('FilterPanelCheckbox onChange')}
+          />
+        </FilterPanelGroup>
+        <FilterPanelGroup title="Truncated accordion item">
+          {new Array(3).fill(null).map((value, index) => (
+            <FilterPanelCheckbox
+              // eslint-disable-next-line react/no-array-index-key
+              key={index}
+              labelText={`Filter ${index + 1}`}
+              id={`result-filter-checkbox-${index + 1}`}
+              count={10}
+              onChange={action('FilterPanelCheckbox onChange')}
+            />
+          ))}
+        </FilterPanelGroup>
+      </FilterPanelSearch>
+
+      <FilterPanelAccordion title="Filter accordion" count={150}>
+        <FilterPanelAccordionItem
+          open
+          title="Filter accordion item"
+          count={3}
+          expandLabel="View more"
+          collapseLabel="View less"
+        >
+          <FilterPanelCheckbox
+            labelText="Filter checkbox"
+            id="filter-checkbox"
+            count={10}
+            onChange={action('FilterPanelCheckbox onChange')}
+          />
+          <FilterPanelCheckbox
+            labelText="Long filter checkbox  label"
+            id="long-filter-checkbox"
+            count={10}
+            onChange={action('FilterPanelCheckbox onChange')}
+          />
+          <FilterPanelCheckbox
+            labelText="Checked"
+            id="checked"
+            count={10}
+            defaultChecked
+            onChange={action('FilterPanelCheckbox onChange')}
+          />
+        </FilterPanelAccordionItem>
+        <FilterPanelAccordionItem
+          title="Truncated accordion item"
+          count={12}
+          expandLabel="View more"
+          collapseLabel="View less"
+        >
+          {new Array(12).fill(null).map((value, index) => (
+            <FilterPanelCheckbox
+              // eslint-disable-next-line react/no-array-index-key
+              key={index}
+              labelText={`Filter ${index + 1}`}
+              id={`filter-checkbox-${index + 1}`}
+              count={10}
+              onChange={action('FilterPanelCheckbox onChange')}
+            />
+          ))}
+        </FilterPanelAccordionItem>
+      </FilterPanelAccordion>
+      <FilterPanelAccordion title="Filter accordion 2" count={100}>
+        <FilterPanelAccordionItem
+          title="Filter accordion item 1"
+          count={4}
+          expandLabel="View more"
+          collapseLabel="View less"
+        >
+          {new Array(4).fill(null).map((value, index) => (
+            <FilterPanelCheckbox
+              // eslint-disable-next-line react/no-array-index-key
+              key={index}
+              labelText={`Filter ${index + 1}`}
+              id={`1-filter-${index + 1}`}
+              count={10}
+            />
+          ))}
+        </FilterPanelAccordionItem>
+
+        <FilterPanelAccordionItem
+          title="Filter accordion item 2"
+          count={6}
+          expandLabel="View more"
+          collapseLabel="View less"
+        >
+          {new Array(6).fill(null).map((value, index) => (
+            <FilterPanelCheckbox
+              // eslint-disable-next-line react/no-array-index-key
+              key={index}
+              labelText={`Filter ${index + 1}`}
+              id={`2-filter-${index + 1}`}
+              count={10}
+            />
+          ))}
+        </FilterPanelAccordionItem>
+      </FilterPanelAccordion>
+    </FilterPanel>
+  ))
+
   .add(
-    'default',
+    'with deprecated FilterData',
     () => (
-      <FilterPanelWithState
+      <LegacyFilterPanelWithState
         onChange={action('onChange')}
         title={text('title', title)}
         filtersExpandLabel={text('filtersExpandLabel', filtersExpandLabel)}
@@ -74,7 +223,7 @@ storiesOf(patterns('FilterPanel'), module)
         text: `## Basic implementation of Filter Panel
 
           The most crucial requirement for this component is the structure of the filter data. Be sure to
-          check out type definitions for [filter data](https://github.com/carbon-design-system/ibm-security/blob/master/src/components/FilterPanel/FilterPanelUtilities.js#L60).
+          check out type definitions for [filter data](https://github.com/carbon-design-system/ibm-security/blob/master/src/components/FilterPanel/LEGACY_FilterPanel/FilterPanelUtilities.js#L60).
           Using the unique prop for each label will override the version passed in the \`labels\` prop.`,
       },
     }

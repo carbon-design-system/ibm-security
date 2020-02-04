@@ -16,9 +16,9 @@
 If you're just getting started and looking for React components, take a look at [our Storybook](https://ibm-security.carbondesignsystem.com).
 
 If you just want to try out Carbon for IBM Security, you can also use
-[CodeSandbox](https://codesandbox.io/s/codesandbox-nmmqp).
+[CodeSandbox](https://codesandbox.io/s/codesandbox-u307t).
 
-[![Edit CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/codesandbox-nmmqp)
+[![Edit CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/codesandbox-u307t)
 
 If you're trying to find something specific, here's a full list of packages that we support!
 

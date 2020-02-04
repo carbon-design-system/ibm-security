@@ -1,6 +1,6 @@
 {
   "name": "@carbon/ibm-security",
-  "version": "2.0.0",
+  "version": "1.16.0-prerelease.4",
   "description": "Carbon for IBM Security",
   "license": "Apache-2.0",
   "main": "lib/index.js",
@@ -26,7 +26,7 @@
     "build:post:clean-css": "cleancss -O2 -o css/index.min.css css/index.css",
     "build:post:storybook": "build-storybook -s public",
     "debug:scss": "node scripts/debugScss.js",
-    "docs": "node scripts/themes && git add .",
+    "docs": "node scripts/themes && git add docs/themes/themes.md",
     "format": "yarn format:precommit '**/*.{js,md,scss}'",
     "format:precommit": "prettier --ignore-path .gitignore --write",
     "lint:js": "yarn lint:js:precommit .",
@@ -100,6 +100,7 @@
     "@storybook/theming": "^5.2.4",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^8.0.3",
     "autoprefixer": "^9.4.10",
     "axe-core": "^3.4.1",
     "babel-eslint": "^10.0.1",
@@ -178,6 +179,7 @@
     "collectCoverage": true,
     "coverageDirectory": "<rootDir>/../coverage",
     "rootDir": "src",
+    "watchman": false,
     "setupFilesAfterEnv": [
       "<rootDir>/../config/jest",
       "jest-canvas-mock"
