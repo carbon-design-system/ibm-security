@@ -124,7 +124,7 @@ $header__transition__timing-function: $timing-function;
       color: $text-02;
     }
 
-    &__title--domain {
+    &__title--brand {
       @include carbon--type-style($name: heading-01);
     }
   }

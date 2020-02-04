@@ -15,10 +15,12 @@
     "jest": true
   },
   "rules": {
+    "camelcase": "warn",
     "global-require": "warn",
     "no-param-reassign": "warn",
     "no-shadow": "off",
     "no-underscore-dangle": "off",
+
     "jsx-a11y/label-has-for": [
       "error",
       {
@@ -43,8 +45,7 @@
         "extensions": [".js", ".jsx"]
       }
     ],
-    "react/prop-types": "warn",
-    "camelcase": "warn",
-    "react/jsx-pascal-case": "warn"
+    "react/jsx-pascal-case": "warn",
+    "react/prop-types": "warn"
   }
 }

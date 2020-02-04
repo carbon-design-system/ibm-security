@@ -476,7 +476,7 @@ export default class SecurityHeader extends Component {
     const classes = classnames(`${namespace}__container`, className);
 
     const domainElement = title => (
-      <span className={`${namespace}__link__title--domain`}>{title}</span>
+      <span className={`${namespace}__link__title--brand`}>{title}</span>
     );
 
     return (
