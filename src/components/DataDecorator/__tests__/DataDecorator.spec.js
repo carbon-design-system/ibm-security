@@ -44,6 +44,16 @@ describe('DataDecorator', () => {
     await expect(document.body).toHaveNoDAPViolations('DataDecorator');
   });
 
+  test('should invoke open mock when data decorator is clicked to open panel', () => {
+    const onOpenMock = jest.fn();
+    const { getByText } = render(
+      <DataDecorator type="IP" value="10.0.0.0" score={0} onOpen={onOpenMock} />
+    );
+
+    userEvent.click(getByText(/10.0.0.0/i).closest('button'));
+    expect(onOpenMock).toHaveBeenCalledTimes(1);
+  });
+
   test('should cycle between data decorator and open panel in tab order', () => {
     const { getByLabelText, getByText } = render(
       <DataDecorator
