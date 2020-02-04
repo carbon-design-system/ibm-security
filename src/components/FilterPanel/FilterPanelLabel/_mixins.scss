@@ -1,0 +1,25 @@
+////
+/// Filter panel label mixins.
+/// @group filter-panel
+/// @copyright IBM Security 2020
+////
+
+@import '../../../globals/index';
+
+@mixin filter-panel-label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  &__text {
+    flex: 1 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__count {
+    margin-left: $carbon--spacing-04;
+    color: $text-02;
+  }
+}

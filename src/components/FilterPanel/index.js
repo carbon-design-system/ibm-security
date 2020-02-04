@@ -1,6 +1,12 @@
 /**
- * @file Filter panel entry point.
- * @copyright IBM Security 2019
+ * @file Filter panel and subcomponents entry point.
+ * @copyright IBM Security 2020
  */
+export { default } from './FilterPanel';
 
-export default from './FilterPanel';
+export { default as FilterPanelAccordion } from './FilterPanelAccordion';
+export { default as FilterPanelAccordionItem } from './FilterPanelAccordionItem';
+export { default as FilterPanelCheckbox } from './FilterPanelCheckbox';
+export { default as FilterPanelGroup } from './FilterPanelGroup';
+export { default as FilterPanelLabel } from './FilterPanelLabel';
+export { default as FilterPanelSearch } from './FilterPanelSearch';
