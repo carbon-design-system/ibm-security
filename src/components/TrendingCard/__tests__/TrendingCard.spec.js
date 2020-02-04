@@ -25,6 +25,7 @@ describe('TrendingCard', () => {
       }
     );
     await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations('TrendingCard');
   });
 
   test('should accept a custom link', () => {
