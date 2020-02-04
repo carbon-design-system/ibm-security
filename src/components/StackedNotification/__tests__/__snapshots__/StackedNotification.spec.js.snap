@@ -19,10 +19,9 @@ exports[`StackedNotification render renders correctly 1`] = `
 
 exports[`StackedNotification render renders the HTML of the node's subtree 1`] = `
 <div
-  class="bx--toast-notification bx--toast-notification--info security--stacked-notification"
+  class="security--stacked-notification bx--toast-notification bx--toast-notification--info"
   kind="info"
   role="alert"
-  timeout="0"
 >
   <div
     class="bx--toast-notification__details"

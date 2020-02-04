@@ -394,7 +394,7 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
         >
           <label
             class="bx--label bx--visually-hidden"
-            for="bx-pagination-select-3"
+            for="bx-pagination-select-1-right"
           >
             Page number, of 3 pages
           </label>
@@ -406,7 +406,7 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
             >
               <select
                 class="bx--select-input"
-                id="bx-pagination-select-3"
+                id="bx-pagination-select-1-right"
               >
                 <option
                   class="bx--select-option"
