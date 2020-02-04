@@ -6,33 +6,45 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 
-import { Link } from '../../..';
-import { Default as TrendingCard } from '../TrendingCard.stories';
+import { Link, TrendingCard } from '../../../';
 
 describe('TrendingCard', () => {
-  it('renders', () => {
-    expect(render(<TrendingCard />).container.firstChild).toMatchSnapshot();
+  test('should have no Axe or DAP violations', async () => {
+    const main = document.createElement('main');
+    render(
+      <TrendingCard
+        // Use an empty `href` to avoid misdirected Axe "skip-link" violation:
+        href="#"
+        title="test title"
+        subtitle={<span>test subtitle</span>}
+      />,
+      {
+        // DAP requires a landmark '<main>' in the DOM:
+        container: document.body.appendChild(main),
+      }
+    );
+    await expect(document.body).toHaveNoAxeViolations();
   });
 
-  it('renders a custom link', () => {
-    expect(
-      render(<TrendingCard element={Link} />).container.firstChild
-    ).toMatchSnapshot();
-  });
+  test('should accept a custom link', () => {
+    const { getByText, queryByTestId } = render(
+      <TrendingCard
+        title="test title"
+        element={({ children, ...other }) => (
+          <Link data-testid="test-data-id" href="#test-href" {...other}>
+            {children}
+          </Link>
+        )}
+      />
+    );
 
-  describe('automated accessibility testing', () => {
-    it('should have no Axe violations', async () => {
-      const { container } = render(<TrendingCard />);
-      await expect(container).toHaveNoAxeViolations();
-    });
+    // Expect trending card to preserve an extra attribute from custom link:
+    expect(queryByTestId('test-data-id')).toBeInTheDocument();
 
-    it('should have no DAP violations', async () => {
-      const { container } = render(
-        <main>
-          <TrendingCard />
-        </main>
-      );
-      await expect(container).toHaveNoDAPViolations('TrendingCard');
-    });
+    // Expect trending card to preserve href from custom link:
+    expect(getByText(/test title/i).closest('a')).toHaveAttribute(
+      'href',
+      '#test-href'
+    );
   });
 });
