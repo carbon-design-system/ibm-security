@@ -10,7 +10,7 @@ import React from 'react';
 import { Button, DataDecorator } from '../../..';
 
 describe('DataDecorator', () => {
-  test('should have no Axe or DAP violations', async () => {
+  test('should have no Axe or DAP violations when inert', async () => {
     const main = document.createElement('main');
     render(<DataDecorator type="IP" value="10.0.0.0" score={0} inert />, {
       // DAP requires a landmark '<main>' in the DOM:
@@ -18,10 +18,12 @@ describe('DataDecorator', () => {
     });
 
     await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('DataDecorator');
+    await expect(document.body).toHaveNoDAPViolations(
+      'DataDecorator that is inert'
+    );
   });
 
-  test('should have no Axe or DAP violations when active', async () => {
+  test('should have no Axe or DAP violations with an open panel', async () => {
     const main = document.createElement('main');
     const { getByText } = render(
       <DataDecorator
@@ -41,7 +43,9 @@ describe('DataDecorator', () => {
     userEvent.click(getByText(/10.0.0.0/i).closest('button'));
 
     await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('DataDecorator');
+    await expect(document.body).toHaveNoDAPViolations(
+      'DataDecorator with open panel'
+    );
   });
 
   test('should invoke open mock when data decorator is clicked to open panel', () => {
