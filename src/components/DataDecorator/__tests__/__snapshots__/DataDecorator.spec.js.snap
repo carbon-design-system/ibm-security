@@ -105,6 +105,7 @@ exports[`DataDecorator renders correctly 1`] = `
       }
     }
     focusTrap={true}
+    hasScrollingContent={false}
     isOpen={false}
     labels={
       Object {
