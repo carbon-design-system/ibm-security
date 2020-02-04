@@ -33,7 +33,11 @@ describe('SummaryCardContainer', () => {
         render={({ getBatchActionProps, getSelectionProps, summaryCards }) => (
           <Fragment>
             <SummaryCardBatchActions {...getBatchActionProps()}>
-              <SummaryCardBatchAction>test batch action</SummaryCardBatchAction>
+              <SummaryCardBatchAction
+                tabIndex={getBatchActionProps().shouldShowBatchActions ? 0 : -1}
+              >
+                test batch action
+              </SummaryCardBatchAction>
             </SummaryCardBatchActions>
             {summaryCards.map(({ id }) => (
               <SummaryCard key={id}>
@@ -67,7 +71,11 @@ describe('SummaryCardContainer', () => {
         render={({ getBatchActionProps, getSelectionProps, summaryCards }) => (
           <Fragment>
             <SummaryCardBatchActions {...getBatchActionProps()}>
-              <SummaryCardBatchAction>test batch action</SummaryCardBatchAction>
+              <SummaryCardBatchAction
+                tabIndex={getBatchActionProps().shouldShowBatchActions ? 0 : -1}
+              >
+                test batch action
+              </SummaryCardBatchAction>
             </SummaryCardBatchActions>
             {summaryCards.map(({ id }) => (
               <SummaryCard key={id}>
@@ -108,7 +116,11 @@ describe('SummaryCardContainer', () => {
         render={({ getBatchActionProps, getSelectionProps, summaryCards }) => (
           <Fragment>
             <SummaryCardBatchActions {...getBatchActionProps()}>
-              <SummaryCardBatchAction>test batch action</SummaryCardBatchAction>
+              <SummaryCardBatchAction
+                tabIndex={getBatchActionProps().shouldShowBatchActions ? 0 : -1}
+              >
+                test batch action
+              </SummaryCardBatchAction>
             </SummaryCardBatchActions>
             {summaryCards.map(({ id }) => (
               <SummaryCard key={id}>
@@ -147,7 +159,11 @@ describe('SummaryCardContainer', () => {
         render={({ getBatchActionProps, getSelectionProps, summaryCards }) => (
           <Fragment>
             <SummaryCardBatchActions {...getBatchActionProps()}>
-              <SummaryCardBatchAction>test batch action</SummaryCardBatchAction>
+              <SummaryCardBatchAction
+                tabIndex={getBatchActionProps().shouldShowBatchActions ? 0 : -1}
+              >
+                test batch action
+              </SummaryCardBatchAction>
             </SummaryCardBatchActions>
             {summaryCards.map(({ id }) => (
               <SummaryCard key={id}>
@@ -205,7 +221,11 @@ describe('SummaryCardContainer', () => {
         render={({ getBatchActionProps, getSelectionProps, summaryCards }) => (
           <Fragment>
             <SummaryCardBatchActions {...getBatchActionProps()}>
-              <SummaryCardBatchAction>test batch action</SummaryCardBatchAction>
+              <SummaryCardBatchAction
+                tabIndex={getBatchActionProps().shouldShowBatchActions ? 0 : -1}
+              >
+                test batch action
+              </SummaryCardBatchAction>
             </SummaryCardBatchActions>
             {summaryCards.map(({ id }) => (
               <SummaryCard key={id}>
@@ -244,7 +264,11 @@ describe('SummaryCardContainer', () => {
         render={({ getBatchActionProps, getSelectionProps, summaryCards }) => (
           <Fragment>
             <SummaryCardBatchActions {...getBatchActionProps()}>
-              <SummaryCardBatchAction>test batch action</SummaryCardBatchAction>
+              <SummaryCardBatchAction
+                tabIndex={getBatchActionProps().shouldShowBatchActions ? 0 : -1}
+              >
+                test batch action
+              </SummaryCardBatchAction>
             </SummaryCardBatchActions>
             {summaryCards.map(({ id }) => (
               <SummaryCard key={id}>
