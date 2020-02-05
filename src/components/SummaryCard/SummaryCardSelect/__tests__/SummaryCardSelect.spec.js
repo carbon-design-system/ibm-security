@@ -4,17 +4,19 @@
  */
 
 import { render } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 import { SummaryCardSelect } from '../../../..';
 
 describe('SummaryCardSelect', () => {
-  test('should be checked when clicked', () => {
-    const { getByLabelText } = render(
-      <SummaryCardSelect id="summary-select" labelText="test select" />
+  test('should accept a custom class', () => {
+    render(
+      <SummaryCardSelect
+        id="test-summary-select"
+        labelText="test select"
+        className="custom-class"
+      />
     );
-    userEvent.click(getByLabelText(/test select/i));
-    expect(getByLabelText(/test select/i)).toBeChecked();
+    expect(document.querySelector('label')).toHaveClass('custom-class');
   });
 });

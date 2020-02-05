@@ -149,8 +149,6 @@ describe('SummaryCardContainer', () => {
     // Loop complete.
     // The first summary card select:
     expect(getByLabelText(/test select 1/i)).toHaveFocus();
-
-    userEvent.tab();
   });
 
   test('should cycle elements in tab order when the batch actions toolbar is activated', () => {
