@@ -6,9 +6,9 @@
 import React, { Component } from 'react';
 import { debounce } from 'throttle-debounce';
 import { Table as CarbonTable } from 'carbon-components-react/lib/components/DataTable';
+import { g100 } from '@carbon/themes';
 import { tableWrapperNamespace, overflowCellNamespace } from './constants';
 import { carbonPrefix } from '../../globals/namespace';
-import theme from '../../globals/theme';
 import ScrollGradient from '../ScrollGradient/ScrollGradient';
 
 /**
@@ -86,7 +86,7 @@ class Table extends Component {
   render = () => (
     <ScrollGradient
       className={tableWrapperNamespace}
-      color={theme.ui01}
+      color={g100.ui01}
       getScrollElementRef={element => {
         this.scrollContainer = element;
       }}

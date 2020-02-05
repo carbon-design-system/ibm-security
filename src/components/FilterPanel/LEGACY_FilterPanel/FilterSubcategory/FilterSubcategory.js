@@ -8,10 +8,10 @@ import Subtract16 from '@carbon/icons-react/lib/subtract/16';
 
 import PropTypes from 'prop-types';
 import React from 'react';
+import { g100 } from '@carbon/themes';
 
 import * as defaultLabels from '../../../../globals/nls';
 import { getComponentNamespace } from '../../../../globals/namespace';
-import theme from '../../../../globals/theme';
 
 import { AccordionItem } from '../../../Accordion';
 import Button from '../../../Button';
@@ -86,7 +86,7 @@ const FilterSubcategory = ({
       <ul className={`${namespace}__filter-list`}>
         <ScrollGradient
           scrollElementClassName={`${namespace}__scroller`}
-          color={theme.uiBackground}
+          color={g100.uiBackground}
           getScrollElementRef={setListContainer}
         >
           <div

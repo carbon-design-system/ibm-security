@@ -8,6 +8,7 @@ import TrashCan20 from '@carbon/icons-react/lib/trash-can/20';
 
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import { g100 } from '@carbon/themes';
 
 import Button from '../Button';
 import IconButton from '../IconButton';
@@ -17,7 +18,6 @@ import ScrollGradient from '../ScrollGradient';
 import Transition from '../Transition';
 
 import * as defaultLabels from '../../globals/nls';
-import theme from '../../globals/theme';
 
 import { getComponentNamespace } from '../../globals/namespace';
 
@@ -153,7 +153,7 @@ class Tearsheet extends Component {
                 <section className={`${namespace}__main__content`}>
                   <ScrollGradient
                     className={`${namespace}__main__scroll-gradient`}
-                    color={theme.ui01}
+                    color={g100.ui01}
                   >
                     <div
                       className={`${namespace}__main__scroll-gradient__content`}

@@ -1354,7 +1354,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                           >
                             <ScrollGradient
                               className="security--tearsheet--small__content"
-                              color="var(--ui-01, #262626)"
+                              color="#262626"
                               direction="Y"
                               getScrollElementRef={[Function]}
                               hideStartGradient={false}
@@ -1370,7 +1370,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                   role="presentation"
                                   style={
                                     Object {
-                                      "backgroundImage": "linear-gradient(0deg, rgba(0,0,0,0), var(--ui-01, #262626) 90%)",
+                                      "backgroundImage": "linear-gradient(to top, rgba(38, 38, 38, 0), rgb(38, 38, 38))",
                                     }
                                   }
                                 />
@@ -1684,7 +1684,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                   role="presentation"
                                   style={
                                     Object {
-                                      "backgroundImage": "linear-gradient(0deg, var(--ui-01, #262626) 10%, rgba(0,0,0,0))",
+                                      "backgroundImage": "linear-gradient(to bottom, rgba(38, 38, 38, 0), rgb(38, 38, 38))",
                                     }
                                   }
                                 />
@@ -3747,7 +3747,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                             >
                               <ScrollGradient
                                 className="security--tearsheet--small__content"
-                                color="var(--ui-01, #262626)"
+                                color="#262626"
                                 direction="Y"
                                 getScrollElementRef={[Function]}
                                 hideStartGradient={false}
@@ -3763,7 +3763,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     role="presentation"
                                     style={
                                       Object {
-                                        "backgroundImage": "linear-gradient(0deg, rgba(0,0,0,0), var(--ui-01, #262626) 90%)",
+                                        "backgroundImage": "linear-gradient(to top, rgba(38, 38, 38, 0), rgb(38, 38, 38))",
                                       }
                                     }
                                   />
@@ -4077,7 +4077,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     role="presentation"
                                     style={
                                       Object {
-                                        "backgroundImage": "linear-gradient(0deg, var(--ui-01, #262626) 10%, rgba(0,0,0,0))",
+                                        "backgroundImage": "linear-gradient(to bottom, rgba(38, 38, 38, 0), rgb(38, 38, 38))",
                                       }
                                     }
                                   />

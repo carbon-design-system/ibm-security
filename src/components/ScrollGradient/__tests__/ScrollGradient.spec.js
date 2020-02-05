@@ -16,7 +16,7 @@ describe('ScrollGradient', () => {
     scrollGradient = mount(
       <ScrollGradient
         className={className}
-        color="blue"
+        color="#444"
         scrollElementClassName={className}
       >
         {children}
@@ -40,7 +40,7 @@ describe('ScrollGradient', () => {
       scrollGradient = mount(
         <ScrollGradient
           className={className}
-          color="blue"
+          color="#444"
           getScrollElementRef={getScrollElementRef}
         >
           {children}
@@ -61,7 +61,7 @@ describe('ScrollGradient', () => {
     it('adds resize event listener when mounted', () => {
       const spy = jest.spyOn(window, 'addEventListener');
       scrollGradient = mount(
-        <ScrollGradient className={className} color="blue">
+        <ScrollGradient className={className} color="#444">
           {children}
         </ScrollGradient>
       );

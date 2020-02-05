@@ -3,7 +3,7 @@
 exports[`ScrollGradient Rendering renders gradient in x-direction 1`] = `
 <ScrollGradient
   className="class"
-  color="blue"
+  color="#444"
   direction="X"
   getScrollElementRef={[Function]}
   hideStartGradient={false}
@@ -20,7 +20,7 @@ exports[`ScrollGradient Rendering renders gradient in x-direction 1`] = `
       role="presentation"
       style={
         Object {
-          "backgroundImage": "linear-gradient(-90deg, rgba(0,0,0,0), blue 90%)",
+          "backgroundImage": "linear-gradient(to left, rgba(68, 68, 68, 0), rgb(68, 68, 68))",
         }
       }
     />
@@ -44,7 +44,7 @@ exports[`ScrollGradient Rendering renders gradient in x-direction 1`] = `
       role="presentation"
       style={
         Object {
-          "backgroundImage": "linear-gradient(-90deg, blue 10%, rgba(0,0,0,0))",
+          "backgroundImage": "linear-gradient(to right, rgba(68, 68, 68, 0), rgb(68, 68, 68))",
         }
       }
     />
@@ -55,7 +55,7 @@ exports[`ScrollGradient Rendering renders gradient in x-direction 1`] = `
 exports[`ScrollGradient Rendering renders gradient in y-direction by default 1`] = `
 <ScrollGradient
   className="class"
-  color="blue"
+  color="#444"
   direction="Y"
   getScrollElementRef={[Function]}
   hideStartGradient={false}
@@ -72,7 +72,7 @@ exports[`ScrollGradient Rendering renders gradient in y-direction by default 1`]
       role="presentation"
       style={
         Object {
-          "backgroundImage": "linear-gradient(0deg, rgba(0,0,0,0), blue 90%)",
+          "backgroundImage": "linear-gradient(to top, rgba(68, 68, 68, 0), rgb(68, 68, 68))",
         }
       }
     />
@@ -96,7 +96,7 @@ exports[`ScrollGradient Rendering renders gradient in y-direction by default 1`]
       role="presentation"
       style={
         Object {
-          "backgroundImage": "linear-gradient(0deg, blue 10%, rgba(0,0,0,0))",
+          "backgroundImage": "linear-gradient(to bottom, rgba(68, 68, 68, 0), rgb(68, 68, 68))",
         }
       }
     />
