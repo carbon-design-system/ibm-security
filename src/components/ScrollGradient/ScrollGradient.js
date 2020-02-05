@@ -192,7 +192,7 @@ class ScrollGradient extends Component {
       rgbCode = `${colorObject.red}, ${colorObject.green}, ${colorObject.blue}`;
     }
     // If not hex, check if RGB or RGBA value:
-    else if (color.startsWith('rgb')) {
+    else if (color.toLowerCase().startsWith('rgb')) {
       // Get comma separated string:
       const colorCode = color.substring(
         color.indexOf('(') + 1,
