@@ -18,7 +18,7 @@ const scrollDirection = { X: 'X', Y: 'Y' };
 
 class ScrollGradient extends Component {
   static propTypes = {
-    /** @type {string} An RGB color value. If you provide a hex value, it will be converted to RGB. */
+    /** @type {string} A valid HEX, RGB, or RGBA color value. */
     color: PropTypes.string.isRequired,
 
     /** @type {string} Scroll area children */
