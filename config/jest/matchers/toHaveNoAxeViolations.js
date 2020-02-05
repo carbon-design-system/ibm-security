@@ -1,78 +1,74 @@
 /**
- * Copyright IBM Corp. 2016, 2018
- *
- * This source code is licensed under the Apache-2.0 license found in the
- * LICENSE file in the root directory of this source tree.
+ * @copyright IBM Corp. 2016 - 2020
+ * @license Apache-2.0
  */
 
-import axe from 'axe-core';
+import { run } from 'axe-core';
 
-function formatOutput(violations) {
-  const firstViolation = violations[0];
-  const { description, id, impact, help, helpUrl } = firstViolation;
-  const nodes = firstViolation.nodes.map(node => {
-    return ['Node:', node.html, '\n', ...node.failureSummary.split('\n')].join(
-      '\n'
-    );
-  });
-  const divider = '='.repeat(80);
-
-  return `Rule violation: #${id} [${impact}]
-> ${description}
-${help}
-${helpUrl}
-${divider}
-${nodes.join('\n')}`;
-}
-
+// https://github.com/dequelabs/axe-core/blob/master/doc/rule-descriptions.md
 const defaultOptions = {
   rules: {
     'document-title': {
       enabled: false,
     },
+
     'html-has-lang': {
       enabled: false,
     },
+
     'landmark-one-main': {
       enabled: false,
     },
+
     'page-has-heading-one': {
       enabled: false,
     },
+
     region: {
       enabled: false,
     },
   },
 };
 
-function toHaveNoAxeViolations(node, options = {}) {
-  // eslint-disable-next-line compat/compat
+const lineBreak = '\n';
+
+function formatOutput(violations) {
+  const { description, help, helpUrl, id, impact, nodes } = violations[0];
+
+  const formattedNodes = nodes
+    .map(({ failureSummary, html }) =>
+      ['Node:', html, lineBreak, ...failureSummary.split(lineBreak)].join(
+        lineBreak
+      )
+    )
+    .join(lineBreak);
+
+  return `Rule violation: #${id} [${impact}]
+> ${description}
+${help}
+${helpUrl}
+${'='.repeat(80)}
+${formattedNodes}`;
+}
+
+export default function(node, options = {}) {
   return new Promise(resolve => {
-    axe.run(
+    run(
       node,
       {
         ...defaultOptions,
         ...options,
       },
-      (error, result) => {
+      (error, { violations }) => {
         if (error) {
           throw error;
         }
 
-        if (result.violations.length > 0) {
-          resolve({
-            message: () => formatOutput(result.violations),
-            pass: false,
-          });
-          return;
-        }
-
         resolve({
-          pass: true,
+          message: () => formatOutput(violations),
+          pass: !violations.length > 0,
         });
       }
     );
   });
 }
-
-module.exports = toHaveNoAxeViolations;

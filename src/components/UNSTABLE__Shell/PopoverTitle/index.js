@@ -1,5 +1,5 @@
 /**
- * @file Popover header.
+ * @file Popover title.
  * @copyright IBM Security 2020
  */
 
@@ -9,19 +9,19 @@ import React from 'react';
 import { appendComponentNamespace } from '../../../globals/namespace';
 import popoverNamespace from '../Popover';
 
-function PopoverHeader({ children, ...other }) {
+function PopoverTitle({ children, ...other }) {
   return (
-    <section
-      className={appendComponentNamespace(popoverNamespace, 'header')}
+    <span
+      className={appendComponentNamespace(popoverNamespace, 'header__title')}
       {...other}
     >
       {children}
-    </section>
+    </span>
   );
 }
 
-PopoverHeader.propTypes = {
+PopoverTitle.propTypes = {
   children: node.isRequired,
 };
 
-export default PopoverHeader;
+export default PopoverTitle;

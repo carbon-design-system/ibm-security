@@ -1,24 +1,15 @@
 /**
- * Copyright IBM Corp. 2019
- *
- * This source code is licensed under the Apache-2.0 license found in the
- * LICENSE file in the root directory of this source tree.
+ * @copyright IBM Corp. 2019 - 2020
+ * @license Apache-2.0
  */
 
-import AAT from '@ibma/aat';
+import { assertCompliance, getCompliance, stringifyResults } from '@ibma/aat';
 
-async function toHaveNoDAPViolations(node, label) {
-  const results = await AAT.getCompliance(node, label);
-  if (AAT.assertCompliance(results.report) === 0) {
-    return {
-      pass: true,
-    };
-  }
+export default async function(node, label) {
+  const { report } = await getCompliance(node, label);
 
   return {
-    pass: false,
-    message: () => AAT.stringifyResults(results.report),
+    message: () => stringifyResults(report),
+    pass: assertCompliance(report) === 0,
   };
 }
-
-module.exports = toHaveNoDAPViolations;

@@ -8,7 +8,9 @@ import Menu20 from '@carbon/icons-react/lib/menu/20';
 import Notification20 from '@carbon/icons-react/lib/notification/20';
 import User20 from '@carbon/icons-react/lib/user/20';
 import Settings20 from '@carbon/icons-react/lib/settings/20';
+
 import { action } from '@storybook/addon-actions';
+import { text } from '@storybook/addon-knobs';
 
 import React from 'react';
 
@@ -24,10 +26,11 @@ import {
   NavItem,
   NavList,
   NotificationsPopover,
-  PopoverContent,
   PopoverFooter,
   PopoverHeader,
   PopoverNotification,
+  PopoverTitle,
+  ProfilePopover,
   ShellHeader,
   ShellHeaderName,
   ShellReturnToBanner,
@@ -74,8 +77,12 @@ export const Default = () => (
     </ShellToolbar>
 
     <ShellHeader>
-      <ShellHeaderName brand="Cloud" href="#" prefix="IBM">
-        Pak for Security
+      <ShellHeaderName
+        brand={text('`ShellHeaderName` brand (`brand`)', 'Cloud')}
+        href="#"
+        prefix="IBM"
+      >
+        {text('`ShellHeaderName` children (`children`)', 'Pak for Security')}
       </ShellHeaderName>
 
       <HeaderActions>
@@ -90,7 +97,9 @@ export const Default = () => (
         <HeaderAction
           popover={
             <>
-              <PopoverHeader>Notifications</PopoverHeader>
+              <PopoverHeader>
+                <PopoverTitle>Notifications</PopoverTitle>
+              </PopoverHeader>
 
               <NotificationsPopover onClear={action('onClear')} title="Today">
                 <PopoverNotification
@@ -120,25 +129,24 @@ export const Default = () => (
             </>
           }
         >
-          <IconButton renderIcon={Notification20} />
+          <IconButton
+            aria-label="Toggle notifications"
+            renderIcon={Notification20}
+          />
         </HeaderAction>
 
         <HeaderAction
           popover={
-            <>
-              <PopoverHeader>Profile</PopoverHeader>
-
-              <PopoverContent>PopoverContent</PopoverContent>
-
+            <ProfilePopover name="Simon" surname="Finney">
               <PopoverFooter>
                 <Link href="#0">Edit profile</Link>
 
                 <Link href="#0">Sign out</Link>
               </PopoverFooter>
-            </>
+            </ProfilePopover>
           }
         >
-          <IconButton renderIcon={User20} />
+          <IconButton aria-label="Toggle profile" renderIcon={User20} />
         </HeaderAction>
       </HeaderActions>
     </ShellHeader>

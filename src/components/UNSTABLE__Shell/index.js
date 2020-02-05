@@ -12,6 +12,8 @@ export PopoverContent from './PopoverContent';
 export PopoverFooter from './PopoverFooter';
 export PopoverHeader from './PopoverHeader';
 export PopoverNotification from './PopoverNotification';
+export PopoverTitle from './PopoverTitle';
+export ProfilePopover from './ProfilePopover';
 export ShellHeader from './ShellHeader';
 export ShellHeaderName from './ShellHeaderName';
 export ShellReturnToBanner from './ShellReturnToBanner';

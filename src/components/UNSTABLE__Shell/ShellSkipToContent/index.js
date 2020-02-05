@@ -17,13 +17,7 @@ const namespace = appendComponentNamespace(legacyNamespace, 'skip-to-content');
 function ShellSkipToContent({ children, href, ...other }) {
   return (
     <div className={namespace}>
-      <Button
-        className={`${namespace}__link`}
-        href={href}
-        // eslint-disable-next-line jsx-a11y/tabindex-no-positive
-        tabIndex={1}
-        {...other}
-      >
+      <Button className={`${namespace}__link`} href={href} {...other}>
         {children}
       </Button>
     </div>

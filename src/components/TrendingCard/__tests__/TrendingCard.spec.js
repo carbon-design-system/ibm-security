@@ -27,11 +27,7 @@ describe('TrendingCard', () => {
     });
 
     it('should have no DAP violations', async () => {
-      const { container } = render(
-        <main>
-          <TrendingCard />
-        </main>
-      );
+      const { container } = render(<TrendingCard />);
       await expect(container).toHaveNoDAPViolations('TrendingCard');
     });
   });

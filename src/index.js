@@ -135,6 +135,8 @@ export UNSTABLE__Shell, {
   PopoverFooter,
   PopoverHeader,
   PopoverNotification,
+  PopoverTitle,
+  ProfilePopover,
   ShellHeader,
   ShellHeaderName,
   ShellReturnToBanner,
