@@ -198,17 +198,15 @@ class ScrollGradient extends Component {
         color.indexOf('(') + 1,
         color.indexOf(')')
       );
-      // Generate array from comma separate string:
+      // Generate array from comma separated string:
       const colorCodeArray = colorCode.split(',');
 
-      // Check if rgb or rgba value:
+      // Make sure code is the right length:
       if (colorCodeArray.length === 3 || colorCodeArray.length === 4) {
         rgbCode = `${colorCodeArray[0]}, ${colorCodeArray[1]}, ${
           colorCodeArray[2]
         }`;
-      }
-      // Not valid:
-      else {
+      } else {
         console.warn(colorPropWarning);
       }
     } else {
