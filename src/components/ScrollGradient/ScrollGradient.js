@@ -7,6 +7,7 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import { throttle } from 'throttle-debounce';
 import PropTypes from 'prop-types';
+import hexRgb from 'hex-rgb';
 
 import { isClient } from '../../globals/utils/capabilities';
 import { getComponentNamespace } from '../../globals/namespace';
@@ -17,7 +18,7 @@ const scrollDirection = { X: 'X', Y: 'Y' };
 
 class ScrollGradient extends Component {
   static propTypes = {
-    /** @type {string} Fade out color. Any valid CSS color value works */
+    /** @type {string} An RGB color value. If you provide a hex value, it will be converted to RGB. */
     color: PropTypes.string.isRequired,
 
     /** @type {string} Scroll area children */
@@ -181,8 +182,38 @@ class ScrollGradient extends Component {
       ...other
     } = this.props;
     const { position } = this.state;
-    const gradientRotation =
-      direction === ScrollGradient.ScrollDirection.X ? -90 : 0;
+
+    let rgbCode = null;
+    const colorPropWarning = `The \`color\` property "${color}" supplied to \`ScrollGradient\` is not recognized as a valid HEX, RGB, or RGBA color code.`;
+
+    // Check if hex value:
+    if (color.startsWith('#')) {
+      const colorObject = hexRgb(color);
+      rgbCode = `${colorObject.red}, ${colorObject.green}, ${colorObject.blue}`;
+    }
+    // If not hex, check if RGB or RGBA value:
+    else if (color.startsWith('rgb')) {
+      // Get comma separated string:
+      const colorCode = color.substring(
+        color.indexOf('(') + 1,
+        color.indexOf(')')
+      );
+      // Generate array from comma separate string:
+      const colorCodeArray = colorCode.split(',');
+
+      // Check if rgb or rgba value:
+      if (colorCodeArray.length === 3 || colorCodeArray.length === 4) {
+        rgbCode = `${colorCodeArray[0]}, ${colorCodeArray[1]}, ${
+          colorCodeArray[2]
+        }`;
+      }
+      // Not valid:
+      else {
+        console.warn(colorPropWarning);
+      }
+    } else {
+      console.warn(colorPropWarning);
+    }
 
     return (
       <div
@@ -199,7 +230,9 @@ class ScrollGradient extends Component {
           <div
             className={`${namespace}__before`}
             style={{
-              backgroundImage: `linear-gradient(${gradientRotation}deg, rgba(0,0,0,0), ${color} 90%)`,
+              backgroundImage: `linear-gradient(to ${
+                direction === 'X' ? 'left' : 'top'
+              }, rgba(${rgbCode}, 0), rgb(${rgbCode}))`,
             }}
             role="presentation"
             aria-hidden
@@ -218,7 +251,9 @@ class ScrollGradient extends Component {
         <div
           className={`${namespace}__after`}
           style={{
-            backgroundImage: `linear-gradient(${gradientRotation}deg, ${color} 10%, rgba(0,0,0,0))`,
+            backgroundImage: `linear-gradient(to ${
+              direction === 'X' ? 'right' : 'bottom'
+            }, rgba(${rgbCode}, 0), rgb(${rgbCode}))`,
           }}
           role="presentation"
           aria-hidden

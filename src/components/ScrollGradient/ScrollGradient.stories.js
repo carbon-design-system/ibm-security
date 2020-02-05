@@ -6,13 +6,16 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { color, boolean } from '@storybook/addon-knobs';
+import { g100 } from '@carbon/themes';
 
 import { components } from '../../../.storybook';
 
-import { ScrollGradient, theme } from '../..';
+import { ScrollGradient } from '../..';
 import { className, children } from './_mocks_';
 
-const gradientColor = theme.uiBackground;
+// Do not import theme from globals,
+// which would rewrite the theme var with CSS custom properties.
+const gradientColor = g100.uiBackground;
 
 const style = {
   width: '300px',
