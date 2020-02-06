@@ -212,23 +212,24 @@ class ScrollGradient extends Component {
     const customPropertyError = `The \`color\` property ${color} supplied to \`ScrollGradient\` was recognized as a CSS property without a valid HEX or RGB/
     RGBA color code fallback. Please ensure that your CSS property has a fallback: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties#Custom_property_fallback_values`;
 
-    // Check there is no fallback value:
+    // Check if there are 2 items (the variable and the fallback color):
     if (customPropertyItemArray.length === 2) {
       const fallbackColor = customPropertyItemArray[1].toLowerCase().trim();
 
-      // Check if HEX value:
+      // Check if fallback is a HEX value:
       if (fallbackColor.startsWith('#')) {
         return this.processHexColor(fallbackColor);
       }
-      // Check if RGB or RGBA value:
+      // Check if fallback is a RGB or RGBA value:
       else if (fallbackColor.startsWith('rgb')) {
         return this.processRgbCode(fallbackColor);
       }
+      // eslint-disable-next-line no-console
       console.error(customPropertyError);
       return null;
     }
-
-    console.error(customPropertyItemArray);
+    // eslint-disable-next-line no-console
+    console.error(customPropertyError);
     return null;
   };
 
@@ -268,6 +269,7 @@ class ScrollGradient extends Component {
     else if (color.toLowerCase().startsWith('var(--')) {
       rgbCode = this.processCustomProperty(color);
     } else {
+      // eslint-disable-next-line no-console
       console.error(
         `The \`color\` property ${color} supplied to \`ScrollGradient\` was not recognized as a valid HEX, RGB, RGBA, or CSS property with a fallback color.`
       );
