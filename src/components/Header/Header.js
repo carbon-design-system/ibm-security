@@ -10,7 +10,8 @@ import Settings20 from '@carbon/icons-react/lib/settings/20';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component, Fragment } from 'react';
-import { g100 } from '@carbon/themes';
+
+import theme from '../../globals/theme';
 
 import { defaultProps, namespace, propTypes } from './constants';
 
@@ -325,7 +326,7 @@ export default class Header extends Component {
             </button>
           </div>
         )}
-        <ScrollGradient color={g100.inverse02}>
+        <ScrollGradient color={theme.inverse02}>
           <ul className={`${namespace}__popover__list`}>
             <Transition
               className={`${namespace}__notification`}

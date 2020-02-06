@@ -188,6 +188,7 @@ class ScrollGradient extends Component {
     if (colorCodeArray.length === 3 || colorCodeArray.length === 4) {
       return `${colorCodeArray[0]}, ${colorCodeArray[1]}, ${colorCodeArray[2]}`;
     }
+    // eslint-disable-next-line no-console
     console.error(
       `The \`color\` property ${color} supplied to \`ScrollGradient\` is not a valid RGB/RGBA color code, or it is a CSS property without a valid RGB/RGBA fallback color code.`
     );

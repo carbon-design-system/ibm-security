@@ -1354,7 +1354,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                           >
                             <ScrollGradient
                               className="security--tearsheet--small__content"
-                              color="#262626"
+                              color="var(--ui-01, #262626)"
                               direction="Y"
                               getScrollElementRef={[Function]}
                               hideStartGradient={false}
@@ -3747,7 +3747,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                             >
                               <ScrollGradient
                                 className="security--tearsheet--small__content"
-                                color="#262626"
+                                color="var(--ui-01, #262626)"
                                 direction="Y"
                                 getScrollElementRef={[Function]}
                                 hideStartGradient={false}
