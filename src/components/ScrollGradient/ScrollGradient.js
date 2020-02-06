@@ -189,7 +189,7 @@ class ScrollGradient extends Component {
       return `${colorCodeArray[0]}, ${colorCodeArray[1]}, ${colorCodeArray[2]}`;
     }
     console.error(
-      `The \`color\` property ${color} supplied to \`ScrollGradient\` is not a valid RGB/RGBA color code, or it is a CSS property without a valid fallback RGB/RGBA color code.`
+      `The \`color\` property ${color} supplied to \`ScrollGradient\` is not a valid RGB/RGBA color code, or it is a CSS property without a valid RGB/RGBA fallback color code.`
     );
     return null;
   };
@@ -220,7 +220,7 @@ class ScrollGradient extends Component {
       if (fallbackColor.startsWith('#')) {
         return this.processHexColor(fallbackColor);
       }
-      // If not HEX, check if RGB or RGBA value:
+      // Check if RGB or RGBA value:
       else if (fallbackColor.startsWith('rgb')) {
         return this.processRgbCode(fallbackColor);
       }
@@ -260,7 +260,7 @@ class ScrollGradient extends Component {
     if (color.startsWith('#')) {
       rgbCode = this.processHexColor(color);
     }
-    // If not HEX, check if RGB or RGBA value:
+    // Check if RGB or RGBA value:
     else if (color.toLowerCase().startsWith('rgb')) {
       rgbCode = this.processRgbCode(color);
     }
