@@ -87,20 +87,22 @@ class DataDecorator extends Component {
               }
             },
           }}
-          primaryButton={{
-            ...primaryButton,
-            onClick: event => {
-              if (
-                primaryButton.closePanel === undefined ||
-                primaryButton.closePanel
-              ) {
-                this.close(event, type, value);
-              }
-              if (primaryButton.onClick) {
-                primaryButton.onClick(event, type, value);
-              }
-            },
-          }}
+          primaryButton={
+            primaryButton && {
+              ...primaryButton,
+              onClick: event => {
+                if (
+                  primaryButton.closePanel === undefined ||
+                  primaryButton.closePanel
+                ) {
+                  this.close(event, type, value);
+                }
+                if (primaryButton.onClick) {
+                  primaryButton.onClick(event, type, value);
+                }
+              },
+            }
+          }
           renderFooter={renderFooter}
           secondaryButton={
             secondaryButton && {
