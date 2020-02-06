@@ -162,6 +162,77 @@ class ScrollGradient extends Component {
     });
 
   /**
+   * @param {String} color The HEX color value.
+   * @return The red, green, and blue color values separated by commas.
+   */
+  processHexColor = color => {
+    const colorObject = hexRgb(color);
+    return `${colorObject.red}, ${colorObject.green}, ${colorObject.blue}`;
+  };
+
+  /**
+   * @param {String} color The RGB or RGBA color value.
+   * @return The red, green, and blue color values separated by commas.
+   */
+  processRgbCode = color => {
+    // Get comma separated string:
+    const colorCode = color.substring(
+      color.indexOf('(') + 1,
+      color.indexOf(')')
+    );
+    // Generate array from comma separated string:
+    const colorCodeArray = colorCode.split(',');
+
+    // Check if color code array is the right length.
+    // RGB would have 3 items. RGBA would have 4 items.
+    if (colorCodeArray.length === 3 || colorCodeArray.length === 4) {
+      return `${colorCodeArray[0]}, ${colorCodeArray[1]}, ${colorCodeArray[2]}`;
+    }
+    console.error(
+      `The \`color\` property ${color} supplied to \`ScrollGradient\` is not a valid RGB/RGBA color code, or it is a CSS property without a valid fallback RGB/RGBA color code.`
+    );
+    return null;
+  };
+
+  /**
+   * @param {String} color The CSS custom property containing the variable name and a color fallback.
+   * @return The red, green, and blue color values separated by commas.
+   */
+  processCustomProperty = color => {
+    // Get comma separated string of the custom property's
+    // variable name and fallback value:
+    const customPropertyValue = color.substring(
+      color.indexOf('(') + 1,
+      color.indexOf(')')
+    );
+
+    // Generate array from comma separated string:
+    const customPropertyItemArray = customPropertyValue.split(',');
+
+    const customPropertyError = `The \`color\` property ${color} supplied to \`ScrollGradient\` was recognized as a CSS property without a valid HEX or RGB/
+    RGBA color code fallback. Please ensure that your CSS property has a fallback: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties#Custom_property_fallback_values`;
+
+    // Check there is no fallback value:
+    if (customPropertyItemArray.length === 2) {
+      const fallbackColor = customPropertyItemArray[1].toLowerCase().trim();
+
+      // Check if HEX value:
+      if (fallbackColor.startsWith('#')) {
+        return this.processHexColor(fallbackColor);
+      }
+      // If not HEX, check if RGB or RGBA value:
+      else if (fallbackColor.startsWith('rgb')) {
+        return this.processRgbCode(fallbackColor);
+      }
+      console.error(customPropertyError);
+      return null;
+    }
+
+    console.error(customPropertyItemArray);
+    return null;
+  };
+
+  /**
    * @type {Function} Debounces the execution of scroll state update.
    */
   updateHandler = throttle(150, this.updateScrollState);
@@ -184,33 +255,22 @@ class ScrollGradient extends Component {
     const { position } = this.state;
 
     let rgbCode = null;
-    const colorPropWarning = `The \`color\` property "${color}" supplied to \`ScrollGradient\` is not recognized as a valid HEX, RGB, or RGBA color code.`;
 
-    // Check if hex value:
+    // Check if HEX value:
     if (color.startsWith('#')) {
-      const colorObject = hexRgb(color);
-      rgbCode = `${colorObject.red}, ${colorObject.green}, ${colorObject.blue}`;
+      rgbCode = this.processHexColor(color);
     }
-    // If not hex, check if RGB or RGBA value:
+    // If not HEX, check if RGB or RGBA value:
     else if (color.toLowerCase().startsWith('rgb')) {
-      // Get comma separated string:
-      const colorCode = color.substring(
-        color.indexOf('(') + 1,
-        color.indexOf(')')
-      );
-      // Generate array from comma separated string:
-      const colorCodeArray = colorCode.split(',');
-
-      // Make sure code is the right length:
-      if (colorCodeArray.length === 3 || colorCodeArray.length === 4) {
-        rgbCode = `${colorCodeArray[0]}, ${colorCodeArray[1]}, ${
-          colorCodeArray[2]
-        }`;
-      } else {
-        console.warn(colorPropWarning);
-      }
+      rgbCode = this.processRgbCode(color);
+    }
+    // Check if color value is a CSS custom property:
+    else if (color.toLowerCase().startsWith('var(--')) {
+      rgbCode = this.processCustomProperty(color);
     } else {
-      console.warn(colorPropWarning);
+      console.error(
+        `The \`color\` property ${color} supplied to \`ScrollGradient\` was not recognized as a valid HEX, RGB, RGBA, or CSS property with a fallback color.`
+      );
     }
 
     return (
