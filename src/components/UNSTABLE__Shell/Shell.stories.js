@@ -42,15 +42,19 @@ import {
 
 export const Default = () => (
   <UNSTABLE__Shell>
-    <ShellSkipToContent>Skip to content</ShellSkipToContent>
+    <ShellSkipToContent href="#">Skip to content</ShellSkipToContent>
 
     <ShellReturnToBanner href="#">
       Return to Application / View
     </ShellReturnToBanner>
 
     <ShellToolbar>
-      <ToolbarAction aria-label="Toggle menu" renderIcon={Menu20}>
-        <Nav heading="Heading">
+      <ToolbarAction
+        aria-label="Toggle menu"
+        onClick={action('onClick')}
+        renderIcon={Menu20}
+      >
+        <Nav heading="Heading" label="Navigation">
           <NavList title="List">
             <NavItem>Item 1</NavItem>
 
@@ -87,7 +91,9 @@ export const Default = () => (
 
       <HeaderActions>
         <HeaderAction>
-          <Button kind="secondary">Action 1</Button>
+          <Button kind="secondary" onClick={action('onClick')}>
+            Action 1
+          </Button>
         </HeaderAction>
 
         <HeaderAction>
@@ -101,22 +107,32 @@ export const Default = () => (
                 <PopoverTitle>Notifications</PopoverTitle>
               </PopoverHeader>
 
-              <NotificationsPopover onClear={action('onClear')} title="Today">
+              <NotificationsPopover
+                iconDescription="Clear notifications"
+                onClear={action('onClear')}
+                title="Today"
+              >
                 <PopoverNotification
                   description="Notification 1"
+                  onClearButtonClick={action('onClearButtonClick')}
                   product="Offering 1"
+                  tooltipDirection="bottom"
                   viaLabel="via"
                 />
 
                 <PopoverNotification
                   description="Notification 2"
+                  onClearButtonClick={action('onClearButtonClick')}
                   product="Offering 2"
+                  tooltipDirection="top"
                   viaLabel="via"
                 />
 
                 <PopoverNotification
                   description="Notification 3"
+                  onClearButtonClick={action('onClearButtonClick')}
                   product="Offering 3"
+                  tooltipDirection="top"
                   viaLabel="via"
                 />
               </NotificationsPopover>

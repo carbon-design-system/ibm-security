@@ -44,9 +44,16 @@ function NotificationsPopover({
 }
 
 NotificationsPopover.propTypes = {
+  /** Specify the title */
   title: string.isRequired,
+
+  /** Provide the contents of the `NotificationsPopover` */
   children: node.isRequired,
+
+  /** Provide a description for the icon that can be read by screen readers */
   iconDescription: string.isRequired,
+
+  /** Specify a 'clear' handler that is called when the 'clear' button is selected */
   onClear: func,
 };
 

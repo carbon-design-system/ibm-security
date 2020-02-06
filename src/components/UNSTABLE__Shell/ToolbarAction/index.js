@@ -5,7 +5,7 @@
 
 import Close20 from '@carbon/icons-react/lib/close/20';
 
-import { func, node, string } from 'prop-types';
+import { func, node, object, oneOfType, string } from 'prop-types';
 import React, { useRef } from 'react';
 
 import IconButton from '../../IconButton';
@@ -16,6 +16,7 @@ function ToolbarAction({
   activeAction,
   children,
   id,
+  onClick,
   renderIcon,
   setActiveAction,
   ...other
@@ -28,13 +29,15 @@ function ToolbarAction({
       <IconButton
         id={id}
         iconClassName={`${toolbarNamespace}__icon`}
-        onClick={() => {
-          if (isActive) {
-            setActiveAction(null);
-          } else {
-            setActiveAction(id);
+        onClick={event => {
+          setActiveAction(!isActive ? id : null);
 
+          if (!isActive) {
             ref.current.focus();
+          }
+
+          if (onClick) {
+            onClick(event);
           }
         }}
         ref={ref}
@@ -53,15 +56,30 @@ function ToolbarAction({
 }
 
 ToolbarAction.propTypes = {
+  /** Provide the contents of the `ToolbarAction` */
   children: node.isRequired,
-  id: string.isRequired,
-  renderIcon: node.isRequired,
+
+  /** Specify the icon to be rendered */
+  renderIcon: oneOfType([func, object]).isRequired,
+
+  /** Specify a custom identifier */
+  id: string,
+
+  /** Specify the current active action internally */
   activeAction: string,
-  setActiveAction: func.isRequired,
+
+  /** Sets the current active action internally */
+  setActiveAction: func,
+
+  /** Specify a 'click' handler */
+  onClick: func,
 };
 
 ToolbarAction.defaultProps = {
+  id: null,
   activeAction: null,
+  setActiveAction: null,
+  onClick: null,
 };
 
 export default ToolbarAction;

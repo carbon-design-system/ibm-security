@@ -6,18 +6,12 @@
 import { node } from 'prop-types';
 import React, { Children, cloneElement, useState } from 'react';
 
-import {
-  appendComponentNamespace,
-  getComponentNamespace,
-} from '../../../globals/namespace';
+import { appendComponentNamespace } from '../../../globals/namespace';
 
 import { namespace as shellNamespace } from '../Shell';
+import { namespace as toolbarNamespace } from '../../Toolbar/Toolbar';
 
-const suffix = 'toolbar';
-
-export const toolbarNamespace = getComponentNamespace(suffix);
-
-const namespace = appendComponentNamespace(shellNamespace, suffix);
+const namespace = appendComponentNamespace(shellNamespace, 'toolbar');
 
 function ShellToolbar({ children, ...other }) {
   const [activeAction, setActiveAction] = useState(null);
@@ -39,7 +33,10 @@ function ShellToolbar({ children, ...other }) {
 }
 
 ShellToolbar.propTypes = {
+  /** Provide the contents of the `ShellToolbar` */
   children: node.isRequired,
 };
 
 export default ShellToolbar;
+
+export { toolbarNamespace };

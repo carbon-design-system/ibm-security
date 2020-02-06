@@ -6,22 +6,23 @@
 import { node } from 'prop-types';
 import React from 'react';
 
-import { getComponentNamespace } from '../../globals/namespace';
+import { appendComponentNamespace } from '../../globals/namespace';
 
-const legacyNamespace = getComponentNamespace('shell');
+import { namespace as legacyNamespace } from '../Shell/Shell';
 
-const namespace = getComponentNamespace('shell--unstable');
+const namespace = appendComponentNamespace(legacyNamespace, 'unstable');
 
-const UNSTABLE__Shell = ({ children, ...other }) => (
+const Shell = ({ children, ...other }) => (
   <div className={`${legacyNamespace} ${namespace}`} {...other}>
     {children}
   </div>
 );
 
-UNSTABLE__Shell.propTypes = {
+Shell.propTypes = {
+  /** Provide the contents of the `Shell` */
   children: node.isRequired,
 };
 
-export default UNSTABLE__Shell;
+export default Shell;
 
 export { legacyNamespace, namespace };

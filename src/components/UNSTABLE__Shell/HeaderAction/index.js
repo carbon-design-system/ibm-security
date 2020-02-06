@@ -20,20 +20,16 @@ function HeaderAction({
   const isActive = popover && activeAction === id;
   const ref = useRef(null);
 
-  const onClick = () => {
-    if (isActive) {
-      setActiveAction(null);
-    } else {
-      setActiveAction(id);
-
-      ref.current.focus();
-    }
-  };
-
   return (
     <>
       {cloneElement(children, {
-        onClick,
+        onClick: () => {
+          setActiveAction(!isActive ? id : null);
+
+          if (!isActive) {
+            ref.current.focus();
+          }
+        },
         ref,
       })}
 
@@ -50,15 +46,27 @@ function HeaderAction({
 }
 
 HeaderAction.propTypes = {
+  /** Provide the contents of the `HeaderAction` */
   children: node.isRequired,
-  id: string.isRequired,
-  popover: node.isRequired,
+
+  /** Provide the contents of the popover */
+  popover: node,
+
+  /** Specify a custom identifier */
+  id: string,
+
+  /** Specify the current active action internally */
   activeAction: string,
-  setActiveAction: func.isRequired,
+
+  /** Sets the current active action internally */
+  setActiveAction: func,
 };
 
 HeaderAction.defaultProps = {
+  popover: null,
+  id: null,
   activeAction: null,
+  setActiveAction: null,
 };
 
 export default HeaderAction;

@@ -21,6 +21,7 @@ function PopoverHeader({ children, ...other }) {
 }
 
 PopoverHeader.propTypes = {
+  /** Provide the contents of the `PopoverHeader` */
   children: node.isRequired,
 };
 

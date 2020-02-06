@@ -43,6 +43,7 @@ function ShellReturnToBanner({ children, ...other }) {
 }
 
 ShellReturnToBanner.propTypes = {
+  /** Provide the contents of the `ShellReturnToBanner` */
   children: node.isRequired,
 };
 

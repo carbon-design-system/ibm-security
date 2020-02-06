@@ -38,6 +38,7 @@ function HeaderActions({ children, ...other }) {
 }
 
 HeaderActions.propTypes = {
+  /** Provide the contents of the `HeaderActions` */
   children: node.isRequired,
 };
 

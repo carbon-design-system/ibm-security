@@ -36,8 +36,13 @@ function ProfilePopover({ children, name, surname }) {
 }
 
 ProfilePopover.propTypes = {
+  /** Specify the user's first name */
   name: string.isRequired,
+
+  /** Specify the user's surname */
   surname: string.isRequired,
+
+  /** Provide the contents of the `ProfilePopover` */
   children: node.isRequired,
 };
 

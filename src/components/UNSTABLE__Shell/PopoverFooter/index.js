@@ -21,6 +21,7 @@ function PopoverFooter({ children, ...other }) {
 }
 
 PopoverFooter.propTypes = {
+  /** Provide the contents of the `PopoverFooter` */
   children: node.isRequired,
 };
 

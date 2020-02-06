@@ -21,6 +21,7 @@ function PopoverContent({ children, ...other }) {
 }
 
 PopoverContent.propTypes = {
+  /** Provide the contents of the `PopoverContent` */
   children: node.isRequired,
 };
 

@@ -6,14 +6,10 @@
 import { node } from 'prop-types';
 import React from 'react';
 
-import {
-  appendComponentNamespace,
-  getComponentNamespace,
-} from '../../../globals/namespace';
+import { appendComponentNamespace } from '../../../globals/namespace';
 
+import { namespace as headerNamespace } from '../../SecurityHeader/constants';
 import { namespace } from '../Shell';
-
-export const headerNamespace = getComponentNamespace('header');
 
 function ShellHeader({ children, ...other }) {
   return (
@@ -31,7 +27,10 @@ function ShellHeader({ children, ...other }) {
 }
 
 ShellHeader.propTypes = {
+  /** Provide the contents of the `ShellHeader` */
   children: node.isRequired,
 };
 
 export default ShellHeader;
+
+export { headerNamespace };

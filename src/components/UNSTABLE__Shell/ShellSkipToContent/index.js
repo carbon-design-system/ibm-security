@@ -25,7 +25,10 @@ function ShellSkipToContent({ children, href, ...other }) {
 }
 
 ShellSkipToContent.propTypes = {
+  /** Provide the contents of the `ShellSkipToContent` */
   children: node.isRequired,
+
+  /** Specify the hash identifier to 'skip' to */
   href: string.isRequired,
 };
 

@@ -25,8 +25,13 @@ function ShellHeaderName({ brand, children, prefix, ...other }) {
 }
 
 ShellHeaderName.propTypes = {
+  /** Specify the prefix for the name */
   prefix: string.isRequired,
+
+  /** Specify the brand for the name */
   brand: string.isRequired,
+
+  /** Provide the contents of the `ShellHeaderName` */
   children: node.isRequired,
 };
 
