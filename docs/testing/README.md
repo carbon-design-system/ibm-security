@@ -57,7 +57,7 @@ test('should have no Axe or DAP violations with component variation', async () =
 
 ### Click events
 
-Click event that are important to component functionality should be tested using mocks.
+Click events that are important to component functionality should be tested using mocks.
 
 ```
 test('should invoke close mock when close button is clicked', () => {
@@ -122,3 +122,5 @@ Example of a tab cycle test for `PanelV2`:
     expect(getByLabelText(/test close/i)).toHaveFocus();
   });
 ```
+
+Note that if the component is a single interactive element, like a single `<a>` or `<button>` then a tab cycle test may not be necessary. The `TrendingCard` is an example of a component that does not require a tab cycle test.
