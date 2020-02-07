@@ -10,17 +10,15 @@ import React from 'react';
 import { Button, DataDecorator } from '../../..';
 
 describe('DataDecorator', () => {
-  test('should have no Axe or DAP violations when inert', async () => {
+  test('should have no Axe or DAP violations', async () => {
     const main = document.createElement('main');
-    render(<DataDecorator type="IP" value="10.0.0.0" score={0} inert />, {
+    render(<DataDecorator type="IP" value="10.0.0.0" score={0} href="#" />, {
       // DAP requires a landmark '<main>' in the DOM:
       container: document.body.appendChild(main),
     });
 
     await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations(
-      'DataDecorator that is inert'
-    );
+    await expect(document.body).toHaveNoDAPViolations('DataDecorator');
   });
 
   test('should have no Axe or DAP violations with an open panel', async () => {

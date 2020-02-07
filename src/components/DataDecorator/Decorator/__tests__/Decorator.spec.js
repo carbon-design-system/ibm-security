@@ -3,31 +3,42 @@
  * @copyright IBM Security 2019
  */
 
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 import React from 'react';
 
 import { Decorator } from '../../../..';
 
-import props from '../../_mocks_';
-
 describe('Decorator', () => {
-  let decorator;
+  test('should have no Axe or DAP violations when renderd as a button', async () => {
+    const main = document.createElement('main');
+    render(<Decorator type="IP" value="10.0.0.0" score={0} />, {
+      // DAP requires a landmark '<main>' in the DOM:
+      container: document.body.appendChild(main),
+    });
 
-  beforeEach(() => {
-    decorator = shallow(<Decorator {...props} />);
+    await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations('Decorator as a button');
   });
 
-  it('renders correctly', () => {
-    expect(decorator).toMatchSnapshot();
+  test('should have no Axe or DAP violations when rendered as a link', async () => {
+    const main = document.createElement('main');
+    render(<Decorator type="IP" value="10.0.0.0" score={0} href="#" />, {
+      // DAP requires a landmark '<main>' in the DOM:
+      container: document.body.appendChild(main),
+    });
+
+    await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations('Decorator as a link');
   });
 
-  it("renders the HTML of the node's subtree", () => {
-    expect(decorator.render()).toMatchSnapshot();
-  });
+  test('should have no Axe or DAP violations when inert', async () => {
+    const main = document.createElement('main');
+    render(<Decorator type="IP" value="10.0.0.0" score={0} invert />, {
+      // DAP requires a landmark '<main>' in the DOM:
+      container: document.body.appendChild(main),
+    });
 
-  it('renders the `inert` variation', () => {
-    decorator.setProps({ inert: true });
-
-    expect(decorator).toMatchSnapshot();
+    await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations('Decorator as inert');
   });
 });
