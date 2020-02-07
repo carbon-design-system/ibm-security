@@ -55,7 +55,9 @@ const NonEntitledSection = ({
                 <Link id={id} href={href} className={`${namespace}__link`}>
                   {icon !== undefined && (
                     <img
-                      alt={text}
+                      // `alt` is purposely left blank:
+                      alt=""
+                      aria-hidden
                       className={`${namespace}__link__icon`}
                       src={icon}
                     />
