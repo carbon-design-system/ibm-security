@@ -21,6 +21,7 @@ const { scoreThresholds } = Decorator.defaultProps;
 const storyProps = () => ({
   type: text('Type (`type`)', type),
   value: text('Value (`value`)', value),
+  title: text('Title (`title`)', value),
   score: number('Score (`score`)', score, {
     max: scoreThresholds[scoreThresholds.length - 1],
     min: scoreThresholds[0],
