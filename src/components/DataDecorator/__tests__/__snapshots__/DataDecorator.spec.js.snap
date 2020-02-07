@@ -167,11 +167,6 @@ exports[`DataDecorator renders correctly 1`] = `
         "WIZARD_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit",
       }
     }
-    primaryButton={
-      Object {
-        "onClick": [Function],
-      }
-    }
     renderFooter={null}
     stopPropagation={false}
     title="10.0.0.0"

@@ -34,6 +34,7 @@ const InteractiveTag = ({
       [`${namespace}--removable`]: removable,
       [`${namespace}--selected`]: isSelected,
     })}
+    filter={false}
     {...other}
   >
     {children}
