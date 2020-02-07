@@ -146,6 +146,7 @@ storiesOf(patterns('SummaryCard'), module)
                 action('SummaryCardBatchAction onClick')(selectedSummaryCards)
               }
               renderIcon={Delete16}
+              tabIndex={getBatchActionProps().shouldShowBatchActions ? 0 : -1}
             >
               Action
             </SummaryCardBatchAction>
