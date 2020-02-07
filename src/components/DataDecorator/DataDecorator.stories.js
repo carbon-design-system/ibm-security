@@ -35,6 +35,12 @@ const storyProps = () => ({
   renderFooter: () => <Button size="large">Custom footer</Button>,
 });
 
-storiesOf(patterns('DataDecorator'), module).add('Default', () => (
-  <DataDecorator {...storyProps()} />
-));
+storiesOf(patterns('DataDecorator'), module).add(
+  'Default',
+  () => <DataDecorator {...storyProps()} />,
+  {
+    knobs: {
+      escapeHTML: false,
+    },
+  }
+);

@@ -35,10 +35,22 @@ const storyProps = () => ({
 });
 
 storiesOf(components('Decorator'), module)
-  .add('Default', () => <Decorator {...storyProps()} />)
-  .add('Inline', () => (
-    <p className="bx--type-body-long-01">
-      This is an inline decorator <Decorator {...storyProps()} inline /> that
-      appears alongside some text.
-    </p>
-  ));
+  .add('Default', () => <Decorator {...storyProps()} />, {
+    knobs: {
+      escapeHTML: false,
+    },
+  })
+  .add(
+    'Inline',
+    () => (
+      <p className="bx--type-body-long-01">
+        This is an inline decorator <Decorator {...storyProps()} inline /> that
+        appears alongside some text.
+      </p>
+    ),
+    {
+      knobs: {
+        escapeHTML: false,
+      },
+    }
+  );
