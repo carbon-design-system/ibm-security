@@ -6,7 +6,7 @@
 import ArrowLeft16 from '@carbon/icons-react/lib/arrow--left/16';
 
 import dataUri from 'data-uri.macro';
-import { node } from 'prop-types';
+import { node, string } from 'prop-types';
 import React from 'react';
 
 import { appendComponentNamespace } from '../../../globals/namespace';
@@ -22,7 +22,7 @@ import {
 const suffix = 'banner';
 const legacyNamespace = appendComponentNamespace(legacyShellNamespace, suffix);
 
-function ShellReturnToBanner({ children, ...other }) {
+function ShellReturnToBanner({ children, labelText, view, ...other }) {
   return (
     <Link
       className={`${legacyNamespace} ${appendComponentNamespace(
@@ -37,7 +37,10 @@ function ShellReturnToBanner({ children, ...other }) {
       {...other}
     >
       <Icon className={`${legacyNamespace}__icon`} renderIcon={ArrowLeft16} />
-      <span className={`${legacyNamespace}__text`}>{children}</span>
+      <span className={`${legacyNamespace}__text`}>
+        {labelText} {children}
+        {view && ` / ${view}`}
+      </span>
     </Link>
   );
 }
@@ -45,6 +48,17 @@ function ShellReturnToBanner({ children, ...other }) {
 ShellReturnToBanner.propTypes = {
   /** Provide the contents of the `ShellReturnToBanner` */
   children: node.isRequired,
+
+  /** Specify the text for the view to be returned to */
+  view: string,
+
+  /** Specify the translated text for the label */
+  labelText: string,
+};
+
+ShellReturnToBanner.defaultProps = {
+  view: null,
+  labelText: 'Return to',
 };
 
 export default ShellReturnToBanner;

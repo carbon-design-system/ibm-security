@@ -44,8 +44,8 @@ export const Default = () => (
   <UNSTABLE__Shell>
     <ShellSkipToContent href="#">Skip to content</ShellSkipToContent>
 
-    <ShellReturnToBanner href="#">
-      Return to Application / View
+    <ShellReturnToBanner href="#" view="View">
+      Application
     </ShellReturnToBanner>
 
     <ShellToolbar>
