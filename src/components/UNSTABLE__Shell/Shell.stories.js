@@ -9,7 +9,6 @@ import Notification20 from '@carbon/icons-react/lib/notification/20';
 import User20 from '@carbon/icons-react/lib/user/20';
 import Settings20 from '@carbon/icons-react/lib/settings/20';
 
-import { action } from '@storybook/addon-actions';
 import { text } from '@storybook/addon-knobs';
 
 import React from 'react';
@@ -115,11 +114,7 @@ export const returnToBanner = () => (
 export const toolbar = () => (
   <UNSTABLE__Shell>
     <ShellToolbar>
-      <ToolbarAction
-        aria-label="Toggle menu"
-        onClick={action('onClick')}
-        renderIcon={Menu20}
-      >
+      <ToolbarAction aria-label="Toggle menu" renderIcon={Menu20}>
         <Nav heading="Heading" label="Navigation">
           <NavList title="List">
             <NavItem>Item 1</NavItem>
@@ -161,11 +156,7 @@ export const draft = () => (
     </ShellReturnToBanner>
 
     <ShellToolbar>
-      <ToolbarAction
-        aria-label="Toggle menu"
-        onClick={action('onClick')}
-        renderIcon={Menu20}
-      >
+      <ToolbarAction aria-label="Toggle menu" renderIcon={Menu20}>
         <Nav heading="Heading" label="Navigation">
           <NavList title="List">
             <NavItem>Item 1</NavItem>
@@ -205,12 +196,10 @@ export const draft = () => (
 
               <NotificationsPopover
                 iconDescription="Clear notifications"
-                onClear={action('onClear')}
                 title="Today"
               >
                 <PopoverNotification
                   description="Notification 1"
-                  onClearButtonClick={action('onClearButtonClick')}
                   product="Offering 1"
                   tooltipDirection="bottom"
                   viaLabel="via"
@@ -218,7 +207,6 @@ export const draft = () => (
 
                 <PopoverNotification
                   description="Notification 2"
-                  onClearButtonClick={action('onClearButtonClick')}
                   product="Offering 2"
                   tooltipDirection="top"
                   viaLabel="via"
@@ -226,7 +214,6 @@ export const draft = () => (
 
                 <PopoverNotification
                   description="Notification 3"
-                  onClearButtonClick={action('onClearButtonClick')}
                   product="Offering 3"
                   tooltipDirection="top"
                   viaLabel="via"
