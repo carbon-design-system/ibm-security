@@ -40,9 +40,121 @@ import {
   UNSTABLE__Shell,
 } from '../..';
 
+const props = {
+  skipToContent: () => ({
+    children: text(
+      '`ShellSkipToContent` children (`children`)',
+      'Skip to content'
+    ),
+    href: '#',
+  }),
+
+  returnToBanner: () => ({
+    children: text(
+      '`ShellReturnToBanner` children (`children`)',
+      'Application'
+    ),
+    view: text('`ShellReturnToBanner` view (`view`)', 'View'),
+    href: '#',
+  }),
+
+  header: {
+    name: () => ({
+      children: text('`ShellHeaderName` children (`children`)', 'Application'),
+      brand: text('`ShellHeaderName` brand (`brand`)', 'Security'),
+      href: '#',
+      prefix: 'IBM',
+    }),
+  },
+};
+
+const {
+  skipToContent: skipToContentProps,
+  returnToBanner: returnToBannerProps,
+  header: { name: headerNameProps },
+} = props;
+
 export const Default = () => (
   <UNSTABLE__Shell>
-    <ShellSkipToContent href="#">Skip to content</ShellSkipToContent>
+    <ShellHeader>
+      <ShellHeaderName {...headerNameProps()} />
+
+      <HeaderActions>
+        <HeaderAction>
+          <Button>Create an account</Button>
+        </HeaderAction>
+
+        <HeaderAction>
+          <Button kind="secondary">Sign in</Button>
+        </HeaderAction>
+      </HeaderActions>
+    </ShellHeader>
+  </UNSTABLE__Shell>
+);
+
+export const skipToContent = () => (
+  <UNSTABLE__Shell>
+    <ShellSkipToContent {...skipToContentProps()} />
+
+    <ShellHeader>
+      <ShellHeaderName {...headerNameProps()} />
+    </ShellHeader>
+  </UNSTABLE__Shell>
+);
+
+export const returnToBanner = () => (
+  <UNSTABLE__Shell>
+    <ShellReturnToBanner {...returnToBannerProps()} />
+
+    <ShellHeader>
+      <ShellHeaderName {...headerNameProps()} />
+    </ShellHeader>
+  </UNSTABLE__Shell>
+);
+
+export const toolbar = () => (
+  <UNSTABLE__Shell>
+    <ShellToolbar>
+      <ToolbarAction
+        aria-label="Toggle menu"
+        onClick={action('onClick')}
+        renderIcon={Menu20}
+      >
+        <Nav heading="Heading" label="Navigation">
+          <NavList title="List">
+            <NavItem>Item 1</NavItem>
+
+            <NavItem>Item 2</NavItem>
+          </NavList>
+
+          <NavItem>Item 3</NavItem>
+        </Nav>
+
+        <Nav>
+          <NavItem>Item 4</NavItem>
+
+          <NavItem>Item 5</NavItem>
+        </Nav>
+      </ToolbarAction>
+
+      <ToolbarAction aria-label="Toggle settings" renderIcon={Settings20}>
+        Action 2
+      </ToolbarAction>
+
+      <ToolbarAction aria-label="Toggle help" renderIcon={Help20}>
+        Action 3
+      </ToolbarAction>
+    </ShellToolbar>
+
+    <ShellHeader>
+      <ShellHeaderName {...headerNameProps()} />
+    </ShellHeader>
+  </UNSTABLE__Shell>
+);
+
+export const draft = () => (
+  <UNSTABLE__Shell>
+    <ShellSkipToContent {...skipToContentProps()} />
 
     <ShellReturnToBanner href="#" view="View">
       Application
@@ -81,25 +193,9 @@ export const Default = () => (
     </ShellToolbar>
 
     <ShellHeader>
-      <ShellHeaderName
-        brand={text('`ShellHeaderName` brand (`brand`)', 'Cloud')}
-        href="#"
-        prefix="IBM"
-      >
-        {text('`ShellHeaderName` children (`children`)', 'Pak for Security')}
-      </ShellHeaderName>
+      <ShellHeaderName {...headerNameProps()} />
 
       <HeaderActions>
-        <HeaderAction>
-          <Button kind="secondary" onClick={action('onClick')}>
-            Action 1
-          </Button>
-        </HeaderAction>
-
-        <HeaderAction>
-          <Button>Action 2</Button>
-        </HeaderAction>
-
         <HeaderAction
           popover={
             <>

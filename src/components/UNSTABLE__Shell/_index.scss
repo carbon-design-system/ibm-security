@@ -13,25 +13,33 @@
   /// @type Length
   $shell__toolbar__spacing: $toolbar__sizing__width;
 
-  $root: &;
-  $toolbar: '#{&}__toolbar';
-  $header: '#{&}__header';
+  /// Header selector.
+  /// @type String
+  $header__selector: '#{&}__#{$header__name}';
+
+  /// Toolbar selector.
+  /// @type String
+  $toolbar__selector: '#{&}__#{$toolbar__name}';
 
   &__banner ~ {
-    #{$toolbar},
-    #{$toolbar} #{$toolbar__namespace}__panel,
-    #{$header} > #{$header__namespace} {
+    #{$toolbar__selector},
+    #{$toolbar__selector} #{$toolbar__namespace}__panel,
+    #{$header__selector} > #{$header__namespace} {
       margin-top: $shell__banner__sizing__height;
     }
   }
 
-  #{$toolbar} + #{$header} {
+  #{$toolbar__selector} + #{$header__selector} {
     width: calc(#{$header__sizing__width} - #{$shell__toolbar__spacing});
     margin-left: $shell__toolbar__spacing;
   }
 
   &__group {
     position: relative;
+
+    > * {
+      min-height: inherit;
+    }
   }
 
   &__popover {
