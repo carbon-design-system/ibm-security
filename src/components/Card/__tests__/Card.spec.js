@@ -1,61 +1,88 @@
 /**
  * @file Card tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2020
  */
 
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 import React from 'react';
+import userEvent from '@testing-library/user-event';
 
-import { children, className } from '../../_mocks_';
+import { Card } from '../../..';
 
-import { Card, CardSkeleton } from '../';
-
-import { image, label, link, tag, text as bodyText, title } from '../_mocks_';
-
-const props = {
-  className,
-  label,
-
-  header: {
-    tag,
-    image,
-    title,
-  },
-
-  body: {
-    text: bodyText,
-  },
-
-  footer: {
-    children,
-  },
-};
+import { icon } from '../../_mocks_';
 
 describe('Card', () => {
-  let card;
-
-  beforeEach(() => {
-    card = shallow(<Card {...props}>{children}</Card>);
+  test('should have no Axe or DAP violations', async () => {
+    const main = document.createElement('main');
+    render(
+      <Card
+        header={{
+          image: icon,
+          tag: 'test tag',
+          title: 'test title',
+        }}
+        label="test label"
+        body={{
+          text: 'test content',
+        }}
+        footer={{
+          children: <span>test footer</span>,
+        }}
+      />,
+      {
+        // DAP requires a landmark '<main>' in the DOM:
+        container: document.body.appendChild(main),
+      }
+    );
+    await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations('Card');
   });
 
-  it('renders', () => {
-    expect(card).toMatchSnapshot();
+  test('should have no Axe or DAP violations when rendered as a link', async () => {
+    const main = document.createElement('main');
+    render(
+      <Card
+        header={{
+          title: 'test title',
+        }}
+        link="#"
+      />,
+      {
+        // DAP requires a landmark '<main>' in the DOM:
+        container: document.body.appendChild(main),
+      }
+    );
+    await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations('Card as a link');
   });
 
-  it("renders the HTML of the node's subtree", () => {
-    expect(card.render()).toMatchSnapshot();
+  test('should invoke click mock when card is clicked', () => {
+    const onClickMock = jest.fn();
+    const { getByText } = render(
+      <Card
+        header={{
+          title: 'test title',
+        }}
+        link="#"
+        onClick={onClickMock}
+      />
+    );
+
+    userEvent.click(getByText(/test title/i));
+    expect(onClickMock).toHaveBeenCalledTimes(1);
   });
 
-  it('renders the link variation', () => {
-    card.setProps({
-      link,
-      onClick: jest.fn(),
-    });
-
-    expect(card).toMatchSnapshot();
-  });
-
-  it('renders the skeleton variation', () => {
-    expect(shallow(<CardSkeleton />)).toMatchSnapshot();
+  test('should add custom class', () => {
+    const { getByText } = render(
+      <Card
+        header={{
+          title: 'test title',
+        }}
+        className="custom-class"
+      />
+    );
+    expect(getByText(/test title/i).parentNode.parentNode).toHaveClass(
+      'custom-class'
+    );
   });
 });
