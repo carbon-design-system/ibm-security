@@ -19,10 +19,6 @@ describe('Accordion', () => {
         </AccordionItem>
       </Accordion>
     );
-    // Expect accordion to have correct alignment class:
-    expect(getByText(/test title/i).closest('ul')).toHaveClass(
-      `${carbonPrefix}accordion--start`
-    );
     // Expect the icon to be first inside the accordion item heading button:
     expect(getByText(/test title/i).closest('button').firstChild).toBe(
       getByLabelText(/test icon label/i)
