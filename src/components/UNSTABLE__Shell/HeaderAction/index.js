@@ -6,8 +6,14 @@
 import { func, node, string } from 'prop-types';
 import React, { cloneElement, useRef } from 'react';
 
+import Transition from '../../Transition';
+
 import { namespace } from '../Shell';
 import { headerNamespace } from '../ShellHeader';
+
+import popoverNamespace from '../Popover';
+
+console.log(popoverNamespace);
 
 function HeaderAction({
   activeAction,
@@ -33,13 +39,17 @@ function HeaderAction({
         ref,
       })}
 
-      {popover && isActive && (
-        <div
-          className={`${headerNamespace}__popover ${namespace}__popover`}
-          {...other}
-        >
-          {popover}
-        </div>
+      {popover && (
+        <Transition className={headerNamespace} component="span">
+          {isActive && (
+            <div
+              className={`${popoverNamespace} ${namespace}__popover`}
+              {...other}
+            >
+              {popover}
+            </div>
+          )}
+        </Transition>
       )}
     </>
   );

@@ -115,29 +115,33 @@ export const toolbar = () => (
   <UNSTABLE__Shell>
     <ShellToolbar>
       <ToolbarAction aria-label="Toggle menu" renderIcon={Menu20}>
-        <Nav heading="Heading" label="Navigation">
-          <NavList title="List">
-            <NavItem>Item 1</NavItem>
-
-            <NavItem>Item 2</NavItem>
-          </NavList>
-
-          <NavItem>Item 3</NavItem>
-        </Nav>
-
-        <Nav>
-          <NavItem>Item 4</NavItem>
-
-          <NavItem>Item 5</NavItem>
+        <Nav heading="My applications" label="Applications">
+          <NavItem href="#">Application 1</NavItem>
+          <NavItem href="#">Application 2</NavItem>
+          <NavItem href="#">Application 3</NavItem>
         </Nav>
       </ToolbarAction>
 
       <ToolbarAction aria-label="Toggle settings" renderIcon={Settings20}>
-        Action 2
+        <Nav heading="General settings" label="Settings">
+          <NavItem href="#">Settings 1</NavItem>
+          <NavItem href="#">Settings 2</NavItem>
+          <NavItem href="#">Settings 3</NavItem>
+        </Nav>
+
+        <Nav heading="Application settings" label="Application settings">
+          <NavList title="Application 1">
+            <NavItem href="#">Application settings 1</NavItem>
+            <NavItem href="#">Application settings 2</NavItem>
+            <NavItem href="#">Application settings 3</NavItem>
+          </NavList>
+        </Nav>
       </ToolbarAction>
 
       <ToolbarAction aria-label="Toggle help" renderIcon={Help20}>
-        Action 3
+        <Nav heading="Support" label="Support">
+          <NavItem href="#">Support 1</NavItem>
+        </Nav>
       </ToolbarAction>
     </ShellToolbar>
 
@@ -147,42 +151,8 @@ export const toolbar = () => (
   </UNSTABLE__Shell>
 );
 
-export const draft = () => (
+export const notifications = () => (
   <UNSTABLE__Shell>
-    <ShellSkipToContent {...skipToContentProps()} />
-
-    <ShellReturnToBanner href="#" view="View">
-      Application
-    </ShellReturnToBanner>
-
-    <ShellToolbar>
-      <ToolbarAction aria-label="Toggle menu" renderIcon={Menu20}>
-        <Nav heading="Heading" label="Navigation">
-          <NavList title="List">
-            <NavItem>Item 1</NavItem>
-
-            <NavItem>Item 2</NavItem>
-          </NavList>
-
-          <NavItem>Item 3</NavItem>
-        </Nav>
-
-        <Nav>
-          <NavItem>Item 4</NavItem>
-
-          <NavItem>Item 5</NavItem>
-        </Nav>
-      </ToolbarAction>
-
-      <ToolbarAction aria-label="Toggle settings" renderIcon={Settings20}>
-        Action 2
-      </ToolbarAction>
-
-      <ToolbarAction aria-label="Toggle help" renderIcon={Help20}>
-        Action 3
-      </ToolbarAction>
-    </ShellToolbar>
-
     <ShellHeader>
       <ShellHeaderName {...headerNameProps()} />
 
@@ -233,7 +203,17 @@ export const draft = () => (
             renderIcon={Notification20}
           />
         </HeaderAction>
+      </HeaderActions>
+    </ShellHeader>
+  </UNSTABLE__Shell>
+);
 
+export const profile = () => (
+  <UNSTABLE__Shell>
+    <ShellHeader>
+      <ShellHeaderName {...headerNameProps()} />
+
+      <HeaderActions>
         <HeaderAction
           popover={
             <ProfilePopover name="Simon" surname="Finney">

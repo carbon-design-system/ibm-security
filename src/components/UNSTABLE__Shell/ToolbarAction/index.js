@@ -5,6 +5,7 @@
 
 import Close20 from '@carbon/icons-react/lib/close/20';
 
+import classnames from 'classnames';
 import { func, node, object, oneOfType, string } from 'prop-types';
 import React, { useRef } from 'react';
 
@@ -15,6 +16,7 @@ import { toolbarNamespace } from '../ShellToolbar';
 function ToolbarAction({
   activeAction,
   children,
+  className,
   id,
   onClick,
   renderIcon,
@@ -28,7 +30,9 @@ function ToolbarAction({
     <li>
       <IconButton
         id={id}
+        className={classnames(`${toolbarNamespace}__button`, className)}
         iconClassName={`${toolbarNamespace}__icon`}
+        label={other['aria-label']}
         onClick={event => {
           setActiveAction(!isActive ? id : null);
 
@@ -42,6 +46,7 @@ function ToolbarAction({
         }}
         ref={ref}
         renderIcon={isActive ? Close20 : renderIcon}
+        tooltip={!isActive}
         tooltipDirection={IconButton.TooltipDirection.RIGHT}
         {...other}
       />
@@ -65,21 +70,25 @@ ToolbarAction.propTypes = {
   /** Specify a custom identifier */
   id: string,
 
+  /** Specify a 'click' handler */
+  onClick: func,
+
+  /** Provide an optional class to be applied to the containing node */
+  className: string,
+
   /** Specify the current active action internally */
   activeAction: string,
 
   /** Sets the current active action internally */
   setActiveAction: func,
-
-  /** Specify a 'click' handler */
-  onClick: func,
 };
 
 ToolbarAction.defaultProps = {
   id: null,
+  onClick: null,
+  className: null,
   activeAction: null,
   setActiveAction: null,
-  onClick: null,
 };
 
 export default ToolbarAction;

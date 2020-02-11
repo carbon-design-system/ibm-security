@@ -34,12 +34,8 @@
     margin-left: $shell__toolbar__spacing;
   }
 
-  &__group {
-    position: relative;
-
-    > * {
-      min-height: inherit;
-    }
+  &__group > * {
+    min-height: inherit;
   }
 
   &__popover {
