@@ -16,14 +16,16 @@ const LoadingMessage = ({
   withOverlay,
   ...other
 }) => {
-  const loading = <Loading active={active} small={small} withOverlay={false} />;
+  const loading = (
+    <Loading active={active} small={small} withOverlay={false} {...other} />
+  );
 
   const overlayClasses = classnames('bx--loading-overlay', className, {
     'bx--loading-overlay--stop': !active,
   });
 
   return withOverlay ? (
-    <div className={overlayClasses} {...other}>
+    <div className={overlayClasses}>
       {loading}
       {children}
     </div>
