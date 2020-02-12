@@ -25,10 +25,11 @@ import {
   NavItem,
   NavList,
   NotificationsPopover,
+  PopoverAccount,
+  PopoverAccountItem,
+  PopoverAccountList,
   PopoverFooter,
-  PopoverHeader,
   PopoverNotification,
-  PopoverTitle,
   ProfilePopover,
   ShellHeader,
   ShellHeaderName,
@@ -160,13 +161,10 @@ export const notifications = () => (
         <HeaderAction
           popover={
             <>
-              <PopoverHeader>
-                <PopoverTitle>Notifications</PopoverTitle>
-              </PopoverHeader>
-
               <NotificationsPopover
                 iconDescription="Clear notifications"
-                title="Today"
+                label="Today"
+                title="Notifications"
               >
                 <PopoverNotification
                   description="Notification 1"
@@ -216,7 +214,29 @@ export const profile = () => (
       <HeaderActions>
         <HeaderAction
           popover={
-            <ProfilePopover name="Simon" surname="Finney">
+            <ProfilePopover name="Sample" surname="User">
+              <PopoverAccount account="Account 1" id="Account 1">
+                Account 1
+              </PopoverAccount>
+
+              <PopoverAccountList
+                id="Account 1"
+                account="Account 1"
+                name="Account 1"
+              >
+                <PopoverAccountItem id="Account 1" account="Account 1">
+                  Account 1
+                </PopoverAccountItem>
+
+                <PopoverAccountItem id="Account 2" account="Account 2">
+                  Account 2
+                </PopoverAccountItem>
+
+                <PopoverAccountItem id="Account 3" account="Account 3">
+                  Account 3
+                </PopoverAccountItem>
+              </PopoverAccountList>
+
               <PopoverFooter>
                 <Link href="#0">Edit profile</Link>
 

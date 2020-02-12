@@ -13,8 +13,6 @@ import { headerNamespace } from '../ShellHeader';
 
 import popoverNamespace from '../Popover';
 
-console.log(popoverNamespace);
-
 function HeaderAction({
   activeAction,
   children,

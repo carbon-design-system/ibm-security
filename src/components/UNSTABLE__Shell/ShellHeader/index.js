@@ -9,16 +9,13 @@ import React from 'react';
 import { appendComponentNamespace } from '../../../globals/namespace';
 
 import { namespace as headerNamespace } from '../../SecurityHeader/constants';
-import { namespace } from '../Shell';
+import { namespace as shellNamespace } from '../Shell';
+
+export const namespace = appendComponentNamespace(shellNamespace, 'header');
 
 function ShellHeader({ children, ...other }) {
   return (
-    <div
-      className={`${headerNamespace}__container ${appendComponentNamespace(
-        namespace,
-        'header'
-      )}`}
-    >
+    <div className={`${headerNamespace}__container ${namespace}`}>
       <header className={headerNamespace} {...other}>
         {children}
       </header>

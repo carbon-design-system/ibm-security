@@ -13,19 +13,20 @@ import PopoverHeader from '../PopoverHeader';
 
 import popoverNamespace from '../Popover';
 
-const namespace = appendComponentNamespace(popoverNamespace, 'profile__header');
+export const namespace = appendComponentNamespace(popoverNamespace, 'profile');
+const headerNamespace = appendComponentNamespace(namespace, 'header');
 
-function ProfilePopover({ children, name, surname }) {
+function ProfilePopover({ children, name, surname, ...other }) {
   return (
     <>
-      <PopoverHeader>
+      <PopoverHeader {...other}>
         <ProfileImage
-          className={`${namespace}__icon`}
+          className={`${headerNamespace}__icon`}
           profile={{ name: { first_name: name, surname } }}
           large
         />
 
-        <span className={`${namespace}__title`}>
+        <span className={`${headerNamespace}__title`}>
           {name} {surname}
         </span>
       </PopoverHeader>

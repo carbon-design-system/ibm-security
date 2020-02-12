@@ -14,20 +14,26 @@ import Icon from '../../Icon';
 import ScrollGradient from '../../ScrollGradient';
 
 import PopoverContent from '../PopoverContent';
+import PopoverHeader from '../PopoverHeader';
+import PopoverTitle from '../PopoverTitle';
 
 import namespace from '../Popover';
 
 function NotificationsPopover({
   children,
   iconDescription,
+  label,
   onClear,
   title,
   ...other
 }) {
   return (
     <>
+      <PopoverHeader>
+        <PopoverTitle>{title}</PopoverTitle>
+      </PopoverHeader>
       <PopoverContent {...other}>
-        <span className={`${namespace}__label`}>{title}</span>
+        {label && <span className={`${namespace}__label`}>{label}</span>}
         <button
           className={`${namespace}__button`}
           aria-label={iconDescription}
@@ -53,11 +59,15 @@ NotificationsPopover.propTypes = {
   /** Provide a description for the icon that can be read by screen readers */
   iconDescription: string.isRequired,
 
+  /** Specify the label for the notifications */
+  label: string,
+
   /** Specify a 'clear' handler that is called when the 'clear' button is selected */
   onClear: func,
 };
 
 NotificationsPopover.defaultProps = {
+  label: null,
   onClear: null,
 };
 

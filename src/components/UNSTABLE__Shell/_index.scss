@@ -41,4 +41,10 @@
   &__popover {
     top: $header__sizing__height;
   }
+
+  &__header__account {
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
 }
