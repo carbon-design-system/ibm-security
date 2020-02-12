@@ -71,15 +71,17 @@ describe('LoadingMessage', () => {
     expect(queryByLabelText('test description')).toBeInTheDocument();
   });
 
-  test('should show a custom loading message after animated loading icon', () => {
+  test('should show a custom loading message after the loading animation', () => {
     const { container, getByLabelText, getByText } = render(
       <LoadingMessage description="test description">
         test message
       </LoadingMessage>
     );
+    // Expect the loading animation to appear first:
     expect(container.firstChild).toBe(
       getByLabelText(/test description/i).parentNode
     );
+    // Expect the loading message to appear second/last:
     expect(container.lastChild).toBe(getByText(/test message/i));
   });
 });
