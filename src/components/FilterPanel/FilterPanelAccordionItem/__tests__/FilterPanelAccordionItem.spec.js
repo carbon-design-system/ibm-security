@@ -24,21 +24,21 @@ const createChildChildren = length =>
   ));
 
 describe('FilterPanelAccordionItem', () => {
-  it('renders with a title', () => {
+  test('renders with a title', () => {
     const { getByText } = render(
       <FilterPanelAccordionItem title="custom title" />
     );
     expect(getByText(/custom title/i)).toBeVisible();
   });
 
-  it('renders with a title node', () => {
+  test('renders with a title node', () => {
     const { getByTestId } = render(
       <FilterPanelAccordionItem title={<span data-testid="node-title" />} />
     );
     expect(getByTestId('node-title')).toBeVisible();
   });
 
-  it('renders with content', () => {
+  test('renders with content', () => {
     const { getByTestId } = render(
       <FilterPanelAccordionItem>
         <div data-testid="content" />
@@ -47,14 +47,14 @@ describe('FilterPanelAccordionItem', () => {
     expect(getByTestId('content')).toBeVisible();
   });
 
-  it('adds custom class name', () => {
+  test('adds custom class name', () => {
     const { container } = render(
       <FilterPanelAccordionItem className="custom-class" />
     );
     expect(container.querySelector('.custom-class')).toBeInTheDocument();
   });
 
-  it('does not truncate 10 or less children', () => {
+  test('does not truncate 10 or less children', () => {
     const { queryByText } = render(
       <FilterPanelAccordionItem>
         {createChildChildren(10)}
@@ -63,7 +63,7 @@ describe('FilterPanelAccordionItem', () => {
     expect(queryByText(/expandLabel/i)).not.toBeInTheDocument();
   });
 
-  it('truncates more than 10 children', () => {
+  test('truncates more than 10 children', () => {
     const { queryByText } = render(
       <FilterPanelAccordionItem>
         {createChildChildren(11)}
@@ -72,7 +72,7 @@ describe('FilterPanelAccordionItem', () => {
     expect(queryByText(/expandLabel \(\d+\)/i)).toBeInTheDocument();
   });
 
-  it('toggles expand button label when clicked', () => {
+  test('toggles expand button label when clicked', () => {
     const { getByText } = render(
       <FilterPanelAccordionItem>
         {createChildChildren(11)}
@@ -83,7 +83,7 @@ describe('FilterPanelAccordionItem', () => {
     expect(toggleExpandButton).toHaveTextContent(/collapseLabel/i);
   });
 
-  it('toggles expand button label when clicked twice', () => {
+  test('toggles expand button label when clicked twice', () => {
     const { getByText } = render(
       <FilterPanelAccordionItem>
         {createChildChildren(11)}
@@ -95,7 +95,7 @@ describe('FilterPanelAccordionItem', () => {
     expect(toggleExpandButton).toHaveTextContent(/expandLabel \(\d+\)/i);
   });
 
-  it('displays subset of children when truncated and collapsed by default', () => {
+  test('displays subset of children when truncated and collapsed by default', () => {
     const { getAllByTestId } = render(
       <FilterPanelAccordionItem>
         {createChildChildren(20)}
@@ -104,7 +104,7 @@ describe('FilterPanelAccordionItem', () => {
     expect(getAllByTestId(/child-\d+/i)).toHaveLength(5);
   });
 
-  it('displays all children when truncated and expanded', () => {
+  test('displays all children when truncated and expanded', () => {
     const { getByText, getAllByTestId } = render(
       <FilterPanelAccordionItem>
         {createChildChildren(20)}
@@ -115,7 +115,7 @@ describe('FilterPanelAccordionItem', () => {
     expect(getAllByTestId(/child-\d+/i)).toHaveLength(20);
   });
 
-  it('displays separated children when truncated and expanded', () => {
+  test('displays separated children when truncated and expanded', () => {
     const { getByText, getByTestId } = render(
       <FilterPanelAccordionItem>
         {createChildChildren(20)}
