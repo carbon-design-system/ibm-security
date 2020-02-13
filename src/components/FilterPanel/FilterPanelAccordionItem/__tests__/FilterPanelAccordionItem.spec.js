@@ -24,6 +24,28 @@ const createChildChildren = length =>
   ));
 
 describe('FilterPanelAccordionItem', () => {
+  test('should have no Axe or DAP violations', async () => {
+    const main = document.createElement('main');
+    render(
+      <div>
+        <FilterPanelAccordionItem title="test-item-1">
+          {createChildChildren(11)}
+        </FilterPanelAccordionItem>
+        <FilterPanelAccordionItem title="test-item-2">
+          {createChildChildren(11)}
+        </FilterPanelAccordionItem>
+      </div>,
+      {
+        // DAP requires a landmark '<main>' in the DOM:
+        container: document.body.appendChild(main),
+      }
+    );
+    await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations(
+      'FilterPanelAccordionItem'
+    );
+  });
+
   test('renders with a title', () => {
     const { getByText } = render(
       <FilterPanelAccordionItem title="custom title" />

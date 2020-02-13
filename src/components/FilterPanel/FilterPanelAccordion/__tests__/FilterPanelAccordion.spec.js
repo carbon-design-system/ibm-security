@@ -7,25 +7,16 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 import FilterPanelAccordion from '../FilterPanelAccordion';
-import FilterPanelAccordionItem from '../../FilterPanelAccordionItem';
 
 describe('FilterPanelAccordion', () => {
   test('should have no Axe or DAP violations', async () => {
     const main = document.createElement('main');
-    render(
-      <FilterPanelAccordion title="test accordion title">
-        <FilterPanelAccordionItem title="test accordion item 1" />
-        <FilterPanelAccordionItem title="test accordion item 2" />
-      </FilterPanelAccordion>,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
-    );
+    render(<FilterPanelAccordion title="test accordion title" />, {
+      // DAP requires a landmark '<main>' in the DOM:
+      container: document.body.appendChild(main),
+    });
     await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations(
-      'FilterPanelAccordion with FilterPanelAccordionItem children'
-    );
+    await expect(document.body).toHaveNoDAPViolations('FilterPanelAccordion');
   });
 
   test('renders with a title', () => {
