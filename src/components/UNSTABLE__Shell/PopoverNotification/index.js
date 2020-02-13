@@ -12,9 +12,9 @@ import namespace from '../Popover';
 
 function PopoverNotification({ ...other }) {
   return (
-    <li className={appendComponentNamespace(namespace, 'list-item')}>
+    <div className={appendComponentNamespace(namespace, 'list-item')}>
       <HeaderNotification {...other} />
-    </li>
+    </div>
   );
 }
 

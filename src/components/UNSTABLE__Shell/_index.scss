@@ -4,9 +4,13 @@
 /// @copyright IBM Security 2020
 ////
 
-@import '../SecurityHeader/mixins';
-@import '../Shell/mixins';
-@import '../Toolbar/mixins';
+@import '@carbon/layout/scss/mini-unit';
+@import '@carbon/layout/scss/spacing';
+@import 'carbon-components/scss/globals/scss/vars';
+
+@import '../SecurityHeader/index';
+@import '../Shell/index';
+@import '../Toolbar/index';
 
 @include security--component($name: shell__unstable) {
   /// Banner height.
@@ -38,8 +42,16 @@
     min-height: inherit;
   }
 
+  &__button--icon:last-of-type {
+    margin-right: $carbon--spacing-07;
+  }
+
   &__popover {
-    top: $header__sizing__height;
+    top: carbon--mini-units($count: 5.5);
+
+    .#{$prefix}--link {
+      @include header__popover__link--secondary;
+    }
   }
 
   &__header__account {

@@ -9,7 +9,7 @@ import Notification20 from '@carbon/icons-react/lib/notification/20';
 import User20 from '@carbon/icons-react/lib/user/20';
 import Settings20 from '@carbon/icons-react/lib/settings/20';
 
-import { text } from '@storybook/addon-knobs';
+import { boolean, text } from '@storybook/addon-knobs';
 
 import React from 'react';
 
@@ -65,19 +65,30 @@ const props = {
       href: '#',
       prefix: 'IBM',
     }),
+
+    profile: () => ({
+      name: text('`ProfilePopover` name (`name`)', 'Sample'),
+      surname: text('`ProfilePopover` surname (`surname`)', 'User'),
+    }),
+
+    account: () => ({
+      children: text('`PopoverAccount` children (`children`)', 'Account 1'),
+      account: text('`PopoverAccount` account (`account`)', 'Account 1'),
+      id: text('`PopoverAccount` identifier (`id`)', 'Account 1'),
+    }),
   },
 };
 
 const {
   skipToContent: skipToContentProps,
   returnToBanner: returnToBannerProps,
-  header: { name: headerNameProps },
+  header: { account: accountProps, name: nameProps, profile: profileProps },
 } = props;
 
 export const Default = () => (
   <UNSTABLE__Shell>
     <ShellHeader>
-      <ShellHeaderName {...headerNameProps()} />
+      <ShellHeaderName {...nameProps()} />
 
       <HeaderActions>
         <HeaderAction>
@@ -97,7 +108,7 @@ export const skipToContent = () => (
     <ShellSkipToContent {...skipToContentProps()} />
 
     <ShellHeader>
-      <ShellHeaderName {...headerNameProps()} />
+      <ShellHeaderName {...nameProps()} />
     </ShellHeader>
   </UNSTABLE__Shell>
 );
@@ -107,7 +118,7 @@ export const returnToBanner = () => (
     <ShellReturnToBanner {...returnToBannerProps()} />
 
     <ShellHeader>
-      <ShellHeaderName {...headerNameProps()} />
+      <ShellHeaderName {...nameProps()} />
     </ShellHeader>
   </UNSTABLE__Shell>
 );
@@ -147,7 +158,7 @@ export const toolbar = () => (
     </ShellToolbar>
 
     <ShellHeader>
-      <ShellHeaderName {...headerNameProps()} />
+      <ShellHeaderName {...nameProps()} />
     </ShellHeader>
   </UNSTABLE__Shell>
 );
@@ -155,7 +166,7 @@ export const toolbar = () => (
 export const notifications = () => (
   <UNSTABLE__Shell>
     <ShellHeader>
-      <ShellHeaderName {...headerNameProps()} />
+      <ShellHeaderName {...nameProps()} />
 
       <HeaderActions>
         <HeaderAction
@@ -168,21 +179,21 @@ export const notifications = () => (
               >
                 <PopoverNotification
                   description="Notification 1"
-                  product="Offering 1"
+                  product="Application 1"
                   tooltipDirection="bottom"
                   viaLabel="via"
                 />
 
                 <PopoverNotification
                   description="Notification 2"
-                  product="Offering 2"
+                  product="Application 2"
                   tooltipDirection="top"
                   viaLabel="via"
                 />
 
                 <PopoverNotification
                   description="Notification 3"
-                  product="Offering 3"
+                  product="Application 3"
                   tooltipDirection="top"
                   viaLabel="via"
                 />
@@ -195,6 +206,7 @@ export const notifications = () => (
               </PopoverFooter>
             </>
           }
+          hasBadge={boolean('`HeaderAction` badge (`hasBadge`)', true)}
         >
           <IconButton
             aria-label="Toggle notifications"
@@ -206,54 +218,91 @@ export const notifications = () => (
   </UNSTABLE__Shell>
 );
 
-export const profile = () => (
-  <UNSTABLE__Shell>
-    <ShellHeader>
-      <ShellHeaderName {...headerNameProps()} />
+export const profile = () => {
+  return (
+    <UNSTABLE__Shell>
+      <ShellHeader>
+        <ShellHeaderName {...nameProps()} />
 
-      <HeaderActions>
-        <HeaderAction
-          popover={
-            <ProfilePopover name="Sample" surname="User">
-              <PopoverAccount account="Account 1" id="Account 1">
-                Account 1
-              </PopoverAccount>
+        <HeaderActions>
+          <HeaderAction
+            popover={
+              <ProfilePopover {...profileProps()}>
+                <PopoverFooter>
+                  <Link href="#0">Edit profile</Link>
 
-              <PopoverAccountList
-                id="Account 1"
-                account="Account 1"
-                name="Account 1"
-              >
-                <PopoverAccountItem id="Account 1" account="Account 1">
-                  Account 1
-                </PopoverAccountItem>
+                  <Link href="#0">Sign out</Link>
+                </PopoverFooter>
+              </ProfilePopover>
+            }
+          >
+            <IconButton aria-label="Toggle profile" renderIcon={User20} />
+          </HeaderAction>
+        </HeaderActions>
+      </ShellHeader>
+    </UNSTABLE__Shell>
+  );
+};
 
-                <PopoverAccountItem id="Account 2" account="Account 2">
-                  Account 2
-                </PopoverAccountItem>
+export const profileAccount = () => {
+  return (
+    <UNSTABLE__Shell>
+      <ShellHeader>
+        <ShellHeaderName {...nameProps()} />
 
-                <PopoverAccountItem id="Account 3" account="Account 3">
-                  Account 3
-                </PopoverAccountItem>
-              </PopoverAccountList>
+        <HeaderActions>
+          <HeaderAction
+            popover={
+              <ProfilePopover {...profileProps()}>
+                <PopoverAccount {...accountProps()} />
+              </ProfilePopover>
+            }
+          >
+            <IconButton aria-label="Toggle profile" renderIcon={User20} />
+          </HeaderAction>
+        </HeaderActions>
+      </ShellHeader>
+    </UNSTABLE__Shell>
+  );
+};
 
-              <PopoverFooter>
-                <Link href="#0">Edit profile</Link>
+export const profileAccountList = () => {
+  return (
+    <UNSTABLE__Shell>
+      <ShellHeader>
+        <ShellHeaderName {...nameProps()} />
 
-                <Link href="#0">Sign out</Link>
-              </PopoverFooter>
-            </ProfilePopover>
-          }
-        >
-          <IconButton aria-label="Toggle profile" renderIcon={User20} />
-        </HeaderAction>
-      </HeaderActions>
-    </ShellHeader>
-  </UNSTABLE__Shell>
-);
+        <HeaderActions>
+          <HeaderAction
+            popover={
+              <ProfilePopover {...profileProps()}>
+                <PopoverAccountList
+                  {...accountProps()}
+                  name={text('`PopoverAccountList` name (`name`)', 'Account 1')}
+                >
+                  <PopoverAccountItem {...accountProps()} />
+
+                  <PopoverAccountItem account="Account 2" id="Account 2">
+                    Account 2
+                  </PopoverAccountItem>
+
+                  <PopoverAccountItem account="Account 3" id="Account 3">
+                    Account 3
+                  </PopoverAccountItem>
+                </PopoverAccountList>
+              </ProfilePopover>
+            }
+          >
+            <IconButton aria-label="Toggle profile" renderIcon={User20} />
+          </HeaderAction>
+        </HeaderActions>
+      </ShellHeader>
+    </UNSTABLE__Shell>
+  );
+};
 
 export default meta(
   patterns('UNSTABLE__Shell'),
-  'UNSTABLE__Shell',
+  'Shells provide composeability and customisability for IBM Security applications, including the header, notifications, profile, popovers, and toolbar items.',
   disableCentered()
 );

@@ -10,6 +10,7 @@ import { func, node, object, oneOfType, string } from 'prop-types';
 import React, { useRef } from 'react';
 
 import IconButton from '../../IconButton';
+import Transition from '../../Transition';
 
 import { toolbarNamespace } from '../ShellToolbar';
 
@@ -27,7 +28,7 @@ function ToolbarAction({
   const ref = useRef(null);
 
   return (
-    <li>
+    <>
       <IconButton
         id={id}
         className={classnames(`${toolbarNamespace}__button`, className)}
@@ -51,12 +52,14 @@ function ToolbarAction({
         {...other}
       />
 
-      {isActive && (
-        <aside className={`${toolbarNamespace}__panel`} role="menu">
-          {children}
-        </aside>
-      )}
-    </li>
+      <Transition className={toolbarNamespace} component="span">
+        {isActive && (
+          <aside className={`${toolbarNamespace}__panel`} role="menu">
+            {children}
+          </aside>
+        )}
+      </Transition>
+    </>
   );
 }
 

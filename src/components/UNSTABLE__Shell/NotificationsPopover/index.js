@@ -34,16 +34,18 @@ function NotificationsPopover({
       </PopoverHeader>
       <PopoverContent {...other}>
         {label && <span className={`${namespace}__label`}>{label}</span>}
-        <button
-          className={`${namespace}__button`}
-          aria-label={iconDescription}
-          onClick={onClear}
-        >
-          <Icon renderIcon={Close20} />
-        </button>
+        {onClear && (
+          <button
+            className={`${namespace}__button`}
+            aria-label={iconDescription}
+            onClick={onClear}
+          >
+            <Icon renderIcon={Close20} />
+          </button>
+        )}
       </PopoverContent>
       <ScrollGradient color={theme.inverse02}>
-        <ul className={`${namespace}__list`}>{children}</ul>
+        <div className={`${namespace}__list`}>{children}</div>
       </ScrollGradient>
     </>
   );

@@ -230,6 +230,10 @@ $header__transition__timing-function: $timing-function;
 
     &__label {
       @include carbon--type-style($name: heading-01);
+
+      &:only-child {
+        margin-bottom: $carbon--spacing-03;
+      }
     }
 
     &__list {

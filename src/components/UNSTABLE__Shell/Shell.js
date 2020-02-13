@@ -12,11 +12,16 @@ import { namespace as legacyNamespace } from '../Shell/Shell';
 
 const namespace = appendComponentNamespace(legacyNamespace, 'unstable');
 
-const Shell = ({ children, ...other }) => (
-  <div className={`${legacyNamespace} ${namespace}`} {...other}>
-    {children}
-  </div>
-);
+/**
+ * Shells provide composeability and customisability for IBM Security applications, including the header, notifications, profile, popovers, and toolbar items.
+ */
+function Shell({ children, ...other }) {
+  return (
+    <div className={`${legacyNamespace} ${namespace}`} {...other}>
+      {children}
+    </div>
+  );
+}
 
 Shell.propTypes = {
   /** Provide the contents of the `Shell` */

@@ -3,9 +3,11 @@
  * @copyright IBM Security 2020
  */
 
-import { func, node, string } from 'prop-types';
+import classnames from 'classnames';
+import { bool, func, node, string } from 'prop-types';
 import React, { cloneElement, useRef } from 'react';
 
+import IconButton from '../../IconButton';
 import Transition from '../../Transition';
 
 import { namespace } from '../Shell';
@@ -16,6 +18,8 @@ import popoverNamespace from '../Popover';
 function HeaderAction({
   activeAction,
   children,
+  className,
+  hasBadge,
   id,
   popover,
   setActiveAction,
@@ -24,9 +28,18 @@ function HeaderAction({
   const isActive = popover && activeAction === id;
   const ref = useRef(null);
 
+  const headerButtonNamespace = `${headerNamespace}__button`;
+  const isIconButton = popover && children.type === IconButton;
+
   return (
     <>
       {cloneElement(children, {
+        className: classnames(className, {
+          [`${namespace}__button--icon`]: isIconButton,
+          [headerButtonNamespace]: isIconButton,
+          [`${headerButtonNamespace}--notifications`]: isIconButton && hasBadge,
+          [`${headerButtonNamespace}--active`]: isIconButton && isActive,
+        }),
         onClick: () => {
           setActiveAction(!isActive ? id : null);
 
@@ -60,6 +73,12 @@ HeaderAction.propTypes = {
   /** Provide the contents of the popover */
   popover: node,
 
+  /** Provide an optional class to be applied to the containing node */
+  className: string,
+
+  /** Specify whether the action has a badge or not */
+  hasBadge: bool,
+
   /** Specify a custom identifier */
   id: string,
 
@@ -72,6 +91,8 @@ HeaderAction.propTypes = {
 
 HeaderAction.defaultProps = {
   popover: null,
+  className: null,
+  hasBadge: false,
   id: null,
   activeAction: null,
   setActiveAction: null,

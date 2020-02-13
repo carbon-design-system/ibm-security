@@ -18,7 +18,7 @@ function ShellToolbar({ children, ...other }) {
 
   return (
     <nav className={`${toolbarNamespace} ${namespace}`} {...other}>
-      <ul className={`${toolbarNamespace}__group`}>
+      <div className={`${toolbarNamespace}__group`}>
         {Children.map(children, (child, index) =>
           cloneElement(child, {
             activeAction,
@@ -27,7 +27,7 @@ function ShellToolbar({ children, ...other }) {
             setActiveAction,
           })
         )}
-      </ul>
+      </div>
     </nav>
   );
 }
