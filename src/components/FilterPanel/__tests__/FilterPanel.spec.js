@@ -10,6 +10,16 @@ import FilterPanel from '..';
 import * as mockProps from '../_mocks_';
 
 describe('FilterPanel', () => {
+  test('should have no Axe or DAP violations', async () => {
+    const main = document.createElement('main');
+    render(<FilterPanel title="test title" />, {
+      // DAP requires a landmark '<main>' in the DOM:
+      container: document.body.appendChild(main),
+    });
+    await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations('FilterPanel');
+  });
+
   test('renders without a title or content by default', () => {
     const { container } = render(<FilterPanel />);
     expect(container).not.toHaveTextContent();
