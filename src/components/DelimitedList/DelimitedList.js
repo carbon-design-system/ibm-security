@@ -39,7 +39,7 @@ function DelimitedList({ className, delimiter, items, truncate, ...other }) {
   return (
     <div
       className={classes}
-      title={hasOverflow ? items.join(delimiter) : undefined}
+      title={hasOverflow ? items.join(delimiter) : ''}
       {...other}
     >
       <div ref={element} className={valueClasses}>
