@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getComponentNamespace } from '../../globals/namespace';
 
-export const namespace = getComponentNamespace('delimited-list');
+const namespace = getComponentNamespace('delimited-list');
 
 /**
  * Delimited List component.
