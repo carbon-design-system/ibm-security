@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import React from 'react';
 import userEvent from '@testing-library/user-event';
 
@@ -51,7 +51,7 @@ describe('Portal', () => {
 
   test('should set initial focus', () => {
     const { getByText } = render(
-      <Portal initialFocus={() => document.querySelector('#test-button-2')}>
+      <Portal initialFocus="#test-button-2">
         <section>
           <button>test button 1</button>
           <button id="test-button-2">test button 2</button>
@@ -91,5 +91,32 @@ describe('Portal', () => {
     expect(onClickMock).toHaveBeenCalledTimes(0);
   });
 
-  // test that certain events can be stopped, selectively
+  test('should stop specific events from bubbling up with `stopPropagationEvents`', () => {
+    const onMouseDownMock = jest.fn();
+    const onMouseUpMock = jest.fn();
+
+    const { getByText } = render(
+      <Portal stopPropagationEvents={['onMouseUp']}>
+        <section>
+          <button
+            id="test-button"
+            onMouseDown={onMouseDownMock}
+            onMouseUp={onMouseUpMock}
+          >
+            test button
+          </button>
+        </section>
+      </Portal>
+    );
+
+    // userEvent.click(getByText(/test button/i));
+    fireEvent.mouseDown(getByText(/test button/i));
+    fireEvent.mouseUp(getByText(/test button/i));
+
+    // Expect to be called:
+    expect(onMouseDownMock).toHaveBeenCalledTimes(1);
+
+    // Expect to NOT be called, because the even is blocked:
+    expect(onMouseUpMock).toHaveBeenCalledTimes(0);
+  });
 });
