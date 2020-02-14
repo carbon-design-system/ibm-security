@@ -9,7 +9,7 @@ import userEvent from '@testing-library/user-event';
 
 import { Pill } from '../../..';
 
-describe('PanelV2', () => {
+describe('Pill', () => {
   test('should have no Axe or DAP violations', async () => {
     const main = document.createElement('main');
     render(<Pill value="127.0.0.1" type="IP" />, {
