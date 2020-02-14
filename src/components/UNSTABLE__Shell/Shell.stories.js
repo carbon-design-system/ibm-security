@@ -42,30 +42,26 @@ import {
 } from '../..';
 
 const props = {
-  header: {
-    name: () => ({
-      children: text('`ShellHeaderName` children (`children`)', 'Application'),
-      brand: text('`ShellHeaderName` brand (`brand`)', 'Security'),
-      href: '#',
-      prefix: 'IBM',
-    }),
+  name: () => ({
+    children: text('`ShellHeaderName` children (`children`)', 'Application'),
+    brand: text('`ShellHeaderName` brand (`brand`)', 'Security'),
+    href: '#',
+    prefix: 'IBM',
+  }),
 
-    profile: () => ({
-      name: text('`ProfilePopover` name (`name`)', 'Sample'),
-      surname: text('`ProfilePopover` surname (`surname`)', 'User'),
-    }),
+  profile: () => ({
+    name: text('`ProfilePopover` name (`name`)', 'Sample'),
+    surname: text('`ProfilePopover` surname (`surname`)', 'User'),
+  }),
 
-    account: () => ({
-      children: text('`PopoverAccount` children (`children`)', 'Account 1'),
-      account: text('`PopoverAccount` account (`account`)', 'Account 1'),
-      id: text('`PopoverAccount` identifier (`id`)', 'Account 1'),
-    }),
-  },
+  account: () => ({
+    children: text('`PopoverAccount` children (`children`)', 'Account 1'),
+    account: text('`PopoverAccount` account (`account`)', 'Account 1'),
+    id: text('`PopoverAccount` identifier (`id`)', 'Account 1'),
+  }),
 };
 
-const {
-  header: { account: accountProps, name: nameProps, profile: profileProps },
-} = props;
+const { account: accountProps, name: nameProps, profile: profileProps } = props;
 
 export const Default = () => (
   <UNSTABLE__Shell>
