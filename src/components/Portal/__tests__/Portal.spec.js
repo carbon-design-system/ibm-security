@@ -49,6 +49,19 @@ describe('Portal', () => {
     await expect(document.body).toHaveNoDAPViolations('Portal without overlay');
   });
 
+  test('should remove node from DOM when it is unmounted', () => {
+    const { queryByText, unmount } = render(
+      <Portal>
+        <section>
+          <button>test button</button>
+        </section>
+      </Portal>
+    );
+    expect(queryByText(/test button/i)).toBeVisible();
+    unmount();
+    expect(queryByText(/test button/i)).not.toBeInTheDocument();
+  });
+
   test('should set initial focus', () => {
     const { getByText } = render(
       <Portal initialFocus="#test-button-2">
@@ -98,11 +111,7 @@ describe('Portal', () => {
     const { getByText } = render(
       <Portal stopPropagationEvents={['onMouseUp']}>
         <section>
-          <button
-            id="test-button"
-            onMouseDown={onMouseDownMock}
-            onMouseUp={onMouseUpMock}
-          >
+          <button onMouseDown={onMouseDownMock} onMouseUp={onMouseUpMock}>
             test button
           </button>
         </section>
@@ -116,7 +125,7 @@ describe('Portal', () => {
     // Expect to be called:
     expect(onMouseDownMock).toHaveBeenCalledTimes(1);
 
-    // Expect to NOT be called, because the even is blocked:
+    // Expect to NOT be called, because the event is blocked:
     expect(onMouseUpMock).toHaveBeenCalledTimes(0);
   });
 });
