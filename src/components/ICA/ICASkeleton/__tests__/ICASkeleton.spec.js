@@ -4,10 +4,18 @@
  */
 
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
+
 import ICASkeleton from '../ICASkeleton';
 
-describe('ICASkeleton', () => {
-  it('matches default snapshot', () =>
-    expect(shallow(<ICASkeleton />)).toMatchSnapshot());
+describe('ICA', () => {
+  test('should have no Axe or DAP violations', async () => {
+    const main = document.createElement('main');
+    render(<ICASkeleton />, {
+      // DAP requires a landmark '<main>' in the DOM:
+      container: document.body.appendChild(main),
+    });
+    await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations('ICASkeleton');
+  });
 });
