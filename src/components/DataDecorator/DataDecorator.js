@@ -52,8 +52,17 @@ class DataDecorator extends Component {
       subtitle,
       type,
       value,
+      title,
     } = this.props;
-    const decoratorProps = { className, inline, noIcon, score, type, value };
+    const decoratorProps = {
+      className,
+      inline,
+      noIcon,
+      score,
+      type,
+      value,
+      title,
+    };
     const componentLabels = {
       ...defaultLabels.labels,
       ...labels,
@@ -87,20 +96,22 @@ class DataDecorator extends Component {
               }
             },
           }}
-          primaryButton={{
-            ...primaryButton,
-            onClick: event => {
-              if (
-                primaryButton.closePanel === undefined ||
-                primaryButton.closePanel
-              ) {
-                this.close(event, type, value);
-              }
-              if (primaryButton.onClick) {
-                primaryButton.onClick(event, type, value);
-              }
-            },
-          }}
+          primaryButton={
+            primaryButton && {
+              ...primaryButton,
+              onClick: event => {
+                if (
+                  primaryButton.closePanel === undefined ||
+                  primaryButton.closePanel
+                ) {
+                  this.close(event, type, value);
+                }
+                if (primaryButton.onClick) {
+                  primaryButton.onClick(event, type, value);
+                }
+              },
+            }
+          }
           renderFooter={renderFooter}
           secondaryButton={
             secondaryButton && {
@@ -208,6 +219,9 @@ DataDecorator.propTypes = {
   /** @type {ReactNode} Child elements for the panel's subtitle. */
   subtitle: PropTypes.node,
 
+  /** @type {string} decorator's title. */
+  title: PropTypes.string,
+
   /** @type {string} The type of data. */
   type: PropTypes.string.isRequired,
 
@@ -236,6 +250,7 @@ DataDecorator.defaultProps = {
   scoreThresholds: [0, 4, 7, 10],
   secondaryButton: undefined,
   subtitle: undefined,
+  title: undefined,
   stopPropagation: false,
   stopPropagationEvents: undefined,
 };
