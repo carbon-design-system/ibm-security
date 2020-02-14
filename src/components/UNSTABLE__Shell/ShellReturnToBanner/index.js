@@ -22,13 +22,14 @@ import {
 const suffix = 'banner';
 const legacyNamespace = appendComponentNamespace(legacyShellNamespace, suffix);
 
-function ShellReturnToBanner({ children, labelText, view, ...other }) {
+function ShellReturnToBanner({ children, href, labelText, view, ...other }) {
   return (
     <Link
       className={`${legacyNamespace} ${appendComponentNamespace(
         shellNamespace,
         suffix
       )}`}
+      href={href}
       style={{
         backgroundImage: `url(${dataUri(
           '../../../images/aurora-banner@2x.png'
@@ -48,6 +49,9 @@ function ShellReturnToBanner({ children, labelText, view, ...other }) {
 ShellReturnToBanner.propTypes = {
   /** Provide the contents of the `ShellReturnToBanner` */
   children: node.isRequired,
+
+  /** Specify the URL to 'return' to */
+  href: string.isRequired,
 
   /** Specify the text for the view to be returned to */
   view: string,

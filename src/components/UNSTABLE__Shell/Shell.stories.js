@@ -9,6 +9,7 @@ import Notification20 from '@carbon/icons-react/lib/notification/20';
 import User20 from '@carbon/icons-react/lib/user/20';
 import Settings20 from '@carbon/icons-react/lib/settings/20';
 
+import { action } from '@storybook/addon-actions';
 import { boolean, text } from '@storybook/addon-knobs';
 
 import React from 'react';
@@ -41,23 +42,6 @@ import {
 } from '../..';
 
 const props = {
-  skipToContent: () => ({
-    children: text(
-      '`ShellSkipToContent` children (`children`)',
-      'Skip to content'
-    ),
-    href: '#',
-  }),
-
-  returnToBanner: () => ({
-    children: text(
-      '`ShellReturnToBanner` children (`children`)',
-      'Application'
-    ),
-    view: text('`ShellReturnToBanner` view (`view`)', 'View'),
-    href: '#',
-  }),
-
   header: {
     name: () => ({
       children: text('`ShellHeaderName` children (`children`)', 'Application'),
@@ -80,8 +64,6 @@ const props = {
 };
 
 const {
-  skipToContent: skipToContentProps,
-  returnToBanner: returnToBannerProps,
   header: { account: accountProps, name: nameProps, profile: profileProps },
 } = props;
 
@@ -105,7 +87,9 @@ export const Default = () => (
 
 export const skipToContent = () => (
   <UNSTABLE__Shell>
-    <ShellSkipToContent {...skipToContentProps()} />
+    <ShellSkipToContent href="#">
+      {text('`ShellSkipToContent` children (`children`)', 'Skip to content')}
+    </ShellSkipToContent>
 
     <ShellHeader>
       <ShellHeaderName {...nameProps()} />
@@ -115,7 +99,12 @@ export const skipToContent = () => (
 
 export const returnToBanner = () => (
   <UNSTABLE__Shell>
-    <ShellReturnToBanner {...returnToBannerProps()} />
+    <ShellReturnToBanner
+      href="#"
+      view={text('`ShellReturnToBanner` view (`view`)', 'View')}
+    >
+      {text('`ShellReturnToBanner` children (`children`)', 'Application')}
+    </ShellReturnToBanner>
 
     <ShellHeader>
       <ShellHeaderName {...nameProps()} />
@@ -175,9 +164,13 @@ export const notifications = () => (
               <NotificationsPopover
                 iconDescription="Clear notifications"
                 label="Today"
+                onClear={action(
+                  '`NotificationsPopover` clear handler (`onClear`)'
+                )}
                 title="Notifications"
               >
                 <PopoverNotification
+                  dateTime="2020-02-01T09:00:00.770Z"
                   description="Notification 1"
                   product="Application 1"
                   tooltipDirection="bottom"
@@ -185,6 +178,7 @@ export const notifications = () => (
                 />
 
                 <PopoverNotification
+                  dateTime="2020-02-01T09:00:00.770Z"
                   description="Notification 2"
                   product="Application 2"
                   tooltipDirection="top"
@@ -192,6 +186,7 @@ export const notifications = () => (
                 />
 
                 <PopoverNotification
+                  dateTime="2020-02-01T09:00:00.770Z"
                   description="Notification 3"
                   product="Application 3"
                   tooltipDirection="top"

@@ -5,7 +5,7 @@
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 import CarbonButton from 'carbon-components-react/lib/components/Button';
 import InlineLoading from '../InlineLoading';
@@ -16,35 +16,32 @@ export const namespace = getComponentNamespace('button');
 
 const { defaultProps, propTypes } = CarbonButton;
 
-const Button = ({
-  className,
-  disabled,
-  loading,
-  kind,
-  renderIcon,
-  size,
-  ...other
-}) => {
-  const isGhostDanger = kind === 'ghost-danger';
-  const isLarge = size === 'large';
+const Button = forwardRef(
+  ({ className, disabled, loading, kind, renderIcon, size, ...other }, ref) => {
+    const isGhostDanger = kind === 'ghost-danger';
+    const isLarge = size === 'large';
 
-  const buttonClasses = classnames(namespace, className, {
-    [`${namespace}--ghost-danger`]: isGhostDanger,
-    [`${namespace}--large`]: isLarge,
-    [`${namespace}--loading`]: loading,
-  });
+    const buttonClasses = classnames(namespace, className, {
+      [`${namespace}--ghost-danger`]: isGhostDanger,
+      [`${namespace}--large`]: isLarge,
+      [`${namespace}--loading`]: loading,
+    });
 
-  return (
-    <CarbonButton
-      className={buttonClasses}
-      disabled={disabled || loading}
-      kind={isGhostDanger || loading ? 'ghost' : kind}
-      renderIcon={loading ? InlineLoading : renderIcon}
-      size={!isLarge ? size : null}
-      {...other}
-    />
-  );
-};
+    return (
+      <CarbonButton
+        className={buttonClasses}
+        disabled={disabled || loading}
+        kind={isGhostDanger || loading ? 'ghost' : kind}
+        ref={ref}
+        renderIcon={loading ? InlineLoading : renderIcon}
+        size={!isLarge ? size : null}
+        {...other}
+      />
+    );
+  }
+);
+
+Button.displayName = 'Button';
 
 Button.defaultProps = {
   ...defaultProps,
