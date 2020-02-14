@@ -1,3 +1,8 @@
+/**
+ * @file Portal tests.
+ * @copyright IBM Security 2018
+ */
+
 import { cleanup, render, fireEvent } from '@testing-library/react';
 import React from 'react';
 
