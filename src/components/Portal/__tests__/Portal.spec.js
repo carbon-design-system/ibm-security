@@ -63,18 +63,6 @@ describe('Portal', () => {
     expect(queryByText(/test button/i)).not.toBeInTheDocument();
   });
 
-  // test('should set initial focus', () => {
-  //   const { getByText } = render(
-  //     <Portal initialFocus={document.getElementById('#test-button-2')}>
-  //       <section>
-  //         <button>test button 1</button>
-  //         <button id="test-button-2">test button 2</button>
-  //       </section>
-  //     </Portal>
-  //   );
-  //   expect(document.activeElement).toBe(getByText(/test button 2/i));
-  // });
-
   test('should not stop events bubbling up by default', () => {
     const copyHandler = jest.fn();
     const inPortalCopy = jest.fn();
