@@ -3,53 +3,80 @@
  * @copyright IBM Security 2019
  */
 
+import { render } from '@testing-library/react';
 import React from 'react';
-import { shallow } from 'enzyme';
 
-import { TypeLayout, TypeLayoutBody, TypeLayoutRow, TypeLayoutCell } from '../';
+import {
+  TypeLayout,
+  TypeLayoutBody,
+  TypeLayoutRow,
+  TypeLayoutCell,
+} from '../../..';
 
-import rows from '../_mocks_';
-
-describe('TypeLayout', () => {
-  let typeLayout;
-
-  beforeEach(() => {
-    typeLayout = shallow(
+describe('InteractiveTag', () => {
+  test('should have no Axe or DAP violations', async () => {
+    const main = document.createElement('main');
+    render(
       <TypeLayout>
         <TypeLayoutBody>
-          {rows.map(row => {
-            const { id, title, description } = row;
+          <TypeLayoutRow>
+            <TypeLayoutCell>test cell title 1</TypeLayoutCell>
+            <TypeLayoutCell>test cell content 1</TypeLayoutCell>
+          </TypeLayoutRow>
+          <TypeLayoutRow>
+            <TypeLayoutCell>test cell title 2</TypeLayoutCell>
+            <TypeLayoutCell>test cell content 2</TypeLayoutCell>
+          </TypeLayoutRow>
+        </TypeLayoutBody>
+      </TypeLayout>,
+      {
+        // DAP requires a landmark '<main>' in the DOM:
+        container: document.body.appendChild(main),
+      }
+    );
+    await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations('InteractiveTag');
+  });
 
-            return (
-              <TypeLayoutRow key={id}>
-                <TypeLayoutCell>{title}</TypeLayoutCell>
-                <TypeLayoutCell>
-                  <ul>
-                    <li>{description}</li>
-                    <li>{description}</li>
-                    <li>{description}</li>
-                  </ul>
-                </TypeLayoutCell>
-              </TypeLayoutRow>
-            );
-          })}
+  test('should add a custom class to each component', () => {
+    const { getByText } = render(
+      <TypeLayout className="custom-layout-class">
+        <TypeLayoutBody className="custom-body-class">
+          <TypeLayoutRow className="custom-body-class">
+            <TypeLayoutCell className="custom-cell-class">
+              test cell
+            </TypeLayoutCell>
+          </TypeLayoutRow>
         </TypeLayoutBody>
       </TypeLayout>
     );
+    const cell = getByText(/test cell/i);
+    expect(cell).toHaveClass('custom-cell-class');
+    // Row class:
+    expect(cell.parentNode).toHaveClass('custom-row-class');
+    // Body class:
+    expect(cell.parentNode.parentNode).toHaveClass('custom-body-class');
+    // Layout wrapper class:
+    expect(cell.parentNode.parentNode.parentNode).toHaveClass(
+      'custom-layout-class'
+    );
   });
 
-  describe('render', () => {
-    it('renders correctly', () => {
-      expect(typeLayout).toMatchSnapshot();
-    });
-
-    it("renders the HTML of the node's subtree", () => {
-      expect(typeLayout.render()).toMatchSnapshot();
-    });
-
-    it('renders correct classes if `size` or `bordered` are set', () => {
-      typeLayout.setProps({ size: 'sm', border: true });
-      expect(typeLayout.render()).toMatchSnapshot();
-    });
+  test('should pass through extra props via spread attribute', () => {
+    const { queryByTestId } = render(
+      <TypeLayout data-testid="layout-test-id">
+        <TypeLayoutBody data-testid="body-test-id">
+          <TypeLayoutRow data-testid="row-test-id">
+            <TypeLayoutCell data-testid="cell-test-id">
+              test cell
+            </TypeLayoutCell>
+          </TypeLayoutRow>
+        </TypeLayoutBody>
+      </TypeLayout>
+    );
+    expect(queryByTestId('layout-test-id')).toBeInTheDocument();
+    expect(queryByTestId('body-test-id')).toBeInTheDocument();
+    expect(queryByTestId('row-test-id')).toBeInTheDocument();
+    expect(queryByTestId('cell-test-id')).toBeInTheDocument();
   });
 });
