@@ -3,47 +3,50 @@
  * @copyright IBM Security 2019
  */
 
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 import React from 'react';
-
-import { label } from '../../../_mocks_';
+import userEvent from '@testing-library/user-event';
 
 import { InteractiveTag } from '../../../..';
 
-import { namespace } from '../InteractiveTag';
-
 describe('InteractiveTag', () => {
-  const onRemove = jest.fn();
+  test('should have no Axe or DAP violations', async () => {
+    const main = document.createElement('main');
+    render(<InteractiveTag removable>test tag</InteractiveTag>, {
+      // DAP requires a landmark '<main>' in the DOM:
+      container: document.body.appendChild(main),
+    });
+    await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations('InteractiveTag');
+  });
 
-  let interactiveTag;
+  test('should add a custom class', () => {
+    const { getByText } = render(
+      <InteractiveTag className="custom-class">test tag</InteractiveTag>
+    );
+    expect(getByText(/test tag/i)).toHaveClass('custom-class');
+  });
 
-  beforeEach(() => {
-    interactiveTag = shallow(
-      <InteractiveTag type="gray" onRemove={onRemove} removable>
-        {label}
+  test('should pass through extra props via spread attribute', () => {
+    const { queryByTestId } = render(
+      <InteractiveTag data-testid="test-id">test tag</InteractiveTag>
+    );
+    expect(queryByTestId('test-id')).toBeInTheDocument();
+  });
+
+  test('should invoke remove mock when remove button is clicked', () => {
+    const onRemoveMock = jest.fn();
+    const { getByLabelText } = render(
+      <InteractiveTag
+        onRemove={onRemoveMock}
+        removable
+        removeBtnLabel="test remove button"
+      >
+        test tag
       </InteractiveTag>
     );
-  });
 
-  describe('Rendering', () => {
-    it('renders correctly', () => {
-      expect(interactiveTag).toMatchSnapshot();
-    });
-
-    it("renders the HTML of the node's subtree", () => {
-      expect(interactiveTag.render()).toMatchSnapshot();
-    });
-
-    it('renders the selected variation correctly', () => {
-      interactiveTag.setProps({ isSelected: true });
-      expect(interactiveTag).toMatchSnapshot();
-    });
-  });
-
-  describe('Events', () => {
-    it('should invoke the `onRemove` method when the button is selected', () => {
-      interactiveTag.find(`.${namespace}__button`).simulate('click');
-      expect(onRemove).toBeCalled();
-    });
+    userEvent.click(getByLabelText(/test remove button/i));
+    expect(onRemoveMock).toHaveBeenCalledTimes(1);
   });
 });
