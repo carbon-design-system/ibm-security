@@ -13,7 +13,7 @@ import {
   TypeLayoutCell,
 } from '../../..';
 
-describe('InteractiveTag', () => {
+describe('TypeLayout', () => {
   test('should have no Axe or DAP violations', async () => {
     const main = document.createElement('main');
     render(
@@ -35,7 +35,7 @@ describe('InteractiveTag', () => {
       }
     );
     await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('InteractiveTag');
+    await expect(document.body).toHaveNoDAPViolations('TypeLayout');
   });
 
   test('should add a custom class to each component', () => {
