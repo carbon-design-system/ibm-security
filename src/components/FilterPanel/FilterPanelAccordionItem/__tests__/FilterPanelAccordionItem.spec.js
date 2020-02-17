@@ -27,14 +27,17 @@ describe('FilterPanelAccordionItem', () => {
   test('should have no Axe or DAP violations', async () => {
     const main = document.createElement('main');
     render(
-      <div>
+      // `FilterPanelAccordionItem` would be
+      // wrapped by `FilterPanelAccordion`, which
+      // renders as an unordered list:
+      <ul>
         <FilterPanelAccordionItem title="test-item-1">
           {createChildChildren(11)}
         </FilterPanelAccordionItem>
         <FilterPanelAccordionItem title="test-item-2">
           {createChildChildren(11)}
         </FilterPanelAccordionItem>
-      </div>,
+      </ul>,
       {
         // DAP requires a landmark '<main>' in the DOM:
         container: document.body.appendChild(main),
