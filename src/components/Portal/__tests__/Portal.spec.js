@@ -119,7 +119,7 @@ describe('Portal', () => {
     expect(mouseOverHandler).toHaveBeenCalledTimes(1);
   });
 
-  test('should stop events bubbling up when `stopPropagation` is `true`', () => {
+  test('should stop a specific event from bubbling when provided in array via `stopPropagationEvents`', () => {
     const mouseUpHandler = jest.fn();
     const mouseDownHandler = jest.fn();
     const onMouseUpMock = jest.fn();
