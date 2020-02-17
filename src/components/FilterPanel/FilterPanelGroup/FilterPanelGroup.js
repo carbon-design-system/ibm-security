@@ -22,11 +22,13 @@ const FilterPanelGroup = ({
   ...other
 }) => (
   <div className={classnames(namespace, className)} {...other}>
-    <h2 className={classnames(`${namespace}__title`, titleClassName)}>
-      <FilterPanelLabel count={count} countLabel={countLabel}>
-        {title}
-      </FilterPanelLabel>
-    </h2>
+    {title && (
+      <h2 className={classnames(`${namespace}__title`, titleClassName)}>
+        <FilterPanelLabel count={count} countLabel={countLabel}>
+          {title}
+        </FilterPanelLabel>
+      </h2>
+    )}
     <div className={`${namespace}__content`}>{children}</div>
   </div>
 );
