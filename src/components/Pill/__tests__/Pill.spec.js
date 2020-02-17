@@ -28,7 +28,12 @@ describe('Pill', () => {
     expect(getByText(/127.0.0.1/i).parentNode).toHaveClass('custom-class');
   });
 
-  test('should apply type', () => {
+  test('should apply `value`', () => {
+    const { getByText } = render(<Pill value="127.0.0.1" type="IP" />);
+    expect(getByText(/127.0.0.1/i)).toBeVisible();
+  });
+
+  test('should apply `type`', () => {
     const { getByText } = render(
       <Pill value="127.0.0.1" type="IP" className="custom-class" />
     );
@@ -54,10 +59,6 @@ describe('Pill', () => {
     );
     userEvent.tab();
     // Expect only the extra test button to be interactive:
-    expect(getByText(/127.0.0.1/i).parentNode).not.toHaveFocus();
-    expect(getByText(/test button/i)).toHaveFocus();
-    userEvent.tab();
-    // Still expect only the extra test button to be interactive:
     expect(getByText(/127.0.0.1/i).parentNode).not.toHaveFocus();
     expect(getByText(/test button/i)).toHaveFocus();
   });
