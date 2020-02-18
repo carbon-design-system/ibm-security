@@ -124,20 +124,16 @@ export default class NavItem extends Component {
       target: '_blank',
     };
 
-    const handleDisabled = action => (!disabled ? action : null);
-
     const linkClassName = `${namespace}__link`;
 
     return (
       <li
         className={classNames}
         label={label}
-        onClick={event => handleDisabled(onClick(event, href))}
-        onKeyPress={event => handleDisabled(onClick(event, href))}
         role="menuitem"
-        tabIndex={handleDisabled(children ? -1 : tabIndex)}
+        tabIndex={disabled || !children ? -1 : 0}
       >
-        {link ? (
+        {link && !disabled ? (
           <NavItemLink
             id={id}
             className={classnames(linkClassName, {
@@ -145,6 +141,8 @@ export default class NavItem extends Component {
             })}
             element={element}
             href={href}
+            onClick={disabled ? null : onClick}
+            onKeyPress={disabled ? null : onKeyPress}
             {...other}
             {...externalLinkProps}
           >
@@ -157,14 +155,7 @@ export default class NavItem extends Component {
             )}
           </NavItemLink>
         ) : (
-          <div
-            id={id}
-            className={linkClassName}
-            onClick={handleDisabled(handleItemSelect)}
-            onKeyPress={handleDisabled(handleItemSelect)}
-            role="menuitem"
-            tabIndex={handleDisabled(tabIndex)}
-          >
+          <div id={id} className={linkClassName} {...other}>
             {children}
           </div>
         )}
