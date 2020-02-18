@@ -28,6 +28,7 @@ exports[`Decorator renders correctly 1`] = `
   </span>
   <span
     className="security--decorator__value"
+    title=""
   >
     10.0.0.0
   </span>
@@ -62,6 +63,7 @@ exports[`Decorator renders the \`inert\` variation 1`] = `
   </span>
   <span
     className="security--decorator__value"
+    title=""
   >
     10.0.0.0
   </span>
@@ -103,6 +105,7 @@ exports[`Decorator renders the HTML of the node's subtree 1`] = `
   </span>
   <span
     class="security--decorator__value"
+    title=""
   >
     10.0.0.0
   </span>

@@ -75,6 +75,7 @@ exports[`TagWall Rendering renders 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
+        filter={false}
         type="gray"
       >
         <span
@@ -160,6 +161,7 @@ exports[`TagWall Rendering renders 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
+        filter={false}
         type="gray"
       >
         <span
@@ -245,6 +247,7 @@ exports[`TagWall Rendering renders 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
+        filter={false}
         type="gray"
       >
         <span
@@ -330,6 +333,7 @@ exports[`TagWall Rendering renders 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        filter={false}
         type="gray"
       >
         <span
@@ -415,6 +419,7 @@ exports[`TagWall Rendering renders 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        filter={false}
         type="gray"
       >
         <span
@@ -500,6 +505,7 @@ exports[`TagWall Rendering renders 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        filter={false}
         type="gray"
       >
         <span
@@ -585,6 +591,7 @@ exports[`TagWall Rendering renders 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        filter={false}
         type="gray"
       >
         <span
@@ -670,6 +677,7 @@ exports[`TagWall Rendering renders 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        filter={false}
         type="gray"
       >
         <span
@@ -1073,6 +1081,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--selected"
+        filter={false}
         type="gray"
       >
         <span
@@ -1092,6 +1101,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--selected"
+        filter={false}
         type="gray"
       >
         <span
@@ -1111,6 +1121,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--selected"
+        filter={false}
         type="gray"
       >
         <span
@@ -1130,6 +1141,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default"
+        filter={false}
         type="gray"
       >
         <span
@@ -1149,6 +1161,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default"
+        filter={false}
         type="gray"
       >
         <span
@@ -1168,6 +1181,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default"
+        filter={false}
         type="gray"
       >
         <span
@@ -1187,6 +1201,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default"
+        filter={false}
         type="gray"
       >
         <span
@@ -1206,6 +1221,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default"
+        filter={false}
         type="gray"
       >
         <span

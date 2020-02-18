@@ -3,6 +3,7 @@
 exports[`InteractiveTag Rendering renders correctly 1`] = `
 <Tag
   className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+  filter={false}
   type="gray"
 >
   Label
@@ -58,6 +59,7 @@ exports[`InteractiveTag Rendering renders the HTML of the node's subtree 1`] = `
 exports[`InteractiveTag Rendering renders the selected variation correctly 1`] = `
 <Tag
   className="security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
+  filter={false}
   type="gray"
 >
   Label
