@@ -42,7 +42,7 @@ describe('TypeLayout', () => {
     const { getByText } = render(
       <TypeLayout className="custom-layout-class">
         <TypeLayoutBody className="custom-body-class">
-          <TypeLayoutRow className="custom-body-class">
+          <TypeLayoutRow className="custom-row-class">
             <TypeLayoutCell className="custom-cell-class">
               test cell
             </TypeLayoutCell>
