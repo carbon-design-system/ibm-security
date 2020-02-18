@@ -38,6 +38,7 @@ exports[`DataDecorator renders correctly 1`] = `
         10,
       ]
     }
+    title=""
     type="IP"
     value="10.0.0.0"
   >
@@ -90,6 +91,7 @@ exports[`DataDecorator renders correctly 1`] = `
       </span>
       <span
         className="security--decorator__value"
+        title=""
       >
         10.0.0.0
       </span>
@@ -161,11 +163,6 @@ exports[`DataDecorator renders correctly 1`] = `
         "WIZARD_TEARSHEET_DELETE_BUTTON": "Delete connection",
         "WIZARD_TERTIARY_BUTTON": "Cancel",
         "WIZARD_TERTIARY_SECONDARY_TEXT": "Information will not be saved upon exit",
-      }
-    }
-    primaryButton={
-      Object {
-        "onClick": [Function],
       }
     }
     renderFooter={null}
@@ -261,6 +258,7 @@ exports[`DataDecorator renders the HTML of the node's subtree 1`] = `
   </span>
   <span
     class="security--decorator__value"
+    title=""
   >
     10.0.0.0
   </span>

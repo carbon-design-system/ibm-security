@@ -45,7 +45,9 @@ class Decorator extends Component {
         </span>
       )}
       <span className={`${namespace}__type`}>{this.props.type}</span>
-      <span className={`${namespace}__value`}>{this.props.value}</span>
+      <span className={`${namespace}__value`} title={this.props.title}>
+        {this.props.value}
+      </span>
     </Fragment>
   );
 
@@ -127,6 +129,9 @@ Decorator.propTypes = {
     return null;
   },
 
+  /** @type {string} The title of data. */
+  title: PropTypes.string,
+
   /** @type {string} The type of data. */
   type: PropTypes.string.isRequired,
 
@@ -144,6 +149,7 @@ Decorator.defaultProps = {
   noIcon: false,
   score: undefined,
   scoreThresholds: [0, 4, 7, 10],
+  title: '',
 };
 
 export default Decorator;
