@@ -26,7 +26,8 @@ function HeaderAction({
   ...other
 }) {
   const isActive = popover && activeAction === id;
-  const ref = useRef(null);
+  const ref = useRef();
+  const popoverRef = useRef();
 
   const headerButtonNamespace = `${headerNamespace}__button`;
   const isIconButton = popover && children.type === IconButton;
@@ -40,6 +41,11 @@ function HeaderAction({
           [`${headerButtonNamespace}--notifications`]: isIconButton && hasBadge,
           [`${headerButtonNamespace}--active`]: isIconButton && isActive,
         }),
+        onBlur: () =>
+          isActive &&
+          !popoverRef.current.contains(document.activeElement) &&
+          setActiveAction(null),
+
         onClick: () => {
           setActiveAction(!isActive ? id : null);
 
@@ -55,6 +61,7 @@ function HeaderAction({
           {isActive && (
             <div
               className={`${popoverNamespace} ${namespace}__popover`}
+              ref={popoverRef}
               {...other}
             >
               {popover}
