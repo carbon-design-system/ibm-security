@@ -13,6 +13,10 @@ import {
   TypeLayoutCell,
 } from '../../..';
 
+import { namespace } from '../TypeLayout';
+
+const sizes = ['xs', 'sm', 'md', 'lg'];
+
 describe('TypeLayout', () => {
   test('should have no Axe or DAP violations', async () => {
     const main = document.createElement('main');
@@ -79,4 +83,34 @@ describe('TypeLayout', () => {
     expect(queryByTestId('row-test-id')).toBeInTheDocument();
     expect(queryByTestId('cell-test-id')).toBeInTheDocument();
   });
+
+  test('should apply `children` for each component', () => {
+    const { queryByTestId } = render(
+      <TypeLayout data-testid="layout-test-id">
+        <TypeLayoutBody data-testid="body-test-id">
+          <TypeLayoutRow data-testid="row-test-id">
+            <TypeLayoutCell data-testid="cell-test-id">
+              test cell
+            </TypeLayoutCell>
+          </TypeLayoutRow>
+        </TypeLayoutBody>
+      </TypeLayout>
+    );
+    expect(queryByTestId('layout-test-id').hasChildNodes).toBeTruthy();
+    expect(queryByTestId('body-test-id').hasChildNodes).toBeTruthy();
+    expect(queryByTestId('row-test-id').hasChildNodes).toBeTruthy();
+    expect(queryByTestId('cell-test-id').hasChildNodes).toBeTruthy();
+  });
+
+  test('should apply a border when `border` is `true`', () => {
+    const { container } = render(<TypeLayout data-testid="test-id" border />);
+    expect(container.firstElementChild).toHaveClass(`${namespace}--bordered`);
+  });
+
+  sizes.forEach(size =>
+    test(`should apply correct class when \`size\` is set to '${size}'`, () => {
+      const { container } = render(<TypeLayout size={size} />);
+      expect(container.firstElementChild).toHaveClass(`${namespace}--${size}`);
+    })
+  );
 });
