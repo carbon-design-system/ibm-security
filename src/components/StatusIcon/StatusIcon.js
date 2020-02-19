@@ -14,7 +14,7 @@ import { getComponentNamespace } from '../../globals/namespace';
 import Icon from '../Icon';
 import Loading from '../Loading';
 
-const namespace = getComponentNamespace('status-icon');
+export const namespace = getComponentNamespace('status-icon');
 
 const defaultSize = 'md';
 const SIZE = ['lg', defaultSize, 'sm'];
