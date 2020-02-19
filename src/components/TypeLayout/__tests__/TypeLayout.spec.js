@@ -102,7 +102,7 @@ describe('TypeLayout', () => {
     expect(queryByTestId('cell-test-id').hasChildNodes).toBeTruthy();
   });
 
-  test('should apply a border when `border` is `true`', () => {
+  test('should apply correct class when `border` is `true`', () => {
     const { container } = render(<TypeLayout data-testid="test-id" border />);
     expect(container.firstElementChild).toHaveClass(`${namespace}--bordered`);
   });
