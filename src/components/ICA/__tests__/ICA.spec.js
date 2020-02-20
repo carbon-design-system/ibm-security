@@ -50,7 +50,7 @@ describe('ICA', () => {
     const { queryAllByText } = render(
       <ICA label="test ICA" value={10} total={10} />
     );
-    // Should only display 1 occurance of `10` (the value):
+    // Should display 1 occurance of `10` (the value):
     expect(queryAllByText(/10/i).length).toBe(1);
   });
 
@@ -58,7 +58,7 @@ describe('ICA', () => {
     const { queryAllByText } = render(
       <ICA label="test ICA" value={10} total={10} forceShowTotal />
     );
-    // Should all 2 occurances of `10` (the value & the total):
+    // Should display 2 occurances of `10` (the value & the total):
     expect(queryAllByText(/10/i).length).toBe(2);
   });
 
