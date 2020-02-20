@@ -31,8 +31,11 @@ describe('ICA', () => {
   });
 
   test('should render a subset of values when `value` and `total` are provided', () => {
-    const { getByText } = render(<ICA label="test ICA" value={5} total={10} />);
-    expect(getByText('5').nextSibling).toBe(getByText(/10/i));
+    const { queryByText } = render(
+      <ICA label="test ICA" value={5} total={10} />
+    );
+    expect(queryByText('5')).toBeVisible();
+    expect(queryByText(/10/i)).toBeVisible();
   });
 
   test('should not render subset of values when `total` is close to `value`', () => {
@@ -44,26 +47,26 @@ describe('ICA', () => {
   });
 
   test('should not render `total` if it is the same as `value`', () => {
-    const { getByText } = render(
+    const { queryAllByText } = render(
       <ICA label="test ICA" value={10} total={10} />
     );
-    // Expect 2 ICA nodes: the label and the value.
-    expect(getByText(/test ICA/i).parentNode.children.length).toBe(2);
+    // Should only display 1 occurance of `10` (the value):
+    expect(queryAllByText(/10/i).length).toBe(1);
   });
 
   test('should render `total` when forced', () => {
-    const { getByText } = render(
+    const { queryAllByText } = render(
       <ICA label="test ICA" value={10} total={10} forceShowTotal />
     );
-    // Expect 3 ICA nodes: the label, value, and the total.
-    expect(getByText(/test ICA/i).parentNode.children.length).toBe(3);
+    // Should all 2 occurances of `10` (the value & the total):
+    expect(queryAllByText(/10/i).length).toBe(2);
   });
 
   test('should render a percentage', () => {
     const { queryByText } = render(
       <ICA label="test ICA" value={10} percentage />
     );
-    expect(queryByText('10').firstElementChild).toBe(queryByText('%'));
+    expect(queryByText('%')).toBeVisible();
   });
 
   Locales.forEach(locale =>
