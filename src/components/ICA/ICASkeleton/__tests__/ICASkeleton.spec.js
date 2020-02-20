@@ -8,7 +8,7 @@ import { render } from '@testing-library/react';
 
 import ICASkeleton from '../ICASkeleton';
 
-describe('ICA', () => {
+describe('ICASkeleton', () => {
   test('should have no Axe or DAP violations', async () => {
     const main = document.createElement('main');
     render(<ICASkeleton />, {

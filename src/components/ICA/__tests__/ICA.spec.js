@@ -20,22 +20,22 @@ describe('ICA', () => {
     await expect(document.body).toHaveNoDAPViolations('ICA');
   });
 
-  it('should render en dash when `value` is `null`', () => {
+  test('should render en dash when `value` is `null`', () => {
     const { queryByText } = render(<ICA label="test ICA" value={null} />);
     expect(queryByText('–')).toBeVisible();
   });
 
-  it('should render a large value', () => {
+  test('should render a large value', () => {
     const { queryByText } = render(<ICA label="test ICA" value={1000000} />);
     expect(queryByText('1.0m')).toBeVisible();
   });
 
-  it('should render a subset of values when `value` and `total` are provided', () => {
+  test('should render a subset of values when `value` and `total` are provided', () => {
     const { getByText } = render(<ICA label="test ICA" value={5} total={10} />);
     expect(getByText('5').nextSibling).toBe(getByText(/10/i));
   });
 
-  it('should not render subset of values when `total` is close to `value`', () => {
+  test('should not render subset of values when `total` is close to `value`', () => {
     const { queryByText } = render(
       <ICA label="test ICA" value={1000000} total={999995} />
     );
@@ -43,7 +43,7 @@ describe('ICA', () => {
     expect(queryByText('1.0m')).toBeVisible();
   });
 
-  it('should not render `total` if it is the same as `value`', () => {
+  test('should not render `total` if it is the same as `value`', () => {
     const { getByText } = render(
       <ICA label="test ICA" value={10} total={10} />
     );
@@ -51,7 +51,7 @@ describe('ICA', () => {
     expect(getByText(/test ICA/i).parentNode.children.length).toBe(2);
   });
 
-  it('should render `total` when forced', () => {
+  test('should render `total` when forced', () => {
     const { getByText } = render(
       <ICA label="test ICA" value={10} total={10} forceShowTotal />
     );
@@ -59,14 +59,7 @@ describe('ICA', () => {
     expect(getByText(/test ICA/i).parentNode.children.length).toBe(3);
   });
 
-  it('should render a percentage', () => {
-    const { queryByText } = render(
-      <ICA label="test ICA" value={10} percentage />
-    );
-    expect(queryByText('10').firstElementChild).toBe(queryByText('%'));
-  });
-
-  it('should render a percentage', () => {
+  test('should render a percentage', () => {
     const { queryByText } = render(
       <ICA label="test ICA" value={10} percentage />
     );
