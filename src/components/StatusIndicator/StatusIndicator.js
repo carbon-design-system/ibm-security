@@ -4,7 +4,7 @@
  */
 
 import Restart20 from '@carbon/icons-react/lib/restart/20';
-
+import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
 import classnames from 'classnames';
 import {
   array,
@@ -47,7 +47,10 @@ class StatusIndicator extends Component {
       label: string,
 
       /** @type {string} The description for the retry button. */
-      description: string,
+      description: deprecate(
+        string,
+        `\nThe prop \`retry.description\` for StatusIndicator has been deprecated. Please provide a valid \`retry.label\` instead.`
+      ),
     }),
   };
 
