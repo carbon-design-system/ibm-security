@@ -83,15 +83,17 @@ class StatusIndicator extends Component {
         <ul className={`${namespace}__list`} {...currentIndex}>
           {children}
           {this.state.retry && (
-            <Button
-              className={`${namespace}__button--retry`}
-              kind="ghost"
-              onClick={this.state.retry.action}
-              onKeyPress={this.state.retry.action}
-              renderIcon={Restart20}
-            >
-              {this.state.retry.label}
-            </Button>
+            <li>
+              <Button
+                className={`${namespace}__button--retry`}
+                kind="ghost"
+                onClick={this.state.retry.action}
+                onKeyPress={this.state.retry.action}
+                renderIcon={Restart20}
+              >
+                {this.state.retry.label}
+              </Button>
+            </li>
           )}
         </ul>
       </div>
