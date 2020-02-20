@@ -19,12 +19,12 @@ const Step = props => {
   // Filtering out unwanted props.
   const stepProps = {
     className: classes,
-    current: props.current || null,
-    complete: props.complete || null,
-    description: props.description || null,
-    disabled: props.disabled || null,
-    invalid: props.invalid || null,
-    label: props.label, // required
+    current: props.current,
+    complete: props.complete,
+    description: props.description,
+    disabled: props.disabled,
+    invalid: props.invalid,
+    label: props.label,
   };
 
   const defaultRenderLabel = stepProps => <p {...stepProps} />;
