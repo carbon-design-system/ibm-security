@@ -12,7 +12,7 @@ Automated accessibility tests are required for significant component variations 
 
 Use this structure for automated accessibility tests:
 
-```jsx
+```js
 test('should have no Axe or DAP violations', async () => {
   const main = document.createElement('main');
   render(<Component />, {
@@ -54,7 +54,7 @@ test('should have no Axe or DAP violations with component variation', async () =
 
 Events (`onClick`, `onKeyPress`, etc) that are important to component functionality should be tested using mocks.
 
-```jsx
+```js
 test('should invoke close mock when close button is clicked', () => {
   const onCloseMock = jest.fn();
   const { getByLabelText } = render(
@@ -76,7 +76,7 @@ Similar to accessibility tests, a tab cycle test should be written for each sign
 
 Example of a tab cycle test for `PanelV2`:
 
-```jsx
+```js
 test('should cycle panel elements in tab order', () => {
   const { getByLabelText, getByText } = render(
     <PanelV2
@@ -123,7 +123,7 @@ Note that if the component is a single interactive element, like a single `<a>` 
 
 Ensure that custom class names are checked:
 
-```jsx
+```js
 test('should add custom class', () => {
   const { getByText } = render(
     <ExternalLink href="https://www.ibm.com/security" className="custom-class">
@@ -140,7 +140,7 @@ If a component includes a spread attribute (i.e., `...other` in the props defint
 
 You can use a testing attribute like `data-testid` to test for this:
 
-```jsx
+```js
 test('should pass through extra props via spread attribute', () => {
   const { queryByTestId } = render(
     <ExternalLink href="https://www.ibm.com/security" data-testid="test-id">
@@ -157,7 +157,7 @@ There are situations where there are many possible values that should be tested 
 
 For example, with the `ICA`'s `locale` prop, it makes sense to verify that each possible `locale` value does not throw an error:
 
-```jsx
+```js
 Locales.forEach(locale =>
   test(`should accept '${locale}' locale`, () => {
     const { container } = render(
@@ -170,7 +170,7 @@ Locales.forEach(locale =>
 
 And in another example for the `StatusIcon`'s `status` prop, it makes sense to run an accessibility test on each type of `status` because each `status` renders completely different Nodes:
 
-```jsx
+```js
 // Note: STATUS is an array of values.
 STATUS.forEach(status =>
   test(`should have no Axe or DAP violations when \`status\` is  '${status}'`, async () => {
