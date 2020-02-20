@@ -12,34 +12,29 @@ Automated accessibility tests are required for significant component variations 
 
 Use this structure for automated accessibility tests:
 
-```
+```jsx
 test('should have no Axe or DAP violations', async () => {
   const main = document.createElement('main');
-  render(
-    <Component />,
-    {
-      // DAP requires a landmark '<main>' in the DOM:
-      container: document.body.appendChild(main),
-    }
-  );
+  render(<Component />, {
+    // DAP requires a landmark '<main>' in the DOM:
+    container: document.body.appendChild(main),
+  });
 
   await expect(document.body).toHaveNoAxeViolations();
   await expect(document.body).toHaveNoDAPViolations('ComponentName');
 });
 
-
 test('should have no Axe or DAP violations with component variation', async () => {
   const main = document.createElement('main');
-  render(
-    <Component variationProp={value} />,
-    {
-      // DAP requires a landmark '<main>' in the DOM:
-      container: document.body.appendChild(main),
-    }
-  );
+  render(<Component variationProp={value} />, {
+    // DAP requires a landmark '<main>' in the DOM:
+    container: document.body.appendChild(main),
+  });
 
   await expect(document.body).toHaveNoAxeViolations();
-  await expect(document.body).toHaveNoDAPViolations('ComponentName with variation');
+  await expect(document.body).toHaveNoDAPViolations(
+    'ComponentName with variation'
+  );
 });
 ```
 
@@ -55,18 +50,15 @@ test('should have no Axe or DAP violations with component variation', async () =
 
 ## User events
 
-### Click events
+### Click and key press events
 
-Click events that are important to component functionality should be tested using mocks.
+Events (`onClick`, `onKeyPress`, etc) that are important to component functionality should be tested using mocks.
 
-```
+```jsx
 test('should invoke close mock when close button is clicked', () => {
   const onCloseMock = jest.fn();
   const { getByLabelText } = render(
-    <Component
-      labelText="test close"
-      onClick={onCloseMock}
-    />
+    <Component labelText="test close" onClick={onCloseMock} />
   );
 
   userEvent.click(getByLabelText(/test close/i));
@@ -84,43 +76,113 @@ Similar to accessibility tests, a tab cycle test should be written for each sign
 
 Example of a tab cycle test for `PanelV2`:
 
-```
-  test('should cycle panel elements in tab order', () => {
-    const { getByLabelText, getByText } = render(
-      <PanelV2
-        closeButton={{
-          label: 'test close',
-        }}
-        renderFooter={() => <Button>test footer button</Button>}
-      >
-        <PanelContent>
-          test content text
-          <Button>test content button</Button>
-        </PanelContent>
-      </PanelV2>
-    );
+```jsx
+test('should cycle panel elements in tab order', () => {
+  const { getByLabelText, getByText } = render(
+    <PanelV2
+      closeButton={{
+        label: 'test close',
+      }}
+      renderFooter={() => <Button>test footer button</Button>}
+    >
+      <PanelContent>
+        test content text
+        <Button>test content button</Button>
+      </PanelContent>
+    </PanelV2>
+  );
 
-    userEvent.tab();
+  userEvent.tab();
 
-    // The close button:
-    expect(getByLabelText(/test close/i)).toHaveFocus();
+  // The close button:
+  expect(getByLabelText(/test close/i)).toHaveFocus();
 
-    userEvent.tab();
+  userEvent.tab();
 
-    // The button inside the `PanelContent` wrapper:
-    expect(getByText(/test content button/i)).toHaveFocus();
+  // The button inside the `PanelContent` wrapper:
+  expect(getByText(/test content button/i)).toHaveFocus();
 
-    userEvent.tab();
+  userEvent.tab();
 
-    // The footer button:
-    expect(getByText(/test footer button/i)).toHaveFocus();
+  // The footer button:
+  expect(getByText(/test footer button/i)).toHaveFocus();
 
-    userEvent.tab();
+  userEvent.tab();
 
-    // Loop complete.
-    // The close button:
-    expect(getByLabelText(/test close/i)).toHaveFocus();
-  });
+  // Loop complete.
+  // The close button:
+  expect(getByLabelText(/test close/i)).toHaveFocus();
+});
 ```
 
 Note that if the component is a single interactive element, like a single `<a>` or `<button>` then a tab cycle test may not be necessary. The `TrendingCard` is an example of a component that does not require a tab cycle test.
+
+## Props
+
+### Custom class names
+
+Ensure that custom class names are checked:
+
+```jsx
+test('should add custom class', () => {
+  const { getByText } = render(
+    <ExternalLink href="https://www.ibm.com/security" className="custom-class">
+      test link
+    </ExternalLink>
+  );
+  expect(getByText(/test link/i).closest('a')).toHaveClass('custom-class');
+});
+```
+
+### Spread attribute
+
+If a component includes a spread attribute (i.e., `...other` in the props defintion), include a test to check that extra props can be passed through to the component.
+
+You can use a testing attribute like `data-testid` to test for this:
+
+```jsx
+test('should pass through extra props via spread attribute', () => {
+  const { queryByTestId } = render(
+    <ExternalLink href="https://www.ibm.com/security" data-testid="test-id">
+      test link
+    </ExternalLink>
+  );
+  expect(queryByTestId('test-id')).toBeInTheDocument();
+});
+```
+
+### Object or array of significant values
+
+There are situations where there are many possible values that should be tested separately, because they can individually cause an undesired error in the component or because they render completely different Nodes that should be tested individually.
+
+For example, with the `ICA`'s `locale` prop, it makes sense to verify that each possible `locale` value does not throw an error:
+
+```jsx
+Locales.forEach(locale =>
+  test(`should accept '${locale}' locale`, () => {
+    const { container } = render(
+      <ICA label="test ICA" value={10} locale={locale} />
+    );
+    expect(() => container).not.toThrow();
+  })
+);
+```
+
+And in another example for the `StatusIcon`'s `status` prop, it makes sense to run an accessibility test on each type of `status` because each `status` renders completely different Nodes:
+
+```jsx
+// Note: STATUS is an array of values.
+STATUS.forEach(status =>
+  test(`should have no Axe or DAP violations when \`status\` is  '${status}'`, async () => {
+    const main = document.createElement('main');
+    render(<StatusIcon status={status} message="test message" />, {
+      // DAP requires a landmark '<main>' in the DOM:
+      container: document.body.appendChild(main),
+    });
+    await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations(
+      `StatusIcon with ${status} status`
+    );
+  })
+);
+```
