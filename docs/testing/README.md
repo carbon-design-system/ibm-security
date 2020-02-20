@@ -153,7 +153,7 @@ test('should pass through extra props via spread attribute', () => {
 
 ### Object or array of significant values
 
-There are situations where there are many possible values that should be tested separately, because they can individually cause an undesired error in the component or because they render completely different Nodes that should be tested individually.
+If an object or array has significant values that could individually cause an undesired error in the component, that render completely different Nodes, then those values should be tested individually.
 
 For example, with the `ICA`'s `locale` prop, it makes sense to verify that each possible `locale` value does not throw an error:
 
