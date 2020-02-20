@@ -22,10 +22,23 @@ describe('StatusIndicator', () => {
           action: () => {},
         }}
       >
-        <StatusStep />
-        <StatusStep status={STATUS.current} />
-        <StatusStep status={STATUS.complete} />
-        <StatusStep status={STATUS.error} errorMsg="test error" />
+        <StatusStep label="test-label-1" description="test description 1" />
+        <StatusStep
+          status={STATUS.current}
+          label="test-label-2"
+          description="test description 2"
+        />
+        <StatusStep
+          status={STATUS.complete}
+          label="test-label-3"
+          description="test description 3"
+        />
+        <StatusStep
+          status={STATUS.error}
+          errorMsg="test error"
+          label="test-label-4"
+          description="test description 4"
+        />
       </StatusIndicator>,
       {
         // DAP requires a landmark '<main>' in the DOM:
