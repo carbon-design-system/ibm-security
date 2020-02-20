@@ -9,18 +9,12 @@ import { render } from '@testing-library/react';
 import { Step, StepIndicator } from '../../..';
 
 describe('StepIndicator', () => {
-  test('should have no Axe or DAP violations with custom footer via `renderFooter`', async () => {
+  test('should have no Axe or DAP violations', async () => {
     const main = document.createElement('main');
     const { debug } = render(
       <StepIndicator currentIndex={1}>
-        <Step
-          label="First step"
-          description="Step 1: Getting started with Carbon Design System"
-        />
-        <Step
-          label="Second step"
-          description="Step 2: Getting started with Carbon Design System"
-        />
+        <Step label="test label 1" description="test description 1" />
+        <Step label="test label 2" description="test description 2" />
       </StepIndicator>,
       {
         // DAP requires a landmark '<main>' in the DOM:
