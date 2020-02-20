@@ -18,6 +18,7 @@ describe('StatusStep', () => {
       render(
         <ul>
           <StatusStep
+            label="test-label"
             status={status}
             errorMsg="test error"
             description="test description"
@@ -36,19 +37,36 @@ describe('StatusStep', () => {
   );
 
   test('should add a custom class', () => {
-    const { container } = render(<StatusStep className="custom-class" />);
+    const { container } = render(
+      <StatusStep
+        className="custom-class"
+        label="test-label"
+        description="test description"
+      />
+    );
     expect(container.firstElementChild).toHaveClass('custom-class');
   });
 
   test('should add an error message when `status` is `FAILED`', () => {
     const { queryByText } = render(
-      <StatusStep status={STATUS.FAILED} errorMsg="test error" />
+      <StatusStep
+        status={STATUS.FAILED}
+        errorMsg="test error"
+        label="test-label"
+        description="test description"
+      />
     );
     expect(queryByText(/test error/i)).toBeVisible();
   });
 
   test('should not add an error message when `status` is not `FAILED`', () => {
-    const { queryByText } = render(<StatusStep errorMsg="test error" />);
+    const { queryByText } = render(
+      <StatusStep
+        errorMsg="test error"
+        label="test-label"
+        description="test description"
+      />
+    );
     expect(queryByText(/test error/i)).not.toBeInTheDocument();
   });
 });
