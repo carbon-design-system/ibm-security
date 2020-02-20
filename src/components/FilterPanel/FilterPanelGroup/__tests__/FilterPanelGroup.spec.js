@@ -30,6 +30,18 @@ describe('FilterPanelGroup', () => {
     expect(getByTestId('content')).toBeVisible();
   });
 
+  it('does not render the count if the title is not provided', () => {
+    const { queryByText } = render(<FilterPanelGroup count={200} />);
+    expect(queryByText(/200/)).not.toBeInTheDocument();
+  });
+
+  it('renders the count if the title is also provided', () => {
+    const { queryByText } = render(
+      <FilterPanelGroup title="title" count={200} />
+    );
+    expect(queryByText(/200/)).toBeVisible();
+  });
+
   it('adds custom class name', () => {
     const { container } = render(<FilterPanelGroup className="custom-class" />);
     expect(container.querySelector('.custom-class')).toBeInTheDocument();
