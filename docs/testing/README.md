@@ -115,7 +115,7 @@ test('should cycle panel elements in tab order', () => {
 });
 ```
 
-Note that if the component is a single interactive element, like a single `<a>` or `<button>` then a tab cycle test may not be necessary. The `TrendingCard` is an example of a component that does not require a tab cycle test.
+If the component is a single interactive element, like a single `<a>` or `<button>` then a tab cycle test may not be necessary. The `TrendingCard` is an example of a component that does not require a tab cycle test.
 
 ## Props
 
@@ -136,7 +136,7 @@ test('should add custom class', () => {
 
 ### Spread attribute
 
-If a component includes a spread attribute (i.e., `...other` in the props defintion), include a test to check that extra props can be passed through to the component.
+If a component includes a spread attribute (i.e., `...other` in the props definition), include a test to check that extra props can be passed through to the component.
 
 You can use a testing attribute like `data-testid` to test for this:
 
@@ -153,11 +153,12 @@ test('should pass through extra props via spread attribute', () => {
 
 ### Object or array of significant values
 
-If an object or array has significant values that could individually cause an undesired error in the component, that render completely different Nodes, then those values should be tested individually.
+If an object or array has significant values, then those values should be tested individually. "Significant values" in this case means any values that render completely different nodes, or that individually could cause an error.
 
 For example, with the `ICA`'s `locale` prop, it makes sense to verify that each possible `locale` value does not throw an error:
 
 ```js
+// Note: Locals is an array of values.
 Locales.forEach(locale =>
   test(`should accept '${locale}' locale`, () => {
     const { container } = render(
