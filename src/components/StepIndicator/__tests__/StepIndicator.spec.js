@@ -4,15 +4,14 @@
  */
 
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 
-import { Step, StepIndicator } from '../';
+import { Step, StepIndicator } from '../../..';
 
 describe('StepIndicator', () => {
-  let list;
-
-  beforeEach(() => {
-    list = shallow(
+  test('should have no Axe or DAP violations with custom footer via `renderFooter`', async () => {
+    const main = document.createElement('main');
+    const { debug } = render(
       <StepIndicator currentIndex={1}>
         <Step
           label="First step"
@@ -22,22 +21,19 @@ describe('StepIndicator', () => {
           label="Second step"
           description="Step 2: Getting started with Carbon Design System"
         />
-      </StepIndicator>
+      </StepIndicator>,
+      {
+        // DAP requires a landmark '<main>' in the DOM:
+        container: document.body.appendChild(main),
+      }
     );
+    debug();
+    await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations('StepIndicator');
   });
 
-  describe('render', () => {
-    it('renders correctly', () => {
-      expect(list).toMatchSnapshot();
-    });
-
-    it("renders the HTML of the node's subtree", () => {
-      expect(list.render()).toMatchSnapshot();
-    });
-
-    it('renders if `currentIndex` is null', () => {
-      list.setProps({ currentIndex: null });
-      expect(list.render()).toMatchSnapshot();
-    });
+  test('should add a custom class to the parent component', () => {
+    const { container } = render(<StepIndicator className="custom-class" />);
+    expect(container.firstElementChild).toHaveClass('custom-class');
   });
 });
