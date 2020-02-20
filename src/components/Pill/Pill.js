@@ -11,7 +11,7 @@ import { Decorator } from '../DataDecorator';
 
 import { getComponentNamespace } from '../../globals/namespace/index';
 
-const namespace = getComponentNamespace('pill');
+export const namespace = getComponentNamespace('pill');
 
 /**
  * Pill component.
