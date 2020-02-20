@@ -45,4 +45,13 @@ describe('StepIndicator', () => {
     const { queryByTestId } = render(<StepIndicator data-testid="test-id" />);
     expect(queryByTestId('test-id')).toBeInTheDocument();
   });
+
+  test('should render even when `currentIndex` is `null`', () => {
+    const { queryByText } = render(
+      <StepIndicator>
+        <Step label="test label" />
+      </StepIndicator>
+    );
+    expect(queryByText(/test label/i)).toBeVisible();
+  });
 });
