@@ -3,68 +3,53 @@
  * @copyright IBM Security 2019
  */
 
-import React, { Component, createRef } from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { getComponentNamespace } from '../../globals/namespace';
-import { isClient } from '../../globals/utils/capabilities';
 
 const namespace = getComponentNamespace('delimited-list');
 
 /**
  * Delimited List component.
  */
-class DelimitedList extends Component {
-  state = { hasOverflow: false };
+function DelimitedList({ className, delimiter, items, truncate, ...other }) {
+  const [hasOverflow, setHasOverflow] = useState(false);
 
-  componentDidMount() {
-    if (isClient() && this.props.truncate) {
-      this.checkOverflow();
-    }
-  }
+  const element = useRef(null);
 
-  componentDidUpdate() {
-    if (isClient() && this.props.truncate) {
-      this.checkOverflow();
-    }
-  }
-
-  element = createRef();
-
-  checkOverflow = () => {
+  // Use ref to compare the element's `scrollWidth` (full width with overflow)
+  // to its `clientWidth` (innner width, not including overflow).
+  useLayoutEffect(() => {
     if (
-      !this.state.hasOverflow &&
-      this.element &&
-      this.element.current &&
-      this.element.current.scrollWidth > this.element.current.clientWidth
+      element &&
+      element.current &&
+      element.current.scrollWidth > element.current.clientWidth
     ) {
-      this.setState({ hasOverflow: true });
+      return setHasOverflow(true);
     }
-  };
+    return setHasOverflow(false);
+  }, [element.current, items]);
 
-  render() {
-    const { className, delimiter, items, truncate, ...other } = this.props;
+  const classes = classnames(namespace, className);
+  const valueClasses = classnames(`${namespace}__value`, {
+    [`${namespace}__value--truncated`]: truncate,
+  });
 
-    const classes = classnames(namespace, className);
-    const valueClasses = classnames(`${namespace}__value`, {
-      [`${namespace}__value--truncated`]: truncate,
-    });
-
-    return (
-      <div
-        className={classes}
-        title={this.state.hasOverflow ? items.join(delimiter) : undefined}
-        {...other}
-      >
-        <div ref={this.element} className={valueClasses}>
-          {items.length > 0 ? items.join(delimiter) : '–'}
-        </div>
-        {this.state.hasOverflow && items.length > 0 && (
-          <div className={`${namespace}__count`}>{`[${items.length}]`}</div>
-        )}
+  return (
+    <div
+      className={classes}
+      title={hasOverflow ? items.join(delimiter) : undefined}
+      {...other}
+    >
+      <div ref={element} className={valueClasses}>
+        {items.length > 0 ? items.join(delimiter) : '–'}
       </div>
-    );
-  }
+      {hasOverflow && truncate && items.length > 0 && (
+        <div className={`${namespace}__count`}>{`[${items.length}]`}</div>
+      )}
+    </div>
+  );
 }
 
 DelimitedList.propTypes = {
