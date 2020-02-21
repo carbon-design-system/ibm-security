@@ -1,0 +1,35 @@
+////
+/// Details page template 1 styles.
+/// @group accordion
+/// @copyright IBM Security 2018
+////
+
+@import '../../../globals/namespace/index';
+@import '../../../globals/layout/index';
+
+@include export-namespace($name: 'details-page-1') {
+  // Note that this column spans 6:
+  .#{$namespace}details-page-1__section {
+    display: flex;
+
+    // Imitating styles for a column that spans 2 (out of 6)
+    // & also has typical padding:
+    .#{$namespace}details-page-1__section__term {
+      flex: 0 0 100%;
+      max-width: calc(33.33% - 1px);
+      padding: 0 $carbon--spacing-05;
+
+      + .#{$namespace}details-page-1__section__definition {
+        margin-left: 2px;
+      }
+    }
+
+    // Imitating styles for a column that spans 4 (out of 6)
+    // & also has typical padding:
+    .#{$namespace}details-page-1__section__definition {
+      flex: 0 0 100%;
+      max-width: calc(66.66% - 1px);
+      padding: 0 $carbon--spacing-05;
+    }
+  }
+}
