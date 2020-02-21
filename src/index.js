@@ -227,3 +227,10 @@ export UnorderedList from 'carbon-components-react/lib/components/UnorderedList'
 export UNSTABLE__Pagination, {
   PageSelector,
 } from './components/UNSTABLE__Pagination';
+
+export {
+  DetailsPage1,
+  DetailsPage1Main,
+  DetailsPage1Section,
+  DetailsPage1Aside,
+} from './components/GridTemplates';
