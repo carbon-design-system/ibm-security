@@ -11,7 +11,7 @@ import { UNSTABLE__Pagination, PageSelector } from '../../..';
 
 import { namespace } from '../Pagination';
 
-describe('UNSTABLE_Pagination', () => {
+describe('UNSTABLE__Pagination', () => {
   test('should have no Axe or DAP violations', async () => {
     const main = document.createElement('main');
     render(
@@ -410,5 +410,46 @@ describe('UNSTABLE_Pagination', () => {
     // Still expect default text "1-5 items" with 5 being derived from page size,
     // not the total items (despite the fact that `totalItems` is provided):
     expect(getByText(/1–5 items/i)).toBeInTheDocument();
+  });
+
+  test('should add a custom class to parent pagination component', () => {
+    const { container } = render(
+      <UNSTABLE__Pagination totalItems={10} className="custom-class" />
+    );
+    expect(container.firstElementChild).toHaveClass('custom-class');
+  });
+
+  test('should pass through extra props to parent pagination component via spread attribute', () => {
+    const { queryByTestId } = render(
+      <UNSTABLE__Pagination totalItems={10} data-testid="test-id" />
+    );
+    expect(queryByTestId('test-id')).toBeVisible();
+  });
+
+  test('should add a custom class to child page selector component', () => {
+    const { getByText } = render(
+      <PageSelector
+        currentPage={1}
+        totalPages={1}
+        onChange={() => {}}
+        labelText="test page selector"
+        className="custom-class"
+      />
+    );
+    expect(getByText(/test page selector/i).parentNode).toHaveClass(
+      'custom-class'
+    );
+  });
+
+  test('should pass through extra props to child page selector component via spread attribute', () => {
+    const { queryByTestId } = render(
+      <PageSelector
+        currentPage={1}
+        totalPages={1}
+        onChange={() => {}}
+        data-testid="test-id"
+      />
+    );
+    expect(queryByTestId('test-id')).toBeVisible();
   });
 });
