@@ -17,6 +17,7 @@
 | `text-03`            | `cool-gray-40`    | `gray-60`         |
 | `text-04`            | `white-0`         | `white-0`         |
 | `text-05`            | `cool-gray-60`    | `gray-50`         |
+| `text-error`         | `red-60`          | `red-40`          |
 | `icon-01`            | `cool-gray-100`   | `gray-10`         |
 | `icon-02`            | `cool-gray-70`    | `gray-30`         |
 | `icon-03`            | `white-0`         | `white-0`         |
