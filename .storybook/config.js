@@ -75,18 +75,8 @@ addParameters({
     ),
     storySort: (a, b) =>
       ORDER.indexOf(getCategory(a)) - ORDER.indexOf(getCategory(b)),
-
-    // TODO: `modular-styles` - Revert.
-    // theme: storybookTheme,
+    theme: storybookTheme,
   },
 });
 
-/**
- * Finds each component story and loads them into Storybook.
- */
-function loadStories() {
-  const req = require.context('../src/components', true, /\.stories\.js$/);
-  req.keys().forEach(filename => req(filename));
-}
-
-configure(loadStories, module);
+configure(require.context('../src', true, /\.stories\.js$/), module);

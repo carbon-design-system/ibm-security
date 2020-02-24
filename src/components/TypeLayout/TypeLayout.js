@@ -17,7 +17,7 @@ import {
   StructuredListWrapper,
 } from '../StructuredList';
 
-const namespace = getComponentNamespace('type-layout__container');
+export const namespace = getComponentNamespace('type-layout__container');
 
 const TypeLayoutCell = ({ children, className, ...other }) => (
   <StructuredListCell

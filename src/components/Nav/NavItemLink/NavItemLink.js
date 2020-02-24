@@ -13,7 +13,7 @@ const NavItemLink = React.forwardRef(function NavItemLink(props, ref) {
 
 NavItemLink.displayName = 'NavItemLink';
 
-NavItemLink.PropTypes = {
+NavItemLink.propTypes = {
   /** @type {elementType} The base element to use to build the link. Defaults to `a`, can also accept alternative tag names or custom components like `Link` from `react-router`. */
   element: PropTypes.elementType,
 };

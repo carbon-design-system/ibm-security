@@ -45,7 +45,14 @@ export {
 
 export DelimitedList from './components/DelimitedList';
 export ExternalLink from './components/ExternalLink';
-export FilterPanel from './components/FilterPanel';
+export FilterPanel, {
+  FilterPanelAccordion,
+  FilterPanelAccordionItem,
+  FilterPanelCheckbox,
+  FilterPanelGroup,
+  FilterPanelLabel,
+  FilterPanelSearch,
+} from './components/FilterPanel';
 export { ICA, ICASkeleton } from './components/ICA';
 export Icon from './components/Icon';
 export IconButtonBar from './components/IconButtonBar';
@@ -92,18 +99,26 @@ export { StatusStep, StatusIndicator } from './components/StatusIndicator';
 export { Step, StepIndicator } from './components/StepIndicator';
 export StringFormatter from './components/StringFormatter';
 export Switch from './components/Switch';
+
 export SummaryCard, {
   SummaryCardAction,
+  SummaryCardBatchAction,
+  SummaryCardBatchActions,
   SummaryCardBody,
+  SummaryCardContainer,
   SummaryCardFooter,
   SummaryCardHeader,
+  SummaryCardSelect,
   SummaryCardSkeleton,
 } from './components/SummaryCard';
+
 export Tag, { InteractiveTag, TagSkeleton } from './components/Tag';
 export TagWall from './components/TagWall';
 export TagWallFilter from './components/TagWallFilter';
 export { Tearsheet, TearsheetSmall } from './components/Tearsheet';
 export TextInput, { TextInputSkeleton } from './components/TextInput';
+export TimeIndicator from './components/TimeIndicator';
+export TrendingCard from './components/TrendingCard';
 
 export {
   TypeLayout,
@@ -207,3 +222,8 @@ export OrderedList from 'carbon-components-react/lib/components/OrderedList';
 
 export TabContent from 'carbon-components-react/lib/components/TabContent';
 export UnorderedList from 'carbon-components-react/lib/components/UnorderedList';
+
+// Unstable experimental components
+export UNSTABLE__Pagination, {
+  PageSelector,
+} from './components/UNSTABLE__Pagination';

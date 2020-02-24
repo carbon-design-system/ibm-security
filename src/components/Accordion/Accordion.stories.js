@@ -11,13 +11,7 @@ import React from 'react';
 
 import { components, info } from '../../../.storybook';
 
-import {
-  Accordion,
-  AccordionItem,
-  AccordionSkeleton,
-  Select,
-  SelectItem,
-} from '../..';
+import { Accordion, AccordionItem, AccordionSkeleton, Button } from '../..';
 
 const props = {
   onClick: action('onClick'),
@@ -62,27 +56,13 @@ storiesOf(components('Accordion'), module)
           </p>
         </AccordionItem>
         <AccordionItem title="Section 3 title" {...props}>
-          <Select
-            onChange={action('onChange')}
-            id="select-1"
-            defaultValue="placeholder-item"
-          >
-            <SelectItem
-              disabled
-              hidden
-              value="placeholder-item"
-              text="Choose an option"
-            />
-            <SelectItem value="option-1" text="Option 1" />
-            <SelectItem value="option-2" text="Option 2" />
-            <SelectItem value="option-3" text="Option 3" />
-          </Select>
+          <Button>This is a button.</Button>
         </AccordionItem>
         <AccordionItem
           title={
-            <h4>
+            <span>
               Section 4 title (<em>the title can be a node</em>)
-            </h4>
+            </span>
           }
           {...props}
         >
@@ -105,6 +85,7 @@ storiesOf(components('Accordion'), module)
     () => (
       <div style={{ width: '500px' }}>
         <AccordionSkeleton
+          align={select('Accordion heading alignment (align)', align, 'start')}
           open={boolean('Show first item opened (open)', true)}
           count={number('Set number of items (count)', 4)}
         />

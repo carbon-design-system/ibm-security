@@ -1,53 +1,55 @@
 /**
- * @file Filter Panel tests.
- * @copyright IBM Security 2019
+ * @file Filter panel tests.
+ * @copyright IBM Security 2020
  */
 
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
+
 import FilterPanel from '..';
-import {
-  filterData,
-  title,
-  filtersExpandLabel,
-  filtersCollapseLabel,
-  noFiltersResultsLabel,
-  filterSearchLabel,
-  filter,
-  labels,
-} from '../_mocks_';
+import * as mockProps from '../_mocks_';
 
 describe('FilterPanel', () => {
-  let filterPanel;
-  const uniqueProps = {
-    filtersExpandLabel,
-    filtersCollapseLabel,
-    noFiltersResultsLabel,
-    filterSearchLabel,
-  };
+  it('renders without a title or content by default', () => {
+    const { container } = render(<FilterPanel />);
+    expect(container).not.toHaveTextContent();
+  });
 
-  beforeEach(() => {
-    filterPanel = shallow(
-      <FilterPanel filterData={filterData} labels={labels} />
+  it('renders with a title', () => {
+    const { getByText } = render(<FilterPanel title="custom title" />);
+    expect(getByText(/custom title/i)).toBeVisible();
+  });
+
+  it('renders with a title node', () => {
+    const { getByTestId } = render(
+      <FilterPanel title={<span data-testid="node-title" />} />
     );
+    expect(getByTestId('node-title')).toBeVisible();
   });
 
-  it('renders with no title', () => expect(filterPanel).toMatchSnapshot());
-
-  it('renders with title', () => {
-    filterPanel.setProps({ title });
-    expect(filterPanel).toMatchSnapshot();
+  it('renders with content', () => {
+    const { getByTestId } = render(
+      <FilterPanel>
+        <div data-testid="content" />
+      </FilterPanel>
+    );
+    expect(getByTestId('content')).toBeVisible();
   });
 
-  it('should overwrite `labels` when unique props defined', () => {
-    filterPanel.setProps(uniqueProps);
-    expect(filterPanel).toMatchSnapshot();
+  it('adds custom class name', () => {
+    const { container } = render(<FilterPanel className="custom-class" />);
+    expect(container.querySelector('.custom-class')).toBeInTheDocument();
   });
 
-  it('invokes `onChange` when filter is changed', () => {
-    const onChange = jest.fn();
-    filterPanel.setProps({ onChange });
-    filterPanel.find('FilterSearch').simulate('change', filter);
-    expect(onChange).toHaveBeenCalledWith(filter);
+  it('does not render the legacy filter if filterData is not provided', () => {
+    const { queryByTestId } = render(
+      <FilterPanel {...mockProps} filterData={null} />
+    );
+    expect(queryByTestId('legacy-filter-panel')).not.toBeInTheDocument();
+  });
+
+  it('renders the legacy filter panel', () => {
+    const { getByTestId } = render(<FilterPanel {...mockProps} />);
+    expect(getByTestId('legacy-filter-panel')).toBeVisible();
   });
 });

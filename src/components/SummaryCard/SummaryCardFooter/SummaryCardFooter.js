@@ -11,8 +11,10 @@ import { getComponentNamespace } from '../../../globals/namespace/index';
 
 const namespace = getComponentNamespace('summary-card__footer');
 
-const SummaryCardFooter = ({ className, children }) => (
-  <div className={classnames(namespace, className)}>{children}</div>
+const SummaryCardFooter = ({ className, children, ...other }) => (
+  <div className={classnames(namespace, className)} {...other}>
+    {children}
+  </div>
 );
 
 SummaryCardFooter.propTypes = {
@@ -24,7 +26,7 @@ SummaryCardFooter.propTypes = {
 };
 
 SummaryCardFooter.defaultProps = {
-  className: '',
+  className: null,
 };
 
 export default SummaryCardFooter;

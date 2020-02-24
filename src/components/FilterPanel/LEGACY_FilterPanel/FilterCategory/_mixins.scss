@@ -1,0 +1,24 @@
+////
+/// Filter category mixins.
+/// @group filter-panel
+/// @copyright IBM Security 2019
+////
+
+@import '../../../../globals/index';
+@import '../../FilterPanelGroup/mixins';
+
+@mixin filter-category {
+  @include filter-panel-group;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: $carbon--spacing-03;
+  }
+
+  &__count {
+    @include carbon--font-weight($weight: regular);
+    color: $text-02;
+  }
+}

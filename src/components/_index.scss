@@ -40,7 +40,9 @@
 @import 'TagWallFilter/index';
 @import 'Tearsheet/index';
 @import 'Tearsheet/TearsheetSmall/index';
+@import 'TimeIndicator/index';
 @import 'Toolbar/index';
+@import 'TrendingCard/index';
 @import 'TypeLayout/index';
 @import 'Wizard/index';
 
@@ -85,3 +87,6 @@
 /// Hidden Carbon proxy.
 @import 'carbon-components/scss/components/list/list';
 @import 'carbon-components/scss/components/list-box/list-box';
+
+/// Unstable experimental components.
+@import 'UNSTABLE__Pagination/index';
