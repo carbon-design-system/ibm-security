@@ -75,6 +75,7 @@ exports[`TagWall Rendering renders 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
+        filter={false}
         type="gray"
       >
         <span
@@ -142,7 +143,7 @@ exports[`TagWall Rendering renders 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                      d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
                     />
                   </svg>
                 </Icon>
@@ -162,6 +163,7 @@ exports[`TagWall Rendering renders 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
+        filter={false}
         type="gray"
       >
         <span
@@ -229,7 +231,7 @@ exports[`TagWall Rendering renders 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                      d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
                     />
                   </svg>
                 </Icon>
@@ -249,6 +251,7 @@ exports[`TagWall Rendering renders 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
+        filter={false}
         type="gray"
       >
         <span
@@ -316,7 +319,7 @@ exports[`TagWall Rendering renders 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                      d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
                     />
                   </svg>
                 </Icon>
@@ -336,6 +339,7 @@ exports[`TagWall Rendering renders 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        filter={false}
         type="gray"
       >
         <span
@@ -403,7 +407,7 @@ exports[`TagWall Rendering renders 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                      d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
                     />
                   </svg>
                 </Icon>
@@ -423,6 +427,7 @@ exports[`TagWall Rendering renders 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        filter={false}
         type="gray"
       >
         <span
@@ -490,7 +495,7 @@ exports[`TagWall Rendering renders 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                      d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
                     />
                   </svg>
                 </Icon>
@@ -510,6 +515,7 @@ exports[`TagWall Rendering renders 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        filter={false}
         type="gray"
       >
         <span
@@ -577,7 +583,7 @@ exports[`TagWall Rendering renders 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                      d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
                     />
                   </svg>
                 </Icon>
@@ -597,6 +603,7 @@ exports[`TagWall Rendering renders 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        filter={false}
         type="gray"
       >
         <span
@@ -664,7 +671,7 @@ exports[`TagWall Rendering renders 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                      d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
                     />
                   </svg>
                 </Icon>
@@ -684,6 +691,7 @@ exports[`TagWall Rendering renders 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        filter={false}
         type="gray"
       >
         <span
@@ -751,7 +759,7 @@ exports[`TagWall Rendering renders 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                      d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
                     />
                   </svg>
                 </Icon>
@@ -825,7 +833,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+          d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
         />
       </svg>
     </button>
@@ -850,7 +858,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+          d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
         />
       </svg>
     </button>
@@ -875,7 +883,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+          d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
         />
       </svg>
     </button>
@@ -900,7 +908,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+          d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
         />
       </svg>
     </button>
@@ -925,7 +933,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+          d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
         />
       </svg>
     </button>
@@ -950,7 +958,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+          d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
         />
       </svg>
     </button>
@@ -975,7 +983,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+          d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
         />
       </svg>
     </button>
@@ -1000,7 +1008,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+          d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
         />
       </svg>
     </button>
@@ -1090,6 +1098,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--selected"
+        filter={false}
         type="gray"
       >
         <span
@@ -1109,6 +1118,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--selected"
+        filter={false}
         type="gray"
       >
         <span
@@ -1128,6 +1138,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--selected"
+        filter={false}
         type="gray"
       >
         <span
@@ -1147,6 +1158,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default"
+        filter={false}
         type="gray"
       >
         <span
@@ -1166,6 +1178,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default"
+        filter={false}
         type="gray"
       >
         <span
@@ -1185,6 +1198,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default"
+        filter={false}
         type="gray"
       >
         <span
@@ -1204,6 +1218,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default"
+        filter={false}
         type="gray"
       >
         <span
@@ -1223,6 +1238,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default"
+        filter={false}
         type="gray"
       >
         <span

@@ -17,34 +17,18 @@
 @import '../IconButton/index';
 @import '../Search/index';
 
-@include export-namespace($name: data-table) {
-  .#{$prefix}--data-table-container {
-    /// Need to override because the overflow cell does not have a thead td.
-    tbody tr:hover td.#{$namespace}data-table__overflow-cell:hover {
-      border-top: 1px solid transparent;
-    }
+@import '../Component/mixins';
 
-    td.#{$namespace}data-table__overflow-cell {
-      width: 0;
-      border-top: 1px solid transparent;
-
-      .#{$prefix}--overflow-menu {
-        z-index: z($layer: overlay);
-        margin-left: auto;
-      }
-    }
-
-    /// Prevents appearance of "empty" thead space when an overflow cell is added.
-    .#{$prefix}--data-table {
-      background-color: $ui-02;
-    }
-
-    .#{$prefix}--batch-actions {
-      padding: 0;
-    }
+@include security--component($name: data-table) {
+  &__overflow-cell .#{$prefix}--overflow-menu {
+    z-index: z($layer: overlay);
   }
 
-  .#{$prefix}--data-table.#{$prefix}--skeleton th {
-    border-bottom: 0;
+  .#{$prefix}--data-table {
+    background-color: $ui-03;
+
+    &.#{$prefix}--skeleton th {
+      border-bottom-width: 0;
+    }
   }
 }

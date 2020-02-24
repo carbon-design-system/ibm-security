@@ -4,8 +4,11 @@
 /// @copyright IBM Security 2019
 ////
 
+@import 'carbon-components/scss/components/data-table/data-table-action';
+
 @import '../Button/index';
 @import '../ScrollGradient/index';
+@import '../Select/index';
 @import '../Tooltip/index';
 
 @import '../Component/mixins';

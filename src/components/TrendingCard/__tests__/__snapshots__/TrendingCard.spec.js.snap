@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TrendingCard renders 1`] = `
+<a
+  class="security--trending-card"
+  href="#"
+  style="width: 20rem;"
+>
+  <h3
+    class="security--trending-card__title"
+  >
+    Title
+  </h3>
+  <span
+    class="security--trending-card__subtitle"
+  >
+    Subtitle
+  </span>
+</a>
+`;
+
+exports[`TrendingCard renders a custom link 1`] = `
+<a
+  class="bx--link security--trending-card"
+  href="#"
+  style="width: 20rem;"
+>
+  <h3
+    class="security--trending-card__title"
+  >
+    Title
+  </h3>
+  <span
+    class="security--trending-card__subtitle"
+  >
+    Subtitle
+  </span>
+</a>
+`;

@@ -12,6 +12,7 @@
 @import 'carbon-components/scss/globals/scss/helper-mixins';
 
 @import '../Button/index';
+@import '../Dropdown/index';
 @import '../OverflowMenu/index';
 
 @import '../Component/mixins';
@@ -40,6 +41,7 @@
 
   & &__overflow-menu {
     width: 3rem;
+    background-color: $interactive-01;
     margin-left: 1px;
 
     &:hover,

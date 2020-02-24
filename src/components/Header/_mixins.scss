@@ -196,7 +196,7 @@ $header__transition__timing-function: $timing-function;
     color: $inverse-01;
     background-color: $inverse-02;
 
-    @include carbon--breakpoint($name: lg) {
+    @include carbon--breakpoint($name: md) {
       right: carbon--mini-units($count: 1);
       width: carbon--mini-units($count: 34);
     }
@@ -306,16 +306,18 @@ $header__transition__timing-function: $timing-function;
         &__title,
         &__email {
           display: block;
-          word-break: break-all;
           word-wrap: anywhere;
         }
 
         &__title {
           @include carbon--type-style($name: productive-heading-03);
+          hyphens: auto;
+          word-break: break-word;
         }
 
         &__email {
           @include carbon--type-style($name: caption-01);
+          word-break: break-all;
         }
       }
 

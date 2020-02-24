@@ -18,7 +18,6 @@ import { styles } from '@carbon/type/lib';
 
 import { disableCentered, patterns } from '../../../.storybook';
 
-import { label } from '../_mocks_';
 import { header, profile, toolbar } from '../Shell/_mocks_';
 import { labels } from './_mocks_';
 
@@ -38,11 +37,12 @@ const { interactive01, text04 } = theme;
 
 const closeButtonLabel = 'Close';
 
-const props = {
-  title: label,
-  subtitle: label,
+const props = () => ({
+  title: text('title', 'Example title'),
+  subtitle: text('subtitle', 'Example subtitle'),
+  ['aria-label']: text('aria-label', 'Example aria-label'), // eslint-disable-line no-useless-computed-key
   labels,
-};
+});
 
 const comboButtonProps = () => ({
   direction: radios(
@@ -130,7 +130,7 @@ disableCentered(storiesOf(patterns('PanelV2'), module))
               <PanelV2
                 key="p1"
                 isOpen={this.state.firstOpen}
-                {...props}
+                {...props()}
                 closeButton={{
                   onClick: this.closeFirst,
                   label: text('closeButton.label', closeButtonLabel),
@@ -168,7 +168,7 @@ disableCentered(storiesOf(patterns('PanelV2'), module))
               <PanelV2
                 key="p2"
                 isOpen={this.state.secondOpen}
-                {...props}
+                {...props()}
                 closeButton={{
                   onClick: this.closeSecond,
                   label: text('closeButton.label', closeButtonLabel),
@@ -221,7 +221,7 @@ disableCentered(storiesOf(patterns('PanelV2'), module))
               <PanelV2
                 key="p3"
                 isOpen={this.state.thirdOpen}
-                {...props}
+                {...props()}
                 closeButton={{
                   onClick: this.closethird,
                   label: closeButtonLabel,

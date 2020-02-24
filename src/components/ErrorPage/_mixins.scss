@@ -9,107 +9,60 @@
 @import '@carbon/type/scss/font-family';
 @import '@carbon/type/scss/styles';
 
-@import '../../globals/rtl/index';
-
-/// Section min-height.
-/// @type Length
-$error-page__sizing__min-height: carbon--mini-units(
-  $count: 25,
-);
-
-/// Content max width.
-/// @type Length
-$error-page__content__sizing__max-width: carbon--mini-units(
-  $count: 50,
-);
-
-/// Content Wrapper padding.
-/// @type Length
-$error-page__content-wrapper__spacing__padding: carbon--mini-units(
-    $count: 12,
-  )
-  carbon--mini-units(
-    $count: 4,
-  );
-
-/// Left margin.
-/// @type Length
-$error-page__title__spacing__margin: 0 0
-  carbon--mini-units(
-    $count: 6,
-  )
-  0;
-
-/// Description margin.
-/// @type Length
-$error-page__description__spacing__margin: 0 0
-  carbon--mini-units(
-    $count: 4,
-  )
-  0;
-
-/// Link margin.
-/// @type Length
-$error-page__left__spacing__margin: 0 0
-  carbon--mini-units(
-    $count: 6,
-  )
-  0;
-
 @mixin error-page {
   $root: &;
 
   display: flex;
+  min-height: carbon--mini-units($count: 25);
+  margin-bottom: $carbon--spacing-09;
   flex-direction: row;
   justify-content: space-between;
-  min-height: $error-page__sizing__min-height;
   background-repeat: no-repeat;
-  margin: $error-page__left__spacing__margin;
-
-  @include rtl {
-    background-position: center left;
-    flex-direction: row-reverse;
-
-    // Flips the background image.
-    transform: scaleX(-1);
-  }
 
   &__title {
     @include carbon--type-style($name: productive-heading-05);
+    margin-top: $carbon--spacing-04;
+    margin-bottom: $carbon--spacing-09;
+  }
+
+  &__sub-title,
+  &__description {
+    margin-top: 0;
   }
 
   &__sub-title {
     @include carbon--type-style($name: productive-heading-03);
+    margin-bottom: $carbon--spacing-05;
   }
 
   &__description {
     @include carbon--type-style($name: heading-02);
+    margin-bottom: $carbon--spacing-07;
   }
 
   &__content-wrapper {
     display: flex;
+    padding: carbon--mini-units($count: 12) $spacing-07;
     flex-direction: column;
     justify-content: space-between;
-    padding: $error-page__content-wrapper__spacing__padding;
-
-    @include rtl {
-      // Flips the text to compensate for the background flip.
-      transform: scaleX(-1);
-    }
   }
 
   &__content {
     display: flex;
+    max-width: carbon--mini-units($count: 50);
     flex-direction: column;
     justify-content: flex-start;
-    max-width: $error-page__content__sizing__max-width;
   }
 
-  &__link {
-    &__icon {
-      width: carbon--mini-units($count: 2.5);
-      height: carbon--mini-units($count: 2.5);
-      padding-right: $carbon--spacing-03;
-    }
+  &__link__icon {
+    /// Icon dimensions.
+    /// @type Length
+    $error-page__link__icon__sizing__dimensions: carbon--mini-units(
+      $count: 2.5,
+    );
+
+    width: $error-page__link__icon__sizing__dimensions;
+    height: $error-page__link__icon__sizing__dimensions;
+    padding-right: $carbon--spacing-03;
   }
 }

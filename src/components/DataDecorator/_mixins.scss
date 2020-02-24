@@ -46,6 +46,7 @@
   max-width: 100%;
   padding: unset;
   border: unset;
+  vertical-align: middle;
 
   &:focus {
     @include focus-outline('outline');
