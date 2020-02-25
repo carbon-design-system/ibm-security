@@ -7,12 +7,24 @@ import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
-import { UNSTABLE__Pagination, PageSelector } from '../../..';
+import { UNSTABLE__Pagination, PageInput, PageSelector } from '../../..';
 
 import { namespace } from '../Pagination';
 
 describe('UNSTABLE__Pagination', () => {
-  test('should have no Axe or DAP violations', async () => {
+  test('should have no Axe or DAP violations with no children', async () => {
+    const main = document.createElement('main');
+    render(<UNSTABLE__Pagination totalItems={40} pageSizes={[10, 20]} />, {
+      // DAP requires a landmark '<main>' in the DOM:
+      container: document.body.appendChild(main),
+    });
+    await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations(
+      'UNSTABLE__Pagination with no children'
+    );
+  });
+
+  test('should have no Axe or DAP violations with a child page selector', async () => {
     const main = document.createElement('main');
     render(
       <UNSTABLE__Pagination totalItems={40} pageSizes={[10, 20]}>
@@ -30,7 +42,34 @@ describe('UNSTABLE__Pagination', () => {
       }
     );
     await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('UNSTABLE_Pagination');
+    await expect(document.body).toHaveNoDAPViolations(
+      'UNSTABLE__Pagination with child page selector'
+    );
+  });
+
+  test('should have no Axe or DAP violations with a child page input', async () => {
+    const main = document.createElement('main');
+    render(
+      <UNSTABLE__Pagination totalItems={40} pageSizes={[10, 20]}>
+        {({ currentPage, onSetPage, totalPages }) => (
+          <PageInput
+            currentPage={currentPage}
+            id="test-input-1"
+            label="test input"
+            onChange={event => onSetPage(event.target.value)}
+            totalPages={totalPages}
+          />
+        )}
+      </UNSTABLE__Pagination>,
+      {
+        // DAP requires a landmark '<main>' in the DOM:
+        container: document.body.appendChild(main),
+      }
+    );
+    await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations(
+      'UNSTABLE__Pagination with child page input'
+    );
   });
 
   test('should cycle pagination elements in tab order', () => {
@@ -412,43 +451,16 @@ describe('UNSTABLE__Pagination', () => {
     expect(getByText(/1–5 items/i)).toBeInTheDocument();
   });
 
-  test('should add a custom class to parent pagination component', () => {
+  test('should add a custom class', () => {
     const { container } = render(
       <UNSTABLE__Pagination totalItems={10} className="custom-class" />
     );
     expect(container.firstElementChild).toHaveClass('custom-class');
   });
 
-  test('should pass through extra props to parent pagination component via spread attribute', () => {
+  test('should pass through extra props via spread attribute', () => {
     const { queryByTestId } = render(
       <UNSTABLE__Pagination totalItems={10} data-testid="test-id" />
-    );
-    expect(queryByTestId('test-id')).toBeVisible();
-  });
-
-  test('should add a custom class to child page selector component', () => {
-    const { getByText } = render(
-      <PageSelector
-        currentPage={1}
-        totalPages={1}
-        onChange={() => {}}
-        labelText="test page selector"
-        className="custom-class"
-      />
-    );
-    expect(getByText(/test page selector/i).parentNode).toHaveClass(
-      'custom-class'
-    );
-  });
-
-  test('should pass through extra props to child page selector component via spread attribute', () => {
-    const { queryByTestId } = render(
-      <PageSelector
-        currentPage={1}
-        totalPages={1}
-        onChange={() => {}}
-        data-testid="test-id"
-      />
     );
     expect(queryByTestId('test-id')).toBeVisible();
   });
