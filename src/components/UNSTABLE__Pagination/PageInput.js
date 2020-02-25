@@ -18,6 +18,8 @@ function PageSelector({
   id,
   invalidText,
   label,
+  max,
+  min,
   totalPages,
   ...other
 }) {
@@ -29,8 +31,8 @@ function PageSelector({
       invalidText={invalidText}
       label={label}
       value={currentPage}
-      min={1}
-      max={totalPages}
+      max={max || totalPages}
+      min={min}
       {...other}
     />
   );
@@ -52,6 +54,12 @@ PageSelector.propTypes = {
   /** Translatable string to label the page input element. */
   label: PropTypes.string,
 
+  /** The maximum value accepted. */
+  max: PropTypes.number,
+
+  /** The minimum value accepted. */
+  min: PropTypes.number,
+
   /**
    * Total number of pages.
    * This value is calculated using a valid `totalItems` prop passed to the parent `UNSTABLE__Pagination`.
@@ -64,6 +72,8 @@ PageSelector.defaultProps = {
   className: null,
   id: 1,
   label: 'Current page number',
+  max: undefined,
+  min: 1,
   invalidText: 'Not a valid page number.',
 };
 
