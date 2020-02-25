@@ -225,5 +225,6 @@ export UnorderedList from 'carbon-components-react/lib/components/UnorderedList'
 
 // Unstable experimental components
 export UNSTABLE__Pagination, {
+  PageInput,
   PageSelector,
 } from './components/UNSTABLE__Pagination';

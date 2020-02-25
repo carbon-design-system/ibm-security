@@ -4,6 +4,7 @@
  */
 
 import UNSTABLE__Pagination from './Pagination';
+import PageInput from './PageInput';
 import PageSelector from './PageSelector';
 
-export { UNSTABLE__Pagination as default, PageSelector };
+export { UNSTABLE__Pagination as default, PageInput, PageSelector };

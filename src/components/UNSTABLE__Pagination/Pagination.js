@@ -104,6 +104,7 @@ function UNSTABLE__Pagination({
             totalItems &&
             children({
               currentPage,
+              currentPageSize,
               onSetPage,
               totalPages,
             })}

@@ -8,7 +8,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { array, boolean, number, text } from '@storybook/addon-knobs';
 
-import { UNSTABLE__Pagination, PageSelector } from '../..';
+import { UNSTABLE__Pagination, PageInput, PageSelector } from '../..';
 
 import { components } from '../../../.storybook';
 
@@ -34,7 +34,7 @@ const props = () => ({
 storiesOf(components('UNSTABLE Pagination'), module)
   .addDecorator(story => <div style={{ width: '800px' }}>{story()}</div>)
   .add(
-    'default',
+    'with a page selector',
     () => (
       <UNSTABLE__Pagination
         {...props()}
@@ -59,7 +59,7 @@ storiesOf(components('UNSTABLE Pagination'), module)
 
             \`UNSTABLE__Pagination\` accepts a render prop \`children\`.
 
-            In this case, you can wrap the \`children\` (\`PageSelector\`) in a function, allowing it to pass information back to the parent component.
+            This example wraps the \`children\` (\`PageSelector\`) in a function, allowing it to pass information back to the parent component.
 
             \`\`\`jsx
             {/** 
@@ -92,7 +92,69 @@ storiesOf(components('UNSTABLE Pagination'), module)
     }
   )
   .add(
-    'with no page selector or sizer',
+    'with a page input',
+    () => (
+      <UNSTABLE__Pagination
+        {...props()}
+        totalItems={350}
+        pageSizes={array('Choices of `pageSize` (pageSizes)', [10, 20, 30])}
+      >
+        {({ currentPage, onSetPage, totalPages }) => (
+          <PageInput
+            currentPage={currentPage}
+            totalPages={totalPages}
+            id="number-input-1"
+            onChange={event => onSetPage(event.imaginaryTarget.value)}
+          />
+        )}
+      </UNSTABLE__Pagination>
+    ),
+    {
+      info: {
+        propTables: [UNSTABLE__Pagination, PageSelector],
+        text: `
+            🚨 This component is *experimental* and may change. 🚨
+
+            \`UNSTABLE__Pagination\` accepts a render prop \`children\`.
+
+            This example wraps the \`children\` (\`PageInput\`) in a function, allowing it to pass information back to the parent component.
+
+            \`\`\`jsx
+            {/** 
+              * Provide \`totalItems\` to \`UNSTABLE__Pagination\` when using the \`PageSelector\` child.
+              * \`UNSTABLE__Pagination\` uses \`totalItems\` to calculate \`totalPages\`.
+              * And then, \`PageSelector\` uses the calculated \`totalPages\` to accurately display page options.
+              */}
+            <UNSTABLE__Pagination
+              totalItems={350}
+              pageSizes={[10, 15, 20, 25]}
+            >
+              {/** 
+                * Below, \`children\` is a render prop, wrapped in a function.
+                * - \`currentPage\` is used to display the current page.
+                * - \`onSetPage\` is used to update the current page state in the parent component.
+                * - \`totalPages\` is calculated using the \`totalItems\` value provided to the parent component. In the child \`PageInput\` component shown below, \`totalPages\` is used to set the \`max\` for the input.
+                */}
+              {({ currentPage, onSetPage, totalPages }) => (
+                <PageInput
+                  currentPage={currentPage}
+                  totalPages={totalPages}
+                  id="number-input-1"
+
+                  {/**
+                   * NOTE: we are using \`event.imaginaryTarget.value\` because this is a controlled input:
+                   */}
+                   onChange={event => onSetPage(event.imaginaryTarget.value)}
+                />
+              )}
+            </UNSTABLE__Pagination>
+            \`\`\`
+          `,
+      },
+    }
+  )
+  .add(
+    'with no sizer, child input, or child selector',
     () => <UNSTABLE__Pagination {...props()} totalItems={350} />,
     {
       info: {
