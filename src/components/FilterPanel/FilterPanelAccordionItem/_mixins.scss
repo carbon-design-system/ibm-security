@@ -55,9 +55,8 @@
 
       &:focus::before {
         // Override Carbon `Accordion` defaults:
+        @include focus-outline($type: outline);
         border: none;
-        outline: 2px solid $focus;
-        outline-offset: -2px;
       }
     }
 
