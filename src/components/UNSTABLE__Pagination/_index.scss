@@ -151,4 +151,15 @@
   &__page-sizer {
     border-right: 1px solid $ui-02;
   }
+
+  &__page-input {
+    height: 100%;
+    justify-content: center;
+    margin-right: $carbon--spacing-03;
+
+    &.#{$prefix}--number input[type='number'] {
+      border: none;
+      background-color: $ui-03;
+    }
+  }
 }
