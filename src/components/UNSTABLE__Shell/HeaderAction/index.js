@@ -57,7 +57,7 @@ function HeaderAction({
           setActiveAction(!isActive ? id : null);
 
           if (!isActive) {
-            ref.current.focus();
+            current.focus();
           }
         },
         ref,
