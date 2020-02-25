@@ -111,7 +111,7 @@ storiesOf(components('UNSTABLE Pagination'), module)
     ),
     {
       info: {
-        propTables: [UNSTABLE__Pagination, PageSelector],
+        propTables: [UNSTABLE__Pagination, PageInput],
         text: `
             🚨 This component is *experimental* and may change. 🚨
 
@@ -123,7 +123,7 @@ storiesOf(components('UNSTABLE Pagination'), module)
             {/** 
               * Provide \`totalItems\` to \`UNSTABLE__Pagination\` when using the \`PageSelector\` child.
               * \`UNSTABLE__Pagination\` uses \`totalItems\` to calculate \`totalPages\`.
-              * And then, \`PageSelector\` uses the calculated \`totalPages\` to accurately display page options.
+              * And then, \`PageInput\` uses the calculated \`totalPages\` to set the \`max\` for the input.
               */}
             <UNSTABLE__Pagination
               totalItems={350}
