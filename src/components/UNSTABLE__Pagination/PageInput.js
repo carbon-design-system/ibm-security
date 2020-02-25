@@ -6,13 +6,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import setupGetInstanceId from 'carbon-components-react/lib/tools/setupGetInstanceId';
 import NumberInput from '../NumberInput';
 import { appendComponentNamespace } from '../../globals/namespace/index';
 import { namespace as paginationNamespace } from './Pagination';
 
 const namespace = appendComponentNamespace(paginationNamespace, 'page-input');
+const getInstanceId = setupGetInstanceId();
 
-function PageSelector({
+function PageInput({
   className,
   currentPage,
   id,
@@ -23,11 +25,13 @@ function PageSelector({
   totalPages,
   ...other
 }) {
+  const instanceId = `${namespace}__input-${getInstanceId()}`;
+
   return (
     <NumberInput
       className={classnames(namespace, className)}
       hideLabel
-      id={`${namespace}__input-${id}`}
+      id={instanceId || id}
       invalidText={invalidText}
       label={label}
       value={currentPage}
@@ -38,7 +42,7 @@ function PageSelector({
   );
 }
 
-PageSelector.propTypes = {
+PageInput.propTypes = {
   /** Extra class names to add. */
   className: PropTypes.string,
 
@@ -54,7 +58,7 @@ PageSelector.propTypes = {
   /** Translatable string to label the page input element. */
   label: PropTypes.string,
 
-  /** The maximum value accepted. */
+  /** The maximum value accepted. By default, this value will be the `totalPages` passed from the parent. */
   max: PropTypes.number,
 
   /** The minimum value accepted. */
@@ -68,7 +72,7 @@ PageSelector.propTypes = {
   totalPages: PropTypes.number.isRequired,
 };
 
-PageSelector.defaultProps = {
+PageInput.defaultProps = {
   className: null,
   id: 1,
   label: 'Current page number',
@@ -77,4 +81,4 @@ PageSelector.defaultProps = {
   invalidText: 'Not a valid page number.',
 };
 
-export default PageSelector;
+export default PageInput;

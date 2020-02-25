@@ -6,6 +6,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import setupGetInstanceId from 'carbon-components-react/lib/tools/setupGetInstanceId';
 import { Select, SelectItem } from '../Select';
 import { appendComponentNamespace } from '../../globals/namespace/index';
 import { namespace as paginationNamespace } from './Pagination';
@@ -14,6 +15,7 @@ const namespace = appendComponentNamespace(
   paginationNamespace,
   'page-selector'
 );
+const getInstanceId = setupGetInstanceId();
 
 function PageSelector({
   className,
@@ -23,6 +25,8 @@ function PageSelector({
   totalPages,
   ...other
 }) {
+  const instanceId = `${namespace}__select-${getInstanceId()}`;
+
   const renderPages = total => {
     const pages = [];
     for (let counter = 1; counter <= total; counter += 1) {
@@ -37,7 +41,7 @@ function PageSelector({
     <Select
       className={classnames(namespace, className)}
       hideLabel
-      id={`${namespace}__input-${id}`}
+      id={instanceId || id}
       inline
       labelText={labelText}
       value={currentPage}
