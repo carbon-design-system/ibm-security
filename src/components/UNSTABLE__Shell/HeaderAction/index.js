@@ -32,14 +32,15 @@ function HeaderAction({
   const headerButtonNamespace = `${headerNamespace}__button`;
   const isIconButton = popover && children.type === IconButton;
 
-  function isPopoverActive(target) {
-    return (
-      isActive && !popoverRef.current.contains(target) && setActiveAction(null)
-    );
-  }
+  const { current } = ref;
 
   function onBlur({ relatedTarget }) {
-    return isPopoverActive(relatedTarget);
+    return (
+      isActive &&
+      !popoverRef.current.contains(relatedTarget) &&
+      relatedTarget !== current &&
+      setActiveAction(null)
+    );
   }
 
   return (
@@ -72,7 +73,7 @@ function HeaderAction({
               {...other}
             >
               {cloneElement(popover, {
-                onClick: ({ currentTarget }) => isPopoverActive(currentTarget),
+                onMouseDown: event => event.preventDefault(),
               })}
             </div>
           )}
