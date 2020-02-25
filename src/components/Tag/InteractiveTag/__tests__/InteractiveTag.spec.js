@@ -8,6 +8,7 @@ import React from 'react';
 import userEvent from '@testing-library/user-event';
 
 import { InteractiveTag } from '../../../..';
+import { namespace } from '../InteractiveTag';
 
 describe('InteractiveTag', () => {
   test('should have no Axe or DAP violations', async () => {
@@ -20,11 +21,32 @@ describe('InteractiveTag', () => {
     await expect(document.body).toHaveNoDAPViolations('InteractiveTag');
   });
 
+  test('should add close button with `aria-label` when `removable` is `true`', () => {
+    const { queryByLabelText } = render(
+      <InteractiveTag removeBtnLabel="test label" removable>
+        test tag
+      </InteractiveTag>
+    );
+    expect(queryByLabelText(/test label/i)).toBeVisible();
+  });
+
+  test('should add children as tag content', () => {
+    const { queryByText } = render(<InteractiveTag>test tag</InteractiveTag>);
+    expect(queryByText(/test tag/i)).toBeVisible();
+  });
+
   test('should add a custom class', () => {
     const { getByText } = render(
       <InteractiveTag className="custom-class">test tag</InteractiveTag>
     );
     expect(getByText(/test tag/i)).toHaveClass('custom-class');
+  });
+
+  test('should add selected class when `isSelected` is `true`', () => {
+    const { getByText } = render(
+      <InteractiveTag isSelected>test tag</InteractiveTag>
+    );
+    expect(getByText(/test tag/i)).toHaveClass(`${namespace}--selected`);
   });
 
   test('should pass through extra props via spread attribute', () => {
