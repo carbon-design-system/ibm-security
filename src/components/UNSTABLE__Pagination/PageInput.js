@@ -16,6 +16,7 @@ function PageSelector({
   className,
   currentPage,
   id,
+  invalidText,
   label,
   totalPages,
   ...other
@@ -25,6 +26,7 @@ function PageSelector({
       className={classnames(namespace, className)}
       hideLabel
       id={`${namespace}__input-${id}`}
+      invalidText={invalidText}
       label={label}
       value={currentPage}
       min={1}
@@ -44,6 +46,9 @@ PageSelector.propTypes = {
   /** The unique ID of this component instance. */
   id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
+  /** Translatable string for the message shown when an invalid page is entered. */
+  invalidText: PropTypes.string,
+
   /** Translatable string to label the page input element. */
   label: PropTypes.string,
 
@@ -59,6 +64,7 @@ PageSelector.defaultProps = {
   className: null,
   id: 1,
   label: 'Current page number',
+  invalidText: 'Not a valid page number.',
 };
 
 export default PageSelector;

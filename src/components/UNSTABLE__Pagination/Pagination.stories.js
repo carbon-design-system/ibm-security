@@ -141,10 +141,10 @@ storiesOf(components('UNSTABLE Pagination'), module)
                   totalPages={totalPages}
                   id="number-input-1"
 
-                  {/**
+                  /**
                    * NOTE: we are using \`event.imaginaryTarget.value\` because this is a controlled input:
-                   */}
-                   onChange={event => onSetPage(event.imaginaryTarget.value)}
+                   */
+                  onChange={event => onSetPage(event.imaginaryTarget.value)}
                 />
               )}
             </UNSTABLE__Pagination>

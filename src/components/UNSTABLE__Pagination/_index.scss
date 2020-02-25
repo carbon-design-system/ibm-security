@@ -161,5 +161,10 @@
       border: none;
       background-color: $ui-03;
     }
+
+    // Visually hide error text for now:
+    .#{$prefix}--form-requirement {
+      @include hidden;
+    }
   }
 }
