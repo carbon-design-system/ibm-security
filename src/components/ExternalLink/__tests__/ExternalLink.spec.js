@@ -24,6 +24,23 @@ describe('ExternalLink', () => {
     await expect(document.body).toHaveNoDAPViolations('ExternalLink');
   });
 
+  test('should add children as link text', () => {
+    const { queryByText } = render(
+      <ExternalLink href="https://www.ibm.com/security">test link</ExternalLink>
+    );
+    expect(queryByText(/test link/i)).toBeVisible();
+  });
+
+  test('should add an href', () => {
+    const { getByText } = render(
+      <ExternalLink href="https://www.ibm.com/security">test link</ExternalLink>
+    );
+    expect(getByText(/test link/i).closest('a')).toHaveAttribute(
+      'href',
+      'https://www.ibm.com/security'
+    );
+  });
+
   test('should add custom class', () => {
     const { getByText } = render(
       <ExternalLink
