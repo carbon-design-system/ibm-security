@@ -1,6 +1,6 @@
 {
   "name": "@carbon/ibm-security",
-  "version": "1.17.1",
+  "version": "1.17.2-prerelease.8",
   "description": "Carbon for IBM Security",
   "license": "Apache-2.0",
   "main": "lib/index.js",
@@ -101,7 +101,7 @@
     "@storybook/theming": "^5.2.4",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^8.0.3",
+    "@testing-library/user-event": "^8.1.0",
     "autoprefixer": "^9.4.10",
     "axe-core": "^3.4.1",
     "babel-eslint": "^10.0.1",
