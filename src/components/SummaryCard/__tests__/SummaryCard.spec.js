@@ -160,4 +160,19 @@ describe('SummaryCard', () => {
     // The title.
     expect(titleSelector).toHaveFocus();
   });
+
+  test('should accept a custom class name', () => {
+    const { container } = render(<SummaryCard className="custom-class" />);
+    expect(container.firstElementChild).toHaveClass('custom-class');
+  });
+
+  test('should accept children', () => {
+    const { queryByText } = render(<SummaryCard>test content</SummaryCard>);
+    expect(queryByText(/test content/i)).toBeVisible();
+  });
+
+  test('should pass through extra props via spread attribute', () => {
+    const { queryByTestId } = render(<SummaryCard data-testid="test-id" />);
+    expect(queryByTestId('test-id')).toBeVisible();
+  });
 });

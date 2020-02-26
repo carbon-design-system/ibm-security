@@ -39,7 +39,7 @@ describe('SummaryCardAction', () => {
     expect(getByText(/test example button/i)).toHaveFocus();
   });
 
-  test('should only show expandable content when activated', () => {
+  test('should accept `expandedContent` and only show when activated', () => {
     const { getByText, queryByText, getByTestId } = render(
       <SummaryCardAction
         closeButtonIconDescription="test close button"
@@ -62,15 +62,52 @@ describe('SummaryCardAction', () => {
     );
 
     // Click on the action button to show expanded content:
-    userEvent.click(getByTestId('test-button-id'));
+    userEvent.click(getByText('test button'));
 
     // Expect expanded content to be visible:
-    expect(getByText(/test expanded action content/i)).toBeVisible();
+    expect(queryByText(/test expanded action content/i)).toBeVisible();
 
     // Expect `aria-expanded` attribute to be `true`:
     expect(getByTestId('test-button-id')).toHaveAttribute(
       'aria-expanded',
       'true'
     );
+  });
+
+  test('should accept a custom class name', () => {
+    const { container } = render(
+      <SummaryCardAction className="custom-class" />
+    );
+    expect(container.firstElementChild).toHaveClass('custom-class');
+  });
+
+  test("should add a description to the expanded content's close button via `closeButtonIconDescription`", () => {
+    const { getByText, queryAllByLabelText } = render(
+      <SummaryCardAction
+        expandedContent="test content"
+        closeButtonIconDescription="test icon label"
+      >
+        test button
+      </SummaryCardAction>
+    );
+    // Must open the expanded content to see the close button:
+    userEvent.click(getByText('test button'));
+    // Use `queryAll*` & check for 2 occurances because the icon button
+    // applies the label to its `title` and `aria-label` attributes:
+    expect(queryAllByLabelText(/test icon label/i).length).toBe(2);
+  });
+
+  test('should accept children', () => {
+    const { queryByText } = render(
+      <SummaryCardAction>test content</SummaryCardAction>
+    );
+    expect(queryByText(/test content/i)).toBeVisible();
+  });
+
+  test('should pass through extra props via spread attribute', () => {
+    const { queryByTestId } = render(
+      <SummaryCardAction data-testid="test-id" />
+    );
+    expect(queryByTestId('test-id')).toBeVisible();
   });
 });
