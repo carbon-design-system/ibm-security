@@ -1,28 +1,32 @@
 /**
- * @file Summary card body tests.
+ * @file Summary card footer tests.
  * @copyright IBM Security 2020
  */
 
 import { render } from '@testing-library/react';
 import React from 'react';
 
-import { SummaryCardBody } from '../../../..';
+import { SummaryCardFooter } from '../../../..';
 
-describe('SummaryCardBody', () => {
+describe('SummaryCardFooter', () => {
   test('should accept a custom class name', () => {
-    const { container } = render(<SummaryCardBody className="custom-class" />);
+    const { container } = render(
+      <SummaryCardFooter className="custom-class" />
+    );
     expect(container.firstElementChild).toHaveClass('custom-class');
   });
 
   test('should accept children', () => {
     const { getByText } = render(
-      <SummaryCardBody>test content</SummaryCardBody>
+      <SummaryCardFooter>test content</SummaryCardFooter>
     );
     expect(getByText('test content')).toBeVisible();
   });
 
   test('should pass through extra props via spread attribute', () => {
-    const { queryByTestId } = render(<SummaryCardBody data-testid="test-id" />);
+    const { queryByTestId } = render(
+      <SummaryCardFooter data-testid="test-id" />
+    );
     expect(queryByTestId('test-id')).toBeVisible();
   });
 });

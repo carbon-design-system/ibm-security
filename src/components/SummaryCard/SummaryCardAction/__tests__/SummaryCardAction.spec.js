@@ -82,7 +82,7 @@ describe('SummaryCardAction', () => {
   });
 
   test("should add a description to the expanded content's close button via `closeButtonIconDescription`", () => {
-    const { getByText, queryAllByLabelText } = render(
+    const { getByText, getAllByLabelText } = render(
       <SummaryCardAction
         expandedContent="test content"
         closeButtonIconDescription="test icon label"
@@ -92,9 +92,9 @@ describe('SummaryCardAction', () => {
     );
     // Must open the expanded content to see the close button:
     userEvent.click(getByText('test button'));
-    // Use `queryAll*` & check for 2 occurances because the icon button
+    // Use `getAll*` & check for 2 occurances because the icon button
     // applies the label to its `title` and `aria-label` attributes:
-    expect(queryAllByLabelText(/test icon label/i).length).toBe(2);
+    expect(getAllByLabelText(/test icon label/i).length).toBe(2);
   });
 
   test('should accept children', () => {
