@@ -26,19 +26,18 @@ function HeaderAction({
   ...other
 }) {
   const isActive = popover && activeAction === id;
-  const ref = useRef();
-  const popoverRef = useRef();
+
+  const ref = useRef(null);
+  const popoverRef = useRef(null);
 
   const headerButtonNamespace = `${headerNamespace}__button`;
   const isIconButton = popover && children.type === IconButton;
-
-  const { current } = ref;
 
   function onBlur({ relatedTarget }) {
     return (
       isActive &&
       !popoverRef.current.contains(relatedTarget) &&
-      relatedTarget !== current &&
+      relatedTarget !== ref.current &&
       setActiveAction(null)
     );
   }
@@ -57,7 +56,7 @@ function HeaderAction({
           setActiveAction(!isActive ? id : null);
 
           if (!isActive) {
-            current.focus();
+            ref.current.focus();
           }
         },
         ref,
