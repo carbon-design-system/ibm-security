@@ -9,7 +9,7 @@ import React from 'react';
 import { icon } from '../../_mocks_';
 import { NonEntitledSection } from '../../..';
 
-describe('Decorator', () => {
+describe('NonEntitledSection', () => {
   test('should have no Axe or DAP violations', async () => {
     const main = document.createElement('main');
     render(
@@ -39,5 +39,83 @@ describe('Decorator', () => {
 
     await expect(document.body).toHaveNoAxeViolations();
     await expect(document.body).toHaveNoDAPViolations('NonEntitledSection');
+  });
+
+  test('should apply a title via `title`', () => {
+    const { queryByText } = render(
+      <NonEntitledSection title="test title" subTitle="test subtitle" />
+    );
+    expect(queryByText(/test title/i)).toBeVisible();
+  });
+
+  test('should apply a subTitle via `subTitle`', () => {
+    const { queryByText } = render(
+      <NonEntitledSection title="test title" subTitle="test subtitle" />
+    );
+    expect(queryByText(/test subtitle/i)).toBeVisible();
+  });
+
+  test('should apply a description via `description`', () => {
+    const { queryByText } = render(
+      <NonEntitledSection
+        title="test title"
+        subTitle="test subtitle"
+        description="test description"
+      />
+    );
+    expect(queryByText(/test description/i)).toBeVisible();
+  });
+
+  test('should apply a link via `links` array of objects', () => {
+    const { queryByText } = render(
+      <NonEntitledSection
+        title="test title"
+        subTitle="test subtitle"
+        links={[
+          {
+            id: 'test-link',
+            text: 'test link',
+            href: '#',
+          },
+        ]}
+      />
+    );
+    expect(queryByText(/test link/i)).toBeVisible();
+  });
+
+  test('should apply a custom background image to style attribute via `backgroundImage`', () => {
+    const { container } = render(
+      <NonEntitledSection
+        title="test title"
+        subTitle="test subtitle"
+        backgroundImage="TEST-IMAGE"
+      />
+    );
+    expect(container.firstElementChild).toHaveAttribute(
+      'style',
+      `background-image: url(TEST-IMAGE);`
+    );
+  });
+
+  test('should apply a custom class name', () => {
+    const { container } = render(
+      <NonEntitledSection
+        title="test title"
+        subTitle="test subtitle"
+        className="custom-class"
+      />
+    );
+    expect(container.firstElementChild).toHaveClass('custom-class');
+  });
+
+  test('should add extra props via spread attribute', () => {
+    const { queryByTestId } = render(
+      <NonEntitledSection
+        title="test title"
+        subTitle="test subtitle"
+        data-testid="test-id"
+      />
+    );
+    expect(queryByTestId('test-id')).toBeVisible();
   });
 });

@@ -22,7 +22,6 @@ const NonEntitledSection = ({
   description,
   title,
   subTitle,
-  catalogId,
   links,
   style,
   ...other
@@ -76,7 +75,6 @@ NonEntitledSection.defaultProps = {
   backgroundImage: null,
   className: '',
   description: '',
-  catalogId: '',
   links: [],
 };
 
@@ -95,9 +93,6 @@ NonEntitledSection.propTypes = {
 
   /** @type {string} Section description. */
   description: PropTypes.string,
-
-  /** @type {string} Catalog id. */
-  catalogId: PropTypes.string,
 
   /** @type {Array<Object.*>} An array list of links. */
   links: PropTypes.arrayOf(
