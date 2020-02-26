@@ -40,14 +40,58 @@ describe('ErrorPage', () => {
     await expect(document.body).toHaveNoDAPViolations('ErrorPage');
   });
 
-  test('should accept a custom class', () => {
-    const { getByTestId } = render(
+  test('should apply a title via `title`', () => {
+    const { queryByText } = render(<ErrorPage title="test title" />);
+    expect(queryByText(/test title/i)).toBeVisible();
+  });
+
+  test('should apply an error name via `errorName`', () => {
+    const { queryByText } = render(<ErrorPage errorName="test error name" />);
+    expect(queryByText(/test error name/i)).toBeVisible();
+  });
+
+  test('should apply an error message via `errorMessage`', () => {
+    const { queryByText } = render(<ErrorPage errorMessage="test title" />);
+    expect(queryByText(/test title/i)).toBeVisible();
+  });
+
+  test('should apply a custom background image to style attribute via `backgroundImage`', () => {
+    const { container } = render(
+      <ErrorPage statusCode={401} backgroundImage="url(TEST-IMAGE)" />
+    );
+    expect(container.firstElementChild).toHaveAttribute(
+      'style',
+      `background-image: url(TEST-IMAGE)`
+    );
+  });
+
+  test('should apply a status code via `statusCode`', () => {
+    const { queryByText } = render(<ErrorPage statusCode={404} />);
+    expect(queryByText(/404/i)).toBeVisible();
+  });
+
+  test('should apply a link via `links` array of objects', () => {
+    const { queryByText } = render(
       <ErrorPage
-        statusCode={404}
-        data-testid="test-id"
-        className="custom-class"
+        links={[
+          {
+            id: 'test-link',
+            text: 'test link',
+            href: '#',
+          },
+        ]}
       />
     );
-    expect(getByTestId('test-id')).toHaveClass('custom-class');
+    expect(queryByText(/test link/i)).toBeVisible();
+  });
+
+  test('should accept a custom class', () => {
+    const { container } = render(<ErrorPage className="custom-class" />);
+    expect(container.firstElementChild).toHaveClass('custom-class');
+  });
+
+  test('should accept extra props via spread attribute', () => {
+    const { queryByTestId } = render(<ErrorPage data-testid="test-id" />);
+    expect(queryByTestId('test-id')).toBeVisible();
   });
 });
