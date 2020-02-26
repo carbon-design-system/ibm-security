@@ -8,13 +8,13 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Add16 from '@carbon/icons-react/lib/add/16';
 import Subtract16 from '@carbon/icons-react/lib/subtract/16';
-import { g100 as theme } from '@carbon/themes';
 
 import ScrollGradient from '../../ScrollGradient';
 import { AccordionItem } from '../../Accordion';
 import Button from '../../Button';
 import { getComponentNamespace } from '../../../globals/namespace';
 import FilterPanelLabel from '../FilterPanelLabel';
+import theme from '../../../globals/theme';
 
 export const namespace = getComponentNamespace('filter-panel-accordion-item');
 
@@ -85,37 +85,39 @@ const FilterPanelAccordionItem = ({
       open={open}
       {...other}
     >
-      <ul className={`${namespace}__list`}>
-        <ScrollGradient
-          scrollElementClassName={`${namespace}__scroller`}
-          getScrollElementRef={setListContainer}
-          color={scrollGradientColor}
+      <ScrollGradient
+        scrollElementClassName={`${namespace}__scroller`}
+        getScrollElementRef={setListContainer}
+        color={scrollGradientColor}
+      >
+        <div
+          role="presentation"
+          ref={visibleChildren}
+          className={`${namespace}__list-items ${namespace}__list-items--visible`}
         >
-          <div
-            role="presentation"
-            ref={visibleChildren}
-            className={`${namespace}__list-items ${namespace}__list-items--visible`}
-          >
+          <ul className={`${namespace}__list`}>
             {childrenArray.slice(0, displayCount).map(child => (
               <li className={`${namespace}__list-item`} key={child.key}>
                 {child}
               </li>
             ))}
-          </div>
-          {shouldTruncate && isExpanded && (
-            <div
-              role="presentation"
-              className={`${namespace}__list-items ${namespace}__list-items--hidden`}
-            >
+          </ul>
+        </div>
+        {shouldTruncate && isExpanded && (
+          <div
+            role="presentation"
+            className={`${namespace}__list-items ${namespace}__list-items--hidden`}
+          >
+            <ul className={`${namespace}__list`}>
               {childrenArray.slice(displayCount).map(child => (
                 <li className={`${namespace}__filter`} key={child.key}>
                   {child}
                 </li>
               ))}
-            </div>
-          )}
-        </ScrollGradient>
-      </ul>
+            </ul>
+          </div>
+        )}
+      </ScrollGradient>
       {shouldTruncate && (
         <Button
           className={`${namespace}__button--toggle`}

@@ -1266,6 +1266,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                     >
                                       <Tag
                                         className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                                        filter={false}
                                         type="gray"
                                       >
                                         <span
@@ -1892,6 +1893,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 2`] = 
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        filter={false}
         type="gray"
       >
         <span
@@ -3657,6 +3659,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       >
                                         <Tag
                                           className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                                          filter={false}
                                           type="gray"
                                         >
                                           <span
