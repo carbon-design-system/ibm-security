@@ -61,13 +61,13 @@ describe('ErrorPage', () => {
     );
     expect(container.firstElementChild).toHaveAttribute(
       'style',
-      `background-image: url(TEST-IMAGE)`
+      `background-image: url(TEST-IMAGE);`
     );
   });
 
-  test('should apply a status code via `statusCode`', () => {
+  test('should apply an accepted status code via `statusCode` and include it in the title', () => {
     const { queryByText } = render(<ErrorPage statusCode={404} />);
-    expect(queryByText(/404/i)).toBeVisible();
+    expect(queryByText('404')).toBeVisible();
   });
 
   test('should apply a link via `links` array of objects', () => {
