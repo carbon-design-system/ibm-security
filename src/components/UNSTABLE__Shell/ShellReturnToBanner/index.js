@@ -1,5 +1,5 @@
 /**
- * @file 'Return' navigation.
+ * @file 'Return to' banner navigation.
  * @copyright IBM Security 2020
  */
 

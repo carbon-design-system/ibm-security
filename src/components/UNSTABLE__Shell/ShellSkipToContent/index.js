@@ -1,5 +1,5 @@
 /**
- * @file 'Skip' navigation.
+ * @file 'Skip to content' navigation.
  * @copyright IBM Security 2020
  */
 

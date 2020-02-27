@@ -10,7 +10,7 @@ import React from 'react';
 
 import theme from '../../../globals/theme';
 
-import Icon from '../../Icon';
+import IconButton from '../../IconButton';
 import ScrollGradient from '../../ScrollGradient';
 
 import PopoverContent from '../PopoverContent';
@@ -35,13 +35,12 @@ function NotificationsPopover({
       <PopoverContent {...other}>
         {label && <span className={`${namespace}__label`}>{label}</span>}
         {onClear && (
-          <button
+          <IconButton
             className={`${namespace}__button`}
-            aria-label={iconDescription}
+            label={iconDescription}
             onClick={onClear}
-          >
-            <Icon renderIcon={Close20} />
-          </button>
+            renderIcon={Close20}
+          />
         )}
       </PopoverContent>
       <ScrollGradient color={theme.inverse02}>

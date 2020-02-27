@@ -3,6 +3,8 @@
  * @copyright IBM Security 2020
  */
 
+import { layout01 } from '@carbon/layout';
+
 import Help20 from '@carbon/icons-react/lib/help/20';
 import Menu20 from '@carbon/icons-react/lib/menu/20';
 import Notification20 from '@carbon/icons-react/lib/notification/20';
@@ -82,15 +84,27 @@ export const Default = () => (
 );
 
 export const skipToContent = () => (
-  <UNSTABLE__Shell>
-    <ShellSkipToContent href="#">
-      {text('`ShellSkipToContent` children (`children`)', 'Skip to content')}
-    </ShellSkipToContent>
+  <>
+    <UNSTABLE__Shell>
+      <ShellSkipToContent href="#content">
+        {text('`ShellSkipToContent` children (`children`)', 'Skip to content')}
+      </ShellSkipToContent>
 
-    <ShellHeader>
-      <ShellHeaderName {...nameProps()} />
-    </ShellHeader>
-  </UNSTABLE__Shell>
+      <ShellHeader>
+        <ShellHeaderName {...nameProps()} />
+
+        <HeaderActions>
+          <HeaderAction>
+            <Button kind="secondary">Action</Button>
+          </HeaderAction>
+        </HeaderActions>
+      </ShellHeader>
+    </UNSTABLE__Shell>
+
+    <Button id="content" style={{ margin: layout01 }}>
+      Content
+    </Button>
+  </>
 );
 
 export const returnToBanner = () => (
