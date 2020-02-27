@@ -108,6 +108,8 @@ $shell__banner__sizing__height: carbon--mini-units(
       z-index: z($layer: floating);
 
       &:focus {
+        @include focus-outline($type: outline);
+
         width: auto;
         padding: $button-padding;
         clip: auto;

@@ -3,6 +3,7 @@
  * @copyright IBM Security 2020
  */
 
+import setupGetInstanceId from 'carbon-components-react/lib/tools/setupGetInstanceId';
 import { node } from 'prop-types';
 import React, { Children, cloneElement, useState } from 'react';
 
@@ -18,6 +19,8 @@ const namespace = appendComponentNamespace(shellNamespace, suffix);
 function HeaderActions({ children, ...other }) {
   const [activeAction, setActiveAction] = useState(null);
 
+  const getInstanceId = setupGetInstanceId();
+
   return (
     <div
       className={`${appendComponentNamespace(
@@ -29,7 +32,7 @@ function HeaderActions({ children, ...other }) {
       {Children.map(children, (child, index) =>
         cloneElement(child, {
           activeAction,
-          id: `${namespace}__action--${index}`,
+          id: `${namespace}--${getInstanceId()}__${index}`,
           setActiveAction,
         })
       )}
