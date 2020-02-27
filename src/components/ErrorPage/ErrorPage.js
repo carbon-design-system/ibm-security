@@ -62,14 +62,18 @@ const ErrorPage = ({
   errorMessage =
     !errorMessage && errorLabels ? errorLabels.ERRORMESSAGE : errorMessage;
 
+  let formattedBackgroundImage;
+
   if (!backgroundImage) {
-    backgroundImage = errorIllustrations[statusCode]
+    formattedBackgroundImage = errorIllustrations[statusCode]
       ? { ...errorIllustrations[statusCode] }
       : { ...errorIllustrations.default };
+  } else {
+    formattedBackgroundImage = { backgroundImage };
   }
 
   return (
-    <section className={classes} style={backgroundImage} {...other}>
+    <section className={classes} style={formattedBackgroundImage} {...other}>
       <div className={`${namespace}__content-wrapper`}>
         <div className={`${namespace}__content`}>
           <h2 className={`${namespace}__title`}>{title}</h2>
