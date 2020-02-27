@@ -1,5 +1,5 @@
 /**
- * @file Header 'name'.
+ * @file Header name.
  * @copyright IBM Security 2020
  */
 
