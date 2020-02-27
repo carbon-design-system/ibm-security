@@ -65,15 +65,16 @@ function HeaderAction({
       {popover && (
         <Transition className={headerNamespace} component="span">
           {isActive && (
+            // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
             <div
               className={`${popoverNamespace} ${namespace}__popover`}
               onBlur={onBlur}
+              onMouseDown={event => event.preventDefault()}
               ref={popoverRef}
+              role="complementary"
               {...other}
             >
-              {cloneElement(popover, {
-                onMouseDown: event => event.preventDefault(),
-              })}
+              {popover}
             </div>
           )}
         </Transition>

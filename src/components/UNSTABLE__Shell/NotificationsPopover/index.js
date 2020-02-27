@@ -40,6 +40,7 @@ function NotificationsPopover({
             label={iconDescription}
             onClick={onClear}
             renderIcon={Close20}
+            tooltip={false}
           />
         )}
       </PopoverContent>
