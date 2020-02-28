@@ -27,8 +27,8 @@ function HeaderAction({
 }) {
   const isActive = popover && activeAction === id;
 
-  const ref = useRef(null);
-  const popoverRef = useRef(null);
+  const ref = useRef();
+  const popoverRef = useRef();
 
   const headerButtonNamespace = `${headerNamespace}__button`;
   const isIconButton = popover && children.type === IconButton;
@@ -52,13 +52,7 @@ function HeaderAction({
           [`${headerButtonNamespace}--active`]: isIconButton && isActive,
         }),
         onBlur,
-        onClick: () => {
-          setActiveAction(!isActive ? id : null);
-
-          if (!isActive) {
-            ref.current.focus();
-          }
-        },
+        onClick: () => setActiveAction(!isActive ? id : null),
         ref,
       })}
 
