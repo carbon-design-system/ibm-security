@@ -3,11 +3,10 @@
  * @copyright IBM Security 2020
  */
 
-import classnames from 'classnames';
 import { render } from '@testing-library/react';
 import React from 'react';
 
-import { Link, TrendingCard } from '../../../';
+import { TrendingCard } from '../../../';
 
 describe('TrendingCard', () => {
   test('should have no Axe or DAP violations', async () => {
@@ -28,39 +27,17 @@ describe('TrendingCard', () => {
     await expect(document.body).toHaveNoDAPViolations('TrendingCard');
   });
 
-  test('should accept a custom link with its own attributes via `element`', () => {
-    const { getByText, queryByTestId } = render(
+  test('should accept a custom element', () => {
+    const { getByText } = render(
       <TrendingCard
         title="test title"
         className="test-trending-card-class"
-        element={({ children, className, ...other }) => (
-          <Link
-            className={classnames('test-custom-link-class', className)}
-            data-testid="test-data-id"
-            href="#test-href"
-            {...other}
-          >
-            {children}
-          </Link>
-        )}
+        element="button"
       />
     );
 
-    // Expect trending card to preserve an extra attribute from custom link:
-    expect(queryByTestId('test-data-id')).toBeInTheDocument();
-
-    // Expect trending card to preserve and consolidate custom classes
-    // added to both the wrapper and the custom link:
-    expect(getByText(/test title/i).closest('a')).toHaveClass(
-      'test-trending-card-class',
-      'test-custom-link-class'
-    );
-
-    // Expect trending card to preserve href from custom link:
-    expect(getByText(/test title/i).closest('a')).toHaveAttribute(
-      'href',
-      '#test-href'
-    );
+    // Expect trending card to be rendered with a `button` instead of the default `a`:
+    expect(getByText(/test title/i).closest('button')).toBeVisible();
   });
 
   test('should apply a title via `title`', () => {
