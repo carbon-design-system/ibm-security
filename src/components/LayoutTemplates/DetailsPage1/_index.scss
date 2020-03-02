@@ -1,0 +1,13 @@
+////
+/// Details page template 1 styles.
+/// @group details-page-1
+/// @copyright IBM Security 2020
+////
+
+@import '../../Component/mixins';
+
+@import 'mixins';
+
+@include security--component($name: details-page-1) {
+  @include details-page-1;
+}

@@ -1,13 +1,13 @@
 ////
 /// Details page template 1 styles.
-/// @group accordion
+/// @group details-page-1
 /// @copyright IBM Security 2018
 ////
 
 @import '../../../globals/namespace/index';
 @import '../../../globals/layout/index';
 
-@include export-namespace($name: 'details-page-1') {
+@mixin details-page-1 {
   // Note that this column spans 6:
   .#{$namespace}details-page-1__section {
     display: flex;

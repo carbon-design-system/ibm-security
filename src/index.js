@@ -235,4 +235,4 @@ export {
   DetailsPage1SectionTerm,
   DetailsPage1SectionDefinition,
   DetailsPage1Aside,
-} from './components/GridTemplates';
+} from './components/LayoutTemplates';
