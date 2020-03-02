@@ -29,7 +29,7 @@ const StringFormatter = ({
       })}
       style={{
         maxWidth: width,
-        lineClamp: lines,
+        WebkitLineClamp: lines,
       }}
       {...other}
     >
