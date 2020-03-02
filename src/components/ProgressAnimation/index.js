@@ -1,0 +1,3 @@
+/**
+ * Progress animation entry point.
+ */

@@ -1,0 +1,34 @@
+////
+/// Progress animation component.
+/// @group progress-animation
+/// @copyright IBM Security 2020
+////
+
+@import '../../globals/namespace/index';
+@import '../../globals/layout/index';
+
+@include export-namespace($name: 'progress-animation') {
+  .#{$namespace}progress-animation {
+    display: flex;
+  }
+
+  .#{$namespace}progress-animation__message {
+    align-self: center;
+    margin-left: $carbon--spacing-04;
+  }
+
+  .path {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 0;
+    // animation: dash 5s linear forwards;
+  }
+
+  // @keyframes dash {
+  //   from {
+  //     stroke-dashoffset: 0;
+  //   }
+  //   to {
+  //     stroke-dashoffset: -75;
+  //   }
+  // }
+}

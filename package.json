@@ -52,6 +52,7 @@
     "@carbon/motion": "10.5.2",
     "@carbon/themes": "10.9.3",
     "@carbon/type": "10.8.3",
+    "@emotion/core": "^10.0.28",
     "carbon-components": "10.9.3",
     "carbon-components-react": "7.9.3",
     "classnames": "^2.2.5",
