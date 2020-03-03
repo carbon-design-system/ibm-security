@@ -8,13 +8,13 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Add16 from '@carbon/icons-react/lib/add/16';
 import Subtract16 from '@carbon/icons-react/lib/subtract/16';
-import { g100 as theme } from '@carbon/themes';
 
 import ScrollGradient from '../../ScrollGradient';
 import { AccordionItem } from '../../Accordion';
 import Button from '../../Button';
 import { getComponentNamespace } from '../../../globals/namespace';
 import FilterPanelLabel from '../FilterPanelLabel';
+import theme from '../../../globals/theme';
 
 export const namespace = getComponentNamespace('filter-panel-accordion-item');
 
