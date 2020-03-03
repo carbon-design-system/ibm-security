@@ -31,7 +31,7 @@ function ProgressAnimation({
        * created per component instance, because the unique progress
        * percetange is used in the keyframe animation.
        */}
-      {animationTimer !== null && animationTimer !== 0 && (
+      {animationTimer && (
         <style
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{
@@ -85,7 +85,7 @@ function ProgressAnimation({
             xlinkHref={`#circle--${progressAnimationName}`}
             style={
               // If the component is animated:
-              animationTimer !== null && animationTimer !== 0
+              animationTimer
                 ? {
                     strokeDasharray: 100,
                     strokeDashoffset: 0,
@@ -126,8 +126,8 @@ ProgressAnimation.propTypes = {
 
   /**
    * Optional custom timer for this component instance's animation, in seconds.
-   * By default it is `null`, which means the component is not animated.
-   * If you set `animationTimer={0}`, the component will also not be animated.
+   * If value is nonexistant (i.e., set to its default `null`, `0`, or `undefined`),
+   * then the component will not be animated at all.
    */
   animationTimer: PropTypes.number,
 
