@@ -1,6 +1,6 @@
 /**
- * @file Link stories.
- * @copyright IBM Security 2019
+ * @file Progress animation stories.
+ * @copyright IBM Security 2020
  */
 
 import React from 'react';
