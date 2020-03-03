@@ -6,7 +6,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { purple, gray } from '@carbon/colors/lib';
+import { purple, gray } from '@carbon/colors';
 
 import { getComponentNamespace } from '../../globals/namespace';
 
