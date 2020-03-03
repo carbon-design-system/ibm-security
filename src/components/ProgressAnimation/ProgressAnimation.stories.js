@@ -5,18 +5,24 @@
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { number, text } from '@storybook/addon-knobs';
 
 import { components } from '../../../.storybook';
 
-import ProgressAnimation from './ProgressAnimation';
-
-const percentage = 85;
+import ProgressAnimation from '../ProgressAnimation';
 
 storiesOf(components('ProgressAnimation'), module).add(
   `default`,
   () => (
-    <ProgressAnimation id={1} animationTimer={2} percentage={percentage}>
-      {percentage}% complete
+    <ProgressAnimation
+      id={number('Unique instance id (id)', 1)}
+      animationTimer={number(
+        'Timer for the animation in seconds (animationTimer)',
+        2
+      )}
+      percentage={number('Percentage progress out of 100 (percentage)', 85)}
+    >
+      {text('Message (children)', '85% complete')}
     </ProgressAnimation>
   ),
   {
