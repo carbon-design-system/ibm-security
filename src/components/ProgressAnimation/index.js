@@ -31,7 +31,7 @@ function ProgressAnimation({
        * created per component instance, because the unique progress
        * percetange is used in the keyframe animation.
        */}
-      {animationTimer && (
+      {animationTimer ? (
         <style
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{
@@ -46,6 +46,8 @@ function ProgressAnimation({
             `,
           }}
         />
+      ) : (
+        ''
       )}
       <svg
         xmlns="http://www.w3.org/2000/svg"
