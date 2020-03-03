@@ -28,7 +28,7 @@ describe('SummaryCardHeader', () => {
     expect(getByText('test status')).toBeVisible();
   });
 
-  test('should truncate `titel` content when `truncate` is `true`', () => {
+  test('should truncate `title` content when `truncate` is `true`', () => {
     const { getAllByText } = render(
       <SummaryCardHeader title="test title" truncate />
     );
