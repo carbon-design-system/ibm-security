@@ -16,19 +16,4 @@
     align-self: center;
     margin-left: $carbon--spacing-04;
   }
-
-  .path {
-    stroke-dasharray: 100;
-    stroke-dashoffset: 0;
-    // animation: dash 5s linear forwards;
-  }
-
-  // @keyframes dash {
-  //   from {
-  //     stroke-dashoffset: 0;
-  //   }
-  //   to {
-  //     stroke-dashoffset: -75;
-  //   }
-  // }
 }

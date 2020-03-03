@@ -12,10 +12,10 @@ import ProgressAnimation from './ProgressAnimation';
 
 const percentage = 85;
 
-storiesOf(components('aaaa'), module).add(
+storiesOf(components('ProgressAnimation'), module).add(
   `default`,
   () => (
-    <ProgressAnimation animationTimer={50} percentage={percentage}>
+    <ProgressAnimation id={1} animationTimer={2} percentage={percentage}>
       {percentage}% complete
     </ProgressAnimation>
   ),
