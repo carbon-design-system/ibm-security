@@ -158,7 +158,7 @@ If an object or array has significant values, then those values should be tested
 For example, with the `ICA`'s `locale` prop, it makes sense to verify that each possible `locale` value does not throw an error:
 
 ```js
-// Note: Locals is an array of values.
+// Note: Locales is an array of values.
 Locales.forEach(locale =>
   test(`should accept '${locale}' locale`, () => {
     const { container } = render(
