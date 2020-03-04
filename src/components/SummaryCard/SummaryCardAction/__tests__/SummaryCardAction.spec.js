@@ -9,6 +9,8 @@ import React from 'react';
 
 import { SummaryCardAction } from '../../../..';
 
+import { carbonPrefix } from '../../../../globals/namespace';
+
 describe('SummaryCardAction', () => {
   test('should not be interactive when loading', () => {
     const { getByText } = render(
@@ -109,5 +111,26 @@ describe('SummaryCardAction', () => {
       <SummaryCardAction data-testid="test-id" />
     );
     expect(queryByTestId('test-id')).toBeVisible();
+  });
+
+  test('should apply assistive text and icon-only class name when `hasIconOnly` is `true`', () => {
+    const { queryByText } = render(
+      <SummaryCardAction iconDescription="test icon" hasIconOnly />
+    );
+    // Expect icon description to be applied as assistive text:
+    expect(queryByText(/test icon/i)).toBeVisible();
+    // Expect button to have Carbon's icon-only class:
+    expect(queryByText(/test icon/i).closest('button')).toHaveClass(
+      `${carbonPrefix}btn--icon-only`
+    );
+  });
+
+  test('should invoke click mock when button is clicked', () => {
+    const onClickMock = jest.fn();
+    const { getByText } = render(
+      <SummaryCardAction onClick={onClickMock}>test content</SummaryCardAction>
+    );
+    userEvent.click(getByText(/test content/i));
+    expect(onClickMock).toHaveBeenCalledTimes(1);
   });
 });
