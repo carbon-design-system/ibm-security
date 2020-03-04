@@ -79,7 +79,11 @@ storiesOf(components('Checkbox'), module)
     'skeleton',
     () => (
       <div>
-        <CheckboxSkeleton />
+        <CheckboxSkeleton
+          id="skeleton-checkbox"
+          labelText="Checkbox label"
+          hideLabel
+        />
       </div>
     ),
     {
