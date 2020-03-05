@@ -10,7 +10,7 @@ import CarbonAccordion from 'carbon-components-react/lib/components/Accordion';
 
 const { defaultProps, propTypes } = CarbonAccordion;
 
-const Accordion = ({ className, align, ...other }) => (
+const Accordion = ({ align, ...other }) => (
   <CarbonAccordion {...other} align={align} />
 );
 
