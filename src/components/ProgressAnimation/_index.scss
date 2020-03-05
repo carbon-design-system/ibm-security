@@ -7,12 +7,21 @@
 @import '../../globals/namespace/index';
 @import '../../globals/layout/index';
 
-@include export-namespace($name: 'progress-animation') {
-  .#{$namespace}progress-animation {
-    display: flex;
+@import '../Component/mixins';
+
+@include security--component($name: progress-animation) {
+  display: flex;
+
+  &__stroke {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 0;
+
+    &--animated {
+      transition-property: stroke-dashoffset;
+    }
   }
 
-  .#{$namespace}progress-animation__message {
+  &__message {
     align-self: center;
     margin-left: $carbon--spacing-04;
   }

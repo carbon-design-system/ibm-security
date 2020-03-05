@@ -1,71 +1,48 @@
 /**
- * Progress animation component.
+ * @file Progress animation component.
+ * @copyright IBM Security 2020
  */
+
+import { purple, gray } from '@carbon/colors';
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
-
-import { purple, gray } from '@carbon/colors';
+import React, { useEffect, useState } from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
 
 const namespace = getComponentNamespace('progress-animation');
 
 function ProgressAnimation({
+  animationTimer,
   children,
   className,
   id,
   filledColor,
   unfilledColor,
   percentage,
-  animationTimer,
 }) {
-  const progressAnimationName = `progress-animation-${id}`;
+  const [isAnimated, setisAnimated] = useState();
+  const name = `${namespace}__${id}`;
+
+  useEffect(() => {
+    setisAnimated(animationTimer > 0);
+  });
 
   return (
     <div className={classnames(namespace, className)}>
-      {/**
-       * If `animationTimer` is `null`, no need to insert a style tag.
-       * Otherwise, a new style tag with a unique keyframe needs to be
-       * created per component instance, because the unique progress
-       * percetange is used in the keyframe animation.
-       */}
-      {animationTimer ? (
-        <style
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{
-            __html: `
-              @keyframes ${progressAnimationName} {
-                from {
-                  stroke-dashoffset: 0;
-                }
-                to {
-                  stroke-dashoffset: ${percentage};
-                }
-            `,
-          }}
-        />
-      ) : (
-        ''
-      )}
       <svg
+        className={`${namespace}__indicator`}
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
         width="32"
         height="32"
-        className={`${namespace}__indicator`}
       >
         <defs />
         <defs>
-          <circle
-            id={`circle--${progressAnimationName}`}
-            cx="16"
-            cy="16"
-            r="16"
-          />
+          <circle id={`circle--${name}`} cx="16" cy="16" r="16" />
           <mask
-            id={`mask--${progressAnimationName}`}
+            id={`mask--${name}`}
             width="32"
             height="32"
             x="0"
@@ -74,34 +51,26 @@ function ProgressAnimation({
             maskContentUnits="userSpaceOnUse"
             maskUnits="objectBoundingBox"
           >
-            <use xlinkHref={`#circle--${progressAnimationName}`} />
+            <use xlinkHref={`#circle--${name}`} />
           </mask>
         </defs>
         <g fill="none" fillRule="evenodd">
           <circle cx="16" cy="16" r="15" stroke={filledColor} strokeWidth="2" />
           <use
+            className={classnames(`${namespace}__stroke`, {
+              [`${namespace}__stroke--animated`]: animationTimer,
+            })}
             stroke={unfilledColor}
             strokeWidth="4"
-            mask={`url(#mask--${progressAnimationName})`}
+            mask={`url(#mask--${name})`}
             transform="matrix(1 0 0 -1 0 32)"
-            xlinkHref={`#circle--${progressAnimationName}`}
-            style={
-              // If the component is animated:
-              animationTimer
-                ? {
-                    strokeDasharray: 100,
-                    strokeDashoffset: 0,
-                    animationName: progressAnimationName,
-                    animationDuration: `${animationTimer}s`,
-                    animationTimingFunction: 'linear',
-                    animationFillMode: 'forwards',
-                  }
-                : // If the component is NOT animated:
-                  {
-                    strokeDasharray: 100,
-                    strokeDashoffset: percentage,
-                  }
-            }
+            xlinkHref={`#circle--${name}`}
+            style={{
+              strokeDashoffset: animationTimer
+                ? isAnimated && percentage
+                : percentage,
+              transitionDuration: `${animationTimer}s`,
+            }}
           />
         </g>
       </svg>
@@ -111,20 +80,14 @@ function ProgressAnimation({
 }
 
 ProgressAnimation.propTypes = {
-  /** Children contains the message displayed next to the animation. */
-  children: PropTypes.node,
-
-  /** Custom class name applied to component wrapper. */
-  className: PropTypes.string,
+  /** Unique id for this component instance. */
+  id: PropTypes.string.isRequired,
 
   /** The percentage (number only) that represents progress measured, out of 100. */
   percentage: PropTypes.number.isRequired,
 
-  /** The filled color of the progress animation svg, representing percentage complete. */
-  filledColor: PropTypes.string,
-
-  /** the unfilled color of the progress animation svg, representing percetnage incomplete. */
-  unfilledColor: PropTypes.string,
+  /** Children contains the message displayed next to the animation. */
+  children: PropTypes.node,
 
   /**
    * Optional custom timer for this component instance's animation, in seconds.
@@ -133,16 +96,22 @@ ProgressAnimation.propTypes = {
    */
   animationTimer: PropTypes.number,
 
-  /** Unique id for this component instance. */
-  id: PropTypes.number.isRequired,
+  /** The filled color of the progress animation svg, representing percentage complete. */
+  filledColor: PropTypes.string,
+
+  /** the unfilled color of the progress animation svg, representing percetnage incomplete. */
+  unfilledColor: PropTypes.string,
+
+  /** Custom class name applied to component wrapper. */
+  className: PropTypes.string,
 };
 
 ProgressAnimation.defaultProps = {
   children: null,
-  className: null,
   filledColor: purple[60],
   unfilledColor: gray[30],
   animationTimer: null,
+  className: null,
 };
 
 export default ProgressAnimation;
