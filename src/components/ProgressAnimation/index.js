@@ -69,7 +69,7 @@ function ProgressAnimation({
               strokeDashoffset: animationTimer
                 ? isAnimated && percentage
                 : percentage,
-              transitionDuration: `${animationTimer}s`,
+              transitionDuration: animationTimer && `${animationTimer}s`,
             }}
           />
         </g>
