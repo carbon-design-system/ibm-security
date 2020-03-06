@@ -11,14 +11,24 @@ import FilterPanelSearch from '../FilterPanelSearch';
 import Checkbox from '../../../Checkbox';
 
 describe('FilterPanelSearch', () => {
-  it('adds custom class name', () => {
+  test('should have no Axe or DAP violations', async () => {
+    const main = document.createElement('main');
+    render(<FilterPanelSearch labelText="search label" />, {
+      // DAP requires a landmark '<main>' in the DOM:
+      container: document.body.appendChild(main),
+    });
+    await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations('FilterPanelSearch');
+  });
+
+  test('adds custom class name', () => {
     const { container } = render(
       <FilterPanelSearch className="custom-class" labelText="search label" />
     );
     expect(container.querySelector('.custom-class')).toBeInTheDocument();
   });
 
-  it('renders results content when keyboard focus is added', () => {
+  test('renders results content when keyboard focus is added', () => {
     const { getByTestId, getByLabelText } = render(
       <FilterPanelSearch labelText="search label">
         <div data-testid="result-content" />
@@ -29,7 +39,7 @@ describe('FilterPanelSearch', () => {
     expect(getByTestId('result-content')).toBeVisible();
   });
 
-  it('does not render results content when keyboard focus is removed', async () => {
+  test('does not render results content when keyboard focus is removed', async () => {
     const { queryByTestId, getByLabelText } = render(
       <FilterPanelSearch labelText="search label">
         <div data-testid="result-content" />
@@ -45,7 +55,7 @@ describe('FilterPanelSearch', () => {
     );
   });
 
-  it('does not remove results content when keyboard focus transfers to results', () => {
+  test('does not remove results content when keyboard focus transfers to results', () => {
     jest.useFakeTimers();
     const { getByTestId, getByLabelText, container } = render(
       <FilterPanelSearch labelText="search label">
@@ -66,7 +76,7 @@ describe('FilterPanelSearch', () => {
     expect(getByTestId('result-content')).toBeVisible();
   });
 
-  it('invokes onChange when the user types a value into the search', () => {
+  test('invokes onChange when the user types a value into the search', () => {
     const onChangeMock = jest.fn();
     const { getByLabelText } = render(
       <FilterPanelSearch labelText="search label" onChange={onChangeMock} />
