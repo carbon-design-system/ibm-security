@@ -36,17 +36,12 @@ describe('StringFormatter', () => {
   });
 
   test('should truncate text via the `truncate` prop', () => {
-    const { getAllByText } = render(
+    const { container } = render(
       <StringFormatter value="test content" truncate />
     );
-    // Expect two elements with the target text: the base component
-    // and the tooltip that is added when `truncate={true}`.
-    expect(getAllByText(/test content/i).length).toBe(2);
-
-    // Expect to see the truncate class on the inner non-tooltip element:
-    expect(getAllByText(/test content/i)[0]).toHaveClass(
-      `${namespace}--truncate`
-    );
+    expect(
+      container.querySelector(`.${namespace}--truncate`)
+    ).toHaveTextContent(/test content/i);
   });
 
   // Does not work:
@@ -54,19 +49,13 @@ describe('StringFormatter', () => {
   //   const { getAllByText } = render(
   //     <StringFormatter value="test content" lines={4} />
   //   );
-  //   expect(getAllByText(/test content/i)[0]).toHaveAttribute(
-  //     'style',
-  //     '-webkit-line-clamp: 4;'
-  //   );
+  //   expect(getAllByText(/test content/i)[0]).toHaveStyle('-webkit-link-clamp: 4');
   // });
 
   test('should apply correct style attribute when `width` provided', () => {
     const { getAllByText } = render(
       <StringFormatter value="test content" width="200px" />
     );
-    expect(getAllByText(/test content/i)[0]).toHaveAttribute(
-      'style',
-      'max-width: 200px;'
-    );
+    expect(getAllByText(/test content/i)[0]).toHaveStyle('max-width: 200px;');
   });
 });
