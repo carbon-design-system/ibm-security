@@ -1,21 +1,21 @@
 /**
- * @file Important Content Area (ICA) skeleton tests.
- * @copyright IBM Security 2019
+ * @file Summary card skeleton tests.
+ * @copyright IBM Security 2020
  */
 
-import React from 'react';
 import { render } from '@testing-library/react';
+import React from 'react';
 
-import ICASkeleton from '../ICASkeleton';
+import { SummaryCardSkeleton } from '../../../..';
 
-describe('ICASkeleton', () => {
+describe('SummaryCardSkeleton', () => {
   test('should have no Axe or DAP violations', async () => {
     const main = document.createElement('main');
-    render(<ICASkeleton />, {
+    render(<SummaryCardSkeleton />, {
       // DAP requires a landmark '<main>' in the DOM:
       container: document.body.appendChild(main),
     });
     await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('ICASkeleton');
+    await expect(document.body).toHaveNoDAPViolations('SummaryCardSkeleton');
   });
 });
