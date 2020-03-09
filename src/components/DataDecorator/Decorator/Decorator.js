@@ -32,7 +32,7 @@ class Decorator extends Component {
     this.props.onClick(event, this.props.type, this.props.value);
   };
 
-  renderDecorator = (noIcon, path, inline) => (
+  renderDecorator = (noIcon, path, inline, score, scoreThresholds) => (
     <Fragment>
       {!noIcon && (
         <span className={`${namespace}__icon`}>
@@ -41,6 +41,11 @@ class Decorator extends Component {
             path={path}
             size={inline ? 12 : 16}
             viewBox="0 0 16 16"
+            title={
+              score && scoreThresholds
+                ? this.props.scoreDescription(score, scoreThresholds)
+                : undefined
+            }
           />
         </span>
       )}
@@ -62,7 +67,13 @@ class Decorator extends Component {
       scoreThresholds,
     } = this.props;
     const { path, classes } = getDecoratorProps(score, scoreThresholds, active);
-    const decorator = this.renderDecorator(noIcon, path, inline);
+    const decorator = this.renderDecorator(
+      noIcon,
+      path,
+      inline,
+      score,
+      scoreThresholds
+    );
     const decoratorClasses = classnames(namespace, classes, className, {
       [`${namespace}--link`]: this.props.href,
       [`${namespace}--active`]: this.props.active,
@@ -115,7 +126,7 @@ Decorator.propTypes = {
   /** @type {number} The score of the data. */
   score: PropTypes.number,
 
-  /** @type {number} The external URL. */
+  /** @type {Array<number>} An array of four numbers indicating score thresholds for severity. */
   scoreThresholds: (props, propName) => {
     if (
       !Array.isArray(props.scoreThresholds) ||
@@ -137,6 +148,9 @@ Decorator.propTypes = {
 
   /** @type {string} The value of the data. */
   value: PropTypes.string.isRequired,
+
+  /** @type {func} Descriptive text for screen readers that details the severity of a score. */
+  scoreDescription: PropTypes.func,
 };
 
 Decorator.defaultProps = {
@@ -150,6 +164,8 @@ Decorator.defaultProps = {
   score: undefined,
   scoreThresholds: [0, 4, 7, 10],
   title: '',
+  scoreDescription: (score, scoreThresholds) =>
+    `Score ${score} out of ${scoreThresholds.slice(-1)[0]}`,
 };
 
 export default Decorator;
