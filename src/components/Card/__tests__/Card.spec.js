@@ -85,4 +85,111 @@ describe('Card', () => {
       'custom-class'
     );
   });
+
+  test('should apply a header with an image, tag, and title', () => {
+    const { container, queryByText } = render(
+      <Card
+        header={{
+          image: 'test-image',
+          tag: 'test tag',
+          title: 'test title',
+        }}
+      />
+    );
+    expect(container.querySelector('img')).toHaveAttribute('src', 'test-image');
+    expect(queryByText('test title')).toBeVisible();
+    expect(queryByText('test tag')).toBeVisible();
+  });
+
+  test('should apply alt text to the header image via the `label` prop', () => {
+    const { queryByAltText } = render(
+      <Card
+        header={{
+          image: 'test-image',
+          title: 'test title',
+        }}
+        label="test label"
+      />
+    );
+    expect(queryByAltText('test label')).toBeVisible();
+  });
+
+  test('should apply aria-label via the `label` prop if `link` is `true`', () => {
+    const { queryByLabelText } = render(
+      <Card
+        header={{
+          title: 'test title',
+        }}
+        label="test label"
+        link="#"
+      />
+    );
+    expect(queryByLabelText('test label')).toBeVisible();
+  });
+
+  test('should apply a footer', () => {
+    const { queryByText } = render(
+      <Card
+        header={{
+          title: 'test title',
+        }}
+        footer={{
+          children: <span>test footer</span>,
+        }}
+      />
+    );
+    expect(queryByText('test footer')).toBeVisible();
+  });
+
+  test('should apply a body', () => {
+    const { queryByText } = render(
+      <Card
+        header={{
+          title: 'test title',
+        }}
+        body={{
+          text: 'test content',
+        }}
+      />
+    );
+    expect(queryByText('test content')).toBeVisible();
+  });
+
+  test('should render as a `div` by default if no `link` prop is provided', () => {
+    const { container } = render(
+      <Card
+        header={{
+          title: 'test title',
+        }}
+      />
+    );
+    expect(container.firstElementChild.nodeName).toBe('DIV');
+  });
+
+  test('should render as an `a` element when a `link` is provided', () => {
+    const { container } = render(
+      <Card
+        header={{
+          title: 'test title',
+        }}
+        link="#"
+      />
+    );
+    expect(container.firstElementChild.nodeName).toBe('A');
+  });
+
+  test('should render children', () => {
+    const { getByText } = render(
+      <Card
+        header={{
+          title: 'test title',
+        }}
+        link="#"
+      >
+        <span>test content</span>
+      </Card>
+    );
+
+    expect(getByText('test content')).toBeVisible();
+  });
 });
