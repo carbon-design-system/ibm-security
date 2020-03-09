@@ -41,11 +41,7 @@ class Decorator extends Component {
             path={path}
             size={inline ? 12 : 16}
             viewBox="0 0 16 16"
-            title={
-              score && scoreThresholds
-                ? this.props.scoreDescription(score, scoreThresholds)
-                : undefined
-            }
+            title={this.props.scoreDescription(score, scoreThresholds)}
           />
         </span>
       )}
@@ -165,7 +161,9 @@ Decorator.defaultProps = {
   scoreThresholds: [0, 4, 7, 10],
   title: '',
   scoreDescription: (score, scoreThresholds) =>
-    `Score ${score} out of ${scoreThresholds.slice(-1)[0]}`,
+    score
+      ? `Score ${score} out of ${scoreThresholds.slice(-1)[0]}`
+      : 'No score',
 };
 
 export default Decorator;
