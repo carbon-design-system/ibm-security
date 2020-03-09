@@ -188,37 +188,28 @@ DataTable.propTypes = {
 
 export const { defaultProps, propTypes } = DataTable;
 
-// Object for managing which `DataTable` subcomponents should be exported.
-export const dataTableExports = {
-  DataTable,
-  Table,
-  TableActionList,
-  TableBatchAction,
-  TableBatchActions,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableExpandHeader,
-  TableExpandRow,
-  TableExpandedRow,
-  TableHead,
-  TableHeader,
-  TableOverflowCell,
-  TableRow,
-  TableSelectAll,
-  TableSelectRow,
-  TableToolbar,
-  TableToolbarAction,
-  TableToolbarContent,
-  TableToolbarSearch,
-  TableToolbarMenu,
-  TableToolbarDownload,
-};
-
-// Exports each proxied subcomponent to the `DataTable` object.
-Object.keys(dataTableExports).forEach(dataTableExport => {
-  DataTable[dataTableExport] = dataTableExports[dataTableExport];
-});
+DataTable.Table = Table;
+DataTable.TableActionList = TableActionList;
+DataTable.TableBatchAction = TableBatchAction;
+DataTable.TableBatchActions = TableBatchActions;
+DataTable.TableBody = TableBody;
+DataTable.TableCell = TableCell;
+DataTable.TableContainer = TableContainer;
+DataTable.TableExpandHeader = TableExpandHeader;
+DataTable.TableExpandRow = TableExpandRow;
+DataTable.TableExpandedRow = TableExpandedRow;
+DataTable.TableHead = TableHead;
+DataTable.TableHeader = TableHeader;
+DataTable.TableOverflowCell = TableOverflowCell;
+DataTable.TableRow = TableRow;
+DataTable.TableSelectAll = TableSelectAll;
+DataTable.TableSelectRow = TableSelectRow;
+DataTable.TableToolbar = TableToolbar;
+DataTable.TableToolbarAction = TableToolbarAction;
+DataTable.TableToolbarContent = TableToolbarContent;
+DataTable.TableToolbarSearch = TableToolbarSearch;
+DataTable.TableToolbarMenu = TableToolbarMenu;
+DataTable.TableToolbarDownload = TableToolbarDownload;
 
 export {
   DataTable,
