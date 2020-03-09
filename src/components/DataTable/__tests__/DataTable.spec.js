@@ -6,7 +6,7 @@
 import { mount } from 'enzyme';
 import React from 'react';
 
-import { DataTable, dataTableExports } from '../DataTable';
+import { DataTable } from '../DataTable';
 
 import { headers, isSelectable, isSortable, render, rows } from '../_mocks_';
 
@@ -78,14 +78,6 @@ describe('DataTable', () => {
       });
 
       expect(TestOverflowMenu).toMatchSnapshot();
-    });
-  });
-
-  describe('Exporting', () => {
-    Object.keys(dataTableExports).forEach(dataTableExport => {
-      it(`exports '${dataTableExport}' as a subcomponent`, () => {
-        expect(DataTable).toHaveProperty(dataTableExport);
-      });
     });
   });
 });
