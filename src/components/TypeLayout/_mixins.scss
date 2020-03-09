@@ -42,46 +42,51 @@
     }
 
     display: table-cell;
-    padding: $carbon--spacing-03;
+    padding: $carbon--spacing-03 $carbon--spacing-06 $carbon--spacing-03
+      $carbon--spacing-03;
     color: $text-01;
-
-    &:first-of-type {
-      padding-left: 0;
-      color: $text-02;
-      width: 1%;
-      white-space: nowrap;
-      padding-right: $carbon--spacing-06;
-    }
-
-    &:last-of-type {
-      padding-right: 0;
-    }
-
-    &--lg {
-      padding: $carbon--spacing-05;
-    }
-
-    &--sm,
-    &--xs,
-    &--xs:first-of-type {
-      @include carbon--type-style($name: caption-01);
-      padding: $carbon--spacing-02;
-    }
-
-    ul {
-      padding-left: 0;
-      margin-top: 0;
-      margin-bottom: 0;
-      list-style: none;
-
-      li {
-        margin-bottom: carbon--mini-units($count: 1);
-      }
-    }
   }
 
-  &--xs {
-    max-width: unset;
+  &--lg &__cell {
+    padding: $carbon--spacing-05 $carbon--spacing-06 $carbon--spacing-05
+      $carbon--spacing-05;
+  }
+
+  &--sm &__cell {
+    @include carbon--type-style($name: caption-01);
+    padding: $carbon--spacing-02 $carbon--spacing-06 $carbon--spacing-02
+      $carbon--spacing-02;
+  }
+
+  &--xs &__cell {
+    @include carbon--type-style($name: caption-01);
+    padding: $carbon--spacing-02;
+  }
+
+  // xs size should always have a little left padding:
+  &:not(&--xs) #{$root}__cell:first-of-type {
+    padding-left: 0;
+  }
+
+  &__cell:first-of-type {
+    color: $text-02;
+    width: 1%;
+    white-space: nowrap;
+  }
+
+  &__cell:last-of-type {
+    padding-right: 0;
+  }
+
+  &__cell ul {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+
+    li {
+      margin-bottom: carbon--mini-units($count: 1);
+    }
   }
 
   &--bordered &__row {

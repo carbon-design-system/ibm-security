@@ -4,4 +4,4 @@
  */
 
 export default from 'carbon-components-react/lib/components/Checkbox';
-export CheckboxSkeleton from 'carbon-components-react/lib/components/Checkbox';
+export CheckboxSkeleton from 'carbon-components-react/lib/components/Checkbox/Checkbox.Skeleton';
