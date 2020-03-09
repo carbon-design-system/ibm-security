@@ -71,8 +71,21 @@ Button.propTypes = {
   /** @type {Function|object} Optional prop to allow overriding the icon rendering. Can be a React component class. */
   renderIcon: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
 
-  // It's not possible to add to Carbon's values here, so the `PropType` is recreated to include the large variant.
+  /** The size of the button. */
   size: PropTypes.oneOf(['default', 'field', 'large', 'small']),
+
+  /** The kind of button. */
+  kind: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'danger',
+    'ghost',
+    'danger--primary',
+    'tertiary',
+    'ghost-danger',
+  ]),
+
+  // Deprecated prop.
   largeText: deprecatedProp('size="large"', PropTypes.bool),
 };
 
