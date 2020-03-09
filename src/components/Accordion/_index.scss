@@ -8,9 +8,11 @@
 @import '@carbon/type/scss/styles';
 @import 'carbon-components/scss/components/accordion/accordion';
 
+@import 'carbon-components/scss/globals/scss/vars';
+
 @import '../../globals/namespace/index';
 
-@import '../../components/SkeletonText/index';
+@import '../SkeletonText/index';
 
 @include export-namespace($name: 'accordion') {
   .#{$prefix}--accordion {
