@@ -51,10 +51,13 @@ const props = {
     prefix: 'IBM',
   }),
 
-  profile: () => ({
-    name: text('`ProfilePopover` name (`name`)', 'Sample'),
-    surname: text('`ProfilePopover` surname (`surname`)', 'User'),
-  }),
+  profile: {
+    props: () => ({ 'aria-label': 'Profile' }),
+    popover: () => ({
+      name: text('`ProfilePopover` name (`name`)', 'Sample'),
+      surname: text('`ProfilePopover` surname (`surname`)', 'User'),
+    }),
+  },
 
   account: () => ({
     children: text('`PopoverAccount` children (`children`)', 'Account 1'),
@@ -63,7 +66,11 @@ const props = {
   }),
 };
 
-const { account: accountProps, name: nameProps, profile: profileProps } = props;
+const {
+  account: accountProps,
+  name: nameProps,
+  profile: { props: profileProps, popover: profilePopoverProps },
+} = props;
 
 export const Default = () => (
   <UNSTABLE__Shell>
@@ -86,7 +93,7 @@ export const Default = () => (
 export const skipToContent = () => (
   <>
     <UNSTABLE__Shell>
-      <ShellSkipToContent href="#content">
+      <ShellSkipToContent aria-label="Skip to content" href="#content">
         {text('`ShellSkipToContent` children (`children`)', 'Skip to content')}
       </ShellSkipToContent>
 
@@ -101,9 +108,9 @@ export const skipToContent = () => (
       </ShellHeader>
     </UNSTABLE__Shell>
 
-    <Button id="content" style={{ margin: layout01 }}>
-      Content
-    </Button>
+    <main style={{ margin: layout01 }}>
+      <Button id="content">Content</Button>
+    </main>
   </>
 );
 
@@ -124,7 +131,7 @@ export const returnToBanner = () => (
 
 export const toolbar = () => (
   <UNSTABLE__Shell>
-    <ShellToolbar>
+    <ShellToolbar aria-label="Toolbar">
       <ToolbarAction aria-label="Toggle menu" renderIcon={Menu20}>
         <Nav heading="My applications" label="Applications">
           <NavItem href="#">Application 1</NavItem>
@@ -169,6 +176,7 @@ export const notifications = () => (
 
       <HeaderActions>
         <HeaderAction
+          aria-label="Notifications"
           popover={
             <>
               <NotificationsPopover
@@ -180,24 +188,36 @@ export const notifications = () => (
                 title="Notifications"
               >
                 <PopoverNotification
+                  clearButtonLabel="Clear Notification 1"
                   dateTime="2020-02-01T09:00:00.770Z"
                   description="Notification 1"
+                  onClearButtonClick={action(
+                    '`PopoverNotification` 1 clear handler (`onClearButtonClick`)'
+                  )}
                   product="Application 1"
                   tooltipDirection="bottom"
                   viaLabel="via"
                 />
 
                 <PopoverNotification
+                  clearButtonLabel="Clear Notification 2"
                   dateTime="2020-02-01T09:00:00.770Z"
                   description="Notification 2"
+                  onClearButtonClick={action(
+                    '`PopoverNotification` 2 clear handler (`onClearButtonClick`)'
+                  )}
                   product="Application 2"
                   tooltipDirection="top"
                   viaLabel="via"
                 />
 
                 <PopoverNotification
+                  clearButtonLabel="Clear Notification 3"
                   dateTime="2020-02-01T09:00:00.770Z"
                   description="Notification 3"
+                  onClearButtonClick={action(
+                    '`PopoverNotification` 3 clear handler (`onClearButtonClick`)'
+                  )}
                   product="Application 3"
                   tooltipDirection="top"
                   viaLabel="via"
@@ -231,8 +251,9 @@ export const profile = () => {
 
         <HeaderActions>
           <HeaderAction
+            {...profileProps()}
             popover={
-              <ProfilePopover {...profileProps()}>
+              <ProfilePopover {...profilePopoverProps()}>
                 <PopoverFooter>
                   <Link href="#0">Edit profile</Link>
 
@@ -257,8 +278,9 @@ export const profileAccount = () => {
 
         <HeaderActions>
           <HeaderAction
+            {...profileProps()}
             popover={
-              <ProfilePopover {...profileProps()}>
+              <ProfilePopover {...profilePopoverProps()}>
                 <PopoverAccount {...accountProps()} />
               </ProfilePopover>
             }
@@ -279,8 +301,9 @@ export const profileAccountList = () => {
 
         <HeaderActions>
           <HeaderAction
+            {...profileProps()}
             popover={
-              <ProfilePopover {...profileProps()}>
+              <ProfilePopover {...profilePopoverProps()}>
                 <PopoverAccountList
                   {...accountProps()}
                   name={text('`PopoverAccountList` name (`name`)', 'Account 1')}

@@ -356,6 +356,8 @@ $header__transition__timing-function: $timing-function;
           }
 
           &__item {
+            overflow-y: hidden;
+
             &:last-child {
               border-width: 0;
             }
