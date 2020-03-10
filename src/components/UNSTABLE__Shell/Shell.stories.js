@@ -52,7 +52,8 @@ const props = {
   }),
 
   profile: {
-    props: () => ({ 'aria-label': 'Profile' }),
+    props: () => ({ labelText: 'Profile' }),
+
     popover: () => ({
       name: text('`ProfilePopover` name (`name`)', 'Sample'),
       surname: text('`ProfilePopover` surname (`surname`)', 'User'),
@@ -93,7 +94,7 @@ export const Default = () => (
 export const skipToContent = () => (
   <>
     <UNSTABLE__Shell>
-      <ShellSkipToContent aria-label="Skip to content" href="#content">
+      <ShellSkipToContent href="#content" labelText="Skip to content">
         {text('`ShellSkipToContent` children (`children`)', 'Skip to content')}
       </ShellSkipToContent>
 
@@ -131,8 +132,8 @@ export const returnToBanner = () => (
 
 export const toolbar = () => (
   <UNSTABLE__Shell>
-    <ShellToolbar aria-label="Toolbar">
-      <ToolbarAction aria-label="Toggle menu" renderIcon={Menu20}>
+    <ShellToolbar labelText="Toolbar">
+      <ToolbarAction labelText="Toggle menu" renderIcon={Menu20}>
         <Nav heading="My applications" label="Applications">
           <NavItem href="#">Application 1</NavItem>
           <NavItem href="#">Application 2</NavItem>
@@ -140,7 +141,7 @@ export const toolbar = () => (
         </Nav>
       </ToolbarAction>
 
-      <ToolbarAction aria-label="Toggle settings" renderIcon={Settings20}>
+      <ToolbarAction labelText="Toggle settings" renderIcon={Settings20}>
         <Nav heading="General settings" label="Settings">
           <NavItem href="#">Settings 1</NavItem>
           <NavItem href="#">Settings 2</NavItem>
@@ -156,7 +157,7 @@ export const toolbar = () => (
         </Nav>
       </ToolbarAction>
 
-      <ToolbarAction aria-label="Toggle help" renderIcon={Help20}>
+      <ToolbarAction labelText="Toggle help" renderIcon={Help20}>
         <Nav heading="Support" label="Support">
           <NavItem href="#">Support 1</NavItem>
         </Nav>
@@ -176,7 +177,7 @@ export const notifications = () => (
 
       <HeaderActions>
         <HeaderAction
-          aria-label="Notifications"
+          labelText="Notifications"
           popover={
             <>
               <NotificationsPopover

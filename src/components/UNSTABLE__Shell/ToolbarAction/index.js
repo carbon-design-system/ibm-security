@@ -19,6 +19,7 @@ function ToolbarAction({
   children,
   className,
   id,
+  labelText,
   onClick,
   renderIcon,
   setActiveAction,
@@ -33,7 +34,7 @@ function ToolbarAction({
         id={id}
         className={classnames(`${toolbarNamespace}__button`, className)}
         iconClassName={`${toolbarNamespace}__icon`}
-        label={other['aria-label']}
+        label={labelText}
         onClick={event => {
           setActiveAction(!isActive ? id : null);
 
@@ -69,6 +70,9 @@ ToolbarAction.propTypes = {
 
   /** Specify the icon to be rendered */
   renderIcon: oneOfType([func, object]).isRequired,
+
+  /** Provide a label for accessibility */
+  labelText: string.isRequired,
 
   /** Specify a custom identifier */
   id: string,

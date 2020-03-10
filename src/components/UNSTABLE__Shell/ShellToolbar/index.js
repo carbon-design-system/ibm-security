@@ -4,7 +4,7 @@
  */
 
 import setupGetInstanceId from 'carbon-components-react/lib/tools/setupGetInstanceId';
-import { node } from 'prop-types';
+import { node, string } from 'prop-types';
 import React, { Children, cloneElement, useState } from 'react';
 
 import { appendComponentNamespace } from '../../../globals/namespace';
@@ -14,12 +14,16 @@ import { namespace as toolbarNamespace } from '../../Toolbar/Toolbar';
 
 const namespace = appendComponentNamespace(shellNamespace, 'toolbar');
 
-function ShellToolbar({ children, ...other }) {
+function ShellToolbar({ children, labelText, ...other }) {
   const [activeAction, setActiveAction] = useState(null);
   const getInstanceId = setupGetInstanceId();
 
   return (
-    <nav className={`${toolbarNamespace} ${namespace}`} {...other}>
+    <nav
+      className={`${toolbarNamespace} ${namespace}`}
+      aria-label={labelText}
+      {...other}
+    >
       <div className={`${toolbarNamespace}__group`}>
         {Children.map(children, (child, index) =>
           cloneElement(child, {
@@ -36,6 +40,9 @@ function ShellToolbar({ children, ...other }) {
 ShellToolbar.propTypes = {
   /** Provide the contents of the `ShellToolbar` */
   children: node.isRequired,
+
+  /** Provide a label for accessibility */
+  labelText: string.isRequired,
 };
 
 export default ShellToolbar;

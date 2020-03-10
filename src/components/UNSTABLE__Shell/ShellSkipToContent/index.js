@@ -14,10 +14,15 @@ import { legacyNamespace } from '../Shell';
 
 const namespace = appendComponentNamespace(legacyNamespace, 'skip-to-content');
 
-function ShellSkipToContent({ children, href, ...other }) {
+function ShellSkipToContent({ children, href, labelText, ...other }) {
   return (
     <div className={namespace}>
-      <Button className={`${namespace}__link`} href={href} {...other}>
+      <Button
+        className={`${namespace}__link`}
+        aria-label={labelText}
+        href={href}
+        {...other}
+      >
         {children}
       </Button>
     </div>
@@ -30,6 +35,9 @@ ShellSkipToContent.propTypes = {
 
   /** Specify the hash identifier to 'skip' to */
   href: string.isRequired,
+
+  /** Provide a label for accessibility */
+  labelText: string.isRequired,
 };
 
 export default ShellSkipToContent;

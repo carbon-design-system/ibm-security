@@ -3,6 +3,8 @@
  * @copyright IBM Security 2020
  */
 
+import requiredIfGivenPropExists from 'carbon-components-react/lib/prop-types/requiredIfGivenPropExists';
+
 import classnames from 'classnames';
 import { bool, func, node, string } from 'prop-types';
 import React, { cloneElement, useRef } from 'react';
@@ -21,6 +23,7 @@ function HeaderAction({
   className,
   hasBadge,
   id,
+  labelText,
   popover,
   setActiveAction,
   ...other
@@ -62,6 +65,7 @@ function HeaderAction({
             // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
             <div
               className={`${popoverNamespace} ${namespace}__popover`}
+              aria-label={labelText}
               onBlur={onBlur}
               onMouseDown={event => event.preventDefault()}
               ref={popoverRef}
@@ -80,6 +84,11 @@ function HeaderAction({
 HeaderAction.propTypes = {
   /** Provide the contents of the `HeaderAction` */
   children: node.isRequired,
+
+  /** Provide a label for accessibility */
+
+  // eslint-disable-next-line react/require-default-props
+  labelText: requiredIfGivenPropExists('popover', string),
 
   /** Provide the contents of the popover */
   popover: node,
