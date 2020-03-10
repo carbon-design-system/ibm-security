@@ -55,7 +55,10 @@ function ToolbarAction({
 
       <Transition className={toolbarNamespace} component="span">
         {isActive && (
-          <aside className={`${toolbarNamespace}__panel`} role="menu">
+          <aside
+            className={`${toolbarNamespace}__panel`}
+            aria-label={labelText}
+          >
             {children}
           </aside>
         )}

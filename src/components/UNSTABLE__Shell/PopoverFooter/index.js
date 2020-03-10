@@ -11,12 +11,9 @@ import namespace from '../Popover';
 
 function PopoverFooter({ children, ...other }) {
   return (
-    <footer
-      className={appendComponentNamespace(namespace, 'footer')}
-      {...other}
-    >
+    <div className={appendComponentNamespace(namespace, 'footer')} {...other}>
       {children}
-    </footer>
+    </div>
   );
 }
 

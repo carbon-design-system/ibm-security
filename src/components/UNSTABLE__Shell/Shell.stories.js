@@ -133,7 +133,7 @@ export const returnToBanner = () => (
 export const toolbar = () => (
   <UNSTABLE__Shell>
     <ShellToolbar labelText="Toolbar">
-      <ToolbarAction labelText="Toggle menu" renderIcon={Menu20}>
+      <ToolbarAction labelText="Menu" renderIcon={Menu20}>
         <Nav heading="My applications" label="Applications">
           <NavItem href="#">Application 1</NavItem>
           <NavItem href="#">Application 2</NavItem>
@@ -141,7 +141,7 @@ export const toolbar = () => (
         </Nav>
       </ToolbarAction>
 
-      <ToolbarAction labelText="Toggle settings" renderIcon={Settings20}>
+      <ToolbarAction labelText="Settings" renderIcon={Settings20}>
         <Nav heading="General settings" label="Settings">
           <NavItem href="#">Settings 1</NavItem>
           <NavItem href="#">Settings 2</NavItem>
@@ -157,7 +157,7 @@ export const toolbar = () => (
         </Nav>
       </ToolbarAction>
 
-      <ToolbarAction labelText="Toggle help" renderIcon={Help20}>
+      <ToolbarAction labelText="Help" renderIcon={Help20}>
         <Nav heading="Support" label="Support">
           <NavItem href="#">Support 1</NavItem>
         </Nav>
@@ -234,10 +234,7 @@ export const notifications = () => (
           }
           hasBadge={boolean('`HeaderAction` badge (`hasBadge`)', true)}
         >
-          <IconButton
-            aria-label="Toggle notifications"
-            renderIcon={Notification20}
-          />
+          <IconButton aria-label="Notifications" renderIcon={Notification20} />
         </HeaderAction>
       </HeaderActions>
     </ShellHeader>
@@ -263,7 +260,7 @@ export const profile = () => {
               </ProfilePopover>
             }
           >
-            <IconButton aria-label="Toggle profile" renderIcon={User20} />
+            <IconButton aria-label="Profile" renderIcon={User20} />
           </HeaderAction>
         </HeaderActions>
       </ShellHeader>
@@ -286,7 +283,7 @@ export const profileAccount = () => {
               </ProfilePopover>
             }
           >
-            <IconButton aria-label="Toggle profile" renderIcon={User20} />
+            <IconButton aria-label="Profile" renderIcon={User20} />
           </HeaderAction>
         </HeaderActions>
       </ShellHeader>
@@ -322,7 +319,7 @@ export const profileAccountList = () => {
               </ProfilePopover>
             }
           >
-            <IconButton aria-label="Toggle profile" renderIcon={User20} />
+            <IconButton aria-label="Profile" renderIcon={User20} />
           </HeaderAction>
         </HeaderActions>
       </ShellHeader>
