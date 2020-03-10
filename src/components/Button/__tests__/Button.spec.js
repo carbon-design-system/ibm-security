@@ -4,6 +4,7 @@
  */
 
 import Add16 from '@carbon/icons-react/lib/add/16';
+import { ButtonKinds } from 'carbon-components-react/lib/prop-types/types';
 import { render } from '@testing-library/react';
 import React from 'react';
 
@@ -68,11 +69,22 @@ describe('Button', () => {
     );
   });
 
+  ButtonKinds.forEach(kind => {
+    if (kind !== 'ghost-danger') {
+      test(`should add correct class when \`kind\` is ${kind}`, () => {
+        const { getByText } = render(<Button kind={kind}>test button</Button>);
+        expect(getByText(/test button/i)).toHaveClass(
+          `${carbonPrefix}btn--${kind}`
+        );
+      });
+    }
+  });
+
   test('should add correct classes when `kind` set to `ghost-danger`', () => {
     const { getByText } = render(
-      <Button kind="ghost-danger">test loading button</Button>
+      <Button kind="ghost-danger">test button</Button>
     );
-    expect(getByText(/test loading button/i)).toHaveClass(
+    expect(getByText(/test button/i)).toHaveClass(
       `${carbonPrefix}btn--ghost ${namespace}--ghost-danger`
     );
   });
@@ -89,6 +101,21 @@ describe('Button', () => {
       <Button renderIcon={Add16}>test button</Button>
     );
     expect(container.querySelector('svg')).toBeVisible();
+  });
+
+  test('should apply correct class when `size` is `small`', () => {
+    const { getByText } = render(<Button size="small">test button</Button>);
+    expect(getByText(/test button/i)).toHaveClass(`${carbonPrefix}btn--sm`);
+  });
+
+  test('should apply correct class when `size` is `field`', () => {
+    const { getByText } = render(<Button size="field">test button</Button>);
+    expect(getByText(/test button/i)).toHaveClass(`${carbonPrefix}btn--field`);
+  });
+
+  test('should apply correct class when `size` is `large`', () => {
+    const { getByText } = render(<Button size="large">test button</Button>);
+    expect(getByText(/test button/i)).toHaveClass(`${namespace}--large`);
   });
 
   // TODO: `2.x` - Remove test for deprecated prop `largeText`.
