@@ -215,6 +215,7 @@
           align-self: center;
           fill: $text-01;
           opacity: 0;
+          flex-shrink: 0;
         }
 
         &:hover,

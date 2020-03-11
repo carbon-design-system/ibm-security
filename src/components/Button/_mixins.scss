@@ -55,6 +55,11 @@
 
     .#{$prefix}--inline-loading {
       width: auto;
+
+      // Required to ensure that the loading icon
+      // does not make the button taller:
+      margin-top: carbon--mini-units(-1);
+      margin-bottom: carbon--mini-units(-1);
     }
   }
 }
