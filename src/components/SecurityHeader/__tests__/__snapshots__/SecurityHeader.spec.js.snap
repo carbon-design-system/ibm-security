@@ -187,7 +187,7 @@ exports[`SecurityHeader Rendering renders correctly 1`] = `
         >
           IBM 
           <span
-            className="security--header__link__title--domain"
+            className="security--header__link__title--brand"
           >
             Security 
           </span>

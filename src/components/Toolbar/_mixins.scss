@@ -12,6 +12,8 @@
 
 @import '../../platform/body/mixins';
 
+@import '../SecurityHeader/mixins';
+
 /// Name.
 /// @type String
 $toolbar__name: toolbar;
@@ -45,6 +47,10 @@ $toolbar__panel__transition__duration: $transition-duration--fast;
 /// Panel transition timing function.
 /// @type Length
 $toolbar__panel__transition__timing-function: $timing-function;
+
+/// Layer.
+/// @type Length
+$toolbar__layer: ($header__layer + 2);
 
 @mixin toolbar--base {
   position: fixed;

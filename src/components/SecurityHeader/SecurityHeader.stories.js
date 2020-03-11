@@ -8,7 +8,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { object } from '@storybook/addon-knobs';
 
-import { disableCentered, patterns } from '../../../.storybook';
+import { disableCenteredStories, patterns } from '../../../.storybook';
 
 import { SecurityHeader } from '../..';
 
@@ -27,7 +27,7 @@ const headerProps = {
   links,
 };
 
-disableCentered(storiesOf(patterns('SecurityHeader'), module))
+disableCenteredStories(storiesOf(patterns('SecurityHeader'), module))
   .add('default', () => <SecurityHeader {...headerProps} />, {
     info: {
       text: `

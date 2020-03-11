@@ -1,7 +1,7 @@
 ////
 /// Header mixins.
 /// @group header
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import '@carbon/layout/scss/spacing';
@@ -28,6 +28,12 @@ $header__color__background: $body__color__background;
 /// @type Number
 $header__layer: z(
   $layer: overlay,
+);
+
+/// Height.
+/// @type Length
+$header__sizing__height: carbon--mini-units(
+  $count: 6,
 );
 
 /// Width.
@@ -67,12 +73,6 @@ $header__transition__timing-function: $timing-function;
 }
 
 @mixin header {
-  /// Height.
-  /// @type Length
-  $header__sizing__height: carbon--mini-units(
-    $count: 6,
-  );
-
   /// Group margin.
   /// @type Length
   $header__group__spacing__margin: $carbon--spacing-07;
@@ -97,6 +97,7 @@ $header__transition__timing-function: $timing-function;
   position: fixed;
   top: 0;
   width: inherit;
+  height: inherit;
   padding-top: inherit;
   align-items: center;
   background-color: inherit;
@@ -124,7 +125,7 @@ $header__transition__timing-function: $timing-function;
       color: $text-02;
     }
 
-    &__title--domain {
+    &__title--brand {
       @include carbon--type-style($name: heading-01);
     }
   }
@@ -229,6 +230,10 @@ $header__transition__timing-function: $timing-function;
 
     &__label {
       @include carbon--type-style($name: heading-01);
+
+      &:only-child {
+        margin-bottom: $carbon--spacing-03;
+      }
     }
 
     &__list {
@@ -351,6 +356,8 @@ $header__transition__timing-function: $timing-function;
           }
 
           &__item {
+            overflow-y: hidden;
+
             &:last-child {
               border-width: 0;
             }

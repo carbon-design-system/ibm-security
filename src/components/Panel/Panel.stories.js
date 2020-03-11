@@ -4,6 +4,11 @@
  */
 
 import Add16 from '@carbon/icons-react/lib/add/16';
+import ArrowRight20 from '@carbon/icons-react/lib/arrow--right/20';
+import Filter20 from '@carbon/icons-react/lib/filter/20';
+
+import { spacing04, spacing05 } from '@carbon/layout/lib';
+import { styles } from '@carbon/type/lib';
 
 import { action } from '@storybook/addon-actions';
 import { boolean, radios, text } from '@storybook/addon-knobs';
@@ -11,12 +16,7 @@ import { storiesOf } from '@storybook/react';
 
 import React, { Fragment } from 'react';
 
-import ArrowRight20 from '@carbon/icons-react/lib/arrow--right/20';
-import Filter20 from '@carbon/icons-react/lib/filter/20';
-import { spacing04, spacing05 } from '@carbon/layout/lib';
-import { styles } from '@carbon/type/lib';
-
-import { disableCentered, patterns } from '../../../.storybook';
+import { disableCenteredStories, patterns } from '../../../.storybook';
 
 import { header, profile, toolbar } from '../Shell/_mocks_';
 import { labels } from './_mocks_';
@@ -65,7 +65,7 @@ const content = (
   </p>
 );
 
-disableCentered(storiesOf(patterns('Panel'), module))
+disableCenteredStories(storiesOf(patterns('Panel'), module))
   .addParameters({
     info: {
       // Reposition info button so that panel footer isn't covered:

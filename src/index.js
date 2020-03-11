@@ -122,9 +122,31 @@ export { Wizard, WizardStep } from './components/Wizard';
 // Platform.
 export Nav, { NavItem, NavList } from './components/Nav';
 export ProfileImage from './components/ProfileImage';
+
 export SecurityHeader from './components/SecurityHeader';
 export Shell from './components/Shell';
 export Toolbar from './components/Toolbar';
+
+export UNSTABLE__Shell, {
+  HeaderAction,
+  HeaderActions,
+  NotificationsPopover,
+  PopoverAccount,
+  PopoverAccountItem,
+  PopoverAccountList,
+  PopoverContent,
+  PopoverFooter,
+  PopoverHeader,
+  PopoverNotification,
+  PopoverTitle,
+  ProfilePopover,
+  ShellHeader,
+  ShellHeaderName,
+  ShellReturnToBanner,
+  ShellSkipToContent,
+  ShellToolbar,
+  ToolbarAction,
+} from './components/UNSTABLE__Shell';
 
 // Carbon proxy.
 export {

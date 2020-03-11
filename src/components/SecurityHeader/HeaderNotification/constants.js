@@ -26,9 +26,6 @@ const propTypes = {
   /** @type {string} Product name. */
   product: PropTypes.string.isRequired,
 
-  /** @type {string} Time label. */
-  timeLabel: PropTypes.string.isRequired,
-
   /** @type {string} 'Via' label. */
   viaLabel: PropTypes.string.isRequired,
 

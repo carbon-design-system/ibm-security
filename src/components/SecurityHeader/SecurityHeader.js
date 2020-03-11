@@ -327,7 +327,7 @@ export default class SecurityHeader extends Component {
           </div>
         )}
         <ScrollGradient color={theme.inverse02}>
-          <ul className={`${namespace}__popover__list`}>
+          <div className={`${namespace}__popover__list`}>
             <Transition
               className={`${namespace}__notification`}
               component="span"
@@ -343,7 +343,10 @@ export default class SecurityHeader extends Component {
                     { datetime, description, href, id, label, product },
                     index
                   ) => (
-                    <li key={id} className={`${namespace}__popover__list-item`}>
+                    <div
+                      key={id}
+                      className={`${namespace}__popover__list-item`}
+                    >
                       <HeaderNotification
                         clearButtonLabel={`${labels.notifications.clear} '${description}'`}
                         dateTime={datetime}
@@ -356,11 +359,11 @@ export default class SecurityHeader extends Component {
                         tabIndex="0"
                         tooltipDirection={index === 0 ? 'bottom' : 'top'}
                       />
-                    </li>
+                    </div>
                   )
                 )}
             </Transition>
-          </ul>
+          </div>
         </ScrollGradient>
         {!length && (
           <span className={`${namespace}__popover__container`}>
@@ -476,7 +479,7 @@ export default class SecurityHeader extends Component {
     const classes = classnames(`${namespace}__container`, className);
 
     const domainElement = title => (
-      <span className={`${namespace}__link__title--domain`}>{title}</span>
+      <span className={`${namespace}__link__title--brand`}>{title}</span>
     );
 
     return (

@@ -1,0 +1,62 @@
+////
+/// Shell.
+/// @group shell
+/// @copyright IBM Security 2020
+////
+
+@import '@carbon/layout/scss/mini-unit';
+@import '@carbon/layout/scss/spacing';
+@import 'carbon-components/scss/globals/scss/vars';
+
+@import '../SecurityHeader/index';
+@import '../Shell/index';
+@import '../Toolbar/index';
+
+@include security--component($name: shell__unstable) {
+  /// Banner height.
+  /// @type Length
+  $shell__toolbar__spacing: $toolbar__sizing__width;
+
+  /// Header selector.
+  /// @type String
+  $header__selector: '#{&}__#{$header__name}';
+
+  /// Toolbar selector.
+  /// @type String
+  $toolbar__selector: '#{&}__#{$toolbar__name}';
+
+  &__banner ~ {
+    #{$toolbar__selector},
+    #{$toolbar__selector} #{$toolbar__namespace}__panel,
+    #{$header__selector} > #{$header__namespace} {
+      margin-top: $shell__banner__sizing__height;
+    }
+  }
+
+  #{$toolbar__selector} + #{$header__selector} {
+    width: calc(#{$header__sizing__width} - #{$shell__toolbar__spacing});
+    margin-left: $shell__toolbar__spacing;
+  }
+
+  &__group > * {
+    min-height: inherit;
+  }
+
+  &__button--icon:last-of-type {
+    margin-right: $carbon--spacing-07;
+  }
+
+  &__popover {
+    top: carbon--mini-units($count: 5.5);
+
+    .#{$prefix}--link {
+      @include header__popover__link--secondary;
+    }
+  }
+
+  &__header__account {
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+}
