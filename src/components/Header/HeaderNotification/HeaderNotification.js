@@ -3,6 +3,7 @@
  * @copyright IBM Security 2018
  */
 
+import classnames from 'classnames';
 import Close20 from '@carbon/icons-react/lib/close/20';
 import React from 'react';
 
@@ -39,7 +40,10 @@ const HeaderNotification = ({
     </a>
     <div className={`${namespace}__wrapper`}>
       <button
-        className={`${namespace}__button`}
+        className={classnames(
+          `${namespace}__button`,
+          `${namespace}__button--clear`
+        )}
         aria-label={clearButtonLabel}
         onClick={onClearButtonClick}
       >

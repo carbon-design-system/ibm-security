@@ -94,6 +94,13 @@
       transform: translate3d(0, 0, 0);
       opacity: 1;
     }
+
+    &--clear:active,
+    &--clear:focus,
+    &--clear:hover {
+      cursor: pointer;
+      background-color: $active-tertiary;
+    }
   }
 
   &__transition {
