@@ -69,7 +69,7 @@ function HeaderAction({
               onBlur={onBlur}
               onMouseDown={event => event.preventDefault()}
               ref={popoverRef}
-              role="complementary"
+              role="dialog"
               {...other}
             >
               {popover}
