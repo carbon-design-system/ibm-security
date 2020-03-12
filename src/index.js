@@ -1,7 +1,10 @@
 /**
  * @file Entry point.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
+
+// Carbon.
+export * from 'carbon-components-react';
 
 // Globals.
 export theme from './globals/theme';
@@ -91,6 +94,8 @@ export IconButton from './components/IconButton';
 export IconButtonBar from './components/IconButtonBar';
 export InlineLoading from './components/InlineLoading';
 export Link from './components/Link';
+export ListBox from './components/ListBox';
+export ListItem from './components/ListItem';
 export Loading, { LoadingMessage } from './components/Loading';
 
 export MultiSelect from './components/MultiSelect';
@@ -106,6 +111,7 @@ export {
 } from './components/Notification';
 
 export NumberInput, { NumberInputSkeleton } from './components/NumberInput';
+export OrderedList from './components/OrderedList';
 export OverflowMenu from './components/OverflowMenu';
 export OverflowMenuItem from './components/OverflowMenuItem';
 export Pagination from './components/Pagination';
@@ -217,25 +223,41 @@ export {
   TypeLayoutRow,
 } from './components/TypeLayout';
 
-export * from './components/UIShell';
+export {
+  CarbonHeader,
+  Content,
+  HeaderContainer,
+  HeaderGlobalAction,
+  HeaderGlobalBar,
+  HeaderMenu,
+  HeaderMenuButton,
+  HeaderMenuItem,
+  HeaderName,
+  HeaderNavigation,
+  HeaderPanel,
+  HeaderSideNavItems,
+  SideNav,
+  SideNavDetails,
+  SideNavFooter,
+  SideNavHeader,
+  SideNavIcon,
+  SideNavItem,
+  SideNavItems,
+  SideNavLink,
+  SideNavLinkText,
+  SideNavMenu,
+  SideNavMenuItem,
+  SideNavSwitcher,
+  SkipToContent,
+  Switcher,
+  SwitcherDivider,
+  SwitcherItem,
+} from './components/UIShell';
+
+export UnorderedList from './components/UnorderedList';
 export { Wizard, WizardStep } from './components/Wizard';
 
 // Experimental.
 export UNSTABLE__Pagination, {
   PageSelector,
 } from './components/UNSTABLE__Pagination';
-
-// Carbon.
-export FormItem from 'carbon-components-react/lib/components/FormItem';
-export FormLabel from 'carbon-components-react/lib/components/FormLabel';
-export ListBox from 'carbon-components-react/lib/components/ListBox';
-export ListItem from 'carbon-components-react/lib/components/ListItem';
-
-export {
-  NotificationButton,
-  NotificationTextDetails,
-} from 'carbon-components-react/lib/components/Notification';
-
-export OrderedList from 'carbon-components-react/lib/components/OrderedList';
-export TabContent from 'carbon-components-react/lib/components/TabContent';
-export UnorderedList from 'carbon-components-react/lib/components/UnorderedList';
