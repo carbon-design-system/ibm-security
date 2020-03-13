@@ -5,13 +5,3 @@
 ////
 
 @import 'carbon-components/scss/components/tooltip/tooltip';
-
-@import '../../globals/index';
-
-@include export-namespace($name: tooltip) {
-  .#{$prefix}--tooltip {
-    &__label > &__trigger {
-      margin-left: $carbon--spacing-03;
-    }
-  }
-}

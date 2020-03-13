@@ -1,10 +1,14 @@
 ////
 /// Entry point.
-/// @group addons
+/// @group storybook
 /// @copyright IBM Security 2019
 ////
 
-@import '../.storybook/components/Container/index';
+@import '@carbon/layout/scss/spacing';
+
+@import '../src/globals/index';
+@import '../src/components/index';
+@import '../src/platform/index';
 
 * {
   box-sizing: border-box;
