@@ -5,8 +5,13 @@
 ////
 
 @import '../Component/mixins';
-@import 'mixins';
 
 @include security--component($name: delimited-list) {
-  @include delimited-list;
+  display: flex;
+
+  &__value--truncated {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
