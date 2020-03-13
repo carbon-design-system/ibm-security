@@ -38,10 +38,8 @@ exports[`Decorator renders correctly 1`] = `
 `;
 
 exports[`Decorator renders the \`inert\` variation 1`] = `
-<Link
-  className="security--decorator security--decorator--low security--decorator--link security--decorator--inert"
-  href="#"
-  tabIndex={0}
+<span
+  className="security--decorator security--decorator--low security--decorator--inert"
 >
   <span
     className="security--decorator__icon"
@@ -71,7 +69,7 @@ exports[`Decorator renders the \`inert\` variation 1`] = `
   >
     10.0.0.0
   </span>
-</Link>
+</span>
 `;
 
 exports[`Decorator renders the HTML of the node's subtree 1`] = `
