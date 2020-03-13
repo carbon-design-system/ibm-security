@@ -64,13 +64,13 @@ class Decorator extends Component {
     const { path, classes } = getDecoratorProps(score, scoreThresholds, active);
     const decorator = this.renderDecorator(noIcon, path, inline);
     const decoratorClasses = classnames(namespace, classes, className, {
-      [`${namespace}--link`]: this.props.href,
-      [`${namespace}--active`]: this.props.active,
+      [`${namespace}--link`]: this.props.href && !inert,
+      [`${namespace}--active`]: this.props.active && !inert,
       [`${namespace}--inert`]: this.props.inert,
       [`${namespace}--inline`]: this.props.inline,
     });
 
-    if (this.props.href) {
+    if (this.props.href && !inert) {
       return (
         <Link href={this.props.href} className={decoratorClasses} tabIndex={0}>
           {decorator}
