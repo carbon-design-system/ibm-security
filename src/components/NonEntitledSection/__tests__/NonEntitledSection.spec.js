@@ -105,7 +105,7 @@ describe('NonEntitledSection', () => {
         className="custom-class"
       />
     );
-    expect(container.firstElementChild).toHaveClass('custom-class');
+    expect(container.querySelector('.custom-class')).toBeInTheDocument();
   });
 
   test('should add extra props via spread attribute', () => {
