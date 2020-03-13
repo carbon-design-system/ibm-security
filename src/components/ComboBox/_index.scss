@@ -6,6 +6,8 @@
 
 @import 'carbon-components/scss/components/combo-box/combo-box';
 
+@import 'carbon-components/scss/globals/scss/vars';
+
 /// Carbon style overrides.
 @include export-namespace($name: combo-box) {
   .#{$prefix}--list-box__menu-item__option {
