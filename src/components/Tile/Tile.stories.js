@@ -1,27 +1,26 @@
 /**
  * @file Tile stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import { action } from '@storybook/addon-actions';
-
 import { boolean, number, select, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
 import React from 'react';
 
+import { components } from '../../../.storybook';
+
 import {
-  Tile,
   ClickableTile,
   ExpandableTile,
   RadioTile,
   SelectableTile,
+  Tile,
   TileAboveTheFoldContent,
   TileBelowTheFoldContent,
   TileGroup,
-} from '../../';
-
-import { components } from '../../../.storybook';
+} from '../..';
 
 const radioValues = {
   None: '',
@@ -36,6 +35,7 @@ const props = {
     handleClick: action('handleClick'),
     handleKeyDown: action('handleKeyDown'),
   }),
+
   group: () => ({
     name: text('Form item (name in <TileGroup>)', 'tile-group'),
     valueSelected: select(
@@ -45,10 +45,13 @@ const props = {
     ),
     onChange: action('onChange'),
   }),
+
   radio: () => ({
     name: text('Form item name (name in <RadioTile>)', 'tiles'),
     onChange: action('onChange'),
+    light: boolean('Light variant (light)', false),
   }),
+
   expandable: () => ({
     tabIndex: number('Tab index (tabIndex)', 0),
     expanded: boolean('Expanded (expanded)', false),
@@ -93,7 +96,7 @@ storiesOf(components('Tile'), module)
     () => {
       const selectableProps = props.selectable();
       return (
-        <div>
+        <div aria-label="Selectable tiles" role="group">
           <SelectableTile id="tile-1" name="tiles" {...selectableProps}>
             Multi-select Tile
           </SelectableTile>
@@ -116,38 +119,23 @@ storiesOf(components('Tile'), module)
     }
   )
   .add(
-    'Selectable',
+    'Radio',
     () => {
       const radioProps = props.radio();
       return (
         <TileGroup
           defaultSelected="default-selected"
-          legend="Selectable Tile Group"
+          legend="Radio Tile Group"
           {...props.group()}
         >
-          <RadioTile
-            value="standard"
-            id="tile-1"
-            labelText="Selectable Tile"
-            {...radioProps}
-          >
-            Selectable Tile
+          <RadioTile value="standard" {...radioProps}>
+            Radio Tile
           </RadioTile>
-          <RadioTile
-            value="default-selected"
-            labelText="Default selected tile"
-            id="tile-2"
-            {...radioProps}
-          >
-            Selectable Tile
+          <RadioTile value="default-selected" id="tile-2" {...radioProps}>
+            Radio Tile
           </RadioTile>
-          <RadioTile
-            value="selected"
-            labelText="Selectable Tile"
-            id="tile-3"
-            {...radioProps}
-          >
-            Selectable Tile
+          <RadioTile value="selected" id="tile-3" {...radioProps}>
+            Radio Tile
           </RadioTile>
         </TileGroup>
       );
