@@ -60,6 +60,7 @@
   &--active:hover,
   &:focus:active {
     background-color: $ui-05;
+    color: $inverse-link;
 
     > #{$root} {
       &__type,
@@ -76,9 +77,10 @@
   &--inert {
     &:hover {
       cursor: default;
+      background-color: $hover-ui;
     }
 
-    &__value {
+    #{$root}__value {
       color: $text-02;
     }
   }
@@ -170,7 +172,7 @@
   }
 
   &__value {
-    color: $support-04;
+    color: $hover-primary-text;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
