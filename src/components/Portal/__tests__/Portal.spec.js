@@ -3,14 +3,12 @@
  * @copyright IBM Security 2018
  */
 
-import { cleanup, render, fireEvent } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import React from 'react';
 
 import { Portal } from '../../..';
 
 describe('Portal', () => {
-  beforeEach(cleanup);
-
   test('should have no Axe or DAP violations with overlay', async () => {
     const main = document.createElement('main');
     render(
