@@ -95,9 +95,9 @@
       opacity: 1;
     }
 
-    &--clear:active,
-    &--clear:focus,
-    &--clear:hover {
+    &:active,
+    &:focus,
+    &:hover {
       cursor: pointer;
       background-color: $active-tertiary;
     }
