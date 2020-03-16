@@ -9,6 +9,8 @@ import React from 'react';
 
 import { Button, DataDecorator } from '../../..';
 
+import { namespace as panelNamespace } from '../../PanelV2/PanelV2';
+
 describe('DataDecorator', () => {
   test('should have no Axe or DAP violations', async () => {
     const main = document.createElement('main');
@@ -121,7 +123,7 @@ describe('DataDecorator', () => {
     // Save off the panel selector.
     // We will need it to set the `focusTrap` option below.
     // See: https://github.com/testing-library/user-event#tabshift-focustrap
-    const panel = document.querySelector('.security--panelv2');
+    const panel = document.querySelector(`.${panelNamespace}`);
 
     // Tab into the open panel.
     // Set focus trap.
