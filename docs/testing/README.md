@@ -83,7 +83,7 @@ test('should cycle panel elements in tab order', () => {
       closeButton={{
         label: 'test close',
       }}
-      renderFooter={() => (<Button>test footer button</Button>)}
+      renderFooter={() => <Button>test footer button</Button>}
     >
       <PanelContent>
         test content text
