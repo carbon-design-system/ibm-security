@@ -8,11 +8,15 @@ import PropTypes from 'prop-types';
 import React, { forwardRef } from 'react';
 
 import CarbonButton from 'carbon-components-react/lib/components/Button';
+import { ButtonKinds } from 'carbon-components-react/lib/prop-types/types';
 import InlineLoading from '../InlineLoading';
 
 import { getComponentNamespace } from '../../globals/namespace';
 
 export const namespace = getComponentNamespace('button');
+
+// Add our `ghost-danger` kind to the existing array of button kinds:
+ButtonKinds.push('ghost-danger');
 
 const { defaultProps, propTypes } = CarbonButton;
 
@@ -62,8 +66,11 @@ Button.propTypes = {
   /** @type {Function|object} Optional prop to allow overriding the icon rendering. Can be a React component class. */
   renderIcon: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
 
-  // It's not possible to add to Carbon's values here, so the `PropType` is recreated to include the large variant.
+  /** The size of the button. */
   size: PropTypes.oneOf(['default', 'field', 'large', 'small']),
+
+  /** The kind of button. */
+  kind: PropTypes.oneOf(ButtonKinds),
 };
 
 export default Button;
