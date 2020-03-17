@@ -8,6 +8,8 @@ import React from 'react';
 
 import StatusIcon, { namespace, STATUS, SIZE } from '../StatusIcon';
 
+import { carbonPrefix } from '../../../globals/namespace';
+
 describe('StatusIcon', () => {
   // Should check for `undefined` status as well:
   STATUS.push(undefined);
@@ -28,14 +30,39 @@ describe('StatusIcon', () => {
 
   SIZE.forEach(size =>
     test(`should apply correct class when \`size\` is  '${size}'`, () => {
-      const { container } = render(<StatusIcon size={size} />);
-      expect(container.firstElementChild).toHaveClass(`${namespace}--${size}`);
+      render(<StatusIcon size={size} />);
+      expect(document.querySelector(`.${namespace}`)).toHaveClass(
+        `${namespace}--${size}`
+      );
     })
   );
 
+  STATUS.forEach(status => {
+    if (!status) {
+      test('should render a loading icon when `status` is `undefined`', () => {
+        render(<StatusIcon />);
+        expect(document.querySelector(`.${carbonPrefix}loading`)).toBeVisible();
+      });
+    } else if (status === 'complete') {
+      test('should render with corect class and an icon when `status` is `complete`', () => {
+        render(<StatusIcon status={status} />);
+        expect(document.querySelector(`.${namespace}__icon`)).toHaveClass(
+          `${namespace}__icon--success`
+        );
+      });
+    } else {
+      test(`should apply correct class when \`status\` is  '${status}'`, () => {
+        render(<StatusIcon status={status} />);
+        expect(
+          document.querySelector(`.${namespace}__icon--color`)
+        ).toHaveClass(`${namespace}__icon--color--${status}`);
+      });
+    }
+  });
+
   test('should add a custom class', () => {
-    const { container } = render(<StatusIcon className="custom-class" />);
-    expect(container.firstElementChild).toHaveClass('custom-class');
+    render(<StatusIcon className="custom-class" />);
+    expect(document.querySelector(`.${namespace}`)).toHaveClass('custom-class');
   });
 
   test('should add a message', () => {
