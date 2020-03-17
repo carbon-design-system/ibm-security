@@ -1,14 +1,13 @@
 ////
 /// Date picker component.
 /// @group date-picker
-/// @copyright IBM Security 2018, 2019
+/// @copyright IBM Security 2018 - 2020
 ////
 
 @import 'carbon-components/scss/components/date-picker/date-picker';
 
+// Carbon needs to add theming support for this component.
 @include export-namespace($name: datepicker) {
-  // TODO - V2: Colors need to be resolved on Carbon's end - they need to add grey-100 support for this component
-
   .#{$prefix}--date-picker__day.inRange,
   .flatpickr-day.inRange {
     background: $selected-ui;

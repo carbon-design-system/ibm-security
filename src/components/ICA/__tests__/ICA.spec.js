@@ -3,76 +3,78 @@
  * @copyright IBM Security 2019
  */
 
-import { shallow } from 'enzyme';
 import React from 'react';
+import { render } from '@testing-library/react';
 
 import { ICA } from '../../..';
 import { Locales } from '../ICA';
 
-import props from '../_mocks_';
-
-const { label, total, value } = props;
-
-const defaultProps = { label, value };
-
 describe('ICA', () => {
-  let ica;
-  const largeValue = value * total;
-
-  beforeEach(() => {
-    ica = shallow(<ICA {...defaultProps} />);
+  test('should have no Axe or DAP violations', async () => {
+    const main = document.createElement('main');
+    render(<ICA label="test ICA" total={10} value={5} />, {
+      // DAP requires a landmark '<main>' in the DOM:
+      container: document.body.appendChild(main),
+    });
+    await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations('ICA');
   });
 
-  it('renders', () => {
-    expect(ica).toMatchSnapshot();
+  test('should render en dash when `value` is `null`', () => {
+    const { queryByText } = render(<ICA label="test ICA" value={null} />);
+    expect(queryByText('–')).toBeVisible();
   });
 
-  it('renders the null value', () => {
-    ica.setProps({ value: null });
-
-    expect(ica).toMatchSnapshot();
+  test('should render a large value', () => {
+    const { queryByText } = render(<ICA label="test ICA" value={1000000} />);
+    expect(queryByText('1.0m')).toBeVisible();
   });
 
-  it('renders a large value', () => {
-    ica.setProps({ value: largeValue });
-
-    expect(ica).toMatchSnapshot();
+  test('should render a subset of values when `value` and `total` are provided', () => {
+    const { queryByText } = render(
+      <ICA label="test ICA" value={5} total={10} />
+    );
+    expect(queryByText('5')).toBeVisible();
+    expect(queryByText(/10/i)).toBeVisible();
   });
 
-  it('renders a subset of values', () => {
-    ica.setProps({ total });
-
-    expect(ica).toMatchSnapshot();
+  test('should not render subset of values when `total` is close to `value`', () => {
+    const { queryByText } = render(
+      <ICA label="test ICA" value={1000000} total={999995} />
+    );
+    expect(queryByText('999995')).not.toBeInTheDocument();
+    expect(queryByText('1.0m')).toBeVisible();
   });
 
-  it('does not render a subset when the total is close to the provided value', () => {
-    ica.setProps({ total: largeValue - value, value: largeValue });
-    expect(ica).toMatchSnapshot();
+  test('should not render `total` if it is the same as `value`', () => {
+    const { queryAllByText } = render(
+      <ICA label="test ICA" value={10} total={10} />
+    );
+    // Should display 1 occurance of `10` (the value):
+    expect(queryAllByText(/10/i).length).toBe(1);
   });
 
-  it('renders with a value that is same as the total value', () => {
-    ica.setProps({ total: value });
-
-    expect(ica).toMatchSnapshot();
+  test('should render `total` when forced', () => {
+    const { queryAllByText } = render(
+      <ICA label="test ICA" value={10} total={10} forceShowTotal />
+    );
+    // Should display 2 occurances of `10` (the value & the total):
+    expect(queryAllByText(/10/i).length).toBe(2);
   });
 
-  it('renders a percentage', () => {
-    ica.setProps({ percentage: true, total });
-
-    expect(ica).toMatchSnapshot();
-  });
-
-  it('renders a total when forced', () => {
-    ica.setProps({ forceShowTotal: true, total: value });
-
-    expect(ica).toMatchSnapshot();
+  test('should render a percentage', () => {
+    const { queryByText } = render(
+      <ICA label="test ICA" value={10} percentage />
+    );
+    expect(queryByText('%')).toBeVisible();
   });
 
   Locales.forEach(locale =>
-    it(`accepts '${locale}' locale`, () => {
-      ica.setProps({ locale });
-
-      expect(() => ica).not.toThrow();
+    test(`should accept '${locale}' locale`, () => {
+      const { container } = render(
+        <ICA label="test ICA" value={10} locale={locale} />
+      );
+      expect(() => container).not.toThrow();
     })
   );
 });

@@ -26,15 +26,15 @@ const uniqueProps = {
 
 describe('FilterSearch', () => {
   describe('Rendering', () => {
-    it('renders', () =>
+    test('renders', () =>
       expect(shallow(<FilterSearch {...props} />)).toMatchSnapshot());
 
-    it('accepts initial search value', () =>
+    test('accepts initial search value', () =>
       expect(
         shallow(<FilterSearch {...props} initialSearchValue="filter 10" />)
       ).toMatchSnapshot());
 
-    it('displays message when no filters match search value', () => {
+    test('displays message when no filters match search value', () => {
       const wrapper = shallow(
         <FilterSearch
           {...props}
@@ -44,7 +44,7 @@ describe('FilterSearch', () => {
       expect(wrapper).toMatchSnapshot();
     });
 
-    it('partially matches any string', () => {
+    test('partially matches any string', () => {
       const wrapper = shallow(
         <FilterSearch {...props} initialSearchValue="FiLTer 1" />
       );
@@ -52,14 +52,14 @@ describe('FilterSearch', () => {
       expect(wrapper).toMatchSnapshot();
     });
 
-    it('should not overwrite `labels` when unique props defined', () => {
+    test('should not overwrite `labels` when unique props defined', () => {
       const wrapper = shallow(<FilterSearch {...props} {...uniqueProps} />);
       expect(wrapper).toMatchSnapshot();
     });
   });
 
   describe('Events', () => {
-    it('displays search results when value typed in', () => {
+    test('displays search results when value typed in', () => {
       const wrapper = shallow(<FilterSearch {...props} />);
       wrapper
         .find('Search')
@@ -67,7 +67,7 @@ describe('FilterSearch', () => {
       expect(wrapper).toMatchSnapshot();
     });
 
-    it('hides results when filter has been toggled', () => {
+    test('hides results when filter has been toggled', () => {
       const wrapper = shallow(
         <FilterSearch {...props} initialSearchValue="filter 10" />
       );
@@ -78,7 +78,7 @@ describe('FilterSearch', () => {
       expect(wrapper).toMatchSnapshot();
     });
 
-    it('invokes onChange when filter is toggled', () => {
+    test('invokes onChange when filter is toggled', () => {
       const onChange = jest.fn();
       const wrapper = shallow(
         <FilterSearch

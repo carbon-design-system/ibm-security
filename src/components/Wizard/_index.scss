@@ -4,11 +4,16 @@
 /// @copyright IBM Security 2019
 ////
 
+@import '@carbon/layout/scss/spacing';
+
+@import '../Nav/index';
+@import '../StepIndicator/index';
 @import '../Tearsheet/index';
 
 @import '../Component/mixins';
-@import 'mixins';
 
 @include security--component($name: wizard) {
-  @include wizard;
+  &__navItem {
+    margin-left: -$carbon--spacing-06;
+  }
 }

@@ -6,9 +6,15 @@
 
 @import '@carbon/themes/scss/tokens';
 
-@import 'carbon-components/scss/globals/scss/vars';
 @import 'carbon-components/scss/components/data-table-v2/data-table-v2';
 
+@import 'carbon-components/scss/globals/scss/layout';
+@import 'carbon-components/scss/globals/scss/vars';
+
+@import '../../globals/namespace/index';
+
+@import '../Checkbox/index';
+@import '../IconButton/index';
 @import '../Search/index';
 
 @import '../Component/mixins';
