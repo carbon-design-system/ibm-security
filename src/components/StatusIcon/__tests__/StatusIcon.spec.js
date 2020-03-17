@@ -44,7 +44,7 @@ describe('StatusIcon', () => {
         expect(document.querySelector(`.${carbonPrefix}loading`)).toBeVisible();
       });
     } else if (status === 'complete') {
-      test('should render with corect class and an icon when `status` is `complete`', () => {
+      test('should render with correct icon class when `status` is `complete`', () => {
         render(<StatusIcon status={status} />);
         expect(document.querySelector(`.${namespace}__icon`)).toHaveClass(
           `${namespace}__icon--success`
