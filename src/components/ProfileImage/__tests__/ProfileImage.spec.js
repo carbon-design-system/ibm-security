@@ -57,10 +57,40 @@ describe('ProfileImage', () => {
     );
   });
 
-  test('should add a custom class', () => {
-    const { container } = render(
+  test("should apply an image via the `profile` object's `image_url`", () => {
+    render(
       <ProfileImage
-        data-testid="test-id"
+        profile={{
+          image_url: 'test-image',
+          name: {
+            first_name: 'Test',
+            surname: 'User',
+          },
+        }}
+      />
+    );
+    expect(document.querySelector(`[src='test-image']`)).toBeVisible();
+  });
+
+  test("should use initials from `profile` object's `first_name` and `surname` when `image_url` is not provided", () => {
+    const { queryByText } = render(
+      <ProfileImage
+        profile={{
+          image_url: null,
+          name: {
+            first_name: 'Test',
+            surname: 'User',
+          },
+        }}
+      />
+    );
+    // "TU" are initials of "Test User"
+    expect(queryByText('TU')).toBeVisible();
+  });
+
+  test('should add a custom class', () => {
+    render(
+      <ProfileImage
         className="custom-class"
         profile={{
           image_url: null,
@@ -71,7 +101,7 @@ describe('ProfileImage', () => {
         }}
       />
     );
-    expect(container.firstElementChild).toHaveClass('custom-class');
+    expect(document.querySelector('.custom-class')).toBeVisible();
   });
 
   test('should add correct class when `large` is `true`', () => {
