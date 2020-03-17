@@ -37,7 +37,7 @@ describe('StackedNotification', () => {
         iconDescription="test icon desc"
       />
     );
-    expect(container.firstElementChild).toHaveClass('custom-class');
+    expect(container.querySelector('.custom-class')).toBeVisible();
   });
 
   test('should invoke close mock when close button is clicked', () => {
@@ -63,6 +63,89 @@ describe('StackedNotification', () => {
         data-testid="test-id"
       />
     );
-    expect(queryByTestId('test-id')).toBeInTheDocument();
+    expect(queryByTestId('test-id')).toBeVisible();
+  });
+
+  test('should apply a `title`', () => {
+    const { queryByText } = render(
+      <StackedNotification
+        title="test title"
+        subtitle="test subtitle"
+        iconDescription="test close button icon"
+      />
+    );
+    expect(queryByText(/test title/i)).toBeVisible();
+  });
+
+  test('should apply a `subtitle`', () => {
+    const { queryByText } = render(
+      <StackedNotification
+        title="test title"
+        subtitle="test subtitle"
+        iconDescription="test close button icon"
+      />
+    );
+    expect(queryByText(/test subtitle/i)).toBeVisible();
+  });
+
+  test('should apply a `caption`', () => {
+    const { queryByText } = render(
+      <StackedNotification
+        title="test title"
+        subtitle="test subtitle"
+        iconDescription="test close button icon"
+        caption="test caption"
+      />
+    );
+    expect(queryByText(/test caption/i)).toBeVisible();
+  });
+
+  test('should apply a `children`', () => {
+    const { queryByText } = render(
+      <StackedNotification
+        title="test title"
+        subtitle="test subtitle"
+        iconDescription="test close button icon"
+      >
+        test children
+      </StackedNotification>
+    );
+    expect(queryByText(/test children/i)).toBeVisible();
+  });
+
+  test('should apply a custom `role`', () => {
+    const { queryByRole } = render(
+      <StackedNotification
+        title="test title"
+        subtitle="test subtitle"
+        iconDescription="test close button icon"
+        role="dialog"
+      />
+    );
+    // Note that "alert" is the default role:
+    expect(queryByRole('dialog')).toBeVisible();
+  });
+
+  test('should apply an `iconDescription` to the close button', () => {
+    const { queryByLabelText } = render(
+      <StackedNotification
+        title="test title"
+        subtitle="test subtitle"
+        iconDescription="test close button icon"
+      />
+    );
+    expect(queryByLabelText(/test close button icon/i)).toBeVisible();
+  });
+
+  test('should hide the close button when `hideCloseButton` is `true`', () => {
+    const { queryByLabelText } = render(
+      <StackedNotification
+        title="test title"
+        subtitle="test subtitle"
+        iconDescription="test close button icon"
+        hideCloseButton
+      />
+    );
+    expect(queryByLabelText(/test close button icon/i)).not.toBeInTheDocument();
   });
 });
