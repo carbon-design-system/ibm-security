@@ -57,13 +57,6 @@ describe('LoadingMessage', () => {
     );
   });
 
-  test('should add custom class', () => {
-    const { getByTestId } = render(
-      <LoadingMessage data-testid="test-id" className="custom-class" />
-    );
-    expect(getByTestId('test-id').parentNode).toHaveClass('custom-class');
-  });
-
   test('should pass extra props through spread attribute', () => {
     const { queryByLabelText } = render(
       // `description` provides a custom label element
