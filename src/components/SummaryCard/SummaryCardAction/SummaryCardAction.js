@@ -83,6 +83,8 @@ class SummaryCardAction extends Component {
                       iconDescription={closeButtonIconDescription}
                       onClick={this.toggleOpen}
                       kind="ghost"
+                      title={closeButtonIconDescription}
+                      aria-label={closeButtonIconDescription}
                     />
                   </div>
                   <div className={`${namespace}-overlay__content`}>

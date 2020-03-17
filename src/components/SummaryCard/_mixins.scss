@@ -4,13 +4,17 @@
 /// @copyright IBM Security 2019
 ////
 
-@import 'carbon-components/scss/globals/scss/helper-mixins';
-@import 'carbon-components/scss/globals/scss/vars';
-
 @import '@carbon/layout/scss/mini-unit';
 @import '@carbon/layout/scss/spacing';
+@import '@carbon/motion/scss/motion';
+@import '@carbon/themes/scss/tokens';
+@import '@carbon/type/scss/styles';
 
-@import '../../globals/index';
+@import '../../globals/namespace/index';
+
+@import 'carbon-components/scss/globals/scss/helper-mixins';
+@import 'carbon-components/scss/globals/scss/layout';
+@import 'carbon-components/scss/globals/scss/vars';
 
 @mixin summary-card {
   /// Container height.
@@ -53,7 +57,6 @@
   height: $header--height + $body--height + $footer--height;
   min-width: carbon--mini-units($count: 36);
   flex-direction: column;
-  overflow: hidden;
 
   &__container {
     padding-top: $summary-card__container__sizing__height;

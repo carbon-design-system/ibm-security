@@ -53,6 +53,8 @@ class DataDecorator extends Component {
       type,
       value,
       title,
+      scoreThresholds,
+      scoreDescription,
     } = this.props;
     const decoratorProps = {
       className,
@@ -62,6 +64,8 @@ class DataDecorator extends Component {
       type,
       value,
       title,
+      scoreThresholds,
+      scoreDescription,
     };
     const componentLabels = {
       ...defaultLabels.labels,
@@ -233,6 +237,9 @@ DataDecorator.propTypes = {
 
   /** @type {array} Array of event types to stop propagation. */
   stopPropagationEvents: PropTypes.arrayOf(PropTypes.oneOf(PORTAL_EVENTS)),
+
+  /** @type {func} Descriptive text for screen readers that details the severity of a score. */
+  scoreDescription: PropTypes.func,
 };
 
 DataDecorator.defaultProps = {
@@ -253,6 +260,8 @@ DataDecorator.defaultProps = {
   title: undefined,
   stopPropagation: false,
   stopPropagationEvents: undefined,
+  scoreDescription: (score, scoreThresholds) =>
+    `Score ${score} out of ${scoreThresholds.slice(-1)[0]}`,
 };
 
 export default DataDecorator;

@@ -4,142 +4,84 @@
  */
 
 import React from 'react';
-import { boolean, text } from '@storybook/addon-knobs';
+import { boolean } from '@storybook/addon-knobs';
+import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 
 import { components } from '../../../.storybook';
 
 import { Breadcrumb, BreadcrumbItem, BreadcrumbSkeleton } from '../..';
 
-const homepageText = 'Homepage';
-const applicationText = 'Application';
-const titleText = 'Title';
-
-const longText = text =>
-  `A very, very, very, very, very, very, very, very long ${text}`;
-
-const longApplicationText = longText(applicationText);
-const longTitleText = longText(titleText);
-
-const props = {
-  breadcrumb: (noTrailingSlash = true) => ({
-    noTrailingSlash: boolean(
-      'No trailing slash (`noTrailingSlash`)',
-      noTrailingSlash
-    ),
-  }),
-
-  item: () => ({
-    href: '#',
-  }),
-};
-
-const { breadcrumb, item } = props;
+const props = () => ({
+  className: 'some-class',
+  noTrailingSlash: boolean('No trailing slash (noTrailingSlash)', false),
+  onClick: action('onClick'),
+});
 
 storiesOf(components('Breadcrumb'), module)
   .add(
-    'Default',
+    'default',
     () => (
-      <Breadcrumb {...breadcrumb()}>
-        <BreadcrumbItem {...item()}>
-          {text(homepageText, homepageText)}
+      <Breadcrumb {...props()}>
+        <BreadcrumbItem>
+          <a href="/#">Breadcrumb 1 that is very long and will be truncated</a>
         </BreadcrumbItem>
-        <BreadcrumbItem {...item()}>
-          {text(applicationText, applicationText)}
+        <BreadcrumbItem href="#">Breadcrumb 2</BreadcrumbItem>
+        <BreadcrumbItem href="#">Breadcrumb 3</BreadcrumbItem>
+      </Breadcrumb>
+    ),
+    {
+      info: {
+        text: `
+        Breadcrumb enables users to quickly see their location within a path of navigation and move up to a parent level if desired.
+      `,
+      },
+    }
+  )
+  .add('skeleton', () => <BreadcrumbSkeleton />, {
+    info: {
+      text: `
+        Placeholder skeleton state to use when content is loading.
+        `,
+    },
+  })
+  .add(
+    'current page',
+    () => (
+      <Breadcrumb {...props()} noTrailingSlash>
+        <BreadcrumbItem>
+          <a href="/#">Breadcrumb 1 that is very long and will be truncated</a>
         </BreadcrumbItem>
-        <BreadcrumbItem {...item()}>
-          {text(titleText, titleText)}
+        <BreadcrumbItem href="#">Breadcrumb 2</BreadcrumbItem>
+        <BreadcrumbItem href="#" isCurrentPage>
+          Breadcrumb 3
         </BreadcrumbItem>
       </Breadcrumb>
     ),
     {
-      info:
-        'Breadcrumb enables users to quickly see their location within a path of navigation and move up to a parent level if desired.',
+      info: {
+        text:
+          'You can specify a BreadcrumbItem component as the current page with the `isCurrentPage` prop',
+      },
     }
   )
   .add(
-    'Over 40 characters',
+    'current page with aria-current',
     () => (
-      <Breadcrumb {...breadcrumb()}>
-        <BreadcrumbItem {...item()}>
-          {text(homepageText, homepageText)}
+      <Breadcrumb {...props()} noTrailingSlash>
+        <BreadcrumbItem>
+          <a href="/#">Breadcrumb 1 that is very long and will be truncated</a>
         </BreadcrumbItem>
-        <BreadcrumbItem {...item()}>
-          {text(longApplicationText, longApplicationText)}
-        </BreadcrumbItem>
-        <BreadcrumbItem {...item()}>
-          {text(longTitleText, longTitleText)}
+        <BreadcrumbItem href="#">Breadcrumb 2</BreadcrumbItem>
+        <BreadcrumbItem href="#" aria-current="page">
+          Breadcrumb 3
         </BreadcrumbItem>
       </Breadcrumb>
     ),
     {
-      info:
-        'Breadcrumb text length is truncated to approximately 40 characters.',
+      info: {
+        text:
+          'You can specify a BreadcrumbItem component as the current page with the `aria-current` prop by specifying `aria-current="page"`',
+      },
     }
-  )
-  .add(
-    'Trailing slash',
-    () => (
-      <Breadcrumb {...breadcrumb(false)}>
-        <BreadcrumbItem {...item()}>
-          {text(homepageText, homepageText)}
-        </BreadcrumbItem>
-        <BreadcrumbItem {...item()}>
-          {text(applicationText, applicationText)}
-        </BreadcrumbItem>
-        <BreadcrumbItem {...item()}>
-          {text(titleText, titleText)}
-        </BreadcrumbItem>
-      </Breadcrumb>
-    ),
-    {
-      info:
-        'You can choose not to render a trailing slash with the `noTrailingSlash` prop.',
-    }
-  )
-  .add(
-    'Current page',
-    () => (
-      <Breadcrumb {...breadcrumb()}>
-        <BreadcrumbItem {...item()}>
-          {text(homepageText, homepageText)}
-        </BreadcrumbItem>
-        <BreadcrumbItem {...item()}>
-          {text(applicationText, applicationText)}
-        </BreadcrumbItem>
-        <BreadcrumbItem
-          {...item()}
-          isCurrentPage={boolean('isCurrentPage', true)}
-        >
-          {text(titleText, titleText)}
-        </BreadcrumbItem>
-      </Breadcrumb>
-    ),
-    {
-      info:
-        'You can specify a `BreadcrumbItem` component as the current page with the `isCurrentPage` prop.',
-    }
-  )
-  .add(
-    'Current page with `aria-current`',
-    () => (
-      <Breadcrumb {...breadcrumb()}>
-        <BreadcrumbItem {...item()}>
-          {text(homepageText, homepageText)}
-        </BreadcrumbItem>
-        <BreadcrumbItem {...item()}>
-          {text(applicationText, applicationText)}
-        </BreadcrumbItem>
-        <BreadcrumbItem {...item()} aria-current="page">
-          {text(titleText, titleText)}
-        </BreadcrumbItem>
-      </Breadcrumb>
-    ),
-    {
-      info:
-        'You can specify a `BreadcrumbItem` component as the current page with the `aria-current` prop by specifying `aria-current="page"`',
-    }
-  )
-  .add('Skeleton', () => <BreadcrumbSkeleton />, {
-    info: 'Placeholder skeleton state to use when content is loading.',
-  });
+  );

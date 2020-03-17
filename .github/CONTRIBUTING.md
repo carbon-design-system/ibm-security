@@ -42,6 +42,8 @@ Once it's done building, you can start editing source code or creating new compo
 
 ## 5. Test your JavaScript code
 
+Please review the [testing guidelines](./docs/testing) for details on how and what to test.
+
 If you're contributing to our JavaScript code, test your changes by running our test command:
 
 ```bash
@@ -52,8 +54,9 @@ npm test
 yarn test
 ```
 
-If you add any features to our JavaScript code, make sure to add tests so that
-your code is covered. Tests are written in
+New tests are written using [React Testing Library](https://testing-library.com/).
+
+Legacy tests are written in
 [Jest](https://jestjs.io) / [Enzyme](https://airbnb.io/enzyme). You can see if your code
 is covered by looking at `coverage/lcov-report/*/index.html` after
 running test.

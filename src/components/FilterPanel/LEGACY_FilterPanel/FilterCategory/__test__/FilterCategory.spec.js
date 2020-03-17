@@ -32,21 +32,21 @@ describe('FilterCategory', () => {
     );
   });
 
-  it('renders', () => expect(filterCategory).toMatchSnapshot());
+  test('renders', () => expect(filterCategory).toMatchSnapshot());
 
-  it('does not render without subcategories', () => {
+  test('does not render without subcategories', () => {
     filterCategory.setProps({
       category: MockFilterData.categories.NO_SUBCATEGORIES,
     });
     expect(filterCategory).toMatchSnapshot();
   });
 
-  it('does not render without filters', () => {
+  test('does not render without filters', () => {
     filterCategory.setProps({ category: MockFilterData.categories.NO_FILTERS });
     expect(filterCategory).toMatchSnapshot();
   });
 
-  it('should not overwrite `labels` when unique props defined', () => {
+  test('should not overwrite `labels` when unique props defined', () => {
     filterCategory.setProps({ ...uniqueProps });
     expect(filterCategory).toMatchSnapshot();
   });
