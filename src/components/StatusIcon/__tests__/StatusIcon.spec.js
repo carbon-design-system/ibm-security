@@ -11,9 +11,6 @@ import StatusIcon, { namespace, STATUS, SIZE } from '../StatusIcon';
 import { carbonPrefix } from '../../../globals/namespace';
 
 describe('StatusIcon', () => {
-  // Should check for `undefined` status as well:
-  STATUS.push(undefined);
-
   STATUS.forEach(status =>
     test(`should have no Axe or DAP violations when \`status\` is  '${status}'`, async () => {
       const main = document.createElement('main');
@@ -28,6 +25,18 @@ describe('StatusIcon', () => {
     })
   );
 
+  test('should have no Axe or DAP violations when `status` is  `undefined`', async () => {
+    const main = document.createElement('main');
+    render(<StatusIcon message="test message" />, {
+      // DAP requires a landmark '<main>' in the DOM:
+      container: document.body.appendChild(main),
+    });
+    await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations(
+      'StatusIcon with `undefined` status'
+    );
+  });
+
   SIZE.forEach(size =>
     test(`should apply correct class when \`size\` is  '${size}'`, () => {
       render(<StatusIcon size={size} />);
@@ -38,13 +47,8 @@ describe('StatusIcon', () => {
   );
 
   STATUS.forEach(status => {
-    if (!status) {
-      test('should render a loading icon when `status` is `undefined`', () => {
-        render(<StatusIcon />);
-        expect(document.querySelector(`.${carbonPrefix}loading`)).toBeVisible();
-      });
-    } else if (status === 'complete') {
-      test('should render with correct icon class when `status` is `complete`', () => {
+    if (status === 'complete') {
+      test('should render with correct class and an icon when `status` is `complete`', () => {
         render(<StatusIcon status={status} />);
         expect(document.querySelector(`.${namespace}__icon`)).toHaveClass(
           `${namespace}__icon--success`
@@ -58,6 +62,11 @@ describe('StatusIcon', () => {
         ).toHaveClass(`${namespace}__icon--color--${status}`);
       });
     }
+  });
+
+  test('should render a loading icon when `status` is `undefined`', () => {
+    render(<StatusIcon />);
+    expect(document.querySelector(`.${carbonPrefix}loading`)).toBeVisible();
   });
 
   test('should add a custom class', () => {
