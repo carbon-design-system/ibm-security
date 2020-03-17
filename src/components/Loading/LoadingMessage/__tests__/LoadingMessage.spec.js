@@ -94,6 +94,18 @@ describe('LoadingMessage', () => {
     );
   });
 
+  test('should render an animated icon without any "stop" classes `active` is `true`', () => {
+    render(<LoadingMessage active>test message</LoadingMessage>);
+    // The "stop" class should NOT be applied to the inner loading component:
+    expect(document.querySelector(`.${carbonPrefix}loading`)).not.toHaveClass(
+      `${carbonPrefix}loading--stop`
+    );
+    // The "stop" class should NOT applied to the overlay:
+    expect(
+      document.querySelector(`.${carbonPrefix}loading-overlay`)
+    ).not.toHaveClass(`${carbonPrefix}loading-overlay--stop`);
+  });
+
   test('should add the correct "stop" classes when `active` is `false`', () => {
     render(<LoadingMessage active={false}>test message</LoadingMessage>);
     // The "stop" class applied to the inner loading component:
