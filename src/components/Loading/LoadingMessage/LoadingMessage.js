@@ -16,14 +16,16 @@ const LoadingMessage = ({
   withOverlay,
   ...other
 }) => {
-  const loading = <Loading active={active} small={small} withOverlay={false} />;
+  const loading = (
+    <Loading active={active} small={small} withOverlay={false} {...other} />
+  );
 
   const overlayClasses = classnames('bx--loading-overlay', className, {
     'bx--loading-overlay--stop': !active,
   });
 
   return withOverlay ? (
-    <div className={overlayClasses} {...other}>
+    <div className={overlayClasses}>
       {loading}
       {children}
     </div>
@@ -35,10 +37,13 @@ const LoadingMessage = ({
 const propTypes = {
   /** @type {bool} Active loading icon. */
   active: PropTypes.bool,
+
   /** @type {string} A class. */
   className: PropTypes.string,
+
   /** @type {bool} Overlay all other elements. */
   withOverlay: PropTypes.bool,
+
   /** @type {bool} Small loading view. */
   small: PropTypes.bool,
 
