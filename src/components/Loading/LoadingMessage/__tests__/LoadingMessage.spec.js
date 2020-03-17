@@ -94,7 +94,7 @@ describe('LoadingMessage', () => {
     );
   });
 
-  test('should render an animated icon without any "stop" classes `active` is `true`', () => {
+  test('should render an animated icon without any "stop" classes when `active` is `true`', () => {
     render(<LoadingMessage active>test message</LoadingMessage>);
     // The "stop" class should NOT be applied to the inner loading component:
     expect(document.querySelector(`.${carbonPrefix}loading`)).not.toHaveClass(
