@@ -37,10 +37,13 @@ const LoadingMessage = ({
 const propTypes = {
   /** @type {bool} Active loading icon. */
   active: PropTypes.bool,
+
   /** @type {string} A class. */
   className: PropTypes.string,
+
   /** @type {bool} Overlay all other elements. */
   withOverlay: PropTypes.bool,
+
   /** @type {bool} Small loading view. */
   small: PropTypes.bool,
 

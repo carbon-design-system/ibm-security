@@ -8,6 +8,8 @@ import React from 'react';
 
 import { LoadingMessage } from '../../../..';
 
+import { carbonPrefix } from '../../../../globals/namespace';
+
 describe('LoadingMessage', () => {
   test('should have no Axe or DAP violations with overlay', async () => {
     const main = document.createElement('main');
@@ -64,24 +66,43 @@ describe('LoadingMessage', () => {
 
   test('should pass extra props through spread attribute', () => {
     const { queryByLabelText } = render(
-      // `description` provides a custom label
+      // `description` provides a custom label element
       // to the inner `Loading` component:
       <LoadingMessage description="test description" />
     );
     expect(queryByLabelText('test description')).toBeInTheDocument();
   });
 
-  test('should show a custom loading message after the loading animation', () => {
-    const { container, getByLabelText, getByText } = render(
-      <LoadingMessage description="test description">
-        test message
-      </LoadingMessage>
+  test('should show a custom loading message via `children`', () => {
+    const { queryByText } = render(
+      <LoadingMessage>test message</LoadingMessage>
     );
-    // Expect the loading animation to appear first:
-    expect(container.firstChild).toBe(
-      getByLabelText(/test description/i).parentNode
+    expect(queryByText(/test message/i)).toBeVisible();
+  });
+
+  test('should apply a custom class', () => {
+    const { getByText } = render(
+      <LoadingMessage className="custom-class">test message</LoadingMessage>
     );
-    // Expect the loading message to appear second/last:
-    expect(container.lastChild).toBe(getByText(/test message/i));
+    expect(getByText(/test message/i)).toHaveClass('custom-class');
+  });
+
+  test('should render a small loading icon when `small` is `true`', () => {
+    render(<LoadingMessage small>test message</LoadingMessage>);
+    expect(document.querySelector(`.${carbonPrefix}loading`)).toHaveClass(
+      `${carbonPrefix}loading--small`
+    );
+  });
+
+  test('should add the correct "stop" classes when `active` is `false`', () => {
+    render(<LoadingMessage active={false}>test message</LoadingMessage>);
+    // The "stop" class applied to the inner loading component:
+    expect(document.querySelector(`.${carbonPrefix}loading`)).toHaveClass(
+      `${carbonPrefix}loading--stop`
+    );
+    // The "stop" class applied to the overlay:
+    expect(
+      document.querySelector(`.${carbonPrefix}loading-overlay`)
+    ).toHaveClass(`${carbonPrefix}loading-overlay--stop`);
   });
 });
