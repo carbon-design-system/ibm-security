@@ -2,14 +2,14 @@
 
 Contributing to Carbon for IBM Security requires that you can run this repo locally on your computer.
 
-### 1. Fork the repo:
+### 1. Fork the repo
 
 Go to
 [Carbon for IBM Security's repository on GitHub](https://github.com/carbon-design-system/ibm-security)
 and click the `Fork` button in the top-right corner. This will create a copy
 repo of Carbon associated with your account.
 
-### 2. Clone your fork:
+### 2. Clone your fork
 
 1.  Go to your [GitHub Repositories](https://github.com/settings/repositories).
 1.  Click on `[your_github_username]/ibm-security`.
