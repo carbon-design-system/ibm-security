@@ -4,9 +4,11 @@
 /// @copyright IBM Security 2019
 ////
 
-@import '../../../globals/index';
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/layout/scss/mini-unit';
+@import '@carbon/type/scss/index';
 
-@import '../../TagWallFilter/Filter/mixins';
+@import 'carbon-components/scss/globals/scss/vars';
 
 @import '../mixins';
 
@@ -51,6 +53,7 @@
     min-height: 0;
     margin-bottom: $carbon--layout-06;
     flex-grow: 1;
+    overflow: auto;
   }
 
   &__scroll-gradient__content {

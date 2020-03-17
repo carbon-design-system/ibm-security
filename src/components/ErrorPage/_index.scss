@@ -1,12 +1,10 @@
 ////
-/// Error page component.
+/// Error section component.
 /// @group error-page
 /// @copyright IBM Security 2019
 ////
 
-@import 'carbon-components/scss/components/button/button';
-
-@import '../IconButton/index';
+@import '../Link/index';
 
 @import '../Component/mixins';
 @import 'mixins';

@@ -4,6 +4,9 @@
 /// @copyright IBM Security 2019
 ////
 
+@import './Filter/index';
+@import '../Tearsheet/TearsheetSmall/index';
+
 @import '../Component/mixins';
 @import 'mixins';
 

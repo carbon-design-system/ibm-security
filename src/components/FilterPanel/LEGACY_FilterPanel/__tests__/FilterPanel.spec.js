@@ -32,19 +32,19 @@ describe('FilterPanel', () => {
     );
   });
 
-  it('renders with no title', () => expect(filterPanel).toMatchSnapshot());
+  test('renders with no title', () => expect(filterPanel).toMatchSnapshot());
 
-  it('renders with title', () => {
+  test('renders with title', () => {
     filterPanel.setProps({ title });
     expect(filterPanel).toMatchSnapshot();
   });
 
-  it('should overwrite `labels` when unique props defined', () => {
+  test('should overwrite `labels` when unique props defined', () => {
     filterPanel.setProps(uniqueProps);
     expect(filterPanel).toMatchSnapshot();
   });
 
-  it('invokes `onChange` when filter is changed', () => {
+  test('invokes `onChange` when filter is changed', () => {
     const onChange = jest.fn();
     filterPanel.setProps({ onChange });
     filterPanel.find('FilterSearch').simulate('change', filter);

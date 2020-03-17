@@ -1,13 +1,39 @@
 ////
-/// Important Content Area (ICA) component.
-/// @group ICA
+/// Important content area component.
+/// @group ica
 /// @copyright IBM Security 2019
 ////
 
-@import '../Component/mixins';
+@import '@carbon/type/scss/styles';
+@import '@carbon/themes/scss/tokens';
+
 @import 'ICASkeleton/index';
-@import 'mixins';
+
+@import '../Component/mixins';
 
 @include security--component($name: ica) {
-  @include ica;
+  & &__label {
+    @include carbon--type-style($name: label-01);
+    display: block;
+    color: $text-02;
+    margin: 0;
+  }
+
+  & &__value {
+    @include carbon--type-style($name: productive-heading-04);
+    margin-bottom: 0;
+  }
+
+  & &__total {
+    @include carbon--type-style($name: body-short-01);
+    margin-bottom: 0;
+  }
+
+  & &__percentage {
+    @include carbon--type-style($name: productive-heading-04);
+  }
+
+  & &__percentage-mark {
+    @include carbon--type-style($name: productive-heading-03);
+  }
 }

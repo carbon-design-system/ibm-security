@@ -11,7 +11,7 @@ import StringFormatter from '../../StringFormatter';
 
 import { getComponentNamespace } from '../../../globals/namespace/index';
 
-const namespace = getComponentNamespace('summary-card__header');
+export const namespace = getComponentNamespace('summary-card__header');
 
 const SummaryCardHeader = ({
   className,
