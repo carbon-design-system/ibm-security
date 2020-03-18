@@ -225,7 +225,7 @@ Map {
       "className": "",
       "footer": null,
       "header": null,
-      "label": null,
+      "label": "",
       "link": null,
       "onClick": null,
     },
@@ -750,6 +750,7 @@ Map {
       "primaryButton": undefined,
       "renderFooter": null,
       "score": undefined,
+      "scoreDescription": [Function],
       "scoreThresholds": Array [
         0,
         4,
@@ -833,6 +834,9 @@ Map {
       },
       "score": Object {
         "type": "number",
+      },
+      "scoreDescription": Object {
+        "type": "func",
       },
       "scoreThresholds": [Function],
       "secondaryButton": [Function],
@@ -931,6 +935,7 @@ Map {
       "noIcon": false,
       "onClick": [Function],
       "score": undefined,
+      "scoreDescription": [Function],
       "scoreThresholds": Array [
         0,
         4,
@@ -963,6 +968,9 @@ Map {
       },
       "score": Object {
         "type": "number",
+      },
+      "scoreDescription": Object {
+        "type": "func",
       },
       "scoreThresholds": [Function],
       "title": Object {
@@ -3347,16 +3355,12 @@ Map {
   "NonEntitledSection" => Object {
     "defaultProps": Object {
       "backgroundImage": null,
-      "catalogId": "",
       "className": "",
       "description": "",
       "links": Array [],
     },
     "propTypes": Object {
       "backgroundImage": Object {
-        "type": "string",
-      },
-      "catalogId": Object {
         "type": "string",
       },
       "className": Object {
