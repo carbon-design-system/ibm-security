@@ -5,6 +5,7 @@
 ////
 
 @import '../Component/mixins';
+
 @import 'mixins';
 
 @include security--component($name: profile-image) {

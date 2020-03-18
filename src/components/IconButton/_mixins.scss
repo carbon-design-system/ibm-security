@@ -5,10 +5,12 @@
 ////
 
 @import '@carbon/layout/scss/mini-unit';
+@import '@carbon/themes/scss/tokens';
 
-@import '../../globals/layout/index';
+@import 'carbon-components/scss/globals/scss/helper-mixins';
+@import 'carbon-components/scss/globals/scss/layout';
+
 @import '../../globals/motion/index';
-@import '../../globals/theme/index';
 
 @import '../Tooltip/mixins';
 
