@@ -5,6 +5,9 @@
 ////
 
 @import 'carbon-components/scss/components/structured-list/structured-list';
+@import 'carbon-components/scss/globals/scss/vars';
+
+@import '../../globals/namespace/index';
 
 @include export-namespace($name: 'structured-list') {
   // TODO - V2: waiting for Carbon to release fix via https://github.com/carbon-design-system/carbon/pull/3518

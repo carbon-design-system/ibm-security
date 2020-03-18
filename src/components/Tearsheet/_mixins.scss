@@ -4,9 +4,16 @@
 /// @copyright IBM Security 2019
 ////
 
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/layout/scss/mini-unit';
+@import '@carbon/type/scss/index';
+@import '@carbon/themes/scss/tokens';
 @import 'carbon-components/scss/globals/scss/layout';
+@import 'carbon-components/scss/globals/scss/vars';
 
-@import '../../globals/index';
+@import '../../globals/border/index';
+@import '../../globals/motion/index';
+@import '../../globals/theme/mixins';
 
 @import '../Panel/mixins';
 

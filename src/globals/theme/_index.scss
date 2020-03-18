@@ -37,8 +37,6 @@ $carbon--theme: $-theme;
 
 @include carbon--theme;
 
-@import '../variables/index';
-
 @import 'carbon-components/scss/globals/scss/theme';
 
 @import '../deprecate/index';
