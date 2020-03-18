@@ -4,9 +4,17 @@
 /// @copyright IBM Security 2019
 ////
 
+@import '@carbon/layout/scss/mini-unit';
 @import '@carbon/layout/scss/spacing';
+@import '@carbon/themes/scss/tokens';
+@import '@carbon/type/scss/styles';
 
-@import '../../globals/index';
+@import 'carbon-components/scss/globals/scss/helper-mixins';
+@import 'carbon-components/scss/globals/scss/layout';
+@import 'carbon-components/scss/globals/scss/motion';
+
+@import '../../globals/motion/index';
+@import '../../globals/rtl/index';
 
 @mixin nav {
   $nav__heading: '#{&}__heading';
