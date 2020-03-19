@@ -8,6 +8,7 @@
 
 const { isValidElementType } = require('react-is');
 
+// All components:
 const Components = require('../../index');
 
 /**
