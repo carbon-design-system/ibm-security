@@ -535,14 +535,12 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                       <div
                         class="security--filter bx--list-box"
                         id="test-id"
-                        role="listbox"
-                        tabindex="-1"
                       >
                         <div
                           aria-controls="test-id__menu"
                           aria-expanded="true"
                           aria-haspopup="true"
-                          aria-label="Close menu"
+                          aria-label="close menu"
                           aria-owns="test-id__menu"
                           class="bx--list-box__field"
                           data-toggle="true"
@@ -615,7 +613,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                     xmlns="http://www.w3.org/2000/svg"
                                   >
                                     <path
-                                      d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                                      d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
                                     />
                                   </svg>
                                 </span>
@@ -836,14 +834,12 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                   <div
                                     class="security--filter bx--list-box"
                                     id="test-id"
-                                    role="listbox"
-                                    tabindex="-1"
                                   >
                                     <div
                                       aria-controls="test-id__menu"
                                       aria-expanded="true"
                                       aria-haspopup="true"
-                                      aria-label="Close menu"
+                                      aria-label="close menu"
                                       aria-owns="test-id__menu"
                                       class="bx--list-box__field"
                                       data-toggle="true"
@@ -916,7 +912,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                 xmlns="http://www.w3.org/2000/svg"
                                               >
                                                 <path
-                                                  d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                                                  d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
                                                 />
                                               </svg>
                                             </span>
@@ -1060,14 +1056,12 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                     <div
                                       class="security--filter bx--list-box"
                                       id="test-id"
-                                      role="listbox"
-                                      tabindex="-1"
                                     >
                                       <div
                                         aria-controls="test-id__menu"
                                         aria-expanded="true"
                                         aria-haspopup="true"
-                                        aria-label="Close menu"
+                                        aria-label="close menu"
                                         aria-owns="test-id__menu"
                                         class="bx--list-box__field"
                                         data-toggle="true"
@@ -1140,7 +1134,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                   xmlns="http://www.w3.org/2000/svg"
                                                 >
                                                   <path
-                                                    d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                                                    d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
                                                   />
                                                 </svg>
                                               </span>
@@ -1440,8 +1434,6 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                             id="test-id"
                                             onClick={[Function]}
                                             onKeyDown={[Function]}
-                                            role="listbox"
-                                            tabIndex="-1"
                                           >
                                             <ListBoxField
                                               aria-expanded={true}
@@ -1455,14 +1447,13 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                               onKeyDown={[Function]}
                                               role="button"
                                               tabIndex={-1}
-                                              translateWithId={[Function]}
                                               type="button"
                                             >
                                               <div
                                                 aria-controls="test-id__menu"
                                                 aria-expanded={true}
                                                 aria-haspopup={true}
-                                                aria-label="Close menu"
+                                                aria-label="close menu"
                                                 aria-owns="test-id__menu"
                                                 className="bx--list-box__field"
                                                 data-toggle={true}
@@ -1659,7 +1650,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                                   xmlns="http://www.w3.org/2000/svg"
                                                                 >
                                                                   <path
-                                                                    d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                                                                    d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
                                                                   />
                                                                 </svg>
                                                               </Icon>
@@ -2283,14 +2274,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                         <div
                           class="security--filter bx--list-box"
                           id="test-id"
-                          role="listbox"
-                          tabindex="-1"
                         >
                           <div
                             aria-controls="test-id__menu"
                             aria-expanded="true"
                             aria-haspopup="true"
-                            aria-label="Close menu"
+                            aria-label="close menu"
                             aria-owns="test-id__menu"
                             class="bx--list-box__field"
                             data-toggle="true"
@@ -2363,7 +2352,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       xmlns="http://www.w3.org/2000/svg"
                                     >
                                       <path
-                                        d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                                        d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
                                       />
                                     </svg>
                                   </span>
@@ -2498,14 +2487,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                         <div
                           class="security--filter bx--list-box"
                           id="test-id"
-                          role="listbox"
-                          tabindex="-1"
                         >
                           <div
                             aria-controls="test-id__menu"
                             aria-expanded="true"
                             aria-haspopup="true"
-                            aria-label="Close menu"
+                            aria-label="close menu"
                             aria-owns="test-id__menu"
                             class="bx--list-box__field"
                             data-toggle="true"
@@ -2578,7 +2565,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       xmlns="http://www.w3.org/2000/svg"
                                     >
                                       <path
-                                        d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                                        d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
                                       />
                                     </svg>
                                   </span>
@@ -2799,14 +2786,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     <div
                                       class="security--filter bx--list-box"
                                       id="test-id"
-                                      role="listbox"
-                                      tabindex="-1"
                                     >
                                       <div
                                         aria-controls="test-id__menu"
                                         aria-expanded="true"
                                         aria-haspopup="true"
-                                        aria-label="Close menu"
+                                        aria-label="close menu"
                                         aria-owns="test-id__menu"
                                         class="bx--list-box__field"
                                         data-toggle="true"
@@ -2879,7 +2864,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                   xmlns="http://www.w3.org/2000/svg"
                                                 >
                                                   <path
-                                                    d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                                                    d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
                                                   />
                                                 </svg>
                                               </span>
@@ -3014,14 +2999,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     <div
                                       class="security--filter bx--list-box"
                                       id="test-id"
-                                      role="listbox"
-                                      tabindex="-1"
                                     >
                                       <div
                                         aria-controls="test-id__menu"
                                         aria-expanded="true"
                                         aria-haspopup="true"
-                                        aria-label="Close menu"
+                                        aria-label="close menu"
                                         aria-owns="test-id__menu"
                                         class="bx--list-box__field"
                                         data-toggle="true"
@@ -3094,7 +3077,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                   xmlns="http://www.w3.org/2000/svg"
                                                 >
                                                   <path
-                                                    d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                                                    d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
                                                   />
                                                 </svg>
                                               </span>
@@ -3238,14 +3221,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       <div
                                         class="security--filter bx--list-box"
                                         id="test-id"
-                                        role="listbox"
-                                        tabindex="-1"
                                       >
                                         <div
                                           aria-controls="test-id__menu"
                                           aria-expanded="true"
                                           aria-haspopup="true"
-                                          aria-label="Close menu"
+                                          aria-label="close menu"
                                           aria-owns="test-id__menu"
                                           class="bx--list-box__field"
                                           data-toggle="true"
@@ -3318,7 +3299,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                     xmlns="http://www.w3.org/2000/svg"
                                                   >
                                                     <path
-                                                      d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                                                      d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
                                                     />
                                                   </svg>
                                                 </span>
@@ -3453,14 +3434,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       <div
                                         class="security--filter bx--list-box"
                                         id="test-id"
-                                        role="listbox"
-                                        tabindex="-1"
                                       >
                                         <div
                                           aria-controls="test-id__menu"
                                           aria-expanded="true"
                                           aria-haspopup="true"
-                                          aria-label="Close menu"
+                                          aria-label="close menu"
                                           aria-owns="test-id__menu"
                                           class="bx--list-box__field"
                                           data-toggle="true"
@@ -3533,7 +3512,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                     xmlns="http://www.w3.org/2000/svg"
                                                   >
                                                     <path
-                                                      d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                                                      d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
                                                     />
                                                   </svg>
                                                 </span>
@@ -3833,8 +3812,6 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                               id="test-id"
                                               onClick={[Function]}
                                               onKeyDown={[Function]}
-                                              role="listbox"
-                                              tabIndex="-1"
                                             >
                                               <ListBoxField
                                                 aria-expanded={true}
@@ -3848,14 +3825,13 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                 onKeyDown={[Function]}
                                                 role="button"
                                                 tabIndex={-1}
-                                                translateWithId={[Function]}
                                                 type="button"
                                               >
                                                 <div
                                                   aria-controls="test-id__menu"
                                                   aria-expanded={true}
                                                   aria-haspopup={true}
-                                                  aria-label="Close menu"
+                                                  aria-label="close menu"
                                                   aria-owns="test-id__menu"
                                                   className="bx--list-box__field"
                                                   data-toggle={true}
@@ -4052,7 +4028,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                                     xmlns="http://www.w3.org/2000/svg"
                                                                   >
                                                                     <path
-                                                                      d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                                                                      d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
                                                                     />
                                                                   </svg>
                                                                 </Icon>
