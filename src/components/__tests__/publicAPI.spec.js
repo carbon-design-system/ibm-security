@@ -8,9 +8,6 @@
 
 const { isValidElementType } = require('react-is');
 
-// All components:
-const Components = require('../../index');
-
 /**
  * In our Public API test, we try to identify each component and its
  * corresponding API. In order to get prop type information for components,
@@ -166,6 +163,8 @@ describe('PublicAPI', () => {
       return api;
     }
 
+    // eslint-disable-next-line global-require
+    const Components = require('../../index');
     const PublicAPI = new Map();
 
     Object.keys(Components).forEach(name => {
