@@ -64,6 +64,7 @@
     "prop-types": "^15.7.2",
     "ramda": "^0.26.1",
     "react-addons-css-transition-group": "^15.6.2",
+    "react-is": "^16.13.0",
     "recompose": "0.30.0",
     "reduced-utils": "0.1.2",
     "throttle-debounce": "^2.0.1"
