@@ -29,24 +29,30 @@ describe('FilterPanelSearch', () => {
   });
 
   test('renders results content when keyboard focus is added', () => {
-    const { getByTestId, getByLabelText } = render(
-      <FilterPanelSearch labelText="search label">
+    const { getByTestId, getByPlaceholderText } = render(
+      <FilterPanelSearch
+        labelText="search label"
+        placeHolderText="search placeholder"
+      >
         <div data-testid="result-content" />
       </FilterPanelSearch>
     );
 
-    getByLabelText('search label').focus();
+    getByPlaceholderText('search placeholder').focus();
     expect(getByTestId('result-content')).toBeVisible();
   });
 
   test('does not render results content when keyboard focus is removed', async () => {
-    const { queryByTestId, getByLabelText } = render(
-      <FilterPanelSearch labelText="search label">
+    const { queryByTestId, getByPlaceholderText } = render(
+      <FilterPanelSearch
+        labelText="search label"
+        placeHolderText="search placeholder"
+      >
         <div data-testid="result-content" />
       </FilterPanelSearch>
     );
 
-    const searchInput = getByLabelText('search label');
+    const searchInput = getByPlaceholderText('search placeholder');
     searchInput.focus();
     searchInput.blur();
 
@@ -57,15 +63,18 @@ describe('FilterPanelSearch', () => {
 
   test('does not remove results content when keyboard focus transfers to results', () => {
     jest.useFakeTimers();
-    const { getByTestId, getByLabelText, container } = render(
-      <FilterPanelSearch labelText="search label">
+    const { getByTestId, getByPlaceholderText, container } = render(
+      <FilterPanelSearch
+        labelText="search label"
+        placeHolderText="search placeholder"
+      >
         <div data-testid="result-content">
           <Checkbox labelText="checkbox" id="checkbox" />
         </div>
       </FilterPanelSearch>
     );
 
-    const searchInput = getByLabelText('search label');
+    const searchInput = getByPlaceholderText('search placeholder');
     searchInput.focus();
     container.querySelector('#checkbox').focus();
 
@@ -78,10 +87,14 @@ describe('FilterPanelSearch', () => {
 
   test('invokes onChange when the user types a value into the search', () => {
     const onChangeMock = jest.fn();
-    const { getByLabelText } = render(
-      <FilterPanelSearch labelText="search label" onChange={onChangeMock} />
+    const { getByPlaceholderText } = render(
+      <FilterPanelSearch
+        labelText="search label"
+        placeHolderText="search placeholder"
+        onChange={onChangeMock}
+      />
     );
-    userEvent.type(getByLabelText(/search label/i), 'search term');
+    userEvent.type(getByPlaceholderText(/search placeholder/i), 'search term');
     expect(onChangeMock).toHaveBeenCalledTimes('search term'.length);
   });
 });
