@@ -9,14 +9,14 @@ import React from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
 
-const namespace = getComponentNamespace('profile-image');
+export const namespace = getComponentNamespace('profile-image');
 
 /**
  * Profile image component.
  * @param {Object.<string, *>} props Profile image props.
  * @returns {ProfileImage} Profile image instance.
  */
-const ProfileImage = ({ className, large, profile }) => {
+const ProfileImage = ({ className, large, profile, ...other }) => {
   const classNames = classnames(namespace, className, {
     [`${namespace}--large`]: large,
   });
@@ -26,9 +26,10 @@ const ProfileImage = ({ className, large, profile }) => {
       className={classNames}
       alt={`${profile.name.first_name} ${profile.name.surname}`}
       src={profile.image_url}
+      {...other}
     />
   ) : (
-    <span className={classNames}>
+    <span className={classNames} {...other}>
       {`${profile.name.first_name.charAt(0)}${profile.name.surname.charAt(0)}`}
     </span>
   );
