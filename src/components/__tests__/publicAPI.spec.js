@@ -165,7 +165,6 @@ describe('PublicAPI', () => {
       return api;
     }
 
-    // eslint-disable-next-line global-require
     const PublicAPI = new Map();
 
     Object.keys(Components).forEach(name => {
