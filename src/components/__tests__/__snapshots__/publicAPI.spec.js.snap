@@ -7723,9 +7723,7 @@ Map {
             "action": Object {
               "type": "func",
             },
-            "description": Object {
-              "type": "string",
-            },
+            "description": [Function],
             "label": Object {
               "type": "string",
             },
