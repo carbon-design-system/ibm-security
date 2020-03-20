@@ -469,7 +469,7 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M19 23L11 16 19 9 19 23z"
+            d="M20 24L10 16 20 8z"
           />
         </svg>
       </button>
@@ -489,7 +489,7 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M13 9L21 16 13 23 13 9z"
+            d="M12 8L22 16 12 24z"
           />
         </svg>
       </button>
