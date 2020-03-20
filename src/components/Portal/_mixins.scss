@@ -4,7 +4,8 @@
 /// @copyright IBM Security 2019
 ////
 
-@import '../../globals/index';
+@import 'carbon-components/scss/globals/scss/layout';
+@import '@carbon/themes/scss/tokens';
 
 @mixin portal {
   &__overlay {

@@ -4,7 +4,11 @@
 /// @copyright IBM Security 2020
 ////
 
-@import '../../../globals/index';
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/themes/scss/tokens';
+@import '@carbon/type/scss/styles';
+
+@import '../../../globals/motion/index';
 
 @mixin filter-panel-accordion-item {
   /// Scroller padding.
@@ -44,12 +48,19 @@
       padding-top: $filter-panel-accordion-item__content__spacing__padding;
       padding-bottom: $filter-panel-accordion-item__content__spacing__padding;
       color: $text-02;
+      border: 2px solid transparent;
 
       // Increase outline spacing horizontally so that it does not overlap with the count on the
       // accordion heading label.
       &::before {
         left: -$carbon--spacing-01;
         width: calc(100% + #{$carbon--spacing-03});
+      }
+
+      &:focus::before {
+        // Override Carbon `Accordion` defaults:
+        @include focus-outline($type: outline);
+        border: none;
       }
     }
 

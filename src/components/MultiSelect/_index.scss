@@ -4,7 +4,11 @@
 /// @copyright IBM Security 2018
 ////
 
+@import '@carbon/themes/scss/tokens';
 @import 'carbon-components/scss/components/multi-select/multi-select';
+@import 'carbon-components/scss/globals/scss/vars';
+
+@import '../../globals/namespace/index';
 
 @include export-namespace($name: multi-select) {
   .#{$prefix}--multi-select {
