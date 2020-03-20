@@ -6,7 +6,7 @@
  *
  */
 
-const { isValidElementType } = require('react-is');
+import { isValidElementType } from 'react-is';
 
 /**
  * In our Public API test, we try to identify each component and its
@@ -164,13 +164,15 @@ describe('PublicAPI', () => {
     }
 
     // eslint-disable-next-line global-require
-    const Components = require('../../index');
+    const Components = require('../..');
     const PublicAPI = new Map();
 
-    Object.keys(Components).forEach(name => {
-      const Component = Components[name];
-      PublicAPI.set(name, mapComponentToAPI(Component));
-    });
+    Object.keys(Components)
+      .sort()
+      .forEach(name => {
+        const Component = Components[name];
+        PublicAPI.set(name, mapComponentToAPI(Component));
+      });
 
     expect(PublicAPI).toMatchSnapshot();
   });
