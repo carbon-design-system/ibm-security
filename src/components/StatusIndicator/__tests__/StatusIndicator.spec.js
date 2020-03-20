@@ -50,13 +50,22 @@ describe('StatusIndicator', () => {
   });
 
   test('should add a custom class', () => {
-    const { container } = render(<StatusIndicator className="custom-class" />);
-    expect(container.firstElementChild).toHaveClass('custom-class');
+    render(<StatusIndicator className="custom-class" />);
+    expect(document.querySelector('.custom-class')).toBeVisible();
   });
 
   test('should add a title', () => {
     const { queryByText } = render(<StatusIndicator title="test title" />);
     expect(queryByText(/test title/i)).toBeVisible();
+  });
+
+  test('should add children', () => {
+    const { getByText } = render(
+      <StatusIndicator>
+        <span>test text</span>
+      </StatusIndicator>
+    );
+    expect(getByText(/test text/i)).toBeVisible();
   });
 
   test('should add a `retry` object with a `label`', () => {

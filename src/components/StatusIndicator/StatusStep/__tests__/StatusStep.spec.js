@@ -37,14 +37,14 @@ describe('StatusStep', () => {
   );
 
   test('should add a custom class', () => {
-    const { container } = render(
+    render(
       <StatusStep
         className="custom-class"
         label="test-label"
         description="test description"
       />
     );
-    expect(container.firstElementChild).toHaveClass('custom-class');
+    expect(document.querySelector('.custom-class')).toBeVisible();
   });
 
   test('should add an error message when `status` is `FAILED`', () => {
@@ -68,5 +68,12 @@ describe('StatusStep', () => {
       />
     );
     expect(queryByText(/test error/i)).not.toBeInTheDocument();
+  });
+
+  test('should add a description', () => {
+    const { getByText } = render(
+      <StatusStep label="test-label" description="test description" />
+    );
+    expect(getByText(/test description/i)).toBeVisible();
   });
 });
