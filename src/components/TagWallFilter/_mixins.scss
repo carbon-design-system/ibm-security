@@ -3,9 +3,9 @@
 /// @group tag-wall-filter
 /// @copyright IBM Security 2019
 ////
-@import '../../globals/index';
 
-@import './Filter/index';
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/themes/scss/tokens';
 
 @mixin tag-wall-filter {
   &__tag-wall {
