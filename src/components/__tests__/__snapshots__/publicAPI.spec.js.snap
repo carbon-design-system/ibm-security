@@ -3979,6 +3979,137 @@ Map {
       },
     },
   },
+  "ListBox" => Object {
+    "Field": Object {
+      "propTypes": Object {
+        "children": Object {
+          "type": "node",
+        },
+        "disabled": Object {
+          "type": "bool",
+        },
+        "id": Object {
+          "isRequired": true,
+          "type": "string",
+        },
+        "tabIndex": Object {
+          "args": Array [
+            Array [
+              Object {
+                "type": "number",
+              },
+              Object {
+                "type": "string",
+              },
+            ],
+          ],
+          "type": "oneOfType",
+        },
+      },
+    },
+    "Menu": Object {
+      "propTypes": Object {
+        "children": [Function],
+        "id": Object {
+          "isRequired": true,
+          "type": "string",
+        },
+      },
+    },
+    "MenuIcon": Object {
+      "defaultProps": Object {
+        "translateWithId": [Function],
+      },
+      "propTypes": Object {
+        "isOpen": Object {
+          "isRequired": true,
+          "type": "bool",
+        },
+        "translateWithId": Object {
+          "isRequired": true,
+          "type": "func",
+        },
+      },
+    },
+    "MenuItem": Object {
+      "defaultProps": Object {
+        "isActive": false,
+        "isHighlighted": false,
+      },
+      "propTypes": Object {
+        "children": Object {
+          "type": "node",
+        },
+        "isActive": Object {
+          "isRequired": true,
+          "type": "bool",
+        },
+        "isHighlighted": Object {
+          "isRequired": true,
+          "type": "bool",
+        },
+      },
+    },
+    "Selection": Object {
+      "defaultProps": Object {
+        "translateWithId": [Function],
+      },
+      "propTypes": Object {
+        "clearSelection": Object {
+          "isRequired": true,
+          "type": "func",
+        },
+        "selectionCount": Object {
+          "type": "number",
+        },
+        "translateWithId": Object {
+          "isRequired": true,
+          "type": "func",
+        },
+      },
+    },
+    "defaultProps": Object {
+      "disabled": false,
+      "innerRef": [Function],
+      "type": "default",
+    },
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+      "disabled": Object {
+        "isRequired": true,
+        "type": "bool",
+      },
+      "innerRef": Object {
+        "isRequired": true,
+        "type": "func",
+      },
+      "size": Object {
+        "args": Array [
+          Array [
+            "sm",
+            "lg",
+            "xl",
+          ],
+        ],
+        "type": "oneOf",
+      },
+      "type": Object {
+        "args": Array [
+          Array [
+            "default",
+            "inline",
+          ],
+        ],
+        "isRequired": true,
+        "type": "oneOf",
+      },
+    },
+  },
   "ListItem" => Object {
     "propTypes": Object {
       "children": Object {
