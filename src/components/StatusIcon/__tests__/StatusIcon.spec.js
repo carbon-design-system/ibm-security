@@ -3,35 +3,79 @@
  * @copyright IBM Security 2019
  */
 
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 import React from 'react';
 
-import StatusIcon, { STATUS, SIZE } from '../StatusIcon';
+import StatusIcon, { namespace, STATUS, SIZE } from '../StatusIcon';
+
+import { carbonPrefix } from '../../../globals/namespace';
 
 describe('StatusIcon', () => {
-  let statusIcon;
+  STATUS.forEach(status =>
+    test(`should have no Axe or DAP violations when \`status\` is  '${status}'`, async () => {
+      const main = document.createElement('main');
+      render(<StatusIcon status={status} message="test message" />, {
+        // DAP requires a landmark '<main>' in the DOM:
+        container: document.body.appendChild(main),
+      });
+      await expect(document.body).toHaveNoAxeViolations();
+      await expect(document.body).toHaveNoDAPViolations(
+        `StatusIcon with ${status} status`
+      );
+    })
+  );
 
-  beforeEach(() => {
-    statusIcon = shallow(<StatusIcon />);
-  });
-
-  it('renders', () => {
-    expect(statusIcon).toMatchSnapshot();
+  test('should have no Axe or DAP violations when `status` is  `undefined`', async () => {
+    const main = document.createElement('main');
+    render(<StatusIcon message="test message" />, {
+      // DAP requires a landmark '<main>' in the DOM:
+      container: document.body.appendChild(main),
+    });
+    await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations(
+      'StatusIcon with `undefined` status'
+    );
   });
 
   SIZE.forEach(size =>
-    it(`renders the '${size}' variation`, () => {
-      statusIcon.setProps({ size });
-
-      expect(statusIcon).toMatchSnapshot();
+    test(`should apply correct class when \`size\` is  '${size}'`, () => {
+      render(<StatusIcon size={size} />);
+      expect(document.querySelector(`.${namespace}`)).toHaveClass(
+        `${namespace}--${size}`
+      );
     })
   );
 
-  STATUS.forEach(status =>
-    it(`renders the '${status}' variation`, () => {
-      statusIcon.setProps({ message: status, status });
+  STATUS.forEach(status => {
+    if (status === 'complete') {
+      test('should render with correct class and an icon when `status` is `complete`', () => {
+        render(<StatusIcon status={status} />);
+        expect(document.querySelector(`.${namespace}__icon`)).toHaveClass(
+          `${namespace}__icon--success`
+        );
+      });
+    } else {
+      test(`should apply correct class when \`status\` is  '${status}'`, () => {
+        render(<StatusIcon status={status} />);
+        expect(
+          document.querySelector(`.${namespace}__icon--color`)
+        ).toHaveClass(`${namespace}__icon--color--${status}`);
+      });
+    }
+  });
 
-      expect(statusIcon).toMatchSnapshot();
-    })
-  );
+  test('should render a loading icon when `status` is `undefined`', () => {
+    render(<StatusIcon />);
+    expect(document.querySelector(`.${carbonPrefix}loading`)).toBeVisible();
+  });
+
+  test('should add a custom class', () => {
+    render(<StatusIcon className="custom-class" />);
+    expect(document.querySelector(`.${namespace}`)).toHaveClass('custom-class');
+  });
+
+  test('should add a message', () => {
+    const { queryByText } = render(<StatusIcon message="test message" />);
+    expect(queryByText(/test message/i)).toBeVisible();
+  });
 });

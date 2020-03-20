@@ -4,7 +4,8 @@
 /// @copyright IBM Security 2019
 ////
 
-@import '../../../globals/index';
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/type/scss/styles';
 
 @mixin header__popover__header {
   display: flex;
