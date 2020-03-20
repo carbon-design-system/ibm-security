@@ -1,6 +1,6 @@
 /**
  * @file Filter.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import Add20 from '@carbon/icons-react/lib/add/20';
@@ -10,7 +10,6 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Downshift from 'downshift';
-import ListBox from 'carbon-components-react/lib/components/ListBox';
 import { defaultFilterItems } from 'carbon-components-react/lib/components/ComboBox/tools/filter';
 
 import theme from '../../../globals/theme';
@@ -19,6 +18,7 @@ import { defaultItemToString } from './tools/itemToString';
 import { defaultSortItems, defaultCompareItems } from './tools/sorting';
 
 import Icon from '../../Icon';
+import ListBox from '../../ListBox';
 
 import {
   carbonPrefix,
