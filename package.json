@@ -168,7 +168,8 @@
   },
   "browserslist": [
     "> 1%",
-    "not IE 11"
+    "not IE 11",
+    "not OperaMini all"
   ],
   "files": [
     "css",
