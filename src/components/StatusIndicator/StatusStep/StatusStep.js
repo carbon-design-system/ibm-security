@@ -1,7 +1,7 @@
-// /**
-//  * @file Status step.
-//  * @copyright IBM Security 2019
-//  */
+/**
+ * @file Status step.
+ * @copyright IBM Security 2019
+ */
 
 import Error20 from '@carbon/icons-react/lib/error/20';
 import RadioButton20 from '@carbon/icons-react/lib/radio-button/20';
@@ -54,7 +54,9 @@ const getStatusIcon = (status, description) => {
               title={description}
             />
           </div>
-          <p className={`${namespace}__label`}>{description}</p>
+          {description && (
+            <p className={`${namespace}__label`}>{description}</p>
+          )}
         </div>
       );
     default:
@@ -80,7 +82,7 @@ const getStatusIcon = (status, description) => {
  */
 class StatusStep extends Component {
   static propTypes = {
-    /** @type {string} A label for a step. */
+    /** @type {string} Used to create a custom key for a step. */
     label: string.isRequired,
 
     /** @type {string} A description for a step. */
