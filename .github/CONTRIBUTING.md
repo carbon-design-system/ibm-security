@@ -2,14 +2,14 @@
 
 Contributing to Carbon for IBM Security requires that you can run this repo locally on your computer.
 
-### 1. Fork the repo
+## 1. Fork the repo
 
 Go to
 [Carbon for IBM Security's repository on GitHub](https://github.com/carbon-design-system/ibm-security)
 and click the `Fork` button in the top-right corner. This will create a copy
 repo of Carbon associated with your account.
 
-### 2. Clone your fork
+## 2. Clone your fork
 
 1.  Go to your [GitHub Repositories](https://github.com/settings/repositories).
 1.  Click on `[your_github_username]/ibm-security`.
@@ -26,7 +26,7 @@ cd ibm-security
 See [GitHub docs](https://help.github.com/articles/fork-a-repo/) for more
 details.
 
-### 3. Add upstream remotes
+## 3. Add upstream remotes
 
 When you clone your forked repo, running `git remote -v` will show that the
 `origin` is pointing to your forked repo by default.
@@ -51,7 +51,7 @@ upstream    git@github.com:carbon-design-system/ibm-security.git (fetch)
 upstream    git@github.com:carbon-design-system/ibm-security.git (push)
 ```
 
-### 4. Work in a branch
+## 4. Work in a branch
 
 When contributing to Carbon for IBM Security, your work should always be done in a branch off of
 your repo, this is also how you will submit your pull request when your work is
@@ -112,7 +112,7 @@ Legacy tests are written in
 is covered by looking at `coverage/lcov-report/*/index.html` after
 running test.
 
-### 7. Make a pull request
+## 7. Make a pull request
 
 **Note:** Before you make a pull request,
 [search the issues](https://github.com/carbon-design-system/ibm-security/issues) to see if a similar issue has already been submitted. If a similar issue has been submitted, assign yourself or ask to be assigned to the issue by posting a comment. If the issue does not exist, create a new issue.
@@ -126,7 +126,7 @@ Write a title and description then click 'Create pull request'.
 - [Closing issues using keywords](https://help.github.com/en/articles/closing-issues-using-keywords)
 - [How to write the perfect pull request](https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request)
 
-#### Is it a breaking change?
+### Is it a breaking change?
 
 We want to respect [semver](https://semver.org). It's important to discern whether your pull request contains breaking changes or not. Sometimes, renaming or removing things in the code can result in breaking changes.
 
@@ -136,7 +136,7 @@ of change you're submitting.
 - Pull requests with **non-breaking changes** like patches and minor updates use the `dev` branch as the base branch
 - Pull requests with **breaking changes** use the latest major version number branch as the base branch (i.e. `2.x` or whatever the next major version is)
 
-### 8. Updating a pull request
+## 8. Updating a pull request
 
 Stay up to date with the activity in your pull request. Maintainers will be reviewing your work and making comments, asking
 questions, and suggesting changes to be made before they merge your code.
