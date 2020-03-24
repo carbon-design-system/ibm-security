@@ -11,7 +11,7 @@ import TooltipDefinition from '../TooltipDefinition';
 
 import { getComponentNamespace } from '../../globals/namespace';
 
-const namespace = getComponentNamespace('string-formatter');
+export const namespace = getComponentNamespace('string-formatter');
 
 const StringFormatter = ({
   className,

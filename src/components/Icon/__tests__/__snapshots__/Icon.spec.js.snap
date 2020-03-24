@@ -36,12 +36,12 @@ exports[`Icon Rendering renders the HTML of the node's subtree 1`] = `
   height="16"
   preserveAspectRatio="xMidYMid meet"
   style="will-change:transform"
-  viewBox="0 0 16 16"
+  viewBox="0 0 32 32"
   width="16"
   xmlns="http://www.w3.org/2000/svg"
 >
   <path
-    d="M9 7L9 3 7 3 7 7 3 7 3 9 7 9 7 13 9 13 9 9 13 9 13 7z"
+    d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
   />
 </svg>
 `;

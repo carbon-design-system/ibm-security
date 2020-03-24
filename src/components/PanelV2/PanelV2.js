@@ -24,7 +24,7 @@ import IconButton from '../IconButton';
 import Transition from '../Transition';
 import Portal, { PORTAL_EVENTS } from '../Portal';
 
-export const namespace = getComponentNamespace('panelv2');
+export const namespace = getComponentNamespace('panel--v2');
 const getInstanceId = setupGetInstanceId();
 
 /**
