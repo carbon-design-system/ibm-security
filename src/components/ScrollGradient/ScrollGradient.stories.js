@@ -87,8 +87,9 @@ storiesOf(components('ScrollGradient'), module)
         style={style}
         className={className}
       >
-        Content fits completely within content area, so neither scrollbar nor
+        <p>Content fits completely within content area, so neither scrollbar nor
         scroll gradients are necessary.
+        </p>
       </ScrollGradient>
     ),
     {
@@ -107,13 +108,14 @@ storiesOf(components('ScrollGradient'), module)
       className={className}
     >
       <p>Content before the scrollable element.</p>
+
       <ScrollGradient
         color={color('child color (color)', gradientColor)}
-
-        style={{ boxShadow: '0 0 0 1px currentColor', height: '6rem', margin: '1rem 0'}}
+        style={{ height: '6rem', margin: '1rem 0'}}
       >
-        Does not need to scroll.
+        <p>Does not need to scroll so does not have a gradient.</p>
       </ScrollGradient>
+
       <p>Content after the scrollable element.</p>
 
       {children}
@@ -122,7 +124,7 @@ storiesOf(components('ScrollGradient'), module)
   {
     info: {
       text: `
-      This component does not render gradients if the content can fit completely within the allowed area.
+      This story demonstrates that the scroll gradient state of a parent does not affect the scroll state of a child scroll gradient.
     `,
     },
   });
