@@ -11,7 +11,6 @@ import { StatusStep } from '../../../..';
 import { STATUS } from '../StatusStep';
 
 describe('StatusStep', () => {
-  // eslint-disable-next-line compat/compat
   Object.values(STATUS).forEach(status =>
     test(`should have no Axe or DAP violations when \`status\` is  '${status}'`, async () => {
       const main = document.createElement('main');
