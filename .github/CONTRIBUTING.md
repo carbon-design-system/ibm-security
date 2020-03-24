@@ -112,7 +112,7 @@ Legacy tests are written in
 is covered by looking at `coverage/lcov-report/*/index.html` after
 running test.
 
-## 7. Make a pull request
+## 8. Make a pull request
 
 **Note:** Before you make a pull request,
 [search the issues](https://github.com/carbon-design-system/ibm-security/issues) to see if a similar issue has already been submitted. If a similar issue has been submitted, assign yourself or ask to be assigned to the issue by posting a comment. If the issue does not exist, create a new issue.
