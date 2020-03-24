@@ -13,6 +13,7 @@ import {
   TypeLayoutBody,
   TypeLayoutRow,
   TypeLayoutCell,
+  CodeSnippet,
 } from '../..';
 
 import rows from './_mocks_';
@@ -29,7 +30,9 @@ storiesOf(components('TypeLayout'), module)
               <TypeLayoutCell>{title}</TypeLayoutCell>
               <TypeLayoutCell>
                 <ul>
-                  <li>{description}</li>
+                  <li>
+                    <CodeSnippet type="multi">{description}</CodeSnippet>
+                  </li>
                 </ul>
               </TypeLayoutCell>
             </TypeLayoutRow>

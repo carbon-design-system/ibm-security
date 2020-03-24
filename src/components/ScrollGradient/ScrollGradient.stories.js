@@ -98,4 +98,31 @@ storiesOf(components('ScrollGradient'), module)
       `,
       },
     }
-  );
+  )
+  .add('with internal gradients',
+  () => (
+    <ScrollGradient
+      color={color('color', gradientColor)}
+      style={style}
+      className={className}
+    >
+      <p>Content before the scrollable element.</p>
+      <ScrollGradient
+        color={color('child color (color)', gradientColor)}
+
+        style={{ boxShadow: '0 0 0 1px currentColor', height: '6rem', margin: '1rem 0'}}
+      >
+        Does not need to scroll.
+      </ScrollGradient>
+      <p>Content after the scrollable element.</p>
+
+      {children}
+    </ScrollGradient>
+  ),
+  {
+    info: {
+      text: `
+      This component does not render gradients if the content can fit completely within the allowed area.
+    `,
+    },
+  });
