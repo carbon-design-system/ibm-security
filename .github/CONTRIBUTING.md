@@ -136,7 +136,7 @@ of change you're submitting.
 - Pull requests with **non-breaking changes** like patches and minor updates use the `dev` branch as the base branch
 - Pull requests with **breaking changes** use the latest major version number branch as the base branch (i.e. `2.x` or whatever the next major version is)
 
-## 8. Updating a pull request
+## 9. Updating a pull request
 
 Stay up to date with the activity in your pull request. Maintainers will be reviewing your work and making comments, asking
 questions, and suggesting changes to be made before they merge your code.
