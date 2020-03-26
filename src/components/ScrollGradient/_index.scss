@@ -72,14 +72,14 @@
 
   &--initial,
   &--started {
-    #{$block}__after {
+    > #{$block}__after {
       opacity: 1;
     }
   }
 
   &--end,
   &--started {
-    #{$block}__before {
+    > #{$block}__before {
       opacity: 1;
     }
   }
