@@ -1,5 +1,5 @@
 /**
- * @file Grid templates entry point.
+ * @file Details page template 1 entry point.
  * @copyright IBM Security 2020
  */
 

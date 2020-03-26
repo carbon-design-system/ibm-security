@@ -241,10 +241,10 @@ export {
 export TabContent from 'carbon-components-react/lib/components/TabContent';
 
 export {
-  DetailsPage1,
-  DetailsPage1Main,
-  DetailsPage1Section,
-  DetailsPage1SectionTerm,
-  DetailsPage1SectionDefinition,
-  DetailsPage1Aside,
+  UNSTABLE__DetailsPage1,
+  UNSTABLE__DetailsPage1Main,
+  UNSTABLE__DetailsPage1Section,
+  UNSTABLE__DetailsPage1SectionTerm,
+  UNSTABLE__DetailsPage1SectionDefinition,
+  UNSTABLE__DetailsPage1Aside,
 } from './components/LayoutTemplates';

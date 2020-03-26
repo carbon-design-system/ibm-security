@@ -11128,6 +11128,90 @@ Map {
       },
     },
   },
+  "UNSTABLE__DetailsPage1" => Object {
+    "defaultProps": Object {
+      "children": undefined,
+      "className": undefined,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+    },
+  },
+  "UNSTABLE__DetailsPage1Aside" => Object {
+    "defaultProps": Object {
+      "children": undefined,
+      "className": undefined,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+    },
+  },
+  "UNSTABLE__DetailsPage1Main" => Object {
+    "defaultProps": Object {
+      "children": undefined,
+      "className": undefined,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+    },
+  },
+  "UNSTABLE__DetailsPage1Section" => Object {
+    "defaultProps": Object {
+      "children": undefined,
+      "className": undefined,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+    },
+  },
+  "UNSTABLE__DetailsPage1SectionDefinition" => Object {
+    "defaultProps": Object {
+      "children": undefined,
+      "className": undefined,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+    },
+  },
+  "UNSTABLE__DetailsPage1SectionTerm" => Object {
+    "defaultProps": Object {
+      "children": undefined,
+      "className": undefined,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+    },
+  },
   "UNSTABLE__Pagination" => Object {
     "defaultProps": Object {
       "backwardText": "Previous page",
