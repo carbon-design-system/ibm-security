@@ -23,13 +23,13 @@ function DetailsPage1Main({ children, className, ...other }) {
 }
 
 DetailsPage1Main.propTypes = {
-  children: undefined,
-  className: undefined,
+  children: node,
+  className: string,
 };
 
 DetailsPage1Main.defaultProps = {
-  children: node,
-  className: string,
+  children: undefined,
+  className: undefined,
 };
 
 function DetailsPage1Section({ children, className, ...other }) {
@@ -42,13 +42,13 @@ function DetailsPage1Section({ children, className, ...other }) {
 }
 
 DetailsPage1Section.propTypes = {
-  children: undefined,
-  className: undefined,
+  children: node,
+  className: string,
 };
 
 DetailsPage1Section.defaultProps = {
-  children: node,
-  className: string,
+  children: undefined,
+  className: undefined,
 };
 
 function DetailsPage1SectionTerm({ children, className, ...other }) {
@@ -61,13 +61,13 @@ function DetailsPage1SectionTerm({ children, className, ...other }) {
 }
 
 DetailsPage1SectionTerm.propTypes = {
-  children: undefined,
-  className: undefined,
+  children: node,
+  className: string,
 };
 
 DetailsPage1SectionTerm.defaultProps = {
-  children: node,
-  className: string,
+  children: undefined,
+  className: undefined,
 };
 
 function DetailsPage1SectionDefinition({ children, className, ...other }) {
@@ -80,23 +80,23 @@ function DetailsPage1SectionDefinition({ children, className, ...other }) {
 }
 
 DetailsPage1SectionDefinition.propTypes = {
-  children: undefined,
-  className: undefined,
+  children: node,
+  className: string,
 };
 
 DetailsPage1SectionDefinition.defaultProps = {
-  children: node,
-  className: string,
-};
-
-DetailsPage1Section.propTypes = {
   children: undefined,
   className: undefined,
 };
 
-DetailsPage1Section.defaultProps = {
+DetailsPage1Section.propTypes = {
   children: node,
   className: string,
+};
+
+DetailsPage1Section.defaultProps = {
+  children: undefined,
+  className: undefined,
 };
 
 function DetailsPage1Aside({ children, className, ...other }) {
@@ -109,13 +109,13 @@ function DetailsPage1Aside({ children, className, ...other }) {
 }
 
 DetailsPage1Aside.propTypes = {
-  children: undefined,
-  className: undefined,
+  children: node,
+  className: string,
 };
 
 DetailsPage1Aside.defaultProps = {
-  children: node,
-  className: string,
+  children: undefined,
+  className: undefined,
 };
 
 function DetailsPage1({ children, className, ...other }) {
@@ -128,13 +128,13 @@ function DetailsPage1({ children, className, ...other }) {
 }
 
 DetailsPage1.propTypes = {
-  children: undefined,
-  className: undefined,
+  children: node,
+  className: string,
 };
 
 DetailsPage1.defaultProps = {
-  children: node,
-  className: string,
+  children: undefined,
+  className: undefined,
 };
 
 export {
