@@ -16,7 +16,7 @@ const stepNamespace = getComponentNamespace('step');
 const Step = props => {
   const classes = classnames(stepNamespace, props.className);
 
-  // Filtering out unwanted props.
+  // Filtering props.
   const stepProps = {
     className: classes,
     current: props.current,

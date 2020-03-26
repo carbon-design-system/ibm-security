@@ -1,12 +1,14 @@
 /**
  * @file Step indicator tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019-2020
  */
 
 import React from 'react';
 import { render } from '@testing-library/react';
 
 import { Step, StepIndicator } from '../../..';
+
+import { carbonPrefix } from '../../../globals/namespace';
 
 describe('StepIndicator', () => {
   test('should have no Axe or DAP violations', async () => {
@@ -26,8 +28,8 @@ describe('StepIndicator', () => {
   });
 
   test('should add a custom class to the parent component', () => {
-    const { container } = render(<StepIndicator className="custom-class" />);
-    expect(container.firstElementChild).toHaveClass('custom-class');
+    render(<StepIndicator className="custom-class" />);
+    expect(document.querySelector('.custom-class')).toBeVisible();
   });
 
   test('should add a custom class to the child step component', () => {
@@ -43,7 +45,7 @@ describe('StepIndicator', () => {
 
   test('should pass through extra prop to parent component via spread attriute', () => {
     const { queryByTestId } = render(<StepIndicator data-testid="test-id" />);
-    expect(queryByTestId('test-id')).toBeInTheDocument();
+    expect(queryByTestId('test-id')).toBeVisible();
   });
 
   test('should render even when `currentIndex` is `null`', () => {
@@ -53,5 +55,18 @@ describe('StepIndicator', () => {
       </StepIndicator>
     );
     expect(queryByText(/test label/i)).toBeVisible();
+  });
+
+  test('should apply `current={true}` to the child identified with `currentIndex` value', () => {
+    const { queryByText } = render(
+      <StepIndicator currentIndex={1}>
+        <Step label="test label 1" />
+        <Step label="test label 2" />
+      </StepIndicator>
+    );
+    // A step with `current={true}` will recieve a specific class:
+    expect(queryByText('test label 2').closest('li')).toHaveClass(
+      `${carbonPrefix}progress-step--current`
+    );
   });
 });
