@@ -7,120 +7,11 @@ import classnames from 'classnames';
 import { string, node } from 'prop-types';
 import React from 'react';
 
-import { Column, Grid, Row } from 'carbon-components-react/lib/components/Grid';
+import { Grid, Row } from 'carbon-components-react/lib/components/Grid';
 
 import { getComponentNamespace } from '../../../globals/namespace';
 
-const namespace = getComponentNamespace('details-page-1');
-
-function UNSTABLE__DetailsPage1Main({ children, className, ...other }) {
-  const classes = classnames(`${namespace}__main`, className);
-  return (
-    <Column lg={16} className={classes} {...other}>
-      {children}
-    </Column>
-  );
-}
-
-UNSTABLE__DetailsPage1Main.propTypes = {
-  children: node,
-  className: string,
-};
-
-UNSTABLE__DetailsPage1Main.defaultProps = {
-  children: undefined,
-  className: undefined,
-};
-
-function UNSTABLE__DetailsPage1Section({ children, className, ...other }) {
-  const classes = classnames(`${namespace}__section`, className);
-  return (
-    <Column sm={4} md={8} lg={6} className={classes} {...other}>
-      {children}
-    </Column>
-  );
-}
-
-UNSTABLE__DetailsPage1Section.propTypes = {
-  children: node,
-  className: string,
-};
-
-UNSTABLE__DetailsPage1Section.defaultProps = {
-  children: undefined,
-  className: undefined,
-};
-
-function UNSTABLE__DetailsPage1SectionTerm({ children, className, ...other }) {
-  const classes = classnames(`${namespace}__section__term`, className);
-  return (
-    <div className={classes} {...other}>
-      {children}
-    </div>
-  );
-}
-
-UNSTABLE__DetailsPage1SectionTerm.propTypes = {
-  children: node,
-  className: string,
-};
-
-UNSTABLE__DetailsPage1SectionTerm.defaultProps = {
-  children: undefined,
-  className: undefined,
-};
-
-function UNSTABLE__DetailsPage1SectionDefinition({
-  children,
-  className,
-  ...other
-}) {
-  const classes = classnames(`${namespace}__section__definition`, className);
-  return (
-    <div className={classes} {...other}>
-      {children}
-    </div>
-  );
-}
-
-UNSTABLE__DetailsPage1SectionDefinition.propTypes = {
-  children: node,
-  className: string,
-};
-
-UNSTABLE__DetailsPage1SectionDefinition.defaultProps = {
-  children: undefined,
-  className: undefined,
-};
-
-UNSTABLE__DetailsPage1Section.propTypes = {
-  children: node,
-  className: string,
-};
-
-UNSTABLE__DetailsPage1Section.defaultProps = {
-  children: undefined,
-  className: undefined,
-};
-
-function UNSTABLE__DetailsPage1Aside({ children, className, ...other }) {
-  const classes = classnames(`${namespace}__section`, className);
-  return (
-    <Column sm={4} md={8} lg={4} className={classes} {...other}>
-      {children}
-    </Column>
-  );
-}
-
-UNSTABLE__DetailsPage1Aside.propTypes = {
-  children: node,
-  className: string,
-};
-
-UNSTABLE__DetailsPage1Aside.defaultProps = {
-  children: undefined,
-  className: undefined,
-};
+export const namespace = getComponentNamespace('details-page-1');
 
 function UNSTABLE__DetailsPage1({ children, className, ...other }) {
   const classes = classnames(namespace, className);
@@ -141,11 +32,4 @@ UNSTABLE__DetailsPage1.defaultProps = {
   className: undefined,
 };
 
-export {
-  UNSTABLE__DetailsPage1,
-  UNSTABLE__DetailsPage1Main,
-  UNSTABLE__DetailsPage1Section,
-  UNSTABLE__DetailsPage1SectionTerm,
-  UNSTABLE__DetailsPage1SectionDefinition,
-  UNSTABLE__DetailsPage1Aside,
-};
+export default UNSTABLE__DetailsPage1;
