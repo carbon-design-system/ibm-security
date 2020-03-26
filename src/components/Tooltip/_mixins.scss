@@ -6,8 +6,11 @@
 
 @import '@carbon/layout/scss/mini-unit';
 @import '@carbon/layout/scss/spacing';
+@import '@carbon/themes/scss/tokens';
+@import '@carbon/type/scss/styles';
 
-@import '../../globals/index';
+@import '../../globals/motion/index';
+@import '../../globals/rtl/index';
 
 @import '../Toolbar/mixins';
 

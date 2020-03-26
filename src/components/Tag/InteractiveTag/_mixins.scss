@@ -4,7 +4,11 @@
 /// @copyright IBM Security 2019
 ////
 
-@import '../../../globals/index';
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/layout/scss/mini-unit';
+@import '@carbon/themes/scss/tokens';
+@import '../../../globals/namespace/index';
+@import '../../../globals/motion/index';
 
 /// Name.
 /// @type String

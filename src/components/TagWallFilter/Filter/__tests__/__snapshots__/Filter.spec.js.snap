@@ -30,14 +30,12 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
 <div
   class="security--filter bx--list-box"
   id="test-id"
-  role="listbox"
-  tabindex="-1"
 >
   <div
     aria-controls="test-id__menu"
     aria-expanded="true"
     aria-haspopup="true"
-    aria-label="Close menu"
+    aria-label="close menu"
     aria-owns="test-id__menu"
     class="bx--list-box__field"
     data-toggle="true"
@@ -110,7 +108,7 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
               />
             </svg>
           </span>
@@ -146,7 +144,7 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
               />
             </svg>
           </span>
@@ -182,7 +180,7 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
               />
             </svg>
           </span>
@@ -218,7 +216,7 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
               />
             </svg>
           </span>
@@ -254,7 +252,7 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
               />
             </svg>
           </span>
@@ -290,7 +288,7 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
               />
             </svg>
           </span>
@@ -326,7 +324,7 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
               />
             </svg>
           </span>
@@ -362,7 +360,7 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
               />
             </svg>
           </span>
@@ -398,7 +396,7 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
               />
             </svg>
           </span>
@@ -434,7 +432,7 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
               />
             </svg>
           </span>
@@ -470,7 +468,7 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
               />
             </svg>
           </span>

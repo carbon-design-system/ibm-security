@@ -4,8 +4,28 @@
 /// @copyright IBM Security 2019
 ////
 
-@import 'mixins';
+@import '@carbon/layout/scss/mini-unit';
+@import '@carbon/themes/scss/tokens';
+
+@import 'carbon-components/scss/globals/scss/vars';
+
+@import '../Button/index';
+@import '../MultiSelect/index';
+@import '../Search/index';
+
+@import '../Component/mixins';
 
 @include security--component($name: search-bar) {
-  @include search-bar;
+  display: flex;
+
+  &__scopes.#{$prefix}--list-box {
+    flex: 0 0 carbon--mini-units(28);
+    border: 0;
+
+    &,
+    .#{$prefix}--list-box__field {
+      height: 100%;
+      max-height: unset;
+    }
+  }
 }

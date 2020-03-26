@@ -51,7 +51,7 @@
 | `selected-ui`        | `cool-gray-20`    | `gray-80`         |
 | `inverse-hover-ui`   | `#464c51`         | `#e5e5e5`         |
 | `hover-selected-ui`  | `#c4c9d1`         | `#4c4c4c`         |
-| `hover-danger`       | `#ba1b23`         | `#ba1b23`         |
+| `hover-danger`       | `#b81921`         | `#b81921`         |
 | `active-danger`      | `red-80`          | `red-80`          |
 | `hover-row`          | `#e0e4ea`         | `#353535`         |
 | `visited-link`       | `purple-60`       | `purple-40`       |
