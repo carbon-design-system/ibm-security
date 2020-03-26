@@ -32,17 +32,6 @@ describe('StepIndicator', () => {
     expect(document.querySelector('.custom-class')).toBeVisible();
   });
 
-  test('should add a custom class to the child step component', () => {
-    const { getByText } = render(
-      <StepIndicator>
-        <Step label="test label" className="custom-step-class" />
-      </StepIndicator>
-    );
-    expect(getByText(/test label/i).closest('li')).toHaveClass(
-      'custom-step-class'
-    );
-  });
-
   test('should pass through extra prop to parent component via spread attriute', () => {
     const { queryByTestId } = render(<StepIndicator data-testid="test-id" />);
     expect(queryByTestId('test-id')).toBeVisible();
