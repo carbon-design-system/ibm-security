@@ -87,7 +87,9 @@ class Decorator extends Component {
           {decorator}
         </Link>
       );
-    } else if (onClick) {
+    }
+    
+    if (onClick) {
       return (
         <button className={decoratorClasses} onClick={this.handleClick}>
           {decorator}
