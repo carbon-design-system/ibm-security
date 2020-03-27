@@ -48,12 +48,31 @@
   border: unset;
   vertical-align: middle;
 
-  &:focus {
-    @include focus-outline('outline');
+  &--interactive {
+    &:hover {
+      cursor: pointer;
+      background-color: $active-ui;
+    }
+
+    &:focus {
+      @include focus-outline('outline');
+    }
+
+    &:active,
+    &:focus,
+    &:hover,
+    &:focus:active {
+      text-decoration: none;
+      box-shadow: none;
+
+      #{$root}__value {
+        text-decoration: underline;
+      }
+    }
   }
 
-  &:hover {
-    background-color: $active-ui;
+  #{$root}__value {
+    color: $text-02;
   }
 
   &--active,
@@ -74,19 +93,9 @@
     }
   }
 
-  &--button:hover {
-    cursor: pointer;
-  }
-
-  &--inert {
-    &:hover {
-      cursor: default;
-      background-color: $hover-ui;
-    }
-
-    #{$root}__value {
-      color: $text-02;
-    }
+  &--active:focus {
+    @include focus-outline('outline');
+    outline-color: $inverse-focus-ui;
   }
 
   &__icon,
@@ -120,20 +129,6 @@
       &__type,
       &__value {
         line-height: $data-decorator--inline__sizing__height;
-      }
-    }
-  }
-
-  &--link {
-    &:active,
-    &:focus,
-    &:hover,
-    &:focus:active {
-      text-decoration: none;
-      box-shadow: none;
-
-      #{$root}__value {
-        text-decoration: underline;
       }
     }
   }

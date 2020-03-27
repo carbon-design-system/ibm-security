@@ -74,10 +74,8 @@ class Decorator extends Component {
       scoreThresholds
     );
     const decoratorClasses = classnames(namespace, classes, className, {
-      [`${namespace}--link`]: href,
-      [`${namespace}--button`]: onClick,
+      [`${namespace}--interactive`]: href || onClick,
       [`${namespace}--active`]: active,
-      [`${namespace}--inert`]: !href && !onClick,
       [`${namespace}--inline`]: inline,
     });
 
@@ -88,7 +86,7 @@ class Decorator extends Component {
         </Link>
       );
     }
-    
+
     if (onClick) {
       return (
         <button className={decoratorClasses} onClick={this.handleClick}>
