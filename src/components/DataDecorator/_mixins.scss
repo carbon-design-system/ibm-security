@@ -74,6 +74,10 @@
     }
   }
 
+  &--button:hover {
+    cursor: pointer;
+  }
+
   &--inert {
     &:hover {
       cursor: default;

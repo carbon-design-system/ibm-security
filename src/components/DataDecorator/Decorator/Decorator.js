@@ -7,6 +7,8 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
+import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
+
 import { getDecoratorProps, namespace } from './constants';
 
 import Icon from '../../Icon';
@@ -55,38 +57,38 @@ class Decorator extends Component {
     const {
       active,
       className,
-      inert,
+      href,
       inline,
       noIcon,
+      onClick,
       score,
       scoreThresholds,
     } = this.props;
     const { path, classes } = getDecoratorProps(score, scoreThresholds, active);
     const decorator = this.renderDecorator(noIcon, path, inline);
     const decoratorClasses = classnames(namespace, classes, className, {
-      [`${namespace}--link`]: this.props.href && !inert,
-      [`${namespace}--active`]: this.props.active && !inert,
-      [`${namespace}--inert`]: this.props.inert,
-      [`${namespace}--inline`]: this.props.inline,
+      [`${namespace}--link`]: href,
+      [`${namespace}--button`]: onClick,
+      [`${namespace}--active`]: active,
+      [`${namespace}--inert`]: !href && !onClick,
+      [`${namespace}--inline`]: inline,
     });
 
-    if (this.props.href && !inert) {
+    if (href) {
       return (
-        <Link href={this.props.href} className={decoratorClasses} tabIndex={0}>
+        <Link href={href} className={decoratorClasses} tabIndex={0}>
           {decorator}
         </Link>
       );
+    } else if (onClick) {
+      return (
+        <button className={decoratorClasses} onClick={this.handleClick}>
+          {decorator}
+        </button>
+      );
     }
 
-    if (inert) {
-      return <span className={decoratorClasses}>{decorator}</span>;
-    }
-
-    return (
-      <button className={decoratorClasses} onClick={this.handleClick}>
-        {decorator}
-      </button>
-    );
+    return <span className={decoratorClasses}>{decorator}</span>;
   }
 }
 
@@ -101,7 +103,11 @@ Decorator.propTypes = {
   href: PropTypes.string,
 
   /** @type {boolean} Whether the Decorator can be interacted with */
-  inert: PropTypes.bool,
+  // eslint-disable-next-line react/no-unused-prop-types, react/require-default-props
+  inert: deprecate(
+    PropTypes.bool,
+    `\nThe prop \`inert\` for Decorator has been deprecated. The Decorator will now be considered "inert" (non-interactive) by default. You can make a Decorator interactive by adding an \`href\` or \`onClick\` prop.`
+  ),
 
   /** @type {boolean} Whether the Decorator should be treated and styled as an inline element. */
   inline: PropTypes.bool,
@@ -143,9 +149,8 @@ Decorator.defaultProps = {
   active: false,
   className: '',
   href: undefined,
-  inert: false,
   inline: false,
-  onClick: () => {},
+  onClick: undefined,
   noIcon: false,
   score: undefined,
   scoreThresholds: [0, 4, 7, 10],
