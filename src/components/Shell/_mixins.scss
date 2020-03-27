@@ -8,6 +8,7 @@
 @import '@carbon/layout/scss/spacing';
 @import '@carbon/themes/scss/tokens';
 @import '@carbon/type/scss/styles';
+
 @import 'carbon-components/scss/globals/scss/helper-mixins';
 @import 'carbon-components/scss/globals/scss/layout';
 
@@ -103,21 +104,21 @@
   &__skip-to-content {
     display: flex;
     position: relative;
-    height: 0;
     justify-content: center;
 
     &__link {
       @include hidden;
 
-      margin-top: $header__spacing__padding;
-      margin-left: -$toolbar__sizing__width;
       transition: unset;
-      z-index: z($layer: floating);
 
       &:focus {
         width: auto;
         padding: $button-padding;
+        margin-top: $header__spacing__padding;
+        margin-left: -$toolbar__sizing__width;
+        border: $button-border-width solid;
         clip: auto;
+        z-index: z($layer: floating);
       }
     }
   }
