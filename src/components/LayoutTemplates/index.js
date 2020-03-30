@@ -4,6 +4,14 @@
  */
 
 export {
+  UNSTABLE__CardLayout,
+  UNSTABLE__CardLayoutRow,
+  UNSTABLE__CardLayoutColumn,
+  UNSTABLE__CardLayoutAside,
+  UNSTABLE__CardLayoutMain,
+} from './UNSTABLE__CardLayout';
+
+export {
   UNSTABLE__DetailsPage1,
   UNSTABLE__DetailsPage1Main,
   UNSTABLE__DetailsPage1Section,

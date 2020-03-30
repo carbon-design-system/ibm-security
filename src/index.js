@@ -241,6 +241,12 @@ export {
 export TabContent from 'carbon-components-react/lib/components/TabContent';
 
 export {
+  UNSTABLE__CardLayout,
+  UNSTABLE__CardLayoutRow,
+  UNSTABLE__CardLayoutColumn,
+  UNSTABLE__CardLayoutAside,
+  UNSTABLE__CardLayoutMain,
+  UNSTABLE__DetailsPage1,
   UNSTABLE__DetailsPage1Main,
   UNSTABLE__DetailsPage1Section,
   UNSTABLE__DetailsPage1SectionTerm,

@@ -1,0 +1,13 @@
+////
+/// Card layout styles.
+/// @group details-page-1
+/// @copyright IBM Security 2020
+////
+
+@import '../../Component/mixins';
+
+@import 'mixins';
+
+@include security--component($name: card-layout) {
+  @include card-layout;
+}
