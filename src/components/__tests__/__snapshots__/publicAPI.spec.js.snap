@@ -11128,6 +11128,101 @@ Map {
       },
     },
   },
+  "UNSTABLE__CardLayout" => Object {
+    "defaultProps": Object {
+      "children": undefined,
+      "className": undefined,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+    },
+  },
+  "UNSTABLE__CardLayoutAside" => Object {
+    "defaultProps": Object {
+      "children": undefined,
+      "className": undefined,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+    },
+  },
+  "UNSTABLE__CardLayoutColumn" => Object {
+    "defaultProps": Object {
+      "children": undefined,
+      "className": undefined,
+      "size": "sm",
+    },
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+      "size": Object {
+        "args": Array [
+          Array [
+            "sm",
+            "md",
+            "lg",
+          ],
+        ],
+        "type": "oneOf",
+      },
+    },
+  },
+  "UNSTABLE__CardLayoutMain" => Object {
+    "defaultProps": Object {
+      "children": undefined,
+      "className": undefined,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+    },
+  },
+  "UNSTABLE__CardLayoutRow" => Object {
+    "defaultProps": Object {
+      "children": undefined,
+      "className": undefined,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+    },
+  },
+  "UNSTABLE__DetailsPage1" => Object {
+    "defaultProps": Object {
+      "children": undefined,
+      "className": undefined,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+    },
+  },
   "UNSTABLE__DetailsPage1Aside" => Object {
     "defaultProps": Object {
       "children": undefined,

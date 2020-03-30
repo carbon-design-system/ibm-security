@@ -19,14 +19,18 @@ function UNSTABLE__CardLayoutColumn({ children, className, size, ...other }) {
   );
 
   let column;
-  if (size === 'md') {
-    column = 8;
-  } else if (size === 'lg') {
-    column = 12;
-  } else if (size === 'xl') {
-    column = 16;
-  } else {
-    column = 4;
+  switch (size) {
+    case 'md':
+      column = 8;
+      break;
+    case 'lg':
+      column = 12;
+      break;
+    case 'xl':
+      column = 16;
+      break;
+    default:
+      column = 4;
   }
 
   return (
