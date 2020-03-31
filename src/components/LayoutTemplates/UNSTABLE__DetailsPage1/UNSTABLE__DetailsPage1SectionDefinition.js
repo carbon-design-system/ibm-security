@@ -23,7 +23,10 @@ function UNSTABLE__DetailsPage1SectionDefinition({
 }
 
 UNSTABLE__DetailsPage1SectionDefinition.propTypes = {
+  /** Component content. */
   children: node,
+
+  /** Extra classes to add. */
   className: string,
 };
 

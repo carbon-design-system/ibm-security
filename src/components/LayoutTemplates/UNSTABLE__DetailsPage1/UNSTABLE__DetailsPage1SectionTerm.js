@@ -19,7 +19,10 @@ function UNSTABLE__DetailsPage1SectionTerm({ children, className, ...other }) {
 }
 
 UNSTABLE__DetailsPage1SectionTerm.propTypes = {
+  /** Component content. */
   children: node,
+
+  /** Extra classes to add. */
   className: string,
 };
 

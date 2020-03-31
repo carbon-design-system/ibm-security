@@ -23,7 +23,10 @@ function UNSTABLE__DetailsPage1({ children, className, ...other }) {
 }
 
 UNSTABLE__DetailsPage1.propTypes = {
+  /** Component content. */
   children: node,
+
+  /** Extra classes to add. */
   className: string,
 };
 
