@@ -17,7 +17,6 @@
 | `text-03`            | `cool-gray-40`    | `gray-60`         |
 | `text-04`            | `white-0`         | `white-0`         |
 | `text-05`            | `cool-gray-60`    | `gray-50`         |
-| `text-error`         | `red-60`          | `red-40`          |
 | `icon-01`            | `cool-gray-100`   | `gray-10`         |
 | `icon-02`            | `cool-gray-70`    | `gray-30`         |
 | `icon-03`            | `white-0`         | `white-0`         |
@@ -51,7 +50,7 @@
 | `selected-ui`        | `cool-gray-20`    | `gray-80`         |
 | `inverse-hover-ui`   | `#464c51`         | `#e5e5e5`         |
 | `hover-selected-ui`  | `#c4c9d1`         | `#4c4c4c`         |
-| `hover-danger`       | `#b81921`         | `#b81921`         |
+| `hover-danger`       | `#ba1b23`         | `#ba1b23`         |
 | `active-danger`      | `red-80`          | `red-80`          |
 | `hover-row`          | `#e0e4ea`         | `#353535`         |
 | `visited-link`       | `purple-60`       | `purple-40`       |
