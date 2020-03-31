@@ -106,7 +106,7 @@
     justify-content: center;
 
     &__link.#{$prefix}--skip-to-content:focus {
-      position: relative;
+      left: auto;
       border-color: $focus;
       background-color: $interactive-01;
       margin-top: $header__spacing__padding;
