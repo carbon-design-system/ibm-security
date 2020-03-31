@@ -11128,6 +11128,20 @@ Map {
       },
     },
   },
+  "UNSTABLE__DetailsPage1" => Object {
+    "defaultProps": Object {
+      "children": undefined,
+      "className": undefined,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+    },
+  },
   "UNSTABLE__DetailsPage1Aside" => Object {
     "defaultProps": Object {
       "children": undefined,
