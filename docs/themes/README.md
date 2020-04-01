@@ -52,6 +52,16 @@ $interactive-01;
 $interactive-02;
 ```
 
+#### Feature flags
+
+You can disable the CSS custom property and theme output using a feature flag by writing the following Sass code before importing:
+
+```scss
+$security--feature-flags: (
+  enable-css-custom-properties: false,
+);
+```
+
 ### JavaScript
 
 If you're looking to use themes in JavaScript, we export a binding for you to use:
