@@ -42,7 +42,7 @@ storiesOf(components('Decorator'), module)
   ))
   .add('Inline', () => (
     <p className="bx--type-body-long-01">
-      This is an inline decorator <Decorator {...storyProps()} inline /> that
+      This is an inline Decorator <Decorator {...storyProps()} inline /> that
       appears alongside some text.
     </p>
   ))
