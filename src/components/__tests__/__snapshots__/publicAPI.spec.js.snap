@@ -2097,10 +2097,9 @@ Map {
       "active": false,
       "className": "",
       "href": undefined,
-      "inert": false,
       "inline": false,
       "noIcon": false,
-      "onClick": [Function],
+      "onClick": undefined,
       "score": undefined,
       "scoreDescription": [Function],
       "scoreThresholds": Array [
@@ -2121,9 +2120,7 @@ Map {
       "href": Object {
         "type": "string",
       },
-      "inert": Object {
-        "type": "bool",
-      },
+      "inert": [Function],
       "inline": Object {
         "type": "bool",
       },

@@ -102,6 +102,11 @@ describe('Decorator', () => {
     expect(getByText(/10.0.0.0/i).closest('a')).toHaveAttribute('href', '#');
   });
 
+  test('should render as a `span` by default', () => {
+    const { container } = render(<Decorator type="IP" value="10.0.0.0" />);
+    expect(container.firstElementChild.nodeName).toBe('SPAN');
+  });
+
   test('should render as an `a` element when an `href` is provided', () => {
     const { container } = render(
       <Decorator type="IP" value="10.0.0.0" href="#" />
@@ -109,23 +114,11 @@ describe('Decorator', () => {
     expect(container.firstElementChild.nodeName).toBe('A');
   });
 
-  test('should render as a `span` when `inert` prop is `true`', () => {
+  test('should render as a `button` when `onClick` is provided', () => {
     const { container } = render(
-      <Decorator type="IP" value="10.0.0.0" inert />
+      <Decorator type="IP" value="10.0.0.0" onClick={() => {}} />
     );
-    expect(container.firstElementChild.nodeName).toBe('SPAN');
-  });
-
-  test('should render as a `button` by default without `inert` or an `href` value', () => {
-    const { container } = render(<Decorator type="IP" value="10.0.0.0" />);
     expect(container.firstElementChild.nodeName).toBe('BUTTON');
-  });
-
-  test('should apply correct inert class when `inert` is set `true`', () => {
-    const { container } = render(
-      <Decorator type="IP" value="10.0.0.0" inert />
-    );
-    expect(container.firstElementChild).toHaveClass(`${namespace}--inert`);
   });
 
   test('should apply correct active class when `active` is set `true`', () => {

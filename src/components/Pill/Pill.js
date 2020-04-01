@@ -24,7 +24,6 @@ const Pill = ({ className, inline, type, value }) => {
   return (
     <Decorator
       className={classes}
-      inert
       inline={inline}
       noIcon
       type={type}
