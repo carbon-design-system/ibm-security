@@ -101,24 +101,16 @@
   }
 
   &__skip-to-content {
-    display: flex;
     position: relative;
-    height: 0;
+    display: flex;
     justify-content: center;
 
-    &__link {
-      @include hidden;
-
+    &__link.#{$prefix}--skip-to-content:focus {
+      left: auto;
+      border-color: $focus;
+      background-color: $interactive-01;
       margin-top: $header__spacing__padding;
-      margin-left: -$toolbar__sizing__width;
-      transition: unset;
-      z-index: z($layer: floating);
-
-      &:focus {
-        width: auto;
-        padding: $button-padding;
-        clip: auto;
-      }
+      color: $text-04;
     }
   }
 }
