@@ -21,16 +21,6 @@
     border-bottom-width: 0;
   }
 
-  &__list {
-    width: calc(100% + #{$filter-panel-accordion-item__spacing__padding / 2});
-    padding-left: 0;
-  }
-
-  &__scroller {
-    @include transition($transition-property: height);
-    padding-right: $filter-panel-accordion-item__spacing__padding;
-  }
-
   &__count {
     @include carbon--type-style($name: caption-01);
   }
@@ -77,47 +67,5 @@
 
   &#{$carbon--accordion}__item--active > #{$carbon--accordion}__heading {
     color: $text-01;
-  }
-
-  &__button--toggle {
-    /// Button padding.
-    /// @type Length
-    $filter-panel-accordion-item__button__spacing__padding: $carbon--spacing-02;
-
-    position: relative;
-    left: -$filter-panel-accordion-item__button__spacing__padding;
-    width: 100%;
-    min-height: auto;
-    padding: $filter-panel-accordion-item__button__spacing__padding;
-    justify-content: start;
-
-    /// Carbon button selector.
-    /// @type Length
-    $carbon--button: '.#{$prefix}--btn';
-
-    &#{$carbon--button} {
-      /// Carbon button icon selector.
-      /// @type Length
-      $carbon--button__icon: '#{$carbon--button}__icon';
-
-      &,
-      &:active,
-      &:hover {
-        color: $text-02;
-      }
-
-      &,
-      &:hover {
-        > #{$carbon--button__icon} {
-          fill: currentColor;
-        }
-      }
-
-      > #{$carbon--button__icon} {
-        margin-right: $carbon--spacing-03;
-        margin-left: 0;
-        order: -1;
-      }
-    }
   }
 }
