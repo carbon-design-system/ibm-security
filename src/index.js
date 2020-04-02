@@ -212,6 +212,7 @@ export Tooltip from './components/Tooltip';
 export TooltipDefintion from './components/TooltipDefinition';
 export Transition from './components/Transition';
 export TrendingCard from './components/TrendingCard';
+export TruncatedList from './components/TruncatedList';
 
 export {
   TypeLayout,

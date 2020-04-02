@@ -2814,7 +2814,6 @@ Map {
       "count": undefined,
       "countLabel": [Function],
       "expandLabel": "expandLabel",
-      "open": false,
       "scrollGradientColor": "var(--ui-background, #161616)",
       "title": "title",
     },
@@ -2836,9 +2835,6 @@ Map {
       },
       "expandLabel": Object {
         "type": "string",
-      },
-      "open": Object {
-        "type": "bool",
       },
       "scrollGradientColor": Object {
         "type": "string",
@@ -11051,6 +11047,58 @@ Map {
       "title": Object {
         "isRequired": true,
         "type": "string",
+      },
+    },
+  },
+  "TruncatedList" => Object {
+    "defaultProps": Object {
+      "as": "ul",
+      "children": undefined,
+      "className": undefined,
+      "collapseLabel": "collapseLabel",
+      "collapsedItemLimit": 5,
+      "expandLabel": "expandLabel",
+      "expandedItemLimit": 10,
+      "scrollGradientColor": "var(--ui-background, #161616)",
+      "truncateThreshold": 10,
+    },
+    "propTypes": Object {
+      "as": Object {
+        "args": Array [
+          Array [
+            Object {
+              "type": "elementType",
+            },
+            Object {
+              "type": "string",
+            },
+          ],
+        ],
+        "type": "oneOfType",
+      },
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+      "collapseLabel": Object {
+        "type": "string",
+      },
+      "collapsedItemLimit": Object {
+        "type": "number",
+      },
+      "expandLabel": Object {
+        "type": "string",
+      },
+      "expandedItemLimit": Object {
+        "type": "number",
+      },
+      "scrollGradientColor": Object {
+        "type": "string",
+      },
+      "truncateThreshold": Object {
+        "type": "number",
       },
     },
   },

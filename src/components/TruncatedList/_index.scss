@@ -1,0 +1,19 @@
+////
+/// Truncated list styles.
+/// @group list-truncator
+/// @copyright IBM Security 2020
+////
+
+@import '@carbon/layout/scss/spacing';
+
+@import '../Component/mixins';
+
+@include security--component($name: truncated-list) {
+  &__scroller {
+    @include transition($transition-property: height);
+  }
+
+  &__button--toggle {
+    width: 100%;
+  }
+}
