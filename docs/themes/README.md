@@ -58,7 +58,7 @@ You can disable the CSS custom property and theme output using a feature flag by
 
 ```scss
 $security--feature-flags: (
-  enable-css-custom-properties: false,
+  themes: false,
 );
 ```
 
