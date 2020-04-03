@@ -530,6 +530,159 @@ Map {
       },
     },
   },
+  "Column" => Object {
+    "propTypes": Object {
+      "as": Object {
+        "args": Array [
+          Array [
+            Object {
+              "type": "string",
+            },
+            Object {
+              "type": "elementType",
+            },
+          ],
+        ],
+        "type": "oneOfType",
+      },
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+      "lg": Object {
+        "args": Array [
+          Array [
+            Object {
+              "type": "bool",
+            },
+            Object {
+              "type": "number",
+            },
+            Object {
+              "args": Array [
+                Object {
+                  "offset": Object {
+                    "type": "number",
+                  },
+                  "span": Object {
+                    "type": "number",
+                  },
+                },
+              ],
+              "type": "shape",
+            },
+          ],
+        ],
+        "type": "oneOfType",
+      },
+      "max": Object {
+        "args": Array [
+          Array [
+            Object {
+              "type": "bool",
+            },
+            Object {
+              "type": "number",
+            },
+            Object {
+              "args": Array [
+                Object {
+                  "offset": Object {
+                    "type": "number",
+                  },
+                  "span": Object {
+                    "type": "number",
+                  },
+                },
+              ],
+              "type": "shape",
+            },
+          ],
+        ],
+        "type": "oneOfType",
+      },
+      "md": Object {
+        "args": Array [
+          Array [
+            Object {
+              "type": "bool",
+            },
+            Object {
+              "type": "number",
+            },
+            Object {
+              "args": Array [
+                Object {
+                  "offset": Object {
+                    "type": "number",
+                  },
+                  "span": Object {
+                    "type": "number",
+                  },
+                },
+              ],
+              "type": "shape",
+            },
+          ],
+        ],
+        "type": "oneOfType",
+      },
+      "sm": Object {
+        "args": Array [
+          Array [
+            Object {
+              "type": "bool",
+            },
+            Object {
+              "type": "number",
+            },
+            Object {
+              "args": Array [
+                Object {
+                  "offset": Object {
+                    "type": "number",
+                  },
+                  "span": Object {
+                    "type": "number",
+                  },
+                },
+              ],
+              "type": "shape",
+            },
+          ],
+        ],
+        "type": "oneOfType",
+      },
+      "xlg": Object {
+        "args": Array [
+          Array [
+            Object {
+              "type": "bool",
+            },
+            Object {
+              "type": "number",
+            },
+            Object {
+              "args": Array [
+                Object {
+                  "offset": Object {
+                    "type": "number",
+                  },
+                  "span": Object {
+                    "type": "number",
+                  },
+                },
+              ],
+              "type": "shape",
+            },
+          ],
+        ],
+        "type": "oneOfType",
+      },
+    },
+  },
   "ComboBox" => Object {
     "defaultProps": Object {
       "ariaLabel": "Choose an item",
@@ -821,6 +974,42 @@ Map {
       },
     },
   },
+  "ComposedModal" => Object {
+    "defaultProps": Object {
+      "onKeyDown": [Function],
+      "selectorPrimaryFocus": "[data-modal-primary-focus]",
+    },
+    "propTypes": Object {
+      "className": Object {
+        "type": "string",
+      },
+      "containerClassName": Object {
+        "type": "string",
+      },
+      "onClose": Object {
+        "type": "func",
+      },
+      "onKeyDown": Object {
+        "type": "func",
+      },
+      "open": Object {
+        "type": "bool",
+      },
+      "selectorPrimaryFocus": Object {
+        "type": "string",
+      },
+      "size": Object {
+        "args": Array [
+          Array [
+            "xs",
+            "sm",
+            "lg",
+          ],
+        ],
+        "type": "oneOf",
+      },
+    },
+  },
   "Content" => Object {
     "defaultProps": Object {
       "tagName": "main",
@@ -857,6 +1046,30 @@ Map {
       },
     },
   },
+  "Copy" => Object {
+    "defaultProps": Object {
+      "feedback": "Copied!",
+      "feedbackTimeout": 2000,
+      "onClick": [Function],
+    },
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+      "feedback": Object {
+        "type": "string",
+      },
+      "feedbackTimeout": Object {
+        "type": "number",
+      },
+      "onClick": Object {
+        "type": "func",
+      },
+    },
+  },
   "CopyButton" => Object {
     "defaultProps": Object {
       "feedback": "Copied!",
@@ -882,6 +1095,7 @@ Map {
       },
     },
   },
+  "DangerButton" => Object {},
   "DataDecorator" => Object {
     "defaultProps": Object {
       "children": undefined,
@@ -2097,10 +2311,9 @@ Map {
       "active": false,
       "className": "",
       "href": undefined,
-      "inert": false,
       "inline": false,
       "noIcon": false,
-      "onClick": [Function],
+      "onClick": undefined,
       "score": undefined,
       "scoreDescription": [Function],
       "scoreThresholds": Array [
@@ -2121,9 +2334,7 @@ Map {
       "href": Object {
         "type": "string",
       },
-      "inert": Object {
-        "type": "bool",
-      },
+      "inert": [Function],
       "inline": Object {
         "type": "bool",
       },
@@ -2431,6 +2642,43 @@ Map {
       },
     },
   },
+  "ErrorBoundary" => Object {
+    "contextType": Object {
+      "$$typeof": Symbol(react.context),
+      "Consumer": Object {
+        "$$typeof": Symbol(react.context),
+        "_calculateChangedBits": null,
+        "_context": [Circular],
+      },
+      "Provider": Object {
+        "$$typeof": Symbol(react.provider),
+        "_context": [Circular],
+      },
+      "_calculateChangedBits": null,
+      "_currentRenderer": null,
+      "_currentRenderer2": null,
+      "_currentValue": Object {
+        "log": [Function],
+      },
+      "_currentValue2": Object {
+        "log": [Function],
+      },
+      "_threadCount": 0,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "fallback": Object {
+        "type": "node",
+      },
+    },
+  },
+  "ErrorBoundaryContext" => Object {
+    "$$typeof": Symbol(react.context),
+    "Consumer": "React.Consumer",
+    "Provider": "React.Provider",
+  },
   "ErrorPage" => Object {
     "defaultProps": Object {
       "backgroundImage": "",
@@ -2725,6 +2973,94 @@ Map {
       },
       "tabIndex": Object {
         "type": "number",
+      },
+    },
+  },
+  "FileUploaderDropContainer" => Object {
+    "defaultProps": Object {
+      "accept": Array [],
+      "labelText": "Add file",
+      "multiple": false,
+      "onAddFiles": [Function],
+      "tabIndex": 0,
+    },
+    "propTypes": Object {
+      "accept": Object {
+        "args": Array [
+          Object {
+            "type": "string",
+          },
+        ],
+        "type": "arrayOf",
+      },
+      "className": Object {
+        "type": "string",
+      },
+      "disabled": Object {
+        "type": "bool",
+      },
+      "id": Object {
+        "type": "string",
+      },
+      "labelText": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+      "multiple": Object {
+        "type": "bool",
+      },
+      "name": Object {
+        "type": "string",
+      },
+      "onAddFiles": Object {
+        "type": "func",
+      },
+      "role": Object {
+        "type": "string",
+      },
+      "tabIndex": Object {
+        "type": "number",
+      },
+    },
+  },
+  "FileUploaderItem" => Object {
+    "defaultProps": Object {
+      "onDelete": [Function],
+      "status": "uploading",
+      "uuid": "id1",
+    },
+    "propTypes": Object {
+      "errorBody": Object {
+        "type": "string",
+      },
+      "errorSubject": Object {
+        "type": "string",
+      },
+      "iconDescription": Object {
+        "type": "string",
+      },
+      "invalid": Object {
+        "type": "bool",
+      },
+      "name": Object {
+        "type": "string",
+      },
+      "onDelete": Object {
+        "type": "func",
+      },
+      "status": Object {
+        "args": Array [
+          Array [
+            "uploading",
+            "edit",
+            "complete",
+          ],
+        ],
+        "type": "oneOf",
+      },
+      "uuid": Object {
+        "isRequired": true,
+        "type": "string",
       },
     },
   },
@@ -3027,6 +3363,35 @@ Map {
       },
       "id": Object {
         "type": "string",
+      },
+    },
+  },
+  "Grid" => Object {
+    "propTypes": Object {
+      "as": Object {
+        "args": Array [
+          Array [
+            Object {
+              "type": "string",
+            },
+            Object {
+              "type": "elementType",
+            },
+          ],
+        ],
+        "type": "oneOfType",
+      },
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+      "condensed": Object {
+        "type": "bool",
+      },
+      "fullWidth": Object {
+        "type": "bool",
       },
     },
   },
@@ -3804,6 +4169,16 @@ Map {
       },
     },
   },
+  "IconSkeleton" => Object {
+    "propTypes": Object {
+      "className": Object {
+        "type": "string",
+      },
+      "style": Object {
+        "type": "object",
+      },
+    },
+  },
   "InlineLoading" => Object {
     "defaultProps": Object {
       "successDelay": 1500,
@@ -4267,6 +4642,99 @@ Map {
           ],
         ],
         "type": "oneOf",
+      },
+    },
+  },
+  "ModalBody" => Object {
+    "propTypes": Object {
+      "aria-label": [Function],
+      "className": Object {
+        "type": "string",
+      },
+      "hasForm": Object {
+        "type": "bool",
+      },
+      "hasScrollingContent": Object {
+        "type": "bool",
+      },
+    },
+  },
+  "ModalFooter" => Object {
+    "defaultProps": Object {
+      "onRequestClose": [Function],
+      "onRequestSubmit": [Function],
+    },
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+      "closeModal": Object {
+        "type": "func",
+      },
+      "onRequestClose": Object {
+        "type": "func",
+      },
+      "onRequestSubmit": Object {
+        "type": "func",
+      },
+      "primaryButtonDisabled": Object {
+        "type": "bool",
+      },
+      "primaryButtonText": Object {
+        "type": "string",
+      },
+      "primaryClassName": Object {
+        "type": "string",
+      },
+      "secondaryButtonText": Object {
+        "type": "string",
+      },
+      "secondaryClassName": Object {
+        "type": "string",
+      },
+    },
+  },
+  "ModalHeader" => Object {
+    "defaultProps": Object {
+      "buttonOnClick": [Function],
+      "iconDescription": "Close",
+    },
+    "propTypes": Object {
+      "buttonOnClick": Object {
+        "type": "func",
+      },
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+      "closeClassName": Object {
+        "type": "string",
+      },
+      "closeIconClassName": Object {
+        "type": "string",
+      },
+      "closeModal": Object {
+        "type": "func",
+      },
+      "iconDescription": Object {
+        "type": "string",
+      },
+      "label": Object {
+        "type": "node",
+      },
+      "labelClassName": Object {
+        "type": "string",
+      },
+      "title": Object {
+        "type": "node",
+      },
+      "titleClassName": Object {
+        "type": "string",
       },
     },
   },
@@ -5781,6 +6249,7 @@ Map {
       },
     },
   },
+  "PrimaryButton" => Object {},
   "ProfileImage" => Object {
     "defaultProps": Object {
       "className": null,
@@ -6027,6 +6496,32 @@ Map {
         ],
         "isRequired": true,
         "type": "oneOfType",
+      },
+    },
+  },
+  "Row" => Object {
+    "propTypes": Object {
+      "as": Object {
+        "args": Array [
+          Array [
+            Object {
+              "type": "string",
+            },
+            Object {
+              "type": "elementType",
+            },
+          ],
+        ],
+        "type": "oneOfType",
+      },
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+      "condensed": Object {
+        "type": "bool",
       },
     },
   },
@@ -6310,6 +6805,7 @@ Map {
       },
     },
   },
+  "SecondaryButton" => Object {},
   "Select" => Object {
     "$$typeof": Symbol(react.forward_ref),
     "defaultProps": Object {
@@ -7474,6 +7970,13 @@ Map {
     },
     "render": [Function],
   },
+  "SkeletonPlaceholder" => Object {
+    "propTypes": Object {
+      "className": Object {
+        "type": "string",
+      },
+    },
+  },
   "SkeletonText" => Object {
     "defaultProps": Object {
       "heading": false,
@@ -8399,6 +8902,14 @@ Map {
       },
       "useZebraStyles": Object {
         "type": "bool",
+      },
+    },
+  },
+  "TableActionList" => Object {
+    "displayName": "TableActionList",
+    "propTypes": Object {
+      "className": Object {
+        "type": "string",
       },
     },
   },
@@ -10930,9 +11441,121 @@ Map {
       },
     },
   },
+  "ToolbarDivider" => Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "render": [Function],
+  },
+  "ToolbarItem" => Object {
+    "defaultProps": Object {
+      "placeHolderText": "Provide placeHolderText",
+    },
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "placeHolderText": Object {
+        "type": "string",
+      },
+      "type": Object {
+        "type": "string",
+      },
+    },
+  },
+  "ToolbarOption" => Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+    },
+    "render": [Function],
+  },
+  "ToolbarSearch" => Object {
+    "defaultProps": Object {
+      "id": "search__input",
+      "labelId": "search__label",
+      "labelText": "",
+      "placeHolderText": "",
+      "role": "search",
+      "type": "search",
+    },
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+      "id": Object {
+        "type": "string",
+      },
+      "labelText": Object {
+        "type": "node",
+      },
+      "placeHolderText": Object {
+        "type": "string",
+      },
+      "small": Object {
+        "type": "bool",
+      },
+      "type": Object {
+        "type": "string",
+      },
+    },
+  },
+  "ToolbarTitle" => Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "propTypes": Object {
+      "title": Object {
+        "type": "string",
+      },
+    },
+    "render": [Function],
+  },
   "Tooltip" => Object {
     "$$typeof": Symbol(react.forward_ref),
     "render": [Function],
+  },
+  "TooltipDefinition" => Object {
+    "defaultProps": Object {
+      "align": "start",
+      "direction": "bottom",
+    },
+    "propTypes": Object {
+      "align": Object {
+        "args": Array [
+          Array [
+            "start",
+            "center",
+            "end",
+          ],
+        ],
+        "type": "oneOf",
+      },
+      "children": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+      "direction": Object {
+        "args": Array [
+          Array [
+            "top",
+            "bottom",
+          ],
+        ],
+        "type": "oneOf",
+      },
+      "id": Object {
+        "type": "string",
+      },
+      "tooltipText": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+      "triggerClassName": Object {
+        "type": "string",
+      },
+    },
   },
   "TooltipDefintion" => Object {
     "defaultProps": Object {
@@ -10971,6 +11594,46 @@ Map {
         "type": "node",
       },
       "triggerClassName": Object {
+        "type": "string",
+      },
+    },
+  },
+  "TooltipIcon" => Object {
+    "defaultProps": Object {
+      "align": "center",
+      "direction": "bottom",
+    },
+    "propTypes": Object {
+      "align": Object {
+        "args": Array [
+          Array [
+            "start",
+            "center",
+            "end",
+          ],
+        ],
+        "type": "oneOf",
+      },
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+      "direction": Object {
+        "args": Array [
+          Array [
+            "top",
+            "right",
+            "left",
+            "bottom",
+          ],
+        ],
+        "type": "oneOf",
+      },
+      "id": Object {
+        "type": "string",
+      },
+      "tooltipText": Object {
+        "isRequired": true,
         "type": "string",
       },
     },
