@@ -7,7 +7,7 @@ const { bgGreen, bgRed, red } = require('colors');
 const { sync } = require('glob');
 const { render } = require('node-sass');
 
-sync(process.argv[2]).forEach(file =>
+sync('src/**/*.scss').forEach(file =>
   render(
     {
       file,

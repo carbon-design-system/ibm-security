@@ -40,7 +40,7 @@
     "test": "yarn jest spec -ci",
     "test:precommit": "yarn jest -b --passWithNoTests --testMatch src/**/*.spec.js --findRelatedTests",
     "test:imports": "scripts/checkImports.sh",
-    "test:scss": "node scripts/scss 'src/**/*.scss'",
+    "test:scss": "node scripts/scss",
     "test:ssr": "node scripts/ssr"
   },
   "dependencies": {
