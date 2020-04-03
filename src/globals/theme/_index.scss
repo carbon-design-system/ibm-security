@@ -73,7 +73,7 @@ $theme: dark;
 }
 
 @if feature-flag-enabled($feature: $theme__name) {
-  // Outputs the relevant classes for each supported theme.
+  // Outputs the relevant classes for each supported theme - `$carbon--theme` is required to be set before this can occur.
   @each $theme, $tokens in $security--themes {
     @include security--component($name: $theme) {
       @include security--generate-css-custom-properties($theme: $tokens);
