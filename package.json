@@ -26,7 +26,6 @@
     "build:post": "run-p build:post:*",
     "build:post:clean-css": "cleancss -O2 -o css/index.min.css css/index.css",
     "build:post:storybook": "run-s build:pre:grid && build-storybook -s public",
-    "debug:scss": "node scripts/debugScss.js",
     "docs": "node scripts/themes && git add docs/themes/themes.md",
     "format": "yarn format:precommit '**/*.{js,md,scss}'",
     "format:precommit": "prettier --ignore-path .gitignore --write",
@@ -41,6 +40,7 @@
     "test": "yarn jest spec -ci",
     "test:precommit": "yarn jest -b --passWithNoTests --testMatch src/**/*.spec.js --findRelatedTests",
     "test:imports": "scripts/checkImports.sh",
+    "test:scss": "node scripts/scss 'src/**/*.scss'",
     "test:ssr": "node scripts/ssr"
   },
   "dependencies": {
@@ -56,10 +56,12 @@
     "carbon-components": "10.10.0",
     "carbon-components-react": "7.10.0",
     "classnames": "^2.2.5",
+    "colors": "^1.4.0",
     "downshift": "^1.31.14",
     "export-to-csv": "^0.2.1",
     "flatpickr": "^4.6.1",
     "focus-trap-react": "^6.0.0",
+    "glob": "^7.1.6",
     "invariant": "^2.2.3",
     "numeral": "^2.0.6",
     "prop-types": "^15.7.2",
