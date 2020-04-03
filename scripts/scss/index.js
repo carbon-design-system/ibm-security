@@ -18,7 +18,7 @@ sync('src/**/*.scss').forEach(file =>
       console.log(`${error ? bgRed('FAIL') : bgGreen('PASS')} ${file}`);
 
       if (error) {
-        console.log(`\n${red(error.formatted)}`);
+        console.error(`\n${red(error.formatted)}`);
       }
     }
   )
