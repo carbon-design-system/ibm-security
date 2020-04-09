@@ -88,6 +88,7 @@ const ErrorPage = ({
                 key={id}
                 href={href}
                 target="_blank"
+                rel="noopener noreferrer"
                 className={`${namespace}__link`}
               >
                 {icon !== undefined && (
