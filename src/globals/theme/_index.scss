@@ -22,7 +22,7 @@ $security--theme: $carbon--theme--g100 !default;
 /// Default theme.
 /// @type Map<String, Color>
 /// @access private
-$-theme: security--type-tokens-remove(
+$-theme: security--tokens-remove(
   $theme: $security--theme,
 );
 

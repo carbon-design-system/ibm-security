@@ -82,7 +82,7 @@
 ///     --interactive-03: #ffffff;
 ///   }
 @mixin security--generate-css-custom-properties($theme) {
-  @each $token, $value in security--type-tokens-remove($theme: $theme) {
+  @each $token, $value in security--tokens-remove($theme: $theme) {
     --#{$token}: #{$value};
   }
 }
