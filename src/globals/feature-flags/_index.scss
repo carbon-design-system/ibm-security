@@ -47,5 +47,3 @@ $feature-flags: merge-feature-flags(
   $dst: $feature-flags,
   $src: $security--feature-flags,
 );
-
-@warn $feature-flags;
