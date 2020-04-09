@@ -19,7 +19,7 @@ $platform__name: platform;
 
 /// Theme feature flag.
 /// @type String
-$theme__name: themes;
+$theme__name: security--css-custom-property-theming;
 
 // TODO: `2.x` - Deprecate after teams have migrated to `@carbon/type`.
 
@@ -47,3 +47,5 @@ $feature-flags: merge-feature-flags(
   $dst: $feature-flags,
   $src: $security--feature-flags,
 );
+
+@warn $feature-flags;
