@@ -4,7 +4,6 @@
 /// @copyright IBM Security 2019 - 2020
 ////
 
-@import '@carbon/layout/scss/spacing';
 @import '@carbon/themes/scss/mixins';
 @import '@carbon/type/scss/styles';
 
@@ -68,7 +67,7 @@ $security--theme: $carbon--theme--g100 !default;
 $-theme: $security--theme;
 
 @if feature-flag-enabled($feature: $theme__name) {
-  // Map the theme tokens as CSS custom properties.
+  // Map the theme tokens as CSS custom properties, unless they're included in the blacklist.
   @each $token, $value in $-theme {
     $-theme: map-merge(
       $map1: $-theme,
@@ -94,7 +93,7 @@ $carbon--theme: $-theme;
 
 @include carbon--theme;
 
-@import 'carbon-components/scss/globals/scss/theme';
+@import 'carbon-components/scss/globals/scss/theme-tokens';
 @import 'mixins';
 
 // TODO: `2.x` - To be removed after the `theme` function is deprecated.
