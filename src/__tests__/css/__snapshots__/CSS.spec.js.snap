@@ -514,7 +514,7 @@ body {
   grid-row: span 29;
 }
 
-[class*=\\"bx-grid__col--sm--\\"] {
+[class*='bx-grid__col--sm--'] {
   display: block;
 }
 
@@ -574,7 +574,7 @@ body {
   grid-column: span 1;
 }
 
-.bx-grid__col--sm--1.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+.bx-grid__col--sm--1.bx-grid > *:not([class*='bx-grid__col']) {
   grid-column: span 1;
 }
 
@@ -586,7 +586,7 @@ body {
   grid-column: span 2;
 }
 
-.bx-grid__col--sm--2.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+.bx-grid__col--sm--2.bx-grid > *:not([class*='bx-grid__col']) {
   grid-column: span 2;
 }
 
@@ -598,7 +598,7 @@ body {
   grid-column: span 3;
 }
 
-.bx-grid__col--sm--3.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+.bx-grid__col--sm--3.bx-grid > *:not([class*='bx-grid__col']) {
   grid-column: span 3;
 }
 
@@ -610,7 +610,7 @@ body {
   grid-column: span 4;
 }
 
-.bx-grid__col--sm--4.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+.bx-grid__col--sm--4.bx-grid > *:not([class*='bx-grid__col']) {
   grid-column: span 4;
 }
 
@@ -713,7 +713,7 @@ body {
   .bx-grid__col--sm--0--only {
     display: block;
   }
-  [class*=\\"bx-grid__col--md--\\"] {
+  [class*='bx-grid__col--md--'] {
     display: block;
   }
   .bx-grid__col--md--0,
@@ -758,7 +758,7 @@ body {
   .bx-grid__col--sm--1 {
     grid-column: span 2;
   }
-  .bx-grid__col--sm--1.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--sm--1.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 1;
   }
   .bx-grid--fluid-rows > .bx-grid__height--sm--1 {
@@ -767,7 +767,7 @@ body {
   .bx-grid__col--sm--2 {
     grid-column: span 4;
   }
-  .bx-grid__col--sm--2.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--sm--2.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 2;
   }
   .bx-grid--fluid-rows > .bx-grid__height--sm--2 {
@@ -776,7 +776,7 @@ body {
   .bx-grid__col--sm--3 {
     grid-column: span 6;
   }
-  .bx-grid__col--sm--3.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--sm--3.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 3;
   }
   .bx-grid--fluid-rows > .bx-grid__height--sm--3 {
@@ -785,7 +785,7 @@ body {
   .bx-grid__col--sm--4 {
     grid-column: span 8;
   }
-  .bx-grid__col--sm--4.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--sm--4.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 4;
   }
   .bx-grid--fluid-rows > .bx-grid__height--sm--4 {
@@ -794,7 +794,7 @@ body {
   .bx-grid__col--md--1 {
     grid-column: span 1;
   }
-  .bx-grid__col--md--1.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--md--1.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 1;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--1 {
@@ -803,7 +803,7 @@ body {
   .bx-grid__col--md--2 {
     grid-column: span 2;
   }
-  .bx-grid__col--md--2.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--md--2.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 2;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--2 {
@@ -812,7 +812,7 @@ body {
   .bx-grid__col--md--3 {
     grid-column: span 3;
   }
-  .bx-grid__col--md--3.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--md--3.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 3;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--3 {
@@ -821,7 +821,7 @@ body {
   .bx-grid__col--md--4 {
     grid-column: span 4;
   }
-  .bx-grid__col--md--4.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--md--4.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 4;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--4 {
@@ -830,7 +830,7 @@ body {
   .bx-grid__col--md--5 {
     grid-column: span 5;
   }
-  .bx-grid__col--md--5.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--md--5.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 5;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--5 {
@@ -839,7 +839,7 @@ body {
   .bx-grid__col--md--6 {
     grid-column: span 6;
   }
-  .bx-grid__col--md--6.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--md--6.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 6;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--6 {
@@ -848,7 +848,7 @@ body {
   .bx-grid__col--md--7 {
     grid-column: span 7;
   }
-  .bx-grid__col--md--7.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--md--7.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 7;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--7 {
@@ -857,7 +857,7 @@ body {
   .bx-grid__col--md--8 {
     grid-column: span 8;
   }
-  .bx-grid__col--md--8.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--md--8.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 8;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--8 {
@@ -1007,7 +1007,7 @@ body {
   .bx-grid__col--md--0--only {
     display: block;
   }
-  [class*=\\"bx-grid__col--lg--\\"] {
+  [class*='bx-grid__col--lg--'] {
     display: block;
   }
   .bx-grid__col--lg--0,
@@ -1052,7 +1052,7 @@ body {
   .bx-grid__col--sm--1 {
     grid-column: span 4;
   }
-  .bx-grid__col--sm--1.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--sm--1.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 1;
   }
   .bx-grid--fluid-rows > .bx-grid__height--sm--1 {
@@ -1061,7 +1061,7 @@ body {
   .bx-grid__col--sm--2 {
     grid-column: span 8;
   }
-  .bx-grid__col--sm--2.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--sm--2.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 2;
   }
   .bx-grid--fluid-rows > .bx-grid__height--sm--2 {
@@ -1070,7 +1070,7 @@ body {
   .bx-grid__col--sm--3 {
     grid-column: span 12;
   }
-  .bx-grid__col--sm--3.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--sm--3.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 3;
   }
   .bx-grid--fluid-rows > .bx-grid__height--sm--3 {
@@ -1079,7 +1079,7 @@ body {
   .bx-grid__col--sm--4 {
     grid-column: span 16;
   }
-  .bx-grid__col--sm--4.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--sm--4.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 4;
   }
   .bx-grid--fluid-rows > .bx-grid__height--sm--4 {
@@ -1088,7 +1088,7 @@ body {
   .bx-grid__col--md--1 {
     grid-column: span 2;
   }
-  .bx-grid__col--md--1.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--md--1.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 1;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--1 {
@@ -1097,7 +1097,7 @@ body {
   .bx-grid__col--md--2 {
     grid-column: span 4;
   }
-  .bx-grid__col--md--2.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--md--2.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 2;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--2 {
@@ -1106,7 +1106,7 @@ body {
   .bx-grid__col--md--3 {
     grid-column: span 6;
   }
-  .bx-grid__col--md--3.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--md--3.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 3;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--3 {
@@ -1115,7 +1115,7 @@ body {
   .bx-grid__col--md--4 {
     grid-column: span 8;
   }
-  .bx-grid__col--md--4.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--md--4.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 4;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--4 {
@@ -1124,7 +1124,7 @@ body {
   .bx-grid__col--md--5 {
     grid-column: span 10;
   }
-  .bx-grid__col--md--5.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--md--5.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 5;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--5 {
@@ -1133,7 +1133,7 @@ body {
   .bx-grid__col--md--6 {
     grid-column: span 12;
   }
-  .bx-grid__col--md--6.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--md--6.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 6;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--6 {
@@ -1142,7 +1142,7 @@ body {
   .bx-grid__col--md--7 {
     grid-column: span 14;
   }
-  .bx-grid__col--md--7.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--md--7.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 7;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--7 {
@@ -1151,7 +1151,7 @@ body {
   .bx-grid__col--md--8 {
     grid-column: span 16;
   }
-  .bx-grid__col--md--8.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--md--8.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 8;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--8 {
@@ -1160,7 +1160,7 @@ body {
   .bx-grid__col--lg--1 {
     grid-column: span 1;
   }
-  .bx-grid__col--lg--1.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--lg--1.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 1;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--1 {
@@ -1169,7 +1169,7 @@ body {
   .bx-grid__col--lg--2 {
     grid-column: span 2;
   }
-  .bx-grid__col--lg--2.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--lg--2.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 2;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--2 {
@@ -1178,7 +1178,7 @@ body {
   .bx-grid__col--lg--3 {
     grid-column: span 3;
   }
-  .bx-grid__col--lg--3.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--lg--3.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 3;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--3 {
@@ -1187,7 +1187,7 @@ body {
   .bx-grid__col--lg--4 {
     grid-column: span 4;
   }
-  .bx-grid__col--lg--4.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--lg--4.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 4;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--4 {
@@ -1196,7 +1196,7 @@ body {
   .bx-grid__col--lg--5 {
     grid-column: span 5;
   }
-  .bx-grid__col--lg--5.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--lg--5.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 5;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--5 {
@@ -1205,7 +1205,7 @@ body {
   .bx-grid__col--lg--6 {
     grid-column: span 6;
   }
-  .bx-grid__col--lg--6.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--lg--6.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 6;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--6 {
@@ -1214,7 +1214,7 @@ body {
   .bx-grid__col--lg--7 {
     grid-column: span 7;
   }
-  .bx-grid__col--lg--7.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--lg--7.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 7;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--7 {
@@ -1223,7 +1223,7 @@ body {
   .bx-grid__col--lg--8 {
     grid-column: span 8;
   }
-  .bx-grid__col--lg--8.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--lg--8.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 8;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--8 {
@@ -1232,7 +1232,7 @@ body {
   .bx-grid__col--lg--9 {
     grid-column: span 9;
   }
-  .bx-grid__col--lg--9.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--lg--9.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 9;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--9 {
@@ -1241,7 +1241,7 @@ body {
   .bx-grid__col--lg--10 {
     grid-column: span 10;
   }
-  .bx-grid__col--lg--10.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--lg--10.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 10;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--10 {
@@ -1250,7 +1250,7 @@ body {
   .bx-grid__col--lg--11 {
     grid-column: span 11;
   }
-  .bx-grid__col--lg--11.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--lg--11.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 11;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--11 {
@@ -1259,7 +1259,7 @@ body {
   .bx-grid__col--lg--12 {
     grid-column: span 12;
   }
-  .bx-grid__col--lg--12.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--lg--12.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 12;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--12 {
@@ -1268,7 +1268,7 @@ body {
   .bx-grid__col--lg--13 {
     grid-column: span 13;
   }
-  .bx-grid__col--lg--13.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--lg--13.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 13;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--13 {
@@ -1277,7 +1277,7 @@ body {
   .bx-grid__col--lg--14 {
     grid-column: span 14;
   }
-  .bx-grid__col--lg--14.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--lg--14.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 14;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--14 {
@@ -1286,7 +1286,7 @@ body {
   .bx-grid__col--lg--15 {
     grid-column: span 15;
   }
-  .bx-grid__col--lg--15.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--lg--15.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 15;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--15 {
@@ -1295,21 +1295,21 @@ body {
   .bx-grid__col--lg--16 {
     grid-column: span 16;
   }
-  .bx-grid__col--lg--16.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
+  .bx-grid__col--lg--16.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 16;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--16 {
     grid-row: span 16;
   }
-  [class^=\\"bx-container__bleed--md\\"],
-  [class^=\\"bx-container__break--md\\"] {
+  [class^='bx-container__bleed--md'],
+  [class^='bx-container__break--md'] {
     margin-left: 0;
     margin-right: 0;
     padding-left: 0;
     padding-right: 0;
   }
-  [class^=\\"bx-container__bleed--md\\"][class^=\\"bx-padding\\"],
-  [class^=\\"bx-container__break--md\\"][class^=\\"bx-padding\\"] {
+  [class^='bx-container__bleed--md'][class^='bx-padding'],
+  [class^='bx-container__break--md'][class^='bx-padding'] {
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -1369,7 +1369,7 @@ body {
   .bx-grid__col--lg--0--only {
     display: block;
   }
-  [class*=\\"bx-grid__col--max--\\"] {
+  [class*='bx-grid__col--max--'] {
     display: block;
   }
   .bx-grid__col--max--0,

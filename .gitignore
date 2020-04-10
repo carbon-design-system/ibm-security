@@ -11,7 +11,7 @@ node_modules
 /scss
 storybook-static
 
-# Generated CSS Gridish file.
+# CSS Gridish.
 src/globals/grid/css-gridish/css
 src/globals/grid/css-gridish/bx-grid.sketch
 
