@@ -4,7 +4,7 @@
 
 # Generated directories.
 coverage
-css
+css/
 es
 lib
 node_modules
