@@ -4,7 +4,6 @@
  */
 
 import { renderSync } from 'node-sass';
-import React from 'react';
 
 describe('CSS', () => {
   const { css } = renderSync({
@@ -20,6 +19,6 @@ describe('CSS', () => {
   });
 
   test('Snapshot', () => {
-    expect(<style>{css.toString()}</style>).toMatchSnapshot();
+    expect(css.toString()).toMatchSnapshot();
   });
 });
