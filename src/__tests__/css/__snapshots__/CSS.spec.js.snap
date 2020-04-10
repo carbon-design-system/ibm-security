@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CSS Snapshot 1`] = `
-<style>
-  h1 {
+"h1 {
   font-size: 2rem;
   font-weight: 300;
   line-height: 3.125rem;
@@ -342,13 +341,13 @@ body {
   position: relative;
 }
 
-.bx-grid &gt; * {
+.bx-grid > * {
   box-sizing: border-box;
 }
 
-.bx-grid &gt; * :last-child,
-.bx-grid &gt; * :last-child &gt; :last-child,
-.bx-grid &gt; * :last-child &gt; :last-child &gt; :last-child {
+.bx-grid > * :last-child,
+.bx-grid > * :last-child > :last-child,
+.bx-grid > * :last-child > :last-child > :last-child {
   margin-bottom: 0;
 }
 
@@ -357,7 +356,7 @@ body {
 }
 
 @supports (display: grid) {
-  .bx-grid &gt; * {
+  .bx-grid > * {
     height: 100%;
   }
 }
@@ -567,7 +566,7 @@ body {
   grid-auto-rows: 25vw;
 }
 
-.bx-grid &gt; * {
+.bx-grid > * {
   grid-column: span 4;
 }
 
@@ -575,11 +574,11 @@ body {
   grid-column: span 1;
 }
 
-.bx-grid__col--sm--1.bx-grid &gt; *:not([class*='bx-grid__col']) {
+.bx-grid__col--sm--1.bx-grid > *:not([class*='bx-grid__col']) {
   grid-column: span 1;
 }
 
-.bx-grid--fluid-rows &gt; .bx-grid__height--sm--1 {
+.bx-grid--fluid-rows > .bx-grid__height--sm--1 {
   grid-row: span 1;
 }
 
@@ -587,11 +586,11 @@ body {
   grid-column: span 2;
 }
 
-.bx-grid__col--sm--2.bx-grid &gt; *:not([class*='bx-grid__col']) {
+.bx-grid__col--sm--2.bx-grid > *:not([class*='bx-grid__col']) {
   grid-column: span 2;
 }
 
-.bx-grid--fluid-rows &gt; .bx-grid__height--sm--2 {
+.bx-grid--fluid-rows > .bx-grid__height--sm--2 {
   grid-row: span 2;
 }
 
@@ -599,11 +598,11 @@ body {
   grid-column: span 3;
 }
 
-.bx-grid__col--sm--3.bx-grid &gt; *:not([class*='bx-grid__col']) {
+.bx-grid__col--sm--3.bx-grid > *:not([class*='bx-grid__col']) {
   grid-column: span 3;
 }
 
-.bx-grid--fluid-rows &gt; .bx-grid__height--sm--3 {
+.bx-grid--fluid-rows > .bx-grid__height--sm--3 {
   grid-row: span 3;
 }
 
@@ -611,11 +610,11 @@ body {
   grid-column: span 4;
 }
 
-.bx-grid__col--sm--4.bx-grid &gt; *:not([class*='bx-grid__col']) {
+.bx-grid__col--sm--4.bx-grid > *:not([class*='bx-grid__col']) {
   grid-column: span 4;
 }
 
-.bx-grid--fluid-rows &gt; .bx-grid__height--sm--4 {
+.bx-grid--fluid-rows > .bx-grid__height--sm--4 {
   grid-row: span 4;
 }
 
@@ -753,115 +752,115 @@ body {
   .bx-grid.bx-grid--fluid-rows {
     grid-auto-rows: calc((100vw - 2rem) * 0.125);
   }
-  .bx-grid &gt; * {
+  .bx-grid > * {
     grid-column: span 8;
   }
   .bx-grid__col--sm--1 {
     grid-column: span 2;
   }
-  .bx-grid__col--sm--1.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--sm--1.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 1;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--sm--1 {
+  .bx-grid--fluid-rows > .bx-grid__height--sm--1 {
     grid-row: span 1;
   }
   .bx-grid__col--sm--2 {
     grid-column: span 4;
   }
-  .bx-grid__col--sm--2.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--sm--2.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 2;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--sm--2 {
+  .bx-grid--fluid-rows > .bx-grid__height--sm--2 {
     grid-row: span 2;
   }
   .bx-grid__col--sm--3 {
     grid-column: span 6;
   }
-  .bx-grid__col--sm--3.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--sm--3.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 3;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--sm--3 {
+  .bx-grid--fluid-rows > .bx-grid__height--sm--3 {
     grid-row: span 3;
   }
   .bx-grid__col--sm--4 {
     grid-column: span 8;
   }
-  .bx-grid__col--sm--4.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--sm--4.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 4;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--sm--4 {
+  .bx-grid--fluid-rows > .bx-grid__height--sm--4 {
     grid-row: span 4;
   }
   .bx-grid__col--md--1 {
     grid-column: span 1;
   }
-  .bx-grid__col--md--1.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--1.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 1;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--md--1 {
+  .bx-grid--fluid-rows > .bx-grid__height--md--1 {
     grid-row: span 1;
   }
   .bx-grid__col--md--2 {
     grid-column: span 2;
   }
-  .bx-grid__col--md--2.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--2.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 2;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--md--2 {
+  .bx-grid--fluid-rows > .bx-grid__height--md--2 {
     grid-row: span 2;
   }
   .bx-grid__col--md--3 {
     grid-column: span 3;
   }
-  .bx-grid__col--md--3.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--3.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 3;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--md--3 {
+  .bx-grid--fluid-rows > .bx-grid__height--md--3 {
     grid-row: span 3;
   }
   .bx-grid__col--md--4 {
     grid-column: span 4;
   }
-  .bx-grid__col--md--4.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--4.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 4;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--md--4 {
+  .bx-grid--fluid-rows > .bx-grid__height--md--4 {
     grid-row: span 4;
   }
   .bx-grid__col--md--5 {
     grid-column: span 5;
   }
-  .bx-grid__col--md--5.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--5.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 5;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--md--5 {
+  .bx-grid--fluid-rows > .bx-grid__height--md--5 {
     grid-row: span 5;
   }
   .bx-grid__col--md--6 {
     grid-column: span 6;
   }
-  .bx-grid__col--md--6.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--6.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 6;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--md--6 {
+  .bx-grid--fluid-rows > .bx-grid__height--md--6 {
     grid-row: span 6;
   }
   .bx-grid__col--md--7 {
     grid-column: span 7;
   }
-  .bx-grid__col--md--7.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--7.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 7;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--md--7 {
+  .bx-grid--fluid-rows > .bx-grid__height--md--7 {
     grid-row: span 7;
   }
   .bx-grid__col--md--8 {
     grid-column: span 8;
   }
-  .bx-grid__col--md--8.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--8.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 8;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--md--8 {
+  .bx-grid--fluid-rows > .bx-grid__height--md--8 {
     grid-row: span 8;
   }
   .bx-container {
@@ -1047,259 +1046,259 @@ body {
   .bx-grid.bx-grid--fluid-rows {
     grid-auto-rows: calc((100vw - 2rem) * 0.0625);
   }
-  .bx-grid &gt; * {
+  .bx-grid > * {
     grid-column: span 16;
   }
   .bx-grid__col--sm--1 {
     grid-column: span 4;
   }
-  .bx-grid__col--sm--1.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--sm--1.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 1;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--sm--1 {
+  .bx-grid--fluid-rows > .bx-grid__height--sm--1 {
     grid-row: span 1;
   }
   .bx-grid__col--sm--2 {
     grid-column: span 8;
   }
-  .bx-grid__col--sm--2.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--sm--2.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 2;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--sm--2 {
+  .bx-grid--fluid-rows > .bx-grid__height--sm--2 {
     grid-row: span 2;
   }
   .bx-grid__col--sm--3 {
     grid-column: span 12;
   }
-  .bx-grid__col--sm--3.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--sm--3.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 3;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--sm--3 {
+  .bx-grid--fluid-rows > .bx-grid__height--sm--3 {
     grid-row: span 3;
   }
   .bx-grid__col--sm--4 {
     grid-column: span 16;
   }
-  .bx-grid__col--sm--4.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--sm--4.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 4;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--sm--4 {
+  .bx-grid--fluid-rows > .bx-grid__height--sm--4 {
     grid-row: span 4;
   }
   .bx-grid__col--md--1 {
     grid-column: span 2;
   }
-  .bx-grid__col--md--1.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--1.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 1;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--md--1 {
+  .bx-grid--fluid-rows > .bx-grid__height--md--1 {
     grid-row: span 1;
   }
   .bx-grid__col--md--2 {
     grid-column: span 4;
   }
-  .bx-grid__col--md--2.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--2.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 2;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--md--2 {
+  .bx-grid--fluid-rows > .bx-grid__height--md--2 {
     grid-row: span 2;
   }
   .bx-grid__col--md--3 {
     grid-column: span 6;
   }
-  .bx-grid__col--md--3.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--3.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 3;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--md--3 {
+  .bx-grid--fluid-rows > .bx-grid__height--md--3 {
     grid-row: span 3;
   }
   .bx-grid__col--md--4 {
     grid-column: span 8;
   }
-  .bx-grid__col--md--4.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--4.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 4;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--md--4 {
+  .bx-grid--fluid-rows > .bx-grid__height--md--4 {
     grid-row: span 4;
   }
   .bx-grid__col--md--5 {
     grid-column: span 10;
   }
-  .bx-grid__col--md--5.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--5.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 5;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--md--5 {
+  .bx-grid--fluid-rows > .bx-grid__height--md--5 {
     grid-row: span 5;
   }
   .bx-grid__col--md--6 {
     grid-column: span 12;
   }
-  .bx-grid__col--md--6.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--6.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 6;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--md--6 {
+  .bx-grid--fluid-rows > .bx-grid__height--md--6 {
     grid-row: span 6;
   }
   .bx-grid__col--md--7 {
     grid-column: span 14;
   }
-  .bx-grid__col--md--7.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--7.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 7;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--md--7 {
+  .bx-grid--fluid-rows > .bx-grid__height--md--7 {
     grid-row: span 7;
   }
   .bx-grid__col--md--8 {
     grid-column: span 16;
   }
-  .bx-grid__col--md--8.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--8.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 8;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--md--8 {
+  .bx-grid--fluid-rows > .bx-grid__height--md--8 {
     grid-row: span 8;
   }
   .bx-grid__col--lg--1 {
     grid-column: span 1;
   }
-  .bx-grid__col--lg--1.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--1.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 1;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--lg--1 {
+  .bx-grid--fluid-rows > .bx-grid__height--lg--1 {
     grid-row: span 1;
   }
   .bx-grid__col--lg--2 {
     grid-column: span 2;
   }
-  .bx-grid__col--lg--2.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--2.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 2;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--lg--2 {
+  .bx-grid--fluid-rows > .bx-grid__height--lg--2 {
     grid-row: span 2;
   }
   .bx-grid__col--lg--3 {
     grid-column: span 3;
   }
-  .bx-grid__col--lg--3.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--3.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 3;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--lg--3 {
+  .bx-grid--fluid-rows > .bx-grid__height--lg--3 {
     grid-row: span 3;
   }
   .bx-grid__col--lg--4 {
     grid-column: span 4;
   }
-  .bx-grid__col--lg--4.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--4.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 4;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--lg--4 {
+  .bx-grid--fluid-rows > .bx-grid__height--lg--4 {
     grid-row: span 4;
   }
   .bx-grid__col--lg--5 {
     grid-column: span 5;
   }
-  .bx-grid__col--lg--5.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--5.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 5;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--lg--5 {
+  .bx-grid--fluid-rows > .bx-grid__height--lg--5 {
     grid-row: span 5;
   }
   .bx-grid__col--lg--6 {
     grid-column: span 6;
   }
-  .bx-grid__col--lg--6.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--6.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 6;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--lg--6 {
+  .bx-grid--fluid-rows > .bx-grid__height--lg--6 {
     grid-row: span 6;
   }
   .bx-grid__col--lg--7 {
     grid-column: span 7;
   }
-  .bx-grid__col--lg--7.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--7.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 7;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--lg--7 {
+  .bx-grid--fluid-rows > .bx-grid__height--lg--7 {
     grid-row: span 7;
   }
   .bx-grid__col--lg--8 {
     grid-column: span 8;
   }
-  .bx-grid__col--lg--8.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--8.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 8;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--lg--8 {
+  .bx-grid--fluid-rows > .bx-grid__height--lg--8 {
     grid-row: span 8;
   }
   .bx-grid__col--lg--9 {
     grid-column: span 9;
   }
-  .bx-grid__col--lg--9.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--9.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 9;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--lg--9 {
+  .bx-grid--fluid-rows > .bx-grid__height--lg--9 {
     grid-row: span 9;
   }
   .bx-grid__col--lg--10 {
     grid-column: span 10;
   }
-  .bx-grid__col--lg--10.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--10.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 10;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--lg--10 {
+  .bx-grid--fluid-rows > .bx-grid__height--lg--10 {
     grid-row: span 10;
   }
   .bx-grid__col--lg--11 {
     grid-column: span 11;
   }
-  .bx-grid__col--lg--11.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--11.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 11;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--lg--11 {
+  .bx-grid--fluid-rows > .bx-grid__height--lg--11 {
     grid-row: span 11;
   }
   .bx-grid__col--lg--12 {
     grid-column: span 12;
   }
-  .bx-grid__col--lg--12.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--12.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 12;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--lg--12 {
+  .bx-grid--fluid-rows > .bx-grid__height--lg--12 {
     grid-row: span 12;
   }
   .bx-grid__col--lg--13 {
     grid-column: span 13;
   }
-  .bx-grid__col--lg--13.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--13.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 13;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--lg--13 {
+  .bx-grid--fluid-rows > .bx-grid__height--lg--13 {
     grid-row: span 13;
   }
   .bx-grid__col--lg--14 {
     grid-column: span 14;
   }
-  .bx-grid__col--lg--14.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--14.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 14;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--lg--14 {
+  .bx-grid--fluid-rows > .bx-grid__height--lg--14 {
     grid-row: span 14;
   }
   .bx-grid__col--lg--15 {
     grid-column: span 15;
   }
-  .bx-grid__col--lg--15.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--15.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 15;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--lg--15 {
+  .bx-grid--fluid-rows > .bx-grid__height--lg--15 {
     grid-row: span 15;
   }
   .bx-grid__col--lg--16 {
     grid-column: span 16;
   }
-  .bx-grid__col--lg--16.bx-grid &gt; *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--16.bx-grid > *:not([class*='bx-grid__col']) {
     grid-column: span 16;
   }
-  .bx-grid--fluid-rows &gt; .bx-grid__height--lg--16 {
+  .bx-grid--fluid-rows > .bx-grid__height--lg--16 {
     grid-row: span 16;
   }
   [class^='bx-container__bleed--md'],
@@ -1456,24 +1455,24 @@ body {
 }
 
 @supports (display: grid) {
-  .bx-grid &gt; *,
-  .bx-grid &gt; [class*='bx-grid__col--'] {
+  .bx-grid > *,
+  .bx-grid > [class*='bx-grid__col--'] {
     min-width: initial;
     max-width: initial;
     width: initial;
   }
-  .bx-grid &gt; *.bx-grid,
-  .bx-grid &gt; [class*='bx-grid__col--'].bx-grid {
+  .bx-grid > *.bx-grid,
+  .bx-grid > [class*='bx-grid__col--'].bx-grid {
     display: grid;
   }
-  .bx-grid &gt; [class*='bx-grid__height--'] {
+  .bx-grid > [class*='bx-grid__height--'] {
     height: unset;
     max-height: unset;
     min-height: initial;
   }
 }
 
-.bx-grid &gt; script {
+.bx-grid > script {
   display: none;
 }
 
@@ -1499,7 +1498,7 @@ body {
   font-style: italic;
   font-weight: 300;
   font-display: auto;
-  src: local("IBM Plex Mono Light Italic"), local("IBMPlexMono-LightItalic"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6sfjptAgt5VM-kVkqdyU8n1ioSflV1gMoW.woff) format("woff");
+  src: local(\\"IBM Plex Mono Light Italic\\"), local(\\"IBMPlexMono-LightItalic\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6sfjptAgt5VM-kVkqdyU8n1ioSflV1gMoW.woff) format(\\"woff\\");
 }
 
 @font-face {
@@ -1507,7 +1506,7 @@ body {
   font-style: italic;
   font-weight: 400;
   font-display: auto;
-  src: local("IBM Plex Mono Italic"), local("IBMPlexMono-Italic"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6pfjptAgt5VM-kVkqdyU8n1ioa1Xdm.woff) format("woff");
+  src: local(\\"IBM Plex Mono Italic\\"), local(\\"IBMPlexMono-Italic\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6pfjptAgt5VM-kVkqdyU8n1ioa1Xdm.woff) format(\\"woff\\");
 }
 
 @font-face {
@@ -1515,7 +1514,7 @@ body {
   font-style: italic;
   font-weight: 600;
   font-display: auto;
-  src: local("IBM Plex Mono SemiBold Italic"), local("IBMPlexMono-SemiBoldItalic"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6sfjptAgt5VM-kVkqdyU8n1ioSClN1gMoW.woff) format("woff");
+  src: local(\\"IBM Plex Mono SemiBold Italic\\"), local(\\"IBMPlexMono-SemiBoldItalic\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6sfjptAgt5VM-kVkqdyU8n1ioSClN1gMoW.woff) format(\\"woff\\");
 }
 
 @font-face {
@@ -1523,7 +1522,7 @@ body {
   font-style: normal;
   font-weight: 300;
   font-display: auto;
-  src: local("IBM Plex Mono Light"), local("IBMPlexMono-Light"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6qfjptAgt5VM-kVkqdyU8n3oQIwlBFhA.woff) format("woff");
+  src: local(\\"IBM Plex Mono Light\\"), local(\\"IBMPlexMono-Light\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6qfjptAgt5VM-kVkqdyU8n3oQIwlBFhA.woff) format(\\"woff\\");
 }
 
 @font-face {
@@ -1531,7 +1530,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-display: auto;
-  src: local("IBM Plex Mono"), local("IBMPlexMono"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F63fjptAgt5VM-kVkqdyU8n1i8q0Q.woff) format("woff");
+  src: local(\\"IBM Plex Mono\\"), local(\\"IBMPlexMono\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F63fjptAgt5VM-kVkqdyU8n1i8q0Q.woff) format(\\"woff\\");
 }
 
 @font-face {
@@ -1539,7 +1538,7 @@ body {
   font-style: normal;
   font-weight: 600;
   font-display: auto;
-  src: local("IBM Plex Mono SemiBold"), local("IBMPlexMono-SemiBold"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6qfjptAgt5VM-kVkqdyU8n3vAOwlBFhA.woff) format("woff");
+  src: local(\\"IBM Plex Mono SemiBold\\"), local(\\"IBMPlexMono-SemiBold\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6qfjptAgt5VM-kVkqdyU8n3vAOwlBFhA.woff) format(\\"woff\\");
 }
 
 /* cyrillic-ext */
@@ -1548,7 +1547,7 @@ body {
   font-style: italic;
   font-weight: 300;
   font-display: auto;
-  src: local("IBM Plex Mono Light Italic"), local("IBMPlexMono-LightItalic"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6sfjptAgt5VM-kVkqdyU8n1ioSflV1jcoQPttoz6Pz.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono Light Italic\\"), local(\\"IBMPlexMono-LightItalic\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6sfjptAgt5VM-kVkqdyU8n1ioSflV1jcoQPttoz6Pz.woff2) format(\\"woff2\\");
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 
@@ -1558,7 +1557,7 @@ body {
   font-style: italic;
   font-weight: 300;
   font-display: auto;
-  src: local("IBM Plex Mono Light Italic"), local("IBMPlexMono-LightItalic"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6sfjptAgt5VM-kVkqdyU8n1ioSflV1hMoQPttoz6Pz.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono Light Italic\\"), local(\\"IBMPlexMono-LightItalic\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6sfjptAgt5VM-kVkqdyU8n1ioSflV1hMoQPttoz6Pz.woff2) format(\\"woff2\\");
   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 
@@ -1568,7 +1567,7 @@ body {
   font-style: italic;
   font-weight: 300;
   font-display: auto;
-  src: local("IBM Plex Mono Light Italic"), local("IBMPlexMono-LightItalic"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6sfjptAgt5VM-kVkqdyU8n1ioSflV1j8oQPttoz6Pz.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono Light Italic\\"), local(\\"IBMPlexMono-LightItalic\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6sfjptAgt5VM-kVkqdyU8n1ioSflV1j8oQPttoz6Pz.woff2) format(\\"woff2\\");
   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
 }
 
@@ -1578,7 +1577,7 @@ body {
   font-style: italic;
   font-weight: 300;
   font-display: auto;
-  src: local("IBM Plex Mono Light Italic"), local("IBMPlexMono-LightItalic"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6sfjptAgt5VM-kVkqdyU8n1ioSflV1jsoQPttoz6Pz.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono Light Italic\\"), local(\\"IBMPlexMono-LightItalic\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6sfjptAgt5VM-kVkqdyU8n1ioSflV1jsoQPttoz6Pz.woff2) format(\\"woff2\\");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
@@ -1588,7 +1587,7 @@ body {
   font-style: italic;
   font-weight: 300;
   font-display: auto;
-  src: local("IBM Plex Mono Light Italic"), local("IBMPlexMono-LightItalic"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6sfjptAgt5VM-kVkqdyU8n1ioSflV1gMoQPttozw.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono Light Italic\\"), local(\\"IBMPlexMono-LightItalic\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6sfjptAgt5VM-kVkqdyU8n1ioSflV1gMoQPttozw.woff2) format(\\"woff2\\");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -1598,7 +1597,7 @@ body {
   font-style: italic;
   font-weight: 400;
   font-display: auto;
-  src: local("IBM Plex Mono Italic"), local("IBMPlexMono-Italic"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6pfjptAgt5VM-kVkqdyU8n1ioa2HdgregdFOFh.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono Italic\\"), local(\\"IBMPlexMono-Italic\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6pfjptAgt5VM-kVkqdyU8n1ioa2HdgregdFOFh.woff2) format(\\"woff2\\");
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 
@@ -1608,7 +1607,7 @@ body {
   font-style: italic;
   font-weight: 400;
   font-display: auto;
-  src: local("IBM Plex Mono Italic"), local("IBMPlexMono-Italic"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6pfjptAgt5VM-kVkqdyU8n1ioa0XdgregdFOFh.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono Italic\\"), local(\\"IBMPlexMono-Italic\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6pfjptAgt5VM-kVkqdyU8n1ioa0XdgregdFOFh.woff2) format(\\"woff2\\");
   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 
@@ -1618,7 +1617,7 @@ body {
   font-style: italic;
   font-weight: 400;
   font-display: auto;
-  src: local("IBM Plex Mono Italic"), local("IBMPlexMono-Italic"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6pfjptAgt5VM-kVkqdyU8n1ioa2ndgregdFOFh.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono Italic\\"), local(\\"IBMPlexMono-Italic\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6pfjptAgt5VM-kVkqdyU8n1ioa2ndgregdFOFh.woff2) format(\\"woff2\\");
   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
 }
 
@@ -1628,7 +1627,7 @@ body {
   font-style: italic;
   font-weight: 400;
   font-display: auto;
-  src: local("IBM Plex Mono Italic"), local("IBMPlexMono-Italic"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6pfjptAgt5VM-kVkqdyU8n1ioa23dgregdFOFh.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono Italic\\"), local(\\"IBMPlexMono-Italic\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6pfjptAgt5VM-kVkqdyU8n1ioa23dgregdFOFh.woff2) format(\\"woff2\\");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
@@ -1638,7 +1637,7 @@ body {
   font-style: italic;
   font-weight: 400;
   font-display: auto;
-  src: local("IBM Plex Mono Italic"), local("IBMPlexMono-Italic"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6pfjptAgt5VM-kVkqdyU8n1ioa1XdgregdFA.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono Italic\\"), local(\\"IBMPlexMono-Italic\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6pfjptAgt5VM-kVkqdyU8n1ioa1XdgregdFA.woff2) format(\\"woff2\\");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -1648,7 +1647,7 @@ body {
   font-style: italic;
   font-weight: 600;
   font-display: auto;
-  src: local("IBM Plex Mono SemiBold Italic"), local("IBMPlexMono-SemiBoldItalic"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6sfjptAgt5VM-kVkqdyU8n1ioSClN1jcoQPttoz6Pz.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono SemiBold Italic\\"), local(\\"IBMPlexMono-SemiBoldItalic\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6sfjptAgt5VM-kVkqdyU8n1ioSClN1jcoQPttoz6Pz.woff2) format(\\"woff2\\");
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 
@@ -1658,7 +1657,7 @@ body {
   font-style: italic;
   font-weight: 600;
   font-display: auto;
-  src: local("IBM Plex Mono SemiBold Italic"), local("IBMPlexMono-SemiBoldItalic"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6sfjptAgt5VM-kVkqdyU8n1ioSClN1hMoQPttoz6Pz.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono SemiBold Italic\\"), local(\\"IBMPlexMono-SemiBoldItalic\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6sfjptAgt5VM-kVkqdyU8n1ioSClN1hMoQPttoz6Pz.woff2) format(\\"woff2\\");
   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 
@@ -1668,7 +1667,7 @@ body {
   font-style: italic;
   font-weight: 600;
   font-display: auto;
-  src: local("IBM Plex Mono SemiBold Italic"), local("IBMPlexMono-SemiBoldItalic"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6sfjptAgt5VM-kVkqdyU8n1ioSClN1j8oQPttoz6Pz.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono SemiBold Italic\\"), local(\\"IBMPlexMono-SemiBoldItalic\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6sfjptAgt5VM-kVkqdyU8n1ioSClN1j8oQPttoz6Pz.woff2) format(\\"woff2\\");
   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
 }
 
@@ -1678,7 +1677,7 @@ body {
   font-style: italic;
   font-weight: 600;
   font-display: auto;
-  src: local("IBM Plex Mono SemiBold Italic"), local("IBMPlexMono-SemiBoldItalic"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6sfjptAgt5VM-kVkqdyU8n1ioSClN1jsoQPttoz6Pz.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono SemiBold Italic\\"), local(\\"IBMPlexMono-SemiBoldItalic\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6sfjptAgt5VM-kVkqdyU8n1ioSClN1jsoQPttoz6Pz.woff2) format(\\"woff2\\");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
@@ -1688,7 +1687,7 @@ body {
   font-style: italic;
   font-weight: 600;
   font-display: auto;
-  src: local("IBM Plex Mono SemiBold Italic"), local("IBMPlexMono-SemiBoldItalic"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6sfjptAgt5VM-kVkqdyU8n1ioSClN1gMoQPttozw.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono SemiBold Italic\\"), local(\\"IBMPlexMono-SemiBoldItalic\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6sfjptAgt5VM-kVkqdyU8n1ioSClN1gMoQPttozw.woff2) format(\\"woff2\\");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -1698,7 +1697,7 @@ body {
   font-style: normal;
   font-weight: 300;
   font-display: auto;
-  src: local("IBM Plex Mono Light"), local("IBMPlexMono-Light"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6qfjptAgt5VM-kVkqdyU8n3oQIwl1FgsAXHNlYzg.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono Light\\"), local(\\"IBMPlexMono-Light\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6qfjptAgt5VM-kVkqdyU8n3oQIwl1FgsAXHNlYzg.woff2) format(\\"woff2\\");
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 
@@ -1708,7 +1707,7 @@ body {
   font-style: normal;
   font-weight: 300;
   font-display: auto;
-  src: local("IBM Plex Mono Light"), local("IBMPlexMono-Light"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6qfjptAgt5VM-kVkqdyU8n3oQIwlRFgsAXHNlYzg.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono Light\\"), local(\\"IBMPlexMono-Light\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6qfjptAgt5VM-kVkqdyU8n3oQIwlRFgsAXHNlYzg.woff2) format(\\"woff2\\");
   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 
@@ -1718,7 +1717,7 @@ body {
   font-style: normal;
   font-weight: 300;
   font-display: auto;
-  src: local("IBM Plex Mono Light"), local("IBMPlexMono-Light"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6qfjptAgt5VM-kVkqdyU8n3oQIwl9FgsAXHNlYzg.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono Light\\"), local(\\"IBMPlexMono-Light\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6qfjptAgt5VM-kVkqdyU8n3oQIwl9FgsAXHNlYzg.woff2) format(\\"woff2\\");
   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
 }
 
@@ -1728,7 +1727,7 @@ body {
   font-style: normal;
   font-weight: 300;
   font-display: auto;
-  src: local("IBM Plex Mono Light"), local("IBMPlexMono-Light"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6qfjptAgt5VM-kVkqdyU8n3oQIwl5FgsAXHNlYzg.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono Light\\"), local(\\"IBMPlexMono-Light\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6qfjptAgt5VM-kVkqdyU8n3oQIwl5FgsAXHNlYzg.woff2) format(\\"woff2\\");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
@@ -1738,7 +1737,7 @@ body {
   font-style: normal;
   font-weight: 300;
   font-display: auto;
-  src: local("IBM Plex Mono Light"), local("IBMPlexMono-Light"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6qfjptAgt5VM-kVkqdyU8n3oQIwlBFgsAXHNk.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono Light\\"), local(\\"IBMPlexMono-Light\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6qfjptAgt5VM-kVkqdyU8n3oQIwlBFgsAXHNk.woff2) format(\\"woff2\\");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -1748,7 +1747,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-display: auto;
-  src: local("IBM Plex Mono"), local("IBMPlexMono"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F63fjptAgt5VM-kVkqdyU8n1iIq131nj-otFQ.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono\\"), local(\\"IBMPlexMono\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F63fjptAgt5VM-kVkqdyU8n1iIq131nj-otFQ.woff2) format(\\"woff2\\");
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 
@@ -1758,7 +1757,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-display: auto;
-  src: local("IBM Plex Mono"), local("IBMPlexMono"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F63fjptAgt5VM-kVkqdyU8n1isq131nj-otFQ.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono\\"), local(\\"IBMPlexMono\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F63fjptAgt5VM-kVkqdyU8n1isq131nj-otFQ.woff2) format(\\"woff2\\");
   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 
@@ -1768,7 +1767,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-display: auto;
-  src: local("IBM Plex Mono"), local("IBMPlexMono"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F63fjptAgt5VM-kVkqdyU8n1iAq131nj-otFQ.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono\\"), local(\\"IBMPlexMono\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F63fjptAgt5VM-kVkqdyU8n1iAq131nj-otFQ.woff2) format(\\"woff2\\");
   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
 }
 
@@ -1778,7 +1777,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-display: auto;
-  src: local("IBM Plex Mono"), local("IBMPlexMono"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F63fjptAgt5VM-kVkqdyU8n1iEq131nj-otFQ.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono\\"), local(\\"IBMPlexMono\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F63fjptAgt5VM-kVkqdyU8n1iEq131nj-otFQ.woff2) format(\\"woff2\\");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
@@ -1788,7 +1787,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-display: auto;
-  src: local("IBM Plex Mono"), local("IBMPlexMono"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F63fjptAgt5VM-kVkqdyU8n1i8q131nj-o.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono\\"), local(\\"IBMPlexMono\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F63fjptAgt5VM-kVkqdyU8n1i8q131nj-o.woff2) format(\\"woff2\\");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -1798,7 +1797,7 @@ body {
   font-style: normal;
   font-weight: 600;
   font-display: auto;
-  src: local("IBM Plex Mono SemiBold"), local("IBMPlexMono-SemiBold"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6qfjptAgt5VM-kVkqdyU8n3vAOwl1FgsAXHNlYzg.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono SemiBold\\"), local(\\"IBMPlexMono-SemiBold\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6qfjptAgt5VM-kVkqdyU8n3vAOwl1FgsAXHNlYzg.woff2) format(\\"woff2\\");
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 
@@ -1808,7 +1807,7 @@ body {
   font-style: normal;
   font-weight: 600;
   font-display: auto;
-  src: local("IBM Plex Mono SemiBold"), local("IBMPlexMono-SemiBold"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6qfjptAgt5VM-kVkqdyU8n3vAOwlRFgsAXHNlYzg.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono SemiBold\\"), local(\\"IBMPlexMono-SemiBold\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6qfjptAgt5VM-kVkqdyU8n3vAOwlRFgsAXHNlYzg.woff2) format(\\"woff2\\");
   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 
@@ -1818,7 +1817,7 @@ body {
   font-style: normal;
   font-weight: 600;
   font-display: auto;
-  src: local("IBM Plex Mono SemiBold"), local("IBMPlexMono-SemiBold"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6qfjptAgt5VM-kVkqdyU8n3vAOwl9FgsAXHNlYzg.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono SemiBold\\"), local(\\"IBMPlexMono-SemiBold\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6qfjptAgt5VM-kVkqdyU8n3vAOwl9FgsAXHNlYzg.woff2) format(\\"woff2\\");
   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
 }
 
@@ -1828,7 +1827,7 @@ body {
   font-style: normal;
   font-weight: 600;
   font-display: auto;
-  src: local("IBM Plex Mono SemiBold"), local("IBMPlexMono-SemiBold"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6qfjptAgt5VM-kVkqdyU8n3vAOwl5FgsAXHNlYzg.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono SemiBold\\"), local(\\"IBMPlexMono-SemiBold\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6qfjptAgt5VM-kVkqdyU8n3vAOwl5FgsAXHNlYzg.woff2) format(\\"woff2\\");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
@@ -1838,7 +1837,7 @@ body {
   font-style: normal;
   font-weight: 600;
   font-display: auto;
-  src: local("IBM Plex Mono SemiBold"), local("IBMPlexMono-SemiBold"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6qfjptAgt5VM-kVkqdyU8n3vAOwlBFgsAXHNk.woff2) format("woff2");
+  src: local(\\"IBM Plex Mono SemiBold\\"), local(\\"IBMPlexMono-SemiBold\\"), url(https://fonts.gstatic.com/s/ibmplexmono/v4/-F6qfjptAgt5VM-kVkqdyU8n3vAOwlBFgsAXHNk.woff2) format(\\"woff2\\");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -1847,7 +1846,7 @@ body {
   font-style: italic;
   font-weight: 300;
   font-display: auto;
-  src: local("IBM Plex Sans Light Italic"), local("IBMPlexSans-LightItalic"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmvIRcdvfo.woff) format("woff");
+  src: local(\\"IBM Plex Sans Light Italic\\"), local(\\"IBMPlexSans-LightItalic\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmvIRcdvfo.woff) format(\\"woff\\");
 }
 
 @font-face {
@@ -1855,7 +1854,7 @@ body {
   font-style: italic;
   font-weight: 400;
   font-display: auto;
-  src: local("IBM Plex Sans Italic"), local("IBMPlexSans-Italic"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX-KVElMYYaJe8bpLHnCwDKhdTuF6ZP.woff) format("woff");
+  src: local(\\"IBM Plex Sans Italic\\"), local(\\"IBMPlexSans-Italic\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX-KVElMYYaJe8bpLHnCwDKhdTuF6ZP.woff) format(\\"woff\\");
 }
 
 @font-face {
@@ -1863,7 +1862,7 @@ body {
   font-style: italic;
   font-weight: 600;
   font-display: auto;
-  src: local("IBM Plex Sans SemiBold Italic"), local("IBMPlexSans-SemiBoldItalic"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmyIJcdvfo.woff) format("woff");
+  src: local(\\"IBM Plex Sans SemiBold Italic\\"), local(\\"IBMPlexSans-SemiBoldItalic\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmyIJcdvfo.woff) format(\\"woff\\");
 }
 
 @font-face {
@@ -1871,7 +1870,7 @@ body {
   font-style: normal;
   font-weight: 300;
   font-display: auto;
-  src: local("IBM Plex Sans Light"), local("IBMPlexSans-Light"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjXr8AIFscg.woff) format("woff");
+  src: local(\\"IBM Plex Sans Light\\"), local(\\"IBMPlexSans-Light\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjXr8AIFscg.woff) format(\\"woff\\");
 }
 
 @font-face {
@@ -1879,7 +1878,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-display: auto;
-  src: local("IBM Plex Sans"), local("IBMPlexSans"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYXgKVElMYYaJe8bpLHnCwDKhdHeEw.woff) format("woff");
+  src: local(\\"IBM Plex Sans\\"), local(\\"IBMPlexSans\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYXgKVElMYYaJe8bpLHnCwDKhdHeEw.woff) format(\\"woff\\");
 }
 
 @font-face {
@@ -1887,7 +1886,7 @@ body {
   font-style: normal;
   font-weight: 600;
   font-display: auto;
-  src: local("IBM Plex Sans SemiBold"), local("IBMPlexSans-SemiBold"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjQ76AIFscg.woff) format("woff");
+  src: local(\\"IBM Plex Sans SemiBold\\"), local(\\"IBMPlexSans-SemiBold\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjQ76AIFscg.woff) format(\\"woff\\");
 }
 
 /* cyrillic-ext */
@@ -1896,7 +1895,7 @@ body {
   font-style: italic;
   font-weight: 300;
   font-display: auto;
-  src: local("IBM Plex Sans Light Italic"), local("IBMPlexSans-LightItalic"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmvIRce_fuJGl18QRY.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans Light Italic\\"), local(\\"IBMPlexSans-LightItalic\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmvIRce_fuJGl18QRY.woff2) format(\\"woff2\\");
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 
@@ -1906,7 +1905,7 @@ body {
   font-style: italic;
   font-weight: 300;
   font-display: auto;
-  src: local("IBM Plex Sans Light Italic"), local("IBMPlexSans-LightItalic"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmvIRccvfuJGl18QRY.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans Light Italic\\"), local(\\"IBMPlexSans-LightItalic\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmvIRccvfuJGl18QRY.woff2) format(\\"woff2\\");
   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 
@@ -1916,7 +1915,7 @@ body {
   font-style: italic;
   font-weight: 300;
   font-display: auto;
-  src: local("IBM Plex Sans Light Italic"), local("IBMPlexSans-LightItalic"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmvIRcdffuJGl18QRY.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans Light Italic\\"), local(\\"IBMPlexSans-LightItalic\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmvIRcdffuJGl18QRY.woff2) format(\\"woff2\\");
   unicode-range: U+0370-03FF;
 }
 
@@ -1926,7 +1925,7 @@ body {
   font-style: italic;
   font-weight: 300;
   font-display: auto;
-  src: local("IBM Plex Sans Light Italic"), local("IBMPlexSans-LightItalic"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmvIRceffuJGl18QRY.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans Light Italic\\"), local(\\"IBMPlexSans-LightItalic\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmvIRceffuJGl18QRY.woff2) format(\\"woff2\\");
   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
 }
 
@@ -1936,7 +1935,7 @@ body {
   font-style: italic;
   font-weight: 300;
   font-display: auto;
-  src: local("IBM Plex Sans Light Italic"), local("IBMPlexSans-LightItalic"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmvIRcePfuJGl18QRY.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans Light Italic\\"), local(\\"IBMPlexSans-LightItalic\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmvIRcePfuJGl18QRY.woff2) format(\\"woff2\\");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
@@ -1946,7 +1945,7 @@ body {
   font-style: italic;
   font-weight: 300;
   font-display: auto;
-  src: local("IBM Plex Sans Light Italic"), local("IBMPlexSans-LightItalic"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmvIRcdvfuJGl18Q.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans Light Italic\\"), local(\\"IBMPlexSans-LightItalic\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmvIRcdvfuJGl18Q.woff2) format(\\"woff2\\");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -1956,7 +1955,7 @@ body {
   font-style: italic;
   font-weight: 400;
   font-display: auto;
-  src: local("IBM Plex Sans Italic"), local("IBMPlexSans-Italic"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX-KVElMYYaJe8bpLHnCwDKhdTuGqZJW9XjDlN8.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans Italic\\"), local(\\"IBMPlexSans-Italic\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX-KVElMYYaJe8bpLHnCwDKhdTuGqZJW9XjDlN8.woff2) format(\\"woff2\\");
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 
@@ -1966,7 +1965,7 @@ body {
   font-style: italic;
   font-weight: 400;
   font-display: auto;
-  src: local("IBM Plex Sans Italic"), local("IBMPlexSans-Italic"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX-KVElMYYaJe8bpLHnCwDKhdTuE6ZJW9XjDlN8.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans Italic\\"), local(\\"IBMPlexSans-Italic\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX-KVElMYYaJe8bpLHnCwDKhdTuE6ZJW9XjDlN8.woff2) format(\\"woff2\\");
   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 
@@ -1976,7 +1975,7 @@ body {
   font-style: italic;
   font-weight: 400;
   font-display: auto;
-  src: local("IBM Plex Sans Italic"), local("IBMPlexSans-Italic"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX-KVElMYYaJe8bpLHnCwDKhdTuFKZJW9XjDlN8.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans Italic\\"), local(\\"IBMPlexSans-Italic\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX-KVElMYYaJe8bpLHnCwDKhdTuFKZJW9XjDlN8.woff2) format(\\"woff2\\");
   unicode-range: U+0370-03FF;
 }
 
@@ -1986,7 +1985,7 @@ body {
   font-style: italic;
   font-weight: 400;
   font-display: auto;
-  src: local("IBM Plex Sans Italic"), local("IBMPlexSans-Italic"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX-KVElMYYaJe8bpLHnCwDKhdTuGKZJW9XjDlN8.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans Italic\\"), local(\\"IBMPlexSans-Italic\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX-KVElMYYaJe8bpLHnCwDKhdTuGKZJW9XjDlN8.woff2) format(\\"woff2\\");
   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
 }
 
@@ -1996,7 +1995,7 @@ body {
   font-style: italic;
   font-weight: 400;
   font-display: auto;
-  src: local("IBM Plex Sans Italic"), local("IBMPlexSans-Italic"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX-KVElMYYaJe8bpLHnCwDKhdTuGaZJW9XjDlN8.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans Italic\\"), local(\\"IBMPlexSans-Italic\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX-KVElMYYaJe8bpLHnCwDKhdTuGaZJW9XjDlN8.woff2) format(\\"woff2\\");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
@@ -2006,7 +2005,7 @@ body {
   font-style: italic;
   font-weight: 400;
   font-display: auto;
-  src: local("IBM Plex Sans Italic"), local("IBMPlexSans-Italic"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX-KVElMYYaJe8bpLHnCwDKhdTuF6ZJW9XjDg.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans Italic\\"), local(\\"IBMPlexSans-Italic\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX-KVElMYYaJe8bpLHnCwDKhdTuF6ZJW9XjDg.woff2) format(\\"woff2\\");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -2016,7 +2015,7 @@ body {
   font-style: italic;
   font-weight: 600;
   font-display: auto;
-  src: local("IBM Plex Sans SemiBold Italic"), local("IBMPlexSans-SemiBoldItalic"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmyIJce_fuJGl18QRY.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans SemiBold Italic\\"), local(\\"IBMPlexSans-SemiBoldItalic\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmyIJce_fuJGl18QRY.woff2) format(\\"woff2\\");
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 
@@ -2026,7 +2025,7 @@ body {
   font-style: italic;
   font-weight: 600;
   font-display: auto;
-  src: local("IBM Plex Sans SemiBold Italic"), local("IBMPlexSans-SemiBoldItalic"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmyIJccvfuJGl18QRY.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans SemiBold Italic\\"), local(\\"IBMPlexSans-SemiBoldItalic\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmyIJccvfuJGl18QRY.woff2) format(\\"woff2\\");
   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 
@@ -2036,7 +2035,7 @@ body {
   font-style: italic;
   font-weight: 600;
   font-display: auto;
-  src: local("IBM Plex Sans SemiBold Italic"), local("IBMPlexSans-SemiBoldItalic"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmyIJcdffuJGl18QRY.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans SemiBold Italic\\"), local(\\"IBMPlexSans-SemiBoldItalic\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmyIJcdffuJGl18QRY.woff2) format(\\"woff2\\");
   unicode-range: U+0370-03FF;
 }
 
@@ -2046,7 +2045,7 @@ body {
   font-style: italic;
   font-weight: 600;
   font-display: auto;
-  src: local("IBM Plex Sans SemiBold Italic"), local("IBMPlexSans-SemiBoldItalic"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmyIJceffuJGl18QRY.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans SemiBold Italic\\"), local(\\"IBMPlexSans-SemiBoldItalic\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmyIJceffuJGl18QRY.woff2) format(\\"woff2\\");
   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
 }
 
@@ -2056,7 +2055,7 @@ body {
   font-style: italic;
   font-weight: 600;
   font-display: auto;
-  src: local("IBM Plex Sans SemiBold Italic"), local("IBMPlexSans-SemiBoldItalic"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmyIJcePfuJGl18QRY.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans SemiBold Italic\\"), local(\\"IBMPlexSans-SemiBoldItalic\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmyIJcePfuJGl18QRY.woff2) format(\\"woff2\\");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
@@ -2066,7 +2065,7 @@ body {
   font-style: italic;
   font-weight: 600;
   font-display: auto;
-  src: local("IBM Plex Sans SemiBold Italic"), local("IBMPlexSans-SemiBoldItalic"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmyIJcdvfuJGl18Q.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans SemiBold Italic\\"), local(\\"IBMPlexSans-SemiBoldItalic\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX7KVElMYYaJe8bpLHnCwDKhdTmyIJcdvfuJGl18Q.woff2) format(\\"woff2\\");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -2076,7 +2075,7 @@ body {
   font-style: normal;
   font-weight: 300;
   font-display: auto;
-  src: local("IBM Plex Sans Light"), local("IBMPlexSans-Light"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjXr8AIxsdP3pBmtF8A.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans Light\\"), local(\\"IBMPlexSans-Light\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjXr8AIxsdP3pBmtF8A.woff2) format(\\"woff2\\");
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 
@@ -2086,7 +2085,7 @@ body {
   font-style: normal;
   font-weight: 300;
   font-display: auto;
-  src: local("IBM Plex Sans Light"), local("IBMPlexSans-Light"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjXr8AIVsdP3pBmtF8A.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans Light\\"), local(\\"IBMPlexSans-Light\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjXr8AIVsdP3pBmtF8A.woff2) format(\\"woff2\\");
   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 
@@ -2096,7 +2095,7 @@ body {
   font-style: normal;
   font-weight: 300;
   font-display: auto;
-  src: local("IBM Plex Sans Light"), local("IBMPlexSans-Light"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjXr8AIJsdP3pBmtF8A.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans Light\\"), local(\\"IBMPlexSans-Light\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjXr8AIJsdP3pBmtF8A.woff2) format(\\"woff2\\");
   unicode-range: U+0370-03FF;
 }
 
@@ -2106,7 +2105,7 @@ body {
   font-style: normal;
   font-weight: 300;
   font-display: auto;
-  src: local("IBM Plex Sans Light"), local("IBMPlexSans-Light"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjXr8AI5sdP3pBmtF8A.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans Light\\"), local(\\"IBMPlexSans-Light\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjXr8AI5sdP3pBmtF8A.woff2) format(\\"woff2\\");
   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
 }
 
@@ -2116,7 +2115,7 @@ body {
   font-style: normal;
   font-weight: 300;
   font-display: auto;
-  src: local("IBM Plex Sans Light"), local("IBMPlexSans-Light"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjXr8AI9sdP3pBmtF8A.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans Light\\"), local(\\"IBMPlexSans-Light\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjXr8AI9sdP3pBmtF8A.woff2) format(\\"woff2\\");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
@@ -2126,7 +2125,7 @@ body {
   font-style: normal;
   font-weight: 300;
   font-display: auto;
-  src: local("IBM Plex Sans Light"), local("IBMPlexSans-Light"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjXr8AIFsdP3pBms.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans Light\\"), local(\\"IBMPlexSans-Light\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjXr8AIFsdP3pBms.woff2) format(\\"woff2\\");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -2136,7 +2135,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-display: auto;
-  src: local("IBM Plex Sans"), local("IBMPlexSans"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYXgKVElMYYaJe8bpLHnCwDKhdzeFaxOedfTDw.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans\\"), local(\\"IBMPlexSans\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYXgKVElMYYaJe8bpLHnCwDKhdzeFaxOedfTDw.woff2) format(\\"woff2\\");
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 
@@ -2146,7 +2145,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-display: auto;
-  src: local("IBM Plex Sans"), local("IBMPlexSans"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYXgKVElMYYaJe8bpLHnCwDKhdXeFaxOedfTDw.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans\\"), local(\\"IBMPlexSans\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYXgKVElMYYaJe8bpLHnCwDKhdXeFaxOedfTDw.woff2) format(\\"woff2\\");
   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 
@@ -2156,7 +2155,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-display: auto;
-  src: local("IBM Plex Sans"), local("IBMPlexSans"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYXgKVElMYYaJe8bpLHnCwDKhdLeFaxOedfTDw.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans\\"), local(\\"IBMPlexSans\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYXgKVElMYYaJe8bpLHnCwDKhdLeFaxOedfTDw.woff2) format(\\"woff2\\");
   unicode-range: U+0370-03FF;
 }
 
@@ -2166,7 +2165,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-display: auto;
-  src: local("IBM Plex Sans"), local("IBMPlexSans"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYXgKVElMYYaJe8bpLHnCwDKhd7eFaxOedfTDw.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans\\"), local(\\"IBMPlexSans\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYXgKVElMYYaJe8bpLHnCwDKhd7eFaxOedfTDw.woff2) format(\\"woff2\\");
   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
 }
 
@@ -2176,7 +2175,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-display: auto;
-  src: local("IBM Plex Sans"), local("IBMPlexSans"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYXgKVElMYYaJe8bpLHnCwDKhd_eFaxOedfTDw.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans\\"), local(\\"IBMPlexSans\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYXgKVElMYYaJe8bpLHnCwDKhd_eFaxOedfTDw.woff2) format(\\"woff2\\");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
@@ -2186,7 +2185,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-display: auto;
-  src: local("IBM Plex Sans"), local("IBMPlexSans"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYXgKVElMYYaJe8bpLHnCwDKhdHeFaxOedc.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans\\"), local(\\"IBMPlexSans\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYXgKVElMYYaJe8bpLHnCwDKhdHeFaxOedc.woff2) format(\\"woff2\\");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -2196,7 +2195,7 @@ body {
   font-style: normal;
   font-weight: 600;
   font-display: auto;
-  src: local("IBM Plex Sans SemiBold"), local("IBMPlexSans-SemiBold"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjQ76AIxsdP3pBmtF8A.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans SemiBold\\"), local(\\"IBMPlexSans-SemiBold\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjQ76AIxsdP3pBmtF8A.woff2) format(\\"woff2\\");
   unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 
@@ -2206,7 +2205,7 @@ body {
   font-style: normal;
   font-weight: 600;
   font-display: auto;
-  src: local("IBM Plex Sans SemiBold"), local("IBMPlexSans-SemiBold"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjQ76AIVsdP3pBmtF8A.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans SemiBold\\"), local(\\"IBMPlexSans-SemiBold\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjQ76AIVsdP3pBmtF8A.woff2) format(\\"woff2\\");
   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 
@@ -2216,7 +2215,7 @@ body {
   font-style: normal;
   font-weight: 600;
   font-display: auto;
-  src: local("IBM Plex Sans SemiBold"), local("IBMPlexSans-SemiBold"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjQ76AIJsdP3pBmtF8A.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans SemiBold\\"), local(\\"IBMPlexSans-SemiBold\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjQ76AIJsdP3pBmtF8A.woff2) format(\\"woff2\\");
   unicode-range: U+0370-03FF;
 }
 
@@ -2226,7 +2225,7 @@ body {
   font-style: normal;
   font-weight: 600;
   font-display: auto;
-  src: local("IBM Plex Sans SemiBold"), local("IBMPlexSans-SemiBold"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjQ76AI5sdP3pBmtF8A.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans SemiBold\\"), local(\\"IBMPlexSans-SemiBold\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjQ76AI5sdP3pBmtF8A.woff2) format(\\"woff2\\");
   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
 }
 
@@ -2236,7 +2235,7 @@ body {
   font-style: normal;
   font-weight: 600;
   font-display: auto;
-  src: local("IBM Plex Sans SemiBold"), local("IBMPlexSans-SemiBold"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjQ76AI9sdP3pBmtF8A.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans SemiBold\\"), local(\\"IBMPlexSans-SemiBold\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjQ76AI9sdP3pBmtF8A.woff2) format(\\"woff2\\");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
@@ -2246,7 +2245,7 @@ body {
   font-style: normal;
   font-weight: 600;
   font-display: auto;
-  src: local("IBM Plex Sans SemiBold"), local("IBMPlexSans-SemiBold"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjQ76AIFsdP3pBms.woff2) format("woff2");
+  src: local(\\"IBM Plex Sans SemiBold\\"), local(\\"IBMPlexSans-SemiBold\\"), url(https://fonts.gstatic.com/s/ibmplexsans/v6/zYX9KVElMYYaJe8bpLHnCwDKjQ76AIFsdP3pBms.woff2) format(\\"woff2\\");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -2556,20 +2555,20 @@ body {
 }
 
 .bx--breadcrumb,
-.bx--breadcrumb .bx--breadcrumb-item &gt; .bx--link {
+.bx--breadcrumb .bx--breadcrumb-item > .bx--link {
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1rem;
   letter-spacing: 0.32px;
 }
 
-.bx--breadcrumb .bx--breadcrumb-item &gt; .bx--link {
+.bx--breadcrumb .bx--breadcrumb-item > .bx--link {
   max-width: 40ex;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.bx--breadcrumb .bx--breadcrumb-item &gt; .bx--link:visited {
+.bx--breadcrumb .bx--breadcrumb-item > .bx--link:visited {
   color: var(--link-01, #78a9ff);
 }
 
@@ -2713,7 +2712,7 @@ body {
   display: flex;
 }
 
-.bx--btn-set &gt; .bx--btn {
+.bx--btn-set > .bx--btn {
   max-width: 12.25rem;
   width: 100%;
 }
@@ -3513,7 +3512,7 @@ body {
   background-color: var(--hover-danger, #b81921);
 }
 
-.security--button--ghost-danger:hover &gt; .bx--btn__icon &gt; path {
+.security--button--ghost-danger:hover > .bx--btn__icon > path {
   fill: currentColor;
 }
 
@@ -3529,7 +3528,7 @@ body {
   flex-direction: column;
 }
 
-.security--button--large &gt; .bx--btn__icon {
+.security--button--large > .bx--btn__icon {
   position: absolute;
   bottom: 1rem;
   width: unset;
@@ -4425,7 +4424,7 @@ a.bx--overflow-menu-options__btn::before {
   background-color: unset;
 }
 
-.security--combo-button .security--combo-button-item__wrapper &gt; span + svg {
+.security--combo-button .security--combo-button-item__wrapper > span + svg {
   margin-left: 0.5rem;
   flex-shrink: 0;
 }
@@ -4745,8 +4744,8 @@ a.bx--overflow-menu-options__btn::before {
   --icon-size-02: 1.25rem;
 }
 
-.security--panel--v2[dir="rtl"],
-[dir="rtl"] .security--panel--v2 {
+.security--panel--v2[dir=\\"rtl\\"],
+[dir=\\"rtl\\"] .security--panel--v2 {
   right: unset;
   left: 0;
 }
@@ -4755,7 +4754,7 @@ a.bx--overflow-menu-options__btn::before {
   width: calc( 100% - 3rem - 20rem);
 }
 
-.security--panel--v2__container .security--header__container &gt; .security--header {
+.security--panel--v2__container .security--header__container > .security--header {
   width: inherit;
 }
 
@@ -4763,8 +4762,8 @@ a.bx--overflow-menu-options__btn::before {
   margin-left: auto;
 }
 
-.security--panel--v2__button--close:only-child[dir="rtl"],
-[dir="rtl"] .security--panel--v2__button--close:only-child {
+.security--panel--v2__button--close:only-child[dir=\\"rtl\\"],
+[dir=\\"rtl\\"] .security--panel--v2__button--close:only-child {
   margin-right: auto;
   margin-left: unset;
 }
@@ -4928,11 +4927,11 @@ a.bx--overflow-menu-options__btn::before {
   color: var(--inverse-link, #0f62fe);
 }
 
-.security--decorator--active &gt; .security--decorator__type, .security--decorator--active &gt; .security--decorator__value, .security--decorator--active:hover &gt; .security--decorator__type, .security--decorator--active:hover &gt; .security--decorator__value, .security--decorator:focus:active &gt; .security--decorator__type, .security--decorator:focus:active &gt; .security--decorator__value {
+.security--decorator--active > .security--decorator__type, .security--decorator--active > .security--decorator__value, .security--decorator--active:hover > .security--decorator__type, .security--decorator--active:hover > .security--decorator__value, .security--decorator:focus:active > .security--decorator__type, .security--decorator:focus:active > .security--decorator__value {
   color: var(--active-ui, #525252);
 }
 
-.security--decorator--active &gt; .security--decorator__type, .security--decorator--active:hover &gt; .security--decorator__type, .security--decorator:focus:active &gt; .security--decorator__type {
+.security--decorator--active > .security--decorator__type, .security--decorator--active:hover > .security--decorator__type, .security--decorator:focus:active > .security--decorator__type {
   border-right: 1px solid var(--ui-04, #6f6f6f);
 }
 
@@ -4960,16 +4959,16 @@ a.bx--overflow-menu-options__btn::before {
   vertical-align: middle;
 }
 
-.security--decorator--inline &gt; .security--decorator__icon {
+.security--decorator--inline > .security--decorator__icon {
   padding-left: 0.25rem;
 }
 
-.security--decorator--inline &gt; .security--decorator__type, .security--decorator--inline &gt; .security--decorator__value {
+.security--decorator--inline > .security--decorator__type, .security--decorator--inline > .security--decorator__value {
   padding-right: 0.25rem;
   padding-left: 0.25rem;
 }
 
-.security--decorator--inline &gt; .security--decorator__type, .security--decorator--inline &gt; .security--decorator__value {
+.security--decorator--inline > .security--decorator__type, .security--decorator--inline > .security--decorator__value {
   line-height: 1.25rem;
 }
 
@@ -6010,17 +6009,17 @@ tr.bx--parent-row.bx--expandable-row + tr[data-child-row] td .bx--child-row-inne
   max-height: 100%;
 }
 
-.bx--parent-row.bx--expandable-row &gt; td,
-.bx--parent-row.bx--expandable-row + tr[data-child-row] &gt; td {
+.bx--parent-row.bx--expandable-row > td,
+.bx--parent-row.bx--expandable-row + tr[data-child-row] > td {
   border-bottom: 1px solid var(--ui-03, #393939);
   box-shadow: 0 1px var(--ui-03, #393939);
 }
 
-.bx--parent-row:not(.bx--expandable-row) + tr[data-child-row] &gt; td {
+.bx--parent-row:not(.bx--expandable-row) + tr[data-child-row] > td {
   box-shadow: none;
 }
 
-.bx--parent-row.bx--expandable-row &gt; td:first-of-type {
+.bx--parent-row.bx--expandable-row > td:first-of-type {
   box-shadow: none;
 }
 
@@ -6644,7 +6643,7 @@ input[type='number'] {
 
 input[data-invalid],
 .bx--text-input__field-wrapper[data-invalid],
-.bx--text-area__wrapper[data-invalid] &gt; .bx--text-area--invalid,
+.bx--text-area__wrapper[data-invalid] > .bx--text-area--invalid,
 .bx--select-input__wrapper[data-invalid],
 .bx--list-box[data-invalid],
 .bx--combo-box[data-invalid] .bx--text-input {
@@ -7305,8 +7304,8 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   word-wrap: break-word;
 }
 
-.security--link--external__title[dir="rtl"],
-[dir="rtl"] .security--link--external__title {
+.security--link--external__title[dir=\\"rtl\\"],
+[dir=\\"rtl\\"] .security--link--external__title {
   margin-right: unset;
   margin-left: 0.25rem;
 }
@@ -7472,7 +7471,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   }
 }
 
-.bx--accordion__content &gt; p {
+.bx--accordion__content > p {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.25rem;
@@ -7564,11 +7563,11 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   font-weight: 600;
 }
 
-.bx--accordion__content &gt; *:first-child {
+.bx--accordion__content > *:first-child {
   margin-top: 0;
 }
 
-.bx--accordion__content &gt; *:last-child {
+.bx--accordion__content > *:last-child {
   margin-bottom: 0;
 }
 
@@ -7658,11 +7657,11 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .security--filter-selector__checkbox,
-.security--filter-selector__checkbox &gt; span {
+.security--filter-selector__checkbox > span {
   width: 100%;
 }
 
-.security--filter-selector__checkbox &gt; span {
+.security--filter-selector__checkbox > span {
   display: flex;
   align-items: center;
 }
@@ -7703,17 +7702,17 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   padding-right: 1rem;
 }
 
-.security--filter-subcategory &gt; .bx--accordion__heading {
+.security--filter-subcategory > .bx--accordion__heading {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   color: var(--text-02, #c6c6c6);
 }
 
-.security--filter-subcategory &gt; .bx--accordion__content {
+.security--filter-subcategory > .bx--accordion__content {
   padding: 0 0 0 1rem;
 }
 
-.security--filter-subcategory.bx--accordion__item--active &gt; .bx--accordion__heading {
+.security--filter-subcategory.bx--accordion__item--active > .bx--accordion__heading {
   color: var(--text-01, #f4f4f4);
 }
 
@@ -7730,11 +7729,11 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   color: var(--text-02, #c6c6c6);
 }
 
-.security--filter-subcategory__button--toggle.bx--btn &gt; .bx--btn__icon, .security--filter-subcategory__button--toggle.bx--btn:hover &gt; .bx--btn__icon {
+.security--filter-subcategory__button--toggle.bx--btn > .bx--btn__icon, .security--filter-subcategory__button--toggle.bx--btn:hover > .bx--btn__icon {
   fill: currentColor;
 }
 
-.security--filter-subcategory__button--toggle.bx--btn &gt; .bx--btn__icon {
+.security--filter-subcategory__button--toggle.bx--btn > .bx--btn__icon {
   margin-right: 0.5rem;
   margin-left: 0;
   order: -1;
@@ -7806,25 +7805,25 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   letter-spacing: 0.32px;
 }
 
-.security--filter-panel-accordion-item &gt; .bx--accordion__heading {
+.security--filter-panel-accordion-item > .bx--accordion__heading {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   color: var(--text-02, #c6c6c6);
   border: 2px solid transparent;
 }
 
-.security--filter-panel-accordion-item &gt; .bx--accordion__heading::before {
+.security--filter-panel-accordion-item > .bx--accordion__heading::before {
   left: -0.125rem;
   width: calc(100% + 0.5rem);
 }
 
-.security--filter-panel-accordion-item &gt; .bx--accordion__heading:focus::before {
+.security--filter-panel-accordion-item > .bx--accordion__heading:focus::before {
   outline: 2px solid var(--focus, #ffffff);
   outline-offset: -2px;
   border: none;
 }
 
-.security--filter-panel-accordion-item &gt; .bx--accordion__content {
+.security--filter-panel-accordion-item > .bx--accordion__content {
   padding: 0 0 0 1rem;
 }
 
@@ -7832,7 +7831,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   width: calc(100% - 2.8em);
 }
 
-.security--filter-panel-accordion-item.bx--accordion__item--active &gt; .bx--accordion__heading {
+.security--filter-panel-accordion-item.bx--accordion__item--active > .bx--accordion__heading {
   color: var(--text-01, #f4f4f4);
 }
 
@@ -7849,11 +7848,11 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   color: var(--text-02, #c6c6c6);
 }
 
-.security--filter-panel-accordion-item__button--toggle.bx--btn &gt; .bx--btn__icon, .security--filter-panel-accordion-item__button--toggle.bx--btn:hover &gt; .bx--btn__icon {
+.security--filter-panel-accordion-item__button--toggle.bx--btn > .bx--btn__icon, .security--filter-panel-accordion-item__button--toggle.bx--btn:hover > .bx--btn__icon {
   fill: currentColor;
 }
 
-.security--filter-panel-accordion-item__button--toggle.bx--btn &gt; .bx--btn__icon {
+.security--filter-panel-accordion-item__button--toggle.bx--btn > .bx--btn__icon {
   margin-right: 0.5rem;
   margin-left: 0;
   order: -1;
@@ -7884,11 +7883,11 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .security--filter-panel-checkbox,
-.security--filter-panel-checkbox &gt; span {
+.security--filter-panel-checkbox > span {
   width: 100%;
 }
 
-.security--filter-panel-checkbox &gt; span {
+.security--filter-panel-checkbox > span {
   display: flex;
   align-items: center;
 }
@@ -8315,7 +8314,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   padding-bottom: 2rem;
 }
 
-.security--nav + .security--nav &gt; .security--nav__heading {
+.security--nav + .security--nav > .security--nav__heading {
   padding-top: 0.25rem;
 }
 
@@ -8341,8 +8340,8 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   list-style: none;
 }
 
-.security--nav__wrapper[dir="rtl"],
-[dir="rtl"] .security--nav__wrapper {
+.security--nav__wrapper[dir=\\"rtl\\"],
+[dir=\\"rtl\\"] .security--nav__wrapper {
   padding-right: unset;
 }
 
@@ -8377,7 +8376,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   outline-width: 0;
 }
 
-.security--nav__list:focus &gt; .security--nav__list__item__link {
+.security--nav__list:focus > .security--nav__list__item__link {
   outline: 2px solid var(--focus, #ffffff);
   outline-offset: -2px;
 }
@@ -8393,8 +8392,8 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   transform: translate3d(-50%, 0, 0) rotate(270deg);
 }
 
-.security--nav__list__icon[dir="rtl"],
-[dir="rtl"] .security--nav__list__icon {
+.security--nav__list__icon[dir=\\"rtl\\"],
+[dir=\\"rtl\\"] .security--nav__list__icon {
   right: 0.25rem;
   transform: translate3d(-50%, 0, 0) rotate(90deg);
 }
@@ -8427,8 +8426,8 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   z-index: 10000;
 }
 
-.security--nav__list__item[dir="rtl"]::before,
-[dir="rtl"] .security--nav__list__item::before {
+.security--nav__list__item[dir=\\"rtl\\"]::before,
+[dir=\\"rtl\\"] .security--nav__list__item::before {
   right: 0;
   transform: translate3d(100%, 0, 0);
 }
@@ -8437,7 +8436,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   pointer-events: none;
 }
 
-.security--nav__list__item--disabled &gt; .security--nav__list__item__link {
+.security--nav__list__item--disabled > .security--nav__list__item__link {
   color: var(--disabled-03, #6f6f6f);
 }
 
@@ -8445,8 +8444,8 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   font-weight: 600;
 }
 
-.security--nav__list__item--active[dir="rtl"]::before,
-[dir="rtl"] .security--nav__list__item--active::before {
+.security--nav__list__item--active[dir=\\"rtl\\"]::before,
+[dir=\\"rtl\\"] .security--nav__list__item--active::before {
   transform: translate3d(0, 0, 0);
 }
 
@@ -8485,7 +8484,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   flex-shrink: 0;
 }
 
-.security--nav__list__item__link--external:hover &gt; .security--nav__list__item__link--external__icon, .security--nav__list__item__link--external:focus &gt; .security--nav__list__item__link--external__icon {
+.security--nav__list__item__link--external:hover > .security--nav__list__item__link--external__icon, .security--nav__list__item__link--external:focus > .security--nav__list__item__link--external__icon {
   opacity: 1;
 }
 
@@ -8493,19 +8492,19 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   margin-bottom: 0.5rem;
 }
 
-.security--nav__list__item--expanded &gt; .security--nav__list--nested {
+.security--nav__list__item--expanded > .security--nav__list--nested {
   max-height: 20rem;
   margin-top: 0.625rem;
   opacity: 1;
   transition-timing-function: cubic-bezier(0, 0, 0.38, 0.9);
 }
 
-.security--nav__list__item--expanded &gt; .security--nav__list__item__link &gt; .security--nav__list__icon {
+.security--nav__list__item--expanded > .security--nav__list__item__link > .security--nav__list__icon {
   transform: translate3d(-50%, 0, 0) rotate(360deg);
 }
 
-.security--nav__list__item--expanded &gt; .security--nav__list__item__link &gt; .security--nav__list__icon[dir="rtl"],
-[dir="rtl"] .security--nav__list__item--expanded &gt; .security--nav__list__item__link &gt; .security--nav__list__icon {
+.security--nav__list__item--expanded > .security--nav__list__item__link > .security--nav__list__icon[dir=\\"rtl\\"],
+[dir=\\"rtl\\"] .security--nav__list__item--expanded > .security--nav__list__item__link > .security--nav__list__icon {
   transform: translate3d(-50%, 0, 0) rotate(0);
 }
 
@@ -8520,13 +8519,13 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   overflow: hidden;
 }
 
-.security--nav__list--nested[dir="rtl"],
-[dir="rtl"] .security--nav__list--nested {
+.security--nav__list--nested[dir=\\"rtl\\"],
+[dir=\\"rtl\\"] .security--nav__list--nested {
   padding-right: 0;
   padding-left: unset;
 }
 
-.security--nav__list--nested &gt; .security--nav__list__item:last-of-type {
+.security--nav__list--nested > .security--nav__list__item:last-of-type {
   margin-bottom: 0.5rem;
 }
 
@@ -10745,8 +10744,8 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   --icon-size-02: 1.25rem;
 }
 
-.security--panel[dir="rtl"],
-[dir="rtl"] .security--panel {
+.security--panel[dir=\\"rtl\\"],
+[dir=\\"rtl\\"] .security--panel {
   right: unset;
   left: 0;
 }
@@ -10755,7 +10754,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   width: calc( 100% - 3rem - 20rem);
 }
 
-.security--panel__container .security--header__container &gt; .security--header {
+.security--panel__container .security--header__container > .security--header {
   width: inherit;
 }
 
@@ -10763,8 +10762,8 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   margin-left: auto;
 }
 
-.security--panel__button--close:only-child[dir="rtl"],
-[dir="rtl"] .security--panel__button--close:only-child {
+.security--panel__button--close:only-child[dir=\\"rtl\\"],
+[dir=\\"rtl\\"] .security--panel__button--close:only-child {
   margin-right: auto;
   margin-left: unset;
 }
@@ -11110,7 +11109,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   display: none;
 }
 
-.bx--progress__warning &gt; path {
+.bx--progress__warning > path {
   fill: var(--support-01, #fa4d56);
 }
 
@@ -11252,11 +11251,11 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   bottom: 0;
 }
 
-.security--scroll-gradient--initial &gt; .security--scroll-gradient__after, .security--scroll-gradient--started &gt; .security--scroll-gradient__after {
+.security--scroll-gradient--initial > .security--scroll-gradient__after, .security--scroll-gradient--started > .security--scroll-gradient__after {
   opacity: 1;
 }
 
-.security--scroll-gradient--end &gt; .security--scroll-gradient__before, .security--scroll-gradient--started &gt; .security--scroll-gradient__before {
+.security--scroll-gradient--end > .security--scroll-gradient__before, .security--scroll-gradient--started > .security--scroll-gradient__before {
   opacity: 1;
 }
 
@@ -11426,7 +11425,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   color: var(--disabled-02, #525252);
 }
 
-.bx--list-box--disabled .bx--list-box__menu-icon &gt; svg {
+.bx--list-box--disabled .bx--list-box__menu-icon > svg {
   fill: var(--disabled-02, #525252);
 }
 
@@ -11595,7 +11594,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   cursor: pointer;
 }
 
-.bx--list-box__menu-icon &gt; svg {
+.bx--list-box__menu-icon > svg {
   fill: var(--icon-01, #f4f4f4);
   height: 100%;
 }
@@ -11629,7 +11628,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   transform: none;
 }
 
-.bx--list-box__selection &gt; svg {
+.bx--list-box__selection > svg {
   fill: var(--icon-02, #c6c6c6);
 }
 
@@ -11637,7 +11636,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   outline: none;
 }
 
-.bx--list-box--disabled .bx--list-box__selection &gt; svg {
+.bx--list-box--disabled .bx--list-box__selection > svg {
   fill: var(--disabled-02, #525252);
 }
 
@@ -11662,7 +11661,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   border-radius: 0.75rem;
 }
 
-.bx--list-box__selection--multi &gt; svg {
+.bx--list-box__selection--multi > svg {
   fill: var(--inverse-01, #161616);
   margin-left: 0.25rem;
   width: 1.25rem;
@@ -11670,7 +11669,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   padding: 0.125rem;
 }
 
-.bx--list-box__selection--multi &gt; svg:hover {
+.bx--list-box__selection--multi > svg:hover {
   border-radius: 50%;
   background-color: var(--hover-secondary, #606060);
 }
@@ -11874,7 +11873,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   align-items: center;
 }
 
-.bx--multi-select .bx--list-box__menu-item__option &gt; .bx--form-item {
+.bx--multi-select .bx--list-box__menu-item__option > .bx--form-item {
   margin: 0;
   flex-direction: row;
 }
@@ -11898,11 +11897,11 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   box-sizing: border-box;
 }
 
-.bx--multi-select .bx--list-box__selection--multi &gt; svg {
+.bx--multi-select .bx--list-box__selection--multi > svg {
   fill: var(--inverse-01, #161616);
 }
 
-.bx--multi-select .bx--list-box__selection--multi &gt; svg:hover {
+.bx--multi-select .bx--list-box__selection--multi > svg:hover {
   fill: var(--icon-03, #ffffff);
 }
 
@@ -11913,7 +11912,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   align-items: center;
 }
 
-.bx--multi-select .bx--list-box__menu-item__option &gt; .bx--form-item {
+.bx--multi-select .bx--list-box__menu-item__option > .bx--form-item {
   margin: 0;
   flex-direction: row;
 }
@@ -12025,17 +12024,17 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   background-color: var(--support-03, #f1c21b);
 }
 
-.security--status-icon--lg &gt; .security--status-icon__icon {
+.security--status-icon--lg > .security--status-icon__icon {
   width: 4.5rem;
   height: 4.5rem;
 }
 
-.security--status-icon--md &gt; .security--status-icon__icon {
+.security--status-icon--md > .security--status-icon__icon {
   width: 2.5rem;
   height: 2.5rem;
 }
 
-.security--status-icon--sm &gt; .security--status-icon__icon {
+.security--status-icon--sm > .security--status-icon__icon {
   width: 2rem;
   height: 2rem;
 }
@@ -12070,7 +12069,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   align-items: center;
 }
 
-.security--status-indicator__step__icon-wrapper &gt; .bx--inline-loading__text, .security--status-indicator__step-wrapper &gt; .bx--inline-loading__text {
+.security--status-indicator__step__icon-wrapper > .bx--inline-loading__text, .security--status-indicator__step-wrapper > .bx--inline-loading__text {
   color: var(--text-01, #f4f4f4);
 }
 
@@ -12126,36 +12125,36 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   flex-direction: column;
 }
 
-.security--step-indicator &gt; .security--step {
+.security--step-indicator > .security--step {
   width: 100%;
   min-width: unset;
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
 }
 
-.security--step-indicator &gt; .security--step &gt; .bx--progress-step-button {
+.security--step-indicator > .security--step > .bx--progress-step-button {
   align-items: center;
 }
 
-.security--step-indicator &gt; .security--step &gt; .bx--progress-step-button &gt; svg {
+.security--step-indicator > .security--step > .bx--progress-step-button > svg {
   position: absolute;
   margin-top: 0;
   margin-right: 0;
 }
 
-.security--step-indicator &gt; .security--step &gt; .bx--progress-step-button &gt; .bx--progress-label {
+.security--step-indicator > .security--step > .bx--progress-step-button > .bx--progress-label {
   max-width: unset;
   padding-left: 2rem;
   margin-top: 0;
 }
 
-.security--step-indicator &gt; .security--step &gt; .bx--progress-step-button &gt; .bx--progress-label:hover {
+.security--step-indicator > .security--step > .bx--progress-step-button > .bx--progress-label:hover {
   box-shadow: unset;
   color: unset;
   cursor: default;
 }
 
-.security--step-indicator &gt; .security--step &gt; .bx--progress-step-button &gt; .bx--progress-line {
+.security--step-indicator > .security--step > .bx--progress-step-button > .bx--progress-line {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -12168,17 +12167,17 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   white-space: nowrap;
 }
 
-.security--step-indicator &gt; .security--step.bx--progress-step--current svg {
+.security--step-indicator > .security--step.bx--progress-step--current svg {
   transform: translate3d(0.0625rem, 0, 0);
 }
 
-.security--step-indicator &gt; .security--step.bx--progress-step--disabled,
-.security--step-indicator &gt; .security--step.bx--progress-step--disabled svg:hover {
+.security--step-indicator > .security--step.bx--progress-step--disabled,
+.security--step-indicator > .security--step.bx--progress-step--disabled svg:hover {
   cursor: default;
 }
 
-.security--step-indicator &gt; .security--step.bx--progress-step--disabled .bx--progress-label:hover,
-.security--step-indicator &gt; .security--step.bx--progress-step--disabled svg:hover {
+.security--step-indicator > .security--step.bx--progress-step--disabled .bx--progress-label:hover,
+.security--step-indicator > .security--step.bx--progress-step--disabled svg:hover {
   color: var(--disabled-03, #6f6f6f);
 }
 
@@ -14203,7 +14202,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   -webkit-box-orient: vertical;
 }
 
-.security--string-formatter__tooltip &gt; .bx--tooltip__trigger {
+.security--string-formatter__tooltip > .bx--tooltip__trigger {
   color: currentColor;
   font-size: inherit;
   font-weight: inherit;
@@ -14804,7 +14803,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   outline: none;
 }
 
-.bx--tag--filter &gt; svg {
+.bx--tag--filter > svg {
   flex-shrink: 0;
   width: 1.25rem;
   height: 1.25rem;
@@ -14816,11 +14815,11 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   border-radius: 50%;
 }
 
-.bx--tag--filter &gt; svg:hover {
+.bx--tag--filter > svg:hover {
   background-color: var(--inverse-hover-ui, #e5e5e5);
 }
 
-.bx--tag--filter:focus &gt; svg {
+.bx--tag--filter:focus > svg {
   box-shadow: inset 0 0 0 2px var(--inverse-focus-ui, #0f62fe);
   border-radius: 50%;
 }
@@ -14912,7 +14911,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   outline: none;
 }
 
-.security--tag--interactive__button:focus &gt; .security--tag--interactive__button__icon, .security--tag--interactive__button:hover &gt; .security--tag--interactive__button__icon {
+.security--tag--interactive__button:focus > .security--tag--interactive__button__icon, .security--tag--interactive__button:hover > .security--tag--interactive__button__icon {
   border-color: currentColor;
 }
 
@@ -14936,7 +14935,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   letter-spacing: 0.32px;
 }
 
-.security--tag-wall &gt; .security--tag--interactive {
+.security--tag-wall > .security--tag--interactive {
   margin-right: 0.5rem;
 }
 
@@ -15316,7 +15315,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   transform: translateY(1px);
 }
 
-.security--filter__list-item:first-of-type &gt; .bx--list-box__menu-item__option {
+.security--filter__list-item:first-of-type > .bx--list-box__menu-item__option {
   border-color: transparent;
 }
 
@@ -15414,7 +15413,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   right: 0;
 }
 
-.security--tearsheet--small &gt; .bx--loading-overlay {
+.security--tearsheet--small > .bx--loading-overlay {
   position: absolute;
   background-color: var(--overlay-01, rgba(22, 22, 22, 0.7));
 }
@@ -15423,7 +15422,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   stroke: var(--inverse-focus-ui, #0f62fe);
 }
 
-.security--tearsheet--small__loading &gt; .bx--loading {
+.security--tearsheet--small__loading > .bx--loading {
   width: 4rem;
   height: 4rem;
 }
@@ -15610,7 +15609,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   right: 0;
 }
 
-.security--tearsheet &gt; .bx--loading-overlay {
+.security--tearsheet > .bx--loading-overlay {
   position: absolute;
   background-color: var(--overlay-01, rgba(22, 22, 22, 0.7));
 }
@@ -15806,8 +15805,8 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   z-index: 8002;
 }
 
-.security--toolbar[dir="rtl"],
-[dir="rtl"] .security--toolbar {
+.security--toolbar[dir=\\"rtl\\"],
+[dir=\\"rtl\\"] .security--toolbar {
   right: 0;
   left: unset;
   padding-right: 0.25rem;
@@ -15918,8 +15917,8 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   list-style: none;
 }
 
-.security--toolbar__group[dir="rtl"],
-[dir="rtl"] .security--toolbar__group {
+.security--toolbar__group[dir=\\"rtl\\"],
+[dir=\\"rtl\\"] .security--toolbar__group {
   padding-right: unset;
 }
 
@@ -16058,8 +16057,8 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   z-index: 8001;
 }
 
-.security--toolbar__panel[dir="rtl"],
-[dir="rtl"] .security--toolbar__panel {
+.security--toolbar__panel[dir=\\"rtl\\"],
+[dir=\\"rtl\\"] .security--toolbar__panel {
   right: 3rem;
   left: unset;
   box-shadow: -0.125rem 0 0 0 var(--overlay-01, rgba(22, 22, 22, 0.7));
@@ -16076,7 +16075,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   margin: 0 1.5rem 0 1.5rem;
 }
 
-.security--toolbar__content &gt; div:first-child {
+.security--toolbar__content > div:first-child {
   height: 100%;
   width: 100%;
   overflow: auto;
@@ -16105,8 +16104,8 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   transform: translate3d(-16rem, 0, 0);
 }
 
-.security--toolbar__transition--enter[dir="rtl"],
-[dir="rtl"] .security--toolbar__transition--enter {
+.security--toolbar__transition--enter[dir=\\"rtl\\"],
+[dir=\\"rtl\\"] .security--toolbar__transition--enter {
   transform: translate3d(16rem, 0, 0);
 }
 
@@ -16118,8 +16117,8 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   transform: translate3d(-16rem, 0, 0);
 }
 
-.security--toolbar__transition--leave--active[dir="rtl"],
-[dir="rtl"] .security--toolbar__transition--leave--active {
+.security--toolbar__transition--leave--active[dir=\\"rtl\\"],
+[dir=\\"rtl\\"] .security--toolbar__transition--leave--active {
   transform: translate3d(16rem, 0, 0);
 }
 
@@ -16131,8 +16130,8 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   transform: translate3d(-0.5rem, 0, 0);
 }
 
-.security--toolbar__content__transition--enter[dir="rtl"],
-[dir="rtl"] .security--toolbar__content__transition--enter {
+.security--toolbar__content__transition--enter[dir=\\"rtl\\"],
+[dir=\\"rtl\\"] .security--toolbar__content__transition--enter {
   transform: translate3d(0.5rem, 0, 0);
 }
 
@@ -16144,8 +16143,8 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   transform: translate3d(-0.5rem, 0, 0);
 }
 
-.security--toolbar__content__transition--leave--active[dir="rtl"],
-[dir="rtl"] .security--toolbar__content__transition--leave--active {
+.security--toolbar__content__transition--leave--active[dir=\\"rtl\\"],
+[dir=\\"rtl\\"] .security--toolbar__content__transition--leave--active {
   transform: translate3d(0.5rem, 0, 0);
 }
 
@@ -16302,12 +16301,12 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   outline-offset: -2px;
 }
 
-.bx--structured-list--selection .bx--structured-list-row:hover:not(.bx--structured-list-row--header-row) &gt; .bx--structured-list-td,
-.bx--structured-list-row.bx--structured-list-row--selected &gt; .bx--structured-list-td {
+.bx--structured-list--selection .bx--structured-list-row:hover:not(.bx--structured-list-row--header-row) > .bx--structured-list-td,
+.bx--structured-list-row.bx--structured-list-row--selected > .bx--structured-list-td {
   color: var(--text-01, #f4f4f4);
 }
 
-.bx--structured-list--selection .bx--structured-list-row:hover:not(.bx--structured-list-row--header-row) &gt; .bx--structured-list-td {
+.bx--structured-list--selection .bx--structured-list-row:hover:not(.bx--structured-list-row--header-row) > .bx--structured-list-td {
   border-top: 1px solid var(--ui-01, #262626);
 }
 
@@ -16516,11 +16515,11 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   border-width: 0;
 }
 
-.security--type-layout__container__row:first-of-type &gt; .security--type-layout__container__cell {
+.security--type-layout__container__row:first-of-type > .security--type-layout__container__cell {
   padding-top: 0;
 }
 
-.security--type-layout__container__row:last-of-type &gt; .security--type-layout__container__cell {
+.security--type-layout__container__row:last-of-type > .security--type-layout__container__cell {
   padding-bottom: 0;
 }
 
@@ -16530,14 +16529,14 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   color: var(--text-01, #f4f4f4);
 }
 
-.security--type-layout__container__cell[dir="rtl"]:first-of-type,
-[dir="rtl"] .security--type-layout__container__cell:first-of-type {
+.security--type-layout__container__cell[dir=\\"rtl\\"]:first-of-type,
+[dir=\\"rtl\\"] .security--type-layout__container__cell:first-of-type {
   padding-right: 0;
   padding-left: unset;
 }
 
-.security--type-layout__container__cell[dir="rtl"]:last-of-type,
-[dir="rtl"] .security--type-layout__container__cell:last-of-type {
+.security--type-layout__container__cell[dir=\\"rtl\\"]:last-of-type,
+[dir=\\"rtl\\"] .security--type-layout__container__cell:last-of-type {
   padding-right: unset;
   padding-left: 0;
 }
@@ -16677,7 +16676,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   margin-right: 0;
 }
 
-.security--header__list__item &gt; .bx--btn {
+.security--header__list__item > .bx--btn {
   height: inherit;
   min-height: inherit;
 }
@@ -16706,24 +16705,24 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   opacity: 1;
 }
 
-.security--header__notification__content &gt; .bx--tooltip--definition &gt; .bx--tooltip__trigger {
+.security--header__notification__content > .bx--tooltip--definition > .bx--tooltip__trigger {
   color: currentColor;
 }
 
-.security--header__notification__content &gt; .bx--tooltip--definition &gt; .bx--tooltip__trigger:focus {
+.security--header__notification__content > .bx--tooltip--definition > .bx--tooltip__trigger:focus {
   outline-color: var(--inverse-focus-ui, #0f62fe);
 }
 
-.security--header__notification__content &gt; .bx--tooltip--definition &gt; .bx--tooltip__trigger.bx--tooltip--bottom + .bx--assistive-text, .security--header__notification__content &gt; .bx--tooltip--definition &gt; .bx--tooltip__trigger.bx--tooltip--top + .bx--assistive-text {
+.security--header__notification__content > .bx--tooltip--definition > .bx--tooltip__trigger.bx--tooltip--bottom + .bx--assistive-text, .security--header__notification__content > .bx--tooltip--definition > .bx--tooltip__trigger.bx--tooltip--top + .bx--assistive-text {
   background-color: var(--inverse-01, #161616);
   color: var(--inverse-02, #f4f4f4);
 }
 
-.security--header__notification__content &gt; .bx--tooltip--definition &gt; .bx--tooltip__trigger.bx--tooltip--bottom::before {
+.security--header__notification__content > .bx--tooltip--definition > .bx--tooltip__trigger.bx--tooltip--bottom::before {
   border-bottom-color: var(--inverse-01, #161616);
 }
 
-.security--header__notification__content &gt; .bx--tooltip--definition &gt; .bx--tooltip__trigger.bx--tooltip--top::before {
+.security--header__notification__content > .bx--tooltip--definition > .bx--tooltip__trigger.bx--tooltip--top::before {
   border-top-color: var(--inverse-01, #161616);
 }
 
@@ -17467,7 +17466,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   text-overflow: ellipsis;
 }
 
-.security--header__popover__profile__body__accordion &gt; .bx--accordion__item--active .bx--accordion__arrow {
+.security--header__popover__profile__body__accordion > .bx--accordion__item--active .bx--accordion__arrow {
   transform: rotate3d(0, 0, 1, 270deg);
 }
 
@@ -17666,12 +17665,12 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   margin-left: 3rem;
 }
 
-.security--shell--active__header &gt; .security--header {
+.security--shell--active__header > .security--header {
   width: calc(100% - 3rem);
 }
 
 .security--shell--active--return, .security--shell--active--return__toolbar,
-.security--shell--active--return__header &gt; .security--header,
+.security--shell--active--return__header > .security--header,
 .security--shell--active--return .security--toolbar__panel {
   margin-top: 1.5rem;
 }
@@ -19847,7 +19846,7 @@ span.flatpickr-weekday {
   cursor: not-allowed;
 }
 
-.bx--date-picker--range &gt; .bx--date-picker-container:first-child {
+.bx--date-picker--range > .bx--date-picker-container:first-child {
   margin-right: 0.0625rem;
 }
 
@@ -19960,7 +19959,7 @@ span.flatpickr-weekday {
 .flatpickr-month .numInputWrapper .numInput::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-  /* &lt;-- Apparently some margin are still there even though it's hidden */
+  /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 .bx--date-picker__month .numInputWrapper span.arrowUp,
@@ -20738,7 +20737,7 @@ span.flatpickr-weekday {
   margin-left: 1.5rem;
 }
 
-.bx--list--nested &gt; .bx--list__item {
+.bx--list--nested > .bx--list__item {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -20751,12 +20750,12 @@ span.flatpickr-weekday {
   counter-reset: item;
 }
 
-.bx--list--ordered:not(.bx--list--nested) &gt; .bx--list__item {
+.bx--list--ordered:not(.bx--list--nested) > .bx--list__item {
   position: relative;
 }
 
-.bx--list--ordered:not(.bx--list--nested) &gt; .bx--list__item::before {
-  content: counter(item) ".";
+.bx--list--ordered:not(.bx--list--nested) > .bx--list__item::before {
+  content: counter(item) \\".\\";
   counter-increment: item;
   position: absolute;
   left: -1.5rem;
@@ -20766,19 +20765,19 @@ span.flatpickr-weekday {
   list-style-type: lower-latin;
 }
 
-.bx--list--unordered &gt; .bx--list__item {
+.bx--list--unordered > .bx--list__item {
   position: relative;
 }
 
-.bx--list--unordered &gt; .bx--list__item::before {
+.bx--list--unordered > .bx--list__item::before {
   position: absolute;
   left: -1rem;
-  content: '\\002013';
+  content: '\\\\002013';
 }
 
-.bx--list--unordered.bx--list--nested &gt; .bx--list__item::before {
+.bx--list--unordered.bx--list--nested > .bx--list__item::before {
   left: -0.75rem;
-  content: '\\0025AA';
+  content: '\\\\0025AA';
 }
 
 @keyframes rotate {
@@ -21069,11 +21068,11 @@ span.flatpickr-weekday {
   outline-offset: -2px;
 }
 
-.bx--modal-scroll-content &gt; *:last-child {
+.bx--modal-scroll-content > *:last-child {
   padding-bottom: var(--spacing-07, 2rem);
 }
 
-.bx--modal-content &gt; * {
+.bx--modal-content > * {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.25rem;
@@ -21538,8 +21537,8 @@ span.flatpickr-weekday {
   align-items: center;
 }
 
-.bx--pagination__left &gt; .bx--form-item,
-.bx--pagination__right &gt; .bx--form-item {
+.bx--pagination__left > .bx--form-item,
+.bx--pagination__right > .bx--form-item {
   height: 100%;
 }
 
@@ -21952,7 +21951,7 @@ span.bx--pagination__text {
   background-color: var(--interactive-04, #4589ff);
 }
 
-.bx--label--disabled ~ .bx--slider-container &gt; .bx--slider__range-label {
+.bx--label--disabled ~ .bx--slider-container > .bx--slider__range-label {
   color: var(--disabled-02, #525252);
 }
 
@@ -22797,7 +22796,7 @@ bx--text-area.bx--skeleton::placeholder {
   opacity: 1;
 }
 
-.bx--tile-input:checked + .bx--tile &gt; .bx--tile__checkmark svg {
+.bx--tile-input:checked + .bx--tile > .bx--tile__checkmark svg {
   fill: var(--ui-05, #f4f4f4);
 }
 
@@ -23165,22 +23164,22 @@ bx--text-area.bx--skeleton::placeholder {
   transform: translateY(-50%);
 }
 
-.bx--toggle-input:checked + .bx--toggle-input__label &gt; .bx--toggle__switch &gt; .bx--toggle__text--off,
-.bx--toggle-input:not(:checked) + .bx--toggle-input__label &gt; .bx--toggle__switch &gt; .bx--toggle__text--on {
+.bx--toggle-input:checked + .bx--toggle-input__label > .bx--toggle__switch > .bx--toggle__text--off,
+.bx--toggle-input:not(:checked) + .bx--toggle-input__label > .bx--toggle__switch > .bx--toggle__text--on {
   visibility: hidden;
 }
 
-.bx--toggle-input:checked + .bx--toggle-input__label &gt; .bx--toggle__switch::before {
+.bx--toggle-input:checked + .bx--toggle-input__label > .bx--toggle__switch::before {
   background-color: var(--support-02, #42be65);
 }
 
-.bx--toggle-input:checked + .bx--toggle-input__label &gt; .bx--toggle__switch::after {
+.bx--toggle-input:checked + .bx--toggle-input__label > .bx--toggle__switch::after {
   background-color: var(--icon-03, #ffffff);
   transform: translateX(1.5rem);
 }
 
-.bx--toggle-input:focus + .bx--toggle-input__label &gt; .bx--toggle__switch::before,
-.bx--toggle-input:active + .bx--toggle-input__label &gt; .bx--toggle__switch::before {
+.bx--toggle-input:focus + .bx--toggle-input__label > .bx--toggle__switch::before,
+.bx--toggle-input:active + .bx--toggle-input__label > .bx--toggle__switch::before {
   box-shadow: 0 0 0 1px var(--ui-02, #393939), 0 0 0 3px var(--focus, #ffffff);
 }
 
@@ -23188,19 +23187,19 @@ bx--text-area.bx--skeleton::placeholder {
   cursor: not-allowed;
 }
 
-.bx--toggle-input:disabled + .bx--toggle-input__label &gt; .bx--toggle__switch {
+.bx--toggle-input:disabled + .bx--toggle-input__label > .bx--toggle__switch {
   cursor: not-allowed;
 }
 
-.bx--toggle-input:disabled + .bx--toggle-input__label &gt; .bx--toggle__switch::before {
+.bx--toggle-input:disabled + .bx--toggle-input__label > .bx--toggle__switch::before {
   background-color: var(--disabled-01, #262626);
 }
 
-.bx--toggle-input:disabled + .bx--toggle-input__label &gt; .bx--toggle__switch::after {
+.bx--toggle-input:disabled + .bx--toggle-input__label > .bx--toggle__switch::after {
   background-color: var(--disabled-02, #525252);
 }
 
-.bx--toggle-input:disabled + .bx--toggle-input__label &gt; .bx--toggle__switch::before, .bx--toggle-input:disabled + .bx--toggle-input__label &gt; .bx--toggle__switch::after {
+.bx--toggle-input:disabled + .bx--toggle-input__label > .bx--toggle__switch::before, .bx--toggle-input:disabled + .bx--toggle-input__label > .bx--toggle__switch::after {
   cursor: not-allowed;
   transition: 70ms cubic-bezier(0.2, 0, 1, 0.9);
 }
@@ -23209,22 +23208,22 @@ bx--text-area.bx--skeleton::placeholder {
   color: #c6c6c6;
 }
 
-.bx--toggle-input:disabled:active + .bx--toggle-input__label &gt; .bx--toggle__switch::before {
+.bx--toggle-input:disabled:active + .bx--toggle-input__label > .bx--toggle__switch::before {
   box-shadow: none;
 }
 
-.bx--toggle-input--small + .bx--toggle-input__label &gt; .bx--toggle__switch {
+.bx--toggle-input--small + .bx--toggle-input__label > .bx--toggle__switch {
   width: 2rem;
   height: 1rem;
 }
 
-.bx--toggle-input--small + .bx--toggle-input__label &gt; .bx--toggle__switch::before {
+.bx--toggle-input--small + .bx--toggle-input__label > .bx--toggle__switch::before {
   width: 2rem;
   height: 1rem;
   border-radius: 0.9375rem;
 }
 
-.bx--toggle-input--small + .bx--toggle-input__label &gt; .bx--toggle__switch::after {
+.bx--toggle-input--small + .bx--toggle-input__label > .bx--toggle__switch::after {
   width: 0.625rem;
   height: 0.625rem;
 }
@@ -23234,7 +23233,7 @@ bx--text-area.bx--skeleton::placeholder {
   margin-left: 2.5rem;
 }
 
-.bx--toggle-input--small:checked + .bx--toggle-input__label &gt; .bx--toggle__switch::after {
+.bx--toggle-input--small:checked + .bx--toggle-input__label > .bx--toggle__switch::after {
   transform: translateX(1.0625rem);
 }
 
@@ -23300,21 +23299,21 @@ bx--text-area.bx--skeleton::placeholder {
   border: 0;
 }
 
-.bx--header__action &gt; svg.bx--navigation-menu-panel-collapse-icon,
-.bx--header__action--active &gt; svg.bx--navigation-menu-panel-expand-icon {
+.bx--header__action > svg.bx--navigation-menu-panel-collapse-icon,
+.bx--header__action--active > svg.bx--navigation-menu-panel-expand-icon {
   display: none;
 }
 
-.bx--header__action--active &gt; svg.bx--navigation-menu-panel-collapse-icon {
+.bx--header__action--active > svg.bx--navigation-menu-panel-collapse-icon {
   display: inline;
 }
 
-.bx--header__action &gt; svg.bx--navigation-menu-panel-collapse-icon,
-.bx--header__action--active &gt; svg.bx--navigation-menu-panel-expand-icon {
+.bx--header__action > svg.bx--navigation-menu-panel-collapse-icon,
+.bx--header__action--active > svg.bx--navigation-menu-panel-expand-icon {
   display: none;
 }
 
-.bx--header__action--active &gt; svg.bx--navigation-menu-panel-collapse-icon {
+.bx--header__action--active > svg.bx--navigation-menu-panel-collapse-icon {
   display: inline;
 }
 
@@ -23337,7 +23336,7 @@ bx--text-area.bx--skeleton::placeholder {
   background-color: #393939;
 }
 
-.bx--header__action &gt; svg {
+.bx--header__action > svg {
   fill: #ffffff;
 }
 
@@ -23345,7 +23344,7 @@ bx--text-area.bx--skeleton::placeholder {
   margin-right: -0.5rem;
 }
 
-.bx--header__menu-trigger &gt; svg {
+.bx--header__menu-trigger > svg {
   fill: #f4f4f4;
 }
 
@@ -23461,9 +23460,9 @@ a.bx--header__menu-item:focus {
   outline: none;
 }
 
-a.bx--header__menu-item:hover &gt; svg,
-a.bx--header__menu-item:active &gt; svg,
-a.bx--header__menu-item:focus &gt; svg {
+a.bx--header__menu-item:hover > svg,
+a.bx--header__menu-item:active > svg,
+a.bx--header__menu-item:focus > svg {
   fill: #f4f4f4;
 }
 
@@ -23481,7 +23480,7 @@ a.bx--header__menu-item:focus &gt; svg {
   z-index: 6001;
 }
 
-.bx--header__menu-title[aria-expanded='true'] &gt; .bx--header__menu-arrow {
+.bx--header__menu-title[aria-expanded='true'] > .bx--header__menu-arrow {
   transform: rotate(180deg);
 }
 
@@ -23722,7 +23721,7 @@ a.bx--header__menu-item:focus &gt; svg {
   display: flex;
 }
 
-.bx--product-switcher__product-list .bx--overflow-menu &gt; svg {
+.bx--product-switcher__product-list .bx--overflow-menu > svg {
   fill: #c6c6c6;
 }
 
@@ -23730,7 +23729,7 @@ a.bx--header__menu-item:focus &gt; svg {
   background: #c6c6c6;
 }
 
-.bx--product-switcher__product-list .bx--overflow-menu:hover &gt; svg {
+.bx--product-switcher__product-list .bx--overflow-menu:hover > svg {
   fill: #c6c6c6;
 }
 
@@ -24063,8 +24062,8 @@ a.bx--header__menu-item:focus &gt; svg {
   height: auto;
 }
 
-.bx--side-nav__item:not(.bx--side-nav__item--active):hover .bx--side-nav__item:not(.bx--side-nav__item--active) &gt; .bx--side-nav__submenu:hover,
-.bx--side-nav__item:not(.bx--side-nav__item--active) &gt; .bx--side-nav__link:hover,
+.bx--side-nav__item:not(.bx--side-nav__item--active):hover .bx--side-nav__item:not(.bx--side-nav__item--active) > .bx--side-nav__submenu:hover,
+.bx--side-nav__item:not(.bx--side-nav__item--active) > .bx--side-nav__link:hover,
 .bx--side-nav__menu a.bx--side-nav__link:not(.bx--side-nav__link--current):not([aria-current='page']):hover,
 .bx--side-nav a.bx--header__menu-item:hover,
 .bx--side-nav .bx--header__menu-title[aria-expanded='true']:hover {
@@ -24072,8 +24071,8 @@ a.bx--header__menu-item:focus &gt; svg {
   color: #161616;
 }
 
-.bx--side-nav__item:not(.bx--side-nav__item--active) &gt; .bx--side-nav__link:hover &gt; span,
-.bx--side-nav__item:not(.bx--side-nav__item--active) .bx--side-nav__menu-item &gt; .bx--side-nav__link:hover &gt; span {
+.bx--side-nav__item:not(.bx--side-nav__item--active) > .bx--side-nav__link:hover > span,
+.bx--side-nav__item:not(.bx--side-nav__item--active) .bx--side-nav__menu-item > .bx--side-nav__link:hover > span {
   color: #161616;
 }
 
@@ -24144,13 +24143,13 @@ a.bx--header__menu-item:focus &gt; svg {
   justify-content: flex-end;
 }
 
-.bx--side-nav__submenu-chevron &gt; svg {
+.bx--side-nav__submenu-chevron > svg {
   transition: transform 110ms;
   height: 1rem;
   width: 1rem;
 }
 
-.bx--side-nav__submenu[aria-expanded='true'] .bx--side-nav__submenu-chevron &gt; svg {
+.bx--side-nav__submenu[aria-expanded='true'] .bx--side-nav__submenu-chevron > svg {
   transform: rotate(180deg);
 }
 
@@ -24212,9 +24211,9 @@ a.bx--side-nav__link--current {
   background-color: #e0e0e0;
 }
 
-.bx--side-nav__menu a.bx--side-nav__link--current &gt; span,
-.bx--side-nav__menu a.bx--side-nav__link[aria-current='page'] &gt; span,
-a.bx--side-nav__link--current &gt; span {
+.bx--side-nav__menu a.bx--side-nav__link--current > span,
+.bx--side-nav__menu a.bx--side-nav__link[aria-current='page'] > span,
+a.bx--side-nav__link--current > span {
   color: #161616;
   font-weight: 600;
 }
@@ -24241,7 +24240,7 @@ a.bx--side-nav__link,
   height: 3rem;
 }
 
-a.bx--side-nav__link &gt; .bx--side-nav__link-text,
+a.bx--side-nav__link > .bx--side-nav__link-text,
 .bx--side-nav a.bx--header__menu-item .bx--text-truncate-end {
   white-space: nowrap;
   overflow: hidden;
@@ -24292,21 +24291,21 @@ a.bx--side-nav__link--current::before {
   margin-right: 1.5rem;
 }
 
-.bx--side-nav__icon &gt; svg {
+.bx--side-nav__icon > svg {
   fill: #525252;
   width: 1rem;
   height: 1rem;
 }
 
-.bx--side-nav__icon &gt; svg.bx--side-nav-collapse-icon {
+.bx--side-nav__icon > svg.bx--side-nav-collapse-icon {
   display: none;
 }
 
-.bx--side-nav--expanded .bx--side-nav__icon &gt; svg.bx--side-nav-expand-icon {
+.bx--side-nav--expanded .bx--side-nav__icon > svg.bx--side-nav-expand-icon {
   display: none;
 }
 
-.bx--side-nav--expanded .bx--side-nav__icon &gt; svg.bx--side-nav-collapse-icon {
+.bx--side-nav--expanded .bx--side-nav__icon > svg.bx--side-nav-collapse-icon {
   display: block;
 }
 
@@ -24425,7 +24424,7 @@ a.bx--side-nav__link--current::before {
   align-items: center;
 }
 
-.bx--navigation-item--active &gt; a.bx--navigation-link {
+.bx--navigation-item--active > a.bx--navigation-link {
   color: #ffffff;
   font-weight: 600;
 }
@@ -24463,7 +24462,7 @@ a.bx--navigation-link:focus {
   outline-offset: -0.1875rem;
 }
 
-.bx--navigation-item--icon &gt; a.bx--navigation-link {
+.bx--navigation-item--icon > a.bx--navigation-link {
   padding-left: 0;
 }
 
@@ -24531,7 +24530,7 @@ a.bx--navigation-link:focus {
   visibility: hidden;
 }
 
-.bx--navigation__category-item &gt; a.bx--navigation-link {
+.bx--navigation__category-item > a.bx--navigation-link {
   display: flex;
   align-items: center;
   min-height: 2rem;
@@ -24542,7 +24541,7 @@ a.bx--navigation-link:focus {
   position: relative;
 }
 
-.bx--navigation-item--icon .bx--navigation__category-item &gt; a.bx--navigation-link {
+.bx--navigation-item--icon .bx--navigation__category-item > a.bx--navigation-link {
   padding-left: 3.5rem;
 }
 
@@ -24557,7 +24556,7 @@ a.bx--navigation-link:focus {
   background-color: #0f62fe;
 }
 
-.bx--navigation__category-item--active &gt; a.bx--navigation-link {
+.bx--navigation__category-item--active > a.bx--navigation-link {
   font-weight: 600;
   color: #ffffff;
 }
@@ -24566,7 +24565,7 @@ a.bx--navigation-link:focus {
   font-weight: 600;
 }
 
-.bx--navigation__category--expanded .bx--navigation__category-title &gt; svg {
+.bx--navigation__category--expanded .bx--navigation__category-title > svg {
   transform: rotate(180deg);
 }
 
@@ -24656,7 +24655,7 @@ a.bx--navigation-link:focus {
   align-items: center;
 }
 
-.security--unstable-pagination__left &gt; .bx--form-item, .security--unstable-pagination__right &gt; .bx--form-item {
+.security--unstable-pagination__left > .bx--form-item, .security--unstable-pagination__right > .bx--form-item {
   height: 100%;
 }
 
@@ -26942,8 +26941,7 @@ strong {
     font-size: 9.75rem;
   }
 }
-
-</style>
+"
 `;
 
 exports[`CSS Unpacked size 1`] = `"634.0 KB"`;
