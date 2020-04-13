@@ -6,8 +6,6 @@
 import React, { Children } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import Add16 from '@carbon/icons-react/lib/add/16';
-import Subtract16 from '@carbon/icons-react/lib/subtract/16';
 
 import Button from '../Button';
 import ScrollGradient from '../ScrollGradient';
@@ -26,6 +24,7 @@ const TruncatedList = ({
   truncateThreshold,
   collapsedItemLimit,
   expandedItemLimit,
+  ...other
 }) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
   const [listContainer, setListContainer] = React.useState(null);
@@ -93,11 +92,12 @@ const TruncatedList = ({
   return (
     <>
       <ScrollGradient
+        className={`${namespace}__scroller-container`}
         scrollElementClassName={`${namespace}__scroller`}
         color={scrollGradientColor}
         getScrollElementRef={setListContainer}
       >
-        <List className={classnames(namespace, className)}>
+        <List className={classnames(namespace, className)} {...other}>
           {childrenArray.slice(0, displayCount)}
           {shouldTruncate && isExpanded && childrenArray.slice(displayCount)}
         </List>
@@ -105,12 +105,10 @@ const TruncatedList = ({
 
       {shouldTruncate && (
         <Button
-          className={`${namespace}__button--toggle`}
+          className={`bx--link ${namespace}__button ${namespace}__button--toggle`}
           iconDescription=""
           size="small"
-          kind="ghost"
           onClick={handleExpand}
-          renderIcon={isExpanded ? Subtract16 : Add16}
         >
           {isExpanded
             ? collapseLabel

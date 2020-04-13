@@ -33,6 +33,11 @@ describe(TruncatedList.name, () => {
     expect(container.querySelector('.custom-class')).toBeInTheDocument();
   });
 
+  test('passes additional props down to the list', () => {
+    const { getByTestId } = render(<TruncatedList data-testid="test-list" />);
+    expect(getByTestId('test-list')).toBeInTheDocument();
+  });
+
   test('truncates more than 10 list items to 5 items by default', () => {
     const { getByText, getAllByText } = render(
       <TruncatedList>{createChildrenArray(11)}</TruncatedList>
