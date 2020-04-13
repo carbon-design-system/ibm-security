@@ -12,7 +12,7 @@ import { createChildrenArray } from './_mocks_';
 
 storiesOf(components(TruncatedList.name), module)
   .addDecorator(story => (
-    <div style={{ width: 300, minHeight: 300 }}>{story()}</div>
+    <div style={{ minWidth: 100, minHeight: 300 }}>{story()}</div>
   ))
   .add(
     'default',
@@ -49,7 +49,7 @@ storiesOf(components(TruncatedList.name), module)
     {
       info: {
         text: `## Truncated list
-This component is a list that accepts any number of list items (li). It allows consumers to control
+This component is a list that accepts any number of list items (\`li\`). It allows consumers to control
 how many items are revealed to the user while giving the user the ability to expand the list and see
 the entire list. There are three props that control how many items a user can see at once:
 

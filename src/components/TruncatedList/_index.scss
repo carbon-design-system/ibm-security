@@ -9,6 +9,8 @@
 @import '../Component/mixins';
 
 @include security--component($name: truncated-list) {
+  margin: 0;
+
   &__scroller-container {
     height: auto;
   }
