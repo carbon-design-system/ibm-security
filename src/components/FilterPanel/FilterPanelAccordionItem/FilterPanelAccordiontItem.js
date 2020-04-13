@@ -42,6 +42,7 @@ const FilterPanelAccordionItem = ({
       {...other}
     >
       <TruncatedList
+        className={`${namespace}__list`}
         expandLabel={expandLabel}
         collapseLabel={collapseLabel}
         scrollGradientColor={scrollGradientColor}
