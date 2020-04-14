@@ -11,6 +11,7 @@ import { getComponentNamespace } from '../../../globals/namespace';
 
 import FilterPanelCheckbox from '../FilterPanelCheckbox';
 import OverflowMenu from '../../OverflowMenu';
+import { useComponentFocus } from '../../../globals/utils/focus';
 
 export const namespace = getComponentNamespace(
   'filter-panel-checkbox-with-overflow-menu'
@@ -28,33 +29,15 @@ const FilterPanelCheckboxWithOverflowMenu = ({
 }) => {
   const [showOverflowButton, setShowOverflowButton] = React.useState(false);
   const [overflowIsOpen, setOverflowIsOpen] = React.useState(false);
-  const [onBlurTimeout, setOnBlurTimeout] = React.useState(undefined);
+  const { createFocusHandler, createBlurHandler } = useComponentFocus(10);
 
-  // Clear any timeouts before unmounting.
-  React.useEffect(() => () => clearTimeout(onBlurTimeout), []);
-
-  const setNewOnBlurTimeout = newTimeout => {
-    setOnBlurTimeout(currentTimeout => {
-      clearTimeout(currentTimeout);
-      return newTimeout;
-    });
-  };
-
-  const handleFocus = () => {
-    setNewOnBlurTimeout(undefined);
+  const handleFocus = createFocusHandler(() => {
     setShowOverflowButton(true);
-  };
+  });
 
-  // Set a short delay to detect if the blur event resulted in a complete loss of keyboard focus or
-  // the focus just shifted to another element within this same component.
-  const handleBlur = () => {
-    const newTimeout = setTimeout(() => {
-      setShowOverflowButton(false);
-    }, 10);
-
-    // Set a new timeout timer.
-    setNewOnBlurTimeout(newTimeout);
-  };
+  const handleBlur = createBlurHandler(() => {
+    setShowOverflowButton(false);
+  });
 
   return (
     <div
