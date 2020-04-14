@@ -44,8 +44,9 @@ const FilterPanelAccordionItem = ({
       <TruncatedList
         className={`${namespace}__list`}
         expandButtonClassName={`${namespace}__list-expand-button`}
-        expandLabel={expandLabel}
-        collapseLabel={collapseLabel}
+        getExpandButtonLabel={(expanded, shown, hidden) =>
+          expanded ? collapseLabel : `${expandLabel} (${hidden})`
+        }
         scrollGradientColor={scrollGradientColor}
       >
         {Children.map(children, child => (

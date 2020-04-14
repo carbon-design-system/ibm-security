@@ -11718,10 +11718,10 @@ Map {
       "as": "ul",
       "children": undefined,
       "className": undefined,
-      "collapseLabel": "collapseLabel",
       "collapsedItemLimit": 5,
-      "expandLabel": "expandLabel",
+      "expandButtonClassName": undefined,
       "expandedItemLimit": 10,
+      "getExpandButtonLabel": [Function],
       "scrollGradientColor": "var(--ui-background, #161616)",
       "truncateThreshold": 10,
     },
@@ -11745,17 +11745,17 @@ Map {
       "className": Object {
         "type": "string",
       },
-      "collapseLabel": Object {
-        "type": "string",
-      },
       "collapsedItemLimit": Object {
         "type": "number",
       },
-      "expandLabel": Object {
+      "expandButtonClassName": Object {
         "type": "string",
       },
       "expandedItemLimit": Object {
         "type": "number",
+      },
+      "getExpandButtonLabel": Object {
+        "type": "func",
       },
       "scrollGradientColor": Object {
         "type": "string",
