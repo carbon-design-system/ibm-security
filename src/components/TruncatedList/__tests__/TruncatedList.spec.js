@@ -33,6 +33,15 @@ describe(TruncatedList.name, () => {
     expect(container.querySelector('.custom-class')).toBeInTheDocument();
   });
 
+  test('adds custom class name to the expand button', () => {
+    const { getByRole } = render(
+      <TruncatedList expandButtonClassName="custom-class">
+        {createChildrenArray(100)}
+      </TruncatedList>
+    );
+    expect(getByRole('button')).toHaveClass('custom-class');
+  });
+
   test('passes additional props down to the list', () => {
     const { getByTestId } = render(<TruncatedList data-testid="test-list" />);
     expect(getByTestId('test-list')).toBeInTheDocument();

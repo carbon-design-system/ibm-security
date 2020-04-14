@@ -6,6 +6,9 @@
 import React, { Children } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { settings } from 'carbon-components';
+import Add16 from '@carbon/icons-react/lib/add/16';
+import Subtract16 from '@carbon/icons-react/lib/subtract/16';
 
 import Button from '../Button';
 import ScrollGradient from '../ScrollGradient';
@@ -17,6 +20,7 @@ const namespace = getComponentNamespace('truncated-list');
 const TruncatedList = ({
   children,
   className,
+  expandButtonClassName,
   as: List,
   scrollGradientColor,
   collapseLabel,
@@ -97,7 +101,7 @@ const TruncatedList = ({
         color={scrollGradientColor}
         getScrollElementRef={setListContainer}
       >
-        <List className={classnames(namespace, className)} {...other}>
+        <List className={classnames(className, namespace)} {...other}>
           {childrenArray.slice(0, displayCount)}
           {shouldTruncate && isExpanded && childrenArray.slice(displayCount)}
         </List>
@@ -105,10 +109,15 @@ const TruncatedList = ({
 
       {shouldTruncate && (
         <Button
-          className={`bx--link ${namespace}__button ${namespace}__button--toggle`}
+          className={classnames(
+            expandButtonClassName,
+            `${settings.prefix}--link`,
+            `${namespace}__expand-button`
+          )}
           iconDescription=""
           size="small"
           onClick={handleExpand}
+          renderIcon={isExpanded ? Subtract16 : Add16}
         >
           {isExpanded
             ? collapseLabel
@@ -125,6 +134,9 @@ TruncatedList.propTypes = {
 
   /** Optional list class name. */
   className: PropTypes.string,
+
+  /** Optional class name for expand button. */
+  expandButtonClassName: PropTypes.string,
 
   /** The type of list element to render. This could be a ul, ol, or a custom React component. (Optional) */
   as: PropTypes.oneOfType([PropTypes.elementType, PropTypes.string]),
@@ -154,6 +166,7 @@ TruncatedList.propTypes = {
 TruncatedList.defaultProps = {
   children: undefined,
   className: undefined,
+  expandButtonClassName: undefined,
   as: 'ul',
   scrollGradientColor: theme.uiBackground,
   expandLabel: 'expandLabel',

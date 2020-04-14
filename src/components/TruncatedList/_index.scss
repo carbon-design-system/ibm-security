@@ -20,7 +20,7 @@
   }
 
   // Transform button to appear more like a link so it aligns better with the list text
-  &__button {
+  &__expand-button {
     width: 100%;
     max-width: none;
     min-height: auto;
@@ -41,6 +41,10 @@
     &:active {
       background: transparent;
       color: $text-01;
+    }
+
+    .#{$prefix}--btn__icon {
+      position: static;
     }
   }
 }
