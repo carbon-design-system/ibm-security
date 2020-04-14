@@ -7,8 +7,6 @@ import React, { Children } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { settings } from 'carbon-components';
-import Add16 from '@carbon/icons-react/lib/add/16';
-import Subtract16 from '@carbon/icons-react/lib/subtract/16';
 
 import Button from '../Button';
 import ScrollGradient from '../ScrollGradient';
@@ -23,8 +21,7 @@ const TruncatedList = ({
   expandButtonClassName,
   as: List,
   scrollGradientColor,
-  collapseLabel,
-  expandLabel,
+  getExpandButtonLabel,
   truncateThreshold,
   collapsedItemLimit,
   expandedItemLimit,
@@ -117,11 +114,12 @@ const TruncatedList = ({
           iconDescription=""
           size="small"
           onClick={handleExpand}
-          renderIcon={isExpanded ? Subtract16 : Add16}
         >
-          {isExpanded
-            ? collapseLabel
-            : `${expandLabel} (${childrenLength - displayCount})`}
+          {getExpandButtonLabel(
+            isExpanded,
+            isExpanded ? childrenLength : displayCount,
+            isExpanded ? 0 : childrenLength - displayCount
+          )}
         </Button>
       )}
     </>
@@ -144,11 +142,8 @@ TruncatedList.propTypes = {
   /** Optional scroll gradient color. */
   scrollGradientColor: PropTypes.string,
 
-  /** Label for the button to display when the list is truncated and collapsed. */
-  collapseLabel: PropTypes.string,
-
-  /** Label fo rthe button to display when the list is truncated and expanded. */
-  expandLabel: PropTypes.string,
+  /** Function to compute the label for the expand toggle button. */
+  getExpandButtonLabel: PropTypes.func,
 
   /** Number of items allowed in the list before the list is truncated. */
   truncateThreshold: PropTypes.number,
@@ -169,8 +164,7 @@ TruncatedList.defaultProps = {
   expandButtonClassName: undefined,
   as: 'ul',
   scrollGradientColor: theme.uiBackground,
-  expandLabel: 'expandLabel',
-  collapseLabel: 'collapseLabel',
+  getExpandButtonLabel: () => 'getExpandButtonLabel',
   truncateThreshold: 10,
   collapsedItemLimit: 5,
   expandedItemLimit: 10,

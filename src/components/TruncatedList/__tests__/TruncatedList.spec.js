@@ -11,6 +11,9 @@ import TruncatedList from '..';
 import OrderedList from '../../OrderedList';
 import { createChildrenArray } from '../_mocks_';
 
+const getExpandButtonLabel = (expanded, shown, hidden) =>
+  expanded ? 'View less' : `View more (${hidden})`;
+
 describe(TruncatedList.name, () => {
   test('should have no Axe or DAP violations', async () => {
     const main = document.createElement('main');
@@ -47,59 +50,109 @@ describe(TruncatedList.name, () => {
     expect(getByTestId('test-list')).toBeInTheDocument();
   });
 
+  test('applies provided expand button label', () => {
+    const getExpandButtonLabelMock = jest.fn().mockReturnValue('test label');
+    const { getByText } = render(
+      <TruncatedList getExpandButtonLabel={getExpandButtonLabelMock}>
+        {createChildrenArray(15)}
+      </TruncatedList>
+    );
+    expect(getByText(/test label/i)).toBeEnabled();
+  });
+
+  test('invokes function to get the expand button label', () => {
+    const getExpandButtonLabelMock = jest.fn().mockReturnValue('test label');
+    const { getByText } = render(
+      <TruncatedList getExpandButtonLabel={getExpandButtonLabelMock}>
+        {createChildrenArray(15)}
+      </TruncatedList>
+    );
+    expect(getExpandButtonLabelMock).toHaveBeenLastCalledWith(false, 5, 10);
+    expect(getByText(/test label/i)).toBeEnabled();
+  });
+
+  test('invokes function to get the collapse button label', () => {
+    const getExpandButtonLabelMock = jest.fn().mockReturnValue('test label');
+    const { getByText } = render(
+      <TruncatedList getExpandButtonLabel={getExpandButtonLabelMock}>
+        {createChildrenArray(15)}
+      </TruncatedList>
+    );
+    userEvent.click(getByText(/test label/i));
+    expect(getExpandButtonLabelMock).toHaveBeenLastCalledWith(true, 15, 0);
+  });
+
   test('truncates more than 10 list items to 5 items by default', () => {
     const { getByText, getAllByText } = render(
-      <TruncatedList>{createChildrenArray(11)}</TruncatedList>
+      <TruncatedList getExpandButtonLabel={getExpandButtonLabel}>
+        {createChildrenArray(11)}
+      </TruncatedList>
     );
     expect(getAllByText(/child \d+/i)).toHaveLength(5);
-    expect(getByText(/expandLabel \(6\)/i)).toBeEnabled();
+    expect(getByText(/view more \(6\)/i)).toBeEnabled();
   });
 
   test('truncates list items based on the provided threshold', () => {
     const { getByText, getAllByText } = render(
-      <TruncatedList truncateThreshold={15}>
+      <TruncatedList
+        truncateThreshold={15}
+        getExpandButtonLabel={getExpandButtonLabel}
+      >
         {createChildrenArray(20)}
       </TruncatedList>
     );
     expect(getAllByText(/child \d+/i)).toHaveLength(5);
-    expect(getByText(/expandLabel \(15\)/i)).toBeEnabled();
+    expect(getByText(/view more \(15\)/i)).toBeEnabled();
   });
 
   test('does not truncate items if the truncate threshold was not met', () => {
     const { queryByText, getAllByText } = render(
-      <TruncatedList truncateThreshold={30}>
+      <TruncatedList
+        truncateThreshold={30}
+        getExpandButtonLabel={getExpandButtonLabel}
+      >
         {createChildrenArray(30)}
       </TruncatedList>
     );
     expect(getAllByText(/child \d+/i)).toHaveLength(30);
-    expect(queryByText(/expandLabel/i)).not.toBeInTheDocument();
+    expect(queryByText(/view more/i)).not.toBeInTheDocument();
   });
 
   test('renders items up to the collapsed item limit when truncated', () => {
     const { getByText, getAllByText } = render(
-      <TruncatedList truncateThreshold={5} collapsedItemLimit={2}>
+      <TruncatedList
+        truncateThreshold={5}
+        collapsedItemLimit={2}
+        getExpandButtonLabel={getExpandButtonLabel}
+      >
         {createChildrenArray(20)}
       </TruncatedList>
     );
     expect(getAllByText(/child \d+/i)).toHaveLength(2);
-    expect(getByText(/expandLabel \(18\)/i)).toBeEnabled();
+    expect(getByText(/view more \(18\)/i)).toBeEnabled();
   });
 
   test('renders items up to collapsed item limit or the truncate threshold when truncated', () => {
     const { getByText, getAllByText } = render(
-      <TruncatedList truncateThreshold={2} collapsedItemLimit={10}>
+      <TruncatedList
+        truncateThreshold={2}
+        collapsedItemLimit={10}
+        getExpandButtonLabel={getExpandButtonLabel}
+      >
         {createChildrenArray(4)}
       </TruncatedList>
     );
     expect(getAllByText(/child \d+/i)).toHaveLength(2);
-    expect(getByText(/expandLabel \(2\)/i)).toBeEnabled();
+    expect(getByText(/view more \(2\)/i)).toBeEnabled();
   });
 
   test('renders all items when truncated and expanded', () => {
     const { getByText, getAllByTestId } = render(
-      <TruncatedList>{createChildrenArray(20)}</TruncatedList>
+      <TruncatedList getExpandButtonLabel={getExpandButtonLabel}>
+        {createChildrenArray(20)}
+      </TruncatedList>
     );
-    userEvent.click(getByText(/expandLabel/i));
+    userEvent.click(getByText(/view more/i));
     expect(getAllByTestId(/child-\d+/i)).toHaveLength(20);
   });
 
@@ -127,47 +180,11 @@ describe(TruncatedList.name, () => {
 
   test('renders as a single list when expanded', () => {
     const { container, getByText } = render(
-      <TruncatedList>{createChildrenArray(15)}</TruncatedList>
+      <TruncatedList getExpandButtonLabel={getExpandButtonLabel}>
+        {createChildrenArray(15)}
+      </TruncatedList>
     );
-    userEvent.click(getByText(/expandLabel/i));
+    userEvent.click(getByText(/view more/i));
     expect(container.querySelectorAll('ul')).toHaveLength(1);
-  });
-
-  test('applies expand button label', () => {
-    const { getByText } = render(
-      <TruncatedList expandLabel="View more">
-        {createChildrenArray(15)}
-      </TruncatedList>
-    );
-    expect(getByText(/View more \(\d+\)/i)).toBeEnabled();
-  });
-
-  test('applies collapse button label', () => {
-    const { getByText } = render(
-      <TruncatedList collapseLabel="View less">
-        {createChildrenArray(15)}
-      </TruncatedList>
-    );
-    userEvent.click(getByText(/expandLabel/i));
-    expect(getByText(/View less/i)).toBeEnabled();
-  });
-
-  test('toggles expand button label when clicked', () => {
-    const { getByText } = render(
-      <TruncatedList>{createChildrenArray(11)}</TruncatedList>
-    );
-    const toggleExpandButton = getByText(/expandLabel/i);
-    userEvent.click(toggleExpandButton);
-    expect(toggleExpandButton).toHaveTextContent(/collapseLabel/i);
-  });
-
-  test('toggles expand button label when clicked twice', () => {
-    const { getByText } = render(
-      <TruncatedList>{createChildrenArray(11)}</TruncatedList>
-    );
-    const toggleExpandButton = getByText(/expandLabel/i);
-    userEvent.click(toggleExpandButton);
-    userEvent.click(toggleExpandButton);
-    expect(toggleExpandButton).toHaveTextContent(/expandLabel \(\d+\)/i);
   });
 });
