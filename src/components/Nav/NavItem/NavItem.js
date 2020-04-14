@@ -1,6 +1,6 @@
 /**
  * @file Navigation item class.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import Launch16 from '@carbon/icons-react/lib/launch/16';
@@ -108,16 +108,16 @@ export default class NavItem extends Component {
       ...other
     } = this.props;
 
-    const classNames = classnames(namespace, className, {
-      [`${namespace}--active`]:
-        (this.state.current !== null && this.state.current === id) ||
-        (activeHref !== undefined && activeHref === href),
-      [`${namespace}--disabled`]: disabled,
-    });
-
     const isAbsoluteLink = new RegExp('^([a-z]+://|//)', 'i');
     const externalLink =
       isAbsoluteLink.test(href) && href.indexOf(window.location.host) === -1;
+
+    const classNames = classnames(namespace, className, {
+      [`${namespace}--active`]:
+        (this.state.current !== null && this.state.current === id) ||
+        (activeHref !== undefined && activeHref === href && !externalLink),
+      [`${namespace}--disabled`]: disabled,
+    });
 
     const externalLinkProps = externalLink && {
       rel: 'noopener noreferrer',
