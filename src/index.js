@@ -3,6 +3,9 @@
  * @copyright IBM Security 2019 - 2020
  */
 
+// Carbon.
+export * from 'carbon-components-react';
+
 // Globals.
 export theme from './globals/theme';
 
@@ -220,7 +223,37 @@ export {
   TypeLayoutRow,
 } from './components/TypeLayout';
 
-export * from './components/UIShell';
+export {
+  CarbonHeader,
+  Content,
+  HeaderContainer,
+  HeaderGlobalAction,
+  HeaderGlobalBar,
+  HeaderMenu,
+  HeaderMenuButton,
+  HeaderMenuItem,
+  HeaderName,
+  HeaderNavigation,
+  HeaderPanel,
+  HeaderSideNavItems,
+  SideNav,
+  SideNavDetails,
+  SideNavFooter,
+  SideNavHeader,
+  SideNavIcon,
+  SideNavItem,
+  SideNavItems,
+  SideNavLink,
+  SideNavLinkText,
+  SideNavMenu,
+  SideNavMenuItem,
+  SideNavSwitcher,
+  SkipToContent,
+  Switcher,
+  SwitcherDivider,
+  SwitcherItem,
+} from './components/UIShell';
+
 export UnorderedList from './components/UnorderedList';
 export { Wizard, WizardStep } from './components/Wizard';
 
@@ -228,14 +261,3 @@ export { Wizard, WizardStep } from './components/Wizard';
 export UNSTABLE__Pagination, {
   PageSelector,
 } from './components/UNSTABLE__Pagination';
-
-// Carbon.
-export FormItem from 'carbon-components-react/lib/components/FormItem';
-export FormLabel from 'carbon-components-react/lib/components/FormLabel';
-
-export {
-  NotificationButton,
-  NotificationTextDetails,
-} from 'carbon-components-react/lib/components/Notification';
-
-export TabContent from 'carbon-components-react/lib/components/TabContent';
