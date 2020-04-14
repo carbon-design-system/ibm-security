@@ -27,64 +27,66 @@ const FilterPanelCheckboxWithOverflowMenu = ({
   ...other
 }) => {
   const [showOverflowButton, setShowOverflowButton] = React.useState(false);
+  const [overflowIsOpen, setOverflowIsOpen] = React.useState(false);
   const [onBlurTimeout, setOnBlurTimeout] = React.useState(undefined);
 
   // Clear any timeouts before unmounting.
-  React.useEffect(() => () => clearTimeout(onBlurTimeout), [onBlurTimeout]);
-  const menuOptionsClassName = `${namespace}__overflow-options`;
+  React.useEffect(() => () => clearTimeout(onBlurTimeout), []);
 
-  // Set a short delay to detect if the blur event resulted in a complete loss of keyboard focus or
-  // the focus just shifted to another element within this same component.
-  const handleBlur = event => {
-    const { currentTarget } = event;
-
-    // Stop propagation so that the overflow menu does not close the filter results dropdown.
-    event.stopPropagation();
-
-    const newTimeout = setTimeout(() => {
-      const optionsMenu = document.querySelector(`.${menuOptionsClassName}`);
-      if (
-        !currentTarget.contains(document.activeElement) &&
-        !(optionsMenu && optionsMenu.contains(document.activeElement))
-      ) {
-        setShowOverflowButton(false);
-      }
-    }, 50);
-
-    // Set a new timeout timer.
+  const setNewOnBlurTimeout = newTimeout => {
     setOnBlurTimeout(currentTimeout => {
       clearTimeout(currentTimeout);
       return newTimeout;
     });
   };
 
+  const handleFocus = () => {
+    setNewOnBlurTimeout(undefined);
+    setShowOverflowButton(true);
+  };
+
+  // Set a short delay to detect if the blur event resulted in a complete loss of keyboard focus or
+  // the focus just shifted to another element within this same component.
+  const handleBlur = () => {
+    const newTimeout = setTimeout(() => {
+      setShowOverflowButton(false);
+    }, 10);
+
+    // Set a new timeout timer.
+    setNewOnBlurTimeout(newTimeout);
+  };
+
   return (
     <div
-      className={classnames(namespace, className)}
+      className={classnames(className, namespace, {
+        [`${namespace}--open`]: overflowIsOpen,
+      })}
       onMouseOver={() => setShowOverflowButton(true)}
-      onMouseLeave={() => setShowOverflowButton(false)}
-      onFocus={() => setShowOverflowButton(true)}
+      onMouseLeave={() => !overflowIsOpen && setShowOverflowButton(false)}
+      onFocus={handleFocus}
       onBlur={handleBlur}
     >
       <FilterPanelCheckbox
-        className={classnames(namespace, checkboxClassName)}
+        className={checkboxClassName}
         wrapperClassName={classnames(
-          `${namespace}__wrapper`,
-          checkboxWrapperClassName
+          checkboxWrapperClassName,
+          `${namespace}__wrapper`
         )}
         {...other}
       />
       {showOverflowButton && (
         <OverflowMenu
           className={classnames(
-            `${namespace}__overflow-button`,
-            overflowMenuClassName
+            overflowMenuClassName,
+            `${namespace}__overflow-button`
           )}
           menuOptionsClass={classnames(
-            menuOptionsClassName,
-            overflowMenuOptionsClassName
+            overflowMenuOptionsClassName,
+            `${namespace}__overflow-options`
           )}
           ariaLabel={overflowMenuAriaLabel}
+          onOpen={() => setOverflowIsOpen(true)}
+          onClose={() => setOverflowIsOpen(false)}
           flipped
         >
           {children}
@@ -96,12 +98,26 @@ const FilterPanelCheckboxWithOverflowMenu = ({
 
 FilterPanelCheckboxWithOverflowMenu.propTypes = {
   ...FilterPanelCheckbox.propTypes,
+
+  /** Optional class name. */
   className: PropTypes.string,
+
+  /** Optional checkbox class name. */
   checkboxClassName: PropTypes.string,
+
+  /** Optional checkbox wrapper class name. */
   checkboxWrapperClassName: PropTypes.string,
+
+  /** Overflow aria-label to describe the purpose of the overflow button. */
   overflowMenuAriaLabel: PropTypes.string,
+
+  /** Optional overflow menu component class name. */
   overflowMenuClassName: PropTypes.string,
+
+  /** Optional overflow menu options class name. */
   overflowMenuOptionsClassName: PropTypes.string,
+
+  /** Children containing overflow menu items. */
   children: PropTypes.node,
 };
 

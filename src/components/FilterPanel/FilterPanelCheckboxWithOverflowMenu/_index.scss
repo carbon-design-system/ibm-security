@@ -13,6 +13,7 @@
   align-items: center;
   position: relative;
 
+  &--open,
   &:hover,
   &:focus-within {
     background-color: $field-01;
