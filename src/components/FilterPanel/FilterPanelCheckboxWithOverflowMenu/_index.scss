@@ -33,6 +33,9 @@
 
     .#{$prefix}--overflow-menu-options__option {
       height: $carbon--layout-02;
+    }
+
+    .#{$prefix}--overflow-menu-options__btn {
       max-width: none;
       justify-content: flex-end;
     }

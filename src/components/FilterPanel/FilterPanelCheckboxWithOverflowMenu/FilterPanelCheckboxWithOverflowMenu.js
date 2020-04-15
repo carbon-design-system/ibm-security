@@ -27,6 +27,7 @@ const FilterPanelCheckboxWithOverflowMenu = ({
   children,
   ...other
 }) => {
+  const containerRef = React.useRef(null);
   const [showOverflowButton, setShowOverflowButton] = React.useState(false);
   const [overflowIsOpen, setOverflowIsOpen] = React.useState(false);
   const { createFocusHandler, createBlurHandler } = useComponentFocus(10);
@@ -39,6 +40,35 @@ const FilterPanelCheckboxWithOverflowMenu = ({
     setShowOverflowButton(false);
   });
 
+  /**
+   * Sets the width of the overflow menu to match the width of this component's width and adjusts
+   * its position so it is right alingned with the overflow menu button.
+   *
+   * @param {HTMLElement} menuBody Element containing the overflow menu options.
+   * @param {string} direction The menu position relative to the menu button. Not used.
+   * @param {HTMLElement} menuButton Overflow menu button element.
+   * @returns {{top: number, left: number}} The menu offset measurements.
+   */
+  const updateMenuWidthAndSetOffset = (menuBody, direction, menuButton) => {
+    const width = containerRef.current.clientWidth;
+    const left = width / 2 - width + menuButton.clientWidth / 2;
+
+    // Set the menu's width.
+    // eslint-disable-next-line no-param-reassign
+    menuBody.style.width = `${width}px`;
+
+    // Set the menu's left position to match the return left position value. We need to do this so
+    // that the overflow menu is initially positioned properly when the menu is too close to the
+    // edge of the viewport.
+    // eslint-disable-next-line no-param-reassign
+    menuBody.style.left = `${left}px`;
+
+    return {
+      top: 0,
+      left,
+    };
+  };
+
   return (
     <div
       className={classnames(className, namespace, {
@@ -48,6 +78,7 @@ const FilterPanelCheckboxWithOverflowMenu = ({
       onMouseLeave={() => !overflowIsOpen && setShowOverflowButton(false)}
       onFocus={handleFocus}
       onBlur={handleBlur}
+      ref={containerRef}
     >
       <FilterPanelCheckbox
         className={checkboxClassName}
@@ -67,6 +98,7 @@ const FilterPanelCheckboxWithOverflowMenu = ({
             overflowMenuOptionsClassName,
             `${namespace}__overflow-options`
           )}
+          menuOffsetFlip={updateMenuWidthAndSetOffset}
           ariaLabel={overflowMenuAriaLabel}
           onOpen={() => setOverflowIsOpen(true)}
           onClose={() => setOverflowIsOpen(false)}
