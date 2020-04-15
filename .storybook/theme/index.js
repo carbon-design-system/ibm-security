@@ -18,7 +18,7 @@ export default create({
   base: 'dark',
 
   // Brand information.
-  brandTitle: `<img src="${require('./lockup.svg')}" alt="IBM Security" /><br/><br/>${name}<br/>v${version}`,
+  brandTitle: `<img src="${require('./lockup.svg')}" alt="IBM Security" /><br/><br/><code>${name}<br/>v${version}</code>`,
   brandUrl: homepage,
 
   colorPrimary: activeUI,
