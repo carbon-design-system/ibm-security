@@ -1,0 +1,129 @@
+////
+/// Modular layouts styles.
+/// @group modular-layouts
+/// @copyright IBM Security 2020
+////
+
+@import '@carbon/layout/scss/spacing';
+
+@mixin debug {
+  @include carbon--type-style($name: caption-01);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: $spacing-02;
+  left: 0;
+  color: black;
+  background-color: hotpink;
+}
+
+// expects "layout-02" and "top", etc.
+// @mixin generate-spacing-class($size, $direction) {
+//   .spacing--#{$size}--#{$direction} {
+//     position: relative;
+
+//     @if ($direction == "top") {
+//       padding-top: $size;
+
+//       &.debug:before {
+//         @include debug;
+//         content: $size;
+//         top: 0;
+//         height: $layout-01;
+//       }
+//     }
+
+//     @if ($direction == "bottom") {
+//       padding-bottom: $size;
+
+//       &.debug:after {
+//         @include debug;
+//         content: $size;
+//         bottom: 0;
+//         height: $layout-01;
+//       }
+//     }
+//   }
+// }
+
+// @include generate-spacing-class("layout-01", "top");
+// @include generate-spacing-class("layout-01", "bottom");
+
+// @include generate-spacing-class("layout-02", "top");
+// @include generate-spacing-class("layout-02", "bottom");
+
+// @include generate-spacing-class("layout-03", "top");
+// @include generate-spacing-class("layout-03", "bottom");
+
+.spacing--layout-01--top {
+  padding-top: $layout-01;
+  position: relative;
+
+  &.debug:before {
+    @include debug;
+    content: 'spacing--layout-01--top';
+    top: 0;
+    height: $layout-01;
+  }
+}
+
+.spacing--layout-01--bottom {
+  padding-bottom: $layout-01;
+  position: relative;
+
+  &.debug:after {
+    @include debug;
+    content: 'spacing--layout-01--bottom';
+    bottom: 0;
+    height: $layout-01;
+  }
+}
+
+.spacing--layout-02--top {
+  padding-top: $layout-02;
+  position: relative;
+
+  &.debug:before {
+    @include debug;
+    content: 'spacing--layout-02--top';
+    top: 0;
+    height: $layout-02;
+  }
+}
+
+.spacing--layout-02--bottom {
+  padding-bottom: $layout-02;
+  position: relative;
+
+  &.debug:after {
+    @include debug;
+    content: 'spacing--layout-02--bottom';
+    bottom: 0;
+    height: $layout-02;
+  }
+}
+
+.spacing--layout-03--top {
+  padding-top: $layout-03;
+  position: relative;
+
+  &.debug:before {
+    @include debug;
+    content: 'spacing--layout-03--top';
+    top: 0;
+    height: $layout-03;
+  }
+}
+
+.spacing--layout-03--bottom {
+  padding-bottom: $layout-03;
+  position: relative;
+
+  &.debug:after {
+    @include debug;
+    content: 'spacing--layout-03--bottom';
+    bottom: 0;
+    height: $layout-03;
+  }
+}
