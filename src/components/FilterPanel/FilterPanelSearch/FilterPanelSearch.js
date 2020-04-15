@@ -14,7 +14,7 @@ const namespace = getComponentNamespace('filter-panel-search');
 
 const FilterPanelSearch = ({ children, className, ...other }) => {
   const [displayResults, setDisplayResults] = React.useState(false);
-  const { createFocusHandler, createBlurHandler } = useComponentFocus(100);
+  const { createFocusHandler, createBlurHandler } = useComponentFocus(300);
 
   const handleFocus = createFocusHandler(() => {
     setDisplayResults(true);
