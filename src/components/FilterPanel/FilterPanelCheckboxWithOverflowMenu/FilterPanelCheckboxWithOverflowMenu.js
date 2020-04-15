@@ -60,8 +60,10 @@ const FilterPanelCheckboxWithOverflowMenu = ({
     // Set the menu's left position to match the return left position value. We need to do this so
     // that the overflow menu is initially positioned properly when the menu is too close to the
     // edge of the viewport.
-    // eslint-disable-next-line no-param-reassign
-    menuBody.style.left = `${left}px`;
+    if (!overflowIsOpen) {
+      // eslint-disable-next-line no-param-reassign
+      menuBody.style.left = `${left}px`;
+    }
 
     return {
       top: 0,
