@@ -9,7 +9,7 @@ import { fontFamilies } from '@carbon/type/lib';
 
 import { create } from '@storybook/theming';
 
-import { name, homepage } from '../../package.json';
+import { name, homepage, version } from '../../package.json';
 
 const { mono, sans } = fontFamilies;
 const { field02, inverse01, activeUI, text01, ui01, ui02 } = g100;
@@ -18,8 +18,7 @@ export default create({
   base: 'dark',
 
   // Brand information.
-  brandImage: require('./lockup.svg'),
-  brandTitle: name,
+  brandTitle: `<img src="${require('./lockup.svg')}" alt="IBM Security" /><br/><br/><code>${name}<br/>v${version}</code>`,
   brandUrl: homepage,
 
   colorPrimary: activeUI,
