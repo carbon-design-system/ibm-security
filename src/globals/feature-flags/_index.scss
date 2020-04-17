@@ -1,7 +1,7 @@
 ////
 /// Feature flags.
 /// @group feature-flags
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import 'carbon-components/scss/globals/scss/feature-flags';
@@ -17,6 +17,10 @@ $grid__name: css-gridish;
 /// @type String
 $platform__name: platform;
 
+/// Theme feature flag.
+/// @type String
+$theme__name: security--css-custom-property-theming;
+
 // TODO: `2.x` - Deprecate after teams have migrated to `@carbon/type`.
 
 /// Type feature flag.
@@ -28,6 +32,7 @@ $type__name: ibm-type;
 $security--default-feature-flags: (
   #{$grid__name}: true,
   #{$platform__name}: true,
+  #{$theme__name}: true,
   #{$type__name}: true
 );
 
