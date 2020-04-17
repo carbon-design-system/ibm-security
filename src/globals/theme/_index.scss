@@ -1,12 +1,17 @@
 ////
 /// Theme helpers.
 /// @group theme
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import '@carbon/themes/scss/mixins';
 
+@import '../../components/Component/mixins';
+@import '../deprecate/index';
+@import '../feature-flags/index';
+
 @import 'functions';
+@import 'variables';
 
 // TODO: `2.x` - To be removed.
 
@@ -21,14 +26,16 @@ $-theme: security--type-tokens-remove(
   $theme: $security--theme,
 );
 
-// Map the theme tokens as CSS custom properties.
-@each $token, $value in $-theme {
-  $-theme: map-merge(
-    $map1: $-theme,
-    $map2: (
-      $token: var(--#{$token}, $value),
-    ),
-  );
+@if feature-flag-enabled($feature: $theme__name) {
+  // Map the theme tokens as CSS custom properties.
+  @each $token, $value in $-theme {
+    $-theme: map-merge(
+      $map1: $-theme,
+      $map2: (
+        $token: var(--#{$token}, $value),
+      ),
+    );
+  }
 }
 
 /// Carbon theme.
@@ -39,11 +46,7 @@ $carbon--theme: $-theme;
 
 @import 'carbon-components/scss/globals/scss/theme';
 
-@import '../deprecate/index';
-@import '../../components/Component/mixins';
-
 @import 'mixins';
-@import 'variables';
 
 // TODO: `2.x` - To be removed after the `theme` function is deprecated.
 
@@ -65,13 +68,15 @@ $theme: dark;
   @return if($theme == dark, $dark, $light);
 }
 
-// Outputs the relevant classes for each supported theme.
-@each $theme, $tokens in $security--themes {
-  @include security--component($name: $theme) {
-    @include security--generate-css-custom-properties($theme: $tokens);
-  }
-}
-
 @include security--component($name: input__background__color--light) {
   @include input__background-color;
+}
+
+@if feature-flag-enabled($feature: $theme__name) {
+  // Outputs the relevant classes for each supported theme - `$carbon--theme` is required to be set before this can occur.
+  @each $theme, $tokens in $security--themes {
+    @include security--component($name: $theme) {
+      @include security--generate-css-custom-properties($theme: $tokens);
+    }
+  }
 }
