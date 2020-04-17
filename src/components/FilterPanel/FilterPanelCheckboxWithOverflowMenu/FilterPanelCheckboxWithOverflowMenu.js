@@ -102,6 +102,7 @@ const FilterPanelCheckboxWithOverflowMenu = ({
           )}
           menuOffsetFlip={updateMenuWidthAndSetOffset}
           ariaLabel={overflowMenuAriaLabel}
+          iconDescription={overflowMenuAriaLabel}
           onOpen={() => setOverflowIsOpen(true)}
           onClose={() => setOverflowIsOpen(false)}
           flipped
