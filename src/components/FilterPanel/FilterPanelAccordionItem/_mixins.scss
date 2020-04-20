@@ -8,6 +8,9 @@
 @import '@carbon/themes/scss/tokens';
 @import '@carbon/type/scss/styles';
 
+@import 'carbon-components/scss/globals/scss/helper-mixins';
+@import 'carbon-components/scss/globals/scss/vars';
+
 @import '../../../globals/motion/index';
 
 @mixin filter-panel-accordion-item {
