@@ -1,6 +1,6 @@
 /**
  * @file Button.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import classnames from 'classnames';
@@ -25,7 +25,6 @@ const { defaultProps, propTypes } = CarbonButton;
 
 const Button = ({
   className,
-  disabled,
   largeText,
   loading,
   kind,
@@ -46,7 +45,6 @@ const Button = ({
   return (
     <CarbonButton
       className={buttonClasses}
-      disabled={disabled || loading}
       kind={isGhostDanger || loading ? 'ghost' : kind}
       renderIcon={loading ? InlineLoading : renderIcon}
       size={!isLarge ? size : null}
@@ -57,7 +55,6 @@ const Button = ({
 
 Button.defaultProps = {
   ...defaultProps,
-  disabled: false,
   largeText: null,
   loading: false,
   renderIcon: undefined,
@@ -65,9 +62,6 @@ Button.defaultProps = {
 
 Button.propTypes = {
   ...propTypes,
-
-  /** @type {boolean} Whether or not the button is disabled. */
-  disabled: PropTypes.bool,
 
   /** @type {boolean} Whether or not the button is in a loading state. While loading, the button is disabled & icons provided via the `renderIcon` prop will not be shown. */
   loading: PropTypes.bool,
