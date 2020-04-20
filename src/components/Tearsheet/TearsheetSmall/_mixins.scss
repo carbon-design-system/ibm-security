@@ -1,7 +1,7 @@
 ////
 /// Small tearsheet mixins.
 /// @group tearsheet--small
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import '@carbon/layout/scss/spacing';
@@ -9,6 +9,8 @@
 @import '@carbon/type/scss/index';
 
 @import 'carbon-components/scss/globals/scss/vars';
+
+@import '../../TagWallFilter/Filter/mixins';
 
 @import '../mixins';
 
