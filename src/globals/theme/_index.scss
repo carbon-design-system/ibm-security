@@ -27,7 +27,7 @@ $security--theme: $carbon--theme--g100 !default;
 $-theme: $security--theme;
 
 @if feature-flag-enabled($feature: $theme__name) {
-  // Map the theme tokens as CSS custom properties, unless they're included in the blacklist.
+  // Filter out token that are not colors.
   @each $token, $value in $-theme {
     $security--theme__blacklist: if(
       $condition: type-of($value) == 'color',
@@ -39,6 +39,7 @@ $-theme: $security--theme;
         ),
     );
 
+    // Map the theme tokens as CSS custom properties.
     $-theme: map-merge(
       $map1: $-theme,
       $map2: (
