@@ -134,7 +134,7 @@ SummaryCardAction.propTypes = {
   /** @type {bool} Whether or not the action has an icon only. */
   hasIconOnly: PropTypes.bool,
 
-  /** @type {boolean} Specify hether or not the action is in a loading state. While loading, the action is disabled and icons provided via the `renderIcon` prop will not be shown. */
+  /** @type {boolean} Specify whether or not the action is in a loading state. While loading, the action is disabled and icons provided via the `renderIcon` prop will not be shown. */
   loading: PropTypes.bool,
 
   /** @type {Function} Click handler for the action button. */
