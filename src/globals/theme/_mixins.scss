@@ -81,7 +81,7 @@
 ///     --interactive-03: #ffffff;
 ///   }
 @mixin security--generate-css-custom-properties($theme) {
-  @each $token in $security--theme__blacklist {
+  @each $token in $security--theme__ignore-list {
     $theme: map-remove(
       $map: $theme,
       $key: $token,

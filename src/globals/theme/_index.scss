@@ -12,10 +12,10 @@
 
 @import 'variables';
 
-// Theme blacklist.
+// Theme ignore list.
 /// @type List<String>
 /// @access private
-$security--theme__blacklist: ();
+$security--theme__ignore-list: ();
 
 /// Security theme.
 /// @type Map<String, Color>
@@ -29,12 +29,16 @@ $-theme: $security--theme;
 @if feature-flag-enabled($feature: $theme__name) {
   // Filter out token that are not colors.
   @each $token, $value in $-theme {
-    $security--theme__blacklist: if(
-      $condition: type-of($value) == 'color',
-      $if_true: $security--theme__blacklist,
+    $security--theme__ignore-list: if(
+      $condition:
+        type-of(
+          $value: $value,
+        ) ==
+        'color',
+      $if_true: $security--theme__ignore-list,
       $if_false:
         append(
-          $list: $security--theme__blacklist,
+          $list: $security--theme__ignore-list,
           $val: $token,
         ),
     );
@@ -47,7 +51,7 @@ $-theme: $security--theme;
           if(
             $condition:
               index(
-                $list: $security--theme__blacklist,
+                $list: $security--theme__ignore-list,
                 $value: $token,
               ),
             $if_true: $value,
