@@ -5,7 +5,6 @@
 ////
 
 @import '@carbon/themes/scss/mixins';
-@import '@carbon/type/scss/styles';
 
 @import '../../components/Component/mixins';
 @import '../deprecate/index';
@@ -16,46 +15,7 @@
 // Theme blacklist.
 /// @type List<String>
 /// @access private
-$security--theme__blacklist: (
-  container-01,
-  container-02,
-  container-03,
-  container-04,
-  container-05,
-  fluid-spacing-01,
-  fluid-spacing-02,
-  fluid-spacing-03,
-  fluid-spacing-04,
-  icon-size-01,
-  icon-size-02,
-  layout-01,
-  layout-02,
-  layout-03,
-  layout-04,
-  layout-05,
-  layout-06,
-  layout-07,
-  spacing-01,
-  spacing-02,
-  spacing-03,
-  spacing-04,
-  spacing-05,
-  spacing-06,
-  spacing-07,
-  spacing-08,
-  spacing-09,
-  spacing-10,
-  spacing-11,
-  spacing-12
-);
-
-// Append the type tokens to the theming blacklist.
-@each $token in map-keys($map: $tokens) {
-  $security--theme__blacklist: append(
-    $list: $security--theme__blacklist,
-    $val: $token,
-  );
-}
+$security--theme__blacklist: ();
 
 /// Security theme.
 /// @type Map<String, Color>
@@ -69,6 +29,16 @@ $-theme: $security--theme;
 @if feature-flag-enabled($feature: $theme__name) {
   // Map the theme tokens as CSS custom properties, unless they're included in the blacklist.
   @each $token, $value in $-theme {
+    $security--theme__blacklist: if(
+      $condition: type-of($value) == 'color',
+      $if_true: $security--theme__blacklist,
+      $if_false:
+        append(
+          $list: $security--theme__blacklist,
+          $val: $token,
+        ),
+    );
+
     $-theme: map-merge(
       $map1: $-theme,
       $map2: (
