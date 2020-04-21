@@ -67,6 +67,7 @@ class Tearsheet extends Component {
       rootNode,
       stopPropagation,
       stopPropagationEvents,
+      scrollGradient,
 
       deleteButton: {
         icon = TrashCan20,
@@ -90,6 +91,19 @@ class Tearsheet extends Component {
         TEARSHEET_CLOSE_BUTTON: (closeButton && closeButton.label) || '',
       }),
     };
+
+    const mainContent = scrollGradient ? (
+      <ScrollGradient
+        className={`${namespace}__main__scroll-gradient`}
+        color={theme.ui01}
+      >
+        <div className={`${namespace}__main__scroll-gradient__content`}>
+          {renderMain()}
+        </div>
+      </ScrollGradient>
+    ) : (
+      renderMain()
+    );
 
     return (
       <Transition className={namespace} component="span" timeout={300}>
@@ -151,16 +165,7 @@ class Tearsheet extends Component {
                 )}
                 <h1 className={`${namespace}__main__title`}>{mainTitle}</h1>
                 <section className={`${namespace}__main__content`}>
-                  <ScrollGradient
-                    className={`${namespace}__main__scroll-gradient`}
-                    color={theme.ui01}
-                  >
-                    <div
-                      className={`${namespace}__main__scroll-gradient__content`}
-                    >
-                      {renderMain()}
-                    </div>
-                  </ScrollGradient>
+                  {mainContent}
                 </section>
                 <div className={`${namespace}__container`}>
                   {!tertiaryButton.isDisabled && (
@@ -289,6 +294,9 @@ Tearsheet.propTypes = {
 
   /** @type {array} Array of event types to stop propagation. */
   stopPropagationEvents: PropTypes.arrayOf(PropTypes.oneOf(PORTAL_EVENTS)),
+
+  /** @type {boolean} Control whether the main content is wrapped in a scroll gradient. */
+  scrollGradient: PropTypes.bool,
 };
 
 Tearsheet.defaultProps = {
@@ -308,6 +316,7 @@ Tearsheet.defaultProps = {
   labels: {},
   stopPropagation: false,
   stopPropagationEvents: undefined,
+  scrollGradient: true,
 };
 
 export default Tearsheet;

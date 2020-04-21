@@ -28,19 +28,19 @@ $tearsheet__sizing__dimensions: $carbon--layout-04;
 @mixin tearsheet--base {
   /// Position.
   /// @type Length
-  $tearsheet__position: -50%;
 
   @include input__background-color;
 
   display: flex;
   position: fixed;
-  left: 50%;
   bottom: 0;
   height: calc(100vh - #{$tearsheet__sizing__dimensions});
   min-height: carbon--mini-units($count: 40);
   background-color: $ui-01;
-  transform: translate3d(#{$tearsheet__position}, 0, 0);
   z-index: z($layer: modal);
+  margin: $tearsheet__sizing__dimensions
+    calc(#{$tearsheet__sizing__dimensions} / 2) 0
+    calc(#{$tearsheet__sizing__dimensions} / 2);
 
   &__transition {
     &--enter,
@@ -51,18 +51,18 @@ $tearsheet__sizing__dimensions: $carbon--layout-04;
     }
 
     &--enter {
-      transform: translate3d(#{$tearsheet__position}, 100%, 0);
+      transform: translateY(100%);
 
       &--active {
-        transform: translate3d(#{$tearsheet__position}, 0, 0);
+        transform: translateY(0);
       }
     }
 
     &--leave {
-      transform: translate3d(#{$tearsheet__position}, 0, 0);
+      transform: translateY(0);
 
       &--active {
-        transform: translate3d(#{$tearsheet__position}, 100%, 0);
+        transform: translateY(100%);
       }
     }
   }
