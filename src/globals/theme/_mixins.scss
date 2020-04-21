@@ -1,16 +1,16 @@
 ////
 /// Theme mixins.
 /// @group theme
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import '@carbon/themes/scss/tokens';
+@import 'carbon-components/scss/globals/scss/vars';
 
 @import '../../components/IconButton/variables';
 
 @import '../namespace/index';
 
-@import 'functions';
 @import 'variables';
 
 /// Changes background color for form elements.
@@ -81,7 +81,14 @@
 ///     --interactive-03: #ffffff;
 ///   }
 @mixin security--generate-css-custom-properties($theme) {
-  @each $token, $value in security--type-tokens-remove($theme: $theme) {
+  @each $token in $security--theme__ignore-list {
+    $theme: map-remove(
+      $map: $theme,
+      $key: $token,
+    );
+  }
+
+  @each $token, $value in $theme {
     --#{$token}: #{$value};
   }
 }
