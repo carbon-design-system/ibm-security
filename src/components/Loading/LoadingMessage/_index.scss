@@ -1,0 +1,12 @@
+////
+/// Loading message.
+/// @group loading-message
+/// @copyright IBM Security 2020
+////
+
+@import '../../Component/mixins';
+
+@include security--component($name: loading-message) {
+  display: flex;
+  align-items: center;
+}
