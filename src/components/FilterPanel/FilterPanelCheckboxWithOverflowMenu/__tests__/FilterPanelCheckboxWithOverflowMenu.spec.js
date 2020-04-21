@@ -43,6 +43,7 @@ describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
         labelText="checkbox label"
         overflowMenuAriaLabel="filter selection options"
         id="checkbox-id"
+        open
       >
         <OverflowMenuItem primaryFocus itemText="option 1" />
         <OverflowMenuItem itemText="option 2" />
@@ -55,10 +56,10 @@ describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
 
     // Open overflow menu and waitFor for options to appear on the DOM.
     fireEvent.mouseEnter(screen.getByLabelText(/checkbox label/i));
-    userEvent.click(
-      screen.getByLabelText(/filter selection options/i, { selector: 'button' })
-    );
-    await screen.findByText(/option 1/i);
+    // userEvent.click(
+    //   screen.getByLabelText(/filter selection options/i, { selector: 'button' })
+    // );
+    // await screen.findByText(/option 1/i);
     screen.debug();
 
     await expect(document.body).toHaveNoAxeViolations();

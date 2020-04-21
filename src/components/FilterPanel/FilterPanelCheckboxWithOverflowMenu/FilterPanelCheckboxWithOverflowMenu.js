@@ -25,6 +25,7 @@ const FilterPanelCheckboxWithOverflowMenu = ({
   overflowMenuClassName,
   overflowMenuOptionsClassName,
   children,
+  open,
   ...other
 }) => {
   const containerRef = React.useRef(null);
@@ -50,25 +51,29 @@ const FilterPanelCheckboxWithOverflowMenu = ({
    * @returns {{top: number, left: number}} The menu offset measurements.
    */
   const updateMenuWidthAndSetOffset = (menuBody, direction, menuButton) => {
-    const width = containerRef.current.clientWidth;
-    const left = width / 2 - width + menuButton.clientWidth / 2;
+    if (menuButton) {
+      const width = containerRef.current.clientWidth;
+      const left = width / 2 - width + menuButton.clientWidth / 2;
 
-    // Set the menu's width.
-    // eslint-disable-next-line no-param-reassign
-    menuBody.style.width = `${width}px`;
-
-    // Set the menu's left position to match the return left position value. We need to do this so
-    // that the overflow menu is initially positioned properly when the menu is too close to the
-    // edge of the viewport.
-    if (!overflowIsOpen) {
+      // Set the menu's width.
       // eslint-disable-next-line no-param-reassign
-      menuBody.style.left = `${left}px`;
+      menuBody.style.width = `${width}px`;
+
+      // Set the menu's left position to match the return left position value. We need to do this so
+      // that the overflow menu is initially positioned properly when the menu is too close to the
+      // edge of the viewport.
+      if (!overflowIsOpen) {
+        // eslint-disable-next-line no-param-reassign
+        menuBody.style.left = `${left}px`;
+      }
+
+      return {
+        top: 0,
+        left,
+      };
     }
 
-    return {
-      top: 0,
-      left,
-    };
+    return { top: 0, left: 0 };
   };
 
   return (
@@ -92,6 +97,7 @@ const FilterPanelCheckboxWithOverflowMenu = ({
       />
       {showOverflowButton && (
         <OverflowMenu
+          open={open}
           className={classnames(
             overflowMenuClassName,
             `${namespace}__overflow-button`
@@ -137,6 +143,9 @@ FilterPanelCheckboxWithOverflowMenu.propTypes = {
 
   /** Children containing overflow menu items. */
   children: PropTypes.node,
+
+  /** Whether or not the overflow menu should render as open. */
+  open: PropTypes.bool,
 };
 
 FilterPanelCheckboxWithOverflowMenu.defaultProps = {
@@ -148,6 +157,7 @@ FilterPanelCheckboxWithOverflowMenu.defaultProps = {
   overflowMenuClassName: undefined,
   overflowMenuOptionsClassName: undefined,
   children: undefined,
+  open: false,
 };
 
 export default FilterPanelCheckboxWithOverflowMenu;

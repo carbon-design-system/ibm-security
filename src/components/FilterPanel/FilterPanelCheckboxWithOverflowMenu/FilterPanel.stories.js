@@ -26,6 +26,7 @@ storiesOf(
         labelText={text('Checkbox label (labelText)', 'Checkbox label')}
         count={number('Checkbox count (count)', 10)}
         onChange={action('onChange')}
+        open
         id="checkbox-id"
       >
         <OverflowMenuItem
