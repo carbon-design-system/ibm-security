@@ -82,11 +82,13 @@ const ErrorPage = ({
             <p className={`${namespace}__description`}>{errorMessage}</p>
           )}
           {links.length > 0 &&
-            links.map(({ id, text, href, icon }) => (
+            links.map(({ external = false, id, text, href, icon }) => (
               <Link
                 id={id}
                 key={id}
                 href={href}
+                target={external ? '_blank' : '_parent'}
+                rel="noopener noreferrer"
                 className={`${namespace}__link`}
               >
                 {icon !== undefined && (
