@@ -1,12 +1,14 @@
 ////
 /// Combo box component.
 /// @group combo-box
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import 'carbon-components/scss/components/combo-box/combo-box';
 
 @import 'carbon-components/scss/globals/scss/vars';
+
+@import '../../globals/namespace/index';
 
 /// Carbon style overrides.
 @include export-namespace($name: combo-box) {

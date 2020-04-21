@@ -6,6 +6,10 @@
 
 @import 'carbon-components/scss/components/date-picker/date-picker';
 
+@import 'carbon-components/scss/globals/scss/vars';
+
+@import '../../globals/namespace/index';
+
 // Carbon needs to add theming support for this component.
 @include export-namespace($name: datepicker) {
   .#{$prefix}--date-picker__day.inRange,
