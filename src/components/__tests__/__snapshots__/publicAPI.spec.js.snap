@@ -8531,8 +8531,10 @@ Map {
       "children": null,
       "className": null,
       "closeButtonIconDescription": "close",
+      "disabled": false,
       "expandedContent": undefined,
       "hasIconOnly": false,
+      "loading": false,
       "onClick": [Function],
     },
     "propTypes": Object {
@@ -8543,10 +8545,16 @@ Map {
         "type": "string",
       },
       "closeButtonIconDescription": [Function],
+      "disabled": Object {
+        "type": "bool",
+      },
       "expandedContent": Object {
         "type": "node",
       },
       "hasIconOnly": Object {
+        "type": "bool",
+      },
+      "loading": Object {
         "type": "bool",
       },
       "onClick": Object {
