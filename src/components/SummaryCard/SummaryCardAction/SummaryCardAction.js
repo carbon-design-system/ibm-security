@@ -1,6 +1,6 @@
 /**
  * @file Summary card action.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import React, { Component, Fragment } from 'react';
@@ -32,8 +32,10 @@ class SummaryCardAction extends Component {
       children,
       className,
       closeButtonIconDescription,
+      disabled,
       expandedContent,
       hasIconOnly,
+      loading,
       onClick,
       ...rest
     } = this.props;
@@ -48,7 +50,9 @@ class SummaryCardAction extends Component {
           className={classnames(namespace, className, {
             [`${namespace}--icon-only`]: hasIconOnly,
           })}
+          disabled={disabled || loading}
           hasIconOnly={hasIconOnly}
+          loading={loading}
           kind="ghost"
           onClick={
             expandedContent
@@ -121,11 +125,17 @@ SummaryCardAction.propTypes = {
     return undefined;
   },
 
+  /** @type {boolean} Specify whether or not the action is disabled. */
+  disabled: PropTypes.bool,
+
   /** @type {node} Provide content to show if action is clicked. */
   expandedContent: PropTypes.node,
 
   /** @type {bool} Whether or not the action has an icon only. */
   hasIconOnly: PropTypes.bool,
+
+  /** @type {boolean} Specify whether or not the action is in a loading state. While loading, the action is disabled and icons provided via the `renderIcon` prop will not be shown. */
+  loading: PropTypes.bool,
 
   /** @type {Function} Click handler for the action button. */
   onClick: PropTypes.func,
@@ -135,8 +145,10 @@ SummaryCardAction.defaultProps = {
   children: null,
   className: null,
   closeButtonIconDescription: 'close',
+  disabled: false,
   expandedContent: undefined,
   hasIconOnly: false,
+  loading: false,
   onClick: () => {},
 };
 
