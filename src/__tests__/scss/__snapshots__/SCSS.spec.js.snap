@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SCSS Bundle Snapshot 1`] = `
+exports[`SCSS Snapshot 1`] = `
 ".security--input__background__color--light .bx--date-picker__input, .security--input__background__color--light .bx--dropdown,
-.security--input__background__color--light .bx--number input[type='number'], .security--input__background__color--light .bx--search-input, .security--input__background__color--light .bx--select-input, .security--input__background__color--light .bx--text-area, .security--input__background__color--light .bx--text-input, .security--input__background__color--light .bx--list-box, .security--input__background__color--light .bx--list-box__menu, .security--input__background__color--light .security--button--icon:focus, .security--input__background__color--light .security--button--icon:hover, .security--card .bx--number .security--input__background__color--light input[type='number'], .security--tearsheet--small .bx--number .security--input__background__color--light input[type='number'], .security--tearsheet .bx--number .security--input__background__color--light input[type='number'] {
+.security--input__background__color--light .bx--number input[type=\\"number\\"], .security--input__background__color--light .bx--search-input, .security--input__background__color--light .bx--select-input, .security--input__background__color--light .bx--text-area, .security--input__background__color--light .bx--text-input, .security--input__background__color--light .bx--list-box, .security--input__background__color--light .bx--list-box__menu, .security--input__background__color--light .security--button--icon:focus, .security--input__background__color--light .security--button--icon:hover, .security--card .bx--number .security--input__background__color--light input[type=\\"number\\"], .security--tearsheet--small .bx--number .security--input__background__color--light input[type=\\"number\\"], .security--tearsheet .bx--number .security--input__background__color--light input[type=\\"number\\"] {
   background-color: var(--ui-02, #393939);
 }
 
@@ -291,7 +291,7 @@ body {
   margin-bottom: 0;
 }
 
-[class*='bx-padding'] {
+[class*=\\"bx-padding\\"] {
   box-sizing: border-box;
 }
 
@@ -454,7 +454,7 @@ body {
   grid-row: span 29;
 }
 
-[class*='bx-grid__col--sm--'] {
+[class*=\\"bx-grid__col--sm--\\"] {
   display: block;
 }
 
@@ -514,7 +514,7 @@ body {
   grid-column: span 1;
 }
 
-.bx-grid__col--sm--1.bx-grid > *:not([class*='bx-grid__col']) {
+.bx-grid__col--sm--1.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
   grid-column: span 1;
 }
 
@@ -526,7 +526,7 @@ body {
   grid-column: span 2;
 }
 
-.bx-grid__col--sm--2.bx-grid > *:not([class*='bx-grid__col']) {
+.bx-grid__col--sm--2.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
   grid-column: span 2;
 }
 
@@ -538,7 +538,7 @@ body {
   grid-column: span 3;
 }
 
-.bx-grid__col--sm--3.bx-grid > *:not([class*='bx-grid__col']) {
+.bx-grid__col--sm--3.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
   grid-column: span 3;
 }
 
@@ -550,7 +550,7 @@ body {
   grid-column: span 4;
 }
 
-.bx-grid__col--sm--4.bx-grid > *:not([class*='bx-grid__col']) {
+.bx-grid__col--sm--4.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
   grid-column: span 4;
 }
 
@@ -653,7 +653,7 @@ body {
   .bx-grid__col--sm--0--only {
     display: block;
   }
-  [class*='bx-grid__col--md--'] {
+  [class*=\\"bx-grid__col--md--\\"] {
     display: block;
   }
   .bx-grid__col--md--0,
@@ -698,7 +698,7 @@ body {
   .bx-grid__col--sm--1 {
     grid-column: span 2;
   }
-  .bx-grid__col--sm--1.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--sm--1.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 1;
   }
   .bx-grid--fluid-rows > .bx-grid__height--sm--1 {
@@ -707,7 +707,7 @@ body {
   .bx-grid__col--sm--2 {
     grid-column: span 4;
   }
-  .bx-grid__col--sm--2.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--sm--2.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 2;
   }
   .bx-grid--fluid-rows > .bx-grid__height--sm--2 {
@@ -716,7 +716,7 @@ body {
   .bx-grid__col--sm--3 {
     grid-column: span 6;
   }
-  .bx-grid__col--sm--3.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--sm--3.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 3;
   }
   .bx-grid--fluid-rows > .bx-grid__height--sm--3 {
@@ -725,7 +725,7 @@ body {
   .bx-grid__col--sm--4 {
     grid-column: span 8;
   }
-  .bx-grid__col--sm--4.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--sm--4.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 4;
   }
   .bx-grid--fluid-rows > .bx-grid__height--sm--4 {
@@ -734,7 +734,7 @@ body {
   .bx-grid__col--md--1 {
     grid-column: span 1;
   }
-  .bx-grid__col--md--1.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--1.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 1;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--1 {
@@ -743,7 +743,7 @@ body {
   .bx-grid__col--md--2 {
     grid-column: span 2;
   }
-  .bx-grid__col--md--2.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--2.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 2;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--2 {
@@ -752,7 +752,7 @@ body {
   .bx-grid__col--md--3 {
     grid-column: span 3;
   }
-  .bx-grid__col--md--3.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--3.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 3;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--3 {
@@ -761,7 +761,7 @@ body {
   .bx-grid__col--md--4 {
     grid-column: span 4;
   }
-  .bx-grid__col--md--4.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--4.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 4;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--4 {
@@ -770,7 +770,7 @@ body {
   .bx-grid__col--md--5 {
     grid-column: span 5;
   }
-  .bx-grid__col--md--5.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--5.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 5;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--5 {
@@ -779,7 +779,7 @@ body {
   .bx-grid__col--md--6 {
     grid-column: span 6;
   }
-  .bx-grid__col--md--6.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--6.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 6;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--6 {
@@ -788,7 +788,7 @@ body {
   .bx-grid__col--md--7 {
     grid-column: span 7;
   }
-  .bx-grid__col--md--7.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--7.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 7;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--7 {
@@ -797,7 +797,7 @@ body {
   .bx-grid__col--md--8 {
     grid-column: span 8;
   }
-  .bx-grid__col--md--8.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--8.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 8;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--8 {
@@ -947,7 +947,7 @@ body {
   .bx-grid__col--md--0--only {
     display: block;
   }
-  [class*='bx-grid__col--lg--'] {
+  [class*=\\"bx-grid__col--lg--\\"] {
     display: block;
   }
   .bx-grid__col--lg--0,
@@ -992,7 +992,7 @@ body {
   .bx-grid__col--sm--1 {
     grid-column: span 4;
   }
-  .bx-grid__col--sm--1.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--sm--1.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 1;
   }
   .bx-grid--fluid-rows > .bx-grid__height--sm--1 {
@@ -1001,7 +1001,7 @@ body {
   .bx-grid__col--sm--2 {
     grid-column: span 8;
   }
-  .bx-grid__col--sm--2.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--sm--2.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 2;
   }
   .bx-grid--fluid-rows > .bx-grid__height--sm--2 {
@@ -1010,7 +1010,7 @@ body {
   .bx-grid__col--sm--3 {
     grid-column: span 12;
   }
-  .bx-grid__col--sm--3.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--sm--3.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 3;
   }
   .bx-grid--fluid-rows > .bx-grid__height--sm--3 {
@@ -1019,7 +1019,7 @@ body {
   .bx-grid__col--sm--4 {
     grid-column: span 16;
   }
-  .bx-grid__col--sm--4.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--sm--4.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 4;
   }
   .bx-grid--fluid-rows > .bx-grid__height--sm--4 {
@@ -1028,7 +1028,7 @@ body {
   .bx-grid__col--md--1 {
     grid-column: span 2;
   }
-  .bx-grid__col--md--1.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--1.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 1;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--1 {
@@ -1037,7 +1037,7 @@ body {
   .bx-grid__col--md--2 {
     grid-column: span 4;
   }
-  .bx-grid__col--md--2.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--2.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 2;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--2 {
@@ -1046,7 +1046,7 @@ body {
   .bx-grid__col--md--3 {
     grid-column: span 6;
   }
-  .bx-grid__col--md--3.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--3.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 3;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--3 {
@@ -1055,7 +1055,7 @@ body {
   .bx-grid__col--md--4 {
     grid-column: span 8;
   }
-  .bx-grid__col--md--4.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--4.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 4;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--4 {
@@ -1064,7 +1064,7 @@ body {
   .bx-grid__col--md--5 {
     grid-column: span 10;
   }
-  .bx-grid__col--md--5.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--5.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 5;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--5 {
@@ -1073,7 +1073,7 @@ body {
   .bx-grid__col--md--6 {
     grid-column: span 12;
   }
-  .bx-grid__col--md--6.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--6.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 6;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--6 {
@@ -1082,7 +1082,7 @@ body {
   .bx-grid__col--md--7 {
     grid-column: span 14;
   }
-  .bx-grid__col--md--7.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--7.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 7;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--7 {
@@ -1091,7 +1091,7 @@ body {
   .bx-grid__col--md--8 {
     grid-column: span 16;
   }
-  .bx-grid__col--md--8.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--md--8.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 8;
   }
   .bx-grid--fluid-rows > .bx-grid__height--md--8 {
@@ -1100,7 +1100,7 @@ body {
   .bx-grid__col--lg--1 {
     grid-column: span 1;
   }
-  .bx-grid__col--lg--1.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--1.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 1;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--1 {
@@ -1109,7 +1109,7 @@ body {
   .bx-grid__col--lg--2 {
     grid-column: span 2;
   }
-  .bx-grid__col--lg--2.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--2.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 2;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--2 {
@@ -1118,7 +1118,7 @@ body {
   .bx-grid__col--lg--3 {
     grid-column: span 3;
   }
-  .bx-grid__col--lg--3.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--3.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 3;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--3 {
@@ -1127,7 +1127,7 @@ body {
   .bx-grid__col--lg--4 {
     grid-column: span 4;
   }
-  .bx-grid__col--lg--4.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--4.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 4;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--4 {
@@ -1136,7 +1136,7 @@ body {
   .bx-grid__col--lg--5 {
     grid-column: span 5;
   }
-  .bx-grid__col--lg--5.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--5.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 5;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--5 {
@@ -1145,7 +1145,7 @@ body {
   .bx-grid__col--lg--6 {
     grid-column: span 6;
   }
-  .bx-grid__col--lg--6.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--6.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 6;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--6 {
@@ -1154,7 +1154,7 @@ body {
   .bx-grid__col--lg--7 {
     grid-column: span 7;
   }
-  .bx-grid__col--lg--7.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--7.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 7;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--7 {
@@ -1163,7 +1163,7 @@ body {
   .bx-grid__col--lg--8 {
     grid-column: span 8;
   }
-  .bx-grid__col--lg--8.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--8.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 8;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--8 {
@@ -1172,7 +1172,7 @@ body {
   .bx-grid__col--lg--9 {
     grid-column: span 9;
   }
-  .bx-grid__col--lg--9.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--9.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 9;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--9 {
@@ -1181,7 +1181,7 @@ body {
   .bx-grid__col--lg--10 {
     grid-column: span 10;
   }
-  .bx-grid__col--lg--10.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--10.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 10;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--10 {
@@ -1190,7 +1190,7 @@ body {
   .bx-grid__col--lg--11 {
     grid-column: span 11;
   }
-  .bx-grid__col--lg--11.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--11.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 11;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--11 {
@@ -1199,7 +1199,7 @@ body {
   .bx-grid__col--lg--12 {
     grid-column: span 12;
   }
-  .bx-grid__col--lg--12.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--12.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 12;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--12 {
@@ -1208,7 +1208,7 @@ body {
   .bx-grid__col--lg--13 {
     grid-column: span 13;
   }
-  .bx-grid__col--lg--13.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--13.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 13;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--13 {
@@ -1217,7 +1217,7 @@ body {
   .bx-grid__col--lg--14 {
     grid-column: span 14;
   }
-  .bx-grid__col--lg--14.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--14.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 14;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--14 {
@@ -1226,7 +1226,7 @@ body {
   .bx-grid__col--lg--15 {
     grid-column: span 15;
   }
-  .bx-grid__col--lg--15.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--15.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 15;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--15 {
@@ -1235,21 +1235,21 @@ body {
   .bx-grid__col--lg--16 {
     grid-column: span 16;
   }
-  .bx-grid__col--lg--16.bx-grid > *:not([class*='bx-grid__col']) {
+  .bx-grid__col--lg--16.bx-grid > *:not([class*=\\"bx-grid__col\\"]) {
     grid-column: span 16;
   }
   .bx-grid--fluid-rows > .bx-grid__height--lg--16 {
     grid-row: span 16;
   }
-  [class^='bx-container__bleed--md'],
-  [class^='bx-container__break--md'] {
+  [class^=\\"bx-container__bleed--md\\"],
+  [class^=\\"bx-container__break--md\\"] {
     margin-left: 0;
     margin-right: 0;
     padding-left: 0;
     padding-right: 0;
   }
-  [class^='bx-container__bleed--md'][class^='bx-padding'],
-  [class^='bx-container__break--md'][class^='bx-padding'] {
+  [class^=\\"bx-container__bleed--md\\"][class^=\\"bx-padding\\"],
+  [class^=\\"bx-container__break--md\\"][class^=\\"bx-padding\\"] {
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -1309,7 +1309,7 @@ body {
   .bx-grid__col--lg--0--only {
     display: block;
   }
-  [class*='bx-grid__col--max--'] {
+  [class*=\\"bx-grid__col--max--\\"] {
     display: block;
   }
   .bx-grid__col--max--0,
@@ -1396,16 +1396,16 @@ body {
 
 @supports (display: grid) {
   .bx-grid > *,
-  .bx-grid > [class*='bx-grid__col--'] {
+  .bx-grid > [class*=\\"bx-grid__col--\\"] {
     min-width: initial;
     max-width: initial;
     width: initial;
   }
   .bx-grid > *.bx-grid,
-  .bx-grid > [class*='bx-grid__col--'].bx-grid {
+  .bx-grid > [class*=\\"bx-grid__col--\\"].bx-grid {
     display: grid;
   }
-  .bx-grid > [class*='bx-grid__height--'] {
+  .bx-grid > [class*=\\"bx-grid__height--\\"] {
     height: unset;
     max-height: unset;
     min-height: initial;
@@ -1434,7 +1434,7 @@ body {
 }
 
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: italic;
   font-weight: 300;
   font-display: auto;
@@ -1442,7 +1442,7 @@ body {
 }
 
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: italic;
   font-weight: 400;
   font-display: auto;
@@ -1450,7 +1450,7 @@ body {
 }
 
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: italic;
   font-weight: 600;
   font-display: auto;
@@ -1458,7 +1458,7 @@ body {
 }
 
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: normal;
   font-weight: 300;
   font-display: auto;
@@ -1466,7 +1466,7 @@ body {
 }
 
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: normal;
   font-weight: 400;
   font-display: auto;
@@ -1474,7 +1474,7 @@ body {
 }
 
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: normal;
   font-weight: 600;
   font-display: auto;
@@ -1483,7 +1483,7 @@ body {
 
 /* cyrillic-ext */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: italic;
   font-weight: 300;
   font-display: auto;
@@ -1493,7 +1493,7 @@ body {
 
 /* cyrillic */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: italic;
   font-weight: 300;
   font-display: auto;
@@ -1503,7 +1503,7 @@ body {
 
 /* vietnamese */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: italic;
   font-weight: 300;
   font-display: auto;
@@ -1513,7 +1513,7 @@ body {
 
 /* latin-ext */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: italic;
   font-weight: 300;
   font-display: auto;
@@ -1523,7 +1523,7 @@ body {
 
 /* latin */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: italic;
   font-weight: 300;
   font-display: auto;
@@ -1533,7 +1533,7 @@ body {
 
 /* cyrillic-ext */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: italic;
   font-weight: 400;
   font-display: auto;
@@ -1543,7 +1543,7 @@ body {
 
 /* cyrillic */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: italic;
   font-weight: 400;
   font-display: auto;
@@ -1553,7 +1553,7 @@ body {
 
 /* vietnamese */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: italic;
   font-weight: 400;
   font-display: auto;
@@ -1563,7 +1563,7 @@ body {
 
 /* latin-ext */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: italic;
   font-weight: 400;
   font-display: auto;
@@ -1573,7 +1573,7 @@ body {
 
 /* latin */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: italic;
   font-weight: 400;
   font-display: auto;
@@ -1583,7 +1583,7 @@ body {
 
 /* cyrillic-ext */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: italic;
   font-weight: 600;
   font-display: auto;
@@ -1593,7 +1593,7 @@ body {
 
 /* cyrillic */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: italic;
   font-weight: 600;
   font-display: auto;
@@ -1603,7 +1603,7 @@ body {
 
 /* vietnamese */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: italic;
   font-weight: 600;
   font-display: auto;
@@ -1613,7 +1613,7 @@ body {
 
 /* latin-ext */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: italic;
   font-weight: 600;
   font-display: auto;
@@ -1623,7 +1623,7 @@ body {
 
 /* latin */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: italic;
   font-weight: 600;
   font-display: auto;
@@ -1633,7 +1633,7 @@ body {
 
 /* cyrillic-ext */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: normal;
   font-weight: 300;
   font-display: auto;
@@ -1643,7 +1643,7 @@ body {
 
 /* cyrillic */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: normal;
   font-weight: 300;
   font-display: auto;
@@ -1653,7 +1653,7 @@ body {
 
 /* vietnamese */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: normal;
   font-weight: 300;
   font-display: auto;
@@ -1663,7 +1663,7 @@ body {
 
 /* latin-ext */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: normal;
   font-weight: 300;
   font-display: auto;
@@ -1673,7 +1673,7 @@ body {
 
 /* latin */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: normal;
   font-weight: 300;
   font-display: auto;
@@ -1683,7 +1683,7 @@ body {
 
 /* cyrillic-ext */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: normal;
   font-weight: 400;
   font-display: auto;
@@ -1693,7 +1693,7 @@ body {
 
 /* cyrillic */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: normal;
   font-weight: 400;
   font-display: auto;
@@ -1703,7 +1703,7 @@ body {
 
 /* vietnamese */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: normal;
   font-weight: 400;
   font-display: auto;
@@ -1713,7 +1713,7 @@ body {
 
 /* latin-ext */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: normal;
   font-weight: 400;
   font-display: auto;
@@ -1723,7 +1723,7 @@ body {
 
 /* latin */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: normal;
   font-weight: 400;
   font-display: auto;
@@ -1733,7 +1733,7 @@ body {
 
 /* cyrillic-ext */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: normal;
   font-weight: 600;
   font-display: auto;
@@ -1743,7 +1743,7 @@ body {
 
 /* cyrillic */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: normal;
   font-weight: 600;
   font-display: auto;
@@ -1753,7 +1753,7 @@ body {
 
 /* vietnamese */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: normal;
   font-weight: 600;
   font-display: auto;
@@ -1763,7 +1763,7 @@ body {
 
 /* latin-ext */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: normal;
   font-weight: 600;
   font-display: auto;
@@ -1773,7 +1773,7 @@ body {
 
 /* latin */
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: \\"IBM Plex Mono\\";
   font-style: normal;
   font-weight: 600;
   font-display: auto;
@@ -1782,7 +1782,7 @@ body {
 }
 
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: italic;
   font-weight: 300;
   font-display: auto;
@@ -1790,7 +1790,7 @@ body {
 }
 
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: italic;
   font-weight: 400;
   font-display: auto;
@@ -1798,7 +1798,7 @@ body {
 }
 
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: italic;
   font-weight: 600;
   font-display: auto;
@@ -1806,7 +1806,7 @@ body {
 }
 
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: normal;
   font-weight: 300;
   font-display: auto;
@@ -1814,7 +1814,7 @@ body {
 }
 
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: normal;
   font-weight: 400;
   font-display: auto;
@@ -1822,7 +1822,7 @@ body {
 }
 
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: normal;
   font-weight: 600;
   font-display: auto;
@@ -1831,7 +1831,7 @@ body {
 
 /* cyrillic-ext */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: italic;
   font-weight: 300;
   font-display: auto;
@@ -1841,7 +1841,7 @@ body {
 
 /* cyrillic */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: italic;
   font-weight: 300;
   font-display: auto;
@@ -1851,7 +1851,7 @@ body {
 
 /* greek */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: italic;
   font-weight: 300;
   font-display: auto;
@@ -1861,7 +1861,7 @@ body {
 
 /* vietnamese */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: italic;
   font-weight: 300;
   font-display: auto;
@@ -1871,7 +1871,7 @@ body {
 
 /* latin-ext */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: italic;
   font-weight: 300;
   font-display: auto;
@@ -1881,7 +1881,7 @@ body {
 
 /* latin */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: italic;
   font-weight: 300;
   font-display: auto;
@@ -1891,7 +1891,7 @@ body {
 
 /* cyrillic-ext */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: italic;
   font-weight: 400;
   font-display: auto;
@@ -1901,7 +1901,7 @@ body {
 
 /* cyrillic */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: italic;
   font-weight: 400;
   font-display: auto;
@@ -1911,7 +1911,7 @@ body {
 
 /* greek */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: italic;
   font-weight: 400;
   font-display: auto;
@@ -1921,7 +1921,7 @@ body {
 
 /* vietnamese */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: italic;
   font-weight: 400;
   font-display: auto;
@@ -1931,7 +1931,7 @@ body {
 
 /* latin-ext */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: italic;
   font-weight: 400;
   font-display: auto;
@@ -1941,7 +1941,7 @@ body {
 
 /* latin */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: italic;
   font-weight: 400;
   font-display: auto;
@@ -1951,7 +1951,7 @@ body {
 
 /* cyrillic-ext */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: italic;
   font-weight: 600;
   font-display: auto;
@@ -1961,7 +1961,7 @@ body {
 
 /* cyrillic */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: italic;
   font-weight: 600;
   font-display: auto;
@@ -1971,7 +1971,7 @@ body {
 
 /* greek */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: italic;
   font-weight: 600;
   font-display: auto;
@@ -1981,7 +1981,7 @@ body {
 
 /* vietnamese */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: italic;
   font-weight: 600;
   font-display: auto;
@@ -1991,7 +1991,7 @@ body {
 
 /* latin-ext */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: italic;
   font-weight: 600;
   font-display: auto;
@@ -2001,7 +2001,7 @@ body {
 
 /* latin */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: italic;
   font-weight: 600;
   font-display: auto;
@@ -2011,7 +2011,7 @@ body {
 
 /* cyrillic-ext */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: normal;
   font-weight: 300;
   font-display: auto;
@@ -2021,7 +2021,7 @@ body {
 
 /* cyrillic */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: normal;
   font-weight: 300;
   font-display: auto;
@@ -2031,7 +2031,7 @@ body {
 
 /* greek */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: normal;
   font-weight: 300;
   font-display: auto;
@@ -2041,7 +2041,7 @@ body {
 
 /* vietnamese */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: normal;
   font-weight: 300;
   font-display: auto;
@@ -2051,7 +2051,7 @@ body {
 
 /* latin-ext */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: normal;
   font-weight: 300;
   font-display: auto;
@@ -2061,7 +2061,7 @@ body {
 
 /* latin */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: normal;
   font-weight: 300;
   font-display: auto;
@@ -2071,7 +2071,7 @@ body {
 
 /* cyrillic-ext */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: normal;
   font-weight: 400;
   font-display: auto;
@@ -2081,7 +2081,7 @@ body {
 
 /* cyrillic */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: normal;
   font-weight: 400;
   font-display: auto;
@@ -2091,7 +2091,7 @@ body {
 
 /* greek */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: normal;
   font-weight: 400;
   font-display: auto;
@@ -2101,7 +2101,7 @@ body {
 
 /* vietnamese */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: normal;
   font-weight: 400;
   font-display: auto;
@@ -2111,7 +2111,7 @@ body {
 
 /* latin-ext */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: normal;
   font-weight: 400;
   font-display: auto;
@@ -2121,7 +2121,7 @@ body {
 
 /* latin */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: normal;
   font-weight: 400;
   font-display: auto;
@@ -2131,7 +2131,7 @@ body {
 
 /* cyrillic-ext */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: normal;
   font-weight: 600;
   font-display: auto;
@@ -2141,7 +2141,7 @@ body {
 
 /* cyrillic */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: normal;
   font-weight: 600;
   font-display: auto;
@@ -2151,7 +2151,7 @@ body {
 
 /* greek */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: normal;
   font-weight: 600;
   font-display: auto;
@@ -2161,7 +2161,7 @@ body {
 
 /* vietnamese */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: normal;
   font-weight: 600;
   font-display: auto;
@@ -2171,7 +2171,7 @@ body {
 
 /* latin-ext */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: normal;
   font-weight: 600;
   font-display: auto;
@@ -2181,7 +2181,7 @@ body {
 
 /* latin */
 @font-face {
-  font-family: 'IBM Plex Sans';
+  font-family: \\"IBM Plex Sans\\";
   font-style: normal;
   font-weight: 600;
   font-display: auto;
@@ -2189,12 +2189,12 @@ body {
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-[class*='ibm-type'] {
+[class*=\\"ibm-type\\"] {
   margin-top: 0;
 }
 
 .ibm-type {
-  font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: \\"IBM Plex Sans\\", \\"Helvetica Neue\\", Arial, sans-serif;
 }
 
 .ibm-type-italic {
@@ -2202,11 +2202,11 @@ body {
 }
 
 .ibm-type-mono {
-  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+  font-family: \\"IBM Plex Mono\\", \\"Menlo\\", \\"DejaVu Sans Mono\\", \\"Bitstream Vera Sans Mono\\", Courier, monospace;
 }
 
 .ibm-type-serif {
-  font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+  font-family: \\"IBM Plex Serif\\", \\"Georgia\\", Times, serif;
 }
 
 .ibm-type-light {
@@ -2426,13 +2426,13 @@ body {
 }
 
 .bx--breadcrumb-item::after {
-  content: '/';
+  content: \\"/\\";
   color: var(--text-01, #f4f4f4);
   margin-left: 0.5rem;
 }
 
 .bx--breadcrumb--no-trailing-slash .bx--breadcrumb-item:last-child::after {
-  content: '';
+  content: \\"\\";
 }
 
 .bx--breadcrumb-item:last-child,
@@ -2444,13 +2444,13 @@ body {
   white-space: nowrap;
 }
 
-.bx--breadcrumb-item [aria-current='page'],
+.bx--breadcrumb-item [aria-current=\\"page\\"],
 .bx--breadcrumb-item.bx--breadcrumb-item--current .bx--link {
   color: var(--text-01, #f4f4f4);
   cursor: auto;
 }
 
-.bx--breadcrumb-item [aria-current='page']:hover,
+.bx--breadcrumb-item [aria-current=\\"page\\"]:hover,
 .bx--breadcrumb-item.bx--breadcrumb-item--current .bx--link:hover {
   text-decoration: none;
 }
@@ -2473,7 +2473,7 @@ body {
 }
 
 .bx--breadcrumb.bx--skeleton .bx--link:before {
-  content: '';
+  content: \\"\\";
   width: 0%;
   height: 100%;
   position: absolute;
@@ -2531,7 +2531,7 @@ body {
 }
 
 .bx--skeleton__text:before {
-  content: '';
+  content: \\"\\";
   width: 0%;
   height: 100%;
   position: absolute;
@@ -2579,8 +2579,8 @@ body {
   word-break: break-word;
 }
 
-.security--input__background__color--light .bx--number .security--card input[type='number'], .security--card .bx--date-picker__input, .security--card .bx--dropdown,
-.security--card .bx--number input[type='number'], .security--card .bx--search-input, .security--card .bx--select-input, .security--card .bx--text-area, .security--card .bx--text-input, .security--card .bx--list-box, .security--card .bx--list-box__menu, .security--card .security--button--icon:focus, .security--card .security--button--icon:hover, .security--tearsheet--small .bx--number .security--card input[type='number'], .security--tearsheet .bx--number .security--card input[type='number'] {
+.security--input__background__color--light .bx--number .security--card input[type=\\"number\\"], .security--card .bx--date-picker__input, .security--card .bx--dropdown,
+.security--card .bx--number input[type=\\"number\\"], .security--card .bx--search-input, .security--card .bx--select-input, .security--card .bx--text-area, .security--card .bx--text-input, .security--card .bx--list-box, .security--card .bx--list-box__menu, .security--card .security--button--icon:focus, .security--card .security--button--icon:hover, .security--tearsheet--small .bx--number .security--card input[type=\\"number\\"], .security--tearsheet .bx--number .security--card input[type=\\"number\\"] {
   background-color: var(--ui-02, #393939);
 }
 
@@ -2975,7 +2975,7 @@ body {
   width: 0;
   height: 0;
   border-style: solid;
-  content: '';
+  content: \\"\\";
 }
 
 .bx--btn.bx--btn--icon-only.bx--tooltip__trigger .bx--assistive-text,
@@ -3138,7 +3138,7 @@ body {
   width: 0;
   height: 0;
   border-style: solid;
-  content: '';
+  content: \\"\\";
 }
 
 .bx--btn--icon-only--top .bx--assistive-text,
@@ -3427,7 +3427,7 @@ body {
 }
 
 .bx--btn.bx--skeleton:before {
-  content: '';
+  content: \\"\\";
   width: 0%;
   height: 100%;
   position: absolute;
@@ -3929,7 +3929,7 @@ button.bx--dropdown-text:focus {
 
 .bx--dropdown-v2.bx--skeleton:before,
 .bx--dropdown.bx--skeleton:before {
-  content: '';
+  content: \\"\\";
   width: 0%;
   height: 100%;
   position: absolute;
@@ -4075,7 +4075,7 @@ button.bx--dropdown-text:focus {
 }
 
 .bx--overflow-menu-options::after {
-  content: '';
+  content: \\"\\";
   position: absolute;
   display: block;
   background-color: var(--ui-01, #262626);
@@ -4090,42 +4090,42 @@ button.bx--dropdown-text:focus {
   background-color: var(--ui-02, #393939);
 }
 
-.bx--overflow-menu-options[data-floating-menu-direction='bottom']::after {
+.bx--overflow-menu-options[data-floating-menu-direction=\\"bottom\\"]::after {
   top: -0.1875rem;
   left: 0;
   width: 2rem;
   height: 0.1875rem;
 }
 
-.bx--overflow-menu-options[data-floating-menu-direction='top']::after {
+.bx--overflow-menu-options[data-floating-menu-direction=\\"top\\"]::after {
   bottom: -0.5rem;
   left: 0;
   width: 2rem;
   height: 0.5rem;
 }
 
-.bx--overflow-menu-options[data-floating-menu-direction='left']::after {
+.bx--overflow-menu-options[data-floating-menu-direction=\\"left\\"]::after {
   right: -0.375rem;
   top: 0;
   height: 2rem;
   width: 0.375rem;
 }
 
-.bx--overflow-menu-options[data-floating-menu-direction='right']::after {
+.bx--overflow-menu-options[data-floating-menu-direction=\\"right\\"]::after {
   top: 0;
   left: -0.375rem;
   height: 2rem;
   width: 0.375rem;
 }
 
-.bx--overflow-menu--flip.bx--overflow-menu-options[data-floating-menu-direction='top']::after,
-.bx--overflow-menu--flip.bx--overflow-menu-options[data-floating-menu-direction='bottom']::after {
+.bx--overflow-menu--flip.bx--overflow-menu-options[data-floating-menu-direction=\\"top\\"]::after,
+.bx--overflow-menu--flip.bx--overflow-menu-options[data-floating-menu-direction=\\"bottom\\"]::after {
   left: auto;
   right: 0;
 }
 
-.bx--overflow-menu--flip.bx--overflow-menu-options[data-floating-menu-direction='left']::after,
-.bx--overflow-menu--flip.bx--overflow-menu-options[data-floating-menu-direction='right']::after {
+.bx--overflow-menu--flip.bx--overflow-menu-options[data-floating-menu-direction=\\"left\\"]::after,
+.bx--overflow-menu--flip.bx--overflow-menu-options[data-floating-menu-direction=\\"right\\"]::after {
   top: auto;
   bottom: 0;
 }
@@ -4166,7 +4166,7 @@ button.bx--dropdown-text:focus {
 }
 
 a.bx--overflow-menu-options__btn::before {
-  content: '';
+  content: \\"\\";
   height: 100%;
   vertical-align: middle;
   display: inline-block;
@@ -4505,7 +4505,7 @@ a.bx--overflow-menu-options__btn::before {
   transition-duration: 0.1s;
   transition-property: opacity;
   opacity: 1;
-  content: '';
+  content: \\"\\";
   opacity: 0;
 }
 
@@ -4787,7 +4787,7 @@ a.bx--overflow-menu-options__btn::before {
   letter-spacing: 0.16px;
   display: inline-flex;
   box-sizing: border-box;
-  font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: \\"IBM Plex Sans\\", \\"Helvetica Neue\\", Arial, sans-serif;
   height: 1.625rem;
   background-color: var(--hover-ui, #353535);
   font-style: normal;
@@ -5134,7 +5134,7 @@ a.bx--overflow-menu-options__btn::before {
   background: var(--hover-field, #353535);
 }
 
-.bx--toolbar-action:hover[aria-expanded='true'] {
+.bx--toolbar-action:hover[aria-expanded=\\"true\\"] {
   background: var(--ui-01, #262626);
 }
 
@@ -5313,7 +5313,7 @@ a.bx--overflow-menu-options__btn::before {
   left: 0;
   height: 1rem;
   width: 0.0625rem;
-  content: '';
+  content: \\"\\";
   background-color: var(--text-04, #ffffff);
   border: none;
   transition: opacity 110ms cubic-bezier(0.2, 0, 0.38, 0.9);
@@ -5576,7 +5576,7 @@ a.bx--overflow-menu-options__btn::before {
   padding-bottom: 0;
 }
 
-.bx--data-table td.bx--table-column-menu .bx--overflow-menu[aria-expanded='false']:hover {
+.bx--data-table td.bx--table-column-menu .bx--overflow-menu[aria-expanded=\\"false\\"]:hover {
   background: var(--ui-03, #393939);
 }
 
@@ -5588,12 +5588,12 @@ a.bx--overflow-menu-options__btn::before {
   margin: 0;
 }
 
-.bx--data-table td.bx--table-column-menu .bx--overflow-menu[aria-expanded='false']:focus {
+.bx--data-table td.bx--table-column-menu .bx--overflow-menu[aria-expanded=\\"false\\"]:focus {
   outline: 2px solid var(--focus, #ffffff);
   outline-offset: -2px;
 }
 
-.bx--data-table td.bx--table-column-menu .bx--overflow-menu[aria-expanded='true']:focus {
+.bx--data-table td.bx--table-column-menu .bx--overflow-menu[aria-expanded=\\"true\\"]:focus {
   outline: none;
 }
 
@@ -5993,11 +5993,11 @@ tr.bx--parent-row.bx--expandable-row.bx--expandable-row--hover td:first-of-type 
   border-bottom: 1px solid var(--ui-03, #393939);
 }
 
-.bx--data-table td.bx--table-expand[data-previous-value='collapsed'] {
+.bx--data-table td.bx--table-expand[data-previous-value=\\"collapsed\\"] {
   border-bottom: 1px solid transparent;
 }
 
-.bx--table-expand[data-previous-value='collapsed'] .bx--table-expand__svg {
+.bx--table-expand[data-previous-value=\\"collapsed\\"] .bx--table-expand__svg {
   transform: rotate(270deg);
   transition: transform 150ms cubic-bezier(0.2, 0, 0.38, 0.9);
 }
@@ -6062,7 +6062,7 @@ th.bx--table-expand + th.bx--table-column-checkbox {
 
 tr.bx--parent-row.bx--expandable-row td.bx--table-expand + td::after {
   position: absolute;
-  content: '';
+  content: \\"\\";
   left: 0;
   bottom: -0.0625rem;
   height: 0.0625rem;
@@ -6422,7 +6422,7 @@ tr.bx--parent-row.bx--data-table--selected.bx--expandable-row--hover + tr[data-c
 
 .bx--data-table.bx--skeleton th span:before,
 .bx--data-table.bx--skeleton td span:before {
-  content: '';
+  content: \\"\\";
   width: 0%;
   height: 100%;
   position: absolute;
@@ -6531,7 +6531,7 @@ tr.bx--parent-row.bx--data-table--selected.bx--expandable-row--hover + tr[data-c
 }
 
 .bx--label.bx--skeleton:before {
-  content: '';
+  content: \\"\\";
   width: 0%;
   height: 100%;
   position: absolute;
@@ -6547,8 +6547,8 @@ tr.bx--parent-row.bx--data-table--selected.bx--expandable-row--hover + tr[data-c
   }
 }
 
-input[type='number'] {
-  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+input[type=\\"number\\"] {
+  font-family: \\"IBM Plex Mono\\", \\"Menlo\\", \\"DejaVu Sans Mono\\", \\"Bitstream Vera Sans Mono\\", Courier, monospace;
 }
 
 input[data-invalid],
@@ -6683,7 +6683,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .bx--checkbox-label::before {
-  content: '';
+  content: \\"\\";
   width: 1rem;
   height: 1rem;
   margin: 0.125rem;
@@ -6696,7 +6696,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .bx--checkbox-label::after {
-  content: '';
+  content: \\"\\";
   position: absolute;
   left: 0.375rem;
   top: 0.5rem;
@@ -6712,20 +6712,20 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 
 .bx--checkbox:checked + .bx--checkbox-label::before,
 .bx--checkbox:indeterminate + .bx--checkbox-label::before,
-.bx--checkbox-label[data-contained-checkbox-state='true']::before,
-.bx--checkbox-label[data-contained-checkbox-state='mixed']::before {
+.bx--checkbox-label[data-contained-checkbox-state=\\"true\\"]::before,
+.bx--checkbox-label[data-contained-checkbox-state=\\"mixed\\"]::before {
   background-color: var(--ui-05, #f4f4f4);
   border-color: var(--ui-05, #f4f4f4);
   border-width: 1px;
 }
 
 .bx--checkbox:checked + .bx--checkbox-label::after,
-.bx--checkbox-label[data-contained-checkbox-state='true']::after {
+.bx--checkbox-label[data-contained-checkbox-state=\\"true\\"]::after {
   transform: scale(1) rotate(-45deg);
 }
 
 .bx--checkbox:indeterminate + .bx--checkbox-label::after,
-.bx--checkbox-label[data-contained-checkbox-state='mixed']::after {
+.bx--checkbox-label[data-contained-checkbox-state=\\"mixed\\"]::after {
   transform: scale(1) rotate(0deg);
   border-left: 0 solid var(--inverse-01, #161616);
   border-bottom: 2px solid var(--inverse-01, #161616);
@@ -6736,9 +6736,9 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 .bx--checkbox:focus + .bx--checkbox-label::before,
 .bx--checkbox-label__focus::before,
 .bx--checkbox:checked:focus + .bx--checkbox-label::before,
-.bx--checkbox-label[data-contained-checkbox-state='true'].bx--checkbox-label__focus::before,
+.bx--checkbox-label[data-contained-checkbox-state=\\"true\\"].bx--checkbox-label__focus::before,
 .bx--checkbox:indeterminate:focus + .bx--checkbox-label::before,
-.bx--checkbox-label[data-contained-checkbox-state='mixed'].bx--checkbox-label__focus::before {
+.bx--checkbox-label[data-contained-checkbox-state=\\"mixed\\"].bx--checkbox-label__focus::before {
   border-color: var(--focus, #ffffff);
   border-width: 3px;
   width: 1.25rem;
@@ -6752,20 +6752,20 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .bx--checkbox:disabled + .bx--checkbox-label,
-.bx--checkbox-label[data-contained-checkbox-disabled='true'] {
+.bx--checkbox-label[data-contained-checkbox-disabled=\\"true\\"] {
   cursor: not-allowed;
   color: var(--disabled-02, #525252);
 }
 
 .bx--checkbox:disabled + .bx--checkbox-label::before,
-.bx--checkbox-label[data-contained-checkbox-disabled='true']::before {
+.bx--checkbox-label[data-contained-checkbox-disabled=\\"true\\"]::before {
   border-color: var(--disabled-02, #525252);
 }
 
 .bx--checkbox:checked:disabled + .bx--checkbox-label::before,
 .bx--checkbox:indeterminate:disabled + .bx--checkbox-label::before,
-.bx--checkbox-label[data-contained-checkbox-state='true'][data-contained-checkbox-disabled='true']::before,
-.bx--checkbox-label[data-contained-checkbox-state='mixed'][data-contained-checkbox-disabled='true']::before {
+.bx--checkbox-label[data-contained-checkbox-state=\\"true\\"][data-contained-checkbox-disabled=\\"true\\"]::before,
+.bx--checkbox-label[data-contained-checkbox-state=\\"mixed\\"][data-contained-checkbox-disabled=\\"true\\"]::before {
   background-color: var(--disabled-02, #525252);
 }
 
@@ -6788,7 +6788,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .bx--checkbox-label-text.bx--skeleton:before {
-  content: '';
+  content: \\"\\";
   width: 0%;
   height: 100%;
   position: absolute;
@@ -6970,7 +6970,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .bx--search-close::before {
-  content: '';
+  content: \\"\\";
   display: block;
   position: absolute;
   left: 0;
@@ -7095,7 +7095,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 .bx--search--xl.bx--skeleton .bx--search-input:before,
 .bx--search--lg.bx--skeleton .bx--search-input:before,
 .bx--search--sm.bx--skeleton .bx--search-input:before {
-  content: '';
+  content: \\"\\";
   width: 0%;
   height: 100%;
   position: absolute;
@@ -7318,7 +7318,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .bx--accordion__heading:hover::before, .bx--accordion__heading:focus::before {
-  content: '';
+  content: \\"\\";
   position: absolute;
   top: -1px;
   left: 0;
@@ -7756,11 +7756,11 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .security--filter-panel-checkbox__count::before {
-  content: '(';
+  content: \\"(\\";
 }
 
 .security--filter-panel-checkbox__count::after {
-  content: ')';
+  content: \\")\\";
 }
 
 .security--filter-panel-checkbox,
@@ -7827,7 +7827,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 
 .security--ica-skeleton .security--ica-skeleton__label:before,
 .security--ica-skeleton .security--ica-skeleton__value:before {
-  content: '';
+  content: \\"\\";
   width: 0%;
   height: 100%;
   position: absolute;
@@ -8166,7 +8166,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   stroke: var(--interactive-04, #4589ff);
 }
 
-/* If IE11 Don't show check animation */
+/* If IE11 Don\\"t show check animation */
 @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
   .bx--inline-loading__checkmark-container {
     top: 1px;
@@ -8207,7 +8207,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   bottom: 0;
   width: auto;
   border-bottom: 0.0625rem solid var(--ui-02, #393939);
-  content: '';
+  content: \\"\\";
 }
 
 .security--nav:last-of-type::before {
@@ -8302,7 +8302,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   width: 0.25rem;
   height: 100%;
   background-color: transparent;
-  content: '';
+  content: \\"\\";
   transform: translate3d(-100%, 0, 0);
   z-index: 10000;
 }
@@ -8452,7 +8452,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   margin-left: -1rem;
 }
 
-.security--ne-section .bx--grid--condensed [class*='bx--col'] {
+.security--ne-section .bx--grid--condensed [class*=\\"bx--col\\"] {
   padding-top: 0.0625rem;
   padding-bottom: 0.0625rem;
 }
@@ -9908,18 +9908,18 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .security--ne-section .bx--no-gutter,
-.security--ne-section .bx--row.bx--no-gutter [class*='bx--col'] {
+.security--ne-section .bx--row.bx--no-gutter [class*=\\"bx--col\\"] {
   padding-left: 0;
   padding-right: 0;
 }
 
 .security--ne-section .bx--no-gutter--left,
-.security--ne-section .bx--row.bx--no-gutter--left [class*='bx--col'] {
+.security--ne-section .bx--row.bx--no-gutter--left [class*=\\"bx--col\\"] {
   padding-left: 0;
 }
 
 .security--ne-section .bx--no-gutter--right,
-.security--ne-section .bx--row.bx--no-gutter--right [class*='bx--col'] {
+.security--ne-section .bx--row.bx--no-gutter--right [class*=\\"bx--col\\"] {
   padding-right: 0;
 }
 
@@ -10074,7 +10074,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .bx--inline-notification--low-contrast::before {
-  content: '';
+  content: \\"\\";
   pointer-events: none;
   position: absolute;
   top: 0;
@@ -10183,7 +10183,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   border-color: var(--support-03, #f1c21b);
 }
 
-.bx--inline-notification--warning .bx--inline-notification__icon path[opacity='0'] {
+.bx--inline-notification--warning .bx--inline-notification__icon path[opacity=\\"0\\"] {
   fill: #000000;
   opacity: 1;
 }
@@ -10429,7 +10429,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   fill: var(--support-03, #f1c21b);
 }
 
-.bx--toast-notification--warning .bx--toast-notification__icon path[opacity='0'] {
+.bx--toast-notification--warning .bx--toast-notification__icon path[opacity=\\"0\\"] {
   fill: #000000;
   opacity: 1;
 }
@@ -10798,7 +10798,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .bx--progress-label::before {
-  content: '';
+  content: \\"\\";
   display: block;
 }
 
@@ -10982,7 +10982,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .bx--progress.bx--skeleton .bx--progress-label:before {
-  content: '';
+  content: \\"\\";
   width: 0%;
   height: 100%;
   position: absolute;
@@ -11318,7 +11318,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   border-bottom-width: 0;
 }
 
-.bx--list-box.bx--list-box--inline.bx--list-box--expanded .bx--list-box__field[aria-expanded='true'] {
+.bx--list-box.bx--list-box--inline.bx--list-box--expanded .bx--list-box__field[aria-expanded=\\"true\\"] {
   border-width: 0;
 }
 
@@ -11708,7 +11708,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   overflow: hidden;
 }
 
-.bx--list-box input[role='combobox'] {
+.bx--list-box input[role=\\"combobox\\"] {
   background-color: inherit;
   min-width: 0;
 }
@@ -12160,7 +12160,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   color: var(--inverse-link, #0f62fe);
 }
 
-.bx--tooltip .bx--tooltip__content[tabindex='-1']:focus {
+.bx--tooltip .bx--tooltip__content[tabindex=\\"-1\\"]:focus {
   outline: none;
 }
 
@@ -12175,7 +12175,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   width: 0;
   height: 0;
   margin: 0 auto;
-  content: '';
+  content: \\"\\";
 }
 
 .bx--tooltip .bx--tooltip__footer {
@@ -12185,20 +12185,20 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   margin-top: 1rem;
 }
 
-.bx--tooltip[data-floating-menu-direction='left'] .bx--tooltip__caret {
+.bx--tooltip[data-floating-menu-direction=\\"left\\"] .bx--tooltip__caret {
   left: auto;
   top: 50%;
   right: calc(-0.42969rem + 1px);
   transform: rotate(90deg) translate(50%, -50%);
 }
 
-.bx--tooltip[data-floating-menu-direction='top'] .bx--tooltip__caret {
+.bx--tooltip[data-floating-menu-direction=\\"top\\"] .bx--tooltip__caret {
   top: auto;
   bottom: calc(-0.42969rem + 1px);
   transform: rotate(180deg);
 }
 
-.bx--tooltip[data-floating-menu-direction='right'] .bx--tooltip__caret {
+.bx--tooltip[data-floating-menu-direction=\\"right\\"] .bx--tooltip__caret {
   left: calc(-0.42969rem + 1px);
   top: 50%;
   right: auto;
@@ -12399,7 +12399,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   width: 0;
   height: 0;
   border-style: solid;
-  content: '';
+  content: \\"\\";
 }
 
 .bx--tooltip__trigger.bx--tooltip__trigger--definition.bx--tooltip--top .bx--assistive-text,
@@ -12642,7 +12642,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   width: 0;
   height: 0;
   border-style: solid;
-  content: '';
+  content: \\"\\";
 }
 
 .bx--tooltip__trigger.bx--tooltip__trigger--definition.bx--tooltip--bottom .bx--assistive-text,
@@ -12918,7 +12918,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   border-style: solid;
   border-color: transparent transparent var(--inverse-02, #f4f4f4) transparent;
   margin: 0 auto;
-  content: '';
+  content: \\"\\";
   margin-top: 1px;
   margin-left: 50%;
 }
@@ -13098,7 +13098,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   width: 0;
   height: 0;
   border-style: solid;
-  content: '';
+  content: \\"\\";
 }
 
 .bx--tooltip__trigger.bx--tooltip--top .bx--assistive-text,
@@ -13349,7 +13349,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   width: 0;
   height: 0;
   border-style: solid;
-  content: '';
+  content: \\"\\";
 }
 
 .bx--tooltip__trigger.bx--tooltip--right .bx--assistive-text,
@@ -13595,7 +13595,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   width: 0;
   height: 0;
   border-style: solid;
-  content: '';
+  content: \\"\\";
 }
 
 .bx--tooltip__trigger.bx--tooltip--bottom .bx--assistive-text,
@@ -13844,7 +13844,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   width: 0;
   height: 0;
   border-style: solid;
-  content: '';
+  content: \\"\\";
 }
 
 .bx--tooltip__trigger.bx--tooltip--left .bx--assistive-text,
@@ -14303,7 +14303,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .bx--select.bx--skeleton:before {
-  content: '';
+  content: \\"\\";
   width: 0%;
   height: 100%;
   position: absolute;
@@ -14701,7 +14701,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .bx--tag.bx--skeleton:before {
-  content: '';
+  content: \\"\\";
   width: 0%;
   height: 100%;
   position: absolute;
@@ -14914,7 +14914,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   width: 0;
   height: 0;
   border-style: solid;
-  content: '';
+  content: \\"\\";
 }
 
 .bx--text-input__field-wrapper .bx--text-input--password__visibility .bx--assistive-text,
@@ -15157,7 +15157,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .security--filter__list-item:hover:after {
-  content: '';
+  content: \\"\\";
   position: absolute;
   width: 100%;
   background: var(--ui-02, #393939);
@@ -15231,8 +15231,8 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   flex-direction: column;
 }
 
-.security--input__background__color--light .bx--number .security--tearsheet--small input[type='number'], .security--card .bx--number .security--tearsheet--small input[type='number'], .security--tearsheet--small .bx--date-picker__input, .security--tearsheet--small .bx--dropdown,
-.security--tearsheet--small .bx--number input[type='number'], .security--tearsheet--small .bx--search-input, .security--tearsheet--small .bx--select-input, .security--tearsheet--small .bx--text-area, .security--tearsheet--small .bx--text-input, .security--tearsheet--small .bx--list-box, .security--tearsheet--small .bx--list-box__menu, .security--tearsheet--small .security--button--icon:focus, .security--tearsheet--small .security--button--icon:hover, .security--tearsheet .bx--number .security--tearsheet--small input[type='number'] {
+.security--input__background__color--light .bx--number .security--tearsheet--small input[type=\\"number\\"], .security--card .bx--number .security--tearsheet--small input[type=\\"number\\"], .security--tearsheet--small .bx--date-picker__input, .security--tearsheet--small .bx--dropdown,
+.security--tearsheet--small .bx--number input[type=\\"number\\"], .security--tearsheet--small .bx--search-input, .security--tearsheet--small .bx--select-input, .security--tearsheet--small .bx--text-area, .security--tearsheet--small .bx--text-input, .security--tearsheet--small .bx--list-box, .security--tearsheet--small .bx--list-box__menu, .security--tearsheet--small .security--button--icon:focus, .security--tearsheet--small .security--button--icon:hover, .security--tearsheet .bx--number .security--tearsheet--small input[type=\\"number\\"] {
   background-color: var(--ui-02, #393939);
 }
 
@@ -15427,8 +15427,8 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   width: calc(100vw - 3rem);
 }
 
-.security--input__background__color--light .bx--number .security--tearsheet input[type='number'], .security--card .bx--number .security--tearsheet input[type='number'], .security--tearsheet--small .bx--number .security--tearsheet input[type='number'], .security--tearsheet .bx--date-picker__input, .security--tearsheet .bx--dropdown,
-.security--tearsheet .bx--number input[type='number'], .security--tearsheet .bx--search-input, .security--tearsheet .bx--select-input, .security--tearsheet .bx--text-area, .security--tearsheet .bx--text-input, .security--tearsheet .bx--list-box, .security--tearsheet .bx--list-box__menu, .security--tearsheet .security--button--icon:focus, .security--tearsheet .security--button--icon:hover {
+.security--input__background__color--light .bx--number .security--tearsheet input[type=\\"number\\"], .security--card .bx--number .security--tearsheet input[type=\\"number\\"], .security--tearsheet--small .bx--number .security--tearsheet input[type=\\"number\\"], .security--tearsheet .bx--date-picker__input, .security--tearsheet .bx--dropdown,
+.security--tearsheet .bx--number input[type=\\"number\\"], .security--tearsheet .bx--search-input, .security--tearsheet .bx--select-input, .security--tearsheet .bx--text-area, .security--tearsheet .bx--text-input, .security--tearsheet .bx--list-box, .security--tearsheet .bx--list-box__menu, .security--tearsheet .security--button--icon:focus, .security--tearsheet .security--button--icon:hover {
   background-color: var(--ui-02, #393939);
 }
 
@@ -16264,7 +16264,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .bx--structured-list.bx--skeleton .bx--structured-list-th span:before {
-  content: '';
+  content: \\"\\";
   width: 0%;
   height: 100%;
   position: absolute;
@@ -16299,7 +16299,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .bx--structured-list.bx--skeleton .bx--structured-list-th span:before {
-  content: '';
+  content: \\"\\";
   width: 0%;
   height: 100%;
   position: absolute;
@@ -16703,7 +16703,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   transition-duration: 0.1s;
   transition-property: opacity;
   opacity: 1;
-  content: '';
+  content: \\"\\";
   opacity: 0;
 }
 
@@ -16899,7 +16899,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .security--header__button::after {
-  content: '';
+  content: \\"\\";
   height: 100%;
 }
 
@@ -16921,7 +16921,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   height: 0.5rem;
   background-color: var(--support-01, #fa4d56);
   border-radius: 50%;
-  content: '';
+  content: \\"\\";
   z-index: 10000;
 }
 
@@ -17101,7 +17101,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   transition-duration: 0.1s;
   transition-property: opacity;
   opacity: 1;
-  content: '';
+  content: \\"\\";
   opacity: 0;
 }
 
@@ -17395,7 +17395,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   left: 1.5rem;
   background-color: var(--inverse-hover-ui, #e5e5e5);
   height: 0.0625rem;
-  content: '';
+  content: \\"\\";
   transform: translate3d(0, -0.125rem, 0);
 }
 
@@ -17692,7 +17692,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .bx--snippet code {
-  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+  font-family: \\"IBM Plex Mono\\", \\"Menlo\\", \\"DejaVu Sans Mono\\", \\"Bitstream Vera Sans Mono\\", Courier, monospace;
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1rem;
@@ -17742,7 +17742,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   width: 0;
   height: 0;
   border-style: solid;
-  content: '';
+  content: \\"\\";
   display: none;
 }
 
@@ -17829,7 +17829,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .bx--snippet--single {
-  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+  font-family: \\"IBM Plex Mono\\", \\"Menlo\\", \\"DejaVu Sans Mono\\", \\"Bitstream Vera Sans Mono\\", Courier, monospace;
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1rem;
@@ -17863,7 +17863,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 
 .bx--snippet--single pre {
   white-space: nowrap;
-  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+  font-family: \\"IBM Plex Mono\\", \\"Menlo\\", \\"DejaVu Sans Mono\\", \\"Bitstream Vera Sans Mono\\", Courier, monospace;
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1rem;
@@ -17874,7 +17874,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 .bx--snippet--single::after {
   width: 1rem;
   height: 100%;
-  content: '';
+  content: \\"\\";
   position: absolute;
   top: 0;
   right: 3.5rem;
@@ -17882,7 +17882,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .bx--snippet--multi {
-  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+  font-family: \\"IBM Plex Mono\\", \\"Menlo\\", \\"DejaVu Sans Mono\\", \\"Bitstream Vera Sans Mono\\", Courier, monospace;
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1rem;
@@ -17924,7 +17924,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 .bx--snippet--multi .bx--snippet-container pre::after {
   width: 1rem;
   height: 100%;
-  content: '';
+  content: \\"\\";
   position: absolute;
   top: 0;
   right: 0;
@@ -17998,7 +17998,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   font-weight: 400;
   line-height: 1.125rem;
   letter-spacing: 0.16px;
-  font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: \\"IBM Plex Sans\\", \\"Helvetica Neue\\", Arial, sans-serif;
   z-index: 8000;
   font-weight: 400;
   left: inherit;
@@ -18019,7 +18019,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   position: absolute;
   top: 0;
   right: 0;
-  font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: \\"IBM Plex Sans\\", \\"Helvetica Neue\\", Arial, sans-serif;
 }
 
 button.bx--btn.bx--snippet-btn--expand {
@@ -18027,7 +18027,7 @@ button.bx--btn.bx--snippet-btn--expand {
   font-weight: 400;
   line-height: 1.125rem;
   letter-spacing: 0.16px;
-  font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: \\"IBM Plex Sans\\", \\"Helvetica Neue\\", Arial, sans-serif;
   border: 0;
   display: inline-flex;
   align-items: center;
@@ -18125,7 +18125,7 @@ button.bx--btn.bx--snippet-btn--expand:hover {
 }
 
 .bx--snippet.bx--skeleton code:before {
-  content: '';
+  content: \\"\\";
   width: 0%;
   height: 100%;
   position: absolute;
@@ -18197,7 +18197,7 @@ bx--snippet--multi.bx--skeleton {
 }
 
 .bx--snippet.bx--skeleton span:before {
-  content: '';
+  content: \\"\\";
   width: 0%;
   height: 100%;
   position: absolute;
@@ -18264,7 +18264,7 @@ bx--snippet--multi.bx--skeleton {
 }
 
 .bx--snippet.bx--skeleton code:before {
-  content: '';
+  content: \\"\\";
   width: 0%;
   height: 100%;
   position: absolute;
@@ -18347,7 +18347,7 @@ bx--snippet--multi.bx--skeleton {
   left: -0.3rem;
   border-right: 1px solid var(--inverse-02, #f4f4f4);
   border-bottom: 1px solid var(--inverse-02, #f4f4f4);
-  content: '';
+  content: \\"\\";
   transform: rotate(-135deg);
   z-index: 1;
 }
@@ -18398,7 +18398,7 @@ bx--snippet--multi.bx--skeleton {
   width: 0;
   height: 0;
   border-style: solid;
-  content: '';
+  content: \\"\\";
   display: none;
 }
 
@@ -18591,7 +18591,7 @@ bx--snippet--multi.bx--skeleton {
 }
 
 .bx--content-switcher-btn:not(:first-of-type)::before {
-  content: '';
+  content: \\"\\";
   display: block;
   height: 1rem;
   width: 0.0625rem;
@@ -18754,7 +18754,7 @@ bx--snippet--multi.bx--skeleton {
   display: block;
   pointer-events: none;
   border: solid transparent;
-  content: '';
+  content: \\"\\";
   height: 0;
   width: 0;
   left: 22px;
@@ -18935,7 +18935,7 @@ bx--snippet--multi.bx--skeleton {
 
 .numInputWrapper span:after {
   display: block;
-  content: '';
+  content: \\"\\";
   position: absolute;
   top: 33%;
 }
@@ -19259,7 +19259,7 @@ span.flatpickr-weekday {
 }
 
 .flatpickr-time:after {
-  content: '';
+  content: \\"\\";
   display: table;
   clear: both;
 }
@@ -19568,7 +19568,7 @@ span.flatpickr-weekday {
   font-size: 100%;
   font-family: inherit;
   vertical-align: baseline;
-  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+  font-family: \\"IBM Plex Mono\\", \\"Menlo\\", \\"DejaVu Sans Mono\\", \\"Bitstream Vera Sans Mono\\", Courier, monospace;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.25rem;
@@ -19755,7 +19755,7 @@ span.flatpickr-weekday {
 .flatpickr-month .numInputWrapper .numInput::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-  /* <-- Apparently some margin are still there even though it's hidden */
+  /* <-- Apparently some margin are still there even though it\\"s hidden */
 }
 
 .bx--date-picker__month .numInputWrapper span.arrowUp,
@@ -19853,7 +19853,7 @@ span.flatpickr-weekday {
 
 .bx--date-picker__day.today::after,
 .flatpickr-day.today::after {
-  content: '';
+  content: \\"\\";
   position: absolute;
   display: block;
   bottom: 0.4375rem;
@@ -20015,7 +20015,7 @@ span.flatpickr-weekday {
 
 .bx--date-picker.bx--skeleton input:before,
 .bx--date-picker__input.bx--skeleton:before {
-  content: '';
+  content: \\"\\";
   width: 0%;
   height: 100%;
   position: absolute;
@@ -20055,7 +20055,7 @@ span.flatpickr-weekday {
 }
 
 .bx--date-picker.bx--skeleton .bx--label:before {
-  content: '';
+  content: \\"\\";
   width: 0%;
   height: 100%;
   position: absolute;
@@ -20435,7 +20435,7 @@ span.flatpickr-weekday {
   outline: 1px solid var(--focus, #ffffff);
 }
 
-.bx--file__state-container .bx--file-complete [data-icon-path='inner-path'] {
+.bx--file__state-container .bx--file-complete [data-icon-path=\\"inner-path\\"] {
   opacity: 1;
   fill: var(--icon-03, #ffffff);
 }
@@ -20568,12 +20568,12 @@ span.flatpickr-weekday {
 .bx--list--unordered > .bx--list__item::before {
   position: absolute;
   left: -1rem;
-  content: '\\\\002013';
+  content: \\"\\\\002013\\";
 }
 
 .bx--list--unordered.bx--list--nested > .bx--list__item::before {
   left: -0.75rem;
-  content: '\\\\0025AA';
+  content: \\"\\\\0025AA\\";
 }
 
 @keyframes rotate {
@@ -20626,7 +20626,7 @@ span.flatpickr-weekday {
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  content: '';
+  content: \\"\\";
   background-color: transparent;
   opacity: 0;
   visibility: hidden;
@@ -20646,7 +20646,7 @@ span.flatpickr-weekday {
 .bx--modal .bx--select-input,
 .bx--modal .bx--dropdown,
 .bx--modal .bx--dropdown-list,
-.bx--modal .bx--number input[type='number'],
+.bx--modal .bx--number input[type=\\"number\\"],
 .bx--modal .bx--date-picker__input {
   background-color: var(--field-02, #393939);
 }
@@ -20880,7 +20880,7 @@ span.flatpickr-weekday {
   grid-column: 1/-1;
   width: 100%;
   height: 2rem;
-  content: '';
+  content: \\"\\";
   position: absolute;
   left: 0;
   bottom: 2.5rem;
@@ -20966,14 +20966,14 @@ span.flatpickr-weekday {
   box-sizing: inherit;
 }
 
-.bx--number input[type='number'] {
+.bx--number input[type=\\"number\\"] {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.125rem;
   letter-spacing: 0.16px;
   outline: 2px solid transparent;
   outline-offset: -2px;
-  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+  font-family: \\"IBM Plex Mono\\", \\"Menlo\\", \\"DejaVu Sans Mono\\", \\"Bitstream Vera Sans Mono\\", Courier, monospace;
   box-sizing: border-box;
   display: inline-flex;
   width: 100%;
@@ -20991,30 +20991,30 @@ span.flatpickr-weekday {
   -moz-appearance: textfield;
 }
 
-.bx--number input[type='number']:focus {
+.bx--number input[type=\\"number\\"]:focus {
   outline: 2px solid var(--focus, #ffffff);
   outline-offset: -2px;
 }
 
-.bx--number input[type='number']:disabled ~ .bx--number__controls {
+.bx--number input[type=\\"number\\"]:disabled ~ .bx--number__controls {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.bx--number input[type='number']:disabled ~ .bx--number__controls svg {
+.bx--number input[type=\\"number\\"]:disabled ~ .bx--number__controls svg {
   fill: var(--disabled-02, #525252);
 }
 
-.bx--number input[type='number']::-ms-clear {
+.bx--number input[type=\\"number\\"]::-ms-clear {
   display: none;
 }
 
-.bx--number input[type='number']::-webkit-inner-spin-button {
+.bx--number input[type=\\"number\\"]::-webkit-inner-spin-button {
   appearance: none;
 }
 
-.bx--number input[type='number']:disabled,
-.bx--number--readonly input[type='number'] {
+.bx--number input[type=\\"number\\"]:disabled,
+.bx--number--readonly input[type=\\"number\\"] {
   cursor: not-allowed;
   background-color: var(--disabled-01, #262626);
   color: var(--disabled-02, #525252);
@@ -21136,7 +21136,7 @@ span.flatpickr-weekday {
   max-height: 12.5rem;
 }
 
-.bx--number[data-invalid] input[type='number'] {
+.bx--number[data-invalid] input[type=\\"number\\"] {
   outline: 2px solid var(--support-01, #fa4d56);
   outline-offset: -2px;
 }
@@ -21147,7 +21147,7 @@ span.flatpickr-weekday {
   fill: var(--support-01, #fa4d56);
 }
 
-.bx--number--light input[type='number'] {
+.bx--number--light input[type=\\"number\\"] {
   background-color: var(--field-02, #393939);
 }
 
@@ -21181,7 +21181,7 @@ span.flatpickr-weekday {
   position: static;
 }
 
-.bx--number--mobile input[type='number'] {
+.bx--number--mobile input[type=\\"number\\"] {
   min-width: 4rem;
   width: auto;
   margin: 0;
@@ -21192,7 +21192,7 @@ span.flatpickr-weekday {
   background-color: var(--field-01, #262626);
 }
 
-.bx--number--mobile.bx--number--light input[type='number'] {
+.bx--number--mobile.bx--number--light input[type=\\"number\\"] {
   background-color: var(--field-02, #393939);
 }
 
@@ -21222,7 +21222,7 @@ span.flatpickr-weekday {
 }
 
 .bx--number.bx--skeleton:before {
-  content: '';
+  content: \\"\\";
   width: 0%;
   height: 100%;
   position: absolute;
@@ -21238,7 +21238,7 @@ span.flatpickr-weekday {
   }
 }
 
-.bx--number.bx--skeleton input[type='number'] {
+.bx--number.bx--skeleton input[type=\\"number\\"] {
   display: none;
 }
 
@@ -21526,7 +21526,7 @@ span.bx--pagination__text {
 }
 
 .bx--radio-button:checked + .bx--radio-button__label .bx--radio-button__appearance:before {
-  content: '';
+  content: \\"\\";
   display: inline-block;
   position: relative;
   width: 0.5rem;
@@ -21583,7 +21583,7 @@ span.bx--pagination__text {
 }
 
 .bx--radio-button__label.bx--skeleton:before {
-  content: '';
+  content: \\"\\";
   width: 0%;
   height: 100%;
   position: absolute;
@@ -21650,7 +21650,7 @@ span.bx--pagination__text {
 }
 
 .bx--slider__range-label {
-  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+  font-family: \\"IBM Plex Mono\\", \\"Menlo\\", \\"DejaVu Sans Mono\\", \\"Bitstream Vera Sans Mono\\", Courier, monospace;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.25rem;
@@ -21672,7 +21672,7 @@ span.bx--pagination__text {
 }
 
 .bx--slider__track:before {
-  content: '';
+  content: \\"\\";
   position: absolute;
   display: inline-block;
   height: 0.25rem;
@@ -21814,7 +21814,7 @@ span.bx--pagination__text {
 }
 
 .bx--slider-container.bx--skeleton .bx--slider__range-label:before {
-  content: '';
+  content: \\"\\";
   width: 0%;
   height: 100%;
   position: absolute;
@@ -22256,7 +22256,7 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
 }
 
 .bx--tabs.bx--skeleton .bx--tabs__nav-link:before {
-  content: '';
+  content: \\"\\";
   width: 0%;
   height: 100%;
   position: absolute;
@@ -22289,7 +22289,7 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
 }
 
 .bx--tabs.bx--skeleton .bx--tabs-trigger:before {
-  content: '';
+  content: \\"\\";
   width: 0%;
   height: 100%;
   position: absolute;
@@ -22435,7 +22435,7 @@ bx--text-area.bx--skeleton:hover, bx--text-area.bx--skeleton:focus, bx--text-are
 }
 
 bx--text-area.bx--skeleton:before {
-  content: '';
+  content: \\"\\";
   width: 0%;
   height: 100%;
   position: absolute;
@@ -22670,7 +22670,7 @@ bx--text-area.bx--skeleton::placeholder {
   vertical-align: baseline;
   outline: 2px solid transparent;
   outline-offset: -2px;
-  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+  font-family: \\"IBM Plex Mono\\", \\"Menlo\\", \\"DejaVu Sans Mono\\", \\"Bitstream Vera Sans Mono\\", Courier, monospace;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.25rem;
@@ -22730,7 +22730,7 @@ bx--text-area.bx--skeleton::placeholder {
 .bx--toggle__appearance:before {
   position: absolute;
   display: block;
-  content: '';
+  content: \\"\\";
   background-color: var(--ui-04, #6f6f6f);
   cursor: pointer;
   box-sizing: border-box;
@@ -22754,7 +22754,7 @@ bx--text-area.bx--skeleton::placeholder {
   height: 1.125rem;
   background-color: var(--icon-03, #ffffff);
   border-radius: 50%;
-  content: '';
+  content: \\"\\";
   transition: transform 70ms cubic-bezier(0.2, 0, 1, 0.9);
 }
 
@@ -22925,7 +22925,7 @@ bx--text-area.bx--skeleton::placeholder {
   width: 3rem;
   height: 1.5rem;
   border-radius: 0.9375rem;
-  content: '';
+  content: \\"\\";
   background-color: var(--ui-04, #6f6f6f);
   will-change: box-shadow;
   box-shadow: 0 0 0 1px transparent, 0 0 0 3px transparent;
@@ -22942,7 +22942,7 @@ bx--text-area.bx--skeleton::placeholder {
   height: 1.125rem;
   border-radius: 50%;
   background-color: var(--icon-03, #ffffff);
-  content: '';
+  content: \\"\\";
   transition: transform 70ms cubic-bezier(0.2, 0, 1, 0.9);
 }
 
@@ -23204,7 +23204,7 @@ a.bx--header__name:hover {
 }
 
 .bx--header__nav::before {
-  content: '';
+  content: \\"\\";
   display: block;
   position: absolute;
   left: 0;
@@ -23266,17 +23266,17 @@ a.bx--header__menu-item:focus > svg {
   position: relative;
 }
 
-.bx--header__menu-title[aria-haspopup='true'] {
+.bx--header__menu-title[aria-haspopup=\\"true\\"] {
   position: relative;
 }
 
-.bx--header__menu-title[aria-expanded='true'] {
+.bx--header__menu-title[aria-expanded=\\"true\\"] {
   background-color: #262626;
   color: #ffffff;
   z-index: 6001;
 }
 
-.bx--header__menu-title[aria-expanded='true'] > .bx--header__menu-arrow {
+.bx--header__menu-title[aria-expanded=\\"true\\"] > .bx--header__menu-arrow {
   transform: rotate(180deg);
 }
 
@@ -23287,7 +23287,7 @@ a.bx--header__menu-item:focus > svg {
   margin: 0;
 }
 
-.bx--header__menu-title[aria-expanded='true'] + .bx--header__menu {
+.bx--header__menu-title[aria-expanded=\\"true\\"] + .bx--header__menu {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -23300,11 +23300,11 @@ a.bx--header__menu-item:focus > svg {
   z-index: 6000;
 }
 
-.bx--header__menu-title[aria-expanded='true'] + .bx--header__menu .bx--header__menu-item:hover {
+.bx--header__menu-title[aria-expanded=\\"true\\"] + .bx--header__menu .bx--header__menu-item:hover {
   background-color: #353535;
 }
 
-.bx--header__menu-title[aria-expanded='true'] + .bx--header__menu .bx--header__menu-item:active {
+.bx--header__menu-title[aria-expanded=\\"true\\"] + .bx--header__menu .bx--header__menu-item:active {
   background-color: #393939;
 }
 
@@ -23860,9 +23860,9 @@ a.bx--header__menu-item:focus > svg {
 
 .bx--side-nav__item:not(.bx--side-nav__item--active):hover .bx--side-nav__item:not(.bx--side-nav__item--active) > .bx--side-nav__submenu:hover,
 .bx--side-nav__item:not(.bx--side-nav__item--active) > .bx--side-nav__link:hover,
-.bx--side-nav__menu a.bx--side-nav__link:not(.bx--side-nav__link--current):not([aria-current='page']):hover,
+.bx--side-nav__menu a.bx--side-nav__link:not(.bx--side-nav__link--current):not([aria-current=\\"page\\"]):hover,
 .bx--side-nav a.bx--header__menu-item:hover,
-.bx--side-nav .bx--header__menu-title[aria-expanded='true']:hover {
+.bx--side-nav .bx--header__menu-title[aria-expanded=\\"true\\"]:hover {
   background-color: #e5e5e5;
   color: #161616;
 }
@@ -23876,7 +23876,7 @@ a.bx--header__menu-item:focus > svg {
   height: 3rem;
 }
 
-.bx--side-nav__submenu[aria-haspopup='true'] {
+.bx--side-nav__submenu[aria-haspopup=\\"true\\"] {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -23906,13 +23906,13 @@ a.bx--header__menu-item:focus > svg {
   transition: color 110ms, background-color 110ms, outline 110ms;
 }
 
-.bx--side-nav__submenu[aria-haspopup='true'] *,
-.bx--side-nav__submenu[aria-haspopup='true'] *:before,
-.bx--side-nav__submenu[aria-haspopup='true'] *:after {
+.bx--side-nav__submenu[aria-haspopup=\\"true\\"] *,
+.bx--side-nav__submenu[aria-haspopup=\\"true\\"] *:before,
+.bx--side-nav__submenu[aria-haspopup=\\"true\\"] *:after {
   box-sizing: inherit;
 }
 
-.bx--side-nav__submenu[aria-haspopup='true']::-moz-focus-inner {
+.bx--side-nav__submenu[aria-haspopup=\\"true\\"]::-moz-focus-inner {
   border: 0;
 }
 
@@ -23945,7 +23945,7 @@ a.bx--header__menu-item:focus > svg {
   width: 1rem;
 }
 
-.bx--side-nav__submenu[aria-expanded='true'] .bx--side-nav__submenu-chevron > svg {
+.bx--side-nav__submenu[aria-expanded=\\"true\\"] .bx--side-nav__submenu-chevron > svg {
   transform: rotate(180deg);
 }
 
@@ -23958,14 +23958,14 @@ a.bx--header__menu-item:focus > svg {
   color: #161616;
 }
 
-.bx--side-nav__item--active .bx--side-nav__submenu[aria-expanded='false'] {
+.bx--side-nav__item--active .bx--side-nav__submenu[aria-expanded=\\"false\\"] {
   background-color: #e5e5e5;
   color: #161616;
   position: relative;
 }
 
-.bx--side-nav__item--active .bx--side-nav__submenu[aria-expanded='false']::before {
-  content: '';
+.bx--side-nav__item--active .bx--side-nav__submenu[aria-expanded=\\"false\\"]::before {
+  content: \\"\\";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -23985,7 +23985,7 @@ a.bx--header__menu-item:focus > svg {
   max-height: 0;
 }
 
-.bx--side-nav__submenu[aria-expanded='true'] + .bx--side-nav__menu {
+.bx--side-nav__submenu[aria-expanded=\\"true\\"] + .bx--side-nav__menu {
   max-height: 93.75rem;
   visibility: inherit;
 }
@@ -24002,13 +24002,13 @@ a.bx--header__menu-item:focus > svg {
 }
 
 .bx--side-nav__menu a.bx--side-nav__link--current,
-.bx--side-nav__menu a.bx--side-nav__link[aria-current='page'],
+.bx--side-nav__menu a.bx--side-nav__link[aria-current=\\"page\\"],
 a.bx--side-nav__link--current {
   background-color: #e0e0e0;
 }
 
 .bx--side-nav__menu a.bx--side-nav__link--current > span,
-.bx--side-nav__menu a.bx--side-nav__link[aria-current='page'] > span,
+.bx--side-nav__menu a.bx--side-nav__link[aria-current=\\"page\\"] > span,
 a.bx--side-nav__link--current > span {
   color: #161616;
   font-weight: 600;
@@ -24016,7 +24016,7 @@ a.bx--side-nav__link--current > span {
 
 a.bx--side-nav__link,
 .bx--side-nav a.bx--header__menu-item,
-.bx--side-nav .bx--header__menu-title[aria-expanded='true'] + .bx--header__menu {
+.bx--side-nav .bx--header__menu-title[aria-expanded=\\"true\\"] + .bx--header__menu {
   outline: 2px solid transparent;
   outline-offset: -2px;
   font-size: 0.875rem;
@@ -24054,20 +24054,20 @@ a.bx--side-nav__link:focus,
   outline-offset: -2px;
 }
 
-a.bx--side-nav__link[aria-current='page'],
+a.bx--side-nav__link[aria-current=\\"page\\"],
 a.bx--side-nav__link--current {
   background-color: #e5e5e5;
   font-weight: 600;
 }
 
-a.bx--side-nav__link[aria-current='page'] .bx--side-nav__link-text,
+a.bx--side-nav__link[aria-current=\\"page\\"] .bx--side-nav__link-text,
 a.bx--side-nav__link--current .bx--side-nav__link-text {
   color: #161616;
 }
 
-a.bx--side-nav__link[aria-current='page']::before,
+a.bx--side-nav__link[aria-current=\\"page\\"]::before,
 a.bx--side-nav__link--current::before {
-  content: '';
+  content: \\"\\";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -24106,7 +24106,7 @@ a.bx--side-nav__link--current::before {
 }
 
 .bx--side-nav--fixed a.bx--side-nav__link,
-.bx--side-nav--fixed .bx--side-nav__submenu[aria-haspopup='true'] {
+.bx--side-nav--fixed .bx--side-nav__submenu[aria-haspopup=\\"true\\"] {
   padding-left: 1rem;
 }
 
@@ -24133,7 +24133,7 @@ a.bx--side-nav__link--current::before {
 }
 
 .bx--side-nav__header-divider::after {
-  content: '';
+  content: \\"\\";
   position: absolute;
   height: 0.0625rem;
   bottom: -1rem;
@@ -24148,11 +24148,11 @@ a.bx--side-nav__link--current::before {
   justify-content: space-between;
 }
 
-.bx--side-nav a.bx--header__menu-item[aria-expanded='true'] {
+.bx--side-nav a.bx--header__menu-item[aria-expanded=\\"true\\"] {
   background-color: transparent;
 }
 
-.bx--side-nav .bx--header__menu-title[aria-expanded='true'] + .bx--header__menu {
+.bx--side-nav .bx--header__menu-title[aria-expanded=\\"true\\"] + .bx--header__menu {
   bottom: inherit;
   width: 100%;
   box-shadow: none;
@@ -24161,16 +24161,16 @@ a.bx--side-nav__link--current::before {
   padding: 0;
 }
 
-.bx--side-nav .bx--header__menu-title[aria-expanded='true'] + .bx--header__menu li {
+.bx--side-nav .bx--header__menu-title[aria-expanded=\\"true\\"] + .bx--header__menu li {
   width: 100%;
 }
 
-.bx--side-nav .bx--header__menu-title[aria-expanded='true'] + .bx--header__menu a.bx--header__menu-item {
+.bx--side-nav .bx--header__menu-title[aria-expanded=\\"true\\"] + .bx--header__menu a.bx--header__menu-item {
   padding-left: 4.25rem;
   font-weight: 400;
 }
 
-.bx--side-nav .bx--header__menu-title[aria-expanded='true'] + .bx--header__menu a.bx--header__menu-item:hover {
+.bx--side-nav .bx--header__menu-title[aria-expanded=\\"true\\"] + .bx--header__menu a.bx--header__menu-item:hover {
   background-color: #e5e5e5;
   color: #161616;
 }
@@ -24208,7 +24208,7 @@ a.bx--side-nav__link--current::before {
 
 .bx--navigation-section:not(:last-child)::after {
   display: block;
-  content: '';
+  content: \\"\\";
   height: 1px;
   background-color: #393939;
   margin: 0 1rem;
@@ -24226,7 +24226,7 @@ a.bx--side-nav__link--current::before {
 }
 
 .bx--navigation-item--active::after {
-  content: '';
+  content: \\"\\";
   display: block;
   position: absolute;
   top: 0;
@@ -24342,7 +24342,7 @@ a.bx--navigation-link:focus {
 }
 
 .bx--navigation__category-item--active::after {
-  content: '';
+  content: \\"\\";
   position: absolute;
   display: block;
   top: 0;
@@ -24638,7 +24638,7 @@ body *:after {
   margin-left: -1rem;
 }
 
-.bx--grid--condensed [class*='bx--col'] {
+.bx--grid--condensed [class*=\\"bx--col\\"] {
   padding-top: 0.0625rem;
   padding-bottom: 0.0625rem;
 }
@@ -26094,18 +26094,18 @@ body *:after {
 }
 
 .bx--no-gutter,
-.bx--row.bx--no-gutter [class*='bx--col'] {
+.bx--row.bx--no-gutter [class*=\\"bx--col\\"] {
   padding-left: 0;
   padding-right: 0;
 }
 
 .bx--no-gutter--left,
-.bx--row.bx--no-gutter--left [class*='bx--col'] {
+.bx--row.bx--no-gutter--left [class*=\\"bx--col\\"] {
   padding-left: 0;
 }
 
 .bx--no-gutter--right,
-.bx--row.bx--no-gutter--right [class*='bx--col'] {
+.bx--row.bx--no-gutter--right [class*=\\"bx--col\\"] {
   padding-right: 0;
 }
 
@@ -26159,14 +26159,14 @@ html {
 
 body {
   font-weight: 400;
-  font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: \\"IBM Plex Sans\\", \\"Helvetica Neue\\", Arial, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+  font-family: \\"IBM Plex Mono\\", \\"Menlo\\", \\"DejaVu Sans Mono\\", \\"Bitstream Vera Sans Mono\\", Courier, monospace;
 }
 
 strong {
@@ -26174,23 +26174,23 @@ strong {
 }
 
 .bx--type-mono {
-  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+  font-family: \\"IBM Plex Mono\\", \\"Menlo\\", \\"DejaVu Sans Mono\\", \\"Bitstream Vera Sans Mono\\", Courier, monospace;
 }
 
 .bx--type-sans {
-  font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: \\"IBM Plex Sans\\", \\"Helvetica Neue\\", Arial, sans-serif;
 }
 
 .bx--type-sans-condensed {
-  font-family: 'IBM Plex Sans Condensed', 'Helvetica Neue', Arial, sans-serif;
+  font-family: \\"IBM Plex Sans Condensed\\", \\"Helvetica Neue\\", Arial, sans-serif;
 }
 
 .bx--type-sans-hebrew {
-  font-family: 'IBM Plex Sans Hebrew', 'Helvetica Hebrew', 'Arial Hebrew', sans-serif;
+  font-family: \\"IBM Plex Sans Hebrew\\", \\"Helvetica Hebrew\\", \\"Arial Hebrew\\", sans-serif;
 }
 
 .bx--type-serif {
-  font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+  font-family: \\"IBM Plex Serif\\", \\"Georgia\\", Times, serif;
 }
 
 .bx--type-light {
@@ -26258,7 +26258,7 @@ strong {
 }
 
 .bx--type-code-01 {
-  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+  font-family: \\"IBM Plex Mono\\", \\"Menlo\\", \\"DejaVu Sans Mono\\", \\"Bitstream Vera Sans Mono\\", Courier, monospace;
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1rem;
@@ -26266,7 +26266,7 @@ strong {
 }
 
 .bx--type-code-02 {
-  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+  font-family: \\"IBM Plex Mono\\", \\"Menlo\\", \\"DejaVu Sans Mono\\", \\"Bitstream Vera Sans Mono\\", Courier, monospace;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.25rem;
@@ -26764,5 +26764,3 @@ strong {
 }
 "
 `;
-
-exports[`SCSS Bundle Unpacked size 1`] = `"628.0 KB"`;
