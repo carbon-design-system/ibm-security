@@ -6,7 +6,6 @@
 import { boolean } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
-import classnames from 'classnames';
 import React from 'react';
 import { Grid, Row, Column } from 'carbon-components-react';
 import ArrowRight20 from '@carbon/icons-react/lib/arrow--right/20';
@@ -25,241 +24,225 @@ import {
 
 import { disableCentered, patterns } from '../../../.storybook';
 
-const DemoColumn = ({ children, showTokens, ...other }) => {
-  const outlineStyle = showTokens ? '1px solid orange' : 'none';
+const toggleDebugging = () => boolean('Toggle debugging 🕵️‍♀️', false);
 
-  return (
-    <Column
-      style={{
-        outline: outlineStyle,
-        minHeight: '200px',
-      }}
-      {...other}
-    >
-      {children}
-    </Column>
-  );
-};
+const showAccordion = () => boolean('Show accordion', true);
+const showButtonGroup = () => boolean('Show button group', true);
+const showCardGroup = () => boolean('Show card group', true);
+const showTabGroup = () => boolean('Show tab group', true);
 
-const DemoHeading = ({ children, className, showTokens }) => {
-  const classes = classnames(className, 'bx--type-productive-heading-01', {
-    debug: showTokens,
-  });
-
-  return (
-    <h2 className={classes} style={{ margin: 0 }}>
-      {children}
-    </h2>
-  );
-};
+const showFirstRow = showCardGroup() || showButtonGroup();
+const showSecondRow = showTabGroup() || showAccordion();
 
 disableCentered(storiesOf(patterns('Modular Layouts'), module)).add(
-  'default',
+  'details page layout',
   () => (
-    <Grid
-      condensed
-      className="spacing--layout-01--top spacing--layout-03--bottom"
-      showTokens={boolean('Show tokens', false)}
-    >
-      <Row>
-        <DemoColumn md={3} lg={6} showTokens={boolean('Show tokens', false)}>
-          <DemoHeading
-            className="spacing--layout-01--top spacing--layout-03--bottom"
-            showTokens={boolean('Show tokens', false)}
-          >
-            productive-heading-01
-          </DemoHeading>
-          <TypeLayout>
-            <TypeLayoutBody>
-              <TypeLayoutRow>
-                <TypeLayoutCell>Label</TypeLayoutCell>
-                <TypeLayoutCell>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </TypeLayoutCell>
-              </TypeLayoutRow>
-              <TypeLayoutRow>
-                <TypeLayoutCell>Label</TypeLayoutCell>
-                <TypeLayoutCell> Lorem ipsum dolor.</TypeLayoutCell>
-              </TypeLayoutRow>
-              <TypeLayoutRow>
-                <TypeLayoutCell>Label</TypeLayoutCell>
-                <TypeLayoutCell> Lorem ipsum.</TypeLayoutCell>
-              </TypeLayoutRow>
-            </TypeLayoutBody>
-          </TypeLayout>
-        </DemoColumn>
-        <DemoColumn md={3} lg={6} showTokens={boolean('Show tokens', false)}>
-          <DemoHeading
-            className="spacing--layout-01--top spacing--layout-03--bottom"
-            showTokens={boolean('Show tokens', false)}
-          >
-            productive-heading-01
-          </DemoHeading>
-          <TypeLayout>
-            <TypeLayoutBody>
-              <TypeLayoutRow>
-                <TypeLayoutCell>Label</TypeLayoutCell>
-                <TypeLayoutCell>Lorem ipsum dolor sit amet.</TypeLayoutCell>
-              </TypeLayoutRow>
-              <TypeLayoutRow>
-                <TypeLayoutCell>Label</TypeLayoutCell>
-                <TypeLayoutCell> Lorem ipsum dolor.</TypeLayoutCell>
-              </TypeLayoutRow>
-              <TypeLayoutRow>
-                <TypeLayoutCell>Label</TypeLayoutCell>
-                <TypeLayoutCell> Lorem ipsum dolor sit amet.</TypeLayoutCell>
-              </TypeLayoutRow>
-            </TypeLayoutBody>
-          </TypeLayout>
-        </DemoColumn>
-        <DemoColumn md={2} lg={4} showTokens={boolean('Show tokens', false)}>
-          <DemoHeading
-            className="spacing--layout-02--top spacing--layout-03--bottom"
-            showTokens={boolean('Show tokens', false)}
-          >
-            productive-heading-01
-          </DemoHeading>
-          <Button
-            iconDescription="Button icon"
-            kind="ghost"
-            renderIcon={ArrowRight20}
-            style={{ width: '100%', maxWidth: 'unset' }}
-          >
-            Ghost Button
-          </Button>
-          <Button
-            iconDescription="Button icon"
-            kind="ghost"
-            renderIcon={ArrowRight20}
-            style={{ width: '100%', maxWidth: 'unset' }}
-          >
-            Ghost Button
-          </Button>
-          <Button
-            iconDescription="Button icon"
-            kind="ghost"
-            renderIcon={ArrowRight20}
-            style={{ width: '100%', maxWidth: 'unset' }}
-          >
-            Ghost Button
-          </Button>
-          <Button
-            iconDescription="Button icon"
-            kind="ghost"
-            renderIcon={ArrowRight20}
-            style={{ width: '100%', maxWidth: 'unset' }}
-          >
-            Ghost Button
-          </Button>
-        </DemoColumn>
-      </Row>
-      <Row>
-        <DemoColumn md={8} lg={12} showTokens={boolean('Show tokens', false)}>
-          <Tabs
-            ariaLabel="listbox"
-            iconDescription="show menu options"
-            selected={1}
-            triggerHref="#"
-          >
-            <Tab href="#" label="Tab label 1">
-              <div
-                className="spacing--layout-01-top"
-                showTokens={boolean('Show tokens', false)}
-                style={{
-                  height: '100%',
-                  width: '100%',
-                }}
-              >
-                <DemoHeading
-                  className="spacing--layout-02--top spacing--layout-03--bottom"
-                  showTokens={boolean('Show tokens', false)}
-                >
+    <main className={toggleDebugging() && 'debug'}>
+      <h1 className="bx--type-productive-heading-04">productive-heading-04</h1>
+      <Grid condensed>
+        {showFirstRow && (
+          <Row>
+            {showCardGroup() && (
+              <Column md={3} lg={6}>
+                <h2 className="bx--type-productive-heading-01 spacing--layout-01--top spacing--layout-03--bottom">
                   productive-heading-01
-                </DemoHeading>
-                <p>Tab content.</p>
-              </div>
-            </Tab>
-            <Tab href="#" label="Tab label 2">
-              <div
-                className="spacing--layout-01-top"
-                showTokens={boolean('Show tokens', false)}
-                style={{
-                  height: '100%',
-                  width: '100%',
-                }}
-              >
-                <DemoHeading
-                  className="spacing--layout-02--top spacing--layout-03--bottom"
-                  showTokens={boolean('Show tokens', false)}
-                >
+                </h2>
+                <TypeLayout>
+                  <TypeLayoutBody>
+                    <TypeLayoutRow>
+                      <TypeLayoutCell>Label</TypeLayoutCell>
+                      <TypeLayoutCell>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </TypeLayoutCell>
+                    </TypeLayoutRow>
+                    <TypeLayoutRow>
+                      <TypeLayoutCell>Label</TypeLayoutCell>
+                      <TypeLayoutCell> Lorem ipsum dolor.</TypeLayoutCell>
+                    </TypeLayoutRow>
+                    <TypeLayoutRow>
+                      <TypeLayoutCell>Label</TypeLayoutCell>
+                      <TypeLayoutCell> Lorem ipsum.</TypeLayoutCell>
+                    </TypeLayoutRow>
+                  </TypeLayoutBody>
+                </TypeLayout>
+              </Column>
+            )}
+            {showCardGroup() && (
+              <Column md={3} lg={6}>
+                <h2 className="bx--type-productive-heading-01 spacing--layout-01--top spacing--layout-03--bottom">
                   productive-heading-01
-                </DemoHeading>
-                <p>Tab content.</p>
-              </div>
-            </Tab>
-            <Tab href="#" label="Tab label 3">
-              <div
-                className="spacing--layout-01-top"
-                showTokens={boolean('Show tokens', false)}
-                style={{
-                  height: '100%',
-                  width: '100%',
-                }}
-              >
-                <DemoHeading
-                  className="spacing--layout-02--top spacing--layout-03--bottom"
-                  showTokens={boolean('Show tokens', false)}
-                >
+                </h2>
+                <TypeLayout>
+                  <TypeLayoutBody>
+                    <TypeLayoutRow>
+                      <TypeLayoutCell>Label</TypeLayoutCell>
+                      <TypeLayoutCell>
+                        Lorem ipsum dolor sit amet.
+                      </TypeLayoutCell>
+                    </TypeLayoutRow>
+                    <TypeLayoutRow>
+                      <TypeLayoutCell>Label</TypeLayoutCell>
+                      <TypeLayoutCell> Lorem ipsum dolor.</TypeLayoutCell>
+                    </TypeLayoutRow>
+                    <TypeLayoutRow>
+                      <TypeLayoutCell>Label</TypeLayoutCell>
+                      <TypeLayoutCell>
+                        {' '}
+                        Lorem ipsum dolor sit amet.
+                      </TypeLayoutCell>
+                    </TypeLayoutRow>
+                  </TypeLayoutBody>
+                </TypeLayout>
+              </Column>
+            )}
+            {showButtonGroup() && (
+              <Column md={2} lg={4}>
+                <h2 className="bx--type-productive-heading-01 spacing--layout-02--top spacing--layout-03--bottom">
                   productive-heading-01
-                </DemoHeading>
-                <p>Tab content.</p>
-              </div>
-            </Tab>
-          </Tabs>
-        </DemoColumn>
-        <DemoColumn md={8} lg={4} showTokens={boolean('Show tokens', false)}>
-          <DemoHeading
-            className="spacing--layout-01--top spacing--layout-03--bottom"
-            showTokens={boolean('Show tokens', false)}
-          >
-            productive-heading-01
-          </DemoHeading>
-          <Accordion align="end">
-            <AccordionItem
-              style={{
-                width: '100%',
-              }}
-              title="Accordion item"
-            >
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </AccordionItem>
-            <AccordionItem
-              style={{
-                width: '100%',
-              }}
-              title="Accordion item"
-            >
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </AccordionItem>
-            <AccordionItem
-              style={{
-                width: '100%',
-              }}
-              title="Accordion item"
-            >
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </AccordionItem>
-            <AccordionItem
-              style={{
-                width: '100%',
-              }}
-              title="Accordion item"
-            >
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </AccordionItem>
-          </Accordion>
-        </DemoColumn>
-      </Row>
-    </Grid>
+                </h2>
+                <Button
+                  iconDescription="Button icon"
+                  kind="ghost"
+                  renderIcon={ArrowRight20}
+                  style={{ width: '100%', maxWidth: 'unset' }}
+                >
+                  Ghost Button
+                </Button>
+                <Button
+                  iconDescription="Button icon"
+                  kind="ghost"
+                  renderIcon={ArrowRight20}
+                  style={{ width: '100%', maxWidth: 'unset' }}
+                >
+                  Ghost Button
+                </Button>
+                <Button
+                  iconDescription="Button icon"
+                  kind="ghost"
+                  renderIcon={ArrowRight20}
+                  style={{ width: '100%', maxWidth: 'unset' }}
+                >
+                  Ghost Button
+                </Button>
+                <Button
+                  iconDescription="Button icon"
+                  kind="ghost"
+                  renderIcon={ArrowRight20}
+                  style={{ width: '100%', maxWidth: 'unset' }}
+                >
+                  Ghost Button
+                </Button>
+              </Column>
+            )}
+          </Row>
+        )}
+        {showSecondRow && (
+          <Row>
+            {showTabGroup() && (
+              <Column md={8} lg={showAccordion() ? 12 : 16}>
+                <Tabs
+                  ariaLabel="listbox"
+                  iconDescription="show menu options"
+                  selected={1}
+                  triggerHref="#"
+                >
+                  <Tab href="#" label="Tab label 1">
+                    <div
+                      className="spacing--layout-01-top"
+                      style={{
+                        height: '100%',
+                        width: '100%',
+                      }}
+                    >
+                      <h2 className="bx--type-productive-heading-01 spacing--layout-02--top spacing--layout-03--bottom">
+                        productive-heading-01
+                      </h2>
+                      <p>Tab content.</p>
+                    </div>
+                  </Tab>
+                  <Tab href="#" label="Tab label 2">
+                    <div
+                      className="spacing--layout-01-top"
+                      style={{
+                        height: '100%',
+                        width: '100%',
+                      }}
+                    >
+                      <h2 className="bx--type-productive-heading-01 spacing--layout-02--top spacing--layout-03--bottom">
+                        productive-heading-01
+                      </h2>
+                      <p>Tab content.</p>
+                    </div>
+                  </Tab>
+                  <Tab href="#" label="Tab label 3">
+                    <div
+                      className="spacing--layout-01-top"
+                      style={{
+                        height: '100%',
+                        width: '100%',
+                      }}
+                    >
+                      <h2 className="bx--type-productive-heading-01 spacing--layout-02--top spacing--layout-03--bottom">
+                        productive-heading-01
+                      </h2>
+                      <p>Tab content.</p>
+                    </div>
+                  </Tab>
+                </Tabs>
+              </Column>
+            )}
+            {showAccordion() && (
+              <Column md={8} lg={4}>
+                <h2 className="bx--type-productive-heading-01 spacing--layout-01--top spacing--layout-03--bottom">
+                  productive-heading-01
+                </h2>
+                <Accordion align="end">
+                  <AccordionItem
+                    style={{
+                      width: '100%',
+                    }}
+                    title="Accordion item"
+                  >
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                  </AccordionItem>
+                  <AccordionItem
+                    style={{
+                      width: '100%',
+                    }}
+                    title="Accordion item"
+                  >
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                  </AccordionItem>
+                  <AccordionItem
+                    style={{
+                      width: '100%',
+                    }}
+                    title="Accordion item"
+                  >
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                  </AccordionItem>
+                  <AccordionItem
+                    style={{
+                      width: '100%',
+                    }}
+                    title="Accordion item"
+                  >
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                  </AccordionItem>
+                </Accordion>
+              </Column>
+            )}
+          </Row>
+        )}
+      </Grid>
+    </main>
   )
 );

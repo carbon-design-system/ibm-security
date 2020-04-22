@@ -4,8 +4,37 @@
 /// @copyright IBM Security 2020
 ////
 
+@import '@carbon/colors/scss/colors';
 @import '@carbon/layout/scss/spacing';
+@import '@carbon/themes/scss/theme-maps';
 
+/// Generate a map of spacing tokens from the provided Carbon theme map.
+/// @access private
+/// @param {Map} $theme-map - Map of theme variables.
+/// @returns {Map} - The filtered map of only spacing variables.
+@function get-spacing-tokens-map($theme-map) {
+  $-map: ();
+
+  @each $token, $value in $theme-map {
+    @if type-of($value) == 'number' {
+      $-map: map-merge(
+        $-map,
+        (
+          $token: $value,
+        )
+      );
+    }
+  }
+
+  @return $-map;
+}
+
+/// Map of spacing tokens.
+/// @type Map<String, Number>
+/// @access private
+$spacing-tokens-map: get-spacing-tokens-map($carbon--theme--g100);
+
+// Generate styles for the debugging message.
 @mixin debug {
   @include carbon--type-style($name: caption-01);
   position: absolute;
@@ -14,116 +43,62 @@
   justify-content: center;
   padding: $spacing-02;
   left: 0;
-  color: black;
-  background-color: hotpink;
+  color: $carbon--black-100;
+  background-color: $carbon--magenta-40;
 }
 
-// expects "layout-02" and "top", etc.
-// @mixin generate-spacing-class($size, $direction) {
-//   .spacing--#{$size}--#{$direction} {
-//     position: relative;
-
-//     @if ($direction == "top") {
-//       padding-top: $size;
-
-//       &.debug:before {
-//         @include debug;
-//         content: $size;
-//         top: 0;
-//         height: $layout-01;
-//       }
-//     }
-
-//     @if ($direction == "bottom") {
-//       padding-bottom: $size;
-
-//       &.debug:after {
-//         @include debug;
-//         content: $size;
-//         bottom: 0;
-//         height: $layout-01;
-//       }
-//     }
-//   }
-// }
-
-// @include generate-spacing-class("layout-01", "top");
-// @include generate-spacing-class("layout-01", "bottom");
-
-// @include generate-spacing-class("layout-02", "top");
-// @include generate-spacing-class("layout-02", "bottom");
-
-// @include generate-spacing-class("layout-03", "top");
-// @include generate-spacing-class("layout-03", "bottom");
-
-.spacing--layout-01--top {
-  padding-top: $layout-01;
-  position: relative;
-
-  &.debug:before {
-    @include debug;
-    content: 'spacing--layout-01--top';
-    top: 0;
-    height: $layout-01;
+// Generate "top" padding classes and styles for each spacing token.
+@mixin spacing-top {
+  @each $token, $value in $spacing-tokens-map {
+    .spacing--#{$token}--top {
+      padding-top: $value;
+      position: relative;
+    }
   }
 }
 
-.spacing--layout-01--bottom {
-  padding-bottom: $layout-01;
-  position: relative;
-
-  &.debug:after {
-    @include debug;
-    content: 'spacing--layout-01--bottom';
-    bottom: 0;
-    height: $layout-01;
+// Generate debugging styles for "top" padding classes.
+@mixin debug-spacing-top {
+  @each $token, $value in $spacing-tokens-map {
+    .spacing--#{$token}--top::before {
+      @include debug;
+      content: 'spacing--#{$token}--top';
+      height: $value;
+      top: 0;
+    }
   }
 }
 
-.spacing--layout-02--top {
-  padding-top: $layout-02;
-  position: relative;
-
-  &.debug:before {
-    @include debug;
-    content: 'spacing--layout-02--top';
-    top: 0;
-    height: $layout-02;
+// Generate "bottom" padding classes and styles for each spacing token.
+@mixin spacing-bottom {
+  @each $token, $value in $spacing-tokens-map {
+    .spacing--#{$token}--bottom {
+      padding-bottom: $value;
+      position: relative;
+    }
   }
 }
 
-.spacing--layout-02--bottom {
-  padding-bottom: $layout-02;
-  position: relative;
-
-  &.debug:after {
-    @include debug;
-    content: 'spacing--layout-02--bottom';
-    bottom: 0;
-    height: $layout-02;
+// Generate debugging styles for "bottom" padding classes.
+@mixin debug-spacing-bottom {
+  @each $token, $value in $spacing-tokens-map {
+    .spacing--#{$token}--bottom::after {
+      @include debug;
+      content: 'spacing--#{$token}--bottom';
+      height: $value;
+      bottom: 0;
+    }
   }
 }
 
-.spacing--layout-03--top {
-  padding-top: $layout-03;
-  position: relative;
-
-  &.debug:before {
-    @include debug;
-    content: 'spacing--layout-03--top';
-    top: 0;
-    height: $layout-03;
+.debug {
+  div[class^='bx--col'] {
+    outline: 1px solid $carbon--orange-40;
   }
+
+  @include debug-spacing-top;
+  @include debug-spacing-bottom;
 }
 
-.spacing--layout-03--bottom {
-  padding-bottom: $layout-03;
-  position: relative;
-
-  &.debug:after {
-    @include debug;
-    content: 'spacing--layout-03--bottom';
-    bottom: 0;
-    height: $layout-03;
-  }
-}
+@include spacing-top;
+@include spacing-bottom;
