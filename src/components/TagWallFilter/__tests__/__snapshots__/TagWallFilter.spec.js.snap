@@ -703,8 +703,8 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                     "appearActive": "security--tearsheet--small__transition--appear--active",
                     "enter": "security--tearsheet--small__transition--enter",
                     "enterActive": "security--tearsheet--small__transition--enter--active",
-                    "exit": "security--tearsheet--small__transition--exit",
-                    "exitActive": "security--tearsheet--small__transition--exit--active",
+                    "exit": "security--tearsheet--small__transition--leave",
+                    "exitActive": "security--tearsheet--small__transition--leave--active",
                   }
                 }
                 in={true}
@@ -2642,8 +2642,8 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                       "appearActive": "security--tearsheet--small__transition--appear--active",
                       "enter": "security--tearsheet--small__transition--enter",
                       "enterActive": "security--tearsheet--small__transition--enter--active",
-                      "exit": "security--tearsheet--small__transition--exit",
-                      "exitActive": "security--tearsheet--small__transition--exit--active",
+                      "exit": "security--tearsheet--small__transition--leave",
+                      "exitActive": "security--tearsheet--small__transition--leave--active",
                     }
                   }
                   in={true}

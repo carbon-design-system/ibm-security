@@ -13,8 +13,8 @@ exports[`Transition renders correctly 1`] = `
         "appearActive": "class__transition--appear--active",
         "enter": "class__transition--enter",
         "enterActive": "class__transition--enter--active",
-        "exit": "class__transition--exit",
-        "exitActive": "class__transition--exit--active",
+        "exit": "class__transition--leave",
+        "exitActive": "class__transition--leave--active",
       }
     }
     key=".0"

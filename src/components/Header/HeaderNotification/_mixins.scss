@@ -111,7 +111,7 @@
   &__transition {
     @include transition--opacity;
 
-    &--exit {
+    &--leave {
       max-height: $carbon--layout-06;
       transition-duration: $header__notification__transition-duration;
       transition-property: max-height, opacity;

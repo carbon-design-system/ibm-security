@@ -34,8 +34,8 @@ const Transition = ({
             appearActive: `${className}__transition--appear--active`,
             enter: `${className}__transition--enter`,
             enterActive: `${className}__transition--enter--active`,
-            exit: `${className}__transition--exit`,
-            exitActive: `${className}__transition--exit--active`,
+            exit: `${className}__transition--leave`,
+            exitActive: `${className}__transition--leave--active`,
           }}
           timeout={{
             appear: appearTimeout || timeout,
