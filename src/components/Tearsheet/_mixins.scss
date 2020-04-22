@@ -44,7 +44,7 @@ $tearsheet__sizing__dimensions: $carbon--layout-04;
 
   &__transition {
     &--enter,
-    &--leave {
+    &--exit {
       &--active {
         @include transition($transition-property: transform);
       }
@@ -58,7 +58,7 @@ $tearsheet__sizing__dimensions: $carbon--layout-04;
       }
     }
 
-    &--leave {
+    &--exit {
       transform: translate3d(#{$tearsheet__position}, 0, 0);
 
       &--active {

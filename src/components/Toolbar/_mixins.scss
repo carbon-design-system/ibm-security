@@ -61,7 +61,7 @@ $toolbar__panel__transition__timing-function: $timing-function;
   );
 
   &--enter,
-  &--leave {
+  &--exit {
     &--active {
       transition-duration: $toolbar__panel__transition__duration;
     }
@@ -79,7 +79,7 @@ $toolbar__panel__transition__timing-function: $timing-function;
     }
   }
 
-  &--leave--active {
+  &--exit--active {
     transform: translate3d($translation);
 
     @include rtl {
@@ -258,7 +258,7 @@ $toolbar__panel__transition__timing-function: $timing-function;
     @include transition--opacity;
 
     &--enter,
-    &--leave {
+    &--exit {
       width: 100%;
 
       &--active {

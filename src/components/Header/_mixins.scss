@@ -460,7 +460,7 @@ $header__transition__timing-function: $timing-function;
     @include transition--opacity;
 
     &--enter,
-    &--leave {
+    &--exit {
       &--active {
         transition-delay: 0.025s;
         transition-duration: $header__transition__duration;
