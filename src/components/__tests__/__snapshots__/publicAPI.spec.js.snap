@@ -3150,7 +3150,6 @@ Map {
       "count": undefined,
       "countLabel": [Function],
       "expandLabel": "expandLabel",
-      "open": false,
       "scrollGradientColor": "var(--ui-background, #161616)",
       "title": "title",
     },
@@ -3172,9 +3171,6 @@ Map {
       },
       "expandLabel": Object {
         "type": "string",
-      },
-      "open": Object {
-        "type": "bool",
       },
       "scrollGradientColor": Object {
         "type": "string",
@@ -8535,8 +8531,10 @@ Map {
       "children": null,
       "className": null,
       "closeButtonIconDescription": "close",
+      "disabled": false,
       "expandedContent": undefined,
       "hasIconOnly": false,
+      "loading": false,
       "onClick": [Function],
     },
     "propTypes": Object {
@@ -8547,10 +8545,16 @@ Map {
         "type": "string",
       },
       "closeButtonIconDescription": [Function],
+      "disabled": Object {
+        "type": "bool",
+      },
       "expandedContent": Object {
         "type": "node",
       },
       "hasIconOnly": Object {
+        "type": "bool",
+      },
+      "loading": Object {
         "type": "bool",
       },
       "onClick": Object {
@@ -11714,6 +11718,58 @@ Map {
       "title": Object {
         "isRequired": true,
         "type": "string",
+      },
+    },
+  },
+  "TruncatedList" => Object {
+    "defaultProps": Object {
+      "as": "ul",
+      "children": undefined,
+      "className": undefined,
+      "collapsedItemLimit": 5,
+      "expandButtonClassName": undefined,
+      "expandedItemLimit": 10,
+      "getExpandButtonLabel": [Function],
+      "scrollGradientColor": "var(--ui-background, #161616)",
+      "truncateThreshold": 10,
+    },
+    "propTypes": Object {
+      "as": Object {
+        "args": Array [
+          Array [
+            Object {
+              "type": "elementType",
+            },
+            Object {
+              "type": "string",
+            },
+          ],
+        ],
+        "type": "oneOfType",
+      },
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+      "collapsedItemLimit": Object {
+        "type": "number",
+      },
+      "expandButtonClassName": Object {
+        "type": "string",
+      },
+      "expandedItemLimit": Object {
+        "type": "number",
+      },
+      "getExpandButtonLabel": Object {
+        "type": "func",
+      },
+      "scrollGradientColor": Object {
+        "type": "string",
+      },
+      "truncateThreshold": Object {
+        "type": "number",
       },
     },
   },

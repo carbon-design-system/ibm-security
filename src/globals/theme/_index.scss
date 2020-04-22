@@ -1,34 +1,36 @@
 ////
 /// Theme helpers.
 /// @group theme
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import '@carbon/themes/scss/mixins';
 
-@import 'functions';
+@import '../../components/Component/mixins';
+@import '../deprecate/index';
+@import '../feature-flags/index';
 
-// TODO: `2.x` - To be removed.
+@import 'variables';
 
-/// Security theme.
-/// @type Map<String, Color>
-$security--theme: $carbon--theme--g100 !default;
-
-/// Default theme.
-/// @type Map<String, Color>
-/// @access private
-$-theme: security--type-tokens-remove(
-  $theme: $security--theme,
-);
-
-// Map the theme tokens as CSS custom properties.
-@each $token, $value in $-theme {
-  $-theme: map-merge(
-    $map1: $-theme,
-    $map2: (
-      $token: var(--#{$token}, $value),
-    ),
-  );
+@if feature-flag-enabled($feature: $theme__name) {
+  @each $token, $value in $-theme {
+    // Map the theme tokens as CSS custom properties.
+    $-theme: map-merge(
+      $map1: $-theme,
+      $map2: (
+        $token:
+          if(
+            $condition:
+              index(
+                $list: $security--theme__ignore-list,
+                $value: $token,
+              ),
+            $if_true: $value,
+            $if_false: var(--#{$token}, $value),
+          ),
+      ),
+    );
+  }
 }
 
 /// Carbon theme.
@@ -37,13 +39,8 @@ $carbon--theme: $-theme;
 
 @include carbon--theme;
 
-@import 'carbon-components/scss/globals/scss/theme';
-
-@import '../deprecate/index';
-@import '../../components/Component/mixins';
-
+@import 'carbon-components/scss/globals/scss/theme-tokens';
 @import 'mixins';
-@import 'variables';
 
 // TODO: `2.x` - To be removed after the `theme` function is deprecated.
 
@@ -65,13 +62,15 @@ $theme: dark;
   @return if($theme == dark, $dark, $light);
 }
 
-// Outputs the relevant classes for each supported theme.
-@each $theme, $tokens in $security--themes {
-  @include security--component($name: $theme) {
-    @include security--generate-css-custom-properties($theme: $tokens);
-  }
-}
-
 @include security--component($name: input__background__color--light) {
   @include input__background-color;
+}
+
+@if feature-flag-enabled($feature: $theme__name) {
+  // Outputs the relevant classes for each supported theme - `$carbon--theme` is required to be set before this can occur.
+  @each $theme, $tokens in $security--themes {
+    @include security--component($name: $theme) {
+      @include security--generate-css-custom-properties($theme: $tokens);
+    }
+  }
 }

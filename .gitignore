@@ -8,7 +8,7 @@ css
 es
 lib
 node_modules
-scss
+/scss
 storybook-static
 
 # Generated Gridish file.

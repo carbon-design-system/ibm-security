@@ -1,7 +1,7 @@
 ////
 /// Button mixins.
 /// @group button
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import '@carbon/layout/scss/spacing';
@@ -47,19 +47,12 @@
     }
   }
 
-  &--loading {
-    &.#{$prefix}--btn:disabled,
-    &.#{$prefix}--btn.#{$prefix}--btn--disabled {
-      color: $link-01;
-    }
+  &--loading > .#{$prefix}--inline-loading {
+    width: auto;
 
-    .#{$prefix}--inline-loading {
-      width: auto;
-
-      // Required to ensure that the loading icon
-      // does not make the button taller:
-      margin-top: carbon--mini-units(-1);
-      margin-bottom: carbon--mini-units(-1);
-    }
+    // Required to ensure that the loading icon
+    // does not make the button taller:
+    margin-top: carbon--mini-units(-1);
+    margin-bottom: carbon--mini-units(-1);
   }
 }
