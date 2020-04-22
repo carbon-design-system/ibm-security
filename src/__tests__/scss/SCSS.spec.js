@@ -6,7 +6,7 @@
 import { compile, forEachImport } from '../../../scripts/scss/compile';
 
 describe('SCSS', () => {
-  test('Snapshot', () => {
+  test('Bundle', () => {
     expect(
       compile('src/index.scss')
         .css.toString()
