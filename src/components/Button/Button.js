@@ -63,7 +63,7 @@ Button.defaultProps = {
 Button.propTypes = {
   ...propTypes,
 
-  /** @type {boolean} Whether or not the button is in a loading state. While loading, the button is disabled & icons provided via the `renderIcon` prop will not be shown. */
+  /** @type {boolean} Specify whether or not the button is in a loading state. While loading, icons provided via the `renderIcon` prop will not be displayed. */
   loading: PropTypes.bool,
 
   /** @type {Function|object} Optional prop to allow overriding the icon rendering. Can be a React component class. */
