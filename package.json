@@ -38,6 +38,7 @@
     "semantic-release": "semantic-release",
     "start": "run-s build:pre:grid && start-storybook -p 3000 -s public",
     "test": "yarn jest spec -ci",
+    "test:bundle": "webpack --config scripts/webpack",
     "test:precommit": "yarn jest -b --passWithNoTests --testMatch src/**/*.spec.js --findRelatedTests",
     "test:imports": "scripts/checkImports.sh",
     "test:scss": "node scripts/scss",
@@ -108,7 +109,7 @@
     "axe-core": "^3.4.1",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.7.1",
-    "babel-loader": "^8.0.5",
+    "babel-loader": "^8.1.0",
     "babel-plugin-macros": "^2.5.1",
     "babel-plugin-ramda": "^2.0.0",
     "clean-css-cli": "^4.1.11",
@@ -162,6 +163,9 @@
     "stylelint-config-recommended-scss": "^3.2.0",
     "stylelint-no-unsupported-browser-features": "^3.0.0",
     "stylelint-scss": "^3.5.2",
+    "webpack": "^4.43.0",
+    "webpack-bundle-analyzer": "^3.7.0",
+    "webpack-cli": "^3.3.11",
     "yarn": "^1.16.0"
   },
   "peerDependencies": {
