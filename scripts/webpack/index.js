@@ -15,7 +15,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            ...configuration({ env: () => null }),
+            ...configuration({ env: () => 'es' }),
           },
         },
       },
