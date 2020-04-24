@@ -52,14 +52,14 @@ describe('FilterPanel', () => {
   });
 
   test('does not render the legacy filter if filterData is not provided', () => {
-    const { queryByTestId } = render(
-      <FilterPanel {...mockProps} filterData={null} />
-    );
+    const { queryByTestId } = render(<FilterPanel filterData={null} />);
     expect(queryByTestId('legacy-filter-panel')).not.toBeInTheDocument();
   });
 
   test('renders the legacy filter panel', () => {
-    const { getByTestId } = render(<FilterPanel {...mockProps} />);
+    const { getByTestId } = render(
+      <FilterPanel filterData={mockProps.filterData} />
+    );
     expect(getByTestId('legacy-filter-panel')).toBeVisible();
   });
 });
