@@ -65,7 +65,7 @@ StackedNotification.propTypes = {
   onCloseButtonClick: func,
 
   /* Provide a description for "close" icon that can be read by screen readers. */
-  iconDescription: string,
+  iconDescription: string.isRequired,
 
   /* 	Specify whether the close button should be disabled. */
   hideCloseButton: bool,
@@ -78,7 +78,6 @@ StackedNotification.defaultProps = {
   caption: 'provide a caption',
   children: undefined,
   className: null,
-  iconDescription: 'closes notification',
   role: 'alert',
   onCloseButtonClick: () => {},
   hideCloseButton: false,
