@@ -14,5 +14,10 @@
 
   > #{$tag--interactive__namespace} {
     margin-right: $carbon--spacing-03;
+    max-width: 40ex;
+
+    &__button {
+      flex-shrink: 0;
+    }
   }
 }
