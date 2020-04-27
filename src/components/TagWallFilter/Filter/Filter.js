@@ -135,7 +135,9 @@ class Filter extends React.Component {
             className={`${namespace}__list-item__entry`}
             aria-labelledby={itemProps.id}
           >
-            {itemText}
+            <span className={`${carbonPrefix}text-truncate--end`}>
+              {itemText}
+            </span>
             <span className={`${namespace}__add`}>
               <Icon className={`${namespace}__add__icon`} renderIcon={Add20} />
             </span>
