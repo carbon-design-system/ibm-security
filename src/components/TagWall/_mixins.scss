@@ -24,16 +24,12 @@
     color: $text-01;
     background-color: $active-ui;
 
-    // Ensure correct focus outline color when focused:
-    &:focus svg {
-      box-shadow: inset 0 0 0 2px $focus;
+    svg:not(:hover) {
+      fill: $text-01;
     }
 
-    // Ensure correct svg fill color when NOT interacted with:
-    &:not(:hover) svg,
-    &:not(:focus) svg,
-    &:not(:active) svg {
-      fill: $text-01;
+    &:focus svg {
+      box-shadow: inset 0 0 0 2px $focus;
     }
   }
 }
