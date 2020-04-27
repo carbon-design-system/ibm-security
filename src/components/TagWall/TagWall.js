@@ -13,7 +13,7 @@ import * as defaultLabels from '../../globals/nls';
 import defaultItemToString from '../__tools__/defaultItemToString';
 
 import Button from '../Button';
-import InteractiveTag from '../Tag/InteractiveTag';
+import Tag from '../Tag';
 
 const namespace = getComponentNamespace('tag-wall');
 const noop = () => {};
@@ -58,21 +58,25 @@ const TagWall = ({
       {items.map((item, index) => {
         const key = `tag__${index}`;
 
+        const tagClasses = classnames(`${namespace}__tag`, {
+          [`${namespace}__tag--selected`]: item.isSelected,
+        });
+
         return (
-          <InteractiveTag
+          <Tag
             key={key}
-            isSelected={item.isSelected}
+            className={tagClasses}
             onRemove={event => {
               event.stopPropagation();
 
               onChange({ item, type });
             }}
-            removable={!disable}
-            removeBtnLabel={TAG_WALL_REMOVE_BUTTON}
+            filter={!disable}
+            aria-label={TAG_WALL_REMOVE_BUTTON}
             type="gray"
           >
             {itemToString(item)}
-          </InteractiveTag>
+          </Tag>
         );
       })}
       {!addButtonDisabled && (

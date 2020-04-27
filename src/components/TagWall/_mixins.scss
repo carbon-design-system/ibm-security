@@ -7,12 +7,33 @@
 @import '@carbon/type/scss/index';
 @import '@carbon/layout/scss/spacing';
 
+@import '../../globals/namespace/index';
+
 @mixin tag-wall {
   &__label {
     @include carbon--type-style($name: caption-01);
   }
 
-  > #{$tag--interactive__namespace} {
+  &__tag {
     margin-right: $carbon--spacing-03;
+    max-width: 40ex;
+  }
+
+  // Need to invert Carbon's colors for un-selected tags only:
+  &__tag:not(&__tag--selected) {
+    color: $text-01;
+    background-color: $active-ui;
+
+    // Ensure correct focus outline color when focused:
+    &:focus svg {
+      box-shadow: inset 0 0 0 2px $focus;
+    }
+
+    // Ensure correct svg fill color when NOT interacted with:
+    &:not(:hover) svg,
+    &:not(:focus) svg,
+    &:not(:active) svg {
+      fill: $text-01;
+    }
   }
 }
