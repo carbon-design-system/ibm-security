@@ -488,7 +488,11 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                       <span
                         class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
                       >
-                        Y
+                        <span
+                          class="bx--text-truncate--end"
+                        >
+                          Y
+                        </span>
                         <button
                           aria-label=""
                           class="security--tag--interactive__button"
@@ -597,7 +601,11 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                 aria-labelledby="downshift-0-item-0"
                                 class="security--filter__list-item__entry"
                               >
-                                X
+                                <span
+                                  class="bx--text-truncate--end"
+                                >
+                                  X
+                                </span>
                                 <span
                                   class="security--filter__add"
                                 >
@@ -787,7 +795,11 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                   <span
                                     class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
                                   >
-                                    Y
+                                    <span
+                                      class="bx--text-truncate--end"
+                                    >
+                                      Y
+                                    </span>
                                     <button
                                       aria-label=""
                                       class="security--tag--interactive__button"
@@ -896,7 +908,11 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                             aria-labelledby="downshift-0-item-0"
                                             class="security--filter__list-item__entry"
                                           >
-                                            X
+                                            <span
+                                              class="bx--text-truncate--end"
+                                            >
+                                              X
+                                            </span>
                                             <span
                                               class="security--filter__add"
                                             >
@@ -1009,7 +1025,11 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                     <span
                                       class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
                                     >
-                                      Y
+                                      <span
+                                        class="bx--text-truncate--end"
+                                      >
+                                        Y
+                                      </span>
                                       <button
                                         aria-label=""
                                         class="security--tag--interactive__button"
@@ -1118,7 +1138,11 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                               aria-labelledby="downshift-0-item-0"
                                               class="security--filter__list-item__entry"
                                             >
-                                              X
+                                              <span
+                                                class="bx--text-truncate--end"
+                                              >
+                                                X
+                                              </span>
                                               <span
                                                 class="security--filter__add"
                                               >
@@ -1266,7 +1290,11 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                         <span
                                           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
                                         >
-                                          Y
+                                          <span
+                                            className="bx--text-truncate--end"
+                                          >
+                                            Y
+                                          </span>
                                           <button
                                             aria-label=""
                                             className="security--tag--interactive__button"
@@ -1590,7 +1618,11 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                         aria-labelledby="downshift-0-item-0"
                                                         className="security--filter__list-item__entry"
                                                       >
-                                                        X
+                                                        <span
+                                                          className="bx--text-truncate--end"
+                                                        >
+                                                          X
+                                                        </span>
                                                         <span
                                                           className="security--filter__add"
                                                         >
@@ -1890,7 +1922,11 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 2`] = 
         <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
         >
-          Y
+          <span
+            className="bx--text-truncate--end"
+          >
+            Y
+          </span>
           <button
             aria-label=""
             className="security--tag--interactive__button"
@@ -2227,7 +2263,11 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                         <span
                           class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
                         >
-                          Y
+                          <span
+                            class="bx--text-truncate--end"
+                          >
+                            Y
+                          </span>
                           <button
                             aria-label=""
                             class="security--tag--interactive__button"
@@ -2336,7 +2376,11 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   aria-labelledby="downshift-0-item-0"
                                   class="security--filter__list-item__entry"
                                 >
-                                  X
+                                  <span
+                                    class="bx--text-truncate--end"
+                                  >
+                                    X
+                                  </span>
                                   <span
                                     class="security--filter__add"
                                   >
@@ -2440,7 +2484,11 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                         <span
                           class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
                         >
-                          X
+                          <span
+                            class="bx--text-truncate--end"
+                          >
+                            X
+                          </span>
                           <button
                             aria-label=""
                             class="security--tag--interactive__button"
@@ -2549,7 +2597,11 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   aria-labelledby="downshift-1-item-0"
                                   class="security--filter__list-item__entry"
                                 >
-                                  Y
+                                  <span
+                                    class="bx--text-truncate--end"
+                                  >
+                                    Y
+                                  </span>
                                   <span
                                     class="security--filter__add"
                                   >
@@ -2739,7 +2791,11 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     <span
                                       class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
                                     >
-                                      Y
+                                      <span
+                                        class="bx--text-truncate--end"
+                                      >
+                                        Y
+                                      </span>
                                       <button
                                         aria-label=""
                                         class="security--tag--interactive__button"
@@ -2848,7 +2904,11 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                               aria-labelledby="downshift-0-item-0"
                                               class="security--filter__list-item__entry"
                                             >
-                                              X
+                                              <span
+                                                class="bx--text-truncate--end"
+                                              >
+                                                X
+                                              </span>
                                               <span
                                                 class="security--filter__add"
                                               >
@@ -2952,7 +3012,11 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     <span
                                       class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
                                     >
-                                      X
+                                      <span
+                                        class="bx--text-truncate--end"
+                                      >
+                                        X
+                                      </span>
                                       <button
                                         aria-label=""
                                         class="security--tag--interactive__button"
@@ -3061,7 +3125,11 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                               aria-labelledby="downshift-1-item-0"
                                               class="security--filter__list-item__entry"
                                             >
-                                              Y
+                                              <span
+                                                class="bx--text-truncate--end"
+                                              >
+                                                Y
+                                              </span>
                                               <span
                                                 class="security--filter__add"
                                               >
@@ -3174,7 +3242,11 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       <span
                                         class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
                                       >
-                                        Y
+                                        <span
+                                          class="bx--text-truncate--end"
+                                        >
+                                          Y
+                                        </span>
                                         <button
                                           aria-label=""
                                           class="security--tag--interactive__button"
@@ -3283,7 +3355,11 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                 aria-labelledby="downshift-0-item-0"
                                                 class="security--filter__list-item__entry"
                                               >
-                                                X
+                                                <span
+                                                  class="bx--text-truncate--end"
+                                                >
+                                                  X
+                                                </span>
                                                 <span
                                                   class="security--filter__add"
                                                 >
@@ -3387,7 +3463,11 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       <span
                                         class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
                                       >
-                                        X
+                                        <span
+                                          class="bx--text-truncate--end"
+                                        >
+                                          X
+                                        </span>
                                         <button
                                           aria-label=""
                                           class="security--tag--interactive__button"
@@ -3496,7 +3576,11 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                 aria-labelledby="downshift-1-item-0"
                                                 class="security--filter__list-item__entry"
                                               >
-                                                Y
+                                                <span
+                                                  class="bx--text-truncate--end"
+                                                >
+                                                  Y
+                                                </span>
                                                 <span
                                                   class="security--filter__add"
                                                 >
@@ -3644,7 +3728,11 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           <span
                                             className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
                                           >
-                                            X
+                                            <span
+                                              className="bx--text-truncate--end"
+                                            >
+                                              X
+                                            </span>
                                             <button
                                               aria-label=""
                                               className="security--tag--interactive__button"
@@ -3968,7 +4056,11 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                           aria-labelledby="downshift-1-item-0"
                                                           className="security--filter__list-item__entry"
                                                         >
-                                                          Y
+                                                          <span
+                                                            className="bx--text-truncate--end"
+                                                          >
+                                                            Y
+                                                          </span>
                                                           <span
                                                             className="security--filter__add"
                                                           >
