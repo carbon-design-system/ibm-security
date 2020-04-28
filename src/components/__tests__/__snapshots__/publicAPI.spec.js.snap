@@ -3233,8 +3233,6 @@ Map {
   },
   "FilterPanelCheckboxWithOverflowMenu" => Object {
     "defaultProps": Object {
-      "checkboxClassName": undefined,
-      "checkboxWrapperClassName": undefined,
       "children": undefined,
       "className": undefined,
       "count": undefined,
@@ -3243,16 +3241,8 @@ Map {
       "onChange": [Function],
       "open": false,
       "overflowMenuAriaLabel": undefined,
-      "overflowMenuClassName": undefined,
-      "overflowMenuOptionsClassName": undefined,
     },
     "propTypes": Object {
-      "checkboxClassName": Object {
-        "type": "string",
-      },
-      "checkboxWrapperClassName": Object {
-        "type": "string",
-      },
       "checked": Object {
         "type": "bool",
       },
@@ -3295,12 +3285,6 @@ Map {
         "type": "bool",
       },
       "overflowMenuAriaLabel": Object {
-        "type": "string",
-      },
-      "overflowMenuClassName": Object {
-        "type": "string",
-      },
-      "overflowMenuOptionsClassName": Object {
         "type": "string",
       },
       "title": Object {

@@ -56,11 +56,6 @@ describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
 
     // Open overflow menu and waitFor for options to appear on the DOM.
     fireEvent.mouseEnter(screen.getByLabelText(/checkbox label/i));
-    // userEvent.click(
-    //   screen.getByLabelText(/filter selection options/i, { selector: 'button' })
-    // );
-    // await screen.findByText(/option 1/i);
-    screen.debug();
 
     await expect(document.body).toHaveNoAxeViolations();
     await expect(document.body).toHaveNoDAPViolations(
@@ -72,28 +67,6 @@ describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
     const { container } = render(
       <FilterPanelCheckboxWithOverflowMenu
         className="custom-class"
-        labelText="label"
-        id="id"
-      />
-    );
-    expect(container.querySelector('.custom-class')).toBeInTheDocument();
-  });
-
-  test('adds custom checkbox class name', () => {
-    const { container } = render(
-      <FilterPanelCheckboxWithOverflowMenu
-        checkboxClassName="custom-class"
-        labelText="label"
-        id="id"
-      />
-    );
-    expect(container.querySelector('.custom-class')).toBeInTheDocument();
-  });
-
-  test('adds custom checkbox wrappper class name', () => {
-    const { container } = render(
-      <FilterPanelCheckboxWithOverflowMenu
-        checkboxWrapperClassName="custom-class"
         labelText="label"
         id="id"
       />
@@ -157,12 +130,12 @@ describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
     );
 
     expect(
-      queryByLabelText(/filter selection options/i, { selector: 'button' })
+      queryByLabelText(/filter selection options/i)
     ).not.toBeInTheDocument();
   });
 
   it('renders the overflow menu button when the user hovers over the checkbox', () => {
-    const { getByLabelText } = render(
+    const { getByLabelText, getAllByLabelText } = render(
       <FilterPanelCheckboxWithOverflowMenu
         labelText="checkbox label"
         overflowMenuAriaLabel="filter selection options"
@@ -172,7 +145,7 @@ describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
 
     fireEvent.mouseEnter(getByLabelText(/checkbox label/i));
     expect(
-      getByLabelText(/filter selection options/i, { selector: 'button' })
+      getAllByLabelText(/filter selection options/i)[0]
     ).toBeInTheDocument();
   });
 
@@ -190,12 +163,12 @@ describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
     fireEvent.mouseLeave(checkbox);
 
     expect(
-      queryByLabelText(/filter selection options/i, { selector: 'button' })
+      queryByLabelText(/filter selection options/i)
     ).not.toBeInTheDocument();
   });
 
   it('renders the overflow menu button when the user focuses on the checkbox', () => {
-    const { getByLabelText } = render(
+    const { getByLabelText, getAllByLabelText } = render(
       <FilterPanelCheckboxWithOverflowMenu
         labelText="checkbox label"
         overflowMenuAriaLabel="filter selection options"
@@ -206,12 +179,12 @@ describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
     fireEvent.focus(getByLabelText(/checkbox label/i));
 
     expect(
-      getByLabelText(/filter selection options/i, { selector: 'button' })
+      getAllByLabelText(/filter selection options/i)[0]
     ).toBeInTheDocument();
   });
 
   it('renders the overflow menu button when the user focuses on the overflow button', () => {
-    const { getByLabelText } = render(
+    const { getByLabelText, getAllByLabelText } = render(
       <FilterPanelCheckboxWithOverflowMenu
         labelText="checkbox label"
         overflowMenuAriaLabel="filter selection options"
@@ -221,16 +194,14 @@ describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
 
     fireEvent.focus(getByLabelText(/checkbox label/i));
 
-    const overflowButton = getByLabelText(/filter selection options/i, {
-      selector: 'button',
-    });
+    const overflowButton = getAllByLabelText(/filter selection options/i)[0];
     fireEvent.focus(overflowButton);
 
     expect(overflowButton).toBeInTheDocument();
   });
 
   it('removes the overflow menu button when the user removes focuses', async () => {
-    const { getByLabelText, queryByLabelText } = render(
+    const { getByLabelText, queryAllByLabelText, queryByLabelText } = render(
       <FilterPanelCheckboxWithOverflowMenu
         labelText="checkbox label"
         overflowMenuAriaLabel="filter selection options"
@@ -242,17 +213,17 @@ describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
     fireEvent.focus(checkbox);
     fireEvent.blur(checkbox);
 
-    await waitForElementToBeRemoved(() =>
-      queryByLabelText(/filter selection options/i, { selector: 'button' })
+    await waitForElementToBeRemoved(
+      () => queryAllByLabelText(/filter selection options/i)[0]
     );
 
     expect(
-      queryByLabelText(/filter selection options/i, { selector: 'button' })
+      queryByLabelText(/filter selection options/i)
     ).not.toBeInTheDocument();
   });
 
   it('renders the provided overflow menu options when the user opens the menu', async () => {
-    const { getByLabelText, findByText } = render(
+    const { getByLabelText, getAllByLabelText, findByText } = render(
       <FilterPanelCheckboxWithOverflowMenu
         labelText="checkbox label"
         overflowMenuAriaLabel="filter selection options"
@@ -264,9 +235,7 @@ describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
     );
 
     fireEvent.mouseEnter(getByLabelText(/checkbox label/i));
-    userEvent.click(
-      getByLabelText(/filter selection options/i, { selector: 'button' })
-    );
+    userEvent.click(getAllByLabelText(/filter selection options/i)[0]);
 
     expect(await findByText(/option 1/i)).toBeInTheDocument();
     expect(await findByText(/option 2/i)).toBeInTheDocument();
