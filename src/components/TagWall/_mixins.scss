@@ -6,6 +6,7 @@
 
 @import '@carbon/type/scss/index';
 @import '@carbon/layout/scss/spacing';
+@import 'carbon-components/scss/globals/scss/helper-classes';
 
 @mixin tag-wall {
   &__label {
