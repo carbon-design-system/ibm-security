@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { render, waitFor, act } from '@testing-library/react';
+import { render, wait, act } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import FilterPanelSearch from '../FilterPanelSearch';
@@ -56,7 +56,7 @@ describe('FilterPanelSearch', () => {
     searchInput.focus();
     searchInput.blur();
 
-    await waitFor(() =>
+    await wait(() =>
       expect(queryByTestId('result-content')).not.toBeInTheDocument()
     );
   });

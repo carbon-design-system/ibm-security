@@ -3231,6 +3231,86 @@ Map {
       },
     },
   },
+  "FilterPanelCheckboxWithOverflowMenu" => Object {
+    "defaultProps": Object {
+      "checkboxClassName": undefined,
+      "checkboxWrapperClassName": undefined,
+      "children": undefined,
+      "className": undefined,
+      "count": undefined,
+      "countLabel": [Function],
+      "indeterminate": false,
+      "onChange": [Function],
+      "open": false,
+      "overflowMenuAriaLabel": undefined,
+      "overflowMenuClassName": undefined,
+      "overflowMenuOptionsClassName": undefined,
+    },
+    "propTypes": Object {
+      "checkboxClassName": Object {
+        "type": "string",
+      },
+      "checkboxWrapperClassName": Object {
+        "type": "string",
+      },
+      "checked": Object {
+        "type": "bool",
+      },
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+      "count": Object {
+        "type": "number",
+      },
+      "countLabel": Object {
+        "type": "func",
+      },
+      "defaultChecked": Object {
+        "type": "bool",
+      },
+      "disabled": Object {
+        "type": "bool",
+      },
+      "hideLabel": Object {
+        "type": "bool",
+      },
+      "id": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+      "indeterminate": Object {
+        "type": "bool",
+      },
+      "labelText": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+      "onChange": Object {
+        "type": "func",
+      },
+      "open": Object {
+        "type": "bool",
+      },
+      "overflowMenuAriaLabel": Object {
+        "type": "string",
+      },
+      "overflowMenuClassName": Object {
+        "type": "string",
+      },
+      "overflowMenuOptionsClassName": Object {
+        "type": "string",
+      },
+      "title": Object {
+        "type": "string",
+      },
+      "wrapperClassName": Object {
+        "type": "string",
+      },
+    },
+  },
   "FilterPanelGroup" => Object {
     "defaultProps": Object {
       "children": undefined,
