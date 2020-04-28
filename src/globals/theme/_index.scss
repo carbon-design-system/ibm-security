@@ -10,29 +10,24 @@
 @import '../deprecate/index';
 @import '../feature-flags/index';
 
-@import 'functions';
 @import 'variables';
 
-// TODO: `2.x` - To be removed.
-
-/// Security theme.
-/// @type Map<String, Color>
-$security--theme: $carbon--theme--g100 !default;
-
-/// Default theme.
-/// @type Map<String, Color>
-/// @access private
-$-theme: security--type-tokens-remove(
-  $theme: $security--theme,
-);
-
 @if feature-flag-enabled($feature: $theme__name) {
-  // Map the theme tokens as CSS custom properties.
   @each $token, $value in $-theme {
+    // Map the theme tokens as CSS custom properties.
     $-theme: map-merge(
       $map1: $-theme,
       $map2: (
-        $token: var(--#{$token}, $value),
+        $token:
+          if(
+            $condition:
+              index(
+                $list: $security--theme__ignore-list,
+                $value: $token,
+              ),
+            $if_true: $value,
+            $if_false: var(--#{$token}, $value),
+          ),
       ),
     );
   }
@@ -44,8 +39,7 @@ $carbon--theme: $-theme;
 
 @include carbon--theme;
 
-@import 'carbon-components/scss/globals/scss/theme';
-
+@import 'carbon-components/scss/globals/scss/theme-tokens';
 @import 'mixins';
 
 // TODO: `2.x` - To be removed after the `theme` function is deprecated.
