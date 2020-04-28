@@ -19,11 +19,7 @@ export const namespace = getComponentNamespace(
 
 const FilterPanelCheckboxWithOverflowMenu = ({
   className,
-  checkboxClassName,
-  checkboxWrapperClassName,
   overflowMenuAriaLabel,
-  overflowMenuClassName,
-  overflowMenuOptionsClassName,
   children,
   open,
   ...other
@@ -88,24 +84,14 @@ const FilterPanelCheckboxWithOverflowMenu = ({
       ref={containerRef}
     >
       <FilterPanelCheckbox
-        className={checkboxClassName}
-        wrapperClassName={classnames(
-          checkboxWrapperClassName,
-          `${namespace}__wrapper`
-        )}
+        wrapperClassName={`${namespace}__wrapper`}
         {...other}
       />
       {showOverflowButton && (
         <OverflowMenu
           open={open}
-          className={classnames(
-            overflowMenuClassName,
-            `${namespace}__overflow-button`
-          )}
-          menuOptionsClass={classnames(
-            overflowMenuOptionsClassName,
-            `${namespace}__overflow-options`
-          )}
+          className={`${namespace}__overflow-button`}
+          menuOptionsClass={`${namespace}__overflow-options`}
           menuOffsetFlip={updateMenuWidthAndSetOffset}
           ariaLabel={overflowMenuAriaLabel}
           iconDescription={overflowMenuAriaLabel}
@@ -126,20 +112,8 @@ FilterPanelCheckboxWithOverflowMenu.propTypes = {
   /** Optional class name. */
   className: PropTypes.string,
 
-  /** Optional checkbox class name. */
-  checkboxClassName: PropTypes.string,
-
-  /** Optional checkbox wrapper class name. */
-  checkboxWrapperClassName: PropTypes.string,
-
   /** Overflow aria-label to describe the purpose of the overflow button. */
   overflowMenuAriaLabel: PropTypes.string,
-
-  /** Optional overflow menu component class name. */
-  overflowMenuClassName: PropTypes.string,
-
-  /** Optional overflow menu options class name. */
-  overflowMenuOptionsClassName: PropTypes.string,
 
   /** Children containing overflow menu items. */
   children: PropTypes.node,
@@ -151,11 +125,7 @@ FilterPanelCheckboxWithOverflowMenu.propTypes = {
 FilterPanelCheckboxWithOverflowMenu.defaultProps = {
   ...FilterPanelCheckbox.defaultProps,
   className: undefined,
-  checkboxClassName: undefined,
-  checkboxWrapperClassName: undefined,
   overflowMenuAriaLabel: undefined,
-  overflowMenuClassName: undefined,
-  overflowMenuOptionsClassName: undefined,
   children: undefined,
   open: false,
 };
