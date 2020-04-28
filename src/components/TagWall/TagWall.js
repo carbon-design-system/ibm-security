@@ -74,7 +74,10 @@ const TagWall = ({
             removeBtnLabel={TAG_WALL_REMOVE_BUTTON}
             type="gray"
           >
-            <span className={`${carbonPrefix}text-truncate--end`}>
+            <span
+              className={`${carbonPrefix}text-truncate--end`}
+              title={itemToString(item)}
+            >
               {itemToString(item)}
             </span>
           </InteractiveTag>
