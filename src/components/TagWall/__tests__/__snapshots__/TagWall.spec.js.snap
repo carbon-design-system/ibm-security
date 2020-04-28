@@ -83,6 +83,7 @@ exports[`TagWall Rendering renders 1`] = `
         >
           <span
             className="bx--text-truncate--end"
+            title="Tag 1"
           >
             Tag 1
           </span>
@@ -175,6 +176,7 @@ exports[`TagWall Rendering renders 1`] = `
         >
           <span
             className="bx--text-truncate--end"
+            title="Tag 2"
           >
             Tag 2
           </span>
@@ -267,6 +269,7 @@ exports[`TagWall Rendering renders 1`] = `
         >
           <span
             className="bx--text-truncate--end"
+            title="Tag 3"
           >
             Tag 3
           </span>
@@ -359,6 +362,7 @@ exports[`TagWall Rendering renders 1`] = `
         >
           <span
             className="bx--text-truncate--end"
+            title="Tag 4"
           >
             Tag 4
           </span>
@@ -451,6 +455,7 @@ exports[`TagWall Rendering renders 1`] = `
         >
           <span
             className="bx--text-truncate--end"
+            title="Tag 5"
           >
             Tag 5
           </span>
@@ -543,6 +548,7 @@ exports[`TagWall Rendering renders 1`] = `
         >
           <span
             className="bx--text-truncate--end"
+            title="Tag 6"
           >
             Tag 6
           </span>
@@ -635,6 +641,7 @@ exports[`TagWall Rendering renders 1`] = `
         >
           <span
             className="bx--text-truncate--end"
+            title="Tag 7"
           >
             Tag 7
           </span>
@@ -727,6 +734,7 @@ exports[`TagWall Rendering renders 1`] = `
         >
           <span
             className="bx--text-truncate--end"
+            title="Tag 8"
           >
             Tag 8
           </span>
@@ -850,6 +858,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
   >
     <span
       class="bx--text-truncate--end"
+      title="Tag 1"
     >
       Tag 1
     </span>
@@ -879,6 +888,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
   >
     <span
       class="bx--text-truncate--end"
+      title="Tag 2"
     >
       Tag 2
     </span>
@@ -908,6 +918,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
   >
     <span
       class="bx--text-truncate--end"
+      title="Tag 3"
     >
       Tag 3
     </span>
@@ -937,6 +948,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
   >
     <span
       class="bx--text-truncate--end"
+      title="Tag 4"
     >
       Tag 4
     </span>
@@ -966,6 +978,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
   >
     <span
       class="bx--text-truncate--end"
+      title="Tag 5"
     >
       Tag 5
     </span>
@@ -995,6 +1008,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
   >
     <span
       class="bx--text-truncate--end"
+      title="Tag 6"
     >
       Tag 6
     </span>
@@ -1024,6 +1038,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
   >
     <span
       class="bx--text-truncate--end"
+      title="Tag 7"
     >
       Tag 7
     </span>
@@ -1053,6 +1068,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
   >
     <span
       class="bx--text-truncate--end"
+      title="Tag 8"
     >
       Tag 8
     </span>
@@ -1170,6 +1186,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         >
           <span
             className="bx--text-truncate--end"
+            title="Tag 1"
           >
             Tag 1
           </span>
@@ -1194,6 +1211,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         >
           <span
             className="bx--text-truncate--end"
+            title="Tag 2"
           >
             Tag 2
           </span>
@@ -1218,6 +1236,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         >
           <span
             className="bx--text-truncate--end"
+            title="Tag 3"
           >
             Tag 3
           </span>
@@ -1242,6 +1261,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         >
           <span
             className="bx--text-truncate--end"
+            title="Tag 4"
           >
             Tag 4
           </span>
@@ -1266,6 +1286,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         >
           <span
             className="bx--text-truncate--end"
+            title="Tag 5"
           >
             Tag 5
           </span>
@@ -1290,6 +1311,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         >
           <span
             className="bx--text-truncate--end"
+            title="Tag 6"
           >
             Tag 6
           </span>
@@ -1314,6 +1336,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         >
           <span
             className="bx--text-truncate--end"
+            title="Tag 7"
           >
             Tag 7
           </span>
@@ -1338,6 +1361,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         >
           <span
             className="bx--text-truncate--end"
+            title="Tag 8"
           >
             Tag 8
           </span>

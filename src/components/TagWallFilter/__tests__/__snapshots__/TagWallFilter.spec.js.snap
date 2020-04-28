@@ -490,6 +490,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                       >
                         <span
                           class="bx--text-truncate--end"
+                          title="Y"
                         >
                           Y
                         </span>
@@ -603,6 +604,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                               >
                                 <span
                                   class="bx--text-truncate--end"
+                                  title="X"
                                 >
                                   X
                                 </span>
@@ -797,6 +799,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                   >
                                     <span
                                       class="bx--text-truncate--end"
+                                      title="Y"
                                     >
                                       Y
                                     </span>
@@ -910,6 +913,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                           >
                                             <span
                                               class="bx--text-truncate--end"
+                                              title="X"
                                             >
                                               X
                                             </span>
@@ -1027,6 +1031,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                     >
                                       <span
                                         class="bx--text-truncate--end"
+                                        title="Y"
                                       >
                                         Y
                                       </span>
@@ -1140,6 +1145,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                             >
                                               <span
                                                 class="bx--text-truncate--end"
+                                                title="X"
                                               >
                                                 X
                                               </span>
@@ -1292,6 +1298,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                         >
                                           <span
                                             className="bx--text-truncate--end"
+                                            title="Y"
                                           >
                                             Y
                                           </span>
@@ -1620,6 +1627,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                       >
                                                         <span
                                                           className="bx--text-truncate--end"
+                                                          title="X"
                                                         >
                                                           X
                                                         </span>
@@ -1924,6 +1932,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 2`] = 
         >
           <span
             className="bx--text-truncate--end"
+            title="Y"
           >
             Y
           </span>
@@ -2265,6 +2274,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                         >
                           <span
                             class="bx--text-truncate--end"
+                            title="Y"
                           >
                             Y
                           </span>
@@ -2378,6 +2388,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 >
                                   <span
                                     class="bx--text-truncate--end"
+                                    title="X"
                                   >
                                     X
                                   </span>
@@ -2486,6 +2497,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                         >
                           <span
                             class="bx--text-truncate--end"
+                            title="X"
                           >
                             X
                           </span>
@@ -2599,6 +2611,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 >
                                   <span
                                     class="bx--text-truncate--end"
+                                    title="Y"
                                   >
                                     Y
                                   </span>
@@ -2793,6 +2806,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     >
                                       <span
                                         class="bx--text-truncate--end"
+                                        title="Y"
                                       >
                                         Y
                                       </span>
@@ -2906,6 +2920,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                             >
                                               <span
                                                 class="bx--text-truncate--end"
+                                                title="X"
                                               >
                                                 X
                                               </span>
@@ -3014,6 +3029,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     >
                                       <span
                                         class="bx--text-truncate--end"
+                                        title="X"
                                       >
                                         X
                                       </span>
@@ -3127,6 +3143,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                             >
                                               <span
                                                 class="bx--text-truncate--end"
+                                                title="Y"
                                               >
                                                 Y
                                               </span>
@@ -3244,6 +3261,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       >
                                         <span
                                           class="bx--text-truncate--end"
+                                          title="Y"
                                         >
                                           Y
                                         </span>
@@ -3357,6 +3375,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                               >
                                                 <span
                                                   class="bx--text-truncate--end"
+                                                  title="X"
                                                 >
                                                   X
                                                 </span>
@@ -3465,6 +3484,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       >
                                         <span
                                           class="bx--text-truncate--end"
+                                          title="X"
                                         >
                                           X
                                         </span>
@@ -3578,6 +3598,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                               >
                                                 <span
                                                   class="bx--text-truncate--end"
+                                                  title="Y"
                                                 >
                                                   Y
                                                 </span>
@@ -3730,6 +3751,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           >
                                             <span
                                               className="bx--text-truncate--end"
+                                              title="X"
                                             >
                                               X
                                             </span>
@@ -4058,6 +4080,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                         >
                                                           <span
                                                             className="bx--text-truncate--end"
+                                                            title="Y"
                                                           >
                                                             Y
                                                           </span>
