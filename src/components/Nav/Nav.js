@@ -115,7 +115,7 @@ export default class Nav extends Component {
    */
   handleListClick(id) {
     forEach(this.props.children, ({ props, type }, index) => {
-      if (type === NavList) {
+      if (type === React.createElement(NavList).type) {
         const childId = `${navNamespace}__list--${index}`;
 
         if (childId !== id && !props.isExpandedOnPageload) {
@@ -147,7 +147,7 @@ export default class Nav extends Component {
 
         <ul className={`${navNamespace}__wrapper`} role="menubar">
           {map(children, (child, index) =>
-            child.type === NavList
+            child.type === React.createElement(NavList).type
               ? this.buildNewListChild(child, index)
               : this.buildNewItemChild(child, index)
           )}
