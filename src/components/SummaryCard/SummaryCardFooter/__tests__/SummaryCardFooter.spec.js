@@ -11,7 +11,9 @@ import { SummaryCardFooter } from '../../../..';
 describe('SummaryCardFooter', () => {
   test('should accept a custom class name', () => {
     const { container } = render(
-      <SummaryCardFooter className="custom-class" />
+      <SummaryCardFooter className="custom-class">
+        test content
+      </SummaryCardFooter>
     );
     expect(container.firstElementChild).toHaveClass('custom-class');
   });
@@ -25,7 +27,7 @@ describe('SummaryCardFooter', () => {
 
   test('should pass through extra props via spread attribute', () => {
     const { queryByTestId } = render(
-      <SummaryCardFooter data-testid="test-id" />
+      <SummaryCardFooter data-testid="test-id">test content</SummaryCardFooter>
     );
     expect(queryByTestId('test-id')).toBeVisible();
   });
