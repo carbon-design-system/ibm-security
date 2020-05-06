@@ -44,7 +44,10 @@ disableCentered(storiesOf(patterns('Modular Layouts'), module)).add(
           <Row>
             {showCardGroup() && (
               <Column md={3} lg={6}>
-                <h2 className="bx--type-productive-heading-01 spacing--layout-01--top spacing--layout-03--bottom">
+                <h2
+                  style={{ margin: 0 }}
+                  className="bx--type-productive-heading-01 spacing--layout-01--top spacing--layout-03--bottom"
+                >
                   productive-heading-01
                 </h2>
                 <TypeLayout>
@@ -69,7 +72,10 @@ disableCentered(storiesOf(patterns('Modular Layouts'), module)).add(
             )}
             {showCardGroup() && (
               <Column md={3} lg={6}>
-                <h2 className="bx--type-productive-heading-01 spacing--layout-01--top spacing--layout-03--bottom">
+                <h2
+                  style={{ margin: 0 }}
+                  className="bx--type-productive-heading-01 spacing--layout-01--top spacing--layout-03--bottom"
+                >
                   productive-heading-01
                 </h2>
                 <TypeLayout>
@@ -97,7 +103,10 @@ disableCentered(storiesOf(patterns('Modular Layouts'), module)).add(
             )}
             {showButtonGroup() && (
               <Column md={2} lg={4}>
-                <h2 className="bx--type-productive-heading-01 spacing--layout-02--top spacing--layout-03--bottom">
+                <h2
+                  style={{ margin: 0 }}
+                  className="bx--type-productive-heading-01 spacing--layout-02--top spacing--layout-03--bottom"
+                >
                   productive-heading-01
                 </h2>
                 <Button
@@ -154,7 +163,10 @@ disableCentered(storiesOf(patterns('Modular Layouts'), module)).add(
                         width: '100%',
                       }}
                     >
-                      <h2 className="bx--type-productive-heading-01 spacing--layout-02--top spacing--layout-03--bottom">
+                      <h2
+                        style={{ margin: 0 }}
+                        className="bx--type-productive-heading-01 spacing--layout-02--top spacing--layout-03--bottom"
+                      >
                         productive-heading-01
                       </h2>
                       <p>Tab content.</p>
@@ -168,7 +180,10 @@ disableCentered(storiesOf(patterns('Modular Layouts'), module)).add(
                         width: '100%',
                       }}
                     >
-                      <h2 className="bx--type-productive-heading-01 spacing--layout-02--top spacing--layout-03--bottom">
+                      <h2
+                        style={{ margin: 0 }}
+                        className="bx--type-productive-heading-01 spacing--layout-02--top spacing--layout-03--bottom"
+                      >
                         productive-heading-01
                       </h2>
                       <p>Tab content.</p>
@@ -182,7 +197,10 @@ disableCentered(storiesOf(patterns('Modular Layouts'), module)).add(
                         width: '100%',
                       }}
                     >
-                      <h2 className="bx--type-productive-heading-01 spacing--layout-02--top spacing--layout-03--bottom">
+                      <h2
+                        style={{ margin: 0 }}
+                        className="bx--type-productive-heading-01 spacing--layout-02--top spacing--layout-03--bottom"
+                      >
                         productive-heading-01
                       </h2>
                       <p>Tab content.</p>
@@ -193,7 +211,10 @@ disableCentered(storiesOf(patterns('Modular Layouts'), module)).add(
             )}
             {showAccordion() && (
               <Column md={8} lg={4}>
-                <h2 className="bx--type-productive-heading-01 spacing--layout-01--top spacing--layout-03--bottom">
+                <h2
+                  style={{ margin: 0 }}
+                  className="bx--type-productive-heading-01 spacing--layout-01--top spacing--layout-03--bottom"
+                >
                   productive-heading-01
                 </h2>
                 <Accordion align="end">
