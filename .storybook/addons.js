@@ -13,8 +13,8 @@ import '@storybook/addon-viewport/register';
 
 import './addons/addon-theme/register';
 
-if (process.env.STORYBOOK_BRANCH === '412/storybook-analytics') {
-  console.log('412/storybook-analytics');
+console.log(process.env.STORYBOOK_BRANCH);
 
+if (process.env.STORYBOOK_BRANCH === '412/storybook-analytics') {
   window.STORYBOOK_GA_ID = 'UA-80770450-3';
 }
