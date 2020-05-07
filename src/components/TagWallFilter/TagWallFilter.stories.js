@@ -49,7 +49,11 @@ storiesOf(patterns('TagWallFilter'), module).add(
   `TagWall with Filter list for multiselect`,
   () => {
     const selectedItems = object('selectedItems', [
-      { id: 'item-0', label: 'Lima' },
+      {
+        id: 'item-0',
+        label:
+          'Tag that is a very long string and will need to be truncated with an ellipsis',
+      },
     ]);
     const selectedItemsMap = selectedItems.reduce(
       compose(
