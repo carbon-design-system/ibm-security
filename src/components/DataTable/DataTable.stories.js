@@ -5,7 +5,7 @@
 
 import { storiesOf } from '@storybook/react';
 
-import { components } from '../../../.storybook';
+import { components, disableCenteredStories } from '../../../.storybook';
 
 const props = () => ({
   useZebraStyles: false,
@@ -14,36 +14,37 @@ const props = () => ({
 const readmeURL = 'https://goo.gl/dq6CEK';
 
 /* eslint-disable global-require */
-storiesOf(components('DataTable'), module)
-  .add(
-    'default',
-    () =>
-      require('carbon-components-react/lib/components/DataTable/stories/default').default(
-        props()
-      ),
-    {
-      info: {
-        /* eslint-disable no-useless-escape */
-        text: `
+disableCenteredStories(
+  storiesOf(components('DataTable'), module)
+    .add(
+      'default',
+      () =>
+        require('carbon-components-react/lib/components/DataTable/stories/default').default(
+          props()
+        ),
+      {
+        info: {
+          /* eslint-disable no-useless-escape */
+          text: `
           Data Tables are used to represent a collection of resources, displaying a
           subset of their fields in columns, or headers.
 
           You can find more detailed information surrounding usage of this component
           at the following url: ${readmeURL}
         `,
-        /* eslint-enable no-useless-escape */
-      },
-    }
-  )
-  .add(
-    'with batch actions',
-    () =>
-      require('carbon-components-react/lib/components/DataTable/stories/with-batch-actions').default(
-        props()
-      ),
-    {
-      info: {
-        text: `
+          /* eslint-enable no-useless-escape */
+        },
+      }
+    )
+    .add(
+      'with batch actions',
+      () =>
+        require('carbon-components-react/lib/components/DataTable/stories/with-batch-actions').default(
+          props()
+        ),
+      {
+        info: {
+          text: `
           Uses <TableToolbar> alongside <TableBatchActions> and <TableBatchAction>
           to create the toolbar and placeholder for where the batch action menu will
           be displayed.
@@ -56,78 +57,79 @@ storiesOf(components('DataTable'), module)
           You can find more detailed information surrounding usage of this component
           at the following url: ${readmeURL}
         `,
-      },
-    }
-  )
-  .add(
-    'with expansion',
-    () =>
-      require('carbon-components-react/lib/components/DataTable/stories/with-expansion').default(
-        props()
-      ),
-    {
-      info: {
-        text: `
+        },
+      }
+    )
+    .add(
+      'with expansion',
+      () =>
+        require('carbon-components-react/lib/components/DataTable/stories/with-expansion').default(
+          props()
+        ),
+      {
+        info: {
+          text: `
           DataTable with expansion
           You can find more detailed information surrounding usage of this component
           at the following url: ${readmeURL}
         `,
-      },
-    }
-  )
-  .add('with overflow menu', () =>
-    require('./stories/with-overflow-menu').default(props())
-  )
-  .add(
-    'with selection',
-    () =>
-      require('carbon-components-react/lib/components/DataTable/stories/with-selection').default(
-        props()
-      ),
-    {
-      info: {
-        text: `
+        },
+      }
+    )
+    .add('with overflow menu', () =>
+      require('./stories/with-overflow-menu').default(props())
+    )
+    .add(
+      'with selection',
+      () =>
+        require('carbon-components-react/lib/components/DataTable/stories/with-selection').default(
+          props()
+        ),
+      {
+        info: {
+          text: `
         DataTable with selection
         You can find more detailed information surrounding usage of this component
         at the following url: ${readmeURL}
       `,
-      },
-    }
-  )
-  .add(
-    'with sorting',
-    () =>
-      require('carbon-components-react/lib/components/DataTable/stories/with-sorting').default(
-        props()
-      ),
-    {
-      info: {
-        text: `
+        },
+      }
+    )
+    .add(
+      'with sorting',
+      () =>
+        require('carbon-components-react/lib/components/DataTable/stories/with-sorting').default(
+          props()
+        ),
+      {
+        info: {
+          text: `
         DataTable with sorting
         You can find more detailed information surrounding usage of this component
         at the following url: ${readmeURL}
       `,
-      },
-    }
-  )
-  .add(
-    'with toolbar',
-    () =>
-      require('carbon-components-react/lib/components/DataTable/stories/with-toolbar').default(
-        props()
-      ),
-    {
-      info: {
-        text: `
+        },
+      }
+    )
+    .add(
+      'with toolbar',
+      () =>
+        require('carbon-components-react/lib/components/DataTable/stories/with-toolbar').default(
+          props()
+        ),
+      {
+        info: {
+          text: `
         DataTable with action menu, filtering, and CSV exporting. Note, the TableToolbarDownload 
         component expects the same rows and header props as provided to the parent Datatable component.
         You can find more detailed information surrounding usage of the Datatable component
         at the following url: ${readmeURL}
       `,
-      },
-    }
-  )
-  .add('with skeleton', () =>
-    require('./stories/with-skeleton').default(props())
-  );
+        },
+      }
+    )
+    .add('with skeleton', () =>
+      require('./stories/with-skeleton').default(props())
+    )
+);
 /* eslint-enable */
