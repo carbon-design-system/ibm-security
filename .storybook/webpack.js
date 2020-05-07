@@ -3,10 +3,9 @@
  * @copyright IBM Security 2019
  */
 
-const { sync } = require('git-branch');
+// const { BRANCH, CIRCLE_BRANCH } = process.env;
 
-const { BRANCH, CIRCLE_BRANCH } = process.env;
-process.env.STORYBOOK_BRANCH = BRANCH || CIRCLE_BRANCH || sync();
+process.env.STORYBOOK_BRANCH = require('git-branch').sync();
 
 module.exports = config => {
   [

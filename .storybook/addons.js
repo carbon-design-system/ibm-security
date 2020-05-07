@@ -15,6 +15,5 @@ import './addons/addon-theme/register';
 
 console.log(process.env.STORYBOOK_BRANCH);
 
-if (process.env.STORYBOOK_BRANCH === '412/storybook-analytics') {
-  window.STORYBOOK_GA_ID = 'UA-80770450-3';
-}
+window.STORYBOOK_GA_ID =
+  process.env.STORYBOOK_BRANCH === '412/storybook-analytics' && 'UA-80770450-3';
