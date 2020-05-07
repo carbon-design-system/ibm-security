@@ -13,7 +13,6 @@ import '@storybook/addon-viewport/register';
 
 import './addons/addon-theme/register';
 
-console.log(process.env.STORYBOOK_BRANCH);
-
+// Set the Google Analytics tracking ID if the `master` branch is deployed.
 window.STORYBOOK_GA_ID =
-  process.env.STORYBOOK_BRANCH === '412/storybook-analytics' && 'UA-80770450-3';
+  process.env.STORYBOOK_BRANCH === 'master' && 'UA-80770450-3';
