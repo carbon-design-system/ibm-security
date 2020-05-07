@@ -1,15 +1,17 @@
 /**
  * @file Transition component.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import PropTypes from 'prop-types';
 import React, { Children } from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 import { getComponentNamespace } from '../../globals/namespace';
 
 const namespace = getComponentNamespace('transition');
+
+const { map, toArray } = Children;
 
 /**
  * Transition component.
@@ -23,29 +25,33 @@ const Transition = ({
   leaveTimeout,
   timeout,
 }) => (
-  <ReactCSSTransitionGroup
-    className={namespace}
-    component={component}
-    transitionAppear
-    transitionAppearTimeout={appearTimeout || timeout}
-    transitionEnterTimeout={enterTimeout || timeout}
-    transitionLeaveTimeout={leaveTimeout || timeout}
-    transitionName={{
-      appear: `${className}__transition--appear`,
-      appearActive: `${className}__transition--appear--active`,
-      enter: `${className}__transition--enter`,
-      enterActive: `${className}__transition--enter--active`,
-      leave: `${className}__transition--leave`,
-      leaveActive: `${className}__transition--leave--active`,
-    }}
-  >
-    {children}
-  </ReactCSSTransitionGroup>
+  <TransitionGroup className={namespace} component={component}>
+    {children &&
+      map(children, child => (
+        <CSSTransition
+          classNames={{
+            appear: `${className}__transition--appear`,
+            appearActive: `${className}__transition--appear--active`,
+            enter: `${className}__transition--enter`,
+            enterActive: `${className}__transition--enter--active`,
+            exit: `${className}__transition--leave`,
+            exitActive: `${className}__transition--leave--active`,
+          }}
+          timeout={{
+            appear: appearTimeout || timeout,
+            enter: enterTimeout || timeout,
+            exit: leaveTimeout || timeout,
+          }}
+        >
+          {child}
+        </CSSTransition>
+      ))}
+  </TransitionGroup>
 );
 
 Transition.defaultProps = {
   appearTimeout: undefined,
-  component: ({ children }) => Children.toArray(children)[0] || null,
+  component: ({ children }) => toArray(children)[0] || null,
   enterTimeout: undefined,
   leaveTimeout: undefined,
   timeout: 160,
