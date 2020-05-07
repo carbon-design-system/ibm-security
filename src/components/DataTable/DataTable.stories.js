@@ -15,23 +15,32 @@ const readmeURL = 'https://goo.gl/dq6CEK';
 
 /* eslint-disable global-require */
 storiesOf(components('DataTable'), module)
-  .add('default', () => require('./stories/default').default(props()), {
-    info: {
-      /* eslint-disable no-useless-escape */
-      text: `
+  .add(
+    'default',
+    () =>
+      require('carbon-components-react/lib/components/DataTable/stories/default').default(
+        props()
+      ),
+    {
+      info: {
+        /* eslint-disable no-useless-escape */
+        text: `
           Data Tables are used to represent a collection of resources, displaying a
-          subset of their fields in columns, or headers. The \`DataTable\` component
-          that we export from Carbon requires two props to be passed in: \`rows\`
-          and \`headers\`.
+          subset of their fields in columns, or headers.
+
           You can find more detailed information surrounding usage of this component
           at the following url: ${readmeURL}
         `,
-      /* eslint-enable no-useless-escape */
-    },
-  })
+        /* eslint-enable no-useless-escape */
+      },
+    }
+  )
   .add(
     'with batch actions',
-    () => require('./stories/with-batch-actions').default(props()),
+    () =>
+      require('carbon-components-react/lib/components/DataTable/stories/with-batch-actions').default(
+        props()
+      ),
     {
       info: {
         text: `
@@ -52,7 +61,10 @@ storiesOf(components('DataTable'), module)
   )
   .add(
     'with expansion',
-    () => require('./stories/with-expansion').default(props()),
+    () =>
+      require('carbon-components-react/lib/components/DataTable/stories/with-expansion').default(
+        props()
+      ),
     {
       info: {
         text: `
@@ -68,7 +80,10 @@ storiesOf(components('DataTable'), module)
   )
   .add(
     'with selection',
-    () => require('./stories/with-selection').default(props()),
+    () =>
+      require('carbon-components-react/lib/components/DataTable/stories/with-selection').default(
+        props()
+      ),
     {
       info: {
         text: `
@@ -81,7 +96,10 @@ storiesOf(components('DataTable'), module)
   )
   .add(
     'with sorting',
-    () => require('./stories/with-sorting').default(props()),
+    () =>
+      require('carbon-components-react/lib/components/DataTable/stories/with-sorting').default(
+        props()
+      ),
     {
       info: {
         text: `
@@ -94,7 +112,10 @@ storiesOf(components('DataTable'), module)
   )
   .add(
     'with toolbar',
-    () => require('./stories/with-toolbar').default(props()),
+    () =>
+      require('carbon-components-react/lib/components/DataTable/stories/with-toolbar').default(
+        props()
+      ),
     {
       info: {
         text: `
