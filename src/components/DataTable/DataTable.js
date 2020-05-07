@@ -5,7 +5,6 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
 
 import CarbonDataTable from 'carbon-components-react/lib/components/DataTable';
 
@@ -43,86 +42,30 @@ const DataTable = ({
 
   isSortable,
   isSelectable,
-  missingDataCharacter,
   render,
   rows,
   sortRow,
 
   useZebraStyles,
+  ...other
 }) => (
   <div className={namespace}>
-    {render ? (
-      <CarbonDataTable
-        filterRows={filterRows}
-        headers={headers}
-        isSortable={isSortable}
-        render={render}
-        rows={rows}
-        sortRow={sortRow}
-        useZebraStyles={useZebraStyles}
-      />
-    ) : (
-      <CarbonDataTable
-        headers={headers}
-        rows={rows}
-        filterRows={filterRows}
-        sortRow={sortRow}
-        useZebraStyles={useZebraStyles}
-        render={({
-          rows,
-          headers,
-          getHeaderProps,
-          getRowProps,
-          getSelectionProps,
-          getTableProps,
-        }) => (
-          <TableContainer>
-            <Table {...getTableProps()}>
-              <TableHead>
-                <TableRow>
-                  {isSelectable && <TableSelectAll {...getSelectionProps()} />}
-                  {headers.map(header => (
-                    <TableHeader
-                      {...getHeaderProps({ header, isSortable })}
-                      key={header.key}
-                    >
-                      {header.header}
-                    </TableHeader>
-                  ))}
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {rows.map(row => (
-                  <TableRow
-                    {...getRowProps({ row })}
-                    className={classnames({
-                      [`${namespace}__row--selectable`]: isSelectable,
-                    })}
-                    key={row.id}
-                  >
-                    {isSelectable && (
-                      <TableSelectRow {...getSelectionProps({ row })} />
-                    )}
-                    {row.cells.map(cell => (
-                      <TableCell key={cell.id}>
-                        {cell.value ? cell.value : missingDataCharacter}
-                      </TableCell>
-                    ))}
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
-        )}
-      />
-    )}
+    <CarbonDataTable
+      filterRows={filterRows}
+      headers={headers}
+      isSortable={isSortable}
+      render={render}
+      rows={rows}
+      sortRow={sortRow}
+      useZebraStyles={useZebraStyles}
+      {...other}
+    />
   </div>
 );
 
 DataTable.defaultProps = {
   isSortable: true,
   isSelectable: true,
-  missingDataCharacter: '–',
   render: undefined,
   sortRow: undefined,
   filterRows: undefined,
@@ -178,9 +121,6 @@ DataTable.propTypes = {
 
   /** @type {bool} Defines whether the table is selectable. */
   isSelectable: PropTypes.bool,
-
-  /** @type {string} Defines missing data in a cell replaced with a character. */
-  missingDataCharacter: PropTypes.string,
 
   /** @type {bool} Defines whether the table uses zebra styles. */
   useZebraStyles: PropTypes.bool,
