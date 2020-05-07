@@ -8205,6 +8205,13 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
+git-branch@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/git-branch/-/git-branch-2.0.1.tgz#442724a97574c66ede4290ded75b7430785da08f"
+  integrity sha512-jMCT1kjXvsUdZKQd2p8E1uZhKsIuR1pnHgcDYQpQiXBtzE9cmYGvOcCSGqqi58x0B9CPS0lUSu/yti866est8g==
+  dependencies:
+    findup-sync "^2.0.0"
+
 git-log-parser@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/git-log-parser/-/git-log-parser-1.2.0.tgz#2e6a4c1b13fc00028207ba795a7ac31667b9fd4a"
