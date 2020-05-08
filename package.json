@@ -1,6 +1,6 @@
 {
   "name": "@carbon/ibm-security",
-  "version": "1.22.0",
+  "version": "1.22.1-prerelease.5",
   "description": "Carbon for IBM Security",
   "license": "Apache-2.0",
   "main": "lib/index.js",
@@ -64,8 +64,8 @@
     "numeral": "^2.0.6",
     "prop-types": "^15.7.2",
     "ramda": "^0.26.1",
-    "react-addons-css-transition-group": "^15.6.2",
     "react-is": "^16.13.0",
+    "react-transition-group": "^4.3.0",
     "recompose": "0.30.0",
     "reduced-utils": "0.1.2",
     "throttle-debounce": "^2.0.1"

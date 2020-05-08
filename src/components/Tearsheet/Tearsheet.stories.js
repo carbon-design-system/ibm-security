@@ -51,6 +51,7 @@ const renderMain = () => (
 
     <TextInput
       className={className}
+      id="test-input-id"
       labelText={labelText}
       placeholder={placeholder}
     />
