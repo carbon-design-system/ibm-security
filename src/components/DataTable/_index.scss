@@ -1,7 +1,7 @@
 ////
 /// Data table component.
 /// @group data-table
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import '@carbon/themes/scss/tokens';
@@ -15,11 +15,16 @@
 
 @import '../Checkbox/index';
 @import '../IconButton/index';
+@import '../ScrollGradient/index';
 @import '../Search/index';
 
 @import '../Component/mixins';
 
 @include security--component($name: data-table) {
+  &__table-wrapper {
+    z-index: 0;
+  }
+
   &__overflow-cell .#{$prefix}--overflow-menu {
     z-index: z($layer: overlay);
   }
