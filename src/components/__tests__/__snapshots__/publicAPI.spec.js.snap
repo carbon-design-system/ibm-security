@@ -9573,6 +9573,9 @@ Map {
                   "isRequired": true,
                   "type": "string",
                 },
+                "props": Object {
+                  "type": "func",
+                },
               },
             ],
             "type": "shape",
