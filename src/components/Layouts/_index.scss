@@ -8,11 +8,13 @@
 @import '@carbon/layout/scss/spacing';
 @import '@carbon/themes/scss/theme-maps';
 
+@import '../../globals/namespace/index';
+
 /// Generate a map of spacing tokens from the provided Carbon theme map.
 /// @access private
 /// @param {Map} $theme-map - Map of theme variables.
 /// @returns {Map} - The filtered map of only spacing variables.
-@function get-spacing-tokens-map($theme-map) {
+@function security--get-spacing-tokens-map($theme-map) {
   $-map: ();
 
   @each $token, $value in $theme-map {
@@ -26,64 +28,59 @@
     }
   }
 
+  // Include a zero value:
+  $-map: map-merge(
+    $-map,
+    (
+      'layout-00': 0,
+    )
+  );
+
   @return $-map;
 }
 
 /// Map of spacing tokens.
 /// @type Map<String, Number>
 /// @access private
-$spacing-tokens-map: get-spacing-tokens-map($carbon--theme--g100);
+$security--spacing-tokens-map: security--get-spacing-tokens-map(
+  $carbon--theme--g100
+);
 
-// Generate styles for the debugging message.
-@mixin debug {
+// Generate styles for debugging messages.
+@mixin security--debug {
   @include carbon--type-style($name: caption-01);
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: $spacing-02;
+  padding: $carbon--spacing-02;
   left: 0;
   color: $carbon--black-100;
   background-color: $carbon--magenta-40;
 }
 
-// Generate "top" padding classes and styles for each spacing token.
-@mixin spacing-top {
-  @each $token, $value in $spacing-tokens-map {
-    .spacing--#{$token}--top {
+// Generate spacing classes.
+@mixin security--generate-spacing-classes {
+  @each $token, $value in $security--spacing-tokens-map {
+    .#{$namespace}spacing--#{$token}--top {
       padding-top: $value;
       position: relative;
     }
-  }
-}
 
-// Generate debugging styles for "top" padding classes.
-@mixin debug-spacing-top {
-  @each $token, $value in $spacing-tokens-map {
-    .spacing--#{$token}--top::before {
-      @include debug;
+    .#{$namespace}debug .#{$namespace}spacing--#{$token}--top::before {
+      @include security--debug;
       content: 'spacing--#{$token}--top';
       height: $value;
       top: 0;
     }
-  }
-}
 
-// Generate "bottom" padding classes and styles for each spacing token.
-@mixin spacing-bottom {
-  @each $token, $value in $spacing-tokens-map {
-    .spacing--#{$token}--bottom {
+    .#{$namespace}spacing--#{$token}--bottom {
       padding-bottom: $value;
       position: relative;
     }
-  }
-}
 
-// Generate debugging styles for "bottom" padding classes.
-@mixin debug-spacing-bottom {
-  @each $token, $value in $spacing-tokens-map {
-    .spacing--#{$token}--bottom::after {
-      @include debug;
+    .#{$namespace}debug .#{$namespace}spacing--#{$token}--bottom::after {
+      @include security--debug;
       content: 'spacing--#{$token}--bottom';
       height: $value;
       bottom: 0;
@@ -91,20 +88,12 @@ $spacing-tokens-map: get-spacing-tokens-map($carbon--theme--g100);
   }
 }
 
-.debug {
-  div[class^='bx--col'] {
-    outline: 1px solid $carbon--orange-40;
+@include export-namespace($name: 'debug') {
+  .#{$namespace}debug {
+    div[class^='bx--col'] {
+      outline: 1px solid $carbon--orange-40;
+    }
   }
 
-  @include debug-spacing-top;
-  @include debug-spacing-bottom;
+  @include security--generate-spacing-classes;
 }
-
-@include spacing-top;
-@include spacing-bottom;
-
-// TODO:
-// Need classes for "0" values.
-// Need margin classes.
-// Need classes for horizontal spacing, vertical spacing, all around spacing.
-// Rename spacing classes to delineate padding styles.

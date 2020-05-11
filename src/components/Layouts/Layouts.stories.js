@@ -37,7 +37,7 @@ const showSecondRow = showTabGroup() || showAccordion();
 disableCentered(storiesOf(patterns('Modular Layouts'), module)).add(
   'details page layout',
   () => (
-    <main className={toggleDebugging() && 'debug'}>
+    <main className={toggleDebugging() && 'security--debug'}>
       <h1 className="bx--type-productive-heading-04">productive-heading-04</h1>
       <Grid condensed>
         {showFirstRow && (
@@ -46,7 +46,7 @@ disableCentered(storiesOf(patterns('Modular Layouts'), module)).add(
               <Column md={3} lg={6}>
                 <h2
                   style={{ margin: 0 }}
-                  className="bx--type-productive-heading-01 spacing--layout-01--top spacing--layout-03--bottom"
+                  className="bx--type-productive-heading-01 security--spacing--layout-01--top security--spacing--layout-03--bottom"
                 >
                   productive-heading-01
                 </h2>
@@ -74,7 +74,7 @@ disableCentered(storiesOf(patterns('Modular Layouts'), module)).add(
               <Column md={3} lg={6}>
                 <h2
                   style={{ margin: 0 }}
-                  className="bx--type-productive-heading-01 spacing--layout-01--top spacing--layout-03--bottom"
+                  className="bx--type-productive-heading-01 security--spacing--layout-01--top security--spacing--layout-03--bottom"
                 >
                   productive-heading-01
                 </h2>
@@ -105,7 +105,7 @@ disableCentered(storiesOf(patterns('Modular Layouts'), module)).add(
               <Column md={2} lg={4}>
                 <h2
                   style={{ margin: 0 }}
-                  className="bx--type-productive-heading-01 spacing--layout-02--top spacing--layout-03--bottom"
+                  className="bx--type-productive-heading-01 security--spacing--layout-02--top security--spacing--layout-03--bottom"
                 >
                   productive-heading-01
                 </h2>
@@ -157,7 +157,7 @@ disableCentered(storiesOf(patterns('Modular Layouts'), module)).add(
                 >
                   <Tab href="#" label="Tab label 1">
                     <div
-                      className="spacing--layout-01-top"
+                      className="security--spacing--layout-01-top"
                       style={{
                         height: '100%',
                         width: '100%',
@@ -165,7 +165,7 @@ disableCentered(storiesOf(patterns('Modular Layouts'), module)).add(
                     >
                       <h2
                         style={{ margin: 0 }}
-                        className="bx--type-productive-heading-01 spacing--layout-02--top spacing--layout-03--bottom"
+                        className="bx--type-productive-heading-01 security--spacing--layout-02--top security--spacing--layout-03--bottom"
                       >
                         productive-heading-01
                       </h2>
@@ -174,7 +174,7 @@ disableCentered(storiesOf(patterns('Modular Layouts'), module)).add(
                   </Tab>
                   <Tab href="#" label="Tab label 2">
                     <div
-                      className="spacing--layout-01-top"
+                      className="security--spacing--layout-01-top"
                       style={{
                         height: '100%',
                         width: '100%',
@@ -182,7 +182,7 @@ disableCentered(storiesOf(patterns('Modular Layouts'), module)).add(
                     >
                       <h2
                         style={{ margin: 0 }}
-                        className="bx--type-productive-heading-01 spacing--layout-02--top spacing--layout-03--bottom"
+                        className="bx--type-productive-heading-01 security--spacing--layout-02--top security--spacing--layout-03--bottom"
                       >
                         productive-heading-01
                       </h2>
@@ -191,7 +191,7 @@ disableCentered(storiesOf(patterns('Modular Layouts'), module)).add(
                   </Tab>
                   <Tab href="#" label="Tab label 3">
                     <div
-                      className="spacing--layout-01-top"
+                      className="security--spacing--layout-01-top"
                       style={{
                         height: '100%',
                         width: '100%',
@@ -199,7 +199,7 @@ disableCentered(storiesOf(patterns('Modular Layouts'), module)).add(
                     >
                       <h2
                         style={{ margin: 0 }}
-                        className="bx--type-productive-heading-01 spacing--layout-02--top spacing--layout-03--bottom"
+                        className="bx--type-productive-heading-01 security--spacing--layout-02--top security--spacing--layout-03--bottom"
                       >
                         productive-heading-01
                       </h2>
@@ -213,7 +213,7 @@ disableCentered(storiesOf(patterns('Modular Layouts'), module)).add(
               <Column md={8} lg={4}>
                 <h2
                   style={{ margin: 0 }}
-                  className="bx--type-productive-heading-01 spacing--layout-01--top spacing--layout-03--bottom"
+                  className="bx--type-productive-heading-01 security--spacing--layout-01--top security--spacing--layout-03--bottom"
                 >
                   productive-heading-01
                 </h2>
