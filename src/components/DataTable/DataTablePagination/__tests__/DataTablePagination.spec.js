@@ -11,11 +11,11 @@ import {
   headers,
   isSelectable,
   isSortable,
-  missingDataCharacter,
   page,
   pageSize,
   pageSizes,
   rows,
+  render,
 } from '../../_mocks_';
 
 describe('DataTablePagination', () => {
@@ -29,10 +29,10 @@ describe('DataTablePagination', () => {
         headers={headers}
         isSelectable={isSelectable}
         isSortable={isSortable}
-        missingDataCharacter={missingDataCharacter}
         page={page}
         pageSize={pageSize}
         pageSizes={pageSizes}
+        render={render}
       />
     );
 
