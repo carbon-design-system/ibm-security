@@ -14,7 +14,7 @@ exports[`TagWall Rendering renders 1`] = `
         "isSelected": true,
         "label": "Tag 1",
         "props": Object {
-          "exampleProp": "example-value",
+          "example-attribute": "example-value",
         },
       },
       Object {
@@ -22,7 +22,7 @@ exports[`TagWall Rendering renders 1`] = `
         "isSelected": true,
         "label": "Tag 2",
         "props": Object {
-          "exampleProp": "example-value",
+          "example-attribute": "example-value",
         },
       },
       Object {
@@ -30,7 +30,7 @@ exports[`TagWall Rendering renders 1`] = `
         "isSelected": true,
         "label": "Tag 3",
         "props": Object {
-          "exampleProp": "example-value",
+          "example-attribute": "example-value",
         },
       },
       Object {
@@ -38,7 +38,7 @@ exports[`TagWall Rendering renders 1`] = `
         "isSelected": false,
         "label": "Tag 4",
         "props": Object {
-          "exampleProp": "example-value",
+          "example-attribute": "example-value",
         },
       },
       Object {
@@ -46,7 +46,7 @@ exports[`TagWall Rendering renders 1`] = `
         "isSelected": false,
         "label": "Tag 5",
         "props": Object {
-          "exampleProp": "example-value",
+          "example-attribute": "example-value",
         },
       },
       Object {
@@ -54,7 +54,7 @@ exports[`TagWall Rendering renders 1`] = `
         "isSelected": false,
         "label": "Tag 6",
         "props": Object {
-          "exampleProp": "example-value",
+          "example-attribute": "example-value",
         },
       },
       Object {
@@ -62,7 +62,7 @@ exports[`TagWall Rendering renders 1`] = `
         "isSelected": false,
         "label": "Tag 7",
         "props": Object {
-          "exampleProp": "example-value",
+          "example-attribute": "example-value",
         },
       },
       Object {
@@ -70,7 +70,7 @@ exports[`TagWall Rendering renders 1`] = `
         "isSelected": false,
         "label": "Tag 8",
         "props": Object {
-          "exampleProp": "example-value",
+          "example-attribute": "example-value",
         },
       },
     ]
@@ -90,7 +90,7 @@ exports[`TagWall Rendering renders 1`] = `
       Label
     </h2>
     <InteractiveTag
-      exampleProp="example-value"
+      example-attribute="example-value"
       id="0"
       isSelected={true}
       key="tag__0"
@@ -101,14 +101,14 @@ exports[`TagWall Rendering renders 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
-        exampleProp="example-value"
+        example-attribute="example-value"
         filter={false}
         id="0"
         type="gray"
       >
         <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
-          exampleProp="example-value"
+          example-attribute="example-value"
           id="0"
         >
           <span
@@ -189,7 +189,7 @@ exports[`TagWall Rendering renders 1`] = `
       </Tag>
     </InteractiveTag>
     <InteractiveTag
-      exampleProp="example-value"
+      example-attribute="example-value"
       id="1"
       isSelected={true}
       key="tag__1"
@@ -200,14 +200,14 @@ exports[`TagWall Rendering renders 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
-        exampleProp="example-value"
+        example-attribute="example-value"
         filter={false}
         id="1"
         type="gray"
       >
         <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
-          exampleProp="example-value"
+          example-attribute="example-value"
           id="1"
         >
           <span
@@ -288,7 +288,7 @@ exports[`TagWall Rendering renders 1`] = `
       </Tag>
     </InteractiveTag>
     <InteractiveTag
-      exampleProp="example-value"
+      example-attribute="example-value"
       id="2"
       isSelected={true}
       key="tag__2"
@@ -299,14 +299,14 @@ exports[`TagWall Rendering renders 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
-        exampleProp="example-value"
+        example-attribute="example-value"
         filter={false}
         id="2"
         type="gray"
       >
         <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
-          exampleProp="example-value"
+          example-attribute="example-value"
           id="2"
         >
           <span
@@ -387,7 +387,7 @@ exports[`TagWall Rendering renders 1`] = `
       </Tag>
     </InteractiveTag>
     <InteractiveTag
-      exampleProp="example-value"
+      example-attribute="example-value"
       id="3"
       isSelected={false}
       key="tag__3"
@@ -398,14 +398,14 @@ exports[`TagWall Rendering renders 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
-        exampleProp="example-value"
+        example-attribute="example-value"
         filter={false}
         id="3"
         type="gray"
       >
         <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
-          exampleProp="example-value"
+          example-attribute="example-value"
           id="3"
         >
           <span
@@ -486,7 +486,7 @@ exports[`TagWall Rendering renders 1`] = `
       </Tag>
     </InteractiveTag>
     <InteractiveTag
-      exampleProp="example-value"
+      example-attribute="example-value"
       id="4"
       isSelected={false}
       key="tag__4"
@@ -497,14 +497,14 @@ exports[`TagWall Rendering renders 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
-        exampleProp="example-value"
+        example-attribute="example-value"
         filter={false}
         id="4"
         type="gray"
       >
         <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
-          exampleProp="example-value"
+          example-attribute="example-value"
           id="4"
         >
           <span
@@ -585,7 +585,7 @@ exports[`TagWall Rendering renders 1`] = `
       </Tag>
     </InteractiveTag>
     <InteractiveTag
-      exampleProp="example-value"
+      example-attribute="example-value"
       id="5"
       isSelected={false}
       key="tag__5"
@@ -596,14 +596,14 @@ exports[`TagWall Rendering renders 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
-        exampleProp="example-value"
+        example-attribute="example-value"
         filter={false}
         id="5"
         type="gray"
       >
         <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
-          exampleProp="example-value"
+          example-attribute="example-value"
           id="5"
         >
           <span
@@ -684,7 +684,7 @@ exports[`TagWall Rendering renders 1`] = `
       </Tag>
     </InteractiveTag>
     <InteractiveTag
-      exampleProp="example-value"
+      example-attribute="example-value"
       id="6"
       isSelected={false}
       key="tag__6"
@@ -695,14 +695,14 @@ exports[`TagWall Rendering renders 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
-        exampleProp="example-value"
+        example-attribute="example-value"
         filter={false}
         id="6"
         type="gray"
       >
         <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
-          exampleProp="example-value"
+          example-attribute="example-value"
           id="6"
         >
           <span
@@ -783,7 +783,7 @@ exports[`TagWall Rendering renders 1`] = `
       </Tag>
     </InteractiveTag>
     <InteractiveTag
-      exampleProp="example-value"
+      example-attribute="example-value"
       id="7"
       isSelected={false}
       key="tag__7"
@@ -794,14 +794,14 @@ exports[`TagWall Rendering renders 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
-        exampleProp="example-value"
+        example-attribute="example-value"
         filter={false}
         id="7"
         type="gray"
       >
         <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
-          exampleProp="example-value"
+          example-attribute="example-value"
           id="7"
         >
           <span
@@ -927,7 +927,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
   </h2>
   <span
     class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
-    exampleprop="example-value"
+    example-attribute="example-value"
     id="0"
   >
     <span
@@ -959,7 +959,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
   </span>
   <span
     class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
-    exampleprop="example-value"
+    example-attribute="example-value"
     id="1"
   >
     <span
@@ -991,7 +991,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
   </span>
   <span
     class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
-    exampleprop="example-value"
+    example-attribute="example-value"
     id="2"
   >
     <span
@@ -1023,7 +1023,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
   </span>
   <span
     class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
-    exampleprop="example-value"
+    example-attribute="example-value"
     id="3"
   >
     <span
@@ -1055,7 +1055,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
   </span>
   <span
     class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
-    exampleprop="example-value"
+    example-attribute="example-value"
     id="4"
   >
     <span
@@ -1087,7 +1087,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
   </span>
   <span
     class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
-    exampleprop="example-value"
+    example-attribute="example-value"
     id="5"
   >
     <span
@@ -1119,7 +1119,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
   </span>
   <span
     class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
-    exampleprop="example-value"
+    example-attribute="example-value"
     id="6"
   >
     <span
@@ -1151,7 +1151,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
   </span>
   <span
     class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
-    exampleprop="example-value"
+    example-attribute="example-value"
     id="7"
   >
     <span
@@ -1205,7 +1205,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         "isSelected": true,
         "label": "Tag 1",
         "props": Object {
-          "exampleProp": "example-value",
+          "example-attribute": "example-value",
         },
       },
       Object {
@@ -1213,7 +1213,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         "isSelected": true,
         "label": "Tag 2",
         "props": Object {
-          "exampleProp": "example-value",
+          "example-attribute": "example-value",
         },
       },
       Object {
@@ -1221,7 +1221,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         "isSelected": true,
         "label": "Tag 3",
         "props": Object {
-          "exampleProp": "example-value",
+          "example-attribute": "example-value",
         },
       },
       Object {
@@ -1229,7 +1229,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         "isSelected": false,
         "label": "Tag 4",
         "props": Object {
-          "exampleProp": "example-value",
+          "example-attribute": "example-value",
         },
       },
       Object {
@@ -1237,7 +1237,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         "isSelected": false,
         "label": "Tag 5",
         "props": Object {
-          "exampleProp": "example-value",
+          "example-attribute": "example-value",
         },
       },
       Object {
@@ -1245,7 +1245,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         "isSelected": false,
         "label": "Tag 6",
         "props": Object {
-          "exampleProp": "example-value",
+          "example-attribute": "example-value",
         },
       },
       Object {
@@ -1253,7 +1253,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         "isSelected": false,
         "label": "Tag 7",
         "props": Object {
-          "exampleProp": "example-value",
+          "example-attribute": "example-value",
         },
       },
       Object {
@@ -1261,7 +1261,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         "isSelected": false,
         "label": "Tag 8",
         "props": Object {
-          "exampleProp": "example-value",
+          "example-attribute": "example-value",
         },
       },
     ]
@@ -1281,7 +1281,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
       Label
     </h2>
     <InteractiveTag
-      exampleProp="example-value"
+      example-attribute="example-value"
       id="0"
       isSelected={true}
       key="tag__0"
@@ -1292,14 +1292,14 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--selected"
-        exampleProp="example-value"
+        example-attribute="example-value"
         filter={false}
         id="0"
         type="gray"
       >
         <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--selected"
-          exampleProp="example-value"
+          example-attribute="example-value"
           id="0"
         >
           <span
@@ -1312,7 +1312,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
       </Tag>
     </InteractiveTag>
     <InteractiveTag
-      exampleProp="example-value"
+      example-attribute="example-value"
       id="1"
       isSelected={true}
       key="tag__1"
@@ -1323,14 +1323,14 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--selected"
-        exampleProp="example-value"
+        example-attribute="example-value"
         filter={false}
         id="1"
         type="gray"
       >
         <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--selected"
-          exampleProp="example-value"
+          example-attribute="example-value"
           id="1"
         >
           <span
@@ -1343,7 +1343,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
       </Tag>
     </InteractiveTag>
     <InteractiveTag
-      exampleProp="example-value"
+      example-attribute="example-value"
       id="2"
       isSelected={true}
       key="tag__2"
@@ -1354,14 +1354,14 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--selected"
-        exampleProp="example-value"
+        example-attribute="example-value"
         filter={false}
         id="2"
         type="gray"
       >
         <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--selected"
-          exampleProp="example-value"
+          example-attribute="example-value"
           id="2"
         >
           <span
@@ -1374,7 +1374,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
       </Tag>
     </InteractiveTag>
     <InteractiveTag
-      exampleProp="example-value"
+      example-attribute="example-value"
       id="3"
       isSelected={false}
       key="tag__3"
@@ -1385,14 +1385,14 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default"
-        exampleProp="example-value"
+        example-attribute="example-value"
         filter={false}
         id="3"
         type="gray"
       >
         <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default"
-          exampleProp="example-value"
+          example-attribute="example-value"
           id="3"
         >
           <span
@@ -1405,7 +1405,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
       </Tag>
     </InteractiveTag>
     <InteractiveTag
-      exampleProp="example-value"
+      example-attribute="example-value"
       id="4"
       isSelected={false}
       key="tag__4"
@@ -1416,14 +1416,14 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default"
-        exampleProp="example-value"
+        example-attribute="example-value"
         filter={false}
         id="4"
         type="gray"
       >
         <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default"
-          exampleProp="example-value"
+          example-attribute="example-value"
           id="4"
         >
           <span
@@ -1436,7 +1436,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
       </Tag>
     </InteractiveTag>
     <InteractiveTag
-      exampleProp="example-value"
+      example-attribute="example-value"
       id="5"
       isSelected={false}
       key="tag__5"
@@ -1447,14 +1447,14 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default"
-        exampleProp="example-value"
+        example-attribute="example-value"
         filter={false}
         id="5"
         type="gray"
       >
         <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default"
-          exampleProp="example-value"
+          example-attribute="example-value"
           id="5"
         >
           <span
@@ -1467,7 +1467,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
       </Tag>
     </InteractiveTag>
     <InteractiveTag
-      exampleProp="example-value"
+      example-attribute="example-value"
       id="6"
       isSelected={false}
       key="tag__6"
@@ -1478,14 +1478,14 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default"
-        exampleProp="example-value"
+        example-attribute="example-value"
         filter={false}
         id="6"
         type="gray"
       >
         <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default"
-          exampleProp="example-value"
+          example-attribute="example-value"
           id="6"
         >
           <span
@@ -1498,7 +1498,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
       </Tag>
     </InteractiveTag>
     <InteractiveTag
-      exampleProp="example-value"
+      example-attribute="example-value"
       id="7"
       isSelected={false}
       key="tag__7"
@@ -1509,14 +1509,14 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     >
       <Tag
         className="security--tag--interactive security--tag--interactive--default"
-        exampleProp="example-value"
+        example-attribute="example-value"
         filter={false}
         id="7"
         type="gray"
       >
         <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default"
-          exampleProp="example-value"
+          example-attribute="example-value"
           id="7"
         >
           <span

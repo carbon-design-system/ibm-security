@@ -4,7 +4,7 @@
  */
 
 import classnames from 'classnames';
-import { arrayOf, bool, func, shape, string } from 'prop-types';
+import { arrayOf, bool, func, shape, string, object } from 'prop-types';
 import React from 'react';
 
 import {
@@ -118,7 +118,7 @@ TagWall.propTypes = {
       id: string.isRequired,
       isSelected: bool,
       label: string.isRequired,
-      props: func,
+      props: object,
     })
   ).isRequired,
 
