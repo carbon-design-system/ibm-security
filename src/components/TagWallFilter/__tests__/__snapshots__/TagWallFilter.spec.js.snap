@@ -463,7 +463,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
           >
             <section
               aria-hidden="false"
-              class="security--tearsheet--small security--tearsheet--small__transition--appear"
+              class="security--tearsheet--small"
             >
               <header
                 class="security--tearsheet--small__header"
@@ -698,81 +698,68 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
           component="span"
           timeout={300}
         >
-          <CSSTransitionGroup
+          <TransitionGroup
+            childFactory={[Function]}
             className="security--transition"
             component="span"
-            transitionAppear={true}
-            transitionAppearTimeout={300}
-            transitionEnter={true}
-            transitionEnterTimeout={300}
-            transitionLeave={true}
-            transitionLeaveTimeout={300}
-            transitionName={
-              Object {
-                "appear": "security--tearsheet--small__transition--appear",
-                "appearActive": "security--tearsheet--small__transition--appear--active",
-                "enter": "security--tearsheet--small__transition--enter",
-                "enterActive": "security--tearsheet--small__transition--enter--active",
-                "leave": "security--tearsheet--small__transition--leave",
-                "leaveActive": "security--tearsheet--small__transition--leave--active",
-              }
-            }
           >
-            <TransitionGroup
-              childFactory={[Function]}
+            <span
               className="security--transition"
-              component="span"
-              transitionAppear={true}
-              transitionAppearTimeout={300}
-              transitionEnter={true}
-              transitionEnterTimeout={300}
-              transitionLeave={true}
-              transitionLeaveTimeout={300}
-              transitionName={
-                Object {
-                  "appear": "security--tearsheet--small__transition--appear",
-                  "appearActive": "security--tearsheet--small__transition--appear--active",
-                  "enter": "security--tearsheet--small__transition--enter",
-                  "enterActive": "security--tearsheet--small__transition--enter--active",
-                  "leave": "security--tearsheet--small__transition--leave",
-                  "leaveActive": "security--tearsheet--small__transition--leave--active",
-                }
-              }
             >
-              <span
-                className="security--transition"
+              <CSSTransition
+                classNames={
+                  Object {
+                    "appear": "security--tearsheet--small__transition--appear",
+                    "appearActive": "security--tearsheet--small__transition--appear--active",
+                    "enter": "security--tearsheet--small__transition--enter",
+                    "enterActive": "security--tearsheet--small__transition--enter--active",
+                    "exit": "security--tearsheet--small__transition--leave",
+                    "exitActive": "security--tearsheet--small__transition--leave--active",
+                  }
+                }
+                in={true}
+                key=".$.0"
+                onExited={[Function]}
+                timeout={
+                  Object {
+                    "appear": 300,
+                    "enter": 300,
+                    "exit": 300,
+                  }
+                }
               >
-                <CSSTransitionGroupChild
-                  appear={true}
-                  appearTimeout={300}
+                <Transition
+                  appear={false}
                   enter={true}
-                  enterTimeout={300}
-                  key=".0"
-                  leave={true}
-                  leaveTimeout={300}
-                  name={
+                  exit={true}
+                  in={true}
+                  mountOnEnter={false}
+                  onEnter={[Function]}
+                  onEntered={[Function]}
+                  onEntering={[Function]}
+                  onExit={[Function]}
+                  onExited={[Function]}
+                  onExiting={[Function]}
+                  timeout={
                     Object {
-                      "appear": "security--tearsheet--small__transition--appear",
-                      "appearActive": "security--tearsheet--small__transition--appear--active",
-                      "enter": "security--tearsheet--small__transition--enter",
-                      "enterActive": "security--tearsheet--small__transition--enter--active",
-                      "leave": "security--tearsheet--small__transition--leave",
-                      "leaveActive": "security--tearsheet--small__transition--leave--active",
+                      "appear": 300,
+                      "enter": 300,
+                      "exit": 300,
                     }
                   }
+                  unmountOnExit={false}
                 >
                   <Portal
                     focusTrap={true}
                     hasOverlay={true}
                     initialFocus={null}
-                    key=".0"
                     rootNode={
                       <body
                         class="security--portal__container"
                       >
                         <section
                           aria-hidden="false"
-                          class="security--tearsheet--small security--tearsheet--small__transition--appear"
+                          class="security--tearsheet--small"
                         >
                           <header
                             class="security--tearsheet--small__header"
@@ -1004,7 +991,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                         >
                           <section
                             aria-hidden="false"
-                            class="security--tearsheet--small security--tearsheet--small__transition--appear"
+                            class="security--tearsheet--small"
                           >
                             <header
                               class="security--tearsheet--small__header"
@@ -1879,10 +1866,10 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                       </FocusTrap>
                     </Portal>
                   </Portal>
-                </CSSTransitionGroupChild>
-              </span>
-            </TransitionGroup>
-          </CSSTransitionGroup>
+                </Transition>
+              </CSSTransition>
+            </span>
+          </TransitionGroup>
         </Transition>
       </TearsheetSmall>
     </FilterTagFragmentRender>
@@ -2247,7 +2234,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
             >
               <section
                 aria-hidden="false"
-                class="security--tearsheet--small security--tearsheet--small__transition--appear"
+                class="security--tearsheet--small"
               >
                 <header
                   class="security--tearsheet--small__header"
@@ -2470,7 +2457,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
               />
               <section
                 aria-hidden="false"
-                class="security--tearsheet--small security--tearsheet--small__transition--appear"
+                class="security--tearsheet--small"
               >
                 <header
                   class="security--tearsheet--small__header"
@@ -2705,81 +2692,68 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
             component="span"
             timeout={300}
           >
-            <CSSTransitionGroup
+            <TransitionGroup
+              childFactory={[Function]}
               className="security--transition"
               component="span"
-              transitionAppear={true}
-              transitionAppearTimeout={300}
-              transitionEnter={true}
-              transitionEnterTimeout={300}
-              transitionLeave={true}
-              transitionLeaveTimeout={300}
-              transitionName={
-                Object {
-                  "appear": "security--tearsheet--small__transition--appear",
-                  "appearActive": "security--tearsheet--small__transition--appear--active",
-                  "enter": "security--tearsheet--small__transition--enter",
-                  "enterActive": "security--tearsheet--small__transition--enter--active",
-                  "leave": "security--tearsheet--small__transition--leave",
-                  "leaveActive": "security--tearsheet--small__transition--leave--active",
-                }
-              }
             >
-              <TransitionGroup
-                childFactory={[Function]}
+              <span
                 className="security--transition"
-                component="span"
-                transitionAppear={true}
-                transitionAppearTimeout={300}
-                transitionEnter={true}
-                transitionEnterTimeout={300}
-                transitionLeave={true}
-                transitionLeaveTimeout={300}
-                transitionName={
-                  Object {
-                    "appear": "security--tearsheet--small__transition--appear",
-                    "appearActive": "security--tearsheet--small__transition--appear--active",
-                    "enter": "security--tearsheet--small__transition--enter",
-                    "enterActive": "security--tearsheet--small__transition--enter--active",
-                    "leave": "security--tearsheet--small__transition--leave",
-                    "leaveActive": "security--tearsheet--small__transition--leave--active",
-                  }
-                }
               >
-                <span
-                  className="security--transition"
+                <CSSTransition
+                  classNames={
+                    Object {
+                      "appear": "security--tearsheet--small__transition--appear",
+                      "appearActive": "security--tearsheet--small__transition--appear--active",
+                      "enter": "security--tearsheet--small__transition--enter",
+                      "enterActive": "security--tearsheet--small__transition--enter--active",
+                      "exit": "security--tearsheet--small__transition--leave",
+                      "exitActive": "security--tearsheet--small__transition--leave--active",
+                    }
+                  }
+                  in={true}
+                  key=".$.0"
+                  onExited={[Function]}
+                  timeout={
+                    Object {
+                      "appear": 300,
+                      "enter": 300,
+                      "exit": 300,
+                    }
+                  }
                 >
-                  <CSSTransitionGroupChild
-                    appear={true}
-                    appearTimeout={300}
+                  <Transition
+                    appear={false}
                     enter={true}
-                    enterTimeout={300}
-                    key=".0"
-                    leave={true}
-                    leaveTimeout={300}
-                    name={
+                    exit={true}
+                    in={true}
+                    mountOnEnter={false}
+                    onEnter={[Function]}
+                    onEntered={[Function]}
+                    onEntering={[Function]}
+                    onExit={[Function]}
+                    onExited={[Function]}
+                    onExiting={[Function]}
+                    timeout={
                       Object {
-                        "appear": "security--tearsheet--small__transition--appear",
-                        "appearActive": "security--tearsheet--small__transition--appear--active",
-                        "enter": "security--tearsheet--small__transition--enter",
-                        "enterActive": "security--tearsheet--small__transition--enter--active",
-                        "leave": "security--tearsheet--small__transition--leave",
-                        "leaveActive": "security--tearsheet--small__transition--leave--active",
+                        "appear": 300,
+                        "enter": 300,
+                        "exit": 300,
                       }
                     }
+                    unmountOnExit={false}
                   >
                     <Portal
                       focusTrap={true}
                       hasOverlay={true}
                       initialFocus={null}
-                      key=".0"
                       rootNode={
                         <body
                           class=""
                         >
                           <section
                             aria-hidden="false"
-                            class="security--tearsheet--small security--tearsheet--small__transition--appear"
+                            class="security--tearsheet--small"
                           >
                             <header
                               class="security--tearsheet--small__header"
@@ -3002,7 +2976,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                           />
                           <section
                             aria-hidden="false"
-                            class="security--tearsheet--small security--tearsheet--small__transition--appear"
+                            class="security--tearsheet--small"
                           >
                             <header
                               class="security--tearsheet--small__header"
@@ -3234,7 +3208,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                           >
                             <section
                               aria-hidden="false"
-                              class="security--tearsheet--small security--tearsheet--small__transition--appear"
+                              class="security--tearsheet--small"
                             >
                               <header
                                 class="security--tearsheet--small__header"
@@ -3457,7 +3431,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                             />
                             <section
                               aria-hidden="false"
-                              class="security--tearsheet--small security--tearsheet--small__transition--appear"
+                              class="security--tearsheet--small"
                             >
                               <header
                                 class="security--tearsheet--small__header"
@@ -4332,10 +4306,10 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                         </FocusTrap>
                       </Portal>
                     </Portal>
-                  </CSSTransitionGroupChild>
-                </span>
-              </TransitionGroup>
-            </CSSTransitionGroup>
+                  </Transition>
+                </CSSTransition>
+              </span>
+            </TransitionGroup>
           </Transition>
         </TearsheetSmall>
       </FilterTagFragmentRender>
