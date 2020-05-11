@@ -63,6 +63,7 @@ const TagWall = ({
 
         return (
           <InteractiveTag
+            id={item.id}
             key={key}
             isSelected={item.isSelected}
             onRemove={event => {
@@ -73,6 +74,7 @@ const TagWall = ({
             removable={!disable}
             removeBtnLabel={TAG_WALL_REMOVE_BUTTON}
             type="gray"
+            {...item.props}
           >
             <span
               className={`${carbonPrefix}text-truncate--end`}
@@ -116,6 +118,7 @@ TagWall.propTypes = {
       id: string.isRequired,
       isSelected: bool,
       label: string.isRequired,
+      props: func,
     })
   ).isRequired,
 

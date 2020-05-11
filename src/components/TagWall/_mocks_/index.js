@@ -8,6 +8,9 @@ export default {
     id: `${id}`,
     label: `${value} ${id + 1}`,
     isSelected: id < 3,
+    props: {
+      exampleProp: 'example-value',
+    },
   })),
   label: 'Label',
   addLabel: 'Add',
