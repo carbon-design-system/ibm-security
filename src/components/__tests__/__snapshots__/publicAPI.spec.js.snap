@@ -9574,7 +9574,7 @@ Map {
                   "type": "string",
                 },
                 "props": Object {
-                  "type": "func",
+                  "type": "object",
                 },
               },
             ],
