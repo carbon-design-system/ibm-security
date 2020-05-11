@@ -30,7 +30,7 @@ const props = () => ({
 storiesOf(patterns('ComboButton'), module).add(
   'default',
   () => (
-    <div style={{ width: 300 }}>
+    <div style={{ width: 300, margin: '30rem 0' }}>
       <ComboButton {...props()}>
         <ComboButtonItem href="#" renderIcon={ArrowRight20}>
           Item 1 (becomes primary button and text will be truncated)

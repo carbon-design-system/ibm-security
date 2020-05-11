@@ -28,12 +28,10 @@ const ComboButton = ({ children, className, direction }) => {
   const wrapper = useRef(null);
 
   const getMenuOffset = () => {
-    const { top } = wrapper.current.getBoundingClientRect();
     const isTop = direction === TooltipDirection.TOP;
-    return {
-      top: isTop ? top : top * -1,
-      left: 'auto',
-    };
+    const rect = wrapper.current.getBoundingClientRect();
+    const top = rect.top + window.pageYOffset;
+    return { top: isTop ? top : top * -1, left: 'auto' };
   };
 
   const childrenArray = React.Children.toArray(children).filter(Boolean);
