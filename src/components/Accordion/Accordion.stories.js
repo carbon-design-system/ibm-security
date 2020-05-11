@@ -77,6 +77,7 @@ storiesOf(components('Accordion'), module)
     ),
     info(description, {
       story,
+      library: 'react',
       id: 'default',
     })
   )
@@ -93,6 +94,7 @@ storiesOf(components('Accordion'), module)
     ),
     info(description, {
       story,
+      library: 'react',
       id: 'skeleton',
     })
   );
