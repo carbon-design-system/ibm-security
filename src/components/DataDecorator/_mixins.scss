@@ -47,8 +47,11 @@
   padding: unset;
   border: unset;
   vertical-align: middle;
+  color: $text-02;
 
-  &--interactive {
+  &#{$root}--interactive {
+    color: $hover-primary-text;
+
     &:hover {
       cursor: pointer;
       background-color: $active-ui;
@@ -69,10 +72,6 @@
         text-decoration: underline;
       }
     }
-  }
-
-  #{$root}__value {
-    color: $text-02;
   }
 
   &--active,
@@ -166,13 +165,11 @@
   }
 
   &__type {
-    color: $text-02;
     border-right: 1px solid $ui-01;
     white-space: nowrap;
   }
 
   &__value {
-    color: $hover-primary-text;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
