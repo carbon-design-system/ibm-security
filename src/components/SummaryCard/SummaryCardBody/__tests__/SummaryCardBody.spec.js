@@ -10,7 +10,9 @@ import { SummaryCardBody } from '../../../..';
 
 describe('SummaryCardBody', () => {
   test('should accept a custom class name', () => {
-    const { container } = render(<SummaryCardBody className="custom-class" />);
+    const { container } = render(
+      <SummaryCardBody className="custom-class">test content</SummaryCardBody>
+    );
     expect(container.firstElementChild).toHaveClass('custom-class');
   });
 
@@ -22,7 +24,9 @@ describe('SummaryCardBody', () => {
   });
 
   test('should pass through extra props via spread attribute', () => {
-    const { queryByTestId } = render(<SummaryCardBody data-testid="test-id" />);
+    const { queryByTestId } = render(
+      <SummaryCardBody data-testid="test-id">test content</SummaryCardBody>
+    );
     expect(queryByTestId('test-id')).toBeVisible();
   });
 });

@@ -16,7 +16,7 @@ import { getComponentNamespace } from '../../globals/namespace';
 
 export const navNamespace = getComponentNamespace('nav');
 
-const { forEach, map } = Children;
+const NavListName = <NavList />.type.name;
 
 /**
  * Navigation class.
@@ -114,8 +114,8 @@ export default class Nav extends Component {
    * @param {number} id The index of the list.
    */
   handleListClick(id) {
-    forEach(this.props.children, ({ props, type }, index) => {
-      if (type === NavList) {
+    Children.forEach(this.props.children, ({ props, type }, index) => {
+      if (type.name === NavListName) {
         const childId = `${navNamespace}__list--${index}`;
 
         if (childId !== id && !props.isExpandedOnPageload) {
@@ -146,8 +146,8 @@ export default class Nav extends Component {
         {heading && <h1 className={`${navNamespace}__heading`}>{heading}</h1>}
 
         <ul className={`${navNamespace}__wrapper`} role="menubar">
-          {map(children, (child, index) =>
-            child.type === NavList
+          {Children.map(children, (child, index) =>
+            child.type.name === NavListName
               ? this.buildNewListChild(child, index)
               : this.buildNewItemChild(child, index)
           )}
