@@ -4584,7 +4584,7 @@ Map {
     "defaultProps": Object {
       "active": true,
       "children": null,
-      "className": "",
+      "className": null,
       "small": false,
       "withOverlay": true,
     },
