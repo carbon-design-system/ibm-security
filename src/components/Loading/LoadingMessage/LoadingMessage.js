@@ -1,12 +1,20 @@
 /**
- * @file LoadingMessage.
- * @copyright IBM Security 2019
+ * @file Loading message.
+ * @copyright IBM Security 2019 - 2020
  */
 
-import PropTypes from 'prop-types';
-import React from 'react';
 import classnames from 'classnames';
-import Loading from '../';
+import { bool, node, string } from 'prop-types';
+import React from 'react';
+
+import Loading from '..';
+
+import {
+  carbonPrefix,
+  getComponentNamespace,
+} from '../../../globals/namespace';
+
+const overlayNamespace = `${carbonPrefix}loading-overlay`;
 
 const LoadingMessage = ({
   active,
@@ -15,51 +23,41 @@ const LoadingMessage = ({
   small,
   withOverlay,
   ...other
-}) => {
-  const loading = (
+}) => (
+  <div
+    className={classnames(getComponentNamespace('loading-message'), className, {
+      [overlayNamespace]: withOverlay,
+      [`${overlayNamespace}--stop`]: withOverlay && !active,
+    })}
+  >
     <Loading active={active} small={small} withOverlay={false} {...other} />
-  );
+    {children}
+  </div>
+);
 
-  const overlayClasses = classnames('bx--loading-overlay', className, {
-    'bx--loading-overlay--stop': !active,
-  });
-
-  return withOverlay ? (
-    <div className={overlayClasses}>
-      {loading}
-      {children}
-    </div>
-  ) : (
-    loading
-  );
-};
-
-const propTypes = {
-  /** @type {bool} Active loading icon. */
-  active: PropTypes.bool,
-
-  /** @type {string} A class. */
-  className: PropTypes.string,
-
-  /** @type {bool} Overlay all other elements. */
-  withOverlay: PropTypes.bool,
-
-  /** @type {bool} Small loading view. */
-  small: PropTypes.bool,
-
-  /** @type {ReactNode|Object<ReactNode>} Children. */
-  children: PropTypes.node,
-};
-
-const defaultProps = {
+LoadingMessage.defaultProps = {
+  children: null,
   active: true,
-  className: '',
   withOverlay: true,
   small: false,
-  children: null,
+  className: null,
 };
 
-LoadingMessage.defaultProps = defaultProps;
-LoadingMessage.propTypes = propTypes;
+LoadingMessage.propTypes = {
+  /** Provide the contents of the `LoadingMessage` */
+  children: node,
+
+  /** Specify whether the `Loading` is active */
+  active: bool,
+
+  /** Specify whether to use an overlay */
+  withOverlay: bool,
+
+  /** Specify whether to use the small variation  */
+  small: bool,
+
+  /** Provide an optional class to be applied to the containing node */
+  className: string,
+};
 
 export default LoadingMessage;
