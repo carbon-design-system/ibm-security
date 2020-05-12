@@ -9,7 +9,7 @@ const namespace = getComponentNamespace('decorator');
 
 const unknown = `M2,8a6,6 0 1,0 12,0a6,6 0 1,0 -12,0`;
 
-const critical = `M12 0v12H0z`;
+const critical = `M14 2v12H2z`;
 
 const high = `M 8.00,3.00
            C 8.00,3.00 14.00,12.00 14.00,12.00
