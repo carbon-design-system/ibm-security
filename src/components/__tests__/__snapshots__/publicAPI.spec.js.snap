@@ -8109,12 +8109,13 @@ Map {
   },
   "StackedNotification" => Object {
     "defaultProps": Object {
-      "caption": "",
-      "children": "",
-      "className": "",
+      "caption": "provide a caption",
+      "children": undefined,
+      "className": null,
       "hideCloseButton": false,
       "onCloseButtonClick": [Function],
       "role": "alert",
+      "statusIconDescription": "provide a description for the status icon",
     },
     "propTypes": Object {
       "caption": Object {
@@ -8137,6 +8138,9 @@ Map {
         "type": "func",
       },
       "role": Object {
+        "type": "string",
+      },
+      "statusIconDescription": Object {
         "type": "string",
       },
       "subtitle": Object {
@@ -8531,8 +8535,10 @@ Map {
       "children": null,
       "className": null,
       "closeButtonIconDescription": "close",
+      "disabled": false,
       "expandedContent": undefined,
       "hasIconOnly": false,
+      "loading": false,
       "onClick": [Function],
     },
     "propTypes": Object {
@@ -8543,10 +8549,16 @@ Map {
         "type": "string",
       },
       "closeButtonIconDescription": [Function],
+      "disabled": Object {
+        "type": "bool",
+      },
       "expandedContent": Object {
         "type": "node",
       },
       "hasIconOnly": Object {
+        "type": "bool",
+      },
+      "loading": Object {
         "type": "bool",
       },
       "onClick": Object {
