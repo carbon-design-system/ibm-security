@@ -7,7 +7,7 @@ import { getComponentNamespace } from '../../../globals/namespace';
 
 const namespace = getComponentNamespace('decorator');
 
-const unknown = `M2,8a6,6 0 1,0 12,0a6,6 0 1,0 -12,0`;
+const unknown = `M8 3.5c2.5 0 4.5 2 4.5 4.5s-2 4.5-4.5 4.5-4.5-2-4.5-4.5 2-4.5 4.5-4.5M8 2C4.7 2 2 4.7 2 8s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6z`;
 
 const critical = `M14 2v12H2z`;
 
