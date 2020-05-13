@@ -48,8 +48,9 @@
   border: unset;
   vertical-align: middle;
   color: $text-02;
+  text-decoration: none;
 
-  &#{$root}--interactive:not(&--active) {
+  #{$root}--interactive:not(&--active) {
     #{$root}__type {
       color: $text-02;
     }
