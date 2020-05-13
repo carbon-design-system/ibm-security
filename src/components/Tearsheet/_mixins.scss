@@ -1,7 +1,7 @@
 ////
 /// Tearsheet mixins.
 /// @group tearsheet
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import '@carbon/layout/scss/spacing';
@@ -156,7 +156,6 @@ $tearsheet__sizing__dimensions: $carbon--layout-04;
   &__main {
     position: relative;
     display: flex;
-    width: 66%;
     padding-top: $tearsheet__spacing__padding;
     flex: 1;
     flex-direction: column;
