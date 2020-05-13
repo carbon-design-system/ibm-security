@@ -27,7 +27,7 @@ const overflowStory = props => (
     headers={headers}
     {...props}
     render={({ rows, headers, getHeaderProps, getRowProps, getTableProps }) => (
-      <TableContainer>
+      <TableContainer title="DataTable" description="With overflow menu">
         <Table {...getTableProps()}>
           <TableHead>
             <TableRow>
