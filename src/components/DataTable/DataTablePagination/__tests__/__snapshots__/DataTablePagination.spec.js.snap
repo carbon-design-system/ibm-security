@@ -5,6 +5,7 @@ exports[`DataTablePagination Rendering renders correctly 1`] = `
   className="security--data-table-pagination"
 >
   <DataTable
+    filterRows={[Function]}
     headers={
       Array [
         Object {
@@ -35,6 +36,7 @@ exports[`DataTablePagination Rendering renders correctly 1`] = `
     }
     isSelectable={false}
     isSortable={false}
+    locale="en"
     render={[Function]}
     rows={
       Array [
@@ -80,7 +82,8 @@ exports[`DataTablePagination Rendering renders correctly 1`] = `
         },
       ]
     }
-    useZebraStyles={false}
+    sortRow={[Function]}
+    translateWithId={[Function]}
   />
   <Pagination
     backwardText="Backward"
