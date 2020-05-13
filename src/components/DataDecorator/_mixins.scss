@@ -49,9 +49,21 @@
   vertical-align: middle;
   color: $text-02;
 
-  &#{$root}--interactive {
-    color: $hover-primary-text;
+  &#{$root}--interactive:not(&--active) {
+    #{$root}__type {
+      color: $text-02;
+    }
 
+    #{$root}__value {
+      color: $hover-primary-text;
+    }
+
+    &:visited #{$root}__value {
+      color: $visited-link;
+    }
+  }
+
+  &#{$root}--interactive {
     &:hover {
       cursor: pointer;
       background-color: $active-ui;
@@ -74,25 +86,18 @@
     }
   }
 
-  &--active,
-  &--active:hover,
-  &:focus:active {
+  &#{$root}--active,
+  &#{$root}--active:hover,
+  &#{$root}:focus:active {
     background-color: $ui-05;
-    color: $inverse-link;
+    color: $active-ui;
 
-    > #{$root} {
-      &__type,
-      &__value {
-        color: $active-ui;
-      }
-
-      &__type {
-        border-right: 1px solid $ui-04;
-      }
+    &__type {
+      border-right: 1px solid $ui-04;
     }
   }
 
-  &--active:focus {
+  &#{$root}--active:focus {
     @include focus-outline('outline');
     outline-color: $inverse-focus-ui;
   }
@@ -108,7 +113,7 @@
     transition-timing-function: $timing-function;
   }
 
-  &--inline {
+  &#{$root}--inline {
     /// Inline height.
     /// @type Length
     $data-decorator--inline__sizing__height: carbon--mini-units(
@@ -132,22 +137,16 @@
     }
   }
 
-  &--unknown {
-    #{$root}__icon {
-      fill: $icon-02;
-    }
+  &--unknown #{$root}__icon {
+    fill: $icon-02;
   }
 
-  &--low {
-    #{$root}__icon {
-      fill: $support-03;
-    }
+  &--low #{$root}__icon {
+    fill: $support-03;
   }
 
-  &--medium {
-    #{$root}__icon {
-      fill: $carbon--orange-40;
-    }
+  &--medium #{$root}__icon {
+    fill: $carbon--orange-40;
   }
 
   &--high,
@@ -175,9 +174,5 @@
     overflow: hidden;
     display: inline;
     line-height: 1.625rem;
-
-    &:visited {
-      color: $visited-link;
-    }
   }
 }
