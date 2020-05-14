@@ -1,15 +1,15 @@
 /**
  * @file Loading stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
-import React from 'react';
+import { boolean, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
-import { boolean } from '@storybook/addon-knobs';
 
-import { components } from '../../../.storybook';
+import React from 'react';
 
-import { Loading, LoadingMessage } from '../../';
+import { components, info } from '../../../.storybook';
+import { Loading, LoadingMessage } from '../..';
 
 const props = () => ({
   active: boolean('Active (active)', true),
@@ -20,31 +20,19 @@ const props = () => ({
 storiesOf(components('Loading'), module)
   .add(
     'Default',
-    () => {
-      return <Loading {...props()} className="some-class" />;
-    },
-    {
-      info: {
-        text: `
-            Loading spinners are used when retrieving data or performing slow computations,
-            and help to notify users that loading is underway. The 'active' property is true by default;
-            set to false to end the animation.
-          `,
-      },
-    }
+    () => <Loading {...props()} />,
+    info(
+      "Loading spinners are used when retrieving data or performing slow computations, and help to notify users that loading is underway. The 'active' property is true by default; set to false to end the animation."
+    )
   )
   .add(
-    'with message',
+    'Message',
     () => (
-      <LoadingMessage {...props}>
-        <div>Loading message</div>
+      <LoadingMessage {...props()}>
+        {text('Children (children)', 'Loading message')}
       </LoadingMessage>
     ),
-    {
-      info: {
-        text: `
-            The \`LoadingMessage\` component is like the \`Loading\`, but it accepts a child node with a message to display in the loading overlay.
-          `,
-      },
-    }
+    info(
+      'The `LoadingMessage` component is like the `Loading` component, but it accepts a child node with a message to display within the loading overlay.'
+    )
   );

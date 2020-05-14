@@ -151,7 +151,8 @@
     }
   }
 
-  &--high {
+  &--high,
+  &--critical {
     #{$root}__icon {
       fill: $support-01;
     }
