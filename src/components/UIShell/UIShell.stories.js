@@ -38,6 +38,7 @@ disableCentered(
       ),
       info(description, {
         story,
+        library: 'react',
         id: 'header-base',
       })
     )
@@ -92,6 +93,7 @@ disableCentered(
       ),
       info(description, {
         story,
+        library: 'react',
         id: 'header-base-w-navigation',
       })
     )

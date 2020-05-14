@@ -80,6 +80,7 @@ export FilterPanel, {
   FilterPanelAccordion,
   FilterPanelAccordionItem,
   FilterPanelCheckbox,
+  FilterPanelCheckboxWithOverflowMenu,
   FilterPanelGroup,
   FilterPanelLabel,
   FilterPanelSearch,
