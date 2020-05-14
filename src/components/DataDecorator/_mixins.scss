@@ -92,10 +92,10 @@
   &#{$root}:focus:active {
     background-color: $ui-05;
     color: $active-ui;
+  }
 
-    &__type {
-      border-right: 1px solid $ui-04;
-    }
+  &:#{$root}--active__type {
+    border-right: 1px solid $ui-04;
   }
 
   &#{$root}--active:focus {
