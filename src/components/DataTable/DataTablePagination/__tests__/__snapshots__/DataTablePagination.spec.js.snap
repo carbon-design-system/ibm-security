@@ -5,6 +5,7 @@ exports[`DataTablePagination Rendering renders correctly 1`] = `
   className="security--data-table-pagination"
 >
   <DataTable
+    filterRows={[Function]}
     headers={
       Array [
         Object {
@@ -35,7 +36,8 @@ exports[`DataTablePagination Rendering renders correctly 1`] = `
     }
     isSelectable={false}
     isSortable={false}
-    missingDataCharacter="–"
+    locale="en"
+    render={[Function]}
     rows={
       Array [
         Object {
@@ -80,7 +82,8 @@ exports[`DataTablePagination Rendering renders correctly 1`] = `
         },
       ]
     }
-    useZebraStyles={false}
+    sortRow={[Function]}
+    translateWithId={[Function]}
   />
   <Pagination
     backwardText="Backward"
@@ -138,6 +141,22 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
           >
             <thead>
               <tr>
+                <th
+                  class="bx--table-column-checkbox"
+                  scope="col"
+                >
+                  <input
+                    class="bx--checkbox"
+                    id="data-table-1__select-all"
+                    name="select-all"
+                    type="checkbox"
+                  />
+                  <label
+                    aria-label="Select all rows"
+                    class="bx--checkbox-label"
+                    for="data-table-1__select-all"
+                  />
+                </th>
                 <th
                   scope="col"
                 >
@@ -198,6 +217,21 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
               aria-live="polite"
             >
               <tr>
+                <td
+                  class="bx--table-column-checkbox"
+                >
+                  <input
+                    class="bx--checkbox"
+                    id="data-table-1__select-row-7c34f4507156b35"
+                    name="select-row-7c34f4507156b35"
+                    type="checkbox"
+                  />
+                  <label
+                    aria-label="Select row"
+                    class="bx--checkbox-label"
+                    for="data-table-1__select-row-7c34f4507156b35"
+                  />
+                </td>
                 <td>
                   11/28/2018
                 </td>
@@ -218,6 +252,21 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
                 </td>
               </tr>
               <tr>
+                <td
+                  class="bx--table-column-checkbox"
+                >
+                  <input
+                    class="bx--checkbox"
+                    id="data-table-1__select-row-38347816a51b0c5a8"
+                    name="select-row-38347816a51b0c5a8"
+                    type="checkbox"
+                  />
+                  <label
+                    aria-label="Select row"
+                    class="bx--checkbox-label"
+                    for="data-table-1__select-row-38347816a51b0c5a8"
+                  />
+                </td>
                 <td>
                   06/28/2017
                 </td>
@@ -238,6 +287,21 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
                 </td>
               </tr>
               <tr>
+                <td
+                  class="bx--table-column-checkbox"
+                >
+                  <input
+                    class="bx--checkbox"
+                    id="data-table-1__select-row-1d6116a2d1d03b4"
+                    name="select-row-1d6116a2d1d03b4"
+                    type="checkbox"
+                  />
+                  <label
+                    aria-label="Select row"
+                    class="bx--checkbox-label"
+                    for="data-table-1__select-row-1d6116a2d1d03b4"
+                  />
+                </td>
                 <td>
                   05/30/2018
                 </td>
@@ -258,6 +322,21 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
                 </td>
               </tr>
               <tr>
+                <td
+                  class="bx--table-column-checkbox"
+                >
+                  <input
+                    class="bx--checkbox"
+                    id="data-table-1__select-row-c52b0419981221765"
+                    name="select-row-c52b0419981221765"
+                    type="checkbox"
+                  />
+                  <label
+                    aria-label="Select row"
+                    class="bx--checkbox-label"
+                    for="data-table-1__select-row-c52b0419981221765"
+                  />
+                </td>
                 <td>
                   12/12/2018
                 </td>
@@ -278,6 +357,21 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
                 </td>
               </tr>
               <tr>
+                <td
+                  class="bx--table-column-checkbox"
+                >
+                  <input
+                    class="bx--checkbox"
+                    id="data-table-1__select-row-697626e6f703131d"
+                    name="select-row-697626e6f703131d"
+                    type="checkbox"
+                  />
+                  <label
+                    aria-label="Select row"
+                    class="bx--checkbox-label"
+                    for="data-table-1__select-row-697626e6f703131d"
+                  />
+                </td>
                 <td>
                   11/11/2018
                 </td>

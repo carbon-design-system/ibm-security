@@ -19,7 +19,7 @@ import {
   TableRow,
 } from '../../..';
 
-import { headers, missingDataCharacter, rows } from '../_mocks_';
+import { headers, rows } from '../_mocks_';
 
 const overflowStory = props => (
   <DataTable
@@ -27,7 +27,7 @@ const overflowStory = props => (
     headers={headers}
     {...props}
     render={({ rows, headers, getHeaderProps, getRowProps, getTableProps }) => (
-      <TableContainer>
+      <TableContainer title="DataTable" description="With overflow menu">
         <Table {...getTableProps()}>
           <TableHead>
             <TableRow>
@@ -43,7 +43,7 @@ const overflowStory = props => (
               <TableRow {...getRowProps({ row })} key={row.id}>
                 {row.cells.map(cell => (
                   <TableCell key={cell.id}>
-                    {cell.value ? cell.value : missingDataCharacter}
+                    {cell.value ? cell.value : '–'}
                   </TableCell>
                 ))}
 

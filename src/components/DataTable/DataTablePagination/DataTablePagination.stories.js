@@ -33,7 +33,6 @@ import {
   headers,
   isSelectable,
   isSortable,
-  missingDataCharacter,
   rows,
   pageSizes,
   pageSize,
@@ -91,7 +90,7 @@ const render = ({
             <TableSelectRow {...getSelectionProps({ row })} />
             {row.cells.map(cell => (
               <TableCell key={cell.id}>
-                {cell.value ? cell.value : missingDataCharacter}
+                {cell.value ? cell.value : '-'}
               </TableCell>
             ))}
           </TableRow>
@@ -107,7 +106,6 @@ const dataTableProps = {
   headers,
   isSelectable,
   isSortable,
-  missingDataCharacter,
   rows,
 };
 
@@ -120,17 +118,6 @@ const dataTablePaginationProps = {
 };
 
 storiesOf(components('DataTablePagination'), module)
-  .add('pagination data table', () => {
-    DataTablePagination.__docgenInfo = {
-      ...DataTablePagination.__docgenInfo,
-      props: {
-        ...DataTablePagination.__docgenInfo.props,
-        ...DataTable.__docgenInfo.props,
-      },
-    };
-
-    return <DataTablePagination {...dataTablePaginationProps} />;
-  })
   .add(`pagination data table with backend data`, () => {
     function sliceRows({ page, pageSize }) {
       const start = pageSize * (page - 1);
@@ -158,6 +145,7 @@ storiesOf(components('DataTablePagination'), module)
             rows={resultSet}
             useBackendPagination
             onChange={this.fetchPage}
+            render={render}
           />
         );
       }

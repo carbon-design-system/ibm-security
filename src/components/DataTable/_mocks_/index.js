@@ -46,7 +46,6 @@ const headers = [
 
 const isSelectable = false;
 const isSortable = false;
-const missingDataCharacter = '–';
 
 const rows = [
   {
@@ -178,7 +177,7 @@ const render = ({
             <TableSelectRow {...getSelectionProps({ row })} />
             {row.cells.map(cell => (
               <TableCell key={cell.id}>
-                {cell.value ? cell.value : missingDataCharacter}
+                {cell.value ? cell.value : '–'}
               </TableCell>
             ))}
           </TableRow>
@@ -192,7 +191,6 @@ export {
   headers,
   isSelectable,
   isSortable,
-  missingDataCharacter,
   page,
   pageSize,
   pageSizes,
