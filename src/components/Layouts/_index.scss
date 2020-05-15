@@ -59,37 +59,46 @@ $security--spacing-tokens-map: security--get-spacing-tokens-map(
   background-color: $carbon--magenta-40;
 }
 
-// Generate spacing classes.
+// Generate vertical spacing classes.
 @mixin security--generate-spacing-classes {
   @each $token, $value in $security--spacing-tokens-map {
-    .#{$namespace}spacing--#{$token}--top {
+    .#{$namespace}padding-top--#{$token} {
       padding-top: $value;
       position: relative;
     }
 
-    .#{$namespace}debug .#{$namespace}spacing--#{$token}--top::before {
+    .#{$namespace}debug--padding .#{$namespace}padding-top--#{$token}::before {
       @include security--debug;
-      content: 'spacing--#{$token}--top';
+      content: '#{$namespace}padding-top--#{$token}';
       height: $value;
       top: 0;
     }
 
-    .#{$namespace}spacing--#{$token}--bottom {
+    .#{$namespace}padding-bottom--#{$token} {
       padding-bottom: $value;
       position: relative;
     }
 
-    .#{$namespace}debug .#{$namespace}spacing--#{$token}--bottom::after {
+    .#{$namespace}debug--padding
+      .#{$namespace}padding-bottom--#{$token}::after {
       @include security--debug;
-      content: 'spacing--#{$token}--bottom';
+      content: '#{$namespace}padding-bottom--#{$token}';
       height: $value;
       bottom: 0;
+    }
+
+    .#{$namespace}margin-top--#{$token} {
+      margin-top: $value;
+    }
+
+    .#{$namespace}margin-bottom--#{$token} {
+      margin-bottom: $value;
     }
   }
 }
 
 @include export-namespace($name: 'debug') {
-  .#{$namespace}debug {
+  .#{$namespace}debug--padding {
     div[class^='bx--col'] {
       outline: 1px solid $carbon--orange-40;
     }

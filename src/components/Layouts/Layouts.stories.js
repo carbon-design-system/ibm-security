@@ -1,5 +1,5 @@
 /**
- * @file Modular layout stories.
+ * @file Layout stories.
  * @copyright IBM Security 2020
  */
 
@@ -24,7 +24,7 @@ import {
 
 import { disableCentered, patterns } from '../../../.storybook';
 
-const toggleDebugging = () => boolean('Toggle debugging 🕵️‍♀️', false);
+const toggleDebugging = () => boolean('Toggle PADDING debugging 🕵️‍♀️', false);
 
 const showAccordion = () => boolean('Show accordion', true);
 const showButtonGroup = () => boolean('Show button group', true);
@@ -34,20 +34,17 @@ const showTabGroup = () => boolean('Show tab group', true);
 const showFirstRow = showCardGroup() || showButtonGroup();
 const showSecondRow = showTabGroup() || showAccordion();
 
-disableCentered(storiesOf(patterns('Modular Layouts'), module)).add(
+disableCentered(storiesOf(patterns('Layouts'), module)).add(
   'details page layout',
   () => (
-    <main className={toggleDebugging() && 'security--debug'}>
+    <main className={toggleDebugging() && 'security--debug--padding'}>
       <h1 className="bx--type-productive-heading-04">productive-heading-04</h1>
       <Grid condensed>
         {showFirstRow && (
           <Row>
             {showCardGroup() && (
               <Column md={3} lg={6}>
-                <h2
-                  style={{ margin: 0 }}
-                  className="bx--type-productive-heading-01 security--spacing--layout-01--top security--spacing--layout-03--bottom"
-                >
+                <h2 className="bx--type-productive-heading-01 security--padding-top--layout-01 security--padding-bottom--layout-03 security--margin-top--layout-00 security--margin-bottom--layout-00">
                   productive-heading-01
                 </h2>
                 <TypeLayout>
@@ -72,10 +69,7 @@ disableCentered(storiesOf(patterns('Modular Layouts'), module)).add(
             )}
             {showCardGroup() && (
               <Column md={3} lg={6}>
-                <h2
-                  style={{ margin: 0 }}
-                  className="bx--type-productive-heading-01 security--spacing--layout-01--top security--spacing--layout-03--bottom"
-                >
+                <h2 className="bx--type-productive-heading-01 security--padding-top--layout-01 security--padding-bottom--layout-03 security--margin-top--layout-00 security--margin-bottom--layout-00">
                   productive-heading-01
                 </h2>
                 <TypeLayout>
@@ -93,8 +87,7 @@ disableCentered(storiesOf(patterns('Modular Layouts'), module)).add(
                     <TypeLayoutRow>
                       <TypeLayoutCell>Label</TypeLayoutCell>
                       <TypeLayoutCell>
-                        {' '}
-                        Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet
                       </TypeLayoutCell>
                     </TypeLayoutRow>
                   </TypeLayoutBody>
@@ -103,10 +96,7 @@ disableCentered(storiesOf(patterns('Modular Layouts'), module)).add(
             )}
             {showButtonGroup() && (
               <Column md={2} lg={4}>
-                <h2
-                  style={{ margin: 0 }}
-                  className="bx--type-productive-heading-01 security--spacing--layout-02--top security--spacing--layout-03--bottom"
-                >
+                <h2 className="bx--type-productive-heading-01 security--padding-top--layout-02 security--padding-bottom--layout-03 security--margin-top--layout-00 security--margin-bottom--layout-00">
                   productive-heading-01
                 </h2>
                 <Button
@@ -153,57 +143,29 @@ disableCentered(storiesOf(patterns('Modular Layouts'), module)).add(
                   ariaLabel="listbox"
                   iconDescription="show menu options"
                   selected={1}
-                  triggerHref="#"
                 >
-                  <Tab href="#" label="Tab label 1">
-                    <div
-                      className="security--spacing--layout-01-top"
-                      style={{
-                        height: '100%',
-                        width: '100%',
-                      }}
-                    >
-                      <h2
-                        style={{ margin: 0 }}
-                        className="bx--type-productive-heading-01 security--spacing--layout-02--top security--spacing--layout-03--bottom"
-                      >
+                  <Tab label="Tab label 1">
+                    <div className="security--padding-top--layout-01">
+                      <h2 className="bx--type-productive-heading-01 security--padding-top--layout-02 security--padding-bottom--layout-03 security--margin-top--layout-00 security--margin-bottom--layout-00">
                         productive-heading-01
                       </h2>
-                      <p>Tab content.</p>
+                      <p>Tab content 1.</p>
                     </div>
                   </Tab>
-                  <Tab href="#" label="Tab label 2">
-                    <div
-                      className="security--spacing--layout-01-top"
-                      style={{
-                        height: '100%',
-                        width: '100%',
-                      }}
-                    >
-                      <h2
-                        style={{ margin: 0 }}
-                        className="bx--type-productive-heading-01 security--spacing--layout-02--top security--spacing--layout-03--bottom"
-                      >
+                  <Tab label="Tab label 2">
+                    <div className="security--padding-top--layout-01">
+                      <h2 className="bx--type-productive-heading-01 security--padding-top--layout-02 security--padding-bottom--layout-03 security--margin-top--layout-00 security--margin-bottom--layout-00">
                         productive-heading-01
                       </h2>
-                      <p>Tab content.</p>
+                      <p>Tab content 2.</p>
                     </div>
                   </Tab>
-                  <Tab href="#" label="Tab label 3">
-                    <div
-                      className="security--spacing--layout-01-top"
-                      style={{
-                        height: '100%',
-                        width: '100%',
-                      }}
-                    >
-                      <h2
-                        style={{ margin: 0 }}
-                        className="bx--type-productive-heading-01 security--spacing--layout-02--top security--spacing--layout-03--bottom"
-                      >
+                  <Tab label="Tab label 3">
+                    <div className="security--padding-top--layout-01">
+                      <h2 className="bx--type-productive-heading-01 security--padding-top--layout-02 security--padding-bottom--layout-03 security--margin-top--layout-00 security--margin-bottom--layout-00">
                         productive-heading-01
                       </h2>
-                      <p>Tab content.</p>
+                      <p>Tab content 3.</p>
                     </div>
                   </Tab>
                 </Tabs>
@@ -211,49 +173,26 @@ disableCentered(storiesOf(patterns('Modular Layouts'), module)).add(
             )}
             {showAccordion() && (
               <Column md={8} lg={4}>
-                <h2
-                  style={{ margin: 0 }}
-                  className="bx--type-productive-heading-01 security--spacing--layout-01--top security--spacing--layout-03--bottom"
-                >
+                <h2 className="bx--type-productive-heading-01 security--padding-top--layout-01 security--padding-bottom--layout-03 security--margin-top--layout-00 security--margin-bottom--layout-00">
                   productive-heading-01
                 </h2>
                 <Accordion align="end">
-                  <AccordionItem
-                    style={{
-                      width: '100%',
-                    }}
-                    title="Accordion item"
-                  >
+                  <AccordionItem title="Accordion item">
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                   </AccordionItem>
-                  <AccordionItem
-                    style={{
-                      width: '100%',
-                    }}
-                    title="Accordion item"
-                  >
+                  <AccordionItem title="Accordion item">
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                   </AccordionItem>
-                  <AccordionItem
-                    style={{
-                      width: '100%',
-                    }}
-                    title="Accordion item"
-                  >
+                  <AccordionItem title="Accordion item">
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                   </AccordionItem>
-                  <AccordionItem
-                    style={{
-                      width: '100%',
-                    }}
-                    title="Accordion item"
-                  >
+                  <AccordionItem title="Accordion item">
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
