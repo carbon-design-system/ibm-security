@@ -46,45 +46,14 @@ $security--spacing-tokens-map: security--get-spacing-tokens-map(
   $carbon--theme--g100
 );
 
-// Generate styles for debugging messages.
-@mixin security--debug {
-  @include carbon--type-style($name: caption-01);
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: $carbon--spacing-02;
-  left: 0;
-  color: $carbon--black-100;
-  background-color: $carbon--magenta-40;
-}
-
-// Generate vertical spacing classes.
-@mixin security--generate-spacing-classes {
+@include export-namespace($name: 'layouts') {
   @each $token, $value in $security--spacing-tokens-map {
     .#{$namespace}padding-top--#{$token} {
       padding-top: $value;
-      position: relative;
-    }
-
-    .#{$namespace}debug--padding .#{$namespace}padding-top--#{$token}::before {
-      @include security--debug;
-      content: '#{$namespace}padding-top--#{$token}';
-      height: $value;
-      top: 0;
     }
 
     .#{$namespace}padding-bottom--#{$token} {
       padding-bottom: $value;
-      position: relative;
-    }
-
-    .#{$namespace}debug--padding
-      .#{$namespace}padding-bottom--#{$token}::after {
-      @include security--debug;
-      content: '#{$namespace}padding-bottom--#{$token}';
-      height: $value;
-      bottom: 0;
     }
 
     .#{$namespace}margin-top--#{$token} {
@@ -95,14 +64,4 @@ $security--spacing-tokens-map: security--get-spacing-tokens-map(
       margin-bottom: $value;
     }
   }
-}
-
-@include export-namespace($name: 'debug') {
-  .#{$namespace}debug--padding {
-    div[class^='bx--col'] {
-      outline: 1px solid $carbon--orange-40;
-    }
-  }
-
-  @include security--generate-spacing-classes;
 }
