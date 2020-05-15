@@ -63,7 +63,8 @@ export default class Toolbar extends Component {
     if (
       event.target !== activeElement &&
       event.target.nodeName !== 'SHELL-COMPONENT' &&
-      (this.wrapper && !this.wrapper.current.contains(event.target))
+      this.wrapper &&
+      !this.wrapper.current.contains(event.target)
     ) {
       this.setState({
         isActive: { menu: false, settings: false, support: false },

@@ -56,10 +56,7 @@ storiesOf(patterns('TagWallFilter'), module).add(
       },
     ]);
     const selectedItemsMap = selectedItems.reduce(
-      compose(
-        selectFirst,
-        itemsReducer
-      ),
+      compose(selectFirst, itemsReducer),
       {}
     );
     const availableItems = Object.values(
@@ -67,20 +64,12 @@ storiesOf(patterns('TagWallFilter'), module).add(
         'availableItems',
         Object.values(
           items.reduce(
-            compose(
-              selectFirst,
-              filterItems(selectedItemsMap),
-              itemsReducer
-            ),
+            compose(selectFirst, filterItems(selectedItemsMap), itemsReducer),
             {}
           )
         )
       ).reduce(
-        compose(
-          selectFirst,
-          filterItems(selectedItemsMap),
-          itemsReducer
-        ),
+        compose(selectFirst, filterItems(selectedItemsMap), itemsReducer),
         {}
       )
     );

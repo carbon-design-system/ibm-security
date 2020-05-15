@@ -486,7 +486,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                     >
                       
                       <span
-                        class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                        class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                       >
                         <span
                           class="bx--text-truncate--end"
@@ -505,12 +505,12 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                             height="16"
                             preserveAspectRatio="xMidYMid meet"
                             style="will-change: transform;"
-                            viewBox="0 0 16 16"
+                            viewBox="0 0 32 32"
                             width="16"
                             xmlns="http://www.w3.org/2000/svg"
                           >
-                            <path
-                              d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+                            <polygon
+                              points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
                             />
                           </svg>
                         </button>
@@ -622,8 +622,8 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                     width="20"
                                     xmlns="http://www.w3.org/2000/svg"
                                   >
-                                    <path
-                                      d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                    <polygon
+                                      points="17,15 17,8 15,8 15,15 8,15 8,17 15,17 15,24 17,24 17,17 24,17 24,15"
                                     />
                                   </svg>
                                 </span>
@@ -674,8 +674,8 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                   width="20"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path
-                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                  <polygon
+                    points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
                   />
                 </svg>
               </button>
@@ -782,7 +782,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                 >
                                   
                                   <span
-                                    class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                                    class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                   >
                                     <span
                                       class="bx--text-truncate--end"
@@ -801,12 +801,12 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                         height="16"
                                         preserveAspectRatio="xMidYMid meet"
                                         style="will-change: transform;"
-                                        viewBox="0 0 16 16"
+                                        viewBox="0 0 32 32"
                                         width="16"
                                         xmlns="http://www.w3.org/2000/svg"
                                       >
-                                        <path
-                                          d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+                                        <polygon
+                                          points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
                                         />
                                       </svg>
                                     </button>
@@ -918,8 +918,8 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                 width="20"
                                                 xmlns="http://www.w3.org/2000/svg"
                                               >
-                                                <path
-                                                  d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                                <polygon
+                                                  points="17,15 17,8 15,8 15,15 8,15 8,17 15,17 15,24 17,24 17,17 24,17 24,15"
                                                 />
                                               </svg>
                                             </span>
@@ -970,8 +970,8 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                               width="20"
                               xmlns="http://www.w3.org/2000/svg"
                             >
-                              <path
-                                d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                              <polygon
+                                points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
                               />
                             </svg>
                           </button>
@@ -1014,7 +1014,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                   >
                                     
                                     <span
-                                      class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                                      class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                     >
                                       <span
                                         class="bx--text-truncate--end"
@@ -1033,12 +1033,12 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                           height="16"
                                           preserveAspectRatio="xMidYMid meet"
                                           style="will-change: transform;"
-                                          viewBox="0 0 16 16"
+                                          viewBox="0 0 32 32"
                                           width="16"
                                           xmlns="http://www.w3.org/2000/svg"
                                         >
-                                          <path
-                                            d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+                                          <polygon
+                                            points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
                                           />
                                         </svg>
                                       </button>
@@ -1150,8 +1150,8 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                   width="20"
                                                   xmlns="http://www.w3.org/2000/svg"
                                                 >
-                                                  <path
-                                                    d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                                  <polygon
+                                                    points="17,15 17,8 15,8 15,15 8,15 8,17 15,17 15,24 17,24 17,17 24,17 24,15"
                                                   />
                                                 </svg>
                                               </span>
@@ -1202,8 +1202,8 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                 width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
-                                <path
-                                  d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                                <polygon
+                                  points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
                                 />
                               </svg>
                             </button>
@@ -1281,7 +1281,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                         type="gray"
                                       >
                                         <span
-                                          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                                          className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                         >
                                           <span
                                             className="bx--text-truncate--end"
@@ -1330,7 +1330,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                       "willChange": "transform",
                                                     }
                                                   }
-                                                  viewBox="0 0 16 16"
+                                                  viewBox="0 0 32 32"
                                                   width={16}
                                                   xmlns="http://www.w3.org/2000/svg"
                                                 >
@@ -1345,12 +1345,12 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                         "willChange": "transform",
                                                       }
                                                     }
-                                                    viewBox="0 0 16 16"
+                                                    viewBox="0 0 32 32"
                                                     width={16}
                                                     xmlns="http://www.w3.org/2000/svg"
                                                   >
-                                                    <path
-                                                      d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+                                                    <polygon
+                                                      points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
                                                     />
                                                   </svg>
                                                 </Icon>
@@ -1676,8 +1676,8 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                                   width={20}
                                                                   xmlns="http://www.w3.org/2000/svg"
                                                                 >
-                                                                  <path
-                                                                    d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                                                  <polygon
+                                                                    points="17,15 17,8 15,8 15,15 8,15 8,17 15,17 15,24 17,24 17,17 24,17 24,15"
                                                                   />
                                                                 </svg>
                                                               </Icon>
@@ -1853,8 +1853,8 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                       width={20}
                                       xmlns="http://www.w3.org/2000/svg"
                                     >
-                                      <path
-                                        d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                                      <polygon
+                                        points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
                                       />
                                     </svg>
                                   </Icon>
@@ -1915,7 +1915,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 2`] = 
         type="gray"
       >
         <span
-          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+          className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
         >
           <span
             className="bx--text-truncate--end"
@@ -1964,7 +1964,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 2`] = 
                       "willChange": "transform",
                     }
                   }
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 32 32"
                   width={16}
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -1979,12 +1979,12 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 2`] = 
                         "willChange": "transform",
                       }
                     }
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 32 32"
                     width={16}
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path
-                      d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+                    <polygon
+                      points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
                     />
                   </svg>
                 </Icon>
@@ -2257,7 +2257,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                       >
                         
                         <span
-                          class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                          class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                         >
                           <span
                             class="bx--text-truncate--end"
@@ -2276,12 +2276,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               height="16"
                               preserveAspectRatio="xMidYMid meet"
                               style="will-change: transform;"
-                              viewBox="0 0 16 16"
+                              viewBox="0 0 32 32"
                               width="16"
                               xmlns="http://www.w3.org/2000/svg"
                             >
-                              <path
-                                d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+                              <polygon
+                                points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
                               />
                             </svg>
                           </button>
@@ -2393,8 +2393,8 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       width="20"
                                       xmlns="http://www.w3.org/2000/svg"
                                     >
-                                      <path
-                                        d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                      <polygon
+                                        points="17,15 17,8 15,8 15,15 8,15 8,17 15,17 15,24 17,24 17,17 24,17 24,15"
                                       />
                                     </svg>
                                   </span>
@@ -2445,8 +2445,8 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                     width="20"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path
-                      d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                    <polygon
+                      points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
                     />
                   </svg>
                 </button>
@@ -2480,7 +2480,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                       >
                         
                         <span
-                          class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                          class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                         >
                           <span
                             class="bx--text-truncate--end"
@@ -2499,12 +2499,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               height="16"
                               preserveAspectRatio="xMidYMid meet"
                               style="will-change: transform;"
-                              viewBox="0 0 16 16"
+                              viewBox="0 0 32 32"
                               width="16"
                               xmlns="http://www.w3.org/2000/svg"
                             >
-                              <path
-                                d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+                              <polygon
+                                points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
                               />
                             </svg>
                           </button>
@@ -2616,8 +2616,8 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       width="20"
                                       xmlns="http://www.w3.org/2000/svg"
                                     >
-                                      <path
-                                        d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                      <polygon
+                                        points="17,15 17,8 15,8 15,15 8,15 8,17 15,17 15,24 17,24 17,17 24,17 24,15"
                                       />
                                     </svg>
                                   </span>
@@ -2668,8 +2668,8 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                     width="20"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path
-                      d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                    <polygon
+                      points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
                     />
                   </svg>
                 </button>
@@ -2776,7 +2776,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   >
                                     
                                     <span
-                                      class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                                      class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                     >
                                       <span
                                         class="bx--text-truncate--end"
@@ -2795,12 +2795,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           height="16"
                                           preserveAspectRatio="xMidYMid meet"
                                           style="will-change: transform;"
-                                          viewBox="0 0 16 16"
+                                          viewBox="0 0 32 32"
                                           width="16"
                                           xmlns="http://www.w3.org/2000/svg"
                                         >
-                                          <path
-                                            d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+                                          <polygon
+                                            points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
                                           />
                                         </svg>
                                       </button>
@@ -2912,8 +2912,8 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                   width="20"
                                                   xmlns="http://www.w3.org/2000/svg"
                                                 >
-                                                  <path
-                                                    d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                                  <polygon
+                                                    points="17,15 17,8 15,8 15,15 8,15 8,17 15,17 15,24 17,24 17,17 24,17 24,15"
                                                   />
                                                 </svg>
                                               </span>
@@ -2964,8 +2964,8 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
-                                <path
-                                  d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                                <polygon
+                                  points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
                                 />
                               </svg>
                             </button>
@@ -2999,7 +2999,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   >
                                     
                                     <span
-                                      class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                                      class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                     >
                                       <span
                                         class="bx--text-truncate--end"
@@ -3018,12 +3018,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           height="16"
                                           preserveAspectRatio="xMidYMid meet"
                                           style="will-change: transform;"
-                                          viewBox="0 0 16 16"
+                                          viewBox="0 0 32 32"
                                           width="16"
                                           xmlns="http://www.w3.org/2000/svg"
                                         >
-                                          <path
-                                            d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+                                          <polygon
+                                            points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
                                           />
                                         </svg>
                                       </button>
@@ -3135,8 +3135,8 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                   width="20"
                                                   xmlns="http://www.w3.org/2000/svg"
                                                 >
-                                                  <path
-                                                    d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                                  <polygon
+                                                    points="17,15 17,8 15,8 15,15 8,15 8,17 15,17 15,24 17,24 17,17 24,17 24,15"
                                                   />
                                                 </svg>
                                               </span>
@@ -3187,8 +3187,8 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 width="20"
                                 xmlns="http://www.w3.org/2000/svg"
                               >
-                                <path
-                                  d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                                <polygon
+                                  points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
                                 />
                               </svg>
                             </button>
@@ -3231,7 +3231,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     >
                                       
                                       <span
-                                        class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                                        class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                       >
                                         <span
                                           class="bx--text-truncate--end"
@@ -3250,12 +3250,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                             height="16"
                                             preserveAspectRatio="xMidYMid meet"
                                             style="will-change: transform;"
-                                            viewBox="0 0 16 16"
+                                            viewBox="0 0 32 32"
                                             width="16"
                                             xmlns="http://www.w3.org/2000/svg"
                                           >
-                                            <path
-                                              d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+                                            <polygon
+                                              points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
                                             />
                                           </svg>
                                         </button>
@@ -3367,8 +3367,8 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                     width="20"
                                                     xmlns="http://www.w3.org/2000/svg"
                                                   >
-                                                    <path
-                                                      d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                                    <polygon
+                                                      points="17,15 17,8 15,8 15,15 8,15 8,17 15,17 15,24 17,24 17,17 24,17 24,15"
                                                     />
                                                   </svg>
                                                 </span>
@@ -3419,8 +3419,8 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   width="20"
                                   xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <path
-                                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                                  <polygon
+                                    points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
                                   />
                                 </svg>
                               </button>
@@ -3454,7 +3454,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     >
                                       
                                       <span
-                                        class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                                        class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                       >
                                         <span
                                           class="bx--text-truncate--end"
@@ -3473,12 +3473,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                             height="16"
                                             preserveAspectRatio="xMidYMid meet"
                                             style="will-change: transform;"
-                                            viewBox="0 0 16 16"
+                                            viewBox="0 0 32 32"
                                             width="16"
                                             xmlns="http://www.w3.org/2000/svg"
                                           >
-                                            <path
-                                              d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+                                            <polygon
+                                              points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
                                             />
                                           </svg>
                                         </button>
@@ -3590,8 +3590,8 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                     width="20"
                                                     xmlns="http://www.w3.org/2000/svg"
                                                   >
-                                                    <path
-                                                      d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                                    <polygon
+                                                      points="17,15 17,8 15,8 15,15 8,15 8,17 15,17 15,24 17,24 17,17 24,17 24,15"
                                                     />
                                                   </svg>
                                                 </span>
@@ -3642,8 +3642,8 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   width="20"
                                   xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <path
-                                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                                  <polygon
+                                    points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
                                   />
                                 </svg>
                               </button>
@@ -3721,7 +3721,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           type="gray"
                                         >
                                           <span
-                                            className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                                            className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                           >
                                             <span
                                               className="bx--text-truncate--end"
@@ -3770,7 +3770,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                         "willChange": "transform",
                                                       }
                                                     }
-                                                    viewBox="0 0 16 16"
+                                                    viewBox="0 0 32 32"
                                                     width={16}
                                                     xmlns="http://www.w3.org/2000/svg"
                                                   >
@@ -3785,12 +3785,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                           "willChange": "transform",
                                                         }
                                                       }
-                                                      viewBox="0 0 16 16"
+                                                      viewBox="0 0 32 32"
                                                       width={16}
                                                       xmlns="http://www.w3.org/2000/svg"
                                                     >
-                                                      <path
-                                                        d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+                                                      <polygon
+                                                        points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
                                                       />
                                                     </svg>
                                                   </Icon>
@@ -4116,8 +4116,8 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                                     width={20}
                                                                     xmlns="http://www.w3.org/2000/svg"
                                                                   >
-                                                                    <path
-                                                                      d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                                                    <polygon
+                                                                      points="17,15 17,8 15,8 15,15 8,15 8,17 15,17 15,24 17,24 17,17 24,17 24,15"
                                                                     />
                                                                   </svg>
                                                                 </Icon>
@@ -4293,8 +4293,8 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         width={20}
                                         xmlns="http://www.w3.org/2000/svg"
                                       >
-                                        <path
-                                          d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                                        <polygon
+                                          points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
                                         />
                                       </svg>
                                     </Icon>
