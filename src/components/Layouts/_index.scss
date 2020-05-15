@@ -9,7 +9,7 @@
 
 @import '../../globals/namespace/index';
 
-/// Generate a map of spacing tokens from the provided Carbon theme map.
+/// Generate a map of 'layout' spacing tokens from the provided Carbon theme map.
 /// @access private
 /// @param {Map} $theme-map - Map of theme variables.
 /// @returns {Map} - The filtered map of only spacing variables.
@@ -18,12 +18,15 @@
 
   @each $token, $value in $theme-map {
     @if type-of($value) == 'number' {
-      $-map: map-merge(
-        $-map,
-        (
-          $token: $value,
-        )
-      );
+      @if str-index($token, 'layout-') {
+        @debug $token;
+        $-map: map-merge(
+          $-map,
+          (
+            $token: $value,
+          )
+        );
+      }
     }
   }
 
