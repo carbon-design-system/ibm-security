@@ -19,7 +19,6 @@
   @each $token, $value in $theme-map {
     @if type-of($value) == 'number' {
       @if str-index($token, 'layout-') {
-        @debug $token;
         $-map: map-merge(
           $-map,
           (
