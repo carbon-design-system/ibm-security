@@ -29,3 +29,53 @@
     }
   }
 }
+
+// Generate styles for layout debugging messages.
+@mixin security--debug {
+  @include carbon--type-style($name: caption-01);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: $carbon--spacing-02;
+  left: 0;
+  color: $carbon--black-100;
+  background-color: $carbon--magenta-40;
+}
+
+// Generate layout debugging classes.
+@mixin security--generate-layout-debugging-classes {
+  @each $token, $value in $security--spacing-tokens-map {
+    .#{$namespace}debug--padding .#{$namespace}padding-top--#{$token} {
+      position: relative;
+
+      &::before {
+        @include security--debug;
+        content: '.#{$namespace}padding-top--#{$token}';
+        height: $value;
+        top: 0;
+      }
+    }
+
+    .#{$namespace}debug--padding .#{$namespace}padding-bottom--#{$token} {
+      position: relative;
+
+      &::after {
+        @include security--debug;
+        content: ',#{$namespace}padding-bottom--#{$token}';
+        height: $value;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+@include export-namespace($name: 'debug') {
+  .#{$namespace}debug--padding {
+    div[class^='bx--col'] {
+      outline: 1px solid $carbon--orange-40;
+    }
+  }
+
+  @include security--generate-layout-debugging-classes;
+}
