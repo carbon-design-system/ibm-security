@@ -1,6 +1,6 @@
 /**
  * @file Tearsheet.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import Close20 from '@carbon/icons-react/lib/close/20';
@@ -113,30 +113,37 @@ class Tearsheet extends Component {
                   </div>
                 </Loading>
               )}
-              <section className={`${namespace}__sidebar`}>
-                <h1 className={`${namespace}__sidebar__title`}>
-                  {sidebarTitle}
-                </h1>
-                <p className={`${namespace}__sidebar__subtitle`}>
-                  {sidebarSubtitle}
-                </p>
-                <div className={`${namespace}__sidebar__content`}>
-                  {renderSidebar()}
-                </div>
-                <footer className={`${namespace}__sidebar__footer`}>
-                  {!hideDeleteButton && (
-                    <Button
-                      disabled={isDisabled}
-                      iconDescription={componentLabels.TEARSHEET_DELETE_BUTTON}
-                      kind="ghost-danger"
-                      onClick={onDeleteButtonClick}
-                      renderIcon={icon}
-                    >
-                      {componentLabels.TEARSHEET_DELETE_BUTTON}
-                    </Button>
-                  )}
-                </footer>
-              </section>
+
+              {renderSidebar && (
+                <section className={`${namespace}__sidebar`}>
+                  <h1 className={`${namespace}__sidebar__title`}>
+                    {sidebarTitle}
+                  </h1>
+                  <p className={`${namespace}__sidebar__subtitle`}>
+                    {sidebarSubtitle}
+                  </p>
+
+                  <div className={`${namespace}__sidebar__content`}>
+                    {renderSidebar()}
+                  </div>
+
+                  <footer className={`${namespace}__sidebar__footer`}>
+                    {!hideDeleteButton && (
+                      <Button
+                        disabled={isDisabled}
+                        iconDescription={
+                          componentLabels.TEARSHEET_DELETE_BUTTON
+                        }
+                        kind="ghost-danger"
+                        onClick={onDeleteButtonClick}
+                        renderIcon={icon}
+                      >
+                        {componentLabels.TEARSHEET_DELETE_BUTTON}
+                      </Button>
+                    )}
+                  </footer>
+                </section>
+              )}
 
               <section className={`${namespace}__main`}>
                 {!closeButton.isDisabled && (
@@ -294,8 +301,8 @@ Tearsheet.propTypes = {
 Tearsheet.defaultProps = {
   focusTrap: true,
   selectorPrimaryFocus: '[tearsheet-primary-focus]',
-  renderSidebar: () => null,
   renderMain: () => null,
+  renderSidebar: null,
   rootNode: undefined,
   sidebarTitle: '',
   sidebarSubtitle: '',

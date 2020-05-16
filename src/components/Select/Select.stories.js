@@ -1,6 +1,6 @@
 /**
- * @file Breadcrumb stories.
- * @copyright IBM Security 2018
+ * @file Select stories.
+ * @copyright IBM Security 2018-2020
  */
 
 import React from 'react';
