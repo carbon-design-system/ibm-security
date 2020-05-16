@@ -1,6 +1,6 @@
 /**
  * @file Tearsheet stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import { action } from '@storybook/addon-actions';
@@ -26,7 +26,12 @@ import {
 
 import labels from './_mocks_';
 
-const renderSidebar = () => 'Sidebar';
+const { __docgenInfo, defaultProps } = Tearsheet;
+
+const renderSidebar = () =>
+  boolean('Sidebar (renderSidebar)', true)
+    ? () => 'Sidebar'
+    : defaultProps.renderSidebar;
 
 const searchLabel = 'What are you looking for today?';
 
@@ -121,7 +126,7 @@ storiesOf(patterns('Tearsheet'), module)
         focusTrap={boolean('focusTrap', false)}
         selectorPrimaryFocus={selectorPrimaryFocus}
         renderMain={renderMain}
-        renderSidebar={renderSidebar}
+        renderSidebar={renderSidebar()}
         sidebarTitle="Title of setup"
         sidebarSubtitle="5 mins setup"
         mainTitle="Step title"
@@ -174,7 +179,7 @@ storiesOf(patterns('Tearsheet'), module)
       )(Tearsheet);
 
       TearsheetLoadingStory.displayName = getDisplayName(Tearsheet);
-      TearsheetLoadingStory.__docgenInfo = Tearsheet.__docgenInfo;
+      TearsheetLoadingStory.__docgenInfo = __docgenInfo;
 
       return (
         <TearsheetLoadingStory
@@ -182,7 +187,7 @@ storiesOf(patterns('Tearsheet'), module)
           focusTrap={boolean('focusTrap', false)}
           selectorPrimaryFocus={selectorPrimaryFocus}
           renderMain={renderMain}
-          renderSidebar={renderSidebar}
+          renderSidebar={renderSidebar()}
           sidebarTitle="Title of setup"
           sidebarSubtitle="5 mins setup"
           mainTitle="Step title"
@@ -224,7 +229,7 @@ storiesOf(patterns('Tearsheet'), module)
                 focusTrap={boolean('focusTrap', false)}
                 selectorPrimaryFocus={selectorPrimaryFocus}
                 renderMain={renderMain}
-                renderSidebar={renderSidebar}
+                renderSidebar={renderSidebar()}
                 closeButton={{
                   onClick: this.close,
                   label: text('closeButton.label', 'Close'),
@@ -260,7 +265,7 @@ storiesOf(patterns('Tearsheet'), module)
         focusTrap={boolean('focusTrap', false)}
         selectorPrimaryFocus={selector}
         renderMain={renderMain}
-        renderSidebar={renderSidebar}
+        renderSidebar={renderSidebar()}
         sidebarTitle="Title of setup"
         sidebarSubtitle="5 mins setup"
         mainTitle="Step title"
