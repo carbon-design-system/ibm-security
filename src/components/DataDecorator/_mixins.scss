@@ -1,7 +1,7 @@
 ////
 /// Decorator mixins.
 /// @group decorator
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019-2020
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -94,10 +94,6 @@
     color: $active-ui;
   }
 
-  &:#{$root}--active__type {
-    border-right: 1px solid $ui-04;
-  }
-
   &#{$root}--active:focus {
     @include focus-outline('outline');
     outline-color: $inverse-focus-ui;
@@ -167,6 +163,10 @@
   &__type {
     border-right: 1px solid $ui-01;
     white-space: nowrap;
+  }
+
+  &--active &__type {
+    border-right: 1px solid $ui-04;
   }
 
   &__value {
