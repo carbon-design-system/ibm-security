@@ -34,10 +34,14 @@ const showTabGroup = () => boolean('Show tab group', true);
 const showFirstRow = showCardGroup() || showButtonGroup();
 const showSecondRow = showTabGroup() || showAccordion();
 
-disableCentered(storiesOf(patterns('Layouts'), module)).add(
-  'details page layout',
-  () => (
+disableCentered(storiesOf(patterns('Layouts'), module))
+  .addDecorator(story => (
     <main className={toggleDebugging() && 'security--debug--padding'}>
+      {story()}
+    </main>
+  ))
+  .add('details page layout', () => (
+    <>
       <h1 className="bx--type-productive-heading-04">productive-heading-04</h1>
       <Grid condensed>
         {showFirstRow && (
@@ -203,6 +207,5 @@ disableCentered(storiesOf(patterns('Layouts'), module)).add(
           </Row>
         )}
       </Grid>
-    </main>
-  )
-);
+    </>
+  ));
