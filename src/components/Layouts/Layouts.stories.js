@@ -210,6 +210,6 @@ disableCentered(storiesOf(patterns('Layouts'), module))
       </Grid>
     </>
   ))
-  .add('descrption module', () =>
+  .add('description module', () =>
     require('./stories/description-module').default()
   );
