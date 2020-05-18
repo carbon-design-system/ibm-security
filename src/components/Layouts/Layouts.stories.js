@@ -22,7 +22,7 @@ import {
   TypeLayoutCell,
 } from '../..';
 
-import { disableCentered, patterns } from '../../../.storybook';
+import { disableCentered, patterns, info } from '../../../.storybook';
 
 const toggleDebugging = () => boolean('Toggle PADDING debugging 🕵️‍♀️', false);
 
@@ -34,6 +34,7 @@ const showTabGroup = () => boolean('Show tab group', true);
 const showFirstRow = showCardGroup() || showButtonGroup();
 const showSecondRow = showTabGroup() || showAccordion();
 
+/* eslint-disable global-require */
 disableCentered(storiesOf(patterns('Layouts'), module))
   .addDecorator(story => (
     <main className={toggleDebugging() && 'security--debug--padding'}>
@@ -208,4 +209,11 @@ disableCentered(storiesOf(patterns('Layouts'), module))
         )}
       </Grid>
     </>
-  ));
+  ))
+  .add(
+    'button cluster module',
+    () => require('./stories/button-cluster-module').default(),
+    info(
+      `The **Button Cluster Module** shows stacked buttons in isolation, inside their own \`Grid\` and \`Row\` components for the purposes of this demo. Normally, they would appear alongside other components and \`Columns\` inside a given \`Row\` and \`Grid\`. View the "Story" tab to see how icon components are imported and used in the buttons.`
+    )
+  );
