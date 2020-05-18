@@ -14,14 +14,12 @@ const story = () => (
       Sub-section title: productive-heading-01
     </h3>
     <div className="bx--type-body-short-01  security--padding-bottom--layout-03 security--margin-top--layout-00 security--margin-bottom--layout-00">
-      <p>
-        Body-short-01: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Mauris elementum a dolor a convallis. Praesent ut urna laoreet,
-        ultricies mi ac, imperdiet ex. Sed hendrerit porttitor orci. Sed
-        aliquam, lorem quis vehicula mattis, ipsum lacus molestie elit, at
-        fermentum eros justo non mi. Vivamus eget sapien in nibh pharetra
-        vulputate. Vestibulum tristique mi quis fringilla accumsan.
-      </p>
+      Body-short-01: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Mauris elementum a dolor a convallis. Praesent ut urna laoreet, ultricies
+      mi ac, imperdiet ex. Sed hendrerit porttitor orci. Sed aliquam, lorem quis
+      vehicula mattis, ipsum lacus molestie elit, at fermentum eros justo non
+      mi. Vivamus eget sapien in nibh pharetra vulputate. Vestibulum tristique
+      mi quis fringilla accumsan.
     </div>
   </>
 );
