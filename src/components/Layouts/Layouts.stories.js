@@ -34,9 +34,9 @@ const showTabGroup = () => boolean('Show tab group', true);
 const showFirstRow = showCardGroup() || showButtonGroup();
 const showSecondRow = showTabGroup() || showAccordion();
 
-disableCentered(storiesOf(patterns('Layouts'), module)).add(
-  'details page layout',
-  () => (
+/* eslint-disable global-require */
+disableCentered(storiesOf(patterns('Layouts'), module))
+  .add('details page layout', () => (
     <main className={toggleDebugging() && 'security--debug--padding'}>
       <h1 className="bx--type-productive-heading-04">productive-heading-04</h1>
       <Grid condensed>
@@ -204,5 +204,7 @@ disableCentered(storiesOf(patterns('Layouts'), module)).add(
         )}
       </Grid>
     </main>
-  )
-);
+  ))
+  .add('descrption module', () =>
+    require('./stories/description-module').default()
+  );
