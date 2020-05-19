@@ -9,6 +9,8 @@
 
 @import '../../globals/namespace/index';
 
+@import 'Overview/index';
+
 /// Generate a map of 'layout' spacing tokens from the provided Carbon theme map.
 /// @access private
 /// @param {Map} $theme-map - Map of theme variables.
