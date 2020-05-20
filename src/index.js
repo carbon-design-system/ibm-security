@@ -263,3 +263,17 @@ export { Wizard, WizardStep } from './components/Wizard';
 export UNSTABLE__Pagination, {
   PageSelector,
 } from './components/UNSTABLE__Pagination';
+
+export LayoutBackground, {
+  ActionBarModule,
+  ActionBarActions,
+  ButtonClusterModule,
+  DescriptionModule,
+  ICAModule,
+  LayoutTitle,
+  PageTabDetails,
+  PageTabModule,
+  TitleBarModule,
+  TitleBarActions,
+  TypeLayoutModule,
+} from './components/UNSTABLE__LayoutModules';

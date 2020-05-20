@@ -22,7 +22,7 @@ import {
   TypeLayoutCell,
 } from '../..';
 
-import { disableCentered, patterns } from '../../../.storybook';
+import { disableCenteredStories, patterns } from '../../../.storybook';
 
 const toggleDebugging = () => boolean('Toggle PADDING debugging 🕵️‍♀️', false);
 
@@ -34,7 +34,7 @@ const showTabGroup = () => boolean('Show tab group', true);
 const showFirstRow = showCardGroup() || showButtonGroup();
 const showSecondRow = showTabGroup() || showAccordion();
 
-disableCentered(storiesOf(patterns('Layouts'), module)).add(
+disableCenteredStories(storiesOf(patterns('Layouts'), module)).add(
   'details page layout',
   () => (
     <main className={toggleDebugging() && 'security--debug--padding'}>

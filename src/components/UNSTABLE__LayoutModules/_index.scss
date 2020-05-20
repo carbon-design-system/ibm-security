@@ -1,0 +1,194 @@
+////
+/// Layout modules.
+/// @group layout-modules
+/// @copyright IBM Security 2020
+////
+
+@import '@carbon/colors/scss/colors';
+@import '@carbon/layout/scss/convert';
+@import '@carbon/layout/scss/mini-unit';
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/themes/scss/theme-maps';
+@import '@carbon/themes/scss/tokens';
+@import '@carbon/type/scss/styles';
+
+@import 'carbon-components/scss/globals/scss/layout';
+@import 'carbon-components/scss/globals/scss/vars';
+
+@import '../../globals/namespace/index';
+@import '../../globals/theme/variables';
+
+@import '../Component/mixins';
+
+/// Spacing tokens.
+/// @type Map<String, Number>
+/// @access private
+$security--spacing-tokens-map: (
+  layout-00: 0,
+  spacing-00: 0,
+);
+
+@each $token, $value in $carbon--theme--g100 {
+  @if type-of($value: $value) == 'number' {
+    $security--spacing-tokens-map: map-merge(
+      $map1: $security--spacing-tokens-map,
+      $map2: (
+        $token: $value,
+      ),
+    );
+  }
+}
+
+@mixin security--layout-modules--debug(
+  $content: attr(data-module),
+  $height: auto,
+  $pseudo-element: before,
+  $right: 0
+) {
+  position: relative;
+
+  &::#{$pseudo-element} {
+    @include carbon--type-style($name: label-01);
+    position: absolute;
+    top: 0;
+    right: $right;
+    height: $height;
+    padding: $carbon--spacing-02 $carbon--layout-05 $carbon--spacing-02
+      $carbon--spacing-03;
+    background-color: rgba($carbon--magenta-60, 0.7);
+    content: $content;
+    pointer-events: none;
+    z-index: z($layer: overlay);
+  }
+}
+
+@include security--component($name: unstable--layout-modules) {
+  &--action-bar {
+    display: flex;
+    padding-top: $carbon--spacing-01;
+    padding-bottom: $carbon--spacing-03;
+    align-items: center;
+
+    &__actions {
+      margin-left: auto;
+    }
+  }
+
+  &--button-cluster {
+    padding-bottom: $carbon--layout-01;
+
+    &__button {
+      // Popover border width.
+      $layout--button-cluster__button__border: carbon--rem(
+          $px: 1px,
+        )
+        solid $ui-03;
+
+      display: flex;
+      border-bottom: $layout--button-cluster__button__border;
+      flex-flow: column;
+
+      &:first-of-type {
+        border-top: $layout--button-cluster__button__border;
+      }
+
+      > .#{$prefix}--btn {
+        max-width: unset;
+      }
+    }
+  }
+
+  &--background {
+    background-color: $ui-01;
+    outline: carbon--rem($px: 1px) solid $ui-background;
+  }
+
+  &--description {
+    padding-bottom: $carbon--layout-03;
+  }
+
+  &--ica {
+    padding-top: $carbon--layout-01;
+    padding-bottom: $carbon--layout-03;
+  }
+
+  &--page-tab {
+    /// Carbon tabs selector.
+    /// @type Length
+    $carbon--tabs: '.#{$prefix}--tabs';
+
+    position: relative;
+
+    &__details {
+      position: absolute;
+      top: $carbon--spacing-03;
+    }
+
+    > #{$carbon--tabs} {
+      border-bottom: carbon--rem($px: 1px) solid $ui-03;
+
+      > #{$carbon--tabs}__nav {
+        right: 0;
+      }
+    }
+
+    > .#{$prefix}--tab-content {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  &--title {
+    margin-top: $carbon--layout-01;
+    margin-bottom: $carbon--layout-01;
+
+    & + & {
+      margin-top: $carbon--layout-03;
+    }
+  }
+
+  &--title-bar {
+    display: flex;
+
+    &__actions {
+      padding-top: $carbon--spacing-03;
+      padding-bottom: $carbon--spacing-03;
+      margin-left: auto;
+    }
+  }
+
+  &--debug &[data-module] {
+    @include security--layout-modules--debug;
+  }
+
+  @each $token, $value in $security--spacing-tokens-map {
+    $root: &;
+
+    &--pt--#{$token} {
+      padding-top: $value;
+    }
+
+    &--pb--#{$token} {
+      padding-bottom: $value;
+    }
+
+    &--mt--#{$token} {
+      $content: &;
+
+      margin-top: $value;
+
+      #{$root}--debug & {
+        @include security--layout-modules--debug(
+          $content: '#{$content}',
+          $height: $value,
+          $pseudo-element: after,
+          $right: auto
+        );
+      }
+    }
+
+    &--mb--#{$token} {
+      margin-bottom: $value;
+    }
+  }
+}

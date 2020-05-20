@@ -80,6 +80,22 @@ Map {
       "uid": [Function],
     },
   },
+  "ActionBarActions" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
+  "ActionBarModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
   "Breadcrumb" => Object {
     "propTypes": Object {
       "aria-label": Object {
@@ -241,6 +257,14 @@ Map {
           ],
         ],
         "type": "oneOf",
+      },
+    },
+  },
+  "ButtonClusterModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
       },
     },
   },
@@ -2391,6 +2415,14 @@ Map {
       },
     },
   },
+  "DescriptionModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
   "Dropdown" => Object {
     "defaultProps": Object {
       "disabled": false,
@@ -3948,6 +3980,14 @@ Map {
       },
     },
   },
+  "ICAModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
   "ICASkeleton" => Object {},
   "Icon" => Object {
     "defaultProps": Object {
@@ -4389,6 +4429,22 @@ Map {
         ],
         "isRequired": true,
         "type": "oneOf",
+      },
+    },
+  },
+  "LayoutBackground" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
+  "LayoutTitle" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
       },
     },
   },
@@ -5724,6 +5780,22 @@ Map {
       "totalPages": Object {
         "isRequired": true,
         "type": "number",
+      },
+    },
+  },
+  "PageTabDetails" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
+  "PageTabModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
       },
     },
   },
@@ -10968,6 +11040,22 @@ Map {
       },
     },
   },
+  "TitleBarActions" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
+  "TitleBarModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
   "ToastNotification" => Object {
     "defaultProps": Object {
       "caption": "provide a caption",
@@ -11898,6 +11986,14 @@ Map {
       },
       "className": Object {
         "type": "string",
+      },
+    },
+  },
+  "TypeLayoutModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
       },
     },
   },
