@@ -1,6 +1,6 @@
 {
   "name": "@carbon/ibm-security",
-  "version": "1.23.0-prerelease.3",
+  "version": "1.23.1-prerelease.1",
   "description": "Carbon for IBM Security",
   "license": "Apache-2.0",
   "main": "lib/index.js",
@@ -88,7 +88,6 @@
     "@babel/register": "^7.4.0",
     "@commitlint/cli": "^8.0.0",
     "@commitlint/config-conventional": "^8.0.0",
-    "@ibma/aat": "https://able.ibm.com/tools/dist/ibma-aat-2.0.3-alpha.tgz",
     "@semantic-release/git": "^7.1.0-beta.3",
     "@storybook/addon-a11y": "^5.2.4",
     "@storybook/addon-actions": "^5.2.4",
@@ -105,6 +104,7 @@
     "@testing-library/jest-dom": "4.2.4",
     "@testing-library/react": "9.3.2",
     "@testing-library/user-event": "8.1.0",
+    "accessibility-checker": "^3.0.2",
     "autoprefixer": "^9.4.10",
     "axe-core": "^3.4.1",
     "babel-eslint": "^10.0.1",
