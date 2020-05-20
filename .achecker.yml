@@ -2,14 +2,14 @@
 # Default: latest
 # Run `npx achecker archives` for a list of valid ruleArchive ids and policy ids
 ruleArchive: latest
- 
+
 # optional - Specify one or many policies to scan.
 # i.e. For one policy use policies: IBM_Accessibility
 # i.e. Multiple policies: IBM_Accessibility,IBM_Accessibility_BETA
 # Run `npx achecker archives` for a list of valid ruleArchive ids and policy ids
 policies:
     - IBM_Accessibility
- 
+
 # optional - Specify one or many violation levels on which to fail the test
 #            i.e. If specified violation then the testcase will only fail if
 #                 a violation is found during the scan.
@@ -18,7 +18,7 @@ policies:
 # Default: violation, potentialviolation
 failLevels:
     - violation
- 
+
 # optional - Specify one or many violation levels which should be reported
 #            i.e. If specified violation then in the report it would only contain
 #                 results which are level of violation.
@@ -28,13 +28,13 @@ failLevels:
 reportLevels:
     - violation
     - potentialviolation
- 
+
 # Optional - Which type should the results be outputted to
 # Valid values: json, csv
 # Default: json
 outputFormat:
     - json
- 
+
 # Optional - Specify labels that you would like associated to your scan
 #
 # i.e.
@@ -47,11 +47,11 @@ outputFormat:
 # Default: N/A
 label:
     - master
- 
+
 # optional - Where the scan results should be saved.
 # Default: results
 outputFolder: results
- 
+
 # optional - Where the baseline results should be loaded from
 # Default: baselines
 baselineFolder: baselines
