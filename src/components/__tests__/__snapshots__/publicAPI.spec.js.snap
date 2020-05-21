@@ -9637,6 +9637,9 @@ Map {
                   "isRequired": true,
                   "type": "string",
                 },
+                "props": Object {
+                  "type": "object",
+                },
               },
             ],
             "type": "shape",
@@ -9872,7 +9875,7 @@ Map {
       "loadingMessage": "",
       "mainTitle": "",
       "renderMain": [Function],
-      "renderSidebar": [Function],
+      "renderSidebar": null,
       "rootNode": undefined,
       "selectorPrimaryFocus": "[tearsheet-primary-focus]",
       "sidebarSubtitle": "",
