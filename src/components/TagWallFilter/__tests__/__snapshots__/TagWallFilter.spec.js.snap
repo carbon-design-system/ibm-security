@@ -487,6 +487,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                       
                       <span
                         class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                        id="y"
                       >
                         <span
                           class="bx--text-truncate--end"
@@ -783,6 +784,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                   
                                   <span
                                     class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                                    id="y"
                                   >
                                     <span
                                       class="bx--text-truncate--end"
@@ -1015,6 +1017,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                     
                                     <span
                                       class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                                      id="y"
                                     >
                                       <span
                                         class="bx--text-truncate--end"
@@ -1268,6 +1271,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                     className="security--tag-wall security--tag-wall-filter__tag-wall"
                                   >
                                     <InteractiveTag
+                                      id="y"
                                       isSelected={false}
                                       key="tag__0"
                                       onRemove={[Function]}
@@ -1278,10 +1282,12 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                       <Tag
                                         className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
                                         filter={false}
+                                        id="y"
                                         type="gray"
                                       >
                                         <span
                                           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                                          id="y"
                                         >
                                           <span
                                             className="bx--text-truncate--end"
@@ -1902,6 +1908,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 2`] = 
     className="security--tag-wall security--tag-wall-filter__tag-wall"
   >
     <InteractiveTag
+      id="y"
       isSelected={false}
       key="tag__0"
       onRemove={[Function]}
@@ -1912,10 +1919,12 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 2`] = 
       <Tag
         className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
         filter={false}
+        id="y"
         type="gray"
       >
         <span
           className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+          id="y"
         >
           <span
             className="bx--text-truncate--end"
@@ -2258,6 +2267,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                         
                         <span
                           class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                          id="y"
                         >
                           <span
                             class="bx--text-truncate--end"
@@ -2481,6 +2491,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                         
                         <span
                           class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                          id="x"
                         >
                           <span
                             class="bx--text-truncate--end"
@@ -2777,6 +2788,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     
                                     <span
                                       class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                                      id="y"
                                     >
                                       <span
                                         class="bx--text-truncate--end"
@@ -3000,6 +3012,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     
                                     <span
                                       class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                                      id="x"
                                     >
                                       <span
                                         class="bx--text-truncate--end"
@@ -3232,6 +3245,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       
                                       <span
                                         class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                                        id="y"
                                       >
                                         <span
                                           class="bx--text-truncate--end"
@@ -3455,6 +3469,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       
                                       <span
                                         class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                                        id="x"
                                       >
                                         <span
                                           class="bx--text-truncate--end"
@@ -3708,6 +3723,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       className="security--tag-wall security--tag-wall-filter__tag-wall"
                                     >
                                       <InteractiveTag
+                                        id="x"
                                         isSelected={false}
                                         key="tag__0"
                                         onRemove={[Function]}
@@ -3718,10 +3734,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         <Tag
                                           className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
                                           filter={false}
+                                          id="x"
                                           type="gray"
                                         >
                                           <span
                                             className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                                            id="x"
                                           >
                                             <span
                                               className="bx--text-truncate--end"
