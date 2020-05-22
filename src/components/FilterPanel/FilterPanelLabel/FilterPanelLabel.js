@@ -17,10 +17,11 @@ const FilterPanelLabel = ({
   countLabel,
   className,
   countClassName,
+  hoverTitle,
   ...other
 }) => (
   <span className={classnames(namespace, className)} {...other}>
-    <span className={`${namespace}__text`} title={children}>
+    <span className={`${namespace}__text`} title={hoverTitle}>
       {children}
     </span>
     {!Number.isNaN(parseInt(count, 10)) && (
@@ -59,6 +60,11 @@ FilterPanelLabel.propTypes = {
    * Optional class name for the count.
    */
   countClassName: PropTypes.string,
+
+  /**
+   * The `title` attribute that is applied to the accordion heading node.
+   */
+  hoverTitle: PropTypes.string,
 };
 
 FilterPanelLabel.defaultProps = {
@@ -67,6 +73,7 @@ FilterPanelLabel.defaultProps = {
   countLabel: count => `${count} items`,
   className: undefined,
   countClassName: undefined,
+  hoverTitle: undefined,
 };
 
 export default FilterPanelLabel;
