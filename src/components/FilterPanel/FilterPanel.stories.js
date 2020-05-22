@@ -163,6 +163,7 @@ storiesOf(patterns('FilterPanel'), module)
       <FilterPanelAccordion title="Filter accordion 2" count={100}>
         <FilterPanelAccordionItem
           title={<span>Filter accordion item 1</span>}
+          hoverTitle="Filter accordion item 1"
           count={4}
           expandLabel="View more"
           collapseLabel="View less"
