@@ -62,7 +62,7 @@ FilterPanelLabel.propTypes = {
   countClassName: PropTypes.string,
 
   /**
-   * The `title` attribute that is applied to the accordion heading node.
+   * The `title` attribute that is applied to the label node.
    */
   hoverTitle: PropTypes.string,
 };
