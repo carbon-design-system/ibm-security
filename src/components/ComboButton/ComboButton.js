@@ -50,6 +50,7 @@ const ComboButton = ({ children, className, direction }) => {
       href,
       iconDescription,
       onClick,
+      id,
       renderIcon: Icon,
     } = button.props;
     return (
@@ -59,7 +60,8 @@ const ComboButton = ({ children, className, direction }) => {
         href={href}
         iconDescription={iconDescription}
         kind="primary"
-        key={button.id}
+        id={id}
+        key={id || `button-${href}`}
         onClick={onClick}
         renderIcon={Icon}
         type="button"
@@ -89,6 +91,7 @@ const ComboButton = ({ children, className, direction }) => {
         href,
         onClick,
         primaryFocus,
+        id,
         renderIcon: Icon,
       } = item.props;
 
@@ -108,7 +111,8 @@ const ComboButton = ({ children, className, direction }) => {
               {!Icon ? null : <Icon />}
             </>
           }
-          key={item.id}
+          id={id}
+          key={id || `item-${href}`}
           onClick={onClick}
           primaryFocus={!primaryFocus && index === 0 ? true : primaryFocus}
         />
