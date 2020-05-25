@@ -260,6 +260,8 @@ export UnorderedList from './components/UnorderedList';
 export { Wizard, WizardStep } from './components/Wizard';
 
 // Experimental.
+export LayoutBackground from './components/UNSTABLE__Layout/LayoutModules';
+
 export UNSTABLE__Pagination, {
   PageSelector,
 } from './components/UNSTABLE__Pagination';

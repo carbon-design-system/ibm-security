@@ -1,0 +1,12 @@
+////
+/// Layout modules variables.
+/// @group layout-modules
+/// @copyright IBM Security 2020
+////
+
+@import '../variables';
+
+/// Name.
+/// @type String
+/// @access private
+$layout-modules__name: #{$layout__name}__module;

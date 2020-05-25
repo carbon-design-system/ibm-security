@@ -4392,6 +4392,14 @@ Map {
       },
     },
   },
+  "LayoutBackground" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
   "Link" => Object {
     "propTypes": Object {
       "children": Object {
