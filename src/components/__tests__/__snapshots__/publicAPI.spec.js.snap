@@ -9709,6 +9709,9 @@ Map {
                   "isRequired": true,
                   "type": "string",
                 },
+                "props": Object {
+                  "type": "object",
+                },
               },
             ],
             "type": "shape",
