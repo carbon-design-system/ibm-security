@@ -16,7 +16,7 @@ import { getComponentNamespace } from '../../globals/namespace';
 
 export const navNamespace = getComponentNamespace('nav');
 
-const NavListName = (<NavList />).type.name;
+const NavListName = <NavList />.type.name;
 
 /**
  * Navigation class.

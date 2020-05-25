@@ -91,7 +91,10 @@ export const withMappedProps = mapProps(({ itemState, ...otherProps }) => ({
   availableItems: itemState.available.items || [],
 }));
 
-export const withMappedItemReducer = compose(withItemReducer, withMappedProps);
+export const withMappedItemReducer = compose(
+  withItemReducer,
+  withMappedProps
+);
 
 export const FilterTagFragmentRender = ({
   selectedItems,
