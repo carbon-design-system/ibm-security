@@ -5,7 +5,7 @@
 
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { text, number } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
 
 import React from 'react';
 
@@ -23,7 +23,7 @@ storiesOf(
   () => (
     <FilterPanelCheckboxWithOverflowMenu
       labelText={text('Checkbox label (labelText)', 'Checkbox label')}
-      count={number('Checkbox count (count)', 10)}
+      count={text('Checkbox count (count)', 10)}
       onChange={action('onChange')}
       id="checkbox-id"
     >
