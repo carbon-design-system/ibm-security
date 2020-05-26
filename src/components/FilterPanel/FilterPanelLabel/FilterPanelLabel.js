@@ -17,11 +17,11 @@ const FilterPanelLabel = ({
   countLabel,
   className,
   countClassName,
-  hoverTitle,
+  title,
   ...other
 }) => (
   <span className={classnames(namespace, className)} {...other}>
-    <span className={`${namespace}__text`} title={hoverTitle}>
+    <span className={`${namespace}__text`} title={title}>
       {children}
     </span>
     {!Number.isNaN(parseInt(count, 10)) && (
@@ -64,7 +64,7 @@ FilterPanelLabel.propTypes = {
   /**
    * The `title` attribute that is applied to the label node.
    */
-  hoverTitle: PropTypes.string,
+  title: PropTypes.string,
 };
 
 FilterPanelLabel.defaultProps = {
@@ -73,7 +73,7 @@ FilterPanelLabel.defaultProps = {
   countLabel: count => `${count} items`,
   className: undefined,
   countClassName: undefined,
-  hoverTitle: undefined,
+  title: 'title',
 };
 
 export default FilterPanelLabel;

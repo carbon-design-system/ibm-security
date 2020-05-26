@@ -24,7 +24,7 @@ const FilterPanelAccordionItem = ({
   count,
   countLabel,
   className,
-  hoverTitle,
+  heading,
   ...other
 }) => {
   return (
@@ -35,9 +35,9 @@ const FilterPanelAccordionItem = ({
           countLabel={countLabel}
           className={`${namespace}__label`}
           countClassName={`${namespace}__count`}
-          hoverTitle={hoverTitle}
+          title={title}
         >
-          {title}
+          {heading || title}
         </FilterPanelLabel>
       }
       className={classnames(namespace, className)}
@@ -63,14 +63,15 @@ const FilterPanelAccordionItem = ({
 
 FilterPanelAccordionItem.propTypes = {
   /**
-   * Accordion item title.
+   * Accordion item `title` attribute.
    */
-  title: PropTypes.node,
+  title: PropTypes.string,
 
   /**
-   * The `title` attribute that is applied to the accordion heading node.
+   * Accordion item heading node.
+   * If no `heading` is provided, then the `title` prop will be used instead.
    */
-  hoverTitle: PropTypes.string,
+  heading: PropTypes.node,
 
   /**
    * View more label for truncated content.
@@ -110,7 +111,7 @@ FilterPanelAccordionItem.propTypes = {
 
 FilterPanelAccordionItem.defaultProps = {
   title: 'title',
-  hoverTitle: undefined,
+  heading: undefined,
   expandLabel: 'expandLabel',
   collapseLabel: 'collapseLabel',
   children: undefined,
