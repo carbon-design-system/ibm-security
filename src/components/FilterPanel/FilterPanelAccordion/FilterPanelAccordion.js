@@ -41,7 +41,7 @@ FilterPanelAccordion.propTypes = {
   /**
    * Optional accordion count.
    */
-  count: PropTypes.number,
+  count: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 
   /**
    * Function returning a translated text labeling the count for accessibility.
