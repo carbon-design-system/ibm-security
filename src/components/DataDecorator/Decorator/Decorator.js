@@ -12,7 +12,6 @@ import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
 import { getDecoratorProps, namespace } from './constants';
 
 import Icon from '../../Icon';
-import Link from '../../Link';
 
 /**
  * Decorator component.
@@ -81,9 +80,9 @@ class Decorator extends Component {
 
     if (href) {
       return (
-        <Link href={href} className={decoratorClasses} tabIndex={0}>
+        <a href={href} className={decoratorClasses} tabIndex={0}>
           {decorator}
-        </Link>
+        </a>
       );
     }
 
