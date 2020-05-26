@@ -30,6 +30,7 @@
     "format": "yarn format:precommit '**/*.{js,md,scss}'",
     "format:precommit": "prettier --ignore-path .gitignore --write",
     "jest": "jest",
+    "jest:watch": "yarn jest --watch",
     "lint:js": "yarn lint:js:precommit .",
     "lint:js:precommit": "eslint --ignore-path .gitignore --fix",
     "lint:scss": "yarn lint:scss:precommit '**/*.scss'",
