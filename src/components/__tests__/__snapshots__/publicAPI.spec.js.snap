@@ -3122,6 +3122,7 @@ Map {
       "className": undefined,
       "count": undefined,
       "countLabel": [Function],
+      "heading": undefined,
       "title": undefined,
     },
     "propTypes": Object {
@@ -3137,8 +3138,11 @@ Map {
       "countLabel": Object {
         "type": "func",
       },
-      "title": Object {
+      "heading": Object {
         "type": "node",
+      },
+      "title": Object {
+        "type": "string",
       },
     },
   },
@@ -3150,7 +3154,7 @@ Map {
       "count": undefined,
       "countLabel": [Function],
       "expandLabel": "expandLabel",
-      "hoverTitle": undefined,
+      "heading": undefined,
       "scrollGradientColor": "var(--ui-background, #161616)",
       "title": "title",
     },
@@ -3173,14 +3177,14 @@ Map {
       "expandLabel": Object {
         "type": "string",
       },
-      "hoverTitle": Object {
-        "type": "string",
+      "heading": Object {
+        "type": "node",
       },
       "scrollGradientColor": Object {
         "type": "string",
       },
       "title": Object {
-        "type": "node",
+        "type": "string",
       },
     },
   },
@@ -3305,6 +3309,7 @@ Map {
       "className": undefined,
       "count": undefined,
       "countLabel": [Function],
+      "heading": undefined,
       "title": undefined,
       "titleClassName": undefined,
     },
@@ -3321,8 +3326,11 @@ Map {
       "countLabel": Object {
         "type": "func",
       },
-      "title": Object {
+      "heading": Object {
         "type": "node",
+      },
+      "title": Object {
+        "type": "string",
       },
       "titleClassName": Object {
         "type": "string",
@@ -3336,7 +3344,7 @@ Map {
       "count": undefined,
       "countClassName": undefined,
       "countLabel": [Function],
-      "hoverTitle": undefined,
+      "title": "title",
     },
     "propTypes": Object {
       "children": Object {
@@ -3354,7 +3362,7 @@ Map {
       "countLabel": Object {
         "type": "func",
       },
-      "hoverTitle": Object {
+      "title": Object {
         "type": "string",
       },
     },
