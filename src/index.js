@@ -264,6 +264,7 @@ export LayoutModule, {
   BackgroundModule,
   ButtonClusterModule,
   DescriptionModule,
+  PageTabModule,
   TitleModule,
 } from './components/UNSTABLE__Layout/LayoutModules';
 
