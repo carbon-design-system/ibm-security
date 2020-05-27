@@ -261,7 +261,10 @@ export { Wizard, WizardStep } from './components/Wizard';
 
 // Experimental.
 export LayoutModule, {
-  LayoutBackground,
+  BackgroundModule,
+  ButtonClusterModule,
+  DescriptionModule,
+  TitleModule,
 } from './components/UNSTABLE__Layout/LayoutModules';
 
 export UNSTABLE__Pagination, {

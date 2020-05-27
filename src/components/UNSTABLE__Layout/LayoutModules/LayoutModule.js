@@ -11,23 +11,25 @@ import { getComponentNamespace } from '../../../globals/namespace';
 
 const namespace = getComponentNamespace('unstable--layout__module');
 
-export const cloneChildren = (children, className, other) =>
+const getModuleProps = ({ className, module, type }) => ({
+  className: classnames(namespace, `${namespace}--${type}`, className),
+  'data-module': module && `${module} module`,
+});
+
+const cloneChildren = (children, className, other) =>
   Children.map(children, child =>
     cloneElement(child, {
-      className: classnames(
-        child.props.className,
-        `${namespace}--${className}`
-      ),
       ...other,
+      className: classnames(
+        `${namespace}--${className}`,
+        child.props.className,
+        other.className
+      ),
     })
   );
 
 const LayoutModule = ({ className, children, module, type, ...other }) => (
-  <div
-    className={classnames(namespace, `${namespace}--${type}`, className)}
-    data-module={module && `${module} module`}
-    {...other}
-  >
+  <div {...getModuleProps({ className, module, type })} {...other}>
     {children}
   </div>
 );
@@ -45,3 +47,5 @@ LayoutModule.defaultProps = {
 };
 
 export default LayoutModule;
+
+export { cloneChildren, getModuleProps };

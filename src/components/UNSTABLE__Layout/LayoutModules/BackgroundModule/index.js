@@ -1,5 +1,5 @@
 /**
- * @file Layout background.
+ * @file Background module.
  * @copyright IBM Security 2020
  */
 
@@ -7,11 +7,11 @@ import { node } from 'prop-types';
 
 import { cloneChildren } from '../LayoutModule';
 
-const LayoutBackground = ({ children, ...other }) =>
+const BackgroundModule = ({ children, ...other }) =>
   cloneChildren(children, 'background', other);
 
-LayoutBackground.propTypes = {
+BackgroundModule.propTypes = {
   children: node.isRequired,
 };
 
-export default LayoutBackground;
+export default BackgroundModule;

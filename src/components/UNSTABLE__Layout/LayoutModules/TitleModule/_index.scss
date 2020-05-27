@@ -1,0 +1,23 @@
+////
+/// Title module.
+/// @group title-module
+/// @copyright IBM Security 2020
+////
+
+@import '@carbon/layout/scss/spacing';
+
+@import '../../../Component/mixins';
+@import '../variables';
+
+@include security--component($name: #{$layout-modules__name}--title) {
+  /// Spacing.
+  /// @type Length
+  $title__spacing: $carbon--layout-01;
+
+  margin-top: $title__spacing;
+  margin-bottom: $title__spacing;
+
+  & + & {
+    margin-top: $carbon--layout-03;
+  }
+}

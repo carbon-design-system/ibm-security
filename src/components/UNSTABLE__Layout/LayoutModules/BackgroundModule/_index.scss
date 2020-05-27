@@ -1,6 +1,6 @@
 ////
-/// Layout background.
-/// @group layout-background
+/// Background module.
+/// @group background-module
 /// @copyright IBM Security 2020
 ////
 
@@ -8,7 +8,7 @@
 @import '@carbon/themes/scss/tokens';
 
 @import '../../../../globals/border/index';
-
+@import '../../../Component/mixins';
 @import '../variables';
 
 @include security--component($name: #{$layout-modules__name}--background) {

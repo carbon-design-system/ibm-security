@@ -1,0 +1,14 @@
+////
+/// Description module.
+/// @group description-module
+/// @copyright IBM Security 2020
+////
+
+@import '@carbon/layout/scss/spacing';
+
+@import '../../../Component/mixins';
+@import '../variables';
+
+@include security--component($name: #{$layout-modules__name}--description) {
+  padding-bottom: $carbon--layout-03;
+}
