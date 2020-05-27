@@ -3132,7 +3132,17 @@ Map {
         "type": "string",
       },
       "count": Object {
-        "type": "number",
+        "args": Array [
+          Array [
+            Object {
+              "type": "number",
+            },
+            Object {
+              "type": "string",
+            },
+          ],
+        ],
+        "type": "oneOfType",
       },
       "countLabel": Object {
         "type": "func",
@@ -3164,7 +3174,17 @@ Map {
         "type": "string",
       },
       "count": Object {
-        "type": "number",
+        "args": Array [
+          Array [
+            Object {
+              "type": "number",
+            },
+            Object {
+              "type": "string",
+            },
+          ],
+        ],
+        "type": "oneOfType",
       },
       "countLabel": Object {
         "type": "func",
@@ -3195,7 +3215,17 @@ Map {
         "type": "string",
       },
       "count": Object {
-        "type": "number",
+        "args": Array [
+          Array [
+            Object {
+              "type": "number",
+            },
+            Object {
+              "type": "string",
+            },
+          ],
+        ],
+        "type": "oneOfType",
       },
       "countLabel": Object {
         "type": "func",
@@ -3253,7 +3283,17 @@ Map {
         "type": "string",
       },
       "count": Object {
-        "type": "number",
+        "args": Array [
+          Array [
+            Object {
+              "type": "number",
+            },
+            Object {
+              "type": "string",
+            },
+          ],
+        ],
+        "type": "oneOfType",
       },
       "countLabel": Object {
         "type": "func",
@@ -3312,7 +3352,17 @@ Map {
         "type": "string",
       },
       "count": Object {
-        "type": "number",
+        "args": Array [
+          Array [
+            Object {
+              "type": "number",
+            },
+            Object {
+              "type": "string",
+            },
+          ],
+        ],
+        "type": "oneOfType",
       },
       "countLabel": Object {
         "type": "func",
@@ -3341,7 +3391,17 @@ Map {
         "type": "string",
       },
       "count": Object {
-        "type": "number",
+        "args": Array [
+          Array [
+            Object {
+              "type": "number",
+            },
+            Object {
+              "type": "string",
+            },
+          ],
+        ],
+        "type": "oneOfType",
       },
       "countClassName": Object {
         "type": "string",
