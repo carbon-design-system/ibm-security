@@ -27,6 +27,11 @@ describe('FilterPanelGroup', () => {
     expect(getByTitle(/custom title/i)).toBeVisible();
   });
 
+  test('renders a title inside the label as a node if a heading node is not provided', () => {
+    const { queryByText } = render(<FilterPanelGroup title="title" />);
+    expect(queryByText(/title/)).toBeVisible();
+  });
+
   test('renders with a heading node', () => {
     const { getByTestId } = render(
       <FilterPanelGroup heading={<span data-testid="node-title" />} />
