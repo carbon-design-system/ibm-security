@@ -11,22 +11,28 @@ import FilterPanelAccordion from '../FilterPanelAccordion';
 describe('FilterPanelAccordion', () => {
   test('should have no Axe or DAP violations', async () => {
     const main = document.createElement('main');
-    render(<FilterPanelAccordion title="test accordion title" />, {
-      // DAP requires a landmark '<main>' in the DOM:
-      container: document.body.appendChild(main),
-    });
+    render(
+      <FilterPanelAccordion
+        heading="test accordion title"
+        title="test title"
+      />,
+      {
+        // DAP requires a landmark '<main>' in the DOM:
+        container: document.body.appendChild(main),
+      }
+    );
     await expect(document.body).toHaveNoAxeViolations();
     await expect(document.body).toHaveNoDAPViolations('FilterPanelAccordion');
   });
 
-  test('renders with a title', () => {
+  test('renders with a title attribute', () => {
     const { getByText } = render(<FilterPanelAccordion title="custom title" />);
     expect(getByText(/custom title/i)).toBeVisible();
   });
 
-  test('renders with a title node', () => {
+  test('renders with a heading node', () => {
     const { getByTestId } = render(
-      <FilterPanelAccordion title={<span data-testid="node-title" />} />
+      <FilterPanelAccordion heading={<span data-testid="node-title" />} />
     );
     expect(getByTestId('node-title')).toBeVisible();
   });

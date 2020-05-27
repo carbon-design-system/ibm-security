@@ -3214,6 +3214,7 @@ Map {
       "countLabel": [Function],
       "indeterminate": false,
       "onChange": [Function],
+      "title": undefined,
     },
     "propTypes": Object {
       "checked": Object {
@@ -3279,6 +3280,7 @@ Map {
       "onChange": [Function],
       "open": false,
       "overflowMenuAriaLabel": undefined,
+      "title": undefined,
     },
     "propTypes": Object {
       "checked": Object {

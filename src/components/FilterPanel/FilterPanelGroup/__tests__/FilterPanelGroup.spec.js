@@ -11,22 +11,25 @@ import FilterPanelGroup from '../FilterPanelGroup';
 describe('FilterPanelGroup', () => {
   test('should have no Axe or DAP violations', async () => {
     const main = document.createElement('main');
-    render(<FilterPanelGroup title="test filter group" />, {
-      // DAP requires a landmark '<main>' in the DOM:
-      container: document.body.appendChild(main),
-    });
+    render(
+      <FilterPanelGroup heading="test filter group" title="test title" />,
+      {
+        // DAP requires a landmark '<main>' in the DOM:
+        container: document.body.appendChild(main),
+      }
+    );
     await expect(document.body).toHaveNoAxeViolations();
     await expect(document.body).toHaveNoDAPViolations('FilterPanelGroup');
   });
 
-  test('renders with a title', () => {
+  test('renders with a title attribute', () => {
     const { getByText } = render(<FilterPanelGroup title="custom title" />);
     expect(getByText(/custom title/i)).toBeVisible();
   });
 
-  test('renders with a title node', () => {
+  test('renders with a heading node', () => {
     const { getByTestId } = render(
-      <FilterPanelGroup title={<span data-testid="node-title" />} />
+      <FilterPanelGroup heading={<span data-testid="node-title" />} />
     );
     expect(getByTestId('node-title')).toBeVisible();
   });
@@ -40,7 +43,7 @@ describe('FilterPanelGroup', () => {
     expect(getByTestId('content')).toBeVisible();
   });
 
-  test('does not render the count if the title is not provided', () => {
+  test('does not render the count if the heading or title are not provided', () => {
     const { queryByText } = render(<FilterPanelGroup count={200} />);
     expect(queryByText(/200/)).not.toBeInTheDocument();
   });
