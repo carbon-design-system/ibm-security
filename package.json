@@ -181,7 +181,6 @@
     "lib",
     "dist",
     "scss",
-    "storybook-static",
     "macros"
   ],
   "jest": {
