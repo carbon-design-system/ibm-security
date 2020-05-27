@@ -40,14 +40,12 @@ const {
 const DataTable = ({
   filterRows,
   headers,
-
   isSortable,
   isSelectable,
   missingDataCharacter,
   render,
   rows,
   sortRow,
-
   useZebraStyles,
 }) => (
   <div className={namespace}>
@@ -64,6 +62,7 @@ const DataTable = ({
     ) : (
       <CarbonDataTable
         headers={headers}
+        isSortable={isSortable}
         rows={rows}
         filterRows={filterRows}
         sortRow={sortRow}
@@ -75,8 +74,9 @@ const DataTable = ({
           getRowProps,
           getSelectionProps,
           getTableProps,
+          getTableContainerProps,
         }) => (
-          <TableContainer>
+          <TableContainer {...getTableContainerProps()}>
             <Table {...getTableProps()}>
               <TableHead>
                 <TableRow>
