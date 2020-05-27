@@ -23,8 +23,8 @@ describe('FilterPanelGroup', () => {
   });
 
   test('renders with a title attribute', () => {
-    const { getByText } = render(<FilterPanelGroup title="custom title" />);
-    expect(getByText(/custom title/i)).toBeVisible();
+    const { getByTitle } = render(<FilterPanelGroup title="custom title" />);
+    expect(getByTitle(/custom title/i)).toBeVisible();
   });
 
   test('renders with a heading node', () => {
@@ -51,6 +51,13 @@ describe('FilterPanelGroup', () => {
   test('renders the count if the title is also provided', () => {
     const { queryByText } = render(
       <FilterPanelGroup title="title" count={200} />
+    );
+    expect(queryByText(/200/)).toBeVisible();
+  });
+
+  test('renders the count if the heading is also provided', () => {
+    const { queryByText } = render(
+      <FilterPanelGroup heading="title" count={200} />
     );
     expect(queryByText(/200/)).toBeVisible();
   });

@@ -48,10 +48,10 @@ describe('FilterPanelAccordionItem', () => {
   });
 
   test('renders with a title attribute', () => {
-    const { getByText } = render(
+    const { getByTitle } = render(
       <FilterPanelAccordionItem title="custom title" />
     );
-    expect(getByText(/custom title/i)).toBeVisible();
+    expect(getByTitle(/custom title/i)).toBeVisible();
   });
 
   test('renders with a heading node', () => {
