@@ -73,7 +73,7 @@ FilterPanelLabel.defaultProps = {
   countLabel: count => `${count} items`,
   className: undefined,
   countClassName: undefined,
-  title: 'title',
+  title: undefined,
 };
 
 export default FilterPanelLabel;
