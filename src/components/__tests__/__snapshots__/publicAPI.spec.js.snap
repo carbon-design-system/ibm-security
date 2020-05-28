@@ -3396,7 +3396,7 @@ Map {
       "count": undefined,
       "countClassName": undefined,
       "countLabel": [Function],
-      "title": "title",
+      "title": undefined,
     },
     "propTypes": Object {
       "children": Object {
