@@ -3166,7 +3166,7 @@ Map {
       "expandLabel": "expandLabel",
       "heading": undefined,
       "scrollGradientColor": "var(--ui-background, #161616)",
-      "title": "title",
+      "title": undefined,
     },
     "propTypes": Object {
       "children": Object {

@@ -110,7 +110,7 @@ FilterPanelAccordionItem.propTypes = {
 };
 
 FilterPanelAccordionItem.defaultProps = {
-  title: 'title',
+  title: undefined,
   heading: undefined,
   expandLabel: 'expandLabel',
   collapseLabel: 'collapseLabel',
