@@ -59,7 +59,7 @@ const LegacyFilterPanelWithState = compose(
 const checkboxProps = () => ({
   count: 10,
   onChange: action('FilterPanelCheckbox onChange'),
-  title: text('FilterPanelCheckbox title attribute (title)', title),
+  title: 'FilterPanelCheckbox title attribute (title)',
 });
 
 LegacyFilterPanelWithState.displayName = getDisplayName(FilterPanel);
