@@ -9978,6 +9978,7 @@ Map {
   },
   "Tearsheet" => Object {
     "defaultProps": Object {
+      "className": "",
       "deleteButton": Object {
         "hide": true,
         "onClick": [Function],
@@ -10003,6 +10004,9 @@ Map {
       },
     },
     "propTypes": Object {
+      "className": Object {
+        "type": "string",
+      },
       "closeButton": Object {
         "args": Array [
           Object {
@@ -12172,6 +12176,7 @@ Map {
   "Wizard" => Object {
     "defaultProps": Object {
       "children": undefined,
+      "className": "",
       "focusTrap": true,
       "initState": Object {},
       "isOpen": undefined,
@@ -12186,6 +12191,9 @@ Map {
     "propTypes": Object {
       "children": Object {
         "type": "node",
+      },
+      "className": Object {
+        "type": "string",
       },
       "focusTrap": Object {
         "type": "bool",
