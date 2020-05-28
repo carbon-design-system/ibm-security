@@ -56,6 +56,12 @@ const LegacyFilterPanelWithState = compose(
   })
 )(FilterPanel);
 
+const checkboxProps = () => ({
+  count: 10,
+  onChange: action('FilterPanelCheckbox onChange'),
+  title: text('FilterPanelCheckbox title attribute (title)', title),
+});
+
 LegacyFilterPanelWithState.displayName = getDisplayName(FilterPanel);
 LegacyFilterPanelWithState.__docgenInfo = FilterPanel.__docgenInfo;
 
@@ -83,21 +89,18 @@ storiesOf(patterns('FilterPanel'), module)
           <FilterPanelCheckbox
             labelText="Filter checkbox"
             id="result-filter-checkbox"
-            count={10}
-            onChange={action('FilterPanelCheckbox onChange')}
+            {...checkboxProps()}
           />
           <FilterPanelCheckbox
-            labelText="Long filter checkbox  label"
+            labelText="Long filter checkbox label"
             id="result-long-filter-checkbox"
-            count={10}
-            onChange={action('FilterPanelCheckbox onChange')}
+            {...checkboxProps()}
           />
           <FilterPanelCheckbox
             labelText="Checked"
             id="result-checked"
-            count={10}
             defaultChecked
-            onChange={action('FilterPanelCheckbox onChange')}
+            {...checkboxProps()}
           />
         </FilterPanelGroup>
         <FilterPanelGroup title="Truncated accordion item">
@@ -107,8 +110,7 @@ storiesOf(patterns('FilterPanel'), module)
               key={index}
               labelText={`Filter ${index + 1}`}
               id={`result-filter-checkbox-${index + 1}`}
-              count={10}
-              onChange={action('FilterPanelCheckbox onChange')}
+              {...checkboxProps()}
             />
           ))}
         </FilterPanelGroup>
@@ -125,21 +127,18 @@ storiesOf(patterns('FilterPanel'), module)
           <FilterPanelCheckbox
             labelText="Filter checkbox"
             id="filter-checkbox"
-            count={10}
-            onChange={action('FilterPanelCheckbox onChange')}
+            {...checkboxProps()}
           />
           <FilterPanelCheckbox
             labelText="Long filter checkbox  label"
             id="long-filter-checkbox"
-            count={10}
-            onChange={action('FilterPanelCheckbox onChange')}
+            {...checkboxProps()}
           />
           <FilterPanelCheckbox
             labelText="Checked"
             id="checked"
-            count={10}
             defaultChecked
-            onChange={action('FilterPanelCheckbox onChange')}
+            {...checkboxProps()}
           />
         </FilterPanelAccordionItem>
         <FilterPanelAccordionItem
@@ -154,8 +153,7 @@ storiesOf(patterns('FilterPanel'), module)
               key={index}
               labelText={`Filter ${index + 1}`}
               id={`filter-checkbox-${index + 1}`}
-              count={10}
-              onChange={action('FilterPanelCheckbox onChange')}
+              {...checkboxProps()}
             />
           ))}
         </FilterPanelAccordionItem>
@@ -174,7 +172,7 @@ storiesOf(patterns('FilterPanel'), module)
               key={index}
               labelText={`Filter ${index + 1}`}
               id={`1-filter-${index + 1}`}
-              count={10}
+              {...checkboxProps()}
             />
           ))}
         </FilterPanelAccordionItem>
@@ -191,7 +189,7 @@ storiesOf(patterns('FilterPanel'), module)
               key={index}
               labelText={`Filter ${index + 1}`}
               id={`2-filter-${index + 1}`}
-              count={10}
+              {...checkboxProps()}
             />
           ))}
         </FilterPanelAccordionItem>
