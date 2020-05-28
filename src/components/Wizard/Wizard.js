@@ -6,6 +6,7 @@
 /* eslint-disable compat/compat,no-nested-ternary */
 
 import React, { Component, Children } from 'react';
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { StepIndicator, Step as SingleStep } from '../..';
 import WizardStep from './WizardStep';
@@ -235,7 +236,7 @@ class Wizard extends Component {
    * Renders the component.
    */
   render() {
-    const { labels } = this.props;
+    const { labels, ...other } = this.props;
     const componentLabels = {
       ...defaultLabels.labels,
       ...labels,
@@ -330,6 +331,8 @@ class Wizard extends Component {
         }}
         loading={this.state.loading}
         loadingMessage={this.props.loadingMessage}
+        className={classnames(namespace, this.props.className)}
+        {...other}
       />
     );
   }
@@ -378,9 +381,13 @@ Wizard.propTypes = {
    * (useful to override default labels)
    */
   labels: defaultLabels.propType,
+
+  /** Optional class name for the wrapper node. */
+  className: PropTypes.string,
 };
 
 Wizard.defaultProps = {
+  className: '',
   focusTrap: true,
   rootNode: isClient() ? document.body : undefined,
   subTitle: '',
