@@ -7,9 +7,10 @@
 @import '@carbon/layout/scss/spacing';
 
 @import '../../../Component/mixins';
-@import '../variables';
 
-@include security--component($name: #{$layout-modules__name}--title) {
+@import 'variables';
+
+@include security--component($name: $layout__modules--title__name) {
   /// Spacing.
   /// @type Length
   $title__spacing: $carbon--layout-01;

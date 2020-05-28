@@ -1,0 +1,12 @@
+////
+/// Title module variables.
+/// @group title-module
+/// @copyright IBM Security 2020
+////
+
+@import '../variables';
+
+/// Name.
+/// @type String
+/// @access private
+$layout__modules--title__name: #{$layout-modules__name}--title;

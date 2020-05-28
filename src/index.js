@@ -266,6 +266,7 @@ export LayoutModule, {
   DescriptionModule,
   PageTabModule,
   TitleModule,
+  TypeLayoutModule,
 } from './components/UNSTABLE__Layout/LayoutModules';
 
 export UNSTABLE__Pagination, {
