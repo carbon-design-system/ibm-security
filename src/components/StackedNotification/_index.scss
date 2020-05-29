@@ -4,11 +4,22 @@
 /// @copyright IBM Security 2019
 ////
 
+@import '@carbon/layout/scss/spacing';
+
 @import '../Notification/index';
 
 @import '../Component/mixins';
-@import 'mixins';
 
 @include security--component($name: stacked-notification) {
-  @include stacked-notification;
+  /// Border.
+  /// @type Length
+  $box-shadow__sizing: $carbon--spacing-03;
+
+  /// Small border.
+  /// @type Length
+  $box-shadow__sizing--small: $carbon--spacing-02;
+
+  border-width: 0;
+  box-shadow: $box-shadow__sizing--small $box-shadow__sizing--small $ui-04,
+    $box-shadow__sizing $box-shadow__sizing 0 $ui-03;
 }

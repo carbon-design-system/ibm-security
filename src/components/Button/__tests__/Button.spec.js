@@ -54,14 +54,6 @@ describe('Button', () => {
     );
   });
 
-  test('should set button to `disabled` when it is `loading`', () => {
-    const { getByText } = render(<Button loading>test loading button</Button>);
-    expect(getByText(/test loading button/i)).toHaveAttribute('disabled');
-    expect(getByText(/test loading button/i)).toHaveClass(
-      `${carbonPrefix}btn--disabled`
-    );
-  });
-
   test('should set button to `ghost` kind when it is `loading`', () => {
     const { getByText } = render(<Button loading>test loading button</Button>);
     expect(getByText(/test loading button/i)).toHaveClass(

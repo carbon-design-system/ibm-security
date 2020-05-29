@@ -4,7 +4,7 @@
 
 ## Usage
 
-Themes are offered by outputting [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) for theme tokens.
+Themes are offered by outputting Carbon for IBM Security-specific [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) as theme tokens, independently of [Carbon's experimental `enable-css-custom-properties` feature flag](https://github.com/carbon-design-system/carbon/blob/master/packages/components/src/globals/scss/_feature-flags.scss).
 
 Each theme is assigned universal color variables, which are determined by [common roles and usage](https://www.carbondesignsystem.com/guidelines/color/usage). This allows for uniform color application across themes while maintaining full styling flexibility.
 
@@ -50,6 +50,16 @@ This file automatically includes tokens, denoted by the prefix `$`, which initia
 ```scss
 $interactive-01;
 $interactive-02;
+```
+
+#### Feature flags
+
+You can disable Carbon for IBM Security custom theme output using a feature flag by writing the following Sass code before importing:
+
+```scss
+$security--feature-flags: (
+  security--css-custom-property-theming: false,
+);
 ```
 
 ### JavaScript

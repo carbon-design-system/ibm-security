@@ -22,7 +22,6 @@ const NonEntitledSection = ({
   description,
   title,
   subTitle,
-  catalogId,
   links,
   style,
   ...other
@@ -55,7 +54,9 @@ const NonEntitledSection = ({
                 <Link id={id} href={href} className={`${namespace}__link`}>
                   {icon !== undefined && (
                     <img
-                      alt={text}
+                      // `alt` is purposely left blank:
+                      alt=""
+                      aria-hidden
                       className={`${namespace}__link__icon`}
                       src={icon}
                     />
@@ -74,7 +75,6 @@ NonEntitledSection.defaultProps = {
   backgroundImage: null,
   className: '',
   description: '',
-  catalogId: '',
   links: [],
 };
 
@@ -93,9 +93,6 @@ NonEntitledSection.propTypes = {
 
   /** @type {string} Section description. */
   description: PropTypes.string,
-
-  /** @type {string} Catalog id. */
-  catalogId: PropTypes.string,
 
   /** @type {Array<Object.*>} An array list of links. */
   links: PropTypes.arrayOf(

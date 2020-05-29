@@ -1,6 +1,6 @@
 /**
  * @file Navigation class.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import React, { Children, Component } from 'react';
@@ -15,6 +15,8 @@ import window from '../../globals/utils/globalRoot';
 import { getComponentNamespace } from '../../globals/namespace';
 
 export const navNamespace = getComponentNamespace('nav');
+
+const NavListName = (<NavList />).type.name;
 
 /**
  * Navigation class.
@@ -112,13 +114,13 @@ export default class Nav extends Component {
    * @param {number} id The index of the list.
    */
   handleListClick(id) {
-    this.props.children.forEach(({ props, type }, index) => {
-      if (type === NavList) {
+    Children.forEach(this.props.children, ({ props, type }, index) => {
+      if (type.name === NavListName) {
         const childId = `${navNamespace}__list--${index}`;
 
         if (childId !== id && !props.isExpandedOnPageload) {
           this.navigationLists
-            .find(navigationList => navigationList.props.id === childId)
+            .find(({ props }) => props.id === childId)
             .close();
         }
       }
@@ -135,20 +137,20 @@ export default class Nav extends Component {
       ...other
     } = this.props;
 
-    const newChildren = Children.map(children, (child, index) =>
-      child.type === NavList
-        ? this.buildNewListChild(child, index)
-        : this.buildNewItemChild(child, index)
-    );
-
-    const classNames = classnames(navNamespace, className);
-
     return (
-      <nav aria-label={label} className={classNames} {...other}>
+      <nav
+        className={classnames(navNamespace, className)}
+        aria-label={label}
+        {...other}
+      >
         {heading && <h1 className={`${navNamespace}__heading`}>{heading}</h1>}
 
         <ul className={`${navNamespace}__wrapper`} role="menubar">
-          {newChildren}
+          {Children.map(children, (child, index) =>
+            child.type.name === NavListName
+              ? this.buildNewListChild(child, index)
+              : this.buildNewItemChild(child, index)
+          )}
         </ul>
       </nav>
     );

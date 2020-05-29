@@ -16,6 +16,8 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
         className="security--combo-button--primary"
         disabled={false}
         iconDescription=""
+        id="test-1"
+        key="test-1"
         kind="primary"
         loading={false}
         onClick={[Function]}
@@ -32,6 +34,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
           className="security--button security--combo-button--primary"
           disabled={false}
           iconDescription=""
+          id="test-1"
           kind="primary"
           onClick={[Function]}
           renderIcon={
@@ -46,6 +49,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
           <button
             className="security--button security--combo-button--primary bx--btn bx--btn--primary"
             disabled={false}
+            id="test-1"
             onClick={[Function]}
             tabIndex={0}
             type="button"
@@ -203,6 +207,8 @@ exports[`ComboButton renders a combo button without an overflow menu 1`] = `
         className="security--combo-button--primary"
         disabled={false}
         iconDescription=""
+        id="test-1"
+        key="test-1"
         kind="primary"
         loading={false}
         onClick={[Function]}
@@ -219,6 +225,7 @@ exports[`ComboButton renders a combo button without an overflow menu 1`] = `
           className="security--button security--combo-button--primary"
           disabled={false}
           iconDescription=""
+          id="test-1"
           kind="primary"
           onClick={[Function]}
           renderIcon={
@@ -233,6 +240,7 @@ exports[`ComboButton renders a combo button without an overflow menu 1`] = `
           <button
             className="security--button security--combo-button--primary bx--btn bx--btn--primary"
             disabled={false}
+            id="test-1"
             onClick={[Function]}
             tabIndex={0}
             type="button"

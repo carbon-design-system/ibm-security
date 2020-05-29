@@ -6,7 +6,7 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 
-import { ExternalLink } from '../../../..';
+import { ExternalLink } from '../../..';
 
 describe('ExternalLink', () => {
   test('should have no Axe or DAP violations', async () => {

@@ -13,7 +13,7 @@ describe('ComboButton', () => {
   it('renders a combo button without an overflow menu', () => {
     const comboButton = mount(
       <ComboButton>
-        <ComboButtonItem renderIcon={ArrowRight20}>
+        <ComboButtonItem id="test-1" renderIcon={ArrowRight20}>
           Start a task
         </ComboButtonItem>
       </ComboButton>
@@ -26,10 +26,10 @@ describe('ComboButton', () => {
   it('renders a combo button with children and an overflow menu', () => {
     const comboButton = mount(
       <ComboButton>
-        <ComboButtonItem renderIcon={ArrowRight20}>
+        <ComboButtonItem id="test-1" renderIcon={ArrowRight20}>
           Start a task
         </ComboButtonItem>
-        <ComboButtonItem>Filter list</ComboButtonItem>
+        <ComboButtonItem id="test-2">Filter list</ComboButtonItem>
       </ComboButton>
     );
 

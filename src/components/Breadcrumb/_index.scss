@@ -1,17 +1,23 @@
 ////
 /// Breadcrumb component.
 /// @group breadcrumb
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import '@carbon/themes/scss/tokens';
+@import '@carbon/type/scss/styles';
 @import 'carbon-components/scss/components/breadcrumb/breadcrumb';
 
-@import '../../globals/index';
+@import 'carbon-components/scss/globals/scss/css--reset';
+@import 'carbon-components/scss/globals/scss/vars';
 
-/// Carbon style overrides.
+@import '../../globals/namespace/index';
+
 @include export-namespace($name: breadcrumb) {
   .#{$prefix}--breadcrumb {
+    // TODO: Remove when https://github.com/carbon-design-system/carbon/pull/5916 is absorbed.
+    @include reset;
+
     display: flex;
     flex-wrap: wrap;
 

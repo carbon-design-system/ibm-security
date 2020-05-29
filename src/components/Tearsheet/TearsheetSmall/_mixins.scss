@@ -1,10 +1,14 @@
 ////
 /// Small tearsheet mixins.
 /// @group tearsheet--small
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
-@import '../../../globals/index';
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/layout/scss/mini-unit';
+@import '@carbon/type/scss/index';
+
+@import 'carbon-components/scss/globals/scss/vars';
 
 @import '../../TagWallFilter/Filter/mixins';
 
@@ -49,8 +53,10 @@
   &__body {
     display: flex;
     min-height: 0;
+    width: 100%;
     margin-bottom: $carbon--layout-06;
     flex-grow: 1;
+    overflow: auto;
   }
 
   &__scroll-gradient__content {

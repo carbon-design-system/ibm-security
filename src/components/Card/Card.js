@@ -28,6 +28,7 @@ const Card = ({
   body,
   footer,
   onClick,
+  ...other
 }) => {
   const cardHeader = header && (
     <div className={`${namespace}__header`}>
@@ -77,11 +78,14 @@ const Card = ({
           href={link}
           aria-label={label}
           onClick={onClick}
+          {...other}
         >
           {content}
         </a>
       ) : (
-        <div className={classNames}>{content}</div>
+        <div className={classNames} {...other}>
+          {content}
+        </div>
       )}
     </Fragment>
   );
@@ -96,7 +100,7 @@ Card.defaultProps = {
   className: '',
   footer: null,
   header: null,
-  label: null,
+  label: '',
   link: null,
   onClick: null,
 };
@@ -131,7 +135,7 @@ Card.propTypes = {
     title: string.isRequired,
   }),
 
-  /** @type {string} Card label. */
+  /** @type {string} The alt tag content for an image, if included in the header object. */
   label: string,
 
   /** @type {string} The link. */
