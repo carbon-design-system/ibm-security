@@ -13,5 +13,8 @@ module.exports = {
       includePaths: ['node_modules'],
       outputStyle: 'expanded',
     }),
-  forEachImport: callback => sync('src/**/*.scss').forEach(callback),
+  forEachImport: callback =>
+    sync('src/**/*.scss', {
+      ignore: ['src/globals/grid/css-gridish/**/*'],
+    }).forEach(callback),
 };
