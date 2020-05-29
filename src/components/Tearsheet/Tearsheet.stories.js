@@ -49,7 +49,7 @@ const selectorPrimaryFocus = () => document.querySelector(selector);
 const renderMain = ({ isLoading }) => (
   <Form className={namespace} tabIndex={isLoading ? -1 : 0}>
     <p>
-      Whenenver the Tearsheet is loading, please use{' '}
+      Whenever the Tearsheet is loading, please use{' '}
       <CodeSnippet type="inline" light tabIndex={isLoading ? -1 : 0}>
         isLoading
       </CodeSnippet>{' '}
@@ -61,7 +61,7 @@ const renderMain = ({ isLoading }) => (
       links) to{' '}
       <CodeSnippet type="inline" light tabIndex={isLoading ? -1 : 0}>
         disabled
-      </CodeSnippet>{' '}
+      </CodeSnippet>
       or{' '}
       <CodeSnippet type="inline" light tabIndex={isLoading ? -1 : 0}>
         tabIndex={-1}
