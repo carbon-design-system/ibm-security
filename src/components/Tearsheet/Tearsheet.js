@@ -42,11 +42,20 @@ class Tearsheet extends Component {
     if (
       prevState.loading !== nextProps.loading ||
       prevState.loadingMessage !== nextProps.loadingMessage
-    )
+    ) {
+      // Prevent inner elements from being focussable if `loading:true`:
+      const tearsheetWrapper = document.querySelector('.security--tearsheet');
+      const tearsheetChildren = tearsheetWrapper.querySelectorAll(
+        '[tabindex], a, area, button, input, select, textarea'
+      );
+      tearsheetChildren.forEach(element =>
+        element.setAttribute('tabIndex', nextProps.loading ? -1 : 0)
+      );
       return {
         loading: nextProps.loading,
         loadingMessage: nextProps.loadingMessage,
       };
+    }
     return null;
   }
 
@@ -122,42 +131,45 @@ class Tearsheet extends Component {
               )}
 
               {renderSidebar && (
-                <section className={`${namespace}__sidebar`}>
-                  {!this.state.loading && (
-                    <>
-                      <h1 className={`${namespace}__sidebar__title`}>
-                        {sidebarTitle}
-                      </h1>
-                      <p className={`${namespace}__sidebar__subtitle`}>
-                        {sidebarSubtitle}
-                      </p>
+                <section
+                  aria-hidden={this.state.loading}
+                  className={`${namespace}__sidebar`}
+                >
+                  <h1 className={`${namespace}__sidebar__title`}>
+                    {sidebarTitle}
+                  </h1>
+                  <p className={`${namespace}__sidebar__subtitle`}>
+                    {sidebarSubtitle}
+                  </p>
 
-                      <div className={`${namespace}__sidebar__content`}>
-                        {renderSidebar()}
-                      </div>
+                  <div className={`${namespace}__sidebar__content`}>
+                    {renderSidebar()}
+                  </div>
 
-                      <footer className={`${namespace}__sidebar__footer`}>
-                        {!hideDeleteButton && (
-                          <Button
-                            disabled={isDisabled}
-                            iconDescription={
-                              componentLabels.TEARSHEET_DELETE_BUTTON
-                            }
-                            kind="ghost-danger"
-                            onClick={onDeleteButtonClick}
-                            renderIcon={icon}
-                          >
-                            {componentLabels.TEARSHEET_DELETE_BUTTON}
-                          </Button>
-                        )}
-                      </footer>
-                    </>
-                  )}
+                  <footer className={`${namespace}__sidebar__footer`}>
+                    {!hideDeleteButton && (
+                      <Button
+                        disabled={isDisabled}
+                        iconDescription={
+                          componentLabels.TEARSHEET_DELETE_BUTTON
+                        }
+                        kind="ghost-danger"
+                        onClick={onDeleteButtonClick}
+                        renderIcon={icon}
+                        tabIndex={this.state.loading ? -1 : 0}
+                      >
+                        {componentLabels.TEARSHEET_DELETE_BUTTON}
+                      </Button>
+                    )}
+                  </footer>
                 </section>
               )}
 
-              <section className={`${namespace}__main`}>
-                {!this.state.loading && !closeButton.isDisabled && (
+              <section
+                aria-hidden={this.state.loading}
+                className={`${namespace}__main`}
+              >
+                {!closeButton.isDisabled && (
                   <IconButton
                     className={`${namespace}__button--close`}
                     label={componentLabels.TEARSHEET_CLOSE_BUTTON}
@@ -165,68 +177,68 @@ class Tearsheet extends Component {
                     renderIcon={Close20}
                     size="lg"
                     tooltip={false}
+                    tabIndex={this.state.loading ? -1 : 0}
                   />
                 )}
-                {!this.state.loading && (
-                  <>
-                    <h1 className={`${namespace}__main__title`}>{mainTitle}</h1>
-                    <section className={`${namespace}__main__content`}>
-                      <ScrollGradient
-                        className={`${namespace}__main__scroll-gradient`}
-                        color={theme.ui01}
-                      >
-                        <div
-                          className={`${namespace}__main__scroll-gradient__content`}
-                        >
-                          {renderMain()}
-                        </div>
-                      </ScrollGradient>
-                    </section>
-                    <div className={`${namespace}__container`}>
-                      {!tertiaryButton.isDisabled && (
-                      <div className={`${namespace}__container__start`}>
-                        <Button
-                          className={`${namespace}__button--tertiary`}
-                          disabled={isDisabled}
-                          kind="ghost"
-                          onClick={tertiaryButton.onClick}
-                          size="large"
-                        >
-                          {componentLabels.TEARSHEET_TERTIARY_BUTTON}
-                          {tertiaryButton.secondaryText.length > 0 && (
-                            <span
-                              className={`${namespace}__button--tertiary__text`}
-                            >
-                              {componentLabels.TEARSHEET_TERTIARY_SECONDARY_TEXT}
-                            </span>
-                          )}
-                        </Button>
-                      </div>
-                    )}
-                      <div className={`${namespace}__container__end`}>
-                        {!secondaryButton.isDisabled && (
-                        <Button
-                          className={`${namespace}__button ${namespace}__button--secondary`}
-                          disabled={secondaryButton.isDisabled}
-                          kind="secondary"
-                          onClick={secondaryButton.onClick}
-                          size="large"
-                        >
-                          {componentLabels.TEARSHEET_SECONDARY_BUTTON}
-                        </Button>
-                      )}
-                        <Button
-                          className={`${namespace}__button`}
-                          disabled={primaryButton.isDisabled}
-                          onClick={primaryButton.onClick}
-                          size="large"
-                        >
-                          {componentLabels.TEARSHEET_PRIMARY_BUTTON}
-                        </Button>
-                      </div>
+                <h1 className={`${namespace}__main__title`}>{mainTitle}</h1>
+                <section className={`${namespace}__main__content`}>
+                  <ScrollGradient
+                    className={`${namespace}__main__scroll-gradient`}
+                    color={theme.ui01}
+                  >
+                    <div
+                      className={`${namespace}__main__scroll-gradient__content`}
+                    >
+                      {renderMain()}
                     </div>
-                  </>
-                )}
+                  </ScrollGradient>
+                </section>
+                <div className={`${namespace}__container`}>
+                  {!tertiaryButton.isDisabled && (
+                    <div className={`${namespace}__container__start`}>
+                      <Button
+                        className={`${namespace}__button--tertiary`}
+                        disabled={isDisabled}
+                        kind="ghost"
+                        onClick={tertiaryButton.onClick}
+                        size="large"
+                        tabIndex={this.state.loading ? -1 : 0}
+                      >
+                        {componentLabels.TEARSHEET_TERTIARY_BUTTON}
+                        {tertiaryButton.secondaryText.length > 0 && (
+                          <span
+                            className={`${namespace}__button--tertiary__text`}
+                          >
+                            {componentLabels.TEARSHEET_TERTIARY_SECONDARY_TEXT}
+                          </span>
+                        )}
+                      </Button>
+                    </div>
+                  )}
+                  <div className={`${namespace}__container__end`}>
+                    {!secondaryButton.isDisabled && (
+                      <Button
+                        className={`${namespace}__button ${namespace}__button--secondary`}
+                        disabled={secondaryButton.isDisabled}
+                        kind="secondary"
+                        onClick={secondaryButton.onClick}
+                        size="large"
+                        tabIndex={this.state.loading ? -1 : 0}
+                      >
+                        {componentLabels.TEARSHEET_SECONDARY_BUTTON}
+                      </Button>
+                    )}
+                    <Button
+                      className={`${namespace}__button`}
+                      disabled={primaryButton.isDisabled}
+                      onClick={primaryButton.onClick}
+                      size="large"
+                      tabIndex={this.state.loading ? -1 : 0}
+                    >
+                      {componentLabels.TEARSHEET_PRIMARY_BUTTON}
+                    </Button>
+                  </div>
+                </div>
               </section>
             </section>
           </Portal>
