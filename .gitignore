@@ -4,14 +4,15 @@
 
 # Generated directories.
 coverage
-css
+/css
 es
 lib
 node_modules
 /scss
 storybook-static
 
-# Generated Gridish file.
+# CSS Gridish.
+src/globals/grid/css-gridish/css
 src/globals/grid/css-gridish/bx-grid.sketch
 
 # Logs.
@@ -27,4 +28,4 @@ src/globals/grid/css-gridish/bx-grid.sketch
 package-lock.json
 
 # AAT test results from DAP/Axe
-results/ 
+results/
