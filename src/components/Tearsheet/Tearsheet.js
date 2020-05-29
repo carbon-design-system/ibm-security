@@ -44,7 +44,7 @@ class Tearsheet extends Component {
       prevState.loadingMessage !== nextProps.loadingMessage
     ) {
       // Prevent inner elements from being focussable if `loading:true`:
-      const tearsheetWrapper = document.querySelector('.security--tearsheet');
+      const tearsheetWrapper = document.querySelector(`.${namespace}`);
       const tearsheetChildren = tearsheetWrapper.querySelectorAll(
         '[tabindex], a, area, button, input, select, textarea'
       );
