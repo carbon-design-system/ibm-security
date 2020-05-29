@@ -42,20 +42,11 @@ class Tearsheet extends Component {
     if (
       prevState.loading !== nextProps.loading ||
       prevState.loadingMessage !== nextProps.loadingMessage
-    ) {
-      // Prevent inner elements from being focussable if `loading:true`:
-      const tearsheetWrapper = document.querySelector(`.${namespace}`);
-      const tearsheetChildren = tearsheetWrapper.querySelectorAll(
-        '[tabindex], a, area, button, input, select, textarea'
-      );
-      tearsheetChildren.forEach(element =>
-        element.setAttribute('tabIndex', nextProps.loading ? -1 : 0)
-      );
+    )
       return {
         loading: nextProps.loading,
         loadingMessage: nextProps.loadingMessage,
       };
-    }
     return null;
   }
 
@@ -189,7 +180,7 @@ class Tearsheet extends Component {
                     <div
                       className={`${namespace}__main__scroll-gradient__content`}
                     >
-                      {renderMain()}
+                      {renderMain({ isLoading: loading })}
                     </div>
                   </ScrollGradient>
                 </section>

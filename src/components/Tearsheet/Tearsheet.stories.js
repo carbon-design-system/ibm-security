@@ -14,6 +14,7 @@ import { patterns } from '../../../.storybook';
 
 import {
   Button,
+  CodeSnippet,
   Dropdown,
   Form,
   FormGroup,
@@ -45,13 +46,58 @@ const id = 'search';
 const selector = `#${id}`;
 const selectorPrimaryFocus = () => document.querySelector(selector);
 
-const renderMain = () => (
-  <Form className={namespace}>
+const renderMain = ({ isLoading }) => (
+  <Form className={namespace} tabIndex={isLoading ? -1 : 0}>
+    <p>
+      Whenenver the Tearsheet is loading, please use{' '}
+      <CodeSnippet type="inline" light tabIndex={isLoading ? -1 : 0}>
+        isLoading
+      </CodeSnippet>{' '}
+      via the{' '}
+      <CodeSnippet type="inline" light tabIndex={isLoading ? -1 : 0}>
+        renderMain
+      </CodeSnippet>{' '}
+      render prop to set focussable elements (such as form inputs, buttons, and
+      links) to{' '}
+      <CodeSnippet type="inline" light tabIndex={isLoading ? -1 : 0}>
+        disabled
+      </CodeSnippet>{' '}
+      or{' '}
+      <CodeSnippet type="inline" light tabIndex={isLoading ? -1 : 0}>
+        tabIndex={-1}
+      </CodeSnippet>
+      , depending on which is more appropriate for a particular element. This
+      will prevent a user from being able to tab through your Tearsheet&apos;s
+      content while the Tearsheet is loading.
+    </p>
+    <p>For example:</p>
+    <CodeSnippet light type="multi" tabIndex={isLoading ? -1 : 0}>
+      {/* eslint-disable-next-line react/jsx-indent */}
+      {`
+<TearSheet
+  renderMain={({ isLoading }) => (
+    <Button disabled={isLoading}>
+      Example
+    </Button>
+    <CodeSnippet tabIndex={isLoading ? -1 : 0}>
+      Example
+    </CodeSnippet>
+  )}
+/>
+`}
+    </CodeSnippet>
+    <br />
+    <p>
+      For more examples, please review the &quot;Story&quot; tab in the
+      Storybook panel below to the see this demo&apos; source code.
+    </p>
+    <br />
     <Search
       id={id}
       className={className}
       labelText={searchLabel}
       placeHolderText={searchLabel}
+      disabled={isLoading}
     />
 
     <TextInput
@@ -59,6 +105,7 @@ const renderMain = () => (
       id="test-input-id"
       labelText={labelText}
       placeholder={placeholder}
+      disabled={isLoading}
     />
 
     <FormGroup legendText={labelText}>
@@ -76,6 +123,7 @@ const renderMain = () => (
           },
         ]}
         itemToString={item => (item ? item.text : '')}
+        disabled={isLoading}
       />
     </FormGroup>
 
@@ -84,12 +132,14 @@ const renderMain = () => (
       className={className}
       label={labelText}
       value={1000}
+      disabled={isLoading}
     />
 
     <TextArea
       className={className}
       labelText={labelText}
       placeholder={placeholder}
+      disabled={isLoading}
     />
   </Form>
 );
