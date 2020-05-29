@@ -1,9 +1,9 @@
 ////
 /// Type.
 /// @group type
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
-@import '@carbon/type/scss/classes';
-@import '@carbon/type/scss/font-face/mono';
-@import '@carbon/type/scss/font-face/sans';
+@import '@carbon/type/scss/font-family';
+@import '@carbon/type/scss/scale';
+@import '@carbon/type/scss/styles';
