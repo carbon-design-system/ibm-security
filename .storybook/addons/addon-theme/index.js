@@ -61,7 +61,11 @@ class Wrapper extends Component {
     this.setState({ theme });
   };
 
-  render = () => <Theme theme={this.state.theme}>{this.props.children}</Theme>;
+  render = () => (
+    <Theme key={this.state.theme} theme={this.state.theme}>
+      {this.props.children}
+    </Theme>
+  );
 }
 
 export default makeDecorator({

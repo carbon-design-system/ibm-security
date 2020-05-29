@@ -6,6 +6,7 @@
 
 @import '@carbon/type/scss/index';
 @import '@carbon/layout/scss/spacing';
+@import 'carbon-components/scss/globals/scss/helper-classes';
 
 @mixin tag-wall {
   &__label {
@@ -14,5 +15,11 @@
 
   > #{$tag--interactive__namespace} {
     margin-right: $carbon--spacing-03;
+    max-width: 40ex;
+    justify-content: space-between;
+
+    &__button {
+      flex-shrink: 0;
+    }
   }
 }

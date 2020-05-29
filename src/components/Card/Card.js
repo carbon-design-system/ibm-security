@@ -28,6 +28,7 @@ const Card = ({
   body,
   footer,
   onClick,
+  ...other
 }) => {
   const cardHeader = header && (
     <div className={`${namespace}__header`}>
@@ -77,11 +78,14 @@ const Card = ({
           href={link}
           aria-label={label}
           onClick={onClick}
+          {...other}
         >
           {content}
         </a>
       ) : (
-        <div className={classNames}>{content}</div>
+        <div className={classNames} {...other}>
+          {content}
+        </div>
       )}
     </Fragment>
   );

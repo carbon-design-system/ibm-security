@@ -8,25 +8,24 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Search from '../../Search';
 import { getComponentNamespace } from '../../../globals/namespace';
+import { useComponentFocus } from '../../../globals/utils/focus';
 
 const namespace = getComponentNamespace('filter-panel-search');
 
 const FilterPanelSearch = ({ children, className, ...other }) => {
   const [displayResults, setDisplayResults] = React.useState(false);
+  const { createFocusHandler, createBlurHandler } = useComponentFocus(300);
 
-  const hideResultsIfLostFocus = ({ currentTarget }) =>
-    setTimeout(() => {
-      if (!currentTarget.contains(document.activeElement)) {
-        setDisplayResults(false);
-      }
-    }, 300);
+  const handleFocus = createFocusHandler(() => {
+    setDisplayResults(true);
+  });
+
+  const handleBlur = createBlurHandler(() => {
+    setDisplayResults(false);
+  });
 
   return (
-    <div
-      className={namespace}
-      onBlur={hideResultsIfLostFocus}
-      onFocus={() => setDisplayResults(true)}
-    >
+    <div className={namespace} onBlur={handleBlur} onFocus={handleFocus}>
       <Search
         size="sm"
         className={classnames(`${namespace}__input`, className)}

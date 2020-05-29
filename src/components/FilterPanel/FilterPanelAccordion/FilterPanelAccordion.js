@@ -19,6 +19,7 @@ const FilterPanelAccordion = ({
   title,
   count,
   countLabel,
+  heading,
   ...other
 }) => (
   <FilterPanelGroup
@@ -27,6 +28,7 @@ const FilterPanelAccordion = ({
     title={title}
     count={count}
     countLabel={countLabel}
+    heading={heading}
   >
     <Accordion {...other}>{children}</Accordion>
   </FilterPanelGroup>
@@ -34,14 +36,19 @@ const FilterPanelAccordion = ({
 
 FilterPanelAccordion.propTypes = {
   /**
-   * Accordion title.
+   * Accordion `title` attribute.
    */
-  title: PropTypes.node,
+  title: PropTypes.string,
+
+  /**
+   * Accordion heading node.
+   */
+  heading: PropTypes.node,
 
   /**
    * Optional accordion count.
    */
-  count: PropTypes.number,
+  count: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 
   /**
    * Function returning a translated text labeling the count for accessibility.
@@ -65,6 +72,7 @@ FilterPanelAccordion.defaultProps = {
   countLabel: count => `${count} items`,
   className: undefined,
   children: undefined,
+  heading: undefined,
 };
 
 export default FilterPanelAccordion;

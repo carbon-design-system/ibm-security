@@ -58,7 +58,12 @@ register(namespace, api =>
   addPanel(`${namespace}/panel`, {
     title,
     render: ({ active }) => (
-      <Theme active={active} api={api} channel={getChannel()} />
+      <Theme
+        key="storybook/theme/panel"
+        active={active}
+        api={api}
+        channel={getChannel()}
+      />
     ),
   })
 );

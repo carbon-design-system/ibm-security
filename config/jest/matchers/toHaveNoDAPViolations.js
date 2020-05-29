@@ -1,15 +1,15 @@
 /**
- * Copyright IBM Corp. 2019
+ * Copyright IBM Corp. 2019-2020
  *
  * This source code is licensed under the Apache-2.0 license found in the
  * LICENSE file in the root directory of this source tree.
  */
 
-import AAT from '@ibma/aat';
+import aChecker from 'accessibility-checker';
 
 async function toHaveNoDAPViolations(node, label) {
-  const results = await AAT.getCompliance(node, label);
-  if (AAT.assertCompliance(results.report) === 0) {
+  const results = await aChecker.getCompliance(node, label);
+  if (aChecker.assertCompliance(results.report) === 0) {
     return {
       pass: true,
     };
@@ -17,7 +17,7 @@ async function toHaveNoDAPViolations(node, label) {
 
   return {
     pass: false,
-    message: () => AAT.stringifyResults(results.report),
+    message: () => aChecker.stringifyResults(results.report),
   };
 }
 

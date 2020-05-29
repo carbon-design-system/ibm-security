@@ -3122,6 +3122,7 @@ Map {
       "className": undefined,
       "count": undefined,
       "countLabel": [Function],
+      "heading": undefined,
       "title": undefined,
     },
     "propTypes": Object {
@@ -3132,13 +3133,26 @@ Map {
         "type": "string",
       },
       "count": Object {
-        "type": "number",
+        "args": Array [
+          Array [
+            Object {
+              "type": "number",
+            },
+            Object {
+              "type": "string",
+            },
+          ],
+        ],
+        "type": "oneOfType",
       },
       "countLabel": Object {
         "type": "func",
       },
-      "title": Object {
+      "heading": Object {
         "type": "node",
+      },
+      "title": Object {
+        "type": "string",
       },
     },
   },
@@ -3150,8 +3164,9 @@ Map {
       "count": undefined,
       "countLabel": [Function],
       "expandLabel": "expandLabel",
+      "heading": undefined,
       "scrollGradientColor": "var(--ui-background, #161616)",
-      "title": "title",
+      "title": undefined,
     },
     "propTypes": Object {
       "children": Object {
@@ -3164,7 +3179,17 @@ Map {
         "type": "string",
       },
       "count": Object {
-        "type": "number",
+        "args": Array [
+          Array [
+            Object {
+              "type": "number",
+            },
+            Object {
+              "type": "string",
+            },
+          ],
+        ],
+        "type": "oneOfType",
       },
       "countLabel": Object {
         "type": "func",
@@ -3172,11 +3197,14 @@ Map {
       "expandLabel": Object {
         "type": "string",
       },
+      "heading": Object {
+        "type": "node",
+      },
       "scrollGradientColor": Object {
         "type": "string",
       },
       "title": Object {
-        "type": "node",
+        "type": "string",
       },
     },
   },
@@ -3186,6 +3214,7 @@ Map {
       "countLabel": [Function],
       "indeterminate": false,
       "onChange": [Function],
+      "title": undefined,
     },
     "propTypes": Object {
       "checked": Object {
@@ -3195,7 +3224,17 @@ Map {
         "type": "string",
       },
       "count": Object {
-        "type": "number",
+        "args": Array [
+          Array [
+            Object {
+              "type": "number",
+            },
+            Object {
+              "type": "string",
+            },
+          ],
+        ],
+        "type": "oneOfType",
       },
       "countLabel": Object {
         "type": "func",
@@ -3231,12 +3270,88 @@ Map {
       },
     },
   },
+  "FilterPanelCheckboxWithOverflowMenu" => Object {
+    "defaultProps": Object {
+      "children": undefined,
+      "className": undefined,
+      "count": undefined,
+      "countLabel": [Function],
+      "indeterminate": false,
+      "onChange": [Function],
+      "open": false,
+      "overflowMenuAriaLabel": undefined,
+      "title": undefined,
+    },
+    "propTypes": Object {
+      "checked": Object {
+        "type": "bool",
+      },
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+      "count": Object {
+        "args": Array [
+          Array [
+            Object {
+              "type": "number",
+            },
+            Object {
+              "type": "string",
+            },
+          ],
+        ],
+        "type": "oneOfType",
+      },
+      "countLabel": Object {
+        "type": "func",
+      },
+      "defaultChecked": Object {
+        "type": "bool",
+      },
+      "disabled": Object {
+        "type": "bool",
+      },
+      "hideLabel": Object {
+        "type": "bool",
+      },
+      "id": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+      "indeterminate": Object {
+        "type": "bool",
+      },
+      "labelText": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+      "onChange": Object {
+        "type": "func",
+      },
+      "open": Object {
+        "type": "bool",
+      },
+      "overflowMenuAriaLabel": Object {
+        "type": "string",
+      },
+      "title": Object {
+        "type": "string",
+      },
+      "wrapperClassName": Object {
+        "type": "string",
+      },
+    },
+  },
   "FilterPanelGroup" => Object {
     "defaultProps": Object {
       "children": undefined,
       "className": undefined,
       "count": undefined,
       "countLabel": [Function],
+      "heading": undefined,
       "title": undefined,
       "titleClassName": undefined,
     },
@@ -3248,13 +3363,26 @@ Map {
         "type": "string",
       },
       "count": Object {
-        "type": "number",
+        "args": Array [
+          Array [
+            Object {
+              "type": "number",
+            },
+            Object {
+              "type": "string",
+            },
+          ],
+        ],
+        "type": "oneOfType",
       },
       "countLabel": Object {
         "type": "func",
       },
-      "title": Object {
+      "heading": Object {
         "type": "node",
+      },
+      "title": Object {
+        "type": "string",
       },
       "titleClassName": Object {
         "type": "string",
@@ -3268,6 +3396,7 @@ Map {
       "count": undefined,
       "countClassName": undefined,
       "countLabel": [Function],
+      "title": undefined,
     },
     "propTypes": Object {
       "children": Object {
@@ -3277,13 +3406,26 @@ Map {
         "type": "string",
       },
       "count": Object {
-        "type": "number",
+        "args": Array [
+          Array [
+            Object {
+              "type": "number",
+            },
+            Object {
+              "type": "string",
+            },
+          ],
+        ],
+        "type": "oneOfType",
       },
       "countClassName": Object {
         "type": "string",
       },
       "countLabel": Object {
         "type": "func",
+      },
+      "title": Object {
+        "type": "string",
       },
     },
   },
@@ -4520,7 +4662,7 @@ Map {
     "defaultProps": Object {
       "active": true,
       "children": null,
-      "className": "",
+      "className": null,
       "small": false,
       "withOverlay": true,
     },
@@ -8109,12 +8251,13 @@ Map {
   },
   "StackedNotification" => Object {
     "defaultProps": Object {
-      "caption": "",
-      "children": "",
-      "className": "",
+      "caption": "provide a caption",
+      "children": undefined,
+      "className": null,
       "hideCloseButton": false,
       "onCloseButtonClick": [Function],
       "role": "alert",
+      "statusIconDescription": "provide a description for the status icon",
     },
     "propTypes": Object {
       "caption": Object {
@@ -8137,6 +8280,9 @@ Map {
         "type": "func",
       },
       "role": Object {
+        "type": "string",
+      },
+      "statusIconDescription": Object {
         "type": "string",
       },
       "subtitle": Object {
@@ -8531,8 +8677,10 @@ Map {
       "children": null,
       "className": null,
       "closeButtonIconDescription": "close",
+      "disabled": false,
       "expandedContent": undefined,
       "hasIconOnly": false,
+      "loading": false,
       "onClick": [Function],
     },
     "propTypes": Object {
@@ -8543,10 +8691,16 @@ Map {
         "type": "string",
       },
       "closeButtonIconDescription": [Function],
+      "disabled": Object {
+        "type": "bool",
+      },
       "expandedContent": Object {
         "type": "node",
       },
       "hasIconOnly": Object {
+        "type": "bool",
+      },
+      "loading": Object {
         "type": "bool",
       },
       "onClick": Object {
@@ -9561,6 +9715,9 @@ Map {
                   "isRequired": true,
                   "type": "string",
                 },
+                "props": Object {
+                  "type": "object",
+                },
               },
             ],
             "type": "shape",
@@ -9785,6 +9942,7 @@ Map {
   },
   "Tearsheet" => Object {
     "defaultProps": Object {
+      "className": "",
       "deleteButton": Object {
         "hide": true,
         "onClick": [Function],
@@ -9796,7 +9954,7 @@ Map {
       "loadingMessage": "",
       "mainTitle": "",
       "renderMain": [Function],
-      "renderSidebar": [Function],
+      "renderSidebar": null,
       "rootNode": undefined,
       "selectorPrimaryFocus": "[tearsheet-primary-focus]",
       "sidebarSubtitle": "",
@@ -9810,6 +9968,9 @@ Map {
       },
     },
     "propTypes": Object {
+      "className": Object {
+        "type": "string",
+      },
       "closeButton": Object {
         "args": Array [
           Object {
@@ -11953,6 +12114,7 @@ Map {
   "Wizard" => Object {
     "defaultProps": Object {
       "children": undefined,
+      "className": "",
       "focusTrap": true,
       "initState": Object {},
       "isOpen": undefined,
@@ -11967,6 +12129,9 @@ Map {
     "propTypes": Object {
       "children": Object {
         "type": "node",
+      },
+      "className": Object {
+        "type": "string",
       },
       "focusTrap": Object {
         "type": "bool",

@@ -1,7 +1,7 @@
 ////
 /// Decorator mixins.
 /// @group decorator
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019-2020
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -47,8 +47,24 @@
   padding: unset;
   border: unset;
   vertical-align: middle;
+  color: $text-02;
+  text-decoration: none;
 
-  &--interactive {
+  #{$root}--interactive:not(&--active) {
+    #{$root}__type {
+      color: $text-02;
+    }
+
+    #{$root}__value {
+      color: $hover-primary-text;
+    }
+
+    &:visited #{$root}__value {
+      color: $visited-link;
+    }
+  }
+
+  &#{$root}--interactive {
     &:hover {
       cursor: pointer;
       background-color: $active-ui;
@@ -71,29 +87,14 @@
     }
   }
 
-  #{$root}__value {
-    color: $text-02;
-  }
-
-  &--active,
-  &--active:hover,
-  &:focus:active {
+  &#{$root}--active,
+  &#{$root}--active:hover,
+  &#{$root}:focus:active {
     background-color: $ui-05;
-    color: $inverse-link;
-
-    > #{$root} {
-      &__type,
-      &__value {
-        color: $active-ui;
-      }
-
-      &__type {
-        border-right: 1px solid $ui-04;
-      }
-    }
+    color: $active-ui;
   }
 
-  &--active:focus {
+  &#{$root}--active:focus {
     @include focus-outline('outline');
     outline-color: $inverse-focus-ui;
   }
@@ -109,7 +110,7 @@
     transition-timing-function: $timing-function;
   }
 
-  &--inline {
+  &#{$root}--inline {
     /// Inline height.
     /// @type Length
     $data-decorator--inline__sizing__height: carbon--mini-units(
@@ -133,25 +134,20 @@
     }
   }
 
-  &--unknown {
-    #{$root}__icon {
-      fill: $icon-02;
-    }
+  &--unknown #{$root}__icon {
+    fill: $icon-02;
   }
 
-  &--low {
-    #{$root}__icon {
-      fill: $support-03;
-    }
+  &--low #{$root}__icon {
+    fill: $support-03;
   }
 
-  &--medium {
-    #{$root}__icon {
-      fill: $carbon--orange-40;
-    }
+  &--medium #{$root}__icon {
+    fill: $carbon--orange-40;
   }
 
-  &--high {
+  &--high,
+  &--critical {
     #{$root}__icon {
       fill: $support-01;
     }
@@ -165,21 +161,19 @@
   }
 
   &__type {
-    color: $text-02;
     border-right: 1px solid $ui-01;
     white-space: nowrap;
   }
 
+  &--active &__type {
+    border-right: 1px solid $ui-04;
+  }
+
   &__value {
-    color: $hover-primary-text;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
     display: inline;
     line-height: 1.625rem;
-
-    &:visited {
-      color: $visited-link;
-    }
   }
 }

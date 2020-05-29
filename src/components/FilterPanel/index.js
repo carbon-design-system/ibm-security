@@ -9,6 +9,9 @@ export {
   default as FilterPanelAccordionItem,
 } from './FilterPanelAccordionItem';
 export { default as FilterPanelCheckbox } from './FilterPanelCheckbox';
+export {
+  default as FilterPanelCheckboxWithOverflowMenu,
+} from './FilterPanelCheckboxWithOverflowMenu';
 export { default as FilterPanelGroup } from './FilterPanelGroup';
 export { default as FilterPanelLabel } from './FilterPanelLabel';
 export { default as FilterPanelSearch } from './FilterPanelSearch';
