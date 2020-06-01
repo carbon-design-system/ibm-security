@@ -23,6 +23,10 @@ storiesOf(patterns(`FilterPanel/${FilterPanelCheckbox.name}`), module).add(
       count={text('Checkbox count (count)', 10)}
       onChange={action('onChange')}
       id="checkbox-id"
+      title={text(
+        'FilterPanelCheckbox title attribute (title)',
+        'Checkbox title attribute'
+      )}
     />
   ),
 

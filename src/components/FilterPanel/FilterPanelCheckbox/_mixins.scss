@@ -5,6 +5,7 @@
 ////
 
 @import '@carbon/type/scss/styles';
+@import 'carbon-components/scss/globals/scss/vars';
 
 @mixin filter-panel-checkbox {
   &__wrapper {

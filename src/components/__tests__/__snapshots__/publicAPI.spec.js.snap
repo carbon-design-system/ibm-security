@@ -3167,6 +3167,7 @@ Map {
       "className": undefined,
       "count": undefined,
       "countLabel": [Function],
+      "heading": undefined,
       "title": undefined,
     },
     "propTypes": Object {
@@ -3192,8 +3193,11 @@ Map {
       "countLabel": Object {
         "type": "func",
       },
-      "title": Object {
+      "heading": Object {
         "type": "node",
+      },
+      "title": Object {
+        "type": "string",
       },
     },
   },
@@ -3205,8 +3209,9 @@ Map {
       "count": undefined,
       "countLabel": [Function],
       "expandLabel": "expandLabel",
+      "heading": undefined,
       "scrollGradientColor": "var(--ui-background, #161616)",
-      "title": "title",
+      "title": undefined,
     },
     "propTypes": Object {
       "children": Object {
@@ -3237,11 +3242,14 @@ Map {
       "expandLabel": Object {
         "type": "string",
       },
+      "heading": Object {
+        "type": "node",
+      },
       "scrollGradientColor": Object {
         "type": "string",
       },
       "title": Object {
-        "type": "node",
+        "type": "string",
       },
     },
   },
@@ -3251,6 +3259,7 @@ Map {
       "countLabel": [Function],
       "indeterminate": false,
       "onChange": [Function],
+      "title": undefined,
     },
     "propTypes": Object {
       "checked": Object {
@@ -3316,6 +3325,7 @@ Map {
       "onChange": [Function],
       "open": false,
       "overflowMenuAriaLabel": undefined,
+      "title": undefined,
     },
     "propTypes": Object {
       "checked": Object {
@@ -3386,6 +3396,7 @@ Map {
       "className": undefined,
       "count": undefined,
       "countLabel": [Function],
+      "heading": undefined,
       "title": undefined,
       "titleClassName": undefined,
     },
@@ -3412,8 +3423,11 @@ Map {
       "countLabel": Object {
         "type": "func",
       },
-      "title": Object {
+      "heading": Object {
         "type": "node",
+      },
+      "title": Object {
+        "type": "string",
       },
       "titleClassName": Object {
         "type": "string",
@@ -3427,6 +3441,7 @@ Map {
       "count": undefined,
       "countClassName": undefined,
       "countLabel": [Function],
+      "title": undefined,
     },
     "propTypes": Object {
       "children": Object {
@@ -3453,6 +3468,9 @@ Map {
       },
       "countLabel": Object {
         "type": "func",
+      },
+      "title": Object {
+        "type": "string",
       },
     },
   },
