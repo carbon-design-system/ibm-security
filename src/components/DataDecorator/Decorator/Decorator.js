@@ -187,7 +187,7 @@ function generateIconExports(...iconNames) {
         path={icons[iconName]}
         size={size}
         viewBox="0 0 16 16"
-        description={description}
+        aria-label={description}
         {...other}
       />
     );
