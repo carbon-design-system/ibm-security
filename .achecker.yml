@@ -1,3 +1,5 @@
+# https://www.npmjs.com/package/accessibility-checker#configuring-accessibility-checker
+
 # optional - Specify the rule archive
 # Default: latest
 # Run `npx achecker archives` for a list of valid ruleArchive ids and policy ids
@@ -8,7 +10,7 @@ ruleArchive: latest
 # i.e. Multiple policies: IBM_Accessibility,IBM_Accessibility_BETA
 # Run `npx achecker archives` for a list of valid ruleArchive ids and policy ids
 policies:
-    - IBM_Accessibility
+  - WCAG_2_1
 
 # optional - Specify one or many violation levels on which to fail the test
 #            i.e. If specified violation then the testcase will only fail if
@@ -17,7 +19,7 @@ policies:
 # i.e. failLevels: violation,potential violation or refer to below as a list
 # Default: violation, potentialviolation
 failLevels:
-    - violation
+  - violation
 
 # optional - Specify one or many violation levels which should be reported
 #            i.e. If specified violation then in the report it would only contain
@@ -26,14 +28,14 @@ failLevels:
 # Valid values: violation, potentialviolation, recommendation, potentialrecommendation, manual
 # Default: violation, potentialviolation
 reportLevels:
-    - violation
-    - potentialviolation
+  - potentialviolation
+  - violation
 
 # Optional - Which type should the results be outputted to
 # Valid values: json, csv
 # Default: json
 outputFormat:
-    - json
+  - json
 
 # Optional - Specify labels that you would like associated to your scan
 #
@@ -45,8 +47,6 @@ outputFormat:
 #       - V12
 #       - Linux
 # Default: N/A
-label:
-    - master
 
 # optional - Where the scan results should be saved.
 # Default: results
