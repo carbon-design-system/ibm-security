@@ -177,7 +177,7 @@ Decorator.defaultProps = {
 function generateIconExports(...iconNames) {
   const namedExports = {};
   iconNames.forEach(iconName => {
-    const Icon = ({ className, description, size, ...other }) => (
+    const IconComponent = ({ className, description, size, ...other }) => (
       <Icon
         className={classnames(
           `${namespace}__icon--${iconName.toLowerCase()}`,
@@ -191,7 +191,7 @@ function generateIconExports(...iconNames) {
         {...other}
       />
     );
-    Icon.propTypes = {
+    IconComponent.propTypes = {
       /** Optional class name. */
       className: PropTypes.string,
 
@@ -202,7 +202,7 @@ function generateIconExports(...iconNames) {
       description: PropTypes.string.isRequired,
     };
 
-    Icon.defaultProps = {
+    IconComponent.defaultProps = {
       className: '',
       size: 16,
     };
@@ -211,8 +211,8 @@ function generateIconExports(...iconNames) {
     // so that the export is `Decorator.Low` etc.
     const formattedName = iconName.charAt(0).toUpperCase() + iconName.slice(1);
 
-    Icon.displayName = `Decorator.${formattedName}`;
-    namedExports[formattedName] = Icon;
+    IconComponent.displayName = `Decorator.${formattedName}`;
+    namedExports[formattedName] = IconComponent;
   });
   return namedExports;
 }

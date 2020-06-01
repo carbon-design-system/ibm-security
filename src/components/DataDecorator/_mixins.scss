@@ -149,10 +149,13 @@
     fill: $carbon--orange-40;
   }
 
-  &--high,
   &__icon--high,
-  &--critical,
   &__icon--critical {
+    fill: $support-01;
+  }
+
+  &--high,
+  &--critical {
     #{$root}__icon {
       fill: $support-01;
     }

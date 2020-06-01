@@ -61,4 +61,18 @@ storiesOf(components('Decorator'), module)
         <Decorator {...storyProps()} onClick={action('onClick')} />
       </p>
     </>
+  ))
+  .add('Icons', () => (
+    <>
+      <p className="bx--type-body-long-01">
+        You can use Decorator icons as separate components.
+      </p>
+      <p>
+        <Decorator.Unknown description="unknown severity" />
+        <Decorator.Low description="low severity" />
+        <Decorator.Medium description="medium severity" />
+        <Decorator.High description="high severity" />
+        <Decorator.Critical description="critical severity" />
+      </p>
+    </>
   ));
