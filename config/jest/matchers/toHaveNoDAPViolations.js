@@ -5,13 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-let aChecker;
+import aChecker from 'accessibility-checker';
 
 async function toHaveNoDAPViolations(node, label) {
-  if (!aChecker) {
-    aChecker = require('accessibility-checker');
-  }
-
   const results = await aChecker.getCompliance(node, label);
   if (aChecker.assertCompliance(results.report) === 0) {
     return {
