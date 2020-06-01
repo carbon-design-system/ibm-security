@@ -2307,6 +2307,31 @@ Map {
     },
   },
   "Decorator" => Object {
+    "critical": Object {
+      "defaultProps": Object {
+        "className": "",
+        "size": 16,
+      },
+      "displayName": "Decorator.Critical",
+      "propTypes": Object {
+        "className": Object {
+          "type": "string",
+        },
+        "description": Object {
+          "isRequired": true,
+          "type": "string",
+        },
+        "size": Object {
+          "args": Array [
+            Array [
+              12,
+              16,
+            ],
+          ],
+          "type": "oneOf",
+        },
+      },
+    },
     "defaultProps": Object {
       "active": false,
       "className": "",
@@ -2323,6 +2348,81 @@ Map {
         10,
       ],
       "title": "",
+    },
+    "high": Object {
+      "defaultProps": Object {
+        "className": "",
+        "size": 16,
+      },
+      "displayName": "Decorator.High",
+      "propTypes": Object {
+        "className": Object {
+          "type": "string",
+        },
+        "description": Object {
+          "isRequired": true,
+          "type": "string",
+        },
+        "size": Object {
+          "args": Array [
+            Array [
+              12,
+              16,
+            ],
+          ],
+          "type": "oneOf",
+        },
+      },
+    },
+    "low": Object {
+      "defaultProps": Object {
+        "className": "",
+        "size": 16,
+      },
+      "displayName": "Decorator.Low",
+      "propTypes": Object {
+        "className": Object {
+          "type": "string",
+        },
+        "description": Object {
+          "isRequired": true,
+          "type": "string",
+        },
+        "size": Object {
+          "args": Array [
+            Array [
+              12,
+              16,
+            ],
+          ],
+          "type": "oneOf",
+        },
+      },
+    },
+    "medium": Object {
+      "defaultProps": Object {
+        "className": "",
+        "size": 16,
+      },
+      "displayName": "Decorator.Medium",
+      "propTypes": Object {
+        "className": Object {
+          "type": "string",
+        },
+        "description": Object {
+          "isRequired": true,
+          "type": "string",
+        },
+        "size": Object {
+          "args": Array [
+            Array [
+              12,
+              16,
+            ],
+          ],
+          "type": "oneOf",
+        },
+      },
     },
     "propTypes": Object {
       "active": Object {
@@ -2361,6 +2461,31 @@ Map {
       "value": Object {
         "isRequired": true,
         "type": "string",
+      },
+    },
+    "unknown": Object {
+      "defaultProps": Object {
+        "className": "",
+        "size": 16,
+      },
+      "displayName": "Decorator.Unknown",
+      "propTypes": Object {
+        "className": Object {
+          "type": "string",
+        },
+        "description": Object {
+          "isRequired": true,
+          "type": "string",
+        },
+        "size": Object {
+          "args": Array [
+            Array [
+              12,
+              16,
+            ],
+          ],
+          "type": "oneOf",
+        },
       },
     },
   },
