@@ -37,7 +37,7 @@
     "lint-staged": "lint-staged",
     "semantic-release": "semantic-release",
     "start": "run-s build:pre:grid && start-storybook -p 3000 -s public",
-    "test": "yarn jest spec -ci",
+    "test": "yarn jest spec --ci",
     "test:precommit": "yarn jest -b --passWithNoTests --testMatch src/**/*.spec.js --findRelatedTests",
     "test:imports": "scripts/checkImports.sh",
     "test:scss": "node scripts/scss",
