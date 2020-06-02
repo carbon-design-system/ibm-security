@@ -15,6 +15,7 @@ import { patterns } from '../../../.storybook';
 import {
   Button,
   CodeSnippet,
+  CodeSnippetSkeleton,
   Dropdown,
   Form,
   FormGroup,
@@ -57,35 +58,45 @@ const renderMain = ({ isLoading }) => (
       <CodeSnippet type="inline" light tabIndex={isLoading ? -1 : 0}>
         renderMain
       </CodeSnippet>{' '}
-      render prop to set focussable elements (such as form inputs, buttons, and
-      links) to{' '}
+      render prop to prevent users from tabbing through focussable content (such
+      as form inputs, buttons, and links) while the Tearsheet is loading. For
+      example, you can selectively load skeleton components, or you can set
       <CodeSnippet type="inline" light tabIndex={isLoading ? -1 : 0}>
         disabled
       </CodeSnippet>
       or{' '}
       <CodeSnippet type="inline" light tabIndex={isLoading ? -1 : 0}>
         tabIndex={-1}
-      </CodeSnippet>
-      , depending on which is more appropriate for a particular element. This
-      will prevent a user from being able to tab through your Tearsheet&apos;s
-      content while the Tearsheet is loading.
+      </CodeSnippet>{' '}
+      on interactive elements.
     </p>
-    <p>For example:</p>
-    <CodeSnippet light type="multi" tabIndex={isLoading ? -1 : 0}>
-      {/* eslint-disable-next-line react/jsx-indent */}
-      {`
+    <p>Here are some examples:</p>
+    {isLoading ? (
+      <CodeSnippetSkeleton type="multi" />
+    ) : (
+      <CodeSnippet light type="multi">
+        {/* eslint-disable-next-line react/jsx-indent */}
+        {`
 <TearSheet
   renderMain={({ isLoading }) => (
     <Button disabled={isLoading}>
-      Example
+      Example button.
     </Button>
     <CodeSnippet tabIndex={isLoading ? -1 : 0}>
-      Example
+      Example snippet with no copy button.
     </CodeSnippet>
+    {isLoading ? (
+      <CodeSnippetSkeleton type="multi" />
+    ) : (
+      <CodeSnippet type="multi">
+        Exampe snippet with a copy button.
+      </CodeSnippet>
+    )}
   )}
 />
 `}
-    </CodeSnippet>
+      </CodeSnippet>
+    )}
     <br />
     <p>
       For more examples, please review the &quot;Story&quot; tab in the
