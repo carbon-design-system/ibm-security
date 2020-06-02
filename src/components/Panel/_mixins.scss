@@ -122,8 +122,6 @@
   }
 
   &__body {
-    padding-right: $panel__spacing__padding;
-    padding-left: $panel__spacing__padding;
     margin-top: carbon--mini-units($count: 11);
     flex-grow: 1;
     overflow-y: auto;
@@ -131,8 +129,7 @@
     &--content {
       @include carbon--type-style($name: caption-01);
 
-      padding-top: $panel__spacing__padding;
-      padding-bottom: $panel__spacing__padding;
+      padding: $panel__spacing__padding;
       border-bottom: $panel__content__sizing__border solid
         $panel__content__color__border;
 
