@@ -3,12 +3,23 @@
  * @copyright IBM Security 2020
  */
 
+import classnames from 'classnames';
 import { node } from 'prop-types';
+import { Children, cloneElement } from 'react';
 
-import { cloneChildren } from '../LayoutModule';
+import { namespace } from '../LayoutModule';
 
 const BackgroundModule = ({ children, ...other }) =>
-  cloneChildren(children, 'background', other);
+  Children.map(children, child =>
+    cloneElement(child, {
+      ...other,
+      className: classnames(
+        `${namespace}--background`,
+        child.props.className,
+        other.className
+      ),
+    })
+  );
 
 BackgroundModule.propTypes = {
   children: node.isRequired,

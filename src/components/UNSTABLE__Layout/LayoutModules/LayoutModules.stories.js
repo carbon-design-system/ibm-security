@@ -5,6 +5,12 @@
 
 import Activity16 from '@carbon/icons-react/lib/activity/16';
 import Copy16 from '@carbon/icons-react/lib/copy/16';
+import Filter16 from '@carbon/icons-react/lib/filter/16';
+import Search16 from '@carbon/icons-react/lib/search/16';
+import View16 from '@carbon/icons-react/lib/view/16';
+import { breakpoints } from '@carbon/layout';
+
+import { action } from '@storybook/addon-actions';
 import { Column } from 'carbon-components-react';
 import React from 'react';
 
@@ -12,14 +18,23 @@ import { meta, patterns } from '../../../../.storybook';
 import { carbonPrefix } from '../../../globals/namespace';
 
 import {
+  ActionBarModule,
+  ActionBarModuleActions,
   BackgroundModule,
   Button,
   ButtonClusterModule,
+  ContentSwitcher,
   DescriptionModule,
+  IconButtonBar,
   Link,
   PageTabModule,
+  PageTabModuleDetails,
+  Switch,
   Tabs,
   Tab,
+  Tag,
+  TitleBarModule,
+  TitleBarModuleActions,
   TitleModule,
   TypeLayout,
   TypeLayoutBody,
@@ -27,6 +42,31 @@ import {
   TypeLayoutModule,
   TypeLayoutRow,
 } from '../../..';
+
+const actionBar = () => (
+  <ActionBarModule>
+    <Tag type="gray">Closed</Tag> ID: 12 | Result: Completed
+    <ActionBarModuleActions>
+      <IconButtonBar
+        actions={[
+          {
+            label: 'Search',
+            renderIcon: Search16,
+          },
+          {
+            label: 'Filter',
+            renderIcon: Filter16,
+          },
+          {
+            label: 'View',
+            renderIcon: View16,
+          },
+        ]}
+        size="md"
+      />
+    </ActionBarModuleActions>
+  </ActionBarModule>
+);
 
 const background = () => (
   <BackgroundModule>
@@ -68,6 +108,7 @@ const description = () => (
 
 const pageTab = () => (
   <PageTabModule>
+    <PageTabModuleDetails>PageTabModuleDetails</PageTabModuleDetails>
     <Tabs selected={1}>
       <Tab label="Case" />
       <Tab label="Report" />
@@ -80,6 +121,21 @@ const title = () => (
   <TitleModule className={`${carbonPrefix}type-productive-heading-03`}>
     TitleModule
   </TitleModule>
+);
+
+const titleBar = () => (
+  <TitleBarModule>
+    <TitleModule className={`${carbonPrefix}type-productive-heading-03`}>
+      TitleModule
+    </TitleModule>
+
+    <TitleBarModuleActions>
+      <ContentSwitcher onChange={action('onChange')}>
+        <Switch text="By reviewer" />
+        <Switch text="By account" />
+      </ContentSwitcher>
+    </TitleBarModuleActions>
+  </TitleBarModule>
 );
 
 const typeLayout = () => (
@@ -108,7 +164,18 @@ const typeLayout = () => (
 
 export default meta(
   patterns('UNSTABLE LayoutModules'),
-  'Create common, modular, page layouts to deliver consistent cross-portfolio experiences to our users while facilitating a faster time to market for offering teams.'
+  'Create common, modular, page layouts to deliver consistent cross-portfolio experiences to our users while facilitating a faster time to market for offering teams.',
+  null,
+  [story => <div style={{ width: breakpoints.md.width }}>{story()}</div>]
 );
 
-export { background, buttonCluster, description, pageTab, title, typeLayout };
+export {
+  actionBar,
+  background,
+  buttonCluster,
+  description,
+  pageTab,
+  title,
+  titleBar,
+  typeLayout,
+};

@@ -1,0 +1,25 @@
+////
+/// Title bar module.
+/// @group title-bar-module
+/// @copyright IBM Security 2020
+////
+
+@import '@carbon/layout/scss/spacing';
+
+@import '../../../Component/mixins';
+@import '../variables';
+
+@include security--component($name: #{$layout-modules__name}--title-bar) {
+  display: flex;
+  align-items: center;
+
+  &__actions {
+    /// Spacing.
+    /// @type Length
+    $title-bar__actions__spacing: $carbon--spacing-03;
+
+    margin-top: $title-bar__actions__spacing;
+    margin-bottom: $title-bar__actions__spacing;
+    margin-left: auto;
+  }
+}

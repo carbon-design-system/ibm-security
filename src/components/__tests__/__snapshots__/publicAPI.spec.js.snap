@@ -80,6 +80,22 @@ Map {
       "uid": [Function],
     },
   },
+  "ActionBarModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
+  "ActionBarModuleActions" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
   "BackgroundModule" => Object {
     "propTypes": Object {
       "children": Object {
@@ -11102,6 +11118,22 @@ Map {
         "type": "bool",
       },
       "labelText": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
+  "TitleBarModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
+  "TitleBarModuleActions" => Object {
+    "propTypes": Object {
+      "children": Object {
         "isRequired": true,
         "type": "node",
       },
