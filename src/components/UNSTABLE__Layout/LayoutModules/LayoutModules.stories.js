@@ -11,7 +11,7 @@ import View16 from '@carbon/icons-react/lib/view/16';
 import { breakpoints } from '@carbon/layout';
 
 import { action } from '@storybook/addon-actions';
-import { Column } from 'carbon-components-react';
+import { Column, Row } from 'carbon-components-react';
 import React from 'react';
 
 import { meta, patterns } from '../../../../.storybook';
@@ -23,8 +23,13 @@ import {
   BackgroundModule,
   Button,
   ButtonClusterModule,
+  Card,
+  CardModule,
   ContentSwitcher,
   DescriptionModule,
+  ICA as ICAComponent,
+  ICAModule,
+  ICAModuleHover,
   IconButtonBar,
   Link,
   PageTabModule,
@@ -43,7 +48,7 @@ import {
   TypeLayoutRow,
 } from '../../..';
 
-const actionBar = () => (
+const ActionBar = () => (
   <ActionBarModule>
     <Tag type="gray">Closed</Tag> ID: 12 | Result: Completed
     <ActionBarModuleActions>
@@ -85,6 +90,32 @@ const buttonCluster = () => (
   </ButtonClusterModule>
 );
 
+const card = () => (
+  <CardModule>
+    <TitleModule className={`${carbonPrefix}type-productive-heading-03`}>
+      Summary
+    </TitleModule>
+    <TitleModule
+      className={`${carbonPrefix}type-productive-heading-01`}
+      element="h3"
+    >
+      Sub-section title
+    </TitleModule>
+    <ActionBar />
+    <Row>
+      <Column>
+        <Card />
+      </Column>
+      <Column>
+        <Card />
+      </Column>
+      <Column>
+        <Card />
+      </Column>
+    </Row>
+  </CardModule>
+);
+
 const description = () => (
   <DescriptionModule>
     <TitleModule className={`${carbonPrefix}type-productive-heading-03`}>
@@ -104,6 +135,31 @@ const description = () => (
     </p>
     <Link href="#0">View more</Link>
   </DescriptionModule>
+);
+
+const ICA = () => (
+  <ICAModule>
+    <TitleModule className={`${carbonPrefix}type-productive-heading-03`}>
+      Summary
+    </TitleModule>
+    <Row>
+      <ICAModuleHover>
+        <Column>
+          <ICAComponent label="Reviews complete" value={300} />
+        </Column>
+      </ICAModuleHover>
+      <ICAModuleHover>
+        <Column>
+          <ICAComponent label="Approved" value={241} />
+        </Column>
+      </ICAModuleHover>
+      <ICAModuleHover>
+        <Column>
+          <ICAComponent label="Rejected" value={28} />
+        </Column>
+      </ICAModuleHover>
+    </Row>
+  </ICAModule>
 );
 
 const pageTab = () => (
@@ -170,10 +226,12 @@ export default meta(
 );
 
 export {
-  actionBar,
+  ActionBar,
   background,
   buttonCluster,
+  card,
   description,
+  ICA,
   pageTab,
   title,
   titleBar,

@@ -6,12 +6,12 @@
 import { node, string } from 'prop-types';
 import { createElement } from 'react';
 
-import { getModuleProps } from '../LayoutModule';
+import { getLayoutModuleProps } from '../LayoutModule';
 
 const TitleModule = ({ children, className, element, ...other }) =>
   createElement(element, {
     children,
-    ...getModuleProps({ className, module: 'Title', type: 'title' }),
+    ...getLayoutModuleProps({ className, module: 'Title', type: 'title' }),
     ...other,
   });
 

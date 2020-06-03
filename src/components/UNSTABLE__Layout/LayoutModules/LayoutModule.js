@@ -5,19 +5,39 @@
 
 import classnames from 'classnames';
 import { node, string } from 'prop-types';
-import React from 'react';
+import React, { Children, cloneElement } from 'react';
 
 import { getComponentNamespace } from '../../../globals/namespace';
 
 const namespace = getComponentNamespace('unstable--layout__module');
 
-const getModuleProps = ({ className, module, type }) => ({
+const getLayoutModuleProps = ({ className, module, type }) => ({
   className: classnames(namespace, `${namespace}--${type}`, className),
-  'data-module': module && `${module} module`,
+  'data-security-layout-module': module && `${module} module`,
 });
 
+const createLayoutModuleFromChildren = ({
+  children,
+  module,
+  type,
+  ...other
+}) => {
+  const { className, ...props } = other;
+
+  return Children.map(children, child =>
+    cloneElement(child, {
+      ...getLayoutModuleProps({
+        className: classnames(className, child.props.className),
+        module,
+        type,
+      }),
+      ...props,
+    })
+  );
+};
+
 const LayoutModule = ({ className, children, module, type, ...other }) => (
-  <div {...getModuleProps({ className, module, type })} {...other}>
+  <div {...getLayoutModuleProps({ className, module, type })} {...other}>
     {children}
   </div>
 );
@@ -36,4 +56,4 @@ LayoutModule.defaultProps = {
 
 export default LayoutModule;
 
-export { getModuleProps, namespace };
+export { createLayoutModuleFromChildren, getLayoutModuleProps };

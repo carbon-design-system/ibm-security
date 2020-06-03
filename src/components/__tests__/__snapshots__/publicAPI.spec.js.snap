@@ -409,6 +409,14 @@ Map {
       },
     },
   },
+  "CardModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
   "CardSkeleton" => Object {
     "defaultProps": Object {
       "className": null,
@@ -4066,6 +4074,22 @@ Map {
       },
     },
   },
+  "ICAModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
+  "ICAModuleHover" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
   "ICASkeleton" => Object {},
   "Icon" => Object {
     "defaultProps": Object {
@@ -5868,6 +5892,14 @@ Map {
     },
   },
   "PageTabModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
+  "PageTabModuleDetails" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,

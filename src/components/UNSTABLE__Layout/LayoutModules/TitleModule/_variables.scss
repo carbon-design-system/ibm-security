@@ -4,9 +4,16 @@
 /// @copyright IBM Security 2020
 ////
 
+@import '../../../../globals/namespace/index';
 @import '../variables';
 
 /// Name.
 /// @type String
 /// @access private
 $layout__modules--title__name: #{$layout-modules__name}--title;
+
+@mixin layout__modules--title--first-child {
+  > #{get-component-namespace($component-name: $layout__modules--title__name)}:first-child {
+    margin-top: 0;
+  }
+}
