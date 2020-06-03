@@ -19,13 +19,14 @@ const FilterPanelGroup = ({
   className,
   titleClassName,
   children,
+  heading,
   ...other
 }) => (
   <div className={classnames(namespace, className)} {...other}>
-    {title && (
+    {(heading || title) && (
       <h2 className={classnames(`${namespace}__title`, titleClassName)}>
-        <FilterPanelLabel count={count} countLabel={countLabel}>
-          {title}
+        <FilterPanelLabel count={count} countLabel={countLabel} title={title}>
+          {heading || title}
         </FilterPanelLabel>
       </h2>
     )}
@@ -35,14 +36,20 @@ const FilterPanelGroup = ({
 
 FilterPanelGroup.propTypes = {
   /**
-   * Group title.
+   * Group `title` attribute.
    */
-  title: PropTypes.node,
+  title: PropTypes.string,
+
+  /**
+   * Group heading node.
+   * If no `heading` is provided, then the `title` prop value will be used instead.
+   */
+  heading: PropTypes.node,
 
   /**
    * Optional group count.
    */
-  count: PropTypes.number,
+  count: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 
   /**
    * Function returning a translated text labeling the count for accessibility.
@@ -72,6 +79,7 @@ FilterPanelGroup.defaultProps = {
   className: undefined,
   titleClassName: undefined,
   children: undefined,
+  heading: undefined,
 };
 
 export default FilterPanelGroup;
