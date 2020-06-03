@@ -6,7 +6,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { boolean, text } from '@storybook/addon-knobs';
+import { boolean, number, text } from '@storybook/addon-knobs';
 
 import { settings } from 'carbon-components';
 
@@ -60,13 +60,16 @@ storiesOf(components('Modal'), module).add(
   () => (
     <Modal {...props()}>
       <p className={`${prefix}--modal-content__text`}>
-        {new Array(250).fill().map((labelText = 'Checkbox', index) => {
-          const id = `checkbox__${index}`;
+        {new Array(number('Checkbox array length', 250))
+          .fill()
+          .map((labelText = 'Checkbox', index) => {
+            const id = index + 1;
+            const key = `checkbox__${id}`;
 
-          return (
-            <Checkbox key={id} id={id} labelText={`${labelText} ${index}`} />
-          );
-        })}
+            return (
+              <Checkbox key={key} id={key} labelText={`${labelText} ${id}`} />
+            );
+          })}
       </p>
     </Modal>
   ),
