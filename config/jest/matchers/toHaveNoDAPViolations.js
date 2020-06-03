@@ -5,9 +5,16 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import aChecker from 'accessibility-checker';
+let aChecker;
 
 async function toHaveNoDAPViolations(node, label) {
+  // We defer initialization of AAT as it seems to have a race condition if
+  // we are running a test suite in node instead of jsdom. As a result, we only
+  // initialize it if this matcher is called
+  if (!aChecker) {
+    aChecker = require('accessibility-checker');
+  }
+
   const results = await aChecker.getCompliance(node, label);
   if (aChecker.assertCompliance(results.report) === 0) {
     return {
