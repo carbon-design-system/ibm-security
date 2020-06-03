@@ -24,6 +24,7 @@ const FilterPanelAccordionItem = ({
   count,
   countLabel,
   className,
+  heading,
   ...other
 }) => {
   return (
@@ -34,8 +35,9 @@ const FilterPanelAccordionItem = ({
           countLabel={countLabel}
           className={`${namespace}__label`}
           countClassName={`${namespace}__count`}
+          title={title}
         >
-          {title}
+          {heading || title}
         </FilterPanelLabel>
       }
       className={classnames(namespace, className)}
@@ -61,9 +63,15 @@ const FilterPanelAccordionItem = ({
 
 FilterPanelAccordionItem.propTypes = {
   /**
-   * Accordion item title.
+   * Accordion item `title` attribute.
    */
-  title: PropTypes.node,
+  title: PropTypes.string,
+
+  /**
+   * Accordion item heading node.
+   * If no `heading` is provided, then the `title` prop will be used instead.
+   */
+  heading: PropTypes.node,
 
   /**
    * View more label for truncated content.
@@ -102,7 +110,8 @@ FilterPanelAccordionItem.propTypes = {
 };
 
 FilterPanelAccordionItem.defaultProps = {
-  title: 'title',
+  title: undefined,
+  heading: undefined,
   expandLabel: 'expandLabel',
   collapseLabel: 'collapseLabel',
   children: undefined,

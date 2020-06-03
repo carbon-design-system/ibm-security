@@ -29,10 +29,10 @@ describe('FilterPanelAccordionItem', () => {
       // wrapped by `FilterPanelAccordion`, which
       // renders as an unordered list:
       <ul>
-        <FilterPanelAccordionItem title="test-item-1">
+        <FilterPanelAccordionItem heading="test-item-1" title="test-item-1">
           {createChildChildren(11)}
         </FilterPanelAccordionItem>
-        <FilterPanelAccordionItem title="test-item-2">
+        <FilterPanelAccordionItem heading="test-item-2" title="test-item-2">
           {createChildChildren(11)}
         </FilterPanelAccordionItem>
       </ul>,
@@ -47,16 +47,16 @@ describe('FilterPanelAccordionItem', () => {
     );
   });
 
-  test('renders with a title', () => {
-    const { getByText } = render(
+  test('renders with a title attribute', () => {
+    const { getByTitle } = render(
       <FilterPanelAccordionItem title="custom title" />
     );
-    expect(getByText(/custom title/i)).toBeVisible();
+    expect(getByTitle(/custom title/i)).toBeVisible();
   });
 
-  test('renders with a title node', () => {
+  test('renders with a heading node', () => {
     const { getByTestId } = render(
-      <FilterPanelAccordionItem title={<span data-testid="node-title" />} />
+      <FilterPanelAccordionItem heading={<span data-testid="node-title" />} />
     );
     expect(getByTestId('node-title')).toBeVisible();
   });
