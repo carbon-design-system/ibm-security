@@ -3,10 +3,14 @@
  * @copyright IBM Security 2020
  */
 
-import { node } from 'prop-types';
+import { Row } from 'carbon-components-react';
+import { node, string } from 'prop-types';
 import React from 'react';
 
-import LayoutModule from '..';
+import LayoutModule, {
+  createLayoutModuleFromChildren,
+  getLayoutModuleProps,
+} from '../LayoutModule';
 
 const moduleName = 'Card';
 const namespace = 'card';
@@ -21,20 +25,40 @@ CardModule.propTypes = {
   children: node.isRequired,
 };
 
-const CardModuleCard = ({ children, ...other }) => (
-  <LayoutModule
-    module={`${moduleName} card`}
-    type={`${namespace}__card`}
+const CardModuleRow = ({ children, className, ...other }) => (
+  <Row
+    {...getLayoutModuleProps({
+      className,
+      module: `${moduleName} row`,
+      type: `${namespace}__row`,
+    })}
     {...other}
   >
     {children}
-  </LayoutModule>
+  </Row>
 );
 
-CardModuleCard.propTypes = {
+CardModuleRow.propTypes = {
+  children: node.isRequired,
+  className: string,
+};
+
+CardModuleRow.defaultProps = {
+  className: null,
+};
+
+const CardModuleAction = ({ children, ...other }) =>
+  createLayoutModuleFromChildren({
+    children,
+    module: `${moduleName} action`,
+    type: `${namespace}__action`,
+    ...other,
+  });
+
+CardModuleAction.propTypes = {
   children: node.isRequired,
 };
 
 export default CardModule;
 
-export { CardModuleCard };
+export { CardModuleAction, CardModuleRow };

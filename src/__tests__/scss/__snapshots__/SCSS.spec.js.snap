@@ -24503,6 +24503,18 @@ a.bx--navigation-link:focus {
   padding-bottom: 2rem;
 }
 
+.security--unstable--layout__module--card__row {
+  margin-bottom: 2rem;
+}
+
+.security--unstable--layout__module--card__row:last-of-type {
+  margin-bottom: 0;
+}
+
+.security--unstable--layout__module--card__row + .security--unstable--layout__module--card__action {
+  margin-top: 1rem;
+}
+
 .security--unstable--layout__module--description {
   padding-bottom: 2rem;
 }

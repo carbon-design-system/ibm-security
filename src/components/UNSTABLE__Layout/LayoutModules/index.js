@@ -12,7 +12,11 @@ export {
 
 export { default as BackgroundModule } from './BackgroundModule';
 export { default as ButtonClusterModule } from './ButtonClusterModule';
-export { default as CardModule } from './CardModule';
+export {
+  default as CardModule,
+  CardModuleAction,
+  CardModuleRow,
+} from './CardModule';
 export { default as DescriptionModule } from './DescriptionModule';
 export { default as ICAModule, ICAModuleHover } from './ICAModule';
 

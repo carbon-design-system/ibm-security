@@ -4,6 +4,7 @@
  */
 
 import Activity16 from '@carbon/icons-react/lib/activity/16';
+import ArrowRight16 from '@carbon/icons-react/lib/arrow--right/16';
 import Copy16 from '@carbon/icons-react/lib/copy/16';
 import Filter16 from '@carbon/icons-react/lib/filter/16';
 import Search16 from '@carbon/icons-react/lib/search/16';
@@ -25,6 +26,8 @@ import {
   ButtonClusterModule,
   Card,
   CardModule,
+  CardModuleAction,
+  CardModuleRow,
   ContentSwitcher,
   DescriptionModule,
   ICA as ICAComponent,
@@ -48,7 +51,7 @@ import {
   TypeLayoutRow,
 } from '../../..';
 
-const ActionBar = () => (
+const actionBar = () => (
   <ActionBarModule>
     <Tag type="gray">Closed</Tag> ID: 12 | Result: Completed
     <ActionBarModuleActions>
@@ -101,8 +104,29 @@ const card = () => (
     >
       Sub-section title
     </TitleModule>
-    <ActionBar />
-    <Row>
+    <ActionBarModule>
+      <Tag type="gray">Closed</Tag> ID: 12 | Result: Completed
+      <ActionBarModuleActions>
+        <IconButtonBar
+          actions={[
+            {
+              label: 'Search',
+              renderIcon: Search16,
+            },
+            {
+              label: 'Filter',
+              renderIcon: Filter16,
+            },
+            {
+              label: 'View',
+              renderIcon: View16,
+            },
+          ]}
+          size="md"
+        />
+      </ActionBarModuleActions>
+    </ActionBarModule>
+    <CardModuleRow>
       <Column>
         <Card />
       </Column>
@@ -112,7 +136,23 @@ const card = () => (
       <Column>
         <Card />
       </Column>
-    </Row>
+    </CardModuleRow>
+    <CardModuleRow>
+      <Column>
+        <Card />
+      </Column>
+      <Column>
+        <Card />
+      </Column>
+      <Column>
+        <Card />
+      </Column>
+    </CardModuleRow>
+    <CardModuleAction>
+      <Button kind="ghost" renderIcon={ArrowRight16}>
+        Action
+      </Button>
+    </CardModuleAction>
   </CardModule>
 );
 
@@ -226,7 +266,7 @@ export default meta(
 );
 
 export {
-  ActionBar,
+  actionBar,
   background,
   buttonCluster,
   card,

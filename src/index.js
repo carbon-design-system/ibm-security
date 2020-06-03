@@ -266,6 +266,8 @@ export LayoutModule, {
   BackgroundModule,
   ButtonClusterModule,
   CardModule,
+  CardModuleAction,
+  CardModuleRow,
   DescriptionModule,
   ICAModule,
   ICAModuleHover,
