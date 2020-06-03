@@ -12054,7 +12054,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 
 .security--step-indicator > .security--step > .bx--progress-step-button > .bx--progress-label:hover {
   box-shadow: unset;
-  color: unset;
+  color: var(--text-01, #f4f4f4);
   cursor: default;
 }
 
