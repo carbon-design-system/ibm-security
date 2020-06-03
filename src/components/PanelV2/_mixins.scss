@@ -125,8 +125,6 @@
   }
 
   &__body {
-    padding-right: $panel__spacing__padding;
-    padding-left: $panel__spacing__padding;
     margin-top: carbon--mini-units($count: 11);
     flex-grow: 1;
     overflow-y: auto;
