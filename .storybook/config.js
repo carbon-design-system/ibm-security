@@ -79,4 +79,6 @@ addParameters({
   },
 });
 
+console.log(JSON.parse(process.env.STORYBOOK_STORIES));
+
 configure(require.context('../src', true, /\.stories\.js$/), module);
