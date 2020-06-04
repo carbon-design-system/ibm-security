@@ -15281,12 +15281,14 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   position: fixed;
   left: 50%;
   bottom: 0;
+  width: calc(100% - 2rem);
   height: calc(100vh - 3rem);
   min-height: 20rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
   background-color: var(--ui-01, #262626);
-  transform: translate3d(-50%, 0, 0);
+  transform: translate3d(calc( -50% - 1rem), 0, 0);
   z-index: 9000;
-  width: 32rem;
   flex-direction: column;
 }
 
@@ -15302,19 +15304,19 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .security--tearsheet--small__transition--enter {
-  transform: translate3d(-50%, 100%, 0);
+  transform: translate3d(calc( -50% - 1rem), 100%, 0);
 }
 
 .security--tearsheet--small__transition--enter--active {
-  transform: translate3d(-50%, 0, 0);
+  transform: translate3d(calc( -50% - 1rem), 0, 0);
 }
 
 .security--tearsheet--small__transition--leave {
-  transform: translate3d(-50%, 0, 0);
+  transform: translate3d(calc( -50% - 1rem), 0, 0);
 }
 
 .security--tearsheet--small__transition--leave--active {
-  transform: translate3d(-50%, 100%, 0);
+  transform: translate3d(calc( -50% - 1rem), 100%, 0);
 }
 
 .security--tearsheet--small__button--close {
@@ -15330,6 +15332,22 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 
 .security--tearsheet--small__loading .bx--loading__stroke {
   stroke: var(--inverse-focus-ui, #0f62fe);
+}
+
+@media (min-width: 42rem) {
+  .security--tearsheet--small {
+    width: 32rem;
+  }
+}
+
+@media (min-width: 99rem) {
+  .security--tearsheet--small {
+    top: 50%;
+    bottom: unset;
+    width: 64rem;
+    height: 50%;
+    transform: translate3d(calc( -50% - 1rem), -50%, 0);
+  }
 }
 
 .security--tearsheet--small__loading > .bx--loading {
@@ -15384,7 +15402,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   display: flex;
   position: fixed;
   bottom: 0;
-  width: 32rem;
+  width: 100%;
 }
 
 .security--tearsheet--small__footer__button {
@@ -15479,12 +15497,14 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   position: fixed;
   left: 50%;
   bottom: 0;
+  width: calc(100% - 2rem);
   height: calc(100vh - 3rem);
   min-height: 20rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
   background-color: var(--ui-01, #262626);
-  transform: translate3d(-50%, 0, 0);
+  transform: translate3d(calc( -50% - 1rem), 0, 0);
   z-index: 9000;
-  width: calc(100vw - 3rem);
 }
 
 .security--input__background__color--light .bx--number .security--tearsheet input[type=\\"number\\"], .security--card .bx--number .security--tearsheet input[type=\\"number\\"], .security--tearsheet--small .bx--number .security--tearsheet input[type=\\"number\\"], .security--tearsheet .bx--date-picker__input, .security--tearsheet .bx--dropdown,
@@ -15499,19 +15519,19 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .security--tearsheet__transition--enter {
-  transform: translate3d(-50%, 100%, 0);
+  transform: translate3d(calc( -50% - 1rem), 100%, 0);
 }
 
 .security--tearsheet__transition--enter--active {
-  transform: translate3d(-50%, 0, 0);
+  transform: translate3d(calc( -50% - 1rem), 0, 0);
 }
 
 .security--tearsheet__transition--leave {
-  transform: translate3d(-50%, 0, 0);
+  transform: translate3d(calc( -50% - 1rem), 0, 0);
 }
 
 .security--tearsheet__transition--leave--active {
-  transform: translate3d(-50%, 100%, 0);
+  transform: translate3d(calc( -50% - 1rem), 100%, 0);
 }
 
 .security--tearsheet__button--close {

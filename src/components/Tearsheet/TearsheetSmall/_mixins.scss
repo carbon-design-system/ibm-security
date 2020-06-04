@@ -4,6 +4,7 @@
 /// @copyright IBM Security 2019 - 2020
 ////
 
+@import '@carbon/layout/scss/breakpoint';
 @import '@carbon/layout/scss/spacing';
 @import '@carbon/layout/scss/mini-unit';
 @import '@carbon/type/scss/index';
@@ -15,20 +16,29 @@
 @import '../mixins';
 
 @mixin tearsheet--small {
-  /// Width.
-  /// @type Length
-  $tearsheet--small__sizing__width: carbon--mini-units(
-    $count: 64,
-  );
-
   /// Padding.
   /// @type Length
   $tearsheet--small__spacing__padding: $carbon--spacing-05;
 
   @include tearsheet--base;
 
-  width: $tearsheet--small__sizing__width;
   flex-direction: column;
+
+  @include carbon--breakpoint($name: md) {
+    width: carbon--mini-units($count: 64);
+  }
+
+  @include carbon--breakpoint($name: max) {
+    top: $tearsheet__position__base;
+    bottom: unset;
+    width: carbon--mini-units($count: 128);
+    height: $tearsheet__position__base;
+    transform: translate3d(
+      #{$tearsheet__position},
+      -#{$tearsheet__position__base},
+      0
+    );
+  }
 
   &__loading > .#{$prefix}--loading {
     /// Loading dimensions.
@@ -81,7 +91,7 @@
     display: flex;
     position: fixed;
     bottom: 0;
-    width: $tearsheet--small__sizing__width;
+    width: 100%;
 
     &__button {
       @include tearsheet__button;
