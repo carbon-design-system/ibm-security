@@ -132,8 +132,7 @@
     &--content {
       @include carbon--type-style($name: caption-01);
 
-      padding-top: $panel__spacing__padding;
-      padding-bottom: $panel__spacing__padding;
+      padding: $panel__spacing__padding;
       border-bottom: $panel__content__sizing__border solid
         $panel__content__color__border;
 

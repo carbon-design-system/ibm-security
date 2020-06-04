@@ -1,11 +1,31 @@
 /**
  * @file Data table stories.
- * @copyright IBM Security 2019-2020
+ * @copyright IBM Security 2019 - 2020
  */
 
 import { storiesOf } from '@storybook/react';
+import {
+  headers,
+  initialRows,
+} from 'carbon-components-react/lib/components/DataTable/stories/shared';
+
+import React from 'react';
 
 import { components, disableCenteredStories, info } from '../../../.storybook';
+
+import {
+  DataTable,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableExpandHeader,
+  TableExpandRow,
+  TableExpandedRow,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '../../..';
 
 const story = 'datatable';
 
@@ -56,10 +76,58 @@ disableCenteredStories(
     )
     .add(
       'with expansion',
-      () =>
-        require('carbon-components-react/lib/components/DataTable/stories/with-expansion').default(
-          props()
-        ),
+      () => (
+        <DataTable
+          rows={initialRows}
+          headers={headers}
+          {...props}
+          render={({
+            rows,
+            headers,
+            getHeaderProps,
+            getRowProps,
+            getTableProps,
+            getTableContainerProps,
+          }) => (
+            <TableContainer
+              title="DataTable"
+              description="With expansion"
+              {...getTableContainerProps()}
+            >
+              <Table {...getTableProps()}>
+                <TableHead>
+                  <TableRow>
+                    <TableExpandHeader />
+                    {headers.map(header => (
+                      <TableHeader
+                        key={header.key}
+                        {...getHeaderProps({ header })}
+                      >
+                        {header.header}
+                      </TableHeader>
+                    ))}
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {rows.map(row => (
+                    <React.Fragment key={row.id}>
+                      <TableExpandRow {...getRowProps({ row })}>
+                        {row.cells.map(cell => (
+                          <TableCell key={cell.id}>{cell.value}</TableCell>
+                        ))}
+                      </TableExpandRow>
+                      <TableExpandedRow colSpan={headers.length + 1}>
+                        <h1>Expandable row content</h1>
+                        <p>Description here</p>
+                      </TableExpandedRow>
+                    </React.Fragment>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          )}
+        />
+      ),
       info(
         `DataTable with expansion
         You can find more detailed information surrounding usage of this component
