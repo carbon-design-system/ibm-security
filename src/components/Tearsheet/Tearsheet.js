@@ -84,6 +84,8 @@ class Tearsheet extends Component {
       ...other
     } = this.props;
 
+    const tabIndex = this.state.loading ? -1 : 0;
+
     const componentLabels = {
       ...defaultLabels.labels,
       ...labels,
@@ -147,7 +149,7 @@ class Tearsheet extends Component {
                         kind="ghost-danger"
                         onClick={onDeleteButtonClick}
                         renderIcon={icon}
-                        tabIndex={this.state.loading ? -1 : 0}
+                        tabIndex={tabIndex}
                       >
                         {componentLabels.TEARSHEET_DELETE_BUTTON}
                       </Button>
@@ -168,7 +170,7 @@ class Tearsheet extends Component {
                     renderIcon={Close20}
                     size="lg"
                     tooltip={false}
-                    tabIndex={this.state.loading ? -1 : 0}
+                    tabIndex={tabIndex}
                   />
                 )}
                 <h1 className={`${namespace}__main__title`}>{mainTitle}</h1>
@@ -193,7 +195,7 @@ class Tearsheet extends Component {
                         kind="ghost"
                         onClick={tertiaryButton.onClick}
                         size="large"
-                        tabIndex={this.state.loading ? -1 : 0}
+                        tabIndex={tabIndex}
                       >
                         {componentLabels.TEARSHEET_TERTIARY_BUTTON}
                         {tertiaryButton.secondaryText.length > 0 && (
@@ -214,7 +216,7 @@ class Tearsheet extends Component {
                         kind="secondary"
                         onClick={secondaryButton.onClick}
                         size="large"
-                        tabIndex={this.state.loading ? -1 : 0}
+                        tabIndex={tabIndex}
                       >
                         {componentLabels.TEARSHEET_SECONDARY_BUTTON}
                       </Button>
@@ -224,7 +226,7 @@ class Tearsheet extends Component {
                       disabled={primaryButton.isDisabled}
                       onClick={primaryButton.onClick}
                       size="large"
-                      tabIndex={this.state.loading ? -1 : 0}
+                      tabIndex={tabIndex}
                     >
                       {componentLabels.TEARSHEET_PRIMARY_BUTTON}
                     </Button>
