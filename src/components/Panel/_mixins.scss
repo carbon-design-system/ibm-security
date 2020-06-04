@@ -4,19 +4,21 @@
 /// @copyright IBM Security 2020
 ////
 
-@import '@carbon/layout/scss/spacing';
 @import '@carbon/layout/scss/mini-unit';
-@import '@carbon/type/scss/index';
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/motion/scss/motion';
 @import '@carbon/themes/scss/tokens';
-@import 'carbon-components/scss/globals/scss/layout';
+@import '@carbon/type/scss/styles';
 
+@import 'carbon-components/scss/globals/scss/layout';
+@import 'carbon-components/scss/globals/scss/motion';
+
+@import '../../globals/namespace/index';
 @import '../../globals/rtl/index';
 @import '../../globals/theme/mixins';
 
-@import '../../platform/body/mixins';
-
-@import '../IconButton/mixins';
 @import '../SecurityHeader/mixins';
+@import '../IconButton/mixins';
 @import '../Toolbar/mixins';
 
 @mixin panel {
@@ -123,8 +125,6 @@
   }
 
   &__body {
-    padding-right: $panel__spacing__padding;
-    padding-left: $panel__spacing__padding;
     margin-top: carbon--mini-units($count: 11);
     flex-grow: 1;
     overflow-y: auto;
@@ -168,7 +168,10 @@
       &--active {
         transform: translate3d(0, 0, 0);
         transition: all $duration--moderate-02;
-        transition-timing-function: motion(entrance, expressive);
+        transition-timing-function: carbon--motion(
+          $name: entrance,
+          $mode: expressive
+        );
         opacity: 1;
       }
     }
@@ -180,7 +183,10 @@
       &--active {
         transform: translate3d($panel__sizing__width, 0, 0);
         transition: all $duration--moderate-02;
-        transition-timing-function: motion(exit, expressive);
+        transition-timing-function: carbon--motion(
+          $name: exit,
+          $mode: expressive
+        );
         opacity: 0;
       }
     }
