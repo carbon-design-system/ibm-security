@@ -15345,7 +15345,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
     top: 50%;
     bottom: unset;
     width: 64rem;
-    height: 50%;
+    height: 64rem;
     transform: translate3d(calc( -50% - 1rem), -50%, 0);
   }
 }

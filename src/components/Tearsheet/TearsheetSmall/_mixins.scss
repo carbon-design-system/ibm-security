@@ -29,10 +29,16 @@
   }
 
   @include carbon--breakpoint($name: max) {
+    /// Maximum dimensions.
+    /// @type Length
+    $tearsheet__sizing__dimensions: carbon--mini-units(
+      $count: 128,
+    );
+
     top: $tearsheet__position__base;
     bottom: unset;
-    width: carbon--mini-units($count: 128);
-    height: $tearsheet__position__base;
+    width: $tearsheet__sizing__dimensions;
+    height: $tearsheet__sizing__dimensions;
     transform: translate3d(
       #{$tearsheet__position},
       -#{$tearsheet__position__base},
