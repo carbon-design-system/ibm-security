@@ -4728,8 +4728,6 @@ a.bx--overflow-menu-options__btn::before {
 }
 
 .security--panel--v2__body {
-  padding-right: 1rem;
-  padding-left: 1rem;
   margin-top: 5.5rem;
   flex-grow: 1;
   overflow-y: auto;
@@ -10773,8 +10771,6 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .security--panel__body {
-  padding-right: 1rem;
-  padding-left: 1rem;
   margin-top: 5.5rem;
   flex-grow: 1;
   overflow-y: auto;
@@ -10785,8 +10781,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   font-weight: 400;
   line-height: 1rem;
   letter-spacing: 0.32px;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem;
   border-bottom: 0.0625rem solid var(--ui-04, #6f6f6f);
 }
 
@@ -12059,7 +12054,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 
 .security--step-indicator > .security--step > .bx--progress-step-button > .bx--progress-label:hover {
   box-shadow: unset;
-  color: unset;
+  color: var(--text-01, #f4f4f4);
   cursor: default;
 }
 
