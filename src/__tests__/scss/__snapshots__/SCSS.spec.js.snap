@@ -7872,6 +7872,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 .security--filter-panel-accordion-item > .bx--accordion__heading {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+  height: 2rem;
   color: var(--text-02, #c6c6c6);
   border: 2px solid transparent;
 }
@@ -12204,66 +12205,6 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 
 .security--status-indicator__button--retry {
   margin-top: 0.25rem;
-}
-
-.security--step-indicator {
-  flex-direction: column;
-}
-
-.security--step-indicator > .security--step {
-  width: 100%;
-  min-width: unset;
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-}
-
-.security--step-indicator > .security--step > .bx--progress-step-button {
-  align-items: center;
-}
-
-.security--step-indicator > .security--step > .bx--progress-step-button > svg {
-  position: absolute;
-  margin-top: 0;
-  margin-right: 0;
-}
-
-.security--step-indicator > .security--step > .bx--progress-step-button > .bx--progress-label {
-  max-width: unset;
-  padding-left: 2rem;
-  margin-top: 0;
-}
-
-.security--step-indicator > .security--step > .bx--progress-step-button > .bx--progress-label:hover {
-  box-shadow: unset;
-  color: var(--text-01, #f4f4f4);
-  cursor: default;
-}
-
-.security--step-indicator > .security--step > .bx--progress-step-button > .bx--progress-line {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-  visibility: inherit;
-  white-space: nowrap;
-}
-
-.security--step-indicator > .security--step.bx--progress-step--current svg {
-  transform: translate3d(0.0625rem, 0, 0);
-}
-
-.security--step-indicator > .security--step.bx--progress-step--disabled,
-.security--step-indicator > .security--step.bx--progress-step--disabled svg:hover {
-  cursor: default;
-}
-
-.security--step-indicator > .security--step.bx--progress-step--disabled .bx--progress-label:hover,
-.security--step-indicator > .security--step.bx--progress-step--disabled svg:hover {
-  color: var(--disabled-03, #8d8d8d);
 }
 
 .bx--tooltip__label {

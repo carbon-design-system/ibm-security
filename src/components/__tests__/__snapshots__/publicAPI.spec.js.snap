@@ -8496,54 +8496,8 @@ Map {
       },
     },
   },
-  "Step" => Object {
-    "defaultProps": Object {
-      "className": "",
-      "complete": null,
-      "current": null,
-      "description": null,
-      "disabled": null,
-      "invalid": null,
-    },
-    "propTypes": Object {
-      "className": Object {
-        "type": "string",
-      },
-      "complete": Object {
-        "type": "bool",
-      },
-      "current": Object {
-        "type": "bool",
-      },
-      "description": Object {
-        "type": "string",
-      },
-      "disabled": Object {
-        "type": "bool",
-      },
-      "invalid": Object {
-        "type": "bool",
-      },
-      "label": Object {
-        "isRequired": true,
-        "type": "string",
-      },
-    },
-  },
-  "StepIndicator" => Object {
-    "defaultProps": Object {
-      "className": "",
-      "currentIndex": 0,
-    },
-    "propTypes": Object {
-      "className": Object {
-        "type": "string",
-      },
-      "currentIndex": Object {
-        "type": "number",
-      },
-    },
-  },
+  "Step" => Object {},
+  "StepIndicator" => Object {},
   "StringFormatter" => Object {
     "defaultProps": Object {
       "className": null,

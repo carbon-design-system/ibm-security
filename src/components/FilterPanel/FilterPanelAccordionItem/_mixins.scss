@@ -5,6 +5,7 @@
 ////
 
 @import '@carbon/layout/scss/spacing';
+@import '@carbon/layout/scss/mini-unit';
 @import '@carbon/themes/scss/tokens';
 @import '@carbon/type/scss/styles';
 
@@ -46,6 +47,7 @@
 
       padding-top: $filter-panel-accordion-item__content__spacing__padding;
       padding-bottom: $filter-panel-accordion-item__content__spacing__padding;
+      height: carbon--mini-units($count: 4);
       color: $text-02;
       border: 2px solid transparent;
 
