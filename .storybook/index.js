@@ -49,7 +49,7 @@ const getPatternsCategory = bindCategory(PATTERNS);
  * @param {string} name The name to deprecated.
  * @returns {string} The formatted deprecated string.
  */
-const deprecated = name => `${name} [Deprecated]`;
+const deprecate = name => `${name} [Deprecated]`;
 
 /**
  * Configuration for disabling the centering addon in individual stories.
@@ -90,7 +90,7 @@ const meta = (title, description) => ({
 });
 
 export {
-  deprecated,
+  deprecate,
   disableCentered,
   getComponentsCategory as components,
   getPatternsCategory as patterns,

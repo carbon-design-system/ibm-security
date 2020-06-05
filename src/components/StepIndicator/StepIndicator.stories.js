@@ -7,10 +7,10 @@ import { number } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { components, deprecated, info } from '../../../.storybook';
+import { components, deprecate, info } from '../../../.storybook';
 import { Step, StepIndicator } from '../..';
 
-storiesOf(components(deprecated('StepIndicator')), module).add(
+storiesOf(components(deprecate('StepIndicator')), module).add(
   'default',
   () => (
     <StepIndicator currentIndex={number('Current progress (currentIndex)', 1)}>
