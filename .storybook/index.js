@@ -45,6 +45,13 @@ const getComponentsCategory = bindCategory(COMPONENTS);
 const getPatternsCategory = bindCategory(PATTERNS);
 
 /**
+ * Returns a formatted string for deprecated components.
+ * @param {string} name The name to deprecated.
+ * @returns {string} The formatted deprecated string.
+ */
+const deprecated = name => `${name} [Deprecated]`;
+
+/**
  * Configuration for disabling the centering addon in individual stories.
  * @param {Object<string, Object>} stories The collection of stories to disable the addon for.
  * @returns {Object<string, Object>} The collection of stories.
@@ -83,6 +90,7 @@ const meta = (title, description) => ({
 });
 
 export {
+  deprecated,
   disableCentered,
   getComponentsCategory as components,
   getPatternsCategory as patterns,

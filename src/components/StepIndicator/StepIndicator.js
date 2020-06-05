@@ -6,6 +6,7 @@
 import React from 'react';
 import { ProgressIndicator, ProgressStep } from '../ProgressIndicator';
 
+// TODO: `2.x` - Remove in favor of `ProgressIndicator`.
 const StepIndicator = ({ ...other }) => (
   <ProgressIndicator vertical {...other} />
 );
