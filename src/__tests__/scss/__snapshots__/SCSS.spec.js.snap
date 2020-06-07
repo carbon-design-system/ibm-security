@@ -7775,6 +7775,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 .security--filter-subcategory > .bx--accordion__heading {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+  height: 2rem;
   color: var(--text-02, #c6c6c6);
 }
 

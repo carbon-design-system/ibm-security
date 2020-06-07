@@ -14,6 +14,17 @@
 
 @import '../../../globals/motion/index';
 
+@mixin filter-panel-accordion-item__heading {
+  /// Heading padding.
+  /// @type Length
+  $filter-panel-accordion-item__heading__spacing__padding: $carbon--spacing-02;
+
+  padding-top: $filter-panel-accordion-item__heading__spacing__padding;
+  padding-bottom: $filter-panel-accordion-item__heading__spacing__padding;
+  height: carbon--mini-units($count: 4);
+  color: $text-02;
+}
+
 @mixin filter-panel-accordion-item {
   /// Scroller padding.
   /// @type Length
@@ -41,14 +52,7 @@
 
   > #{$carbon--accordion} {
     &__heading {
-      /// Scroller padding.
-      /// @type Length
-      $filter-panel-accordion-item__content__spacing__padding: $carbon--spacing-02;
-
-      padding-top: $filter-panel-accordion-item__content__spacing__padding;
-      padding-bottom: $filter-panel-accordion-item__content__spacing__padding;
-      height: carbon--mini-units($count: 4);
-      color: $text-02;
+      @include filter-panel-accordion-item__heading;
       border: 2px solid transparent;
 
       // Increase outline spacing horizontally so that it does not overlap with the count on the
