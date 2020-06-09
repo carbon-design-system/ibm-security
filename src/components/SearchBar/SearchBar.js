@@ -83,7 +83,11 @@ export default class SearchBar extends React.Component {
     /** @type {func} Callback function for translating MultiSelect's child ListBoxMenuIcon SVG title. */
     translateWithId: PropTypes.func, // eslint-disable-line react/require-default-props
 
-    /** Optional custom sorting. For more information, see: https://github.com/carbon-design-system/carbon/blob/master/packages/react/src/components/MultiSelect/tools/sorting.js */
+    /**
+     * Optional custom sorting algorithm for an array of scope items.
+     * By default, scope items are sorted in ascending alphabetical order,
+     * with "selected" items moved to the start of the scope items array.
+     */
     sortItems: PropTypes.func, // eslint-disable-line react/require-default-props
   };
 
