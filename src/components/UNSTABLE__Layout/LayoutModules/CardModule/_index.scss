@@ -10,19 +10,15 @@
 @import '../variables';
 
 @include security--component($name: #{$layout-modules__name}--card) {
-  $root: &;
+  /// Spacing.
+  /// @type Length
+  $layout--card__spacing: $carbon--layout-03;
 
-  padding-bottom: $carbon--layout-03;
+  &__card {
+    margin-bottom: $layout--card__spacing;
+  }
 
-  &__row {
-    margin-bottom: $carbon--layout-03;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-
-    + #{$root}__action {
-      margin-top: $carbon--layout-01;
-    }
+  &__action {
+    margin-bottom: $layout--card__spacing;
   }
 }

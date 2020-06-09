@@ -5,10 +5,25 @@
 ////
 
 @import '@carbon/layout/scss/spacing';
+@import '@carbon/type/scss/styles';
 
 @import '../../../Component/mixins';
 @import '../variables';
 
 @include security--component($name: #{$layout-modules__name}--description) {
   padding-bottom: $carbon--layout-03;
+
+  &__description {
+    /// Spacing.
+    /// @type Length
+    $layout--description__spacing: $carbon--layout-01;
+
+    @include carbon--type-style($name: body-short-01);
+    margin-top: $layout--description__spacing;
+    margin-bottom: $layout--description__spacing;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }

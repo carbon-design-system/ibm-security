@@ -1,17 +1,16 @@
 /**
  * @file Step indicator stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
-import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { number } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
+import React from 'react';
 
+import { components, deprecate, info } from '../../../.storybook';
 import { Step, StepIndicator } from '../..';
 
-import { components } from '../../../.storybook';
-
-storiesOf(components('StepIndicator'), module).add(
+storiesOf(components(deprecate('StepIndicator')), module).add(
   'default',
   () => (
     <StepIndicator currentIndex={number('Current progress (currentIndex)', 1)}>
@@ -39,11 +38,13 @@ storiesOf(components('StepIndicator'), module).add(
       />
     </StepIndicator>
   ),
-  {
-    info: {
-      text: `
-          Basic implementation of step indicator.
-        `,
-    },
-  }
+
+  info(
+    '`StepIndicator` and `Step` have been deprecated - please use the vertical `ProgressIndicator` and `ProgressStep` instead.',
+    {
+      library: 'ibm-security',
+      story: 'components-progressindicator',
+      id: 'default',
+    }
+  )
 );

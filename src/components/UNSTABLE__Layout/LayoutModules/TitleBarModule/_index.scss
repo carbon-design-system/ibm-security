@@ -16,10 +16,10 @@
   &__actions {
     /// Spacing.
     /// @type Length
-    $title-bar__actions__spacing: $carbon--spacing-03;
+    $layout--title-bar__actions__spacing: $carbon--spacing-03;
 
-    margin-top: $title-bar__actions__spacing;
-    margin-bottom: $title-bar__actions__spacing;
+    margin-top: $layout--title-bar__actions__spacing;
+    margin-bottom: $layout--title-bar__actions__spacing;
     margin-left: auto;
   }
 }

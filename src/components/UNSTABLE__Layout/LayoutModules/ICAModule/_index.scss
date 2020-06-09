@@ -21,10 +21,10 @@
   &__ica--hover {
     /// Spacing.
     /// @type Length
-    $ica--hover__spacing: $carbon--layout-01;
+    $layout--ica--hover__spacing: $carbon--layout-01;
 
-    padding-top: $ica--hover__spacing;
-    padding-bottom: $ica--hover__spacing;
+    padding-top: $layout--ica--hover__spacing;
+    padding-bottom: $layout--ica--hover__spacing;
 
     &:hover {
       background-color: $hover-ui;

@@ -11,7 +11,6 @@ import Search16 from '@carbon/icons-react/lib/search/16';
 import View16 from '@carbon/icons-react/lib/view/16';
 import { breakpoints } from '@carbon/layout';
 
-import { action } from '@storybook/addon-actions';
 import { Column, Row } from 'carbon-components-react';
 import React from 'react';
 
@@ -27,9 +26,9 @@ import {
   Card,
   CardModule,
   CardModuleAction,
-  CardModuleRow,
-  ContentSwitcher,
+  CardModuleCard,
   DescriptionModule,
+  DescriptionModuleDescription,
   ICA as ICAComponent,
   ICAModule,
   ICAModuleHover,
@@ -37,7 +36,6 @@ import {
   Link,
   PageTabModule,
   PageTabModuleDetails,
-  Switch,
   Tabs,
   Tab,
   Tag,
@@ -105,7 +103,9 @@ const card = () => (
       Sub-section title
     </TitleModule>
     <ActionBarModule>
-      <Tag type="gray">Closed</Tag> ID: 12 | Result: Completed
+      <Button kind="ghost" renderIcon={Filter16}>
+        Action
+      </Button>
       <ActionBarModuleActions>
         <IconButtonBar
           actions={[
@@ -126,28 +126,23 @@ const card = () => (
         />
       </ActionBarModuleActions>
     </ActionBarModule>
-    <CardModuleRow>
-      <Column>
-        <Card />
-      </Column>
-      <Column>
-        <Card />
-      </Column>
-      <Column>
-        <Card />
-      </Column>
-    </CardModuleRow>
-    <CardModuleRow>
-      <Column>
-        <Card />
-      </Column>
-      <Column>
-        <Card />
-      </Column>
-      <Column>
-        <Card />
-      </Column>
-    </CardModuleRow>
+    <Row>
+      <CardModuleCard>
+        <Column>
+          <Card />
+        </Column>
+      </CardModuleCard>
+      <CardModuleCard>
+        <Column>
+          <Card />
+        </Column>
+      </CardModuleCard>
+      <CardModuleCard>
+        <Column>
+          <Card />
+        </Column>
+      </CardModuleCard>
+    </Row>
     <CardModuleAction>
       <Button kind="ghost" renderIcon={ArrowRight16}>
         Action
@@ -167,12 +162,12 @@ const description = () => (
     >
       Sub-section title
     </TitleModule>
-    <p className={`${carbonPrefix}type-productive-body-short-01`}>
+    <DescriptionModuleDescription>
       BadFlick is a backdoor that is usually seen being distributed using
       exploited word documents. It does not have any persistence to survive
       reboot, but it is capable of opening a reverse shell connection to its C2
       server where it can download and execute possibly other malware.
-    </p>
+    </DescriptionModuleDescription>
     <Link href="#0">View more</Link>
   </DescriptionModule>
 );
@@ -226,10 +221,23 @@ const titleBar = () => (
     </TitleModule>
 
     <TitleBarModuleActions>
-      <ContentSwitcher onChange={action('onChange')}>
-        <Switch text="By reviewer" />
-        <Switch text="By account" />
-      </ContentSwitcher>
+      <IconButtonBar
+        actions={[
+          {
+            label: 'Search',
+            renderIcon: Search16,
+          },
+          {
+            label: 'Filter',
+            renderIcon: Filter16,
+          },
+          {
+            label: 'View',
+            renderIcon: View16,
+          },
+        ]}
+        size="md"
+      />
     </TitleBarModuleActions>
   </TitleBarModule>
 );

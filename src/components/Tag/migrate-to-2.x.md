@@ -7,5 +7,7 @@ Also refer to [migration in Carbon](https://github.com/carbon-design-system/carb
 ## Example
 
 ```js
-<InteractiveTag isSelected removable>InteractiveTag</Tag>
+<InteractiveTag isSelected removable>
+  InteractiveTag
+</Tag>
 ```

@@ -15,9 +15,14 @@ export { default as ButtonClusterModule } from './ButtonClusterModule';
 export {
   default as CardModule,
   CardModuleAction,
-  CardModuleRow,
+  CardModuleCard,
 } from './CardModule';
-export { default as DescriptionModule } from './DescriptionModule';
+
+export {
+  default as DescriptionModule,
+  DescriptionModuleDescription,
+} from './DescriptionModule';
+
 export { default as ICAModule, ICAModuleHover } from './ICAModule';
 
 export {

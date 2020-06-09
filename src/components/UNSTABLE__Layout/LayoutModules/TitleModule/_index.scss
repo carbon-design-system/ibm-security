@@ -13,10 +13,10 @@
 @include security--component($name: $layout__modules--title__name) {
   /// Spacing.
   /// @type Length
-  $title__spacing: $carbon--layout-01;
+  $layout--title__spacing: $carbon--layout-01;
 
-  margin-top: $title__spacing;
-  margin-bottom: $title__spacing;
+  margin-top: $layout--title__spacing;
+  margin-bottom: $layout--title__spacing;
 
   & + & {
     margin-top: $carbon--layout-03;
