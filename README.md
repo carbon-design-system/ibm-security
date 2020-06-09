@@ -47,8 +47,9 @@ yarn add @carbon/ibm-security
 Please use [distribution tags](https://docs.npmjs.com/cli/dist-tag) to install the most relevant version of this framework. e.g. `npm i -S @carbon/ibm-security@latest`:
 
 - `@latest` - Stable
-- `@canary` - Prerelease
-- `@next` - Alpha
+- `@canary` - Unstable prerelease
+- `@experimental` - Experimental features
+- `@next` - Upcoming
 
 ### React
 
