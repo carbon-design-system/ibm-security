@@ -107,9 +107,8 @@ exports[`TagWall Rendering renders 1`] = `
         type="gray"
       >
         <span
-          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
+          className="bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected bx--tag--gray"
           example-attribute="example-value"
-          id="0"
         >
           <span
             className="bx--text-truncate--end"
@@ -158,7 +157,7 @@ exports[`TagWall Rendering renders 1`] = `
                       "willChange": "transform",
                     }
                   }
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 32 32"
                   width={16}
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -173,12 +172,12 @@ exports[`TagWall Rendering renders 1`] = `
                         "willChange": "transform",
                       }
                     }
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 32 32"
                     width={16}
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+                      d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
                     />
                   </svg>
                 </Icon>
@@ -206,9 +205,8 @@ exports[`TagWall Rendering renders 1`] = `
         type="gray"
       >
         <span
-          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
+          className="bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected bx--tag--gray"
           example-attribute="example-value"
-          id="1"
         >
           <span
             className="bx--text-truncate--end"
@@ -257,7 +255,7 @@ exports[`TagWall Rendering renders 1`] = `
                       "willChange": "transform",
                     }
                   }
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 32 32"
                   width={16}
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -272,12 +270,12 @@ exports[`TagWall Rendering renders 1`] = `
                         "willChange": "transform",
                       }
                     }
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 32 32"
                     width={16}
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+                      d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
                     />
                   </svg>
                 </Icon>
@@ -305,9 +303,8 @@ exports[`TagWall Rendering renders 1`] = `
         type="gray"
       >
         <span
-          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
+          className="bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected bx--tag--gray"
           example-attribute="example-value"
-          id="2"
         >
           <span
             className="bx--text-truncate--end"
@@ -356,7 +353,7 @@ exports[`TagWall Rendering renders 1`] = `
                       "willChange": "transform",
                     }
                   }
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 32 32"
                   width={16}
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -371,12 +368,12 @@ exports[`TagWall Rendering renders 1`] = `
                         "willChange": "transform",
                       }
                     }
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 32 32"
                     width={16}
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+                      d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
                     />
                   </svg>
                 </Icon>
@@ -404,9 +401,8 @@ exports[`TagWall Rendering renders 1`] = `
         type="gray"
       >
         <span
-          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+          className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
           example-attribute="example-value"
-          id="3"
         >
           <span
             className="bx--text-truncate--end"
@@ -455,7 +451,7 @@ exports[`TagWall Rendering renders 1`] = `
                       "willChange": "transform",
                     }
                   }
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 32 32"
                   width={16}
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -470,12 +466,12 @@ exports[`TagWall Rendering renders 1`] = `
                         "willChange": "transform",
                       }
                     }
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 32 32"
                     width={16}
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+                      d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
                     />
                   </svg>
                 </Icon>
@@ -503,9 +499,8 @@ exports[`TagWall Rendering renders 1`] = `
         type="gray"
       >
         <span
-          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+          className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
           example-attribute="example-value"
-          id="4"
         >
           <span
             className="bx--text-truncate--end"
@@ -554,7 +549,7 @@ exports[`TagWall Rendering renders 1`] = `
                       "willChange": "transform",
                     }
                   }
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 32 32"
                   width={16}
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -569,12 +564,12 @@ exports[`TagWall Rendering renders 1`] = `
                         "willChange": "transform",
                       }
                     }
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 32 32"
                     width={16}
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+                      d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
                     />
                   </svg>
                 </Icon>
@@ -602,9 +597,8 @@ exports[`TagWall Rendering renders 1`] = `
         type="gray"
       >
         <span
-          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+          className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
           example-attribute="example-value"
-          id="5"
         >
           <span
             className="bx--text-truncate--end"
@@ -653,7 +647,7 @@ exports[`TagWall Rendering renders 1`] = `
                       "willChange": "transform",
                     }
                   }
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 32 32"
                   width={16}
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -668,12 +662,12 @@ exports[`TagWall Rendering renders 1`] = `
                         "willChange": "transform",
                       }
                     }
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 32 32"
                     width={16}
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+                      d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
                     />
                   </svg>
                 </Icon>
@@ -701,9 +695,8 @@ exports[`TagWall Rendering renders 1`] = `
         type="gray"
       >
         <span
-          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+          className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
           example-attribute="example-value"
-          id="6"
         >
           <span
             className="bx--text-truncate--end"
@@ -752,7 +745,7 @@ exports[`TagWall Rendering renders 1`] = `
                       "willChange": "transform",
                     }
                   }
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 32 32"
                   width={16}
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -767,12 +760,12 @@ exports[`TagWall Rendering renders 1`] = `
                         "willChange": "transform",
                       }
                     }
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 32 32"
                     width={16}
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+                      d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
                     />
                   </svg>
                 </Icon>
@@ -800,9 +793,8 @@ exports[`TagWall Rendering renders 1`] = `
         type="gray"
       >
         <span
-          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+          className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
           example-attribute="example-value"
-          id="7"
         >
           <span
             className="bx--text-truncate--end"
@@ -851,7 +843,7 @@ exports[`TagWall Rendering renders 1`] = `
                       "willChange": "transform",
                     }
                   }
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 32 32"
                   width={16}
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -866,12 +858,12 @@ exports[`TagWall Rendering renders 1`] = `
                         "willChange": "transform",
                       }
                     }
-                    viewBox="0 0 16 16"
+                    viewBox="0 0 32 32"
                     width={16}
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+                      d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
                     />
                   </svg>
                 </Icon>
@@ -926,9 +918,8 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
     Label
   </h2>
   <span
-    class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
+    class="bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected bx--tag--gray"
     example-attribute="example-value"
-    id="0"
   >
     <span
       class="bx--text-truncate--end"
@@ -947,20 +938,19 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
         height="16"
         preserveAspectRatio="xMidYMid meet"
         style="will-change: transform;"
-        viewBox="0 0 16 16"
+        viewBox="0 0 32 32"
         width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+          d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
         />
       </svg>
     </button>
   </span>
   <span
-    class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
+    class="bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected bx--tag--gray"
     example-attribute="example-value"
-    id="1"
   >
     <span
       class="bx--text-truncate--end"
@@ -979,20 +969,19 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
         height="16"
         preserveAspectRatio="xMidYMid meet"
         style="will-change: transform;"
-        viewBox="0 0 16 16"
+        viewBox="0 0 32 32"
         width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+          d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
         />
       </svg>
     </button>
   </span>
   <span
-    class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
+    class="bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected bx--tag--gray"
     example-attribute="example-value"
-    id="2"
   >
     <span
       class="bx--text-truncate--end"
@@ -1011,20 +1000,19 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
         height="16"
         preserveAspectRatio="xMidYMid meet"
         style="will-change: transform;"
-        viewBox="0 0 16 16"
+        viewBox="0 0 32 32"
         width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+          d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
         />
       </svg>
     </button>
   </span>
   <span
-    class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+    class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
     example-attribute="example-value"
-    id="3"
   >
     <span
       class="bx--text-truncate--end"
@@ -1043,20 +1031,19 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
         height="16"
         preserveAspectRatio="xMidYMid meet"
         style="will-change: transform;"
-        viewBox="0 0 16 16"
+        viewBox="0 0 32 32"
         width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+          d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
         />
       </svg>
     </button>
   </span>
   <span
-    class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+    class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
     example-attribute="example-value"
-    id="4"
   >
     <span
       class="bx--text-truncate--end"
@@ -1075,20 +1062,19 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
         height="16"
         preserveAspectRatio="xMidYMid meet"
         style="will-change: transform;"
-        viewBox="0 0 16 16"
+        viewBox="0 0 32 32"
         width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+          d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
         />
       </svg>
     </button>
   </span>
   <span
-    class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+    class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
     example-attribute="example-value"
-    id="5"
   >
     <span
       class="bx--text-truncate--end"
@@ -1107,20 +1093,19 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
         height="16"
         preserveAspectRatio="xMidYMid meet"
         style="will-change: transform;"
-        viewBox="0 0 16 16"
+        viewBox="0 0 32 32"
         width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+          d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
         />
       </svg>
     </button>
   </span>
   <span
-    class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+    class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
     example-attribute="example-value"
-    id="6"
   >
     <span
       class="bx--text-truncate--end"
@@ -1139,20 +1124,19 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
         height="16"
         preserveAspectRatio="xMidYMid meet"
         style="will-change: transform;"
-        viewBox="0 0 16 16"
+        viewBox="0 0 32 32"
         width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+          d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
         />
       </svg>
     </button>
   </span>
   <span
-    class="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+    class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
     example-attribute="example-value"
-    id="7"
   >
     <span
       class="bx--text-truncate--end"
@@ -1171,12 +1155,12 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
         height="16"
         preserveAspectRatio="xMidYMid meet"
         style="will-change: transform;"
-        viewBox="0 0 16 16"
+        viewBox="0 0 32 32"
         width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"
+          d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
         />
       </svg>
     </button>
@@ -1298,9 +1282,8 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         type="gray"
       >
         <span
-          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--selected"
+          className="bx--tag security--tag--interactive security--tag--interactive--selected bx--tag--gray"
           example-attribute="example-value"
-          id="0"
         >
           <span
             className="bx--text-truncate--end"
@@ -1329,9 +1312,8 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         type="gray"
       >
         <span
-          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--selected"
+          className="bx--tag security--tag--interactive security--tag--interactive--selected bx--tag--gray"
           example-attribute="example-value"
-          id="1"
         >
           <span
             className="bx--text-truncate--end"
@@ -1360,9 +1342,8 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         type="gray"
       >
         <span
-          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--selected"
+          className="bx--tag security--tag--interactive security--tag--interactive--selected bx--tag--gray"
           example-attribute="example-value"
-          id="2"
         >
           <span
             className="bx--text-truncate--end"
@@ -1391,9 +1372,8 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         type="gray"
       >
         <span
-          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default"
+          className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--gray"
           example-attribute="example-value"
-          id="3"
         >
           <span
             className="bx--text-truncate--end"
@@ -1422,9 +1402,8 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         type="gray"
       >
         <span
-          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default"
+          className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--gray"
           example-attribute="example-value"
-          id="4"
         >
           <span
             className="bx--text-truncate--end"
@@ -1453,9 +1432,8 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         type="gray"
       >
         <span
-          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default"
+          className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--gray"
           example-attribute="example-value"
-          id="5"
         >
           <span
             className="bx--text-truncate--end"
@@ -1484,9 +1462,8 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         type="gray"
       >
         <span
-          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default"
+          className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--gray"
           example-attribute="example-value"
-          id="6"
         >
           <span
             className="bx--text-truncate--end"
@@ -1515,9 +1492,8 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         type="gray"
       >
         <span
-          className="bx--tag bx--tag--gray security--tag--interactive security--tag--interactive--default"
+          className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--gray"
           example-attribute="example-value"
-          id="7"
         >
           <span
             className="bx--text-truncate--end"
