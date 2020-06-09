@@ -16,6 +16,9 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
     <section
       aria-hidden={false}
       className="security--tearsheet"
+      isOpen={true}
+      loading={false}
+      loadingMessage=""
     >
       <section
         className="security--tearsheet__sidebar"
@@ -182,6 +185,9 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
     <section
       aria-hidden={false}
       className="security--tearsheet"
+      isOpen={true}
+      loading={false}
+      loadingMessage=""
     >
       <section
         className="security--tearsheet__sidebar"

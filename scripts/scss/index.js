@@ -4,22 +4,21 @@
  */
 
 const { bgGreen, bgRed, red } = require('colors');
-const { sync } = require('glob');
-const { render } = require('node-sass');
 
-sync('src/**/*.scss').forEach(file =>
-  render(
-    {
-      file,
-      includePaths: ['node_modules'],
-    },
+const { compile, forEachImport } = require('./compile');
 
-    error => {
-      console.log(`${error ? bgRed('FAIL') : bgGreen('PASS')} ${file}`);
+forEachImport(file => {
+  let status;
 
-      if (error) {
-        console.error(`\n${red(error.formatted)}`);
-      }
+  try {
+    compile(file);
+  } catch (error) {
+    status = error;
+  } finally {
+    console.log(`${status ? bgRed('FAIL') : bgGreen('PASS')} ${file}`);
+
+    if (status) {
+      console.error(`\n${red(status.formatted)}`);
     }
-  )
-);
+  }
+});
