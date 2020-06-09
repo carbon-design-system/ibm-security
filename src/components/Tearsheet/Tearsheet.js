@@ -12,7 +12,7 @@ import React, { Component } from 'react';
 
 import Button from '../Button';
 import IconButton from '../IconButton';
-import Loading from '../Loading';
+import { LoadingMessage } from '../Loading';
 import Portal, { PORTAL_EVENTS } from '../Portal';
 import ScrollGradient from '../ScrollGradient';
 import Transition from '../Transition';
@@ -78,8 +78,13 @@ class Tearsheet extends Component {
         onClick: onDeleteButtonClick,
       },
       labels,
+      loading,
+      loadingMessage,
+      isOpen,
       ...other
     } = this.props;
+
+    const tabIndex = this.state.loading ? -1 : 0;
 
     const componentLabels = {
       ...defaultLabels.labels,
@@ -111,15 +116,18 @@ class Tearsheet extends Component {
               {...other}
             >
               {this.state.loading && (
-                <Loading className={`${namespace}__loading`}>
+                <LoadingMessage className={`${namespace}__loading`}>
                   <div className={`${namespace}__loading__message`}>
                     {this.state.loadingMessage}
                   </div>
-                </Loading>
+                </LoadingMessage>
               )}
 
               {renderSidebar && (
-                <section className={`${namespace}__sidebar`}>
+                <section
+                  aria-hidden={this.state.loading}
+                  className={`${namespace}__sidebar`}
+                >
                   <h1 className={`${namespace}__sidebar__title`}>
                     {sidebarTitle}
                   </h1>
@@ -141,6 +149,7 @@ class Tearsheet extends Component {
                         kind="ghost-danger"
                         onClick={onDeleteButtonClick}
                         renderIcon={icon}
+                        tabIndex={tabIndex}
                       >
                         {componentLabels.TEARSHEET_DELETE_BUTTON}
                       </Button>
@@ -149,7 +158,10 @@ class Tearsheet extends Component {
                 </section>
               )}
 
-              <section className={`${namespace}__main`}>
+              <section
+                aria-hidden={this.state.loading}
+                className={`${namespace}__main`}
+              >
                 {!closeButton.isDisabled && (
                   <IconButton
                     className={`${namespace}__button--close`}
@@ -158,6 +170,7 @@ class Tearsheet extends Component {
                     renderIcon={Close20}
                     size="lg"
                     tooltip={false}
+                    tabIndex={tabIndex}
                   />
                 )}
                 <h1 className={`${namespace}__main__title`}>{mainTitle}</h1>
@@ -169,7 +182,7 @@ class Tearsheet extends Component {
                     <div
                       className={`${namespace}__main__scroll-gradient__content`}
                     >
-                      {renderMain()}
+                      {renderMain({ isLoading: loading })}
                     </div>
                   </ScrollGradient>
                 </section>
@@ -182,6 +195,7 @@ class Tearsheet extends Component {
                         kind="ghost"
                         onClick={tertiaryButton.onClick}
                         size="large"
+                        tabIndex={tabIndex}
                       >
                         {componentLabels.TEARSHEET_TERTIARY_BUTTON}
                         {tertiaryButton.secondaryText.length > 0 && (
@@ -202,6 +216,7 @@ class Tearsheet extends Component {
                         kind="secondary"
                         onClick={secondaryButton.onClick}
                         size="large"
+                        tabIndex={tabIndex}
                       >
                         {componentLabels.TEARSHEET_SECONDARY_BUTTON}
                       </Button>
@@ -211,6 +226,7 @@ class Tearsheet extends Component {
                       disabled={primaryButton.isDisabled}
                       onClick={primaryButton.onClick}
                       size="large"
+                      tabIndex={tabIndex}
                     >
                       {componentLabels.TEARSHEET_PRIMARY_BUTTON}
                     </Button>
@@ -283,7 +299,7 @@ Tearsheet.propTypes = {
     icon: PropTypes.string,
   }),
 
-  /** @type {bool} The toggle to determine whether or not to show the loading. */
+  /** @type {bool} The toggle to determine whether or not to show the loading overlay. */
   loading: PropTypes.bool,
 
   /** @type {string} The message to be displayed during loading. */
