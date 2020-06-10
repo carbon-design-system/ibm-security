@@ -12,7 +12,12 @@ const { BRANCH, CIRCLE_BRANCH } = process.env;
 // Pass the branch name from Netlify, CircleCI, or the local branch.
 process.env.STORYBOOK_BRANCH = BRANCH || CIRCLE_BRANCH || sync();
 
-// Construct an array of stories returning the name and path.
+/**
+ * Construct an array of available stories returning the name and path.
+ * @param {string} path The path to search for stories in.
+ * @param {string} suffix The story suffix to use.
+ * @returns {Array.<Object.<string, string>>} An array of objects containing the story name and it's path.
+ */
 const getStories = (path, suffix) =>
   glob.sync(`${path}/**/*${suffix}.*`).map(path => ({
     name: parse(path).name.replace(suffix, ''),
