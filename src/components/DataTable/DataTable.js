@@ -1,13 +1,12 @@
 /**
  * @file Data table.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
-
 import CarbonDataTable from 'carbon-components-react/lib/components/DataTable';
+import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 import { namespace } from './constants';
 
@@ -47,6 +46,7 @@ const DataTable = ({
   rows,
   sortRow,
   useZebraStyles,
+  ...other
 }) => (
   <div className={namespace}>
     {render ? (
@@ -58,6 +58,7 @@ const DataTable = ({
         rows={rows}
         sortRow={sortRow}
         useZebraStyles={useZebraStyles}
+        {...other}
       />
     ) : (
       <CarbonDataTable
@@ -114,6 +115,7 @@ const DataTable = ({
             </Table>
           </TableContainer>
         )}
+        {...other}
       />
     )}
   </div>
