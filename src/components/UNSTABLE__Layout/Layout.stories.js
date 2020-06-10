@@ -23,6 +23,9 @@ import {
   BackgroundModule,
   ButtonClusterModule,
   Button,
+  Card,
+  CardModule,
+  CardModuleCard,
   ContentSwitcher,
   DataTablePagination,
   Decorator,
@@ -31,9 +34,7 @@ import {
   ICA,
   ICAModule,
   IconButtonBar,
-  Link,
   PageTabModule,
-  PageTabModuleDetails,
   Switch,
   Tabs,
   Tab,
@@ -54,25 +55,6 @@ export const overview = () => (
       <Column>
         <ActionBarModule>
           <Tag type="gray">Closed</Tag> ID: 12 | Result: Completed
-          <ActionBarModuleActions>
-            <IconButtonBar
-              actions={[
-                {
-                  label: 'Search',
-                  renderIcon: Search16,
-                },
-                {
-                  label: 'Filter',
-                  renderIcon: Filter16,
-                },
-                {
-                  label: 'View',
-                  renderIcon: View16,
-                },
-              ]}
-              size="md"
-            />
-          </ActionBarModuleActions>
         </ActionBarModule>
       </Column>
     </Row>
@@ -332,7 +314,6 @@ export const overview = () => (
                   <ul>
                     <li>Scott Damon</li>
                     <li>scottd@cse-bank.com</li>
-                    <li>ServiceNow 3</li>
                   </ul>
                 </TypeLayoutCell>
               </TypeLayoutRow>
@@ -361,7 +342,6 @@ export const detail = () => (
     <Row>
       <Column>
         <PageTabModule>
-          <PageTabModuleDetails>PageTabModuleDetails</PageTabModuleDetails>
           <Tabs selected={1}>
             <Tab label="Case" />
             <Tab label="Report">
@@ -374,12 +354,6 @@ export const detail = () => (
                       Summary
                     </TitleModule>
 
-                    <TitleModule
-                      className={`${carbonPrefix}type-productive-heading-01`}
-                      element="h3"
-                    >
-                      Sub-section title
-                    </TitleModule>
                     <DescriptionModuleDescription>
                       BadFlick is a backdoor that is usually seen being
                       distributed using exploited word documents. It does not
@@ -387,7 +361,6 @@ export const detail = () => (
                       of opening a reverse shell connection to its C2 server
                       where it can download and execute possibly other malware.
                     </DescriptionModuleDescription>
-                    <Link href="#0">View more</Link>
                   </DescriptionModule>
                 </Column>
                 <Column lg={{ offset: 2, span: 6 }}>
@@ -409,6 +382,68 @@ export const detail = () => (
               </Row>
 
               <Row>
+                <Column>
+                  <TitleModule
+                    className={`${carbonPrefix}type-productive-heading-03`}
+                  >
+                    Related reports
+                  </TitleModule>
+                  <ActionBarModule>
+                    <TitleModule
+                      className={`${carbonPrefix}type-productive-heading-01`}
+                    >
+                      Supplementary details
+                    </TitleModule>
+
+                    <ActionBarModuleActions>
+                      <IconButtonBar
+                        actions={[
+                          {
+                            label: 'Search',
+                            renderIcon: Search16,
+                          },
+                          {
+                            label: 'Filter',
+                            renderIcon: Filter16,
+                          },
+                          {
+                            label: 'View',
+                            renderIcon: View16,
+                          },
+                        ]}
+                        size="md"
+                      />
+                    </ActionBarModuleActions>
+                  </ActionBarModule>
+                </Column>
+              </Row>
+
+              <CardModule>
+                <Row>
+                  <Column>
+                    <CardModuleCard>
+                      <Card header={{ tag: 'Threat actor' }} />
+                    </CardModuleCard>
+                  </Column>
+                  <Column>
+                    <CardModuleCard>
+                      <Card header={{ tag: 'Threat report' }} />
+                    </CardModuleCard>
+                  </Column>
+                  <Column>
+                    <CardModuleCard>
+                      <Card header={{ tag: 'IP report' }} />
+                    </CardModuleCard>
+                  </Column>
+                  <Column>
+                    <CardModuleCard>
+                      <Card header={{ tag: 'Vulnerability report' }} />
+                    </CardModuleCard>
+                  </Column>
+                </Row>
+              </CardModule>
+
+              <Row>
                 <BackgroundModule>
                   <Column>
                     <Row>
@@ -426,14 +461,17 @@ export const detail = () => (
 
                     <ICAModule>
                       <Row>
-                        <Column md={2} lg={3}>
-                          <ICA label="Reviews complete" value={300} />
+                        <Column lg={3}>
+                          <ICA label="Malware" value={11} />
                         </Column>
-                        <Column md={2} lg={3}>
-                          <ICA label="Approved" value={241} />
+                        <Column lg={3}>
+                          <ICA label="IPs" value={8} />
                         </Column>
-                        <Column md={2} lg={3}>
-                          <ICA label="Rejected" value={28} />
+                        <Column lg={3}>
+                          <ICA label="URLs" value={9} />
+                        </Column>
+                        <Column lg={3}>
+                          <ICA label="VULs" value={1} />
                         </Column>
                       </Row>
                     </ICAModule>
