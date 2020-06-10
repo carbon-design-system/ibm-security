@@ -6956,6 +6956,9 @@ Map {
         ],
         "type": "arrayOf",
       },
+      "sortItems": Object {
+        "type": "func",
+      },
       "submitLabel": Object {
         "isRequired": true,
         "type": "string",
