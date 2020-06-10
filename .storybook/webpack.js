@@ -5,32 +5,36 @@
 
 const { sync } = require('git-branch');
 const glob = require('glob');
-const { parse } = require('path');
+const { parse, resolve } = require('path');
 
 const { BRANCH, CIRCLE_BRANCH } = process.env;
 
 // Pass the branch name from Netlify, CircleCI, or the local branch.
 process.env.STORYBOOK_BRANCH = BRANCH || CIRCLE_BRANCH || sync();
 
+// Construct an array of stories returning the name and path.
 const getStories = (path, suffix) =>
-  glob.sync(`${path}/**/*${suffix}.*`).map(file => ({
-    file,
-    name: parse(file).name.replace(suffix, ''),
+  glob.sync(`${path}/**/*${suffix}.*`).map(path => ({
+    name: parse(path).name.replace(suffix, ''),
+    path,
   }));
 
+// Pass the array of filtered stories as an environment variable to Storybook environment as a string - https://storybook.js.org/docs/configurations/env-vars
 process.env.STORYBOOK_STORIES = JSON.stringify(
-  [
-    ...getStories('node_modules/carbon-components-react/lib', '-story'),
-    ...getStories('src', '.stories'),
-  ]
-    .reduce(
-      (accumulator, currentValue) =>
-        accumulator.find(({ name }) => name === currentValue.name)
-          ? accumulator
-          : accumulator.concat([currentValue]),
-      []
+  getStories('node_modules/carbon-components-react/lib', '-story')
+    .filter(
+      ({ name }) =>
+        // Filter out stories from dependencies that already have examples in `@carbon/ibm-security`.
+        !getStories('src', '.stories').find(story => story.name === name)
     )
-    .map(({ file }) => file)
+
+    // Filter out any stories that can't be displayed due to missing resources from dependencies, for example - https://github.com/carbon-design-system/carbon/blob/master/packages/react/src/components/Grid/Grid-story.js#L1
+    .map(({ path }) => {
+      try {
+        return require(resolve(__dirname, '..', path)) && path;
+      } catch {}
+    })
+    .filter(Boolean)
 );
 
 module.exports = config => {
