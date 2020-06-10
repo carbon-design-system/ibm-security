@@ -79,6 +79,14 @@ addParameters({
   },
 });
 
-console.log(JSON.parse(process.env.STORYBOOK_STORIES));
+const loader = () => {
+  const exports = JSON.parse(process.env.STORYBOOK_STORIES).map(
+    ({ name, path }) =>
+      require(`carbon-components-react/es/components/${path}/${name}-story`)
+  );
 
-configure(require.context('../src', true, /\.stories\.js$/), module);
+  const stories = require.context('../src', true, /\.stories\.js$/);
+  stories.keys().forEach(story => exports.push(req(story)));
+};
+
+configure(loader, module);
