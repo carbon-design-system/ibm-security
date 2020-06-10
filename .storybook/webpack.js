@@ -19,13 +19,17 @@ const getStories = (path, suffix) =>
     path,
   }));
 
+// Internal stories.
+const stories = getStories('src', '.stories');
+
 // Pass the array of filtered stories as an environment variable to Storybook environment as a string - https://storybook.js.org/docs/configurations/env-vars
 process.env.STORYBOOK_STORIES = JSON.stringify(
+  // Stories from dependencies.
   getStories('node_modules/carbon-components-react/lib', '-story')
     .filter(
       ({ name }) =>
         // Filter out stories from dependencies that already have examples in `@carbon/ibm-security`.
-        !getStories('src', '.stories').find(story => story.name === name)
+        !stories.find(story => story.name === name)
     )
 
     // Filter out any stories that can't be displayed due to missing resources from dependencies, for example - https://github.com/carbon-design-system/carbon/blob/master/packages/react/src/components/Grid/Grid-story.js#L1
