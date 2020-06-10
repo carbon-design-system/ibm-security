@@ -11,7 +11,7 @@ import React, { Component, createRef, Fragment } from 'react';
 import Close20 from '@carbon/icons-react/lib/close/20';
 
 import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
-import requiredIfGivenPropExists from 'carbon-components-react/lib/prop-types/requiredIfGivenPropExists';
+import requiredIfGivenPropIsTruthy from 'carbon-components-react/lib/prop-types/requiredIfGivenPropIsTruthy';
 import setupGetInstanceId from 'carbon-components-react/lib/tools/setupGetInstanceId';
 
 import { getComponentNamespace } from '../../globals/namespace';
@@ -310,7 +310,7 @@ PanelV2.propTypes = {
   /**
    * Required props for the accessibility label of the header
    */
-  ['aria-label']: requiredIfGivenPropExists(
+  ['aria-label']: requiredIfGivenPropIsTruthy(
     'hasScrollingContent',
     PropTypes.string
   ),
