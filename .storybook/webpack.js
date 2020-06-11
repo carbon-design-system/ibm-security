@@ -80,6 +80,12 @@ module.exports = config => {
         },
       ],
     },
+    {
+      test: /\-story\.js$/,
+      exclude: /node_modules\/(?!carbon-components-react\/).*/,
+      loader: 'file-loader',
+      options: { name: '[name].[ext]' },
+    },
   ].forEach(rule => config.module.rules.push(rule));
 
   return config;

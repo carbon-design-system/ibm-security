@@ -86,7 +86,7 @@ const loader = () => {
   );
 
   const stories = require.context('../src', true, /\.stories\.js$/);
-  stories.keys().forEach(story => exports.push(req(story)));
+  stories.keys().forEach(story => exports.push(stories(story)));
 };
 
 configure(loader, module);
