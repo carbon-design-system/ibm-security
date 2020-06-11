@@ -173,7 +173,6 @@ class Portal extends Component {
     return (
       isClient() &&
       createPortal(
-        // eslint-disable-next-line jsx-a11y/mouse-events-have-key-events
         <FocusTrap
           active={focusTrap}
           focusTrapOptions={{
