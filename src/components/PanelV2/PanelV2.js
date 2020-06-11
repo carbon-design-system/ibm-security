@@ -7,7 +7,7 @@
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { Component, createRef, Fragment } from 'react';
+import React, { createRef, Fragment, useState, useEffect } from 'react';
 import Close20 from '@carbon/icons-react/lib/close/20';
 
 import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
@@ -32,80 +32,73 @@ const getInstanceId = setupGetInstanceId();
  * @param {Object.<string, *>} props Panel v2 container props.
  * @returns {PanelV2} Panel v2 container instance.
  */
-export default class PanelV2 extends Component {
-  state = { bodyMargin: 0, isOpen: this.props.isOpen };
+function PanelV2({
+  children,
+  className,
+  closeButton,
+  focusTrap,
+  primaryButton,
+  renderFooter,
+  secondaryButton,
+  stopPropagation,
+  stopPropagationEvents,
+  subtitle,
+  title,
+  hasScrollingContent,
+  labels,
+  isOpen,
+  onClose,
+  ...other
+}) {
+  const [bodyMargin, setBodyMargin] = useState(0);
 
-  static getDerivedStateFromProps(nextProps, prevState) {
-    if (prevState.isOpen !== nextProps.isOpen) {
-      return { isOpen: nextProps.isOpen };
-    }
-    return null;
-  }
+  const panelInstanceId = `panel-${getInstanceId()}`;
+  const panelTitleId = `${namespace}__title--${panelInstanceId}`;
+  const panelSubtitleId = `${namespace}__subtitle--${panelInstanceId}`;
 
-  componentDidMount() {
-    if (isClient() && this.state.isOpen) {
-      this.setBodyMargin();
-    }
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    if (this.state.isOpen && !prevState.isOpen && isClient()) {
-      this.setBodyMargin();
-    }
-  }
+  const footerRef = createRef();
+  const headerRef = createRef();
 
   /**
    * Sets the body margin to match the height of the header for fixed scrolling.
    */
-  setBodyMargin() {
-    const footerElement = this.footer.current;
-    const headerElement = this.header.current;
+  const handleBodyMargin = () => {
+    const footerElement = footerRef.current;
+    const headerElement = headerRef.current;
 
-    this.setState({
-      bodyMargin: {
-        top: headerElement.clientHeight,
-        bottom: footerElement && footerElement.clientHeight,
-      },
+    setBodyMargin({
+      top: headerElement.clientHeight,
+      bottom: footerElement && footerElement.clientHeight,
     });
-  }
+  };
 
-  panelInstanceId = `panel-${getInstanceId()}`;
-  panelTitleId = `${namespace}__title--${this.panelInstanceId}`;
-  panelSubtitleId = `${namespace}__subtitle--${this.panelInstanceId}`;
+  const handleKeyDown = event => {
+    if (isOpen && event.which === 27) {
+      onClose();
+    }
+  };
 
-  footer = createRef();
-  header = createRef();
+  useEffect(() => {
+    if (isClient() && isOpen) {
+      handleBodyMargin();
+    }
+  }, [isOpen]);
 
-  renderPanel = ({
+  const renderPanel = ({
     labels: {
       PANEL_CONTAINER_PRIMARY_BUTTON,
       PANEL_CONTAINER_SECONDARY_BUTTON,
       PANEL_CONTAINER_CLOSE_BUTTON,
     },
   }) => {
-    const {
-      children,
-      className,
-      closeButton,
-      focusTrap,
-      primaryButton,
-      renderFooter,
-      secondaryButton,
-      stopPropagation,
-      stopPropagationEvents,
-      subtitle,
-      title,
-      hasScrollingContent,
-    } = this.props;
-
     const hasFooter = renderFooter || primaryButton;
 
-    const ariaLabel = this.props['aria-label'] || title || subtitle;
+    const ariaLabel = other['aria-label'] || title || subtitle;
 
     const getAriaLabelledBy =
       title || subtitle
         ? {
-            'aria-labelledby': title ? this.panelTitleId : this.panelSubtitleId,
+            'aria-labelledby': title ? panelTitleId : panelSubtitleId,
           }
         : {};
 
@@ -119,24 +112,26 @@ export default class PanelV2 extends Component {
 
     return (
       <Transition className={namespace}>
-        {this.state.isOpen && (
+        {isOpen && (
           <Portal
             focusTrap={focusTrap}
             stopPropagation={stopPropagation}
             stopPropagationEvents={stopPropagationEvents}
           >
+            {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
             <section
               className={classnames(namespace, className)}
               role="dialog"
               aria-label={ariaLabel}
               aria-modal="true"
+              onKeyDown={handleKeyDown}
             >
-              <header ref={this.header} className={`${namespace}__header`}>
+              <header ref={headerRef} className={`${namespace}__header`}>
                 <IconButton
                   id={closeButton.id}
                   className={`${namespace}__button--close`}
                   label={PANEL_CONTAINER_CLOSE_BUTTON}
-                  onClick={closeButton.onClick}
+                  onClick={closeButton.onClick || onClose}
                   renderIcon={closeButton.icon || Close20}
                   tooltip={false}
                 />
@@ -144,14 +139,14 @@ export default class PanelV2 extends Component {
                   <div className={`${namespace}__header__container--title`}>
                     {typeof title === 'string' ? (
                       <h2
-                        id={this.panelTitleId}
+                        id={panelTitleId}
                         className={`${namespace}__header--title`}
                       >
                         {title}
                       </h2>
                     ) : (
                       <div
-                        id={this.panelTitleId}
+                        id={panelTitleId}
                         className={`${namespace}__header--title`}
                       >
                         {title}
@@ -159,7 +154,7 @@ export default class PanelV2 extends Component {
                     )}
                     {subtitle && (
                       <div
-                        id={this.panelSubtitleId}
+                        id={panelSubtitleId}
                         className={`${namespace}__header--subtitle`}
                       >
                         {subtitle}
@@ -173,8 +168,8 @@ export default class PanelV2 extends Component {
                   [`${namespace}__body--footer`]: renderFooter,
                 })}
                 style={{
-                  marginTop: `${this.state.bodyMargin.top}px`,
-                  marginBottom: `${this.state.bodyMargin.bottom}px`,
+                  marginTop: `${bodyMargin.top}px`,
+                  marginBottom: `${bodyMargin.bottom}px`,
                 }}
                 {...hasScrollingContentProps}
                 {...getAriaLabelledBy}
@@ -183,7 +178,7 @@ export default class PanelV2 extends Component {
               </section>
 
               {hasFooter && (
-                <footer ref={this.footer} className={`${namespace}__footer`}>
+                <footer ref={footerRef} className={`${namespace}__footer`}>
                   {renderFooter ? (
                     renderFooter()
                   ) : (
@@ -222,22 +217,19 @@ export default class PanelV2 extends Component {
     );
   };
 
-  render() {
-    const { closeButton, primaryButton, secondaryButton, labels } = this.props;
+  const componentLabels = {
+    ...defaultLabels.labels,
+    ...labels,
+    ...defaultLabels.filterFalsey({
+      PANEL_CONTAINER_PRIMARY_BUTTON:
+        (primaryButton && primaryButton.label) || '',
+      PANEL_CONTAINER_SECONDARY_BUTTON:
+        (secondaryButton && secondaryButton.label) || '',
+      PANEL_CONTAINER_CLOSE_BUTTON: (closeButton && closeButton.label) || '',
+    }),
+  };
 
-    const componentLabels = {
-      ...defaultLabels.labels,
-      ...labels,
-      ...defaultLabels.filterFalsey({
-        PANEL_CONTAINER_PRIMARY_BUTTON:
-          (primaryButton && primaryButton.label) || '',
-        PANEL_CONTAINER_SECONDARY_BUTTON:
-          (secondaryButton && secondaryButton.label) || '',
-        PANEL_CONTAINER_CLOSE_BUTTON: (closeButton && closeButton.label) || '',
-      }),
-    };
-    return this.renderPanel({ labels: componentLabels });
-  }
+  return renderPanel({ labels: componentLabels });
 }
 
 const buttonType = PropTypes.shape({
@@ -314,6 +306,12 @@ PanelV2.propTypes = {
     'hasScrollingContent',
     PropTypes.string
   ),
+
+  /**
+   * Handler for all close actions such as clicking on the close button,
+   * pressing the "Escape" key, or clicking outside of the panel area.
+   */
+  onClose: PropTypes.func,
 };
 
 PanelV2.defaultProps = {
@@ -331,6 +329,8 @@ PanelV2.defaultProps = {
   subtitle: undefined,
   title: undefined,
   hasScrollingContent: false,
+  onClose: () => {},
 };
-
 /* eslint-enable */
+
+export default PanelV2;
