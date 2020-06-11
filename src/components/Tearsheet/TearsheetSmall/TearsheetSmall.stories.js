@@ -12,7 +12,12 @@ import { compose, getDisplayName, lifecycle } from 'recompose';
 
 import { patterns } from '../../../../.storybook';
 
-import { Button, TearsheetSmall } from '../../..';
+import {
+  Button,
+  CodeSnippet,
+  CodeSnippetSkeleton,
+  TearsheetSmall,
+} from '../../..';
 
 import {
   buttons,
@@ -129,13 +134,13 @@ storiesOf(patterns('TearsheetSmall'), module)
               this.setState({
                 loadingMessage: 'Processing request...',
               }),
-            3000
+            300000
           );
 
-          this.complete = setTimeout(
-            () => this.setState({ loading: !loading }),
-            5000
-          );
+          // this.complete = setTimeout(
+          //   () => this.setState({ loading: !loading }),
+          //   5000
+          // );
         },
         componentWillUnmount() {
           clearTimeout(this.startRequest);
@@ -172,6 +177,64 @@ storiesOf(patterns('TearsheetSmall'), module)
         isOpen
         loading={loading}
         labels={labels}
+        body={({ ...isLoading }) => (
+          <>
+            <p>
+              Whenever the TearsheetSmall is loading, please use{' '}
+              <CodeSnippet type="inline" light tabIndex={isLoading ? -1 : 0}>
+                isLoading
+              </CodeSnippet>{' '}
+              via the{' '}
+              <CodeSnippet type="inline" light tabIndex={isLoading ? -1 : 0}>
+                renderMain
+              </CodeSnippet>{' '}
+              render prop to prevent users from tabbing through focussable
+              content (such as form inputs, buttons, and links) while the
+              TearsheetSmall is loading. For example, you can selectively load
+              skeleton components, or you can set
+              <CodeSnippet type="inline" light tabIndex={isLoading ? -1 : 0}>
+                disabled
+              </CodeSnippet>
+              or{' '}
+              <CodeSnippet type="inline" light tabIndex={isLoading ? -1 : 0}>
+                tabIndex={-1}
+              </CodeSnippet>{' '}
+              on interactive elements.
+            </p>
+            <p>Here are some examples:</p>
+            {isLoading ? (
+              <CodeSnippetSkeleton type="multi" />
+            ) : (
+              <CodeSnippet light type="multi">
+                {/* eslint-disable-next-line react/jsx-indent */}
+                {`
+            <TearSheetSmall
+              body={({ ...isLoading }) => (
+                <Button disabled={isLoading}>
+                  Example button.
+                </Button>
+                <CodeSnippet tabIndex={isLoading ? -1 : 0}>
+                  Example snippet with no copy button.
+                </CodeSnippet>
+                {isLoading ? (
+                  <CodeSnippetSkeleton type="multi" />
+                ) : (
+                  <CodeSnippet type="multi">
+                    Exampe snippet with a copy button.
+                  </CodeSnippet>
+                )}
+              )}
+            />
+            `}
+              </CodeSnippet>
+            )}
+            <br />
+            <p>
+              For more examples, please review the &quot;Story&quot; tab in the
+              Storybook panel below to the see this demo&apos; source code.
+            </p>
+          </>
+        )}
       />
     );
   })
