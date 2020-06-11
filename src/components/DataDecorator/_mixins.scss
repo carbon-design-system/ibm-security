@@ -134,16 +134,24 @@
     }
   }
 
-  &--unknown #{$root}__icon {
+  &--unknown #{$root}__icon,
+  &__icon--unknown {
     fill: $icon-02;
   }
 
-  &--low #{$root}__icon {
+  &--low #{$root}__icon,
+  &__icon--low {
     fill: $support-03;
   }
 
-  &--medium #{$root}__icon {
+  &--medium #{$root}__icon,
+  &__icon--medium {
     fill: $carbon--orange-40;
+  }
+
+  &__icon--high,
+  &__icon--critical {
+    fill: $support-01;
   }
 
   &--high,

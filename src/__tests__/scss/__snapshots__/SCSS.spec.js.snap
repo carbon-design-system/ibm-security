@@ -4902,16 +4902,20 @@ a.bx--overflow-menu-options__btn::before {
   line-height: 1.25rem;
 }
 
-.security--decorator--unknown .security--decorator__icon {
+.security--decorator--unknown .security--decorator__icon, .security--decorator__icon--unknown {
   fill: var(--icon-02, #c6c6c6);
 }
 
-.security--decorator--low .security--decorator__icon {
+.security--decorator--low .security--decorator__icon, .security--decorator__icon--low {
   fill: var(--support-03, #f1c21b);
 }
 
-.security--decorator--medium .security--decorator__icon {
+.security--decorator--medium .security--decorator__icon, .security--decorator__icon--medium {
   fill: #ff832b;
+}
+
+.security--decorator__icon--high, .security--decorator__icon--critical {
+  fill: var(--support-01, #fa4d56);
 }
 
 .security--decorator--high .security--decorator__icon, .security--decorator--critical .security--decorator__icon {
