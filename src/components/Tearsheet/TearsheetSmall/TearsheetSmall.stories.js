@@ -134,13 +134,13 @@ storiesOf(patterns('TearsheetSmall'), module)
               this.setState({
                 loadingMessage: 'Processing request...',
               }),
-            300000
+            3000
           );
 
-          // this.complete = setTimeout(
-          //   () => this.setState({ loading: !loading }),
-          //   5000
-          // );
+          this.complete = setTimeout(
+            () => this.setState({ loading: !loading }),
+            5000
+          );
         },
         componentWillUnmount() {
           clearTimeout(this.startRequest);
