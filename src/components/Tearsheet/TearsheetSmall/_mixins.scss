@@ -5,6 +5,7 @@
 ////
 
 @import '@carbon/layout/scss/breakpoint';
+@import '@carbon/layout/scss/convert';
 @import '@carbon/layout/scss/spacing';
 @import '@carbon/layout/scss/mini-unit';
 @import '@carbon/type/scss/index';
@@ -28,17 +29,27 @@
     width: carbon--mini-units($count: 64);
   }
 
-  @include carbon--breakpoint($name: max) {
-    /// Maximum dimensions.
-    /// @type Length
-    $tearsheet__sizing__dimensions: carbon--mini-units(
-      $count: 128,
-    );
-
+  @include carbon--breakpoint(
+    $name: security--soc,
+    $breakpoints:
+      map-merge(
+        $map1: $carbon--grid-breakpoints,
+        $map2: (
+          security--soc:
+            map-merge(
+              $map1: map-get($map: $carbon--grid-breakpoints, $key: max),
+              $map2: (
+                width: carbon--rem($px: 1968px),
+              )
+            ),
+        )
+      )
+  ) {
     top: $tearsheet__position__base;
     bottom: unset;
-    width: $tearsheet__sizing__dimensions;
-    height: $tearsheet__sizing__dimensions;
+    width: carbon--mini-units($count: 128);
+    height: 50%;
+    min-height: carbon--mini-units($count: 64);
     transform: translate3d(
       #{$tearsheet__position},
       -#{$tearsheet__position__base},
