@@ -10,7 +10,6 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
     focusTrap={true}
     hasOverlay={true}
     initialFocus="[tearsheet-primary-focus]"
-    onOverlayClick={[Function]}
     rootNode={<body />}
     stopPropagation={false}
   >
@@ -180,7 +179,6 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
     focusTrap={true}
     hasOverlay={true}
     initialFocus="[tearsheet-primary-focus]"
-    onOverlayClick={[Function]}
     rootNode={<body />}
     stopPropagation={false}
   >

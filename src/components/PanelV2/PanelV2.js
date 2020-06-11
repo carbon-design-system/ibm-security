@@ -126,6 +126,7 @@ function PanelV2({
               aria-label={ariaLabel}
               aria-modal="true"
               onKeyDown={handleKeyDown}
+              tabIndex={-1}
             >
               <header ref={headerRef} className={`${namespace}__header`}>
                 <IconButton

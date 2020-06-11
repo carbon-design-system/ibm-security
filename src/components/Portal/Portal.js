@@ -109,7 +109,10 @@ class Portal extends Component {
         this.overlay.setAttribute('tabIndex', '-1');
         this.overlay.classList.add(`${namespace}__overlay`);
         rootNode.appendChild(this.overlay);
-        this.overlay.addEventListener('mousedown', this.handleOverlayClick);
+
+        if (this.props.onOverlayClick) {
+          this.overlay.addEventListener('mousedown', this.handleOverlayClick);
+        }
       }
     }
   }
@@ -122,6 +125,10 @@ class Portal extends Component {
 
       if (hasOverlay && this.overlay) {
         rootNode.removeChild(this.overlay);
+      }
+
+      if (this.props.onOverlayClick) {
+        this.overlay.removeEventListener('mousedown', this.handleOverlayClick);
       }
     }
   }
@@ -223,7 +230,7 @@ Portal.defaultProps = {
   rootNode: isClient() && document.body,
   stopPropagation: false,
   stopPropagationEvents: undefined,
-  onOverlayClick: () => {},
+  onOverlayClick: undefined,
 };
 
 export default Portal;

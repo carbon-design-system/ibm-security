@@ -6491,7 +6491,7 @@ Map {
       "focusTrap": true,
       "hasOverlay": true,
       "initialFocus": null,
-      "onOverlayClick": [Function],
+      "onOverlayClick": undefined,
       "rootNode": <body />,
       "stopPropagation": false,
       "stopPropagationEvents": undefined,
