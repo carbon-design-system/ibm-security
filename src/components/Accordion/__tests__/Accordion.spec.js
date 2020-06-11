@@ -6,20 +6,13 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 
+import { carbonPrefix } from '../../../globals/namespace';
 import { Accordion, AccordionItem } from '../../..';
 
 describe('Accordion', () => {
-  test('should have icon aligned at start by default', () => {
-    const { getByLabelText, getByText } = render(
-      <Accordion>
-        <AccordionItem title="test title" iconDescription="test icon label">
-          test content
-        </AccordionItem>
-      </Accordion>
-    );
-    // Expect the icon to be first inside the accordion item heading button:
-    expect(getByText(/test title/i).closest('button').firstChild).toBe(
-      getByLabelText(/test icon label/i)
+  test('has icon aligned at start by default', () => {
+    expect(render(<Accordion />).container.firstChild).toHaveClass(
+      `${carbonPrefix}accordion--start`
     );
   });
 

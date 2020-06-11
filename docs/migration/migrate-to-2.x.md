@@ -38,6 +38,7 @@ Remove any `@ibmduo`-scoped packages if they're listed as a dependency
 | `Pagination`          | [Migrate](../../src/components/Pagination/migrate-to-2.x.md)    |
 | `Panel`               | [Migrate](../../src/components/Panel/migrate-to-2.x.md)         |
 | `Search`              | [Migrate](../../src/components/Search/migrate-to-2.x.md)        |
+| `StepIndicator`       | [Migrate](../../src/components/StepIndicator/migrate-to-2.x.md) |
 | `Tag`                 | [Migrate](../../src/components/Tag/migrate-to-2.x.md)           |
 | `TextInput`           | [Migrate](../../src/components/TextInput/migrate-to-2.x.md)     |
 | `TypeLayout`          | [Migrate](../../src/components/TypeLayout/migrate-to-2.x.md)    |
