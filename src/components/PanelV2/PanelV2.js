@@ -117,6 +117,7 @@ function PanelV2({
             focusTrap={focusTrap}
             stopPropagation={stopPropagation}
             stopPropagationEvents={stopPropagationEvents}
+            onOverlayClick={onClose}
           >
             {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
             <section

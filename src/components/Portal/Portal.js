@@ -109,6 +109,8 @@ class Portal extends Component {
         this.overlay.setAttribute('tabIndex', '-1');
         this.overlay.classList.add(`${namespace}__overlay`);
         rootNode.appendChild(this.overlay);
+
+        this.overlay.addEventListener('mousedown', this.handleOverlayClick);
       }
     }
   }
@@ -124,6 +126,10 @@ class Portal extends Component {
       }
     }
   }
+
+  handleOverlayClick = () => {
+    this.props.onOverlayClick();
+  };
 
   createPropagationTrap = () => {
     const { children, stopPropagationEvents } = this.props;
@@ -168,6 +174,7 @@ class Portal extends Component {
     return (
       isClient() &&
       createPortal(
+        // eslint-disable-next-line jsx-a11y/mouse-events-have-key-events
         <FocusTrap
           active={focusTrap}
           focusTrapOptions={{
@@ -205,6 +212,9 @@ Portal.propTypes = {
 
   /** @type {array} Array of event types to stop propagation. */
   stopPropagationEvents: PropTypes.arrayOf(PropTypes.oneOf(PORTAL_EVENTS)),
+
+  /** Click handler for the overlay. */
+  onOverlayClick: PropTypes.func,
 };
 
 Portal.defaultProps = {
@@ -215,6 +225,7 @@ Portal.defaultProps = {
   rootNode: isClient() && document.body,
   stopPropagation: false,
   stopPropagationEvents: undefined,
+  onOverlayClick: () => {},
 };
 
 export default Portal;
