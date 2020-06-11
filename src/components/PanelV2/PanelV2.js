@@ -7,7 +7,7 @@
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { createRef, Fragment, useState, useEffect } from 'react';
+import React, { createRef, useEffect, useState } from 'react';
 import Close20 from '@carbon/icons-react/lib/close/20';
 
 import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
@@ -183,7 +183,7 @@ function PanelV2({
                   {renderFooter ? (
                     renderFooter()
                   ) : (
-                    <Fragment>
+                    <>
                       {secondaryButton && (
                         <Button
                           id={secondaryButton.id}
@@ -207,7 +207,7 @@ function PanelV2({
                       >
                         {PANEL_CONTAINER_PRIMARY_BUTTON}
                       </Button>
-                    </Fragment>
+                    </>
                   )}
                 </footer>
               )}
