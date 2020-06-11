@@ -10,8 +10,6 @@ import React from 'react';
 
 import { Button, PanelV2, PanelContent } from '../../..';
 
-import { namespace as portalNamespace } from '../../Portal/Portal';
-
 describe('PanelV2', () => {
   test('should have no Axe or DAP violations with custom footer via `renderFooter`', async () => {
     const main = document.createElement('main');
@@ -157,24 +155,6 @@ describe('PanelV2', () => {
       keyCode: 27,
       charCode: 27,
     });
-    expect(onCloseMock).toHaveBeenCalledTimes(1);
-  });
-
-  test('should invoke close mock when clicking outside of the panel', () => {
-    const onCloseMock = jest.fn();
-    render(
-      <PanelV2
-        title="test title"
-        onClose={onCloseMock}
-        closeButton={{
-          label: 'test close',
-        }}
-        isOpen
-      />
-    );
-
-    // Clicks outside of the `Panel` are captured by the `Portal`'s overlay:
-    userEvent.click(document.querySelector(`${portalNamespace}__overlay`));
     expect(onCloseMock).toHaveBeenCalledTimes(1);
   });
 

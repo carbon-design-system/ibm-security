@@ -13,7 +13,7 @@ import composeEventHandlers from '../../globals/utils/events';
 
 import { getComponentNamespace } from '../../globals/namespace';
 
-export const namespace = getComponentNamespace('portal');
+const namespace = getComponentNamespace('portal');
 
 export const PORTAL_EVENTS = [
   'onAbort',
