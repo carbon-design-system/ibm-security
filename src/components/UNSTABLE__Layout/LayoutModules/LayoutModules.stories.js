@@ -49,6 +49,8 @@ import {
   TypeLayoutRow,
 } from '../../..';
 
+import storyDescription from '../stories';
+
 const actionBar = () => (
   <ActionBarModule>
     <Tag type="gray">Closed</Tag> ID: 12 | Result: Completed
@@ -268,7 +270,7 @@ const typeLayout = () => (
 
 export default meta(
   patterns('UNSTABLE LayoutModules'),
-  'Create common, modular, page layouts to deliver consistent cross-portfolio experiences to our users while facilitating a faster time to market for offering teams.',
+  storyDescription,
   null,
   [story => <div style={{ width: breakpoints.md.width }}>{story()}</div>]
 );

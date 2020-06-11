@@ -12,7 +12,7 @@ const moduleName = 'Page tab';
 const namespace = 'page-tab';
 
 const PageTabModule = ({ children, ...other }) => (
-  <LayoutModule module={module} type={namespace} {...other}>
+  <LayoutModule module={moduleName} type={namespace} {...other}>
     {children}
   </LayoutModule>
 );

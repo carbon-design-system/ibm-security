@@ -17,6 +17,8 @@ import React from 'react';
 import { disableCentered, meta, patterns } from '../../../.storybook';
 import { carbonPrefix } from '../../globals/namespace';
 
+import description from './stories';
+
 import {
   ActionBarModule,
   ActionBarModuleActions,
@@ -49,7 +51,7 @@ import {
   TypeLayoutCell,
 } from '../..';
 
-export const overview = () => (
+const overview = () => (
   <Grid>
     <Row>
       <Column>
@@ -337,7 +339,7 @@ export const overview = () => (
   </Grid>
 );
 
-export const detail = () => (
+const detail = () => (
   <Grid>
     <Row>
       <Column>
@@ -565,6 +567,8 @@ export const detail = () => (
 
 export default meta(
   patterns('UNSTABLE Layout'),
-  'Create common, modular, page layouts to deliver consistent cross-portfolio experiences to our users while facilitating a faster time to market for offering teams.',
+  description,
   disableCentered()
 );
+
+export { detail, overview };
