@@ -84,8 +84,6 @@ class Tearsheet extends Component {
       ...other
     } = this.props;
 
-    const tabIndex = this.state.loading ? -1 : 0;
-
     const componentLabels = {
       ...defaultLabels.labels,
       ...labels,
@@ -142,14 +140,13 @@ class Tearsheet extends Component {
                   <footer className={`${namespace}__sidebar__footer`}>
                     {!hideDeleteButton && (
                       <Button
-                        disabled={isDisabled}
+                        disabled={isDisabled || this.state.loading}
                         iconDescription={
                           componentLabels.TEARSHEET_DELETE_BUTTON
                         }
                         kind="ghost-danger"
                         onClick={onDeleteButtonClick}
                         renderIcon={icon}
-                        tabIndex={tabIndex}
                       >
                         {componentLabels.TEARSHEET_DELETE_BUTTON}
                       </Button>
@@ -170,7 +167,7 @@ class Tearsheet extends Component {
                     renderIcon={Close20}
                     size="lg"
                     tooltip={false}
-                    tabIndex={tabIndex}
+                    disabled={this.state.loading}
                   />
                 )}
                 <h1 className={`${namespace}__main__title`}>{mainTitle}</h1>
@@ -191,11 +188,10 @@ class Tearsheet extends Component {
                     <div className={`${namespace}__container__start`}>
                       <Button
                         className={`${namespace}__button--tertiary`}
-                        disabled={isDisabled}
+                        disabled={isDisabled || this.state.loading}
                         kind="ghost"
                         onClick={tertiaryButton.onClick}
                         size="large"
-                        tabIndex={tabIndex}
                       >
                         {componentLabels.TEARSHEET_TERTIARY_BUTTON}
                         {tertiaryButton.secondaryText.length > 0 && (
@@ -212,21 +208,21 @@ class Tearsheet extends Component {
                     {!secondaryButton.isDisabled && (
                       <Button
                         className={`${namespace}__button ${namespace}__button--secondary`}
-                        disabled={secondaryButton.isDisabled}
+                        disabled={
+                          secondaryButton.isDisabled || this.state.loading
+                        }
                         kind="secondary"
                         onClick={secondaryButton.onClick}
                         size="large"
-                        tabIndex={tabIndex}
                       >
                         {componentLabels.TEARSHEET_SECONDARY_BUTTON}
                       </Button>
                     )}
                     <Button
                       className={`${namespace}__button`}
-                      disabled={primaryButton.isDisabled}
+                      disabled={primaryButton.isDisabled || this.state.loading}
                       onClick={primaryButton.onClick}
                       size="large"
-                      tabIndex={tabIndex}
                     >
                       {componentLabels.TEARSHEET_PRIMARY_BUTTON}
                     </Button>
