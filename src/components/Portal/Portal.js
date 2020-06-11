@@ -109,7 +109,6 @@ class Portal extends Component {
         this.overlay.setAttribute('tabIndex', '-1');
         this.overlay.classList.add(`${namespace}__overlay`);
         rootNode.appendChild(this.overlay);
-
         this.overlay.addEventListener('mousedown', this.handleOverlayClick);
       }
     }
