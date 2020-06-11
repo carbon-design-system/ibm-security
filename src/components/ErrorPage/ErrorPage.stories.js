@@ -7,7 +7,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text, select } from '@storybook/addon-knobs';
 
-import { disableCentered, patterns } from '../../../.storybook';
+import { disableCenteredStories, patterns } from '../../../.storybook';
 
 import { ErrorPage } from '../..';
 
@@ -31,6 +31,7 @@ const props = () => ({
   ],
 });
 
-disableCentered(storiesOf(patterns('ErrorPage'), module)).add('default', () => (
-  <ErrorPage {...props()} />
-));
+disableCenteredStories(storiesOf(patterns('ErrorPage'), module)).add(
+  'default',
+  () => <ErrorPage {...props()} />
+);

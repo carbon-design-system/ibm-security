@@ -16,7 +16,7 @@ import Filter20 from '@carbon/icons-react/lib/filter/20';
 import { spacing04, spacing05 } from '@carbon/layout/lib';
 import { styles } from '@carbon/type/lib';
 
-import { disableCentered, patterns } from '../../../.storybook';
+import { disableCenteredStories, patterns } from '../../../.storybook';
 
 import { header, profile, toolbar } from '../Shell/_mocks_';
 import { labels } from './_mocks_';
@@ -65,7 +65,7 @@ const content = (
   </p>
 );
 
-disableCentered(storiesOf(patterns('PanelV2'), module))
+disableCenteredStories(storiesOf(patterns('PanelV2'), module))
   .addParameters({
     info: {
       // Reposition info button so that panel footer isn't covered:
