@@ -1,6 +1,6 @@
 /**
  * @file Data table with batch actions story.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import React from 'react';
@@ -38,14 +38,15 @@ const batchActionsStory = props => (
     render={({
       rows,
       headers,
+      getBatchActionProps,
       getHeaderProps,
       getRowProps,
       getSelectionProps,
-      getBatchActionProps,
-      onInputChange,
       getTableProps,
+      getTableContainerProps,
+      onInputChange,
     }) => (
-      <TableContainer>
+      <TableContainer {...getTableContainerProps()}>
         <TableToolbar>
           <TableBatchActions {...getBatchActionProps()}>
             <TableBatchAction
