@@ -10,13 +10,9 @@
 @import '../../../Component/mixins';
 @import '../../../TypeLayout/variables';
 
-@import '../TitleModule/variables';
 @import '../variables';
 
 @include security--component($name: #{$layout-modules__name}--type-layout) {
-  @include layout__modules--title--first-child;
-
-  padding-top: $carbon--layout-01;
   padding-bottom: $carbon--layout-03;
 
   // TODO: `3.x` - Remove bottom margin from the `TypeLayout` component to allow it to be handled by the layout module.

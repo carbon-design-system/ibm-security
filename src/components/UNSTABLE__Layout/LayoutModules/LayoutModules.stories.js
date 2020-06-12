@@ -23,7 +23,6 @@ import {
   BackgroundModule,
   Button,
   ButtonClusterModule,
-  Card,
   CardModule,
   CardModuleAction,
   CardModuleCard,
@@ -36,6 +35,11 @@ import {
   Link,
   PageTabModule,
   PageTabModuleDetails,
+  SummaryCard,
+  SummaryCardAction,
+  SummaryCardBody,
+  SummaryCardFooter,
+  SummaryCardHeader,
   Tabs,
   Tab,
   Tag,
@@ -95,9 +99,7 @@ const buttonCluster = () => (
 
 const card = () => (
   <CardModule>
-    <TitleModule className={`${carbonPrefix}type-productive-heading-03`}>
-      Summary
-    </TitleModule>
+    <TitleModule>Summary</TitleModule>
     <TitleModule
       className={`${carbonPrefix}type-productive-heading-01`}
       element="h3"
@@ -129,35 +131,41 @@ const card = () => (
       </ActionBarModuleActions>
     </ActionBarModule>
     <Row>
-      <CardModuleCard>
-        <Column>
-          <Card />
-        </Column>
-      </CardModuleCard>
-      <CardModuleCard>
-        <Column>
-          <Card />
-        </Column>
-      </CardModuleCard>
-      <CardModuleCard>
-        <Column>
-          <Card />
-        </Column>
-      </CardModuleCard>
+      {new Array(6).fill().map((item = 'cardModuleCard', index) => {
+        const key = `${item}__${index}`;
+
+        return (
+          <Column key={key}>
+            <CardModuleCard>
+              <SummaryCard>
+                <SummaryCardHeader title="Label" />
+                <SummaryCardBody>
+                  <TitleModule>Title</TitleModule>
+                </SummaryCardBody>
+                <SummaryCardFooter>
+                  <SummaryCardAction>Scan now</SummaryCardAction>
+                </SummaryCardFooter>
+              </SummaryCard>
+            </CardModuleCard>
+          </Column>
+        );
+      })}
     </Row>
-    <CardModuleAction>
-      <Button kind="ghost" renderIcon={ArrowRight16}>
-        Action
-      </Button>
-    </CardModuleAction>
+    <Row>
+      <Column>
+        <CardModuleAction>
+          <Button kind="ghost" renderIcon={ArrowRight16}>
+            Action
+          </Button>
+        </CardModuleAction>
+      </Column>
+    </Row>
   </CardModule>
 );
 
 const description = () => (
   <DescriptionModule>
-    <TitleModule className={`${carbonPrefix}type-productive-heading-03`}>
-      Summary
-    </TitleModule>
+    <TitleModule>Summary</TitleModule>
     <TitleModule
       className={`${carbonPrefix}type-productive-heading-01`}
       element="h3"
@@ -176,9 +184,7 @@ const description = () => (
 
 const ICA = () => (
   <ICAModule>
-    <TitleModule className={`${carbonPrefix}type-productive-heading-03`}>
-      Summary
-    </TitleModule>
+    <TitleModule>Summary</TitleModule>
     <Row>
       <ICAModuleHover>
         <Column>
@@ -210,17 +216,11 @@ const pageTab = () => (
   </PageTabModule>
 );
 
-const title = () => (
-  <TitleModule className={`${carbonPrefix}type-productive-heading-03`}>
-    TitleModule
-  </TitleModule>
-);
+const title = () => <TitleModule>TitleModule</TitleModule>;
 
 const titleBar = () => (
   <TitleBarModule>
-    <TitleModule className={`${carbonPrefix}type-productive-heading-03`}>
-      TitleModule
-    </TitleModule>
+    <TitleModule>TitleModule</TitleModule>
 
     <TitleBarModuleActions>
       <IconButtonBar
@@ -246,9 +246,7 @@ const titleBar = () => (
 
 const typeLayout = () => (
   <TypeLayoutModule>
-    <TitleModule className={`${carbonPrefix}type-productive-heading-03`}>
-      TitleModule
-    </TitleModule>
+    <TitleModule>TitleModule</TitleModule>
     <TypeLayout>
       <TypeLayoutBody>
         <TypeLayoutRow>
@@ -272,7 +270,7 @@ export default meta(
   patterns('UNSTABLE LayoutModules'),
   storyDescription,
   null,
-  [story => <div style={{ width: breakpoints.md.width }}>{story()}</div>]
+  [story => <div style={{ width: breakpoints.lg.width }}>{story()}</div>]
 );
 
 export {

@@ -68,7 +68,6 @@ const disableCentered = () => ({
  */
 const disableCenteredStories = stories =>
   stories.addParameters(disableCentered());
-
 /**
  * Configuration for applying information to individual stories.
  * @param {string} description The information to apply to individual stories.

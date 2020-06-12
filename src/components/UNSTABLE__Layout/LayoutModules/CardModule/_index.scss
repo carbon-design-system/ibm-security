@@ -7,6 +7,8 @@
 @import '@carbon/layout/scss/spacing';
 
 @import '../../../Component/mixins';
+
+@import '../BackgroundModule/mixins';
 @import '../variables';
 
 @include security--component($name: #{$layout-modules__name}--card) {
@@ -15,6 +17,8 @@
   $layout--card__spacing: $carbon--layout-03;
 
   &__card {
+    @include layout__modules--background;
+
     margin-bottom: $layout--card__spacing;
   }
 

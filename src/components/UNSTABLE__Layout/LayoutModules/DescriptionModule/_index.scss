@@ -14,13 +14,10 @@
   padding-bottom: $carbon--layout-03;
 
   &__description {
-    /// Spacing.
-    /// @type Length
-    $layout--description__spacing: $carbon--layout-01;
+    @include carbon--type-style($name: body-long-01);
 
-    @include carbon--type-style($name: body-short-01);
-    margin-top: $layout--description__spacing;
-    margin-bottom: $layout--description__spacing;
+    margin-top: 0;
+    margin-bottom: $carbon--layout-03;
 
     &:last-child {
       margin-bottom: 0;

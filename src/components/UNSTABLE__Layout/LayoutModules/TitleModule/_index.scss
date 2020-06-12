@@ -5,6 +5,7 @@
 ////
 
 @import '@carbon/layout/scss/spacing';
+@import '@carbon/type/scss/styles';
 
 @import '../../../Component/mixins';
 
@@ -14,6 +15,8 @@
   /// Spacing.
   /// @type Length
   $layout--title__spacing: $carbon--layout-01;
+
+  @include carbon--type-style($name: productive-heading-03);
 
   margin-top: $layout--title__spacing;
   margin-bottom: $layout--title__spacing;

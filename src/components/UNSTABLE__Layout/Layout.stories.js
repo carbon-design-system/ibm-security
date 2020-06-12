@@ -4,6 +4,7 @@
  */
 
 import Activity16 from '@carbon/icons-react/lib/activity/16';
+import ArrowRight16 from '@carbon/icons-react/lib/arrow--right/16';
 import Copy16 from '@carbon/icons-react/lib/copy/16';
 import Filter16 from '@carbon/icons-react/lib/filter/16';
 import Search16 from '@carbon/icons-react/lib/search/16';
@@ -19,13 +20,14 @@ import { carbonPrefix } from '../../globals/namespace';
 
 import description from './stories';
 
+import { namespace } from './LayoutModules/LayoutModule';
+
 import {
   ActionBarModule,
   ActionBarModuleActions,
   BackgroundModule,
   ButtonClusterModule,
   Button,
-  Card,
   CardModule,
   CardModuleCard,
   ContentSwitcher,
@@ -37,13 +39,17 @@ import {
   ICAModule,
   IconButtonBar,
   PageTabModule,
+  SummaryCard,
+  SummaryCardAction,
+  SummaryCardBody,
+  SummaryCardFooter,
+  SummaryCardHeader,
   Switch,
   Tabs,
   Tab,
   Tag,
   TitleModule,
   TitleBarModule,
-  TitleBarModuleActions,
   TypeLayout,
   TypeLayoutBody,
   TypeLayoutModule,
@@ -56,7 +62,13 @@ const overview = () => (
     <Row>
       <Column>
         <ActionBarModule>
-          <Tag type="gray">Closed</Tag> ID: 12 | Result: Completed
+          <Tag
+            className={`${namespace}--spacing-03--mr ${namespace}--spacing-00--ml`}
+            type="gray"
+          >
+            Closed
+          </Tag>
+          ID: 12&nbsp;&nbsp;|&nbsp;&nbsp;Result: Completed
         </ActionBarModule>
       </Column>
     </Row>
@@ -127,44 +139,44 @@ const overview = () => (
             </Column>
           </BackgroundModule>
 
-          <Column>
-            <Row>
-              <BackgroundModule>
-                <Column>
-                  <TypeLayoutModule>
-                    <TitleModule
-                      className={`${carbonPrefix}type-productive-heading-01`}
-                    >
-                      Schedule
-                    </TitleModule>
+          <BackgroundModule>
+            <Column>
+              <Row>
+                <BackgroundModule>
+                  <Column>
+                    <TypeLayoutModule>
+                      <TitleModule
+                        className={`${carbonPrefix}type-productive-heading-01`}
+                      >
+                        Schedule
+                      </TitleModule>
 
-                    <TypeLayout>
-                      <TypeLayoutBody>
-                        <TypeLayoutRow>
-                          <TypeLayoutCell>Start date</TypeLayoutCell>
-                          <TypeLayoutCell>
-                            Jul 1 2019 at 12:00PM CST
-                          </TypeLayoutCell>
-                        </TypeLayoutRow>
-                        <TypeLayoutRow>
-                          <TypeLayoutCell>Duration</TypeLayoutCell>
-                          <TypeLayoutCell>20 days</TypeLayoutCell>
-                        </TypeLayoutRow>
-                        <TypeLayoutRow>
-                          <TypeLayoutCell>Frequency</TypeLayoutCell>
-                          <TypeLayoutCell>
-                            This campaign repeats every 3 months
-                          </TypeLayoutCell>
-                        </TypeLayoutRow>
-                      </TypeLayoutBody>
-                    </TypeLayout>
-                  </TypeLayoutModule>
-                </Column>
-              </BackgroundModule>
-            </Row>
+                      <TypeLayout>
+                        <TypeLayoutBody>
+                          <TypeLayoutRow>
+                            <TypeLayoutCell>Start date</TypeLayoutCell>
+                            <TypeLayoutCell>
+                              Jul 1 2019 at 12:00PM CST
+                            </TypeLayoutCell>
+                          </TypeLayoutRow>
+                          <TypeLayoutRow>
+                            <TypeLayoutCell>Duration</TypeLayoutCell>
+                            <TypeLayoutCell>20 days</TypeLayoutCell>
+                          </TypeLayoutRow>
+                          <TypeLayoutRow>
+                            <TypeLayoutCell>Frequency</TypeLayoutCell>
+                            <TypeLayoutCell>
+                              This campaign repeats every 3 months
+                            </TypeLayoutCell>
+                          </TypeLayoutRow>
+                        </TypeLayoutBody>
+                      </TypeLayout>
+                    </TypeLayoutModule>
+                  </Column>
+                </BackgroundModule>
+              </Row>
 
-            <Row>
-              <BackgroundModule>
+              <Row>
                 <Column>
                   <TypeLayoutModule>
                     <TitleModule
@@ -191,9 +203,9 @@ const overview = () => (
                     </TypeLayout>
                   </TypeLayoutModule>
                 </Column>
-              </BackgroundModule>
-            </Row>
-          </Column>
+              </Row>
+            </Column>
+          </BackgroundModule>
         </Row>
 
         <Row>
@@ -207,14 +219,16 @@ const overview = () => (
                     >
                       Campaign results
                     </TitleModule>
-
-                    <TitleBarModuleActions>
-                      <ContentSwitcher onChange={action('onChange')}>
-                        <Switch text="By reviewer" />
-                        <Switch text="By account" />
-                      </ContentSwitcher>
-                    </TitleBarModuleActions>
                   </TitleBarModule>
+                </Column>
+                <Column lg={6}>
+                  <ContentSwitcher
+                    className={`${namespace}--spacing-03--mt`}
+                    onChange={action('onChange')}
+                  >
+                    <Switch text="By reviewer" />
+                    <Switch text="By account" />
+                  </ContentSwitcher>
                 </Column>
               </Row>
 
@@ -348,14 +362,13 @@ const detail = () => (
             <Tab label="Case" />
             <Tab label="Report">
               <Row>
+                <Column>
+                  <TitleModule>Summary</TitleModule>
+                </Column>
+              </Row>
+              <Row>
                 <Column lg={8}>
                   <DescriptionModule>
-                    <TitleModule
-                      className={`${carbonPrefix}type-productive-heading-03`}
-                    >
-                      Summary
-                    </TitleModule>
-
                     <DescriptionModuleDescription>
                       BadFlick is a backdoor that is usually seen being
                       distributed using exploited word documents. It does not
@@ -385,14 +398,10 @@ const detail = () => (
 
               <Row>
                 <Column>
-                  <TitleModule
-                    className={`${carbonPrefix}type-productive-heading-03`}
-                  >
-                    Related reports
-                  </TitleModule>
+                  <TitleModule>Related reports</TitleModule>
                   <ActionBarModule>
                     <TitleModule
-                      className={`${carbonPrefix}type-productive-heading-01`}
+                      className={`${carbonPrefix}type-body-short-01`}
                     >
                       Supplementary details
                     </TitleModule>
@@ -424,22 +433,83 @@ const detail = () => (
                 <Row>
                   <Column>
                     <CardModuleCard>
-                      <Card header={{ tag: 'Threat actor' }} />
+                      <SummaryCard>
+                        <SummaryCardHeader title="Threat actor" />
+                        <SummaryCardBody>
+                          <TitleModule>
+                            Suspected Chinese Cyber Espionage Group
+                            (TEMP.Periscope)
+                          </TitleModule>
+                        </SummaryCardBody>
+                        <SummaryCardFooter>
+                          <SummaryCardAction
+                            renderIcon={ArrowRight16}
+                            iconDescription="Navigate"
+                            tooltipAlignment="center"
+                            tooltipPosition="right"
+                            hasIconOnly
+                          />
+                        </SummaryCardFooter>
+                      </SummaryCard>
                     </CardModuleCard>
                   </Column>
                   <Column>
                     <CardModuleCard>
-                      <Card header={{ tag: 'Threat report' }} />
+                      <SummaryCard>
+                        <SummaryCardHeader title="Threat report" />
+                        <SummaryCardBody>
+                          <TitleModule>
+                            XFTAS Daily Threat Assessment for Mar 2019
+                          </TitleModule>
+                        </SummaryCardBody>
+                        <SummaryCardFooter>
+                          <SummaryCardAction
+                            renderIcon={ArrowRight16}
+                            iconDescription="Navigate"
+                            tooltipAlignment="center"
+                            tooltipPosition="right"
+                            hasIconOnly
+                          />
+                        </SummaryCardFooter>
+                      </SummaryCard>
                     </CardModuleCard>
                   </Column>
                   <Column>
                     <CardModuleCard>
-                      <Card header={{ tag: 'IP report' }} />
+                      <SummaryCard>
+                        <SummaryCardHeader title="IP report" />
+                        <SummaryCardBody>
+                          <TitleModule>103.243.175.181</TitleModule>
+                        </SummaryCardBody>
+                        <SummaryCardFooter>
+                          <SummaryCardAction
+                            renderIcon={ArrowRight16}
+                            iconDescription="Navigate"
+                            tooltipAlignment="center"
+                            tooltipPosition="right"
+                            hasIconOnly
+                          />
+                        </SummaryCardFooter>
+                      </SummaryCard>
                     </CardModuleCard>
                   </Column>
                   <Column>
                     <CardModuleCard>
-                      <Card header={{ tag: 'Vulnerability report' }} />
+                      <SummaryCard>
+                        <SummaryCardHeader title="Vulnerability report" />
+                        <SummaryCardBody>
+                          <TitleModule>CVE-2017-11882</TitleModule>
+                        </SummaryCardBody>
+                        <SummaryCardFooter>
+                          <SummaryCardAction
+                            renderIcon={ArrowRight16}
+                            iconDescription="Navigate"
+                            tooltipAlignment="center"
+                            tooltipPosition="right"
+                            hasIconOnly
+                          />
+                        </SummaryCardFooter>
+                      </SummaryCard>
                     </CardModuleCard>
                   </Column>
                 </Row>
@@ -451,12 +521,7 @@ const detail = () => (
                     <Row>
                       <Column>
                         <TitleBarModule>
-                          <TitleModule
-                            className={`${carbonPrefix}type-productive-heading-03`}
-                            element="h4"
-                          >
-                            Indicators
-                          </TitleModule>
+                          <TitleModule element="h4">Indicators</TitleModule>
                         </TitleBarModule>
                       </Column>
                     </Row>

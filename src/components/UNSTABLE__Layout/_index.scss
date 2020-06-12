@@ -32,20 +32,26 @@ $security--spacing-tokens-map: (
 @include security--component($name: $layout__name) {
   @each $token, $value in $security--spacing-tokens-map {
     &--#{$token} {
-      &--pt {
-        padding-top: $value;
-      }
+      @each $selector, $property in (m: margin, p: padding) {
+        &--#{$selector} {
+          #{$property}: $value;
 
-      &--pb {
-        padding-bottom: $value;
-      }
+          &b {
+            #{$property}-bottom: $value;
+          }
 
-      &--mt {
-        margin-top: $value;
-      }
+          &l {
+            #{$property}-left: $value;
+          }
 
-      &--mb {
-        margin-bottom: $value;
+          &r {
+            #{$property}-right: $value;
+          }
+
+          &t {
+            #{$property}-top: $value;
+          }
+        }
       }
     }
   }
