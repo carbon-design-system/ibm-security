@@ -1,14 +1,16 @@
 /**
  * @file Data table stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
+import { boolean } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
 import { components } from '../../../.storybook';
 
 const props = () => ({
-  useZebraStyles: false,
+  useZebraStyles: boolean('Zebra row styles (useZebraStyles)', false),
+  stickyHeader: boolean('Sticky header (stickyHeader)', false),
 });
 
 const readmeURL = 'https://goo.gl/dq6CEK';
