@@ -15869,6 +15869,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   flex: 1;
   flex-direction: column;
   justify-content: space-between;
+  overflow-x: auto;
 }
 
 .security--tearsheet__main__title, .security--tearsheet__main__content {
