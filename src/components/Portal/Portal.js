@@ -109,6 +109,10 @@ class Portal extends Component {
         this.overlay.setAttribute('tabIndex', '-1');
         this.overlay.classList.add(`${namespace}__overlay`);
         rootNode.appendChild(this.overlay);
+
+        if (this.props.onOverlayClick) {
+          this.overlay.addEventListener('mousedown', this.handleOverlayClick);
+        }
       }
     }
   }
@@ -122,8 +126,16 @@ class Portal extends Component {
       if (hasOverlay && this.overlay) {
         rootNode.removeChild(this.overlay);
       }
+
+      if (this.props.onOverlayClick) {
+        this.overlay.removeEventListener('mousedown', this.handleOverlayClick);
+      }
     }
   }
+
+  handleOverlayClick = () => {
+    this.props.onOverlayClick();
+  };
 
   createPropagationTrap = () => {
     const { children, stopPropagationEvents } = this.props;
@@ -205,6 +217,9 @@ Portal.propTypes = {
 
   /** @type {array} Array of event types to stop propagation. */
   stopPropagationEvents: PropTypes.arrayOf(PropTypes.oneOf(PORTAL_EVENTS)),
+
+  /** Click handler for the overlay. */
+  onOverlayClick: PropTypes.func,
 };
 
 Portal.defaultProps = {
@@ -215,6 +230,7 @@ Portal.defaultProps = {
   rootNode: isClient() && document.body,
   stopPropagation: false,
   stopPropagationEvents: undefined,
+  onOverlayClick: undefined,
 };
 
 export default Portal;

@@ -4603,6 +4603,7 @@ a.bx--overflow-menu-options__btn::before {
   flex-direction: column;
   justify-content: space-between;
   z-index: 10000;
+  outline: none;
 }
 
 .security--theme--cg10 .security--panel--v2 {

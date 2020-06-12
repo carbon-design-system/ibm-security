@@ -6306,6 +6306,7 @@ Map {
       "hasScrollingContent": false,
       "isOpen": true,
       "labels": Object {},
+      "onClose": [Function],
       "primaryButton": undefined,
       "renderFooter": null,
       "secondaryButton": undefined,
@@ -6376,6 +6377,9 @@ Map {
           },
         ],
         "type": "objectOf",
+      },
+      "onClose": Object {
+        "type": "func",
       },
       "primaryButton": [Function],
       "renderFooter": Object {
@@ -6487,6 +6491,7 @@ Map {
       "focusTrap": true,
       "hasOverlay": true,
       "initialFocus": null,
+      "onOverlayClick": undefined,
       "rootNode": <body />,
       "stopPropagation": false,
       "stopPropagationEvents": undefined,
@@ -6513,6 +6518,9 @@ Map {
           ],
         ],
         "type": "oneOfType",
+      },
+      "onOverlayClick": Object {
+        "type": "func",
       },
       "rootNode": Object {
         "args": Array [
