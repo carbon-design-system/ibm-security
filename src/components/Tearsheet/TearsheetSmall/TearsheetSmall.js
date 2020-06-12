@@ -121,7 +121,7 @@ class TearsheetSmall extends PureComponent {
                       [`${namespace}__scroll-gradient__content`]: !flush,
                     })}
                   >
-                    {this.renderBody()}
+                    {this.renderBody({ isLoading: this.state.loading })}
                   </div>
                 </ScrollGradient>
               </section>
@@ -129,7 +129,7 @@ class TearsheetSmall extends PureComponent {
                 {!secondaryButton.hide && (
                   <Button
                     className={`${namespace}__footer__button ${namespace}__footer__button--secondary`}
-                    disabled={secondaryButton.isDisabled}
+                    disabled={secondaryButton.isDisabled || this.state.loading}
                     kind="secondary"
                     onClick={secondaryButton.onClick}
                     size="large"
@@ -140,7 +140,7 @@ class TearsheetSmall extends PureComponent {
                 {!primaryButton.hide && (
                   <Button
                     className={`${namespace}__footer__button`}
-                    disabled={primaryButton.isDisabled}
+                    disabled={primaryButton.isDisabled || this.state.loading}
                     onClick={primaryButton.onClick}
                     size="large"
                   >
@@ -156,6 +156,7 @@ class TearsheetSmall extends PureComponent {
                   renderIcon={Close20}
                   size="lg"
                   tooltip={false}
+                  disabled={this.state.loading}
                 />
               )}
             </section>
