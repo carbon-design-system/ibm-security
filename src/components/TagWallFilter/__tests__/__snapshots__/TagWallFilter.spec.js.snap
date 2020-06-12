@@ -1779,6 +1779,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                           </footer>
                           <IconButton
                             className="security--tearsheet--small__button--close"
+                            disabled={false}
                             iconClassName=""
                             iconSize={20}
                             label="Close"
@@ -1798,6 +1799,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                             <button
                               aria-label="Close"
                               className="security--button--icon security--tearsheet--small__button--close security--button--icon--lg"
+                              disabled={false}
                               onClick={[MockFunction]}
                             >
                               <Icon
@@ -4223,6 +4225,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                             </footer>
                             <IconButton
                               className="security--tearsheet--small__button--close"
+                              disabled={false}
                               iconClassName=""
                               iconSize={20}
                               label="Close"
@@ -4242,6 +4245,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               <button
                                 aria-label="Close"
                                 className="security--button--icon security--tearsheet--small__button--close security--button--icon--lg"
+                                disabled={false}
                                 onClick={[MockFunction]}
                               >
                                 <Icon
