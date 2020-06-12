@@ -8,4 +8,6 @@ import React from 'react';
 import { DataTableSkeleton } from '../../..';
 import { headers } from '../_mocks_';
 
-export default () => <DataTableSkeleton headers={headers} />;
+export default ({ ...other }) => (
+  <DataTableSkeleton headers={headers} {...other} />
+);
