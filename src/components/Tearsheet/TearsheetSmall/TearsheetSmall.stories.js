@@ -177,7 +177,7 @@ storiesOf(patterns('TearsheetSmall'), module)
         isOpen
         loading={loading}
         labels={labels}
-        body={({ ...isLoading }) => (
+        body={isLoading => (
           <>
             <p>
               Whenever the TearsheetSmall is loading, please use{' '}
@@ -209,7 +209,7 @@ storiesOf(patterns('TearsheetSmall'), module)
                 {/* eslint-disable-next-line react/jsx-indent */}
                 {`
             <TearSheetSmall
-              body={({ ...isLoading }) => (
+              body={(isLoading) => (
                 <Button disabled={isLoading}>
                   Example button.
                 </Button>
