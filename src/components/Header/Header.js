@@ -1,6 +1,6 @@
 /**
  * @file Header.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import Close20 from '@carbon/icons-react/lib/close/20';
@@ -476,7 +476,7 @@ export default class Header extends Component {
     const classes = classnames(`${namespace}__container`, className);
 
     const domainElement = title => (
-      <span className={`${namespace}__link__title--domain`}>{title}</span>
+      <span className={`${namespace}__link__title--brand`}>{title}</span>
     );
 
     return (

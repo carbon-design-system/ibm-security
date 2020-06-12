@@ -9,12 +9,18 @@
     "plugin:security/recommended",
     "prettier"
   ],
-  "plugins": ["compat", "jsx-a11y", "react", "security"],
+  "plugins": [
+    "compat",
+    "jsx-a11y",
+    "react",
+    "security"
+  ],
   "env": {
     "browser": true,
     "jest": true
   },
   "rules": {
+    "camelcase": "warn",
     "global-require": "warn",
     "no-param-reassign": "warn",
     "no-shadow": "off",
@@ -23,9 +29,13 @@
       "error",
       {
         "allowChildren": false,
-        "components": ["Label"],
+        "components": [
+          "Label"
+        ],
         "required": {
-          "every": ["id"]
+          "every": [
+            "id"
+          ]
         }
       }
     ],
@@ -40,11 +50,13 @@
     "react/jsx-filename-extension": [
       "warn",
       {
-        "extensions": [".js", ".jsx"]
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
       }
     ],
-    "react/prop-types": "warn",
-    "camelcase": "warn",
-    "react/jsx-pascal-case": "warn"
+    "react/jsx-pascal-case": "warn",
+    "react/prop-types": "warn"
   }
 }

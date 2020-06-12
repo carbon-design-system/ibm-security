@@ -3985,6 +3985,49 @@ Map {
       },
     },
   },
+  "HeaderAction" => Object {
+    "defaultProps": Object {
+      "activeAction": null,
+      "className": null,
+      "hasBadge": false,
+      "id": null,
+      "popover": null,
+      "setActiveAction": null,
+    },
+    "propTypes": Object {
+      "activeAction": Object {
+        "type": "string",
+      },
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+      "hasBadge": Object {
+        "type": "bool",
+      },
+      "id": Object {
+        "type": "string",
+      },
+      "labelText": [Function],
+      "popover": Object {
+        "type": "node",
+      },
+      "setActiveAction": Object {
+        "type": "func",
+      },
+    },
+  },
+  "HeaderActions" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
   "HeaderContainer" => Object {
     "defaultProps": Object {
       "isSideNavExpanded": false,
@@ -5862,6 +5905,32 @@ Map {
       },
     },
   },
+  "NotificationsPopover" => Object {
+    "defaultProps": Object {
+      "label": null,
+      "onClear": null,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+      "iconDescription": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+      "label": Object {
+        "type": "string",
+      },
+      "onClear": Object {
+        "type": "func",
+      },
+      "title": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+    },
+  },
   "NumberInput" => Object {
     "$$typeof": Symbol(react.forward_ref),
     "render": [Function],
@@ -6481,6 +6550,105 @@ Map {
       },
     },
   },
+  "PopoverAccount" => Object {
+    "defaultProps": Object {
+      "className": null,
+    },
+    "propTypes": Object {
+      "account": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+      "id": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+    },
+  },
+  "PopoverAccountItem" => Object {
+    "defaultProps": Object {
+      "onClick": null,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+      "id": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+      "onClick": Object {
+        "type": "func",
+      },
+    },
+  },
+  "PopoverAccountList" => Object {
+    "defaultProps": Object {
+      "className": null,
+    },
+    "propTypes": Object {
+      "account": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+      "id": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+      "name": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+    },
+  },
+  "PopoverContent" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
+  "PopoverFooter" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
+  "PopoverHeader" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
+  "PopoverNotification" => Object {},
+  "PopoverTitle" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
   "Portal" => Object {
     "defaultProps": Object {
       "children": null,
@@ -6630,6 +6798,22 @@ Map {
         ],
         "isRequired": true,
         "type": "shape",
+      },
+    },
+  },
+  "ProfilePopover" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+      "name": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+      "surname": Object {
+        "isRequired": true,
+        "type": "string",
       },
     },
   },
@@ -8065,6 +8249,80 @@ Map {
           },
         ],
         "type": "shape",
+      },
+    },
+  },
+  "ShellHeader" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
+  "ShellHeaderName" => Object {
+    "propTypes": Object {
+      "brand": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+      "prefix": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+    },
+  },
+  "ShellReturnToBanner" => Object {
+    "defaultProps": Object {
+      "labelText": "Return to",
+      "view": null,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+      "href": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+      "labelText": Object {
+        "type": "string",
+      },
+      "view": Object {
+        "type": "string",
+      },
+    },
+  },
+  "ShellSkipToContent" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+      "href": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+      "labelText": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+    },
+  },
+  "ShellToolbar" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+      "labelText": Object {
+        "isRequired": true,
+        "type": "string",
       },
     },
   },
@@ -11772,6 +12030,54 @@ Map {
       },
     },
   },
+  "ToolbarAction" => Object {
+    "defaultProps": Object {
+      "activeAction": null,
+      "className": null,
+      "id": null,
+      "onClick": null,
+      "setActiveAction": null,
+    },
+    "propTypes": Object {
+      "activeAction": Object {
+        "type": "string",
+      },
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+      "id": Object {
+        "type": "string",
+      },
+      "labelText": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+      "onClick": Object {
+        "type": "func",
+      },
+      "renderIcon": Object {
+        "args": Array [
+          Array [
+            Object {
+              "type": "func",
+            },
+            Object {
+              "type": "object",
+            },
+          ],
+        ],
+        "isRequired": true,
+        "type": "oneOfType",
+      },
+      "setActiveAction": Object {
+        "type": "func",
+      },
+    },
+  },
   "ToolbarDivider" => Object {
     "$$typeof": Symbol(react.forward_ref),
     "render": [Function],
@@ -12266,6 +12572,14 @@ Map {
       },
       "totalItems": Object {
         "type": "number",
+      },
+    },
+  },
+  "UNSTABLE__Shell" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
       },
     },
   },

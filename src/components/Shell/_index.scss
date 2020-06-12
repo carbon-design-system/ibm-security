@@ -1,8 +1,10 @@
 ////
 /// Shell component.
 /// @group shell
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
+
+@import 'carbon-components/scss/components/ui-shell/header';
 
 @import '../Breadcrumb/index';
 @import '../Button/index';

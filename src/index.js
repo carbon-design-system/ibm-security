@@ -263,3 +263,24 @@ export { Wizard, WizardStep } from './components/Wizard';
 export UNSTABLE__Pagination, {
   PageSelector,
 } from './components/UNSTABLE__Pagination';
+
+export UNSTABLE__Shell, {
+  HeaderAction,
+  HeaderActions,
+  NotificationsPopover,
+  PopoverAccount,
+  PopoverAccountItem,
+  PopoverAccountList,
+  PopoverContent,
+  PopoverFooter,
+  PopoverHeader,
+  PopoverNotification,
+  PopoverTitle,
+  ProfilePopover,
+  ShellHeader,
+  ShellHeaderName,
+  ShellReturnToBanner,
+  ShellSkipToContent,
+  ShellToolbar,
+  ToolbarAction,
+} from './components/UNSTABLE__Shell';

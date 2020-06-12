@@ -1,7 +1,7 @@
 ////
 /// Header mixins.
 /// @group header
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -125,7 +125,7 @@ $header__transition__timing-function: $timing-function;
       color: $text-02;
     }
 
-    &__title--domain {
+    &__title--brand {
       @include carbon--type-style($name: heading-01);
     }
   }
@@ -229,6 +229,10 @@ $header__transition__timing-function: $timing-function;
 
     &__label {
       @include carbon--type-style($name: heading-01);
+
+      &:only-child {
+        margin-bottom: $carbon--spacing-03;
+      }
     }
 
     &__list {
@@ -351,6 +355,8 @@ $header__transition__timing-function: $timing-function;
           }
 
           &__item {
+            overflow-y: hidden;
+
             &:last-child {
               border-width: 0;
             }

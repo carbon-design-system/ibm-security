@@ -1,7 +1,7 @@
 ////
 /// Components entry point.
 /// @group entry
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 // Application.
@@ -91,3 +91,4 @@
 
 /// Unstable experimental components.
 @import 'UNSTABLE__Pagination/index';
+@import 'UNSTABLE__Shell/index';
