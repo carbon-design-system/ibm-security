@@ -1,6 +1,6 @@
 /**
  * @file Tearsheet stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import { action } from '@storybook/addon-actions';
@@ -14,6 +14,8 @@ import { patterns } from '../../../.storybook';
 
 import {
   Button,
+  CodeSnippet,
+  CodeSnippetSkeleton,
   Dropdown,
   Form,
   FormGroup,
@@ -26,7 +28,12 @@ import {
 
 import labels from './_mocks_';
 
-const renderSidebar = () => 'Sidebar';
+const { __docgenInfo, defaultProps } = Tearsheet;
+
+const renderSidebar = () =>
+  boolean('Sidebar (renderSidebar)', true)
+    ? () => 'Sidebar'
+    : defaultProps.renderSidebar;
 
 const searchLabel = 'What are you looking for today?';
 
@@ -40,19 +47,76 @@ const id = 'search';
 const selector = `#${id}`;
 const selectorPrimaryFocus = () => document.querySelector(selector);
 
-const renderMain = () => (
-  <Form className={namespace}>
+const renderMain = ({ isLoading }) => (
+  <Form className={namespace} tabIndex={isLoading ? -1 : 0}>
+    <p>
+      Whenever the Tearsheet is loading, please use{' '}
+      <CodeSnippet type="inline" light tabIndex={isLoading ? -1 : 0}>
+        isLoading
+      </CodeSnippet>{' '}
+      via the{' '}
+      <CodeSnippet type="inline" light tabIndex={isLoading ? -1 : 0}>
+        renderMain
+      </CodeSnippet>{' '}
+      render prop to prevent users from tabbing through focussable content (such
+      as form inputs, buttons, and links) while the Tearsheet is loading. For
+      example, you can selectively load skeleton components, or you can set
+      <CodeSnippet type="inline" light tabIndex={isLoading ? -1 : 0}>
+        disabled
+      </CodeSnippet>
+      or{' '}
+      <CodeSnippet type="inline" light tabIndex={isLoading ? -1 : 0}>
+        tabIndex={-1}
+      </CodeSnippet>{' '}
+      on interactive elements.
+    </p>
+    <p>Here are some examples:</p>
+    {isLoading ? (
+      <CodeSnippetSkeleton type="multi" />
+    ) : (
+      <CodeSnippet light type="multi">
+        {/* eslint-disable-next-line react/jsx-indent */}
+        {`
+<TearSheet
+  renderMain={({ isLoading }) => (
+    <Button disabled={isLoading}>
+      Example button.
+    </Button>
+    <CodeSnippet tabIndex={isLoading ? -1 : 0}>
+      Example snippet with no copy button.
+    </CodeSnippet>
+    {isLoading ? (
+      <CodeSnippetSkeleton type="multi" />
+    ) : (
+      <CodeSnippet type="multi">
+        Exampe snippet with a copy button.
+      </CodeSnippet>
+    )}
+  )}
+/>
+`}
+      </CodeSnippet>
+    )}
+    <br />
+    <p>
+      For more examples, please review the &quot;Story&quot; tab in the
+      Storybook panel below to the see this demo&apos; source code.
+    </p>
+    <br />
     <Search
       id={id}
       className={className}
       labelText={searchLabel}
       placeHolderText={searchLabel}
+      disabled={isLoading}
     />
 
     <TextInput
       className={className}
+      id="test-input-id"
       labelText={labelText}
       placeholder={placeholder}
+      disabled={isLoading}
     />
 
     <FormGroup legendText={labelText}>
@@ -70,6 +134,7 @@ const renderMain = () => (
           },
         ]}
         itemToString={item => (item ? item.text : '')}
+        disabled={isLoading}
       />
     </FormGroup>
 
@@ -78,12 +143,14 @@ const renderMain = () => (
       className={className}
       label={labelText}
       value={1000}
+      disabled={isLoading}
     />
 
     <TextArea
       className={className}
       labelText={labelText}
       placeholder={placeholder}
+      disabled={isLoading}
     />
   </Form>
 );
@@ -120,7 +187,7 @@ storiesOf(patterns('Tearsheet'), module)
         focusTrap={boolean('focusTrap', false)}
         selectorPrimaryFocus={selectorPrimaryFocus}
         renderMain={renderMain}
-        renderSidebar={renderSidebar}
+        renderSidebar={renderSidebar()}
         sidebarTitle="Title of setup"
         sidebarSubtitle="5 mins setup"
         mainTitle="Step title"
@@ -173,7 +240,7 @@ storiesOf(patterns('Tearsheet'), module)
       )(Tearsheet);
 
       TearsheetLoadingStory.displayName = getDisplayName(Tearsheet);
-      TearsheetLoadingStory.__docgenInfo = Tearsheet.__docgenInfo;
+      TearsheetLoadingStory.__docgenInfo = __docgenInfo;
 
       return (
         <TearsheetLoadingStory
@@ -181,7 +248,7 @@ storiesOf(patterns('Tearsheet'), module)
           focusTrap={boolean('focusTrap', false)}
           selectorPrimaryFocus={selectorPrimaryFocus}
           renderMain={renderMain}
-          renderSidebar={renderSidebar}
+          renderSidebar={renderSidebar()}
           sidebarTitle="Title of setup"
           sidebarSubtitle="5 mins setup"
           mainTitle="Step title"
@@ -223,7 +290,7 @@ storiesOf(patterns('Tearsheet'), module)
                 focusTrap={boolean('focusTrap', false)}
                 selectorPrimaryFocus={selectorPrimaryFocus}
                 renderMain={renderMain}
-                renderSidebar={renderSidebar}
+                renderSidebar={renderSidebar()}
                 closeButton={{
                   onClick: this.close,
                   label: text('closeButton.label', 'Close'),
@@ -259,7 +326,7 @@ storiesOf(patterns('Tearsheet'), module)
         focusTrap={boolean('focusTrap', false)}
         selectorPrimaryFocus={selector}
         renderMain={renderMain}
-        renderSidebar={renderSidebar}
+        renderSidebar={renderSidebar()}
         sidebarTitle="Title of setup"
         sidebarSubtitle="5 mins setup"
         mainTitle="Step title"

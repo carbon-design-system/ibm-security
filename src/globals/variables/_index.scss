@@ -14,14 +14,6 @@ $security--css--reset: false !default;
 
 // Carbon variables.
 
-/// `@font-face` declarations.
-/// @type boolean
-$css--font-face: true !default;
-
-/// IBM Plex.
-/// @type boolean
-$css--plex: true;
-
 /// CSS reset - https://cssreset.com/
 /// @type boolean
 $css--reset: $security--css--reset;

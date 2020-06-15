@@ -9,7 +9,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
-import { disableCentered, patterns } from '../../../.storybook';
+import { disableCenteredStories, patterns } from '../../../.storybook';
 
 import Shell from '.';
 
@@ -29,7 +29,7 @@ const shellProps = {
   toolbar,
 };
 
-disableCentered(storiesOf(patterns('Shell (Security)'), module))
+disableCenteredStories(storiesOf(patterns('Shell (Security)'), module))
   .add('default', () => <Shell {...shellProps} />, {
     info: {
       text: `

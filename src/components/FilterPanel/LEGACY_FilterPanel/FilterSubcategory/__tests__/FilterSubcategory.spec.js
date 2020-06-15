@@ -35,51 +35,51 @@ describe('FilterSubcategory', () => {
   });
 
   describe('Rendering', () => {
-    it('renders', () => expect(filterSubcategory).toMatchSnapshot());
+    test('renders', () => expect(filterSubcategory).toMatchSnapshot());
 
-    it('does not truncate short list of filters', () => {
+    test('does not truncate short list of filters', () => {
       filterSubcategory.setProps({
         subcategory: { ...MockFilterData.subcategories.DEFAULT, open: true },
       });
       expect(filterSubcategory).toMatchSnapshot();
     });
 
-    it('truncates long list of filters', () => {
+    test('truncates long list of filters', () => {
       filterSubcategory.setProps({
         subcategory: { ...MockFilterData.subcategories.TRUNCATED, open: true },
       });
       expect(filterSubcategory).toMatchSnapshot();
     });
 
-    it('does not render with no filters', () => {
+    test('does not render with no filters', () => {
       filterSubcategory.setProps({
         subcategory: MockFilterData.subcategories.NO_FILTERS,
       });
       expect(filterSubcategory).toMatchSnapshot();
     });
 
-    it('does not render when count is 0', () => {
+    test('does not render when count is 0', () => {
       filterSubcategory.setProps({
         subcategory: MockFilterData.subcategories.ZERO_FILTERS_COUNT,
       });
       expect(filterSubcategory).toMatchSnapshot();
     });
 
-    it('renders open subcategory', () => {
+    test('renders open subcategory', () => {
       filterSubcategory.setProps({
         subcategory: MockFilterData.subcategories.OPEN,
       });
       expect(filterSubcategory).toMatchSnapshot();
     });
 
-    it('should not override `labels` if unique props are defined', () => {
+    test('should not override `labels` if unique props are defined', () => {
       filterSubcategory.setProps({ ...uniqueProps });
       expect(filterSubcategory).toMatchSnapshot();
     });
   });
 
   describe('Events', () => {
-    it('expands truncated list of filters', () => {
+    test('expands truncated list of filters', () => {
       filterSubcategory.setProps({
         subcategory: { ...MockFilterData.subcategories.TRUNCATED, open: true },
       });
@@ -87,7 +87,7 @@ describe('FilterSubcategory', () => {
       expect(filterSubcategory).toMatchSnapshot();
     });
 
-    it('collapses expanded truncated list of filters', () => {
+    test('collapses expanded truncated list of filters', () => {
       filterSubcategory.setProps({
         subcategory: { ...MockFilterData.subcategories.TRUNCATED, open: true },
       });

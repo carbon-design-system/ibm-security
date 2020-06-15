@@ -17,10 +17,11 @@ const FilterPanelLabel = ({
   countLabel,
   className,
   countClassName,
+  title,
   ...other
 }) => (
   <span className={classnames(namespace, className)} {...other}>
-    <span className={`${namespace}__text`} title={children}>
+    <span className={`${namespace}__text`} title={title}>
       {children}
     </span>
     {!Number.isNaN(parseInt(count, 10)) && (
@@ -43,7 +44,7 @@ FilterPanelLabel.propTypes = {
   /**
    * Label count.
    */
-  count: PropTypes.number,
+  count: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 
   /**
    * Function returning a translated text labeling the count for accessibility.
@@ -59,6 +60,11 @@ FilterPanelLabel.propTypes = {
    * Optional class name for the count.
    */
   countClassName: PropTypes.string,
+
+  /**
+   * The `title` attribute that is applied to the label node.
+   */
+  title: PropTypes.string,
 };
 
 FilterPanelLabel.defaultProps = {
@@ -67,6 +73,7 @@ FilterPanelLabel.defaultProps = {
   countLabel: count => `${count} items`,
   className: undefined,
   countClassName: undefined,
+  title: undefined,
 };
 
 export default FilterPanelLabel;

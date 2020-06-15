@@ -171,6 +171,7 @@ exports[`DataTable Rendering renders 1`] = `
       }
       isSortable={false}
       locale="en"
+      overflowMenuOnHover={true}
       render={[Function]}
       rows={
         Array [
@@ -264,6 +265,7 @@ exports[`DataTable Rendering renders 1`] = `
           },
         ]
       }
+      size="normal"
       sortRow={[Function]}
       translateWithId={[Function]}
       useZebraStyles={false}
@@ -274,6 +276,8 @@ exports[`DataTable Rendering renders 1`] = `
         >
           <Table
             isSortable={false}
+            overflowMenuOnHover={true}
+            size="normal"
             useZebraStyles={false}
           >
             <ScrollGradient
@@ -304,6 +308,8 @@ exports[`DataTable Rendering renders 1`] = `
                 >
                   <Table
                     isSortable={false}
+                    overflowMenuOnHover={true}
+                    size="normal"
                     useZebraStyles={false}
                   >
                     <table
@@ -1817,6 +1823,7 @@ exports[`DataTable Rendering renders a custom table 1`] = `
       }
       isSortable={false}
       locale="en"
+      overflowMenuOnHover={true}
       render={[Function]}
       rows={
         Array [
@@ -1910,6 +1917,7 @@ exports[`DataTable Rendering renders a custom table 1`] = `
           },
         ]
       }
+      size="normal"
       sortRow={[Function]}
       translateWithId={[Function]}
       useZebraStyles={false}
@@ -1920,6 +1928,8 @@ exports[`DataTable Rendering renders a custom table 1`] = `
         >
           <Table
             isSortable={false}
+            overflowMenuOnHover={true}
+            size="normal"
             useZebraStyles={false}
           >
             <ScrollGradient
@@ -1950,6 +1960,8 @@ exports[`DataTable Rendering renders a custom table 1`] = `
                 >
                   <Table
                     isSortable={false}
+                    overflowMenuOnHover={true}
+                    size="normal"
                     useZebraStyles={false}
                   >
                     <table
@@ -3463,6 +3475,7 @@ exports[`DataTable Rendering renders a selectable table 1`] = `
       }
       isSortable={false}
       locale="en"
+      overflowMenuOnHover={true}
       render={[Function]}
       rows={
         Array [
@@ -3556,6 +3569,7 @@ exports[`DataTable Rendering renders a selectable table 1`] = `
           },
         ]
       }
+      size="normal"
       sortRow={[Function]}
       translateWithId={[Function]}
       useZebraStyles={false}
@@ -3566,6 +3580,8 @@ exports[`DataTable Rendering renders a selectable table 1`] = `
         >
           <Table
             isSortable={false}
+            overflowMenuOnHover={true}
+            size="normal"
             useZebraStyles={false}
           >
             <ScrollGradient
@@ -3596,6 +3612,8 @@ exports[`DataTable Rendering renders a selectable table 1`] = `
                 >
                   <Table
                     isSortable={false}
+                    overflowMenuOnHover={true}
+                    size="normal"
                     useZebraStyles={false}
                   >
                     <table
@@ -5109,6 +5127,7 @@ exports[`DataTable Rendering renders a sortable table 1`] = `
       }
       isSortable={true}
       locale="en"
+      overflowMenuOnHover={true}
       render={[Function]}
       rows={
         Array [
@@ -5202,6 +5221,7 @@ exports[`DataTable Rendering renders a sortable table 1`] = `
           },
         ]
       }
+      size="normal"
       sortRow={[Function]}
       translateWithId={[Function]}
       useZebraStyles={false}
@@ -5212,6 +5232,8 @@ exports[`DataTable Rendering renders a sortable table 1`] = `
         >
           <Table
             isSortable={true}
+            overflowMenuOnHover={true}
+            size="normal"
             useZebraStyles={false}
           >
             <ScrollGradient
@@ -5242,6 +5264,8 @@ exports[`DataTable Rendering renders a sortable table 1`] = `
                 >
                   <Table
                     isSortable={true}
+                    overflowMenuOnHover={true}
+                    size="normal"
                     useZebraStyles={false}
                   >
                     <table

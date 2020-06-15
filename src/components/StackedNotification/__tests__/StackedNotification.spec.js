@@ -3,33 +3,160 @@
  * @copyright IBM Security 2019
  */
 
-import { shallow } from 'enzyme';
 import React from 'react';
+import { render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
-import { iconDescription, title, subtitle } from '../_mocks_';
-
-import StackedNotification from '../';
+import { StackedNotification } from '../../..';
 
 describe('StackedNotification', () => {
-  let stackedNotification;
-
-  beforeEach(() => {
-    stackedNotification = shallow(
+  test('should have no Axe or DAP violations', async () => {
+    const main = document.createElement('main');
+    render(
       <StackedNotification
-        iconDescription={iconDescription}
-        title={title}
-        subtitle={subtitle}
-      />
+        title="test title"
+        subtitle="test subtitle"
+        caption="test caption"
+        iconDescription="test close button icon"
+        statusIconDescription="test status icon"
+      />,
+      {
+        // DAP requires a landmark '<main>' in the DOM:
+        container: document.body.appendChild(main),
+      }
     );
+    await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations('StackedNotification');
   });
 
-  describe('render', () => {
-    it('renders correctly', () => {
-      expect(stackedNotification).toMatchSnapshot();
-    });
+  test('should add a custom class', () => {
+    const { container } = render(
+      <StackedNotification
+        title="test title"
+        className="custom-class"
+        subtitle="test subtitle"
+        iconDescription="test icon desc"
+        statusIconDescription="test status icon"
+      />
+    );
+    expect(container.querySelector('.custom-class')).toBeVisible();
+  });
 
-    it("renders the HTML of the node's subtree", () => {
-      expect(stackedNotification.render()).toMatchSnapshot();
-    });
+  test('should invoke close mock when close button is clicked', () => {
+    const onCloseMock = jest.fn();
+    const { getByLabelText } = render(
+      <StackedNotification
+        title="test title"
+        subtitle="test subtitle"
+        iconDescription="test close button icon"
+        statusIconDescription="test status icon"
+        onCloseButtonClick={onCloseMock}
+      />
+    );
+    userEvent.click(getByLabelText(/test close button icon/i));
+    expect(onCloseMock).toHaveBeenCalledTimes(1);
+  });
+
+  test('should pass through extra props via spread attribute', () => {
+    const { queryByTestId } = render(
+      <StackedNotification
+        title="test title"
+        subtitle="test subtitle"
+        iconDescription="test close button icon"
+        statusIconDescription="test status icon"
+        data-testid="test-id"
+      />
+    );
+    expect(queryByTestId('test-id')).toBeVisible();
+  });
+
+  test('should apply a `title`', () => {
+    const { queryByText } = render(
+      <StackedNotification
+        title="test title"
+        subtitle="test subtitle"
+        iconDescription="test close button icon"
+        statusIconDescription="test status icon"
+      />
+    );
+    expect(queryByText(/test title/i)).toBeVisible();
+  });
+
+  test('should apply a `subtitle`', () => {
+    const { queryByText } = render(
+      <StackedNotification
+        title="test title"
+        subtitle="test subtitle"
+        iconDescription="test close button icon"
+        statusIconDescription="test status icon"
+      />
+    );
+    expect(queryByText(/test subtitle/i)).toBeVisible();
+  });
+
+  test('should apply a `caption`', () => {
+    const { queryByText } = render(
+      <StackedNotification
+        title="test title"
+        subtitle="test subtitle"
+        iconDescription="test close button icon"
+        statusIconDescription="test status icon"
+        caption="test caption"
+      />
+    );
+    expect(queryByText(/test caption/i)).toBeVisible();
+  });
+
+  test('should apply a `children`', () => {
+    const { queryByText } = render(
+      <StackedNotification
+        title="test title"
+        subtitle="test subtitle"
+        iconDescription="test close button icon"
+        statusIconDescription="test status icon"
+      >
+        test children
+      </StackedNotification>
+    );
+    expect(queryByText(/test children/i)).toBeVisible();
+  });
+
+  test('should apply a custom `role`', () => {
+    const { queryByRole } = render(
+      <StackedNotification
+        title="test title"
+        subtitle="test subtitle"
+        iconDescription="test close button icon"
+        statusIconDescription="test status icon"
+        role="dialog"
+      />
+    );
+    // Note that "alert" is the default role:
+    expect(queryByRole('dialog')).toBeVisible();
+  });
+
+  test('should apply an `iconDescription` to the close button', () => {
+    const { queryByLabelText } = render(
+      <StackedNotification
+        title="test title"
+        subtitle="test subtitle"
+        iconDescription="test close button icon"
+        statusIconDescription="test status icon"
+      />
+    );
+    expect(queryByLabelText(/test close button icon/i)).toBeVisible();
+  });
+
+  test('should hide the close button when `hideCloseButton` is `true`', () => {
+    const { queryByLabelText } = render(
+      <StackedNotification
+        title="test title"
+        subtitle="test subtitle"
+        iconDescription="test close button icon"
+        statusIconDescription="test status icon"
+        hideCloseButton
+      />
+    );
+    expect(queryByLabelText(/test close button icon/i)).not.toBeInTheDocument();
   });
 });

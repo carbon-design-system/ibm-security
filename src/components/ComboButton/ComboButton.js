@@ -1,14 +1,16 @@
 /**
  * @file Combo button.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
+
+import ChevronDown16 from '@carbon/icons-react/lib/chevron--down/16';
+import ChevronUp16 from '@carbon/icons-react/lib/chevron--up/16';
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { useRef, useState } from 'react';
-import ChevronDown16 from '@carbon/icons-react/lib/chevron--down/16';
-import ChevronUp16 from '@carbon/icons-react/lib/chevron--up/16';
-import { settings } from 'carbon-components';
+
+import { carbonPrefix, getComponentNamespace } from '../../globals/namespace';
 
 import Button from '../Button';
 import OverflowMenu from '../OverflowMenu';
@@ -17,24 +19,11 @@ import { TooltipDirection } from '../IconButton/IconButton';
 
 import { namespace as buttonNamespace } from '../Button/Button';
 
-import { getComponentNamespace } from '../../globals/namespace';
-
 export const namespace = getComponentNamespace('combo-button');
-
-const { prefix } = settings;
 
 const ComboButton = ({ children, className, direction }) => {
   const [isOpen, setIsOpen] = useState(false);
   const wrapper = useRef(null);
-
-  const getMenuOffset = () => {
-    const { top } = wrapper.current.getBoundingClientRect();
-    const isTop = direction === TooltipDirection.TOP;
-    return {
-      top: isTop ? top : top * -1,
-      left: 'auto',
-    };
-  };
 
   const childrenArray = React.Children.toArray(children).filter(Boolean);
 
@@ -50,6 +39,7 @@ const ComboButton = ({ children, className, direction }) => {
       href,
       iconDescription,
       onClick,
+      id,
       renderIcon: Icon,
     } = button.props;
     return (
@@ -59,12 +49,13 @@ const ComboButton = ({ children, className, direction }) => {
         href={href}
         iconDescription={iconDescription}
         kind="primary"
-        key={button.id}
+        id={id}
+        key={id || `button-${href}`}
         onClick={onClick}
         renderIcon={Icon}
         type="button"
       >
-        <span className={`${prefix}--text-truncate--end`} title={children}>
+        <span className={`${carbonPrefix}text-truncate--end`} title={children}>
           {children}
         </span>
       </Button>
@@ -89,6 +80,7 @@ const ComboButton = ({ children, className, direction }) => {
         href,
         onClick,
         primaryFocus,
+        id,
         renderIcon: Icon,
       } = item.props;
 
@@ -100,7 +92,7 @@ const ComboButton = ({ children, className, direction }) => {
           itemText={
             <>
               <span
-                className={`${prefix}--text-truncate--end`}
+                className={`${carbonPrefix}text-truncate--end`}
                 title={children}
               >
                 {children}
@@ -108,7 +100,8 @@ const ComboButton = ({ children, className, direction }) => {
               {!Icon ? null : <Icon />}
             </>
           }
-          key={item.id}
+          id={id}
+          key={id || `item-${href}`}
           onClick={onClick}
           primaryFocus={!primaryFocus && index === 0 ? true : primaryFocus}
         />
@@ -132,8 +125,8 @@ const ComboButton = ({ children, className, direction }) => {
             className={classnames(
               // Button-specific classes for styling:
               buttonNamespace,
-              `${prefix}--btn`,
-              `${prefix}--btn--primary`,
+              `${carbonPrefix}btn`,
+              `${carbonPrefix}btn--primary`,
 
               // Button as a child of combo button:
               `${namespace}__button`,
@@ -142,8 +135,10 @@ const ComboButton = ({ children, className, direction }) => {
               `${namespace}__overflow-menu`
             )}
             direction={direction}
-            menuOffset={getMenuOffset}
-            menuOptionsClass={`${prefix}--list-box__menu`}
+            menuOffset={() => ({
+              left: 'auto',
+            })}
+            menuOptionsClass={`${carbonPrefix}list-box__menu`}
             onClose={() => setIsOpen(false)}
             onOpen={() => setIsOpen(true)}
             renderIcon={() =>

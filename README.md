@@ -47,8 +47,9 @@ yarn add @carbon/ibm-security
 Please use [distribution tags](https://docs.npmjs.com/cli/dist-tag) to install the most relevant version of this framework. e.g. `npm i -S @carbon/ibm-security@latest`:
 
 - `@latest` - Stable
-- `@canary` - Prerelease
-- `@next` - Alpha
+- `@canary` - Unstable prerelease
+- `@experimental` - Experimental features
+- `@next` - Upcoming
 
 ### React
 
@@ -88,10 +89,13 @@ Carbon for IBM Security takes advantage of feature flags to conditionally enable
 $security--feature-flags: (
   css-gridish: false,
   ibm-type: false,
+  security--css-custom-property-theming: false,
 );
 
 @import '@carbon/ibm-security/scss/index';
 ```
+
+Also refer to [feature flags in Carbon](https://github.com/carbon-design-system/carbon/blob/master/packages/components/src/globals/scss/_feature-flags.scss).
 
 ### CSS
 

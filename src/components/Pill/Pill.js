@@ -11,7 +11,7 @@ import { Decorator } from '../DataDecorator';
 
 import { getComponentNamespace } from '../../globals/namespace/index';
 
-const namespace = getComponentNamespace('pill');
+export const namespace = getComponentNamespace('pill');
 
 /**
  * Pill component.
@@ -24,7 +24,6 @@ const Pill = ({ className, inline, type, value }) => {
   return (
     <Decorator
       className={classes}
-      inert
       inline={inline}
       noIcon
       type={type}

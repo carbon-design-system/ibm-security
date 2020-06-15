@@ -4,11 +4,21 @@
 /// @copyright IBM Security 2019
 ////
 
+@import '@carbon/layout/scss/mini-unit';
 @import '@carbon/layout/scss/spacing';
+@import '@carbon/themes/scss/tokens';
+@import '@carbon/type/scss/styles';
+@import 'carbon-components/scss/globals/scss/helper-mixins';
+@import 'carbon-components/scss/globals/scss/layout';
 
-@import '../../globals/index';
+@import '../../globals/motion/index';
+@import '../../globals/namespace/index';
 
 @import '../../platform/body/mixins';
+
+@import '../IconButton/mixins';
+
+@import 'variables';
 
 /// Name.
 /// @type String
@@ -24,19 +34,9 @@ $header__namespace: get-component-namespace(
 /// @type Color
 $header__color__background: $body__color__background;
 
-/// Layer.
-/// @type Number
-$header__layer: z(
-  $layer: overlay,
-);
-
 /// Width.
 /// @type Length
 $header__sizing__width: 100%;
-
-/// Padding.
-/// @type Length
-$header__spacing__padding: $carbon--spacing-03;
 
 /// Transition duration.
 /// @type Length
@@ -97,6 +97,7 @@ $header__transition__timing-function: $timing-function;
   position: fixed;
   top: 0;
   width: inherit;
+  height: inherit;
   padding-top: inherit;
   align-items: center;
   background-color: inherit;
@@ -131,7 +132,6 @@ $header__transition__timing-function: $timing-function;
 
   &__group {
     display: flex;
-    height: inherit;
     padding-left: unset;
     margin-top: unset;
     margin-bottom: unset;

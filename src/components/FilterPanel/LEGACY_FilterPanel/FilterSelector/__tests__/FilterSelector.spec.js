@@ -21,17 +21,17 @@ describe('FilterSelector', () => {
   });
 
   describe('Rendering', () => {
-    it('renders unchecked filter', () =>
+    test('renders unchecked filter', () =>
       expect(filterSelector).toMatchSnapshot());
 
-    it('renders checked filter', () => {
+    test('renders checked filter', () => {
       filterSelector.setProps({ filter: MockFilterData.filters.SELECTED });
       expect(filterSelector).toMatchSnapshot();
     });
   });
 
   describe('Events', () => {
-    it('invokes `onChange` when filter is clicked', () => {
+    test('invokes `onChange` when filter is clicked', () => {
       const onChange = jest.fn();
       filterSelector.setProps({ onChange });
       filterSelector.find('FilterPanelCheckbox').simulate('change');

@@ -1,16 +1,14 @@
 ////
 /// Button mixins.
 /// @group button
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
-@import 'carbon-components/scss/globals/scss/vars';
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/themes/scss/tokens';
+@import '@carbon/type/scss/styles';
 
-@import '../../globals/color/index';
-@import '../../globals/layout/index';
-@import '../../globals/motion/index';
-@import '../../globals/rtl/index';
-@import '../../globals/theme/index';
+@import 'carbon-components/scss/globals/scss/vars';
 
 @mixin button {
   /// Padding.
@@ -49,14 +47,12 @@
     }
   }
 
-  &--loading {
-    &.#{$prefix}--btn:disabled,
-    &.#{$prefix}--btn.#{$prefix}--btn--disabled {
-      color: $link-01;
-    }
+  &--loading > .#{$prefix}--inline-loading {
+    width: auto;
 
-    .#{$prefix}--inline-loading {
-      width: auto;
-    }
+    // Required to ensure that the loading icon
+    // does not make the button taller:
+    margin-top: carbon--mini-units(-1);
+    margin-bottom: carbon--mini-units(-1);
   }
 }

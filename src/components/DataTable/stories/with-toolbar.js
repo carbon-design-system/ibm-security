@@ -1,6 +1,6 @@
 /**
  * @file Data table with toolbar story.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import React from 'react';
@@ -39,9 +39,10 @@ const toolbarStory = props => (
       getHeaderProps,
       getRowProps,
       getTableProps,
+      getTableContainerProps,
       onInputChange,
     }) => (
-      <TableContainer>
+      <TableContainer {...getTableContainerProps()}>
         <TableToolbar>
           <TableToolbarContent>
             <TableToolbarSearch onChange={onInputChange} />

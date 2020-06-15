@@ -9,19 +9,37 @@ import { render } from '@testing-library/react';
 import FilterPanelGroup from '../FilterPanelGroup';
 
 describe('FilterPanelGroup', () => {
-  it('renders with a title', () => {
-    const { getByText } = render(<FilterPanelGroup title="custom title" />);
-    expect(getByText(/custom title/i)).toBeVisible();
+  test('should have no Axe or DAP violations', async () => {
+    const main = document.createElement('main');
+    render(
+      <FilterPanelGroup heading="test filter group" title="test title" />,
+      {
+        // DAP requires a landmark '<main>' in the DOM:
+        container: document.body.appendChild(main),
+      }
+    );
+    await expect(document.body).toHaveNoAxeViolations();
+    await expect(document.body).toHaveNoDAPViolations('FilterPanelGroup');
   });
 
-  it('renders with a title node', () => {
+  test('renders with a title attribute', () => {
+    const { getByTitle } = render(<FilterPanelGroup title="custom title" />);
+    expect(getByTitle(/custom title/i)).toBeVisible();
+  });
+
+  test('renders a title inside the label as a node if a heading node is not provided', () => {
+    const { queryByText } = render(<FilterPanelGroup title="title" />);
+    expect(queryByText(/title/)).toBeVisible();
+  });
+
+  test('renders with a heading node', () => {
     const { getByTestId } = render(
-      <FilterPanelGroup title={<span data-testid="node-title" />} />
+      <FilterPanelGroup heading={<span data-testid="node-title" />} />
     );
     expect(getByTestId('node-title')).toBeVisible();
   });
 
-  it('renders with content', () => {
+  test('renders with content', () => {
     const { getByTestId } = render(
       <FilterPanelGroup>
         <div data-testid="content" />
@@ -30,7 +48,26 @@ describe('FilterPanelGroup', () => {
     expect(getByTestId('content')).toBeVisible();
   });
 
-  it('adds custom class name', () => {
+  test('does not render the count if the heading or title are not provided', () => {
+    const { queryByText } = render(<FilterPanelGroup count={200} />);
+    expect(queryByText(/200/)).not.toBeInTheDocument();
+  });
+
+  test('renders the count if the title is also provided', () => {
+    const { queryByText } = render(
+      <FilterPanelGroup title="title" count={200} />
+    );
+    expect(queryByText(/200/)).toBeVisible();
+  });
+
+  test('renders the count if the heading is also provided', () => {
+    const { queryByText } = render(
+      <FilterPanelGroup heading="title" count={200} />
+    );
+    expect(queryByText(/200/)).toBeVisible();
+  });
+
+  test('adds custom class name', () => {
     const { container } = render(<FilterPanelGroup className="custom-class" />);
     expect(container.querySelector('.custom-class')).toBeInTheDocument();
   });

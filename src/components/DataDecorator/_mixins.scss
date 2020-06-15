@@ -1,15 +1,18 @@
 ////
 /// Decorator mixins.
 /// @group decorator
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019-2020
 ////
-
-/* stylelint-disable no-descending-specificity */
 
 @import '@carbon/layout/scss/mini-unit';
 @import '@carbon/layout/scss/spacing';
+@import '@carbon/themes/scss/tokens';
+@import '@carbon/type/scss/font-family';
+@import '@carbon/type/scss/styles';
 
-@import '../../globals/index';
+@import 'carbon-components/scss/globals/scss/helper-mixins';
+
+@import '../../globals/motion/index';
 
 @mixin security--decorator__padding($decorator__spacing__padding) {
   &__icon {
@@ -43,43 +46,71 @@
   max-width: 100%;
   padding: unset;
   border: unset;
+  vertical-align: middle;
+  color: $text-02;
+  text-decoration: none;
 
-  &:focus {
-    @include focus-outline('outline');
-  }
+  #{$root}--interactive:not(&--active) {
+    #{$root}__type {
+      color: $text-02;
+    }
 
-  &:hover {
-    background-color: $active-ui;
-  }
+    #{$root}__value {
+      color: $hover-primary-text;
+    }
 
-  &--active,
-  &--active:hover,
-  &:focus:active {
-    background-color: $ui-05;
-
-    > #{$root} {
-      &__type,
-      &__value {
-        color: $active-ui;
-      }
-
-      &__type {
-        border-right: 1px solid $ui-04;
-      }
+    &:visited #{$root}__value {
+      color: $visited-link;
     }
   }
 
-  &--inert {
+  &#{$root}--interactive {
     &:hover {
-      cursor: default;
+      cursor: pointer;
+      background-color: $active-ui;
+    }
+
+    &:focus {
+      @include focus-outline('outline');
+    }
+
+    &:active,
+    &:focus,
+    &:hover,
+    &:focus:active {
+      text-decoration: none;
+      box-shadow: none;
+
+      #{$root}__value {
+        text-decoration: underline;
+      }
     }
   }
 
-  &--inert &__value {
-    color: $text-02;
+  &#{$root}--active,
+  &#{$root}--active:hover,
+  &#{$root}:focus:active {
+    background-color: $ui-05;
+    color: $active-ui;
   }
 
-  &--inline {
+  &#{$root}--active:focus {
+    @include focus-outline('outline');
+    outline-color: $inverse-focus-ui;
+  }
+
+  &__icon,
+  &__type,
+  &__value {
+    display: inherit;
+    height: inherit;
+    align-items: center;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+    transition-timing-function: $timing-function;
+  }
+
+  &#{$root}--inline {
     /// Inline height.
     /// @type Length
     $data-decorator--inline__sizing__height: carbon--mini-units(
@@ -103,39 +134,28 @@
     }
   }
 
-  &--link {
-    &:active,
-    &:focus,
-    &:hover,
-    &:focus:active {
-      text-decoration: none;
-      box-shadow: none;
-
-      #{$root}__value {
-        text-decoration: underline;
-      }
-    }
+  &--unknown #{$root}__icon,
+  &__icon--unknown {
+    fill: $icon-02;
   }
 
-  &--unknown {
-    #{$root}__icon {
-      fill: $icon-02;
-    }
+  &--low #{$root}__icon,
+  &__icon--low {
+    fill: $support-03;
   }
 
-  &--low {
-    #{$root}__icon {
-      fill: $support-03;
-    }
+  &--medium #{$root}__icon,
+  &__icon--medium {
+    fill: $carbon--orange-40;
   }
 
-  &--medium {
-    #{$root}__icon {
-      fill: $carbon--orange-40;
-    }
+  &__icon--high,
+  &__icon--critical {
+    fill: $support-01;
   }
 
-  &--high {
+  &--high,
+  &--critical {
     #{$root}__icon {
       fill: $support-01;
     }
@@ -148,33 +168,20 @@
     }
   }
 
-  &__icon,
-  &__type,
-  &__value {
-    display: inherit;
-    height: inherit;
-    align-items: center;
-    transition-duration: 0.2s;
-    transition-property: background-color;
-    transition-timing-function: $timing-function;
-  }
-
   &__type {
-    color: $text-02;
     border-right: 1px solid $ui-01;
     white-space: nowrap;
   }
 
+  &--active &__type {
+    border-right: 1px solid $ui-04;
+  }
+
   &__value {
-    color: $support-04;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
     display: inline;
     line-height: 1.625rem;
-
-    &:visited {
-      color: $visited-link;
-    }
   }
 }
