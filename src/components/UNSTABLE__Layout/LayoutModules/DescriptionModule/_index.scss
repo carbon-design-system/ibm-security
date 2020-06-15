@@ -14,7 +14,7 @@
   padding-bottom: $carbon--layout-03;
 
   &__description {
-    @include carbon--type-style($name: body-long-01);
+    @include carbon--type-style($name: body-short-01);
 
     margin-top: 0;
     margin-bottom: $carbon--layout-03;
