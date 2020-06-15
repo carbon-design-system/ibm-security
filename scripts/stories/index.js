@@ -8,6 +8,7 @@ const { sync } = require('glob');
 const { compile } = require('handlebars');
 const { basename, parse, resolve } = require('path');
 
+// The year to use for copyright information.
 const year = new Date().getFullYear();
 
 // Internal directory.
@@ -36,35 +37,30 @@ const internalSuffix = '.stories';
 // Internal stories.
 const internalStories = getStories(internalDirectory, internalSuffix);
 
-// Dependency suffix.
-const suffix = '-story';
-
 // Stories from dependencies.
-getStories('node_modules/carbon-components-react/lib/components', suffix)
+getStories('node_modules/carbon-components-react/lib/components', '-story')
   .filter(
     ({ name }) =>
       // Filter out stories from dependencies that already have examples in `@carbon/ibm-security`.
       !internalStories.find(story => story.name === name)
   )
 
-  // Create any stories that can be displayed, excluding any that are missing resources from dependencies, for example - https://github.com/carbon-design-system/carbon/blob/master/packages/react/src/components/Grid/Grid-story.js#L1
-  .forEach(({ path }) => {
+  // Create any stories that can be displayed and exclude any that are missing resources from dependencies, for example - https://github.com/carbon-design-system/carbon/blob/master/packages/react/src/components/Grid/Grid-story.js#L1
+  .forEach(({ name, path }) => {
     try {
-      const { dir, name } = parse(path);
+      const { dir, name: story } = parse(path);
 
-      // Throws an error if the story can't be imported.
+      // Catch execution if the story can't be imported.
       require(path);
 
-      const file = name.replace(suffix, '');
-
       writeFileSync(
-        `${storiesDirectory}/${file}${internalSuffix}.js`,
+        `${storiesDirectory}/${testName}${internalSuffix}.js`,
         compile(
           readFileSync(resolve(__dirname, 'templates', 'index.hbs'), 'utf8')
         )({
-          name: file,
+          name,
           path: basename(dir),
-          story: name,
+          story,
           year,
         })
       );

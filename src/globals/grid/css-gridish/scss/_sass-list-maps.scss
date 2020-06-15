@@ -14,7 +14,7 @@
 /// Global sort direction: either `asc` or `desc`
 /// @access public
 /// @group map-lists/map-maps
-$maps-sort-dir: "asc";
+$maps-sort-dir: 'asc';
 
 /// get value at nested or 'deep' key, per $keys list
 /// @access public
@@ -27,7 +27,7 @@ $maps-sort-dir: "asc";
     @return null;
   }
   @each $key in $keys {
-    @if type-of($map) != "map" {
+    @if type-of($map) != 'map' {
       @return $map;
     }
     $map: map-get($map, $key);
@@ -52,7 +52,7 @@ $maps-sort-dir: "asc";
     $equal: ();
     $greater: ();
 
-    $map-of-maps: type-of($maps) == "map";
+    $map-of-maps: type-of($maps) == 'map';
 
     @if $map-of-maps {
       $seed-map: nth(nth($maps, ceil(length($maps) / 2)), 2);
@@ -65,18 +65,43 @@ $maps-sort-dir: "asc";
         $curr-value: map-get-nested($map, $keys...);
 
         @if $curr-value == $seed-value {
-          $equal: map-merge($equal,  ($key: $map));
+          $equal: map-merge(
+            $equal,
+            (
+              $key: $map,
+            )
+          );
         } @else if $curr-value < $seed-value {
-          @if $maps-sort-dir == "asc" {
-            $less: map-merge($less,  ($key: $map));
+          @if $maps-sort-dir == 'asc' {
+            $less: map-merge(
+              $less,
+              (
+                $key: $map,
+              )
+            );
           } @else {
-            $greater: map-merge($greater,  ($key: $map));
+            $greater: map-merge(
+              $greater,
+              (
+                $key: $map,
+              )
+            );
           }
         } @else {
-          @if $maps-sort-dir == "asc" {
-            $greater: map-merge($greater,  ($key: $map));
+          @if $maps-sort-dir == 'asc' {
+            $greater: map-merge(
+              $greater,
+              (
+                $key: $map,
+              )
+            );
           } @else {
-            $less: map-merge($less,  ($key: $map));
+            $less: map-merge(
+              $less,
+              (
+                $key: $map,
+              )
+            );
           }
         }
       }
@@ -96,13 +121,13 @@ $maps-sort-dir: "asc";
         @if $curr-value == $seed-value {
           $equal: append($equal, $map);
         } @else if $curr-value < $seed-value {
-          @if $maps-sort-dir == "asc" {
+          @if $maps-sort-dir == 'asc' {
             $less: append($less, $map);
           } @else {
             $greater: append($greater, $map);
           }
         } @else {
-          @if $maps-sort-dir == "asc" {
+          @if $maps-sort-dir == 'asc' {
             $greater: append($greater, $map);
           } @else {
             $less: append($less, $map);
