@@ -4,5 +4,5 @@
  */
 
 export {
-  default as FormLabelStory,
+  default as FormLabel,
 } from 'carbon-components-react/es/components/FormLabel/FormLabel-story';

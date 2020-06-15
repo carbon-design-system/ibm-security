@@ -4,5 +4,5 @@
  */
 
 export {
-  default as ComposedModalStory,
+  default as ComposedModal,
 } from 'carbon-components-react/es/components/ComposedModal/ComposedModal-story';

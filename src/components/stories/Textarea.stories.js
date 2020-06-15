@@ -4,5 +4,5 @@
  */
 
 export {
-  default as TextareaStory,
+  default as Textarea,
 } from 'carbon-components-react/es/components/TextArea/Textarea-story';

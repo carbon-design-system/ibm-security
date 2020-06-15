@@ -4,5 +4,5 @@
  */
 
 export {
-  default as TooltipDefinitionStory,
+  default as TooltipDefinition,
 } from 'carbon-components-react/es/components/TooltipDefinition/TooltipDefinition-story';

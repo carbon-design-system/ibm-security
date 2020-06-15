@@ -4,5 +4,5 @@
  */
 
 export {
-  default as FormStory,
+  default as Form,
 } from 'carbon-components-react/es/components/Form/Form-story';

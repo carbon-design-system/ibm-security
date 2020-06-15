@@ -4,5 +4,5 @@
  */
 
 export {
-  default as DataTableSkeletonStory,
+  default as DataTableSkeleton,
 } from 'carbon-components-react/es/components/DataTableSkeleton/DataTableSkeleton-story';

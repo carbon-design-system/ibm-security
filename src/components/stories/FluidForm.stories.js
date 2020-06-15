@@ -4,5 +4,5 @@
  */
 
 export {
-  default as FluidFormStory,
+  default as FluidForm,
 } from 'carbon-components-react/es/components/FluidForm/FluidForm-story';

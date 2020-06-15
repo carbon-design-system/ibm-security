@@ -4,5 +4,5 @@
  */
 
 export {
-  default as ErrorBoundaryStory,
+  default as ErrorBoundary,
 } from 'carbon-components-react/es/components/ErrorBoundary/ErrorBoundary-story';

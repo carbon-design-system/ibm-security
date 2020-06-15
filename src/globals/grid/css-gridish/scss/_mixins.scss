@@ -78,7 +78,7 @@
             grid-column: span #{$columnMultiplier};
 
             @if is-same-breakpoint($breakpoint, $last) == false {
-              &.#{$prefix}-grid > *:not([class*='#{$prefix}-grid__col']) {
+              &.#{$prefix}-grid > *:not([class*="#{$prefix}-grid__col"]) {
                 grid-column: span #{$i};
               }
             }
@@ -103,7 +103,7 @@
 
   @if $includeFlexFallback {
     @if is-same-breakpoint($breakpoint, $last) {
-      [class*='#{$prefix}-grid__col--'] {
+      [class*="#{$prefix}-grid__col--"] {
         min-width: 0;
       }
     }
@@ -152,7 +152,7 @@
     }
   }
 
-  [class*='#{$prefix}-grid__col--#{$name}--'] {
+  [class*="#{$prefix}-grid__col--#{$name}--"] {
     display: block;
   }
 
@@ -197,16 +197,16 @@
       $previousMargin !=
       0 and
       $previousMargin !=
-      '0'
+      "0"
     {
-      [class^='#{$prefix}-container__bleed--#{$previousName}'],
-      [class^='#{$prefix}-container__break--#{$previousName}'] {
+      [class^="#{$prefix}-container__bleed--#{$previousName}"],
+      [class^="#{$prefix}-container__break--#{$previousName}"] {
         margin-left: 0;
         margin-right: 0;
         padding-left: 0;
         padding-right: 0;
 
-        &[class^='#{$prefix}-padding'] {
+        &[class^="#{$prefix}-padding"] {
           padding-left: $padding;
           padding-right: $padding;
         }
@@ -214,13 +214,13 @@
     }
   }
 
-  @if $margin != null and $margin != 0 and $margin != '0' {
+  @if $margin != null and $margin != 0 and $margin != "0" {
     $marginPlusPadding: calc(#{$margin} + #{$padding});
-    @if $margin == '0' and $padding == '0' {
+    @if $margin == "0" and $padding == "0" {
       $marginPlusPadding: 0;
-    } @else if $margin == '0' {
+    } @else if $margin == "0" {
       $marginPlusPadding: $padding;
-    } @else if $padding == '0' {
+    } @else if $padding == "0" {
       $marginPlusPadding: $margin;
     }
 

@@ -1,4 +1,4 @@
-@import 'sass-list-maps';
+@import "sass-list-maps";
 
 // Transform the gutter property into a padding property for web
 @function add-padding($breakpoints) {
@@ -8,12 +8,7 @@
       $cleanBreakpoints,
       (
         $name:
-          map-merge(
-            $breakpoint,
-            (
-              padding: map-get($breakpoint, gutter) / 2,
-            )
-          ),
+          map-merge($breakpoint, (padding: map-get($breakpoint, gutter) / 2))
       )
     );
   }
@@ -41,26 +36,25 @@
       }
     }
     @if $extraBreakpointWidth > map-get($last, breakpoint) {
-      $match: (last, $last);
+      $match: (
+        last,
+        $last
+      );
     }
     @if $extraBreakpointWidth < map-get($first, breakpoint) {
-      $match: (first, $first);
+      $match: (
+        first,
+        $first
+      );
     }
 
     $newBreakpoint: map-merge(
       nth($match, 2),
-      (
-        breakpoint: $extraBreakpointWidth,
-      )
+      (breakpoint: $extraBreakpointWidth)
     );
     $currentBreakpoint: (
       $extraBreakpointName:
-        map-merge(
-          nth($match, 2),
-          (
-            breakpoint: $extraBreakpointWidth,
-          )
-        ),
+        map-merge(nth($match, 2), (breakpoint: $extraBreakpointWidth))
     );
     $allBreakpoints: map-merge($allBreakpoints, $currentBreakpoint);
   }

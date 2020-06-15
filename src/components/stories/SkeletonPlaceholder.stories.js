@@ -4,5 +4,5 @@
  */
 
 export {
-  default as SkeletonPlaceholderStory,
+  default as SkeletonPlaceholder,
 } from 'carbon-components-react/es/components/SkeletonPlaceholder/SkeletonPlaceholder-story';
