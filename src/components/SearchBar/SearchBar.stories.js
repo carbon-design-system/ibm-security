@@ -107,7 +107,7 @@ storiesOf(patterns('SearchBar'), module)
     ),
     {
       info: {
-        text: `By default, the scopes in the \`SearchBar\` will be sorted in ascending alphabetical order, and "selected" scopes will be moved to the top of the sort order. You can pass in a function for a custom sort order via the \`sortOrder\` prop. To completely remove the default sorting, follow this story example by setting the \`sortOrder\` prop to \`sortItems={(items) => items}\``,
+        text: `By default, the scopes in the \`SearchBar\` will be sorted in ascending alphabetical order, and "selected" scopes will be moved to the top of the sort order. You can pass in a function for a custom sort order via the \`sortItems\` prop. To completely remove the default sorting, follow this story example by setting the \`sortItems\` prop to \`sortItems={(items) => items}\``,
       },
     }
   )

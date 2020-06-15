@@ -77,6 +77,7 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
       >
         <IconButton
           className="security--tearsheet__button--close"
+          disabled={false}
           iconClassName=""
           iconSize={20}
           label="Close - prop"
@@ -90,7 +91,6 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
           }
           size="lg"
           state={false}
-          tabIndex={0}
           tooltip={false}
           tooltipDirection="bottom"
         />
@@ -246,6 +246,7 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
       >
         <IconButton
           className="security--tearsheet__button--close"
+          disabled={false}
           iconClassName=""
           iconSize={20}
           label="Close"
@@ -259,7 +260,6 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
           }
           size="lg"
           state={false}
-          tabIndex={0}
           tooltip={false}
           tooltipDirection="bottom"
         />
