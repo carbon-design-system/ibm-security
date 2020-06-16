@@ -3,13 +3,18 @@
  * @copyright IBM Security 2020
  */
 
-import { node } from 'prop-types';
+import classnames from 'classnames';
+import { bool, node, string } from 'prop-types';
 import React from 'react';
 
-import LayoutModule, { createLayoutModuleFromChildren } from '../LayoutModule';
+import LayoutModule, {
+  createLayoutModuleFromChildren,
+  layoutModuleNamespace,
+} from '../LayoutModule';
 
 const moduleName = 'ICA';
 const namespace = 'ica';
+const icaNamespace = `${namespace}__ica`;
 
 const ICAModule = ({ children, ...other }) => (
   <LayoutModule module={moduleName} type={namespace} {...other}>
@@ -21,21 +26,26 @@ ICAModule.propTypes = {
   children: node.isRequired,
 };
 
-const ICAModuleICA = ({ children, ...other }) =>
+const ICAModuleICA = ({ children, className, interactive, ...other }) =>
   createLayoutModuleFromChildren({
     children,
+    className: classnames(className, {
+      [`${layoutModuleNamespace}--${icaNamespace}--interactive`]: interactive,
+    }),
     module: `${moduleName} ICA`,
-    type: `${namespace}__ica`,
+    type: icaNamespace,
     ...other,
   });
 
 ICAModuleICA.propTypes = {
   children: node.isRequired,
-  // onClick: func,
+  className: string,
+  interactive: bool,
 };
 
 ICAModuleICA.defaultProps = {
-  // onClick: null,
+  interactive: false,
+  className: null,
 };
 
 export default ICAModule;

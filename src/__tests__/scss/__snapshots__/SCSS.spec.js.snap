@@ -24940,12 +24940,12 @@ a.bx--navigation-link:focus {
   margin-bottom: 2rem;
 }
 
-.security--unstable--layout__module--ica__ica--hover {
+.security--unstable--layout__module--ica__ica--interactive {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-.security--unstable--layout__module--ica__ica--hover:hover {
+.security--unstable--layout__module--ica__ica--interactive:hover {
   background-color: var(--hover-ui, #353535);
 }
 

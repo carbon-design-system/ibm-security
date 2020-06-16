@@ -20,13 +20,13 @@
   &__ica {
     margin-bottom: $carbon--layout-03;
 
-    &--hover {
+    &--interactive {
       /// Spacing.
       /// @type Length
-      $layout--ica--hover__spacing: $carbon--layout-01;
+      $layout--ica--interactive__spacing: $carbon--layout-01;
 
-      padding-top: $layout--ica--hover__spacing;
-      padding-bottom: $layout--ica--hover__spacing;
+      padding-top: $layout--ica--interactive__spacing;
+      padding-bottom: $layout--ica--interactive__spacing;
 
       &:hover {
         background-color: $hover-ui;

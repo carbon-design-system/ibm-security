@@ -186,17 +186,17 @@ const ICA = () => (
   <ICAModule>
     <TitleModule>Summary</TitleModule>
     <Row>
-      <ICAModuleICA>
+      <ICAModuleICA interactive>
         <Column>
           <ICAComponent label="Reviews complete" value={300} />
         </Column>
       </ICAModuleICA>
-      <ICAModuleICA>
+      <ICAModuleICA interactive>
         <Column>
           <ICAComponent label="Approved" value={241} />
         </Column>
       </ICAModuleICA>
-      <ICAModuleICA>
+      <ICAModuleICA interactive>
         <Column>
           <ICAComponent label="Rejected" value={28} />
         </Column>

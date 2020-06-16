@@ -4297,15 +4297,19 @@ Map {
   },
   "ICAModuleICA" => Object {
     "defaultProps": Object {
-      "onClick": null,
+      "className": null,
+      "interactive": false,
     },
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
         "type": "node",
       },
-      "onClick": Object {
-        "type": "func",
+      "className": Object {
+        "type": "string",
+      },
+      "interactive": Object {
+        "type": "bool",
       },
     },
   },

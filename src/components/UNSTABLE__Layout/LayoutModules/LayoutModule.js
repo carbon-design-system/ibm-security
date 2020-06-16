@@ -64,4 +64,9 @@ LayoutModule.defaultProps = {
 
 export default LayoutModule;
 
-export { createLayoutModuleFromChildren, getLayoutModuleProps, namespace };
+export {
+  createLayoutModuleFromChildren,
+  getLayoutModuleProps,
+  layoutModuleNamespace,
+  namespace,
+};
