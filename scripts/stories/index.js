@@ -42,6 +42,7 @@ getStories('node_modules/carbon-components-react/lib/components', '-story')
   .filter(
     ({ name }) =>
       // Filter out stories from dependencies that already have examples in `@carbon/ibm-security`.
+
       !internalStories.find(story => story.name === name)
   )
 
@@ -54,7 +55,7 @@ getStories('node_modules/carbon-components-react/lib/components', '-story')
       require(path);
 
       writeFileSync(
-        `${storiesDirectory}/${testName}${internalSuffix}.js`,
+        `${storiesDirectory}/${name}${internalSuffix}.js`,
         compile(
           readFileSync(resolve(__dirname, 'templates', 'index.hbs'), 'utf8')
         )({
