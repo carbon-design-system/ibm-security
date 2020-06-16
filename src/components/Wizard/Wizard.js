@@ -1,22 +1,23 @@
 /**
  * @file Wizard.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 /* eslint-disable compat/compat,no-nested-ternary */
 
-import React, { Component, Children } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import { StepIndicator, Step as SingleStep } from '../..';
-import WizardStep from './WizardStep';
-import { Tearsheet } from '../Tearsheet';
-import Nav from '../Nav';
-import NavItem from '../Nav/NavItem';
-import * as defaultLabels from '../../globals/nls';
+import React, { Children, Component } from 'react';
 
-import { isClient, isNode } from '../../globals/utils/capabilities';
 import { getComponentNamespace } from '../../globals/namespace';
+import * as defaultLabels from '../../globals/nls';
+import { isClient, isNode } from '../../globals/utils/capabilities';
+
+import Nav from '../Nav';
+import { ProgressIndicator, ProgressStep } from '../ProgressIndicator';
+import NavItem from '../Nav/NavItem';
+import { Tearsheet } from '../Tearsheet';
+import WizardStep from './WizardStep';
 
 const namespace = getComponentNamespace('wizard');
 
@@ -224,11 +225,15 @@ class Wizard extends Component {
         ))}
       </Nav>
     ) : (
-      <StepIndicator currentIndex={currentStep}>
-        {this.steps.map(({ title }) => (
-          <SingleStep key={title} label={title} />
+      <ProgressIndicator currentIndex={currentStep} vertical>
+        {this.steps.map(({ title }, index) => (
+          <ProgressStep
+            key={title}
+            disabled={index > currentStep}
+            label={title}
+          />
         ))}
-      </StepIndicator>
+      </ProgressIndicator>
     );
   };
 

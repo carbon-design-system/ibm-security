@@ -4,7 +4,7 @@
  */
 
 import Add16 from '@carbon/icons-react/lib/add/16';
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
@@ -128,10 +128,33 @@ describe('PanelV2', () => {
           label: 'test close',
           onClick: onCloseMock,
         }}
+        isOpen
       />
     );
 
     userEvent.click(getByLabelText(/test close/i));
+    expect(onCloseMock).toHaveBeenCalledTimes(1);
+  });
+
+  test('should invoke close mock when Escape key is pressed', () => {
+    const onCloseMock = jest.fn();
+    const { getByText } = render(
+      <PanelV2
+        title="test title"
+        onClose={onCloseMock}
+        closeButton={{
+          label: 'test close',
+        }}
+        isOpen
+      />
+    );
+
+    fireEvent.keyDown(getByText(/test title/i), {
+      key: 'Escape',
+      code: 'Escape',
+      keyCode: 27,
+      charCode: 27,
+    });
     expect(onCloseMock).toHaveBeenCalledTimes(1);
   });
 

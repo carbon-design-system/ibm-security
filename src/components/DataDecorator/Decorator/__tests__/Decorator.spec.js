@@ -9,7 +9,7 @@ import userEvent from '@testing-library/user-event';
 
 import { Decorator } from '../../../..';
 
-import { namespace } from '../constants';
+import { namespace, icons } from '../constants';
 
 describe('Decorator', () => {
   test('should have no Axe or DAP violations when rendered as a button', async () => {
@@ -133,5 +133,70 @@ describe('Decorator', () => {
       <Decorator type="IP" value="10.0.0.0" inline />
     );
     expect(container.firstElementChild).toHaveClass(`${namespace}--inline`);
+  });
+});
+
+Object.keys(icons).forEach(icon => {
+  // Capitalize first character of icon name
+  // to correctly call component name (like `Decorator.Low`, etc.)
+  const formattedName = icon.charAt(0).toUpperCase() + icon.slice(1);
+  const className = `${namespace}__icon--${icon}`;
+
+  const Component = Decorator[formattedName];
+
+  describe(`Decorator.${formattedName}`, () => {
+    test('should have no Axe or DAP violations', async () => {
+      const main = document.createElement('main');
+      render(<Component description={`${formattedName} severity`} />, {
+        // DAP requires a landmark '<main>' in the DOM:
+        container: document.body.appendChild(main),
+      });
+
+      await expect(document.body).toHaveNoAxeViolations();
+      await expect(document.body).toHaveNoDAPViolations(
+        `Decorator.${formattedName}`
+      );
+    });
+
+    test('should apply accessible `aria-label` with `description` prop', () => {
+      const { getByLabelText } = render(
+        <Component description={`${formattedName} severity`} />
+      );
+      expect(getByLabelText(`${formattedName} severity`)).toBeVisible();
+    });
+
+    test('should add a custom class', () => {
+      render(
+        <Component
+          className="custom-class"
+          description={`${formattedName} severity`}
+        />
+      );
+      expect(document.querySelector(`.${className}`)).toHaveClass(
+        'custom-class'
+      );
+    });
+
+    test('should pass through extra props via spread attribute', () => {
+      const { queryByTestId } = render(
+        <Component
+          data-testid="test-id"
+          description={`${formattedName} severity`}
+        />
+      );
+      expect(queryByTestId('test-id')).toBeVisible();
+    });
+
+    test('should set `height` and `width` with `size` prop', () => {
+      render(<Component size={12} description={`${formattedName} severity`} />);
+      expect(document.querySelector(`.${className}`)).toHaveAttribute(
+        'height',
+        '12'
+      );
+      expect(document.querySelector(`.${className}`)).toHaveAttribute(
+        'width',
+        '12'
+      );
+    });
   });
 });

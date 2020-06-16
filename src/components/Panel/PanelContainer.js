@@ -12,7 +12,7 @@ import PropTypes, { func } from 'prop-types';
 import React, { Component, createRef, Fragment } from 'react';
 import { createPortal } from 'react-dom';
 
-import requiredIfGivenPropExists from 'carbon-components-react/lib/prop-types/requiredIfGivenPropExists';
+import requiredIfGivenPropIsTruthy from 'carbon-components-react/lib/prop-types/requiredIfGivenPropIsTruthy';
 import setupGetInstanceId from 'carbon-components-react/lib/tools/setupGetInstanceId';
 
 import { getComponentNamespace } from '../../globals/namespace';
@@ -328,7 +328,7 @@ PanelContainer.propTypes = {
   /**
    * Required props for the accessibility label of the header
    */
-  ['aria-label']: requiredIfGivenPropExists(
+  ['aria-label']: requiredIfGivenPropIsTruthy(
     'hasScrollingContent',
     PropTypes.string
   ),

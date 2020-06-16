@@ -14,6 +14,8 @@ import { patterns } from '../../../.storybook';
 
 import {
   Button,
+  CodeSnippet,
+  CodeSnippetSkeleton,
   Dropdown,
   Form,
   FormGroup,
@@ -45,13 +47,68 @@ const id = 'search';
 const selector = `#${id}`;
 const selectorPrimaryFocus = () => document.querySelector(selector);
 
-const renderMain = () => (
-  <Form className={namespace}>
+const renderMain = ({ isLoading }) => (
+  <Form className={namespace} tabIndex={isLoading ? -1 : 0}>
+    <p>
+      Whenever the Tearsheet is loading, please use{' '}
+      <CodeSnippet type="inline" light tabIndex={isLoading ? -1 : 0}>
+        isLoading
+      </CodeSnippet>{' '}
+      via the{' '}
+      <CodeSnippet type="inline" light tabIndex={isLoading ? -1 : 0}>
+        renderMain
+      </CodeSnippet>{' '}
+      render prop to prevent users from tabbing through focussable content (such
+      as form inputs, buttons, and links) while the Tearsheet is loading. For
+      example, you can selectively load skeleton components, or you can set
+      <CodeSnippet type="inline" light tabIndex={isLoading ? -1 : 0}>
+        disabled
+      </CodeSnippet>
+      or{' '}
+      <CodeSnippet type="inline" light tabIndex={isLoading ? -1 : 0}>
+        tabIndex={-1}
+      </CodeSnippet>{' '}
+      on interactive elements.
+    </p>
+    <p>Here are some examples:</p>
+    {isLoading ? (
+      <CodeSnippetSkeleton type="multi" />
+    ) : (
+      <CodeSnippet light type="multi">
+        {/* eslint-disable-next-line react/jsx-indent */}
+        {`
+<TearSheet
+  renderMain={({ isLoading }) => (
+    <Button disabled={isLoading}>
+      Example button.
+    </Button>
+    <CodeSnippet tabIndex={isLoading ? -1 : 0}>
+      Example snippet with no copy button.
+    </CodeSnippet>
+    {isLoading ? (
+      <CodeSnippetSkeleton type="multi" />
+    ) : (
+      <CodeSnippet type="multi">
+        Exampe snippet with a copy button.
+      </CodeSnippet>
+    )}
+  )}
+/>
+`}
+      </CodeSnippet>
+    )}
+    <br />
+    <p>
+      For more examples, please review the &quot;Story&quot; tab in the
+      Storybook panel below to the see this demo&apos; source code.
+    </p>
+    <br />
     <Search
       id={id}
       className={className}
       labelText={searchLabel}
       placeHolderText={searchLabel}
+      disabled={isLoading}
     />
 
     <TextInput
@@ -59,6 +116,7 @@ const renderMain = () => (
       id="test-input-id"
       labelText={labelText}
       placeholder={placeholder}
+      disabled={isLoading}
     />
 
     <FormGroup legendText={labelText}>
@@ -76,6 +134,7 @@ const renderMain = () => (
           },
         ]}
         itemToString={item => (item ? item.text : '')}
+        disabled={isLoading}
       />
     </FormGroup>
 
@@ -84,12 +143,14 @@ const renderMain = () => (
       className={className}
       label={labelText}
       value={1000}
+      disabled={isLoading}
     />
 
     <TextArea
       className={className}
       labelText={labelText}
       placeholder={placeholder}
+      disabled={isLoading}
     />
   </Form>
 );

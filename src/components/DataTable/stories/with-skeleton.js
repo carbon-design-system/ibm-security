@@ -1,12 +1,13 @@
 /**
- * @file Data table default story.
- * @copyright IBM Security 2019
+ * @file Data table skeleton story.
+ * @copyright IBM Security 2019 - 2020
  */
 
 import React from 'react';
+
 import { DataTableSkeleton } from '../../..';
-import { headers, rows } from '../_mocks_';
+import { headers } from '../_mocks_';
 
-const skeletonStory = () => <DataTableSkeleton headers={headers} rows={rows} />;
-
-export default skeletonStory;
+export default ({ ...other }) => (
+  <DataTableSkeleton headers={headers} {...other} />
+);
