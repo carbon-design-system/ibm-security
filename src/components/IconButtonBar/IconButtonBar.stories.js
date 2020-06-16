@@ -8,6 +8,7 @@ import { storiesOf } from '@storybook/react';
 import { select, number, boolean } from '@storybook/addon-knobs';
 
 import React from 'react';
+import { gray } from '@carbon/colors';
 import Add16 from '@carbon/icons-react/lib/add/16';
 import Add20 from '@carbon/icons-react/lib/add/20';
 import Add24 from '@carbon/icons-react/lib/add/24';
@@ -59,6 +60,7 @@ storiesOf(patterns('IconButtonBar'), module).add(
         iconClassName,
         label: `${label} 2`,
         onClick: action('onClick'),
+        style: { boxShadow: `-1px 0 0 ${gray[40]}` },
         renderIcon:
           size === 'sm'
             ? Edit16
