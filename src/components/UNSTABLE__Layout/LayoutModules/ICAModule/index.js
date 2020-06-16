@@ -21,18 +21,23 @@ ICAModule.propTypes = {
   children: node.isRequired,
 };
 
-const ICAModuleHover = ({ children, ...other }) =>
+const ICAModuleICA = ({ children, ...other }) =>
   createLayoutModuleFromChildren({
     children,
-    module: 'ICA hover',
-    type: `${namespace}__ica--hover`,
+    module: `${moduleName} ICA`,
+    type: `${namespace}__ica`,
     ...other,
   });
 
-ICAModuleHover.propTypes = {
+ICAModuleICA.propTypes = {
   children: node.isRequired,
+  // onClick: func,
+};
+
+ICAModuleICA.defaultProps = {
+  // onClick: null,
 };
 
 export default ICAModule;
 
-export { ICAModuleHover };
+export { ICAModuleICA };

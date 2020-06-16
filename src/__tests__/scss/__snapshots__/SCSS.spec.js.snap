@@ -24930,11 +24930,14 @@ a.bx--navigation-link:focus {
 
 .security--unstable--layout__module--ica {
   padding-top: 1rem;
-  padding-bottom: 2rem;
 }
 
 .security--unstable--layout__module--ica > .security--unstable--layout__module--title:first-child {
   margin-top: 0;
+}
+
+.security--unstable--layout__module--ica__ica {
+  margin-bottom: 2rem;
 }
 
 .security--unstable--layout__module--ica__ica--hover {

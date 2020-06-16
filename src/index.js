@@ -271,7 +271,7 @@ export LayoutModule, {
   DescriptionModule,
   DescriptionModuleDescription,
   ICAModule,
-  ICAModuleHover,
+  ICAModuleICA,
   PageTabModule,
   PageTabModuleDetails,
   TitleBarModule,

@@ -4295,11 +4295,17 @@ Map {
       },
     },
   },
-  "ICAModuleHover" => Object {
+  "ICAModuleICA" => Object {
+    "defaultProps": Object {
+      "onClick": null,
+    },
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
         "type": "node",
+      },
+      "onClick": Object {
+        "type": "func",
       },
     },
   },

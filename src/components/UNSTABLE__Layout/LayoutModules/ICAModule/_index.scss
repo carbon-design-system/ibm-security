@@ -16,18 +16,21 @@
   @include layout__modules--title--first-child;
 
   padding-top: $carbon--layout-01;
-  padding-bottom: $carbon--layout-03;
 
-  &__ica--hover {
-    /// Spacing.
-    /// @type Length
-    $layout--ica--hover__spacing: $carbon--layout-01;
+  &__ica {
+    margin-bottom: $carbon--layout-03;
 
-    padding-top: $layout--ica--hover__spacing;
-    padding-bottom: $layout--ica--hover__spacing;
+    &--hover {
+      /// Spacing.
+      /// @type Length
+      $layout--ica--hover__spacing: $carbon--layout-01;
 
-    &:hover {
-      background-color: $hover-ui;
+      padding-top: $layout--ica--hover__spacing;
+      padding-bottom: $layout--ica--hover__spacing;
+
+      &:hover {
+        background-color: $hover-ui;
+      }
     }
   }
 }

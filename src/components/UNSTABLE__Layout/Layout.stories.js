@@ -37,6 +37,7 @@ import {
   DescriptionModuleDescription,
   ICA,
   ICAModule,
+  ICAModuleICA,
   IconButtonBar,
   PageTabModule,
   Shell as ShellComponent,
@@ -239,14 +240,20 @@ const overview = () => (
 
               <ICAModule>
                 <Row>
-                  <Column md={2} lg={3}>
-                    <ICA label="Reviews complete" value={300} />
+                  <Column sm={2} md={2} lg={3}>
+                    <ICAModuleICA>
+                      <ICA label="Reviews complete" value={300} />
+                    </ICAModuleICA>
                   </Column>
-                  <Column md={2} lg={3}>
-                    <ICA label="Approved" value={241} />
+                  <Column sm={2} md={2} lg={3}>
+                    <ICAModuleICA>
+                      <ICA label="Approved" value={241} />
+                    </ICAModuleICA>
                   </Column>
-                  <Column md={2} lg={3}>
-                    <ICA label="Rejected" value={28} />
+                  <Column sm={2} md={2} lg={3}>
+                    <ICAModuleICA>
+                      <ICA label="Rejected" value={28} />
+                    </ICAModuleICA>
                   </Column>
                 </Row>
               </ICAModule>
@@ -530,17 +537,25 @@ const detail = () => (
 
                   <ICAModule>
                     <Row>
-                      <Column lg={3}>
-                        <ICA label="Malware" value={11} />
+                      <Column sm={2} md={2} lg={3}>
+                        <ICAModuleICA>
+                          <ICA label="Malware" value={11} />
+                        </ICAModuleICA>
                       </Column>
-                      <Column lg={3}>
-                        <ICA label="IPs" value={8} />
+                      <Column sm={2} md={2} lg={3}>
+                        <ICAModuleICA>
+                          <ICA label="IPs" value={8} />
+                        </ICAModuleICA>
                       </Column>
-                      <Column lg={3}>
-                        <ICA label="URLs" value={9} />
+                      <Column sm={2} md={2} lg={3}>
+                        <ICAModuleICA>
+                          <ICA label="URLs" value={9} />
+                        </ICAModuleICA>
                       </Column>
-                      <Column lg={3}>
-                        <ICA label="VULs" value={1} />
+                      <Column sm={2} md={2} lg={3}>
+                        <ICAModuleICA>
+                          <ICA label="VULs" value={1} />
+                        </ICAModuleICA>
                       </Column>
                     </Row>
                   </ICAModule>

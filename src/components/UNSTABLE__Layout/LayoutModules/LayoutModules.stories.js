@@ -30,7 +30,7 @@ import {
   DescriptionModuleDescription,
   ICA as ICAComponent,
   ICAModule,
-  ICAModuleHover,
+  ICAModuleICA,
   IconButtonBar,
   Link,
   PageTabModule,
@@ -186,21 +186,21 @@ const ICA = () => (
   <ICAModule>
     <TitleModule>Summary</TitleModule>
     <Row>
-      <ICAModuleHover>
+      <ICAModuleICA>
         <Column>
           <ICAComponent label="Reviews complete" value={300} />
         </Column>
-      </ICAModuleHover>
-      <ICAModuleHover>
+      </ICAModuleICA>
+      <ICAModuleICA>
         <Column>
           <ICAComponent label="Approved" value={241} />
         </Column>
-      </ICAModuleHover>
-      <ICAModuleHover>
+      </ICAModuleICA>
+      <ICAModuleICA>
         <Column>
           <ICAComponent label="Rejected" value={28} />
         </Column>
-      </ICAModuleHover>
+      </ICAModuleICA>
     </Row>
   </ICAModule>
 );

@@ -23,7 +23,7 @@ export {
   DescriptionModuleDescription,
 } from './DescriptionModule';
 
-export { default as ICAModule, ICAModuleHover } from './ICAModule';
+export { default as ICAModule, ICAModuleICA } from './ICAModule';
 
 export {
   default as PageTabModule,
