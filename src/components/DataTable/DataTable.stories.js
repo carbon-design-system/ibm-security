@@ -13,7 +13,7 @@ const props = () => ({
   stickyHeader: boolean('Sticky header (stickyHeader)', false),
 });
 
-const readmeURL = 'https://goo.gl/dq6CEK';
+const readmeURL = 'https://bit.ly/2Z9PGsC';
 
 /* eslint-disable global-require */
 storiesOf(components('DataTable'), module)
