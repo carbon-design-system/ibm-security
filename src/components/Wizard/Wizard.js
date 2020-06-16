@@ -219,7 +219,6 @@ class Wizard extends Component {
             disabled={!valid}
             handleItemSelect={this.handleItemSelect}
             link={false}
-            title={title}
           >
             {title}
           </NavItem>
@@ -232,7 +231,6 @@ class Wizard extends Component {
             key={title}
             disabled={index > currentStep}
             label={title}
-            title={title}
           />
         ))}
       </ProgressIndicator>
