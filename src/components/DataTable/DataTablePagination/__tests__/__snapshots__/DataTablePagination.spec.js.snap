@@ -455,10 +455,10 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
               <svg
                 aria-hidden="true"
                 class="bx--select__arrow"
+                fill="currentColor"
                 focusable="false"
                 height="16"
                 preserveAspectRatio="xMidYMid meet"
-                style="will-change:transform"
                 viewBox="0 0 16 16"
                 width="16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -525,10 +525,10 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
               <svg
                 aria-hidden="true"
                 class="bx--select__arrow"
+                fill="currentColor"
                 focusable="false"
                 height="16"
                 preserveAspectRatio="xMidYMid meet"
-                style="will-change:transform"
                 viewBox="0 0 16 16"
                 width="16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -554,10 +554,10 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
       >
         <svg
           aria-hidden="true"
+          fill="currentColor"
           focusable="false"
           height="24"
           preserveAspectRatio="xMidYMid meet"
-          style="will-change:transform"
           viewBox="0 0 32 32"
           width="24"
           xmlns="http://www.w3.org/2000/svg"
@@ -574,10 +574,10 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
       >
         <svg
           aria-hidden="true"
+          fill="currentColor"
           focusable="false"
           height="24"
           preserveAspectRatio="xMidYMid meet"
-          style="will-change:transform"
           viewBox="0 0 32 32"
           width="24"
           xmlns="http://www.w3.org/2000/svg"
