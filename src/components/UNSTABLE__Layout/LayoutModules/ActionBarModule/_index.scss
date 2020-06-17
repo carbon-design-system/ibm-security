@@ -1,0 +1,21 @@
+////
+/// Action bar module.
+/// @group action-bar-module
+/// @copyright IBM Security 2020
+////
+
+@import '@carbon/layout/scss/spacing';
+
+@import '../../../Component/mixins';
+@import '../variables';
+
+@include security--component($name: #{$layout-modules__name}--action-bar) {
+  display: flex;
+  padding-top: $carbon--spacing-01;
+  padding-bottom: $carbon--spacing-03;
+  align-items: center;
+
+  &__actions {
+    margin-left: auto;
+  }
+}

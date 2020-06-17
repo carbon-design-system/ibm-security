@@ -1,0 +1,58 @@
+////
+/// Layout.
+/// @group layout
+/// @copyright IBM Security 2020
+////
+
+@import '../../globals/theme/variables';
+@import '../Component/mixins';
+
+@import 'variables';
+
+@import 'LayoutModules/index';
+
+/// Spacing tokens.
+/// @type Map<String, Number>
+$security--spacing-tokens-map: (
+  layout-00: 0,
+  spacing-00: 0,
+);
+
+@each $token, $value in $security--theme {
+  @if type-of($value: $value) == 'number' {
+    $security--spacing-tokens-map: map-merge(
+      $map1: $security--spacing-tokens-map,
+      $map2: (
+        $token: $value,
+      ),
+    );
+  }
+}
+
+@include security--component($name: $layout__name) {
+  @each $token, $value in $security--spacing-tokens-map {
+    &--#{$token} {
+      @each $selector, $property in (m: margin, p: padding) {
+        &--#{$selector} {
+          #{$property}: $value;
+
+          &b {
+            #{$property}-bottom: $value;
+          }
+
+          &l {
+            #{$property}-left: $value;
+          }
+
+          &r {
+            #{$property}-right: $value;
+          }
+
+          &t {
+            #{$property}-top: $value;
+          }
+        }
+      }
+    }
+  }
+}

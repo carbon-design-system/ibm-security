@@ -88,9 +88,11 @@ Also refer to http://${component.library}.carbondesignsystem.com/?path=/story/${
  * @param {string} title The title to apply to stories.
  * @param {string} description The information to apply to individual stories.
  * @param {Object<string, Object>} parameters Additional parameters to apply to the stories.
- * @returns {Object<string, string>} The configuration containing information to apply.
+ * @param {Array.<function>} decorators The decorators to apply to individual stories.
+ * @returns {Object.<string, string>} The configuration containing information to apply.
  */
-const meta = (title, description, parameters) => ({
+const meta = (title, description, parameters, decorators) => ({
+  decorators,
   parameters: { ...info(description), ...parameters },
   title,
 });

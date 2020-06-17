@@ -1,0 +1,28 @@
+////
+/// Card module.
+/// @group card-module
+/// @copyright IBM Security 2020
+////
+
+@import '@carbon/layout/scss/spacing';
+
+@import '../../../Component/mixins';
+
+@import '../BackgroundModule/mixins';
+@import '../variables';
+
+@include security--component($name: #{$layout-modules__name}--card) {
+  /// Spacing.
+  /// @type Length
+  $layout--card__spacing: $carbon--layout-03;
+
+  &__card {
+    @include layout__modules--background;
+
+    margin-bottom: $layout--card__spacing;
+  }
+
+  &__action {
+    margin-bottom: $layout--card__spacing;
+  }
+}
