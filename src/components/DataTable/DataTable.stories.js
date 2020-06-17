@@ -25,7 +25,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '../../..';
+} from '../..';
 
 const story = 'datatable';
 
