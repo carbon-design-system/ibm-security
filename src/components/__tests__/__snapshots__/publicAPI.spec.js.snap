@@ -2334,6 +2334,131 @@ Map {
     },
   },
   "Decorator" => Object {
+    "Critical": Object {
+      "defaultProps": Object {
+        "className": "",
+        "size": 16,
+      },
+      "displayName": "Decorator.Critical",
+      "propTypes": Object {
+        "className": Object {
+          "type": "string",
+        },
+        "description": Object {
+          "isRequired": true,
+          "type": "string",
+        },
+        "size": Object {
+          "args": Array [
+            Array [
+              12,
+              16,
+            ],
+          ],
+          "type": "oneOf",
+        },
+      },
+    },
+    "High": Object {
+      "defaultProps": Object {
+        "className": "",
+        "size": 16,
+      },
+      "displayName": "Decorator.High",
+      "propTypes": Object {
+        "className": Object {
+          "type": "string",
+        },
+        "description": Object {
+          "isRequired": true,
+          "type": "string",
+        },
+        "size": Object {
+          "args": Array [
+            Array [
+              12,
+              16,
+            ],
+          ],
+          "type": "oneOf",
+        },
+      },
+    },
+    "Low": Object {
+      "defaultProps": Object {
+        "className": "",
+        "size": 16,
+      },
+      "displayName": "Decorator.Low",
+      "propTypes": Object {
+        "className": Object {
+          "type": "string",
+        },
+        "description": Object {
+          "isRequired": true,
+          "type": "string",
+        },
+        "size": Object {
+          "args": Array [
+            Array [
+              12,
+              16,
+            ],
+          ],
+          "type": "oneOf",
+        },
+      },
+    },
+    "Medium": Object {
+      "defaultProps": Object {
+        "className": "",
+        "size": 16,
+      },
+      "displayName": "Decorator.Medium",
+      "propTypes": Object {
+        "className": Object {
+          "type": "string",
+        },
+        "description": Object {
+          "isRequired": true,
+          "type": "string",
+        },
+        "size": Object {
+          "args": Array [
+            Array [
+              12,
+              16,
+            ],
+          ],
+          "type": "oneOf",
+        },
+      },
+    },
+    "Unknown": Object {
+      "defaultProps": Object {
+        "className": "",
+        "size": 16,
+      },
+      "displayName": "Decorator.Unknown",
+      "propTypes": Object {
+        "className": Object {
+          "type": "string",
+        },
+        "description": Object {
+          "isRequired": true,
+          "type": "string",
+        },
+        "size": Object {
+          "args": Array [
+            Array [
+              12,
+              16,
+            ],
+          ],
+          "type": "oneOf",
+        },
+      },
+    },
     "defaultProps": Object {
       "active": false,
       "className": "",
@@ -6181,6 +6306,7 @@ Map {
       "hasScrollingContent": false,
       "isOpen": true,
       "labels": Object {},
+      "onClose": [Function],
       "primaryButton": undefined,
       "renderFooter": null,
       "secondaryButton": undefined,
@@ -6251,6 +6377,9 @@ Map {
           },
         ],
         "type": "objectOf",
+      },
+      "onClose": Object {
+        "type": "func",
       },
       "primaryButton": [Function],
       "renderFooter": Object {
@@ -6362,6 +6491,7 @@ Map {
       "focusTrap": true,
       "hasOverlay": true,
       "initialFocus": null,
+      "onOverlayClick": undefined,
       "rootNode": <body />,
       "stopPropagation": false,
       "stopPropagationEvents": undefined,
@@ -6388,6 +6518,9 @@ Map {
           ],
         ],
         "type": "oneOfType",
+      },
+      "onOverlayClick": Object {
+        "type": "func",
       },
       "rootNode": Object {
         "args": Array [
@@ -6955,6 +7088,9 @@ Map {
           },
         ],
         "type": "arrayOf",
+      },
+      "sortItems": Object {
+        "type": "func",
       },
       "submitLabel": Object {
         "isRequired": true,

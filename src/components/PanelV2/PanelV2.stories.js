@@ -16,7 +16,7 @@ import Filter20 from '@carbon/icons-react/lib/filter/20';
 import { spacing04, spacing05 } from '@carbon/layout/lib';
 import { styles } from '@carbon/type/lib';
 
-import { disableCentered, patterns } from '../../../.storybook';
+import { disableCenteredStories, patterns } from '../../../.storybook';
 
 import { header, profile, toolbar } from '../Shell/_mocks_';
 import { labels } from './_mocks_';
@@ -65,7 +65,7 @@ const content = (
   </p>
 );
 
-disableCentered(storiesOf(patterns('PanelV2'), module))
+disableCenteredStories(storiesOf(patterns('PanelV2'), module))
   .addParameters({
     info: {
       // Reposition info button so that panel footer isn't covered:
@@ -99,7 +99,7 @@ disableCentered(storiesOf(patterns('PanelV2'), module))
         closeSecond = () => {
           this.setState({ secondOpen: false });
         };
-        closethird = () => {
+        closeThird = () => {
           this.setState({ thirdOpen: false });
         };
         openFirst = () => {
@@ -130,9 +130,9 @@ disableCentered(storiesOf(patterns('PanelV2'), module))
               <PanelV2
                 key="p1"
                 isOpen={this.state.firstOpen}
+                onClose={this.closeFirst}
                 {...props()}
                 closeButton={{
-                  onClick: this.closeFirst,
                   label: text('closeButton.label', closeButtonLabel),
                 }}
                 primaryButton={{
@@ -168,9 +168,9 @@ disableCentered(storiesOf(patterns('PanelV2'), module))
               <PanelV2
                 key="p2"
                 isOpen={this.state.secondOpen}
+                onClose={this.closeSecond}
                 {...props()}
                 closeButton={{
-                  onClick: this.closeSecond,
                   label: text('closeButton.label', closeButtonLabel),
                 }}
                 renderFooter={() => (
@@ -221,9 +221,9 @@ disableCentered(storiesOf(patterns('PanelV2'), module))
               <PanelV2
                 key="p3"
                 isOpen={this.state.thirdOpen}
+                onClose={this.closeThird}
                 {...props()}
                 closeButton={{
-                  onClick: this.closethird,
                   label: closeButtonLabel,
                 }}
               >
