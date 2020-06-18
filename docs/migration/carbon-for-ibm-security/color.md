@@ -6,14 +6,23 @@ Also refer to [migration in Carbon](https://github.com/carbon-design-system/carb
 
 ### Imports
 
-| `1.x`                                     | `2.x`                                                      |
+| `carbon-addons-security`                  | `@carbon/ibm-security`                                     |
 | ----------------------------------------- | ---------------------------------------------------------- |
 | `import { white } from '@ibmduo/colors';` | `import { white } from '@carbon/colors';`                  |
 | `@import '@ibmduo/colors/**/*';`          | `@import '@carbon/ibm-security/scss/globals/color/index';` |
 
 ### Variables
 
-| `1.x`                                      | `2.x`                           |
+| `carbon-addons-security`                   | `@carbon/ibm-security`          |
 | ------------------------------------------ | ------------------------------- |
 | `$ibm-colors__white` / `$ibm-color__white` | `$carbon--white-0` / `$white-0` |
-| `$security-color__gray-90--hover`          | `$hover-ui`                     |
+
+### Feature flags
+
+If using `@carbon/grid`, you can disable the legacy grid output using a feature flag by writing the following Sass code before importing:
+
+```scss
+$security--feature-flags: (
+  css-gridish: false,
+);
+```
