@@ -8,7 +8,7 @@ Also refer to [migration in Carbon](https://github.com/carbon-design-system/carb
 
 ### Imports
 
-| `1.x`                          | `2.x`                                                     |
+| `carbon-addons-security`       | `@carbon/ibm-security`                                    |
 | ------------------------------ | --------------------------------------------------------- |
 | `@import '@ibmduo/grid/**/*';` | `@import '@carbon/ibm-security/scss/globals/grid/index';` |
 
