@@ -8,7 +8,7 @@ const { sync } = require('glob');
 const { compile } = require('handlebars');
 const { basename, parse, resolve } = require('path');
 
-// The year to use for copyright information.
+// The year to use for templating copyright information.
 const year = new Date().getFullYear();
 
 // Internal directory.
@@ -25,6 +25,7 @@ const storiesDirectory = `${internalDirectory}/stories`;
  */
 const getStories = (path, suffix) =>
   sync(resolve(__dirname, '..', '..', path, '**', `*${suffix}.*`), {
+    // Ignore the generated stories directory to ensure these are always up-to-date.
     ignore: `**/${storiesDirectory}/*`,
   }).map(path => ({
     name: parse(path).name.replace(suffix, ''),
@@ -39,15 +40,14 @@ const internalStories = getStories(internalDirectory, internalSuffix);
 
 // Stories from dependencies.
 getStories('node_modules/carbon-components-react/lib/components', '-story')
-  .filter(
-    ({ name }) =>
-      // Filter out stories from dependencies that already have examples in `@carbon/ibm-security`.
-
-      !internalStories.find(story => story.name === name)
-  )
+  // Filter out stories from dependencies that already have examples in `@carbon/ibm-security`.
+  .filter(({ name }) => !internalStories.find(story => story.name === name))
 
   // Create any stories that can be displayed and exclude any that are missing resources from dependencies, for example - https://github.com/carbon-design-system/carbon/blob/master/packages/react/src/components/Grid/Grid-story.js#L1
   .forEach(({ name, path }) => {
+    let content = name;
+    let status = 'Success';
+
     try {
       const { dir, name: story } = parse(path);
 
@@ -65,5 +65,10 @@ getStories('node_modules/carbon-components-react/lib/components', '-story')
           year,
         })
       );
-    } catch {}
+    } catch ({ message, name }) {
+      content = `${content} - ${message}`;
+      status = name;
+    } finally {
+      console.log(`${status}: ${content}`);
+    }
   });
