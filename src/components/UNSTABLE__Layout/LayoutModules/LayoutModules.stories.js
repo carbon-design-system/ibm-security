@@ -55,6 +55,13 @@ import {
 
 import storyDescription from '../stories';
 
+const setDescription = ({ displayName }, url) => ({
+  parameters: {
+    info: `${storyDescription}
+- [Learn more](${url}) about how to use the '${displayName}'`,
+  },
+});
+
 const actionBar = () => (
   <ActionBarModule>
     <Tag type="gray">Closed</Tag> ID: 12 | Result: Completed
@@ -80,6 +87,11 @@ const actionBar = () => (
   </ActionBarModule>
 );
 
+actionBar.story = setDescription(
+  ActionBarModule,
+  'https://ibm.box.com/s/rn0pt5mov83tbd5k086ee39wgpm18mmq'
+);
+
 const background = () => (
   <BackgroundModule>
     <Column>BackgroundModule</Column>
@@ -95,6 +107,11 @@ const buttonCluster = () => (
       View activity report
     </Button>
   </ButtonClusterModule>
+);
+
+buttonCluster.story = setDescription(
+  ButtonClusterModule,
+  'https://ibm.box.com/s/medn74frnbw2aatsc1p74ncmrmlr51g3'
 );
 
 const card = () => (
@@ -163,6 +180,11 @@ const card = () => (
   </CardModule>
 );
 
+card.story = setDescription(
+  CardModule,
+  'https://ibm.box.com/s/ery5j69q2a20o788s2f7mnjmoew7k9ka'
+);
+
 const description = () => (
   <DescriptionModule>
     <TitleModule>Summary</TitleModule>
@@ -180,6 +202,11 @@ const description = () => (
     </DescriptionModuleDescription>
     <Link href="#0">View more</Link>
   </DescriptionModule>
+);
+
+description.story = setDescription(
+  DescriptionModule,
+  'https://ibm.box.com/s/xozfswg0kzn0tuv61uvtz59qoduui6mx'
 );
 
 const ICA = () => (
@@ -205,6 +232,11 @@ const ICA = () => (
   </ICAModule>
 );
 
+ICA.story = setDescription(
+  ICAModule,
+  'https://ibm.box.com/s/f0orv16ivr46ukwd6jn0hmuw0slxfj2c'
+);
+
 const pageTab = () => (
   <PageTabModule>
     <PageTabModuleDetails>PageTabModuleDetails</PageTabModuleDetails>
@@ -214,6 +246,11 @@ const pageTab = () => (
       <Tab label="Evidence" />
     </Tabs>
   </PageTabModule>
+);
+
+pageTab.story = setDescription(
+  PageTabModule,
+  'https://ibm.box.com/s/17fg1zm60roe6bhipl85pvtx9mxztnfh'
 );
 
 const title = () => <TitleModule>TitleModule</TitleModule>;
@@ -244,6 +281,11 @@ const titleBar = () => (
   </TitleBarModule>
 );
 
+titleBar.story = setDescription(
+  TitleBarModule,
+  'https://ibm.box.com/s/0wp85w684cnsseqdetezhyhk80aqzjux'
+);
+
 const typeLayout = () => (
   <TypeLayoutModule>
     <TitleModule>TitleModule</TitleModule>
@@ -264,6 +306,11 @@ const typeLayout = () => (
       </TypeLayoutBody>
     </TypeLayout>
   </TypeLayoutModule>
+);
+
+typeLayout.story = setDescription(
+  TypeLayoutModule,
+  'https://ibm.box.com/s/u4idf3g6sqsvj2529lps6q19s1imu8eq'
 );
 
 export default meta(
