@@ -40,7 +40,7 @@ storiesOf(patterns('IconButtonBar'), module).add(
     const actions = [
       {
         className,
-        border: select(
+        divider: select(
           'Icon 1 border (border)',
           ['left', 'right', 'sides'],
           'sides'
@@ -60,7 +60,7 @@ storiesOf(patterns('IconButtonBar'), module).add(
       },
       {
         className,
-        border: select(
+        divider: select(
           'Icon 2 border (border)',
           ['left', 'right', 'sides'],
           'right'

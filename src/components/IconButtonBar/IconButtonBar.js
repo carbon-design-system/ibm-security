@@ -43,7 +43,7 @@ const IconButtonBar = ({
 
   const renderIconButton = action => (
     <>
-      {(action.border === 'left' || action.border === 'sides') && (
+      {(action.divider === 'left' || action.divider === 'sides') && (
         <span className={`${namespace}__divider`} aria-hidden>
           <span className={`${namespace}__divider__inner`} aria-hidden />
         </span>
@@ -55,7 +55,7 @@ const IconButtonBar = ({
         tooltip={tooltip}
         tooltipDirection={iconTooltipDirection}
       />
-      {(action.border === 'right' || action.border === 'sides') && (
+      {(action.divider === 'right' || action.divider === 'sides') && (
         <span className={`${namespace}__divider`} aria-hidden>
           <span className={`${namespace}__divider__inner`} aria-hidden />
         </span>
@@ -119,7 +119,7 @@ IconButtonBar.propTypes = {
   actions: PropTypes.arrayOf(
     PropTypes.shape({
       ...propTypes,
-      border: PropTypes.oneOf(['left', 'right', 'sides']),
+      divider: PropTypes.oneOf(['left', 'right', 'sides']),
     })
   ),
 
