@@ -14,7 +14,7 @@ import { OverflowMenu, OverflowMenuItem } from '../..';
 import IconButton from '../IconButton';
 import { getComponentNamespace } from '../../globals/namespace';
 
-const namespace = getComponentNamespace('icon-button-bar');
+export const namespace = getComponentNamespace('icon-button-bar');
 const { propTypes } = IconButton;
 
 const IconButtonBar = ({
@@ -41,8 +41,8 @@ const IconButtonBar = ({
     }
   );
 
-  const renderIconButton = action => (
-    <>
+  const renderIconButton = (action, index) => (
+    <Fragment key={action.label || `${namespace}__button--icon--${index}`}>
       {(action.divider === 'left' || action.divider === 'sides') && (
         <span className={`${namespace}__divider`} aria-hidden>
           <span className={`${namespace}__divider__inner`} aria-hidden />
@@ -50,7 +50,6 @@ const IconButtonBar = ({
       )}
       <IconButton
         {...action}
-        key={action.label || `${namespace}__button--icon`}
         size={size}
         tooltip={tooltip}
         tooltipDirection={iconTooltipDirection}
@@ -60,7 +59,7 @@ const IconButtonBar = ({
           <span className={`${namespace}__divider__inner`} aria-hidden />
         </span>
       )}
-    </>
+    </Fragment>
   );
 
   const renderMenuItems = () => {

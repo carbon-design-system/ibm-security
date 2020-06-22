@@ -4,12 +4,21 @@ exports[`IconButtonBar renders the 'lg' variation 1`] = `
 <div
   className="security--icon-button-bar security--icon-button-bar--lg"
 >
+  <span
+    aria-hidden={true}
+    className="security--icon-button-bar__divider"
+  >
+    <span
+      aria-hidden={true}
+      className="security--icon-button-bar__divider__inner"
+    />
+  </span>
   <IconButton
     className="class"
     disabled={false}
+    divider="left"
     iconClassName="class"
     iconSize={20}
-    key="Label 1"
     label="Label 1"
     onClick={[Function]}
     path={null}
@@ -27,9 +36,9 @@ exports[`IconButtonBar renders the 'lg' variation 1`] = `
   <IconButton
     className="class"
     disabled={false}
+    divider="right"
     iconClassName="class"
     iconSize={20}
-    key="Label 2"
     label="Label 2"
     onClick={[Function]}
     path={null}
@@ -44,6 +53,15 @@ exports[`IconButtonBar renders the 'lg' variation 1`] = `
     tooltip={true}
     tooltipDirection="top"
   />
+  <span
+    aria-hidden={true}
+    className="security--icon-button-bar__divider"
+  >
+    <span
+      aria-hidden={true}
+      className="security--icon-button-bar__divider__inner"
+    />
+  </span>
   <ForwardRef(OverflowMenu)
     className="security--icon-button-bar__overflow-menu"
     direction="top"
@@ -84,12 +102,21 @@ exports[`IconButtonBar renders the 'md' variation 1`] = `
 <div
   className="security--icon-button-bar security--icon-button-bar--md"
 >
+  <span
+    aria-hidden={true}
+    className="security--icon-button-bar__divider"
+  >
+    <span
+      aria-hidden={true}
+      className="security--icon-button-bar__divider__inner"
+    />
+  </span>
   <IconButton
     className="class"
     disabled={false}
+    divider="left"
     iconClassName="class"
     iconSize={20}
-    key="Label 1"
     label="Label 1"
     onClick={[Function]}
     path={null}
@@ -107,9 +134,9 @@ exports[`IconButtonBar renders the 'md' variation 1`] = `
   <IconButton
     className="class"
     disabled={false}
+    divider="right"
     iconClassName="class"
     iconSize={20}
-    key="Label 2"
     label="Label 2"
     onClick={[Function]}
     path={null}
@@ -124,6 +151,15 @@ exports[`IconButtonBar renders the 'md' variation 1`] = `
     tooltip={true}
     tooltipDirection="top"
   />
+  <span
+    aria-hidden={true}
+    className="security--icon-button-bar__divider"
+  >
+    <span
+      aria-hidden={true}
+      className="security--icon-button-bar__divider__inner"
+    />
+  </span>
   <ForwardRef(OverflowMenu)
     className="security--icon-button-bar__overflow-menu"
     direction="top"
@@ -164,12 +200,21 @@ exports[`IconButtonBar renders the 'sm' variation 1`] = `
 <div
   className="security--icon-button-bar security--icon-button-bar--sm"
 >
+  <span
+    aria-hidden={true}
+    className="security--icon-button-bar__divider"
+  >
+    <span
+      aria-hidden={true}
+      className="security--icon-button-bar__divider__inner"
+    />
+  </span>
   <IconButton
     className="class"
     disabled={false}
+    divider="left"
     iconClassName="class"
     iconSize={20}
-    key="Label 1"
     label="Label 1"
     onClick={[Function]}
     path={null}
@@ -187,9 +232,9 @@ exports[`IconButtonBar renders the 'sm' variation 1`] = `
   <IconButton
     className="class"
     disabled={false}
+    divider="right"
     iconClassName="class"
     iconSize={20}
-    key="Label 2"
     label="Label 2"
     onClick={[Function]}
     path={null}
@@ -204,6 +249,15 @@ exports[`IconButtonBar renders the 'sm' variation 1`] = `
     tooltip={true}
     tooltipDirection="top"
   />
+  <span
+    aria-hidden={true}
+    className="security--icon-button-bar__divider"
+  >
+    <span
+      aria-hidden={true}
+      className="security--icon-button-bar__divider__inner"
+    />
+  </span>
   <ForwardRef(OverflowMenu)
     className="security--icon-button-bar__overflow-menu"
     direction="top"
@@ -244,12 +298,21 @@ exports[`IconButtonBar renders the 'xl' variation 1`] = `
 <div
   className="security--icon-button-bar security--icon-button-bar--xl"
 >
+  <span
+    aria-hidden={true}
+    className="security--icon-button-bar__divider"
+  >
+    <span
+      aria-hidden={true}
+      className="security--icon-button-bar__divider__inner"
+    />
+  </span>
   <IconButton
     className="class"
     disabled={false}
+    divider="left"
     iconClassName="class"
     iconSize={20}
-    key="Label 1"
     label="Label 1"
     onClick={[Function]}
     path={null}
@@ -267,9 +330,9 @@ exports[`IconButtonBar renders the 'xl' variation 1`] = `
   <IconButton
     className="class"
     disabled={false}
+    divider="right"
     iconClassName="class"
     iconSize={20}
-    key="Label 2"
     label="Label 2"
     onClick={[Function]}
     path={null}
@@ -284,6 +347,15 @@ exports[`IconButtonBar renders the 'xl' variation 1`] = `
     tooltip={true}
     tooltipDirection="top"
   />
+  <span
+    aria-hidden={true}
+    className="security--icon-button-bar__divider"
+  >
+    <span
+      aria-hidden={true}
+      className="security--icon-button-bar__divider__inner"
+    />
+  </span>
   <ForwardRef(OverflowMenu)
     className="security--icon-button-bar__overflow-menu"
     direction="top"
@@ -384,12 +456,21 @@ exports[`IconButtonBar renders the length of '2' variation 1`] = `
 <div
   className="security--icon-button-bar security--icon-button-bar--lg"
 >
+  <span
+    aria-hidden={true}
+    className="security--icon-button-bar__divider"
+  >
+    <span
+      aria-hidden={true}
+      className="security--icon-button-bar__divider__inner"
+    />
+  </span>
   <IconButton
     className="class"
     disabled={false}
+    divider="left"
     iconClassName="class"
     iconSize={20}
-    key="Label 1"
     label="Label 1"
     onClick={[Function]}
     path={null}
@@ -454,12 +535,21 @@ exports[`IconButtonBar renders the length of '3' variation 1`] = `
 <div
   className="security--icon-button-bar security--icon-button-bar--lg"
 >
+  <span
+    aria-hidden={true}
+    className="security--icon-button-bar__divider"
+  >
+    <span
+      aria-hidden={true}
+      className="security--icon-button-bar__divider__inner"
+    />
+  </span>
   <IconButton
     className="class"
     disabled={false}
+    divider="left"
     iconClassName="class"
     iconSize={20}
-    key="Label 1"
     label="Label 1"
     onClick={[Function]}
     path={null}
@@ -477,9 +567,9 @@ exports[`IconButtonBar renders the length of '3' variation 1`] = `
   <IconButton
     className="class"
     disabled={false}
+    divider="right"
     iconClassName="class"
     iconSize={20}
-    key="Label 2"
     label="Label 2"
     onClick={[Function]}
     path={null}
@@ -494,6 +584,15 @@ exports[`IconButtonBar renders the length of '3' variation 1`] = `
     tooltip={true}
     tooltipDirection="top"
   />
+  <span
+    aria-hidden={true}
+    className="security--icon-button-bar__divider"
+  >
+    <span
+      aria-hidden={true}
+      className="security--icon-button-bar__divider__inner"
+    />
+  </span>
   <ForwardRef(OverflowMenu)
     className="security--icon-button-bar__overflow-menu"
     direction="top"
@@ -534,12 +633,21 @@ exports[`IconButtonBar renders the length of '4' variation 1`] = `
 <div
   className="security--icon-button-bar security--icon-button-bar--lg"
 >
+  <span
+    aria-hidden={true}
+    className="security--icon-button-bar__divider"
+  >
+    <span
+      aria-hidden={true}
+      className="security--icon-button-bar__divider__inner"
+    />
+  </span>
   <IconButton
     className="class"
     disabled={false}
+    divider="left"
     iconClassName="class"
     iconSize={20}
-    key="Label 1"
     label="Label 1"
     onClick={[Function]}
     path={null}
@@ -557,9 +665,9 @@ exports[`IconButtonBar renders the length of '4' variation 1`] = `
   <IconButton
     className="class"
     disabled={false}
+    divider="right"
     iconClassName="class"
     iconSize={20}
-    key="Label 2"
     label="Label 2"
     onClick={[Function]}
     path={null}
@@ -574,12 +682,30 @@ exports[`IconButtonBar renders the length of '4' variation 1`] = `
     tooltip={true}
     tooltipDirection="top"
   />
+  <span
+    aria-hidden={true}
+    className="security--icon-button-bar__divider"
+  >
+    <span
+      aria-hidden={true}
+      className="security--icon-button-bar__divider__inner"
+    />
+  </span>
+  <span
+    aria-hidden={true}
+    className="security--icon-button-bar__divider"
+  >
+    <span
+      aria-hidden={true}
+      className="security--icon-button-bar__divider__inner"
+    />
+  </span>
   <IconButton
     className="class"
     disabled={false}
+    divider="sides"
     iconClassName="class"
     iconSize={20}
-    key="Label 3"
     label="Label 3"
     onClick={[Function]}
     path={null}
@@ -594,12 +720,20 @@ exports[`IconButtonBar renders the length of '4' variation 1`] = `
     tooltip={true}
     tooltipDirection="top"
   />
+  <span
+    aria-hidden={true}
+    className="security--icon-button-bar__divider"
+  >
+    <span
+      aria-hidden={true}
+      className="security--icon-button-bar__divider__inner"
+    />
+  </span>
   <IconButton
     className="class"
     disabled={false}
     iconClassName="class"
     iconSize={20}
-    key="Label 4"
     label="Label 4"
     onClick={[Function]}
     path={null}
@@ -621,12 +755,21 @@ exports[`IconButtonBar renders the length of '5' variation 1`] = `
 <div
   className="security--icon-button-bar security--icon-button-bar--lg"
 >
+  <span
+    aria-hidden={true}
+    className="security--icon-button-bar__divider"
+  >
+    <span
+      aria-hidden={true}
+      className="security--icon-button-bar__divider__inner"
+    />
+  </span>
   <IconButton
     className="class"
     disabled={false}
+    divider="left"
     iconClassName="class"
     iconSize={20}
-    key="Label 1"
     label="Label 1"
     onClick={[Function]}
     path={null}
@@ -644,9 +787,9 @@ exports[`IconButtonBar renders the length of '5' variation 1`] = `
   <IconButton
     className="class"
     disabled={false}
+    divider="right"
     iconClassName="class"
     iconSize={20}
-    key="Label 2"
     label="Label 2"
     onClick={[Function]}
     path={null}
@@ -661,12 +804,30 @@ exports[`IconButtonBar renders the length of '5' variation 1`] = `
     tooltip={true}
     tooltipDirection="top"
   />
+  <span
+    aria-hidden={true}
+    className="security--icon-button-bar__divider"
+  >
+    <span
+      aria-hidden={true}
+      className="security--icon-button-bar__divider__inner"
+    />
+  </span>
+  <span
+    aria-hidden={true}
+    className="security--icon-button-bar__divider"
+  >
+    <span
+      aria-hidden={true}
+      className="security--icon-button-bar__divider__inner"
+    />
+  </span>
   <IconButton
     className="class"
     disabled={false}
+    divider="sides"
     iconClassName="class"
     iconSize={20}
-    key="Label 3"
     label="Label 3"
     onClick={[Function]}
     path={null}
@@ -681,12 +842,20 @@ exports[`IconButtonBar renders the length of '5' variation 1`] = `
     tooltip={true}
     tooltipDirection="top"
   />
+  <span
+    aria-hidden={true}
+    className="security--icon-button-bar__divider"
+  >
+    <span
+      aria-hidden={true}
+      className="security--icon-button-bar__divider__inner"
+    />
+  </span>
   <IconButton
     className="class"
     disabled={false}
     iconClassName="class"
     iconSize={20}
-    key="Label 4"
     label="Label 4"
     onClick={[Function]}
     path={null}

@@ -4377,6 +4377,16 @@ Map {
                 "className": Object {
                   "type": "string",
                 },
+                "divider": Object {
+                  "args": Array [
+                    Array [
+                      "left",
+                      "right",
+                      "sides",
+                    ],
+                  ],
+                  "type": "oneOf",
+                },
                 "iconClassName": Object {
                   "type": "string",
                 },
