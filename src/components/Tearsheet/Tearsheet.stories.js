@@ -12,6 +12,8 @@ import { compose, getDisplayName, lifecycle } from 'recompose';
 
 import { patterns } from '../../../.storybook';
 
+import getGuidance from './stories';
+
 import {
   Button,
   CodeSnippet,
@@ -199,7 +201,9 @@ storiesOf(patterns('Tearsheet'), module)
       Basic implementation of the Tearsheet. Using the \`label\` property in a button object will override the value set in \`labels\` prop
       ## Important note about \`focusTrap\`:
       The \`focusTrap\` prop is set to \`false\` in the Storybook so that you can navigate the Storybook UI. This prop is set to \`true\` by default. In most cases, you should not have to change this prop.
-    `,
+
+      ${getGuidance(Tearsheet)}
+      `,
     }
   )
   .add(
@@ -264,7 +268,9 @@ storiesOf(patterns('Tearsheet'), module)
       Tearsheet with loading and dynamic messages. Using the \`label\` property in a button object will override the value set in \`labels\` prop
       ## Important note about \`focusTrap\`:
       The \`focusTrap\` prop is set to \`false\` in the Storybook so that you can navigate the Storybook UI. This prop is set to \`true\` by default. In most cases, you should not have to change this prop.
-    `,
+    
+      ${getGuidance(Tearsheet)}
+      `,
     }
   )
   .add(
@@ -315,7 +321,9 @@ storiesOf(patterns('Tearsheet'), module)
       The \`focusTrap\` prop is set to \`false\` in the Storybook so that you can navigate the Storybook UI. This prop is set to \`true\` by default. In most cases, you should not have to change this prop.
 
       The \`selectorPrimaryFocus\` prop only works when \`focusTrap\` is set to \`true\`. However, in this Storybook environment, \`focusTrap = false\` so that you can navigate the UI. To demonstrate \`selectorPrimaryFocus\` functionality, please open the "Knobs" tab in the Storybook addon's frame and toggle the \`focusTrap\` checkbox. When you are ready to view this component's prop table or navigate to a different component, you will need to click on the \`focusTrap\` checkbox again to disable focus trapping.
-    `,
+    
+      ${getGuidance(Tearsheet)}
+      `,
     }
   )
   .add(
@@ -341,6 +349,8 @@ storiesOf(patterns('Tearsheet'), module)
       The \`focusTrap\` prop is set to \`false\` in the Storybook so that you can navigate the Storybook UI. This prop is set to \`true\` by default. In most cases, you should not have to change this prop.
 
       The \`selectorPrimaryFocus\` prop only works when \`focusTrap\` is set to \`true\`. However, in this Storybook environment, \`focusTrap = false\` so that you can navigate the UI. To demonstrate \`selectorPrimaryFocus\` functionality, please open the "Knobs" tab in the Storybook addon's frame and toggle the \`focusTrap\` checkbox. When you are ready to view this component's prop table or navigate to a different component, you will need to click on the \`focusTrap\` checkbox again to disable focus trapping.
-    `,
+    
+      ${getGuidance(Tearsheet)}
+      `,
     }
   );
