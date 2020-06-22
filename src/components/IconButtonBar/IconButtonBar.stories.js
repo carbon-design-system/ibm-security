@@ -40,6 +40,11 @@ storiesOf(patterns('IconButtonBar'), module).add(
     const actions = [
       {
         className,
+        border: select(
+          'Icon 1 border (border)',
+          ['left', 'right', 'sides'],
+          'sides'
+        ),
         disabled: false,
         iconClassName,
         label: `${label} 1`,
@@ -55,6 +60,11 @@ storiesOf(patterns('IconButtonBar'), module).add(
       },
       {
         className,
+        border: select(
+          'Icon 2 border (border)',
+          ['left', 'right', 'sides'],
+          'right'
+        ),
         disabled: false,
         iconClassName,
         label: `${label} 2`,

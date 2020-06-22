@@ -42,13 +42,25 @@ const IconButtonBar = ({
   );
 
   const renderIconButton = action => (
-    <IconButton
-      {...action}
-      key={action.label || `${namespace}__button--icon`}
-      size={size}
-      tooltip={tooltip}
-      tooltipDirection={iconTooltipDirection}
-    />
+    <>
+      {(action.border === 'left' || action.border === 'sides') && (
+        <span className={`${namespace}__divider`} aria-hidden>
+          <span className={`${namespace}__divider__inner`} aria-hidden />
+        </span>
+      )}
+      <IconButton
+        {...action}
+        key={action.label || `${namespace}__button--icon`}
+        size={size}
+        tooltip={tooltip}
+        tooltipDirection={iconTooltipDirection}
+      />
+      {(action.border === 'right' || action.border === 'sides') && (
+        <span className={`${namespace}__divider`} aria-hidden>
+          <span className={`${namespace}__divider__inner`} aria-hidden />
+        </span>
+      )}
+    </>
   );
 
   const renderMenuItems = () => {
@@ -107,6 +119,7 @@ IconButtonBar.propTypes = {
   actions: PropTypes.arrayOf(
     PropTypes.shape({
       ...propTypes,
+      border: PropTypes.oneOf(['left', 'right', 'sides']),
     })
   ),
 
