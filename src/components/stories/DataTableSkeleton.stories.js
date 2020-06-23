@@ -3,4 +3,4 @@
  * @copyright IBM Security 2020
  */
 
-import 'carbon-components-react/es/components/DataTableSkeleton/DataTableSkeleton-story';
+export DataTableSkeleton from 'carbon-components-react/es/components/DataTableSkeleton/DataTableSkeleton-story';

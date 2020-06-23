@@ -3,4 +3,4 @@
  * @copyright IBM Security 2020
  */
 
-import 'carbon-components-react/es/components/ErrorBoundary/ErrorBoundary-story';
+export ErrorBoundary from 'carbon-components-react/es/components/ErrorBoundary/ErrorBoundary-story';

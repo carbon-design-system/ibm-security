@@ -3,4 +3,4 @@
  * @copyright IBM Security 2020
  */
 
-import 'carbon-components-react/es/components/TooltipDefinition/TooltipDefinition-story';
+export TooltipDefinition from 'carbon-components-react/es/components/TooltipDefinition/TooltipDefinition-story';

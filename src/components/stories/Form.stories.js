@@ -3,4 +3,4 @@
  * @copyright IBM Security 2020
  */
 
-import 'carbon-components-react/es/components/Form/Form-story';
+export Form from 'carbon-components-react/es/components/Form/Form-story';

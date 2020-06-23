@@ -3,4 +3,4 @@
  * @copyright IBM Security 2020
  */
 
-import 'carbon-components-react/es/components/SkeletonPlaceholder/SkeletonPlaceholder-story';
+export SkeletonPlaceholder from 'carbon-components-react/es/components/SkeletonPlaceholder/SkeletonPlaceholder-story';
