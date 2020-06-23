@@ -6,6 +6,7 @@
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React, { Fragment } from 'react';
+import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
 import {
   SummaryCard,
@@ -27,8 +28,7 @@ const summaryCards = [
 
 describe('SummaryCardContainer', () => {
   test('should have no Axe or DAP violations', async () => {
-    const main = document.createElement('main');
-    render(
+    const { container } = renderWithinLandmark(
       <SummaryCardContainer
         render={({ getBatchActionProps, getSelectionProps, summaryCards }) => (
           <Fragment>
@@ -53,20 +53,15 @@ describe('SummaryCardContainer', () => {
           </Fragment>
         )}
         summaryCards={summaryCards}
-      />,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+      />
     );
 
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('SummaryCardContainer');
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('SummaryCardContainer');
   });
 
   test('should have no Axe or DAP violations when cards are selected', async () => {
-    const main = document.createElement('main');
-    const { getByText } = render(
+    const { container, getByText } = render(
       <SummaryCardContainer
         render={({ getBatchActionProps, getSelectionProps, summaryCards }) => (
           <Fragment>
@@ -91,11 +86,7 @@ describe('SummaryCardContainer', () => {
           </Fragment>
         )}
         summaryCards={summaryCards}
-      />,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+      />
     );
 
     // Currently there's no way to load the page
@@ -104,8 +95,8 @@ describe('SummaryCardContainer', () => {
     userEvent.click(getByText(/test select 0/i));
     userEvent.click(getByText(/test select 1/i));
 
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations(
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations(
       'SummaryCardContainer with selected cards'
     );
   });

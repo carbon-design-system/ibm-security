@@ -5,6 +5,7 @@
 
 import { render } from '@testing-library/react';
 import React from 'react';
+import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
 import { LoadingMessage } from '../../../..';
 
@@ -12,47 +13,35 @@ import { carbonPrefix } from '../../../../globals/namespace';
 
 describe('LoadingMessage', () => {
   test('should have no Axe or DAP violations with overlay', async () => {
-    const main = document.createElement('main');
-    render(
+    const { container } = renderWithinLandmark(
       <LoadingMessage active withOverlay>
         test message
-      </LoadingMessage>,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+      </LoadingMessage>
     );
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations(
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations(
       'LoadingMessage with overlay'
     );
   });
 
   test('should have no Axe or DAP violations without overlay', async () => {
-    const main = document.createElement('main');
-    render(
+    const { container } = renderWithinLandmark(
       <LoadingMessage active withOverlay={false}>
         test message
-      </LoadingMessage>,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+      </LoadingMessage>
     );
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations(
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations(
       'LoadingMessage without overlay'
     );
   });
 
   test('should have no Axe or DAP violations when inactive', async () => {
-    const main = document.createElement('main');
-    render(<LoadingMessage active={false}>test message</LoadingMessage>, {
-      // DAP requires a landmark '<main>' in the DOM:
-      container: document.body.appendChild(main),
-    });
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations(
+    const { container } = renderWithinLandmark(
+      <LoadingMessage active={false}>test message</LoadingMessage>
+    );
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations(
       'LoadingMessage when inactive'
     );
   });

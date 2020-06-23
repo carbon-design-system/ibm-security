@@ -5,6 +5,7 @@
 
 import { render } from '@testing-library/react';
 import React from 'react';
+import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import StatusIcon, { namespace, STATUS, SIZE } from '../StatusIcon';
 
@@ -13,26 +14,22 @@ import { carbonPrefix } from '../../../globals/namespace';
 describe('StatusIcon', () => {
   STATUS.forEach(status =>
     test(`should have no Axe or DAP violations when \`status\` is  '${status}'`, async () => {
-      const main = document.createElement('main');
-      render(<StatusIcon status={status} message="test message" />, {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      });
-      await expect(document.body).toHaveNoAxeViolations();
-      await expect(document.body).toHaveNoDAPViolations(
+      const { container } = render(
+        <StatusIcon status={status} message="test message" />
+      );
+      await expect(container).toHaveNoAxeViolations();
+      await expect(container).toHaveNoDAPViolations(
         `StatusIcon with ${status} status`
       );
     })
   );
 
   test('should have no Axe or DAP violations when `status` is  `undefined`', async () => {
-    const main = document.createElement('main');
-    render(<StatusIcon message="test message" />, {
-      // DAP requires a landmark '<main>' in the DOM:
-      container: document.body.appendChild(main),
-    });
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations(
+    const { container } = renderWithinLandmark(
+      <StatusIcon message="test message" />
+    );
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations(
       'StatusIcon with `undefined` status'
     );
   });
