@@ -6,6 +6,7 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 import userEvent from '@testing-library/user-event';
+import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
 import { Decorator } from '../../../..';
 
@@ -13,36 +14,30 @@ import { namespace, icons } from '../constants';
 
 describe('Decorator', () => {
   test('should have no Axe or DAP violations when rendered as a button', async () => {
-    const main = document.createElement('main');
-    render(<Decorator type="IP" value="10.0.0.0" score={0} />, {
-      // DAP requires a landmark '<main>' in the DOM:
-      container: document.body.appendChild(main),
-    });
+    const { container } = renderWithinLandmark(
+      <Decorator type="IP" value="10.0.0.0" score={0} />
+    );
 
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('Decorator as a button');
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('Decorator as a button');
   });
 
   test('should have no Axe or DAP violations when rendered as a link', async () => {
-    const main = document.createElement('main');
-    render(<Decorator type="IP" value="10.0.0.0" score={0} href="#" />, {
-      // DAP requires a landmark '<main>' in the DOM:
-      container: document.body.appendChild(main),
-    });
+    const { container } = renderWithinLandmark(
+      <Decorator type="IP" value="10.0.0.0" score={0} href="#" />
+    );
 
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('Decorator as a link');
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('Decorator as a link');
   });
 
   test('should have no Axe or DAP violations when inert', async () => {
-    const main = document.createElement('main');
-    render(<Decorator type="IP" value="10.0.0.0" score={0} invert />, {
-      // DAP requires a landmark '<main>' in the DOM:
-      container: document.body.appendChild(main),
-    });
+    const { container } = renderWithinLandmark(
+      <Decorator type="IP" value="10.0.0.0" score={0} invert />
+    );
 
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('Decorator as inert');
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('Decorator as inert');
   });
 
   test('should apply a score', () => {
@@ -146,14 +141,12 @@ Object.keys(icons).forEach(icon => {
 
   describe(`Decorator.${formattedName}`, () => {
     test('should have no Axe or DAP violations', async () => {
-      const main = document.createElement('main');
-      render(<Component description={`${formattedName} severity`} />, {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      });
+      const { container } = renderWithinLandmark(
+        <Component description={`${formattedName} severity`} />
+      );
 
-      await expect(document.body).toHaveNoAxeViolations();
-      await expect(document.body).toHaveNoDAPViolations(
+      await expect(container).toHaveNoAxeViolations();
+      await expect(container).toHaveNoDAPViolations(
         `Decorator.${formattedName}`
       );
     });

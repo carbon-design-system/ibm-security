@@ -14,27 +14,25 @@ Use this structure for automated accessibility tests:
 
 ```jsx
 test('should have no Axe or DAP violations', async () => {
-  const main = document.createElement('main');
-  render(<Component />, {
-    // DAP requires a landmark '<main>' in the DOM:
-    container: document.body.appendChild(main),
-  });
+  const { container } = render(<Component />);
 
-  await expect(document.body).toHaveNoAxeViolations();
-  await expect(document.body).toHaveNoDAPViolations('ComponentName');
+  await expect(container).toHaveNoAxeViolations();
+  await expect(container).toHaveNoDAPViolations('ComponentName');
 });
 
 test('should have no Axe or DAP violations with component variation', async () => {
-  const main = document.createElement('main');
-  render(<Component variationProp={value} />, {
-    // DAP requires a landmark '<main>' in the DOM:
-    container: document.body.appendChild(main),
-  });
+  const { container } = render(<Component variationProp={value} />);
 
-  await expect(document.body).toHaveNoAxeViolations();
-  await expect(document.body).toHaveNoDAPViolations(
-    'ComponentName with variation'
-  );
+  await expect(container).toHaveNoAxeViolations();
+  await expect(container).toHaveNoDAPViolations('ComponentName with variation');
+});
+
+test('should have no Axe or DAP violations with component variation that should be wrapped in a landmark node', async () => {
+  // `renderWithinLandmark` can be used to wrap a component in a `main` node:
+  const { container } = renderWithinLandmark(<Component />);
+
+  await expect(container).toHaveNoAxeViolations();
+  await expect(container).toHaveNoDAPViolations('ComponentName');
 });
 ```
 
@@ -45,7 +43,7 @@ test('should have no Axe or DAP violations with component variation', async () =
 
 #### DAP requirements
 
-- DAP requires that components be rendered inside a valid landmark element, which is why the `container` is a `main` node. This extra step may not be required if the component is already wrapped in a `main` or another significant HTML landmark element.
+- DAP requires that components be rendered inside a valid landmark element. Use the `renderWithinLandmark` helper to wrap a component in a landmark `main` node.
 - DAP requires a unique id per test within a given component. (Hence, "ComponentName" and "ComponentName with variation")
 
 ## User events

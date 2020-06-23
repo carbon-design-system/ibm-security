@@ -5,21 +5,17 @@
 
 import React from 'react';
 import { render } from '@testing-library/react';
+import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
 import FilterPanelGroup from '../FilterPanelGroup';
 
 describe('FilterPanelGroup', () => {
   test('should have no Axe or DAP violations', async () => {
-    const main = document.createElement('main');
-    render(
-      <FilterPanelGroup heading="test filter group" title="test title" />,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+    const { container } = renderWithinLandmark(
+      <FilterPanelGroup heading="test filter group" title="test title" />
     );
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('FilterPanelGroup');
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('FilterPanelGroup');
   });
 
   test('renders with a title attribute', () => {

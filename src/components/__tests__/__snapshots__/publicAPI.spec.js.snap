@@ -2008,9 +2008,6 @@ Map {
       "itemText": Object {
         "type": "func",
       },
-      "itemsPerPageFollowsText": Object {
-        "type": "string",
-      },
       "itemsPerPageText": Object {
         "type": "string",
       },
