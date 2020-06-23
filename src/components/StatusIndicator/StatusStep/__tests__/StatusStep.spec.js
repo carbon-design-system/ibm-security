@@ -5,6 +5,7 @@
 
 import { render } from '@testing-library/react';
 import React from 'react';
+import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
 import { StatusStep } from '../../../..';
 
@@ -13,8 +14,7 @@ import { STATUS } from '../StatusStep';
 describe('StatusStep', () => {
   Object.values(STATUS).forEach(status =>
     test(`should have no Axe or DAP violations when \`status\` is  '${status}'`, async () => {
-      const main = document.createElement('main');
-      render(
+      const { container } = renderWithinLandmark(
         <ul>
           <StatusStep
             label="test-label"
@@ -22,14 +22,10 @@ describe('StatusStep', () => {
             errorMsg="test error"
             description="test description"
           />
-        </ul>,
-        {
-          // DAP requires a landmark '<main>' in the DOM:
-          container: document.body.appendChild(main),
-        }
+        </ul>
       );
-      await expect(document.body).toHaveNoAxeViolations();
-      await expect(document.body).toHaveNoDAPViolations(
+      await expect(container).toHaveNoAxeViolations();
+      await expect(container).toHaveNoDAPViolations(
         `StatusStep with ${status} status`
       );
     })
