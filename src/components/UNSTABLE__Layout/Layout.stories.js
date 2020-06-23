@@ -647,7 +647,7 @@ const detail = () => (
 );
 
 export default meta(
-  patterns('UNSTABLE Layout'),
+  patterns('UNSTABLE Layout Examples'),
   description,
   disableCentered(),
   [
