@@ -1,7 +1,7 @@
 ////
 /// Summary card mixins.
 /// @group summary-card
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -100,6 +100,7 @@
     display: flex;
     background-color: $ui-01;
     border-top: 1px solid $ui-02;
+    z-index: 0;
   }
 
   &__select {
