@@ -5,13 +5,13 @@
 
 import { render, fireEvent } from '@testing-library/react';
 import React from 'react';
+import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { Portal } from '../../..';
 
 describe('Portal', () => {
   test('should have no Axe or DAP violations with overlay', async () => {
-    const main = document.createElement('main');
-    render(
+    const { container } = renderWithinLandmark(
       <div>
         <section>
           <button>test button outside portal</button>
@@ -21,19 +21,14 @@ describe('Portal', () => {
             <button>test button inside portal</button>
           </section>
         </Portal>
-      </div>,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+      </div>
     );
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('Portal with overlay');
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('Portal with overlay');
   });
 
   test('should have no Axe or DAP violations without overlay', async () => {
-    const main = document.createElement('main');
-    render(
+    const { container } = renderWithinLandmark(
       <div>
         <section>
           <button>test button outside portal</button>
@@ -43,14 +38,10 @@ describe('Portal', () => {
             <button>test button inside portal</button>
           </section>
         </Portal>
-      </div>,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+      </div>
     );
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('Portal without overlay');
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('Portal without overlay');
   });
 
   test('should remove node from DOM when it is unmounted', () => {

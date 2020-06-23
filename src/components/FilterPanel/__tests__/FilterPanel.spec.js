@@ -5,19 +5,18 @@
 
 import React from 'react';
 import { render } from '@testing-library/react';
+import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import FilterPanel from '..';
 import * as mockProps from '../_mocks_';
 
 describe('FilterPanel', () => {
   test('should have no Axe or DAP violations', async () => {
-    const main = document.createElement('main');
-    render(<FilterPanel title="test title" />, {
-      // DAP requires a landmark '<main>' in the DOM:
-      container: document.body.appendChild(main),
-    });
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('FilterPanel');
+    const { container } = renderWithinLandmark(
+      <FilterPanel title="test title" />
+    );
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('FilterPanel');
   });
 
   test('renders without a title or content by default', () => {

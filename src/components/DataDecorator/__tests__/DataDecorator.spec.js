@@ -6,6 +6,7 @@
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
+import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { Button, DataDecorator } from '../../..';
 
@@ -13,31 +14,24 @@ import { namespace as panelNamespace } from '../../PanelV2/PanelV2';
 
 describe('DataDecorator', () => {
   test('should have no Axe or DAP violations', async () => {
-    const main = document.createElement('main');
-    render(<DataDecorator type="IP" value="10.0.0.0" score={0} href="#" />, {
-      // DAP requires a landmark '<main>' in the DOM:
-      container: document.body.appendChild(main),
-    });
+    const { container } = renderWithinLandmark(
+      <DataDecorator type="IP" value="10.0.0.0" score={0} href="#" />
+    );
 
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('DataDecorator');
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('DataDecorator');
   });
 
   test('should have no Axe or DAP violations with an open panel', async () => {
-    const main = document.createElement('main');
-    const { getByText } = render(
-      <DataDecorator type="IP" value="10.0.0.0" score={0} href="#" />,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+    const { container, getByText } = renderWithinLandmark(
+      <DataDecorator type="IP" value="10.0.0.0" score={0} href="#" />
     );
 
     // Click on the data decorator to open the connected panel:
     userEvent.click(getByText(/10.0.0.0/i).closest('button'));
 
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations(
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations(
       'DataDecorator with open panel'
     );
   });
