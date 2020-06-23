@@ -35,13 +35,13 @@ import { TooltipDirection } from '../IconButton/IconButton';
 storiesOf(patterns('IconButtonBar'), module).add(
   'default',
   () => {
-    const size = select('size', sizes, sizes[0]);
+    const size = select('size', sizes, 'sm');
     /* eslint-disable no-nested-ternary */
     const actions = [
       {
         className,
         divider: select(
-          'Icon 1 border (border)',
+          'Icon 1 divider (divider)',
           ['left', 'right', 'sides'],
           'sides'
         ),
@@ -61,7 +61,7 @@ storiesOf(patterns('IconButtonBar'), module).add(
       {
         className,
         divider: select(
-          'Icon 2 border (border)',
+          'Icon 2 divider (divider)',
           ['left', 'right', 'sides'],
           'right'
         ),
