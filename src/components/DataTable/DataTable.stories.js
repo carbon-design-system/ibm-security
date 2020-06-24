@@ -107,8 +107,6 @@ storiesOf(components('DataTable'), module)
       `,
       },
     }
-  )
-  .add('with skeleton', () =>
-    require('./stories/with-skeleton').default(props())
   );
+
 /* eslint-enable */
