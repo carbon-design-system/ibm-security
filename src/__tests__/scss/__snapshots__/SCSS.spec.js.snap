@@ -12079,6 +12079,10 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   height: 2rem;
 }
 
+.bx--loading-overlay {
+  background-color: var(--overlay-01, rgba(22, 22, 22, 0.7));
+}
+
 .security--status-icon {
   display: flex;
   align-items: center;
