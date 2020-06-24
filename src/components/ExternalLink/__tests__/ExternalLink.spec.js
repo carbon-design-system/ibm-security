@@ -5,23 +5,17 @@
 
 import { render } from '@testing-library/react';
 import React from 'react';
+import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { ExternalLink } from '../../..';
 
 describe('ExternalLink', () => {
   test('should have no Axe or DAP violations', async () => {
-    const main = document.createElement('main');
-    render(
-      <ExternalLink href="https://www.ibm.com/security">
-        test link
-      </ExternalLink>,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+    const { container } = renderWithinLandmark(
+      <ExternalLink href="https://www.ibm.com/security">test link</ExternalLink>
     );
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('ExternalLink');
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('ExternalLink');
   });
 
   test('should add children as link text', () => {

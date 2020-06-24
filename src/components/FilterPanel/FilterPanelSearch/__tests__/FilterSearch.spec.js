@@ -6,19 +6,18 @@
 import React from 'react';
 import { render, wait, act } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
 import FilterPanelSearch from '../FilterPanelSearch';
 import Checkbox from '../../../Checkbox';
 
 describe('FilterPanelSearch', () => {
   test('should have no Axe or DAP violations', async () => {
-    const main = document.createElement('main');
-    render(<FilterPanelSearch labelText="search label" />, {
-      // DAP requires a landmark '<main>' in the DOM:
-      container: document.body.appendChild(main),
-    });
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('FilterPanelSearch');
+    const { container } = renderWithinLandmark(
+      <FilterPanelSearch labelText="search label" />
+    );
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('FilterPanelSearch');
   });
 
   test('adds custom class name', () => {

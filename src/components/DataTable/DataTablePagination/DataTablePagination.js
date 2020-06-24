@@ -56,11 +56,6 @@ class DataTablePagination extends Component {
     itemsPerPageText: PropTypes.string,
 
     /**
-     * @type {string} A variant of `itemsPerPageText`, with a sign indicating that the number follows, e.g. ':'.
-     */
-    itemsPerPageFollowsText: PropTypes.string,
-
-    /**
      * @type {Function} A variant of `itemRangeText`, used if the total number of items is unknown.
      */
     itemText: PropTypes.func,
@@ -195,7 +190,6 @@ class DataTablePagination extends Component {
       forwardText,
       id,
       isLastPage,
-      itemsPerPageFollowsText,
       itemsPerPageText,
       itemRangeText,
       itemText,
@@ -224,7 +218,6 @@ class DataTablePagination extends Component {
           forwardText={forwardText}
           id={id}
           isLastPage={isLastPage}
-          itemsPerPageFollowsText={itemsPerPageFollowsText}
           itemsPerPageText={itemsPerPageText}
           itemRangeText={itemRangeText}
           itemText={itemText}
