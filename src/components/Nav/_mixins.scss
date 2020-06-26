@@ -1,7 +1,7 @@
 ////
 /// Navigation mixins.
 /// @group nav
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -75,7 +75,7 @@
 
   &__heading {
     @include carbon--type-style($name: caption-01);
-    padding: $carbon--spacing-04 $carbon--spacing-07;
+    padding: $carbon--spacing-05 $carbon--spacing-07;
     margin-top: unset;
     margin-bottom: unset;
     color: $text-02;

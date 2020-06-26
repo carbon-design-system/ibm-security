@@ -12,7 +12,7 @@ exports[`Toolbar Rendering renders correctly 1`] = `
         <button
           aria-describedby="menu"
           aria-label="Toggle menu"
-          class="security--button--icon security--toolbar__button security--button--icon--tooltip security--button--icon--tooltip--right"
+          class="security--button--icon security--toolbar__button security--button--icon--lg security--button--icon--tooltip security--button--icon--tooltip--right"
         >
           <svg
             aria-hidden="true"
@@ -35,7 +35,7 @@ exports[`Toolbar Rendering renders correctly 1`] = `
         <button
           aria-describedby="settings"
           aria-label="Toggle settings"
-          class="security--button--icon security--toolbar__button security--button--icon--tooltip security--button--icon--tooltip--right"
+          class="security--button--icon security--toolbar__button security--button--icon--lg security--button--icon--tooltip security--button--icon--tooltip--right"
         >
           <svg
             aria-hidden="true"
@@ -61,7 +61,7 @@ exports[`Toolbar Rendering renders correctly 1`] = `
         <button
           aria-describedby="support"
           aria-label="Toggle support"
-          class="security--button--icon security--toolbar__button security--button--icon--tooltip security--button--icon--tooltip--right"
+          class="security--button--icon security--toolbar__button security--button--icon--lg security--button--icon--tooltip security--button--icon--tooltip--right"
         >
           <svg
             aria-hidden="true"
@@ -108,7 +108,7 @@ exports[`Toolbar Rendering renders the HTML of the node's subtree 1`] = `
         <button
           aria-describedby="menu"
           aria-label="Toggle menu"
-          class="security--button--icon security--toolbar__button security--button--icon--tooltip security--button--icon--tooltip--right"
+          class="security--button--icon security--toolbar__button security--button--icon--lg security--button--icon--tooltip security--button--icon--tooltip--right"
         >
           <svg
             aria-hidden="true"
@@ -131,7 +131,7 @@ exports[`Toolbar Rendering renders the HTML of the node's subtree 1`] = `
         <button
           aria-describedby="settings"
           aria-label="Toggle settings"
-          class="security--button--icon security--toolbar__button security--button--icon--tooltip security--button--icon--tooltip--right"
+          class="security--button--icon security--toolbar__button security--button--icon--lg security--button--icon--tooltip security--button--icon--tooltip--right"
         >
           <svg
             aria-hidden="true"
@@ -157,7 +157,7 @@ exports[`Toolbar Rendering renders the HTML of the node's subtree 1`] = `
         <button
           aria-describedby="support"
           aria-label="Toggle support"
-          class="security--button--icon security--toolbar__button security--button--icon--tooltip security--button--icon--tooltip--right"
+          class="security--button--icon security--toolbar__button security--button--icon--lg security--button--icon--tooltip security--button--icon--tooltip--right"
         >
           <svg
             aria-hidden="true"
@@ -216,7 +216,7 @@ exports[`Toolbar Rendering renders the panel correctly 1`] = `
               "render": [Function],
             }
           }
-          size={null}
+          size="lg"
           state={true}
           tooltip={false}
           tooltipDirection="right"
@@ -238,7 +238,7 @@ exports[`Toolbar Rendering renders the panel correctly 1`] = `
               "render": [Function],
             }
           }
-          size={null}
+          size="lg"
           state={false}
           tooltip={true}
           tooltipDirection="right"
@@ -260,7 +260,7 @@ exports[`Toolbar Rendering renders the panel correctly 1`] = `
               "render": [Function],
             }
           }
-          size={null}
+          size="lg"
           state={false}
           tooltip={true}
           tooltipDirection="right"
@@ -384,7 +384,7 @@ exports[`Toolbar With renderAddons should render the toolbar with addon icon 1`]
               "render": [Function],
             }
           }
-          size={null}
+          size="lg"
           state={false}
           tooltip={true}
           tooltipDirection="right"
@@ -406,7 +406,7 @@ exports[`Toolbar With renderAddons should render the toolbar with addon icon 1`]
               "render": [Function],
             }
           }
-          size={null}
+          size="lg"
           state={false}
           tooltip={true}
           tooltipDirection="right"
@@ -428,7 +428,7 @@ exports[`Toolbar With renderAddons should render the toolbar with addon icon 1`]
               "render": [Function],
             }
           }
-          size={null}
+          size="lg"
           state={false}
           tooltip={true}
           tooltipDirection="right"
@@ -481,7 +481,7 @@ exports[`Toolbar With renderAddons should render the toolbar with addon icon 2`]
         <button
           aria-describedby="menu"
           aria-label="Toggle menu"
-          class="security--button--icon security--toolbar__button security--button--icon--tooltip security--button--icon--tooltip--right"
+          class="security--button--icon security--toolbar__button security--button--icon--lg security--button--icon--tooltip security--button--icon--tooltip--right"
         >
           <svg
             aria-hidden="true"
@@ -504,7 +504,7 @@ exports[`Toolbar With renderAddons should render the toolbar with addon icon 2`]
         <button
           aria-describedby="settings"
           aria-label="Toggle settings"
-          class="security--button--icon security--toolbar__button security--button--icon--tooltip security--button--icon--tooltip--right"
+          class="security--button--icon security--toolbar__button security--button--icon--lg security--button--icon--tooltip security--button--icon--tooltip--right"
         >
           <svg
             aria-hidden="true"
@@ -530,7 +530,7 @@ exports[`Toolbar With renderAddons should render the toolbar with addon icon 2`]
         <button
           aria-describedby="support"
           aria-label="Toggle support"
-          class="security--button--icon security--toolbar__button security--button--icon--tooltip security--button--icon--tooltip--right"
+          class="security--button--icon security--toolbar__button security--button--icon--lg security--button--icon--tooltip security--button--icon--tooltip--right"
         >
           <svg
             aria-hidden="true"

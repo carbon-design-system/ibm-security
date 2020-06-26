@@ -8434,7 +8434,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   font-weight: 400;
   line-height: 1rem;
   letter-spacing: 0.32px;
-  padding: 0.75rem 2rem;
+  padding: 1rem 2rem;
   margin-top: unset;
   margin-bottom: unset;
   color: var(--text-02, #c6c6c6);
@@ -15990,7 +15990,6 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   bottom: 0;
   left: 0;
   width: 3rem;
-  padding: 0.5rem 0.25rem;
   background-color: var(--ui-background, #161616);
   box-sizing: border-box;
   z-index: 8002;
@@ -16000,8 +15999,6 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 [dir=\\"rtl\\"] .security--toolbar {
   right: 0;
   left: unset;
-  padding-right: 0.25rem;
-  padding-left: unset;
 }
 
 .security--theme--cg10 .security--toolbar, .security--theme--cg10 .security--toolbar__panel {
@@ -16182,7 +16179,6 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   left: 3rem;
   bottom: 0;
   width: 16rem;
-  padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   background-color: var(--ui-01, #262626);
   box-shadow: 0.125rem 0 0 0 var(--overlay-01, rgba(22, 22, 22, 0.7));

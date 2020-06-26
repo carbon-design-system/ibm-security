@@ -1,19 +1,20 @@
 /**
  * @file Shell stories.
- * @copyright IBM Security 2018
+ * @copyright IBM Security 2018 - 2020
  */
 
 import Camera20 from '@carbon/icons-react/lib/camera/20';
 
-import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
+import { storiesOf } from '@storybook/react';
+
+import React from 'react';
 
 import { disableCenteredStories, patterns } from '../../../.storybook';
 
-import Shell from '.';
-
 import { IconButton, Button } from '../..';
+
+import Shell from '.';
 
 import {
   header,
@@ -48,16 +49,15 @@ disableCenteredStories(storiesOf(patterns('Shell (Security)'), module))
             {
               id: 'example-addon',
               tooltip: 'Example Addon Action',
-              render: ({ iconClassName, className }) => (
+              render: ({ ...props }) => (
                 <IconButton
-                  className={className}
-                  iconClassName={iconClassName}
                   label="Example Addon"
                   onClick={action('addon click')}
                   onFocus={action('addon hovered')}
                   onMouseOver={action('addon hovered')}
                   renderIcon={Camera20}
                   tooltipDirection={IconButton.TooltipDirection.RIGHT}
+                  {...props}
                 />
               ),
             },
@@ -116,16 +116,15 @@ disableCenteredStories(storiesOf(patterns('Shell (Security)'), module))
             {
               id: 'example-addon',
               tooltip: 'Example Addon Action',
-              render: ({ className, iconClassName }) => (
+              render: ({ ...props }) => (
                 <IconButton
-                  className={className}
-                  iconClassName={iconClassName}
                   label="Example Addon"
                   onClick={action('addon click')}
                   onFocus={action('addon hovered')}
                   onMouseOver={action('addon hovered')}
                   renderIcon={Camera20}
                   tooltipDirection={IconButton.TooltipDirection.RIGHT}
+                  {...props}
                 />
               ),
             },

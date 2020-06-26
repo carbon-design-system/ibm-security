@@ -1,6 +1,6 @@
 /**
  * @file Toolbar.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import ArrowLeft20 from '@carbon/icons-react/lib/arrow--left/20';
@@ -12,8 +12,10 @@ import Settings20 from '@carbon/icons-react/lib/settings/20';
 import classnames from 'classnames';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+
 import { isClient } from '../../globals/utils/capabilities';
 import root from '../../globals/utils/globalRoot';
+import { getComponentNamespace } from '../../globals/namespace';
 
 import toggle from '../Component';
 import IconButton from '../IconButton';
@@ -21,8 +23,6 @@ import Nav from '../Nav';
 import NavList from '../Nav/NavList';
 import NavItem from '../Nav/NavItem';
 import Transition from '../Transition';
-
-import { getComponentNamespace } from '../../globals/namespace';
 
 export const namespace = getComponentNamespace('toolbar');
 
@@ -97,6 +97,7 @@ export default class Toolbar extends Component {
         label={label}
         onClick={() => this.togglePanel(type)}
         renderIcon={isActiveItem ? Close20 : renderIcon}
+        size="lg"
         state={isActiveItem}
         tooltip={!isActiveItem}
         tooltipDirection={IconButton.TooltipDirection.RIGHT}
@@ -228,6 +229,7 @@ export default class Toolbar extends Component {
                 {render({
                   className: `${namespace}__button`,
                   iconClassName: `${namespace}__icon`,
+                  size: 'lg',
                 })}
               </li>
             ))}

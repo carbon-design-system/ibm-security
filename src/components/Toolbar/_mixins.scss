@@ -1,7 +1,7 @@
 ////
 /// Toolbar mixins.
 /// @group toolbar
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -26,10 +26,6 @@ $toolbar__name: toolbar;
 $toolbar__namespace: get-component-namespace(
   $component-name: $toolbar__name,
 );
-
-/// Horizontal position.
-/// @type Length
-$toolbar__spacing__position__horizontal: $carbon--spacing-02;
 
 /// Width.
 /// @type Length
@@ -122,10 +118,6 @@ $toolbar__panel__transition__timing-function: $timing-function;
   /// @type List<Length>
   $toolbar__panel__translation: (-$toolbar__panel__sizing__width, 0, 0);
 
-  /// Vertical position.
-  /// @type Length
-  $toolbar__spacing__position__vertical: $spacing-03;
-
   /// Layer.
   /// @type Length
   $toolbar__layer: ($header__layer + 2);
@@ -135,8 +127,6 @@ $toolbar__panel__transition__timing-function: $timing-function;
   bottom: 0;
   left: 0;
   width: $toolbar__sizing__width;
-  padding: $toolbar__spacing__position__vertical
-    $toolbar__spacing__position__horizontal;
   background-color: $ui-background;
   box-sizing: border-box;
   z-index: $toolbar__layer;
@@ -144,8 +134,6 @@ $toolbar__panel__transition__timing-function: $timing-function;
   @include rtl {
     right: 0;
     left: unset;
-    padding-right: $toolbar__spacing__position__horizontal;
-    padding-left: unset;
   }
 
   &,
@@ -203,8 +191,7 @@ $toolbar__panel__transition__timing-function: $timing-function;
     left: $toolbar__sizing__width;
     bottom: 0;
     width: $toolbar__panel__sizing__width;
-    padding-top: $toolbar__spacing__position__vertical;
-    padding-bottom: $toolbar__spacing__position__vertical;
+    padding-bottom: $carbon--spacing-03;
     background-color: $ui-01;
     box-shadow: $toolbar__panel__box-shadow;
     box-sizing: border-box;
