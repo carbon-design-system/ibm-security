@@ -14589,6 +14589,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   display: flex;
   background-color: var(--ui-01, #262626);
   border-top: 1px solid var(--ui-02, #393939);
+  z-index: 0;
 }
 
 .security--summary-card__select {
