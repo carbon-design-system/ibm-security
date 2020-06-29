@@ -5,27 +5,23 @@
 
 import { render } from '@testing-library/react';
 import React from 'react';
+import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { StringFormatter } from '../../..';
 import { namespace } from '../StringFormatter';
 
 describe('StringFormatter', () => {
   test('should have no Axe or DAP violations', async () => {
-    const main = document.createElement('main');
-    render(
+    const { container } = renderWithinLandmark(
       <StringFormatter
         value="This is a long test string that would normally be truncated."
         truncate
         lines={2}
         width="50px"
-      />,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+      />
     );
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('StringFormatter');
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('StringFormatter');
   });
 
   test('should add a custom class', () => {

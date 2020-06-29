@@ -5,19 +5,18 @@
 
 import React from 'react';
 import { render } from '@testing-library/react';
+import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { ICA } from '../../..';
 import { Locales } from '../ICA';
 
 describe('ICA', () => {
   test('should have no Axe or DAP violations', async () => {
-    const main = document.createElement('main');
-    render(<ICA label="test ICA" total={10} value={5} />, {
-      // DAP requires a landmark '<main>' in the DOM:
-      container: document.body.appendChild(main),
-    });
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('ICA');
+    const { container } = renderWithinLandmark(
+      <ICA label="test ICA" total={10} value={5} />
+    );
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('ICA');
   });
 
   test('should render en dash when `value` is `null`', () => {

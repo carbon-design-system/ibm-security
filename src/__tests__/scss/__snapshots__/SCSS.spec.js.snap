@@ -12079,6 +12079,10 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   height: 2rem;
 }
 
+.bx--loading-overlay {
+  background-color: var(--overlay-01, rgba(22, 22, 22, 0.7));
+}
+
 .security--status-icon {
   display: flex;
   align-items: center;
@@ -14573,6 +14577,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   display: flex;
   background-color: var(--ui-01, #262626);
   border-top: 1px solid var(--ui-02, #393939);
+  z-index: 0;
 }
 
 .security--summary-card__select {

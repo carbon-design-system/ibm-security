@@ -6,15 +6,15 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 import userEvent from '@testing-library/user-event';
+import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { Card } from '../../..';
 
 import { icon } from '../../_mocks_';
 
-describe('Card', () => {
+describe('Card2', () => {
   test('should have no Axe or DAP violations', async () => {
-    const main = document.createElement('main');
-    render(
+    const { container } = renderWithinLandmark(
       <Card
         header={{
           image: icon,
@@ -28,32 +28,23 @@ describe('Card', () => {
         footer={{
           children: <span>test footer</span>,
         }}
-      />,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+      />
     );
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('Card');
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('Card');
   });
 
   test('should have no Axe or DAP violations when rendered as a link', async () => {
-    const main = document.createElement('main');
-    render(
+    const { container } = renderWithinLandmark(
       <Card
         header={{
           title: 'test title',
         }}
         link="#"
-      />,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+      />
     );
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('Card as a link');
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('Card as a link');
   });
 
   test('should invoke click mock when card is clicked', () => {
