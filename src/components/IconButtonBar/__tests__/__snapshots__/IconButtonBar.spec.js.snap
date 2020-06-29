@@ -9,7 +9,6 @@ exports[`IconButtonBar renders the 'lg' variation 1`] = `
     className="security--icon-button-bar__divider"
   >
     <span
-      aria-hidden={true}
       className="security--icon-button-bar__divider__inner"
     />
   </span>
@@ -58,7 +57,6 @@ exports[`IconButtonBar renders the 'lg' variation 1`] = `
     className="security--icon-button-bar__divider"
   >
     <span
-      aria-hidden={true}
       className="security--icon-button-bar__divider__inner"
     />
   </span>
@@ -107,7 +105,6 @@ exports[`IconButtonBar renders the 'md' variation 1`] = `
     className="security--icon-button-bar__divider"
   >
     <span
-      aria-hidden={true}
       className="security--icon-button-bar__divider__inner"
     />
   </span>
@@ -156,7 +153,6 @@ exports[`IconButtonBar renders the 'md' variation 1`] = `
     className="security--icon-button-bar__divider"
   >
     <span
-      aria-hidden={true}
       className="security--icon-button-bar__divider__inner"
     />
   </span>
@@ -205,7 +201,6 @@ exports[`IconButtonBar renders the 'sm' variation 1`] = `
     className="security--icon-button-bar__divider"
   >
     <span
-      aria-hidden={true}
       className="security--icon-button-bar__divider__inner"
     />
   </span>
@@ -254,7 +249,6 @@ exports[`IconButtonBar renders the 'sm' variation 1`] = `
     className="security--icon-button-bar__divider"
   >
     <span
-      aria-hidden={true}
       className="security--icon-button-bar__divider__inner"
     />
   </span>
@@ -303,7 +297,6 @@ exports[`IconButtonBar renders the 'xl' variation 1`] = `
     className="security--icon-button-bar__divider"
   >
     <span
-      aria-hidden={true}
       className="security--icon-button-bar__divider__inner"
     />
   </span>
@@ -352,7 +345,6 @@ exports[`IconButtonBar renders the 'xl' variation 1`] = `
     className="security--icon-button-bar__divider"
   >
     <span
-      aria-hidden={true}
       className="security--icon-button-bar__divider__inner"
     />
   </span>
@@ -461,7 +453,6 @@ exports[`IconButtonBar renders the length of '2' variation 1`] = `
     className="security--icon-button-bar__divider"
   >
     <span
-      aria-hidden={true}
       className="security--icon-button-bar__divider__inner"
     />
   </span>
@@ -540,7 +531,6 @@ exports[`IconButtonBar renders the length of '3' variation 1`] = `
     className="security--icon-button-bar__divider"
   >
     <span
-      aria-hidden={true}
       className="security--icon-button-bar__divider__inner"
     />
   </span>
@@ -589,7 +579,6 @@ exports[`IconButtonBar renders the length of '3' variation 1`] = `
     className="security--icon-button-bar__divider"
   >
     <span
-      aria-hidden={true}
       className="security--icon-button-bar__divider__inner"
     />
   </span>
@@ -638,7 +627,6 @@ exports[`IconButtonBar renders the length of '4' variation 1`] = `
     className="security--icon-button-bar__divider"
   >
     <span
-      aria-hidden={true}
       className="security--icon-button-bar__divider__inner"
     />
   </span>
@@ -687,7 +675,6 @@ exports[`IconButtonBar renders the length of '4' variation 1`] = `
     className="security--icon-button-bar__divider"
   >
     <span
-      aria-hidden={true}
       className="security--icon-button-bar__divider__inner"
     />
   </span>
@@ -696,7 +683,6 @@ exports[`IconButtonBar renders the length of '4' variation 1`] = `
     className="security--icon-button-bar__divider"
   >
     <span
-      aria-hidden={true}
       className="security--icon-button-bar__divider__inner"
     />
   </span>
@@ -725,7 +711,6 @@ exports[`IconButtonBar renders the length of '4' variation 1`] = `
     className="security--icon-button-bar__divider"
   >
     <span
-      aria-hidden={true}
       className="security--icon-button-bar__divider__inner"
     />
   </span>
@@ -760,7 +745,6 @@ exports[`IconButtonBar renders the length of '5' variation 1`] = `
     className="security--icon-button-bar__divider"
   >
     <span
-      aria-hidden={true}
       className="security--icon-button-bar__divider__inner"
     />
   </span>
@@ -809,7 +793,6 @@ exports[`IconButtonBar renders the length of '5' variation 1`] = `
     className="security--icon-button-bar__divider"
   >
     <span
-      aria-hidden={true}
       className="security--icon-button-bar__divider__inner"
     />
   </span>
@@ -818,7 +801,6 @@ exports[`IconButtonBar renders the length of '5' variation 1`] = `
     className="security--icon-button-bar__divider"
   >
     <span
-      aria-hidden={true}
       className="security--icon-button-bar__divider__inner"
     />
   </span>
@@ -847,7 +829,6 @@ exports[`IconButtonBar renders the length of '5' variation 1`] = `
     className="security--icon-button-bar__divider"
   >
     <span
-      aria-hidden={true}
       className="security--icon-button-bar__divider__inner"
     />
   </span>

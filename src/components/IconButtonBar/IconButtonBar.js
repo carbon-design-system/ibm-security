@@ -45,7 +45,7 @@ const IconButtonBar = ({
     <Fragment key={action.label || `${namespace}__button--icon--${index}`}>
       {(action.divider === 'left' || action.divider === 'sides') && (
         <span className={`${namespace}__divider`} aria-hidden>
-          <span className={`${namespace}__divider__inner`} aria-hidden />
+          <span className={`${namespace}__divider__inner`} />
         </span>
       )}
       <IconButton
@@ -56,7 +56,7 @@ const IconButtonBar = ({
       />
       {(action.divider === 'right' || action.divider === 'sides') && (
         <span className={`${namespace}__divider`} aria-hidden>
-          <span className={`${namespace}__divider__inner`} aria-hidden />
+          <span className={`${namespace}__divider__inner`} />
         </span>
       )}
     </Fragment>

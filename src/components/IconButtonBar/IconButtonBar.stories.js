@@ -60,11 +60,7 @@ storiesOf(patterns('IconButtonBar'), module).add(
       },
       {
         className,
-        divider: select(
-          'Icon 2 divider (divider)',
-          ['left', 'right', 'sides'],
-          'right'
-        ),
+        divider: undefined,
         disabled: false,
         iconClassName,
         label: `${label} 2`,
