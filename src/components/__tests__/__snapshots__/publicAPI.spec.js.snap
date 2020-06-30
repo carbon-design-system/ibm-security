@@ -1121,7 +1121,9 @@ Map {
       "inline": false,
       "labels": Object {},
       "noIcon": false,
+      "onClick": undefined,
       "onClose": [Function],
+      "onContextMenu": undefined,
       "onOpen": [Function],
       "primaryButton": undefined,
       "renderFooter": null,
@@ -1198,7 +1200,13 @@ Map {
       "noIcon": Object {
         "type": "bool",
       },
+      "onClick": Object {
+        "type": "func",
+      },
       "onClose": Object {
+        "type": "func",
+      },
+      "onContextMenu": Object {
         "type": "func",
       },
       "onOpen": Object {
@@ -2463,6 +2471,7 @@ Map {
       "inline": false,
       "noIcon": false,
       "onClick": undefined,
+      "onContextMenu": undefined,
       "score": undefined,
       "scoreDescription": [Function],
       "scoreThresholds": Array [
@@ -2491,6 +2500,9 @@ Map {
         "type": "bool",
       },
       "onClick": Object {
+        "type": "func",
+      },
+      "onContextMenu": Object {
         "type": "func",
       },
       "score": Object {
