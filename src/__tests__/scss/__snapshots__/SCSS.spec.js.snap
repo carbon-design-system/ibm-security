@@ -14577,6 +14577,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   display: flex;
   background-color: var(--ui-01, #262626);
   border-top: 1px solid var(--ui-02, #393939);
+  z-index: 0;
 }
 
 .security--summary-card__select {
@@ -15679,7 +15680,8 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 
 .security--tag-wall-filter__tag-wall {
   min-height: 1.5rem;
-  margin: 0.75rem 0 0.5rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .security--tag-wall-filter__tag-wall__label {
@@ -15687,8 +15689,17 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .security--tag-wall-filter__description {
+  padding-right: 1rem;
   max-height: 20vh;
   overflow: auto;
+}
+
+.security--tag-wall-filter.security--tearsheet--small > .security--tearsheet--small__header {
+  padding-right: 0;
+}
+
+.security--tag-wall-filter.security--tearsheet--small > .security--tearsheet--small__header > .security--tearsheet--small__title {
+  margin-right: 1rem;
 }
 
 .security--portal__overlay {

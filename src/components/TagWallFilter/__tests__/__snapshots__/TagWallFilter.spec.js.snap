@@ -2073,6 +2073,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
     tagWallLabel={null}
     tearsheetProps={
       Object {
+        "className": "security--tag-wall-filter",
         "closeButton": Object {
           "onClick": [MockFunction],
         },
@@ -2148,6 +2149,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
       tagWallLabel={null}
       tearsheetProps={
         Object {
+          "className": "security--tag-wall-filter",
           "closeButton": Object {
             "onClick": [MockFunction],
           },
@@ -2193,6 +2195,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
         tagWallLabel={null}
         tearsheetProps={
           Object {
+            "className": "security--tag-wall-filter",
             "closeButton": Object {
               "onClick": [MockFunction],
             },
@@ -2213,7 +2216,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
       >
         <TearsheetSmall
           body=""
-          className=""
+          className="security--tag-wall-filter"
           closeButton={
             Object {
               "onClick": [MockFunction],
@@ -2463,7 +2466,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
               />
               <section
                 aria-hidden="false"
-                class="security--tearsheet--small"
+                class="security--tearsheet--small security--tag-wall-filter"
               >
                 <header
                   class="security--tearsheet--small__header"
@@ -2982,7 +2985,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                           />
                           <section
                             aria-hidden="false"
-                            class="security--tearsheet--small"
+                            class="security--tearsheet--small security--tag-wall-filter"
                           >
                             <header
                               class="security--tearsheet--small__header"
@@ -3437,7 +3440,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                             />
                             <section
                               aria-hidden="false"
-                              class="security--tearsheet--small"
+                              class="security--tearsheet--small security--tag-wall-filter"
                             >
                               <header
                                 class="security--tearsheet--small__header"
@@ -3673,7 +3676,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                         >
                           <section
                             aria-hidden={false}
-                            className="security--tearsheet--small"
+                            className="security--tearsheet--small security--tag-wall-filter"
                           >
                             <header
                               className="security--tearsheet--small__header"
