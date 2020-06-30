@@ -8155,6 +8155,17 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   width: 4rem;
 }
 
+.security--icon-button-bar__divider {
+  width: 3px;
+  display: flex;
+  justify-content: center;
+}
+
+.security--icon-button-bar__divider__inner {
+  background-color: var(--ui-03, #393939);
+  width: 1px;
+}
+
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
