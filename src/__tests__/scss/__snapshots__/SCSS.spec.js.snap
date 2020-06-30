@@ -8156,7 +8156,6 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .security--icon-button-bar__divider {
-  background-color: transparent;
   width: 3px;
   display: flex;
   justify-content: center;
