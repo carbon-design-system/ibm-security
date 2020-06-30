@@ -191,8 +191,10 @@ DataDecorator.propTypes = {
   /** @type {boolean} Whether the rendered Decorator includes an icon */
   noIcon: PropTypes.bool,
 
+  /** @type {Function} The function to call when the DataDecorator is clicked. */
   onClick: PropTypes.func,
 
+  /** @type {Function} The function to call when the DataDecorator is secondary-clicked */
   onContextMenu: PropTypes.func,
 
   /** @type {Function} The function to call when the DataDecorator Panel closes. */

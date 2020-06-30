@@ -130,6 +130,7 @@ Decorator.propTypes = {
   /** @type {Function} Click handler of the Decorator. */
   onClick: PropTypes.func,
 
+  /** @type {Function} Secondary click handler of the Decorator. */
   onContextMenu: PropTypes.func,
 
   /** @type {boolean} Whether the Decorator includes an icon */
