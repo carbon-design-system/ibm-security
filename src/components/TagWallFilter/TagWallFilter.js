@@ -1,17 +1,21 @@
 /**
  * @file TagWallFilter
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
-import React from 'react';
+
 import PropTypes from 'prop-types';
+import React from 'react';
 import { withReducer, mapProps, compose } from 'recompose';
 import { createReducer, combineReducers } from 'reduced-utils';
-import { defaultSortItems } from './tools/sorting';
+
+import { getComponentNamespace } from '../../globals/namespace/index';
+
 import FilterRaw from './Filter';
 import TagWall from '../TagWall';
 import { TearsheetSmall } from '../Tearsheet';
 import { buttonType } from '../Tearsheet/TearsheetSmall/TearsheetSmall';
-import { getComponentNamespace } from '../../globals/namespace/index';
+
+import { defaultSortItems } from './tools/sorting';
 
 const namespace = getComponentNamespace('tag-wall-filter');
 
@@ -190,6 +194,7 @@ export const TagWallFilter = ({
   filterFieldClearAllTooltip,
 }) => {
   const tearsheetProps = {
+    className: namespace,
     flush: true,
     focusTrap,
     heading,
