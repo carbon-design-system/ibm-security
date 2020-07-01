@@ -65,7 +65,6 @@ class Decorator extends Component {
       inline,
       noIcon,
       onClick,
-      onContextMenu,
       score,
       scoreThresholds,
     } = this.props;
@@ -91,7 +90,7 @@ class Decorator extends Component {
       );
     }
 
-    if (onClick || onContextMenu) {
+    if (onClick) {
       return (
         <button
           className={decoratorClasses}
@@ -172,7 +171,7 @@ Decorator.defaultProps = {
   href: undefined,
   inline: false,
   onClick: undefined,
-  onContextMenu: undefined,
+  onContextMenu: () => {},
   noIcon: false,
   score: undefined,
   scoreThresholds: [0, 4, 7, 10],

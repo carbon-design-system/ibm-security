@@ -55,15 +55,8 @@ class DataDecorator extends Component {
       title,
       scoreThresholds,
       scoreDescription,
-      onClick: propOnClick,
       onContextMenu: propOnContextMenu,
     } = this.props;
-    const onClick = !propOnClick
-      ? event => {
-          event.stopPropagation();
-          this.toggleOpen();
-        }
-      : propOnClick;
     const onContextMenu = propOnContextMenu
       ? event => {
           event.preventDefault();
@@ -80,7 +73,6 @@ class DataDecorator extends Component {
       title,
       scoreThresholds,
       scoreDescription,
-      onClick,
       onContextMenu,
     };
     const componentLabels = {
@@ -96,7 +88,14 @@ class DataDecorator extends Component {
     };
     return (
       <Fragment>
-        <Decorator {...decoratorProps} active={this.state.isOpen} />
+        <Decorator
+          {...decoratorProps}
+          active={this.state.isOpen}
+          onClick={event => {
+            event.stopPropagation();
+            this.toggleOpen();
+          }}
+        />
         <PanelV2
           isOpen={this.state.isOpen}
           stopPropagation={stopPropagation}
@@ -191,9 +190,6 @@ DataDecorator.propTypes = {
   /** @type {boolean} Whether the rendered Decorator includes an icon */
   noIcon: PropTypes.bool,
 
-  /** @type {Function} The function to call when the DataDecorator is clicked. */
-  onClick: PropTypes.func,
-
   /** @type {Function} The function to call when the DataDecorator is secondary-clicked */
   onContextMenu: PropTypes.func,
 
@@ -264,7 +260,6 @@ DataDecorator.defaultProps = {
   inline: defaultProps.inline,
   labels: {},
   noIcon: false,
-  onClick: undefined,
   onContextMenu: undefined,
   onClose: () => {},
   onOpen: () => {},

@@ -1121,7 +1121,6 @@ Map {
       "inline": false,
       "labels": Object {},
       "noIcon": false,
-      "onClick": undefined,
       "onClose": [Function],
       "onContextMenu": undefined,
       "onOpen": [Function],
@@ -1199,9 +1198,6 @@ Map {
       },
       "noIcon": Object {
         "type": "bool",
-      },
-      "onClick": Object {
-        "type": "func",
       },
       "onClose": Object {
         "type": "func",
@@ -2471,7 +2467,7 @@ Map {
       "inline": false,
       "noIcon": false,
       "onClick": undefined,
-      "onContextMenu": undefined,
+      "onContextMenu": [Function],
       "score": undefined,
       "scoreDescription": [Function],
       "scoreThresholds": Array [
