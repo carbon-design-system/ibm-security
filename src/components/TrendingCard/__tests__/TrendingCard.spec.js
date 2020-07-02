@@ -5,26 +5,22 @@
 
 import { render } from '@testing-library/react';
 import React from 'react';
+import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { TrendingCard } from '../../../';
 
 describe('TrendingCard', () => {
   test('should have no Axe or DAP violations', async () => {
-    const main = document.createElement('main');
-    render(
+    const { container } = renderWithinLandmark(
       <TrendingCard
         // Use an empty `href` to avoid misdirected Axe "skip-link" violation:
         href="#"
         title="test title"
         subtitle={<span>test subtitle</span>}
-      />,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+      />
     );
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('TrendingCard');
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('TrendingCard');
   });
 
   test('should accept a custom element', () => {

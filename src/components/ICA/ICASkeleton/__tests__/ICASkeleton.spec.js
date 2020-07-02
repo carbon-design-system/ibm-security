@@ -4,18 +4,15 @@
  */
 
 import React from 'react';
-import { render } from '@testing-library/react';
+
+import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
 import ICASkeleton from '../ICASkeleton';
 
 describe('ICASkeleton', () => {
   test('should have no Axe or DAP violations', async () => {
-    const main = document.createElement('main');
-    render(<ICASkeleton />, {
-      // DAP requires a landmark '<main>' in the DOM:
-      container: document.body.appendChild(main),
-    });
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('ICASkeleton');
+    const { container } = renderWithinLandmark(<ICASkeleton />);
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('ICASkeleton');
   });
 });

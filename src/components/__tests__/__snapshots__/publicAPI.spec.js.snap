@@ -2008,9 +2008,6 @@ Map {
       "itemText": Object {
         "type": "func",
       },
-      "itemsPerPageFollowsText": Object {
-        "type": "string",
-      },
       "itemsPerPageText": Object {
         "type": "string",
       },
@@ -4376,6 +4373,16 @@ Map {
               Object {
                 "className": Object {
                   "type": "string",
+                },
+                "divider": Object {
+                  "args": Array [
+                    Array [
+                      "left",
+                      "right",
+                      "sides",
+                    ],
+                  ],
+                  "type": "oneOf",
                 },
                 "iconClassName": Object {
                   "type": "string",
