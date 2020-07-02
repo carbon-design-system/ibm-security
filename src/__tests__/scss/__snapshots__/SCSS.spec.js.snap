@@ -7849,9 +7849,70 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   margin-bottom: 1rem;
 }
 
+@keyframes collapse-accordion {
+  0% {
+    height: 100%;
+    visibility: inherit;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes expand-accordion {
+  0% {
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    height: 100%;
+    visibility: inherit;
+    opacity: 1;
+  }
+}
+
 .security--filter-panel-accordion__title {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
+}
+
+.security--truncated-list {
+  margin: 0;
+}
+
+.security--truncated-list__scroller-container {
+  height: auto;
+}
+
+.security--truncated-list__scroller {
+  transition-duration: 0.2s;
+  transition-property: height;
+  transition-timing-function: cubic-bezier(0.2, 0, 0.38, 0.9);
+}
+
+.security--truncated-list__expand-button {
+  width: 100%;
+  max-width: none;
+  min-height: auto;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--link-01, #78a9ff);
+  margin-top: 1px;
+}
+
+.security--truncated-list__expand-button:hover {
+  background: transparent;
+  color: var(--link-01, #78a9ff);
+}
+
+.security--truncated-list__expand-button:active {
+  background: transparent;
+  color: var(--text-01, #f4f4f4);
 }
 
 .security--filter-panel-accordion-item {
@@ -16383,41 +16444,6 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   line-height: 1rem;
   letter-spacing: 0.32px;
   color: var(--text-02, #c6c6c6);
-}
-
-.security--truncated-list {
-  margin: 0;
-}
-
-.security--truncated-list__scroller-container {
-  height: auto;
-}
-
-.security--truncated-list__scroller {
-  transition-duration: 0.2s;
-  transition-property: height;
-  transition-timing-function: cubic-bezier(0.2, 0, 0.38, 0.9);
-}
-
-.security--truncated-list__expand-button {
-  width: 100%;
-  max-width: none;
-  min-height: auto;
-  padding: 0;
-  border: none;
-  background: transparent;
-  color: var(--link-01, #78a9ff);
-  margin-top: 1px;
-}
-
-.security--truncated-list__expand-button:hover {
-  background: transparent;
-  color: var(--link-01, #78a9ff);
-}
-
-.security--truncated-list__expand-button:active {
-  background: transparent;
-  color: var(--text-01, #f4f4f4);
 }
 
 .bx--structured-list--selection .bx--structured-list-td,
