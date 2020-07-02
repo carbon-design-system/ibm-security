@@ -1,10 +1,11 @@
 ////
 /// Entry point.
 /// @group storybook
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import '@carbon/layout/scss/spacing';
+@import 'carbon-components/scss/globals/scss/vars';
 
 @import '../src/globals/index';
 @import '../src/components/index';
