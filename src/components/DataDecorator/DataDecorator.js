@@ -26,13 +26,13 @@ class DataDecorator extends Component {
   toggleOpen = () => (this.state.isOpen ? this.close() : this.open());
 
   open = () => {
-    this.props.onOpen();
     this.setState({ isOpen: true });
+    this.props.onOpen();
   };
 
   close = () => {
-    this.props.onClose();
     this.setState({ isOpen: false });
+    this.props.onClose();
   };
 
   render() {
@@ -98,6 +98,7 @@ class DataDecorator extends Component {
         />
         <PanelV2
           isOpen={this.state.isOpen}
+          onClose={this.close}
           stopPropagation={stopPropagation}
           stopPropagationEvents={stopPropagationEvents}
           closeButton={{
