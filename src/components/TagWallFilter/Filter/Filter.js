@@ -109,6 +109,19 @@ class Filter extends React.Component {
 
     const { inputValue } = this.state;
 
+    const renderInnerMenuItem = ({ itemProps, itemText }) => (
+      <div
+        className={`${namespace}__list-item__entry`}
+        aria-labelledby={itemProps.id}
+      >
+        <span className={`${carbonPrefix}text-truncate--end`} title={itemText}>
+          {itemText}
+        </span>
+        <span className={`${namespace}__add`}>
+          <Icon className={`${namespace}__add__icon`} renderIcon={Add20} />
+        </span>
+      </div>
+    );
     const menuItems = sortItems(
       filterItems(items, { itemToString, inputValue }),
       {
@@ -117,7 +130,28 @@ class Filter extends React.Component {
         compareItems,
         locale,
       }
-    ).map(item => {
+    );
+    if (menuItems.length === 0 && this.props.allowAddition) {
+      const newItem = {
+        id: inputValue,
+        label: inputValue,
+      };
+      const itemProps = getItemProps({ item: newItem });
+      const itemText = `${this.props.newItemPrefix}${itemToString(newItem)}`;
+      return (
+        <MenuItem
+          className={`${namespace}__list-item`}
+          isActive
+          onKeyDown={e => this.handleKeyDownChange(e, newItem)}
+          role="button"
+          tabIndex="0"
+          {...itemProps}
+        >
+          {renderInnerMenuItem({ itemProps, itemText })}
+        </MenuItem>
+      );
+    }
+    return menuItems.map(item => {
       const itemProps = getItemProps({ item });
       const itemText = itemToString(item);
 
@@ -131,25 +165,10 @@ class Filter extends React.Component {
           tabIndex="0"
           {...itemProps}
         >
-          <div
-            className={`${namespace}__list-item__entry`}
-            aria-labelledby={itemProps.id}
-          >
-            <span
-              className={`${carbonPrefix}text-truncate--end`}
-              title={itemText}
-            >
-              {itemText}
-            </span>
-            <span className={`${namespace}__add`}>
-              <Icon className={`${namespace}__add__icon`} renderIcon={Add20} />
-            </span>
-          </div>
+          {renderInnerMenuItem({ itemProps, itemText })}
         </MenuItem>
       );
     });
-
-    return menuItems;
   };
 
   render() {
@@ -235,6 +254,8 @@ Filter.defaultProps = {
   filterItems: defaultFilterItems,
   initialSelectedItems: [],
   selectedItems: [],
+  newItemPrefix: 'Add: ',
+  allowAddition: false,
   itemToString: defaultItemToString,
   locale: 'en',
   sortItems: defaultSortItems,
@@ -265,6 +286,11 @@ Filter.propTypes = {
     })
   ),
 
+  /**
+   * @type {string} The prefix string to add when no item has been found, e.g "Add: yourtag", the default prefix is "Add: "
+   */
+  newItemPrefix: PropTypes.string,
+  allowAddition: PropTypes.bool,
   /** @type {func} Render a given item to a string label */
   itemToString: PropTypes.func,
 

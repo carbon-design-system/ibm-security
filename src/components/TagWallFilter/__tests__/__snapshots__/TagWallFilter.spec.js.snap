@@ -1400,6 +1400,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                     className="security--tearsheet--small__scroll-gradient__content"
                                   >
                                     <Filter
+                                      allowAddition={false}
                                       className=""
                                       compareItems={[Function]}
                                       disabled={false}
@@ -1418,6 +1419,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                         ]
                                       }
                                       locale="en"
+                                      newItemPrefix="Add: "
                                       onChange={[Function]}
                                       placeholder="placeholder"
                                       selectedItems={Array []}
@@ -2006,6 +2008,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 2`] = 
 
 exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter component 1`] = `
 <TagWallFilter
+  allowAddition={false}
   availableItems={
     Array [
       Object {
@@ -2026,6 +2029,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
   heading="TagWallFilter Heading"
   id="test-id"
   inputFieldPlaceholder=""
+  newItemPrefix="Add: "
   onChange={[Function]}
   primaryButton={
     Object {
@@ -2048,6 +2052,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
   tagWallLabel={null}
 >
   <FilterTagFragment
+    allowAddition={false}
     availableItems={
       Array [
         Object {
@@ -2060,6 +2065,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
     filterFieldClearSelectionTooltip="Clear selected item"
     id="test-id"
     itemToString={[Function]}
+    newItemPrefix="Add: "
     onChange={[Function]}
     placeholder=""
     selectedItems={
@@ -2093,6 +2099,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
     }
   >
     <mapProps(FilterTagFragmentRender)
+      allowAddition={false}
       availableItems={
         Array [
           Object {
@@ -2136,6 +2143,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
         }
       }
       itemToString={[Function]}
+      newItemPrefix="Add: "
       onChange={[Function]}
       placeholder=""
       selectedItems={
@@ -2169,6 +2177,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
       }
     >
       <FilterTagFragmentRender
+        allowAddition={false}
         availableItems={
           Array [
             Object {
@@ -2182,6 +2191,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
         filterFieldClearSelectionTooltip="Clear selected item"
         id="test-id"
         itemToString={[Function]}
+        newItemPrefix="Add: "
         onChange={[Function]}
         placeholder=""
         selectedItems={
@@ -3849,6 +3859,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       className=""
                                     >
                                       <Filter
+                                        allowAddition={false}
                                         className=""
                                         compareItems={[Function]}
                                         disabled={false}
@@ -3867,6 +3878,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           ]
                                         }
                                         locale="en"
+                                        newItemPrefix="Add: "
                                         onChange={[Function]}
                                         placeholder=""
                                         selectedItems={Array []}

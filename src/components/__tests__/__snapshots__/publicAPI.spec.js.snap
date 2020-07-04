@@ -9961,12 +9961,14 @@ Map {
   "TagWallFilter" => Object {
     "defaultProps": Object {
       "allItems": undefined,
+      "allowAddition": false,
       "description": "",
       "filterFieldClearAllTooltip": "Clear all selected items",
       "filterFieldClearSelectionTooltip": "Clear selected item",
       "focusTrap": true,
       "id": "security--tag-wall-filter",
       "inputFieldPlaceholder": "",
+      "newItemPrefix": "Add: ",
       "onChange": [Function],
       "selectedItems": Array [],
       "tagWallLabel": null,
@@ -9992,6 +9994,9 @@ Map {
           },
         ],
         "type": "arrayOf",
+      },
+      "allowAddition": Object {
+        "type": "bool",
       },
       "availableItems": Object {
         "args": Array [
@@ -10068,6 +10073,9 @@ Map {
         "type": "string",
       },
       "inputFieldPlaceholder": Object {
+        "type": "string",
+      },
+      "newItemPrefix": Object {
         "type": "string",
       },
       "onChange": Object {

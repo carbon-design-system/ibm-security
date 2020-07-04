@@ -108,6 +108,8 @@ export const FilterTagFragmentRender = ({
   itemToString,
   onChange,
   tagWallLabel,
+  allowAddition,
+  newItemPrefix,
   tearsheetProps,
   ...otherProps
 }) => (
@@ -131,6 +133,8 @@ export const FilterTagFragmentRender = ({
       id={id}
       items={availableItems}
       itemToString={itemToString}
+      newItemPrefix={newItemPrefix}
+      allowAddition={allowAddition}
       onChange={change => dispatchItemChange(change, onChange)}
       {...otherProps}
     />
@@ -192,6 +196,8 @@ export const TagWallFilter = ({
   allItems,
   filterFieldClearSelectionTooltip,
   filterFieldClearAllTooltip,
+  newItemPrefix,
+  allowAddition,
 }) => {
   const tearsheetProps = {
     className: namespace,
@@ -219,6 +225,8 @@ export const TagWallFilter = ({
       tearsheetProps={tearsheetProps}
       filterFieldClearSelectionTooltip={filterFieldClearSelectionTooltip}
       filterFieldClearAllTooltip={filterFieldClearAllTooltip}
+      newItemPrefix={newItemPrefix}
+      allowAddition={allowAddition}
     />
   );
 };
@@ -276,6 +284,13 @@ TagWallFilter.propTypes = {
     })
   ),
 
+  /**
+   * @type {string} The prefix string to add when no item has been found, e.g "Add: yourtag", the default prefix is "Add: "
+   */
+  newItemPrefix: PropTypes.string,
+
+  allowAddition: PropTypes.bool,
+
   /** @type {func} Called whenever a something changed. Is called with the latest state */
   onChange: PropTypes.func,
 
@@ -293,6 +308,8 @@ TagWallFilter.defaultProps = {
   selectedItems: [],
   allItems: undefined,
   onChange: noop,
+  newItemPrefix: 'Add: ',
+  allowAddition: false,
   inputFieldPlaceholder: '',
   tagWallLabel: null,
   filterFieldClearSelectionTooltip: 'Clear selected item',
