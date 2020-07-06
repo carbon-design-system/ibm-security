@@ -1,6 +1,6 @@
 /**
  * @file Tag wall tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import { mount } from 'enzyme';
@@ -8,10 +8,10 @@ import React from 'react';
 
 import { Button, InteractiveTag, TagWall } from '../../..';
 
-import { type } from '../TagWall';
-import { namespace as interactiveTagNamespace } from '../../Tag/InteractiveTag/InteractiveTag';
+import { namespace } from '../../InteractiveTag/InteractiveTag';
 
 import props from '../_mocks_';
+import { type } from '../TagWall';
 
 describe('TagWall', () => {
   let tagWall;
@@ -44,7 +44,7 @@ describe('TagWall', () => {
       tagWall
         .find(InteractiveTag)
         .first()
-        .find(`button.${interactiveTagNamespace}__button`);
+        .find(`button.${namespace}__button`);
 
     it('should call the `onChange` method', () => {
       const onChange = fn();

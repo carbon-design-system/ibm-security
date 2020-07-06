@@ -1,6 +1,6 @@
 /**
  * @file Tag wall.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import classnames from 'classnames';
@@ -11,12 +11,13 @@ import {
   carbonPrefix,
   getComponentNamespace,
 } from '../../globals/namespace/index';
+
 import * as defaultLabels from '../../globals/nls';
 
 import defaultItemToString from '../__tools__/defaultItemToString';
 
 import Button from '../Button';
-import InteractiveTag from '../Tag/InteractiveTag';
+import InteractiveTag from '../InteractiveTag';
 
 const namespace = getComponentNamespace('tag-wall');
 const noop = () => {};

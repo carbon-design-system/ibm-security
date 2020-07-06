@@ -33,6 +33,10 @@ class Decorator extends Component {
     this.props.onClick(event, this.props.type, this.props.value);
   };
 
+  handleContextMenuClick = event => {
+    this.props.onContextMenu(event, this.props.type, this.props.value);
+  };
+
   renderDecorator = (noIcon, path, inline, score, scoreThresholds) => {
     const { scoreDescription, title, type, value } = this.props;
 
@@ -92,7 +96,11 @@ class Decorator extends Component {
 
     if (onClick) {
       return (
-        <button className={decoratorClasses} onClick={this.handleClick}>
+        <button
+          className={decoratorClasses}
+          onClick={this.handleClick}
+          onContextMenu={this.handleContextMenuClick}
+        >
           {decorator}
         </button>
       );
@@ -124,6 +132,9 @@ Decorator.propTypes = {
 
   /** @type {Function} Click handler of the Decorator. */
   onClick: PropTypes.func,
+
+  /** @type {Function} Secondary click handler of the Decorator. */
+  onContextMenu: PropTypes.func,
 
   /** @type {boolean} Whether the Decorator includes an icon */
   noIcon: PropTypes.bool,
@@ -164,6 +175,7 @@ Decorator.defaultProps = {
   href: undefined,
   inline: false,
   onClick: undefined,
+  onContextMenu: () => {},
   noIcon: false,
   score: undefined,
   scoreThresholds: [0, 4, 7, 10],
