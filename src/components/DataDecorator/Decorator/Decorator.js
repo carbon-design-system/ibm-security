@@ -3,9 +3,9 @@
  * @copyright IBM Security 2019-2020
  */
 
-import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 
 import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
 
@@ -33,25 +33,29 @@ class Decorator extends Component {
     this.props.onClick(event, this.props.type, this.props.value);
   };
 
-  renderDecorator = (noIcon, path, inline, score, scoreThresholds) => (
-    <Fragment>
-      {!noIcon && (
-        <span className={`${namespace}__icon`}>
-          <Icon
-            fillRule="evenodd"
-            path={path}
-            size={inline ? 12 : 16}
-            viewBox="0 0 16 16"
-            title={this.props.scoreDescription(score, scoreThresholds)}
-          />
+  renderDecorator = (noIcon, path, inline, score, scoreThresholds) => {
+    const { scoreDescription, title, type, value } = this.props;
+
+    return (
+      <>
+        {!noIcon && (
+          <span className={`${namespace}__icon`}>
+            <Icon
+              fillRule="evenodd"
+              path={path}
+              size={inline ? 12 : 16}
+              viewBox="0 0 16 16"
+              title={scoreDescription(score, scoreThresholds)}
+            />
+          </span>
+        )}
+        <span className={`${namespace}__type`}>{type}</span>
+        <span className={`${namespace}__value`} title={title || value}>
+          {value}
         </span>
-      )}
-      <span className={`${namespace}__type`}>{this.props.type}</span>
-      <span className={`${namespace}__value`} title={this.props.title}>
-        {this.props.value}
-      </span>
-    </Fragment>
-  );
+      </>
+    );
+  };
 
   render() {
     const {
