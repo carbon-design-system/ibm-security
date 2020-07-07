@@ -5,13 +5,14 @@
 
 import Camera20 from '@carbon/icons-react/lib/camera/20';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
 import { disableCenteredStories, patterns } from '../../../.storybook';
 
 import Shell from '.';
+import { PageWrapper, PushPanel } from '../PushPanel';
 
 import { IconButton, Button } from '../..';
 
@@ -30,13 +31,64 @@ const shellProps = {
 };
 
 disableCenteredStories(storiesOf(patterns('Shell (Security)'), module))
-  .add('default', () => <Shell {...shellProps} />, {
-    info: {
-      text: `
+  .add(
+    'default',
+    () => {
+      function PushPanelStory() {
+        const [open, setOpen] = useState(false);
+
+        const toggle = () => (open ? setOpen(false) : setOpen(true));
+
+        return (
+          <PageWrapper>
+            <Shell
+              {...shellProps}
+              style={{
+                gridRow: 1,
+                gridColumnStart: 1,
+                gridColumnEnd: open ? 2 : 3,
+              }}
+            />
+            <div
+              id="main"
+              style={{
+                paddingLeft: '5rem',
+                backgroundColor: 'cyan',
+                color: 'black',
+                height: '1000px',
+                gridRow: 2,
+                gridColumnStart: 1,
+                gridColumnEnd: open ? 2 : 3,
+              }}
+            >
+              <p>
+                Example page content. Example page content. Example page
+                content. Example page content. Example page content. Example
+                page content. Example page content. Example page content.
+                Example page content. Example page content. Example page
+                content. Example page content. Example page content. Example
+                page content. Example page content. Example page content.
+                Example page content. Example page content. Example page
+                content. Example page content. Example page content. Example
+                page content. Example page content. Example page content.
+                Example page content. Example page content.{' '}
+              </p>
+              <Button onClick={() => toggle()}>Example button</Button>
+            </div>
+            <PushPanel isOpen={open}>Panel content</PushPanel>
+          </PageWrapper>
+        );
+      }
+      return <PushPanelStory />;
+    },
+    {
+      info: {
+        text: `
           Basic implementation of the shell.
         `,
-    },
-  })
+      },
+    }
+  )
   .add(
     'with addon and skip-to-content link',
     () => (

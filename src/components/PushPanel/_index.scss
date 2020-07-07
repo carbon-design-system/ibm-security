@@ -1,0 +1,58 @@
+// Push panel demo
+@import '@carbon/motion/scss/motion';
+@import 'carbon-components/scss/globals/scss/motion';
+@import '../../globals/namespace/index';
+
+@include export-namespace($name: push-panel) {
+  $panel-width: 300px;
+
+  .page-wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 300px;
+    background-color: yellow;
+    height: 100vh; // required for position: sticky + overflow
+    overflow-x: hidden;
+  }
+
+  .push-panel {
+    grid-row: 1/3;
+    grid-column-start: 2;
+    width: $panel-width;
+    background-color: hotpink;
+
+    &__content {
+      position: sticky;
+      top: 0;
+    }
+  }
+
+  .push-panel__transition {
+    &--appear,
+    &--enter {
+      transform: translate3d($panel-width, 0, 0);
+
+      &--active {
+        transform: translate3d(0, 0, 0);
+        transition: all $duration--moderate-02;
+        transition-timing-function: carbon--motion(
+          $name: entrance,
+          $mode: expressive
+        );
+      }
+    }
+
+    &--leave {
+      transform: translate3d(0, 0, 0);
+
+      &--active {
+        transform: translate3d($panel-width, 0, 0);
+        transition: all $duration--moderate-02;
+        transition-timing-function: carbon--motion(
+          $name: exit,
+          $mode: expressive
+        );
+      }
+    }
+  }
+}

@@ -29,6 +29,7 @@ const Shell = ({
   returnToBanner,
   skipToContent,
   toolbar,
+  ...other
 }) => {
   const {
     accounts,
@@ -86,6 +87,7 @@ const Shell = ({
           [activeClass]: profile,
           [returnClass]: returnToBanner,
         })}
+        {...other}
       >
         {profile && (
           <Toolbar

@@ -17209,11 +17209,6 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 
 .security--header {
   display: flex;
-  position: fixed;
-  top: 0;
-  width: inherit;
-  height: inherit;
-  padding-top: inherit;
   align-items: center;
   background-color: inherit;
   color: inherit;
@@ -17853,6 +17848,9 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .security--shell--active {
+  position: sticky;
+  top: 0;
+  z-index: 8000;
   margin-left: 3rem;
 }
 
@@ -25065,6 +25063,47 @@ a.bx--navigation-link:focus {
 
 .security--unstable-pagination__page-sizer {
   border-right: 1px solid var(--ui-02, #393939);
+}
+
+.page-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 300px;
+  background-color: yellow;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.push-panel {
+  grid-row: 1/3;
+  grid-column-start: 2;
+  width: 300px;
+  background-color: hotpink;
+}
+
+.push-panel__content {
+  position: sticky;
+  top: 0;
+}
+
+.push-panel__transition--appear, .push-panel__transition--enter {
+  transform: translate3d(300px, 0, 0);
+}
+
+.push-panel__transition--appear--active, .push-panel__transition--enter--active {
+  transform: translate3d(0, 0, 0);
+  transition: all 240ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.3, 1);
+}
+
+.push-panel__transition--leave {
+  transform: translate3d(0, 0, 0);
+}
+
+.push-panel__transition--leave--active {
+  transform: translate3d(300px, 0, 0);
+  transition: all 240ms;
+  transition-timing-function: cubic-bezier(0.4, 0.14, 1, 1);
 }
 
 body {

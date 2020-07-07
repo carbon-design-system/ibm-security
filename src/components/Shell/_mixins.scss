@@ -28,6 +28,9 @@
     $header: '__header';
     $toolbar: '__toolbar';
 
+    position: sticky;
+    top: 0;
+    z-index: $header__layer;
     margin-left: $toolbar__sizing__width;
 
     &#{$header} > #{$header__namespace} {
