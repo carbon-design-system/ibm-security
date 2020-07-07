@@ -5,6 +5,7 @@
 
 import { render } from '@testing-library/react';
 import React from 'react';
+import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { ProfileImage } from '../../..';
 
@@ -12,8 +13,7 @@ import { namespace } from '../ProfileImage';
 
 describe('ProfileImage', () => {
   test('should have no Axe or DAP violations when image is NOT provided', async () => {
-    const main = document.createElement('main');
-    render(
+    const { container } = renderWithinLandmark(
       <ProfileImage
         profile={{
           image_url: null,
@@ -22,21 +22,14 @@ describe('ProfileImage', () => {
             surname: 'User',
           },
         }}
-      />,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+      />
     );
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations(
-      'ProfileImage without image'
-    );
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('ProfileImage without image');
   });
 
   test('should have no Axe or DAP violations when image is provided', async () => {
-    const main = document.createElement('main');
-    render(
+    const { container } = renderWithinLandmark(
       <ProfileImage
         profile={{
           image_url: 'example.svg',
@@ -45,16 +38,10 @@ describe('ProfileImage', () => {
             surname: 'User',
           },
         }}
-      />,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+      />
     );
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations(
-      'ProfileImage with image'
-    );
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('ProfileImage with image');
   });
 
   test("should apply an image via the `profile` object's `image_url`", () => {

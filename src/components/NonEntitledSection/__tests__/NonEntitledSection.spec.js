@@ -5,14 +5,14 @@
 
 import { render } from '@testing-library/react';
 import React from 'react';
+import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { icon } from '../../_mocks_';
 import { NonEntitledSection } from '../../..';
 
 describe('NonEntitledSection', () => {
   test('should have no Axe or DAP violations', async () => {
-    const main = document.createElement('main');
-    render(
+    const { container } = renderWithinLandmark(
       <NonEntitledSection
         title="test title"
         subTitle="test subtitle"
@@ -30,15 +30,11 @@ describe('NonEntitledSection', () => {
             icon,
           },
         ]}
-      />,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+      />
     );
 
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('NonEntitledSection');
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('NonEntitledSection');
   });
 
   test('should apply a title via `title`', () => {

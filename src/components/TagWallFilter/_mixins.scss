@@ -7,10 +7,25 @@
 @import '@carbon/layout/scss/spacing';
 @import '@carbon/themes/scss/tokens';
 
+@import '../../globals/namespace/index';
+
+@import '../Tearsheet/TearsheetSmall/variables';
+
 @mixin tag-wall-filter {
+  /// Small tearsheet namespace.
+  /// @type String
+  $tearsheet--small__namespace: get-component-namespace(
+    $component-name: tearsheet--small,
+  );
+
+  /// Small tearsheet spacing.
+  /// @type String
+  $tearsheet--small__spacing: $carbon--spacing-05;
+
   &__tag-wall {
     min-height: $carbon--spacing-06;
-    margin: $carbon--spacing-04 0 $carbon--spacing-03;
+    margin-top: $carbon--spacing-04;
+    margin-bottom: $carbon--spacing-03;
 
     &__label {
       color: $text-02;
@@ -18,7 +33,18 @@
   }
 
   &__description {
+    padding-right: $tearsheet--small__spacing;
     max-height: 20vh;
     overflow: auto;
+  }
+
+  &#{$tearsheet--small__namespace} {
+    > #{$tearsheet--small__namespace}__header {
+      padding-right: 0;
+
+      > #{$tearsheet--small__namespace}__title {
+        margin-right: $tearsheet--small__spacing;
+      }
+    }
   }
 }

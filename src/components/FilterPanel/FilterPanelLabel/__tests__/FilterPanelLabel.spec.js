@@ -5,18 +5,17 @@
 
 import React from 'react';
 import { render } from '@testing-library/react';
+import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
 import FilterPanelLabel from '../FilterPanelLabel';
 
 describe('FilterPanelLabel', () => {
   test('should have no Axe or DAP violations', async () => {
-    const main = document.createElement('main');
-    render(<FilterPanelLabel count={100}>custom label</FilterPanelLabel>, {
-      // DAP requires a landmark '<main>' in the DOM:
-      container: document.body.appendChild(main),
-    });
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('FilterPanelGroup');
+    const { container } = renderWithinLandmark(
+      <FilterPanelLabel count={100}>custom label</FilterPanelLabel>
+    );
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('FilterPanelGroup');
   });
 
   test('renders with children', () => {
