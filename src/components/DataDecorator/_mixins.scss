@@ -31,7 +31,7 @@
 
   /// Height.
   /// @type Length
-  $data-decorator_sizing__height: carbon--mini-units(
+  $data-decorator__sizing__height: carbon--mini-units(
     $count: 3.25,
   );
 
@@ -43,7 +43,7 @@
   display: inline-flex;
   box-sizing: border-box;
   font-family: carbon--font-family($name: sans);
-  height: $data-decorator_sizing__height;
+  height: $data-decorator__sizing__height;
   background-color: $hover-ui;
   font-style: normal;
   font-stretch: normal;
@@ -186,6 +186,6 @@
   &__value {
     @include text-overflow;
     max-width: 30ch;
-    line-height: $data-decorator_sizing__height;
+    line-height: $data-decorator__sizing__height;
   }
 }

@@ -37,29 +37,35 @@ class Decorator extends Component {
     this.props.onContextMenu(event, this.props.type, this.props.value);
   };
 
-  renderDecorator = (noIcon, path, inline, score, scoreThresholds) => {
-    const { scoreDescription, title, type, value } = this.props;
-
-    return (
-      <>
-        {!noIcon && (
-          <span className={`${namespace}__icon`}>
-            <Icon
-              fillRule="evenodd"
-              path={path}
-              size={inline ? 12 : 16}
-              viewBox="0 0 16 16"
-              title={scoreDescription(score, scoreThresholds)}
-            />
-          </span>
-        )}
-        <span className={`${namespace}__type`}>{type}</span>
-        <span className={`${namespace}__value`} title={title || value}>
-          {value}
+  renderDecorator = (
+    inline,
+    noIcon,
+    path,
+    score,
+    scoreDescription,
+    scoreThresholds,
+    title,
+    type,
+    value
+  ) => (
+    <>
+      {!noIcon && (
+        <span className={`${namespace}__icon`}>
+          <Icon
+            fillRule="evenodd"
+            path={path}
+            size={inline ? 12 : 16}
+            viewBox="0 0 16 16"
+            title={scoreDescription(score, scoreThresholds)}
+          />
         </span>
-      </>
-    );
-  };
+      )}
+      <span className={`${namespace}__type`}>{type}</span>
+      <span className={`${namespace}__value`} title={title || value}>
+        {value}
+      </span>
+    </>
+  );
 
   render() {
     const {
@@ -70,16 +76,27 @@ class Decorator extends Component {
       noIcon,
       onClick,
       score,
+      scoreDescription,
       scoreThresholds,
+      title,
+      type,
+      value,
     } = this.props;
+
     const { path, classes } = getDecoratorProps(score, scoreThresholds, active);
+
     const decorator = this.renderDecorator(
+      inline,
       noIcon,
       path,
-      inline,
       score,
-      scoreThresholds
+      scoreDescription,
+      scoreThresholds,
+      title,
+      type,
+      value
     );
+
     const decoratorClasses = classnames(namespace, classes, className, {
       [`${namespace}--interactive`]: href || onClick,
       [`${namespace}--active`]: active,
