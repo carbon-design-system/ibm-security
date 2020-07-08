@@ -714,30 +714,14 @@ Map {
       "downshiftProps": Object {
         "args": Array [
           Object {
-            "breakingChanges": Object {
-              "args": Array [
-                Object {
-                  "resetInputOnSelection": Object {
-                    "type": "bool",
-                  },
-                },
-              ],
-              "type": "shape",
-            },
             "children": Object {
               "type": "func",
             },
             "defaultHighlightedIndex": Object {
               "type": "number",
             },
-            "defaultInputValue": Object {
-              "type": "string",
-            },
             "defaultIsOpen": Object {
               "type": "bool",
-            },
-            "defaultSelectedItem": Object {
-              "type": "any",
             },
             "environment": Object {
               "args": Array [
@@ -771,10 +755,28 @@ Map {
             "getA11yStatusMessage": Object {
               "type": "func",
             },
+            "getItemId": Object {
+              "type": "func",
+            },
             "highlightedIndex": Object {
               "type": "number",
             },
             "id": Object {
+              "type": "string",
+            },
+            "initialHighlightedIndex": Object {
+              "type": "number",
+            },
+            "initialInputValue": Object {
+              "type": "string",
+            },
+            "initialIsOpen": Object {
+              "type": "bool",
+            },
+            "initialSelectedItem": Object {
+              "type": "any",
+            },
+            "inputId": Object {
               "type": "string",
             },
             "inputValue": Object {
@@ -788,6 +790,12 @@ Map {
             },
             "itemToString": Object {
               "type": "func",
+            },
+            "labelId": Object {
+              "type": "string",
+            },
+            "menuId": Object {
+              "type": "string",
             },
             "onChange": Object {
               "type": "func",
@@ -807,7 +815,7 @@ Map {
             "onUserAction": Object {
               "type": "func",
             },
-            "render": Object {
+            "scrollIntoView": Object {
               "type": "func",
             },
             "selectedItem": Object {
@@ -818,6 +826,9 @@ Map {
             },
             "stateReducer": Object {
               "type": "func",
+            },
+            "suppressRefError": Object {
+              "type": "bool",
             },
           },
         ],
@@ -2091,6 +2102,8 @@ Map {
       "compact": false,
       "headers": Array [],
       "rowCount": 5,
+      "showHeader": true,
+      "showToolbar": true,
       "zebra": false,
     },
     "propTypes": Object {
@@ -2125,6 +2138,12 @@ Map {
       },
       "rowCount": Object {
         "type": "number",
+      },
+      "showHeader": Object {
+        "type": "bool",
+      },
+      "showToolbar": Object {
+        "type": "bool",
       },
       "zebra": Object {
         "type": "bool",
@@ -2576,116 +2595,7 @@ Map {
         "type": "bool",
       },
       "downshiftProps": Object {
-        "args": Array [
-          Object {
-            "breakingChanges": Object {
-              "args": Array [
-                Object {
-                  "resetInputOnSelection": Object {
-                    "type": "bool",
-                  },
-                },
-              ],
-              "type": "shape",
-            },
-            "children": Object {
-              "type": "func",
-            },
-            "defaultHighlightedIndex": Object {
-              "type": "number",
-            },
-            "defaultInputValue": Object {
-              "type": "string",
-            },
-            "defaultIsOpen": Object {
-              "type": "bool",
-            },
-            "defaultSelectedItem": Object {
-              "type": "any",
-            },
-            "environment": Object {
-              "args": Array [
-                Object {
-                  "addEventListener": Object {
-                    "type": "func",
-                  },
-                  "document": Object {
-                    "args": Array [
-                      Object {
-                        "activeElement": Object {
-                          "type": "any",
-                        },
-                        "body": Object {
-                          "type": "any",
-                        },
-                        "getElementById": Object {
-                          "type": "func",
-                        },
-                      },
-                    ],
-                    "type": "shape",
-                  },
-                  "removeEventListener": Object {
-                    "type": "func",
-                  },
-                },
-              ],
-              "type": "shape",
-            },
-            "getA11yStatusMessage": Object {
-              "type": "func",
-            },
-            "highlightedIndex": Object {
-              "type": "number",
-            },
-            "id": Object {
-              "type": "string",
-            },
-            "inputValue": Object {
-              "type": "string",
-            },
-            "isOpen": Object {
-              "type": "bool",
-            },
-            "itemCount": Object {
-              "type": "number",
-            },
-            "itemToString": Object {
-              "type": "func",
-            },
-            "onChange": Object {
-              "type": "func",
-            },
-            "onInputValueChange": Object {
-              "type": "func",
-            },
-            "onOuterClick": Object {
-              "type": "func",
-            },
-            "onSelect": Object {
-              "type": "func",
-            },
-            "onStateChange": Object {
-              "type": "func",
-            },
-            "onUserAction": Object {
-              "type": "func",
-            },
-            "render": Object {
-              "type": "func",
-            },
-            "selectedItem": Object {
-              "type": "any",
-            },
-            "selectedItemChanged": Object {
-              "type": "func",
-            },
-            "stateReducer": Object {
-              "type": "func",
-            },
-          },
-        ],
-        "type": "shape",
+        "type": "object",
       },
       "helperText": Object {
         "args": Array [
@@ -4578,8 +4488,10 @@ Map {
           Array [
             "error",
             "info",
+            "info-square",
             "success",
             "warning",
+            "warning-alt",
           ],
         ],
         "isRequired": true,
@@ -4692,16 +4604,29 @@ Map {
     },
   },
   "ListBox" => Object {
+    "$$typeof": Symbol(react.forward_ref),
     "Field": Object {
       "propTypes": Object {
+        "aria-haspopup": Object {
+          "args": Array [
+            Array [
+              Object {
+                "type": "string",
+              },
+              Object {
+                "type": "bool",
+              },
+            ],
+          ],
+          "type": "oneOfType",
+        },
         "children": Object {
           "type": "node",
         },
         "disabled": Object {
           "type": "bool",
         },
-        "id": Object {
-          "isRequired": true,
+        "role": Object {
           "type": "string",
         },
         "tabIndex": Object {
@@ -4720,6 +4645,8 @@ Map {
       },
     },
     "Menu": Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "displayName": "ListBoxMenu",
       "propTypes": Object {
         "children": [Function],
         "id": Object {
@@ -4727,6 +4654,7 @@ Map {
           "type": "string",
         },
       },
+      "render": [Function],
     },
     "MenuIcon": Object {
       "defaultProps": Object {
@@ -4771,6 +4699,15 @@ Map {
           "isRequired": true,
           "type": "func",
         },
+        "disabled": Object {
+          "type": "bool",
+        },
+        "onClick": Object {
+          "type": "func",
+        },
+        "onKeyDown": Object {
+          "type": "func",
+        },
         "selectionCount": Object {
           "type": "number",
         },
@@ -4782,9 +4719,9 @@ Map {
     },
     "defaultProps": Object {
       "disabled": false,
-      "innerRef": [Function],
       "type": "default",
     },
+    "displayName": "ListBox",
     "propTypes": Object {
       "children": Object {
         "type": "node",
@@ -4795,10 +4732,6 @@ Map {
       "disabled": Object {
         "isRequired": true,
         "type": "bool",
-      },
-      "innerRef": Object {
-        "isRequired": true,
-        "type": "func",
       },
       "size": Object {
         "args": Array [
@@ -4820,6 +4753,7 @@ Map {
         "type": "oneOf",
       },
     },
+    "render": [Function],
   },
   "ListItem" => Object {
     "propTypes": Object {
@@ -4953,10 +4887,10 @@ Map {
         "type": "bool",
       },
       "primaryButtonText": Object {
-        "type": "string",
+        "type": "node",
       },
       "secondaryButtonText": Object {
-        "type": "string",
+        "type": "node",
       },
       "selectorPrimaryFocus": Object {
         "type": "string",
@@ -5204,30 +5138,14 @@ Map {
         "downshiftProps": Object {
           "args": Array [
             Object {
-              "breakingChanges": Object {
-                "args": Array [
-                  Object {
-                    "resetInputOnSelection": Object {
-                      "type": "bool",
-                    },
-                  },
-                ],
-                "type": "shape",
-              },
               "children": Object {
                 "type": "func",
               },
               "defaultHighlightedIndex": Object {
                 "type": "number",
               },
-              "defaultInputValue": Object {
-                "type": "string",
-              },
               "defaultIsOpen": Object {
                 "type": "bool",
-              },
-              "defaultSelectedItem": Object {
-                "type": "any",
               },
               "environment": Object {
                 "args": Array [
@@ -5261,10 +5179,28 @@ Map {
               "getA11yStatusMessage": Object {
                 "type": "func",
               },
+              "getItemId": Object {
+                "type": "func",
+              },
               "highlightedIndex": Object {
                 "type": "number",
               },
               "id": Object {
+                "type": "string",
+              },
+              "initialHighlightedIndex": Object {
+                "type": "number",
+              },
+              "initialInputValue": Object {
+                "type": "string",
+              },
+              "initialIsOpen": Object {
+                "type": "bool",
+              },
+              "initialSelectedItem": Object {
+                "type": "any",
+              },
+              "inputId": Object {
                 "type": "string",
               },
               "inputValue": Object {
@@ -5278,6 +5214,12 @@ Map {
               },
               "itemToString": Object {
                 "type": "func",
+              },
+              "labelId": Object {
+                "type": "string",
+              },
+              "menuId": Object {
+                "type": "string",
               },
               "onChange": Object {
                 "type": "func",
@@ -5297,7 +5239,7 @@ Map {
               "onUserAction": Object {
                 "type": "func",
               },
-              "render": Object {
+              "scrollIntoView": Object {
                 "type": "func",
               },
               "selectedItem": Object {
@@ -5308,6 +5250,9 @@ Map {
               },
               "stateReducer": Object {
                 "type": "func",
+              },
+              "suppressRefError": Object {
+                "type": "bool",
               },
             },
           ],
@@ -5414,30 +5359,14 @@ Map {
       "downshiftProps": Object {
         "args": Array [
           Object {
-            "breakingChanges": Object {
-              "args": Array [
-                Object {
-                  "resetInputOnSelection": Object {
-                    "type": "bool",
-                  },
-                },
-              ],
-              "type": "shape",
-            },
             "children": Object {
               "type": "func",
             },
             "defaultHighlightedIndex": Object {
               "type": "number",
             },
-            "defaultInputValue": Object {
-              "type": "string",
-            },
             "defaultIsOpen": Object {
               "type": "bool",
-            },
-            "defaultSelectedItem": Object {
-              "type": "any",
             },
             "environment": Object {
               "args": Array [
@@ -5471,10 +5400,28 @@ Map {
             "getA11yStatusMessage": Object {
               "type": "func",
             },
+            "getItemId": Object {
+              "type": "func",
+            },
             "highlightedIndex": Object {
               "type": "number",
             },
             "id": Object {
+              "type": "string",
+            },
+            "initialHighlightedIndex": Object {
+              "type": "number",
+            },
+            "initialInputValue": Object {
+              "type": "string",
+            },
+            "initialIsOpen": Object {
+              "type": "bool",
+            },
+            "initialSelectedItem": Object {
+              "type": "any",
+            },
+            "inputId": Object {
               "type": "string",
             },
             "inputValue": Object {
@@ -5488,6 +5435,12 @@ Map {
             },
             "itemToString": Object {
               "type": "func",
+            },
+            "labelId": Object {
+              "type": "string",
+            },
+            "menuId": Object {
+              "type": "string",
             },
             "onChange": Object {
               "type": "func",
@@ -5507,7 +5460,7 @@ Map {
             "onUserAction": Object {
               "type": "func",
             },
-            "render": Object {
+            "scrollIntoView": Object {
               "type": "func",
             },
             "selectedItem": Object {
@@ -5518,6 +5471,9 @@ Map {
             },
             "stateReducer": Object {
               "type": "func",
+            },
+            "suppressRefError": Object {
+              "type": "bool",
             },
           },
         ],
@@ -5970,9 +5926,7 @@ Map {
       "onMouseUp": Object {
         "type": "func",
       },
-      "primaryFocus": Object {
-        "type": "bool",
-      },
+      "primaryFocus": [Function],
       "requireTitle": Object {
         "type": "bool",
       },
@@ -6027,7 +5981,6 @@ Map {
       "itemText": [Function],
       "itemsPerPageText": "Items per page:",
       "page": 1,
-      "pageInputDisabled": false,
       "pageNumberText": "Page Number",
       "pageRangeText": [Function],
       "pageText": [Function],
@@ -6077,9 +6030,7 @@ Map {
       "page": Object {
         "type": "number",
       },
-      "pageInputDisabled": Object {
-        "type": "bool",
-      },
+      "pageInputDisabled": [Function],
       "pageNumberText": Object {
         "type": "string",
       },
@@ -11285,8 +11236,10 @@ Map {
           Array [
             "error",
             "info",
+            "info-square",
             "success",
             "warning",
+            "warning-alt",
           ],
         ],
         "isRequired": true,
@@ -12305,6 +12258,101 @@ Map {
       },
       "nested": Object {
         "type": "bool",
+      },
+    },
+  },
+  "Unstable_Pagination" => Object {
+    "defaultProps": Object {
+      "backwardText": "Previous page",
+      "children": undefined,
+      "className": null,
+      "disabled": false,
+      "forwardText": "Next page",
+      "id": 1,
+      "initialPage": 1,
+      "itemRangeText": [Function],
+      "itemText": [Function],
+      "itemsPerPageText": "Items per page:",
+      "pageRangeText": [Function],
+      "pageSize": 10,
+      "pageSizes": undefined,
+      "pageText": [Function],
+      "pagesUnknown": false,
+      "totalItems": undefined,
+    },
+    "propTypes": Object {
+      "backwardText": Object {
+        "type": "string",
+      },
+      "children": Object {
+        "args": Array [
+          Array [
+            Object {
+              "type": "node",
+            },
+            Object {
+              "type": "func",
+            },
+          ],
+        ],
+        "type": "oneOfType",
+      },
+      "className": Object {
+        "type": "string",
+      },
+      "disabled": Object {
+        "type": "bool",
+      },
+      "forwardText": Object {
+        "type": "string",
+      },
+      "id": Object {
+        "args": Array [
+          Array [
+            Object {
+              "type": "string",
+            },
+            Object {
+              "type": "number",
+            },
+          ],
+        ],
+        "type": "oneOfType",
+      },
+      "initialPage": Object {
+        "type": "number",
+      },
+      "itemRangeText": Object {
+        "type": "func",
+      },
+      "itemText": Object {
+        "type": "func",
+      },
+      "itemsPerPageText": Object {
+        "type": "string",
+      },
+      "pageRangeText": Object {
+        "type": "func",
+      },
+      "pageSize": Object {
+        "type": "number",
+      },
+      "pageSizes": Object {
+        "args": Array [
+          Object {
+            "type": "number",
+          },
+        ],
+        "type": "arrayOf",
+      },
+      "pageText": Object {
+        "type": "func",
+      },
+      "pagesUnknown": Object {
+        "type": "bool",
+      },
+      "totalItems": Object {
+        "type": "number",
       },
     },
   },
