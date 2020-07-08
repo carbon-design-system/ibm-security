@@ -24919,6 +24919,50 @@ a.bx--navigation-link:focus {
   margin: 0;
 }
 
+.security--upsell-nudge {
+  transition-timing-function: cubic-bezier(0.2, 0, 0.38, 0.9);
+  display: block;
+  min-width: 12rem;
+  padding: 1rem;
+  background-color: var(--ui-01, #262626);
+  transition-duration: 0.1s;
+  text-decoration: unset;
+}
+
+.security--upsell-nudge:focus, .security--upsell-nudge:hover {
+  background-color: var(--hover-ui, #353535);
+}
+
+.security--upsell-nudge:focus {
+  outline: 2px solid var(--focus, #ffffff);
+  outline-offset: -2px;
+}
+
+.security--upsell-nudge__title, .security--upsell-nudge__subtitle {
+  display: block;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.security--upsell-nudge__title {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 0.16px;
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+  color: var(--text-01, #f4f4f4);
+}
+
+.security--upsell-nudge__subtitle {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1rem;
+  letter-spacing: 0.32px;
+  color: var(--text-02, #c6c6c6);
+}
+
 .security--unstable-pagination {
   box-sizing: border-box;
   margin: 0;

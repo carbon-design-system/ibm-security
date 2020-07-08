@@ -12308,6 +12308,28 @@ Map {
       },
     },
   },
+  "UpsellNudge" => Object {
+    "defaultProps": Object {
+      "className": null,
+      "element": "a",
+      "subtitle": null,
+    },
+    "propTypes": Object {
+      "className": Object {
+        "type": "string",
+      },
+      "element": Object {
+        "type": "elementType",
+      },
+      "subtitle": Object {
+        "type": "node",
+      },
+      "title": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+    },
+  },
   "Wizard" => Object {
     "defaultProps": Object {
       "children": undefined,

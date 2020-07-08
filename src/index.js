@@ -258,6 +258,7 @@ export {
 } from './components/UIShell';
 
 export UnorderedList from './components/UnorderedList';
+export UpsellNudge from './components/UpsellNudge';
 export { Wizard, WizardStep } from './components/Wizard';
 
 // Experimental.
