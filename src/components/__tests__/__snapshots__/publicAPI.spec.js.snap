@@ -1118,6 +1118,7 @@ Map {
       "children": undefined,
       "className": undefined,
       "closeButton": undefined,
+      "focusTrap": true,
       "inline": false,
       "labels": Object {},
       "noIcon": false,
@@ -1126,6 +1127,7 @@ Map {
       "onOpen": [Function],
       "primaryButton": undefined,
       "renderFooter": null,
+      "rootNode": undefined,
       "score": undefined,
       "scoreDescription": [Function],
       "scoreThresholds": Array [
@@ -1172,6 +1174,9 @@ Map {
         ],
         "type": "shape",
       },
+      "focusTrap": Object {
+        "type": "bool",
+      },
       "inline": Object {
         "type": "bool",
       },
@@ -1211,6 +1216,12 @@ Map {
       "primaryButton": [Function],
       "renderFooter": Object {
         "type": "func",
+      },
+      "rootNode": Object {
+        "args": Array [
+          [Function],
+        ],
+        "type": "instanceOf",
       },
       "score": Object {
         "type": "number",
@@ -6324,6 +6335,7 @@ Map {
       "onClose": [Function],
       "primaryButton": undefined,
       "renderFooter": null,
+      "rootNode": undefined,
       "secondaryButton": undefined,
       "stopPropagation": false,
       "stopPropagationEvents": undefined,
@@ -6399,6 +6411,12 @@ Map {
       "primaryButton": [Function],
       "renderFooter": Object {
         "type": "func",
+      },
+      "rootNode": Object {
+        "args": Array [
+          [Function],
+        ],
+        "type": "instanceOf",
       },
       "secondaryButton": [Function],
       "stopPropagation": Object {
