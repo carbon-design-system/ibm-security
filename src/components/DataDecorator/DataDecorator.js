@@ -41,11 +41,13 @@ class DataDecorator extends Component {
       children,
       className,
       closeButton,
+      focusTrap,
       inline,
       labels,
       noIcon,
       primaryButton,
       renderFooter,
+      rootNode,
       score,
       secondaryButton,
       stopPropagation,
@@ -57,7 +59,6 @@ class DataDecorator extends Component {
       scoreThresholds,
       scoreDescription,
       onContextMenu: propOnContextMenu,
-      rootNode,
     } = this.props;
     const onContextMenu = propOnContextMenu
       ? event => {
@@ -104,6 +105,7 @@ class DataDecorator extends Component {
           stopPropagation={stopPropagation}
           stopPropagationEvents={stopPropagationEvents}
           rootNode={rootNode}
+          focusTrap={focusTrap}
           closeButton={{
             onClick: event => {
               this.close(event, type, value);
@@ -185,6 +187,9 @@ DataDecorator.propTypes = {
   /** @type {Object<Object>} An object list of close button props. */
   closeButton: buttonType,
 
+  /** @type {boolean} Focus trap. */
+  focusTrap: PropTypes.bool,
+
   /** @type {boolean} Determines if this is inline or not. */
   inline: propTypes.inline,
 
@@ -264,6 +269,7 @@ DataDecorator.defaultProps = {
   children: undefined,
   className: undefined,
   closeButton: undefined,
+  focusTrap: true,
   inline: defaultProps.inline,
   labels: {},
   noIcon: false,
