@@ -1122,6 +1122,7 @@ Map {
       "labels": Object {},
       "noIcon": false,
       "onClose": [Function],
+      "onContextMenu": undefined,
       "onOpen": [Function],
       "primaryButton": undefined,
       "renderFooter": null,
@@ -1199,6 +1200,9 @@ Map {
         "type": "bool",
       },
       "onClose": Object {
+        "type": "func",
+      },
+      "onContextMenu": Object {
         "type": "func",
       },
       "onOpen": Object {
@@ -2463,6 +2467,7 @@ Map {
       "inline": false,
       "noIcon": false,
       "onClick": undefined,
+      "onContextMenu": [Function],
       "score": undefined,
       "scoreDescription": [Function],
       "scoreThresholds": Array [
@@ -2491,6 +2496,9 @@ Map {
         "type": "bool",
       },
       "onClick": Object {
+        "type": "func",
+      },
+      "onContextMenu": Object {
         "type": "func",
       },
       "score": Object {
@@ -4373,6 +4381,16 @@ Map {
               Object {
                 "className": Object {
                   "type": "string",
+                },
+                "divider": Object {
+                  "args": Array [
+                    Array [
+                      "left",
+                      "right",
+                      "sides",
+                    ],
+                  ],
+                  "type": "oneOf",
                 },
                 "iconClassName": Object {
                   "type": "string",

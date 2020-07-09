@@ -6,9 +6,11 @@
 
 @import '@carbon/themes/scss/tokens';
 
-@import '../Component/mixins';
-
 @import '../../globals/motion/index';
+
+@import '../Button/index';
+
+@import '../Component/mixins';
 
 @include security--component($name: truncated-list) {
   margin: 0;

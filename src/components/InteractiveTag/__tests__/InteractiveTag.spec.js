@@ -1,14 +1,15 @@
 /**
  * @file Interactive tag tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
+import userEvent from '@testing-library/user-event';
 import { render } from '@testing-library/react';
 import React from 'react';
-import userEvent from '@testing-library/user-event';
-import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
-import { InteractiveTag } from '../../../..';
+import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
+
+import { InteractiveTag } from '../../..';
 import { namespace } from '../InteractiveTag';
 
 describe('InteractiveTag', () => {

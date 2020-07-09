@@ -27,13 +27,13 @@ class DataDecorator extends Component {
   toggleOpen = () => (this.state.isOpen ? this.close() : this.open());
 
   open = () => {
-    this.props.onOpen();
     this.setState({ isOpen: true });
+    this.props.onOpen();
   };
 
   close = () => {
-    this.props.onClose();
     this.setState({ isOpen: false });
+    this.props.onClose();
   };
 
   render() {
@@ -56,8 +56,15 @@ class DataDecorator extends Component {
       title,
       scoreThresholds,
       scoreDescription,
+      onContextMenu: propOnContextMenu,
       rootNode,
     } = this.props;
+    const onContextMenu = propOnContextMenu
+      ? event => {
+          event.preventDefault();
+          propOnContextMenu(event);
+        }
+      : undefined;
     const decoratorProps = {
       className,
       inline,
@@ -68,6 +75,7 @@ class DataDecorator extends Component {
       title,
       scoreThresholds,
       scoreDescription,
+      onContextMenu,
     };
     const componentLabels = {
       ...defaultLabels.labels,
@@ -92,6 +100,7 @@ class DataDecorator extends Component {
         />
         <PanelV2
           isOpen={this.state.isOpen}
+          onClose={this.close}
           stopPropagation={stopPropagation}
           stopPropagationEvents={stopPropagationEvents}
           rootNode={rootNode}
@@ -185,6 +194,9 @@ DataDecorator.propTypes = {
   /** @type {boolean} Whether the rendered Decorator includes an icon */
   noIcon: PropTypes.bool,
 
+  /** @type {Function} The function to call when the DataDecorator is secondary-clicked */
+  onContextMenu: PropTypes.func,
+
   /** @type {Function} The function to call when the DataDecorator Panel closes. */
   onClose: PropTypes.func,
 
@@ -255,6 +267,7 @@ DataDecorator.defaultProps = {
   inline: defaultProps.inline,
   labels: {},
   noIcon: false,
+  onContextMenu: undefined,
   onClose: () => {},
   onOpen: () => {},
   primaryButton: undefined,

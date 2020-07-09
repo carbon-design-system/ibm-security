@@ -3,6 +3,7 @@
  * @copyright IBM Security 2019
  */
 
+import { render } from '@testing-library/react';
 import { shallow } from 'enzyme';
 import React from 'react';
 import Add16 from '@carbon/icons-react/lib/add/16';
@@ -18,9 +19,12 @@ import {
   sizes,
 } from '../../IconButton/_mocks_';
 
+import { namespace } from '../IconButtonBar';
+
 const actions = [
   {
     className,
+    divider: 'left',
     disabled: false,
     iconClassName,
     label: `${label} 1`,
@@ -29,6 +33,7 @@ const actions = [
   },
   {
     className,
+    divider: 'right',
     disabled: false,
     iconClassName,
     label: `${label} 2`,
@@ -37,6 +42,7 @@ const actions = [
   },
   {
     className,
+    divider: 'sides',
     disabled: false,
     iconClassName,
     label: `${label} 3`,
@@ -53,15 +59,10 @@ const actions = [
   },
 ];
 
-let iconButtonBar;
-
-beforeEach(() => {
-  iconButtonBar = shallow(<IconButtonBar actions={actions} />);
-});
-
 describe('IconButtonBar', () => {
   sizes.forEach(size => {
     it(`renders the '${size}' variation`, () => {
+      const iconButtonBar = shallow(<IconButtonBar actions={actions} />);
       iconButtonBar.setProps({ size });
       expect(iconButtonBar).toMatchSnapshot();
     });
@@ -69,8 +70,66 @@ describe('IconButtonBar', () => {
 
   [1, 2, 3, 4, 5].forEach(length => {
     it(`renders the length of '${length}' variation`, () => {
+      const iconButtonBar = shallow(<IconButtonBar actions={actions} />);
       iconButtonBar.setProps({ length });
       expect(iconButtonBar).toMatchSnapshot();
     });
+  });
+
+  it('renders a divider on the left', () => {
+    const { getByLabelText } = render(
+      <IconButtonBar
+        actions={[
+          {
+            divider: 'left',
+            label: 'Test label',
+            onClick: () => {},
+            renderIcon: Edit16,
+          },
+        ]}
+      />
+    );
+    expect(getByLabelText('Test label').previousSibling).toHaveClass(
+      `${namespace}__divider`
+    );
+  });
+
+  it('renders a divider on the right', () => {
+    const { getByLabelText } = render(
+      <IconButtonBar
+        actions={[
+          {
+            divider: 'right',
+            label: 'Test label',
+            onClick: () => {},
+            renderIcon: Edit16,
+          },
+        ]}
+      />
+    );
+    expect(getByLabelText('Test label').nextSibling).toHaveClass(
+      `${namespace}__divider`
+    );
+  });
+
+  it('renders a divider on both sides of a button', () => {
+    const { getByLabelText } = render(
+      <IconButtonBar
+        actions={[
+          {
+            divider: 'sides',
+            label: 'Test label',
+            onClick: () => {},
+            renderIcon: Edit16,
+          },
+        ]}
+      />
+    );
+    expect(getByLabelText('Test label').previousSibling).toHaveClass(
+      `${namespace}__divider`
+    );
+    expect(getByLabelText('Test label').nextSibling).toHaveClass(
+      `${namespace}__divider`
+    );
   });
 });
