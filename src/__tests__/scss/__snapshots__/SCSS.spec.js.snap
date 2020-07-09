@@ -7366,6 +7366,10 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   color: transparent;
 }
 
+.bx--search-button, .bx--search-close {
+  color: var(--icon-01, #f4f4f4);
+}
+
 .security--data-table__table-wrapper {
   z-index: 0;
 }
