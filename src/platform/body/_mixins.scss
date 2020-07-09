@@ -4,8 +4,12 @@
 /// @copyright IBM Security 2019
 ////
 
-@import '../../globals/grid/index';
-@import '../../globals/type/index';
+@import '@carbon/grid/scss/mixins';
+@import '@carbon/themes/scss/tokens';
+@import '@carbon/type/scss/classes';
+@import '@carbon/type/scss/font-face/mono';
+@import '@carbon/type/scss/font-face/sans';
+@import '@carbon/type/scss/reset';
 
 /// Background color.
 /// @type Color
@@ -17,8 +21,8 @@ $body__color__text: $text-01;
 
 @mixin body {
   @include carbon--grid;
-  @include carbon--type-reset;
   @include carbon--type-classes;
   @include carbon--font-face-mono;
   @include carbon--font-face-sans;
+  @include carbon--type-reset;
 }

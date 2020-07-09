@@ -4,10 +4,13 @@
  */
 
 import classnames from 'classnames';
-import { arrayOf, bool, func, shape, string } from 'prop-types';
+import { arrayOf, bool, func, shape, string, object } from 'prop-types';
 import React from 'react';
 
-import { getComponentNamespace } from '../../globals/namespace/index';
+import {
+  carbonPrefix,
+  getComponentNamespace,
+} from '../../globals/namespace/index';
 import * as defaultLabels from '../../globals/nls';
 
 import defaultItemToString from '../__tools__/defaultItemToString';
@@ -60,6 +63,7 @@ const TagWall = ({
 
         return (
           <InteractiveTag
+            id={item.id}
             key={key}
             isSelected={item.isSelected}
             onRemove={event => {
@@ -70,8 +74,14 @@ const TagWall = ({
             removable={!disable}
             removeBtnLabel={TAG_WALL_REMOVE_BUTTON}
             type="gray"
+            {...item.props}
           >
-            {itemToString(item)}
+            <span
+              className={`${carbonPrefix}text-truncate--end`}
+              title={itemToString(item)}
+            >
+              {itemToString(item)}
+            </span>
           </InteractiveTag>
         );
       })}
@@ -108,6 +118,7 @@ TagWall.propTypes = {
       id: string.isRequired,
       isSelected: bool,
       label: string.isRequired,
+      props: object,
     })
   ).isRequired,
 

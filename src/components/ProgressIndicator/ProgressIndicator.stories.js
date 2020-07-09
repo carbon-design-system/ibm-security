@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { number } from '@storybook/addon-knobs';
+import { boolean, number, text } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
 import { settings } from 'carbon-components';
@@ -26,10 +26,11 @@ storiesOf(components('ProgressIndicator'), module)
     'Default',
     () => (
       <ProgressIndicator
+        vertical={boolean('Vertical', false)}
         currentIndex={number('Current progress (currentIndex)', 1)}
       >
         <ProgressStep
-          label="First step"
+          label={text('Label', 'First step')}
           description="Step 1: Getting started with Carbon Design System"
           secondaryLabel="Optional label"
         />
@@ -84,10 +85,10 @@ storiesOf(components('ProgressIndicator'), module)
     {
       info: {
         text: `
-            For React usage, ProgressIndicator holds the currentIndex state to indicate which ProgressStep is the current step. The ProgressIndicator component should always be used with ProgressStep components as its children. Changing currentIndex prop will automatically set the ProgressStep components props (complete, incomplete, current).
-            For general usage, Progress Indicators display steps in a process. It should indicate when steps have been complete, the active step,
-            and the steps to come.
-          `,
+          For React usage, ProgressIndicator holds the currentIndex state to indicate which ProgressStep is the current step. The ProgressIndicator component should always be used with ProgressStep components as its children. Changing currentIndex prop will automatically set the ProgressStep components props (complete, incomplete, current).
+          For general usage, Progress Indicators display steps in a process. It should indicate when steps have been complete, the active step,
+          and the steps to come.
+        `,
       },
     }
   )
@@ -131,15 +132,15 @@ storiesOf(components('ProgressIndicator'), module)
     {
       info: {
         text: `
-           If you register an onChange handler, the Progress Indicator will become interactive.  Your parent component should update the currentIndex prop within the onChange handler.
-          `,
+         If you register an onChange handler, the Progress Indicator will become interactive.  Your parent component should update the currentIndex prop within the onChange handler.
+        `,
       },
     }
   )
   .add('skeleton', () => <ProgressIndicatorSkeleton />, {
     info: {
       text: `
-            Placeholder skeleton state to use when content is loading.
-        `,
+          Placeholder skeleton state to use when content is loading.
+      `,
     },
   });

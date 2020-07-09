@@ -30,14 +30,12 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
 <div
   class="security--filter bx--list-box"
   id="test-id"
-  role="listbox"
-  tabindex="-1"
 >
   <div
     aria-controls="test-id__menu"
     aria-expanded="true"
     aria-haspopup="true"
-    aria-label="Close menu"
+    aria-label="close menu"
     aria-owns="test-id__menu"
     class="bx--list-box__field"
     data-toggle="true"
@@ -94,7 +92,12 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
           aria-labelledby="downshift-0-item-0"
           class="security--filter__list-item__entry"
         >
-          Abuja
+          <span
+            class="bx--text-truncate--end"
+            title="Abuja"
+          >
+            Abuja
+          </span>
           <span
             class="security--filter__add"
           >
@@ -110,7 +113,7 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
               />
             </svg>
           </span>
@@ -130,7 +133,12 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
           aria-labelledby="downshift-0-item-1"
           class="security--filter__list-item__entry"
         >
-          Beijing
+          <span
+            class="bx--text-truncate--end"
+            title="Beijing"
+          >
+            Beijing
+          </span>
           <span
             class="security--filter__add"
           >
@@ -146,7 +154,7 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
               />
             </svg>
           </span>
@@ -166,7 +174,12 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
           aria-labelledby="downshift-0-item-2"
           class="security--filter__list-item__entry"
         >
-          Berlin
+          <span
+            class="bx--text-truncate--end"
+            title="Berlin"
+          >
+            Berlin
+          </span>
           <span
             class="security--filter__add"
           >
@@ -182,7 +195,7 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
               />
             </svg>
           </span>
@@ -202,7 +215,12 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
           aria-labelledby="downshift-0-item-3"
           class="security--filter__list-item__entry"
         >
-          Johannesburg
+          <span
+            class="bx--text-truncate--end"
+            title="Johannesburg"
+          >
+            Johannesburg
+          </span>
           <span
             class="security--filter__add"
           >
@@ -218,7 +236,7 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
               />
             </svg>
           </span>
@@ -238,7 +256,12 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
           aria-labelledby="downshift-0-item-4"
           class="security--filter__list-item__entry"
         >
-          London
+          <span
+            class="bx--text-truncate--end"
+            title="London"
+          >
+            London
+          </span>
           <span
             class="security--filter__add"
           >
@@ -254,7 +277,7 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
               />
             </svg>
           </span>
@@ -274,7 +297,12 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
           aria-labelledby="downshift-0-item-5"
           class="security--filter__list-item__entry"
         >
-          Montreal
+          <span
+            class="bx--text-truncate--end"
+            title="Montreal"
+          >
+            Montreal
+          </span>
           <span
             class="security--filter__add"
           >
@@ -290,7 +318,7 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
               />
             </svg>
           </span>
@@ -310,7 +338,12 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
           aria-labelledby="downshift-0-item-6"
           class="security--filter__list-item__entry"
         >
-          New Delhi
+          <span
+            class="bx--text-truncate--end"
+            title="New Delhi"
+          >
+            New Delhi
+          </span>
           <span
             class="security--filter__add"
           >
@@ -326,7 +359,7 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
               />
             </svg>
           </span>
@@ -346,7 +379,12 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
           aria-labelledby="downshift-0-item-7"
           class="security--filter__list-item__entry"
         >
-          New York
+          <span
+            class="bx--text-truncate--end"
+            title="New York"
+          >
+            New York
+          </span>
           <span
             class="security--filter__add"
           >
@@ -362,7 +400,7 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
               />
             </svg>
           </span>
@@ -382,7 +420,12 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
           aria-labelledby="downshift-0-item-8"
           class="security--filter__list-item__entry"
         >
-          Rio de Janeiro
+          <span
+            class="bx--text-truncate--end"
+            title="Rio de Janeiro"
+          >
+            Rio de Janeiro
+          </span>
           <span
             class="security--filter__add"
           >
@@ -398,7 +441,7 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
               />
             </svg>
           </span>
@@ -418,7 +461,12 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
           aria-labelledby="downshift-0-item-9"
           class="security--filter__list-item__entry"
         >
-          San Fransisco
+          <span
+            class="bx--text-truncate--end"
+            title="San Fransisco"
+          >
+            San Fransisco
+          </span>
           <span
             class="security--filter__add"
           >
@@ -434,7 +482,7 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
               />
             </svg>
           </span>
@@ -454,7 +502,12 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
           aria-labelledby="downshift-0-item-10"
           class="security--filter__list-item__entry"
         >
-          Tokyo
+          <span
+            class="bx--text-truncate--end"
+            title="Tokyo"
+          >
+            Tokyo
+          </span>
           <span
             class="security--filter__add"
           >
@@ -470,7 +523,7 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M17 15L17 7 15 7 15 15 7 15 7 17 15 17 15 25 17 25 17 17 25 17 25 15 17 15z"
+                d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
               />
             </svg>
           </span>

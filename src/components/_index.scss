@@ -5,6 +5,7 @@
 ////
 
 // Application.
+@import 'Breadcrumb/index';
 @import 'Card/index';
 @import 'ComboButton/index';
 @import 'DataDecorator/index';
@@ -17,10 +18,12 @@
 @import 'IconButtonBar/index';
 @import 'IconButton/index';
 @import 'InlineLoading/index';
+@import 'Nav/index';
 @import 'NonEntitledSection/index';
 @import 'Notification/index';
 @import 'Panel/index';
 @import 'Pill/index';
+@import 'ProfileImage/index';
 @import 'ProgressIndicator/index';
 @import 'ScrollGradient/index';
 @import 'Search/index';
@@ -39,20 +42,17 @@
 @import 'TimeIndicator/index';
 @import 'Toolbar/index';
 @import 'TrendingCard/index';
+@import 'TruncatedList/index';
 @import 'TypeLayout/index';
 @import 'Wizard/index';
 
 // Platform.
-@import 'Nav/index';
-@import 'ProfileImage/index';
 @import 'SecurityHeader/index';
 @import 'Shell/index';
-@import 'UNSTABLE__Shell/index';
 
 /// Carbon proxy.
 @import 'Accordion/index';
 @import 'Button/index';
-@import 'Breadcrumb/index';
 @import 'Checkbox/index';
 @import 'CodeSnippet/index';
 @import 'ComboBox/index';
@@ -90,3 +90,4 @@
 
 /// Unstable experimental components.
 @import 'UNSTABLE__Pagination/index';
+@import 'UNSTABLE__Shell/index';

@@ -12,11 +12,11 @@ import React, { Fragment } from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
 
-import Button from '../Button';
 import Icon from '../Icon';
 import Link from '../Link';
 import SecurityHeader from '../SecurityHeader';
 import Toolbar from '../Toolbar';
+import { SkipToContent } from '../..';
 
 export const namespace = getComponentNamespace('shell');
 
@@ -53,15 +53,13 @@ const Shell = ({
     <Fragment>
       {skipToContent && (
         <div className={`${namespace}__skip-to-content`}>
-          <Button
+          <SkipToContent
             id={`${namespace}__skip-to-content__link`}
             className={`${namespace}__skip-to-content__link`}
             href={skipToContent.href}
-            // eslint-disable-next-line jsx-a11y/tabindex-no-positive
-            tabIndex={1}
           >
             {skipToContent.label}
-          </Button>
+          </SkipToContent>
         </div>
       )}
       {returnToBanner && (

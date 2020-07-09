@@ -26,7 +26,7 @@ describe('FilterPanelLabel', () => {
     expect(getByText(/custom label/i)).toBeVisible();
   });
 
-  test('renders with a title node', () => {
+  test('renders with a heading node', () => {
     const { getByTestId } = render(
       <FilterPanelLabel>
         <span data-testid="node-label" />

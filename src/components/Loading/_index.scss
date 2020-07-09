@@ -1,10 +1,17 @@
 ////
 /// Loading component.
 /// @group loading
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
+@import '@carbon/layout/scss/spacing';
+@import 'carbon-components/scss/globals/scss/vars';
+
 @import 'carbon-components/scss/components/loading/loading';
+
+@import '../../globals/namespace/index';
+
+@import 'LoadingMessage/index';
 
 @include export-namespace($name: loading) {
   .#{$prefix}--loading {

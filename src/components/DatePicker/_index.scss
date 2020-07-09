@@ -1,14 +1,17 @@
 ////
 /// Date picker component.
 /// @group date-picker
-/// @copyright IBM Security 2018, 2019
+/// @copyright IBM Security 2018 - 2020
 ////
 
 @import 'carbon-components/scss/components/date-picker/date-picker';
 
-@include export-namespace($name: datepicker) {
-  // TODO - V2: Colors need to be resolved on Carbon's end - they need to add grey-100 support for this component
+@import 'carbon-components/scss/globals/scss/vars';
 
+@import '../../globals/namespace/index';
+
+// Carbon needs to add theming support for this component.
+@include export-namespace($name: datepicker) {
   .#{$prefix}--date-picker__day.inRange,
   .flatpickr-day.inRange {
     background: $selected-ui;
@@ -32,7 +35,7 @@
   }
 
   .flatpickr-current-month input.cur-year:disabled {
-    color: $carbon--gray-60;
+    color: $disabled-03;
   }
 
   .#{$prefix}--date-picker__month .numInputWrapper .numInput:focus,
@@ -46,7 +49,7 @@
   .flatpickr-day.today {
     color: $text-01;
     &:after {
-      background-color: $support-04;
+      background-color: $interactive-04;
     }
   }
 
@@ -61,11 +64,12 @@
 
   .flatpickr-prev-month svg,
   .flatpickr-next-month svg {
-    fill: $carbon--white-0;
+    fill: $icon-01;
+
     &:hover,
     &:focus,
     &:active {
-      fill: $carbon--blue-50;
+      fill: $interactive-04;
     }
   }
 
@@ -73,15 +77,15 @@
   .#{$prefix}--date-picker__month .numInputWrapper span.arrowDown::after,
   .flatpickr-month .numInputWrapper span.arrowUp::after,
   .flatpickr-month .numInputWrapper span.arrowDown::after {
-    border-bottom-color: $carbon--white-0;
-    border-top-color: $carbon--white-0;
+    border-bottom-color: $icon-01;
+    border-top-color: $icon-01;
   }
 
   .#{$prefix}--date-picker__month .numInputWrapper span.arrowUp:hover::after,
   .#{$prefix}--date-picker__month .numInputWrapper span.arrowDown:hover::after,
   .flatpickr-month .numInputWrapper span.arrowUp:hover::after,
   .flatpickr-month .numInputWrapper span.arrowDown:hover::after {
-    border-bottom-color: $carbon--blue-50;
-    border-top-color: $carbon--blue-50;
+    border-bottom-color: $interactive-04;
+    border-top-color: $interactive-04;
   }
 }

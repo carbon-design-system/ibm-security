@@ -74,12 +74,12 @@ Each tab cycle test should traverse completely through the ideal tab order, in a
 
 Similar to accessibility tests, a tab cycle test should be written for each significant component variation, especially if a variation adds or removes interactive elements from the component.
 
-Example of a tab cycle test for `PanelV2`:
+Example of a tab cycle test for `Panel`:
 
 ```jsx
 test('should cycle panel elements in tab order', () => {
   const { getByLabelText, getByText } = render(
-    <PanelV2
+    <Panel
       closeButton={{
         label: 'test close',
       }}
@@ -89,7 +89,7 @@ test('should cycle panel elements in tab order', () => {
         test content text
         <Button>test content button</Button>
       </PanelContent>
-    </PanelV2>
+    </Panel>
   );
 
   userEvent.tab();

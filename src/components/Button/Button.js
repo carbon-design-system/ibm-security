@@ -1,6 +1,6 @@
 /**
  * @file Button.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import classnames from 'classnames';
@@ -21,7 +21,7 @@ ButtonKinds.push('ghost-danger');
 const { defaultProps, propTypes } = CarbonButton;
 
 const Button = forwardRef(
-  ({ className, disabled, loading, kind, renderIcon, size, ...other }, ref) => {
+  ({ className, loading, kind, renderIcon, size, ...other }, ref) => {
     const isGhostDanger = kind === 'ghost-danger';
     const isLarge = size === 'large';
 
@@ -34,7 +34,6 @@ const Button = forwardRef(
     return (
       <CarbonButton
         className={buttonClasses}
-        disabled={disabled || loading}
         kind={isGhostDanger || loading ? 'ghost' : kind}
         ref={ref}
         renderIcon={loading ? InlineLoading : renderIcon}
@@ -49,7 +48,6 @@ Button.displayName = 'Button';
 
 Button.defaultProps = {
   ...defaultProps,
-  disabled: false,
   loading: false,
   renderIcon: undefined,
 };
@@ -57,10 +55,7 @@ Button.defaultProps = {
 Button.propTypes = {
   ...propTypes,
 
-  /** @type {boolean} Whether or not the button is disabled. */
-  disabled: PropTypes.bool,
-
-  /** @type {boolean} Whether or not the button is in a loading state. While loading, the button is disabled & icons provided via the `renderIcon` prop will not be shown. */
+  /** @type {boolean} Specify whether or not the button is in a loading state. While loading, icons provided via the `renderIcon` prop will not be displayed. */
   loading: PropTypes.bool,
 
   /** @type {Function|object} Optional prop to allow overriding the icon rendering. Can be a React component class. */

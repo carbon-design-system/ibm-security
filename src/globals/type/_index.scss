@@ -1,34 +1,9 @@
 ////
 /// Type.
 /// @group type
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
-@import '@carbon/layout/scss/convert';
-@import '@carbon/type/scss/classes';
-@import '@carbon/type/scss/font-face/mono';
-@import '@carbon/type/scss/font-face/sans';
-
-// TODO: Remove when fix is released in `@carbon/type` - https://github.com/carbon-design-system/carbon/pull/4927
-
-$expressive-heading-01: map-merge(
-  $map1: $heading-01,
-  $map2: (
-    line-height:
-      carbon--rem(
-        $px: 20px,
-      ),
-  ),
-);
-
-$expressive-heading-02: map-merge(
-  $map1: $heading-02,
-  $map2: (
-    line-height:
-      carbon--rem(
-        $px: 24px,
-      ),
-  ),
-);
-
-@import '@carbon/type/scss/reset';
+@import '@carbon/type/scss/font-family';
+@import '@carbon/type/scss/scale';
+@import '@carbon/type/scss/styles';

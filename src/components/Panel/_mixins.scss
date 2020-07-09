@@ -4,12 +4,22 @@
 /// @copyright IBM Security 2020
 ////
 
-@import '../../globals/index';
+@import '@carbon/layout/scss/mini-unit';
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/motion/scss/motion';
+@import '@carbon/themes/scss/tokens';
+@import '@carbon/type/scss/styles';
+
+@import 'carbon-components/scss/globals/scss/layout';
+@import 'carbon-components/scss/globals/scss/motion';
+
+@import '../../globals/namespace/index';
+@import '../../globals/rtl/index';
 @import '../../globals/theme/mixins';
 
-@import '../../components/IconButton/mixins';
-@import '../../components/SecurityHeader/mixins';
-@import '../../components/Toolbar/mixins';
+@import '../SecurityHeader/mixins';
+@import '../IconButton/mixins';
+@import '../Toolbar/mixins';
 
 @mixin panel {
   /// Width.
@@ -115,8 +125,6 @@
   }
 
   &__body {
-    padding-right: $panel__spacing__padding;
-    padding-left: $panel__spacing__padding;
     margin-top: carbon--mini-units($count: 11);
     flex-grow: 1;
     overflow-y: auto;
@@ -124,8 +132,7 @@
     &--content {
       @include carbon--type-style($name: caption-01);
 
-      padding-top: $panel__spacing__padding;
-      padding-bottom: $panel__spacing__padding;
+      padding: $panel__spacing__padding;
       border-bottom: $panel__content__sizing__border solid
         $panel__content__color__border;
 
@@ -160,7 +167,10 @@
       &--active {
         transform: translate3d(0, 0, 0);
         transition: all $duration--moderate-02;
-        transition-timing-function: motion(entrance, expressive);
+        transition-timing-function: carbon--motion(
+          $name: entrance,
+          $mode: expressive
+        );
         opacity: 1;
       }
     }
@@ -172,7 +182,10 @@
       &--active {
         transform: translate3d($panel__sizing__width, 0, 0);
         transition: all $duration--moderate-02;
-        transition-timing-function: motion(exit, expressive);
+        transition-timing-function: carbon--motion(
+          $name: exit,
+          $mode: expressive
+        );
         opacity: 0;
       }
     }

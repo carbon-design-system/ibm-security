@@ -20,6 +20,7 @@ const FilterPanelCheckbox = ({
   labelText,
   count,
   countLabel,
+  title,
   ...other
 }) => (
   <Checkbox
@@ -30,6 +31,7 @@ const FilterPanelCheckbox = ({
         count={count}
         countLabel={countLabel}
         countClassName={`${namespace}__count`}
+        title={title}
       >
         {labelText}
       </FilterPanelLabel>
@@ -44,18 +46,24 @@ FilterPanelCheckbox.propTypes = {
   /**
    * Optional count.
    */
-  count: PropTypes.number,
+  count: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 
   /**
    * Function returning a translated text labeling the count for accessibility.
    */
   countLabel: PropTypes.func,
+
+  /**
+   * The `title` attribute of the checkbox label.
+   */
+  title: PropTypes.string,
 };
 
 FilterPanelCheckbox.defaultProps = {
   ...Checkbox.defaultProps,
   count: undefined,
   countLabel: count => `${count} items`,
+  title: undefined,
 };
 
 export default FilterPanelCheckbox;

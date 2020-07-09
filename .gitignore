@@ -4,11 +4,11 @@
 
 # Generated directories.
 coverage
-css
+/css
 es
 lib
 node_modules
-scss
+/scss
 storybook-static
 
 # Logs.
@@ -24,4 +24,4 @@ storybook-static
 package-lock.json
 
 # AAT test results from DAP/Axe
-results/ 
+results/
