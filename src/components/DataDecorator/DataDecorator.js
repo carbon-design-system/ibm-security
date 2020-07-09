@@ -12,6 +12,7 @@ import Decorator from './Decorator';
 import PanelV2 from '../PanelV2';
 import { PORTAL_EVENTS } from '../Portal';
 import * as defaultLabels from '../../globals/nls';
+import { isNode } from '../../globals/utils/capabilities';
 
 const { defaultProps, propTypes } = Decorator;
 
@@ -55,6 +56,7 @@ class DataDecorator extends Component {
       title,
       scoreThresholds,
       scoreDescription,
+      rootNode,
     } = this.props;
     const decoratorProps = {
       className,
@@ -92,6 +94,7 @@ class DataDecorator extends Component {
           isOpen={this.state.isOpen}
           stopPropagation={stopPropagation}
           stopPropagationEvents={stopPropagationEvents}
+          rootNode={rootNode}
           closeButton={{
             onClick: event => {
               this.close(event, type, value);
@@ -197,6 +200,9 @@ DataDecorator.propTypes = {
   /** @type {function} Panel footer render prop. */
   renderFooter: PropTypes.func,
 
+  /** @type {ReactNode|any} The root node for rendering the panel */
+  rootNode: isNode() ? PropTypes.instanceOf(Node) : PropTypes.any,
+
   /** @type {number} The score of the data. */
   score: PropTypes.number,
 
@@ -253,6 +259,7 @@ DataDecorator.defaultProps = {
   onOpen: () => {},
   primaryButton: undefined,
   renderFooter: null,
+  rootNode: undefined,
   score: undefined,
   scoreThresholds: [0, 4, 7, 10],
   secondaryButton: undefined,
