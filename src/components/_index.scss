@@ -19,6 +19,7 @@
 @import 'IconButton/index';
 @import 'InlineLoading/index';
 @import 'InteractiveTag/index';
+@import 'ListBox/index';
 @import 'Nav/index';
 @import 'NonEntitledSection/index';
 @import 'Notification/index';
@@ -88,7 +89,6 @@
 
 /// Hidden Carbon proxy.
 @import 'carbon-components/scss/components/list/list';
-@import 'carbon-components/scss/components/list-box/list-box';
 
 /// Unstable experimental components.
 @import 'UNSTABLE__Pagination/index';
