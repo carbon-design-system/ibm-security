@@ -1,7 +1,7 @@
 ////
 /// Accordion component.
 /// @group accordion
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import '@carbon/layout/scss/spacing';
@@ -14,16 +14,10 @@
 
 @import '../SkeletonText/index';
 
-@include export-namespace($name: 'accordion') {
+@include export-namespace($name: accordion) {
   .#{$prefix}--accordion {
     &.#{$prefix}--accordion--start .#{$prefix}--accordion__heading {
       align-items: center;
-    }
-
-    // TODO - fix in Carbon: https://github.com/carbon-design-system/carbon/issues/4962
-    &.#{$prefix}--accordion--end.#{$prefix}--skeleton
-      .#{$prefix}--accordion__arrow {
-      margin-left: $carbon--spacing-03;
     }
 
     &__item--active &__title {

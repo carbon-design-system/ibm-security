@@ -34,12 +34,6 @@ $header__namespace: get-component-namespace(
 /// @type Color
 $header__color__background: $body__color__background;
 
-/// Height.
-/// @type Length
-$header__sizing__height: carbon--mini-units(
-  $count: 6,
-);
-
 /// Width.
 /// @type Length
 $header__sizing__width: 100%;
@@ -73,6 +67,12 @@ $header__transition__timing-function: $timing-function;
 }
 
 @mixin header {
+  /// Height.
+  /// @type Length
+  $header__sizing__height: carbon--mini-units(
+    $count: 6,
+  );
+
   /// Group margin.
   /// @type Length
   $header__group__spacing__margin: $carbon--spacing-07;

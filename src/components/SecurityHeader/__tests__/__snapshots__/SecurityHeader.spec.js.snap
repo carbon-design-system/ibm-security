@@ -230,7 +230,6 @@ exports[`SecurityHeader Rendering renders correctly 1`] = `
                 <a
                   className="security--button bx--btn bx--btn--primary"
                   href="#"
-                  role="button"
                   tabIndex={0}
                 >
                   Create an account
@@ -268,7 +267,6 @@ exports[`SecurityHeader Rendering renders correctly 1`] = `
                 <a
                   className="security--button bx--btn bx--btn--secondary"
                   href="#"
-                  role="button"
                   tabIndex={0}
                 >
                   Sign in

@@ -8,6 +8,7 @@ exports[`SearchBar Rendering disables the submit button with no selected scopes 
   <MultiSelect
     className="security--search-bar__scopes"
     compareItems={[Function]}
+    direction="bottom"
     disabled={false}
     id="security--search-bar__multi-select"
     initialSelectedItems={Array []}
@@ -15,15 +16,15 @@ exports[`SearchBar Rendering disables the submit button with no selected scopes 
     items={
       Array [
         Object {
-          "id": 0,
-          "name": "Scope 1",
-        },
-        Object {
-          "id": 1,
+          "id": "scope-2",
           "name": "Scope 2",
         },
         Object {
-          "id": 2,
+          "id": "scope-1",
+          "name": "Scope 1",
+        },
+        Object {
+          "id": "scope-3",
           "name": "Scope 3",
         },
       ]
@@ -162,6 +163,7 @@ exports[`SearchBar Rendering renders scopes 1`] = `
   <MultiSelect
     className="security--search-bar__scopes"
     compareItems={[Function]}
+    direction="bottom"
     disabled={false}
     id="security--search-bar__multi-select"
     initialSelectedItems={Array []}
@@ -169,15 +171,15 @@ exports[`SearchBar Rendering renders scopes 1`] = `
     items={
       Array [
         Object {
-          "id": 0,
-          "name": "Scope 1",
-        },
-        Object {
-          "id": 1,
+          "id": "scope-2",
           "name": "Scope 2",
         },
         Object {
-          "id": 2,
+          "id": "scope-1",
+          "name": "Scope 1",
+        },
+        Object {
+          "id": "scope-3",
           "name": "Scope 3",
         },
       ]
@@ -226,13 +228,14 @@ exports[`SearchBar Rendering renders selected scopes 1`] = `
   <MultiSelect
     className="security--search-bar__scopes"
     compareItems={[Function]}
+    direction="bottom"
     disabled={false}
     id="security--search-bar__multi-select"
     initialSelectedItems={
       Array [
         Object {
-          "id": 0,
-          "name": "Scope 1",
+          "id": "scope-2",
+          "name": "Scope 2",
         },
       ]
     }
@@ -240,15 +243,15 @@ exports[`SearchBar Rendering renders selected scopes 1`] = `
     items={
       Array [
         Object {
-          "id": 0,
-          "name": "Scope 1",
-        },
-        Object {
-          "id": 1,
+          "id": "scope-2",
           "name": "Scope 2",
         },
         Object {
-          "id": 2,
+          "id": "scope-1",
+          "name": "Scope 1",
+        },
+        Object {
+          "id": "scope-3",
           "name": "Scope 3",
         },
       ]

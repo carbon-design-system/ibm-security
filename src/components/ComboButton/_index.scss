@@ -1,11 +1,10 @@
 ////
 /// Combo button component.
 /// @group combo-button
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import '@carbon/layout/scss/mini-unit';
-
 @import '@carbon/layout/scss/spacing';
 @import '@carbon/themes/scss/tokens';
 
@@ -24,7 +23,7 @@
   position: relative;
 
   & &--primary {
-    @include text-overflow();
+    @include text-overflow;
     display: flex;
     flex: 1;
   }
@@ -37,6 +36,7 @@
 
   &__icon {
     fill: $icon-03;
+    pointer-events: none;
   }
 
   & &__overflow-menu {

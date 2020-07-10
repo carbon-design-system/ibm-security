@@ -93,6 +93,7 @@ export Icon from './components/Icon';
 export IconButton from './components/IconButton';
 export IconButtonBar from './components/IconButtonBar';
 export InlineLoading from './components/InlineLoading';
+export InteractiveTag from './components/InteractiveTag';
 export Link from './components/Link';
 export ListBox from './components/ListBox';
 export ListItem from './components/ListItem';
@@ -180,7 +181,7 @@ export SummaryCard, {
 } from './components/SummaryCard';
 
 export { Tab, Tabs, TabsSkeleton } from './components/Tabs';
-export Tag, { InteractiveTag, TagSkeleton } from './components/Tag';
+export Tag, { TagSkeleton } from './components/Tag';
 export TagWall from './components/TagWall';
 export TagWallFilter from './components/TagWallFilter';
 export { Tearsheet, TearsheetSmall } from './components/Tearsheet';

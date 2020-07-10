@@ -37,6 +37,7 @@ exports[`DataTablePagination Rendering renders correctly 1`] = `
     isSelectable={false}
     isSortable={false}
     locale="en"
+    overflowMenuOnHover={true}
     render={[Function]}
     rows={
       Array [
@@ -82,6 +83,7 @@ exports[`DataTablePagination Rendering renders correctly 1`] = `
         },
       ]
     }
+    size="normal"
     sortRow={[Function]}
     translateWithId={[Function]}
   />
@@ -455,7 +457,6 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
               <svg
                 aria-hidden="true"
                 class="bx--select__arrow"
-                fill="currentColor"
                 focusable="false"
                 height="16"
                 preserveAspectRatio="xMidYMid meet"
@@ -525,7 +526,6 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
               <svg
                 aria-hidden="true"
                 class="bx--select__arrow"
-                fill="currentColor"
                 focusable="false"
                 height="16"
                 preserveAspectRatio="xMidYMid meet"
@@ -554,7 +554,6 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
       >
         <svg
           aria-hidden="true"
-          fill="currentColor"
           focusable="false"
           height="24"
           preserveAspectRatio="xMidYMid meet"
@@ -574,7 +573,6 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
       >
         <svg
           aria-hidden="true"
-          fill="currentColor"
           focusable="false"
           height="24"
           preserveAspectRatio="xMidYMid meet"
