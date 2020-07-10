@@ -29,6 +29,12 @@
 @mixin decorator {
   $root: &;
 
+  /// Height.
+  /// @type Length
+  $data-decorator__sizing__height: carbon--mini-units(
+    $count: 3.25,
+  );
+
   @include carbon--type-style($name: body-short-01);
   @include security--decorator__padding(
     $decorator__spacing__padding: $carbon--spacing-03
@@ -37,7 +43,7 @@
   display: inline-flex;
   box-sizing: border-box;
   font-family: carbon--font-family($name: sans);
-  height: carbon--mini-units(3.25);
+  height: $data-decorator__sizing__height;
   background-color: $hover-ui;
   font-style: normal;
   font-stretch: normal;
@@ -178,10 +184,8 @@
   }
 
   &__value {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline;
-    line-height: 1.625rem;
+    @include text-overflow;
+    max-width: 30ch;
+    line-height: $data-decorator__sizing__height;
   }
 }

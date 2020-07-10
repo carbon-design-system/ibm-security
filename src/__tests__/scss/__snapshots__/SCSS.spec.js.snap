@@ -5542,10 +5542,11 @@ a.bx--overflow-menu-options__btn::before {
 }
 
 .security--decorator__value {
+  display: block;
+  overflow-x: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
-  display: inline;
+  max-width: 30ch;
   line-height: 1.625rem;
 }
 
