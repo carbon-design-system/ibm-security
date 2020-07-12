@@ -6,13 +6,11 @@
 import { node, string } from 'prop-types';
 import React from 'react';
 
-import { appendComponentNamespace } from '../../../globals/namespace';
+import { getComponentNamespace } from '../../../globals/namespace';
 
 import Button from '../../Button';
 
-import { legacyNamespace } from '../Shell';
-
-const namespace = appendComponentNamespace(legacyNamespace, 'skip-to-content');
+const namespace = getComponentNamespace('shell__skip-to-content');
 
 function ShellSkipToContent({ children, href, labelText, ...other }) {
   return (
