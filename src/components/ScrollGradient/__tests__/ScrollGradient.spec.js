@@ -1,10 +1,12 @@
 /**
  * @file Scroll gradient tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import React from 'react';
 import { mount } from 'enzyme';
+
+import resizeObserverMock from '../../../../config/jest/__mocks__';
 
 import ScrollGradient, { namespace } from '../ScrollGradient';
 import { className, children } from '../_mocks_';
@@ -58,22 +60,24 @@ describe('ScrollGradient', () => {
       expect(onScroll).toHaveBeenCalledTimes(1);
     });
 
-    it('adds resize event listener when mounted', () => {
-      const spy = jest.spyOn(window, 'addEventListener');
+    it('adds `ResizeObserver` when mounted', () => {
       scrollGradient = mount(
         <ScrollGradient className={className} color="blue">
           {children}
         </ScrollGradient>
       );
-      expect(spy).toHaveBeenCalledWith('resize', expect.any(Function));
-      spy.mockRestore();
+
+      expect(
+        resizeObserverMock.mock.instances[6].observe
+      ).toHaveBeenCalledTimes(1);
     });
 
-    it('removes resize event listener when unmounted', () => {
-      const spy = jest.spyOn(window, 'removeEventListener');
+    it('removes `ResizeObserver` when unmounted', () => {
       scrollGradient.unmount();
-      expect(spy).toHaveBeenCalledWith('resize', expect.any(Function));
-      spy.mockRestore();
+
+      expect(
+        resizeObserverMock.mock.instances[7].disconnect
+      ).toHaveBeenCalledTimes(1);
     });
   });
 

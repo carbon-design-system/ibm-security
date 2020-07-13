@@ -1,16 +1,18 @@
 /**
  * @file Jest configuration.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import '@testing-library/jest-dom/extend-expect';
 
-Enzyme.configure({ adapter: new Adapter() });
+import toHaveNoAxeViolations from './matchers/toHaveNoAxeViolations';
+import toHaveNoDAPViolations from './matchers/toHaveNoDAPViolations';
 
-const toHaveNoAxeViolations = require('./matchers/toHaveNoAxeViolations');
-const toHaveNoDAPViolations = require('./matchers/toHaveNoDAPViolations');
+import resizeObserverMock from './__mocks__';
+
+Enzyme.configure({ adapter: new Adapter() });
 
 // We can extend `expect` using custom matchers as defined by:
 // https://jest-bot.github.io/jest/docs/expect.html#expectextendmatchers
@@ -24,3 +26,5 @@ const toHaveNoDAPViolations = require('./matchers/toHaveNoDAPViolations');
 // For more information, check out the docs here:
 // https://jestjs.io/docs/en/configuration.html#setupfilesafterenv-array
 expect.extend({ toHaveNoAxeViolations, toHaveNoDAPViolations });
+
+global.ResizeObserver = resizeObserverMock;
