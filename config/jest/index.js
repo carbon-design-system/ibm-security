@@ -3,9 +3,9 @@
  * @copyright IBM Security 2019 - 2020
  */
 
+import '@testing-library/jest-dom/extend-expect';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import '@testing-library/jest-dom/extend-expect';
 
 import toHaveNoAxeViolations from './matchers/toHaveNoAxeViolations';
 import toHaveNoDAPViolations from './matchers/toHaveNoDAPViolations';
