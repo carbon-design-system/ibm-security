@@ -67,15 +67,13 @@ describe('ScrollGradient', () => {
         </ScrollGradient>
       );
 
-      expect(resizeObserverMock.mock.instances[6].observe).toHaveBeenCalled();
+      expect(resizeObserverMock.mock.instances[6].observe).toBeCalled();
     });
 
     it('removes `ResizeObserver` when unmounted', () => {
       scrollGradient.unmount();
 
-      expect(
-        resizeObserverMock.mock.instances[7].disconnect
-      ).toHaveBeenCalled();
+      expect(resizeObserverMock.mock.instances[7].disconnect).toBeCalled();
     });
   });
 
