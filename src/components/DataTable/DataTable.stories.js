@@ -8,10 +8,14 @@ import { storiesOf } from '@storybook/react';
 
 import { components } from '../../../.storybook';
 
-const sizes = [null, 'compact', 'short', 'tall'];
+import { DataTable } from '../..';
+
+const {
+  defaultProps: { size },
+} = DataTable;
 
 const props = () => ({
-  size: select('Row height (size)', sizes, sizes[0]),
+  size: select('Row height (size)', [size, 'compact', 'short', 'tall'], size),
   stickyHeader: boolean('Sticky header (stickyHeader)', false),
   useZebraStyles: boolean('Zebra row styles (useZebraStyles)', false),
 });
