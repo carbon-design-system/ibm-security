@@ -6,6 +6,8 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+
+// https://www.npmjs.com/package/resize-observer-polyfill
 import ResizeObserver from 'resize-observer-polyfill';
 
 import { throttle } from 'throttle-debounce';
