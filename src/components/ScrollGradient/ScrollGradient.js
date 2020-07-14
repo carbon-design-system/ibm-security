@@ -6,6 +6,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import ResizeObserver from 'resize-observer-polyfill';
 
 import { throttle } from 'throttle-debounce';
 
