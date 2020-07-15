@@ -31,10 +31,15 @@
     $breadcrumb-page-title__box-shadow__sizing -$breadcrumb-page-title__box-shadow__sizing
     $header__color__background;
 
+  &__breadcrumb {
+    position: relative;
+    z-index: 1;
+  }
+
   &__title {
     @include carbon--type-style($name: productive-heading-04);
 
-    margin-top: $breadcrumb-page-title__spacing;
+    margin-top: $carbon--spacing-03;
     margin-bottom: 0;
   }
 

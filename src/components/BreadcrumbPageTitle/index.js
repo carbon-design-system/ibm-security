@@ -5,7 +5,14 @@
 
 import classnames from 'classnames';
 import { arrayOf, elementType, shape, string } from 'prop-types';
-import React, { createElement, useLayoutEffect, useRef, useState } from 'react';
+import React, {
+  createElement,
+  forwardRef,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
+import { throttle } from 'throttle-debounce';
 
 import { getComponentNamespace } from '../../globals/namespace';
 import { isClient } from '../../globals/utils/capabilities';
@@ -23,47 +30,68 @@ const BreadcrumbPageTitle = ({
   title,
   ...other
 }) => {
-  const Title = props => createElement(element, props, title);
+  const Title = forwardRef((props, ref) =>
+    createElement(element, { ref, ...props }, title)
+  );
 
   const ref = useRef(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [style, setStyle] = useState(null);
+
+  let height;
 
   if (isClient()) {
     useLayoutEffect(() => {
-      const onScroll = () =>
-        setIsScrolled(
-          window.scrollY > ref.current.getBoundingClientRect().height
-        );
+      const onScroll = throttle(50, () => {
+        const { scrollY } = window;
+
+        setIsScrolled(scrollY > height);
+
+        if (!isScrolled) {
+          const calculation = scrollY / height;
+
+          setStyle({
+            opacity: 1 - calculation,
+            transform: `translate3d(0, -${Math.round(
+              (calculation / 2) * 100
+            )}%, 0)`,
+          });
+        }
+      });
+
+      height = height || ref.current.getBoundingClientRect().height;
 
       window.addEventListener('scroll', onScroll);
 
       return () => window.removeEventListener('scroll', onScroll);
-    });
+    }, []);
   }
 
   return (
     <div className={classnames(namespace, className)} {...other}>
-      <span ref={ref}>
-        <Breadcrumb aria-label={ariaLabel} noTrailingSlash>
-          {path.map(({ children, href, id }) => (
-            <BreadcrumbItem key={id} href={href}>
-              {children}
+      <Breadcrumb
+        className={`${namespace}__breadcrumb`}
+        aria-label={ariaLabel}
+        noTrailingSlash
+      >
+        {path.map(({ children, href, id }) => (
+          <BreadcrumbItem key={id} href={href}>
+            {children}
+          </BreadcrumbItem>
+        ))}
+
+        <Transition className={namespace}>
+          {isScrolled && (
+            <BreadcrumbItem isCurrentPage>
+              <Title />
             </BreadcrumbItem>
-          ))}
+          )}
+        </Transition>
+      </Breadcrumb>
 
-          <Transition className={namespace}>
-            {isScrolled && (
-              <BreadcrumbItem isCurrentPage>
-                <Title />
-              </BreadcrumbItem>
-            )}
-          </Transition>
-        </Breadcrumb>
-      </span>
-
-      <Transition className={namespace}>
-        {!isScrolled && <Title className={`${namespace}__title`} />}
-      </Transition>
+      {!isScrolled && (
+        <Title className={`${namespace}__title`} ref={ref} style={style} />
+      )}
     </div>
   );
 };
