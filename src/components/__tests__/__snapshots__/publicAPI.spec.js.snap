@@ -110,6 +110,68 @@ Map {
       },
     },
   },
+  "BreadcrumbPageTitle" => Object {
+    "defaultProps": Object {
+      "className": null,
+      "element": "h1",
+      "isTitleVisible": false,
+      "root": [Window],
+    },
+    "propTypes": Object {
+      "aria-label": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+      "className": Object {
+        "type": "string",
+      },
+      "element": Object {
+        "type": "elementType",
+      },
+      "isTitleVisible": Object {
+        "type": "bool",
+      },
+      "path": Object {
+        "args": Array [
+          Object {
+            "args": Array [
+              Object {
+                "children": Object {
+                  "type": "node",
+                },
+                "className": Object {
+                  "type": "string",
+                },
+                "href": Object {
+                  "type": "string",
+                },
+                "id": Object {
+                  "isRequired": true,
+                  "type": "string",
+                },
+                "isCurrentPage": Object {
+                  "type": "bool",
+                },
+              },
+            ],
+            "type": "shape",
+          },
+        ],
+        "isRequired": true,
+        "type": "arrayOf",
+      },
+      "root": Object {
+        "args": Array [
+          [Function],
+        ],
+        "type": "instanceOf",
+      },
+      "title": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+    },
+  },
   "BreadcrumbSkeleton" => Object {
     "propTypes": Object {
       "className": Object {

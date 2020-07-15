@@ -2542,6 +2542,20 @@ body {
   color: var(--link-01, #78a9ff);
 }
 
+.security--breadcrumb-page-title {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.security--breadcrumb-page-title__title {
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 2.25rem;
+  letter-spacing: 0;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
 .bx--skeleton__text {
   position: relative;
   border: none;

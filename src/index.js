@@ -22,6 +22,7 @@ export {
   BreadcrumbSkeleton,
 } from './components/Breadcrumb';
 
+export BreadcrumbPageTitle from './components/BreadcrumbPageTitle';
 export Button, { ButtonSkeleton } from './components/Button';
 export { Card, CardSkeleton } from './components/Card';
 export Checkbox, { CheckboxSkeleton } from './components/Checkbox';

@@ -1,0 +1,27 @@
+////
+/// Breadcrumb page title.
+/// @group breadcrumb-page-title
+/// @copyright IBM Security 2020
+////
+
+@import '@carbon/type/scss/styles';
+
+@import '../Breadcrumb/index';
+
+@import '../Component/mixins';
+
+@include security--component($name: breadcrumb-page-title) {
+  /// Spacing.
+  /// @type String
+  $breadcrumb-page-title__spacing: $carbon--spacing-05;
+
+  padding-top: $breadcrumb-page-title__spacing;
+  padding-bottom: $breadcrumb-page-title__spacing;
+
+  &__title {
+    @include carbon--type-style($name: productive-heading-04);
+
+    margin-top: $breadcrumb-page-title__spacing;
+    margin-bottom: 0;
+  }
+}
