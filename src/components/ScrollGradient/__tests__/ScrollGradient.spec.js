@@ -6,8 +6,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import resizeObserverMock from '../../../../config/jest/__mocks__';
-
 import ScrollGradient, { namespace } from '../ScrollGradient';
 import { className, children } from '../_mocks_';
 
@@ -53,8 +51,29 @@ describe('ScrollGradient', () => {
   });
 
   describe('Events', () => {
+    const { fn } = jest;
+
+    const disconnectMock = fn();
+    const observeMock = fn();
+
+    beforeAll(() => {
+      global.ResizeObserver = fn(() => ({
+        disconnect: disconnectMock,
+        observe: observeMock,
+      }));
+    });
+
+    beforeEach(() => {
+      observeMock.restoreMock();
+      disconnectMock.restoreMock();
+    });
+
+    afterAll(() => {
+      global.ResizeObserver = undefined;
+    });
+
     it('invokes `onScroll`', () => {
-      const onScroll = jest.fn();
+      const onScroll = fn();
       scrollGradient.setProps({ onScroll });
       scrollGradient.find(`.${namespace}__content`).simulate('scroll');
       expect(onScroll).toHaveBeenCalledTimes(1);
@@ -67,13 +86,13 @@ describe('ScrollGradient', () => {
         </ScrollGradient>
       );
 
-      expect(resizeObserverMock.mock.instances[6].observe).toBeCalled();
+      expect(observeMock).toBeCalledTimes(1);
     });
 
     it('removes `ResizeObserver` when unmounted', () => {
       scrollGradient.unmount();
 
-      expect(resizeObserverMock.mock.instances[7].disconnect).toBeCalled();
+      expect(disconnectMock).toBeCalledTimes(1);
     });
   });
 

@@ -10,8 +10,6 @@ import Adapter from 'enzyme-adapter-react-16';
 import toHaveNoAxeViolations from './matchers/toHaveNoAxeViolations';
 import toHaveNoDAPViolations from './matchers/toHaveNoDAPViolations';
 
-import resizeObserverMock from './__mocks__';
-
 Enzyme.configure({ adapter: new Adapter() });
 
 // We can extend `expect` using custom matchers as defined by:
@@ -26,5 +24,3 @@ Enzyme.configure({ adapter: new Adapter() });
 // For more information, check out the docs here:
 // https://jestjs.io/docs/en/configuration.html#setupfilesafterenv-array
 expect.extend({ toHaveNoAxeViolations, toHaveNoDAPViolations });
-
-global.ResizeObserver = resizeObserverMock;
