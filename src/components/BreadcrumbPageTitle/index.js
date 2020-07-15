@@ -4,22 +4,14 @@
  */
 
 import classnames from 'classnames';
-
-import {
-  arrayOf,
-  bool,
-  elementType,
-  instanceOf,
-  shape,
-  string,
-} from 'prop-types';
-
-import React, { createElement, useLayoutEffect, useRef } from 'react';
+import { arrayOf, elementType, shape, string } from 'prop-types';
+import React, { createElement, useLayoutEffect, useRef, useState } from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
 import { isClient } from '../../globals/utils/capabilities';
 
 import { Breadcrumb, BreadcrumbItem } from '../Breadcrumb';
+import Transition from '../Transition';
 
 const namespace = getComponentNamespace('breadcrumb-page-title');
 
@@ -27,33 +19,31 @@ const BreadcrumbPageTitle = ({
   'aria-label': ariaLabel,
   className,
   element,
-  isTitleVisible,
   path,
-  root,
   title,
   ...other
 }) => {
   const Title = props => createElement(element, props, title);
 
   const ref = useRef(null);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  useLayoutEffect(() => {
-    const onScroll = () => {
-      const { bottom, height } = ref.current.getBoundingClientRect();
+  if (isClient()) {
+    useLayoutEffect(() => {
+      const onScroll = () =>
+        setIsScrolled(
+          window.scrollY > ref.current.getBoundingClientRect().height
+        );
 
-      console.log(root.scrollY > bottom + height);
-    };
+      window.addEventListener('scroll', onScroll);
 
-    if (isClient()) {
-      root.addEventListener('scroll', onScroll);
-    }
-
-    return () => isClient() && root.removeEventListener('scroll', onScroll);
-  });
+      return () => window.removeEventListener('scroll', onScroll);
+    });
+  }
 
   return (
     <div className={classnames(namespace, className)} {...other}>
-      <div ref={ref}>
+      <span ref={ref}>
         <Breadcrumb aria-label={ariaLabel} noTrailingSlash>
           {path.map(({ children, href, id }) => (
             <BreadcrumbItem key={id} href={href}>
@@ -61,15 +51,19 @@ const BreadcrumbPageTitle = ({
             </BreadcrumbItem>
           ))}
 
-          {isTitleVisible && (
-            <BreadcrumbItem isCurrentPage>
-              <Title />
-            </BreadcrumbItem>
-          )}
+          <Transition className={namespace}>
+            {isScrolled && (
+              <BreadcrumbItem isCurrentPage>
+                <Title />
+              </BreadcrumbItem>
+            )}
+          </Transition>
         </Breadcrumb>
-      </div>
+      </span>
 
-      {isTitleVisible || <Title className={`${namespace}__title`} />}
+      <Transition className={namespace}>
+        {!isScrolled && <Title className={`${namespace}__title`} />}
+      </Transition>
     </div>
   );
 };
@@ -78,17 +72,12 @@ BreadcrumbPageTitle.propTypes = {
   /** Specify the text of the title */
   title: string.isRequired,
 
+  /** Specify an array of paths for the breadcrumbs - See also https://react.carbondesignsystem.com/?path=/story/breadcrumb--current-page  */
   path: arrayOf(shape({ id: string.isRequired, ...BreadcrumbItem.propTypes }))
     .isRequired,
 
   /** Specify the label for the breadcrumb container */
   'aria-label': string.isRequired,
-
-  /** Determines whether or not the title is visible */
-  isTitleVisible: bool,
-
-  /** Specify the root to attach event listeners to */
-  root: instanceOf(Node),
 
   /** Specify the base element to use to build the title */
   element: elementType,
@@ -98,8 +87,6 @@ BreadcrumbPageTitle.propTypes = {
 };
 
 BreadcrumbPageTitle.defaultProps = {
-  isTitleVisible: false,
-  root: isClient() && window,
   element: 'h1',
   className: null,
 };

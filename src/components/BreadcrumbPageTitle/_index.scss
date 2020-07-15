@@ -4,24 +4,49 @@
 /// @copyright IBM Security 2020
 ////
 
+@import '@carbon/layout/scss/mini-unit';
 @import '@carbon/type/scss/styles';
 
+@import '../../globals/motion/index';
+
 @import '../Breadcrumb/index';
+@import '../Header/mixins';
 
 @import '../Component/mixins';
 
 @include security--component($name: breadcrumb-page-title) {
   /// Spacing.
-  /// @type String
+  /// @type Length
   $breadcrumb-page-title__spacing: $carbon--spacing-05;
+
+  /// Box shadow sizing.
+  /// @type Length
+  $breadcrumb-page-title__box-shadow__sizing: carbon--mini-units(
+    $count: 1,
+  );
 
   padding-top: $breadcrumb-page-title__spacing;
   padding-bottom: $breadcrumb-page-title__spacing;
+  box-shadow: 0 carbon--mini-units($count: 2)
+    $breadcrumb-page-title__box-shadow__sizing -$breadcrumb-page-title__box-shadow__sizing
+    $header__color__background;
 
   &__title {
     @include carbon--type-style($name: productive-heading-04);
 
     margin-top: $breadcrumb-page-title__spacing;
     margin-bottom: 0;
+  }
+
+  &__transition {
+    @include transition--opacity;
+
+    &--enter,
+    &--leave {
+      &--active {
+        transition-duration: $transition-duration;
+        transition-property: opacity;
+      }
+    }
   }
 }

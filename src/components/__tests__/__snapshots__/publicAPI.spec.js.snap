@@ -114,8 +114,6 @@ Map {
     "defaultProps": Object {
       "className": null,
       "element": "h1",
-      "isTitleVisible": false,
-      "root": [Window],
     },
     "propTypes": Object {
       "aria-label": Object {
@@ -127,9 +125,6 @@ Map {
       },
       "element": Object {
         "type": "elementType",
-      },
-      "isTitleVisible": Object {
-        "type": "bool",
       },
       "path": Object {
         "args": Array [
@@ -159,12 +154,6 @@ Map {
         ],
         "isRequired": true,
         "type": "arrayOf",
-      },
-      "root": Object {
-        "args": Array [
-          [Function],
-        ],
-        "type": "instanceOf",
       },
       "title": Object {
         "isRequired": true,
