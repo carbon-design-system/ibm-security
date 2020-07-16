@@ -55,8 +55,12 @@ describe('ScrollGradient', () => {
 
   describe('Events', () => {
     beforeEach(() => {
-      observeMock.mockRestore();
       disconnectMock.mockRestore();
+      observeMock.mockRestore();
+    });
+
+    afterAll(() => {
+      window.ResizeObserver = undefined;
     });
 
     it('invokes `onScroll`', () => {
