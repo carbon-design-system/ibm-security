@@ -109,6 +109,7 @@ exports[`TagWall Rendering renders 1`] = `
         <span
           className="bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected bx--tag--gray"
           example-attribute="example-value"
+          title={null}
         >
           <span
             className="bx--text-truncate--end"
@@ -149,6 +150,7 @@ exports[`TagWall Rendering renders 1`] = `
                 <Icon
                   aria-hidden="true"
                   className="security--icon security--tag--interactive__button__icon"
+                  fill="currentColor"
                   focusable={false}
                   height={16}
                   preserveAspectRatio="xMidYMid meet"
@@ -164,6 +166,7 @@ exports[`TagWall Rendering renders 1`] = `
                   <svg
                     aria-hidden={true}
                     className="security--icon security--tag--interactive__button__icon"
+                    fill="currentColor"
                     focusable={false}
                     height={16}
                     preserveAspectRatio="xMidYMid meet"
@@ -207,6 +210,7 @@ exports[`TagWall Rendering renders 1`] = `
         <span
           className="bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected bx--tag--gray"
           example-attribute="example-value"
+          title={null}
         >
           <span
             className="bx--text-truncate--end"
@@ -247,6 +251,7 @@ exports[`TagWall Rendering renders 1`] = `
                 <Icon
                   aria-hidden="true"
                   className="security--icon security--tag--interactive__button__icon"
+                  fill="currentColor"
                   focusable={false}
                   height={16}
                   preserveAspectRatio="xMidYMid meet"
@@ -262,6 +267,7 @@ exports[`TagWall Rendering renders 1`] = `
                   <svg
                     aria-hidden={true}
                     className="security--icon security--tag--interactive__button__icon"
+                    fill="currentColor"
                     focusable={false}
                     height={16}
                     preserveAspectRatio="xMidYMid meet"
@@ -305,6 +311,7 @@ exports[`TagWall Rendering renders 1`] = `
         <span
           className="bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected bx--tag--gray"
           example-attribute="example-value"
+          title={null}
         >
           <span
             className="bx--text-truncate--end"
@@ -345,6 +352,7 @@ exports[`TagWall Rendering renders 1`] = `
                 <Icon
                   aria-hidden="true"
                   className="security--icon security--tag--interactive__button__icon"
+                  fill="currentColor"
                   focusable={false}
                   height={16}
                   preserveAspectRatio="xMidYMid meet"
@@ -360,6 +368,7 @@ exports[`TagWall Rendering renders 1`] = `
                   <svg
                     aria-hidden={true}
                     className="security--icon security--tag--interactive__button__icon"
+                    fill="currentColor"
                     focusable={false}
                     height={16}
                     preserveAspectRatio="xMidYMid meet"
@@ -403,6 +412,7 @@ exports[`TagWall Rendering renders 1`] = `
         <span
           className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
           example-attribute="example-value"
+          title={null}
         >
           <span
             className="bx--text-truncate--end"
@@ -443,6 +453,7 @@ exports[`TagWall Rendering renders 1`] = `
                 <Icon
                   aria-hidden="true"
                   className="security--icon security--tag--interactive__button__icon"
+                  fill="currentColor"
                   focusable={false}
                   height={16}
                   preserveAspectRatio="xMidYMid meet"
@@ -458,6 +469,7 @@ exports[`TagWall Rendering renders 1`] = `
                   <svg
                     aria-hidden={true}
                     className="security--icon security--tag--interactive__button__icon"
+                    fill="currentColor"
                     focusable={false}
                     height={16}
                     preserveAspectRatio="xMidYMid meet"
@@ -501,6 +513,7 @@ exports[`TagWall Rendering renders 1`] = `
         <span
           className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
           example-attribute="example-value"
+          title={null}
         >
           <span
             className="bx--text-truncate--end"
@@ -541,6 +554,7 @@ exports[`TagWall Rendering renders 1`] = `
                 <Icon
                   aria-hidden="true"
                   className="security--icon security--tag--interactive__button__icon"
+                  fill="currentColor"
                   focusable={false}
                   height={16}
                   preserveAspectRatio="xMidYMid meet"
@@ -556,6 +570,7 @@ exports[`TagWall Rendering renders 1`] = `
                   <svg
                     aria-hidden={true}
                     className="security--icon security--tag--interactive__button__icon"
+                    fill="currentColor"
                     focusable={false}
                     height={16}
                     preserveAspectRatio="xMidYMid meet"
@@ -599,6 +614,7 @@ exports[`TagWall Rendering renders 1`] = `
         <span
           className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
           example-attribute="example-value"
+          title={null}
         >
           <span
             className="bx--text-truncate--end"
@@ -639,6 +655,7 @@ exports[`TagWall Rendering renders 1`] = `
                 <Icon
                   aria-hidden="true"
                   className="security--icon security--tag--interactive__button__icon"
+                  fill="currentColor"
                   focusable={false}
                   height={16}
                   preserveAspectRatio="xMidYMid meet"
@@ -654,6 +671,7 @@ exports[`TagWall Rendering renders 1`] = `
                   <svg
                     aria-hidden={true}
                     className="security--icon security--tag--interactive__button__icon"
+                    fill="currentColor"
                     focusable={false}
                     height={16}
                     preserveAspectRatio="xMidYMid meet"
@@ -697,6 +715,7 @@ exports[`TagWall Rendering renders 1`] = `
         <span
           className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
           example-attribute="example-value"
+          title={null}
         >
           <span
             className="bx--text-truncate--end"
@@ -737,6 +756,7 @@ exports[`TagWall Rendering renders 1`] = `
                 <Icon
                   aria-hidden="true"
                   className="security--icon security--tag--interactive__button__icon"
+                  fill="currentColor"
                   focusable={false}
                   height={16}
                   preserveAspectRatio="xMidYMid meet"
@@ -752,6 +772,7 @@ exports[`TagWall Rendering renders 1`] = `
                   <svg
                     aria-hidden={true}
                     className="security--icon security--tag--interactive__button__icon"
+                    fill="currentColor"
                     focusable={false}
                     height={16}
                     preserveAspectRatio="xMidYMid meet"
@@ -795,6 +816,7 @@ exports[`TagWall Rendering renders 1`] = `
         <span
           className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
           example-attribute="example-value"
+          title={null}
         >
           <span
             className="bx--text-truncate--end"
@@ -835,6 +857,7 @@ exports[`TagWall Rendering renders 1`] = `
                 <Icon
                   aria-hidden="true"
                   className="security--icon security--tag--interactive__button__icon"
+                  fill="currentColor"
                   focusable={false}
                   height={16}
                   preserveAspectRatio="xMidYMid meet"
@@ -850,6 +873,7 @@ exports[`TagWall Rendering renders 1`] = `
                   <svg
                     aria-hidden={true}
                     className="security--icon security--tag--interactive__button__icon"
+                    fill="currentColor"
                     focusable={false}
                     height={16}
                     preserveAspectRatio="xMidYMid meet"
@@ -934,6 +958,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
       <svg
         aria-hidden="true"
         class="security--icon security--tag--interactive__button__icon"
+        fill="currentColor"
         focusable="false"
         height="16"
         preserveAspectRatio="xMidYMid meet"
@@ -965,6 +990,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
       <svg
         aria-hidden="true"
         class="security--icon security--tag--interactive__button__icon"
+        fill="currentColor"
         focusable="false"
         height="16"
         preserveAspectRatio="xMidYMid meet"
@@ -996,6 +1022,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
       <svg
         aria-hidden="true"
         class="security--icon security--tag--interactive__button__icon"
+        fill="currentColor"
         focusable="false"
         height="16"
         preserveAspectRatio="xMidYMid meet"
@@ -1027,6 +1054,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
       <svg
         aria-hidden="true"
         class="security--icon security--tag--interactive__button__icon"
+        fill="currentColor"
         focusable="false"
         height="16"
         preserveAspectRatio="xMidYMid meet"
@@ -1058,6 +1086,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
       <svg
         aria-hidden="true"
         class="security--icon security--tag--interactive__button__icon"
+        fill="currentColor"
         focusable="false"
         height="16"
         preserveAspectRatio="xMidYMid meet"
@@ -1089,6 +1118,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
       <svg
         aria-hidden="true"
         class="security--icon security--tag--interactive__button__icon"
+        fill="currentColor"
         focusable="false"
         height="16"
         preserveAspectRatio="xMidYMid meet"
@@ -1120,6 +1150,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
       <svg
         aria-hidden="true"
         class="security--icon security--tag--interactive__button__icon"
+        fill="currentColor"
         focusable="false"
         height="16"
         preserveAspectRatio="xMidYMid meet"
@@ -1151,6 +1182,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
       <svg
         aria-hidden="true"
         class="security--icon security--tag--interactive__button__icon"
+        fill="currentColor"
         focusable="false"
         height="16"
         preserveAspectRatio="xMidYMid meet"
@@ -1284,6 +1316,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         <span
           className="bx--tag security--tag--interactive security--tag--interactive--selected bx--tag--gray"
           example-attribute="example-value"
+          title={null}
         >
           <span
             className="bx--text-truncate--end"
@@ -1314,6 +1347,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         <span
           className="bx--tag security--tag--interactive security--tag--interactive--selected bx--tag--gray"
           example-attribute="example-value"
+          title={null}
         >
           <span
             className="bx--text-truncate--end"
@@ -1344,6 +1378,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         <span
           className="bx--tag security--tag--interactive security--tag--interactive--selected bx--tag--gray"
           example-attribute="example-value"
+          title={null}
         >
           <span
             className="bx--text-truncate--end"
@@ -1374,6 +1409,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         <span
           className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--gray"
           example-attribute="example-value"
+          title={null}
         >
           <span
             className="bx--text-truncate--end"
@@ -1404,6 +1440,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         <span
           className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--gray"
           example-attribute="example-value"
+          title={null}
         >
           <span
             className="bx--text-truncate--end"
@@ -1434,6 +1471,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         <span
           className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--gray"
           example-attribute="example-value"
+          title={null}
         >
           <span
             className="bx--text-truncate--end"
@@ -1464,6 +1502,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         <span
           className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--gray"
           example-attribute="example-value"
+          title={null}
         >
           <span
             className="bx--text-truncate--end"
@@ -1494,6 +1533,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         <span
           className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--gray"
           example-attribute="example-value"
+          title={null}
         >
           <span
             className="bx--text-truncate--end"

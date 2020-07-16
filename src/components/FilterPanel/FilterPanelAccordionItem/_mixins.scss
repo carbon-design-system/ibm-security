@@ -21,7 +21,7 @@
 
   padding-top: $filter-panel-accordion-item__heading__spacing__padding;
   padding-bottom: $filter-panel-accordion-item__heading__spacing__padding;
-  height: carbon--mini-units($count: 4);
+  min-height: carbon--mini-units($count: 4);
   color: $text-02;
 }
 
