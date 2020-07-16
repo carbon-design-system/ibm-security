@@ -19,6 +19,7 @@ export const namespace = getComponentNamespace('scroll-gradient');
 
 const scrollDirection = { X: 'X', Y: 'Y' };
 
+// Checks if the native version is available and switch between this and the polyfill to improve performance on browsers with native support.
 const ResizeObserver = window.ResizeObserver || ResizeObserverPolyfill;
 
 class ScrollGradient extends Component {
