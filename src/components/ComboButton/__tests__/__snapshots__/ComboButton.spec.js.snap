@@ -70,6 +70,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
                 aria-hidden="true"
                 aria-label=""
                 className="bx--btn__icon"
+                fill="currentColor"
                 height={20}
                 preserveAspectRatio="xMidYMid meet"
                 viewBox="0 0 20 20"
@@ -80,6 +81,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
                   aria-hidden={true}
                   aria-label=""
                   className="bx--btn__icon"
+                  fill="currentColor"
                   focusable="false"
                   height={20}
                   preserveAspectRatio="xMidYMid meet"
@@ -122,6 +124,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
           onOpen={[Function]}
           open={false}
           renderIcon={[Function]}
+          selectorPrimaryFocus="[data-overflow-menu-primary-focus]"
           tabIndex={0}
         >
           <ClickListener
@@ -150,6 +153,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
                 >
                   <Icon
                     className="security--combo-button__icon"
+                    fill="currentColor"
                     height={16}
                     preserveAspectRatio="xMidYMid meet"
                     viewBox="0 0 16 16"
@@ -159,6 +163,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
                     <svg
                       aria-hidden={true}
                       className="security--combo-button__icon"
+                      fill="currentColor"
                       focusable="false"
                       height={16}
                       preserveAspectRatio="xMidYMid meet"
@@ -252,6 +257,7 @@ exports[`ComboButton renders a combo button without an overflow menu 1`] = `
                 aria-hidden="true"
                 aria-label=""
                 className="bx--btn__icon"
+                fill="currentColor"
                 height={20}
                 preserveAspectRatio="xMidYMid meet"
                 viewBox="0 0 20 20"
@@ -262,6 +268,7 @@ exports[`ComboButton renders a combo button without an overflow menu 1`] = `
                   aria-hidden={true}
                   aria-label=""
                   className="bx--btn__icon"
+                  fill="currentColor"
                   focusable="false"
                   height={20}
                   preserveAspectRatio="xMidYMid meet"
