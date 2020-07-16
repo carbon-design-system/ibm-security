@@ -7,9 +7,6 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-// https://www.npmjs.com/package/resize-observer-polyfill
-import ResizeObserverPolyfill from 'resize-observer-polyfill';
-
 import { throttle } from 'throttle-debounce';
 
 import { getComponentNamespace } from '../../globals/namespace';
@@ -19,9 +16,9 @@ export const namespace = getComponentNamespace('scroll-gradient');
 
 const scrollDirection = { X: 'X', Y: 'Y' };
 
-// Checks if the native version is available and switch between this and the polyfill to improve performance on browsers with native support.
+// Checks if the native version is available and switch between this and the polyfill to improve performance on browsers with native support - https://www.npmjs.com/package/resize-observer-polyfill
 const ResizeObserver =
-  (isClient() && window.ResizeObserver) || ResizeObserverPolyfill;
+  (isClient() && window.ResizeObserver) || require('resize-observer-polyfill');
 
 class ScrollGradient extends Component {
   static propTypes = {
