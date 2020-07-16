@@ -6,7 +6,10 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
+// JSDOM hasn't implemented `ResizeObserver` yet, so the mock needs to be moved into a separate file and included before the tested file - https://jestjs.io/docs/en/manual-mocks#mocking-methods-which-are-not-implemented-in-jsdom
+import { disconnectMock, observeMock } from '../__mocks__';
 import ScrollGradient, { namespace } from '../ScrollGradient';
+
 import { className, children } from '../_mocks_';
 
 describe('ScrollGradient', () => {
@@ -51,29 +54,13 @@ describe('ScrollGradient', () => {
   });
 
   describe('Events', () => {
-    const { fn } = jest;
-
-    const disconnectMock = fn();
-    const observeMock = fn();
-
-    beforeAll(() => {
-      global.ResizeObserver = fn(() => ({
-        disconnect: disconnectMock,
-        observe: observeMock,
-      }));
-    });
-
     beforeEach(() => {
-      observeMock.restoreMock();
-      disconnectMock.restoreMock();
-    });
-
-    afterAll(() => {
-      global.ResizeObserver = undefined;
+      observeMock.mockRestore();
+      disconnectMock.mockRestore();
     });
 
     it('invokes `onScroll`', () => {
-      const onScroll = fn();
+      const onScroll = jest.fn();
       scrollGradient.setProps({ onScroll });
       scrollGradient.find(`.${namespace}__content`).simulate('scroll');
       expect(onScroll).toHaveBeenCalledTimes(1);

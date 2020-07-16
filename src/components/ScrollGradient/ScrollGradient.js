@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
 // https://www.npmjs.com/package/resize-observer-polyfill
-import ResizeObserver from 'resize-observer-polyfill';
+import ResizeObserverPolyfill from 'resize-observer-polyfill';
 
 import { throttle } from 'throttle-debounce';
 
@@ -18,6 +18,8 @@ import { isClient } from '../../globals/utils/capabilities';
 export const namespace = getComponentNamespace('scroll-gradient');
 
 const scrollDirection = { X: 'X', Y: 'Y' };
+
+const ResizeObserver = window.ResizeObserver || ResizeObserverPolyfill;
 
 class ScrollGradient extends Component {
   static propTypes = {
