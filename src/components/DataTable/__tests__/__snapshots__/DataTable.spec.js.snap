@@ -381,11 +381,11 @@ exports[`DataTable Rendering renders 1`] = `
                                 <th
                                   scope="col"
                                 >
-                                  <span
+                                  <div
                                     className="bx--table-header-label"
                                   >
                                     Last sighted
-                                  </span>
+                                  </div>
                                 </th>
                               </TableHeader>
                               <TableHeader
@@ -400,11 +400,11 @@ exports[`DataTable Rendering renders 1`] = `
                                 <th
                                   scope="col"
                                 >
-                                  <span
+                                  <div
                                     className="bx--table-header-label"
                                   >
                                     Name
-                                  </span>
+                                  </div>
                                 </th>
                               </TableHeader>
                               <TableHeader
@@ -419,11 +419,11 @@ exports[`DataTable Rendering renders 1`] = `
                                 <th
                                   scope="col"
                                 >
-                                  <span
+                                  <div
                                     className="bx--table-header-label"
                                   >
                                     Type
-                                  </span>
+                                  </div>
                                 </th>
                               </TableHeader>
                               <TableHeader
@@ -438,11 +438,11 @@ exports[`DataTable Rendering renders 1`] = `
                                 <th
                                   scope="col"
                                 >
-                                  <span
+                                  <div
                                     className="bx--table-header-label"
                                   >
                                     Attack phase
-                                  </span>
+                                  </div>
                                 </th>
                               </TableHeader>
                               <TableHeader
@@ -457,11 +457,11 @@ exports[`DataTable Rendering renders 1`] = `
                                 <th
                                   scope="col"
                                 >
-                                  <span
+                                  <div
                                     className="bx--table-header-label"
                                   >
                                     Method
-                                  </span>
+                                  </div>
                                 </th>
                               </TableHeader>
                               <TableHeader
@@ -476,11 +476,11 @@ exports[`DataTable Rendering renders 1`] = `
                                 <th
                                   scope="col"
                                 >
-                                  <span
+                                  <div
                                     className="bx--table-header-label"
                                   >
                                     Missing
-                                  </span>
+                                  </div>
                                 </th>
                               </TableHeader>
                             </tr>
@@ -2035,11 +2035,11 @@ exports[`DataTable Rendering renders a custom table 1`] = `
                                 <th
                                   scope="col"
                                 >
-                                  <span
+                                  <div
                                     className="bx--table-header-label"
                                   >
                                     Last sighted
-                                  </span>
+                                  </div>
                                 </th>
                               </TableHeader>
                               <TableHeader
@@ -2054,11 +2054,11 @@ exports[`DataTable Rendering renders a custom table 1`] = `
                                 <th
                                   scope="col"
                                 >
-                                  <span
+                                  <div
                                     className="bx--table-header-label"
                                   >
                                     Name
-                                  </span>
+                                  </div>
                                 </th>
                               </TableHeader>
                               <TableHeader
@@ -2073,11 +2073,11 @@ exports[`DataTable Rendering renders a custom table 1`] = `
                                 <th
                                   scope="col"
                                 >
-                                  <span
+                                  <div
                                     className="bx--table-header-label"
                                   >
                                     Type
-                                  </span>
+                                  </div>
                                 </th>
                               </TableHeader>
                               <TableHeader
@@ -2092,11 +2092,11 @@ exports[`DataTable Rendering renders a custom table 1`] = `
                                 <th
                                   scope="col"
                                 >
-                                  <span
+                                  <div
                                     className="bx--table-header-label"
                                   >
                                     Attack phase
-                                  </span>
+                                  </div>
                                 </th>
                               </TableHeader>
                               <TableHeader
@@ -2111,11 +2111,11 @@ exports[`DataTable Rendering renders a custom table 1`] = `
                                 <th
                                   scope="col"
                                 >
-                                  <span
+                                  <div
                                     className="bx--table-header-label"
                                   >
                                     Method
-                                  </span>
+                                  </div>
                                 </th>
                               </TableHeader>
                               <TableHeader
@@ -2130,11 +2130,11 @@ exports[`DataTable Rendering renders a custom table 1`] = `
                                 <th
                                   scope="col"
                                 >
-                                  <span
+                                  <div
                                     className="bx--table-header-label"
                                   >
                                     Missing
-                                  </span>
+                                  </div>
                                 </th>
                               </TableHeader>
                             </tr>
@@ -3689,11 +3689,11 @@ exports[`DataTable Rendering renders a selectable table 1`] = `
                                 <th
                                   scope="col"
                                 >
-                                  <span
+                                  <div
                                     className="bx--table-header-label"
                                   >
                                     Last sighted
-                                  </span>
+                                  </div>
                                 </th>
                               </TableHeader>
                               <TableHeader
@@ -3708,11 +3708,11 @@ exports[`DataTable Rendering renders a selectable table 1`] = `
                                 <th
                                   scope="col"
                                 >
-                                  <span
+                                  <div
                                     className="bx--table-header-label"
                                   >
                                     Name
-                                  </span>
+                                  </div>
                                 </th>
                               </TableHeader>
                               <TableHeader
@@ -3727,11 +3727,11 @@ exports[`DataTable Rendering renders a selectable table 1`] = `
                                 <th
                                   scope="col"
                                 >
-                                  <span
+                                  <div
                                     className="bx--table-header-label"
                                   >
                                     Type
-                                  </span>
+                                  </div>
                                 </th>
                               </TableHeader>
                               <TableHeader
@@ -3746,11 +3746,11 @@ exports[`DataTable Rendering renders a selectable table 1`] = `
                                 <th
                                   scope="col"
                                 >
-                                  <span
+                                  <div
                                     className="bx--table-header-label"
                                   >
                                     Attack phase
-                                  </span>
+                                  </div>
                                 </th>
                               </TableHeader>
                               <TableHeader
@@ -3765,11 +3765,11 @@ exports[`DataTable Rendering renders a selectable table 1`] = `
                                 <th
                                   scope="col"
                                 >
-                                  <span
+                                  <div
                                     className="bx--table-header-label"
                                   >
                                     Method
-                                  </span>
+                                  </div>
                                 </th>
                               </TableHeader>
                               <TableHeader
@@ -3784,11 +3784,11 @@ exports[`DataTable Rendering renders a selectable table 1`] = `
                                 <th
                                   scope="col"
                                 >
-                                  <span
+                                  <div
                                     className="bx--table-header-label"
                                   >
                                     Missing
-                                  </span>
+                                  </div>
                                 </th>
                               </TableHeader>
                             </tr>
@@ -5343,11 +5343,11 @@ exports[`DataTable Rendering renders a sortable table 1`] = `
                                 <th
                                   scope="col"
                                 >
-                                  <span
+                                  <div
                                     className="bx--table-header-label"
                                   >
                                     Last sighted
-                                  </span>
+                                  </div>
                                 </th>
                               </TableHeader>
                               <TableHeader
@@ -5362,11 +5362,11 @@ exports[`DataTable Rendering renders a sortable table 1`] = `
                                 <th
                                   scope="col"
                                 >
-                                  <span
+                                  <div
                                     className="bx--table-header-label"
                                   >
                                     Name
-                                  </span>
+                                  </div>
                                 </th>
                               </TableHeader>
                               <TableHeader
@@ -5381,11 +5381,11 @@ exports[`DataTable Rendering renders a sortable table 1`] = `
                                 <th
                                   scope="col"
                                 >
-                                  <span
+                                  <div
                                     className="bx--table-header-label"
                                   >
                                     Type
-                                  </span>
+                                  </div>
                                 </th>
                               </TableHeader>
                               <TableHeader
@@ -5400,11 +5400,11 @@ exports[`DataTable Rendering renders a sortable table 1`] = `
                                 <th
                                   scope="col"
                                 >
-                                  <span
+                                  <div
                                     className="bx--table-header-label"
                                   >
                                     Attack phase
-                                  </span>
+                                  </div>
                                 </th>
                               </TableHeader>
                               <TableHeader
@@ -5419,11 +5419,11 @@ exports[`DataTable Rendering renders a sortable table 1`] = `
                                 <th
                                   scope="col"
                                 >
-                                  <span
+                                  <div
                                     className="bx--table-header-label"
                                   >
                                     Method
-                                  </span>
+                                  </div>
                                 </th>
                               </TableHeader>
                               <TableHeader
@@ -5438,11 +5438,11 @@ exports[`DataTable Rendering renders a sortable table 1`] = `
                                 <th
                                   scope="col"
                                 >
-                                  <span
+                                  <div
                                     className="bx--table-header-label"
                                   >
                                     Missing
-                                  </span>
+                                  </div>
                                 </th>
                               </TableHeader>
                             </tr>

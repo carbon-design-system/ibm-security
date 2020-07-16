@@ -32,6 +32,7 @@ exports[`Icon Rendering renders the HTML of the node's subtree 1`] = `
 <svg
   aria-hidden="true"
   class="security--icon class"
+  fill="currentColor"
   focusable="false"
   height="16"
   preserveAspectRatio="xMidYMid meet"
