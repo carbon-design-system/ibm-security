@@ -54,15 +54,6 @@ describe('ScrollGradient', () => {
   });
 
   describe('Events', () => {
-    beforeEach(() => {
-      disconnectMock.mockRestore();
-      observeMock.mockRestore();
-    });
-
-    afterAll(() => {
-      window.ResizeObserver = undefined;
-    });
-
     it('invokes `onScroll`', () => {
       const onScroll = jest.fn();
       scrollGradient.setProps({ onScroll });
@@ -70,20 +61,31 @@ describe('ScrollGradient', () => {
       expect(onScroll).toHaveBeenCalledTimes(1);
     });
 
-    it('adds `ResizeObserver` when mounted', () => {
-      scrollGradient = mount(
-        <ScrollGradient className={className} color="blue">
-          {children}
-        </ScrollGradient>
-      );
+    describe('`ResizeObserver`', () => {
+      beforeEach(() => {
+        disconnectMock.mockClear();
+        observeMock.mockClear();
+      });
 
-      expect(observeMock).toBeCalledTimes(1);
-    });
+      afterAll(() => {
+        window.ResizeObserver = undefined;
+      });
 
-    it('removes `ResizeObserver` when unmounted', () => {
-      scrollGradient.unmount();
+      it('adds `ResizeObserver` when mounted', () => {
+        scrollGradient = mount(
+          <ScrollGradient className={className} color="blue">
+            {children}
+          </ScrollGradient>
+        );
 
-      expect(disconnectMock).toBeCalledTimes(1);
+        expect(observeMock).toBeCalledTimes(1);
+      });
+
+      it('removes `ResizeObserver` when unmounted', () => {
+        scrollGradient.unmount();
+
+        expect(disconnectMock).toBeCalledTimes(1);
+      });
     });
   });
 
