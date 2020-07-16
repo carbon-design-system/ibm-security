@@ -13,6 +13,10 @@
 
 @import '../../globals/namespace/index';
 
+/// Type style.
+/// @type String
+$breadcrumb__item__link__type-style: caption-01;
+
 @include export-namespace($name: breadcrumb) {
   .#{$prefix}--breadcrumb {
     // TODO: Remove when https://github.com/carbon-design-system/carbon/pull/5916 is absorbed.
@@ -27,7 +31,7 @@
 
     &,
     #{$carbon--breadcrumb__item__link} {
-      @include carbon--type-style($name: caption-01);
+      @include carbon--type-style($name: $breadcrumb__item__link__type-style);
     }
 
     #{$carbon--breadcrumb__item__link} {

@@ -12,7 +12,6 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import { throttle } from 'throttle-debounce';
 
 import { getComponentNamespace } from '../../globals/namespace';
 import { isClient } from '../../globals/utils/capabilities';
@@ -42,22 +41,24 @@ const BreadcrumbPageTitle = ({
 
   if (isClient()) {
     useLayoutEffect(() => {
-      const onScroll = throttle(50, () => {
+      const onScroll = () => {
         const { scrollY } = window;
 
         setIsScrolled(scrollY > height);
 
         if (!isScrolled) {
-          const calculation = scrollY / height;
+          requestAnimationFrame(() => {
+            const calculation = scrollY / height;
 
-          setStyle({
-            opacity: 1 - calculation,
-            transform: `translate3d(0, -${Math.round(
-              (calculation / 2) * 100
-            )}%, 0)`,
+            setStyle({
+              opacity: 1 - calculation,
+              transform: `translate3d(0, -${Math.round(
+                (calculation / 2) * 100
+              )}%, 0)`,
+            });
           });
         }
-      });
+      };
 
       height = height || ref.current.getBoundingClientRect().height;
 
@@ -74,11 +75,12 @@ const BreadcrumbPageTitle = ({
         aria-label={ariaLabel}
         noTrailingSlash
       >
-        {path.map(({ children, href, id }) => (
-          <BreadcrumbItem key={id} href={href}>
-            {children}
-          </BreadcrumbItem>
-        ))}
+        {path &&
+          path.map(({ children, href, id }) => (
+            <BreadcrumbItem key={id} href={href}>
+              {children}
+            </BreadcrumbItem>
+          ))}
 
         <Transition className={namespace}>
           {isScrolled && (
@@ -100,12 +102,17 @@ BreadcrumbPageTitle.propTypes = {
   /** Specify the text of the title */
   title: string.isRequired,
 
-  /** Specify an array of paths for the breadcrumbs - See also https://react.carbondesignsystem.com/?path=/story/breadcrumb--current-page  */
-  path: arrayOf(shape({ id: string.isRequired, ...BreadcrumbItem.propTypes }))
-    .isRequired,
-
   /** Specify the label for the breadcrumb container */
   'aria-label': string.isRequired,
+
+  /** Specify an array of paths for the breadcrumbs - See also https://react.carbondesignsystem.com/?path=/story/breadcrumb--current-page  */
+  path: arrayOf(
+    shape({
+      /** Specify the label for the breadcrumb container */
+      id: string.isRequired,
+      ...BreadcrumbItem.propTypes,
+    })
+  ),
 
   /** Specify the base element to use to build the title */
   element: elementType,
@@ -115,6 +122,7 @@ BreadcrumbPageTitle.propTypes = {
 };
 
 BreadcrumbPageTitle.defaultProps = {
+  path: null,
   element: 'h1',
   className: null,
 };

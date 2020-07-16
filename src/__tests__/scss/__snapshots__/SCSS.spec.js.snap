@@ -2550,6 +2550,7 @@ body {
 
 .security--breadcrumb-page-title__breadcrumb {
   position: relative;
+  min-height: 1rem;
   z-index: 1;
 }
 

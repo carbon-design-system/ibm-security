@@ -114,6 +114,7 @@ Map {
     "defaultProps": Object {
       "className": null,
       "element": "h1",
+      "path": null,
     },
     "propTypes": Object {
       "aria-label": Object {
@@ -152,7 +153,6 @@ Map {
             "type": "shape",
           },
         ],
-        "isRequired": true,
         "type": "arrayOf",
       },
       "title": Object {

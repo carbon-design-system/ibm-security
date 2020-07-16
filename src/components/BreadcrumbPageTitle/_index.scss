@@ -33,6 +33,10 @@
 
   &__breadcrumb {
     position: relative;
+    min-height: map-get(
+      $map: map-get($map: $tokens, $key: $breadcrumb__item__link__type-style),
+      $key: line-height
+    );
     z-index: 1;
   }
 
