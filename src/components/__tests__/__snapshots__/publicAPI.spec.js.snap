@@ -1863,13 +1863,15 @@ Map {
       },
     },
     "defaultProps": Object {
-      "filterRows": undefined,
+      "filterRows": [Function],
       "isSelectable": true,
       "isSortable": true,
+      "locale": "en",
       "missingDataCharacter": "–",
-      "render": undefined,
-      "sortRow": undefined,
-      "useZebraStyles": false,
+      "overflowMenuOnHover": true,
+      "size": "normal",
+      "sortRow": [Function],
+      "translateWithId": [Function],
     },
     "propTypes": Object {
       "filterRows": Object {
@@ -1882,7 +1884,7 @@ Map {
               Object {
                 "header": Object {
                   "isRequired": true,
-                  "type": "string",
+                  "type": "node",
                 },
                 "key": Object {
                   "isRequired": true,
@@ -1902,20 +1904,35 @@ Map {
       "isSortable": Object {
         "type": "bool",
       },
+      "locale": Object {
+        "type": "string",
+      },
       "missingDataCharacter": Object {
         "type": "string",
       },
-      "render": Object {
-        "type": "func",
+      "overflowMenuOnHover": Object {
+        "type": "bool",
+      },
+      "radio": Object {
+        "type": "bool",
       },
       "rows": Object {
         "args": Array [
           Object {
             "args": Array [
               Object {
+                "disabled": Object {
+                  "type": "bool",
+                },
                 "id": Object {
                   "isRequired": true,
                   "type": "string",
+                },
+                "isExpanded": Object {
+                  "type": "bool",
+                },
+                "isSelected": Object {
+                  "type": "bool",
                 },
               },
             ],
@@ -1925,11 +1942,25 @@ Map {
         "isRequired": true,
         "type": "arrayOf",
       },
+      "size": Object {
+        "args": Array [
+          Array [
+            "compact",
+            "short",
+            "normal",
+            "tall",
+          ],
+        ],
+        "type": "oneOf",
+      },
       "sortRow": Object {
         "type": "func",
       },
-      "useZebraStyles": Object {
+      "stickyHeader": Object {
         "type": "bool",
+      },
+      "translateWithId": Object {
+        "type": "func",
       },
     },
   },
@@ -1938,7 +1969,7 @@ Map {
       "backwardText": "Backward",
       "className": "",
       "disabled": false,
-      "filterRows": undefined,
+      "filterRows": [Function],
       "forwardText": "Forward",
       "isLastPage": false,
       "isSelectable": true,
@@ -1946,17 +1977,19 @@ Map {
       "itemRangeText": [Function],
       "itemText": [Function],
       "itemsPerPageText": "Items per page",
+      "locale": "en",
       "missingDataCharacter": "–",
+      "overflowMenuOnHover": true,
       "page": 1,
       "pageInputDisabled": false,
       "pageNumberText": "Page Number",
       "pageRangeText": [Function],
       "pageText": [Function],
       "pagesUnknown": false,
-      "render": undefined,
-      "sortRow": undefined,
+      "size": "normal",
+      "sortRow": [Function],
+      "translateWithId": [Function],
       "useBackendPagination": false,
-      "useZebraStyles": false,
     },
     "propTypes": Object {
       "backwardText": Object {
@@ -1981,7 +2014,7 @@ Map {
               Object {
                 "header": Object {
                   "isRequired": true,
-                  "type": "string",
+                  "type": "node",
                 },
                 "key": Object {
                   "isRequired": true,
@@ -2026,11 +2059,17 @@ Map {
       "itemsPerPageText": Object {
         "type": "string",
       },
+      "locale": Object {
+        "type": "string",
+      },
       "missingDataCharacter": Object {
         "type": "string",
       },
       "onChange": Object {
         "type": "func",
+      },
+      "overflowMenuOnHover": Object {
+        "type": "bool",
       },
       "page": Object {
         "type": "number",
@@ -2062,17 +2101,26 @@ Map {
       "pagesUnknown": Object {
         "type": "bool",
       },
-      "render": Object {
-        "type": "func",
+      "radio": Object {
+        "type": "bool",
       },
       "rows": Object {
         "args": Array [
           Object {
             "args": Array [
               Object {
+                "disabled": Object {
+                  "type": "bool",
+                },
                 "id": Object {
                   "isRequired": true,
                   "type": "string",
+                },
+                "isExpanded": Object {
+                  "type": "bool",
+                },
+                "isSelected": Object {
+                  "type": "bool",
                 },
               },
             ],
@@ -2082,16 +2130,30 @@ Map {
         "isRequired": true,
         "type": "arrayOf",
       },
+      "size": Object {
+        "args": Array [
+          Array [
+            "compact",
+            "short",
+            "normal",
+            "tall",
+          ],
+        ],
+        "type": "oneOf",
+      },
       "sortRow": Object {
         "type": "func",
+      },
+      "stickyHeader": Object {
+        "type": "bool",
       },
       "totalItems": Object {
         "type": "number",
       },
-      "useBackendPagination": Object {
-        "type": "bool",
+      "translateWithId": Object {
+        "type": "func",
       },
-      "useZebraStyles": Object {
+      "useBackendPagination": Object {
         "type": "bool",
       },
     },

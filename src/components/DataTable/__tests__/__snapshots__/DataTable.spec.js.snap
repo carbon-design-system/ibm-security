@@ -10,6 +10,7 @@ Object {
 
 exports[`DataTable Rendering renders 1`] = `
 <DataTable
+  filterRows={[Function]}
   headers={
     Array [
       Object {
@@ -40,7 +41,9 @@ exports[`DataTable Rendering renders 1`] = `
   }
   isSelectable={false}
   isSortable={false}
+  locale="en"
   missingDataCharacter="–"
+  overflowMenuOnHover={true}
   render={[Function]}
   rows={
     Array [
@@ -134,7 +137,9 @@ exports[`DataTable Rendering renders 1`] = `
       },
     ]
   }
-  useZebraStyles={false}
+  size="normal"
+  sortRow={[Function]}
+  translateWithId={[Function]}
 >
   <div
     className="security--data-table"
@@ -268,7 +273,6 @@ exports[`DataTable Rendering renders 1`] = `
       size="normal"
       sortRow={[Function]}
       translateWithId={[Function]}
-      useZebraStyles={false}
     >
       <TableContainer>
         <div
@@ -278,7 +282,6 @@ exports[`DataTable Rendering renders 1`] = `
             isSortable={false}
             overflowMenuOnHover={true}
             size="normal"
-            useZebraStyles={false}
           >
             <ScrollGradient
               className="security--data-table__table-wrapper"
@@ -310,7 +313,6 @@ exports[`DataTable Rendering renders 1`] = `
                     isSortable={false}
                     overflowMenuOnHover={true}
                     size="normal"
-                    useZebraStyles={false}
                   >
                     <table
                       className="bx--data-table bx--data-table--no-border"
@@ -1662,6 +1664,7 @@ exports[`DataTable Rendering renders 1`] = `
 
 exports[`DataTable Rendering renders a custom table 1`] = `
 <DataTable
+  filterRows={[Function]}
   headers={
     Array [
       Object {
@@ -1692,7 +1695,9 @@ exports[`DataTable Rendering renders a custom table 1`] = `
   }
   isSelectable={false}
   isSortable={false}
+  locale="en"
   missingDataCharacter="–"
+  overflowMenuOnHover={true}
   render={[Function]}
   rows={
     Array [
@@ -1786,7 +1791,9 @@ exports[`DataTable Rendering renders a custom table 1`] = `
       },
     ]
   }
-  useZebraStyles={false}
+  size="normal"
+  sortRow={[Function]}
+  translateWithId={[Function]}
 >
   <div
     className="security--data-table"
@@ -1920,7 +1927,6 @@ exports[`DataTable Rendering renders a custom table 1`] = `
       size="normal"
       sortRow={[Function]}
       translateWithId={[Function]}
-      useZebraStyles={false}
     >
       <TableContainer>
         <div
@@ -1930,7 +1936,6 @@ exports[`DataTable Rendering renders a custom table 1`] = `
             isSortable={false}
             overflowMenuOnHover={true}
             size="normal"
-            useZebraStyles={false}
           >
             <ScrollGradient
               className="security--data-table__table-wrapper"
@@ -1962,7 +1967,6 @@ exports[`DataTable Rendering renders a custom table 1`] = `
                     isSortable={false}
                     overflowMenuOnHover={true}
                     size="normal"
-                    useZebraStyles={false}
                   >
                     <table
                       className="bx--data-table bx--data-table--no-border"
@@ -3314,6 +3318,7 @@ exports[`DataTable Rendering renders a custom table 1`] = `
 
 exports[`DataTable Rendering renders a selectable table 1`] = `
 <DataTable
+  filterRows={[Function]}
   headers={
     Array [
       Object {
@@ -3344,7 +3349,9 @@ exports[`DataTable Rendering renders a selectable table 1`] = `
   }
   isSelectable={true}
   isSortable={false}
+  locale="en"
   missingDataCharacter="–"
+  overflowMenuOnHover={true}
   render={[Function]}
   rows={
     Array [
@@ -3438,7 +3445,9 @@ exports[`DataTable Rendering renders a selectable table 1`] = `
       },
     ]
   }
-  useZebraStyles={false}
+  size="normal"
+  sortRow={[Function]}
+  translateWithId={[Function]}
 >
   <div
     className="security--data-table"
@@ -3572,7 +3581,6 @@ exports[`DataTable Rendering renders a selectable table 1`] = `
       size="normal"
       sortRow={[Function]}
       translateWithId={[Function]}
-      useZebraStyles={false}
     >
       <TableContainer>
         <div
@@ -3582,7 +3590,6 @@ exports[`DataTable Rendering renders a selectable table 1`] = `
             isSortable={false}
             overflowMenuOnHover={true}
             size="normal"
-            useZebraStyles={false}
           >
             <ScrollGradient
               className="security--data-table__table-wrapper"
@@ -3614,7 +3621,6 @@ exports[`DataTable Rendering renders a selectable table 1`] = `
                     isSortable={false}
                     overflowMenuOnHover={true}
                     size="normal"
-                    useZebraStyles={false}
                   >
                     <table
                       className="bx--data-table bx--data-table--no-border"
@@ -4966,6 +4972,7 @@ exports[`DataTable Rendering renders a selectable table 1`] = `
 
 exports[`DataTable Rendering renders a sortable table 1`] = `
 <DataTable
+  filterRows={[Function]}
   headers={
     Array [
       Object {
@@ -4996,7 +5003,9 @@ exports[`DataTable Rendering renders a sortable table 1`] = `
   }
   isSelectable={false}
   isSortable={true}
+  locale="en"
   missingDataCharacter="–"
+  overflowMenuOnHover={true}
   render={[Function]}
   rows={
     Array [
@@ -5090,7 +5099,9 @@ exports[`DataTable Rendering renders a sortable table 1`] = `
       },
     ]
   }
-  useZebraStyles={false}
+  size="normal"
+  sortRow={[Function]}
+  translateWithId={[Function]}
 >
   <div
     className="security--data-table"
@@ -5224,7 +5235,6 @@ exports[`DataTable Rendering renders a sortable table 1`] = `
       size="normal"
       sortRow={[Function]}
       translateWithId={[Function]}
-      useZebraStyles={false}
     >
       <TableContainer>
         <div
@@ -5234,7 +5244,6 @@ exports[`DataTable Rendering renders a sortable table 1`] = `
             isSortable={true}
             overflowMenuOnHover={true}
             size="normal"
-            useZebraStyles={false}
           >
             <ScrollGradient
               className="security--data-table__table-wrapper"
@@ -5266,7 +5275,6 @@ exports[`DataTable Rendering renders a sortable table 1`] = `
                     isSortable={true}
                     overflowMenuOnHover={true}
                     size="normal"
-                    useZebraStyles={false}
                   >
                     <table
                       className="bx--data-table bx--data-table--sort bx--data-table--no-border"
