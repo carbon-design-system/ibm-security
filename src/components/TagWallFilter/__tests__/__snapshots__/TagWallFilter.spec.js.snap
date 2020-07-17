@@ -501,6 +501,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                           <svg
                             aria-hidden="true"
                             class="security--icon security--tag--interactive__button__icon"
+                            fill="currentColor"
                             focusable="false"
                             height="16"
                             preserveAspectRatio="xMidYMid meet"
@@ -542,13 +543,12 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                         id="test-id"
                       >
                         <div
-                          aria-controls="test-id__menu"
                           aria-expanded="true"
                           aria-haspopup="true"
                           aria-label="close menu"
-                          aria-owns="test-id__menu"
                           class="bx--list-box__field"
                           data-toggle="true"
+                          id="test-id"
                           role="button"
                           tabindex="-1"
                           type="button"
@@ -586,7 +586,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                         </div>
                         <div
                           class="security--filter__list-container"
-                          id="test-id__menu"
+                          id="test-id"
                           role="listbox"
                         >
                           <div
@@ -614,6 +614,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                   <svg
                                     aria-hidden="true"
                                     class="security--icon security--filter__add__icon"
+                                    fill="currentColor"
                                     focusable="false"
                                     height="20"
                                     preserveAspectRatio="xMidYMid meet"
@@ -666,6 +667,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                 <svg
                   aria-hidden="true"
                   class="security--icon"
+                  fill="currentColor"
                   focusable="false"
                   height="20"
                   preserveAspectRatio="xMidYMid meet"
@@ -797,6 +799,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                       <svg
                                         aria-hidden="true"
                                         class="security--icon security--tag--interactive__button__icon"
+                                        fill="currentColor"
                                         focusable="false"
                                         height="16"
                                         preserveAspectRatio="xMidYMid meet"
@@ -838,13 +841,12 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                     id="test-id"
                                   >
                                     <div
-                                      aria-controls="test-id__menu"
                                       aria-expanded="true"
                                       aria-haspopup="true"
                                       aria-label="close menu"
-                                      aria-owns="test-id__menu"
                                       class="bx--list-box__field"
                                       data-toggle="true"
+                                      id="test-id"
                                       role="button"
                                       tabindex="-1"
                                       type="button"
@@ -882,7 +884,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                     </div>
                                     <div
                                       class="security--filter__list-container"
-                                      id="test-id__menu"
+                                      id="test-id"
                                       role="listbox"
                                     >
                                       <div
@@ -910,6 +912,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                               <svg
                                                 aria-hidden="true"
                                                 class="security--icon security--filter__add__icon"
+                                                fill="currentColor"
                                                 focusable="false"
                                                 height="20"
                                                 preserveAspectRatio="xMidYMid meet"
@@ -962,6 +965,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                             <svg
                               aria-hidden="true"
                               class="security--icon"
+                              fill="currentColor"
                               focusable="false"
                               height="20"
                               preserveAspectRatio="xMidYMid meet"
@@ -1029,6 +1033,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                         <svg
                                           aria-hidden="true"
                                           class="security--icon security--tag--interactive__button__icon"
+                                          fill="currentColor"
                                           focusable="false"
                                           height="16"
                                           preserveAspectRatio="xMidYMid meet"
@@ -1070,13 +1075,12 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                       id="test-id"
                                     >
                                       <div
-                                        aria-controls="test-id__menu"
                                         aria-expanded="true"
                                         aria-haspopup="true"
                                         aria-label="close menu"
-                                        aria-owns="test-id__menu"
                                         class="bx--list-box__field"
                                         data-toggle="true"
+                                        id="test-id"
                                         role="button"
                                         tabindex="-1"
                                         type="button"
@@ -1114,7 +1118,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                       </div>
                                       <div
                                         class="security--filter__list-container"
-                                        id="test-id__menu"
+                                        id="test-id"
                                         role="listbox"
                                       >
                                         <div
@@ -1142,6 +1146,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                 <svg
                                                   aria-hidden="true"
                                                   class="security--icon security--filter__add__icon"
+                                                  fill="currentColor"
                                                   focusable="false"
                                                   height="20"
                                                   preserveAspectRatio="xMidYMid meet"
@@ -1194,6 +1199,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                               <svg
                                 aria-hidden="true"
                                 class="security--icon"
+                                fill="currentColor"
                                 focusable="false"
                                 height="20"
                                 preserveAspectRatio="xMidYMid meet"
@@ -1284,6 +1290,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                       >
                                         <span
                                           className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+                                          title={null}
                                         >
                                           <span
                                             className="bx--text-truncate--end"
@@ -1324,6 +1331,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                 <Icon
                                                   aria-hidden="true"
                                                   className="security--icon security--tag--interactive__button__icon"
+                                                  fill="currentColor"
                                                   focusable={false}
                                                   height={16}
                                                   preserveAspectRatio="xMidYMid meet"
@@ -1339,6 +1347,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                   <svg
                                                     aria-hidden={true}
                                                     className="security--icon security--tag--interactive__button__icon"
+                                                    fill="currentColor"
                                                     focusable={false}
                                                     height={16}
                                                     preserveAspectRatio="xMidYMid meet"
@@ -1456,6 +1465,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                           <div
                                             className="security--filter bx--list-box"
                                             id="test-id"
+                                            innerRef={[Function]}
                                             onClick={[Function]}
                                             onKeyDown={[Function]}
                                           >
@@ -1474,13 +1484,12 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                               type="button"
                                             >
                                               <div
-                                                aria-controls="test-id__menu"
                                                 aria-expanded={true}
                                                 aria-haspopup={true}
                                                 aria-label="close menu"
-                                                aria-owns="test-id__menu"
                                                 className="bx--list-box__field"
                                                 data-toggle={true}
+                                                id="test-id"
                                                 onBlur={[Function]}
                                                 onClick={[Function]}
                                                 onKeyDown={[Function]}
@@ -1581,7 +1590,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                             >
                                               <div
                                                 className="security--filter__list-container"
-                                                id="test-id__menu"
+                                                id="test-id"
                                                 role="listbox"
                                               >
                                                 <ListBoxMenuItem
@@ -1651,6 +1660,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                               <Icon
                                                                 aria-hidden="true"
                                                                 className="security--icon security--filter__add__icon"
+                                                                fill="currentColor"
                                                                 focusable={false}
                                                                 height={20}
                                                                 preserveAspectRatio="xMidYMid meet"
@@ -1666,6 +1676,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                                 <svg
                                                                   aria-hidden={true}
                                                                   className="security--icon security--filter__add__icon"
+                                                                  fill="currentColor"
                                                                   focusable={false}
                                                                   height={20}
                                                                   preserveAspectRatio="xMidYMid meet"
@@ -1830,6 +1841,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                   <Icon
                                     aria-hidden="true"
                                     className="security--icon"
+                                    fill="currentColor"
                                     focusable={false}
                                     height={20}
                                     preserveAspectRatio="xMidYMid meet"
@@ -1845,6 +1857,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                     <svg
                                       aria-hidden={true}
                                       className="security--icon"
+                                      fill="currentColor"
                                       focusable={false}
                                       height={20}
                                       preserveAspectRatio="xMidYMid meet"
@@ -1922,6 +1935,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 2`] = 
       >
         <span
           className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+          title={null}
         >
           <span
             className="bx--text-truncate--end"
@@ -1962,6 +1976,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 2`] = 
                 <Icon
                   aria-hidden="true"
                   className="security--icon security--tag--interactive__button__icon"
+                  fill="currentColor"
                   focusable={false}
                   height={16}
                   preserveAspectRatio="xMidYMid meet"
@@ -1977,6 +1992,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 2`] = 
                   <svg
                     aria-hidden={true}
                     className="security--icon security--tag--interactive__button__icon"
+                    fill="currentColor"
                     focusable={false}
                     height={16}
                     preserveAspectRatio="xMidYMid meet"
@@ -2281,6 +2297,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                             <svg
                               aria-hidden="true"
                               class="security--icon security--tag--interactive__button__icon"
+                              fill="currentColor"
                               focusable="false"
                               height="16"
                               preserveAspectRatio="xMidYMid meet"
@@ -2322,13 +2339,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                           id="test-id"
                         >
                           <div
-                            aria-controls="test-id__menu"
                             aria-expanded="true"
                             aria-haspopup="true"
                             aria-label="close menu"
-                            aria-owns="test-id__menu"
                             class="bx--list-box__field"
                             data-toggle="true"
+                            id="test-id"
                             role="button"
                             tabindex="-1"
                             type="button"
@@ -2366,7 +2382,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                           </div>
                           <div
                             class="security--filter__list-container"
-                            id="test-id__menu"
+                            id="test-id"
                             role="listbox"
                           >
                             <div
@@ -2394,6 +2410,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     <svg
                                       aria-hidden="true"
                                       class="security--icon security--filter__add__icon"
+                                      fill="currentColor"
                                       focusable="false"
                                       height="20"
                                       preserveAspectRatio="xMidYMid meet"
@@ -2446,6 +2463,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                   <svg
                     aria-hidden="true"
                     class="security--icon"
+                    fill="currentColor"
                     focusable="false"
                     height="20"
                     preserveAspectRatio="xMidYMid meet"
@@ -2504,6 +2522,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                             <svg
                               aria-hidden="true"
                               class="security--icon security--tag--interactive__button__icon"
+                              fill="currentColor"
                               focusable="false"
                               height="16"
                               preserveAspectRatio="xMidYMid meet"
@@ -2545,13 +2564,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                           id="test-id"
                         >
                           <div
-                            aria-controls="test-id__menu"
                             aria-expanded="true"
                             aria-haspopup="true"
                             aria-label="close menu"
-                            aria-owns="test-id__menu"
                             class="bx--list-box__field"
                             data-toggle="true"
+                            id="test-id"
                             role="button"
                             tabindex="-1"
                             type="button"
@@ -2589,7 +2607,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                           </div>
                           <div
                             class="security--filter__list-container"
-                            id="test-id__menu"
+                            id="test-id"
                             role="listbox"
                           >
                             <div
@@ -2617,6 +2635,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     <svg
                                       aria-hidden="true"
                                       class="security--icon security--filter__add__icon"
+                                      fill="currentColor"
                                       focusable="false"
                                       height="20"
                                       preserveAspectRatio="xMidYMid meet"
@@ -2669,6 +2688,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                   <svg
                     aria-hidden="true"
                     class="security--icon"
+                    fill="currentColor"
                     focusable="false"
                     height="20"
                     preserveAspectRatio="xMidYMid meet"
@@ -2800,6 +2820,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         <svg
                                           aria-hidden="true"
                                           class="security--icon security--tag--interactive__button__icon"
+                                          fill="currentColor"
                                           focusable="false"
                                           height="16"
                                           preserveAspectRatio="xMidYMid meet"
@@ -2841,13 +2862,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       id="test-id"
                                     >
                                       <div
-                                        aria-controls="test-id__menu"
                                         aria-expanded="true"
                                         aria-haspopup="true"
                                         aria-label="close menu"
-                                        aria-owns="test-id__menu"
                                         class="bx--list-box__field"
                                         data-toggle="true"
+                                        id="test-id"
                                         role="button"
                                         tabindex="-1"
                                         type="button"
@@ -2885,7 +2905,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       </div>
                                       <div
                                         class="security--filter__list-container"
-                                        id="test-id__menu"
+                                        id="test-id"
                                         role="listbox"
                                       >
                                         <div
@@ -2913,6 +2933,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                 <svg
                                                   aria-hidden="true"
                                                   class="security--icon security--filter__add__icon"
+                                                  fill="currentColor"
                                                   focusable="false"
                                                   height="20"
                                                   preserveAspectRatio="xMidYMid meet"
@@ -2965,6 +2986,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               <svg
                                 aria-hidden="true"
                                 class="security--icon"
+                                fill="currentColor"
                                 focusable="false"
                                 height="20"
                                 preserveAspectRatio="xMidYMid meet"
@@ -3023,6 +3045,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         <svg
                                           aria-hidden="true"
                                           class="security--icon security--tag--interactive__button__icon"
+                                          fill="currentColor"
                                           focusable="false"
                                           height="16"
                                           preserveAspectRatio="xMidYMid meet"
@@ -3064,13 +3087,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       id="test-id"
                                     >
                                       <div
-                                        aria-controls="test-id__menu"
                                         aria-expanded="true"
                                         aria-haspopup="true"
                                         aria-label="close menu"
-                                        aria-owns="test-id__menu"
                                         class="bx--list-box__field"
                                         data-toggle="true"
+                                        id="test-id"
                                         role="button"
                                         tabindex="-1"
                                         type="button"
@@ -3108,7 +3130,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       </div>
                                       <div
                                         class="security--filter__list-container"
-                                        id="test-id__menu"
+                                        id="test-id"
                                         role="listbox"
                                       >
                                         <div
@@ -3136,6 +3158,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                 <svg
                                                   aria-hidden="true"
                                                   class="security--icon security--filter__add__icon"
+                                                  fill="currentColor"
                                                   focusable="false"
                                                   height="20"
                                                   preserveAspectRatio="xMidYMid meet"
@@ -3188,6 +3211,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               <svg
                                 aria-hidden="true"
                                 class="security--icon"
+                                fill="currentColor"
                                 focusable="false"
                                 height="20"
                                 preserveAspectRatio="xMidYMid meet"
@@ -3255,6 +3279,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           <svg
                                             aria-hidden="true"
                                             class="security--icon security--tag--interactive__button__icon"
+                                            fill="currentColor"
                                             focusable="false"
                                             height="16"
                                             preserveAspectRatio="xMidYMid meet"
@@ -3296,13 +3321,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         id="test-id"
                                       >
                                         <div
-                                          aria-controls="test-id__menu"
                                           aria-expanded="true"
                                           aria-haspopup="true"
                                           aria-label="close menu"
-                                          aria-owns="test-id__menu"
                                           class="bx--list-box__field"
                                           data-toggle="true"
+                                          id="test-id"
                                           role="button"
                                           tabindex="-1"
                                           type="button"
@@ -3340,7 +3364,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         </div>
                                         <div
                                           class="security--filter__list-container"
-                                          id="test-id__menu"
+                                          id="test-id"
                                           role="listbox"
                                         >
                                           <div
@@ -3368,6 +3392,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                   <svg
                                                     aria-hidden="true"
                                                     class="security--icon security--filter__add__icon"
+                                                    fill="currentColor"
                                                     focusable="false"
                                                     height="20"
                                                     preserveAspectRatio="xMidYMid meet"
@@ -3420,6 +3445,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 <svg
                                   aria-hidden="true"
                                   class="security--icon"
+                                  fill="currentColor"
                                   focusable="false"
                                   height="20"
                                   preserveAspectRatio="xMidYMid meet"
@@ -3478,6 +3504,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           <svg
                                             aria-hidden="true"
                                             class="security--icon security--tag--interactive__button__icon"
+                                            fill="currentColor"
                                             focusable="false"
                                             height="16"
                                             preserveAspectRatio="xMidYMid meet"
@@ -3519,13 +3546,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         id="test-id"
                                       >
                                         <div
-                                          aria-controls="test-id__menu"
                                           aria-expanded="true"
                                           aria-haspopup="true"
                                           aria-label="close menu"
-                                          aria-owns="test-id__menu"
                                           class="bx--list-box__field"
                                           data-toggle="true"
+                                          id="test-id"
                                           role="button"
                                           tabindex="-1"
                                           type="button"
@@ -3563,7 +3589,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         </div>
                                         <div
                                           class="security--filter__list-container"
-                                          id="test-id__menu"
+                                          id="test-id"
                                           role="listbox"
                                         >
                                           <div
@@ -3591,6 +3617,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                   <svg
                                                     aria-hidden="true"
                                                     class="security--icon security--filter__add__icon"
+                                                    fill="currentColor"
                                                     focusable="false"
                                                     height="20"
                                                     preserveAspectRatio="xMidYMid meet"
@@ -3643,6 +3670,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 <svg
                                   aria-hidden="true"
                                   class="security--icon"
+                                  fill="currentColor"
                                   focusable="false"
                                   height="20"
                                   preserveAspectRatio="xMidYMid meet"
@@ -3733,6 +3761,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         >
                                           <span
                                             className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+                                            title={null}
                                           >
                                             <span
                                               className="bx--text-truncate--end"
@@ -3773,6 +3802,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                   <Icon
                                                     aria-hidden="true"
                                                     className="security--icon security--tag--interactive__button__icon"
+                                                    fill="currentColor"
                                                     focusable={false}
                                                     height={16}
                                                     preserveAspectRatio="xMidYMid meet"
@@ -3788,6 +3818,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                     <svg
                                                       aria-hidden={true}
                                                       className="security--icon security--tag--interactive__button__icon"
+                                                      fill="currentColor"
                                                       focusable={false}
                                                       height={16}
                                                       preserveAspectRatio="xMidYMid meet"
@@ -3905,6 +3936,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                             <div
                                               className="security--filter bx--list-box"
                                               id="test-id"
+                                              innerRef={[Function]}
                                               onClick={[Function]}
                                               onKeyDown={[Function]}
                                             >
@@ -3923,13 +3955,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                 type="button"
                                               >
                                                 <div
-                                                  aria-controls="test-id__menu"
                                                   aria-expanded={true}
                                                   aria-haspopup={true}
                                                   aria-label="close menu"
-                                                  aria-owns="test-id__menu"
                                                   className="bx--list-box__field"
                                                   data-toggle={true}
+                                                  id="test-id"
                                                   onBlur={[Function]}
                                                   onClick={[Function]}
                                                   onKeyDown={[Function]}
@@ -4030,7 +4061,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                               >
                                                 <div
                                                   className="security--filter__list-container"
-                                                  id="test-id__menu"
+                                                  id="test-id"
                                                   role="listbox"
                                                 >
                                                   <ListBoxMenuItem
@@ -4100,6 +4131,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                                 <Icon
                                                                   aria-hidden="true"
                                                                   className="security--icon security--filter__add__icon"
+                                                                  fill="currentColor"
                                                                   focusable={false}
                                                                   height={20}
                                                                   preserveAspectRatio="xMidYMid meet"
@@ -4115,6 +4147,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                                   <svg
                                                                     aria-hidden={true}
                                                                     className="security--icon security--filter__add__icon"
+                                                                    fill="currentColor"
                                                                     focusable={false}
                                                                     height={20}
                                                                     preserveAspectRatio="xMidYMid meet"
@@ -4279,6 +4312,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     <Icon
                                       aria-hidden="true"
                                       className="security--icon"
+                                      fill="currentColor"
                                       focusable={false}
                                       height={20}
                                       preserveAspectRatio="xMidYMid meet"
@@ -4294,6 +4328,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       <svg
                                         aria-hidden={true}
                                         className="security--icon"
+                                        fill="currentColor"
                                         focusable={false}
                                         height={20}
                                         preserveAspectRatio="xMidYMid meet"
