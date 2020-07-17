@@ -198,7 +198,6 @@ export default class SearchBar extends React.Component {
           value={value}
           onChange={this.handleInputChange}
           closeButtonLabelText={clearButtonLabelText}
-          showIcon={false}
         />
         <Button
           name="search-submit"
