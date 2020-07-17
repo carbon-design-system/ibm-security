@@ -3,14 +3,21 @@
  * @copyright IBM Security 2019 - 2020
  */
 
-import { boolean } from '@storybook/addon-knobs';
+import { boolean, select } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
 import { components } from '../../../.storybook';
 
+import { DataTable } from '../..';
+
+const {
+  defaultProps: { size },
+} = DataTable;
+
 const props = () => ({
-  useZebraStyles: boolean('Zebra row styles (useZebraStyles)', false),
+  size: select('Row height (size)', [size, 'compact', 'short', 'tall'], size),
   stickyHeader: boolean('Sticky header (stickyHeader)', false),
+  useZebraStyles: boolean('Zebra row styles (useZebraStyles)', false),
 });
 
 const readmeURL = 'https://bit.ly/2Z9PGsC';

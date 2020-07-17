@@ -49,6 +49,7 @@ exports[`Nav Rendering renders correctly 1`] = `
           <Icon
             aria-hidden="true"
             className="security--icon security--nav__list__icon"
+            fill="currentColor"
             focusable={false}
             height={16}
             preserveAspectRatio="xMidYMid meet"
@@ -64,6 +65,7 @@ exports[`Nav Rendering renders correctly 1`] = `
             <svg
               aria-hidden={true}
               className="security--icon security--nav__list__icon"
+              fill="currentColor"
               focusable={false}
               height={16}
               preserveAspectRatio="xMidYMid meet"
@@ -150,6 +152,7 @@ exports[`Nav Rendering renders the HTML of the node's subtree 1`] = `
     <svg
       aria-hidden="true"
       class="security--icon security--nav__list__icon"
+      fill="currentColor"
       focusable="false"
       height="16"
       preserveAspectRatio="xMidYMid meet"
