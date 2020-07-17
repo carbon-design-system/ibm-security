@@ -4,44 +4,49 @@
  */
 
 import classnames from 'classnames';
-import { elementType, node, string } from 'prop-types';
-import React, { Fragment } from 'react';
+import { func, node, string } from 'prop-types';
+import React from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
 
-const namespace = getComponentNamespace('trending-card');
+const namespace = getComponentNamespace('upsell-nudge');
 
-/**
- * Trending cards provide summary information of trending items with the ability to navigate to the details.
- */
-const TrendingCard = ({ className, element, title, subtitle, ...other }) =>
-  React.createElement(
-    element,
-    { className: classnames(namespace, className), ...other },
-    <Fragment>
-      <h3 className={`${namespace}__title`}>{title}</h3>
-      {subtitle && <span className={`${namespace}__subtitle`}>{subtitle}</span>}
-    </Fragment>
-  );
+const UpsellNudge = ({
+  children,
+  className,
+  description,
+  renderIcon: Icon,
+  title,
+  ...other
+}) => (
+  <div className={classnames(namespace, className)} {...other}>
+    <Icon className={`${namespace}__icon`} />
+    <div className={`${namespace}__description`}>{description}</div>
+    <div className={`${namespace}__title`}>{title}</div>
+    {children}
+  </div>
+);
 
-TrendingCard.defaultProps = {
-  subtitle: null,
-  element: 'a',
+UpsellNudge.defaultProps = {
+  children: null,
   className: null,
 };
 
-TrendingCard.propTypes = {
+UpsellNudge.propTypes = {
+  /** Specify the text of the description */
+  description: string.isRequired,
+
   /** Specify the text of the title */
   title: string.isRequired,
 
-  /** Specify the content of the subtitle */
-  subtitle: node,
+  /** Provide the icon to renderOptional prop to allow overriding the icon rendering */
+  renderIcon: func.isRequired,
 
-  /** Specify the base element to use to build the link. This can also accept custom components like `Link` from `react-router` */
-  element: elementType,
+  /** Provide the contents of the `UpsellNudge` */
+  children: node,
 
   /** Provide an optional class to be applied to the containing node */
   className: string,
 };
 
-export default TrendingCard;
+export default UpsellNudge;

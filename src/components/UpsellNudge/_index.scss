@@ -4,52 +4,48 @@
 /// @copyright IBM Security 2020
 ////
 
+@import '@carbon/layout/scss/convert';
 @import '@carbon/layout/scss/mini-unit';
 @import '@carbon/layout/scss/spacing';
-@import '@carbon/motion/scss/motion';
 @import '@carbon/themes/scss/tokens';
 @import '@carbon/type/scss/styles';
 
-@import 'carbon-components/scss/globals/scss/helper-mixins';
-
-@import '../../globals/motion/index';
-@import '../../platform/body/mixins';
 @import '../Component/mixins';
 
 @include security--component($name: upsell-nudge) {
-  @include carbon--motion($name: standard, $mode: productive);
+  /// Spacing.
+  /// @type Length
+  $upsell-nudge__spacing: $carbon--spacing-04;
 
-  display: block;
-  min-width: carbon--mini-units($count: 24);
   padding: $carbon--spacing-05;
-  background-color: $ui-01;
-  transition-duration: $transition-duration--fast;
-  text-decoration: unset;
 
-  &:focus,
-  &:hover {
-    background-color: $hover-ui;
+  &__icon {
+    display: block;
+    margin-bottom: $carbon--spacing-02;
   }
 
-  &:focus {
-    @include focus-outline($type: outline);
-  }
-
-  &__title,
-  &__subtitle {
-    @include text-overflow;
+  &__description {
+    @include carbon--type-style($name: productive-heading-03);
+    margin-bottom: $upsell-nudge__spacing;
   }
 
   &__title {
-    @include carbon--type-style($name: body-long-01);
+    @include carbon--type-style($name: body-short-01);
 
-    margin-top: 0;
-    margin-bottom: $carbon--spacing-02;
-    color: $body__color__text;
-  }
+    position: relative;
+    padding-top: $upsell-nudge__spacing;
+    margin-bottom: $carbon--spacing-07;
 
-  &__subtitle {
-    @include carbon--type-style($name: caption-01);
-    color: $text-02;
+    &::before {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-width: carbon--mini-units($count: 10);
+      width: 100%;
+      height: rem($px: 2px);
+      background-color: $ui-03;
+      content: '';
+    }
   }
 }

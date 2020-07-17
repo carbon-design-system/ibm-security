@@ -3,11 +3,13 @@
  * @copyright IBM Security 2020
  */
 
-import React from 'react';
+import { number, color } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
-import { number, select, color } from '@storybook/addon-knobs';
+
+import React from 'react';
+
 import { components } from '../../../.storybook';
-import TruncatedList from '.';
+import { TruncatedList, UnorderedList } from '../..';
 import { createChildrenArray } from './_mocks_';
 
 storiesOf(components(TruncatedList.name), module)
@@ -20,7 +22,7 @@ storiesOf(components(TruncatedList.name), module)
       <TruncatedList
         className="other-class"
         style={{ paddingLeft: 0 }}
-        as={select('list element (as)', ['ul', 'ol', 'dl'], 'ul')}
+        as={UnorderedList}
         scrollGradientColor={color(
           'scroll gradient color (scrollGradientColor)',
           TruncatedList.defaultProps.scrollGradientColor
