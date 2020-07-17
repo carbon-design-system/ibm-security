@@ -14,7 +14,6 @@ import React, {
 } from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
-import { isClient } from '../../globals/utils/capabilities';
 
 import { Breadcrumb, BreadcrumbItem } from '../Breadcrumb';
 import Transition from '../Transition';
@@ -34,39 +33,34 @@ const BreadcrumbPageTitle = ({
   );
 
   const ref = useRef(null);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [style, setStyle] = useState(null);
 
-  let height;
+  const [titleHeight, setTitleHeight] = useState(0);
+  const [isTitleVisible, setIsTitleVisible] = useState(true);
 
-  if (isClient()) {
-    useLayoutEffect(() => {
-      const onScroll = () => {
-        const { scrollY } = window;
+  useLayoutEffect(() => {
+    const onScroll = () => {
+      const { scrollY } = window;
 
-        setIsScrolled(scrollY > height);
+      const styleCalculation = window.scrollY / titleHeight;
 
-        if (!isScrolled) {
-          requestAnimationFrame(() => {
-            const calculation = scrollY / height;
+      requestAnimationFrame(() => {
+        Object.assign(ref.current.style, {
+          opacity: 1 - styleCalculation,
+          transform: `translate3d(0, -${Math.round(
+            (styleCalculation / 2) * 100
+          )}%, 0)`,
+        });
+      });
 
-            setStyle({
-              opacity: 1 - calculation,
-              transform: `translate3d(0, -${Math.round(
-                (calculation / 2) * 100
-              )}%, 0)`,
-            });
-          });
-        }
-      };
+      setIsTitleVisible(scrollY < titleHeight);
+    };
 
-      height = height || ref.current.getBoundingClientRect().height;
+    window.addEventListener('scroll', onScroll);
 
-      window.addEventListener('scroll', onScroll);
+    setTitleHeight(ref.current.getBoundingClientRect().height);
 
-      return () => window.removeEventListener('scroll', onScroll);
-    }, []);
-  }
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [ref.current]);
 
   return (
     <div className={classnames(namespace, className)} {...other}>
@@ -83,7 +77,7 @@ const BreadcrumbPageTitle = ({
           ))}
 
         <Transition className={namespace}>
-          {isScrolled && (
+          {!isTitleVisible && (
             <BreadcrumbItem isCurrentPage>
               <Title />
             </BreadcrumbItem>
@@ -91,9 +85,7 @@ const BreadcrumbPageTitle = ({
         </Transition>
       </Breadcrumb>
 
-      {!isScrolled && (
-        <Title className={`${namespace}__title`} ref={ref} style={style} />
-      )}
+      {isTitleVisible && <Title className={`${namespace}__title`} ref={ref} />}
     </div>
   );
 };
