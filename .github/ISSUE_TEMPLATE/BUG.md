@@ -15,7 +15,7 @@ about: Something isn't working as expected? Submit a bug report
 
 ### Steps for reproducing
 
-<!-- Please try to re-create the issue as a reduced test case using our CodeSandbox template - https://codesandbox.io/s/codesandbox-nmmqp -->
+<!-- Please try to re-create the issue as a reduced test case using our CodeSandbox template - https://codesandbox.io/s/github/carbon-design-system/ibm-security/tree/dev/examples/codesandbox -->
 
 [CodeSandbox](https://codesandbox.io/s/<!-- URL -->)
 
