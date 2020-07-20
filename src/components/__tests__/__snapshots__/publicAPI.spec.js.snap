@@ -12420,7 +12420,9 @@ Map {
   },
   "UpsellNudge" => Object {
     "defaultProps": Object {
+      "children": null,
       "className": null,
+      "element": "h3",
     },
     "propTypes": Object {
       "button": Object {
@@ -12543,12 +12545,14 @@ Map {
         "isRequired": true,
         "type": "shape",
       },
+      "children": Object {
+        "type": "node",
+      },
       "className": Object {
         "type": "string",
       },
-      "description": Object {
-        "isRequired": true,
-        "type": "string",
+      "element": Object {
+        "type": "elementType",
       },
       "renderIcon": Object {
         "args": Array [

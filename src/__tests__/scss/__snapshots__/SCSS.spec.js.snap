@@ -24397,8 +24397,8 @@ a.bx--navigation-link:focus {
   background-image: linear-gradient(rgba(0, 0, 0, 0), var(--ui-01, #262626));
 }
 
-.security--upsell-nudge__content {
-  padding-right: 1rem;
+.security--upsell-nudge__container {
+  padding-right: 2rem;
   padding-left: 1rem;
 }
 
@@ -24406,15 +24406,16 @@ a.bx--navigation-link:focus {
   margin-bottom: 0.5rem;
 }
 
-.security--upsell-nudge__description {
+.security--upsell-nudge__title {
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.75rem;
   letter-spacing: 0;
+  margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
-.security--upsell-nudge__title {
+.security--upsell-nudge__content {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.125rem;
@@ -24424,7 +24425,7 @@ a.bx--navigation-link:focus {
   margin-bottom: 0.5rem;
 }
 
-.security--upsell-nudge__title::before {
+.security--upsell-nudge__content::before {
   display: inline-block;
   position: absolute;
   top: 0;

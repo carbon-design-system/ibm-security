@@ -4,8 +4,8 @@
  */
 
 import classnames from 'classnames';
-import { shape, string } from 'prop-types';
-import React from 'react';
+import { elementType, node, shape, string } from 'prop-types';
+import React, { createElement } from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
 
@@ -18,18 +18,22 @@ const namespace = getComponentNamespace('upsell-nudge');
  */
 const UpsellNudge = ({
   button,
+  children,
   className,
-  description,
+  element,
   renderIcon: Icon,
   title,
   ...other
 }) => (
   <div className={classnames(namespace, className)} {...other}>
-    <div className={`${namespace}__content`}>
+    <div className={`${namespace}__container`}>
       <Icon className={`${namespace}__icon`} />
-      <div className={`${namespace}__description`}>{description}</div>
-      <div className={`${namespace}__title`}>{title}</div>
+
+      {createElement(element, { className: `${namespace}__title` }, title)}
+
+      {children && <div className={`${namespace}__content`}>{children}</div>}
     </div>
+
     <Button className={`${namespace}__button`} kind="ghost" {...button} />
   </div>
 );
@@ -37,9 +41,6 @@ const UpsellNudge = ({
 const { propTypes } = Button;
 
 UpsellNudge.propTypes = {
-  /** Specify the text of the description */
-  description: string.isRequired,
-
   /** Specify the text of the title */
   title: string.isRequired,
 
@@ -49,11 +50,19 @@ UpsellNudge.propTypes = {
   /** Provide the props of the `Button` */
   button: shape(propTypes).isRequired,
 
+  /** Specify the content of the `UpsellNudge` */
+  children: node,
+
+  /** Specify the base element to use to build the title */
+  element: elementType,
+
   /** Provide an optional class to be applied to the containing node */
   className: string,
 };
 
 UpsellNudge.defaultProps = {
+  children: null,
+  element: 'h3',
   className: null,
 };
 

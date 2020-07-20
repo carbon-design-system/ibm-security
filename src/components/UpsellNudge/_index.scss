@@ -28,26 +28,23 @@
   padding-top: $upsell-nudge__spacing;
   background-image: linear-gradient(rgba(0, 0, 0, 0), $ui-01);
 
-  &__content {
-    /// Content spacing.
-    /// @type Length
-    $upsell-nudge__content__spacing: $carbon--spacing-05;
-
-    padding-right: $upsell-nudge__content__spacing;
-    padding-left: $upsell-nudge__content__spacing;
+  &__container {
+    padding-right: $carbon--spacing-07;
+    padding-left: $carbon--spacing-05;
   }
 
   &__icon {
     margin-bottom: $upsell-nudge__spacing;
   }
 
-  &__description {
+  &__title {
     @include carbon--type-style($name: productive-heading-03);
 
+    margin-top: 0;
     margin-bottom: $upsell-nudge__spacing;
   }
 
-  &__title {
+  &__content {
     @include carbon--type-style($name: body-short-01);
 
     position: relative;
