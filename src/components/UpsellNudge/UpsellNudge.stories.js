@@ -16,10 +16,10 @@ const props = () => ({
     'See threat activity related to this report and discover threats affecting your environment'
   ),
   children: text('Children (children)', 'IBM Threat Intelligence Insights'),
-  renderIcon: App24,
   button: {
     children: text('Button children (button.children)', 'View in Catalog'),
   },
+  renderIcon: App24,
 });
 
 export const Default = () => <UpsellNudge {...props()} />;
