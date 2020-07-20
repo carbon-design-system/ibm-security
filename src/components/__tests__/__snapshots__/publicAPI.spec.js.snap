@@ -10414,7 +10414,6 @@ Map {
   "TearsheetSmall" => Object {
     "defaultProps": Object {
       "body": "",
-      "children": undefined,
       "className": "",
       "description": "",
       "flush": false,
@@ -10444,9 +10443,6 @@ Map {
           ],
         ],
         "type": "oneOfType",
-      },
-      "children": Object {
-        "type": "element",
       },
       "className": Object {
         "type": "string",
