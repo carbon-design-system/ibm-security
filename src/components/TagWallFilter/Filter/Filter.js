@@ -57,11 +57,6 @@ class Filter extends React.Component {
     });
   };
 
-  clearInputValue = event => {
-    event.stopPropagation();
-    this.setState({ inputValue: '' });
-  };
-
   handleOnStateChange = changes => {
     const { type } = changes;
     switch (type) {
@@ -156,22 +151,6 @@ class Filter extends React.Component {
     const { inputValue, highlightedIndex } = this.state;
     const { itemToString, id, disabled, placeholder } = this.props;
 
-    const clearButton = inputValue ? (
-      <Selection
-        clearSelection={this.clearInputValue}
-        translateWithId={id => {
-          switch (id) {
-            case 'clear.all':
-              return this.props.filterFieldClearAllTooltip;
-            case 'clear.selection':
-              return this.props.filterFieldClearSelectionTooltip;
-            default:
-              return '';
-          }
-        }}
-      />
-    ) : null;
-
     return (
       <Downshift
         highlightedIndex={highlightedIndex}
@@ -180,10 +159,11 @@ class Filter extends React.Component {
         onChange={this.handleItemChange}
         itemToString={itemToString}
         onStateChange={this.handleOnStateChange}
-        clearSelection={this.handleClearSelection}
         isOpen
-        render={({
-          getButtonProps,
+      >
+        {({
+          clearSelection,
+          getToggleButtonProps,
           getInputProps,
           getItemProps,
           getRootProps,
@@ -194,7 +174,11 @@ class Filter extends React.Component {
             {...getRootProps()}
             id={id}
           >
-            <Field {...getButtonProps({ disabled, tabIndex: -1 })} id={id}>
+            <Field
+              {...getToggleButtonProps({ disabled })}
+              tabIndex={-1}
+              id={id}
+            >
               <input
                 className={`${namespace}__input-field ${carbonPrefix}text-input`}
                 {...getInputProps({
@@ -205,7 +189,26 @@ class Filter extends React.Component {
                   onKeyDown: this.handleOnInputKeyDown,
                 })}
               />
-              {clearButton}
+              {inputValue && (
+                <Selection
+                  clearSelection={event => {
+                    event.stopPropagation();
+                    clearSelection(() => {
+                      this.handleClearSelection();
+                    });
+                  }}
+                  translateWithId={id => {
+                    switch (id) {
+                      case 'clear.all':
+                        return this.props.filterFieldClearAllTooltip;
+                      case 'clear.selection':
+                        return this.props.filterFieldClearSelectionTooltip;
+                      default:
+                        return '';
+                    }
+                  }}
+                />
+              )}
               <span className={`${namespace}__search`}>
                 <Icon
                   className={classnames(`${namespace}__search__icon`, {
@@ -222,7 +225,7 @@ class Filter extends React.Component {
             </Menu>
           </ListBox>
         )}
-      />
+      </Downshift>
     );
   }
 }

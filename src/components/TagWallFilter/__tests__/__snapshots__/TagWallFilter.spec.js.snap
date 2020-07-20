@@ -482,7 +482,109 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                   >
                     <div
                       class="security--tearsheet--small__scroll-gradient__content"
-                    />
+                    >
+                      <div
+                        aria-expanded="true"
+                        aria-haspopup="listbox"
+                        aria-labelledby="downshift-0-label"
+                        aria-owns="downshift-0-menu"
+                        class="security--filter bx--list-box"
+                        id="test-id"
+                        role="combobox"
+                      >
+                        <div
+                          aria-haspopup="true"
+                          aria-label="close menu"
+                          class="bx--list-box__field"
+                          data-toggle="true"
+                          id="test-id"
+                          role="button"
+                          tabindex="-1"
+                          type="button"
+                        >
+                          <input
+                            aria-autocomplete="list"
+                            aria-controls="downshift-0-menu"
+                            aria-labelledby="downshift-0-label"
+                            autocomplete="off"
+                            class="security--filter__input-field bx--text-input"
+                            id="test-id"
+                            placeholder="placeholder"
+                            value=""
+                          />
+                          
+                          <span
+                            class="security--filter__search"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="security--icon security--filter__search__icon"
+                              fill="var(--icon-01, #f4f4f4)"
+                              focusable="false"
+                              height="20"
+                              preserveAspectRatio="xMidYMid meet"
+                              style="will-change: transform;"
+                              viewBox="0 0 32 32"
+                              width="20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                              />
+                            </svg>
+                          </span>
+                        </div>
+                        <div
+                          class="security--filter__list-container"
+                          id="test-id"
+                          role="listbox"
+                        >
+                          <div
+                            aria-selected="false"
+                            class="security--filter__list-item"
+                            id="downshift-0-item-0"
+                            role="option"
+                            tabindex="0"
+                          >
+                            <div
+                              class="bx--list-box__menu-item__option"
+                            >
+                              <div
+                                aria-labelledby="downshift-0-item-0"
+                                class="security--filter__list-item__entry"
+                              >
+                                <span
+                                  class="bx--text-truncate--end"
+                                  title="X"
+                                >
+                                  X
+                                </span>
+                                <span
+                                  class="security--filter__add"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="security--icon security--filter__add__icon"
+                                    fill="currentColor"
+                                    focusable="false"
+                                    height="20"
+                                    preserveAspectRatio="xMidYMid meet"
+                                    style="will-change: transform;"
+                                    viewBox="0 0 32 32"
+                                    width="20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                    />
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div
                     aria-hidden="true"
@@ -684,7 +786,109 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                               >
                                 <div
                                   class="security--tearsheet--small__scroll-gradient__content"
-                                />
+                                >
+                                  <div
+                                    aria-expanded="true"
+                                    aria-haspopup="listbox"
+                                    aria-labelledby="downshift-0-label"
+                                    aria-owns="downshift-0-menu"
+                                    class="security--filter bx--list-box"
+                                    id="test-id"
+                                    role="combobox"
+                                  >
+                                    <div
+                                      aria-haspopup="true"
+                                      aria-label="close menu"
+                                      class="bx--list-box__field"
+                                      data-toggle="true"
+                                      id="test-id"
+                                      role="button"
+                                      tabindex="-1"
+                                      type="button"
+                                    >
+                                      <input
+                                        aria-autocomplete="list"
+                                        aria-controls="downshift-0-menu"
+                                        aria-labelledby="downshift-0-label"
+                                        autocomplete="off"
+                                        class="security--filter__input-field bx--text-input"
+                                        id="test-id"
+                                        placeholder="placeholder"
+                                        value=""
+                                      />
+                                      
+                                      <span
+                                        class="security--filter__search"
+                                      >
+                                        <svg
+                                          aria-hidden="true"
+                                          class="security--icon security--filter__search__icon"
+                                          fill="var(--icon-01, #f4f4f4)"
+                                          focusable="false"
+                                          height="20"
+                                          preserveAspectRatio="xMidYMid meet"
+                                          style="will-change: transform;"
+                                          viewBox="0 0 32 32"
+                                          width="20"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                          <path
+                                            d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                          />
+                                        </svg>
+                                      </span>
+                                    </div>
+                                    <div
+                                      class="security--filter__list-container"
+                                      id="test-id"
+                                      role="listbox"
+                                    >
+                                      <div
+                                        aria-selected="false"
+                                        class="security--filter__list-item"
+                                        id="downshift-0-item-0"
+                                        role="option"
+                                        tabindex="0"
+                                      >
+                                        <div
+                                          class="bx--list-box__menu-item__option"
+                                        >
+                                          <div
+                                            aria-labelledby="downshift-0-item-0"
+                                            class="security--filter__list-item__entry"
+                                          >
+                                            <span
+                                              class="bx--text-truncate--end"
+                                              title="X"
+                                            >
+                                              X
+                                            </span>
+                                            <span
+                                              class="security--filter__add"
+                                            >
+                                              <svg
+                                                aria-hidden="true"
+                                                class="security--icon security--filter__add__icon"
+                                                fill="currentColor"
+                                                focusable="false"
+                                                height="20"
+                                                preserveAspectRatio="xMidYMid meet"
+                                                style="will-change: transform;"
+                                                viewBox="0 0 32 32"
+                                                width="20"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                              >
+                                                <path
+                                                  d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                                />
+                                              </svg>
+                                            </span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
                               <div
                                 aria-hidden="true"
@@ -822,7 +1026,109 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                 >
                                   <div
                                     class="security--tearsheet--small__scroll-gradient__content"
-                                  />
+                                  >
+                                    <div
+                                      aria-expanded="true"
+                                      aria-haspopup="listbox"
+                                      aria-labelledby="downshift-0-label"
+                                      aria-owns="downshift-0-menu"
+                                      class="security--filter bx--list-box"
+                                      id="test-id"
+                                      role="combobox"
+                                    >
+                                      <div
+                                        aria-haspopup="true"
+                                        aria-label="close menu"
+                                        class="bx--list-box__field"
+                                        data-toggle="true"
+                                        id="test-id"
+                                        role="button"
+                                        tabindex="-1"
+                                        type="button"
+                                      >
+                                        <input
+                                          aria-autocomplete="list"
+                                          aria-controls="downshift-0-menu"
+                                          aria-labelledby="downshift-0-label"
+                                          autocomplete="off"
+                                          class="security--filter__input-field bx--text-input"
+                                          id="test-id"
+                                          placeholder="placeholder"
+                                          value=""
+                                        />
+                                        
+                                        <span
+                                          class="security--filter__search"
+                                        >
+                                          <svg
+                                            aria-hidden="true"
+                                            class="security--icon security--filter__search__icon"
+                                            fill="var(--icon-01, #f4f4f4)"
+                                            focusable="false"
+                                            height="20"
+                                            preserveAspectRatio="xMidYMid meet"
+                                            style="will-change: transform;"
+                                            viewBox="0 0 32 32"
+                                            width="20"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                          >
+                                            <path
+                                              d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                            />
+                                          </svg>
+                                        </span>
+                                      </div>
+                                      <div
+                                        class="security--filter__list-container"
+                                        id="test-id"
+                                        role="listbox"
+                                      >
+                                        <div
+                                          aria-selected="false"
+                                          class="security--filter__list-item"
+                                          id="downshift-0-item-0"
+                                          role="option"
+                                          tabindex="0"
+                                        >
+                                          <div
+                                            class="bx--list-box__menu-item__option"
+                                          >
+                                            <div
+                                              aria-labelledby="downshift-0-item-0"
+                                              class="security--filter__list-item__entry"
+                                            >
+                                              <span
+                                                class="bx--text-truncate--end"
+                                                title="X"
+                                              >
+                                                X
+                                              </span>
+                                              <span
+                                                class="security--filter__add"
+                                              >
+                                                <svg
+                                                  aria-hidden="true"
+                                                  class="security--icon security--filter__add__icon"
+                                                  fill="currentColor"
+                                                  focusable="false"
+                                                  height="20"
+                                                  preserveAspectRatio="xMidYMid meet"
+                                                  style="will-change: transform;"
+                                                  viewBox="0 0 32 32"
+                                                  width="20"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                  <path
+                                                    d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                                  />
+                                                </svg>
+                                              </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                                 <div
                                   aria-hidden="true"
@@ -1090,7 +1396,6 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                       sortItems={[Function]}
                                     >
                                       <Downshift
-                                        clearSelection={[Function]}
                                         defaultHighlightedIndex={null}
                                         defaultIsOpen={false}
                                         environment={[Window]}
@@ -1105,12 +1410,272 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                         onSelect={[Function]}
                                         onStateChange={[Function]}
                                         onUserAction={[Function]}
-                                        render={[Function]}
                                         scrollIntoView={[Function]}
                                         selectedItemChanged={[Function]}
                                         stateReducer={[Function]}
                                         suppressRefError={false}
-                                      />
+                                      >
+                                        <ListBox
+                                          aria-expanded={true}
+                                          aria-haspopup="listbox"
+                                          aria-labelledby="downshift-0-label"
+                                          aria-owns="downshift-0-menu"
+                                          className="security--filter"
+                                          disabled={false}
+                                          id="test-id"
+                                          role="combobox"
+                                          type="default"
+                                        >
+                                          <div
+                                            aria-expanded={true}
+                                            aria-haspopup="listbox"
+                                            aria-labelledby="downshift-0-label"
+                                            aria-owns="downshift-0-menu"
+                                            className="security--filter bx--list-box"
+                                            id="test-id"
+                                            onClick={[Function]}
+                                            onKeyDown={[Function]}
+                                            role="combobox"
+                                          >
+                                            <ListBoxField
+                                              aria-haspopup={true}
+                                              aria-label="close menu"
+                                              data-toggle={true}
+                                              disabled={false}
+                                              id="test-id"
+                                              onBlur={[Function]}
+                                              onClick={[Function]}
+                                              onKeyDown={[Function]}
+                                              onKeyUp={[Function]}
+                                              role="button"
+                                              tabIndex={-1}
+                                              type="button"
+                                            >
+                                              <div
+                                                aria-haspopup={true}
+                                                aria-label="close menu"
+                                                className="bx--list-box__field"
+                                                data-toggle={true}
+                                                id="test-id"
+                                                onBlur={[Function]}
+                                                onClick={[Function]}
+                                                onKeyDown={[Function]}
+                                                onKeyUp={[Function]}
+                                                role="button"
+                                                tabIndex={-1}
+                                                type="button"
+                                              >
+                                                <input
+                                                  aria-activedescendant={null}
+                                                  aria-autocomplete="list"
+                                                  aria-controls="downshift-0-menu"
+                                                  aria-labelledby="downshift-0-label"
+                                                  autoComplete="off"
+                                                  className="security--filter__input-field bx--text-input"
+                                                  disabled={false}
+                                                  id="test-id"
+                                                  onBlur={[Function]}
+                                                  onChange={[Function]}
+                                                  onKeyDown={[Function]}
+                                                  placeholder="placeholder"
+                                                  value=""
+                                                />
+                                                <span
+                                                  className="security--filter__search"
+                                                >
+                                                  <Icon
+                                                    className="security--filter__search__icon"
+                                                    fill="var(--icon-01, #f4f4f4)"
+                                                    height={null}
+                                                    path={null}
+                                                    renderIcon={
+                                                      Object {
+                                                        "$$typeof": Symbol(react.forward_ref),
+                                                        "render": [Function],
+                                                      }
+                                                    }
+                                                    size={20}
+                                                    viewBox="0 0 32 32"
+                                                    width={null}
+                                                  >
+                                                    <ForwardRef(Search20)
+                                                      aria-hidden="true"
+                                                      className="security--icon security--filter__search__icon"
+                                                      fill="var(--icon-01, #f4f4f4)"
+                                                      focusable={false}
+                                                      preserveAspectRatio="xMidYMid meet"
+                                                      style={
+                                                        Object {
+                                                          "willChange": "transform",
+                                                        }
+                                                      }
+                                                    >
+                                                      <Icon
+                                                        aria-hidden="true"
+                                                        className="security--icon security--filter__search__icon"
+                                                        fill="var(--icon-01, #f4f4f4)"
+                                                        focusable={false}
+                                                        height={20}
+                                                        preserveAspectRatio="xMidYMid meet"
+                                                        style={
+                                                          Object {
+                                                            "willChange": "transform",
+                                                          }
+                                                        }
+                                                        viewBox="0 0 32 32"
+                                                        width={20}
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                      >
+                                                        <svg
+                                                          aria-hidden={true}
+                                                          className="security--icon security--filter__search__icon"
+                                                          fill="var(--icon-01, #f4f4f4)"
+                                                          focusable={false}
+                                                          height={20}
+                                                          preserveAspectRatio="xMidYMid meet"
+                                                          style={
+                                                            Object {
+                                                              "willChange": "transform",
+                                                            }
+                                                          }
+                                                          viewBox="0 0 32 32"
+                                                          width={20}
+                                                          xmlns="http://www.w3.org/2000/svg"
+                                                        >
+                                                          <path
+                                                            d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                                          />
+                                                        </svg>
+                                                      </Icon>
+                                                    </ForwardRef(Search20)>
+                                                  </Icon>
+                                                </span>
+                                              </div>
+                                            </ListBoxField>
+                                            <ListBoxMenu
+                                              className="security--filter__list-container"
+                                              id="test-id"
+                                            >
+                                              <div
+                                                className="security--filter__list-container"
+                                                id="test-id"
+                                                role="listbox"
+                                              >
+                                                <ListBoxMenuItem
+                                                  aria-selected={false}
+                                                  className="security--filter__list-item"
+                                                  id="downshift-0-item-0"
+                                                  isActive={false}
+                                                  isHighlighted={false}
+                                                  key="downshift-0-item-0"
+                                                  onClick={[Function]}
+                                                  onKeyDown={[Function]}
+                                                  onMouseDown={[Function]}
+                                                  onMouseMove={[Function]}
+                                                  role="option"
+                                                  tabIndex="0"
+                                                >
+                                                  <div
+                                                    aria-selected={false}
+                                                    className="security--filter__list-item"
+                                                    id="downshift-0-item-0"
+                                                    onClick={[Function]}
+                                                    onKeyDown={[Function]}
+                                                    onMouseDown={[Function]}
+                                                    onMouseMove={[Function]}
+                                                    role="option"
+                                                    tabIndex="0"
+                                                  >
+                                                    <div
+                                                      className="bx--list-box__menu-item__option"
+                                                    >
+                                                      <div
+                                                        aria-labelledby="downshift-0-item-0"
+                                                        className="security--filter__list-item__entry"
+                                                      >
+                                                        <span
+                                                          className="bx--text-truncate--end"
+                                                          title="X"
+                                                        >
+                                                          X
+                                                        </span>
+                                                        <span
+                                                          className="security--filter__add"
+                                                        >
+                                                          <Icon
+                                                            className="security--filter__add__icon"
+                                                            height={null}
+                                                            path={null}
+                                                            renderIcon={
+                                                              Object {
+                                                                "$$typeof": Symbol(react.forward_ref),
+                                                                "render": [Function],
+                                                              }
+                                                            }
+                                                            size={20}
+                                                            viewBox="0 0 32 32"
+                                                            width={null}
+                                                          >
+                                                            <ForwardRef(Add20)
+                                                              aria-hidden="true"
+                                                              className="security--icon security--filter__add__icon"
+                                                              focusable={false}
+                                                              preserveAspectRatio="xMidYMid meet"
+                                                              style={
+                                                                Object {
+                                                                  "willChange": "transform",
+                                                                }
+                                                              }
+                                                            >
+                                                              <Icon
+                                                                aria-hidden="true"
+                                                                className="security--icon security--filter__add__icon"
+                                                                fill="currentColor"
+                                                                focusable={false}
+                                                                height={20}
+                                                                preserveAspectRatio="xMidYMid meet"
+                                                                style={
+                                                                  Object {
+                                                                    "willChange": "transform",
+                                                                  }
+                                                                }
+                                                                viewBox="0 0 32 32"
+                                                                width={20}
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                              >
+                                                                <svg
+                                                                  aria-hidden={true}
+                                                                  className="security--icon security--filter__add__icon"
+                                                                  fill="currentColor"
+                                                                  focusable={false}
+                                                                  height={20}
+                                                                  preserveAspectRatio="xMidYMid meet"
+                                                                  style={
+                                                                    Object {
+                                                                      "willChange": "transform",
+                                                                    }
+                                                                  }
+                                                                  viewBox="0 0 32 32"
+                                                                  width={20}
+                                                                  xmlns="http://www.w3.org/2000/svg"
+                                                                >
+                                                                  <path
+                                                                    d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                                                  />
+                                                                </svg>
+                                                              </Icon>
+                                                            </ForwardRef(Add20)>
+                                                          </Icon>
+                                                        </span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </ListBoxMenuItem>
+                                              </div>
+                                            </ListBoxMenu>
+                                          </div>
+                                        </ListBox>
+                                      </Downshift>
                                     </Filter>
                                   </div>
                                 </div>
@@ -1738,7 +2303,109 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                     >
                       <div
                         class="security--tearsheet--small__scroll-gradient__content"
-                      />
+                      >
+                        <div
+                          aria-expanded="true"
+                          aria-haspopup="listbox"
+                          aria-labelledby="downshift-0-label"
+                          aria-owns="downshift-0-menu"
+                          class="security--filter bx--list-box"
+                          id="test-id"
+                          role="combobox"
+                        >
+                          <div
+                            aria-haspopup="true"
+                            aria-label="close menu"
+                            class="bx--list-box__field"
+                            data-toggle="true"
+                            id="test-id"
+                            role="button"
+                            tabindex="-1"
+                            type="button"
+                          >
+                            <input
+                              aria-autocomplete="list"
+                              aria-controls="downshift-0-menu"
+                              aria-labelledby="downshift-0-label"
+                              autocomplete="off"
+                              class="security--filter__input-field bx--text-input"
+                              id="test-id"
+                              placeholder="placeholder"
+                              value=""
+                            />
+                            
+                            <span
+                              class="security--filter__search"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="security--icon security--filter__search__icon"
+                                fill="var(--icon-01, #f4f4f4)"
+                                focusable="false"
+                                height="20"
+                                preserveAspectRatio="xMidYMid meet"
+                                style="will-change: transform;"
+                                viewBox="0 0 32 32"
+                                width="20"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                />
+                              </svg>
+                            </span>
+                          </div>
+                          <div
+                            class="security--filter__list-container"
+                            id="test-id"
+                            role="listbox"
+                          >
+                            <div
+                              aria-selected="false"
+                              class="security--filter__list-item"
+                              id="downshift-0-item-0"
+                              role="option"
+                              tabindex="0"
+                            >
+                              <div
+                                class="bx--list-box__menu-item__option"
+                              >
+                                <div
+                                  aria-labelledby="downshift-0-item-0"
+                                  class="security--filter__list-item__entry"
+                                >
+                                  <span
+                                    class="bx--text-truncate--end"
+                                    title="X"
+                                  >
+                                    X
+                                  </span>
+                                  <span
+                                    class="security--filter__add"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="security--icon security--filter__add__icon"
+                                      fill="currentColor"
+                                      focusable="false"
+                                      height="20"
+                                      preserveAspectRatio="xMidYMid meet"
+                                      style="will-change: transform;"
+                                      viewBox="0 0 32 32"
+                                      width="20"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                      />
+                                    </svg>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div
                       aria-hidden="true"
@@ -1867,7 +2534,109 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                     >
                       <div
                         class="security--tearsheet--small__scroll-gradient__content"
-                      />
+                      >
+                        <div
+                          aria-expanded="true"
+                          aria-haspopup="listbox"
+                          aria-labelledby="downshift-1-label"
+                          aria-owns="downshift-1-menu"
+                          class="security--filter bx--list-box"
+                          id="test-id"
+                          role="combobox"
+                        >
+                          <div
+                            aria-haspopup="true"
+                            aria-label="close menu"
+                            class="bx--list-box__field"
+                            data-toggle="true"
+                            id="test-id"
+                            role="button"
+                            tabindex="-1"
+                            type="button"
+                          >
+                            <input
+                              aria-autocomplete="list"
+                              aria-controls="downshift-1-menu"
+                              aria-labelledby="downshift-1-label"
+                              autocomplete="off"
+                              class="security--filter__input-field bx--text-input"
+                              id="test-id"
+                              placeholder="placeholder"
+                              value=""
+                            />
+                            
+                            <span
+                              class="security--filter__search"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="security--icon security--filter__search__icon"
+                                fill="var(--icon-01, #f4f4f4)"
+                                focusable="false"
+                                height="20"
+                                preserveAspectRatio="xMidYMid meet"
+                                style="will-change: transform;"
+                                viewBox="0 0 32 32"
+                                width="20"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                />
+                              </svg>
+                            </span>
+                          </div>
+                          <div
+                            class="security--filter__list-container"
+                            id="test-id"
+                            role="listbox"
+                          >
+                            <div
+                              aria-selected="false"
+                              class="security--filter__list-item"
+                              id="downshift-1-item-0"
+                              role="option"
+                              tabindex="0"
+                            >
+                              <div
+                                class="bx--list-box__menu-item__option"
+                              >
+                                <div
+                                  aria-labelledby="downshift-1-item-0"
+                                  class="security--filter__list-item__entry"
+                                >
+                                  <span
+                                    class="bx--text-truncate--end"
+                                    title="X"
+                                  >
+                                    X
+                                  </span>
+                                  <span
+                                    class="security--filter__add"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="security--icon security--filter__add__icon"
+                                      fill="currentColor"
+                                      focusable="false"
+                                      height="20"
+                                      preserveAspectRatio="xMidYMid meet"
+                                      style="will-change: transform;"
+                                      viewBox="0 0 32 32"
+                                      width="20"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                      />
+                                    </svg>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div
                       aria-hidden="true"
@@ -1996,7 +2765,109 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                     >
                       <div
                         class=""
-                      />
+                      >
+                        <div
+                          aria-expanded="true"
+                          aria-haspopup="listbox"
+                          aria-labelledby="downshift-2-label"
+                          aria-owns="downshift-2-menu"
+                          class="security--filter bx--list-box"
+                          id="test-id"
+                          role="combobox"
+                        >
+                          <div
+                            aria-haspopup="true"
+                            aria-label="close menu"
+                            class="bx--list-box__field"
+                            data-toggle="true"
+                            id="test-id"
+                            role="button"
+                            tabindex="-1"
+                            type="button"
+                          >
+                            <input
+                              aria-autocomplete="list"
+                              aria-controls="downshift-2-menu"
+                              aria-labelledby="downshift-2-label"
+                              autocomplete="off"
+                              class="security--filter__input-field bx--text-input"
+                              id="test-id"
+                              placeholder=""
+                              value=""
+                            />
+                            
+                            <span
+                              class="security--filter__search"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="security--icon security--filter__search__icon"
+                                fill="var(--icon-01, #f4f4f4)"
+                                focusable="false"
+                                height="20"
+                                preserveAspectRatio="xMidYMid meet"
+                                style="will-change: transform;"
+                                viewBox="0 0 32 32"
+                                width="20"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                />
+                              </svg>
+                            </span>
+                          </div>
+                          <div
+                            class="security--filter__list-container"
+                            id="test-id"
+                            role="listbox"
+                          >
+                            <div
+                              aria-selected="false"
+                              class="security--filter__list-item"
+                              id="downshift-2-item-0"
+                              role="option"
+                              tabindex="0"
+                            >
+                              <div
+                                class="bx--list-box__menu-item__option"
+                              >
+                                <div
+                                  aria-labelledby="downshift-2-item-0"
+                                  class="security--filter__list-item__entry"
+                                >
+                                  <span
+                                    class="bx--text-truncate--end"
+                                    title="Y"
+                                  >
+                                    Y
+                                  </span>
+                                  <span
+                                    class="security--filter__add"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="security--icon security--filter__add__icon"
+                                      fill="currentColor"
+                                      focusable="false"
+                                      height="20"
+                                      preserveAspectRatio="xMidYMid meet"
+                                      style="will-change: transform;"
+                                      viewBox="0 0 32 32"
+                                      width="20"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                      />
+                                    </svg>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div
                       aria-hidden="true"
@@ -2198,7 +3069,109 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 >
                                   <div
                                     class="security--tearsheet--small__scroll-gradient__content"
-                                  />
+                                  >
+                                    <div
+                                      aria-expanded="true"
+                                      aria-haspopup="listbox"
+                                      aria-labelledby="downshift-0-label"
+                                      aria-owns="downshift-0-menu"
+                                      class="security--filter bx--list-box"
+                                      id="test-id"
+                                      role="combobox"
+                                    >
+                                      <div
+                                        aria-haspopup="true"
+                                        aria-label="close menu"
+                                        class="bx--list-box__field"
+                                        data-toggle="true"
+                                        id="test-id"
+                                        role="button"
+                                        tabindex="-1"
+                                        type="button"
+                                      >
+                                        <input
+                                          aria-autocomplete="list"
+                                          aria-controls="downshift-0-menu"
+                                          aria-labelledby="downshift-0-label"
+                                          autocomplete="off"
+                                          class="security--filter__input-field bx--text-input"
+                                          id="test-id"
+                                          placeholder="placeholder"
+                                          value=""
+                                        />
+                                        
+                                        <span
+                                          class="security--filter__search"
+                                        >
+                                          <svg
+                                            aria-hidden="true"
+                                            class="security--icon security--filter__search__icon"
+                                            fill="var(--icon-01, #f4f4f4)"
+                                            focusable="false"
+                                            height="20"
+                                            preserveAspectRatio="xMidYMid meet"
+                                            style="will-change: transform;"
+                                            viewBox="0 0 32 32"
+                                            width="20"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                          >
+                                            <path
+                                              d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                            />
+                                          </svg>
+                                        </span>
+                                      </div>
+                                      <div
+                                        class="security--filter__list-container"
+                                        id="test-id"
+                                        role="listbox"
+                                      >
+                                        <div
+                                          aria-selected="false"
+                                          class="security--filter__list-item"
+                                          id="downshift-0-item-0"
+                                          role="option"
+                                          tabindex="0"
+                                        >
+                                          <div
+                                            class="bx--list-box__menu-item__option"
+                                          >
+                                            <div
+                                              aria-labelledby="downshift-0-item-0"
+                                              class="security--filter__list-item__entry"
+                                            >
+                                              <span
+                                                class="bx--text-truncate--end"
+                                                title="X"
+                                              >
+                                                X
+                                              </span>
+                                              <span
+                                                class="security--filter__add"
+                                              >
+                                                <svg
+                                                  aria-hidden="true"
+                                                  class="security--icon security--filter__add__icon"
+                                                  fill="currentColor"
+                                                  focusable="false"
+                                                  height="20"
+                                                  preserveAspectRatio="xMidYMid meet"
+                                                  style="will-change: transform;"
+                                                  viewBox="0 0 32 32"
+                                                  width="20"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                  <path
+                                                    d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                                  />
+                                                </svg>
+                                              </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                                 <div
                                   aria-hidden="true"
@@ -2327,7 +3300,109 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 >
                                   <div
                                     class="security--tearsheet--small__scroll-gradient__content"
-                                  />
+                                  >
+                                    <div
+                                      aria-expanded="true"
+                                      aria-haspopup="listbox"
+                                      aria-labelledby="downshift-1-label"
+                                      aria-owns="downshift-1-menu"
+                                      class="security--filter bx--list-box"
+                                      id="test-id"
+                                      role="combobox"
+                                    >
+                                      <div
+                                        aria-haspopup="true"
+                                        aria-label="close menu"
+                                        class="bx--list-box__field"
+                                        data-toggle="true"
+                                        id="test-id"
+                                        role="button"
+                                        tabindex="-1"
+                                        type="button"
+                                      >
+                                        <input
+                                          aria-autocomplete="list"
+                                          aria-controls="downshift-1-menu"
+                                          aria-labelledby="downshift-1-label"
+                                          autocomplete="off"
+                                          class="security--filter__input-field bx--text-input"
+                                          id="test-id"
+                                          placeholder="placeholder"
+                                          value=""
+                                        />
+                                        
+                                        <span
+                                          class="security--filter__search"
+                                        >
+                                          <svg
+                                            aria-hidden="true"
+                                            class="security--icon security--filter__search__icon"
+                                            fill="var(--icon-01, #f4f4f4)"
+                                            focusable="false"
+                                            height="20"
+                                            preserveAspectRatio="xMidYMid meet"
+                                            style="will-change: transform;"
+                                            viewBox="0 0 32 32"
+                                            width="20"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                          >
+                                            <path
+                                              d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                            />
+                                          </svg>
+                                        </span>
+                                      </div>
+                                      <div
+                                        class="security--filter__list-container"
+                                        id="test-id"
+                                        role="listbox"
+                                      >
+                                        <div
+                                          aria-selected="false"
+                                          class="security--filter__list-item"
+                                          id="downshift-1-item-0"
+                                          role="option"
+                                          tabindex="0"
+                                        >
+                                          <div
+                                            class="bx--list-box__menu-item__option"
+                                          >
+                                            <div
+                                              aria-labelledby="downshift-1-item-0"
+                                              class="security--filter__list-item__entry"
+                                            >
+                                              <span
+                                                class="bx--text-truncate--end"
+                                                title="X"
+                                              >
+                                                X
+                                              </span>
+                                              <span
+                                                class="security--filter__add"
+                                              >
+                                                <svg
+                                                  aria-hidden="true"
+                                                  class="security--icon security--filter__add__icon"
+                                                  fill="currentColor"
+                                                  focusable="false"
+                                                  height="20"
+                                                  preserveAspectRatio="xMidYMid meet"
+                                                  style="will-change: transform;"
+                                                  viewBox="0 0 32 32"
+                                                  width="20"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                  <path
+                                                    d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                                  />
+                                                </svg>
+                                              </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                                 <div
                                   aria-hidden="true"
@@ -2456,7 +3531,109 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 >
                                   <div
                                     class=""
-                                  />
+                                  >
+                                    <div
+                                      aria-expanded="true"
+                                      aria-haspopup="listbox"
+                                      aria-labelledby="downshift-2-label"
+                                      aria-owns="downshift-2-menu"
+                                      class="security--filter bx--list-box"
+                                      id="test-id"
+                                      role="combobox"
+                                    >
+                                      <div
+                                        aria-haspopup="true"
+                                        aria-label="close menu"
+                                        class="bx--list-box__field"
+                                        data-toggle="true"
+                                        id="test-id"
+                                        role="button"
+                                        tabindex="-1"
+                                        type="button"
+                                      >
+                                        <input
+                                          aria-autocomplete="list"
+                                          aria-controls="downshift-2-menu"
+                                          aria-labelledby="downshift-2-label"
+                                          autocomplete="off"
+                                          class="security--filter__input-field bx--text-input"
+                                          id="test-id"
+                                          placeholder=""
+                                          value=""
+                                        />
+                                        
+                                        <span
+                                          class="security--filter__search"
+                                        >
+                                          <svg
+                                            aria-hidden="true"
+                                            class="security--icon security--filter__search__icon"
+                                            fill="var(--icon-01, #f4f4f4)"
+                                            focusable="false"
+                                            height="20"
+                                            preserveAspectRatio="xMidYMid meet"
+                                            style="will-change: transform;"
+                                            viewBox="0 0 32 32"
+                                            width="20"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                          >
+                                            <path
+                                              d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                            />
+                                          </svg>
+                                        </span>
+                                      </div>
+                                      <div
+                                        class="security--filter__list-container"
+                                        id="test-id"
+                                        role="listbox"
+                                      >
+                                        <div
+                                          aria-selected="false"
+                                          class="security--filter__list-item"
+                                          id="downshift-2-item-0"
+                                          role="option"
+                                          tabindex="0"
+                                        >
+                                          <div
+                                            class="bx--list-box__menu-item__option"
+                                          >
+                                            <div
+                                              aria-labelledby="downshift-2-item-0"
+                                              class="security--filter__list-item__entry"
+                                            >
+                                              <span
+                                                class="bx--text-truncate--end"
+                                                title="Y"
+                                              >
+                                                Y
+                                              </span>
+                                              <span
+                                                class="security--filter__add"
+                                              >
+                                                <svg
+                                                  aria-hidden="true"
+                                                  class="security--icon security--filter__add__icon"
+                                                  fill="currentColor"
+                                                  focusable="false"
+                                                  height="20"
+                                                  preserveAspectRatio="xMidYMid meet"
+                                                  style="will-change: transform;"
+                                                  viewBox="0 0 32 32"
+                                                  width="20"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                  <path
+                                                    d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                                  />
+                                                </svg>
+                                              </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                                 <div
                                   aria-hidden="true"
@@ -2594,7 +3771,109 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   >
                                     <div
                                       class="security--tearsheet--small__scroll-gradient__content"
-                                    />
+                                    >
+                                      <div
+                                        aria-expanded="true"
+                                        aria-haspopup="listbox"
+                                        aria-labelledby="downshift-0-label"
+                                        aria-owns="downshift-0-menu"
+                                        class="security--filter bx--list-box"
+                                        id="test-id"
+                                        role="combobox"
+                                      >
+                                        <div
+                                          aria-haspopup="true"
+                                          aria-label="close menu"
+                                          class="bx--list-box__field"
+                                          data-toggle="true"
+                                          id="test-id"
+                                          role="button"
+                                          tabindex="-1"
+                                          type="button"
+                                        >
+                                          <input
+                                            aria-autocomplete="list"
+                                            aria-controls="downshift-0-menu"
+                                            aria-labelledby="downshift-0-label"
+                                            autocomplete="off"
+                                            class="security--filter__input-field bx--text-input"
+                                            id="test-id"
+                                            placeholder="placeholder"
+                                            value=""
+                                          />
+                                          
+                                          <span
+                                            class="security--filter__search"
+                                          >
+                                            <svg
+                                              aria-hidden="true"
+                                              class="security--icon security--filter__search__icon"
+                                              fill="var(--icon-01, #f4f4f4)"
+                                              focusable="false"
+                                              height="20"
+                                              preserveAspectRatio="xMidYMid meet"
+                                              style="will-change: transform;"
+                                              viewBox="0 0 32 32"
+                                              width="20"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                              <path
+                                                d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                              />
+                                            </svg>
+                                          </span>
+                                        </div>
+                                        <div
+                                          class="security--filter__list-container"
+                                          id="test-id"
+                                          role="listbox"
+                                        >
+                                          <div
+                                            aria-selected="false"
+                                            class="security--filter__list-item"
+                                            id="downshift-0-item-0"
+                                            role="option"
+                                            tabindex="0"
+                                          >
+                                            <div
+                                              class="bx--list-box__menu-item__option"
+                                            >
+                                              <div
+                                                aria-labelledby="downshift-0-item-0"
+                                                class="security--filter__list-item__entry"
+                                              >
+                                                <span
+                                                  class="bx--text-truncate--end"
+                                                  title="X"
+                                                >
+                                                  X
+                                                </span>
+                                                <span
+                                                  class="security--filter__add"
+                                                >
+                                                  <svg
+                                                    aria-hidden="true"
+                                                    class="security--icon security--filter__add__icon"
+                                                    fill="currentColor"
+                                                    focusable="false"
+                                                    height="20"
+                                                    preserveAspectRatio="xMidYMid meet"
+                                                    style="will-change: transform;"
+                                                    viewBox="0 0 32 32"
+                                                    width="20"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                  >
+                                                    <path
+                                                      d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                                    />
+                                                  </svg>
+                                                </span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
                                   </div>
                                   <div
                                     aria-hidden="true"
@@ -2723,7 +4002,109 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   >
                                     <div
                                       class="security--tearsheet--small__scroll-gradient__content"
-                                    />
+                                    >
+                                      <div
+                                        aria-expanded="true"
+                                        aria-haspopup="listbox"
+                                        aria-labelledby="downshift-1-label"
+                                        aria-owns="downshift-1-menu"
+                                        class="security--filter bx--list-box"
+                                        id="test-id"
+                                        role="combobox"
+                                      >
+                                        <div
+                                          aria-haspopup="true"
+                                          aria-label="close menu"
+                                          class="bx--list-box__field"
+                                          data-toggle="true"
+                                          id="test-id"
+                                          role="button"
+                                          tabindex="-1"
+                                          type="button"
+                                        >
+                                          <input
+                                            aria-autocomplete="list"
+                                            aria-controls="downshift-1-menu"
+                                            aria-labelledby="downshift-1-label"
+                                            autocomplete="off"
+                                            class="security--filter__input-field bx--text-input"
+                                            id="test-id"
+                                            placeholder="placeholder"
+                                            value=""
+                                          />
+                                          
+                                          <span
+                                            class="security--filter__search"
+                                          >
+                                            <svg
+                                              aria-hidden="true"
+                                              class="security--icon security--filter__search__icon"
+                                              fill="var(--icon-01, #f4f4f4)"
+                                              focusable="false"
+                                              height="20"
+                                              preserveAspectRatio="xMidYMid meet"
+                                              style="will-change: transform;"
+                                              viewBox="0 0 32 32"
+                                              width="20"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                              <path
+                                                d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                              />
+                                            </svg>
+                                          </span>
+                                        </div>
+                                        <div
+                                          class="security--filter__list-container"
+                                          id="test-id"
+                                          role="listbox"
+                                        >
+                                          <div
+                                            aria-selected="false"
+                                            class="security--filter__list-item"
+                                            id="downshift-1-item-0"
+                                            role="option"
+                                            tabindex="0"
+                                          >
+                                            <div
+                                              class="bx--list-box__menu-item__option"
+                                            >
+                                              <div
+                                                aria-labelledby="downshift-1-item-0"
+                                                class="security--filter__list-item__entry"
+                                              >
+                                                <span
+                                                  class="bx--text-truncate--end"
+                                                  title="X"
+                                                >
+                                                  X
+                                                </span>
+                                                <span
+                                                  class="security--filter__add"
+                                                >
+                                                  <svg
+                                                    aria-hidden="true"
+                                                    class="security--icon security--filter__add__icon"
+                                                    fill="currentColor"
+                                                    focusable="false"
+                                                    height="20"
+                                                    preserveAspectRatio="xMidYMid meet"
+                                                    style="will-change: transform;"
+                                                    viewBox="0 0 32 32"
+                                                    width="20"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                  >
+                                                    <path
+                                                      d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                                    />
+                                                  </svg>
+                                                </span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
                                   </div>
                                   <div
                                     aria-hidden="true"
@@ -2852,7 +4233,109 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   >
                                     <div
                                       class=""
-                                    />
+                                    >
+                                      <div
+                                        aria-expanded="true"
+                                        aria-haspopup="listbox"
+                                        aria-labelledby="downshift-2-label"
+                                        aria-owns="downshift-2-menu"
+                                        class="security--filter bx--list-box"
+                                        id="test-id"
+                                        role="combobox"
+                                      >
+                                        <div
+                                          aria-haspopup="true"
+                                          aria-label="close menu"
+                                          class="bx--list-box__field"
+                                          data-toggle="true"
+                                          id="test-id"
+                                          role="button"
+                                          tabindex="-1"
+                                          type="button"
+                                        >
+                                          <input
+                                            aria-autocomplete="list"
+                                            aria-controls="downshift-2-menu"
+                                            aria-labelledby="downshift-2-label"
+                                            autocomplete="off"
+                                            class="security--filter__input-field bx--text-input"
+                                            id="test-id"
+                                            placeholder=""
+                                            value=""
+                                          />
+                                          
+                                          <span
+                                            class="security--filter__search"
+                                          >
+                                            <svg
+                                              aria-hidden="true"
+                                              class="security--icon security--filter__search__icon"
+                                              fill="var(--icon-01, #f4f4f4)"
+                                              focusable="false"
+                                              height="20"
+                                              preserveAspectRatio="xMidYMid meet"
+                                              style="will-change: transform;"
+                                              viewBox="0 0 32 32"
+                                              width="20"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                              <path
+                                                d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                              />
+                                            </svg>
+                                          </span>
+                                        </div>
+                                        <div
+                                          class="security--filter__list-container"
+                                          id="test-id"
+                                          role="listbox"
+                                        >
+                                          <div
+                                            aria-selected="false"
+                                            class="security--filter__list-item"
+                                            id="downshift-2-item-0"
+                                            role="option"
+                                            tabindex="0"
+                                          >
+                                            <div
+                                              class="bx--list-box__menu-item__option"
+                                            >
+                                              <div
+                                                aria-labelledby="downshift-2-item-0"
+                                                class="security--filter__list-item__entry"
+                                              >
+                                                <span
+                                                  class="bx--text-truncate--end"
+                                                  title="Y"
+                                                >
+                                                  Y
+                                                </span>
+                                                <span
+                                                  class="security--filter__add"
+                                                >
+                                                  <svg
+                                                    aria-hidden="true"
+                                                    class="security--icon security--filter__add__icon"
+                                                    fill="currentColor"
+                                                    focusable="false"
+                                                    height="20"
+                                                    preserveAspectRatio="xMidYMid meet"
+                                                    style="will-change: transform;"
+                                                    viewBox="0 0 32 32"
+                                                    width="20"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                  >
+                                                    <path
+                                                      d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                                    />
+                                                  </svg>
+                                                </span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
                                   </div>
                                   <div
                                     aria-hidden="true"
@@ -3120,7 +4603,6 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         sortItems={[Function]}
                                       >
                                         <Downshift
-                                          clearSelection={[Function]}
                                           defaultHighlightedIndex={null}
                                           defaultIsOpen={false}
                                           environment={[Window]}
@@ -3135,12 +4617,272 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           onSelect={[Function]}
                                           onStateChange={[Function]}
                                           onUserAction={[Function]}
-                                          render={[Function]}
                                           scrollIntoView={[Function]}
                                           selectedItemChanged={[Function]}
                                           stateReducer={[Function]}
                                           suppressRefError={false}
-                                        />
+                                        >
+                                          <ListBox
+                                            aria-expanded={true}
+                                            aria-haspopup="listbox"
+                                            aria-labelledby="downshift-2-label"
+                                            aria-owns="downshift-2-menu"
+                                            className="security--filter"
+                                            disabled={false}
+                                            id="test-id"
+                                            role="combobox"
+                                            type="default"
+                                          >
+                                            <div
+                                              aria-expanded={true}
+                                              aria-haspopup="listbox"
+                                              aria-labelledby="downshift-2-label"
+                                              aria-owns="downshift-2-menu"
+                                              className="security--filter bx--list-box"
+                                              id="test-id"
+                                              onClick={[Function]}
+                                              onKeyDown={[Function]}
+                                              role="combobox"
+                                            >
+                                              <ListBoxField
+                                                aria-haspopup={true}
+                                                aria-label="close menu"
+                                                data-toggle={true}
+                                                disabled={false}
+                                                id="test-id"
+                                                onBlur={[Function]}
+                                                onClick={[Function]}
+                                                onKeyDown={[Function]}
+                                                onKeyUp={[Function]}
+                                                role="button"
+                                                tabIndex={-1}
+                                                type="button"
+                                              >
+                                                <div
+                                                  aria-haspopup={true}
+                                                  aria-label="close menu"
+                                                  className="bx--list-box__field"
+                                                  data-toggle={true}
+                                                  id="test-id"
+                                                  onBlur={[Function]}
+                                                  onClick={[Function]}
+                                                  onKeyDown={[Function]}
+                                                  onKeyUp={[Function]}
+                                                  role="button"
+                                                  tabIndex={-1}
+                                                  type="button"
+                                                >
+                                                  <input
+                                                    aria-activedescendant={null}
+                                                    aria-autocomplete="list"
+                                                    aria-controls="downshift-2-menu"
+                                                    aria-labelledby="downshift-2-label"
+                                                    autoComplete="off"
+                                                    className="security--filter__input-field bx--text-input"
+                                                    disabled={false}
+                                                    id="test-id"
+                                                    onBlur={[Function]}
+                                                    onChange={[Function]}
+                                                    onKeyDown={[Function]}
+                                                    placeholder=""
+                                                    value=""
+                                                  />
+                                                  <span
+                                                    className="security--filter__search"
+                                                  >
+                                                    <Icon
+                                                      className="security--filter__search__icon"
+                                                      fill="var(--icon-01, #f4f4f4)"
+                                                      height={null}
+                                                      path={null}
+                                                      renderIcon={
+                                                        Object {
+                                                          "$$typeof": Symbol(react.forward_ref),
+                                                          "render": [Function],
+                                                        }
+                                                      }
+                                                      size={20}
+                                                      viewBox="0 0 32 32"
+                                                      width={null}
+                                                    >
+                                                      <ForwardRef(Search20)
+                                                        aria-hidden="true"
+                                                        className="security--icon security--filter__search__icon"
+                                                        fill="var(--icon-01, #f4f4f4)"
+                                                        focusable={false}
+                                                        preserveAspectRatio="xMidYMid meet"
+                                                        style={
+                                                          Object {
+                                                            "willChange": "transform",
+                                                          }
+                                                        }
+                                                      >
+                                                        <Icon
+                                                          aria-hidden="true"
+                                                          className="security--icon security--filter__search__icon"
+                                                          fill="var(--icon-01, #f4f4f4)"
+                                                          focusable={false}
+                                                          height={20}
+                                                          preserveAspectRatio="xMidYMid meet"
+                                                          style={
+                                                            Object {
+                                                              "willChange": "transform",
+                                                            }
+                                                          }
+                                                          viewBox="0 0 32 32"
+                                                          width={20}
+                                                          xmlns="http://www.w3.org/2000/svg"
+                                                        >
+                                                          <svg
+                                                            aria-hidden={true}
+                                                            className="security--icon security--filter__search__icon"
+                                                            fill="var(--icon-01, #f4f4f4)"
+                                                            focusable={false}
+                                                            height={20}
+                                                            preserveAspectRatio="xMidYMid meet"
+                                                            style={
+                                                              Object {
+                                                                "willChange": "transform",
+                                                              }
+                                                            }
+                                                            viewBox="0 0 32 32"
+                                                            width={20}
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                          >
+                                                            <path
+                                                              d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                                            />
+                                                          </svg>
+                                                        </Icon>
+                                                      </ForwardRef(Search20)>
+                                                    </Icon>
+                                                  </span>
+                                                </div>
+                                              </ListBoxField>
+                                              <ListBoxMenu
+                                                className="security--filter__list-container"
+                                                id="test-id"
+                                              >
+                                                <div
+                                                  className="security--filter__list-container"
+                                                  id="test-id"
+                                                  role="listbox"
+                                                >
+                                                  <ListBoxMenuItem
+                                                    aria-selected={false}
+                                                    className="security--filter__list-item"
+                                                    id="downshift-2-item-0"
+                                                    isActive={false}
+                                                    isHighlighted={false}
+                                                    key="downshift-2-item-0"
+                                                    onClick={[Function]}
+                                                    onKeyDown={[Function]}
+                                                    onMouseDown={[Function]}
+                                                    onMouseMove={[Function]}
+                                                    role="option"
+                                                    tabIndex="0"
+                                                  >
+                                                    <div
+                                                      aria-selected={false}
+                                                      className="security--filter__list-item"
+                                                      id="downshift-2-item-0"
+                                                      onClick={[Function]}
+                                                      onKeyDown={[Function]}
+                                                      onMouseDown={[Function]}
+                                                      onMouseMove={[Function]}
+                                                      role="option"
+                                                      tabIndex="0"
+                                                    >
+                                                      <div
+                                                        className="bx--list-box__menu-item__option"
+                                                      >
+                                                        <div
+                                                          aria-labelledby="downshift-2-item-0"
+                                                          className="security--filter__list-item__entry"
+                                                        >
+                                                          <span
+                                                            className="bx--text-truncate--end"
+                                                            title="Y"
+                                                          >
+                                                            Y
+                                                          </span>
+                                                          <span
+                                                            className="security--filter__add"
+                                                          >
+                                                            <Icon
+                                                              className="security--filter__add__icon"
+                                                              height={null}
+                                                              path={null}
+                                                              renderIcon={
+                                                                Object {
+                                                                  "$$typeof": Symbol(react.forward_ref),
+                                                                  "render": [Function],
+                                                                }
+                                                              }
+                                                              size={20}
+                                                              viewBox="0 0 32 32"
+                                                              width={null}
+                                                            >
+                                                              <ForwardRef(Add20)
+                                                                aria-hidden="true"
+                                                                className="security--icon security--filter__add__icon"
+                                                                focusable={false}
+                                                                preserveAspectRatio="xMidYMid meet"
+                                                                style={
+                                                                  Object {
+                                                                    "willChange": "transform",
+                                                                  }
+                                                                }
+                                                              >
+                                                                <Icon
+                                                                  aria-hidden="true"
+                                                                  className="security--icon security--filter__add__icon"
+                                                                  fill="currentColor"
+                                                                  focusable={false}
+                                                                  height={20}
+                                                                  preserveAspectRatio="xMidYMid meet"
+                                                                  style={
+                                                                    Object {
+                                                                      "willChange": "transform",
+                                                                    }
+                                                                  }
+                                                                  viewBox="0 0 32 32"
+                                                                  width={20}
+                                                                  xmlns="http://www.w3.org/2000/svg"
+                                                                >
+                                                                  <svg
+                                                                    aria-hidden={true}
+                                                                    className="security--icon security--filter__add__icon"
+                                                                    fill="currentColor"
+                                                                    focusable={false}
+                                                                    height={20}
+                                                                    preserveAspectRatio="xMidYMid meet"
+                                                                    style={
+                                                                      Object {
+                                                                        "willChange": "transform",
+                                                                      }
+                                                                    }
+                                                                    viewBox="0 0 32 32"
+                                                                    width={20}
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                  >
+                                                                    <path
+                                                                      d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                                                    />
+                                                                  </svg>
+                                                                </Icon>
+                                                              </ForwardRef(Add20)>
+                                                            </Icon>
+                                                          </span>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </ListBoxMenuItem>
+                                                </div>
+                                              </ListBoxMenu>
+                                            </div>
+                                          </ListBox>
+                                        </Downshift>
                                       </Filter>
                                     </div>
                                   </div>
