@@ -12420,12 +12420,128 @@ Map {
   },
   "UpsellNudge" => Object {
     "defaultProps": Object {
-      "children": null,
       "className": null,
     },
     "propTypes": Object {
-      "children": Object {
-        "type": "node",
+      "button": Object {
+        "args": Array [
+          Object {
+            "as": Object {
+              "args": Array [
+                Array [
+                  Object {
+                    "type": "func",
+                  },
+                  Object {
+                    "type": "string",
+                  },
+                  Object {
+                    "type": "elementType",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
+            },
+            "children": Object {
+              "type": "node",
+            },
+            "className": Object {
+              "type": "string",
+            },
+            "disabled": Object {
+              "type": "bool",
+            },
+            "hasIconOnly": Object {
+              "type": "bool",
+            },
+            "href": Object {
+              "type": "string",
+            },
+            "iconDescription": [Function],
+            "kind": Object {
+              "args": Array [
+                Array [
+                  "primary",
+                  "secondary",
+                  "danger",
+                  "ghost",
+                  "danger--primary",
+                  "tertiary",
+                  "ghost-danger",
+                ],
+              ],
+              "type": "oneOf",
+            },
+            "largeText": [Function],
+            "loading": Object {
+              "type": "bool",
+            },
+            "renderIcon": Object {
+              "args": Array [
+                Array [
+                  Object {
+                    "type": "func",
+                  },
+                  Object {
+                    "type": "object",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
+            },
+            "role": Object {
+              "type": "string",
+            },
+            "size": Object {
+              "args": Array [
+                Array [
+                  "default",
+                  "field",
+                  "large",
+                  "small",
+                ],
+              ],
+              "type": "oneOf",
+            },
+            "small": [Function],
+            "tabIndex": Object {
+              "type": "number",
+            },
+            "tooltipAlignment": Object {
+              "args": Array [
+                Array [
+                  "start",
+                  "center",
+                  "end",
+                ],
+              ],
+              "type": "oneOf",
+            },
+            "tooltipPosition": Object {
+              "args": Array [
+                Array [
+                  "top",
+                  "right",
+                  "bottom",
+                  "left",
+                ],
+              ],
+              "type": "oneOf",
+            },
+            "type": Object {
+              "args": Array [
+                Array [
+                  "button",
+                  "reset",
+                  "submit",
+                ],
+              ],
+              "type": "oneOf",
+            },
+          },
+        ],
+        "isRequired": true,
+        "type": "shape",
       },
       "className": Object {
         "type": "string",
@@ -12435,8 +12551,18 @@ Map {
         "type": "string",
       },
       "renderIcon": Object {
+        "args": Array [
+          Array [
+            Object {
+              "type": "func",
+            },
+            Object {
+              "type": "object",
+            },
+          ],
+        ],
         "isRequired": true,
-        "type": "func",
+        "type": "oneOfType",
       },
       "title": Object {
         "isRequired": true,

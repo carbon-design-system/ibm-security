@@ -9,7 +9,7 @@ import React from 'react';
 
 import { components, meta } from '../../../.storybook';
 
-import { Link, UpsellNudge } from '../..';
+import { UpsellNudge } from '../..';
 
 const props = () => ({
   description: text(
@@ -18,12 +18,14 @@ const props = () => ({
   ),
   title: text('Title (title)', 'IBM Threat Intelligence Insights'),
   renderIcon: App24,
+  button: {
+    children: text('Button children (button.children)', 'View in Catalog'),
+  },
 });
 
-export const Default = () => (
-  <UpsellNudge {...props()}>
-    <Link href="#0">View in Catalog</Link>
-  </UpsellNudge>
-);
+export const Default = () => <UpsellNudge {...props()} />;
 
-export default meta(components('UpsellNudge'), '');
+export default meta(
+  components('UpsellNudge'),
+  'Upsell nudges are in-context cards that enables pivoting to purchase or upgrades.'
+);

@@ -4,15 +4,20 @@
  */
 
 import classnames from 'classnames';
-import { func, node, string } from 'prop-types';
+import { shape, string } from 'prop-types';
 import React from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
 
+import Button from '../Button';
+
 const namespace = getComponentNamespace('upsell-nudge');
 
+/**
+ * Upsell nudges are in-context cards that enables pivoting to purchase or upgrades.
+ */
 const UpsellNudge = ({
-  children,
+  button,
   className,
   description,
   renderIcon: Icon,
@@ -20,17 +25,16 @@ const UpsellNudge = ({
   ...other
 }) => (
   <div className={classnames(namespace, className)} {...other}>
-    <Icon className={`${namespace}__icon`} />
-    <div className={`${namespace}__description`}>{description}</div>
-    <div className={`${namespace}__title`}>{title}</div>
-    {children}
+    <div className={`${namespace}__content`}>
+      <Icon className={`${namespace}__icon`} />
+      <div className={`${namespace}__description`}>{description}</div>
+      <div className={`${namespace}__title`}>{title}</div>
+    </div>
+    <Button className={`${namespace}__button`} kind="ghost" {...button} />
   </div>
 );
 
-UpsellNudge.defaultProps = {
-  children: null,
-  className: null,
-};
+const { propTypes } = Button;
 
 UpsellNudge.propTypes = {
   /** Specify the text of the description */
@@ -39,14 +43,18 @@ UpsellNudge.propTypes = {
   /** Specify the text of the title */
   title: string.isRequired,
 
-  /** Provide the icon to renderOptional prop to allow overriding the icon rendering */
-  renderIcon: func.isRequired,
+  /** Provide the icon to render */
+  renderIcon: propTypes.renderIcon.isRequired,
 
-  /** Provide the contents of the `UpsellNudge` */
-  children: node,
+  /** Provide the props of the `Button` */
+  button: shape(propTypes).isRequired,
 
   /** Provide an optional class to be applied to the containing node */
   className: string,
+};
+
+UpsellNudge.defaultProps = {
+  className: null,
 };
 
 export default UpsellNudge;
