@@ -195,7 +195,7 @@ describe('TagWallFilter tests', () => {
     });
     it('should call the on change callback with the latest item state on change', () => {
       const onChangeMock = jest.fn();
-      const wrapper = shallow(
+      const wrapper = mount(
         <FilterTagFragment
           id="test-id"
           onChange={onChangeMock}
@@ -206,17 +206,11 @@ describe('TagWallFilter tests', () => {
           tearsheetProps={tearsheetProps}
         />
       );
+      const filterWrapper = wrapper.find(Filter);
 
-      const filterWrapper = wrapper
-        .first()
-        .shallow()
-        .first()
-        .shallow()
-        .find(Filter)
-        .first();
       filterWrapper.prop('onChange')({
         type: 'SELECT_ITEM',
-        item: { id: 'x' },
+        item: { id: 'x', label: 'X' },
       });
       expect(wrapper.props()).toMatchSnapshot();
       expect(onChangeMock).toHaveBeenCalled();
@@ -224,7 +218,7 @@ describe('TagWallFilter tests', () => {
       onChangeMock.mockClear();
       filterWrapper.prop('onChange')({
         type: 'UNSELECT_ITEM',
-        item: { id: 'x' },
+        item: { id: 'x', label: 'X' },
       });
 
       expect(wrapper.props()).toMatchSnapshot();

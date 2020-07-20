@@ -126,15 +126,16 @@ export const FilterTagFragmentRender = ({
         />
       </div>
     )}
-  >
-    <FilterRaw
-      id={id}
-      items={availableItems}
-      itemToString={itemToString}
-      onChange={change => dispatchItemChange(change, onChange)}
-      {...otherProps}
-    />
-  </TearsheetSmall>
+    body={() => (
+      <FilterRaw
+        id={id}
+        items={availableItems}
+        itemToString={itemToString}
+        onChange={change => dispatchItemChange(change, onChange)}
+        {...otherProps}
+      />
+    )}
+  />
 );
 
 FilterTagFragmentRender.propTypes = {
