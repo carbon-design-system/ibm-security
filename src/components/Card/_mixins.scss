@@ -57,8 +57,6 @@ $card__name: card;
   }
 
   &__header {
-    text-transform: capitalize;
-
     &__image {
       width: $card__image__sizing__dimensions;
       height: $card__image__sizing__dimensions;
