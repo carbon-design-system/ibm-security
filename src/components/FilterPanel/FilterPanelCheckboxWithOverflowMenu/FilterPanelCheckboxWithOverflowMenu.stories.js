@@ -28,7 +28,7 @@ storiesOf(
       id="checkbox-id"
     >
       <OverflowMenuItem
-        primaryFocus
+        selectorPrimaryFocus
         itemText="Option 1"
         onClick={action('OverflowMenuItem onClick')}
       />
