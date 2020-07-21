@@ -2626,10 +2626,6 @@ body {
   outline-offset: -2px;
 }
 
-.security--card__header {
-  text-transform: capitalize;
-}
-
 .security--card__header__image {
   width: 2rem;
   height: 2rem;
