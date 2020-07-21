@@ -72,7 +72,7 @@ const IconButtonBar = ({
         itemText={action.label}
         key={action.label}
         onClick={action.onClick}
-        primaryFocus={index === 0}
+        selectorPrimaryFocus={index === 0}
         disabled={action.disabled}
       />
     ));
