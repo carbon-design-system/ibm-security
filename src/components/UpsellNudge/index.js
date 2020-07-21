@@ -27,7 +27,7 @@ const UpsellNudge = ({
 }) => (
   <div className={classnames(namespace, className)} {...other}>
     <div className={`${namespace}__container`}>
-      <Icon className={`${namespace}__icon`} />
+      <Icon />
 
       {createElement(element, { className: `${namespace}__title` }, title)}
 
