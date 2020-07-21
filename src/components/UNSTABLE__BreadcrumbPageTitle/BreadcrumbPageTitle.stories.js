@@ -10,7 +10,7 @@ import React from 'react';
 
 import { disableCentered, meta, patterns } from '../../../.storybook';
 
-import { BreadcrumbPageTitle } from '../..';
+import { UNSTABLE__BreadcrumbPageTitle } from '../..';
 
 const props = () => ({
   title: text('Title (title)', 'Title'),
@@ -26,8 +26,12 @@ const props = () => ({
 
 export const Default = () => (
   <div style={{ height: breakpoints.lg.width, margin: layout05 }}>
-    <BreadcrumbPageTitle {...props()} />
+    <UNSTABLE__BreadcrumbPageTitle {...props()} />
   </div>
 );
 
-export default meta(patterns('BreadcrumbPageTitle'), '', disableCentered());
+export default meta(
+  patterns('UNSTABLE BreadcrumbPageTitle'),
+  '',
+  disableCentered()
+);

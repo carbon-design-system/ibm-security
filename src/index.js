@@ -22,7 +22,6 @@ export {
   BreadcrumbSkeleton,
 } from './components/Breadcrumb';
 
-export BreadcrumbPageTitle from './components/BreadcrumbPageTitle';
 export Button, { ButtonSkeleton } from './components/Button';
 export { Card, CardSkeleton } from './components/Card';
 export Checkbox, { CheckboxSkeleton } from './components/Checkbox';
@@ -262,6 +261,7 @@ export UnorderedList from './components/UnorderedList';
 export { Wizard, WizardStep } from './components/Wizard';
 
 // Experimental.
+export UNSTABLE__BreadcrumbPageTitle from './components/UNSTABLE__BreadcrumbPageTitle';
 export UNSTABLE__Pagination, {
   PageSelector,
 } from './components/UNSTABLE__Pagination';

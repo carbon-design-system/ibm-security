@@ -33,34 +33,39 @@ const BreadcrumbPageTitle = ({
   );
 
   const ref = useRef(null);
+  const [isTitleVisible, setIsTitleVisible] = useState(false);
 
-  const [titleHeight, setTitleHeight] = useState(0);
-  const [isTitleVisible, setIsTitleVisible] = useState(true);
+  let titleHeight;
 
   useLayoutEffect(() => {
+    titleHeight = ref.current.getBoundingClientRect().height;
+
     const onScroll = () => {
       const { scrollY } = window;
 
-      const styleCalculation = window.scrollY / titleHeight;
+      const styleCalculation = scrollY / titleHeight;
+
+      const style = {
+        opacity: 1 - styleCalculation,
+        transform: `translate3d(0, -${Math.round(
+          (styleCalculation / 2) * 100
+        )}%, 0)`,
+      };
 
       requestAnimationFrame(() => {
         Object.assign(ref.current.style, {
-          opacity: 1 - styleCalculation,
-          transform: `translate3d(0, -${Math.round(
-            (styleCalculation / 2) * 100
-          )}%, 0)`,
+          ...style,
+          willChange: Object.keys(style),
         });
       });
 
-      setIsTitleVisible(scrollY < titleHeight);
+      setIsTitleVisible(scrollY >= titleHeight);
     };
 
     window.addEventListener('scroll', onScroll);
 
-    setTitleHeight(ref.current.getBoundingClientRect().height);
-
     return () => window.removeEventListener('scroll', onScroll);
-  }, [ref.current]);
+  }, []);
 
   return (
     <div className={classnames(namespace, className)} {...other}>
@@ -77,7 +82,7 @@ const BreadcrumbPageTitle = ({
           ))}
 
         <Transition className={namespace}>
-          {!isTitleVisible && (
+          {isTitleVisible && (
             <BreadcrumbItem isCurrentPage>
               <Title />
             </BreadcrumbItem>
@@ -85,7 +90,11 @@ const BreadcrumbPageTitle = ({
         </Transition>
       </Breadcrumb>
 
-      {isTitleVisible && <Title className={`${namespace}__title`} ref={ref} />}
+      <Title
+        className={`${namespace}__title`}
+        aria-hidden={isTitleVisible}
+        ref={ref}
+      />
     </div>
   );
 };

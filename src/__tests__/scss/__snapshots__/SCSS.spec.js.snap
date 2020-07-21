@@ -2536,53 +2536,6 @@ body {
   color: var(--link-01, #78a9ff);
 }
 
-.security--breadcrumb-page-title {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  box-shadow: 0 1rem 0rem var(--ui-background, #161616);
-}
-
-.security--breadcrumb-page-title__breadcrumb {
-  position: relative;
-  min-height: 1rem;
-  z-index: 1;
-}
-
-.security--breadcrumb-page-title__title {
-  font-size: 1.75rem;
-  font-weight: 400;
-  line-height: 2.25rem;
-  letter-spacing: 0;
-  margin-top: 0.5rem;
-  margin-bottom: 0;
-}
-
-.security--breadcrumb-page-title__transition--enter--active, .security--breadcrumb-page-title__transition--leave--active {
-  transition-timing-function: cubic-bezier(0.2, 0, 0.38, 0.9);
-  opacity: 1;
-}
-
-.security--breadcrumb-page-title__transition--enter {
-  opacity: 0;
-}
-
-.security--breadcrumb-page-title__transition--enter--active {
-  opacity: 1;
-}
-
-.security--breadcrumb-page-title__transition--leave {
-  opacity: 1;
-}
-
-.security--breadcrumb-page-title__transition--leave--active {
-  opacity: 0;
-}
-
-.security--breadcrumb-page-title__transition--enter--active, .security--breadcrumb-page-title__transition--leave--active {
-  transition-duration: 0.2s;
-  transition-property: opacity;
-}
-
 .bx--skeleton__text {
   position: relative;
   border: none;
@@ -24431,6 +24384,53 @@ a.bx--navigation-link:focus {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.security--breadcrumb-page-title {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  box-shadow: 0 1rem 0rem var(--ui-background, #161616);
+}
+
+.security--breadcrumb-page-title__breadcrumb {
+  position: relative;
+  min-height: 1rem;
+  z-index: 1;
+}
+
+.security--breadcrumb-page-title__title {
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 2.25rem;
+  letter-spacing: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.security--breadcrumb-page-title__transition--enter--active, .security--breadcrumb-page-title__transition--leave--active {
+  transition-timing-function: cubic-bezier(0.2, 0, 0.38, 0.9);
+  opacity: 1;
+}
+
+.security--breadcrumb-page-title__transition--enter {
+  opacity: 0;
+}
+
+.security--breadcrumb-page-title__transition--enter--active {
+  opacity: 1;
+}
+
+.security--breadcrumb-page-title__transition--leave {
+  opacity: 1;
+}
+
+.security--breadcrumb-page-title__transition--leave--active {
+  opacity: 0;
+}
+
+.security--breadcrumb-page-title__transition--enter--active, .security--breadcrumb-page-title__transition--leave--active {
+  transition-duration: 0.2s;
+  transition-property: opacity;
 }
 
 .security--unstable-pagination {
