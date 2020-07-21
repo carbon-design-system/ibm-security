@@ -193,7 +193,7 @@ storiesOf(patterns('TearsheetSmall'), module)
           isOpen
           loading={loading}
           labels={labels}
-          body={isLoading => (
+          body={({ isLoading }) => (
             <>
               <p>
                 Whenever the TearsheetSmall is loading, please use{' '}
