@@ -24405,6 +24405,7 @@ a.bx--navigation-link:focus {
   letter-spacing: 0;
   margin-top: 0.5rem;
   margin-bottom: 0;
+  will-change: opacity, transform;
 }
 
 .security--breadcrumb-page-title__transition--enter--active, .security--breadcrumb-page-title__transition--leave--active {

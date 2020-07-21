@@ -45,6 +45,7 @@
 
     margin-top: $carbon--spacing-03;
     margin-bottom: 0;
+    will-change: opacity, transform;
   }
 
   &__transition {

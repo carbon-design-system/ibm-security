@@ -14,6 +14,7 @@ import React, {
 } from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
+import { isClient } from '../../globals/utils/capabilities';
 
 import { Breadcrumb, BreadcrumbItem } from '../Breadcrumb';
 import Transition from '../Transition';
@@ -35,37 +36,33 @@ const BreadcrumbPageTitle = ({
   const ref = useRef(null);
   const [isTitleVisible, setIsTitleVisible] = useState(false);
 
-  let titleHeight;
+  if (isClient()) {
+    let titleHeight;
 
-  useLayoutEffect(() => {
-    titleHeight = ref.current.getBoundingClientRect().height;
+    useLayoutEffect(() => {
+      titleHeight = ref.current.getBoundingClientRect().height;
 
-    const onScroll = () => {
-      const { scrollY } = window;
+      const onScroll = () => {
+        const { scrollY } = window;
+        const styleCalculation = scrollY / titleHeight;
 
-      const styleCalculation = scrollY / titleHeight;
+        requestAnimationFrame(() => {
+          Object.assign(ref.current.style, {
+            opacity: 1 - styleCalculation,
+            transform: `translate3d(0, -${Math.round(
+              (styleCalculation / 2) * 100
+            )}%, 0)`,
+          });
+        });
 
-      const style = {
-        opacity: 1 - styleCalculation,
-        transform: `translate3d(0, -${Math.round(
-          (styleCalculation / 2) * 100
-        )}%, 0)`,
+        setIsTitleVisible(scrollY >= titleHeight);
       };
 
-      requestAnimationFrame(() => {
-        Object.assign(ref.current.style, {
-          ...style,
-          willChange: Object.keys(style),
-        });
-      });
+      window.addEventListener('scroll', onScroll);
 
-      setIsTitleVisible(scrollY >= titleHeight);
-    };
-
-    window.addEventListener('scroll', onScroll);
-
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+      return () => window.removeEventListener('scroll', onScroll);
+    }, []);
+  }
 
   return (
     <div className={classnames(namespace, className)} {...other}>
