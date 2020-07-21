@@ -951,7 +951,6 @@ Map {
       "href": undefined,
       "iconDescription": "",
       "onClick": [Function],
-      "primaryFocus": false,
       "renderIcon": null,
       "selectorPrimaryFocus": false,
     },
