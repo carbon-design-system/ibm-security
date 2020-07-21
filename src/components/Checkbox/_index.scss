@@ -12,7 +12,7 @@
 
 /// Carbon style overrides.
 @include export-namespace($name: checkbox) {
-  // TODO - remove when issue is resolved & release in Carbon: https://github.com/carbon-design-system/carbon/issues/5984
+  // TODO - remove when issue is resolved & released in Carbon: https://github.com/carbon-design-system/carbon/issues/6471
   // Unchecked
   .#{$prefix}--checkbox:focus + .#{$prefix}--checkbox-label::before,
     .#{$prefix}--checkbox-label__focus::before,
@@ -23,5 +23,11 @@
     .#{$prefix}--checkbox:indeterminate:focus + .#{$prefix}--checkbox-label::before,
     .#{$prefix}--checkbox-label[data-contained-checkbox-state='mixed'].#{$prefix}--checkbox-label__focus::before {
     border-color: $interactive-04;
+    border-width: 3px;
+    width: rem(20px);
+    height: rem(20px);
+    left: -2px;
+    top: 0;
+    box-shadow: none;
   }
 }
