@@ -79,7 +79,7 @@ const ComboButton = ({ children, className, direction }) => {
         disabled,
         href,
         onClick,
-        primaryFocus,
+        selectorPrimaryFocus,
         id,
         renderIcon: Icon,
       } = item.props;
@@ -103,7 +103,9 @@ const ComboButton = ({ children, className, direction }) => {
           id={id}
           key={id || `item-${href}`}
           onClick={onClick}
-          primaryFocus={!primaryFocus && index === 0 ? true : primaryFocus}
+          selectorPrimaryFocus={
+            !selectorPrimaryFocus && index === 0 ? true : selectorPrimaryFocus
+          }
         />
       );
     });

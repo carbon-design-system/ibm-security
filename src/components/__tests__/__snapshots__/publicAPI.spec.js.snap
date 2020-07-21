@@ -953,6 +953,7 @@ Map {
       "onClick": [Function],
       "primaryFocus": false,
       "renderIcon": null,
+      "selectorPrimaryFocus": false,
     },
     "propTypes": Object {
       "children": Object {
@@ -974,9 +975,7 @@ Map {
       "onClick": Object {
         "type": "func",
       },
-      "primaryFocus": Object {
-        "type": "bool",
-      },
+      "primaryFocus": [Function],
       "renderIcon": Object {
         "args": Array [
           Array [
@@ -989,6 +988,9 @@ Map {
           ],
         ],
         "type": "oneOfType",
+      },
+      "selectorPrimaryFocus": Object {
+        "type": "bool",
       },
     },
   },
