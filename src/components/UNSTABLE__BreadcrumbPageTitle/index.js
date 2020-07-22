@@ -44,14 +44,16 @@ const BreadcrumbPageTitle = ({
         const { scrollY } = window;
         const calculation = scrollY / height;
 
-        requestAnimationFrame(() => {
-          Object.assign(ref.current.style, {
-            opacity: 1 - calculation,
-            transform: `translate3d(0, -${Math.round(
-              (calculation / 2) * 100
-            )}%, 0)`,
+        if (calculation < 1) {
+          requestAnimationFrame(() => {
+            Object.assign(ref.current.style, {
+              opacity: 1 - calculation,
+              transform: `translate3d(0, -${Math.round(
+                (calculation / 2) * 100
+              )}%, 0)`,
+            });
           });
-        });
+        }
 
         setIsTitleVisible(scrollY >= height);
       };
@@ -86,7 +88,9 @@ const BreadcrumbPageTitle = ({
       </Breadcrumb>
 
       <Title
-        className={`${namespace}__title`}
+        className={classnames(`${namespace}__title`, {
+          [`${namespace}__title--hidden`]: isTitleVisible,
+        })}
         aria-hidden={isTitleVisible}
         ref={ref}
       />

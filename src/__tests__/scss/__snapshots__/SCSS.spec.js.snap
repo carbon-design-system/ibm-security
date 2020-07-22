@@ -24410,6 +24410,11 @@ a.bx--navigation-link:focus {
   will-change: opacity, transform;
 }
 
+.security--breadcrumb-page-title__title--hidden {
+  opacity: 0;
+  transform: translate3d(0, -50%, 0);
+}
+
 .security--breadcrumb-page-title__transition--enter--active, .security--breadcrumb-page-title__transition--leave--active {
   transition-timing-function: cubic-bezier(0.2, 0, 0.38, 0.9);
   opacity: 1;

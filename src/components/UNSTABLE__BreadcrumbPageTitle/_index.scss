@@ -46,6 +46,11 @@
     margin-top: $carbon--spacing-03;
     margin-bottom: 0;
     will-change: opacity, transform;
+
+    &--hidden {
+      opacity: 0;
+      transform: translate3d(0, -50%, 0);
+    }
   }
 
   &__transition {
