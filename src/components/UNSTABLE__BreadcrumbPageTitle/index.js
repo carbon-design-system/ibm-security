@@ -111,7 +111,7 @@ BreadcrumbPageTitle.propTypes = {
   /** Specify an array of paths for the breadcrumbs - See also https://react.carbondesignsystem.com/?path=/story/breadcrumb--current-page  */
   path: arrayOf(
     shape({
-      /** Specify the label for the breadcrumb container */
+      /** Specify the key for the breadcrumb item */
       id: string.isRequired,
       ...BreadcrumbItem.propTypes,
     })
