@@ -34,15 +34,15 @@ ComboButtonItem.propTypes = {
   /** @type {func} Click handler. */
   onClick: PropTypes.func,
 
-  /** @deprecated This prop has been deprecated in favor of `selectorPrimaryFocus` */
+  /**
+   * @deprecated This prop has been deprecated.
+   * Please use `selectorPrimaryFocus` in ComboButton instead.
+   */
   // eslint-disable-next-line react/require-default-props
   primaryFocus: deprecate(
     PropTypes.bool,
-    `\nThe prop \`primaryFocus\` for ComboButtonItem has been deprecated in favor of \`selectorPrimaryFocus\`.`
+    `\nThe prop \`primaryFocus\` for ComboButtonItem has been deprecated. Please use the \`selectorPrimaryFocus\` in ComboButton instead.`
   ),
-
-  /** @type {boolean} Assign primary focus to a combo button item rendered inside an overflow menu. */
-  selectorPrimaryFocus: PropTypes.bool,
 
   /** @type {function|object} Icon to render. */
   renderIcon: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
@@ -54,7 +54,6 @@ ComboButtonItem.defaultProps = {
   href: undefined,
   iconDescription: '',
   onClick: () => {},
-  selectorPrimaryFocus: false,
   renderIcon: null,
 };
 
