@@ -37,25 +37,23 @@ const BreadcrumbPageTitle = ({
   const [isTitleVisible, setIsTitleVisible] = useState(false);
 
   if (isClient()) {
-    let titleHeight;
-
     useLayoutEffect(() => {
-      titleHeight = ref.current.getBoundingClientRect().height;
+      const { height } = ref.current.getBoundingClientRect();
 
       const onScroll = () => {
         const { scrollY } = window;
-        const styleCalculation = scrollY / titleHeight;
+        const calculation = scrollY / height;
 
         requestAnimationFrame(() => {
           Object.assign(ref.current.style, {
-            opacity: 1 - styleCalculation,
+            opacity: 1 - calculation,
             transform: `translate3d(0, -${Math.round(
-              (styleCalculation / 2) * 100
+              (calculation / 2) * 100
             )}%, 0)`,
           });
         });
 
-        setIsTitleVisible(scrollY >= titleHeight);
+        setIsTitleVisible(scrollY >= height);
       };
 
       window.addEventListener('scroll', onScroll);
