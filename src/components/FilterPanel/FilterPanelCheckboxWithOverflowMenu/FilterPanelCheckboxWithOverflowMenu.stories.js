@@ -26,6 +26,7 @@ storiesOf(
       count={text('Checkbox count (count)', 10)}
       onChange={action('onChange')}
       id="checkbox-id"
+      selectorPrimaryFocus="[data-storybook-example-primary-focus]"
     >
       <OverflowMenuItem
         itemText="Option 1"
@@ -34,7 +35,7 @@ storiesOf(
       <OverflowMenuItem
         itemText="Option 2 -- selected when menu opens"
         onClick={action('OverflowMenuItem onClick')}
-        data-floating-menu-primary-focus
+        data-storybook-example-primary-focus
       />
     </FilterPanelCheckboxWithOverflowMenu>
   ),
