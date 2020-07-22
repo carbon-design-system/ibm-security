@@ -5,6 +5,9 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+
+import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
+
 import { namespace } from '../ComboButton';
 
 const ComboButtonItem = props => {
@@ -31,8 +34,15 @@ ComboButtonItem.propTypes = {
   /** @type {func} Click handler. */
   onClick: PropTypes.func,
 
-  /** @type {boolean} Assign primary focus to a combo button item rendered inside an overflow menu. */
-  primaryFocus: PropTypes.bool,
+  /**
+   * @deprecated This prop has been deprecated.
+   * Please use `selectorPrimaryFocus` in ComboButton instead.
+   */
+  // eslint-disable-next-line react/require-default-props
+  primaryFocus: deprecate(
+    PropTypes.bool,
+    `\nThe prop \`primaryFocus\` for ComboButtonItem has been deprecated. Please use the \`selectorPrimaryFocus\` in ComboButton instead.`
+  ),
 
   /** @type {function|object} Icon to render. */
   renderIcon: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
@@ -44,7 +54,6 @@ ComboButtonItem.defaultProps = {
   href: undefined,
   iconDescription: '',
   onClick: () => {},
-  primaryFocus: false,
   renderIcon: null,
 };
 
