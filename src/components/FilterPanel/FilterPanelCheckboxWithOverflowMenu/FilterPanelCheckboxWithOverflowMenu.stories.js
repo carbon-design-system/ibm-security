@@ -28,13 +28,13 @@ storiesOf(
       id="checkbox-id"
     >
       <OverflowMenuItem
-        selectorPrimaryFocus
         itemText="Option 1"
         onClick={action('OverflowMenuItem onClick')}
       />
       <OverflowMenuItem
-        itemText="Option 2"
+        itemText="Option 2 -- selected when menu opens"
         onClick={action('OverflowMenuItem onClick')}
+        data-floating-menu-primary-focus
       />
     </FilterPanelCheckboxWithOverflowMenu>
   ),
