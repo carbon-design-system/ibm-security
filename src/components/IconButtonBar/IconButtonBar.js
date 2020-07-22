@@ -25,6 +25,7 @@ const IconButtonBar = ({
   overflowMenuDirection,
   size,
   tooltip,
+  selectorPrimaryFocus,
 }) => {
   const isMaxLength = actions.length > length;
   const iconButtonBarClasses = classnames(namespace, className, {
@@ -73,6 +74,7 @@ const IconButtonBar = ({
         key={action.label}
         onClick={action.onClick}
         disabled={action.disabled}
+        {...action.otherProps}
       />
     ));
   };
@@ -103,6 +105,7 @@ const IconButtonBar = ({
             flipped
             menuOptionsClass={iconButtonBarMenuOptionsClasses}
             renderIcon={getOverflowMenuIcon()}
+            selectorPrimaryFocus={selectorPrimaryFocus}
           >
             {renderMenuItems()}
           </OverflowMenu>
@@ -151,6 +154,12 @@ IconButtonBar.propTypes = {
 
   /** @type {boolean} Specify tooltip. */
   tooltip: PropTypes.bool,
+
+  /**
+   * Specify a CSS selector that matches the DOM element that should
+   * be focused when the OverflowMenu opens
+   */
+  selectorPrimaryFocus: PropTypes.string,
 };
 
 IconButtonBar.defaultProps = {
@@ -161,6 +170,7 @@ IconButtonBar.defaultProps = {
   overflowMenuDirection: IconButton.TooltipDirection.TOP,
   size: 'lg',
   tooltip: true,
+  selectorPrimaryFocus: '[data-overflow-menu-primary-focus]',
 };
 
 export default IconButtonBar;
