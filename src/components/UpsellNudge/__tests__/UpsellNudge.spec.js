@@ -1,5 +1,5 @@
 /**
- * @file Truncated list tests.
+ * @file Upsell nudge tests.
  * @copyright IBM Security 2020
  */
 
