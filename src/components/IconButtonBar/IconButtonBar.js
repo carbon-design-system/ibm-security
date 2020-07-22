@@ -25,9 +25,9 @@ const IconButtonBar = ({
   overflowMenuDirection,
   size,
   tooltip,
-  selectorPrimaryFocus,
 }) => {
   const isMaxLength = actions.length > length;
+  const iconButtonPrimaryFocus = `${namespace}--primary-focus`;
   const iconButtonBarClasses = classnames(namespace, className, {
     [`${namespace}--${size}`]: size,
   });
@@ -74,7 +74,9 @@ const IconButtonBar = ({
         key={action.label}
         onClick={action.onClick}
         disabled={action.disabled}
-        {...action.otherProps}
+        className={classnames(action.className, {
+          [`${iconButtonPrimaryFocus}`]: action.setFocus,
+        })}
       />
     ));
   };
@@ -105,7 +107,7 @@ const IconButtonBar = ({
             flipped
             menuOptionsClass={iconButtonBarMenuOptionsClasses}
             renderIcon={getOverflowMenuIcon()}
-            selectorPrimaryFocus={selectorPrimaryFocus}
+            selectorPrimaryFocus={`.${iconButtonPrimaryFocus}`}
           >
             {renderMenuItems()}
           </OverflowMenu>
@@ -121,6 +123,12 @@ IconButtonBar.propTypes = {
     PropTypes.shape({
       ...propTypes,
       divider: PropTypes.oneOf(['left', 'right', 'sides']),
+
+      /**
+       * Whether or not the icon button should receive focus when the menu is first opened.
+       * By default, the first button in the menu will receive focus.
+       */
+      setFocus: PropTypes.bool,
     })
   ),
 
@@ -154,12 +162,6 @@ IconButtonBar.propTypes = {
 
   /** @type {boolean} Specify tooltip. */
   tooltip: PropTypes.bool,
-
-  /**
-   * Specify a CSS selector that matches the DOM element that should
-   * be focused when the OverflowMenu opens
-   */
-  selectorPrimaryFocus: PropTypes.string,
 };
 
 IconButtonBar.defaultProps = {
@@ -170,7 +172,6 @@ IconButtonBar.defaultProps = {
   overflowMenuDirection: IconButton.TooltipDirection.TOP,
   size: 'lg',
   tooltip: true,
-  selectorPrimaryFocus: '[data-overflow-menu-primary-focus]',
 };
 
 export default IconButtonBar;

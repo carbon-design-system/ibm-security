@@ -80,11 +80,7 @@ storiesOf(patterns('IconButtonBar'), module).add(
         iconClassName,
         label: 'Label 3',
         onClick: action('onClick'),
-        otherProps: {
-          // This data attribute means that "Label 3" is selected
-          // by default when the overflow menu is opened.
-          [`data-overflow-menu-primary-focus`]: true,
-        },
+        setFocus: true,
         renderIcon:
           size === 'sm'
             ? Locked16

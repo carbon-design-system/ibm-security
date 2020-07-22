@@ -4402,6 +4402,9 @@ Map {
                   ],
                   "type": "oneOfType",
                 },
+                "setFocus": Object {
+                  "type": "bool",
+                },
                 "size": Object {
                   "args": Array [
                     Array [

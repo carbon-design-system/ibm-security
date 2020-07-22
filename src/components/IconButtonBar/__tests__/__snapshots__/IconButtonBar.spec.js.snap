@@ -71,8 +71,10 @@ exports[`IconButtonBar renders the 'lg' variation 1`] = `
         "render": [Function],
       }
     }
+    selectorPrimaryFocus=".security--icon-button-bar--primary-focus"
   >
     <OverflowMenuItem
+      className="class"
       disabled={false}
       hasDivider={false}
       isDelete={false}
@@ -82,6 +84,7 @@ exports[`IconButtonBar renders the 'lg' variation 1`] = `
       onKeyDown={[Function]}
     />
     <OverflowMenuItem
+      className="class"
       disabled={false}
       hasDivider={false}
       isDelete={false}
@@ -165,8 +168,10 @@ exports[`IconButtonBar renders the 'md' variation 1`] = `
         "render": [Function],
       }
     }
+    selectorPrimaryFocus=".security--icon-button-bar--primary-focus"
   >
     <OverflowMenuItem
+      className="class"
       disabled={false}
       hasDivider={false}
       isDelete={false}
@@ -176,6 +181,7 @@ exports[`IconButtonBar renders the 'md' variation 1`] = `
       onKeyDown={[Function]}
     />
     <OverflowMenuItem
+      className="class"
       disabled={false}
       hasDivider={false}
       isDelete={false}
@@ -259,8 +265,10 @@ exports[`IconButtonBar renders the 'sm' variation 1`] = `
         "render": [Function],
       }
     }
+    selectorPrimaryFocus=".security--icon-button-bar--primary-focus"
   >
     <OverflowMenuItem
+      className="class"
       disabled={false}
       hasDivider={false}
       isDelete={false}
@@ -270,6 +278,7 @@ exports[`IconButtonBar renders the 'sm' variation 1`] = `
       onKeyDown={[Function]}
     />
     <OverflowMenuItem
+      className="class"
       disabled={false}
       hasDivider={false}
       isDelete={false}
@@ -353,8 +362,10 @@ exports[`IconButtonBar renders the 'xl' variation 1`] = `
         "render": [Function],
       }
     }
+    selectorPrimaryFocus=".security--icon-button-bar--primary-focus"
   >
     <OverflowMenuItem
+      className="class"
       disabled={false}
       hasDivider={false}
       isDelete={false}
@@ -364,6 +375,7 @@ exports[`IconButtonBar renders the 'xl' variation 1`] = `
       onKeyDown={[Function]}
     />
     <OverflowMenuItem
+      className="class"
       disabled={false}
       hasDivider={false}
       isDelete={false}
@@ -391,8 +403,10 @@ exports[`IconButtonBar renders the length of '1' variation 1`] = `
         "render": [Function],
       }
     }
+    selectorPrimaryFocus=".security--icon-button-bar--primary-focus"
   >
     <OverflowMenuItem
+      className="class"
       disabled={false}
       hasDivider={false}
       isDelete={false}
@@ -402,6 +416,7 @@ exports[`IconButtonBar renders the length of '1' variation 1`] = `
       onKeyDown={[Function]}
     />
     <OverflowMenuItem
+      className="class"
       disabled={false}
       hasDivider={false}
       isDelete={false}
@@ -411,6 +426,7 @@ exports[`IconButtonBar renders the length of '1' variation 1`] = `
       onKeyDown={[Function]}
     />
     <OverflowMenuItem
+      className="class"
       disabled={false}
       hasDivider={false}
       isDelete={false}
@@ -420,6 +436,7 @@ exports[`IconButtonBar renders the length of '1' variation 1`] = `
       onKeyDown={[Function]}
     />
     <OverflowMenuItem
+      className="class"
       disabled={false}
       hasDivider={false}
       isDelete={false}
@@ -475,8 +492,10 @@ exports[`IconButtonBar renders the length of '2' variation 1`] = `
         "render": [Function],
       }
     }
+    selectorPrimaryFocus=".security--icon-button-bar--primary-focus"
   >
     <OverflowMenuItem
+      className="class"
       disabled={false}
       hasDivider={false}
       isDelete={false}
@@ -486,6 +505,7 @@ exports[`IconButtonBar renders the length of '2' variation 1`] = `
       onKeyDown={[Function]}
     />
     <OverflowMenuItem
+      className="class"
       disabled={false}
       hasDivider={false}
       isDelete={false}
@@ -495,6 +515,7 @@ exports[`IconButtonBar renders the length of '2' variation 1`] = `
       onKeyDown={[Function]}
     />
     <OverflowMenuItem
+      className="class"
       disabled={false}
       hasDivider={false}
       isDelete={false}
@@ -578,8 +599,10 @@ exports[`IconButtonBar renders the length of '3' variation 1`] = `
         "render": [Function],
       }
     }
+    selectorPrimaryFocus=".security--icon-button-bar--primary-focus"
   >
     <OverflowMenuItem
+      className="class"
       disabled={false}
       hasDivider={false}
       isDelete={false}
@@ -589,6 +612,7 @@ exports[`IconButtonBar renders the length of '3' variation 1`] = `
       onKeyDown={[Function]}
     />
     <OverflowMenuItem
+      className="class"
       disabled={false}
       hasDivider={false}
       isDelete={false}
