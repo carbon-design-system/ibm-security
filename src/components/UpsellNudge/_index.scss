@@ -14,19 +14,21 @@
 
 @import '../Component/mixins';
 
+@mixin upsell-nudge__background($background-color) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), $background-color);
+}
+
 @include security--component($name: upsell-nudge) {
   /// Spacing.
   /// @type Length
   $upsell-nudge__spacing: $carbon--spacing-03;
 
-  /// Border height.
-  /// @type Length
-  $upsell-nudge__border__sizing__height: rem(
-    $px: 2px,
-  );
-
+  @include upsell-nudge__background($background-color: $ui-01);
   padding-top: $upsell-nudge__spacing;
-  background-image: linear-gradient(rgba(0, 0, 0, 0), $ui-01);
+
+  &--light {
+    @include upsell-nudge__background($background-color: $hover-ui);
+  }
 
   &__container {
     padding-right: $carbon--spacing-07;
@@ -41,6 +43,12 @@
   }
 
   &__content {
+    /// Border height.
+    /// @type Length
+    $upsell-nudge__border__sizing__height: rem(
+      $px: 2px,
+    );
+
     @include carbon--type-style($name: body-short-01);
 
     position: relative;

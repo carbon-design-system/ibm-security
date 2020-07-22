@@ -11,6 +11,7 @@ import React from 'react';
 import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { UpsellNudge } from '../../..';
+import { namespace } from '..';
 
 const { name } = UpsellNudge;
 
@@ -56,6 +57,14 @@ describe(name, () => {
 
     expect(
       render(<UpsellNudge {...props({ children })} />).getByText(children)
+    ).toBeInTheDocument();
+  });
+
+  test('adds the light variant', () => {
+    expect(
+      render(
+        <UpsellNudge {...props({ light: true })} />
+      ).container.querySelector(`.${namespace}--light`)
     ).toBeInTheDocument();
   });
 

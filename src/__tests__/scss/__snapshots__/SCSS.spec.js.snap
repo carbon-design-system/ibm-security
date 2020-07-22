@@ -24393,8 +24393,12 @@ a.bx--navigation-link:focus {
 }
 
 .security--upsell-nudge {
-  padding-top: 0.5rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0), var(--ui-01, #262626));
+  padding-top: 0.5rem;
+}
+
+.security--upsell-nudge--light {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), var(--hover-ui, #353535));
 }
 
 .security--upsell-nudge__container {

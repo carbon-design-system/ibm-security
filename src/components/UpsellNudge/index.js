@@ -4,14 +4,14 @@
  */
 
 import classnames from 'classnames';
-import { elementType, node, shape, string } from 'prop-types';
+import { bool, elementType, node, shape, string } from 'prop-types';
 import React, { createElement } from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
 
 import Button from '../Button';
 
-const namespace = getComponentNamespace('upsell-nudge');
+export const namespace = getComponentNamespace('upsell-nudge');
 
 /**
  * Upsell nudges are in-context cards that enables pivoting to purchase or upgrades.
@@ -21,11 +21,17 @@ const UpsellNudge = ({
   children,
   className,
   element,
+  light,
   renderIcon: Icon,
   title,
   ...other
 }) => (
-  <div className={classnames(namespace, className)} {...other}>
+  <div
+    className={classnames(namespace, className, {
+      [`${namespace}--light`]: light,
+    })}
+    {...other}
+  >
     <div className={`${namespace}__container`}>
       <Icon />
 
@@ -53,6 +59,9 @@ UpsellNudge.propTypes = {
   /** Specify the content of the `UpsellNudge` */
   children: node,
 
+  /** Specifiy whether or not to use the light variant */
+  light: bool,
+
   /** Specify the base element to use to build the title */
   element: elementType,
 
@@ -62,6 +71,7 @@ UpsellNudge.propTypes = {
 
 UpsellNudge.defaultProps = {
   children: null,
+  light: false,
   element: 'h3',
   className: null,
 };

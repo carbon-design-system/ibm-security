@@ -3,7 +3,7 @@
  * @copyright IBM Security 2020
  */
 import { App24 } from '@carbon/icons-react';
-import { text } from '@storybook/addon-knobs';
+import { boolean, text } from '@storybook/addon-knobs';
 import React from 'react';
 
 import { components, meta } from '../../../.storybook';
@@ -19,6 +19,7 @@ const props = () => ({
   button: {
     children: text('Button children (button.children)', 'View in Catalog'),
   },
+  light: boolean('Light variant (light)', UpsellNudge.defaultProps.light),
   renderIcon: App24,
 });
 

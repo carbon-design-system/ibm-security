@@ -12423,6 +12423,7 @@ Map {
       "children": null,
       "className": null,
       "element": "h3",
+      "light": false,
     },
     "propTypes": Object {
       "button": Object {
@@ -12553,6 +12554,9 @@ Map {
       },
       "element": Object {
         "type": "elementType",
+      },
+      "light": Object {
+        "type": "bool",
       },
       "renderIcon": Object {
         "args": Array [
