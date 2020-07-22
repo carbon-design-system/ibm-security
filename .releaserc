@@ -7,6 +7,11 @@
       name: 'dev',
       prerelease: 'prerelease',
     },
+    {
+      channel: 'alpha',
+      name: '635/breadcrumb-page-title',
+      prerelease: 'alpha',
+    },
   ],
   plugins: [
     '@semantic-release/commit-analyzer',
