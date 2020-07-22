@@ -10445,9 +10445,7 @@ Map {
         ],
         "type": "oneOfType",
       },
-      "children": Object {
-        "type": "element",
-      },
+      "children": [Function],
       "className": Object {
         "type": "string",
       },
