@@ -32,6 +32,6 @@ export const Default = () => (
 
 export default meta(
   patterns('UNSTABLE BreadcrumbPageTitle'),
-  '',
+  "The breadcrumb page title indicates the user's position on a website or platform, depicting hierarchy, facilitating quick transitions, and displaying the navigation of user path.",
   disableCentered()
 );
