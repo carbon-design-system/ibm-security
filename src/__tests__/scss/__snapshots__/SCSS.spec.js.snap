@@ -7643,6 +7643,9 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   position: absolute;
   opacity: 0;
   pointer-events: none;
+  transition-duration: 0.2s;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.2, 0, 0.38, 0.9);
   z-index: 1;
 }
 
