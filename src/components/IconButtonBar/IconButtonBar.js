@@ -67,12 +67,11 @@ const IconButtonBar = ({
     if (overflowMenuDirection === IconButton.TooltipDirection.TOP) {
       items.reverse();
     }
-    return items.map((action, index) => (
+    return items.map(action => (
       <OverflowMenuItem
         itemText={action.label}
         key={action.label}
         onClick={action.onClick}
-        selectorPrimaryFocus={index === 0}
         disabled={action.disabled}
       />
     ));

@@ -80,7 +80,6 @@ exports[`IconButtonBar renders the 'lg' variation 1`] = `
       key="Label 4"
       onClick={[Function]}
       onKeyDown={[Function]}
-      selectorPrimaryFocus={true}
     />
     <OverflowMenuItem
       disabled={false}
@@ -90,7 +89,6 @@ exports[`IconButtonBar renders the 'lg' variation 1`] = `
       key="Label 3"
       onClick={[Function]}
       onKeyDown={[Function]}
-      selectorPrimaryFocus={false}
     />
   </ForwardRef(OverflowMenu)>
 </div>
@@ -176,7 +174,6 @@ exports[`IconButtonBar renders the 'md' variation 1`] = `
       key="Label 4"
       onClick={[Function]}
       onKeyDown={[Function]}
-      selectorPrimaryFocus={true}
     />
     <OverflowMenuItem
       disabled={false}
@@ -186,7 +183,6 @@ exports[`IconButtonBar renders the 'md' variation 1`] = `
       key="Label 3"
       onClick={[Function]}
       onKeyDown={[Function]}
-      selectorPrimaryFocus={false}
     />
   </ForwardRef(OverflowMenu)>
 </div>
@@ -272,7 +268,6 @@ exports[`IconButtonBar renders the 'sm' variation 1`] = `
       key="Label 4"
       onClick={[Function]}
       onKeyDown={[Function]}
-      selectorPrimaryFocus={true}
     />
     <OverflowMenuItem
       disabled={false}
@@ -282,7 +277,6 @@ exports[`IconButtonBar renders the 'sm' variation 1`] = `
       key="Label 3"
       onClick={[Function]}
       onKeyDown={[Function]}
-      selectorPrimaryFocus={false}
     />
   </ForwardRef(OverflowMenu)>
 </div>
@@ -368,7 +362,6 @@ exports[`IconButtonBar renders the 'xl' variation 1`] = `
       key="Label 4"
       onClick={[Function]}
       onKeyDown={[Function]}
-      selectorPrimaryFocus={true}
     />
     <OverflowMenuItem
       disabled={false}
@@ -378,7 +371,6 @@ exports[`IconButtonBar renders the 'xl' variation 1`] = `
       key="Label 3"
       onClick={[Function]}
       onKeyDown={[Function]}
-      selectorPrimaryFocus={false}
     />
   </ForwardRef(OverflowMenu)>
 </div>
@@ -408,7 +400,6 @@ exports[`IconButtonBar renders the length of '1' variation 1`] = `
       key="Label 4"
       onClick={[Function]}
       onKeyDown={[Function]}
-      selectorPrimaryFocus={true}
     />
     <OverflowMenuItem
       disabled={false}
@@ -418,7 +409,6 @@ exports[`IconButtonBar renders the length of '1' variation 1`] = `
       key="Label 3"
       onClick={[Function]}
       onKeyDown={[Function]}
-      selectorPrimaryFocus={false}
     />
     <OverflowMenuItem
       disabled={false}
@@ -428,7 +418,6 @@ exports[`IconButtonBar renders the length of '1' variation 1`] = `
       key="Label 2"
       onClick={[Function]}
       onKeyDown={[Function]}
-      selectorPrimaryFocus={false}
     />
     <OverflowMenuItem
       disabled={false}
@@ -438,7 +427,6 @@ exports[`IconButtonBar renders the length of '1' variation 1`] = `
       key="Label 1"
       onClick={[Function]}
       onKeyDown={[Function]}
-      selectorPrimaryFocus={false}
     />
   </ForwardRef(OverflowMenu)>
 </div>
@@ -496,7 +484,6 @@ exports[`IconButtonBar renders the length of '2' variation 1`] = `
       key="Label 4"
       onClick={[Function]}
       onKeyDown={[Function]}
-      selectorPrimaryFocus={true}
     />
     <OverflowMenuItem
       disabled={false}
@@ -506,7 +493,6 @@ exports[`IconButtonBar renders the length of '2' variation 1`] = `
       key="Label 3"
       onClick={[Function]}
       onKeyDown={[Function]}
-      selectorPrimaryFocus={false}
     />
     <OverflowMenuItem
       disabled={false}
@@ -516,7 +502,6 @@ exports[`IconButtonBar renders the length of '2' variation 1`] = `
       key="Label 2"
       onClick={[Function]}
       onKeyDown={[Function]}
-      selectorPrimaryFocus={false}
     />
   </ForwardRef(OverflowMenu)>
 </div>
@@ -602,7 +587,6 @@ exports[`IconButtonBar renders the length of '3' variation 1`] = `
       key="Label 4"
       onClick={[Function]}
       onKeyDown={[Function]}
-      selectorPrimaryFocus={true}
     />
     <OverflowMenuItem
       disabled={false}
@@ -612,7 +596,6 @@ exports[`IconButtonBar renders the length of '3' variation 1`] = `
       key="Label 3"
       onClick={[Function]}
       onKeyDown={[Function]}
-      selectorPrimaryFocus={false}
     />
   </ForwardRef(OverflowMenu)>
 </div>
