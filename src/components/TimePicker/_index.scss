@@ -1,7 +1,18 @@
 ////
 /// Time picker component.
 /// @group time-picker
-/// @copyright IBM Security 2018
+/// @copyright IBM Security 2018-2020
 ////
 
+@import '@carbon/layout/scss/spacing';
+@import 'carbon-components/scss/globals/scss/vars';
 @import 'carbon-components/scss/components/time-picker/time-picker';
+
+@import '../../globals/namespace/index';
+
+@include export-namespace($name: time-picker) {
+  // TODO: Waiting for fix from Carbon via https://github.com/carbon-design-system/carbon/pull/6483
+  input.#{$prefix}--time-picker__input-field {
+    padding: 0 $carbon--spacing-05;
+  }
+}
