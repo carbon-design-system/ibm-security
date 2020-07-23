@@ -24394,7 +24394,7 @@ a.bx--navigation-link:focus {
   box-shadow: 0 1rem 0rem var(--ui-background, #161616);
 }
 
-.security--breadcrumb-page-title__breadcrumb {
+.security--breadcrumb-page-title__container {
   position: relative;
   min-height: 1rem;
   z-index: 1;

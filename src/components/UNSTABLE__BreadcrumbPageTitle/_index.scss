@@ -31,7 +31,7 @@
     $breadcrumb-page-title__box-shadow__sizing -$breadcrumb-page-title__box-shadow__sizing
     $header__color__background;
 
-  &__breadcrumb {
+  &__container {
     position: relative;
     min-height: map-get(
       $map: map-get($map: $tokens, $key: $breadcrumb__item__link__type-style),

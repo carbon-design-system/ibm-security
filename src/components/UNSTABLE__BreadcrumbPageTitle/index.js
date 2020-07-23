@@ -69,26 +69,26 @@ const BreadcrumbPageTitle = ({
 
   return (
     <div className={classnames(namespace, className)} {...other}>
-      <Breadcrumb
-        className={`${namespace}__breadcrumb`}
-        aria-label={ariaLabel}
-        noTrailingSlash
-      >
-        {path &&
-          path.map(({ children, href, id }) => (
-            <BreadcrumbItem key={id} href={href}>
-              {children}
-            </BreadcrumbItem>
-          ))}
+      <div className={`${namespace}__container`}>
+        {(isTitleVisible || path) && (
+          <Breadcrumb aria-label={ariaLabel} noTrailingSlash>
+            {path &&
+              path.map(({ children, href, id, ...other }) => (
+                <BreadcrumbItem key={id} id={id} href={href} {...other}>
+                  {children}
+                </BreadcrumbItem>
+              ))}
 
-        <Transition className={namespace}>
-          {isTitleVisible && (
-            <BreadcrumbItem isCurrentPage>
-              <Title />
-            </BreadcrumbItem>
-          )}
-        </Transition>
-      </Breadcrumb>
+            <Transition className={namespace}>
+              {isTitleVisible && (
+                <BreadcrumbItem isCurrentPage>
+                  <Title />
+                </BreadcrumbItem>
+              )}
+            </Transition>
+          </Breadcrumb>
+        )}
+      </div>
 
       <Title
         className={classnames(`${namespace}__title`, {
