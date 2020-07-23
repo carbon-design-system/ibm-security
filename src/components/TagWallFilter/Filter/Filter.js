@@ -75,12 +75,13 @@ class Filter extends React.Component {
 
   handleClearSelection = () => {
     this.setState({ inputValue: '' });
-    this.props.onChange({ selectedItems: [], type: 'CLEAR_SELECTED_ITEMS' });
   };
 
   handleItemChange = selectedItem => {
-    this.setState(
-      { inputValue: '' },
+    if (selectedItem === null) {
+      return;
+    }
+    this.setState({ inputValue: '' }, () =>
       this.props.onChange({ item: selectedItem, type: 'SELECT_ITEM' })
     );
   };
