@@ -17030,7 +17030,6 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .security--wizard .bx--progress--vertical .bx--progress-label {
-  display: inline-block;
   max-width: 80ch;
   overflow: hidden;
   display: -webkit-box;
