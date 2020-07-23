@@ -3428,6 +3428,7 @@ Map {
       "onChange": [Function],
       "open": false,
       "overflowMenuAriaLabel": undefined,
+      "selectorPrimaryFocus": "[data-overflow-menu-primary-focus]",
       "title": undefined,
     },
     "propTypes": Object {
@@ -3483,6 +3484,9 @@ Map {
         "type": "bool",
       },
       "overflowMenuAriaLabel": Object {
+        "type": "string",
+      },
+      "selectorPrimaryFocus": Object {
         "type": "string",
       },
       "title": Object {
