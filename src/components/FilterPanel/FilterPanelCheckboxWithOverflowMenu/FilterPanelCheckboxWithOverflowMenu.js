@@ -22,6 +22,7 @@ const FilterPanelCheckboxWithOverflowMenu = ({
   overflowMenuAriaLabel,
   children,
   open,
+  selectorPrimaryFocus,
   ...other
 }) => {
   const containerRef = React.useRef(null);
@@ -98,6 +99,7 @@ const FilterPanelCheckboxWithOverflowMenu = ({
           onOpen={() => setOverflowIsOpen(true)}
           onClose={() => setOverflowIsOpen(false)}
           flipped
+          selectorPrimaryFocus={selectorPrimaryFocus}
         >
           {children}
         </OverflowMenu>
@@ -120,6 +122,12 @@ FilterPanelCheckboxWithOverflowMenu.propTypes = {
 
   /** Whether or not the overflow menu should render as open. */
   open: PropTypes.bool,
+
+  /**
+   * Specify a CSS selector that matches the DOM element that should
+   * be focused when the OverflowMenu opens
+   */
+  selectorPrimaryFocus: PropTypes.string,
 };
 
 FilterPanelCheckboxWithOverflowMenu.defaultProps = {
@@ -128,6 +136,7 @@ FilterPanelCheckboxWithOverflowMenu.defaultProps = {
   overflowMenuAriaLabel: undefined,
   children: undefined,
   open: false,
+  selectorPrimaryFocus: '[data-overflow-menu-primary-focus]',
 };
 
 export default FilterPanelCheckboxWithOverflowMenu;
