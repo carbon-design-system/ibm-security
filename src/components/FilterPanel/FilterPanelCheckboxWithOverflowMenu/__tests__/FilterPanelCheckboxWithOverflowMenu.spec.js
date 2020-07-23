@@ -41,7 +41,7 @@ describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
         id="checkbox-id"
         open
       >
-        <OverflowMenuItem primaryFocus itemText="option 1" />
+        <OverflowMenuItem itemText="option 1" />
         <OverflowMenuItem itemText="option 2" />
       </FilterPanelCheckboxWithOverflowMenu>
     );
@@ -221,7 +221,7 @@ describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
         overflowMenuAriaLabel="filter selection options"
         id="checkbox-id"
       >
-        <OverflowMenuItem primaryFocus itemText="option 1" />
+        <OverflowMenuItem itemText="option 1" />
         <OverflowMenuItem itemText="option 2" />
       </FilterPanelCheckboxWithOverflowMenu>
     );
