@@ -22663,6 +22663,10 @@ bx--text-area.bx--skeleton::placeholder {
   color: var(--disabled-02, #525252);
 }
 
+input.bx--time-picker__input-field {
+  padding: 0 1rem;
+}
+
 .bx--toggle {
   position: absolute;
   width: 1px;
