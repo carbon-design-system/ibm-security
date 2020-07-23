@@ -3,7 +3,7 @@
  * @copyright IBM Security 2020
  */
 
-import requiredIfGivenPropExists from 'carbon-components-react/lib/prop-types/requiredIfGivenPropExists';
+import requiredIfGivenPropIsTruthy from 'carbon-components-react/lib/prop-types/requiredIfGivenPropIsTruthy';
 
 import classnames from 'classnames';
 import { bool, func, node, string } from 'prop-types';
@@ -88,7 +88,7 @@ HeaderAction.propTypes = {
   /** Provide a label for accessibility */
 
   // eslint-disable-next-line react/require-default-props
-  labelText: requiredIfGivenPropExists('popover', string),
+  labelText: requiredIfGivenPropIsTruthy('popover', string),
 
   /** Provide the contents of the popover */
   popover: node,

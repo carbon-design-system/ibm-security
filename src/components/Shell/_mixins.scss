@@ -101,14 +101,13 @@ $shell__banner__sizing__height: carbon--mini-units(
   }
 
   &__skip-to-content {
-    position: relative;
     display: flex;
+    position: relative;
+    height: 0;
     justify-content: center;
 
-    &__link.#{$prefix}--skip-to-content:focus {
-      left: auto;
-      border-color: $focus;
-      background-color: $interactive-01;
+    &__link {
+      @include hidden;
       margin-top: $header__spacing__padding;
       margin-left: -$toolbar__sizing__width;
       transition: unset;
@@ -121,7 +120,6 @@ $shell__banner__sizing__height: carbon--mini-units(
         padding: $button-padding;
         clip: auto;
       }
-      color: $text-04;
     }
   }
 }

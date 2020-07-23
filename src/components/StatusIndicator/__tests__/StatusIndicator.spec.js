@@ -6,6 +6,7 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 import userEvent from '@testing-library/user-event';
+import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { StatusIndicator, StatusStep } from '../../..';
 
@@ -13,8 +14,7 @@ import { STATUS } from '../StatusStep/StatusStep';
 
 describe('StatusIndicator', () => {
   test('should have no Axe or DAP violations', async () => {
-    const main = document.createElement('main');
-    render(
+    const { container } = renderWithinLandmark(
       <StatusIndicator
         title="test title"
         retry={{
@@ -39,14 +39,10 @@ describe('StatusIndicator', () => {
           label="test-label-4"
           description="test description 4"
         />
-      </StatusIndicator>,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+      </StatusIndicator>
     );
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations(`StatusIndicator`);
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations(`StatusIndicator`);
   });
 
   test('should add a custom class', () => {

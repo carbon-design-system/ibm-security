@@ -29,6 +29,12 @@
 @mixin decorator {
   $root: &;
 
+  /// Height.
+  /// @type Length
+  $data-decorator__sizing__height: carbon--mini-units(
+    $count: 3.25,
+  );
+
   @include carbon--type-style($name: body-short-01);
   @include security--decorator__padding(
     $decorator__spacing__padding: $carbon--spacing-03
@@ -37,7 +43,7 @@
   display: inline-flex;
   box-sizing: border-box;
   font-family: carbon--font-family($name: sans);
-  height: carbon--mini-units(3.25);
+  height: $data-decorator__sizing__height;
   background-color: $hover-ui;
   font-style: normal;
   font-stretch: normal;
@@ -134,16 +140,24 @@
     }
   }
 
-  &--unknown #{$root}__icon {
+  &--unknown #{$root}__icon,
+  &__icon--unknown {
     fill: $icon-02;
   }
 
-  &--low #{$root}__icon {
+  &--low #{$root}__icon,
+  &__icon--low {
     fill: $support-03;
   }
 
-  &--medium #{$root}__icon {
+  &--medium #{$root}__icon,
+  &__icon--medium {
     fill: $carbon--orange-40;
+  }
+
+  &__icon--high,
+  &__icon--critical {
+    fill: $support-01;
   }
 
   &--high,
@@ -170,10 +184,8 @@
   }
 
   &__value {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline;
-    line-height: 1.625rem;
+    @include text-overflow;
+    max-width: 30ch;
+    line-height: $data-decorator__sizing__height;
   }
 }

@@ -1,18 +1,18 @@
 /**
  * @file Interactive tag.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import Close16 from '@carbon/icons-react/lib/close/16';
 
-import { bool, func, string } from 'prop-types';
 import classnames from 'classnames';
+import { bool, func, string } from 'prop-types';
 import React from 'react';
 
-import { getComponentNamespace } from '../../../globals/namespace/index';
+import { getComponentNamespace } from '../../globals/namespace/index';
 
-import Icon from '../../Icon';
-import Tag from '..';
+import Icon from '../Icon';
+import Tag from '../Tag';
 
 export const namespace = getComponentNamespace('tag--interactive');
 

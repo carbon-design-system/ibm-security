@@ -12,8 +12,12 @@ import { compose, getDisplayName, lifecycle } from 'recompose';
 
 import { patterns } from '../../../.storybook';
 
+import getGuidance from './stories';
+
 import {
   Button,
+  CodeSnippet,
+  CodeSnippetSkeleton,
   Dropdown,
   Form,
   FormGroup,
@@ -45,13 +49,68 @@ const id = 'search';
 const selector = `#${id}`;
 const selectorPrimaryFocus = () => document.querySelector(selector);
 
-const renderMain = () => (
-  <Form className={namespace}>
+const renderMain = ({ isLoading }) => (
+  <Form className={namespace} tabIndex={isLoading ? -1 : 0}>
+    <p>
+      Whenever the Tearsheet is loading, please use{' '}
+      <CodeSnippet type="inline" light tabIndex={isLoading ? -1 : 0}>
+        isLoading
+      </CodeSnippet>{' '}
+      via the{' '}
+      <CodeSnippet type="inline" light tabIndex={isLoading ? -1 : 0}>
+        renderMain
+      </CodeSnippet>{' '}
+      render prop to prevent users from tabbing through focussable content (such
+      as form inputs, buttons, and links) while the Tearsheet is loading. For
+      example, you can selectively load skeleton components, or you can set
+      <CodeSnippet type="inline" light tabIndex={isLoading ? -1 : 0}>
+        disabled
+      </CodeSnippet>
+      or{' '}
+      <CodeSnippet type="inline" light tabIndex={isLoading ? -1 : 0}>
+        tabIndex={-1}
+      </CodeSnippet>{' '}
+      on interactive elements.
+    </p>
+    <p>Here are some examples:</p>
+    {isLoading ? (
+      <CodeSnippetSkeleton type="multi" />
+    ) : (
+      <CodeSnippet light type="multi">
+        {/* eslint-disable-next-line react/jsx-indent */}
+        {`
+<TearSheet
+  renderMain={({ isLoading }) => (
+    <Button disabled={isLoading}>
+      Example button.
+    </Button>
+    <CodeSnippet tabIndex={isLoading ? -1 : 0}>
+      Example snippet with no copy button.
+    </CodeSnippet>
+    {isLoading ? (
+      <CodeSnippetSkeleton type="multi" />
+    ) : (
+      <CodeSnippet type="multi">
+        Exampe snippet with a copy button.
+      </CodeSnippet>
+    )}
+  )}
+/>
+`}
+      </CodeSnippet>
+    )}
+    <br />
+    <p>
+      For more examples, please review the &quot;Story&quot; tab in the
+      Storybook panel below to the see this demo&apos; source code.
+    </p>
+    <br />
     <Search
       id={id}
       className={className}
       labelText={searchLabel}
       placeHolderText={searchLabel}
+      disabled={isLoading}
     />
 
     <TextInput
@@ -59,6 +118,7 @@ const renderMain = () => (
       id="test-input-id"
       labelText={labelText}
       placeholder={placeholder}
+      disabled={isLoading}
     />
 
     <FormGroup legendText={labelText}>
@@ -76,6 +136,7 @@ const renderMain = () => (
           },
         ]}
         itemToString={item => (item ? item.text : '')}
+        disabled={isLoading}
       />
     </FormGroup>
 
@@ -84,12 +145,14 @@ const renderMain = () => (
       className={className}
       label={labelText}
       value={1000}
+      disabled={isLoading}
     />
 
     <TextArea
       className={className}
       labelText={labelText}
       placeholder={placeholder}
+      disabled={isLoading}
     />
   </Form>
 );
@@ -138,7 +201,9 @@ storiesOf(patterns('Tearsheet'), module)
       Basic implementation of the Tearsheet. Using the \`label\` property in a button object will override the value set in \`labels\` prop
       ## Important note about \`focusTrap\`:
       The \`focusTrap\` prop is set to \`false\` in the Storybook so that you can navigate the Storybook UI. This prop is set to \`true\` by default. In most cases, you should not have to change this prop.
-    `,
+
+      ${getGuidance(Tearsheet)}
+      `,
     }
   )
   .add(
@@ -203,7 +268,9 @@ storiesOf(patterns('Tearsheet'), module)
       Tearsheet with loading and dynamic messages. Using the \`label\` property in a button object will override the value set in \`labels\` prop
       ## Important note about \`focusTrap\`:
       The \`focusTrap\` prop is set to \`false\` in the Storybook so that you can navigate the Storybook UI. This prop is set to \`true\` by default. In most cases, you should not have to change this prop.
-    `,
+    
+      ${getGuidance(Tearsheet)}
+      `,
     }
   )
   .add(
@@ -254,7 +321,9 @@ storiesOf(patterns('Tearsheet'), module)
       The \`focusTrap\` prop is set to \`false\` in the Storybook so that you can navigate the Storybook UI. This prop is set to \`true\` by default. In most cases, you should not have to change this prop.
 
       The \`selectorPrimaryFocus\` prop only works when \`focusTrap\` is set to \`true\`. However, in this Storybook environment, \`focusTrap = false\` so that you can navigate the UI. To demonstrate \`selectorPrimaryFocus\` functionality, please open the "Knobs" tab in the Storybook addon's frame and toggle the \`focusTrap\` checkbox. When you are ready to view this component's prop table or navigate to a different component, you will need to click on the \`focusTrap\` checkbox again to disable focus trapping.
-    `,
+    
+      ${getGuidance(Tearsheet)}
+      `,
     }
   )
   .add(
@@ -280,6 +349,8 @@ storiesOf(patterns('Tearsheet'), module)
       The \`focusTrap\` prop is set to \`false\` in the Storybook so that you can navigate the Storybook UI. This prop is set to \`true\` by default. In most cases, you should not have to change this prop.
 
       The \`selectorPrimaryFocus\` prop only works when \`focusTrap\` is set to \`true\`. However, in this Storybook environment, \`focusTrap = false\` so that you can navigate the UI. To demonstrate \`selectorPrimaryFocus\` functionality, please open the "Knobs" tab in the Storybook addon's frame and toggle the \`focusTrap\` checkbox. When you are ready to view this component's prop table or navigate to a different component, you will need to click on the \`focusTrap\` checkbox again to disable focus trapping.
-    `,
+    
+      ${getGuidance(Tearsheet)}
+      `,
     }
   );

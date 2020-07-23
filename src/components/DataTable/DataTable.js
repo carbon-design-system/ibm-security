@@ -1,11 +1,10 @@
 /**
  * @file Data table.
- * @copyright IBM Security 2019-2020
+ * @copyright IBM Security 2019 - 2020
  */
 
-import React from 'react';
-
 import CarbonDataTable from 'carbon-components-react/lib/components/DataTable';
+import React from 'react';
 
 import { namespace } from './constants';
 

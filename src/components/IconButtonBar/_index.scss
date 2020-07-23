@@ -49,4 +49,16 @@
       width: $icon-button-bar__sizing__dimensions;
     }
   }
+
+  &__divider {
+    // divider should remain transparent
+    width: 3px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__divider__inner {
+    background-color: $ui-03;
+    width: 1px;
+  }
 }

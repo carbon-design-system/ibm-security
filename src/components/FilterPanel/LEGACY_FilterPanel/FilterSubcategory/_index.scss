@@ -1,16 +1,18 @@
 ////
 /// Filter subcategory styles.
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import '@carbon/layout/scss/spacing';
 @import '@carbon/themes/scss/tokens';
 
 @import '../../../../globals/motion/index';
-
 @import '../../../Component/mixins';
 
 @import '../../../Button/index';
+@import '../../../ScrollGradient/index';
+
+@import '../../FilterPanelAccordionItem/mixins';
 
 @include security--component($name: filter-subcategory) {
   /// Scroller padding.
@@ -39,13 +41,7 @@
 
   > #{$carbon--accordion} {
     &__heading {
-      /// Scroller padding.
-      /// @type Length
-      $filter-subcategory__accordion__spacing__padding: $carbon--spacing-02;
-
-      padding-top: $filter-subcategory__accordion__spacing__padding;
-      padding-bottom: $filter-subcategory__accordion__spacing__padding;
-      color: $text-02;
+      @include filter-panel-accordion-item__heading;
     }
 
     &__content {

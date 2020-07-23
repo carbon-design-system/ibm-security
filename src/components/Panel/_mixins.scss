@@ -60,6 +60,7 @@
   flex-direction: column;
   justify-content: space-between;
   z-index: z($layer: floating);
+  outline: none;
 
   @include rtl {
     right: unset;
@@ -132,7 +133,8 @@
     &--content {
       @include carbon--type-style($name: caption-01);
 
-      padding: $panel__spacing__padding;
+      padding-top: $panel__spacing__padding;
+      padding-bottom: $panel__spacing__padding;
       border-bottom: $panel__content__sizing__border solid
         $panel__content__color__border;
 

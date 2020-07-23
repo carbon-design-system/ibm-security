@@ -3,19 +3,15 @@
  * @copyright IBM Security 2020
  */
 
-import { render } from '@testing-library/react';
 import React from 'react';
+import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
 import { CardSkeleton } from '../../../..';
 
 describe('CardSkeleton', () => {
   test('should have no Axe or DAP violations', async () => {
-    const main = document.createElement('main');
-    render(<CardSkeleton />, {
-      // DAP requires a landmark '<main>' in the DOM:
-      container: document.body.appendChild(main),
-    });
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('CardSkeleton');
+    const { container } = renderWithinLandmark(<CardSkeleton />);
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('CardSkeleton');
   });
 });

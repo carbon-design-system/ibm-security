@@ -7,6 +7,7 @@ import Add16 from '@carbon/icons-react/lib/add/16';
 import { ButtonKinds } from 'carbon-components-react/lib/prop-types/types';
 import { render } from '@testing-library/react';
 import React from 'react';
+import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { Button } from '../../..';
 import { carbonPrefix } from '../../../globals/namespace';
@@ -14,18 +15,13 @@ import { namespace } from '../Button';
 
 describe('Button', () => {
   test('should have no Axe or DAP violations when `loading`', async () => {
-    const main = document.createElement('main');
-    render(
+    const { container } = renderWithinLandmark(
       <Button loading iconDescription="test button icon description">
         test loading button
-      </Button>,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+      </Button>
     );
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('Button that is loading');
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('Button that is loading');
   });
 
   test('should add custom class', () => {

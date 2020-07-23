@@ -16,7 +16,7 @@ import Icon from '../Icon';
 import Link from '../Link';
 import SecurityHeader from '../SecurityHeader';
 import Toolbar from '../Toolbar';
-import { SkipToContent } from '../..';
+import { ShellSkipToContent } from '../..';
 
 export const namespace = getComponentNamespace('shell');
 
@@ -51,17 +51,24 @@ const Shell = ({
 
   return (
     <Fragment>
-      {skipToContent && (
-        <div className={`${namespace}__skip-to-content`}>
-          <SkipToContent
-            id={`${namespace}__skip-to-content__link`}
-            className={`${namespace}__skip-to-content__link`}
-            href={skipToContent.href}
-          >
-            {skipToContent.label}
-          </SkipToContent>
-        </div>
-      )}
+      {skipToContent &&
+        (() => {
+          const { href, label } = skipToContent;
+
+          return (
+            <div className={`${namespace}__skip-to-content`}>
+              <ShellSkipToContent
+                id={`${namespace}__skip-to-content__link`}
+                className={`${namespace}__skip-to-content__link`}
+                href={href}
+                labelText={label}
+              >
+                {label}
+              </ShellSkipToContent>
+            </div>
+          );
+        })()}
+
       {returnToBanner && (
         <Link
           id="returnToBanner"

@@ -1,6 +1,6 @@
 /**
  * @file Data table with overflow menu story.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import React from 'react';
@@ -26,8 +26,19 @@ const overflowStory = props => (
     rows={rows}
     headers={headers}
     {...props}
-    render={({ rows, headers, getHeaderProps, getRowProps, getTableProps }) => (
-      <TableContainer title="DataTable" description="With overflow menu">
+    render={({
+      rows,
+      headers,
+      getHeaderProps,
+      getRowProps,
+      getTableProps,
+      getTableContainerProps,
+    }) => (
+      <TableContainer
+        title="DataTable"
+        description="With overflow menu"
+        {...getTableContainerProps()}
+      >
         <Table {...getTableProps()}>
           <TableHead>
             <TableRow>

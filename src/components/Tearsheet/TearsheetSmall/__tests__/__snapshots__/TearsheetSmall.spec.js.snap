@@ -77,6 +77,7 @@ exports[`TearsheetSmall renders 1`] = `
       </footer>
       <IconButton
         className="security--tearsheet--small__button--close"
+        disabled={false}
         iconClassName=""
         iconSize={20}
         label="Close"
@@ -238,7 +239,7 @@ exports[`TearsheetSmall renders loading state 1`] = `
       >
         <Button
           className="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary"
-          disabled={false}
+          disabled={true}
           kind="secondary"
           loading={false}
           onClick={[Function]}
@@ -250,7 +251,7 @@ exports[`TearsheetSmall renders loading state 1`] = `
         </Button>
         <Button
           className="security--tearsheet--small__footer__button"
-          disabled={false}
+          disabled={true}
           kind="primary"
           loading={false}
           onClick={[Function]}
@@ -263,6 +264,7 @@ exports[`TearsheetSmall renders loading state 1`] = `
       </footer>
       <IconButton
         className="security--tearsheet--small__button--close"
+        disabled={true}
         iconClassName=""
         iconSize={20}
         label="Close"
@@ -361,6 +363,7 @@ exports[`TearsheetSmall should override \`labels\` if button label property prov
       </footer>
       <IconButton
         className="security--tearsheet--small__button--close"
+        disabled={false}
         iconClassName=""
         iconSize={20}
         label="Close - prop"

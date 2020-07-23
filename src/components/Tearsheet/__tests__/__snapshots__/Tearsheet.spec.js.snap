@@ -16,11 +16,9 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
     <section
       aria-hidden={false}
       className="security--tearsheet"
-      isOpen={true}
-      loading={false}
-      loadingMessage=""
     >
       <section
+        aria-hidden={false}
         className="security--tearsheet__sidebar"
       >
         <h1
@@ -73,10 +71,12 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
         </footer>
       </section>
       <section
+        aria-hidden={false}
         className="security--tearsheet__main"
       >
         <IconButton
           className="security--tearsheet__button--close"
+          disabled={false}
           iconClassName=""
           iconSize={20}
           label="Close - prop"
@@ -182,11 +182,9 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
     <section
       aria-hidden={false}
       className="security--tearsheet"
-      isOpen={true}
-      loading={false}
-      loadingMessage=""
     >
       <section
+        aria-hidden={false}
         className="security--tearsheet__sidebar"
       >
         <h1
@@ -239,10 +237,12 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
         </footer>
       </section>
       <section
+        aria-hidden={false}
         className="security--tearsheet__main"
       >
         <IconButton
           className="security--tearsheet__button--close"
+          disabled={false}
           iconClassName=""
           iconSize={20}
           label="Close"

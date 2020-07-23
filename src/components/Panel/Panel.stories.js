@@ -4,17 +4,17 @@
  */
 
 import Add16 from '@carbon/icons-react/lib/add/16';
-import ArrowRight20 from '@carbon/icons-react/lib/arrow--right/20';
-import Filter20 from '@carbon/icons-react/lib/filter/20';
-
-import { spacing04, spacing05 } from '@carbon/layout/lib';
-import { styles } from '@carbon/type/lib';
 
 import { action } from '@storybook/addon-actions';
 import { boolean, radios, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
 import React, { Fragment } from 'react';
+
+import ArrowRight20 from '@carbon/icons-react/lib/arrow--right/20';
+import Filter20 from '@carbon/icons-react/lib/filter/20';
+import { spacing04, spacing05 } from '@carbon/layout/lib';
+import { styles } from '@carbon/type/lib';
 
 import { disableCenteredStories, patterns } from '../../../.storybook';
 
@@ -97,7 +97,7 @@ disableCenteredStories(storiesOf(patterns('Panel'), module))
       closeSecond = () => {
         this.setState({ secondOpen: false });
       };
-      closethird = () => {
+      closeThird = () => {
         this.setState({ thirdOpen: false });
       };
       openFirst = () => {
@@ -128,9 +128,9 @@ disableCenteredStories(storiesOf(patterns('Panel'), module))
             <Panel
               key="p1"
               isOpen={this.state.firstOpen}
+              onClose={this.closeFirst}
               {...props()}
               closeButton={{
-                onClick: this.closeFirst,
                 label: text('closeButton.label', closeButtonLabel),
               }}
               primaryButton={{
@@ -166,9 +166,9 @@ disableCenteredStories(storiesOf(patterns('Panel'), module))
             <Panel
               key="p2"
               isOpen={this.state.secondOpen}
+              onClose={this.closeSecond}
               {...props()}
               closeButton={{
-                onClick: this.closeSecond,
                 label: text('closeButton.label', closeButtonLabel),
               }}
               renderFooter={() => (
@@ -219,9 +219,9 @@ disableCenteredStories(storiesOf(patterns('Panel'), module))
             <Panel
               key="p3"
               isOpen={this.state.thirdOpen}
+              onClose={this.closeThird}
               {...props()}
               closeButton={{
-                onClick: this.closethird,
                 label: closeButtonLabel,
               }}
             >

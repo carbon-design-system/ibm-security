@@ -42,6 +42,7 @@ exports[`DataTable Rendering renders 1`] = `
   isSelectable={false}
   isSortable={false}
   locale="en"
+  overflowMenuOnHover={true}
   render={[Function]}
   rows={
     Array [
@@ -135,6 +136,7 @@ exports[`DataTable Rendering renders 1`] = `
       },
     ]
   }
+  size="normal"
   sortRow={[Function]}
   translateWithId={[Function]}
 >
@@ -174,6 +176,7 @@ exports[`DataTable Rendering renders 1`] = `
       isSelectable={false}
       isSortable={false}
       locale="en"
+      overflowMenuOnHover={true}
       render={[Function]}
       rows={
         Array [
@@ -267,6 +270,7 @@ exports[`DataTable Rendering renders 1`] = `
           },
         ]
       }
+      size="normal"
       sortRow={[Function]}
       translateWithId={[Function]}
     >
@@ -276,6 +280,8 @@ exports[`DataTable Rendering renders 1`] = `
         >
           <Table
             isSortable={false}
+            overflowMenuOnHover={true}
+            size="normal"
           >
             <ScrollGradient
               className="security--data-table__table-wrapper"
@@ -305,6 +311,8 @@ exports[`DataTable Rendering renders 1`] = `
                 >
                   <Table
                     isSortable={false}
+                    overflowMenuOnHover={true}
+                    size="normal"
                   >
                     <table
                       className="bx--data-table bx--data-table--no-border"
@@ -1688,6 +1696,7 @@ exports[`DataTable Rendering renders a custom table 1`] = `
   isSelectable={false}
   isSortable={false}
   locale="en"
+  overflowMenuOnHover={true}
   render={[Function]}
   rows={
     Array [
@@ -1781,6 +1790,7 @@ exports[`DataTable Rendering renders a custom table 1`] = `
       },
     ]
   }
+  size="normal"
   sortRow={[Function]}
   translateWithId={[Function]}
 >
@@ -1820,6 +1830,7 @@ exports[`DataTable Rendering renders a custom table 1`] = `
       isSelectable={false}
       isSortable={false}
       locale="en"
+      overflowMenuOnHover={true}
       render={[Function]}
       rows={
         Array [
@@ -1913,6 +1924,7 @@ exports[`DataTable Rendering renders a custom table 1`] = `
           },
         ]
       }
+      size="normal"
       sortRow={[Function]}
       translateWithId={[Function]}
     >
@@ -1922,6 +1934,8 @@ exports[`DataTable Rendering renders a custom table 1`] = `
         >
           <Table
             isSortable={false}
+            overflowMenuOnHover={true}
+            size="normal"
           >
             <ScrollGradient
               className="security--data-table__table-wrapper"
@@ -1951,6 +1965,8 @@ exports[`DataTable Rendering renders a custom table 1`] = `
                 >
                   <Table
                     isSortable={false}
+                    overflowMenuOnHover={true}
+                    size="normal"
                   >
                     <table
                       className="bx--data-table bx--data-table--no-border"
@@ -3334,6 +3350,7 @@ exports[`DataTable Rendering renders a selectable table 1`] = `
   isSelectable={true}
   isSortable={false}
   locale="en"
+  overflowMenuOnHover={true}
   render={[Function]}
   rows={
     Array [
@@ -3427,6 +3444,7 @@ exports[`DataTable Rendering renders a selectable table 1`] = `
       },
     ]
   }
+  size="normal"
   sortRow={[Function]}
   translateWithId={[Function]}
 >
@@ -3466,6 +3484,7 @@ exports[`DataTable Rendering renders a selectable table 1`] = `
       isSelectable={true}
       isSortable={false}
       locale="en"
+      overflowMenuOnHover={true}
       render={[Function]}
       rows={
         Array [
@@ -3559,6 +3578,7 @@ exports[`DataTable Rendering renders a selectable table 1`] = `
           },
         ]
       }
+      size="normal"
       sortRow={[Function]}
       translateWithId={[Function]}
     >
@@ -3568,6 +3588,8 @@ exports[`DataTable Rendering renders a selectable table 1`] = `
         >
           <Table
             isSortable={false}
+            overflowMenuOnHover={true}
+            size="normal"
           >
             <ScrollGradient
               className="security--data-table__table-wrapper"
@@ -3597,6 +3619,8 @@ exports[`DataTable Rendering renders a selectable table 1`] = `
                 >
                   <Table
                     isSortable={false}
+                    overflowMenuOnHover={true}
+                    size="normal"
                   >
                     <table
                       className="bx--data-table bx--data-table--no-border"
@@ -4980,6 +5004,7 @@ exports[`DataTable Rendering renders a sortable table 1`] = `
   isSelectable={false}
   isSortable={true}
   locale="en"
+  overflowMenuOnHover={true}
   render={[Function]}
   rows={
     Array [
@@ -5073,6 +5098,7 @@ exports[`DataTable Rendering renders a sortable table 1`] = `
       },
     ]
   }
+  size="normal"
   sortRow={[Function]}
   translateWithId={[Function]}
 >
@@ -5112,6 +5138,7 @@ exports[`DataTable Rendering renders a sortable table 1`] = `
       isSelectable={false}
       isSortable={true}
       locale="en"
+      overflowMenuOnHover={true}
       render={[Function]}
       rows={
         Array [
@@ -5205,6 +5232,7 @@ exports[`DataTable Rendering renders a sortable table 1`] = `
           },
         ]
       }
+      size="normal"
       sortRow={[Function]}
       translateWithId={[Function]}
     >
@@ -5214,6 +5242,8 @@ exports[`DataTable Rendering renders a sortable table 1`] = `
         >
           <Table
             isSortable={true}
+            overflowMenuOnHover={true}
+            size="normal"
           >
             <ScrollGradient
               className="security--data-table__table-wrapper"
@@ -5243,6 +5273,8 @@ exports[`DataTable Rendering renders a sortable table 1`] = `
                 >
                   <Table
                     isSortable={true}
+                    overflowMenuOnHover={true}
+                    size="normal"
                   >
                     <table
                       className="bx--data-table bx--data-table--sort bx--data-table--no-border"
