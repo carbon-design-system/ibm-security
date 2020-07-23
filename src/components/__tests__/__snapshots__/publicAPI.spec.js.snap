@@ -949,6 +949,7 @@ Map {
     "defaultProps": Object {
       "className": "",
       "direction": "top",
+      "selectorPrimaryFocus": "[data-overflow-menu-primary-focus]",
     },
     "propTypes": Object {
       "children": Object {
@@ -967,6 +968,9 @@ Map {
         ],
         "type": "oneOf",
       },
+      "selectorPrimaryFocus": Object {
+        "type": "string",
+      },
     },
   },
   "ComboButtonItem" => Object {
@@ -976,7 +980,6 @@ Map {
       "href": undefined,
       "iconDescription": "",
       "onClick": [Function],
-      "primaryFocus": false,
       "renderIcon": null,
     },
     "propTypes": Object {
@@ -999,9 +1002,7 @@ Map {
       "onClick": Object {
         "type": "func",
       },
-      "primaryFocus": Object {
-        "type": "bool",
-      },
+      "primaryFocus": [Function],
       "renderIcon": Object {
         "args": Array [
           Array [
@@ -3569,6 +3570,7 @@ Map {
       "onChange": [Function],
       "open": false,
       "overflowMenuAriaLabel": undefined,
+      "selectorPrimaryFocus": "[data-overflow-menu-primary-focus]",
       "title": undefined,
     },
     "propTypes": Object {
@@ -3624,6 +3626,9 @@ Map {
         "type": "bool",
       },
       "overflowMenuAriaLabel": Object {
+        "type": "string",
+      },
+      "selectorPrimaryFocus": Object {
         "type": "string",
       },
       "title": Object {
