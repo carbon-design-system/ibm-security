@@ -7687,6 +7687,14 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   opacity: 1;
 }
 
+.security--scroll-gradient--initial > .security--scroll-gradient__before {
+  transition-duration: 0.1s;
+}
+
+.security--scroll-gradient--end > .security--scroll-gradient__after {
+  transition-duration: 0.1s;
+}
+
 .bx--search {
   display: flex;
   align-items: center;

@@ -89,4 +89,12 @@
       opacity: 1;
     }
   }
+
+  &--initial > #{$block}__before {
+    transition-duration: $transition-duration--fast;
+  }
+
+  &--end > #{$block}__after {
+    transition-duration: $transition-duration--fast;
+  }
 }
