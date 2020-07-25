@@ -17821,6 +17821,12 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   word-break: break-all;
 }
 
+.security--header__popover__profile__description {
+  padding-right: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
 .security--header__popover__profile__body--account {
   padding-right: 1.5rem;
   padding-bottom: 1rem;

@@ -3926,6 +3926,9 @@ Map {
               ],
               "type": "shape",
             },
+            "description": Object {
+              "type": "node",
+            },
             "email": Object {
               "type": "string",
             },
@@ -7622,6 +7625,9 @@ Map {
                     ],
                     "type": "shape",
                   },
+                  "description": Object {
+                    "type": "node",
+                  },
                   "email": Object {
                     "type": "string",
                   },
@@ -7682,6 +7688,9 @@ Map {
                 },
               ],
               "type": "shape",
+            },
+            "description": Object {
+              "type": "node",
             },
             "email": Object {
               "type": "string",
