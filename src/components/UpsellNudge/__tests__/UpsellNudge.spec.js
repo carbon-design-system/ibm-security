@@ -8,8 +8,6 @@ import { render } from '@testing-library/react';
 
 import React from 'react';
 
-import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
-
 import { UpsellNudge } from '../../..';
 import { namespace } from '..';
 
@@ -34,7 +32,7 @@ describe(name, () => {
   });
 
   test('has no axe or DAP violations', async () => {
-    const { container } = renderWithinLandmark(<UpsellNudge {...props()} />);
+    const { container } = upsellNudge;
 
     await expect(container).toHaveNoAxeViolations();
     await expect(container).toHaveNoDAPViolations(name);
@@ -53,48 +51,50 @@ describe(name, () => {
   });
 
   test(`adds content for the '${name}'`, () => {
+    const { getByText, rerender } = upsellNudge;
+
     const children = 'children';
 
-    expect(
-      render(<UpsellNudge {...props({ children })} />).getByText(children)
-    ).toBeInTheDocument();
+    rerender(<UpsellNudge {...props({ children })} />);
+
+    expect(getByText(children)).toBeInTheDocument();
   });
 
   test('adds the light variant', () => {
-    expect(
-      render(
-        <UpsellNudge {...props({ light: true })} />
-      ).container.querySelector(`.${namespace}--light`)
-    ).toBeInTheDocument();
+    const { container, rerender } = upsellNudge;
+
+    rerender(<UpsellNudge {...props({ light: true })} />);
+
+    expect(container.querySelector(`.${namespace}--light`)).toBeInTheDocument();
   });
 
   test('adds the base element used to build the title', () => {
+    const { container, rerender } = upsellNudge;
+
     const element = 'h1';
 
-    expect(
-      render(<UpsellNudge {...props({ element })} />).container.querySelector(
-        element
-      )
-    ).toBeInTheDocument();
+    rerender(<UpsellNudge {...props({ element })} />);
+
+    expect(container.querySelector(element)).toBeInTheDocument();
   });
 
   test('adds a class to the containing node', () => {
+    const { container, rerender } = upsellNudge;
+
     const className = 'className';
 
-    expect(
-      render(<UpsellNudge {...props({ className })} />).container.querySelector(
-        `.${className}`
-      )
-    ).toBeInTheDocument();
+    rerender(<UpsellNudge {...props({ className })} />);
+
+    expect(container.querySelector(`.${className}`)).toBeInTheDocument();
   });
 
   test('adds additional props to the containing node', () => {
+    const { getByTestId, rerender } = upsellNudge;
+
     const dataTestId = 'dataTestId';
 
-    expect(
-      render(
-        <UpsellNudge {...props({ 'data-testid': dataTestId })} />
-      ).getByTestId(dataTestId)
-    ).toBeInTheDocument();
+    rerender(<UpsellNudge {...props({ 'data-testid': dataTestId })} />);
+
+    expect(getByTestId(dataTestId)).toBeInTheDocument();
   });
 });
