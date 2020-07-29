@@ -10,7 +10,7 @@ exports[`Toolbar Rendering renders correctly 1`] = `
     >
       <li>
         <button
-          aria-describedby="menu"
+          aria-expanded="false"
           aria-label="Toggle menu"
           class="security--button--icon security--toolbar__button security--button--icon--tooltip security--button--icon--tooltip--right"
         >
@@ -34,7 +34,7 @@ exports[`Toolbar Rendering renders correctly 1`] = `
       </li>
       <li>
         <button
-          aria-describedby="settings"
+          aria-expanded="false"
           aria-label="Toggle settings"
           class="security--button--icon security--toolbar__button security--button--icon--tooltip security--button--icon--tooltip--right"
         >
@@ -61,7 +61,7 @@ exports[`Toolbar Rendering renders correctly 1`] = `
       </li>
       <li>
         <button
-          aria-describedby="support"
+          aria-expanded="false"
           aria-label="Toggle support"
           class="security--button--icon security--toolbar__button security--button--icon--tooltip security--button--icon--tooltip--right"
         >
@@ -109,7 +109,7 @@ exports[`Toolbar Rendering renders the HTML of the node's subtree 1`] = `
     >
       <li>
         <button
-          aria-describedby="menu"
+          aria-expanded="false"
           aria-label="Toggle menu"
           class="security--button--icon security--toolbar__button security--button--icon--tooltip security--button--icon--tooltip--right"
         >
@@ -133,7 +133,7 @@ exports[`Toolbar Rendering renders the HTML of the node's subtree 1`] = `
       </li>
       <li>
         <button
-          aria-describedby="settings"
+          aria-expanded="false"
           aria-label="Toggle settings"
           class="security--button--icon security--toolbar__button security--button--icon--tooltip security--button--icon--tooltip--right"
         >
@@ -160,7 +160,7 @@ exports[`Toolbar Rendering renders the HTML of the node's subtree 1`] = `
       </li>
       <li>
         <button
-          aria-describedby="support"
+          aria-expanded="false"
           aria-label="Toggle support"
           class="security--button--icon security--toolbar__button security--button--icon--tooltip security--button--icon--tooltip--right"
         >
@@ -208,7 +208,8 @@ exports[`Toolbar Rendering renders the panel correctly 1`] = `
     >
       <li>
         <IconButton
-          aria-describedby="menu"
+          aria-controls="security--toolbar--toolbar--menu"
+          aria-expanded={true}
           aria-label="Toggle menu"
           className="security--toolbar__button security--toolbar__button--active"
           iconClassName="security--toolbar__icon"
@@ -230,7 +231,7 @@ exports[`Toolbar Rendering renders the panel correctly 1`] = `
       </li>
       <li>
         <IconButton
-          aria-describedby="settings"
+          aria-expanded={false}
           aria-label="Toggle settings"
           className="security--toolbar__button"
           iconClassName="security--toolbar__icon"
@@ -252,7 +253,7 @@ exports[`Toolbar Rendering renders the panel correctly 1`] = `
       </li>
       <li>
         <IconButton
-          aria-describedby="support"
+          aria-expanded={false}
           aria-label="Toggle support"
           className="security--toolbar__button"
           iconClassName="security--toolbar__icon"
@@ -281,6 +282,7 @@ exports[`Toolbar Rendering renders the panel correctly 1`] = `
   >
     <aside
       className="security--toolbar__panel"
+      id="security--toolbar--toolbar--menu"
       role="menu"
     >
       <Transition
@@ -376,7 +378,7 @@ exports[`Toolbar With renderAddons should render the toolbar with addon icon 1`]
     >
       <li>
         <IconButton
-          aria-describedby="menu"
+          aria-expanded={false}
           aria-label="Toggle menu"
           className="security--toolbar__button"
           iconClassName="security--toolbar__icon"
@@ -398,7 +400,7 @@ exports[`Toolbar With renderAddons should render the toolbar with addon icon 1`]
       </li>
       <li>
         <IconButton
-          aria-describedby="settings"
+          aria-expanded={false}
           aria-label="Toggle settings"
           className="security--toolbar__button"
           iconClassName="security--toolbar__icon"
@@ -420,7 +422,7 @@ exports[`Toolbar With renderAddons should render the toolbar with addon icon 1`]
       </li>
       <li>
         <IconButton
-          aria-describedby="support"
+          aria-expanded={false}
           aria-label="Toggle support"
           className="security--toolbar__button"
           iconClassName="security--toolbar__icon"
@@ -485,7 +487,7 @@ exports[`Toolbar With renderAddons should render the toolbar with addon icon 2`]
     >
       <li>
         <button
-          aria-describedby="menu"
+          aria-expanded="false"
           aria-label="Toggle menu"
           class="security--button--icon security--toolbar__button security--button--icon--tooltip security--button--icon--tooltip--right"
         >
@@ -509,7 +511,7 @@ exports[`Toolbar With renderAddons should render the toolbar with addon icon 2`]
       </li>
       <li>
         <button
-          aria-describedby="settings"
+          aria-expanded="false"
           aria-label="Toggle settings"
           class="security--button--icon security--toolbar__button security--button--icon--tooltip security--button--icon--tooltip--right"
         >
@@ -536,7 +538,7 @@ exports[`Toolbar With renderAddons should render the toolbar with addon icon 2`]
       </li>
       <li>
         <button
-          aria-describedby="support"
+          aria-expanded="false"
           aria-label="Toggle support"
           class="security--button--icon security--toolbar__button security--button--icon--tooltip security--button--icon--tooltip--right"
         >
