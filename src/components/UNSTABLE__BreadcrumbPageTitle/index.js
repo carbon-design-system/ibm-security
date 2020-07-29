@@ -19,7 +19,7 @@ import { isClient } from '../../globals/utils/capabilities';
 import { Breadcrumb, BreadcrumbItem } from '../Breadcrumb';
 import Transition from '../Transition';
 
-const namespace = getComponentNamespace('breadcrumb-page-title');
+export const namespace = getComponentNamespace('breadcrumb-page-title');
 
 /**
  * The breadcrumb page title indicates the user's position on a website or platform, depicting hierarchy, facilitating quick transitions, and displaying the navigation of user path.
