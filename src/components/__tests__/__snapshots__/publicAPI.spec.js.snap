@@ -12211,50 +12211,17 @@ Map {
       },
     },
   },
-  "UNSTABLE__BreadcrumbPageTitle" => Object {
+  "UNSTABLE__PageTitle" => Object {
     "defaultProps": Object {
+      "children": null,
       "className": null,
-      "element": "h1",
-      "path": null,
     },
     "propTypes": Object {
-      "aria-label": Object {
-        "isRequired": true,
-        "type": "string",
+      "children": Object {
+        "type": "node",
       },
       "className": Object {
         "type": "string",
-      },
-      "element": Object {
-        "type": "elementType",
-      },
-      "path": Object {
-        "args": Array [
-          Object {
-            "args": Array [
-              Object {
-                "children": Object {
-                  "type": "node",
-                },
-                "className": Object {
-                  "type": "string",
-                },
-                "href": Object {
-                  "type": "string",
-                },
-                "id": Object {
-                  "isRequired": true,
-                  "type": "string",
-                },
-                "isCurrentPage": Object {
-                  "type": "bool",
-                },
-              },
-            ],
-            "type": "shape",
-          },
-        ],
-        "type": "arrayOf",
       },
       "title": Object {
         "isRequired": true,

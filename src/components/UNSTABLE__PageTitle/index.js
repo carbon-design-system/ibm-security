@@ -1,17 +1,11 @@
 /**
- * @file Breadcrumb page title.
+ * @file Page title.
  * @copyright IBM Security 2020
  */
 
 import classnames from 'classnames';
-import { arrayOf, elementType, shape, string } from 'prop-types';
-import React, {
-  createElement,
-  forwardRef,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from 'react';
+import { node, string } from 'prop-types';
+import React, { forwardRef, useLayoutEffect, useRef, useState } from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
 import { isClient } from '../../globals/utils/capabilities';
@@ -19,24 +13,19 @@ import { isClient } from '../../globals/utils/capabilities';
 import { Breadcrumb, BreadcrumbItem } from '../Breadcrumb';
 import Transition from '../Transition';
 
-export const namespace = getComponentNamespace('breadcrumb-page-title');
+export const namespace = getComponentNamespace('page-title');
 
 /**
- * The breadcrumb page title indicates the user's position on a website or platform, depicting hierarchy, facilitating quick transitions, and displaying the navigation of user path.
+ * The page title indicates the user's position on a website or platform, depicting hierarchy, facilitating quick transitions, and displaying the navigation of user path.
  */
-const BreadcrumbPageTitle = ({
-  'aria-label': ariaLabel,
-  className,
-  element,
-  path,
-  title,
-  ...other
-}) => {
-  const Title = forwardRef((props, ref) =>
-    createElement(element, { ref, ...props }, title)
-  );
+const PageTitle = ({ children, className, title, ...other }) => {
+  const Title = forwardRef((props, ref) => (
+    <h1 ref={ref} {...props}>
+      {title}
+    </h1>
+  ));
 
-  const ref = useRef(null);
+  const ref = useRef();
   const [isTitleVisible, setIsTitleVisible] = useState(false);
 
   if (isClient()) {
@@ -70,14 +59,9 @@ const BreadcrumbPageTitle = ({
   return (
     <div className={classnames(namespace, className)} {...other}>
       <div className={`${namespace}__container`}>
-        {(isTitleVisible || path) && (
-          <Breadcrumb aria-label={ariaLabel} noTrailingSlash>
-            {path &&
-              path.map(({ children, href, id, ...other }) => (
-                <BreadcrumbItem key={id} id={id} href={href} {...other}>
-                  {children}
-                </BreadcrumbItem>
-              ))}
+        {(isTitleVisible || children) && (
+          <Breadcrumb noTrailingSlash>
+            {children}
 
             <Transition className={namespace}>
               {isTitleVisible && (
@@ -101,33 +85,20 @@ const BreadcrumbPageTitle = ({
   );
 };
 
-BreadcrumbPageTitle.propTypes = {
+PageTitle.propTypes = {
   /** Specify the text of the title */
   title: string.isRequired,
 
-  /** Specify the label for the breadcrumb container */
-  'aria-label': string.isRequired,
-
-  /** Specify an array of paths for the breadcrumbs - See also https://react.carbondesignsystem.com/?path=/story/breadcrumb--current-page  */
-  path: arrayOf(
-    shape({
-      /** Specify the key for the breadcrumb item */
-      id: string.isRequired,
-      ...BreadcrumbItem.propTypes,
-    })
-  ),
-
-  /** Specify the base element to use to build the title */
-  element: elementType,
+  /** Provide the contents of the `PageTitle` */
+  children: node,
 
   /** Provide an optional class to be applied to the containing node */
   className: string,
 };
 
-BreadcrumbPageTitle.defaultProps = {
-  path: null,
-  element: 'h1',
+PageTitle.defaultProps = {
+  children: null,
   className: null,
 };
 
-export default BreadcrumbPageTitle;
+export default PageTitle;

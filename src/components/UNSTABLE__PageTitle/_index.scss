@@ -1,6 +1,6 @@
 ////
-/// Breadcrumb page title.
-/// @group breadcrumb-page-title
+/// Page title.
+/// @group page-title
 /// @copyright IBM Security 2020
 ////
 
@@ -14,21 +14,20 @@
 
 @import '../Component/mixins';
 
-@include security--component($name: breadcrumb-page-title) {
+@include security--component($name: page-title) {
   /// Spacing.
   /// @type Length
-  $breadcrumb-page-title__spacing: $carbon--spacing-05;
+  $page-title__spacing: $carbon--spacing-05;
 
   /// Box shadow sizing.
   /// @type Length
-  $breadcrumb-page-title__box-shadow__sizing: carbon--mini-units(
+  $page-title__box-shadow__sizing: carbon--mini-units(
     $count: 1,
   );
 
-  padding-top: $breadcrumb-page-title__spacing;
-  padding-bottom: $breadcrumb-page-title__spacing;
-  box-shadow: 0 carbon--mini-units($count: 2)
-    $breadcrumb-page-title__box-shadow__sizing -$breadcrumb-page-title__box-shadow__sizing
+  padding-top: $page-title__spacing;
+  padding-bottom: $page-title__spacing;
+  box-shadow: 0 carbon--mini-units($count: 2) $page-title__box-shadow__sizing -$page-title__box-shadow__sizing
     $header__color__background;
 
   &__container {

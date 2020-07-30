@@ -261,7 +261,7 @@ export UnorderedList from './components/UnorderedList';
 export { Wizard, WizardStep } from './components/Wizard';
 
 // Experimental.
-export UNSTABLE__BreadcrumbPageTitle from './components/UNSTABLE__BreadcrumbPageTitle';
+export UNSTABLE__PageTitle from './components/UNSTABLE__PageTitle';
 export UNSTABLE__Pagination, {
   PageSelector,
 } from './components/UNSTABLE__Pagination';
