@@ -1,16 +1,18 @@
 /**
  * @file Tabs stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
-import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { breakpoints } from '@carbon/layout';
+
 import { action } from '@storybook/addon-actions';
 import { boolean, number, text } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
+import React from 'react';
 
 import { components } from '../../../.storybook';
 
-import { Tabs, Tab, TabsSkeleton } from '../../';
+import { Tabs, Tab, TabsSkeleton } from '../..';
 
 const props = {
   tabs: () => ({
@@ -53,6 +55,9 @@ const TabContentRenderedOnlyWhenSelected = ({ selected, children, ...other }) =>
   );
 
 storiesOf(components('Tabs'), module)
+  .addDecorator(story => (
+    <div style={{ minWidth: breakpoints.md.width }}>{story()}</div>
+  ))
   .add(
     'Default',
     () => (

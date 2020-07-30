@@ -1,10 +1,13 @@
 ////
 /// Scroll gradient component.
 /// @group scroll-gradient
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import '@carbon/layout/scss/spacing';
+@import '@carbon/motion/scss/motion';
+
+@import '../../globals/motion/index';
 
 @import '../Component/mixins';
 
@@ -33,6 +36,9 @@
     position: absolute;
     opacity: 0;
     pointer-events: none;
+    transition-duration: $transition-duration;
+    transition-property: opacity;
+    transition-timing-function: carbon--motion($name: standard);
     z-index: 1;
   }
 
@@ -82,5 +88,13 @@
     > #{$block}__before {
       opacity: 1;
     }
+  }
+
+  &--initial > #{$block}__before {
+    transition-duration: $transition-duration--fast;
+  }
+
+  &--end > #{$block}__after {
+    transition-duration: $transition-duration--fast;
   }
 }
