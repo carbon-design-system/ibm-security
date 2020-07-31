@@ -14,6 +14,8 @@ import { namespace } from '..';
 const { name } = UNSTABLE__PageTitle;
 
 describe(name, () => {
+  const children = 'children';
+  const dataTestId = 'dataTestId';
   const title = 'Title';
 
   const props = ({ ...props }) => ({
@@ -41,8 +43,6 @@ describe(name, () => {
   test('adds contents of the `PageTitle`', () => {
     const { rerender } = pageTitle;
 
-    const children = 'children';
-
     rerender(<UNSTABLE__PageTitle {...props({ children })} />);
 
     expect(pageTitle.getByText(children)).toBeInTheDocument();
@@ -58,12 +58,14 @@ describe(name, () => {
     expect(container.querySelector(`.${className}`)).toBeInTheDocument();
   });
 
-  test('adds additional props to the containing node', () => {
+  test('adds additional props to the breadcrumb node', () => {
     const { getByTestId, rerender } = pageTitle;
 
-    const dataTestId = 'dataTestId';
-
-    rerender(<UNSTABLE__PageTitle {...props({ 'data-testid': dataTestId })} />);
+    rerender(
+      <UNSTABLE__PageTitle
+        {...props({ children, 'data-testid': dataTestId })}
+      />
+    );
 
     expect(getByTestId(dataTestId)).toBeInTheDocument();
   });
@@ -86,11 +88,17 @@ describe(name, () => {
     });
 
     test('renders the breadcrumbs when the user scrolls', () => {
-      // expect().not.toBeInTheDocument();
+      const { queryByTestId, rerender } = pageTitle;
+
+      rerender(
+        <UNSTABLE__PageTitle {...props({ 'data-testid': dataTestId })} />
+      );
+
+      expect(queryByTestId(dataTestId)).not.toBeInTheDocument();
 
       onScroll();
 
-      // expect().toBeInTheDocument();
+      expect(queryByTestId(dataTestId)).toBeInTheDocument();
     });
   });
 });

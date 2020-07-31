@@ -57,12 +57,11 @@ const PageTitle = ({ children, className, title, ...other }) => {
   }
 
   return (
-    <div className={classnames(namespace, className)} {...other}>
+    <div className={classnames(namespace, className)}>
       <div className={`${namespace}__container`}>
         {(isTitleVisible || children) && (
-          <Breadcrumb noTrailingSlash>
+          <Breadcrumb noTrailingSlash {...other}>
             {children}
-
             <Transition className={namespace}>
               {isTitleVisible && (
                 <BreadcrumbItem isCurrentPage>
