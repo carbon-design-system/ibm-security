@@ -1130,6 +1130,7 @@ Map {
       "children": undefined,
       "className": undefined,
       "closeButton": undefined,
+      "focusTrap": true,
       "inline": false,
       "labels": Object {},
       "noIcon": false,
@@ -1138,6 +1139,7 @@ Map {
       "onOpen": [Function],
       "primaryButton": undefined,
       "renderFooter": null,
+      "rootNode": undefined,
       "score": undefined,
       "scoreDescription": [Function],
       "scoreThresholds": Array [
@@ -1184,6 +1186,9 @@ Map {
         ],
         "type": "shape",
       },
+      "focusTrap": Object {
+        "type": "bool",
+      },
       "inline": Object {
         "type": "bool",
       },
@@ -1223,6 +1228,12 @@ Map {
       "primaryButton": [Function],
       "renderFooter": Object {
         "type": "func",
+      },
+      "rootNode": Object {
+        "args": Array [
+          [Function],
+        ],
+        "type": "instanceOf",
       },
       "score": Object {
         "type": "number",
@@ -3428,6 +3439,7 @@ Map {
       "onChange": [Function],
       "open": false,
       "overflowMenuAriaLabel": undefined,
+      "selectorPrimaryFocus": "[data-overflow-menu-primary-focus]",
       "title": undefined,
     },
     "propTypes": Object {
@@ -3483,6 +3495,9 @@ Map {
         "type": "bool",
       },
       "overflowMenuAriaLabel": Object {
+        "type": "string",
+      },
+      "selectorPrimaryFocus": Object {
         "type": "string",
       },
       "title": Object {
@@ -4402,6 +4417,9 @@ Map {
                     ],
                   ],
                   "type": "oneOfType",
+                },
+                "setFocus": Object {
+                  "type": "bool",
                 },
                 "size": Object {
                   "args": Array [
@@ -6338,6 +6356,7 @@ Map {
       "onClose": [Function],
       "primaryButton": undefined,
       "renderFooter": null,
+      "rootNode": undefined,
       "secondaryButton": undefined,
       "stopPropagation": false,
       "stopPropagationEvents": undefined,
@@ -6413,6 +6432,12 @@ Map {
       "primaryButton": [Function],
       "renderFooter": Object {
         "type": "func",
+      },
+      "rootNode": Object {
+        "args": Array [
+          [Function],
+        ],
+        "type": "instanceOf",
       },
       "secondaryButton": [Function],
       "stopPropagation": Object {
