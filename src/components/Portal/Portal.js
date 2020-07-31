@@ -183,7 +183,7 @@ class Portal extends Component {
         <FocusTrap
           active={focusTrap}
           focusTrapOptions={{
-            allowOutsideClick: true,
+            allowOutsideClick: () => true,
             initialFocus,
           }}
         >
