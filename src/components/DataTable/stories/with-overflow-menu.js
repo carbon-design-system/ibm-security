@@ -63,7 +63,6 @@ const overflowStory = props => (
                         <OverflowMenuItem
                           key={key}
                           itemText={`${itemText} ${index + 1}`}
-                          primaryFocus={index === 0}
                         />
                       );
                     })}
