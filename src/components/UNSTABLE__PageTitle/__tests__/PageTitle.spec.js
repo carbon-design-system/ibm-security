@@ -87,7 +87,7 @@ describe(name, () => {
       expect(getTitle()).toBeInTheDocument();
     });
 
-    test('renders the breadcrumbs when the user scrolls', () => {
+    test('renders the breadcrumb when the user scrolls', () => {
       const { queryByTestId, rerender } = pageTitle;
 
       rerender(
