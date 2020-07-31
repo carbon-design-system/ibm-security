@@ -1,17 +1,17 @@
 /**
  * @file Portal.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import FocusTrap from 'focus-trap-react';
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { createPortal } from 'react-dom';
-import PropTypes from 'prop-types';
+
+import { getComponentNamespace } from '../../globals/namespace';
 
 import { isClient, isNode } from '../../globals/utils/capabilities';
 import composeEventHandlers from '../../globals/utils/events';
-
-import { getComponentNamespace } from '../../globals/namespace';
 
 const namespace = getComponentNamespace('portal');
 
@@ -183,6 +183,7 @@ class Portal extends Component {
         <FocusTrap
           active={focusTrap}
           focusTrapOptions={{
+            allowOutsideClick: true,
             initialFocus,
           }}
         >
