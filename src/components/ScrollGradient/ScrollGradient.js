@@ -1,19 +1,24 @@
 /**
  * @file Scroll gradient.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
-import React, { Component } from 'react';
 import classnames from 'classnames';
-import { throttle } from 'throttle-debounce';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 
-import { isClient } from '../../globals/utils/capabilities';
+import { throttle } from 'throttle-debounce';
+
 import { getComponentNamespace } from '../../globals/namespace';
+import { isClient } from '../../globals/utils/capabilities';
 
 export const namespace = getComponentNamespace('scroll-gradient');
 
 const scrollDirection = { X: 'X', Y: 'Y' };
+
+// Checks if the native version is available and switch between this and the polyfill to improve performance on browsers with native support - https://www.npmjs.com/package/resize-observer-polyfill
+const ResizeObserver =
+  (isClient() && window.ResizeObserver) || require('resize-observer-polyfill');
 
 class ScrollGradient extends Component {
   static propTypes = {
@@ -96,7 +101,10 @@ class ScrollGradient extends Component {
     }
 
     if (isClient()) {
-      window.addEventListener('resize', this.updateHandler);
+      // https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver
+      this.resizeObserver = new ResizeObserver(this.updateHandler);
+
+      this.resizeObserver.observe(this.scrollContainer);
     }
   }
 
@@ -110,7 +118,7 @@ class ScrollGradient extends Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.updateHandler);
+    this.resizeObserver.disconnect();
   }
 
   /**
