@@ -1,6 +1,6 @@
 {
   "name": "@carbon/ibm-security",
-  "version": "1.29.0-prerelease.6",
+  "version": "1.29.0-prerelease.7",
   "description": "Carbon for IBM Security",
   "license": "Apache-2.0",
   "main": "lib/index.js",
@@ -69,6 +69,7 @@
     "react-transition-group": "^4.3.0",
     "recompose": "0.30.0",
     "reduced-utils": "0.1.2",
+    "resize-observer-polyfill": "^1.5.1",
     "throttle-debounce": "^2.0.1"
   },
   "devDependencies": {

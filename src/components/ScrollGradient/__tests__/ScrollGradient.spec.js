@@ -1,12 +1,15 @@
 /**
  * @file Scroll gradient tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import React from 'react';
 import { mount } from 'enzyme';
 
+// JSDOM hasn't implemented `ResizeObserver` yet, so the mock needs to be moved into a separate file and included before the tested file - https://jestjs.io/docs/en/manual-mocks#mocking-methods-which-are-not-implemented-in-jsdom
+import { disconnectMock, observeMock } from '../__mocks__';
 import ScrollGradient, { namespace } from '../ScrollGradient';
+
 import { className, children } from '../_mocks_';
 
 describe('ScrollGradient', () => {
@@ -58,22 +61,31 @@ describe('ScrollGradient', () => {
       expect(onScroll).toHaveBeenCalledTimes(1);
     });
 
-    it('adds resize event listener when mounted', () => {
-      const spy = jest.spyOn(window, 'addEventListener');
-      scrollGradient = mount(
-        <ScrollGradient className={className} color="blue">
-          {children}
-        </ScrollGradient>
-      );
-      expect(spy).toHaveBeenCalledWith('resize', expect.any(Function));
-      spy.mockRestore();
-    });
+    describe('`ResizeObserver`', () => {
+      beforeEach(() => {
+        disconnectMock.mockClear();
+        observeMock.mockClear();
+      });
 
-    it('removes resize event listener when unmounted', () => {
-      const spy = jest.spyOn(window, 'removeEventListener');
-      scrollGradient.unmount();
-      expect(spy).toHaveBeenCalledWith('resize', expect.any(Function));
-      spy.mockRestore();
+      afterAll(() => {
+        window.ResizeObserver = undefined;
+      });
+
+      it('adds `ResizeObserver` when mounted', () => {
+        scrollGradient = mount(
+          <ScrollGradient className={className} color="blue">
+            {children}
+          </ScrollGradient>
+        );
+
+        expect(observeMock).toBeCalledTimes(1);
+      });
+
+      it('removes `ResizeObserver` when unmounted', () => {
+        scrollGradient.unmount();
+
+        expect(disconnectMock).toBeCalledTimes(1);
+      });
     });
   });
 
