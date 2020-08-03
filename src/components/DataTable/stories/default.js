@@ -4,6 +4,7 @@
  */
 
 import React from 'react';
+
 import { DataTable } from '../../..';
 import { headers, missingDataCharacter, rows } from '../_mocks_';
 

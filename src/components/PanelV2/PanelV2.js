@@ -17,7 +17,7 @@ import setupGetInstanceId from 'carbon-components-react/lib/tools/setupGetInstan
 import { getComponentNamespace } from '../../globals/namespace';
 import * as defaultLabels from '../../globals/nls';
 
-import { isClient } from '../../globals/utils/capabilities';
+import { isClient, isNode } from '../../globals/utils/capabilities';
 
 import Button from '../Button';
 import IconButton from '../IconButton';
@@ -48,6 +48,7 @@ function PanelV2({
   labels,
   isOpen,
   onClose,
+  rootNode,
   ...other
 }) {
   const [bodyMargin, setBodyMargin] = useState(0);
@@ -118,6 +119,7 @@ function PanelV2({
             stopPropagation={stopPropagation}
             stopPropagationEvents={stopPropagationEvents}
             onOverlayClick={onClose}
+            rootNode={rootNode}
           >
             {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
             <section
@@ -278,6 +280,9 @@ PanelV2.propTypes = {
   /** @type {Function} Footer render prop. */
   renderFooter: PropTypes.func,
 
+  /** @type {ReactNode|any} The root node for rendering the panel */
+  rootNode: isNode() ? PropTypes.instanceOf(Node) : PropTypes.any,
+
   /** @type {Object<Object>} An object list of secondary button props. */
   secondaryButton: deprecate(
     buttonType,
@@ -325,6 +330,7 @@ PanelV2.defaultProps = {
   labels: {},
   primaryButton: undefined,
   renderFooter: null,
+  rootNode: undefined,
   secondaryButton: undefined,
   stopPropagation: false,
   stopPropagationEvents: undefined,
