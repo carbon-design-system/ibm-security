@@ -15663,8 +15663,12 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .security--filter .bx--list-box__field {
+  position: fixed;
+  height: 2.5rem;
   padding-right: 0;
   padding-left: 0;
+  background-color: inherit;
+  z-index: 10000;
 }
 
 .security--filter .bx--list-box__menu-item__option {
@@ -15693,6 +15697,10 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 .security--filter__add__icon {
   fill: currentColor;
   visibility: hidden;
+}
+
+.security--filter__list-container {
+  padding-top: 2.5rem;
 }
 
 .security--filter__list-item:focus .security--filter__add__icon, .security--filter__list-item:hover .security--filter__add__icon {

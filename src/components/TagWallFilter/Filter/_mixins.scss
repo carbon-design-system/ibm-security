@@ -1,14 +1,17 @@
 ////
 /// Filter mixins.
 /// @filter
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import '@carbon/layout/scss/spacing';
 @import '@carbon/layout/scss/mini-unit';
 @import '@carbon/themes/scss/tokens';
+
 @import 'carbon-components/scss/globals/scss/helper-classes';
 @import 'carbon-components/scss/globals/scss/helper-mixins';
+@import 'carbon-components/scss/globals/scss/layout';
+
 @import '../../../globals/namespace/index';
 
 /// Name.
@@ -24,10 +27,20 @@ $filter__namespace: get-component-namespace(
 @mixin filter {
   $root: &;
 
+  /// Dimensions.
+  /// @type Length
+  $filter__sizing__dimensions: carbon--mini-units(
+    $count: 5,
+  );
+
   .#{$prefix}--list-box {
     &__field {
+      position: fixed;
+      height: $filter__sizing__dimensions;
       padding-right: 0;
       padding-left: 0;
+      background-color: inherit;
+      z-index: z($layer: floating);
     }
 
     &__menu-item__option {
@@ -59,6 +72,10 @@ $filter__namespace: get-component-namespace(
     }
   }
 
+  &__list-container {
+    padding-top: $filter__sizing__dimensions;
+  }
+
   &__list-item {
     &:focus,
     &:hover {
@@ -68,7 +85,7 @@ $filter__namespace: get-component-namespace(
     }
 
     &:focus {
-      @include focus-outline('outline');
+      @include focus-outline($type: outline);
     }
 
     &:hover {
