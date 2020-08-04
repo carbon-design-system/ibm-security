@@ -29,7 +29,7 @@ import { patterns } from '../../../.storybook';
 
 import { IconButton, IconButtonBar } from '../..';
 
-import { className, iconClassName, label, sizes } from '../IconButton/_mocks_';
+import { className, iconClassName, sizes } from '../IconButton/_mocks_';
 import { TooltipDirection } from '../IconButton/IconButton';
 
 storiesOf(patterns('IconButtonBar'), module).add(
@@ -47,7 +47,7 @@ storiesOf(patterns('IconButtonBar'), module).add(
         ),
         disabled: false,
         iconClassName,
-        label: `${label} 1`,
+        label: 'Label 1',
         onClick: action('onClick'),
         renderIcon:
           size === 'sm'
@@ -63,7 +63,7 @@ storiesOf(patterns('IconButtonBar'), module).add(
         divider: undefined,
         disabled: false,
         iconClassName,
-        label: `${label} 2`,
+        label: 'Label 2',
         onClick: action('onClick'),
         renderIcon:
           size === 'sm'
@@ -78,8 +78,9 @@ storiesOf(patterns('IconButtonBar'), module).add(
         className,
         disabled: false,
         iconClassName,
-        label: `${label} 3`,
+        label: 'Label 3',
         onClick: action('onClick'),
+        setFocus: true,
         renderIcon:
           size === 'sm'
             ? Locked16
@@ -93,7 +94,7 @@ storiesOf(patterns('IconButtonBar'), module).add(
         className,
         disabled: false,
         iconClassName,
-        label: `${label} 4`,
+        label: 'Label 4',
         onClick: action('onClick'),
         renderIcon:
           size === 'sm'

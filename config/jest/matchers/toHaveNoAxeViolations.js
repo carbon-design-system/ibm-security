@@ -75,4 +75,4 @@ function toHaveNoAxeViolations(node, options = {}) {
   });
 }
 
-module.exports = toHaveNoAxeViolations;
+export default toHaveNoAxeViolations;

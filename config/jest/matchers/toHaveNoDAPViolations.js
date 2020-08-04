@@ -28,4 +28,4 @@ async function toHaveNoDAPViolations(node, label) {
   };
 }
 
-module.exports = toHaveNoDAPViolations;
+export default toHaveNoDAPViolations;

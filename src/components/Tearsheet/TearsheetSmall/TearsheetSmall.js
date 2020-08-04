@@ -8,6 +8,7 @@ import Close20 from '@carbon/icons-react/lib/close/20';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
+import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
 
 import { getComponentNamespace } from '../../../globals/namespace';
 import * as defaultLabels from '../../../globals/nls';
@@ -49,14 +50,16 @@ class TearsheetSmall extends PureComponent {
     return null;
   }
 
-  renderProp = prop => (typeof prop === 'function' ? prop() : prop);
+  renderProp = (prop, ...args) =>
+    typeof prop === 'function' ? prop(...args) : prop;
 
   renderBody = () => {
-    if (React.Children.count(this.props.children) > 0) {
-      return this.props.children;
-    }
+    const { body, children } = this.props;
+    const { loading } = this.state;
 
-    return this.renderProp(this.props.body);
+    const elementToRender = body || children;
+
+    return this.renderProp(elementToRender, { isLoading: loading });
   };
 
   render() {
@@ -121,7 +124,7 @@ class TearsheetSmall extends PureComponent {
                       [`${namespace}__scroll-gradient__content`]: !flush,
                     })}
                   >
-                    {this.renderBody({ isLoading: this.state.loading })}
+                    {this.renderBody()}
                   </div>
                 </ScrollGradient>
               </section>
@@ -205,7 +208,11 @@ TearsheetSmall.propTypes = {
     PropTypes.element,
   ]),
 
-  children: PropTypes.element,
+  /** @deprecated Deprecated. Please use `body` prop. */
+  children: deprecate(
+    PropTypes.element,
+    `\nThe prop \`children\` for TearsheetSmall has been deprecated in favor of \`body\`.`
+  ),
 
   /** @type {Object<Object>} An object list of primary button props. */
   primaryButton: buttonType.isRequired,

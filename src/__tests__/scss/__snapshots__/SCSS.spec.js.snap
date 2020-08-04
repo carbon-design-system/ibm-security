@@ -2626,10 +2626,6 @@ body {
   outline-offset: -2px;
 }
 
-.security--card__header {
-  text-transform: capitalize;
-}
-
 .security--card__header__image {
   width: 2rem;
   height: 2rem;
@@ -7647,6 +7643,9 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   position: absolute;
   opacity: 0;
   pointer-events: none;
+  transition-duration: 0.2s;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.2, 0, 0.38, 0.9);
   z-index: 1;
 }
 
@@ -7686,6 +7685,14 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 
 .security--scroll-gradient--end > .security--scroll-gradient__before, .security--scroll-gradient--started > .security--scroll-gradient__before {
   opacity: 1;
+}
+
+.security--scroll-gradient--initial > .security--scroll-gradient__before {
+  transition-duration: 0.1s;
+}
+
+.security--scroll-gradient--end > .security--scroll-gradient__after {
+  transition-duration: 0.1s;
 }
 
 .bx--search {
