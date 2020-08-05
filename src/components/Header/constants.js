@@ -183,6 +183,9 @@ const propTypes = {
       /** @type {string} The profile surname. */
       surname: PropTypes.string.isRequired,
     }).isRequired,
+
+    /** Optional description for a profile. */
+    description: PropTypes.node,
   }),
 
   /** @type {boolean} Whether or not to show the Edit Profile link. */

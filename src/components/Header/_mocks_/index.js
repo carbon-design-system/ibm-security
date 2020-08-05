@@ -3,6 +3,7 @@
  * @copyright IBM Security 2018
  */
 
+import React from 'react';
 import { url } from '../../_mocks_';
 import labels from '../locales/en/Header.json';
 
@@ -100,6 +101,12 @@ const profile = {
     first_name: 'Sample',
     surname: 'User',
   },
+  description: (
+    <span>
+      Example description node with extra information and{' '}
+      <a href="#example">example link.</a>
+    </span>
+  ),
 };
 
 const profileWithAccount = Object.assign({}, profile, {
