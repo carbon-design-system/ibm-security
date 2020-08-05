@@ -280,10 +280,9 @@ exports[`Toolbar Rendering renders the panel correctly 1`] = `
     component="span"
     timeout={160}
   >
-    <aside
+    <nav
       className="security--toolbar__panel"
       id="security--toolbar--toolbar--menu"
-      role="menu"
     >
       <Transition
         className="security--toolbar__content"
@@ -303,7 +302,7 @@ exports[`Toolbar Rendering renders the panel correctly 1`] = `
         key="support"
         timeout={160}
       />
-    </aside>
+    </nav>
   </Transition>
 </div>
 `;
