@@ -3,18 +3,20 @@
  * @copyright IBM Security 2019 - 2020
  */
 
-import Launch16 from '@carbon/icons-react/lib/launch/16';
-
+import { Launch16 } from '@carbon/icons-react';
+import setupGetInstanceId from 'carbon-components-react/lib/tools/setupGetInstanceId';
 import classnames from 'classnames';
 import { bool, elementType, func, node, number, string } from 'prop-types';
 import React, { Component } from 'react';
-import NavItemLink from '../NavItemLink';
 
 import Icon from '../../Icon';
+import NavItemLink from '../NavItemLink';
 
 import { getComponentNamespace } from '../../../globals/namespace';
 
 export const namespace = getComponentNamespace('nav__list__item');
+
+const getInstanceId = setupGetInstanceId();
 
 /**
  * Navigation item component.
@@ -73,13 +75,19 @@ export default class NavItem extends Component {
     element: 'a',
     handleItemSelect: null,
     href: undefined,
-    id: namespace,
+    id: null,
     label: '',
     link: true,
     onClick: () => {},
     onKeyPress: () => {},
     tabIndex: 0,
   };
+
+  constructor(props) {
+    super(props);
+
+    this.navItemId = `${namespace}__${getInstanceId()}`;
+  }
 
   state = {
     current: this.props.current,
@@ -139,7 +147,7 @@ export default class NavItem extends Component {
       >
         {link ? (
           <NavItemLink
-            id={id}
+            id={id || this.navItemId}
             className={classnames(linkClassName, {
               [`${namespace}__link--external`]: externalLink,
             })}
