@@ -247,7 +247,7 @@ export default class Toolbar extends Component {
 
         <Transition className={namespace} component="span">
           {isPanelActive && this.state.showContent ? (
-            <nav
+            <div
               id={`${namespace}--toolbar--${currentType}`}
               className={`${namespace}__panel`}
             >
@@ -259,10 +259,10 @@ export default class Toolbar extends Component {
                 className={`${namespace}__content`}
                 dangerouslySetInnerHTML={{ __html: this.state.content }} // eslint-disable-line react/no-danger
               />
-            </nav>
+            </div>
           ) : (
             isPanelActive && (
-              <nav
+              <div
                 id={`${namespace}--toolbar--${currentType}`}
                 className={`${namespace}__panel`}
               >
@@ -275,7 +275,7 @@ export default class Toolbar extends Component {
                     {this.renderContent(type)}
                   </Transition>
                 ))}
-              </nav>
+              </div>
             )
           )}
         </Transition>
