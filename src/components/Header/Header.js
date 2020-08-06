@@ -205,11 +205,12 @@ export default class Header extends Component {
         ref={userProfile => {
           this.userProfile = userProfile;
         }}
-        value="profile"
-        tabIndex="0"
-        role="tabpanel"
-        onBlur={() => this.closePopover(this.userProfile)}
         className={`${namespace}__popover--focus`}
+        aria-labelledby="profile"
+        onBlur={() => this.closePopover(this.userProfile)}
+        role="tabpanel"
+        tabIndex="0"
+        value="profile"
       >
         <HeaderPopoverHeader
           className={`${namespace}__popover__profile__header`}
@@ -221,7 +222,10 @@ export default class Header extends Component {
               large
             />
             <div>
-              <span className={`${namespace}__popover__profile__header__title`}>
+              <span
+                id="profile"
+                className={`${namespace}__popover__profile__header__title`}
+              >
                 {profile.name.first_name} {profile.name.surname}
               </span>
               <span className={`${namespace}__popover__profile__header__email`}>
@@ -310,13 +314,17 @@ export default class Header extends Component {
         ref={notifications => {
           this.notifications = notifications;
         }}
+        className={`${namespace}__popover--focus`}
+        aria-labelledby="notifications"
+        onBlur={() => this.closePopover(this.notifications)}
         role="tabpanel"
         tabIndex="0"
         value="notifications"
-        onBlur={() => this.closePopover(this.notifications)}
-        className={`${namespace}__popover--focus`}
       >
-        <HeaderPopoverHeader title={labels.notifications.title} />
+        <HeaderPopoverHeader
+          id="notifications"
+          title={labels.notifications.title}
+        />
         {length > 0 && (
           <div className={`${namespace}__popover__content`}>
             <span className={`${namespace}__popover__label`}>

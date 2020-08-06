@@ -1,10 +1,10 @@
 /**
  * @file Header popover header.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
+import { element, string } from 'prop-types';
 import React from 'react';
 
 import { appendComponentNamespace } from '../../../globals/namespace';
@@ -17,9 +17,13 @@ const namespace = appendComponentNamespace(headerNamespace, 'popover__header');
  * @param {Object.<string, *>} props Header popover header props.
  * @returns {HeaderPopoverHeader} Header popover header instance.
  */
-const HeaderPopoverHeader = ({ children, className, title }) => (
+const HeaderPopoverHeader = ({ children, className, id, title }) => (
   <section className={classnames(namespace, className)}>
-    {title && <span className={`${namespace}__title`}>{title}</span>}
+    {title && (
+      <span id={id} className={`${namespace}__title`}>
+        {title}
+      </span>
+    )}
     {children}
   </section>
 );
@@ -27,18 +31,22 @@ const HeaderPopoverHeader = ({ children, className, title }) => (
 HeaderPopoverHeader.defaultProps = {
   children: null,
   className: '',
+  id: null,
   title: '',
 };
 
 HeaderPopoverHeader.propTypes = {
   /** @type {HTMLElement} Children. */
-  children: PropTypes.element,
+  children: element,
 
   /** @type {string} Extra classes. */
-  className: PropTypes.string,
+  className: string,
+
+  /** The ID to pass the title */
+  id: string,
 
   /** @type {string} Title. */
-  title: PropTypes.string,
+  title: string,
 };
 
 export default HeaderPopoverHeader;
