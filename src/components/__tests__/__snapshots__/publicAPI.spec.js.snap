@@ -924,6 +924,8 @@ Map {
     "defaultProps": Object {
       "className": "",
       "direction": "top",
+      "menuOffset": [Function],
+      "menuOffsetFlip": undefined,
       "selectorPrimaryFocus": "[data-overflow-menu-primary-focus]",
     },
     "propTypes": Object {
@@ -942,6 +944,52 @@ Map {
           ],
         ],
         "type": "oneOf",
+      },
+      "menuOffset": Object {
+        "args": Array [
+          Array [
+            Object {
+              "args": Array [
+                Object {
+                  "left": Object {
+                    "type": "number",
+                  },
+                  "top": Object {
+                    "type": "number",
+                  },
+                },
+              ],
+              "type": "shape",
+            },
+            Object {
+              "type": "func",
+            },
+          ],
+        ],
+        "type": "oneOfType",
+      },
+      "menuOffsetFlip": Object {
+        "args": Array [
+          Array [
+            Object {
+              "args": Array [
+                Object {
+                  "left": Object {
+                    "type": "number",
+                  },
+                  "top": Object {
+                    "type": "number",
+                  },
+                },
+              ],
+              "type": "shape",
+            },
+            Object {
+              "type": "func",
+            },
+          ],
+        ],
+        "type": "oneOfType",
       },
       "selectorPrimaryFocus": Object {
         "type": "string",
