@@ -952,10 +952,30 @@ Map {
               "args": Array [
                 Object {
                   "left": Object {
-                    "type": "number",
+                    "args": Array [
+                      Array [
+                        Object {
+                          "type": "number",
+                        },
+                        Object {
+                          "type": "string",
+                        },
+                      ],
+                    ],
+                    "type": "oneOf",
                   },
                   "top": Object {
-                    "type": "number",
+                    "args": Array [
+                      Array [
+                        Object {
+                          "type": "number",
+                        },
+                        Object {
+                          "type": "string",
+                        },
+                      ],
+                    ],
+                    "type": "oneOf",
                   },
                 },
               ],
@@ -975,10 +995,30 @@ Map {
               "args": Array [
                 Object {
                   "left": Object {
-                    "type": "number",
+                    "args": Array [
+                      Array [
+                        Object {
+                          "type": "number",
+                        },
+                        Object {
+                          "type": "string",
+                        },
+                      ],
+                    ],
+                    "type": "oneOf",
                   },
                   "top": Object {
-                    "type": "number",
+                    "args": Array [
+                      Array [
+                        Object {
+                          "type": "number",
+                        },
+                        Object {
+                          "type": "string",
+                        },
+                      ],
+                    ],
+                    "type": "oneOf",
                   },
                 },
               ],

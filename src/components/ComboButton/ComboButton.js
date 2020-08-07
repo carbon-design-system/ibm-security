@@ -175,8 +175,8 @@ ComboButton.propTypes = {
    */
   menuOffset: PropTypes.oneOfType([
     PropTypes.shape({
-      top: PropTypes.number,
-      left: PropTypes.number,
+      top: PropTypes.oneOf([PropTypes.number, PropTypes.string]),
+      left: PropTypes.oneOf([PropTypes.number, PropTypes.string]),
     }),
     PropTypes.func,
   ]),
@@ -186,8 +186,8 @@ ComboButton.propTypes = {
    */
   menuOffsetFlip: PropTypes.oneOfType([
     PropTypes.shape({
-      top: PropTypes.number,
-      left: PropTypes.number,
+      top: PropTypes.oneOf([PropTypes.number, PropTypes.string]),
+      left: PropTypes.oneOf([PropTypes.number, PropTypes.string]),
     }),
     PropTypes.func,
   ]),
