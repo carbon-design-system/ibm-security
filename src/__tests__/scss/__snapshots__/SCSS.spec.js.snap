@@ -12558,14 +12558,31 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .security--search-bar__scopes.bx--list-box {
-  flex: 0 0 14rem;
   border: 0;
 }
 
 .security--search-bar__scopes.bx--list-box,
 .security--search-bar__scopes.bx--list-box .bx--list-box__field {
-  height: 100%;
+  height: 3rem;
   max-height: unset;
+}
+
+.security--search-bar .bx--multi-select__wrapper,
+.security--search-bar .bx--search, .security--search-bar__submit {
+  align-self: flex-end;
+}
+
+.security--search-bar--hide-scopes-label .bx--label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  visibility: inherit;
+  clip: rect(0, 0, 0, 0);
 }
 
 .security--stacked-notification {
