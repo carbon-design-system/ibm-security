@@ -70,7 +70,6 @@ const applicationsToGenerate = [
   {
     title: 'Section 2',
     icon,
-    id: 'section2Id',
   },
   {
     title: 'Section 3',
