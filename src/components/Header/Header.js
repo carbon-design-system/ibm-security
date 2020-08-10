@@ -373,7 +373,7 @@ export default class Header extends Component {
           </span>
         )}
 
-        <footer className={`${namespace}__popover__footer`}>
+        <div className={`${namespace}__popover__footer`}>
           {links.notifications_view_all && (
             <HeaderPopoverLinkSecondary href={links.notifications_view_all}>
               {labels.notifications.link}{' '}
@@ -387,7 +387,7 @@ export default class Header extends Component {
               title={labels.notifications.preferences || ''}
             />
           )}
-        </footer>
+        </div>
       </div>,
       isActive.notifications
     );
