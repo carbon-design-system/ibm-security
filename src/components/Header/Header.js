@@ -230,6 +230,11 @@ export default class Header extends Component {
             </div>
           </Fragment>
         </HeaderPopoverHeader>
+        {profile.description && (
+          <section className={`${namespace}__popover__profile__description`}>
+            {profile.description}
+          </section>
+        )}
         {hasAccount && (
           <section
             className={classnames(`${namespace}__popover__profile__body`, {
