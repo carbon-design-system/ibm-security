@@ -1,6 +1,6 @@
 /**
  * @file Toolbar mocks.
- * @copyright IBM Security 2018
+ * @copyright IBM Security 2018 - 2020
  */
 
 import { icon, url, random } from '../../_mocks_';
@@ -11,12 +11,20 @@ const externalURL = 'https://www.ibm.com';
 /**
  * Generates the initial navigation model.
  */
-const generateNavigationModel = (title, content, icon, href) => ({
-  id: url(random(30)),
-  title,
+const generateNavigationModel = ({
   content,
+  href,
   icon,
+  id,
+  title,
+  ...props
+}) => ({
+  content,
   href: href || window.location.host + url(random(30)),
+  icon,
+  id: id || `${random(30)}`,
+  title,
+  ...props,
 });
 
 /**
@@ -33,15 +41,20 @@ const generateNavigationListModel = (title, navigation) => ({
  */
 const generateNavigation = array =>
   array.map(item =>
-    generateNavigationModel(item.title, item.content, item.icon, item.href)
+    generateNavigationModel({
+      title: item.title,
+      content: item.content,
+      icon: item.icon,
+      href: item.href,
+    })
   );
 
 /**
  * Generates application data for the navigation.
  */
 const generateApplications = array =>
-  array.map(({ children, title, content, icon }) => ({
-    ...generateNavigationModel(title, content, icon),
+  array.map(({ children, id, title, content, icon }) => ({
+    ...generateNavigationModel({ title, content, icon, id }),
     children,
   }));
 
@@ -57,6 +70,7 @@ const applicationsToGenerate = [
   {
     title: 'Section 2',
     icon,
+    id: 'section2Id',
   },
   {
     title: 'Section 3',
