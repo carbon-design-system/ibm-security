@@ -5,7 +5,7 @@
 
 import FocusTrap from 'focus-trap-react';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, { Children, Component } from 'react';
 import { createPortal } from 'react-dom';
 
 import { getComponentNamespace } from '../../globals/namespace';
@@ -175,7 +175,10 @@ class Portal extends Component {
       rootNode,
       stopPropagation,
       stopPropagationEvents,
+      ...focusTrapOptions
     } = this.props;
+
+    const { fallbackFocus } = focusTrapOptions;
 
     return (
       isClient() &&
@@ -184,7 +187,11 @@ class Portal extends Component {
           active={focusTrap}
           focusTrapOptions={{
             allowOutsideClick: () => true,
+            fallbackFocus:
+              fallbackFocus ||
+              (isClient() ? rootNode : Children.toArray(children)[0].type),
             initialFocus,
+            ...focusTrapOptions,
           }}
         >
           {stopPropagation || stopPropagationEvents
@@ -203,6 +210,9 @@ Portal.propTypes = {
 
   /** @type {boolean} Focus trap. */
   focusTrap: PropTypes.bool,
+
+  /** Pass any of the options available in https://github.com/focus-trap/focus-trap#focustrap--createfocustrapelement-createoptions */
+  focusTrapOptions: FocusTrap.propTypes.focusTrapOptions,
 
   /** @type {boolean} Include an overlay. */
   hasOverlay: PropTypes.bool,
@@ -226,6 +236,7 @@ Portal.propTypes = {
 Portal.defaultProps = {
   children: null,
   focusTrap: true,
+  focusTrapOptions: null,
   hasOverlay: true,
   initialFocus: null,
   rootNode: isClient() && document.body,
