@@ -4,6 +4,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
 <ComboButton
   className=""
   direction="top"
+  menuOffset={[Function]}
   selectorPrimaryFocus="[data-overflow-menu-primary-focus]"
 >
   <div
@@ -193,6 +194,7 @@ exports[`ComboButton renders a combo button without an overflow menu 1`] = `
 <ComboButton
   className=""
   direction="top"
+  menuOffset={[Function]}
   selectorPrimaryFocus="[data-overflow-menu-primary-focus]"
 >
   <div
