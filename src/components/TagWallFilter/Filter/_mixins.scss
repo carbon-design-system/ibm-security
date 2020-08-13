@@ -10,9 +10,10 @@
 
 @import 'carbon-components/scss/globals/scss/helper-classes';
 @import 'carbon-components/scss/globals/scss/helper-mixins';
-@import 'carbon-components/scss/globals/scss/layout';
 
 @import '../../../globals/namespace/index';
+
+@import '../../Tearsheet/mixins';
 
 /// Name.
 /// @type String
@@ -24,14 +25,14 @@ $filter__namespace: get-component-namespace(
   $component-name: $filter__name,
 );
 
+/// Dimensions.
+/// @type Length
+$filter__sizing__dimensions: carbon--mini-units(
+  $count: 5,
+);
+
 @mixin filter {
   $root: &;
-
-  /// Dimensions.
-  /// @type Length
-  $filter__sizing__dimensions: carbon--mini-units(
-    $count: 5,
-  );
 
   .#{$prefix}--list-box {
     &__field {
@@ -40,7 +41,7 @@ $filter__namespace: get-component-namespace(
       padding-right: 0;
       padding-left: 0;
       background-color: inherit;
-      z-index: z($layer: floating);
+      transform: translate3d(0, -100%, 0);
     }
 
     &__menu-item__option {
@@ -73,7 +74,12 @@ $filter__namespace: get-component-namespace(
   }
 
   &__list-container {
-    padding-top: $filter__sizing__dimensions;
+    background-color: $tearsheet__color__background;
+
+    &:empty {
+      min-height: $filter__sizing__dimensions;
+      cursor: default;
+    }
   }
 
   &__list-item {
