@@ -45,44 +45,60 @@ const getComponentsCategory = bindCategory(COMPONENTS);
 const getPatternsCategory = bindCategory(PATTERNS);
 
 /**
+ * Returns a formatted string for deprecated components.
+ * @param {string} name The name to deprecated.
+ * @returns {string} The formatted deprecated string.
+ */
+const deprecate = name => `${name} [Deprecated]`;
+
+/**
+ * Configuration for disabling the centering addon.
+ * @returns {Object<string, Object>} The disabled configuration.
+ */
+const disableCentered = () => ({
+  centered: {
+    disable: true,
+  },
+});
+
+/**
  * Configuration for disabling the centering addon in individual stories.
  * @param {Object<string, Object>} stories The collection of stories to disable the addon for.
  * @returns {Object<string, Object>} The collection of stories.
  */
-const disableCentered = stories =>
-  stories.addParameters({
-    centered: {
-      disable: true,
-    },
-  });
-
+const disableCenteredStories = stories =>
+  stories.addParameters(disableCentered());
 /**
  * Configuration for applying information to individual stories.
  * @param {string} description The information to apply to individual stories.
- * @param {Object.<string, string>} carbon - An object containing Carbon information to redirect to.
+ * @param {{library: string, story: string, id: string}} [component={}] An object containing component information to redirect to.
  * @returns {Object<string, string>} The configuration containing information to apply.
  */
-const info = (description, carbon = null) => ({
-  info: carbon
-    ? `${description}
+const info = (description, component = {}) => ({
+  info:
+    component.library && component.story && component.id
+      ? `${description}
 
-Also refer to http://react.carbondesignsystem.com/?path=/story/${carbon.story}--${carbon.id}`
-    : description,
+Also refer to http://${component.library}.carbondesignsystem.com/?path=/story/${component.story}--${component.id}`
+      : description,
 });
 
 /**
  * Configuration for applying metadata information to stories.
  * @param {string} title The title to apply to stories.
  * @param {string} description The information to apply to individual stories.
+ * @param {Object<string, Object>} parameters Additional parameters to apply to the stories.
  * @returns {Object<string, string>} The configuration containing information to apply.
  */
-const meta = (title, description) => ({
-  parameters: info(description),
+const meta = (title, description, parameters) => ({
+  parameters: { ...info(description), ...parameters },
   title,
 });
 
 export {
+  deprecate,
   disableCentered,
+  disableCenteredStories,
   getComponentsCategory as components,
   getPatternsCategory as patterns,
   HIERARCHY_ROOT_SEPARATOR,

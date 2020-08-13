@@ -5,6 +5,7 @@ exports[`DataTablePagination Rendering renders correctly 1`] = `
   className="security--data-table-pagination"
 >
   <DataTable
+    filterRows={[Function]}
     headers={
       Array [
         Object {
@@ -35,7 +36,9 @@ exports[`DataTablePagination Rendering renders correctly 1`] = `
     }
     isSelectable={false}
     isSortable={false}
+    locale="en"
     missingDataCharacter="–"
+    overflowMenuOnHover={true}
     rows={
       Array [
         Object {
@@ -80,7 +83,9 @@ exports[`DataTablePagination Rendering renders correctly 1`] = `
         },
       ]
     }
-    useZebraStyles={false}
+    size="normal"
+    sortRow={[Function]}
+    translateWithId={[Function]}
   />
   <Pagination
     backwardText="Backward"
@@ -141,56 +146,56 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
                 <th
                   scope="col"
                 >
-                  <span
+                  <div
                     class="bx--table-header-label"
                   >
                     Last sighted
-                  </span>
+                  </div>
                 </th>
                 <th
                   scope="col"
                 >
-                  <span
+                  <div
                     class="bx--table-header-label"
                   >
                     Name
-                  </span>
+                  </div>
                 </th>
                 <th
                   scope="col"
                 >
-                  <span
+                  <div
                     class="bx--table-header-label"
                   >
                     Type
-                  </span>
+                  </div>
                 </th>
                 <th
                   scope="col"
                 >
-                  <span
+                  <div
                     class="bx--table-header-label"
                   >
                     Attack phase
-                  </span>
+                  </div>
                 </th>
                 <th
                   scope="col"
                 >
-                  <span
+                  <div
                     class="bx--table-header-label"
                   >
                     Method
-                  </span>
+                  </div>
                 </th>
                 <th
                   scope="col"
                 >
-                  <span
+                  <div
                     class="bx--table-header-label"
                   >
                     Missing
-                  </span>
+                  </div>
                 </th>
               </tr>
             </thead>
@@ -361,10 +366,10 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
               <svg
                 aria-hidden="true"
                 class="bx--select__arrow"
+                fill="currentColor"
                 focusable="false"
                 height="16"
                 preserveAspectRatio="xMidYMid meet"
-                style="will-change:transform"
                 viewBox="0 0 16 16"
                 width="16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -431,10 +436,10 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
               <svg
                 aria-hidden="true"
                 class="bx--select__arrow"
+                fill="currentColor"
                 focusable="false"
                 height="16"
                 preserveAspectRatio="xMidYMid meet"
-                style="will-change:transform"
                 viewBox="0 0 16 16"
                 width="16"
                 xmlns="http://www.w3.org/2000/svg"
@@ -453,19 +458,27 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
         1 of 3 pages
       </span>
       <button
-        aria-label="Backward"
-        class="bx--pagination__button bx--pagination__button--backward bx--pagination__button--no-index"
+        class="bx--pagination__button bx--pagination__button--backward bx--pagination__button--no-index bx--btn bx--btn--ghost bx--btn--disabled bx--btn--icon-only bx--tooltip__trigger bx--tooltip--a11y bx--tooltip--top bx--tooltip--align-center"
         disabled=""
+        tabindex="0"
         type="button"
       >
+        <span
+          class="bx--assistive-text"
+        >
+          Backward
+        </span>
         <svg
           aria-hidden="true"
+          aria-label="Backward"
+          class="bx--btn__icon"
+          fill="currentColor"
           focusable="false"
-          height="24"
+          height="16"
           preserveAspectRatio="xMidYMid meet"
-          style="will-change:transform"
+          role="img"
           viewBox="0 0 32 32"
-          width="24"
+          width="16"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -474,18 +487,26 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
         </svg>
       </button>
       <button
-        aria-label="Forward"
-        class="bx--pagination__button bx--pagination__button--forward"
+        class="bx--pagination__button bx--pagination__button--forward bx--btn bx--btn--ghost bx--btn--icon-only bx--tooltip__trigger bx--tooltip--a11y bx--tooltip--top bx--tooltip--align-end"
+        tabindex="0"
         type="button"
       >
+        <span
+          class="bx--assistive-text"
+        >
+          Forward
+        </span>
         <svg
           aria-hidden="true"
+          aria-label="Forward"
+          class="bx--btn__icon"
+          fill="currentColor"
           focusable="false"
-          height="24"
+          height="16"
           preserveAspectRatio="xMidYMid meet"
-          style="will-change:transform"
+          role="img"
           viewBox="0 0 32 32"
-          width="24"
+          width="16"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path

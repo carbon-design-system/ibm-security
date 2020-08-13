@@ -97,6 +97,7 @@ $header__transition__timing-function: $timing-function;
   position: fixed;
   top: 0;
   width: inherit;
+  height: inherit;
   padding-top: inherit;
   align-items: center;
   background-color: inherit;
@@ -131,7 +132,6 @@ $header__transition__timing-function: $timing-function;
 
   &__group {
     display: flex;
-    height: inherit;
     padding-left: unset;
     margin-top: unset;
     margin-bottom: unset;
@@ -319,6 +319,12 @@ $header__transition__timing-function: $timing-function;
           @include carbon--type-style($name: caption-01);
           word-break: break-all;
         }
+      }
+
+      &__description {
+        padding-right: $header__popover__spacing__padding;
+        padding-bottom: $header__profile__spacing__margin;
+        padding-left: $header__popover__spacing__padding;
       }
 
       &__body {

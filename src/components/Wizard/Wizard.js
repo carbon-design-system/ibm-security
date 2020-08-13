@@ -1,21 +1,23 @@
 /**
  * @file Wizard.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 /* eslint-disable compat/compat,no-nested-ternary */
 
-import React, { Component, Children } from 'react';
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import { StepIndicator, Step as SingleStep } from '../..';
-import WizardStep from './WizardStep';
-import { Tearsheet } from '../Tearsheet';
-import Nav from '../Nav';
-import NavItem from '../Nav/NavItem';
-import * as defaultLabels from '../../globals/nls';
+import React, { Children, Component } from 'react';
 
-import { isClient, isNode } from '../../globals/utils/capabilities';
 import { getComponentNamespace } from '../../globals/namespace';
+import * as defaultLabels from '../../globals/nls';
+import { isClient, isNode } from '../../globals/utils/capabilities';
+
+import Nav from '../Nav';
+import { ProgressIndicator, ProgressStep } from '../ProgressIndicator';
+import NavItem from '../Nav/NavItem';
+import { Tearsheet } from '../Tearsheet';
+import WizardStep from './WizardStep';
 
 const namespace = getComponentNamespace('wizard');
 
@@ -223,11 +225,15 @@ class Wizard extends Component {
         ))}
       </Nav>
     ) : (
-      <StepIndicator currentIndex={currentStep}>
-        {this.steps.map(({ title }) => (
-          <SingleStep key={title} label={title} />
+      <ProgressIndicator currentIndex={currentStep} vertical>
+        {this.steps.map(({ title }, index) => (
+          <ProgressStep
+            key={title}
+            disabled={index > currentStep}
+            label={title}
+          />
         ))}
-      </StepIndicator>
+      </ProgressIndicator>
     );
   };
 
@@ -235,7 +241,7 @@ class Wizard extends Component {
    * Renders the component.
    */
   render() {
-    const { labels } = this.props;
+    const { labels, focusTrap, title, subTitle, ...other } = this.props;
     const componentLabels = {
       ...defaultLabels.labels,
       ...labels,
@@ -302,7 +308,6 @@ class Wizard extends Component {
       TEARSHEET_TERTIARY_BUTTON: componentLabels.WIZARD_TERTIARY_BUTTON,
     };
 
-    const { focusTrap, title, subTitle } = this.props;
     const renderMain = () =>
       this.currentStep.renderMain(
         this.state.componentState,
@@ -330,6 +335,8 @@ class Wizard extends Component {
         }}
         loading={this.state.loading}
         loadingMessage={this.props.loadingMessage}
+        className={classnames(namespace, this.props.className)}
+        {...other}
       />
     );
   }
@@ -378,9 +385,13 @@ Wizard.propTypes = {
    * (useful to override default labels)
    */
   labels: defaultLabels.propType,
+
+  /** Optional class name for the wrapper node. */
+  className: PropTypes.string,
 };
 
 Wizard.defaultProps = {
+  className: '',
   focusTrap: true,
   rootNode: isClient() ? document.body : undefined,
   subTitle: '',

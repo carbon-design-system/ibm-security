@@ -7,12 +7,12 @@ import { storiesOf } from '@storybook/react';
 
 import React from 'react';
 
-import { disableCentered, patterns } from '../../../.storybook';
+import { disableCenteredStories, patterns } from '../../../.storybook';
 
 import { NonEntitledSection } from '../..';
 
 import { noSubscriptionExample, sharingExample } from './_mocks_';
 
-disableCentered(storiesOf(patterns('NonEntitledSection'), module))
+disableCenteredStories(storiesOf(patterns('NonEntitledSection'), module))
   .add('Default', () => <NonEntitledSection {...noSubscriptionExample} />)
   .add('Sharing', () => <NonEntitledSection {...sharingExample} />);

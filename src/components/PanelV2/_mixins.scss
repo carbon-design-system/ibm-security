@@ -60,6 +60,7 @@
   flex-direction: column;
   justify-content: space-between;
   z-index: z($layer: floating);
+  outline: none;
 
   @include rtl {
     right: unset;
@@ -125,8 +126,6 @@
   }
 
   &__body {
-    padding-right: $panel__spacing__padding;
-    padding-left: $panel__spacing__padding;
     margin-top: carbon--mini-units($count: 11);
     flex-grow: 1;
     overflow-y: auto;

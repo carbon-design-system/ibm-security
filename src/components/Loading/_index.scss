@@ -1,15 +1,19 @@
 ////
 /// Loading component.
 /// @group loading
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import '@carbon/layout/scss/spacing';
+@import '@carbon/themes/scss/tokens';
+
 @import 'carbon-components/scss/globals/scss/vars';
 
 @import 'carbon-components/scss/components/loading/loading';
 
 @import '../../globals/namespace/index';
+
+@import 'LoadingMessage/index';
 
 @include export-namespace($name: loading) {
   .#{$prefix}--loading {
@@ -27,6 +31,11 @@
     &--small {
       width: $loading--small__sizing__dimensions;
       height: $loading--small__sizing__dimensions;
+    }
+
+    // https://github.com/carbon-design-system/carbon/pull/6323
+    &-overlay {
+      background-color: $overlay-01;
     }
   }
 }

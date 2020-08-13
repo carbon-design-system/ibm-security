@@ -4,16 +4,16 @@
  */
 
 import Add16 from '@carbon/icons-react/lib/add/16';
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
+import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { Button, PanelV2, PanelContent } from '../../..';
 
 describe('PanelV2', () => {
   test('should have no Axe or DAP violations with custom footer via `renderFooter`', async () => {
-    const main = document.createElement('main');
-    render(
+    const { container } = renderWithinLandmark(
       <PanelV2
         title="test title"
         subtitle="test subtitle"
@@ -23,21 +23,14 @@ describe('PanelV2', () => {
         renderFooter={() => <Button>test footer button</Button>}
       >
         <PanelContent>test content</PanelContent>
-      </PanelV2>,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+      </PanelV2>
     );
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations(
-      'PanelV2 with renderFooter'
-    );
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('PanelV2 with renderFooter');
   });
 
   test('should have no Axe or DAP violations with `title` or `subtitle` as a `node`', async () => {
-    const main = document.createElement('main');
-    render(
+    const { container } = renderWithinLandmark(
       <PanelV2
         title={<span>test title</span>}
         subtitle={<span>test subtitle</span>}
@@ -46,21 +39,16 @@ describe('PanelV2', () => {
         }}
       >
         <PanelContent>test content</PanelContent>
-      </PanelV2>,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+      </PanelV2>
     );
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations(
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations(
       'PanelV2 with title or subtitle as node'
     );
   });
 
   test('should have no Axe or DAP violations when there is scrolling content', async () => {
-    const main = document.createElement('main');
-    render(
+    const { container } = renderWithinLandmark(
       <PanelV2
         // Note that title (or subtitle) should be provided here
         // to generate a valid `aria-labelledBy` for tabbable scrolling content:
@@ -77,21 +65,16 @@ describe('PanelV2', () => {
           test content text
           <Button>test content button</Button>
         </PanelContent>
-      </PanelV2>,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+      </PanelV2>
     );
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations(
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations(
       'PanelV2 with hasScrollingContent'
     );
   });
 
   test('should have no Axe or DAP violations with deprecated `primaryButton` & `secondaryButton`', async () => {
-    const main = document.createElement('main');
-    render(
+    const { container } = renderWithinLandmark(
       <PanelV2
         title="test title"
         subtitle="test subtitle"
@@ -108,14 +91,10 @@ describe('PanelV2', () => {
         }}
       >
         <PanelContent>test content</PanelContent>
-      </PanelV2>,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+      </PanelV2>
     );
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations(
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations(
       'PanelV2 with deprecated props'
     );
   });
@@ -128,10 +107,33 @@ describe('PanelV2', () => {
           label: 'test close',
           onClick: onCloseMock,
         }}
+        isOpen
       />
     );
 
     userEvent.click(getByLabelText(/test close/i));
+    expect(onCloseMock).toHaveBeenCalledTimes(1);
+  });
+
+  test('should invoke close mock when Escape key is pressed', () => {
+    const onCloseMock = jest.fn();
+    const { getByText } = render(
+      <PanelV2
+        title="test title"
+        onClose={onCloseMock}
+        closeButton={{
+          label: 'test close',
+        }}
+        isOpen
+      />
+    );
+
+    fireEvent.keyDown(getByText(/test title/i), {
+      key: 'Escape',
+      code: 'Escape',
+      keyCode: 27,
+      charCode: 27,
+    });
     expect(onCloseMock).toHaveBeenCalledTimes(1);
   });
 

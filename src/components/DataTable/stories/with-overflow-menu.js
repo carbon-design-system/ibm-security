@@ -1,6 +1,6 @@
 /**
  * @file Data table with overflow menu story.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import React from 'react';
@@ -26,8 +26,15 @@ const overflowStory = props => (
     rows={rows}
     headers={headers}
     {...props}
-    render={({ rows, headers, getHeaderProps, getRowProps, getTableProps }) => (
-      <TableContainer>
+    render={({
+      rows,
+      headers,
+      getHeaderProps,
+      getRowProps,
+      getTableProps,
+      getTableContainerProps,
+    }) => (
+      <TableContainer {...getTableContainerProps()}>
         <Table {...getTableProps()}>
           <TableHead>
             <TableRow>
@@ -56,7 +63,6 @@ const overflowStory = props => (
                         <OverflowMenuItem
                           key={key}
                           itemText={`${itemText} ${index + 1}`}
-                          primaryFocus={index === 0}
                         />
                       );
                     })}

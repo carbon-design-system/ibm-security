@@ -29,20 +29,25 @@ import { patterns } from '../../../.storybook';
 
 import { IconButton, IconButtonBar } from '../..';
 
-import { className, iconClassName, label, sizes } from '../IconButton/_mocks_';
+import { className, iconClassName, sizes } from '../IconButton/_mocks_';
 import { TooltipDirection } from '../IconButton/IconButton';
 
 storiesOf(patterns('IconButtonBar'), module).add(
   'default',
   () => {
-    const size = select('size', sizes, sizes[0]);
+    const size = select('size', sizes, 'sm');
     /* eslint-disable no-nested-ternary */
     const actions = [
       {
         className,
+        divider: select(
+          'Icon 1 divider (divider)',
+          ['left', 'right', 'sides'],
+          'sides'
+        ),
         disabled: false,
         iconClassName,
-        label: `${label} 1`,
+        label: 'Label 1',
         onClick: action('onClick'),
         renderIcon:
           size === 'sm'
@@ -55,9 +60,10 @@ storiesOf(patterns('IconButtonBar'), module).add(
       },
       {
         className,
+        divider: undefined,
         disabled: false,
         iconClassName,
-        label: `${label} 2`,
+        label: 'Label 2',
         onClick: action('onClick'),
         renderIcon:
           size === 'sm'
@@ -72,8 +78,9 @@ storiesOf(patterns('IconButtonBar'), module).add(
         className,
         disabled: false,
         iconClassName,
-        label: `${label} 3`,
+        label: 'Label 3',
         onClick: action('onClick'),
+        setFocus: true,
         renderIcon:
           size === 'sm'
             ? Locked16
@@ -87,7 +94,7 @@ storiesOf(patterns('IconButtonBar'), module).add(
         className,
         disabled: false,
         iconClassName,
-        label: `${label} 4`,
+        label: 'Label 4',
         onClick: action('onClick'),
         renderIcon:
           size === 'sm'

@@ -13,7 +13,7 @@
 | `ui-04`              | `cool-gray-50`    | `gray-60`         |
 | `ui-05`              | `cool-gray-100`   | `gray-10`         |
 | `text-01`            | `cool-gray-100`   | `gray-10`         |
-| `text-02`            | `cool-gray-80`    | `gray-30`         |
+| `text-02`            | `cool-gray-70`    | `gray-30`         |
 | `text-03`            | `cool-gray-40`    | `gray-60`         |
 | `text-04`            | `white-0`         | `white-0`         |
 | `text-05`            | `cool-gray-60`    | `gray-50`         |
@@ -49,6 +49,7 @@
 | `hover-ui`           | `#e0e4ea`         | `#353535`         |
 | `active-ui`          | `cool-gray-30`    | `gray-70`         |
 | `selected-ui`        | `cool-gray-20`    | `gray-80`         |
+| `selected-light-ui`  | `cool-gray-20`    | `gray-70`         |
 | `inverse-hover-ui`   | `#464c51`         | `#e5e5e5`         |
 | `hover-selected-ui`  | `#c4c9d1`         | `#4c4c4c`         |
 | `hover-danger`       | `#b81921`         | `#b81921`         |
@@ -57,8 +58,9 @@
 | `visited-link`       | `purple-60`       | `purple-40`       |
 | `disabled-01`        | `white-0`         | `gray-90`         |
 | `disabled-02`        | `cool-gray-30`    | `gray-70`         |
-| `disabled-03`        | `cool-gray-50`    | `gray-60`         |
+| `disabled-03`        | `cool-gray-50`    | `gray-50`         |
 | `highlight`          | `blue-20`         | `blue-80`         |
+| `decorative-01`      | `cool-gray-20`    | `gray-70`         |
 | `skeleton-01`        | `#e0e4ea`         | `#353535`         |
 | `skeleton-02`        | `cool-gray-30`    | `gray-80`         |
 | `brand-01`           | `blue-60`         | `blue-60`         |

@@ -7,6 +7,7 @@ import Folder20 from '@carbon/icons-react/lib/folder/20';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
+import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import {
   SummaryCard,
@@ -22,8 +23,7 @@ import { namespace as headerNamespace } from '../SummaryCardHeader/SummaryCardHe
 
 describe('SummaryCard', () => {
   test('should have no Axe or DAP violations`', async () => {
-    const main = document.createElement('main');
-    render(
+    const { container } = renderWithinLandmark(
       <SummaryCard>
         <SummaryCardHeader
           title="test summary card title"
@@ -50,19 +50,14 @@ describe('SummaryCard', () => {
             tooltipAlignment="center"
           />
         </SummaryCardFooter>
-      </SummaryCard>,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+      </SummaryCard>
     );
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('SummaryCard');
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('SummaryCard');
   });
 
   test('should have no Axe or DAP violations when the expandable content is shown`', async () => {
-    const main = document.createElement('main');
-    const { getByText } = render(
+    const { container, getByText } = renderWithinLandmark(
       <SummaryCard>
         <SummaryCardHeader title="test summary card title" />
         <SummaryCardBody>test card body content</SummaryCardBody>
@@ -74,18 +69,14 @@ describe('SummaryCard', () => {
             test button
           </SummaryCardAction>
         </SummaryCardFooter>
-      </SummaryCard>,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+      </SummaryCard>
     );
 
     // Click on the action button to show expanded content.
     userEvent.click(getByText(/test button/i).closest('button'));
 
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations(
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations(
       'SummaryCard with expandable content'
     );
   });
@@ -162,7 +153,9 @@ describe('SummaryCard', () => {
   });
 
   test('should accept a custom class name', () => {
-    const { container } = render(<SummaryCard className="custom-class" />);
+    const { container } = render(
+      <SummaryCard className="custom-class">test content</SummaryCard>
+    );
     expect(container.firstElementChild).toHaveClass('custom-class');
   });
 
@@ -172,7 +165,9 @@ describe('SummaryCard', () => {
   });
 
   test('should pass through extra props via spread attribute', () => {
-    const { queryByTestId } = render(<SummaryCard data-testid="test-id" />);
+    const { queryByTestId } = render(
+      <SummaryCard data-testid="test-id">test content</SummaryCard>
+    );
     expect(queryByTestId('test-id')).toBeVisible();
   });
 });

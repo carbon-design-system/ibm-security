@@ -6,26 +6,23 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { StackedNotification } from '../../..';
 
 describe('StackedNotification', () => {
   test('should have no Axe or DAP violations', async () => {
-    const main = document.createElement('main');
-    render(
+    const { container } = renderWithinLandmark(
       <StackedNotification
         title="test title"
         subtitle="test subtitle"
         caption="test caption"
         iconDescription="test close button icon"
-      />,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+        statusIconDescription="test status icon"
+      />
     );
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('StackedNotification');
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('StackedNotification');
   });
 
   test('should add a custom class', () => {
@@ -35,6 +32,7 @@ describe('StackedNotification', () => {
         className="custom-class"
         subtitle="test subtitle"
         iconDescription="test icon desc"
+        statusIconDescription="test status icon"
       />
     );
     expect(container.querySelector('.custom-class')).toBeVisible();
@@ -47,6 +45,7 @@ describe('StackedNotification', () => {
         title="test title"
         subtitle="test subtitle"
         iconDescription="test close button icon"
+        statusIconDescription="test status icon"
         onCloseButtonClick={onCloseMock}
       />
     );
@@ -60,6 +59,7 @@ describe('StackedNotification', () => {
         title="test title"
         subtitle="test subtitle"
         iconDescription="test close button icon"
+        statusIconDescription="test status icon"
         data-testid="test-id"
       />
     );
@@ -72,6 +72,7 @@ describe('StackedNotification', () => {
         title="test title"
         subtitle="test subtitle"
         iconDescription="test close button icon"
+        statusIconDescription="test status icon"
       />
     );
     expect(queryByText(/test title/i)).toBeVisible();
@@ -83,6 +84,7 @@ describe('StackedNotification', () => {
         title="test title"
         subtitle="test subtitle"
         iconDescription="test close button icon"
+        statusIconDescription="test status icon"
       />
     );
     expect(queryByText(/test subtitle/i)).toBeVisible();
@@ -94,6 +96,7 @@ describe('StackedNotification', () => {
         title="test title"
         subtitle="test subtitle"
         iconDescription="test close button icon"
+        statusIconDescription="test status icon"
         caption="test caption"
       />
     );
@@ -106,6 +109,7 @@ describe('StackedNotification', () => {
         title="test title"
         subtitle="test subtitle"
         iconDescription="test close button icon"
+        statusIconDescription="test status icon"
       >
         test children
       </StackedNotification>
@@ -119,6 +123,7 @@ describe('StackedNotification', () => {
         title="test title"
         subtitle="test subtitle"
         iconDescription="test close button icon"
+        statusIconDescription="test status icon"
         role="dialog"
       />
     );
@@ -132,6 +137,7 @@ describe('StackedNotification', () => {
         title="test title"
         subtitle="test subtitle"
         iconDescription="test close button icon"
+        statusIconDescription="test status icon"
       />
     );
     expect(queryByLabelText(/test close button icon/i)).toBeVisible();
@@ -143,6 +149,7 @@ describe('StackedNotification', () => {
         title="test title"
         subtitle="test subtitle"
         iconDescription="test close button icon"
+        statusIconDescription="test status icon"
         hideCloseButton
       />
     );

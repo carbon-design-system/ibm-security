@@ -6,7 +6,7 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { disableCentered, info, patterns } from '../../../.storybook';
+import { disableCenteredStories, info, patterns } from '../../../.storybook';
 
 import {
   CarbonHeader,
@@ -25,7 +25,7 @@ import {
 const description = "Carbon's `UIShell` component.";
 const story = 'ui-shell';
 
-disableCentered(
+disableCenteredStories(
   storiesOf(patterns('UIShell (Carbon)'), module)
     .add(
       'Header Base',
@@ -38,6 +38,7 @@ disableCentered(
       ),
       info(description, {
         story,
+        library: 'react',
         id: 'header-base',
       })
     )
@@ -92,6 +93,7 @@ disableCentered(
       ),
       info(description, {
         story,
+        library: 'react',
         id: 'header-base-w-navigation',
       })
     )

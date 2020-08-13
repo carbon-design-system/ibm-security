@@ -32,26 +32,28 @@ storiesOf(patterns('ComboButton'), module).add(
   () => (
     <div style={{ width: 300 }}>
       <ComboButton {...props()}>
-        <ComboButtonItem href="#" renderIcon={ArrowRight20}>
-          Item 1 (becomes primary button and text will be truncated)
+        <ComboButtonItem
+          href="#"
+          onClick={action(`onClick (Item 1)`)}
+          renderIcon={ArrowRight20}
+        >
+          Item 1 -- becomes primary button and text will be truncated
         </ComboButtonItem>
-        {Array(5)
-          .fill(0)
-          .map((item, index) => {
-            const text = `Item ${index +
-              2} - text may be long and will be truncated`;
-            return (
-              <ComboButtonItem
-                className="some-class"
-                key={text}
-                index={index}
-                onClick={action(`onClick (${text})`)}
-                renderIcon={index % 2 === 0 ? Filter20 : null} // Show icon at even indexes.
-              >
-                {text}
-              </ComboButtonItem>
-            );
-          })}
+        <ComboButtonItem
+          href="#"
+          onClick={action(`onClick (Item 2)`)}
+          renderIcon={Filter20}
+        >
+          Item 2
+        </ComboButtonItem>
+        <ComboButtonItem
+          href="#"
+          renderIcon={Filter20}
+          onClick={action(`onClick (Item 3)`)}
+          data-overflow-menu-primary-focus
+        >
+          Item 3 -- will be selected when menu opens
+        </ComboButtonItem>
       </ComboButton>
     </div>
   ),

@@ -1,17 +1,18 @@
 /**
  * @file Tearsheet.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import Close20 from '@carbon/icons-react/lib/close/20';
 import TrashCan20 from '@carbon/icons-react/lib/trash-can/20';
 
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import React, { Component } from 'react';
 
 import Button from '../Button';
 import IconButton from '../IconButton';
-import Loading from '../Loading';
+import { LoadingMessage } from '../Loading';
 import Portal, { PORTAL_EVENTS } from '../Portal';
 import ScrollGradient from '../ScrollGradient';
 import Transition from '../Transition';
@@ -53,6 +54,7 @@ class Tearsheet extends Component {
 
   render() {
     const {
+      className,
       focusTrap,
       selectorPrimaryFocus,
       renderSidebar,
@@ -76,6 +78,10 @@ class Tearsheet extends Component {
         onClick: onDeleteButtonClick,
       },
       labels,
+      loading,
+      loadingMessage,
+      isOpen,
+      ...other
     } = this.props;
 
     const componentLabels = {
@@ -103,42 +109,56 @@ class Tearsheet extends Component {
           >
             <section
               ref={this.containerSection}
-              className={namespace}
+              className={classnames(namespace, className)}
               aria-hidden={false}
+              {...other}
             >
               {this.state.loading && (
-                <Loading className={`${namespace}__loading`}>
+                <LoadingMessage className={`${namespace}__loading`}>
                   <div className={`${namespace}__loading__message`}>
                     {this.state.loadingMessage}
                   </div>
-                </Loading>
+                </LoadingMessage>
               )}
-              <section className={`${namespace}__sidebar`}>
-                <h1 className={`${namespace}__sidebar__title`}>
-                  {sidebarTitle}
-                </h1>
-                <p className={`${namespace}__sidebar__subtitle`}>
-                  {sidebarSubtitle}
-                </p>
-                <div className={`${namespace}__sidebar__content`}>
-                  {renderSidebar()}
-                </div>
-                <footer className={`${namespace}__sidebar__footer`}>
-                  {!hideDeleteButton && (
-                    <Button
-                      disabled={isDisabled}
-                      iconDescription={componentLabels.TEARSHEET_DELETE_BUTTON}
-                      kind="ghost-danger"
-                      onClick={onDeleteButtonClick}
-                      renderIcon={icon}
-                    >
-                      {componentLabels.TEARSHEET_DELETE_BUTTON}
-                    </Button>
-                  )}
-                </footer>
-              </section>
 
-              <section className={`${namespace}__main`}>
+              {renderSidebar && (
+                <section
+                  aria-hidden={this.state.loading}
+                  className={`${namespace}__sidebar`}
+                >
+                  <h1 className={`${namespace}__sidebar__title`}>
+                    {sidebarTitle}
+                  </h1>
+                  <p className={`${namespace}__sidebar__subtitle`}>
+                    {sidebarSubtitle}
+                  </p>
+
+                  <div className={`${namespace}__sidebar__content`}>
+                    {renderSidebar()}
+                  </div>
+
+                  <footer className={`${namespace}__sidebar__footer`}>
+                    {!hideDeleteButton && (
+                      <Button
+                        disabled={isDisabled || this.state.loading}
+                        iconDescription={
+                          componentLabels.TEARSHEET_DELETE_BUTTON
+                        }
+                        kind="ghost-danger"
+                        onClick={onDeleteButtonClick}
+                        renderIcon={icon}
+                      >
+                        {componentLabels.TEARSHEET_DELETE_BUTTON}
+                      </Button>
+                    )}
+                  </footer>
+                </section>
+              )}
+
+              <section
+                aria-hidden={this.state.loading}
+                className={`${namespace}__main`}
+              >
                 {!closeButton.isDisabled && (
                   <IconButton
                     className={`${namespace}__button--close`}
@@ -147,6 +167,7 @@ class Tearsheet extends Component {
                     renderIcon={Close20}
                     size="lg"
                     tooltip={false}
+                    disabled={this.state.loading}
                   />
                 )}
                 <h1 className={`${namespace}__main__title`}>{mainTitle}</h1>
@@ -158,7 +179,7 @@ class Tearsheet extends Component {
                     <div
                       className={`${namespace}__main__scroll-gradient__content`}
                     >
-                      {renderMain()}
+                      {renderMain({ isLoading: loading })}
                     </div>
                   </ScrollGradient>
                 </section>
@@ -167,7 +188,7 @@ class Tearsheet extends Component {
                     <div className={`${namespace}__container__start`}>
                       <Button
                         className={`${namespace}__button--tertiary`}
-                        disabled={isDisabled}
+                        disabled={isDisabled || this.state.loading}
                         kind="ghost"
                         onClick={tertiaryButton.onClick}
                         size="large"
@@ -187,7 +208,9 @@ class Tearsheet extends Component {
                     {!secondaryButton.isDisabled && (
                       <Button
                         className={`${namespace}__button ${namespace}__button--secondary`}
-                        disabled={secondaryButton.isDisabled}
+                        disabled={
+                          secondaryButton.isDisabled || this.state.loading
+                        }
                         kind="secondary"
                         onClick={secondaryButton.onClick}
                         size="large"
@@ -197,7 +220,7 @@ class Tearsheet extends Component {
                     )}
                     <Button
                       className={`${namespace}__button`}
-                      disabled={primaryButton.isDisabled}
+                      disabled={primaryButton.isDisabled || this.state.loading}
                       onClick={primaryButton.onClick}
                       size="large"
                     >
@@ -272,7 +295,7 @@ Tearsheet.propTypes = {
     icon: PropTypes.string,
   }),
 
-  /** @type {bool} The toggle to determine whether or not to show the loading. */
+  /** @type {bool} The toggle to determine whether or not to show the loading overlay. */
   loading: PropTypes.bool,
 
   /** @type {string} The message to be displayed during loading. */
@@ -289,13 +312,17 @@ Tearsheet.propTypes = {
 
   /** @type {array} Array of event types to stop propagation. */
   stopPropagationEvents: PropTypes.arrayOf(PropTypes.oneOf(PORTAL_EVENTS)),
+
+  /** Optional class name for the tearsheet wrapper node. */
+  className: PropTypes.string,
 };
 
 Tearsheet.defaultProps = {
+  className: '',
   focusTrap: true,
   selectorPrimaryFocus: '[tearsheet-primary-focus]',
-  renderSidebar: () => null,
   renderMain: () => null,
+  renderSidebar: null,
   rootNode: undefined,
   sidebarTitle: '',
   sidebarSubtitle: '',

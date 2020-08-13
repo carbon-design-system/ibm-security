@@ -6,19 +6,18 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 import userEvent from '@testing-library/user-event';
+import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { Pill } from '../../..';
 import { namespace } from '../Pill';
 
 describe('Pill', () => {
   test('should have no Axe or DAP violations', async () => {
-    const main = document.createElement('main');
-    render(<Pill value="127.0.0.1" type="IP" />, {
-      // DAP requires a landmark '<main>' in the DOM:
-      container: document.body.appendChild(main),
-    });
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('Pill');
+    const { container } = renderWithinLandmark(
+      <Pill value="127.0.0.1" type="IP" />
+    );
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('Pill');
   });
 
   test('should add a custom class', () => {

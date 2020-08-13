@@ -14,7 +14,7 @@ import { OverflowMenu, OverflowMenuItem } from '../..';
 import IconButton from '../IconButton';
 import { getComponentNamespace } from '../../globals/namespace';
 
-const namespace = getComponentNamespace('icon-button-bar');
+export const namespace = getComponentNamespace('icon-button-bar');
 const { propTypes } = IconButton;
 
 const IconButtonBar = ({
@@ -27,6 +27,7 @@ const IconButtonBar = ({
   tooltip,
 }) => {
   const isMaxLength = actions.length > length;
+  const iconButtonPrimaryFocus = `${namespace}--primary-focus`;
   const iconButtonBarClasses = classnames(namespace, className, {
     [`${namespace}--${size}`]: size,
   });
@@ -41,14 +42,25 @@ const IconButtonBar = ({
     }
   );
 
-  const renderIconButton = action => (
-    <IconButton
-      {...action}
-      key={action.label || `${namespace}__button--icon`}
-      size={size}
-      tooltip={tooltip}
-      tooltipDirection={iconTooltipDirection}
-    />
+  const renderIconButton = (action, index) => (
+    <Fragment key={action.label || `${namespace}__button--icon--${index}`}>
+      {(action.divider === 'left' || action.divider === 'sides') && (
+        <span className={`${namespace}__divider`} aria-hidden>
+          <span className={`${namespace}__divider__inner`} />
+        </span>
+      )}
+      <IconButton
+        {...action}
+        size={size}
+        tooltip={tooltip}
+        tooltipDirection={iconTooltipDirection}
+      />
+      {(action.divider === 'right' || action.divider === 'sides') && (
+        <span className={`${namespace}__divider`} aria-hidden>
+          <span className={`${namespace}__divider__inner`} />
+        </span>
+      )}
+    </Fragment>
   );
 
   const renderMenuItems = () => {
@@ -56,13 +68,15 @@ const IconButtonBar = ({
     if (overflowMenuDirection === IconButton.TooltipDirection.TOP) {
       items.reverse();
     }
-    return items.map((action, index) => (
+    return items.map(action => (
       <OverflowMenuItem
         itemText={action.label}
         key={action.label}
         onClick={action.onClick}
-        primaryFocus={index === 0}
         disabled={action.disabled}
+        className={classnames(action.className, {
+          [`${iconButtonPrimaryFocus}`]: action.setFocus,
+        })}
       />
     ));
   };
@@ -93,6 +107,7 @@ const IconButtonBar = ({
             flipped
             menuOptionsClass={iconButtonBarMenuOptionsClasses}
             renderIcon={getOverflowMenuIcon()}
+            selectorPrimaryFocus={`.${iconButtonPrimaryFocus}`}
           >
             {renderMenuItems()}
           </OverflowMenu>
@@ -107,6 +122,13 @@ IconButtonBar.propTypes = {
   actions: PropTypes.arrayOf(
     PropTypes.shape({
       ...propTypes,
+      divider: PropTypes.oneOf(['left', 'right', 'sides']),
+
+      /**
+       * Whether or not the icon button should receive focus when the menu is first opened.
+       * By default, the first button in the menu will receive focus.
+       */
+      setFocus: PropTypes.bool,
     })
   ),
 

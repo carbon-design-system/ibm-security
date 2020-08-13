@@ -1,7 +1,7 @@
 ////
 /// Tearsheet mixins.
 /// @group tearsheet
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import '@carbon/layout/scss/spacing';
@@ -21,23 +21,36 @@
 /// @type String
 $tearsheet__name: tearsheet;
 
-/// Dimensions.
+/// Margin.
 /// @type Length
-$tearsheet__sizing__dimensions: $carbon--layout-04;
+$tearsheet__sizing__margin: $carbon--spacing-05;
+
+/// Position base.
+/// @type Length
+$tearsheet__position__base: 50%;
+
+/// Position.
+/// @type Length
+$tearsheet__position: calc(
+  -#{$tearsheet__position__base} - #{$tearsheet__sizing__margin}
+);
 
 @mixin tearsheet--base {
-  /// Position.
+  /// Dimensions.
   /// @type Length
-  $tearsheet__position: -50%;
+  $tearsheet__sizing__dimensions: $carbon--layout-04;
 
   @include input__background-color;
 
   display: flex;
   position: fixed;
-  left: 50%;
+  left: $tearsheet__position__base;
   bottom: 0;
+  width: calc(100% - #{$tearsheet__sizing__margin * 2});
   height: calc(100vh - #{$tearsheet__sizing__dimensions});
   min-height: carbon--mini-units($count: 40);
+  margin-right: $tearsheet__sizing__margin;
+  margin-left: $tearsheet__sizing__margin;
   background-color: $ui-01;
   transform: translate3d(#{$tearsheet__position}, 0, 0);
   z-index: z($layer: modal);
@@ -104,8 +117,6 @@ $tearsheet__sizing__dimensions: $carbon--layout-04;
 
   @include tearsheet--base;
 
-  width: calc(100vw - #{$tearsheet__sizing__dimensions});
-
   &__button {
     @include tearsheet__button;
     max-width: carbon--mini-units($count: 33);
@@ -156,11 +167,11 @@ $tearsheet__sizing__dimensions: $carbon--layout-04;
   &__main {
     position: relative;
     display: flex;
-    width: 66%;
     padding-top: $tearsheet__spacing__padding;
     flex: 1;
     flex-direction: column;
     justify-content: space-between;
+    overflow-x: auto;
 
     &__title,
     &__content {

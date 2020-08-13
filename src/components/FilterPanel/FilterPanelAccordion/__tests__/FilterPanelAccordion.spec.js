@@ -5,28 +5,29 @@
 
 import React from 'react';
 import { render } from '@testing-library/react';
+import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
 import FilterPanelAccordion from '../FilterPanelAccordion';
 
 describe('FilterPanelAccordion', () => {
   test('should have no Axe or DAP violations', async () => {
-    const main = document.createElement('main');
-    render(<FilterPanelAccordion title="test accordion title" />, {
-      // DAP requires a landmark '<main>' in the DOM:
-      container: document.body.appendChild(main),
-    });
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('FilterPanelAccordion');
+    const { container } = renderWithinLandmark(
+      <FilterPanelAccordion heading="test accordion title" title="test title" />
+    );
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('FilterPanelAccordion');
   });
 
-  test('renders with a title', () => {
-    const { getByText } = render(<FilterPanelAccordion title="custom title" />);
-    expect(getByText(/custom title/i)).toBeVisible();
+  test('renders with a title attribute', () => {
+    const { getByTitle } = render(
+      <FilterPanelAccordion title="custom title" />
+    );
+    expect(getByTitle(/custom title/i)).toBeVisible();
   });
 
-  test('renders with a title node', () => {
+  test('renders with a heading node', () => {
     const { getByTestId } = render(
-      <FilterPanelAccordion title={<span data-testid="node-title" />} />
+      <FilterPanelAccordion heading={<span data-testid="node-title" />} />
     );
     expect(getByTestId('node-title')).toBeVisible();
   });

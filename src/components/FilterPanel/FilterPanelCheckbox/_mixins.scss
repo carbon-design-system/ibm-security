@@ -5,12 +5,22 @@
 ////
 
 @import '@carbon/type/scss/styles';
+@import 'carbon-components/scss/globals/scss/vars';
 
 @mixin filter-panel-checkbox {
   &__wrapper {
     @include carbon--type-style($name: body-short-01);
     display: flex;
     max-width: 100%;
+
+    // Artificially increase the specificity of this style to override Carbon's style
+    &.#{$prefix}--checkbox-wrapper {
+      &,
+      &:first-of-type,
+      &:last-of-type {
+        margin: 0;
+      }
+    }
   }
 
   &__count {

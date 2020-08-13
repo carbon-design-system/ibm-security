@@ -82,6 +82,13 @@ export default class SearchBar extends React.Component {
 
     /** @type {func} Callback function for translating MultiSelect's child ListBoxMenuIcon SVG title. */
     translateWithId: PropTypes.func, // eslint-disable-line react/require-default-props
+
+    /**
+     * Optional custom sorting algorithm for an array of scope items.
+     * By default, scope items are sorted in ascending alphabetical order,
+     * with "selected" items moved to the start of the scope items array.
+     */
+    sortItems: PropTypes.func, // eslint-disable-line react/require-default-props
   };
 
   static defaultProps = {
@@ -146,6 +153,7 @@ export default class SearchBar extends React.Component {
       scopesTypeLabel,
       selectedScopes,
       translateWithId,
+      sortItems,
     } = this.props;
 
     if (scopes.length === 0) return null;
@@ -161,6 +169,7 @@ export default class SearchBar extends React.Component {
         items={scopes}
         itemToString={scopeToString}
         translateWithId={translateWithId}
+        sortItems={sortItems}
       />
     );
   }
@@ -189,7 +198,6 @@ export default class SearchBar extends React.Component {
           value={value}
           onChange={this.handleInputChange}
           closeButtonLabelText={clearButtonLabelText}
-          showIcon={false}
         />
         <Button
           name="search-submit"

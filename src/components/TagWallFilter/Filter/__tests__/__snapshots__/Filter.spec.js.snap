@@ -32,13 +32,12 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
   id="test-id"
 >
   <div
-    aria-controls="test-id__menu"
     aria-expanded="true"
     aria-haspopup="true"
     aria-label="close menu"
-    aria-owns="test-id__menu"
     class="bx--list-box__field"
     data-toggle="true"
+    id="test-id"
     role="button"
     tabindex="-1"
     type="button"
@@ -76,7 +75,7 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
   </div>
   <div
     class="security--filter__list-container"
-    id="test-id__menu"
+    id="test-id"
     role="listbox"
   >
     <div
@@ -92,13 +91,19 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
           aria-labelledby="downshift-0-item-0"
           class="security--filter__list-item__entry"
         >
-          Abuja
+          <span
+            class="bx--text-truncate--end"
+            title="Abuja"
+          >
+            Abuja
+          </span>
           <span
             class="security--filter__add"
           >
             <svg
               aria-hidden="true"
               class="security--icon security--filter__add__icon"
+              fill="currentColor"
               focusable="false"
               height="20"
               preserveAspectRatio="xMidYMid meet"
@@ -128,13 +133,19 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
           aria-labelledby="downshift-0-item-1"
           class="security--filter__list-item__entry"
         >
-          Beijing
+          <span
+            class="bx--text-truncate--end"
+            title="Beijing"
+          >
+            Beijing
+          </span>
           <span
             class="security--filter__add"
           >
             <svg
               aria-hidden="true"
               class="security--icon security--filter__add__icon"
+              fill="currentColor"
               focusable="false"
               height="20"
               preserveAspectRatio="xMidYMid meet"
@@ -164,13 +175,19 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
           aria-labelledby="downshift-0-item-2"
           class="security--filter__list-item__entry"
         >
-          Berlin
+          <span
+            class="bx--text-truncate--end"
+            title="Berlin"
+          >
+            Berlin
+          </span>
           <span
             class="security--filter__add"
           >
             <svg
               aria-hidden="true"
               class="security--icon security--filter__add__icon"
+              fill="currentColor"
               focusable="false"
               height="20"
               preserveAspectRatio="xMidYMid meet"
@@ -200,13 +217,19 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
           aria-labelledby="downshift-0-item-3"
           class="security--filter__list-item__entry"
         >
-          Johannesburg
+          <span
+            class="bx--text-truncate--end"
+            title="Johannesburg"
+          >
+            Johannesburg
+          </span>
           <span
             class="security--filter__add"
           >
             <svg
               aria-hidden="true"
               class="security--icon security--filter__add__icon"
+              fill="currentColor"
               focusable="false"
               height="20"
               preserveAspectRatio="xMidYMid meet"
@@ -236,13 +259,19 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
           aria-labelledby="downshift-0-item-4"
           class="security--filter__list-item__entry"
         >
-          London
+          <span
+            class="bx--text-truncate--end"
+            title="London"
+          >
+            London
+          </span>
           <span
             class="security--filter__add"
           >
             <svg
               aria-hidden="true"
               class="security--icon security--filter__add__icon"
+              fill="currentColor"
               focusable="false"
               height="20"
               preserveAspectRatio="xMidYMid meet"
@@ -272,13 +301,19 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
           aria-labelledby="downshift-0-item-5"
           class="security--filter__list-item__entry"
         >
-          Montreal
+          <span
+            class="bx--text-truncate--end"
+            title="Montreal"
+          >
+            Montreal
+          </span>
           <span
             class="security--filter__add"
           >
             <svg
               aria-hidden="true"
               class="security--icon security--filter__add__icon"
+              fill="currentColor"
               focusable="false"
               height="20"
               preserveAspectRatio="xMidYMid meet"
@@ -308,13 +343,19 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
           aria-labelledby="downshift-0-item-6"
           class="security--filter__list-item__entry"
         >
-          New Delhi
+          <span
+            class="bx--text-truncate--end"
+            title="New Delhi"
+          >
+            New Delhi
+          </span>
           <span
             class="security--filter__add"
           >
             <svg
               aria-hidden="true"
               class="security--icon security--filter__add__icon"
+              fill="currentColor"
               focusable="false"
               height="20"
               preserveAspectRatio="xMidYMid meet"
@@ -344,13 +385,19 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
           aria-labelledby="downshift-0-item-7"
           class="security--filter__list-item__entry"
         >
-          New York
+          <span
+            class="bx--text-truncate--end"
+            title="New York"
+          >
+            New York
+          </span>
           <span
             class="security--filter__add"
           >
             <svg
               aria-hidden="true"
               class="security--icon security--filter__add__icon"
+              fill="currentColor"
               focusable="false"
               height="20"
               preserveAspectRatio="xMidYMid meet"
@@ -380,13 +427,19 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
           aria-labelledby="downshift-0-item-8"
           class="security--filter__list-item__entry"
         >
-          Rio de Janeiro
+          <span
+            class="bx--text-truncate--end"
+            title="Rio de Janeiro"
+          >
+            Rio de Janeiro
+          </span>
           <span
             class="security--filter__add"
           >
             <svg
               aria-hidden="true"
               class="security--icon security--filter__add__icon"
+              fill="currentColor"
               focusable="false"
               height="20"
               preserveAspectRatio="xMidYMid meet"
@@ -416,13 +469,19 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
           aria-labelledby="downshift-0-item-9"
           class="security--filter__list-item__entry"
         >
-          San Fransisco
+          <span
+            class="bx--text-truncate--end"
+            title="San Fransisco"
+          >
+            San Fransisco
+          </span>
           <span
             class="security--filter__add"
           >
             <svg
               aria-hidden="true"
               class="security--icon security--filter__add__icon"
+              fill="currentColor"
               focusable="false"
               height="20"
               preserveAspectRatio="xMidYMid meet"
@@ -452,13 +511,19 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
           aria-labelledby="downshift-0-item-10"
           class="security--filter__list-item__entry"
         >
-          Tokyo
+          <span
+            class="bx--text-truncate--end"
+            title="Tokyo"
+          >
+            Tokyo
+          </span>
           <span
             class="security--filter__add"
           >
             <svg
               aria-hidden="true"
               class="security--icon security--filter__add__icon"
+              fill="currentColor"
               focusable="false"
               height="20"
               preserveAspectRatio="xMidYMid meet"

@@ -4,17 +4,30 @@
 /// @copyright IBM Security 2019
 ////
 
+@import '@carbon/themes/scss/tokens';
 @import 'carbon-components/scss/components/checkbox/checkbox';
-
 @import 'carbon-components/scss/globals/scss/vars';
 
 @import '../../globals/namespace/index';
 
 /// Carbon style overrides.
 @include export-namespace($name: checkbox) {
-  // TODO - remove issue is resolved in Carbon: https://github.com/carbon-design-system/carbon/issues/4074
-  .#{$prefix}--checkbox-label::after {
-    width: 0.575rem;
-    height: 0.3rem;
+  // TODO - remove when issue is resolved & released in Carbon: https://github.com/carbon-design-system/carbon/issues/6471
+  // Unchecked
+  .#{$prefix}--checkbox:focus + .#{$prefix}--checkbox-label::before,
+    .#{$prefix}--checkbox-label__focus::before,
+    // Checked
+    .#{$prefix}--checkbox:checked:focus + .#{$prefix}--checkbox-label::before,
+    .#{$prefix}--checkbox-label[data-contained-checkbox-state='true'].#{$prefix}--checkbox-label__focus::before,
+    // Indeterminate
+    .#{$prefix}--checkbox:indeterminate:focus + .#{$prefix}--checkbox-label::before,
+    .#{$prefix}--checkbox-label[data-contained-checkbox-state='mixed'].#{$prefix}--checkbox-label__focus::before {
+    border-color: $interactive-04;
+    border-width: 3px;
+    width: rem(20px);
+    height: rem(20px);
+    left: -2px;
+    top: 0;
+    box-shadow: none;
   }
 }

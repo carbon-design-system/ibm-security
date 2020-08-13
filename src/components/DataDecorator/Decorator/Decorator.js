@@ -1,18 +1,17 @@
 /**
  * @file Decorator
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019-2020
  */
 
-import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 
 import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
 
-import { getDecoratorProps, namespace } from './constants';
+import { getDecoratorProps, namespace, icons } from './constants';
 
 import Icon from '../../Icon';
-import Link from '../../Link';
 
 /**
  * Decorator component.
@@ -34,8 +33,22 @@ class Decorator extends Component {
     this.props.onClick(event, this.props.type, this.props.value);
   };
 
-  renderDecorator = (noIcon, path, inline, score, scoreThresholds) => (
-    <Fragment>
+  handleContextMenuClick = event => {
+    this.props.onContextMenu(event, this.props.type, this.props.value);
+  };
+
+  renderDecorator = (
+    inline,
+    noIcon,
+    path,
+    score,
+    scoreDescription,
+    scoreThresholds,
+    title,
+    type,
+    value
+  ) => (
+    <>
       {!noIcon && (
         <span className={`${namespace}__icon`}>
           <Icon
@@ -43,15 +56,15 @@ class Decorator extends Component {
             path={path}
             size={inline ? 12 : 16}
             viewBox="0 0 16 16"
-            title={this.props.scoreDescription(score, scoreThresholds)}
+            title={scoreDescription(score, scoreThresholds)}
           />
         </span>
       )}
-      <span className={`${namespace}__type`}>{this.props.type}</span>
-      <span className={`${namespace}__value`} title={this.props.title}>
-        {this.props.value}
+      <span className={`${namespace}__type`}>{type}</span>
+      <span className={`${namespace}__value`} title={title || value}>
+        {value}
       </span>
-    </Fragment>
+    </>
   );
 
   render() {
@@ -63,16 +76,27 @@ class Decorator extends Component {
       noIcon,
       onClick,
       score,
+      scoreDescription,
       scoreThresholds,
+      title,
+      type,
+      value,
     } = this.props;
+
     const { path, classes } = getDecoratorProps(score, scoreThresholds, active);
+
     const decorator = this.renderDecorator(
+      inline,
       noIcon,
       path,
-      inline,
       score,
-      scoreThresholds
+      scoreDescription,
+      scoreThresholds,
+      title,
+      type,
+      value
     );
+
     const decoratorClasses = classnames(namespace, classes, className, {
       [`${namespace}--interactive`]: href || onClick,
       [`${namespace}--active`]: active,
@@ -81,15 +105,19 @@ class Decorator extends Component {
 
     if (href) {
       return (
-        <Link href={href} className={decoratorClasses} tabIndex={0}>
+        <a href={href} className={decoratorClasses} tabIndex={0}>
           {decorator}
-        </Link>
+        </a>
       );
     }
 
     if (onClick) {
       return (
-        <button className={decoratorClasses} onClick={this.handleClick}>
+        <button
+          className={decoratorClasses}
+          onClick={this.handleClick}
+          onContextMenu={this.handleContextMenuClick}
+        >
           {decorator}
         </button>
       );
@@ -121,6 +149,9 @@ Decorator.propTypes = {
 
   /** @type {Function} Click handler of the Decorator. */
   onClick: PropTypes.func,
+
+  /** @type {Function} Secondary click handler of the Decorator. */
+  onContextMenu: PropTypes.func,
 
   /** @type {boolean} Whether the Decorator includes an icon */
   noIcon: PropTypes.bool,
@@ -161,6 +192,7 @@ Decorator.defaultProps = {
   href: undefined,
   inline: false,
   onClick: undefined,
+  onContextMenu: () => {},
   noIcon: false,
   score: undefined,
   scoreThresholds: [0, 4, 7, 10],
@@ -170,5 +202,54 @@ Decorator.defaultProps = {
       ? `Score ${score} out of ${scoreThresholds.slice(-1)[0]}`
       : 'No score',
 };
+
+/**
+ * Generate exports for individual severity icon types.
+ * @param {array} iconNames array of icon names
+ */
+function generateIconExports(...iconNames) {
+  const namedExports = {};
+  iconNames.forEach(iconName => {
+    const IconComponent = ({ className, description, size, ...other }) => (
+      <Icon
+        className={classnames(
+          `${namespace}__icon--${iconName.toLowerCase()}`,
+          className
+        )}
+        fillRule="evenodd"
+        path={icons[iconName]}
+        size={size}
+        viewBox="0 0 16 16"
+        aria-label={description}
+        {...other}
+      />
+    );
+    IconComponent.propTypes = {
+      /** Optional class name. */
+      className: PropTypes.string,
+
+      /** Icon size. */
+      size: PropTypes.oneOf([12, 16]),
+
+      /** The icon description. */
+      description: PropTypes.string.isRequired,
+    };
+
+    IconComponent.defaultProps = {
+      className: '',
+      size: 16,
+    };
+
+    // Capitalize first character of icon name
+    // so that the export is `Decorator.Low` etc.
+    const formattedName = iconName.charAt(0).toUpperCase() + iconName.slice(1);
+
+    IconComponent.displayName = `Decorator.${formattedName}`;
+    namedExports[formattedName] = IconComponent;
+  });
+  return namedExports;
+}
+
+Object.assign(Decorator, generateIconExports(...Object.keys(icons)));
 
 export default Decorator;

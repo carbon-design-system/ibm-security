@@ -63,7 +63,8 @@ export default class Toolbar extends Component {
     if (
       event.target !== activeElement &&
       event.target.nodeName !== 'SHELL-COMPONENT' &&
-      (this.wrapper && !this.wrapper.current.contains(event.target))
+      this.wrapper &&
+      !this.wrapper.current.contains(event.target)
     ) {
       this.setState({
         isActive: { menu: false, settings: false, support: false },
@@ -90,7 +91,14 @@ export default class Toolbar extends Component {
     return (
       <IconButton
         className={iconButtonClasses}
-        aria-describedby={type}
+        aria-expanded={isActiveItem}
+        {
+          // Expanded panels are added to the UI when opened,
+          // so this should not reference an ID that doesn't yet exist.
+          ...(isActiveItem
+            ? { [`aria-controls`]: `${namespace}--toolbar--${type}` }
+            : {})
+        }
         aria-label={label}
         iconClassName={`${namespace}__icon`}
         label={label}
@@ -209,10 +217,14 @@ export default class Toolbar extends Component {
     const { menu, settings, support } = labels;
     const classes = classnames(namespace, className);
     const { isActive } = this.state;
-    const isPanelActive = Object.keys(isActive).some(type => {
-      const { [type]: isActiveItem } = isActive;
-      return isActiveItem;
-    });
+    const activeItems = Object.entries(isActive)
+      // eslint-disable-next-line no-unused-vars
+      .filter(([type, isActiveItem]) => isActiveItem);
+    let currentType = '';
+    let isPanelActive = false;
+    if (activeItems.length > 0) {
+      [[currentType, isPanelActive]] = activeItems;
+    }
 
     return (
       <div ref={this.wrapper}>
@@ -235,7 +247,11 @@ export default class Toolbar extends Component {
 
         <Transition className={namespace} component="span">
           {isPanelActive && this.state.showContent ? (
-            <aside className={`${namespace}__panel`} role="menu">
+            <aside
+              className={`${namespace}__panel`}
+              id={`${namespace}--toolbar--${currentType}`}
+              role="menu"
+            >
               <IconButton
                 onClick={this.toggleContent}
                 renderIcon={ArrowLeft20}
@@ -247,7 +263,11 @@ export default class Toolbar extends Component {
             </aside>
           ) : (
             isPanelActive && (
-              <aside className={`${namespace}__panel`} role="menu">
+              <aside
+                className={`${namespace}__panel`}
+                id={`${namespace}--toolbar--${currentType}`}
+                role="menu"
+              >
                 {Object.keys(isActive).map(type => (
                   <Transition
                     key={type}

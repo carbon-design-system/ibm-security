@@ -3,9 +3,20 @@
  * @copyright IBM Security 2019
  */
 
-const scopes = new Array(3)
-  .fill()
-  .map((name = 'Scope', id) => ({ id, name: `${name} ${id + 1}` }));
+const scopes = [
+  {
+    id: 'scope-2',
+    name: 'Scope 2',
+  },
+  {
+    id: 'scope-1',
+    name: 'Scope 1',
+  },
+  {
+    id: 'scope-3',
+    name: 'Scope 3',
+  },
+];
 
 export default {
   submitLabel: 'Submit',
