@@ -5299,7 +5299,7 @@ a.bx--overflow-menu-options__btn::before {
   background-color: var(--ui-01, #262626);
   flex-direction: column;
   justify-content: space-between;
-  z-index: 6000;
+  z-index: 10000;
   outline: none;
 }
 
