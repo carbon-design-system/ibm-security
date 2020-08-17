@@ -924,6 +924,8 @@ Map {
     "defaultProps": Object {
       "className": "",
       "direction": "top",
+      "menuOffset": [Function],
+      "menuOffsetFlip": undefined,
       "selectorPrimaryFocus": "[data-overflow-menu-primary-focus]",
     },
     "propTypes": Object {
@@ -942,6 +944,92 @@ Map {
           ],
         ],
         "type": "oneOf",
+      },
+      "menuOffset": Object {
+        "args": Array [
+          Array [
+            Object {
+              "args": Array [
+                Object {
+                  "left": Object {
+                    "args": Array [
+                      Array [
+                        Object {
+                          "type": "number",
+                        },
+                        Object {
+                          "type": "string",
+                        },
+                      ],
+                    ],
+                    "type": "oneOf",
+                  },
+                  "top": Object {
+                    "args": Array [
+                      Array [
+                        Object {
+                          "type": "number",
+                        },
+                        Object {
+                          "type": "string",
+                        },
+                      ],
+                    ],
+                    "type": "oneOf",
+                  },
+                },
+              ],
+              "type": "shape",
+            },
+            Object {
+              "type": "func",
+            },
+          ],
+        ],
+        "type": "oneOfType",
+      },
+      "menuOffsetFlip": Object {
+        "args": Array [
+          Array [
+            Object {
+              "args": Array [
+                Object {
+                  "left": Object {
+                    "args": Array [
+                      Array [
+                        Object {
+                          "type": "number",
+                        },
+                        Object {
+                          "type": "string",
+                        },
+                      ],
+                    ],
+                    "type": "oneOf",
+                  },
+                  "top": Object {
+                    "args": Array [
+                      Array [
+                        Object {
+                          "type": "number",
+                        },
+                        Object {
+                          "type": "string",
+                        },
+                      ],
+                    ],
+                    "type": "oneOf",
+                  },
+                },
+              ],
+              "type": "shape",
+            },
+            Object {
+              "type": "func",
+            },
+          ],
+        ],
+        "type": "oneOfType",
       },
       "selectorPrimaryFocus": Object {
         "type": "string",
@@ -3936,6 +4024,9 @@ Map {
                 },
               ],
               "type": "shape",
+            },
+            "description": Object {
+              "type": "node",
             },
             "email": Object {
               "type": "string",
@@ -7640,6 +7731,9 @@ Map {
                     ],
                     "type": "shape",
                   },
+                  "description": Object {
+                    "type": "node",
+                  },
                   "email": Object {
                     "type": "string",
                   },
@@ -7700,6 +7794,9 @@ Map {
                 },
               ],
               "type": "shape",
+            },
+            "description": Object {
+              "type": "node",
             },
             "email": Object {
               "type": "string",
