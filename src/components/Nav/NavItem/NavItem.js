@@ -3,16 +3,16 @@
  * @copyright IBM Security 2019 - 2020
  */
 
-import Launch16 from '@carbon/icons-react/lib/launch/16';
+import { Launch16 } from '@carbon/icons-react';
 
 import classnames from 'classnames';
 import { bool, elementType, func, node, number, string } from 'prop-types';
 import React, { Component } from 'react';
-import NavItemLink from '../NavItemLink';
-
-import Icon from '../../Icon';
 
 import { getComponentNamespace } from '../../../globals/namespace';
+
+import Icon from '../../Icon';
+import NavItemLink from '../NavItemLink';
 
 export const namespace = getComponentNamespace('nav__list__item');
 
@@ -124,9 +124,12 @@ export default class NavItem extends Component {
       target: '_blank',
     };
 
-    const handleDisabled = action => (!disabled ? action : null);
+    const handleDisabled = (action, defaultValue = null) =>
+      !disabled ? action : defaultValue;
 
     const linkClassName = `${namespace}__link`;
+
+    const navItemTabIndex = handleDisabled(tabIndex, -1);
 
     return (
       <li
@@ -135,7 +138,6 @@ export default class NavItem extends Component {
         onClick={event => handleDisabled(onClick(event, href))}
         onKeyPress={event => handleDisabled(onClick(event, href))}
         role="menuitem"
-        tabIndex={handleDisabled(children ? -1 : tabIndex)}
       >
         {link ? (
           <NavItemLink
@@ -145,6 +147,7 @@ export default class NavItem extends Component {
             })}
             element={element}
             href={href}
+            tabIndex={navItemTabIndex}
             {...other}
             {...externalLinkProps}
           >
@@ -163,7 +166,7 @@ export default class NavItem extends Component {
             onClick={handleDisabled(handleItemSelect)}
             onKeyPress={handleDisabled(handleItemSelect)}
             role="menuitem"
-            tabIndex={handleDisabled(tabIndex)}
+            tabIndex={navItemTabIndex}
           >
             {children}
           </div>
