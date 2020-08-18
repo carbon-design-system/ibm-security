@@ -17039,7 +17039,6 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 
 .security--wizard .bx--progress--vertical .bx--progress-line {
   display: none;
-  visibility: hidden;
 }
 
 @keyframes collapse-accordion {
