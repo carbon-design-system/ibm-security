@@ -218,7 +218,7 @@ export default class PanelContainer extends Component {
           {children}
         </section>
         {hasFooter && (
-          <footer ref={this.footer} className={`${namespace}__footer`}>
+          <div ref={this.footer} className={`${namespace}__footer`}>
             {renderFooter ? (
               renderFooter()
             ) : (
@@ -248,7 +248,7 @@ export default class PanelContainer extends Component {
                 </Button>
               </Fragment>
             )}
-          </footer>
+          </div>
         )}
       </div>
     );
