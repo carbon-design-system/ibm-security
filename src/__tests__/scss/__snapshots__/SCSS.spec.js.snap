@@ -17018,6 +17018,29 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   margin-left: -1.5rem;
 }
 
+.security--wizard .bx--progress--vertical .bx--progress-step,
+.security--wizard .bx--progress--vertical .bx--progress-step-button {
+  flex-wrap: nowrap;
+  margin-bottom: 0.5rem;
+}
+
+.security--wizard .bx--progress--vertical .bx--progress-step svg,
+.security--wizard .bx--progress--vertical .bx--progress-step-button svg {
+  margin-left: 0;
+}
+
+.security--wizard .bx--progress--vertical .bx--progress-label {
+  max-width: 80ch;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.security--wizard .bx--progress--vertical .bx--progress-line {
+  display: none;
+}
+
 @keyframes collapse-accordion {
   0% {
     height: 100%;
