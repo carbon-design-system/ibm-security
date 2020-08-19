@@ -3,6 +3,7 @@
  * @copyright IBM Security 2020
  */
 
+import { breakpoints } from '@carbon/layout';
 import { text } from '@storybook/addon-knobs';
 import React from 'react';
 
@@ -16,7 +17,11 @@ const props = () => ({
   view: text('View (view)', 'View'),
 });
 
-export const Default = () => <ReturnToBanner {...props()} />;
+export const Default = () => (
+  <div style={{ width: breakpoints.md.width }}>
+    <ReturnToBanner {...props()} />
+  </div>
+);
 
 export default meta(
   components('ReturnToBanner'),
