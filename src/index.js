@@ -139,6 +139,7 @@ export {
 export RadioButton, { RadioButtonSkeleton } from './components/RadioButton';
 export RadioButtonGroup from './components/RadioButtonGroup';
 export RadioTile from './components/RadioTile';
+export ReturnToBanner from './components/ReturnToBanner';
 export ScrollGradient from './components/ScrollGradient';
 
 export Search, {

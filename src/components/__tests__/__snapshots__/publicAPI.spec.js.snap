@@ -6997,6 +6997,32 @@ Map {
       },
     },
   },
+  "ReturnToBanner" => Object {
+    "defaultProps": Object {
+      "className": null,
+      "view": null,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+      "href": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+      "labelText": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+      "view": Object {
+        "type": "string",
+      },
+    },
+  },
   "Row" => Object {
     "propTypes": Object {
       "as": Object {

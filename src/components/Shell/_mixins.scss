@@ -1,29 +1,17 @@
 ////
 /// Shell mixins.
 /// @group shell
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
-@import '@carbon/layout/scss/mini-unit';
-@import '@carbon/layout/scss/spacing';
 @import '@carbon/themes/scss/tokens';
-@import '@carbon/type/scss/styles';
-@import 'carbon-components/scss/globals/scss/helper-mixins';
-@import 'carbon-components/scss/globals/scss/layout';
-
-@import '../../globals/motion/index';
-@import '../../globals/theme/mixins';
 
 @import '../Header/mixins';
 @import '../Toolbar/mixins';
 
-@mixin shell {
-  /// Banner height.
-  /// @type Length
-  $shell__banner__sizing__height: carbon--mini-units(
-    $count: 3,
-  );
+@import '../ReturnToBanner/variables';
 
+@mixin shell {
   &--active {
     $header: '__header';
     $toolbar: '__toolbar';
@@ -39,65 +27,14 @@
       &#{$toolbar},
       &#{$header} > #{$header__namespace},
       #{$toolbar__namespace}__panel {
-        margin-top: $shell__banner__sizing__height;
+        margin-top: $return-to-banner__sizing__height;
       }
     }
   }
 
   &__banner {
-    /// Banner background size height.
-    /// @type Length
-    $shell__banner__background__sizing__height: $carbon--layout-02;
-
-    /// Banner background size width.
-    /// @type Length
-    $shell__banner__background__sizing__width: $carbon--layout-07;
-
-    @include security--theme--cg10__cg100;
-
-    display: flex;
     position: fixed;
     top: 0;
-    width: 100%;
-    height: $shell__banner__sizing__height;
-    padding-left: $carbon--spacing-05;
-    background-color: $ui-01;
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: $shell__banner__background__sizing__width
-      $shell__banner__background__sizing__height;
-    align-items: center;
-    transition: $transition-duration background-size $timing-function;
-    z-index: $header__layer;
-
-    &,
-    &:hover,
-    &:visited {
-      color: $text-01;
-    }
-
-    &__icon {
-      fill: $icon-03;
-    }
-
-    &__text {
-      @include carbon--type-style($name: caption-01);
-      padding-left: $carbon--spacing-04;
-      max-width: carbon--mini-units($count: 53);
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    &:focus,
-    &:hover {
-      background-size: ($shell__banner__background__sizing__width * 2)
-        $shell__banner__background__sizing__height;
-    }
-
-    &:focus {
-      @include focus-outline($type: outline);
-    }
   }
 
   &__skip-to-content {

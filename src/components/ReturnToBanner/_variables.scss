@@ -1,0 +1,13 @@
+////
+/// 'Return to' banner variables.
+/// @group return-to-banner
+/// @copyright IBM Security 2020
+////
+
+@import '@carbon/layout/scss/mini-unit';
+
+/// Height.
+/// @type Length
+$return-to-banner__sizing__height: carbon--mini-units(
+  $count: 3,
+);

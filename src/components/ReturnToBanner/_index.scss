@@ -1,0 +1,77 @@
+////
+/// 'Return to' banner.
+/// @group return-to-banner
+/// @copyright IBM Security 2020
+////
+
+@import '@carbon/layout/scss/mini-unit';
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/themes/scss/tokens';
+@import '@carbon/type/scss/styles';
+@import 'carbon-components/scss/globals/scss/helper-mixins';
+
+@import '../../globals/motion/index';
+@import '../../globals/theme/mixins';
+
+@import '../Link/index';
+
+@import '../Component/mixins';
+
+@import 'variables';
+
+@include security--component($name: return-to-banner) {
+  /// Spacing.
+  /// @type Length
+  $return-to-banner__spacing: $carbon--spacing-05;
+
+  /// Background size height.
+  /// @type Length
+  $return-to-banner__background__sizing__height: $carbon--layout-02;
+
+  /// Background size width.
+  /// @type Length
+  $return-to-banner__background__sizing__width: $carbon--layout-07;
+
+  @include security--theme--cg10__cg100;
+
+  display: flex;
+  width: 100%;
+  height: $return-to-banner__sizing__height;
+  padding-right: $return-to-banner__spacing;
+  padding-left: $return-to-banner__spacing;
+  background-color: $ui-01;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: $return-to-banner__background__sizing__width
+    $return-to-banner__background__sizing__height;
+  align-items: center;
+  transition: $transition-duration background-size $timing-function;
+
+  &,
+  &:hover,
+  &:visited {
+    color: $text-01;
+  }
+
+  &__icon {
+    fill: $icon-03;
+  }
+
+  &__text {
+    @include carbon--type-style($name: caption-01);
+    @include text-overflow;
+
+    padding-left: $carbon--spacing-04;
+    max-width: carbon--mini-units($count: 53);
+  }
+
+  &:focus,
+  &:hover {
+    background-size: ($return-to-banner__background__sizing__width * 2)
+      $return-to-banner__background__sizing__height;
+  }
+
+  &:focus {
+    @include focus-outline($type: outline);
+  }
+}

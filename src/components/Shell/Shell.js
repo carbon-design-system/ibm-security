@@ -1,22 +1,20 @@
 /**
  * @file Shell.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
-import ArrowLeft16 from '@carbon/icons-react/lib/arrow--left/16';
-
 import classnames from 'classnames';
-import dataUri from 'data-uri.macro';
+
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
 
-import Header from '../Header';
-import Icon from '../Icon';
-import Link from '../Link';
-import Toolbar from '../Toolbar';
 import { SkipToContent } from '../..';
+
+import Header from '../Header';
+import ReturnToBanner from '../ReturnToBanner';
+import Toolbar from '../Toolbar';
 
 export const namespace = getComponentNamespace('shell');
 
@@ -59,28 +57,23 @@ const Shell = ({
           </SkipToContent>
         </div>
       )}
-      {returnToBanner && (
-        <Link
-          id="returnToBanner"
-          className={`${namespace}__banner`}
-          href={returnToBanner.href}
-          style={{
-            backgroundImage: `url(${dataUri(
-              '../../images/aurora-banner@2x.png'
-            )})`,
-          }}
-        >
-          <Icon
-            className={`${namespace}__banner__icon`}
-            renderIcon={ArrowLeft16}
-          />
-          <span className={`${namespace}__banner__text`}>
-            {returnToBanner.view
-              ? `Return to ${returnToBanner.application} / ${returnToBanner.view}`
-              : `Return to ${returnToBanner.application}`}
-          </span>
-        </Link>
-      )}
+      {returnToBanner &&
+        (() => {
+          const { application, href, view } = returnToBanner;
+
+          return (
+            <ReturnToBanner
+              id="returnToBanner"
+              className={`${namespace}__banner`}
+              href={href}
+              labelText="Return to"
+              view={view}
+            >
+              {application}
+            </ReturnToBanner>
+          );
+        })()}
+
       <div
         className={classnames(namespace, {
           [activeClass]: profile,
