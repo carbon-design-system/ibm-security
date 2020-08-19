@@ -6,24 +6,16 @@
 import { icon, url, random } from '../../_mocks_';
 import labels from '../locales/en/Toolbar.json';
 
-const externalURL = 'https://www.ibm.com';
-
 /**
  * Generates the initial navigation model.
  */
 const generateNavigationModel = ({
-  content,
-  href,
-  icon,
-  id,
-  title,
+  href = window.location.host + url(random(30)),
+  id = `${random(30)}`,
   ...props
 }) => ({
-  content,
-  href: href || window.location.host + url(random(30)),
-  icon,
-  id: id || `${random(30)}`,
-  title,
+  href,
+  id,
   ...props,
 });
 
@@ -39,22 +31,14 @@ const generateNavigationListModel = (title, navigation) => ({
 /**
  * Generates data for the navigation.
  */
-const generateNavigation = array =>
-  array.map(item =>
-    generateNavigationModel({
-      title: item.title,
-      content: item.content,
-      icon: item.icon,
-      href: item.href,
-    })
-  );
+const generateNavigation = array => array.map(generateNavigationModel);
 
 /**
  * Generates application data for the navigation.
  */
 const generateApplications = array =>
-  array.map(({ children, id, title, content, icon }) => ({
-    ...generateNavigationModel({ title, content, icon, id }),
+  array.map(({ children, ...props }) => ({
+    ...generateNavigationModel(props),
     children,
   }));
 
@@ -115,7 +99,7 @@ const settings = [
   generateNavigationListModel(
     'Legal',
     generateNavigation([
-      { title: 'Privacy', href: externalURL },
+      { title: 'Privacy', href: 'https://www.ibm.com' },
       { title: 'Terms' },
     ])
   ),
