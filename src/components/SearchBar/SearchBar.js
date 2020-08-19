@@ -96,7 +96,7 @@ export default class SearchBar extends React.Component {
     titleText: PropTypes.string,
 
     /**
-     * Whether or not the scopes MultiSelecto label is visually hidden.
+     * Whether or not the scopes MultiSelect label is visually hidden.
      */
     hideScopesLabel: PropTypes.bool,
   };
