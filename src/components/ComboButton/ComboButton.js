@@ -7,7 +7,7 @@ import { ChevronDown16, ChevronUp16 } from '@carbon/icons-react';
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { useRef, useState } from 'react';
+import React, { createElement, useState } from 'react';
 
 import { carbonPrefix, getComponentNamespace } from '../../globals/namespace';
 
@@ -29,7 +29,6 @@ const ComboButton = ({
   selectorPrimaryFocus,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const wrapper = useRef(null);
 
   const childrenArray = React.Children.toArray(children).filter(Boolean);
 
@@ -106,7 +105,7 @@ const ComboButton = ({
               >
                 {children}
               </span>
-              {!Icon ? null : <Icon />}
+              {Icon && <Icon aria-label={iconDescription} />}
             </>
           }
           id={id}
@@ -118,12 +117,14 @@ const ComboButton = ({
     });
   }
 
-  const overflowIcon = Icon => <Icon className={`${namespace}__icon`} />;
+  const renderOverflowMenuIcon = () =>
+    createElement(isOpen ? ChevronUp16 : ChevronDown16, {
+      className: `${namespace}__icon`,
+    });
 
   return (
     <div
       className={classnames(namespace, className)}
-      ref={wrapper}
       data-floating-menu-container
     >
       <div className={`${namespace}__group`}>
@@ -149,10 +150,7 @@ const ComboButton = ({
             menuOptionsClass={`${carbonPrefix}list-box__menu`}
             onClick={() => setIsOpen(!isOpen)}
             onClose={() => setIsOpen(false)}
-            onOpen={() => setIsOpen(true)}
-            renderIcon={() =>
-              isOpen ? overflowIcon(ChevronUp16) : overflowIcon(ChevronDown16)
-            }
+            renderIcon={renderOverflowMenuIcon}
             selectorPrimaryFocus={selectorPrimaryFocus}
           >
             {overflowMenuItemWithProps}
