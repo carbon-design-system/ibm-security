@@ -105,6 +105,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
         direction="top"
         menuOffset={[Function]}
         menuOptionsClass="bx--list-box__menu"
+        onClick={[Function]}
         onClose={[Function]}
         onOpen={[Function]}
         renderIcon={[Function]}

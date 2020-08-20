@@ -3,8 +3,7 @@
  * @copyright IBM Security 2019 - 2020
  */
 
-import ChevronDown16 from '@carbon/icons-react/lib/chevron--down/16';
-import ChevronUp16 from '@carbon/icons-react/lib/chevron--up/16';
+import { ChevronDown16, ChevronUp16 } from '@carbon/icons-react';
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
@@ -49,6 +48,7 @@ const ComboButton = ({
       id,
       renderIcon: Icon,
     } = button.props;
+
     return (
       <Button
         className={classnames(className, `${namespace}--primary`)}
@@ -76,7 +76,7 @@ const ComboButton = ({
     overflowItems = childrenArray.slice(1);
 
     // Create `OverflowMenuItem` components:
-    overflowMenuItemWithProps = overflowItems.map(item => {
+    overflowMenuItemWithProps = overflowItems.map((item, index) => {
       // Need to explicitly define props, versus using `...rest`,
       // because otherwise unused `Button`-related props from
       // may trigger invalid DOM warnings.
@@ -85,8 +85,10 @@ const ComboButton = ({
         className,
         disabled,
         href,
-        onClick,
+        iconDescription,
         id,
+        key,
+        onClick,
         renderIcon: Icon,
         ...other
       } = item.props;
@@ -108,7 +110,7 @@ const ComboButton = ({
             </>
           }
           id={id}
-          key={id || `item-${href}`}
+          key={key || id || `${namespace}__item__${index}`}
           onClick={onClick}
           {...other}
         />
@@ -145,6 +147,7 @@ const ComboButton = ({
             menuOffset={menuOffset}
             menuOffsetFlip={menuOffsetFlip}
             menuOptionsClass={`${carbonPrefix}list-box__menu`}
+            onClick={() => setIsOpen(!isOpen)}
             onClose={() => setIsOpen(false)}
             onOpen={() => setIsOpen(true)}
             renderIcon={() =>
