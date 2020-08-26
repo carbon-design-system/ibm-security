@@ -12541,14 +12541,31 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .security--search-bar__scopes.bx--list-box {
-  flex: 0 0 14rem;
   border: 0;
 }
 
 .security--search-bar__scopes.bx--list-box,
 .security--search-bar__scopes.bx--list-box .bx--list-box__field {
-  height: 100%;
+  height: 3rem;
   max-height: unset;
+}
+
+.security--search-bar .bx--multi-select__wrapper,
+.security--search-bar .bx--search, .security--search-bar__submit {
+  align-self: flex-end;
+}
+
+.security--search-bar--hide-scopes-label .bx--label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  visibility: inherit;
+  clip: rect(0, 0, 0, 0);
 }
 
 .security--stacked-notification {
@@ -15639,8 +15656,12 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .security--filter .bx--list-box__field {
+  position: fixed;
+  height: 2.5rem;
   padding-right: 0;
   padding-left: 0;
+  background-color: inherit;
+  transform: translate3d(0, -100%, 0);
 }
 
 .security--filter .bx--list-box__menu-item__option {
@@ -15669,6 +15690,15 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 .security--filter__add__icon {
   fill: currentColor;
   visibility: hidden;
+}
+
+.security--filter__list-container {
+  background-color: var(--ui-01, #262626);
+}
+
+.security--filter__list-container:empty {
+  min-height: 2.5rem;
+  cursor: default;
 }
 
 .security--filter__list-item:focus .security--filter__add__icon, .security--filter__list-item:hover .security--filter__add__icon {
@@ -15911,6 +15941,10 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 
 .security--tag-wall-filter.security--tearsheet--small > .security--tearsheet--small__header > .security--tearsheet--small__title {
   margin-right: 1rem;
+}
+
+.security--tag-wall-filter.security--tearsheet--small .security--tearsheet--small__content {
+  margin-top: 2.5rem;
 }
 
 .security--portal__overlay {
@@ -16946,6 +16980,29 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 
 .security--wizard__navItem {
   margin-left: -1.5rem;
+}
+
+.security--wizard .bx--progress--vertical .bx--progress-step,
+.security--wizard .bx--progress--vertical .bx--progress-step-button {
+  flex-wrap: nowrap;
+  margin-bottom: 0.5rem;
+}
+
+.security--wizard .bx--progress--vertical .bx--progress-step svg,
+.security--wizard .bx--progress--vertical .bx--progress-step-button svg {
+  margin-left: 0;
+}
+
+.security--wizard .bx--progress--vertical .bx--progress-label {
+  max-width: 80ch;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.security--wizard .bx--progress--vertical .bx--progress-line {
+  display: none;
 }
 
 @keyframes collapse-accordion {

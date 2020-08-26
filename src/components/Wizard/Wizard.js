@@ -241,7 +241,14 @@ class Wizard extends Component {
    * Renders the component.
    */
   render() {
-    const { labels, focusTrap, title, subTitle, ...other } = this.props;
+    const {
+      labels,
+      focusTrap,
+      title,
+      subTitle,
+      className,
+      ...other
+    } = this.props;
     const componentLabels = {
       ...defaultLabels.labels,
       ...labels,
@@ -335,7 +342,7 @@ class Wizard extends Component {
         }}
         loading={this.state.loading}
         loadingMessage={this.props.loadingMessage}
-        className={classnames(namespace, this.props.className)}
+        className={classnames(namespace, className)}
         {...other}
       />
     );
