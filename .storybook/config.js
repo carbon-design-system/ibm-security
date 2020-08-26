@@ -1,6 +1,6 @@
 /**
  * @file Storybook configuration.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import { spacing04, spacing05 } from '@carbon/layout/lib';
@@ -79,4 +79,4 @@ addParameters({
   },
 });
 
-configure(require.context('../src', true, /\.stories\.js$/), module);
+configure(require.context('../src', true, /\.stories\.*$/), module);
