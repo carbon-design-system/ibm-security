@@ -1,15 +1,19 @@
 ////
 /// Filter mixins.
 /// @filter
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import '@carbon/layout/scss/spacing';
 @import '@carbon/layout/scss/mini-unit';
 @import '@carbon/themes/scss/tokens';
+
 @import 'carbon-components/scss/globals/scss/helper-classes';
 @import 'carbon-components/scss/globals/scss/helper-mixins';
+
 @import '../../../globals/namespace/index';
+
+@import '../../Tearsheet/mixins';
 
 /// Name.
 /// @type String
@@ -21,13 +25,23 @@ $filter__namespace: get-component-namespace(
   $component-name: $filter__name,
 );
 
+/// Dimensions.
+/// @type Length
+$filter__sizing__dimensions: carbon--mini-units(
+  $count: 5,
+);
+
 @mixin filter {
   $root: &;
 
   .#{$prefix}--list-box {
     &__field {
+      position: fixed;
+      height: $filter__sizing__dimensions;
       padding-right: 0;
       padding-left: 0;
+      background-color: inherit;
+      transform: translate3d(0, -100%, 0);
     }
 
     &__menu-item__option {
@@ -59,6 +73,15 @@ $filter__namespace: get-component-namespace(
     }
   }
 
+  &__list-container {
+    background-color: $tearsheet__color__background;
+
+    &:empty {
+      min-height: $filter__sizing__dimensions;
+      cursor: default;
+    }
+  }
+
   &__list-item {
     &:focus,
     &:hover {
@@ -68,7 +91,7 @@ $filter__namespace: get-component-namespace(
     }
 
     &:focus {
-      @include focus-outline('outline');
+      @include focus-outline($type: outline);
     }
 
     &:hover {
