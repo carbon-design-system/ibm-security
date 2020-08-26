@@ -3,14 +3,18 @@
  * @copyright IBM Security 2019 - 2020
  */
 
-import Add20 from '@carbon/icons-react/lib/add/20';
-import Search20 from '@carbon/icons-react/lib/search/20';
+import { Add20, Search20 } from '@carbon/icons-react';
 
-import classnames from 'classnames';
-import PropTypes from 'prop-types';
-import React from 'react';
-import Downshift from 'downshift';
 import { defaultFilterItems } from 'carbon-components-react/lib/components/ComboBox/tools/filter';
+import classnames from 'classnames';
+import Downshift from 'downshift';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+
+import {
+  carbonPrefix,
+  getComponentNamespace,
+} from '../../../globals/namespace/index';
 
 import theme from '../../../globals/theme';
 
@@ -20,16 +24,11 @@ import { defaultSortItems, defaultCompareItems } from './tools/sorting';
 import Icon from '../../Icon';
 import ListBox from '../../ListBox';
 
-import {
-  carbonPrefix,
-  getComponentNamespace,
-} from '../../../globals/namespace/index';
-
 const { Field, Menu, MenuItem, Selection } = ListBox;
 
 const namespace = getComponentNamespace('filter');
 
-class Filter extends React.Component {
+class Filter extends Component {
   constructor(props) {
     super(props);
     this.state = {

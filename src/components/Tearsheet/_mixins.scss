@@ -21,6 +21,10 @@
 /// @type String
 $tearsheet__name: tearsheet;
 
+/// Background color.
+/// @type Color
+$tearsheet__color__background: $ui-01;
+
 /// Margin.
 /// @type Length
 $tearsheet__sizing__margin: $carbon--spacing-05;
@@ -51,7 +55,7 @@ $tearsheet__position: calc(
   min-height: carbon--mini-units($count: 40);
   margin-right: $tearsheet__sizing__margin;
   margin-left: $tearsheet__sizing__margin;
-  background-color: $ui-01;
+  background-color: $tearsheet__color__background;
   transform: translate3d(#{$tearsheet__position}, 0, 0);
   z-index: z($layer: modal);
 
