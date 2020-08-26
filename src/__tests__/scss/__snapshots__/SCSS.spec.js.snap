@@ -15680,8 +15680,12 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .security--filter .bx--list-box__field {
+  position: fixed;
+  height: 2.5rem;
   padding-right: 0;
   padding-left: 0;
+  background-color: inherit;
+  transform: translate3d(0, -100%, 0);
 }
 
 .security--filter .bx--list-box__menu-item__option {
@@ -15710,6 +15714,15 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 .security--filter__add__icon {
   fill: currentColor;
   visibility: hidden;
+}
+
+.security--filter__list-container {
+  background-color: var(--ui-01, #262626);
+}
+
+.security--filter__list-container:empty {
+  min-height: 2.5rem;
+  cursor: default;
 }
 
 .security--filter__list-item:focus .security--filter__add__icon, .security--filter__list-item:hover .security--filter__add__icon {
@@ -15952,6 +15965,10 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 
 .security--tag-wall-filter.security--tearsheet--small > .security--tearsheet--small__header > .security--tearsheet--small__title {
   margin-right: 1rem;
+}
+
+.security--tag-wall-filter.security--tearsheet--small .security--tearsheet--small__content {
+  margin-top: 2.5rem;
 }
 
 .security--portal__overlay {
