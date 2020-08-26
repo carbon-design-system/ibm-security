@@ -7165,11 +7165,13 @@ Map {
   "SearchBar" => Object {
     "defaultProps": Object {
       "className": "",
+      "hideScopesLabel": true,
       "onChange": [Function],
       "onSubmit": [Function],
       "scopeToString": [Function],
       "scopes": Array [],
       "selectedScopes": Array [],
+      "titleText": "Scopes multiselect",
       "value": "",
     },
     "propTypes": Object {
@@ -7179,6 +7181,9 @@ Map {
       "clearButtonLabelText": Object {
         "isRequired": true,
         "type": "string",
+      },
+      "hideScopesLabel": Object {
+        "type": "bool",
       },
       "labelText": Object {
         "isRequired": true,
@@ -7239,6 +7244,9 @@ Map {
       },
       "submitLabel": Object {
         "isRequired": true,
+        "type": "string",
+      },
+      "titleText": Object {
         "type": "string",
       },
       "translateWithId": Object {
