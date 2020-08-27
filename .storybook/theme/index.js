@@ -1,15 +1,17 @@
 /**
  * @file Storybook theme.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
-import { black } from '@carbon/colors/lib';
-import { g100 } from '@carbon/themes/lib';
-import { fontFamilies } from '@carbon/type/lib';
+import { black } from '@carbon/colors';
+import { g100 } from '@carbon/themes';
+import { fontFamilies } from '@carbon/type';
 
 import { create } from '@storybook/theming';
 
 import { name, homepage, version } from '../../package.json';
+
+import lockup from './lockup.svg';
 
 const { mono, sans } = fontFamilies;
 const { field02, inverse01, activeUI, text01, ui01, ui02 } = g100;
@@ -18,7 +20,7 @@ export default create({
   base: 'dark',
 
   // Brand information.
-  brandTitle: `<img src="${require('./lockup.svg')}" alt="IBM Security" /><br/><br/><code>${name}<br/>v${version}</code>`,
+  brandTitle: `<img src="${lockup}" alt="IBM Security" /><br/><br/><code>${name}<br/>v${version}</code>`,
   brandUrl: homepage,
 
   colorPrimary: activeUI,

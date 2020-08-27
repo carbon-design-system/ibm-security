@@ -56,10 +56,8 @@ import {
 import storyDescription from '../stories';
 
 const setDescription = ({ displayName }, url) => ({
-  parameters: {
-    info: `${storyDescription}
+  info: `${storyDescription}
 - [Learn more](${url}) about how to use the '${displayName}'`,
-  },
 });
 
 const actionBar = () => (
@@ -87,7 +85,7 @@ const actionBar = () => (
   </ActionBarModule>
 );
 
-actionBar.story = setDescription(
+actionBar.parameters = setDescription(
   ActionBarModule,
   'https://ibm.box.com/s/rn0pt5mov83tbd5k086ee39wgpm18mmq'
 );
@@ -109,7 +107,7 @@ const buttonCluster = () => (
   </ButtonClusterModule>
 );
 
-buttonCluster.story = setDescription(
+buttonCluster.parameters = setDescription(
   ButtonClusterModule,
   'https://ibm.box.com/s/medn74frnbw2aatsc1p74ncmrmlr51g3'
 );
@@ -180,7 +178,7 @@ const card = () => (
   </CardModule>
 );
 
-card.story = setDescription(
+card.parameters = setDescription(
   CardModule,
   'https://ibm.box.com/s/ery5j69q2a20o788s2f7mnjmoew7k9ka'
 );
@@ -204,7 +202,7 @@ const description = () => (
   </DescriptionModule>
 );
 
-description.story = setDescription(
+description.parameters = setDescription(
   DescriptionModule,
   'https://ibm.box.com/s/xozfswg0kzn0tuv61uvtz59qoduui6mx'
 );
@@ -232,7 +230,7 @@ const ICA = () => (
   </ICAModule>
 );
 
-ICA.story = setDescription(
+ICA.parameters = setDescription(
   ICAModule,
   'https://ibm.box.com/s/f0orv16ivr46ukwd6jn0hmuw0slxfj2c'
 );
@@ -248,7 +246,7 @@ const pageTab = () => (
   </PageTabModule>
 );
 
-pageTab.story = setDescription(
+pageTab.parameters = setDescription(
   PageTabModule,
   'https://ibm.box.com/s/17fg1zm60roe6bhipl85pvtx9mxztnfh'
 );
@@ -281,7 +279,7 @@ const titleBar = () => (
   </TitleBarModule>
 );
 
-titleBar.story = setDescription(
+titleBar.parameters = setDescription(
   TitleBarModule,
   'https://ibm.box.com/s/0wp85w684cnsseqdetezhyhk80aqzjux'
 );
@@ -308,7 +306,7 @@ const typeLayout = () => (
   </TypeLayoutModule>
 );
 
-typeLayout.story = setDescription(
+typeLayout.parameters = setDescription(
   TypeLayoutModule,
   'https://ibm.box.com/s/u4idf3g6sqsvj2529lps6q19s1imu8eq'
 );
