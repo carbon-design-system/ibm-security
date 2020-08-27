@@ -321,6 +321,12 @@ $header__transition__timing-function: $timing-function;
         }
       }
 
+      &__description {
+        padding-right: $header__popover__spacing__padding;
+        padding-bottom: $header__profile__spacing__margin;
+        padding-left: $header__popover__spacing__padding;
+      }
+
       &__body {
         &--account {
           padding-right: $header__popover__spacing__padding;

@@ -21,7 +21,14 @@ import { namespace as buttonNamespace } from '../Button/Button';
 
 export const namespace = getComponentNamespace('combo-button');
 
-const ComboButton = ({ children, className, direction }) => {
+const ComboButton = ({
+  children,
+  className,
+  direction,
+  menuOffset,
+  menuOffsetFlip,
+  selectorPrimaryFocus,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const wrapper = useRef(null);
 
@@ -69,7 +76,7 @@ const ComboButton = ({ children, className, direction }) => {
     overflowItems = childrenArray.slice(1);
 
     // Create `OverflowMenuItem` components:
-    overflowMenuItemWithProps = overflowItems.map((item, index) => {
+    overflowMenuItemWithProps = overflowItems.map(item => {
       // Need to explicitly define props, versus using `...rest`,
       // because otherwise unused `Button`-related props from
       // may trigger invalid DOM warnings.
@@ -79,9 +86,9 @@ const ComboButton = ({ children, className, direction }) => {
         disabled,
         href,
         onClick,
-        primaryFocus,
         id,
         renderIcon: Icon,
+        ...other
       } = item.props;
 
       return (
@@ -103,7 +110,7 @@ const ComboButton = ({ children, className, direction }) => {
           id={id}
           key={id || `item-${href}`}
           onClick={onClick}
-          primaryFocus={!primaryFocus && index === 0 ? true : primaryFocus}
+          {...other}
         />
       );
     });
@@ -135,15 +142,15 @@ const ComboButton = ({ children, className, direction }) => {
               `${namespace}__overflow-menu`
             )}
             direction={direction}
-            menuOffset={() => ({
-              left: 'auto',
-            })}
+            menuOffset={menuOffset}
+            menuOffsetFlip={menuOffsetFlip}
             menuOptionsClass={`${carbonPrefix}list-box__menu`}
             onClose={() => setIsOpen(false)}
             onOpen={() => setIsOpen(true)}
             renderIcon={() =>
               isOpen ? overflowIcon(ChevronUp16) : overflowIcon(ChevronDown16)
             }
+            selectorPrimaryFocus={selectorPrimaryFocus}
           >
             {overflowMenuItemWithProps}
           </OverflowMenu>
@@ -162,11 +169,44 @@ ComboButton.propTypes = {
 
   /** @type {string} Overflow menu direction. */
   direction: PropTypes.oneOf([TooltipDirection.TOP, TooltipDirection.BOTTOM]),
+
+  /**
+   * The adjustment in position applied to the floating menu.
+   */
+  menuOffset: PropTypes.oneOfType([
+    PropTypes.shape({
+      top: PropTypes.oneOf([PropTypes.number, PropTypes.string]),
+      left: PropTypes.oneOf([PropTypes.number, PropTypes.string]),
+    }),
+    PropTypes.func,
+  ]),
+
+  /**
+   * The adjustment in position applied to the floating menu.
+   */
+  menuOffsetFlip: PropTypes.oneOfType([
+    PropTypes.shape({
+      top: PropTypes.oneOf([PropTypes.number, PropTypes.string]),
+      left: PropTypes.oneOf([PropTypes.number, PropTypes.string]),
+    }),
+    PropTypes.func,
+  ]),
+
+  /**
+   * Specify a CSS selector that matches the DOM element that should
+   * be focused when the OverflowMenu opens
+   */
+  selectorPrimaryFocus: PropTypes.string,
 };
 
 ComboButton.defaultProps = {
   className: '',
   direction: TooltipDirection.TOP,
+  menuOffset: () => ({
+    left: 'auto',
+  }),
+  menuOffsetFlip: undefined,
+  selectorPrimaryFocus: '[data-overflow-menu-primary-focus]',
 };
 
 export default ComboButton;

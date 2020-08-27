@@ -6,6 +6,7 @@
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
+import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { UNSTABLE__Pagination, PageSelector } from '../../..';
 
@@ -13,8 +14,7 @@ import { namespace } from '../Pagination';
 
 describe('UNSTABLE__Pagination', () => {
   test('should have no Axe or DAP violations', async () => {
-    const main = document.createElement('main');
-    render(
+    const { container } = renderWithinLandmark(
       <UNSTABLE__Pagination totalItems={40} pageSizes={[10, 20]}>
         {({ currentPage, onSetPage, totalPages }) => (
           <PageSelector
@@ -23,14 +23,10 @@ describe('UNSTABLE__Pagination', () => {
             totalPages={totalPages}
           />
         )}
-      </UNSTABLE__Pagination>,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+      </UNSTABLE__Pagination>
     );
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations('UNSTABLE_Pagination');
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('UNSTABLE_Pagination');
   });
 
   test('should cycle pagination elements in tab order', () => {

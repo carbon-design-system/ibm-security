@@ -1,0 +1,87 @@
+////
+/// Interactive tag mixins.
+/// @group tag--interactive
+/// @copyright IBM Security 2019 - 2020
+////
+
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/layout/scss/mini-unit';
+@import '@carbon/themes/scss/tokens';
+
+@import 'carbon-components/scss/globals/scss/helper-mixins';
+
+@import '../../globals/namespace/index';
+@import '../../globals/motion/index';
+
+/// Name.
+/// @type String
+$tag--interactive__name: tag--interactive;
+
+/// Namespace.
+/// @type String
+$tag--interactive__namespace: get-component-namespace(
+  $component-name: $tag--interactive__name,
+);
+
+@mixin tag--interactive {
+  /// Button height.
+  /// @type Length
+  $tag--interactive__button__sizing__height: carbon--mini-units(
+    $count: 2.5,
+  );
+
+  /// Button icon position.
+  /// @type Length
+  $tag--interactive__button__icon__position: 50%;
+
+  /// Button icon transform.
+  /// @type Length
+  $tag--interactive__button__icon__transform: -$tag--interactive__button__icon__position;
+
+  &--default {
+    color: $text-01;
+    background-color: $active-ui;
+  }
+
+  &--removable {
+    padding-right: $carbon--spacing-01;
+  }
+
+  &__button {
+    $button: &;
+    @include button-reset;
+
+    position: relative;
+    margin-left: $carbon--spacing-03;
+    height: $tag--interactive__button__sizing__height;
+    width: $tag--interactive__button__sizing__height;
+    color: currentColor;
+
+    &:focus,
+    &:hover {
+      outline: none;
+
+      > #{$button}__icon {
+        border-color: currentColor;
+      }
+    }
+
+    &__icon {
+      @include transition(
+        $transition-property: border-color,
+        $transition-duration: $transition-duration--fast
+      );
+
+      position: absolute;
+      top: $tag--interactive__button__icon__position;
+      left: $tag--interactive__button__icon__position;
+      border: carbon--mini-units($count: 0.25) solid transparent;
+      border-radius: 50%;
+      fill: currentColor;
+      transform: translate(
+        $tag--interactive__button__icon__transform,
+        $tag--interactive__button__icon__transform
+      );
+    }
+  }
+}

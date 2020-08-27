@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { render } from '@testing-library/react';
+import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
 import FilterPanelAccordionItem from '../FilterPanelAccordiontItem';
 
@@ -23,8 +24,7 @@ const createChildChildren = length =>
 
 describe('FilterPanelAccordionItem', () => {
   test('should have no Axe or DAP violations', async () => {
-    const main = document.createElement('main');
-    render(
+    const { container } = renderWithinLandmark(
       // `FilterPanelAccordionItem` would be
       // wrapped by `FilterPanelAccordion`, which
       // renders as an unordered list:
@@ -35,16 +35,10 @@ describe('FilterPanelAccordionItem', () => {
         <FilterPanelAccordionItem heading="test-item-2" title="test-item-2">
           {createChildChildren(11)}
         </FilterPanelAccordionItem>
-      </ul>,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+      </ul>
     );
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations(
-      'FilterPanelAccordionItem'
-    );
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations('FilterPanelAccordionItem');
   });
 
   test('renders with a title attribute', () => {

@@ -50,7 +50,8 @@ const labels = {
 
 const steps = [
   {
-    title: 'First Step',
+    title:
+      'First Step that is very long will be truncated at 3 lines if the viewport size is small enough.',
     renderMain: (state, setState) => (
       <div>
         <p style={{ fontSize: 'normal' }}>Please fill out the form.</p>

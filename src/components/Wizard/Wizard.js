@@ -241,7 +241,14 @@ class Wizard extends Component {
    * Renders the component.
    */
   render() {
-    const { labels, ...other } = this.props;
+    const {
+      labels,
+      focusTrap,
+      title,
+      subTitle,
+      className,
+      ...other
+    } = this.props;
     const componentLabels = {
       ...defaultLabels.labels,
       ...labels,
@@ -308,7 +315,6 @@ class Wizard extends Component {
       TEARSHEET_TERTIARY_BUTTON: componentLabels.WIZARD_TERTIARY_BUTTON,
     };
 
-    const { focusTrap, title, subTitle } = this.props;
     const renderMain = () =>
       this.currentStep.renderMain(
         this.state.componentState,
@@ -336,7 +342,7 @@ class Wizard extends Component {
         }}
         loading={this.state.loading}
         loadingMessage={this.props.loadingMessage}
-        className={classnames(namespace, this.props.className)}
+        className={classnames(namespace, className)}
         {...other}
       />
     );

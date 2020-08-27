@@ -11,25 +11,21 @@ import {
   screen,
 } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
 import FilterPanelCheckboxWithOverflowMenu from '../FilterPanelCheckboxWithOverflowMenu';
 import OverflowMenuItem from '../../../OverflowMenuItem';
 
 describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
   test('should have no Axe or DAP violations', async () => {
-    const main = document.createElement('main');
-    render(
+    const { container } = renderWithinLandmark(
       <FilterPanelCheckboxWithOverflowMenu
         labelText="test checkbox"
         id="test-checkbox-id"
-      />,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+      />
     );
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations(
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations(
       `${FilterPanelCheckboxWithOverflowMenu.name}-default`
     );
   });
@@ -38,27 +34,23 @@ describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
     const main = document.createElement('main');
     main.setAttribute('data-floating-menu-container', 'true');
 
-    render(
+    const { container } = render(
       <FilterPanelCheckboxWithOverflowMenu
         labelText="checkbox label"
         overflowMenuAriaLabel="filter selection options"
         id="checkbox-id"
         open
       >
-        <OverflowMenuItem primaryFocus itemText="option 1" />
+        <OverflowMenuItem itemText="option 1" />
         <OverflowMenuItem itemText="option 2" />
-      </FilterPanelCheckboxWithOverflowMenu>,
-      {
-        // DAP requires a landmark '<main>' in the DOM:
-        container: document.body.appendChild(main),
-      }
+      </FilterPanelCheckboxWithOverflowMenu>
     );
 
     // Open overflow menu and waitFor for options to appear on the DOM.
     fireEvent.mouseEnter(screen.getByLabelText(/checkbox label/i));
 
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations(
+    await expect(container).toHaveNoAxeViolations();
+    await expect(container).toHaveNoDAPViolations(
       `${FilterPanelCheckboxWithOverflowMenu.name}-open`
     );
   });
@@ -229,7 +221,7 @@ describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
         overflowMenuAriaLabel="filter selection options"
         id="checkbox-id"
       >
-        <OverflowMenuItem primaryFocus itemText="option 1" />
+        <OverflowMenuItem itemText="option 1" />
         <OverflowMenuItem itemText="option 2" />
       </FilterPanelCheckboxWithOverflowMenu>
     );
