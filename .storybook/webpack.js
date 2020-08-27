@@ -17,6 +17,10 @@ module.exports = config => {
       use: '@storybook/source-loader',
     },
     {
+      test: /\.mdx$/,
+      use: ['babel-loader', '@mdx-js/loader'],
+    },
+    {
       sideEffects: true,
       test: /\.scss$/,
       use: [
