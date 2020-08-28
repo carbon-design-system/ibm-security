@@ -1,6 +1,6 @@
 /**
  * @file Trending card stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import { breakpoints } from '@carbon/layout';
@@ -8,7 +8,7 @@ import { breakpoints } from '@carbon/layout';
 import { text } from '@storybook/addon-knobs';
 import React from 'react';
 
-import { components, meta } from '../../../.storybook';
+import { components } from '../../../.storybook';
 
 import { TrendingCard } from '../..';
 
@@ -23,7 +23,7 @@ export const Default = ({ element }) => (
   <TrendingCard {...props()} element={element} />
 );
 
-export default meta(
-  components('TrendingCard'),
-  'Trending cards provide summary information of trending items with the ability to navigate to the details.'
-);
+export default {
+  title: components('TrendingCard'),
+  component: TrendingCard,
+};

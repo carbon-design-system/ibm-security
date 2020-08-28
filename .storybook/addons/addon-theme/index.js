@@ -4,11 +4,14 @@
  */
 
 import addons, { makeDecorator } from '@storybook/addons';
+import { themes as storybookThemes } from '@storybook/theming';
 
 import React, { Component } from 'react';
 
 import Themes, { defaultTheme } from '../../themes';
 import Theme from './Theme';
+
+const { dark, light } = storybookThemes;
 
 const namespace = 'addon-theme';
 const action = `${namespace}/change`;
@@ -71,7 +74,14 @@ class Wrapper extends Component {
 export default makeDecorator({
   name: `with${title}`,
   parameterName: title,
-  wrapper: getStory => <Wrapper>{getStory()}</Wrapper>,
+  wrapper: (storyFn, context) => {
+    console.log(dark);
+    console.log(light);
+
+    console.log(context);
+
+    return <Wrapper>{storyFn(context)}</Wrapper>;
+  },
 });
 
 export { action, getStoredTheme, namespace, themes, title };

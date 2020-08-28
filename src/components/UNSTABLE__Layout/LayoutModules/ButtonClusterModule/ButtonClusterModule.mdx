@@ -1,13 +1,24 @@
-import * as Blocks from '@storybook/addon-docs/blocks';
+import { ArgsTable, Canvas, Story } from '@storybook/addon-docs/blocks';
+import Link from '@storybook/addon-links/react';
 
-import { ButtonClusterModule } from '../../../..';
-
-# Button Cluster Module
+# `ButtonClusterModule`
 
 ## Overview
 
-Overview
+Button cluster modules group secondary actions that can be taken on a whole page or component. Icons are used to help describe, at a glance, the action that can be taken.
+
+You can build a button cluster module using a combination of the `ButtonClusterModule` and <Link kind="components-button--default">`Button`</Link> components. The `ButtonClusterModule` accepts a list of `Button` components as `children`.
+
+<Canvas>
+  <Story id="patterns-buttonclustermodule--default" />
+</Canvas>
+
+## Grid placement
+
+When placing a button cluster module on the grid, it should be placed in 4 columns.
 
 ## Component API
 
-Component API
+<ArgsTable />
+
+Additional props passed into `ButtonClusterModule` will be forwarded along to the underlying button cluster container.

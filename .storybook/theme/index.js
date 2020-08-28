@@ -7,7 +7,7 @@ import { black } from '@carbon/colors';
 import { g100 } from '@carbon/themes';
 import { fontFamilies } from '@carbon/type';
 
-import { create } from '@storybook/theming';
+import { create, themes } from '@storybook/theming';
 
 import { name, homepage, version } from '../../package.json';
 
@@ -17,10 +17,11 @@ const { mono, sans } = fontFamilies;
 const { field02, inverse01, activeUI, text01, ui01, ui02 } = g100;
 
 export default create({
-  base: 'dark',
+  ...themes.dark,
 
   // Brand information.
-  brandTitle: `<img src="${lockup}" alt="IBM Security" /><br/><br/><code>${name}<br/>v${version}</code>`,
+  brandTitle: `<img alt="IBM Security" src="${lockup}" /><br /><br /><code>${name}<br />v${version}</code>`,
+
   brandUrl: homepage,
 
   colorPrimary: activeUI,

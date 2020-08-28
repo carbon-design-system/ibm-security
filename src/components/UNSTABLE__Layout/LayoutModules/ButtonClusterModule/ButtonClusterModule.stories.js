@@ -7,6 +7,8 @@ import { breakpoints } from '@carbon/layout';
 
 import React from 'react';
 
+import { patterns } from '../../../../../.storybook';
+
 import { Button, ButtonClusterModule } from '../../../..';
 
 import page from './ButtonClusterModule.mdx';
@@ -23,13 +25,10 @@ export const Default = () => (
 );
 
 export default {
-  title: 'Patterns/ButtonClusterModule',
+  title: patterns('ButtonClusterModule'),
   component: ButtonClusterModule,
-  subcomponents: {
-    Button,
-  },
   parameters: { docs: { page } },
   decorators: [
-    story => <div style={{ width: breakpoints.lg.width }}>{story()}</div>,
+    story => <div style={{ width: breakpoints.md.width }}>{story()}</div>,
   ],
 };

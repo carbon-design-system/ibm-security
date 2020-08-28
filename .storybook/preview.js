@@ -15,6 +15,7 @@ import { HIERARCHY_ROOT_SEPARATOR, ORDER } from '.';
 
 import withTheme from './addons/addon-theme';
 import Container from './components/Container';
+import storybookTheme from './theme';
 
 const { interactive01, text04 } = theme;
 
@@ -38,7 +39,7 @@ const decorators = [
     },
   }),
   withTheme,
-  story => <Container>{story()}</Container>,
+  (storyFn, context) => <Container>{storyFn(context)}</Container>,
 ];
 
 /**
@@ -53,6 +54,9 @@ function getCategory(story) {
 }
 
 const parameters = {
+  docs: {
+    theme: storybookTheme,
+  },
   layout: 'centered',
   options: {
     storySort: (a, b) =>
