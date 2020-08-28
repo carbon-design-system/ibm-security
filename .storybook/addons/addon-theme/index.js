@@ -75,10 +75,8 @@ export default makeDecorator({
   name: `with${title}`,
   parameterName: title,
   wrapper: (storyFn, context) => {
-    console.log(dark);
-    console.log(light);
-
-    console.log(context);
+    context.parameters.docs.theme =
+      getStoredTheme() === themes['Cool Gray 10'] ? light : dark;
 
     return <Wrapper>{storyFn(context)}</Wrapper>;
   },
