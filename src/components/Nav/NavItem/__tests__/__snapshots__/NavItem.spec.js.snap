@@ -7,13 +7,13 @@ exports[`NavItem Rendering renders correctly 1`] = `
   onClick={[Function]}
   onKeyPress={[Function]}
   role="menuitem"
-  tabIndex={-1}
 >
   <NavItemLink
     className="security--nav__list__item__link"
     element="a"
     href="#"
     id="security--nav__list__item"
+    tabIndex={0}
   >
     Label
   </NavItemLink>
@@ -25,12 +25,12 @@ exports[`NavItem Rendering renders the HTML of the node's subtree 1`] = `
   class="security--nav__list__item class security--nav__list__item--active"
   label=""
   role="menuitem"
-  tabindex="-1"
 >
   <a
     class="security--nav__list__item__link"
     href="#"
     id="security--nav__list__item"
+    tabindex="0"
   >
     Label
   </a>
