@@ -12,6 +12,7 @@ export {
 
 export { default as withBackground } from './Background';
 export { default as ButtonCluster } from './ButtonCluster';
+
 export {
   default as CardModule,
   CardModuleAction,
@@ -24,6 +25,7 @@ export {
 } from './DescriptionModule';
 
 export { default as ICAModule, ICAModuleICA } from './ICAModule';
+export { default as withLayout } from './Layout';
 
 export { default as PageTab, PageTabDetails } from './PageTab';
 

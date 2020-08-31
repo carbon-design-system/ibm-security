@@ -279,6 +279,7 @@ export LayoutModule, {
   Title,
   TypeLayoutModule,
   withBackground,
+  withLayout,
 } from './components/UNSTABLE__Layout/LayoutModules';
 
 export UNSTABLE__Pagination, {

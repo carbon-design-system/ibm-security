@@ -24497,8 +24497,6 @@ a.bx--navigation-link:focus {
 }
 
 .security--unstable--layout__module--card__card {
-  background-color: var(--ui-01, #262626);
-  outline: 0.0625rem solid var(--ui-background, #161616);
   margin-bottom: 2rem;
 }
 
@@ -24542,6 +24540,10 @@ a.bx--navigation-link:focus {
 
 .security--unstable--layout__module--ica__ica--interactive:hover {
   background-color: var(--hover-ui, #353535);
+}
+
+.security--unstable--layout__module--layout {
+  margin-bottom: 2rem;
 }
 
 .security--unstable--layout__module--page-tab {

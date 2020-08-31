@@ -27,7 +27,6 @@ import {
   ButtonCluster,
   Button,
   CardModule,
-  CardModuleCard,
   ContentSwitcher,
   DataTablePagination,
   Decorator,
@@ -35,7 +34,6 @@ import {
   DescriptionModuleDescription,
   ICA,
   ICAModule,
-  ICAModuleICA,
   IconButtonBar,
   PageTab,
   Shell as ShellComponent,
@@ -55,11 +53,17 @@ import {
   TypeLayoutModule,
   TypeLayoutRow,
   TypeLayoutCell,
+  withBackground,
+  withLayout,
 } from '../..';
 
 const Shell = () => (
   <ShellComponent header={header} profile={profile} toolbar={toolbar} />
 );
+
+const EnhancedColumn = withBackground(Column);
+const EnhancedICA = withLayout(ICA);
+const EnhancedSummaryCard = withLayout(withBackground(SummaryCard));
 
 const overview = () => (
   <>
@@ -79,7 +83,7 @@ const overview = () => (
     <Row>
       <Column lg={12}>
         <Row>
-          <Column>
+          <EnhancedColumn>
             <TypeLayoutModule>
               <Title subsection>General settings and scope</Title>
 
@@ -135,11 +139,11 @@ const overview = () => (
                 </TypeLayoutBody>
               </TypeLayout>
             </TypeLayoutModule>
-          </Column>
+          </EnhancedColumn>
 
-          <Column>
+          <EnhancedColumn>
             <Row>
-              <Column>
+              <EnhancedColumn>
                 <TypeLayoutModule>
                   <Title subsection>Schedule</Title>
 
@@ -164,7 +168,7 @@ const overview = () => (
                     </TypeLayoutBody>
                   </TypeLayout>
                 </TypeLayoutModule>
-              </Column>
+              </EnhancedColumn>
             </Row>
 
             <Row>
@@ -191,11 +195,11 @@ const overview = () => (
                 </TypeLayoutModule>
               </Column>
             </Row>
-          </Column>
+          </EnhancedColumn>
         </Row>
 
         <Row>
-          <Column>
+          <EnhancedColumn>
             <Row>
               <Column>
                 <TitleBarModule>
@@ -216,19 +220,13 @@ const overview = () => (
             <ICAModule>
               <Row>
                 <Column sm={2} md={2} lg={3}>
-                  <ICAModuleICA>
-                    <ICA label="Reviews complete" value={300} />
-                  </ICAModuleICA>
+                  <EnhancedICA label="Reviews complete" value={300} />
                 </Column>
                 <Column sm={2} md={2} lg={3}>
-                  <ICAModuleICA>
-                    <ICA label="Approved" value={241} />
-                  </ICAModuleICA>
+                  <EnhancedICA label="Approved" value={241} />
                 </Column>
                 <Column sm={2} md={2} lg={3}>
-                  <ICAModuleICA>
-                    <ICA label="Rejected" value={28} />
-                  </ICAModuleICA>
+                  <EnhancedICA label="Rejected" value={28} />
                 </Column>
               </Row>
             </ICAModule>
@@ -289,7 +287,7 @@ const overview = () => (
                 />
               </Column>
             </Row>
-          </Column>
+          </EnhancedColumn>
         </Row>
       </Column>
 
@@ -410,91 +408,80 @@ const detail = () => (
             <CardModule>
               <Row>
                 <Column>
-                  <CardModuleCard>
-                    <SummaryCard>
-                      <SummaryCardHeader title="Threat actor" />
-                      <SummaryCardBody>
-                        <Title>
-                          Suspected Chinese Cyber Espionage Group
-                          (TEMP.Periscope)
-                        </Title>
-                      </SummaryCardBody>
-                      <SummaryCardFooter>
-                        <SummaryCardAction
-                          renderIcon={ArrowRight16}
-                          iconDescription="Navigate"
-                          tooltipAlignment="center"
-                          tooltipPosition="right"
-                          hasIconOnly
-                        />
-                      </SummaryCardFooter>
-                    </SummaryCard>
-                  </CardModuleCard>
+                  <EnhancedSummaryCard>
+                    <SummaryCardHeader title="Threat actor" />
+                    <SummaryCardBody>
+                      <Title>
+                        Suspected Chinese Cyber Espionage Group (TEMP.Periscope)
+                      </Title>
+                    </SummaryCardBody>
+                    <SummaryCardFooter>
+                      <SummaryCardAction
+                        renderIcon={ArrowRight16}
+                        iconDescription="Navigate"
+                        tooltipAlignment="center"
+                        tooltipPosition="right"
+                        hasIconOnly
+                      />
+                    </SummaryCardFooter>
+                  </EnhancedSummaryCard>
                 </Column>
                 <Column>
-                  <CardModuleCard>
-                    <SummaryCard>
-                      <SummaryCardHeader title="Threat report" />
-                      <SummaryCardBody>
-                        <Title>
-                          XFTAS Daily Threat Assessment for Mar 2019
-                        </Title>
-                      </SummaryCardBody>
-                      <SummaryCardFooter>
-                        <SummaryCardAction
-                          renderIcon={ArrowRight16}
-                          iconDescription="Navigate"
-                          tooltipAlignment="center"
-                          tooltipPosition="right"
-                          hasIconOnly
-                        />
-                      </SummaryCardFooter>
-                    </SummaryCard>
-                  </CardModuleCard>
+                  <EnhancedSummaryCard>
+                    <SummaryCardHeader title="Threat report" />
+                    <SummaryCardBody>
+                      <Title>XFTAS Daily Threat Assessment for Mar 2019</Title>
+                    </SummaryCardBody>
+                    <SummaryCardFooter>
+                      <SummaryCardAction
+                        renderIcon={ArrowRight16}
+                        iconDescription="Navigate"
+                        tooltipAlignment="center"
+                        tooltipPosition="right"
+                        hasIconOnly
+                      />
+                    </SummaryCardFooter>
+                  </EnhancedSummaryCard>
                 </Column>
                 <Column>
-                  <CardModuleCard>
-                    <SummaryCard>
-                      <SummaryCardHeader title="IP report" />
-                      <SummaryCardBody>
-                        <Title>103.243.175.181</Title>
-                      </SummaryCardBody>
-                      <SummaryCardFooter>
-                        <SummaryCardAction
-                          renderIcon={ArrowRight16}
-                          iconDescription="Navigate"
-                          tooltipAlignment="center"
-                          tooltipPosition="right"
-                          hasIconOnly
-                        />
-                      </SummaryCardFooter>
-                    </SummaryCard>
-                  </CardModuleCard>
+                  <EnhancedSummaryCard>
+                    <SummaryCardHeader title="IP report" />
+                    <SummaryCardBody>
+                      <Title>103.243.175.181</Title>
+                    </SummaryCardBody>
+                    <SummaryCardFooter>
+                      <SummaryCardAction
+                        renderIcon={ArrowRight16}
+                        iconDescription="Navigate"
+                        tooltipAlignment="center"
+                        tooltipPosition="right"
+                        hasIconOnly
+                      />
+                    </SummaryCardFooter>
+                  </EnhancedSummaryCard>
                 </Column>
                 <Column>
-                  <CardModuleCard>
-                    <SummaryCard>
-                      <SummaryCardHeader title="Vulnerability report" />
-                      <SummaryCardBody>
-                        <Title>CVE-2017-11882</Title>
-                      </SummaryCardBody>
-                      <SummaryCardFooter>
-                        <SummaryCardAction
-                          renderIcon={ArrowRight16}
-                          iconDescription="Navigate"
-                          tooltipAlignment="center"
-                          tooltipPosition="right"
-                          hasIconOnly
-                        />
-                      </SummaryCardFooter>
-                    </SummaryCard>
-                  </CardModuleCard>
+                  <EnhancedSummaryCard>
+                    <SummaryCardHeader title="Vulnerability report" />
+                    <SummaryCardBody>
+                      <Title>CVE-2017-11882</Title>
+                    </SummaryCardBody>
+                    <SummaryCardFooter>
+                      <SummaryCardAction
+                        renderIcon={ArrowRight16}
+                        iconDescription="Navigate"
+                        tooltipAlignment="center"
+                        tooltipPosition="right"
+                        hasIconOnly
+                      />
+                    </SummaryCardFooter>
+                  </EnhancedSummaryCard>
                 </Column>
               </Row>
             </CardModule>
 
             <Row>
-              <Column>
+              <EnhancedColumn>
                 <Row>
                   <Column>
                     <TitleBarModule>
@@ -506,24 +493,16 @@ const detail = () => (
                 <ICAModule>
                   <Row>
                     <Column sm={2} md={2} lg={3}>
-                      <ICAModuleICA>
-                        <ICA label="Malware" value={11} />
-                      </ICAModuleICA>
+                      <EnhancedICA label="Malware" value={11} />
                     </Column>
                     <Column sm={2} md={2} lg={3}>
-                      <ICAModuleICA>
-                        <ICA label="IPs" value={8} />
-                      </ICAModuleICA>
+                      <EnhancedICA label="IPs" value={8} />
                     </Column>
                     <Column sm={2} md={2} lg={3}>
-                      <ICAModuleICA>
-                        <ICA label="URLs" value={9} />
-                      </ICAModuleICA>
+                      <EnhancedICA label="URLs" value={9} />
                     </Column>
                     <Column sm={2} md={2} lg={3}>
-                      <ICAModuleICA>
-                        <ICA label="VULs" value={1} />
-                      </ICAModuleICA>
+                      <EnhancedICA label="VULs" value={1} />
                     </Column>
                   </Row>
                 </ICAModule>
@@ -603,7 +582,7 @@ const detail = () => (
                     />
                   </Column>
                 </Row>
-              </Column>
+              </EnhancedColumn>
             </Row>
           </Tab>
           <Tab label="Evidence" />

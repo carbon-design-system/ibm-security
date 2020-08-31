@@ -1,5 +1,5 @@
 /**
- * @file Background.
+ * @file Layout.
  * @copyright IBM Security 2020
  */
 
@@ -9,18 +9,15 @@ import React from 'react';
 import { layoutModuleNamespace } from '../LayoutModule';
 
 export default WrappedComponent => {
-  const WithBackground = ({ className, ...other }) => (
+  const WithLayout = ({ className, ...other }) => (
     <WrappedComponent
-      className={classnames(`${layoutModuleNamespace}--background`, className)}
+      className={classnames(`${layoutModuleNamespace}--layout`, className)}
       {...other}
     />
   );
 
   const { displayName, name } = WrappedComponent;
+  WithLayout.displayName = `WithLayout(${displayName || name || 'Component'})`;
 
-  WithBackground.displayName = `WithBackground(${displayName ||
-    name ||
-    'Component'})`;
-
-  return WithBackground;
+  return WithLayout;
 };
