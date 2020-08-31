@@ -4227,6 +4227,7 @@ Map {
       "locale": "en",
       "percentage": false,
       "total": 0,
+      "truncate": true,
       "value": null,
     },
     "propTypes": Object {
@@ -4287,6 +4288,9 @@ Map {
       },
       "total": Object {
         "type": "number",
+      },
+      "truncate": Object {
+        "type": "bool",
       },
       "value": Object {
         "type": "number",
