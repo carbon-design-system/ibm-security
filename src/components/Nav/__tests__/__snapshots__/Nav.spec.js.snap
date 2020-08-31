@@ -136,18 +136,19 @@ exports[`Nav Rendering renders correctly 1`] = `
                 onClick={[Function]}
                 onKeyPress={[Function]}
                 role="menuitem"
-                tabIndex={-1}
               >
                 <NavItemLink
                   className="security--nav__list__item__link"
                   element="a"
                   href="#0"
                   id="security--nav__list__item"
+                  tabIndex={-1}
                 >
                   <a
                     className="security--nav__list__item__link"
                     href="#0"
                     id="security--nav__list__item"
+                    tabIndex={-1}
                   >
                     Label
                   </a>
@@ -274,18 +275,19 @@ exports[`Nav Rendering renders correctly 1`] = `
                 onClick={[Function]}
                 onKeyPress={[Function]}
                 role="menuitem"
-                tabIndex={-1}
               >
                 <NavItemLink
                   className="security--nav__list__item__link"
                   element="a"
                   href="#1"
                   id="security--nav__list__item"
+                  tabIndex={-1}
                 >
                   <a
                     className="security--nav__list__item__link"
                     href="#1"
                     id="security--nav__list__item"
+                    tabIndex={-1}
                   >
                     Label
                   </a>
@@ -317,18 +319,19 @@ exports[`Nav Rendering renders correctly 1`] = `
           onClick={[Function]}
           onKeyPress={[Function]}
           role="menuitem"
-          tabIndex={-1}
         >
           <NavItemLink
             className="security--nav__list__item__link"
             element="a"
             href="#2"
             id="security--nav__list__item"
+            tabIndex={0}
           >
             <a
               className="security--nav__list__item__link"
               href="#2"
               id="security--nav__list__item"
+              tabIndex={0}
             >
               Label
             </a>
@@ -392,12 +395,12 @@ exports[`Nav Rendering renders the HTML of the node's subtree 1`] = `
           class="security--nav__list__item"
           label=""
           role="menuitem"
-          tabindex="-1"
         >
           <a
             class="security--nav__list__item__link"
             href="#0"
             id="security--nav__list__item"
+            tabindex="-1"
           >
             Label
           </a>
@@ -442,12 +445,12 @@ exports[`Nav Rendering renders the HTML of the node's subtree 1`] = `
           class="security--nav__list__item"
           label=""
           role="menuitem"
-          tabindex="-1"
         >
           <a
             class="security--nav__list__item__link"
             href="#1"
             id="security--nav__list__item"
+            tabindex="-1"
           >
             Label
           </a>
@@ -458,12 +461,12 @@ exports[`Nav Rendering renders the HTML of the node's subtree 1`] = `
       class="security--nav__list__item"
       label=""
       role="menuitem"
-      tabindex="-1"
     >
       <a
         class="security--nav__list__item__link"
         href="#2"
         id="security--nav__list__item"
+        tabindex="0"
       >
         Label
       </a>
