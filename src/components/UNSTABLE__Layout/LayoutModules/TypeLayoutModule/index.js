@@ -9,7 +9,7 @@ import React from 'react';
 import LayoutModule from '..';
 
 const TypeLayoutModule = ({ children, ...other }) => (
-  <LayoutModule module="TypeLayout" type="type-layout" {...other}>
+  <LayoutModule type="type-layout" {...other}>
     {children}
   </LayoutModule>
 );

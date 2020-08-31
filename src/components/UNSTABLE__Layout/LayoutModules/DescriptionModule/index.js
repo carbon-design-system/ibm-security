@@ -8,11 +8,10 @@ import React from 'react';
 
 import LayoutModule, { getLayoutModuleProps } from '../LayoutModule';
 
-const moduleName = 'Description';
 const namespace = 'description';
 
 const DescriptionModule = ({ children, ...other }) => (
-  <LayoutModule module={moduleName} type={namespace} {...other}>
+  <LayoutModule type={namespace} {...other}>
     {children}
   </LayoutModule>
 );
@@ -25,7 +24,6 @@ const DescriptionModuleDescription = ({ children, className, ...other }) => (
   <p
     {...getLayoutModuleProps({
       className,
-      module: `${moduleName} description`,
       type: `${namespace}__description`,
     })}
     {...other}

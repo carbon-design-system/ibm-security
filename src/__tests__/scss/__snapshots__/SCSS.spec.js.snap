@@ -24586,6 +24586,13 @@ a.bx--navigation-link:focus {
   margin-bottom: 1rem;
 }
 
+.security--unstable--layout__module--title--subsection {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.125rem;
+  letter-spacing: 0.16px;
+}
+
 .security--unstable--layout__module--title + .security--unstable--layout__module--title {
   margin-top: 2rem;
 }

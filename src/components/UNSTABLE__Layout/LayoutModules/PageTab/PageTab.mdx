@@ -1,0 +1,34 @@
+import { ArgsTable, Canvas, Story } from '@storybook/addon-docs/blocks';
+
+# PageTab
+
+## Overview
+
+Page tab provides orderly tab navigation for a page.
+
+You can build a page tab using a combination of the `PageTab`, [`Tabs`](https://react.carbondesignsystem.com/?path=/docs/tabs--default), and `PageTabDetails` components. The `PageTab` accepts a `PageTabDetails` and `Tabs` component as `children` and each `Tab` is responsible for displaying the tab's label and panel content.
+
+<Canvas>
+  <Story id="patterns-layout-modules-pagetab--default" />
+</Canvas>
+
+## Details
+
+If necessary, supplementary details can be placed inline with the tabs.
+
+```jsx
+<PageTab>
+  <PageTabDetails>PageTabDetails</PageTabDetails>
+  <Tabs>
+    <Tab>Tab 1</Tab>
+    <Tab>Tab 2</Tab>
+    <Tab>Tab 3</Tab>
+  </Tabs>
+</PageTab>
+```
+
+## Component API
+
+<ArgsTable />
+
+Additional props passed into `PageTab` will be forwarded along to the underlying page tab container.

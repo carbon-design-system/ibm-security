@@ -10,8 +10,8 @@ export {
   ActionBarModuleActions,
 } from './ActionBarModule';
 
-export { default as BackgroundModule } from './BackgroundModule';
-export { default as ButtonClusterModule } from './ButtonClusterModule';
+export { default as withBackground } from './Background';
+export { default as ButtonCluster } from './ButtonCluster';
 export {
   default as CardModule,
   CardModuleAction,
@@ -25,15 +25,12 @@ export {
 
 export { default as ICAModule, ICAModuleICA } from './ICAModule';
 
-export {
-  default as PageTabModule,
-  PageTabModuleDetails,
-} from './PageTabModule';
+export { default as PageTab, PageTabDetails } from './PageTab';
 
 export {
   default as TitleBarModule,
   TitleBarModuleActions,
 } from './TitleBarModule';
 
-export { default as TitleModule } from './TitleModule';
+export { default as Title } from './Title';
 export { default as TypeLayoutModule } from './TypeLayoutModule';

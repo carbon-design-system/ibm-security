@@ -1,0 +1,32 @@
+import { ArgsTable, Canvas, Story } from '@storybook/addon-docs/blocks';
+
+# ButtonCluster
+
+## Overview
+
+Button clusters group secondary actions that can be taken on a whole page or component. Icons are used to help describe, at a glance, the action that can be taken.
+
+You can build a button cluster using a combination of the `ButtonCluster` and [`Button`](https://react.carbondesignsystem.com/?path=/docs/button--default) components. The `ButtonCluster` accepts a list of `Button` components as `children`.
+
+<Canvas>
+  <Story id="patterns-layout-modules-buttoncluster--default" />
+</Canvas>
+
+## Grid placement
+
+When placing a button cluster on the grid, it should be placed in 4 columns.
+
+```jsx
+<Column lg={4}>
+  <ButtonCluster>
+    <Button kind="ghost">Button 1</Button>
+    <Button kind="ghost">Button 2</Button>
+  </ButtonCluster>
+</Column>
+```
+
+## Component API
+
+<ArgsTable />
+
+Additional props passed into `ButtonCluster` will be forwarded along to the underlying button cluster container.

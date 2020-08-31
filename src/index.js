@@ -264,8 +264,7 @@ export { Wizard, WizardStep } from './components/Wizard';
 export LayoutModule, {
   ActionBarModule,
   ActionBarModuleActions,
-  BackgroundModule,
-  ButtonClusterModule,
+  ButtonCluster,
   CardModule,
   CardModuleAction,
   CardModuleCard,
@@ -273,12 +272,13 @@ export LayoutModule, {
   DescriptionModuleDescription,
   ICAModule,
   ICAModuleICA,
-  PageTabModule,
-  PageTabModuleDetails,
+  PageTab,
+  PageTabDetails,
   TitleBarModule,
   TitleBarModuleActions,
-  TitleModule,
+  Title,
   TypeLayoutModule,
+  withBackground,
 } from './components/UNSTABLE__Layout/LayoutModules';
 
 export UNSTABLE__Pagination, {

@@ -3,9 +3,7 @@
  * @copyright IBM Security 2020
  */
 
-import Activity16 from '@carbon/icons-react/lib/activity/16';
 import ArrowRight16 from '@carbon/icons-react/lib/arrow--right/16';
-import Copy16 from '@carbon/icons-react/lib/copy/16';
 import Filter16 from '@carbon/icons-react/lib/filter/16';
 import Search16 from '@carbon/icons-react/lib/search/16';
 import View16 from '@carbon/icons-react/lib/view/16';
@@ -20,9 +18,7 @@ import { carbonPrefix } from '../../../globals/namespace';
 import {
   ActionBarModule,
   ActionBarModuleActions,
-  BackgroundModule,
   Button,
-  ButtonClusterModule,
   CardModule,
   CardModuleAction,
   CardModuleCard,
@@ -33,19 +29,15 @@ import {
   ICAModuleICA,
   IconButtonBar,
   Link,
-  PageTabModule,
-  PageTabModuleDetails,
   SummaryCard,
   SummaryCardAction,
   SummaryCardBody,
   SummaryCardFooter,
   SummaryCardHeader,
-  Tabs,
-  Tab,
   Tag,
   TitleBarModule,
   TitleBarModuleActions,
-  TitleModule,
+  Title,
   TypeLayout,
   TypeLayoutBody,
   TypeLayoutCell,
@@ -90,37 +82,12 @@ actionBar.parameters = setDescription(
   'https://ibm.box.com/s/rn0pt5mov83tbd5k086ee39wgpm18mmq'
 );
 
-const background = () => (
-  <BackgroundModule>
-    <Column>BackgroundModule</Column>
-  </BackgroundModule>
-);
-
-const buttonCluster = () => (
-  <ButtonClusterModule>
-    <Button kind="ghost" renderIcon={Copy16}>
-      Duplicate campaign
-    </Button>
-    <Button kind="ghost" renderIcon={Activity16}>
-      View activity report
-    </Button>
-  </ButtonClusterModule>
-);
-
-buttonCluster.parameters = setDescription(
-  ButtonClusterModule,
-  'https://ibm.box.com/s/medn74frnbw2aatsc1p74ncmrmlr51g3'
-);
-
 const card = () => (
   <CardModule>
-    <TitleModule>Summary</TitleModule>
-    <TitleModule
-      className={`${carbonPrefix}type-productive-heading-01`}
-      element="h3"
-    >
+    <Title>Summary</Title>
+    <Title className={`${carbonPrefix}type-productive-heading-01`} element="h3">
       Sub-section title
-    </TitleModule>
+    </Title>
     <ActionBarModule>
       <Button kind="ghost" renderIcon={Filter16}>
         Action
@@ -155,7 +122,7 @@ const card = () => (
               <SummaryCard>
                 <SummaryCardHeader title="Label" />
                 <SummaryCardBody>
-                  <TitleModule>Title</TitleModule>
+                  <Title>Title</Title>
                 </SummaryCardBody>
                 <SummaryCardFooter>
                   <SummaryCardAction>Scan now</SummaryCardAction>
@@ -185,13 +152,10 @@ card.parameters = setDescription(
 
 const description = () => (
   <DescriptionModule>
-    <TitleModule>Summary</TitleModule>
-    <TitleModule
-      className={`${carbonPrefix}type-productive-heading-01`}
-      element="h3"
-    >
+    <Title>Summary</Title>
+    <Title className={`${carbonPrefix}type-productive-heading-01`} element="h3">
       Sub-section title
-    </TitleModule>
+    </Title>
     <DescriptionModuleDescription>
       BadFlick is a backdoor that is usually seen being distributed using
       exploited word documents. It does not have any persistence to survive
@@ -209,7 +173,7 @@ description.parameters = setDescription(
 
 const ICA = () => (
   <ICAModule>
-    <TitleModule>Summary</TitleModule>
+    <Title>Summary</Title>
     <Row>
       <ICAModuleICA interactive>
         <Column>
@@ -235,27 +199,9 @@ ICA.parameters = setDescription(
   'https://ibm.box.com/s/f0orv16ivr46ukwd6jn0hmuw0slxfj2c'
 );
 
-const pageTab = () => (
-  <PageTabModule>
-    <PageTabModuleDetails>PageTabModuleDetails</PageTabModuleDetails>
-    <Tabs selected={1}>
-      <Tab label="Case" />
-      <Tab label="Report" />
-      <Tab label="Evidence" />
-    </Tabs>
-  </PageTabModule>
-);
-
-pageTab.parameters = setDescription(
-  PageTabModule,
-  'https://ibm.box.com/s/17fg1zm60roe6bhipl85pvtx9mxztnfh'
-);
-
-const title = () => <TitleModule>TitleModule</TitleModule>;
-
 const titleBar = () => (
   <TitleBarModule>
-    <TitleModule>TitleModule</TitleModule>
+    <Title>Title</Title>
 
     <TitleBarModuleActions>
       <IconButtonBar
@@ -286,7 +232,7 @@ titleBar.parameters = setDescription(
 
 const typeLayout = () => (
   <TypeLayoutModule>
-    <TitleModule>TitleModule</TitleModule>
+    <Title>Title</Title>
     <TypeLayout>
       <TypeLayoutBody>
         <TypeLayoutRow>
@@ -318,15 +264,4 @@ export default meta(
   [story => <div style={{ width: breakpoints.lg.width }}>{story()}</div>]
 );
 
-export {
-  actionBar,
-  background,
-  buttonCluster,
-  card,
-  description,
-  ICA,
-  pageTab,
-  title,
-  titleBar,
-  typeLayout,
-};
+export { actionBar, card, description, ICA, titleBar, typeLayout };

@@ -8,11 +8,10 @@ import React from 'react';
 
 import LayoutModule, { createLayoutModuleFromChildren } from '../LayoutModule';
 
-const moduleName = 'Card';
 const namespace = 'card';
 
 const CardModule = ({ children, ...other }) => (
-  <LayoutModule module={moduleName} type={namespace} {...other}>
+  <LayoutModule type={namespace} {...other}>
     {children}
   </LayoutModule>
 );
@@ -24,7 +23,6 @@ CardModule.propTypes = {
 const CardModuleAction = ({ children, ...other }) =>
   createLayoutModuleFromChildren({
     children,
-    module: `${moduleName} action`,
     type: `${namespace}__action`,
     ...other,
   });
@@ -36,7 +34,6 @@ CardModuleAction.propTypes = {
 const CardModuleCard = ({ children, ...other }) =>
   createLayoutModuleFromChildren({
     children,
-    module: `${moduleName} card`,
     type: `${namespace}__card`,
     ...other,
   });

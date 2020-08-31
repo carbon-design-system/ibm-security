@@ -8,7 +8,7 @@
 
 @import '../../../Component/mixins';
 
-@import '../BackgroundModule/mixins';
+@import '../Background/mixins';
 @import '../variables';
 
 @include security--component($name: #{$layout-modules__name}--card) {

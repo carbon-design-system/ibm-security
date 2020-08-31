@@ -15,9 +15,9 @@ module.exports = {
   addons: [
     '@storybook/addon-docs',
     '@storybook/addon-google-analytics',
-    '@storybook/addon-links',
     '@storybook/addon-storysource',
     '@storybook/addon-knobs',
+    '@storybook/addon-controls',
     '@storybook/addon-actions',
     '@storybook/addon-a11y',
     './addons/addon-theme/register',

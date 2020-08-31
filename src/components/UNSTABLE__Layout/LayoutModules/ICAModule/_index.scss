@@ -9,7 +9,7 @@
 @import 'carbon-components/scss/globals/scss/vars';
 
 @import '../../../Component/mixins';
-@import '../TitleModule/variables';
+@import '../Title/variables';
 @import '../variables';
 
 @include security--component($name: #{$layout-modules__name}--ica) {

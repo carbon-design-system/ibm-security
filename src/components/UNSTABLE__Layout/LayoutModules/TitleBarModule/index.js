@@ -8,11 +8,10 @@ import React from 'react';
 
 import LayoutModule from '..';
 
-const moduleName = 'Title bar';
 const namespace = 'title-bar';
 
 const TitleBarModule = ({ children, ...other }) => (
-  <LayoutModule module={moduleName} type={namespace} {...other}>
+  <LayoutModule type={namespace} {...other}>
     {children}
   </LayoutModule>
 );
@@ -22,11 +21,7 @@ TitleBarModule.propTypes = {
 };
 
 const TitleBarModuleActions = ({ children, ...other }) => (
-  <LayoutModule
-    module={`${moduleName} actions`}
-    type={`${namespace}__actions`}
-    {...other}
-  >
+  <LayoutModule type={`${namespace}__actions`} {...other}>
     {children}
   </LayoutModule>
 );

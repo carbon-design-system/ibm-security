@@ -12,12 +12,11 @@ import LayoutModule, {
   layoutModuleNamespace,
 } from '../LayoutModule';
 
-const moduleName = 'ICA';
 const namespace = 'ica';
 const icaNamespace = `${namespace}__ica`;
 
 const ICAModule = ({ children, ...other }) => (
-  <LayoutModule module={moduleName} type={namespace} {...other}>
+  <LayoutModule type={namespace} {...other}>
     {children}
   </LayoutModule>
 );
@@ -32,7 +31,6 @@ const ICAModuleICA = ({ children, className, interactive, ...other }) =>
     className: classnames(className, {
       [`${layoutModuleNamespace}--${icaNamespace}--interactive`]: interactive,
     }),
-    module: `${moduleName} ICA`,
     type: icaNamespace,
     ...other,
   });

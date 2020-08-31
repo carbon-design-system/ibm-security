@@ -94,14 +94,6 @@ Map {
       },
     },
   },
-  "BackgroundModule" => Object {
-    "propTypes": Object {
-      "children": Object {
-        "isRequired": true,
-        "type": "node",
-      },
-    },
-  },
   "Breadcrumb" => Object {
     "propTypes": Object {
       "aria-label": Object {
@@ -266,7 +258,7 @@ Map {
       },
     },
   },
-  "ButtonClusterModule" => Object {
+  "ButtonCluster" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
@@ -4860,7 +4852,6 @@ Map {
   "LayoutModule" => Object {
     "defaultProps": Object {
       "className": null,
-      "module": null,
     },
     "propTypes": Object {
       "children": Object {
@@ -4868,9 +4859,6 @@ Map {
         "type": "node",
       },
       "className": Object {
-        "type": "string",
-      },
-      "module": Object {
         "type": "string",
       },
       "type": Object {
@@ -6269,7 +6257,7 @@ Map {
       },
     },
   },
-  "PageTabModule" => Object {
+  "PageTab" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
@@ -6277,7 +6265,7 @@ Map {
       },
     },
   },
-  "PageTabModuleDetails" => Object {
+  "PageTabDetails" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
@@ -11536,6 +11524,28 @@ Map {
       },
     },
   },
+  "Title" => Object {
+    "defaultProps": Object {
+      "className": null,
+      "element": "h2",
+      "subsection": false,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+      "element": Object {
+        "type": "string",
+      },
+      "subsection": Object {
+        "type": "bool",
+      },
+    },
+  },
   "TitleBarModule" => Object {
     "propTypes": Object {
       "children": Object {
@@ -11549,24 +11559,6 @@ Map {
       "children": Object {
         "isRequired": true,
         "type": "node",
-      },
-    },
-  },
-  "TitleModule" => Object {
-    "defaultProps": Object {
-      "className": null,
-      "element": "h2",
-    },
-    "propTypes": Object {
-      "children": Object {
-        "isRequired": true,
-        "type": "node",
-      },
-      "className": Object {
-        "type": "string",
-      },
-      "element": Object {
-        "type": "string",
       },
     },
   },
@@ -12987,5 +12979,6 @@ Map {
     "uiBackground": "var(--ui-background, #161616)",
     "visitedLink": "var(--visited-link, #be95ff)",
   },
+  "withBackground" => Object {},
 }
 `;

@@ -15,28 +15,21 @@ import {
 const namespace = getComponentNamespace('unstable--layout');
 const layoutModuleNamespace = appendComponentNamespace(namespace, 'module');
 
-const getLayoutModuleProps = ({ className, module, type }) => ({
+const getLayoutModuleProps = ({ className, type }) => ({
   className: classnames(
     layoutModuleNamespace,
     `${layoutModuleNamespace}--${type}`,
     className
   ),
-  'data-security-layout-module': module && `${module} module`,
 });
 
-const createLayoutModuleFromChildren = ({
-  children,
-  module,
-  type,
-  ...other
-}) => {
+const createLayoutModuleFromChildren = ({ children, type, ...other }) => {
   const { className, ...props } = other;
 
   return Children.map(children, child =>
     cloneElement(child, {
       ...getLayoutModuleProps({
         className: classnames(className, child.props.className),
-        module,
         type,
       }),
       ...props,
@@ -44,8 +37,8 @@ const createLayoutModuleFromChildren = ({
   );
 };
 
-const LayoutModule = ({ className, children, module, type, ...other }) => (
-  <div {...getLayoutModuleProps({ className, module, type })} {...other}>
+const LayoutModule = ({ className, children, type, ...other }) => (
+  <div {...getLayoutModuleProps({ className, type })} {...other}>
     {children}
   </div>
 );
@@ -53,12 +46,10 @@ const LayoutModule = ({ className, children, module, type, ...other }) => (
 LayoutModule.propTypes = {
   children: node.isRequired,
   type: string.isRequired,
-  module: string,
   className: string,
 };
 
 LayoutModule.defaultProps = {
-  module: null,
   className: null,
 };
 
