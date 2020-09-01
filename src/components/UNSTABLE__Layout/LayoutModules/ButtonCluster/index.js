@@ -22,6 +22,7 @@ const ButtonCluster = ({ children, ...other }) => (
 );
 
 ButtonCluster.propTypes = {
+  /** Provide the `Button`s for the `ButtonCluster` */
   children: node.isRequired,
 };
 

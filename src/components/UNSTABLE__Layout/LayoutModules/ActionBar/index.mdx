@@ -1,0 +1,70 @@
+import { ArgsTable, Canvas, Story } from '@storybook/addon-docs/blocks';
+
+# ActionBar
+
+## Overview
+
+Action bars allow users to take multiple actions on the subsequent section.
+
+You can build an action bar using a combination of the `ActionBar` and `ActionBarItems` components.
+
+`ActionBarItems` is responsible for positioning the actions, and everything you pass in as a child of `ActionBarItems` will be rendered.
+
+<Canvas>
+  <Story id="patterns-layout-modules-actionbar--default" />
+</Canvas>
+
+## Supplementary details
+
+If necessary, supplementary details can be placed inline with the actions.
+
+<Canvas>
+  <Story id="patterns-layout-modules-actionbar--details" />
+</Canvas>
+
+## Grid placement
+
+When placing an action bar on the grid, it should be placed in a minimum of 4 columns and a maximum of 16.
+
+```jsx
+<Column lg={4}>
+  <ActionBar>
+    <Button kind="ghost">Action</Button>
+
+    <ActionBarItems>
+      <IconButtonBar
+        actions={[
+          {
+            label: 'Action 1',
+            renderIcon: Add16,
+          },
+          {
+            label: 'Action 2',
+            renderIcon: Edit16,
+          },
+          {
+            label: 'Action 3',
+            renderIcon: Filter16,
+          },
+        ]}
+        size="md"
+      />
+    </ActionBarItems>
+  </ActionBar>
+</Column>
+```
+
+## Component API
+
+<ArgsTable />
+
+Additional props passed into `ActionBar` and `ActionBarItems` will be forwarded along to their underlying containers.
+
+## References
+
+- [IconButtonBar](?path=/story/patterns-iconbuttonbar--default)
+- [Grid](https://react.carbondesignsystem.com/?path=/docs/grid)
+
+## Feedback
+
+Help us improve this component by providing feedback, asking questions, and leaving any other comments on [GitHub](https://github.com/carbon-design-system/ibm-security/edit/dev/src/components/UNSTABLE__Layout/LayoutModules/ActionBar/index.mdx).

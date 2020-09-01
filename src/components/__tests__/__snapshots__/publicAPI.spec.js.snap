@@ -78,7 +78,7 @@ Map {
       "uid": [Function],
     },
   },
-  "ActionBarModule" => Object {
+  "ActionBar" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
@@ -86,7 +86,7 @@ Map {
       },
     },
   },
-  "ActionBarModuleActions" => Object {
+  "ActionBarItems" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
@@ -2777,7 +2777,7 @@ Map {
       },
     },
   },
-  "DescriptionModule" => Object {
+  "Description" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
@@ -2785,7 +2785,7 @@ Map {
       },
     },
   },
-  "DescriptionModuleDescription" => Object {
+  "DescriptionContent" => Object {
     "defaultProps": Object {
       "className": null,
     },

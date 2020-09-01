@@ -1,5 +1,5 @@
 /**
- * @file Button cluster stories.
+ * @file Title stories.
  * @copyright IBM Security 2020
  */
 
@@ -9,11 +9,9 @@ import { patterns } from '../../../../../.storybook';
 
 import { Title } from '../../../..';
 
-import page from './Title.mdx';
+import page from './index.mdx';
 
 const { name } = Title;
-
-export const Default = args => <Title {...args} />;
 
 export default {
   title: patterns(`Layout Modules/${name}`),
@@ -23,3 +21,5 @@ export default {
   },
   parameters: { docs: { page } },
 };
+
+export const Default = args => <Title {...args} />;

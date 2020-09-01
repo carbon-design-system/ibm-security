@@ -1,6 +1,6 @@
 ////
-/// Description module.
-/// @group description-module
+/// Description.
+/// @group description
 /// @copyright IBM Security 2020
 ////
 
@@ -13,7 +13,7 @@
 @include security--component($name: #{$layout-modules__name}--description) {
   padding-bottom: $carbon--layout-03;
 
-  &__description {
+  &__content {
     @include carbon--type-style($name: body-short-01);
 
     margin-top: 0;

@@ -4,7 +4,7 @@
 /// @copyright IBM Security 2020
 ////
 
-@import '@carbon/layout/scss/spacing';
+@import '@carbon/layout/scss/mini-unit';
 @import '@carbon/themes/scss/tokens';
 @import 'carbon-components/scss/globals/scss/vars';
 
@@ -20,8 +20,10 @@
   position: relative;
 
   &__details {
+    display: flex;
     position: absolute;
-    top: $carbon--spacing-04;
+    min-height: carbon--mini-units($count: 5);
+    align-items: center;
   }
 
   > #{$carbon--tabs} {

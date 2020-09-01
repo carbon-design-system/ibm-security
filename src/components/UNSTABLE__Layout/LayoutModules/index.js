@@ -5,10 +5,7 @@
 
 export default from './LayoutModule';
 
-export {
-  default as ActionBarModule,
-  ActionBarModuleActions,
-} from './ActionBarModule';
+export { default as ActionBar, ActionBarItems } from './ActionBar';
 
 export { default as withBackground } from './Background';
 export { default as ButtonCluster } from './ButtonCluster';
@@ -19,10 +16,7 @@ export {
   CardModuleCard,
 } from './CardModule';
 
-export {
-  default as DescriptionModule,
-  DescriptionModuleDescription,
-} from './DescriptionModule';
+export { default as Description, DescriptionContent } from './Description';
 
 export { default as ICAModule, ICAModuleICA } from './ICAModule';
 export { default as withLayout } from './Layout';

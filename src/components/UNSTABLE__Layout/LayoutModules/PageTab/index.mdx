@@ -1,0 +1,59 @@
+import { ArgsTable, Canvas, Story } from '@storybook/addon-docs/blocks';
+
+# PageTab
+
+## Overview
+
+Page tab provides orderly tab navigation for a page.
+
+You can build a page tab using a combination of the `PageTab`, [`Tabs`](#references), and `PageTabDetails` components.
+
+The `PageTab` accepts `Tabs`, and optionally `PageTabDetails`, components as `children` and each `Tab` is responsible for displaying the tab's label and panel content.
+
+<Canvas>
+  <Story id="patterns-layout-modules-pagetab--default" />
+</Canvas>
+
+## Supplementary details
+
+If necessary, supplementary details can be placed inline with the tabs.
+
+<Canvas>
+  <Story id="patterns-layout-modules-pagetab--details" />
+</Canvas>
+
+## Grid placement
+
+When placing a page tab on the grid, it should be placed directly in to the grid context.
+
+```jsx
+<Grid>
+  <PageTab>
+    <Tabs>
+      <Tab label="Tab 1">
+        <Row>
+          <Column>Tab 1 content</Column>
+        </Row>
+      </Tab>
+
+      <Tab label="Tab 2" />
+      <Tab label="Tab 3" />
+    </Tabs>
+  </PageTab>
+</Grid>
+```
+
+## Component API
+
+<ArgsTable />
+
+Additional props passed into `PageTab` and `PageTabDetails` will be forwarded along to their underlying containers.
+
+## References
+
+- [Tabs](https://react.carbondesignsystem.com/?path=/docs/tabs)
+- [Grid](https://react.carbondesignsystem.com/?path=/docs/grid)
+
+## Feedback
+
+Help us improve this component by providing feedback, asking questions, and leaving any other comments on [GitHub](https://github.com/carbon-design-system/ibm-security/edit/dev/src/components/UNSTABLE__Layout/LayoutModules/PageTab/index.mdx).

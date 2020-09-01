@@ -20,6 +20,7 @@ const PageTab = ({ children, ...other }) => (
 );
 
 PageTab.propTypes = {
+  /** Provide the `Tabs`, and optionally `PageTabDetails`, for the `PageTab` */
   children: node.isRequired,
 };
 
@@ -30,6 +31,7 @@ const PageTabDetails = ({ children, ...other }) => (
 );
 
 PageTabDetails.propTypes = {
+  /** Provide the contents of the `PageTabDetails` */
   children: node.isRequired,
 };
 

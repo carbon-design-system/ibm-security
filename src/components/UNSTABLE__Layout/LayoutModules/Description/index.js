@@ -10,21 +10,21 @@ import LayoutModule, { getLayoutModuleProps } from '../LayoutModule';
 
 const namespace = 'description';
 
-const DescriptionModule = ({ children, ...other }) => (
+const Description = ({ children, ...other }) => (
   <LayoutModule type={namespace} {...other}>
     {children}
   </LayoutModule>
 );
 
-DescriptionModule.propTypes = {
+Description.propTypes = {
   children: node.isRequired,
 };
 
-const DescriptionModuleDescription = ({ children, className, ...other }) => (
+const DescriptionContent = ({ children, className, ...other }) => (
   <p
     {...getLayoutModuleProps({
       className,
-      type: `${namespace}__description`,
+      type: `${namespace}__content`,
     })}
     {...other}
   >
@@ -32,15 +32,15 @@ const DescriptionModuleDescription = ({ children, className, ...other }) => (
   </p>
 );
 
-DescriptionModuleDescription.propTypes = {
+DescriptionContent.propTypes = {
   children: node.isRequired,
   className: string,
 };
 
-DescriptionModuleDescription.defaultProps = {
+DescriptionContent.defaultProps = {
   className: null,
 };
 
-export default DescriptionModule;
+export default Description;
 
-export { DescriptionModuleDescription };
+export { DescriptionContent };

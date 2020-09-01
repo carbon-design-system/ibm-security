@@ -24463,13 +24463,17 @@ a.bx--navigation-link:focus {
 }
 
 .security--unstable--layout__module--action-bar {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  letter-spacing: 0.16px;
   display: flex;
   padding-top: 0.125rem;
   padding-bottom: 0.5rem;
   align-items: center;
 }
 
-.security--unstable--layout__module--action-bar__actions {
+.security--unstable--layout__module--action-bar__items {
   margin-left: auto;
 }
 
@@ -24508,7 +24512,7 @@ a.bx--navigation-link:focus {
   padding-bottom: 2rem;
 }
 
-.security--unstable--layout__module--description__description {
+.security--unstable--layout__module--description__content {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.125rem;
@@ -24517,7 +24521,7 @@ a.bx--navigation-link:focus {
   margin-bottom: 2rem;
 }
 
-.security--unstable--layout__module--description__description:last-child {
+.security--unstable--layout__module--description__content:last-child {
   margin-bottom: 0;
 }
 
@@ -24551,8 +24555,10 @@ a.bx--navigation-link:focus {
 }
 
 .security--unstable--layout__module--page-tab__details {
+  display: flex;
   position: absolute;
-  top: 0.75rem;
+  min-height: 2.5rem;
+  align-items: center;
 }
 
 .security--unstable--layout__module--page-tab > .bx--tabs {

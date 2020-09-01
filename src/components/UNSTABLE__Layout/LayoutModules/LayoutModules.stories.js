@@ -16,14 +16,14 @@ import { meta, patterns } from '../../../../.storybook';
 import { carbonPrefix } from '../../../globals/namespace';
 
 import {
-  ActionBarModule,
-  ActionBarModuleActions,
+  ActionBar,
+  ActionBarItems,
   Button,
   CardModule,
   CardModuleAction,
   CardModuleCard,
-  DescriptionModule,
-  DescriptionModuleDescription,
+  Description,
+  DescriptionContent,
   ICA as ICAComponent,
   ICAModule,
   ICAModuleICA,
@@ -34,7 +34,6 @@ import {
   SummaryCardBody,
   SummaryCardFooter,
   SummaryCardHeader,
-  Tag,
   TitleBarModule,
   TitleBarModuleActions,
   Title,
@@ -52,47 +51,17 @@ const setDescription = ({ displayName }, url) => ({
 - [Learn more](${url}) about how to use the '${displayName}'`,
 });
 
-const actionBar = () => (
-  <ActionBarModule>
-    <Tag type="gray">Closed</Tag> ID: 12 | Result: Completed
-    <ActionBarModuleActions>
-      <IconButtonBar
-        actions={[
-          {
-            label: 'Search',
-            renderIcon: Search16,
-          },
-          {
-            label: 'Filter',
-            renderIcon: Filter16,
-          },
-          {
-            label: 'View',
-            renderIcon: View16,
-          },
-        ]}
-        size="md"
-      />
-    </ActionBarModuleActions>
-  </ActionBarModule>
-);
-
-actionBar.parameters = setDescription(
-  ActionBarModule,
-  'https://ibm.box.com/s/rn0pt5mov83tbd5k086ee39wgpm18mmq'
-);
-
 const card = () => (
   <CardModule>
     <Title>Summary</Title>
     <Title className={`${carbonPrefix}type-productive-heading-01`} element="h3">
       Sub-section title
     </Title>
-    <ActionBarModule>
+    <ActionBar>
       <Button kind="ghost" renderIcon={Filter16}>
         Action
       </Button>
-      <ActionBarModuleActions>
+      <ActionBarItems>
         <IconButtonBar
           actions={[
             {
@@ -110,8 +79,8 @@ const card = () => (
           ]}
           size="md"
         />
-      </ActionBarModuleActions>
-    </ActionBarModule>
+      </ActionBarItems>
+    </ActionBar>
     <Row>
       {new Array(6).fill().map((item = 'cardModuleCard', index) => {
         const key = `${item}__${index}`;
@@ -151,23 +120,23 @@ card.parameters = setDescription(
 );
 
 const description = () => (
-  <DescriptionModule>
+  <Description>
     <Title>Summary</Title>
     <Title className={`${carbonPrefix}type-productive-heading-01`} element="h3">
       Sub-section title
     </Title>
-    <DescriptionModuleDescription>
+    <DescriptionContent>
       BadFlick is a backdoor that is usually seen being distributed using
       exploited word documents. It does not have any persistence to survive
       reboot, but it is capable of opening a reverse shell connection to its C2
       server where it can download and execute possibly other malware.
-    </DescriptionModuleDescription>
+    </DescriptionContent>
     <Link href="#0">View more</Link>
-  </DescriptionModule>
+  </Description>
 );
 
 description.parameters = setDescription(
-  DescriptionModule,
+  Description,
   'https://ibm.box.com/s/xozfswg0kzn0tuv61uvtz59qoduui6mx'
 );
 
@@ -264,4 +233,4 @@ export default meta(
   [story => <div style={{ width: breakpoints.lg.width }}>{story()}</div>]
 );
 
-export { actionBar, card, description, ICA, titleBar, typeLayout };
+export { card, description, ICA, titleBar, typeLayout };

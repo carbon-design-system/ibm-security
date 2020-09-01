@@ -262,14 +262,14 @@ export { Wizard, WizardStep } from './components/Wizard';
 
 // Experimental.
 export LayoutModule, {
-  ActionBarModule,
-  ActionBarModuleActions,
+  ActionBar,
+  ActionBarItems,
   ButtonCluster,
   CardModule,
   CardModuleAction,
   CardModuleCard,
-  DescriptionModule,
-  DescriptionModuleDescription,
+  Description,
+  DescriptionContent,
   ICAModule,
   ICAModuleICA,
   PageTab,
