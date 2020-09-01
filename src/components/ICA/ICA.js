@@ -1,11 +1,12 @@
 /**
- * @file Important Content Area (ICA).
- * @copyright IBM Security 2019
+ * @file Important content area (ICA).
+ * @copyright IBM Security 2019 - 2020
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
 import numeral from 'numeral';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import 'numeral/locales';
 
 import isDevelopment from '../../globals/env';
@@ -27,13 +28,26 @@ export const Locales = Object.keys(numeral.locales);
 const getFormat = value => (Math.round(value) > 999 ? '0.0a' : '0a');
 
 /**
+ * Ensure that the value is formatted correctly based on whether it should be truncated or not.
+ * @param {number} value The value to format.
+ * @param {boolean} truncate Whether or not the value should be truncated.
+ * @returns {string} The formatted value.
+ */
+const formatValue = (value, truncate) => {
+  const localeValue = numeral(value);
+
+  return truncate ? localeValue.format(getFormat(value)) : localeValue.value();
+};
+
+/**
  * Ensure that the value includes a percentage if specified by prop,
  * or otherwise the value is properly formatted.
  * @param {boolean} percentage Whether a percent sign should be included.
  * @param {number|null} value The value to be formatted.
+ * @param {boolean} truncate Whether or not the value should be truncated.
  * @returns {string} Formatted string.
  */
-const truncateValue = (percentage, value) => {
+const truncateValue = (percentage, value, truncate) => {
   if (percentage)
     return (
       <div className={`${namespace}__percentage`}>
@@ -42,17 +56,18 @@ const truncateValue = (percentage, value) => {
       </div>
     );
 
-  return value === null ? '–' : numeral(value).format(getFormat(value));
+  return value === null ? '–' : formatValue(value, truncate);
 };
 
 const ICA = ({
-  label,
-  total,
-  value,
   className,
+  forceShowTotal,
+  label,
   locale,
   percentage,
-  forceShowTotal,
+  truncate,
+  total,
+  value,
   ...other
 }) => {
   if (Locales.includes(locale)) {
@@ -66,8 +81,9 @@ const ICA = ({
     numeral.locale(ICA.defaultProps.locale);
   }
 
-  const truncatedValue = truncateValue(percentage, value);
-  const truncatedTotal = numeral(total).format(getFormat(total));
+  const truncatedValue = truncateValue(percentage, value, truncate);
+  const truncatedTotal = formatValue(total, truncate);
+
   const shouldDisplayof =
     (!percentage && total > value && truncatedValue !== truncatedTotal) ||
     (forceShowTotal && truncatedTotal > 0);
@@ -127,6 +143,9 @@ ICA.propTypes = {
    * @type bool
    */
   forceShowTotal: PropTypes.bool,
+
+  /** Specify whether or not the values should be truncated. */
+  truncate: PropTypes.bool,
 };
 
 ICA.defaultProps = {
@@ -136,6 +155,7 @@ ICA.defaultProps = {
   percentage: false,
   value: null,
   forceShowTotal: false,
+  truncate: true,
 };
 
 export default ICA;
