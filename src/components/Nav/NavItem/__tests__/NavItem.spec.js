@@ -1,6 +1,6 @@
 /**
  * @file Navigation item tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import { shallow } from 'enzyme';
@@ -37,11 +37,6 @@ describe('NavItem', () => {
 
     it("renders the HTML of the node's subtree", () => {
       expect(navigationItem.render()).toMatchSnapshot();
-    });
-
-    it('renders with correct `tabIndex` when there are no children', () => {
-      navigationItem.setProps({ children: null });
-      expect(navigationItem.prop('tabIndex')).toEqual(0);
     });
   });
 
