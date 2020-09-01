@@ -6,36 +6,37 @@
 import { Add16, Edit16, Filter16 } from '@carbon/icons-react';
 import React from 'react';
 
-import { patterns } from '../../../../../.storybook';
-
+import withResponsive from '../../../../../.storybook/decorators';
 import { ActionBar, ActionBarItems, Button, IconButtonBar } from '../../../..';
+import { getTitle } from '../../stories';
 
 import page from './index.mdx';
 
 export default {
-  title: patterns(`Layout Modules/${ActionBar.name}`),
+  title: getTitle(ActionBar),
   component: ActionBar,
   subcomponents: { ActionBarItems },
   parameters: { docs: { page } },
+  decorators: [withResponsive],
 };
 
 export const Default = () => (
   <ActionBar>
-    <Button kind="ghost">Action</Button>
+    <Button kind="ghost">Action 1</Button>
 
     <ActionBarItems>
       <IconButtonBar
         actions={[
           {
-            label: 'Action 1',
+            label: 'Action 2',
             renderIcon: Add16,
           },
           {
-            label: 'Action 2',
+            label: 'Action 3',
             renderIcon: Edit16,
           },
           {
-            label: 'Action 3',
+            label: 'Action 4',
             renderIcon: Filter16,
           },
         ]}

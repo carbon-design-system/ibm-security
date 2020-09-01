@@ -37,11 +37,6 @@ import {
   TitleBarModule,
   TitleBarModuleActions,
   Title,
-  TypeLayout,
-  TypeLayoutBody,
-  TypeLayoutCell,
-  TypeLayoutModule,
-  TypeLayoutRow,
 } from '../../..';
 
 import storyDescription from '../stories';
@@ -199,33 +194,6 @@ titleBar.parameters = setDescription(
   'https://ibm.box.com/s/0wp85w684cnsseqdetezhyhk80aqzjux'
 );
 
-const typeLayout = () => (
-  <TypeLayoutModule>
-    <Title>Title</Title>
-    <TypeLayout>
-      <TypeLayoutBody>
-        <TypeLayoutRow>
-          <TypeLayoutCell>Start date</TypeLayoutCell>
-          <TypeLayoutCell>Jul 1 2019 at 12:00PM CST</TypeLayoutCell>
-        </TypeLayoutRow>
-        <TypeLayoutRow>
-          <TypeLayoutCell>Duration</TypeLayoutCell>
-          <TypeLayoutCell>20 days</TypeLayoutCell>
-        </TypeLayoutRow>
-        <TypeLayoutRow>
-          <TypeLayoutCell>Frequency</TypeLayoutCell>
-          <TypeLayoutCell>This campaign repeats every 3 months</TypeLayoutCell>
-        </TypeLayoutRow>
-      </TypeLayoutBody>
-    </TypeLayout>
-  </TypeLayoutModule>
-);
-
-typeLayout.parameters = setDescription(
-  TypeLayoutModule,
-  'https://ibm.box.com/s/u4idf3g6sqsvj2529lps6q19s1imu8eq'
-);
-
 export default meta(
   patterns('UNSTABLE LayoutModules'),
   storyDescription,
@@ -233,4 +201,4 @@ export default meta(
   [story => <div style={{ width: breakpoints.lg.width }}>{story()}</div>]
 );
 
-export { card, description, ICA, titleBar, typeLayout };
+export { card, description, ICA, titleBar };

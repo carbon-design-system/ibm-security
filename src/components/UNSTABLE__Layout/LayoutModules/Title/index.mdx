@@ -1,1 +1,49 @@
-## Title
+import { ArgsTable, Canvas, Story } from '@storybook/addon-docs/blocks';
+
+# Title
+
+## Overview
+
+Titles provide interchangeable and reliable headings for establishing consistent hierarchies when using layout modules. Everything you pass in as a child will be rendered.
+
+<Canvas>
+  <Story id="patterns-unstable-layout-modules-title--default" />
+</Canvas>
+
+## Component API
+
+<ArgsTable />
+
+Additional props passed into `Title` will be forwarded along to the underlying title.
+
+### `subsection`
+
+You can use the `subsection` prop to specify whether a subsection should be used.
+
+```jsx
+<Title subsection>Subsection title</Title>
+```
+
+## `element`
+
+This prop allows you to specify a different element to be rendered as a title.
+
+```jsx
+<Title element="h3">Section 3 title</Title>
+```
+
+### `className`
+
+The `className` prop passed into `Title` will be forwarded along to the underlying title container. This is useful for specifying a custom class name for layout and [typography](#references).
+
+```jsx
+<Title className="bx--type-productive-heading-03">Custom title</Title>
+```
+
+## References
+
+[Type classes](https://github.com/carbon-design-system/carbon/tree/master/packages/type#type-classes)
+
+## Feedback
+
+Help us improve this component by providing feedback, asking questions, and leaving any other comments on [GitHub](https://github.com/carbon-design-system/ibm-security/edit/dev/src/components/UNSTABLE__Layout/LayoutModules/Title/index.mdx).

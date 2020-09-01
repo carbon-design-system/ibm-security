@@ -11,7 +11,7 @@ You can build an action bar using a combination of the `ActionBar` and `ActionBa
 `ActionBarItems` is responsible for positioning the actions, and everything you pass in as a child of `ActionBarItems` will be rendered.
 
 <Canvas>
-  <Story id="patterns-layout-modules-actionbar--default" />
+  <Story id="patterns-unstable-layout-modules-actionbar--default" />
 </Canvas>
 
 ## Supplementary details
@@ -19,31 +19,31 @@ You can build an action bar using a combination of the `ActionBar` and `ActionBa
 If necessary, supplementary details can be placed inline with the actions.
 
 <Canvas>
-  <Story id="patterns-layout-modules-actionbar--details" />
+  <Story id="patterns-unstable-layout-modules-actionbar--details" />
 </Canvas>
 
 ## Grid placement
 
-When placing an action bar on the grid, it should be placed in a minimum of 4 columns and a maximum of 16.
+When placing an action bar on the [grid](#references), it should be placed in a minimum of 4 columns and a maximum of 16.
 
 ```jsx
 <Column lg={4}>
   <ActionBar>
-    <Button kind="ghost">Action</Button>
+    <Button kind="ghost">Action 1</Button>
 
     <ActionBarItems>
       <IconButtonBar
         actions={[
           {
-            label: 'Action 1',
+            label: 'Action 2',
             renderIcon: Add16,
           },
           {
-            label: 'Action 2',
+            label: 'Action 3',
             renderIcon: Edit16,
           },
           {
-            label: 'Action 3',
+            label: 'Action 4',
             renderIcon: Filter16,
           },
         ]}

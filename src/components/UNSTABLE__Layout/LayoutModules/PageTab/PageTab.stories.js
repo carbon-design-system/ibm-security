@@ -5,17 +5,18 @@
 
 import React from 'react';
 
-import { patterns } from '../../../../../.storybook';
-
+import withResponsive from '../../../../../.storybook/decorators';
 import { PageTab, PageTabDetails, Tabs, Tab } from '../../../..';
+import { getTitle } from '../../stories';
 
 import page from './index.mdx';
 
 export default {
-  title: patterns(`Layout Modules/${PageTab.name}`),
+  title: getTitle(PageTab),
   component: PageTab,
   subcomponents: { PageTabDetails },
-  parameters: { docs: { page }, layout: 'fullscreen' },
+  parameters: { docs: { page } },
+  decorators: [withResponsive],
 };
 
 export const Default = () => (

@@ -5,19 +5,16 @@
 
 import React from 'react';
 
-import { patterns } from '../../../../../.storybook';
-
 import { Title } from '../../../..';
+import { getTitle } from '../../stories';
 
 import page from './index.mdx';
 
-const { name } = Title;
-
 export default {
-  title: patterns(`Layout Modules/${name}`),
+  title: getTitle(Title),
   component: Title,
   args: {
-    children: name,
+    children: 'Section title',
   },
   parameters: { docs: { page } },
 };

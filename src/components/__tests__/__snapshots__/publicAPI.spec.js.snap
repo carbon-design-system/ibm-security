@@ -11543,7 +11543,7 @@ Map {
         "type": "string",
       },
       "element": Object {
-        "type": "string",
+        "type": "elementType",
       },
       "subsection": Object {
         "type": "bool",

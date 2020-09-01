@@ -3,30 +3,31 @@
  * @copyright IBM Security 2020
  */
 
-import { Activity16, Copy16 } from '@carbon/icons-react';
+import { Add16, Edit16 } from '@carbon/icons-react';
 
 import React from 'react';
 
-import { patterns } from '../../../../../.storybook';
-
+import withResponsive from '../../../../../.storybook/decorators';
 import { Button, ButtonCluster } from '../../../..';
+import { getTitle } from '../../stories';
 
 import page from './index.mdx';
 
 export default {
-  title: patterns(`Layout Modules/${ButtonCluster.name}`),
+  title: getTitle(ButtonCluster),
   component: ButtonCluster,
   parameters: { docs: { page } },
+  decorators: [withResponsive],
 };
 
 export const Default = () => (
   <ButtonCluster>
-    <Button kind="ghost" renderIcon={Copy16}>
-      Duplicate campaign
+    <Button kind="ghost" renderIcon={Add16}>
+      Button 1
     </Button>
 
-    <Button kind="ghost" renderIcon={Activity16}>
-      View activity report
+    <Button kind="ghost" renderIcon={Edit16}>
+      Button 2
     </Button>
   </ButtonCluster>
 );
