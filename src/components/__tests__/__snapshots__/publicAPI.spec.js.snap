@@ -12736,6 +12736,7 @@ Map {
       "isOpen": undefined,
       "isSequential": undefined,
       "labels": Object {},
+      "navLabel": "Steps navigation",
       "onClose": [Function],
       "onDelete": [Function],
       "rootNode": <body />,
@@ -12784,6 +12785,9 @@ Map {
           },
         ],
         "type": "objectOf",
+      },
+      "navLabel": Object {
+        "type": "string",
       },
       "onClose": Object {
         "type": "func",
