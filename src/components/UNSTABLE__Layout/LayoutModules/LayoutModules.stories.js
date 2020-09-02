@@ -22,20 +22,15 @@ import {
   CardModule,
   CardModuleAction,
   CardModuleCard,
-  Description,
-  DescriptionContent,
   ICA as ICAComponent,
   ICAModule,
   ICAModuleICA,
   IconButtonBar,
-  Link,
   SummaryCard,
   SummaryCardAction,
   SummaryCardBody,
   SummaryCardFooter,
   SummaryCardHeader,
-  TitleBarModule,
-  TitleBarModuleActions,
   Title,
 } from '../../..';
 
@@ -114,27 +109,6 @@ card.parameters = setDescription(
   'https://ibm.box.com/s/ery5j69q2a20o788s2f7mnjmoew7k9ka'
 );
 
-const description = () => (
-  <Description>
-    <Title>Summary</Title>
-    <Title className={`${carbonPrefix}type-productive-heading-01`} element="h3">
-      Sub-section title
-    </Title>
-    <DescriptionContent>
-      BadFlick is a backdoor that is usually seen being distributed using
-      exploited word documents. It does not have any persistence to survive
-      reboot, but it is capable of opening a reverse shell connection to its C2
-      server where it can download and execute possibly other malware.
-    </DescriptionContent>
-    <Link href="#0">View more</Link>
-  </Description>
-);
-
-description.parameters = setDescription(
-  Description,
-  'https://ibm.box.com/s/xozfswg0kzn0tuv61uvtz59qoduui6mx'
-);
-
 const ICA = () => (
   <ICAModule>
     <Title>Summary</Title>
@@ -163,42 +137,8 @@ ICA.parameters = setDescription(
   'https://ibm.box.com/s/f0orv16ivr46ukwd6jn0hmuw0slxfj2c'
 );
 
-const titleBar = () => (
-  <TitleBarModule>
-    <Title>Title</Title>
+export default meta(patterns('LayoutModules [Beta]'), storyDescription, null, [
+  story => <div style={{ width: breakpoints.lg.width }}>{story()}</div>,
+]);
 
-    <TitleBarModuleActions>
-      <IconButtonBar
-        actions={[
-          {
-            label: 'Search',
-            renderIcon: Search16,
-          },
-          {
-            label: 'Filter',
-            renderIcon: Filter16,
-          },
-          {
-            label: 'View',
-            renderIcon: View16,
-          },
-        ]}
-        size="md"
-      />
-    </TitleBarModuleActions>
-  </TitleBarModule>
-);
-
-titleBar.parameters = setDescription(
-  TitleBarModule,
-  'https://ibm.box.com/s/0wp85w684cnsseqdetezhyhk80aqzjux'
-);
-
-export default meta(
-  patterns('UNSTABLE LayoutModules'),
-  storyDescription,
-  null,
-  [story => <div style={{ width: breakpoints.lg.width }}>{story()}</div>]
-);
-
-export { card, description, ICA, titleBar };
+export { card, ICA };

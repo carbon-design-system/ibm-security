@@ -1,0 +1,68 @@
+import { ArgsTable, Canvas, Story } from '@storybook/addon-docs/blocks';
+
+# Description
+
+## Overview
+
+Descriptions provide a means to orderly layout short-form content.
+
+You can build a description using a combination of the [`Title`](#references) and `DescriptionContent` components. Everything you pass in as a child of `DescriptionContent` will be rendered.
+
+<Canvas>
+  <Story id="patterns-unstable-layout-modules-description--default" />
+</Canvas>
+
+## Subsection title
+
+If necessary, subsection titles can be used below section titles.
+
+<Canvas>
+  <Story id="patterns-unstable-layout-modules-description--subsection-title" />
+</Canvas>
+
+## Grid placement
+
+When placing a description on the [grid](#references), it should be placed in a maximum of 8 columns.
+
+```jsx
+<Column lg={8}>
+  <Description>
+    <Title>Section title</Title>
+
+    <DescriptionContent>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus
+      tortor eget est ornare, a ultrices risus tincidunt. Suspendisse
+      condimentum mauris at ornare tempor. Phasellus a arcu ante. Morbi vitae
+      ultrices quam, eget eleifend magna. Morbi quis porttitor ex, in elementum
+      tellus. In eget rutrum eros, eu scelerisque risus. Phasellus vel pretium
+      lorem, ut laoreet sapien. Cras ac purus vitae velit efficitur iaculis.
+      Nunc.
+    </DescriptionContent>
+
+    <DescriptionContent>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus
+      tortor eget est ornare, a ultrices risus tincidunt. Suspendisse
+      condimentum mauris at ornare tempor. Phasellus a arcu ante. Morbi vitae
+      ultrices quam, eget eleifend magna. Morbi quis porttitor ex, in elementum
+      tellus. In eget rutrum eros, eu scelerisque risus. Phasellus vel pretium
+      lorem, ut laoreet sapien. Cras ac purus vitae velit efficitur iaculis.
+      Nunc.
+    </DescriptionContent>
+  </Description>
+</Column>
+```
+
+## Component API
+
+<ArgsTable />
+
+Additional props passed into `Description` and `DescriptionContent` will be forwarded along to their underlying containers.
+
+## References
+
+- [Title](?path=/docs/patterns-unstable-layout-modules-title--default)
+- [Grid](https://react.carbondesignsystem.com/?path=/docs/grid)
+
+## Feedback
+
+Help us improve this component by providing feedback, asking questions, and leaving any other comments on [GitHub](https://github.com/carbon-design-system/ibm-security/edit/dev/src/components/UNSTABLE__Layout/LayoutModules/Description/index.mdx).

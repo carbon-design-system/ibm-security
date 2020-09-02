@@ -10,6 +10,9 @@ import LayoutModule, { getLayoutModuleProps } from '../LayoutModule';
 
 const namespace = 'description';
 
+/**
+ * Descriptions provide a means to orderly layout short-form content.
+ */
 const Description = ({ children, ...other }) => (
   <LayoutModule type={namespace} {...other}>
     {children}
@@ -17,6 +20,7 @@ const Description = ({ children, ...other }) => (
 );
 
 Description.propTypes = {
+  /** Provide the `Title` and `DescriptionContent` for the `Description` */
   children: node.isRequired,
 };
 
@@ -33,7 +37,10 @@ const DescriptionContent = ({ children, className, ...other }) => (
 );
 
 DescriptionContent.propTypes = {
+  /** Provide the contents of the `DescriptionContent` */
   children: node.isRequired,
+
+  /** Provide an optional class to be applied to the containing node */
   className: string,
 };
 

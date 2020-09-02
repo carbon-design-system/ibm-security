@@ -16,7 +16,12 @@ export default {
   title: getTitle(ActionBar),
   component: ActionBar,
   subcomponents: { ActionBarItems },
-  parameters: { docs: { page } },
+  parameters: {
+    docs: { page },
+    info: {
+      disable: true,
+    },
+  },
   decorators: [withResponsive],
 };
 

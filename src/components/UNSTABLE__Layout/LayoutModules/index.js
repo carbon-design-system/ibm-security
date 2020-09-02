@@ -23,10 +23,6 @@ export { default as withLayout } from './Layout';
 
 export { default as PageTab, PageTabDetails } from './PageTab';
 
-export {
-  default as TitleBarModule,
-  TitleBarModuleActions,
-} from './TitleBarModule';
+export { default as TitleBar, TitleBarItems } from './TitleBar';
 
 export { default as Title } from './Title';
-export { default as TypeLayoutModule } from './TypeLayoutModule';

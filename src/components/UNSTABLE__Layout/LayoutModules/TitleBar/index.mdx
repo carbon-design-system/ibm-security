@@ -1,0 +1,63 @@
+import { ArgsTable, Canvas, Story } from '@storybook/addon-docs/blocks';
+
+# TitleBar
+
+## Overview
+
+Title bars provide...
+
+You can build a title bar using a combination of the `TitleBar`, [`Title`](#references) and `TitleBarItems` components.
+
+`TitleBarItems` is responsible for positioning the actions, and everything you pass in as a child of `TitleBarItems` will be rendered.
+
+<Canvas>
+  <Story id="patterns-unstable-layout-modules-titlebar--default" />
+</Canvas>
+
+## Grid placement
+
+When placing a title bar on the [grid](#references), it should be placed in a minimum of 4 columns and a maximum of 8.
+
+```jsx
+<Column lg={4}>
+  <TitleBar>
+    <Title>Section title</Title>
+
+    <TitleBarItems>
+      <IconButtonBar
+        actions={[
+          {
+            label: 'Action 1',
+            renderIcon: Add16,
+          },
+          {
+            label: 'Action 2',
+            renderIcon: Edit16,
+          },
+          {
+            label: 'Action 3',
+            renderIcon: Filter16,
+          },
+        ]}
+        size="md"
+      />
+    </TitleBarItems>
+  </TitleBar>
+</Column>
+```
+
+## Component API
+
+<ArgsTable />
+
+Additional props passed into `TitleBar` and `TitleBarItems` will be forwarded along to their underlying containers.
+
+## References
+
+- [Title](?path=/docs/patterns-unstable-layout-modules-title--default)
+- [IconButtonBar](?path=/story/patterns-iconbuttonbar--default)
+- [Grid](https://react.carbondesignsystem.com/?path=/docs/grid)
+
+## Feedback
+
+Help us improve this component by providing feedback, asking questions, and leaving any other comments on [GitHub](https://github.com/carbon-design-system/ibm-security/edit/dev/src/components/UNSTABLE__Layout/LayoutModules/TitleBar/index.mdx).

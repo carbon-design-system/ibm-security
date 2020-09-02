@@ -47,10 +47,9 @@ import {
   Tab,
   Tag,
   Title,
-  TitleBarModule,
+  TitleBar,
   TypeLayout,
   TypeLayoutBody,
-  TypeLayoutModule,
   TypeLayoutRow,
   TypeLayoutCell,
   withBackground,
@@ -84,115 +83,103 @@ const overview = () => (
       <Column lg={12}>
         <Row>
           <EnhancedColumn>
-            <TypeLayoutModule>
-              <Title subsection>General settings and scope</Title>
+            <Title subsection>General settings and scope</Title>
 
-              <TypeLayout>
-                <TypeLayoutBody>
-                  <TypeLayoutRow>
-                    <TypeLayoutCell>Name</TypeLayoutCell>
-                    <TypeLayoutCell>
-                      ServiceNow entitlements review
-                    </TypeLayoutCell>
-                  </TypeLayoutRow>
-                  <TypeLayoutRow>
-                    <TypeLayoutCell>Description</TypeLayoutCell>
-                    <TypeLayoutCell>
-                      Sample description of the ServiceNow entitlements review
-                      campaign that may need to go to several lines.
-                    </TypeLayoutCell>
-                  </TypeLayoutRow>
-                  <TypeLayoutRow>
-                    <TypeLayoutCell>Type</TypeLayoutCell>
-                    <TypeLayoutCell>User entitlements</TypeLayoutCell>
-                  </TypeLayoutRow>
-                  <TypeLayoutRow>
-                    <TypeLayoutCell>Priority</TypeLayoutCell>
-                    <TypeLayoutCell>Medium</TypeLayoutCell>
-                  </TypeLayoutRow>
-                  <TypeLayoutRow>
-                    <TypeLayoutCell>Applications</TypeLayoutCell>
-                    <TypeLayoutCell>
-                      <ul>
-                        <li>ServiceNow 1</li>
-                        <li>ServiceNow 2</li>
-                        <li>ServiceNow 3</li>
-                      </ul>
-                    </TypeLayoutCell>
-                  </TypeLayoutRow>
-                  <TypeLayoutRow>
-                    <TypeLayoutCell>Include only</TypeLayoutCell>
-                    <TypeLayoutCell>
-                      All users and groups included
-                    </TypeLayoutCell>
-                  </TypeLayoutRow>
-                  <TypeLayoutRow>
-                    <TypeLayoutCell>Except for</TypeLayoutCell>
-                    <TypeLayoutCell>
-                      No users and groups excluded
-                    </TypeLayoutCell>
-                  </TypeLayoutRow>
-                  <TypeLayoutRow>
-                    <TypeLayoutCell>Reviewer</TypeLayoutCell>
-                    <TypeLayoutCell>User manager</TypeLayoutCell>
-                  </TypeLayoutRow>
-                </TypeLayoutBody>
-              </TypeLayout>
-            </TypeLayoutModule>
+            <TypeLayout>
+              <TypeLayoutBody>
+                <TypeLayoutRow>
+                  <TypeLayoutCell>Name</TypeLayoutCell>
+                  <TypeLayoutCell>
+                    ServiceNow entitlements review
+                  </TypeLayoutCell>
+                </TypeLayoutRow>
+                <TypeLayoutRow>
+                  <TypeLayoutCell>Description</TypeLayoutCell>
+                  <TypeLayoutCell>
+                    Sample description of the ServiceNow entitlements review
+                    campaign that may need to go to several lines.
+                  </TypeLayoutCell>
+                </TypeLayoutRow>
+                <TypeLayoutRow>
+                  <TypeLayoutCell>Type</TypeLayoutCell>
+                  <TypeLayoutCell>User entitlements</TypeLayoutCell>
+                </TypeLayoutRow>
+                <TypeLayoutRow>
+                  <TypeLayoutCell>Priority</TypeLayoutCell>
+                  <TypeLayoutCell>Medium</TypeLayoutCell>
+                </TypeLayoutRow>
+                <TypeLayoutRow>
+                  <TypeLayoutCell>Applications</TypeLayoutCell>
+                  <TypeLayoutCell>
+                    <ul>
+                      <li>ServiceNow 1</li>
+                      <li>ServiceNow 2</li>
+                      <li>ServiceNow 3</li>
+                    </ul>
+                  </TypeLayoutCell>
+                </TypeLayoutRow>
+                <TypeLayoutRow>
+                  <TypeLayoutCell>Include only</TypeLayoutCell>
+                  <TypeLayoutCell>All users and groups included</TypeLayoutCell>
+                </TypeLayoutRow>
+                <TypeLayoutRow>
+                  <TypeLayoutCell>Except for</TypeLayoutCell>
+                  <TypeLayoutCell>No users and groups excluded</TypeLayoutCell>
+                </TypeLayoutRow>
+                <TypeLayoutRow>
+                  <TypeLayoutCell>Reviewer</TypeLayoutCell>
+                  <TypeLayoutCell>User manager</TypeLayoutCell>
+                </TypeLayoutRow>
+              </TypeLayoutBody>
+            </TypeLayout>
           </EnhancedColumn>
 
           <EnhancedColumn>
             <Row>
               <EnhancedColumn>
-                <TypeLayoutModule>
-                  <Title subsection>Schedule</Title>
+                <Title subsection>Schedule</Title>
 
-                  <TypeLayout>
-                    <TypeLayoutBody>
-                      <TypeLayoutRow>
-                        <TypeLayoutCell>Start date</TypeLayoutCell>
-                        <TypeLayoutCell>
-                          Jul 1 2019 at 12:00PM CST
-                        </TypeLayoutCell>
-                      </TypeLayoutRow>
-                      <TypeLayoutRow>
-                        <TypeLayoutCell>Duration</TypeLayoutCell>
-                        <TypeLayoutCell>20 days</TypeLayoutCell>
-                      </TypeLayoutRow>
-                      <TypeLayoutRow>
-                        <TypeLayoutCell>Frequency</TypeLayoutCell>
-                        <TypeLayoutCell>
-                          This campaign repeats every 3 months
-                        </TypeLayoutCell>
-                      </TypeLayoutRow>
-                    </TypeLayoutBody>
-                  </TypeLayout>
-                </TypeLayoutModule>
+                <TypeLayout>
+                  <TypeLayoutBody>
+                    <TypeLayoutRow>
+                      <TypeLayoutCell>Start date</TypeLayoutCell>
+                      <TypeLayoutCell>Jul 1 2019 at 12:00PM CST</TypeLayoutCell>
+                    </TypeLayoutRow>
+                    <TypeLayoutRow>
+                      <TypeLayoutCell>Duration</TypeLayoutCell>
+                      <TypeLayoutCell>20 days</TypeLayoutCell>
+                    </TypeLayoutRow>
+                    <TypeLayoutRow>
+                      <TypeLayoutCell>Frequency</TypeLayoutCell>
+                      <TypeLayoutCell>
+                        This campaign repeats every 3 months
+                      </TypeLayoutCell>
+                    </TypeLayoutRow>
+                  </TypeLayoutBody>
+                </TypeLayout>
               </EnhancedColumn>
             </Row>
 
             <Row>
               <Column>
-                <TypeLayoutModule>
-                  <Title subsection>Campaign end</Title>
+                <Title subsection>Campaign end</Title>
 
-                  <TypeLayout>
-                    <TypeLayoutBody>
-                      <TypeLayoutRow>
-                        <TypeLayoutCell>Reminders</TypeLayoutCell>
-                        <TypeLayoutCell>
-                          Start 10 days before campaign ends
-                        </TypeLayoutCell>
-                      </TypeLayoutRow>
-                      <TypeLayoutRow>
-                        <TypeLayoutCell>Campaign end</TypeLayoutCell>
-                        <TypeLayoutCell>
-                          Take no action on entitlements not reviewed
-                        </TypeLayoutCell>
-                      </TypeLayoutRow>
-                    </TypeLayoutBody>
-                  </TypeLayout>
-                </TypeLayoutModule>
+                <TypeLayout>
+                  <TypeLayoutBody>
+                    <TypeLayoutRow>
+                      <TypeLayoutCell>Reminders</TypeLayoutCell>
+                      <TypeLayoutCell>
+                        Start 10 days before campaign ends
+                      </TypeLayoutCell>
+                    </TypeLayoutRow>
+                    <TypeLayoutRow>
+                      <TypeLayoutCell>Campaign end</TypeLayoutCell>
+                      <TypeLayoutCell>
+                        Take no action on entitlements not reviewed
+                      </TypeLayoutCell>
+                    </TypeLayoutRow>
+                  </TypeLayoutBody>
+                </TypeLayout>
               </Column>
             </Row>
           </EnhancedColumn>
@@ -202,9 +189,9 @@ const overview = () => (
           <EnhancedColumn>
             <Row>
               <Column>
-                <TitleBarModule>
+                <TitleBar>
                   <Title subsection>Campaign results</Title>
-                </TitleBarModule>
+                </TitleBar>
               </Column>
               <Column lg={6}>
                 <ContentSwitcher
@@ -301,35 +288,33 @@ const overview = () => (
           </Button>
         </ButtonCluster>
 
-        <TypeLayoutModule>
-          <Title subsection>Details</Title>
+        <Title subsection>Details</Title>
 
-          <TypeLayout>
-            <TypeLayoutBody>
-              <TypeLayoutRow>
-                <TypeLayoutCell>Created by</TypeLayoutCell>
-                <TypeLayoutCell>
-                  <ul>
-                    <li>Scott Damon</li>
-                    <li>scottd@cse-bank.com</li>
-                  </ul>
-                </TypeLayoutCell>
-              </TypeLayoutRow>
-              <TypeLayoutRow>
-                <TypeLayoutCell>Created on</TypeLayoutCell>
-                <TypeLayoutCell>Jun 21 2018</TypeLayoutCell>
-              </TypeLayoutRow>
-              <TypeLayoutRow>
-                <TypeLayoutCell>Modified on</TypeLayoutCell>
-                <TypeLayoutCell>–</TypeLayoutCell>
-              </TypeLayoutRow>
-              <TypeLayoutRow>
-                <TypeLayoutCell>Closed on</TypeLayoutCell>
-                <TypeLayoutCell>Jul 15 2018</TypeLayoutCell>
-              </TypeLayoutRow>
-            </TypeLayoutBody>
-          </TypeLayout>
-        </TypeLayoutModule>
+        <TypeLayout>
+          <TypeLayoutBody>
+            <TypeLayoutRow>
+              <TypeLayoutCell>Created by</TypeLayoutCell>
+              <TypeLayoutCell>
+                <ul>
+                  <li>Scott Damon</li>
+                  <li>scottd@cse-bank.com</li>
+                </ul>
+              </TypeLayoutCell>
+            </TypeLayoutRow>
+            <TypeLayoutRow>
+              <TypeLayoutCell>Created on</TypeLayoutCell>
+              <TypeLayoutCell>Jun 21 2018</TypeLayoutCell>
+            </TypeLayoutRow>
+            <TypeLayoutRow>
+              <TypeLayoutCell>Modified on</TypeLayoutCell>
+              <TypeLayoutCell>–</TypeLayoutCell>
+            </TypeLayoutRow>
+            <TypeLayoutRow>
+              <TypeLayoutCell>Closed on</TypeLayoutCell>
+              <TypeLayoutCell>Jul 15 2018</TypeLayoutCell>
+            </TypeLayoutRow>
+          </TypeLayoutBody>
+        </TypeLayout>
       </Column>
     </Row>
   </>
@@ -358,20 +343,18 @@ const detail = () => (
             </Description>
           </Column>
           <Column lg={{ offset: 2, span: 8 }}>
-            <TypeLayoutModule>
-              <TypeLayout>
-                <TypeLayoutBody>
-                  <TypeLayoutRow>
-                    <TypeLayoutCell>Created by</TypeLayoutCell>
-                    <TypeLayoutCell>X-Force IRIS</TypeLayoutCell>
-                  </TypeLayoutRow>
-                  <TypeLayoutRow>
-                    <TypeLayoutCell>Last updated</TypeLayoutCell>
-                    <TypeLayoutCell>Jul 14 2019</TypeLayoutCell>
-                  </TypeLayoutRow>
-                </TypeLayoutBody>
-              </TypeLayout>
-            </TypeLayoutModule>
+            <TypeLayout>
+              <TypeLayoutBody>
+                <TypeLayoutRow>
+                  <TypeLayoutCell>Created by</TypeLayoutCell>
+                  <TypeLayoutCell>X-Force IRIS</TypeLayoutCell>
+                </TypeLayoutRow>
+                <TypeLayoutRow>
+                  <TypeLayoutCell>Last updated</TypeLayoutCell>
+                  <TypeLayoutCell>Jul 14 2019</TypeLayoutCell>
+                </TypeLayoutRow>
+              </TypeLayoutBody>
+            </TypeLayout>
           </Column>
         </Row>
 
@@ -482,9 +465,9 @@ const detail = () => (
           <EnhancedColumn>
             <Row>
               <Column>
-                <TitleBarModule>
+                <TitleBar>
                   <Title element="h4">Indicators</Title>
-                </TitleBarModule>
+                </TitleBar>
               </Column>
             </Row>
 
@@ -589,7 +572,7 @@ const detail = () => (
 );
 
 export default meta(
-  patterns('UNSTABLE Layout Examples'),
+  patterns('Layout Examples [Beta]'),
   description,
   disableCentered(),
   [

@@ -10,45 +10,48 @@ import {
   TypeLayout,
   TypeLayoutBody,
   TypeLayoutCell,
-  TypeLayoutModule,
   TypeLayoutRow,
 } from '../../../..';
+
 import { getTitle } from '../../stories';
 
 import page from './index.mdx';
 
 export default {
-  title: getTitle(TypeLayoutModule),
-  component: TypeLayoutModule,
-  subcomponents: { Title },
-  parameters: { docs: { page } },
+  title: getTitle(TypeLayout),
+  component: TypeLayout,
+  subcomponents: { Title, TypeLayoutBody, TypeLayoutCell, TypeLayoutRow },
+  parameters: {
+    docs: { page },
+    info: {
+      disable: true,
+    },
+  },
 };
 
 export const Default = () => (
-  <TypeLayoutModule>
-    <TypeLayout>
-      <TypeLayoutBody>
-        <TypeLayoutRow>
-          <TypeLayoutCell>Term 1</TypeLayoutCell>
-          <TypeLayoutCell>Definition 1</TypeLayoutCell>
-        </TypeLayoutRow>
+  <TypeLayout>
+    <TypeLayoutBody>
+      <TypeLayoutRow>
+        <TypeLayoutCell>Term 1</TypeLayoutCell>
+        <TypeLayoutCell>Definition 1</TypeLayoutCell>
+      </TypeLayoutRow>
 
-        <TypeLayoutRow>
-          <TypeLayoutCell>Term 2</TypeLayoutCell>
-          <TypeLayoutCell>Definition 2</TypeLayoutCell>
-        </TypeLayoutRow>
+      <TypeLayoutRow>
+        <TypeLayoutCell>Term 2</TypeLayoutCell>
+        <TypeLayoutCell>Definition 2</TypeLayoutCell>
+      </TypeLayoutRow>
 
-        <TypeLayoutRow>
-          <TypeLayoutCell>Term 3</TypeLayoutCell>
-          <TypeLayoutCell>Definition 3</TypeLayoutCell>
-        </TypeLayoutRow>
-      </TypeLayoutBody>
-    </TypeLayout>
-  </TypeLayoutModule>
+      <TypeLayoutRow>
+        <TypeLayoutCell>Term 3</TypeLayoutCell>
+        <TypeLayoutCell>Definition 3</TypeLayoutCell>
+      </TypeLayoutRow>
+    </TypeLayoutBody>
+  </TypeLayout>
 );
 
 export const title = () => (
-  <TypeLayoutModule>
+  <>
     <Title>Section title</Title>
 
     <TypeLayout>
@@ -69,5 +72,5 @@ export const title = () => (
         </TypeLayoutRow>
       </TypeLayoutBody>
     </TypeLayout>
-  </TypeLayoutModule>
+  </>
 );

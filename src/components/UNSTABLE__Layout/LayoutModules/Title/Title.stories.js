@@ -16,7 +16,12 @@ export default {
   args: {
     children: 'Section title',
   },
-  parameters: { docs: { page } },
+  parameters: {
+    docs: { page },
+    info: {
+      disable: true,
+    },
+  },
 };
 
 export const Default = args => <Title {...args} />;

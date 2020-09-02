@@ -25,7 +25,7 @@
     @include carbon--type-style($name: productive-heading-01);
   }
 
-  & + & {
+  & + &--subsection {
     margin-top: $carbon--layout-03;
   }
 }

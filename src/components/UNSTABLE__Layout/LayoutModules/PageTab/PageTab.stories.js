@@ -15,7 +15,12 @@ export default {
   title: getTitle(PageTab),
   component: PageTab,
   subcomponents: { PageTabDetails },
-  parameters: { docs: { page } },
+  parameters: {
+    docs: { page },
+    info: {
+      disable: true,
+    },
+  },
   decorators: [withResponsive],
 };
 

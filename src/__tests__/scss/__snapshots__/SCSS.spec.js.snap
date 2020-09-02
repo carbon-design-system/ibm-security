@@ -24579,9 +24579,9 @@ a.bx--navigation-link:focus {
   align-items: center;
 }
 
-.security--unstable--layout__module--title-bar__actions {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+.security--unstable--layout__module--title-bar__items {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
   margin-left: auto;
 }
 
@@ -24601,16 +24601,8 @@ a.bx--navigation-link:focus {
   letter-spacing: 0.16px;
 }
 
-.security--unstable--layout__module--title + .security--unstable--layout__module--title {
+.security--unstable--layout__module--title + .security--unstable--layout__module--title--subsection {
   margin-top: 2rem;
-}
-
-.security--unstable--layout__module--type-layout {
-  padding-bottom: 2rem;
-}
-
-.security--unstable--layout__module--type-layout > .security--type-layout__container {
-  margin-bottom: 0;
 }
 
 .security--unstable--layout--layout-00--m {

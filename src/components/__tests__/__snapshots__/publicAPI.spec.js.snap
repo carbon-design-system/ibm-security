@@ -11550,7 +11550,7 @@ Map {
       },
     },
   },
-  "TitleBarModule" => Object {
+  "TitleBar" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
@@ -11558,7 +11558,7 @@ Map {
       },
     },
   },
-  "TitleBarModuleActions" => Object {
+  "TitleBarItems" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
@@ -12496,14 +12496,6 @@ Map {
       },
       "className": Object {
         "type": "string",
-      },
-    },
-  },
-  "TypeLayoutModule" => Object {
-    "propTypes": Object {
-      "children": Object {
-        "isRequired": true,
-        "type": "node",
       },
     },
   },

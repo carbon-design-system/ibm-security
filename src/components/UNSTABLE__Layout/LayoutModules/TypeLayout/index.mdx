@@ -1,0 +1,65 @@
+import { ArgsTable, Canvas, Story } from '@storybook/addon-docs/blocks';
+
+# TypeLayout
+
+## Overview
+
+Type layout provide a means to orderly layout terms and definitions.
+
+You can build a type layout using a combination of the `TypeLayout` and [`Title`](#references) components.
+
+The `TypeLayout` accepts `TypeLayoutBody`, `TypeLayoutCell`, and `TypeLayoutRow` components as `children`.
+
+<Canvas>
+  <Story id="patterns-unstable-layout-modules-typelayout--default" />
+</Canvas>
+
+## Title
+
+If necessary, both section and subsection titles can precede the type layout.
+
+<Canvas>
+  <Story id="patterns-unstable-layout-modules-typelayout--title" />
+</Canvas>
+
+## Grid placement
+
+When placing a type layout module on the [grid](#references), it should be placed in a maximum of 8 columns.
+
+```jsx
+<Column lg={8}>
+  <TypeLayout>
+    <TypeLayoutBody>
+      <TypeLayoutRow>
+        <TypeLayoutCell>Term 1</TypeLayoutCell>
+        <TypeLayoutCell>Definition 1</TypeLayoutCell>
+      </TypeLayoutRow>
+
+      <TypeLayoutRow>
+        <TypeLayoutCell>Term 2</TypeLayoutCell>
+        <TypeLayoutCell>Definition 2</TypeLayoutCell>
+      </TypeLayoutRow>
+
+      <TypeLayoutRow>
+        <TypeLayoutCell>Term 3</TypeLayoutCell>
+        <TypeLayoutCell>Definition 3</TypeLayoutCell>
+      </TypeLayoutRow>
+    </TypeLayoutBody>
+  </TypeLayout>
+</Column>
+```
+
+## Component API
+
+<ArgsTable />
+
+Additional props passed into `TypeLayout` will be forwarded along to the underlying type layout container.
+
+## References
+
+- [Title](?path=/docs/patterns-unstable-layout-modules-title--default)
+- [Grid](https://react.carbondesignsystem.com/?path=/docs/grid)
+
+## Feedback
+
+Help us improve this component by providing feedback, asking questions, and leaving any other comments on [GitHub](https://github.com/carbon-design-system/ibm-security/edit/dev/src/components/UNSTABLE__Layout/LayoutModules/TypeLayout/index.mdx).

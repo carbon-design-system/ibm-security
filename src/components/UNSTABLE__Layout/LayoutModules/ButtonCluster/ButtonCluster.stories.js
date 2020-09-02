@@ -16,7 +16,12 @@ import page from './index.mdx';
 export default {
   title: getTitle(ButtonCluster),
   component: ButtonCluster,
-  parameters: { docs: { page } },
+  parameters: {
+    docs: { page },
+    info: {
+      disable: true,
+    },
+  },
   decorators: [withResponsive],
 };
 

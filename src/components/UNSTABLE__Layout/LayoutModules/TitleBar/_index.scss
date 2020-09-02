@@ -1,6 +1,6 @@
 ////
-/// Title bar module.
-/// @group title-bar-module
+/// Title bar.
+/// @group title-bar
 /// @copyright IBM Security 2020
 ////
 
@@ -13,10 +13,10 @@
   display: flex;
   align-items: center;
 
-  &__actions {
+  &__items {
     /// Spacing.
     /// @type Length
-    $layout--title-bar__actions__spacing: $carbon--spacing-03;
+    $layout--title-bar__actions__spacing: $carbon--spacing-02;
 
     margin-top: $layout--title-bar__actions__spacing;
     margin-bottom: $layout--title-bar__actions__spacing;
