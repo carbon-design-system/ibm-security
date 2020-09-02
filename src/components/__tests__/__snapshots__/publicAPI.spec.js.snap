@@ -12979,7 +12979,11 @@ Map {
     "uiBackground": "var(--ui-background, #161616)",
     "visitedLink": "var(--visited-link, #be95ff)",
   },
-  "withBackground" => Object {},
-  "withLayout" => Object {},
+  "withBackground" => Object {
+    "displayName": "withBackground",
+  },
+  "withLayout" => Object {
+    "displayName": "withLayout",
+  },
 }
 `;

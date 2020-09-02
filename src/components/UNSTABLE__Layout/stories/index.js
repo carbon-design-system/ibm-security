@@ -10,5 +10,5 @@ export default `In combination with ['Grid' components](https://react.carbondesi
 
 - [Learn more](https://www.carbondesignsystem.com/guidelines/spacing/overview#spacing-scale) about Carbon and additional values for spacing classes`;
 
-export const getTitle = ({ name }) =>
-  patterns(`UNSTABLE Layout Modules/${name}`);
+export const getTitle = ({ displayName, name }) =>
+  patterns(`UNSTABLE Layout Modules/${displayName || name}`);

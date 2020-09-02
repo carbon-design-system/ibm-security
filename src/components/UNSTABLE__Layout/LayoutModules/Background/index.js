@@ -8,7 +8,9 @@ import React from 'react';
 
 import { layoutModuleNamespace } from '../LayoutModule';
 
-export default WrappedComponent => {
+const displayName = 'withBackground';
+
+const withBackground = WrappedComponent => {
   const WithBackground = ({ className, ...other }) => (
     <WrappedComponent
       className={classnames(`${layoutModuleNamespace}--background`, className)}
@@ -16,11 +18,18 @@ export default WrappedComponent => {
     />
   );
 
-  const { displayName, name } = WrappedComponent;
+  const {
+    displayName: wrappedComponentDisplayName,
+    name: wrappedComponentName,
+  } = WrappedComponent;
 
-  WithBackground.displayName = `WithBackground(${displayName ||
-    name ||
+  WithBackground.displayName = `${displayName}(${wrappedComponentDisplayName ||
+    wrappedComponentName ||
     'Component'})`;
 
   return WithBackground;
 };
+
+withBackground.displayName = displayName;
+
+export default withBackground;
