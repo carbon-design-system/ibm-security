@@ -1,17 +1,14 @@
 /**
  * @file Theme entry point.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import addons, { makeDecorator } from '@storybook/addons';
-import { themes as storybookThemes } from '@storybook/theming';
 
 import React, { Component } from 'react';
 
 import Themes, { defaultTheme } from '../../themes';
 import Theme from './Theme';
-
-const { dark, light } = storybookThemes;
 
 const namespace = 'addon-theme';
 const action = `${namespace}/change`;
@@ -74,12 +71,11 @@ class Wrapper extends Component {
 export default makeDecorator({
   name: `with${title}`,
   parameterName: title,
-  wrapper: (storyFn, context) => {
-    context.parameters.docs.theme =
-      getStoredTheme() === themes['Cool Gray 10'] ? light : dark;
-
-    return <Wrapper>{storyFn(context)}</Wrapper>;
-  },
+  wrapper: Story => (
+    <Wrapper>
+      <Story />
+    </Wrapper>
+  ),
 });
 
 export { action, getStoredTheme, namespace, themes, title };

@@ -1,6 +1,6 @@
 /**
  * @file Theme component.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import { Component } from 'react';
@@ -13,7 +13,6 @@ const namespace = getComponentNamespace('theme');
  * Theme class.
  * @class
  */
-
 export default class Theme extends Component {
   componentDidMount = () => {
     this.root = document.querySelector('html');
