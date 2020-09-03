@@ -1,0 +1,17 @@
+////
+/// Background.
+/// @group background
+/// @copyright IBM Security 2020
+////
+
+@import '@carbon/themes/scss/tokens';
+
+@import '../../../globals/border/index';
+@import '../../Component/mixins';
+
+@import '../variables';
+
+@include security--component($name: #{$layout-modules__name}--background) {
+  background-color: $ui-01;
+  outline: $border__sizing__width solid $ui-background;
+}

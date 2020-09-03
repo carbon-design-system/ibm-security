@@ -12444,7 +12444,7 @@ Map {
       "border": false,
       "bordered": null,
       "children": null,
-      "className": "",
+      "className": null,
       "size": "md",
     },
     "propTypes": Object {
@@ -12474,7 +12474,7 @@ Map {
   "TypeLayoutBody" => Object {
     "defaultProps": Object {
       "children": null,
-      "className": "",
+      "className": null,
     },
     "propTypes": Object {
       "children": Object {
@@ -12488,7 +12488,7 @@ Map {
   "TypeLayoutCell" => Object {
     "defaultProps": Object {
       "children": null,
-      "className": "",
+      "className": null,
     },
     "propTypes": Object {
       "children": Object {
@@ -12502,7 +12502,7 @@ Map {
   "TypeLayoutRow" => Object {
     "defaultProps": Object {
       "children": null,
-      "className": "",
+      "className": null,
     },
     "propTypes": Object {
       "children": Object {

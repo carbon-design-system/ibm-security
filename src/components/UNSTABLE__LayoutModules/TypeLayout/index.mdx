@@ -1,0 +1,112 @@
+import { ArgsTable, Canvas, Story } from '@storybook/addon-docs/blocks';
+import { Default } from './TypeLayout.stories';
+
+# TypeLayout
+
+## Overview
+
+Type layout provide a means to orderly layout terms and definitions.
+
+You can build a type layout using a combination of the `TypeLayout` and [`Title`](#references) components.
+
+The `TypeLayout` accepts `TypeLayoutBody`, `TypeLayoutCell`, and `TypeLayoutRow` components as `children`.
+
+<Canvas>
+  <Story id="patterns-unstable-layout-modules-typelayout--default" />
+</Canvas>
+
+## Title
+
+If necessary, both section and subsection titles can precede the type layout.
+
+<Canvas>
+  <Story id="patterns-unstable-layout-modules-typelayout--title" />
+</Canvas>
+
+## Grid placement
+
+When placing a type layout module on the [grid](#references), it should be placed in a maximum of 8 columns.
+
+```jsx
+<Column lg={8}>
+  <TypeLayout>
+    <TypeLayoutBody>
+      <TypeLayoutRow>
+        <TypeLayoutCell>Term 1</TypeLayoutCell>
+
+        <TypeLayoutCell>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+          accumsan, dui ut pulvinar mattis, diam est imperdiet ex, a varius
+          lacus ex at libero. Aenean euismod viverra odio, id volutpat turpis
+          commodo.
+        </TypeLayoutCell>
+      </TypeLayoutRow>
+
+      <TypeLayoutRow>
+        <TypeLayoutCell>Term 2</TypeLayoutCell>
+
+        <TypeLayoutCell>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+          accumsan, dui ut pulvinar mattis, diam est imperdiet ex, a varius
+          lacus ex at libero. Aenean euismod viverra odio, id volutpat turpis
+          commodo.
+        </TypeLayoutCell>
+      </TypeLayoutRow>
+
+      <TypeLayoutRow>
+        <TypeLayoutCell>Term 3</TypeLayoutCell>
+
+        <TypeLayoutCell>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+          accumsan, dui ut pulvinar mattis, diam est imperdiet ex, a varius
+          lacus ex at libero. Aenean euismod viverra odio, id volutpat turpis
+          commodo.
+        </TypeLayoutCell>
+      </TypeLayoutRow>
+    </TypeLayoutBody>
+  </TypeLayout>
+</Column>
+```
+
+## Component API
+
+<ArgsTable />
+
+Additional props passed into `TypeLayout`, `TypeLayoutBody`, `TypeLayoutCell`, and `TypeLayoutRow` will be forwarded along to their underlying containers.
+
+### `size`
+
+This prop specifies which size the `TypeLayout` should be rendered at. Valid values are `xs`, `sm`, `md`, and `lg`. If no size is specified, it renders as `md`.
+
+<Default size="sm" />
+
+```jsx
+<TypeLayout size="sm" />
+```
+
+## `border`
+
+This prop allows you to specify whether a border should be rendered.
+
+<Default border />
+
+```jsx
+<TypeLayout border />
+```
+
+### `className`
+
+The `className` prop passed into either `TypeLayout`, `TypeLayoutBody`, `TypeLayoutCell`, and `TypeLayoutRow`, will be forwarded along to their underlying containers. This is useful for specifying a custom class name for layout.
+
+```jsx
+<TypeLayout className="class-name" />
+```
+
+## References
+
+- [Title](?path=/docs/patterns-unstable-layout-modules-title--default)
+- [Grid](https://react.carbondesignsystem.com/?path=/docs/grid)
+
+## Feedback
+
+Help us improve this component by providing feedback, asking questions, and leaving any other comments on [GitHub](https://github.com/carbon-design-system/ibm-security/edit/dev/src/components/UNSTABLE__Layout/LayoutModules/TypeLayout/index.mdx).

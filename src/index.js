@@ -279,7 +279,7 @@ export LayoutModule, {
   TitleBarItems,
   withBackground,
   withLayout,
-} from './components/UNSTABLE__Layout/LayoutModules';
+} from './components/UNSTABLE__LayoutModules';
 
 export UNSTABLE__Pagination, {
   PageSelector,

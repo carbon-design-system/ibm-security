@@ -1,0 +1,41 @@
+////
+/// Page tab.
+/// @group page-tab
+/// @copyright IBM Security 2020
+////
+
+@import '@carbon/layout/scss/mini-unit';
+@import '@carbon/themes/scss/tokens';
+@import 'carbon-components/scss/globals/scss/vars';
+
+@import '../../../globals/border/index';
+@import '../../Component/mixins';
+@import '../variables';
+
+@include security--component($name: #{$layout-modules__name}--page-tab) {
+  /// Carbon tabs selector.
+  /// @type Length
+  $carbon--tabs: '.#{$prefix}--tabs';
+
+  position: relative;
+
+  &__details {
+    display: flex;
+    position: absolute;
+    min-height: carbon--mini-units($count: 5);
+    align-items: center;
+  }
+
+  > #{$carbon--tabs} {
+    border-bottom: $border__sizing__width solid $ui-03;
+
+    > #{$carbon--tabs}__nav {
+      right: 0;
+    }
+  }
+
+  > .#{$prefix}--tab-content {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
