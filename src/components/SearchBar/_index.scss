@@ -4,7 +4,7 @@
 /// @copyright IBM Security 2019
 ////
 
-@import '@carbon/layout/scss/mini-unit';
+@import '@carbon/layout/scss/spacing';
 @import '@carbon/themes/scss/tokens';
 
 @import 'carbon-components/scss/globals/scss/vars';
@@ -19,13 +19,31 @@
   display: flex;
 
   &__scopes.#{$prefix}--list-box {
-    flex: 0 0 carbon--mini-units(28);
     border: 0;
 
     &,
     .#{$prefix}--list-box__field {
-      height: 100%;
+      height: $carbon--layout-04;
       max-height: unset;
     }
+  }
+
+  .#{$prefix}--multi-select__wrapper,
+  .#{$prefix}--search,
+  &__submit {
+    align-self: flex-end;
+  }
+
+  &--hide-scopes-label .#{$prefix}--label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+    visibility: inherit;
+    clip: rect(0, 0, 0, 0);
   }
 }

@@ -11,6 +11,8 @@
 
 @import '../Tearsheet/TearsheetSmall/variables';
 
+@import './Filter/mixins';
+
 @mixin tag-wall-filter {
   /// Small tearsheet namespace.
   /// @type String
@@ -45,6 +47,10 @@
       > #{$tearsheet--small__namespace}__title {
         margin-right: $tearsheet--small__spacing;
       }
+    }
+
+    #{$tearsheet--small__namespace}__content {
+      margin-top: $filter__sizing__dimensions;
     }
   }
 }
