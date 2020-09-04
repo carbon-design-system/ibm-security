@@ -1,4 +1,7 @@
-import { ArgsTable, Canvas, Story } from '@storybook/addon-docs/blocks';
+import { ArgsTable, Story } from '@storybook/addon-docs/blocks';
+
+import Canvas from '../../../../.storybook/components/Canvas';
+
 import { Default } from './TypeLayout.stories';
 
 # TypeLayout
@@ -78,7 +81,9 @@ Additional props passed into `TypeLayout`, `TypeLayoutBody`, `TypeLayoutCell`, a
 
 This prop specifies which size the `TypeLayout` should be rendered at. Valid values are `xs`, `sm`, `md`, and `lg`. If no size is specified, it renders as `md`.
 
-<Default size="sm" />
+<Canvas withSource="none">
+  <Default size="sm" />
+</Canvas>
 
 ```jsx
 <TypeLayout size="sm" />
@@ -88,7 +93,9 @@ This prop specifies which size the `TypeLayout` should be rendered at. Valid val
 
 This prop allows you to specify whether a border should be rendered.
 
-<Default border />
+<Canvas withSource="none">
+  <Default border />
+</Canvas>
 
 ```jsx
 <TypeLayout border />

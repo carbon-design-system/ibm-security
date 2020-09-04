@@ -1,4 +1,7 @@
-import { ArgsTable, Canvas, Story } from '@storybook/addon-docs/blocks';
+import { ArgsTable, Story } from '@storybook/addon-docs/blocks';
+
+import Canvas from '../../../../.storybook/components/Canvas';
+
 import { Default } from './Title.stories';
 
 # Title
@@ -21,7 +24,9 @@ Additional props passed into `Title` will be forwarded along to the underlying t
 
 You can use the `subsection` prop to specify whether a subsection should be used.
 
-<Default subsection>Subsection title</Default>
+<Canvas withSource="none">
+  <Default subsection>Subsection title</Default>
+</Canvas>
 
 ```jsx
 <Title subsection>Subsection title</Title>
@@ -31,7 +36,9 @@ You can use the `subsection` prop to specify whether a subsection should be used
 
 This prop allows you to specify a different element to be rendered as a title.
 
-<Default element="h3">Section 3 title</Default>
+<Canvas withSource="none">
+  <Default element="h3">Section 3 title</Default>
+</Canvas>
 
 ```jsx
 <Title element="h3">Section 3 title</Title>
