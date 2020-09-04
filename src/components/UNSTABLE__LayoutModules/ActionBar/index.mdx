@@ -1,5 +1,7 @@
 import { ArgsTable, Canvas, Story } from '@storybook/addon-docs/blocks';
 
+import { decorators, parameters } from '../../../../.storybook/preview';
+
 # ActionBar
 
 ## Overview
@@ -10,8 +12,12 @@ You can build an action bar using a combination of the `ActionBar` and `ActionBa
 
 `ActionBarItems` is responsible for positioning the actions, and everything you pass in as a child of `ActionBarItems` will be rendered.
 
-<Canvas>
-  <Story id="patterns-unstable-layout-modules-actionbar--default" />
+<Canvas withSource="open">
+  <Story
+    decorators={decorators}
+    id="patterns-unstable-layout-modules-actionbar--default"
+    parameters={parameters}
+  />
 </Canvas>
 
 ## Supplementary details
