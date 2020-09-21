@@ -211,7 +211,7 @@ Portal.propTypes = {
   /** @type {boolean} Focus trap. */
   focusTrap: PropTypes.bool,
 
-  /** Pass any of the options available in https://github.com/focus-trap/focus-trap#focustrap--createfocustrapelement-createoptions */
+  /** Pass any of the options available in https://github.com/focus-trap/focus-trap#createfocustrapelement-createoptions */
   focusTrapOptions: FocusTrap.propTypes.focusTrapOptions,
 
   /** @type {boolean} Include an overlay. */
