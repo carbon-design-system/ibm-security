@@ -6638,7 +6638,7 @@ Map {
     "defaultProps": Object {
       "children": null,
       "focusTrap": true,
-      "focusTrapOptions": null,
+      "focusTrapOptions": Object {},
       "hasOverlay": true,
       "initialFocus": null,
       "onOverlayClick": undefined,

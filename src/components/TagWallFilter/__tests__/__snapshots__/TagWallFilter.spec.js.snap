@@ -753,7 +753,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                 >
                   <Portal
                     focusTrap={true}
-                    focusTrapOptions={null}
+                    focusTrapOptions={Object {}}
                     hasOverlay={true}
                     initialFocus={null}
                     rootNode={
@@ -1457,10 +1457,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                 tabindex="-1"
                               />
                             </body>,
-                            "focusTrapOptions": null,
-                            "hasOverlay": true,
                             "initialFocus": null,
-                            "onOverlayClick": undefined,
                           }
                         }
                         paused={false}
@@ -3008,7 +3005,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                   >
                     <Portal
                       focusTrap={true}
-                      focusTrapOptions={null}
+                      focusTrapOptions={Object {}}
                       hasOverlay={true}
                       initialFocus={null}
                       rootNode={
@@ -4387,10 +4384,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   tabindex="-1"
                                 />
                               </body>,
-                              "focusTrapOptions": null,
-                              "hasOverlay": true,
                               "initialFocus": null,
-                              "onOverlayClick": undefined,
                             }
                           }
                           paused={false}

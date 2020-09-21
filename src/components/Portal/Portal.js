@@ -171,14 +171,12 @@ class Portal extends Component {
     const {
       children,
       focusTrap,
+      focusTrapOptions,
       initialFocus,
       rootNode,
       stopPropagation,
       stopPropagationEvents,
-      ...focusTrapOptions
     } = this.props;
-
-    const { fallbackFocus } = focusTrapOptions;
 
     return (
       isClient() &&
@@ -188,7 +186,7 @@ class Portal extends Component {
           focusTrapOptions={{
             allowOutsideClick: () => true,
             fallbackFocus:
-              fallbackFocus ||
+              focusTrapOptions.fallbackFocus ||
               (isClient() ? rootNode : Children.toArray(children)[0].type),
             initialFocus,
             ...focusTrapOptions,
@@ -236,7 +234,7 @@ Portal.propTypes = {
 Portal.defaultProps = {
   children: null,
   focusTrap: true,
-  focusTrapOptions: null,
+  focusTrapOptions: FocusTrap.defaultProps.focusTrapOptions,
   hasOverlay: true,
   initialFocus: null,
   rootNode: isClient() && document.body,

@@ -8,7 +8,7 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
 >
   <Portal
     focusTrap={true}
-    focusTrapOptions={null}
+    focusTrapOptions={Object {}}
     hasOverlay={true}
     initialFocus="[tearsheet-primary-focus]"
     rootNode={<body />}
@@ -178,7 +178,7 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
 >
   <Portal
     focusTrap={true}
-    focusTrapOptions={null}
+    focusTrapOptions={Object {}}
     hasOverlay={true}
     initialFocus="[tearsheet-primary-focus]"
     rootNode={<body />}

@@ -8,7 +8,7 @@ exports[`TearsheetSmall renders 1`] = `
 >
   <Portal
     focusTrap={true}
-    focusTrapOptions={null}
+    focusTrapOptions={Object {}}
     hasOverlay={true}
     initialFocus={null}
     rootNode={<body />}
@@ -110,7 +110,7 @@ exports[`TearsheetSmall renders disabled buttons 1`] = `
 >
   <Portal
     focusTrap={true}
-    focusTrapOptions={null}
+    focusTrapOptions={Object {}}
     hasOverlay={true}
     initialFocus={null}
     rootNode={<body />}
@@ -193,7 +193,7 @@ exports[`TearsheetSmall renders loading state 1`] = `
 >
   <Portal
     focusTrap={true}
-    focusTrapOptions={null}
+    focusTrapOptions={Object {}}
     hasOverlay={true}
     initialFocus={null}
     rootNode={<body />}
@@ -303,7 +303,7 @@ exports[`TearsheetSmall should override \`labels\` if button label property prov
 >
   <Portal
     focusTrap={true}
-    focusTrapOptions={null}
+    focusTrapOptions={Object {}}
     hasOverlay={true}
     initialFocus={null}
     rootNode={<body />}
