@@ -1,14 +1,16 @@
 /**
  * @file Summary card skeleton.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
+import classnames from 'classnames';
+import { string } from 'prop-types';
 import React from 'react';
 
 import { getComponentNamespace } from '../../../globals/namespace/index';
 
-import Card from '..';
 import SkeletonText from '../../SkeletonText';
+import Card from '..';
 
 const namespace = getComponentNamespace('summary-card--skeleton');
 
@@ -20,8 +22,8 @@ const WIDTHS = {
 
 const { sm, md, lg } = WIDTHS;
 
-const SummaryCardSkeleton = () => (
-  <Card className={namespace}>
+const SummaryCardSkeleton = ({ className, ...other }) => (
+  <Card className={classnames(namespace, className)} {...other}>
     <SkeletonText width={sm} />
     <SkeletonText width={sm} heading />
     <SkeletonText width={md} />
@@ -34,5 +36,13 @@ const SummaryCardSkeleton = () => (
     </div>
   </Card>
 );
+
+SummaryCardSkeleton.propTypes = {
+  className: string,
+};
+
+SummaryCardSkeleton.defaultProps = {
+  className: null,
+};
 
 export default SummaryCardSkeleton;
