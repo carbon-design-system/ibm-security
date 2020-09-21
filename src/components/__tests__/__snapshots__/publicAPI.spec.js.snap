@@ -11528,15 +11528,15 @@ Map {
       },
     },
   },
-  "Title" => Object {
+  "TitleBar" => Object {
     "defaultProps": Object {
+      "children": null,
       "className": null,
       "element": "h2",
       "subsection": false,
     },
     "propTypes": Object {
       "children": Object {
-        "isRequired": true,
         "type": "node",
       },
       "className": Object {
@@ -11548,19 +11548,7 @@ Map {
       "subsection": Object {
         "type": "bool",
       },
-    },
-  },
-  "TitleBar" => Object {
-    "propTypes": Object {
-      "children": Object {
-        "isRequired": true,
-        "type": "node",
-      },
-    },
-  },
-  "TitleBarItems" => Object {
-    "propTypes": Object {
-      "children": Object {
+      "title": Object {
         "isRequired": true,
         "type": "node",
       },

@@ -6,7 +6,7 @@
 import React from 'react';
 
 import {
-  Title,
+  TitleBar,
   TypeLayout,
   TypeLayoutBody,
   TypeLayoutCell,
@@ -20,7 +20,7 @@ import page from './index.mdx';
 export default {
   title: getTitle(TypeLayout),
   component: TypeLayout,
-  subcomponents: { Title, TypeLayoutBody, TypeLayoutCell, TypeLayoutRow },
+  subcomponents: { TitleBar, TypeLayoutBody, TypeLayoutCell, TypeLayoutRow },
   parameters: {
     docs: { page },
     info: {
@@ -74,7 +74,7 @@ export const Default = args => (
 
 export const title = args => (
   <>
-    <Title>Section title</Title>
+    <TitleBar title="Section title" />
 
     <TypeLayout {...args}>
       <TypeLayoutBody>

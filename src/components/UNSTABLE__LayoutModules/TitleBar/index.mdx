@@ -2,18 +2,24 @@ import { ArgsTable, Story } from '@storybook/addon-docs/blocks';
 
 import Canvas from '../../../../.storybook/components/Canvas';
 
+import { Default } from './TitleBar.stories';
+
 # TitleBar
 
 ## Overview
 
-Title bars provide...
-
-You can build a title bar using a combination of the `TitleBar`, [`Title`](#references) and `TitleBarItems` components.
-
-`TitleBarItems` is responsible for positioning the actions, and everything you pass in as a child of `TitleBarItems` will be rendered.
+Titles provide interchangeable and reliable headings for establishing consistent hierarchies when using layout modules. Everything you pass in as a child will be rendered.
 
 <Canvas>
   <Story id="patterns-unstable-layout-modules-titlebar--default" />
+</Canvas>
+
+## Actions
+
+If necessary, actions can be placed inline with the title.
+
+<Canvas>
+  <Story id="patterns-unstable-layout-modules-titlebar--actions" />
 </Canvas>
 
 ## Grid placement
@@ -22,28 +28,24 @@ When placing a title bar on the [grid](#references), it should be placed in a mi
 
 ```jsx
 <Column lg={4}>
-  <TitleBar>
-    <Title>Section title</Title>
-
-    <TitleBarItems>
-      <IconButtonBar
-        actions={[
-          {
-            label: 'Action 1',
-            renderIcon: Add16,
-          },
-          {
-            label: 'Action 2',
-            renderIcon: Edit16,
-          },
-          {
-            label: 'Action 3',
-            renderIcon: Filter16,
-          },
-        ]}
-        size="md"
-      />
-    </TitleBarItems>
+  <TitleBar title="Section title">
+    <IconButtonBar
+      actions={[
+        {
+          label: 'Action 1',
+          renderIcon: Add16,
+        },
+        {
+          label: 'Action 2',
+          renderIcon: Edit16,
+        },
+        {
+          label: 'Action 3',
+          renderIcon: Filter16,
+        },
+      ]}
+      size="md"
+    />
   </TitleBar>
 </Column>
 ```
@@ -54,9 +56,40 @@ When placing a title bar on the [grid](#references), it should be placed in a mi
 
 Additional props passed into `TitleBar` and `TitleBarItems` will be forwarded along to their underlying containers.
 
+### `subsection`
+
+You can use the `subsection` prop to specify whether a subsection should be used.
+
+<Canvas withSource="none">
+  <Default title="Subsection title" subsection />
+</Canvas>
+
+```jsx
+<TitleBar title="Subsection title" subsection />
+```
+
+## `element`
+
+This prop allows you to specify a different element to be rendered as a title.
+
+<Canvas withSource="none">
+  <Default element="h3" title="Section 3 title" />
+</Canvas>
+
+```jsx
+<TitleBar element="h3" title="Section 3 title" />
+```
+
+### `className`
+
+The `className` prop passed into `TitleBar` will be forwarded along to the underlying container. This is useful for specifying a custom class name for layout.
+
+```jsx
+<TitleBar className="class-name" title="Custom title" />
+```
+
 ## References
 
-- [Title](?path=/docs/patterns-unstable-layout-modules-title--default)
 - [IconButtonBar](?path=/story/patterns-iconbuttonbar--default)
 - [Grid](https://react.carbondesignsystem.com/?path=/docs/grid)
 

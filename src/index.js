@@ -274,9 +274,7 @@ export LayoutModule, {
   ICAModuleICA,
   PageTab,
   PageTabDetails,
-  Title,
   TitleBar,
-  TitleBarItems,
   withBackground,
   withLayout,
 } from './components/UNSTABLE__LayoutModules';

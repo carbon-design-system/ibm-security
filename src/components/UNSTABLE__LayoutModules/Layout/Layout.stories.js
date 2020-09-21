@@ -13,7 +13,7 @@ import {
   Row,
   SummaryCard,
   SummaryCardBody,
-  Title,
+  TitleBar,
   withBackground,
   withLayout,
 } from '../../..';
@@ -41,7 +41,7 @@ export const Default = () => {
 
   return (
     <>
-      <Title>Section title</Title>
+      <TitleBar title="Section title" />
 
       <Row>
         {new Array(4).fill().map((summaryCard, index) => {
@@ -51,7 +51,7 @@ export const Default = () => {
             <Column key={key}>
               <EnhancedSummaryCard>
                 <SummaryCardBody>
-                  <Title>Title</Title>
+                  <TitleBar title="Title" />
                 </SummaryCardBody>
               </EnhancedSummaryCard>
             </Column>

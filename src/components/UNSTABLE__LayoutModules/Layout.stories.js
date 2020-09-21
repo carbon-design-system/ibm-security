@@ -43,9 +43,7 @@ import {
   Tabs,
   Tab,
   Tag,
-  Title,
   TitleBar,
-  TitleBarItems,
   TypeLayout,
   TypeLayoutBody,
   TypeLayoutRow,
@@ -76,7 +74,7 @@ const overview = () => (
       <Column lg={12}>
         <Row>
           <EnhancedColumn>
-            <Title subsection>General settings and scope</Title>
+            <TitleBar title="General settings and scope" subsection />
 
             <TypeLayout>
               <TypeLayoutBody>
@@ -130,7 +128,7 @@ const overview = () => (
           <EnhancedColumn>
             <Row>
               <EnhancedColumn>
-                <Title subsection>Schedule</Title>
+                <TitleBar title="Schedule" subsection />
 
                 <TypeLayout>
                   <TypeLayoutBody>
@@ -155,7 +153,7 @@ const overview = () => (
 
             <Row>
               <Column>
-                <Title subsection>Campaign end</Title>
+                <TitleBar title="Campaign end" subsection />
 
                 <TypeLayout>
                   <TypeLayoutBody>
@@ -182,14 +180,11 @@ const overview = () => (
           <EnhancedColumn>
             <Row>
               <Column>
-                <TitleBar>
-                  <Title subsection>Campaign results</Title>
-                  <TitleBarItems>
-                    <ContentSwitcher onChange={action('onChange')}>
-                      <Switch text="By reviewer" />
-                      <Switch text="By account" />
-                    </ContentSwitcher>
-                  </TitleBarItems>
+                <TitleBar title="Campaign results" subsection>
+                  <ContentSwitcher onChange={action('onChange')}>
+                    <Switch text="By reviewer" />
+                    <Switch text="By account" />
+                  </ContentSwitcher>
                 </TitleBar>
               </Column>
             </Row>
@@ -278,7 +273,7 @@ const overview = () => (
           </Button>
         </ButtonCluster>
 
-        <Title subsection>Details</Title>
+        <TitleBar title="Details" subsection />
 
         <TypeLayout>
           <TypeLayoutBody>
@@ -317,7 +312,7 @@ const detail = () => (
       <Tab label="Report">
         <Row>
           <Column>
-            <Title>Summary</Title>
+            <TitleBar title="Summary" />
           </Column>
         </Row>
         <Row>
@@ -350,7 +345,8 @@ const detail = () => (
 
         <Row>
           <Column>
-            <Title>Related reports</Title>
+            <TitleBar title="Related reports" />
+
             <ActionBar>
               Supplementary details
               <ActionBarItems>
@@ -382,9 +378,7 @@ const detail = () => (
               <EnhancedSummaryCard>
                 <SummaryCardHeader title="Threat actor" />
                 <SummaryCardBody>
-                  <Title>
-                    Suspected Chinese Cyber Espionage Group (TEMP.Periscope)
-                  </Title>
+                  <TitleBar title="Suspected Chinese Cyber Espionage Group (TEMP.Periscope)" />
                 </SummaryCardBody>
                 <SummaryCardFooter>
                   <SummaryCardAction
@@ -401,7 +395,7 @@ const detail = () => (
               <EnhancedSummaryCard>
                 <SummaryCardHeader title="Threat report" />
                 <SummaryCardBody>
-                  <Title>XFTAS Daily Threat Assessment for Mar 2019</Title>
+                  <TitleBar title="XFTAS Daily Threat Assessment for Mar 2019" />
                 </SummaryCardBody>
                 <SummaryCardFooter>
                   <SummaryCardAction
@@ -418,7 +412,7 @@ const detail = () => (
               <EnhancedSummaryCard>
                 <SummaryCardHeader title="IP report" />
                 <SummaryCardBody>
-                  <Title>103.243.175.181</Title>
+                  <TitleBar title="103.243.175.181" />
                 </SummaryCardBody>
                 <SummaryCardFooter>
                   <SummaryCardAction
@@ -435,7 +429,7 @@ const detail = () => (
               <EnhancedSummaryCard>
                 <SummaryCardHeader title="Vulnerability report" />
                 <SummaryCardBody>
-                  <Title>CVE-2017-11882</Title>
+                  <TitleBar title="CVE-2017-11882" />
                 </SummaryCardBody>
                 <SummaryCardFooter>
                   <SummaryCardAction
@@ -455,9 +449,7 @@ const detail = () => (
           <EnhancedColumn>
             <Row>
               <Column>
-                <TitleBar>
-                  <Title element="h4">Indicators</Title>
-                </TitleBar>
+                <TitleBar element="h4" title="Indicators" />
               </Column>
             </Row>
 

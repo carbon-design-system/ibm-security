@@ -6,7 +6,7 @@
 import React from 'react';
 
 import withResponsive from '../../../../.storybook/decorators';
-import { Description, DescriptionContent, Title } from '../../..';
+import { Description, DescriptionContent, TitleBar } from '../../..';
 import getTitle from '../stories';
 
 import page from './index.mdx';
@@ -14,7 +14,7 @@ import page from './index.mdx';
 export default {
   title: getTitle(Description),
   component: Description,
-  subcomponents: { DescriptionContent, Title },
+  subcomponents: { DescriptionContent, TitleBar },
   parameters: {
     docs: { page },
     info: {
@@ -26,7 +26,7 @@ export default {
 
 export const Default = () => (
   <Description>
-    <Title>Section title</Title>
+    <TitleBar title="Section title" />
 
     <DescriptionContent>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus
@@ -52,9 +52,8 @@ export const Default = () => (
 
 export const subsectionTitle = () => (
   <Description>
-    <Title>Section title</Title>
-
-    <Title subsection>Subsection title</Title>
+    <TitleBar title="Section title" />
+    <TitleBar title="Subsection title" subsection />
 
     <DescriptionContent>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus

@@ -31,15 +31,19 @@ import {
   SummaryCardBody,
   SummaryCardFooter,
   SummaryCardHeader,
-  Title,
+  TitleBar,
 } from '../..';
 
 const card = () => (
   <CardModule>
-    <Title>Summary</Title>
-    <Title className={`${carbonPrefix}type-productive-heading-01`} element="h3">
-      Sub-section title
-    </Title>
+    <TitleBar title="Summary" />
+
+    <TitleBar
+      className={`${carbonPrefix}type-productive-heading-01`}
+      element="h3"
+      title="Sub-section title"
+    />
+
     <ActionBar>
       <Button kind="ghost" renderIcon={Filter16}>
         Action
@@ -74,7 +78,7 @@ const card = () => (
               <SummaryCard>
                 <SummaryCardHeader title="Label" />
                 <SummaryCardBody>
-                  <Title>Title</Title>
+                  <TitleBar title="Title" />
                 </SummaryCardBody>
                 <SummaryCardFooter>
                   <SummaryCardAction>Scan now</SummaryCardAction>
@@ -99,7 +103,7 @@ const card = () => (
 
 const ICA = () => (
   <ICAModule>
-    <Title>Summary</Title>
+    <TitleBar title="Summary" />
     <Row>
       <ICAModuleICA interactive>
         <Column>

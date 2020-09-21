@@ -9,12 +9,9 @@
 @import 'carbon-components/scss/globals/scss/vars';
 
 @import '../../Component/mixins';
-@import '../Title/variables';
 @import '../variables';
 
 @include security--component($name: #{$layout-modules__name}--ica) {
-  @include layout__modules--title--first-child;
-
   padding-top: $carbon--layout-01;
 
   &__ica {
