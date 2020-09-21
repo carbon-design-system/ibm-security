@@ -172,6 +172,11 @@ export default class Toolbar extends Component {
                         title: navigationListItemTitle,
                       }) => (
                         <NavItem
+                          id={
+                            navigationListItemId && navigationListItemId.length
+                              ? navigationListItemId
+                              : null
+                          }
                           key={navigationListItemId}
                           href={navigationListItemHref}
                           link={content === undefined}
@@ -192,6 +197,11 @@ export default class Toolbar extends Component {
                 ) : (
                   <NavItem
                     key={navigationItemId}
+                    id={
+                      navigationItemId && navigationItemId.length
+                        ? navigationItemId
+                        : null
+                    }
                     href={href}
                     link={content === undefined}
                     handleItemSelect={() => this.toggleContent(content)}
@@ -214,7 +224,7 @@ export default class Toolbar extends Component {
 
   render() {
     const { className, labels, renderAddons = [] } = this.props;
-    const { menu, settings, support } = labels;
+    const { menu, settings, support, mainNavigation } = labels;
     const classes = classnames(namespace, className);
     const { isActive } = this.state;
     const activeItems = Object.entries(isActive)
@@ -228,7 +238,14 @@ export default class Toolbar extends Component {
 
     return (
       <div ref={this.wrapper}>
-        <nav className={classes}>
+        <nav
+          aria-label={
+            mainNavigation.ariaLabel && mainNavigation.ariaLabel.length
+              ? mainNavigation.ariaLabel
+              : null
+          }
+          className={classes}
+        >
           <ul className={`${namespace}__group`}>
             <li>{this.toggleIcon(menu.button, Menu20, 'menu')}</li>
             <li>{this.toggleIcon(settings.button, Settings20, 'settings')}</li>
@@ -248,6 +265,8 @@ export default class Toolbar extends Component {
         <Transition className={namespace} component="span">
           {isPanelActive && this.state.showContent ? (
             <div
+              role="navigation"
+              aria-label={currentType}
               id={`${namespace}--toolbar--${currentType}`}
               className={`${namespace}__panel`}
             >
@@ -263,6 +282,8 @@ export default class Toolbar extends Component {
           ) : (
             isPanelActive && (
               <div
+                role="navigation"
+                aria-label={currentType}
                 id={`${namespace}--toolbar--${currentType}`}
                 className={`${namespace}__panel`}
               >
@@ -355,6 +376,12 @@ Toolbar.propTypes = {
 
       /** @type {string} The tooltip label. */
       tooltip: PropTypes.string,
+    }).isRequired,
+
+    /** @type {Object.<string, string>} An object list of navigation labels for the top level navigation item. */
+    mainNavigation: PropTypes.shape({
+      /** @type {string} Adds an aria label to the primary navigation */
+      ariaLabel: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
 
