@@ -38,6 +38,7 @@ const SummaryCardSkeleton = ({ className, ...other }) => (
 );
 
 SummaryCardSkeleton.propTypes = {
+  /** Provide an optional class to be applied to the containing node */
   className: string,
 };
 
