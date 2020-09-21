@@ -172,11 +172,6 @@ export default class Toolbar extends Component {
                         title: navigationListItemTitle,
                       }) => (
                         <NavItem
-                          id={
-                            navigationListItemId && navigationListItemId.length
-                              ? navigationListItemId
-                              : null
-                          }
                           key={navigationListItemId}
                           href={navigationListItemHref}
                           link={content === undefined}
@@ -197,11 +192,6 @@ export default class Toolbar extends Component {
                 ) : (
                   <NavItem
                     key={navigationItemId}
-                    id={
-                      navigationItemId && navigationItemId.length
-                        ? navigationItemId
-                        : null
-                    }
                     href={href}
                     link={content === undefined}
                     handleItemSelect={() => this.toggleContent(content)}
