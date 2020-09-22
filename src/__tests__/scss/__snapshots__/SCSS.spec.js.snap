@@ -7649,33 +7649,33 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   z-index: 1;
 }
 
-.security--scroll-gradient--x .security--scroll-gradient__before,
-.security--scroll-gradient--x .security--scroll-gradient__after {
+.security--scroll-gradient--x > .security--scroll-gradient__before,
+.security--scroll-gradient--x > .security--scroll-gradient__after {
   top: 0;
   width: 3rem;
   height: 100%;
 }
 
-.security--scroll-gradient--x .security--scroll-gradient__before {
+.security--scroll-gradient--x > .security--scroll-gradient__before {
   left: 0;
 }
 
-.security--scroll-gradient--x .security--scroll-gradient__after {
+.security--scroll-gradient--x > .security--scroll-gradient__after {
   right: 0;
 }
 
-.security--scroll-gradient--y .security--scroll-gradient__before,
-.security--scroll-gradient--y .security--scroll-gradient__after {
+.security--scroll-gradient--y > .security--scroll-gradient__before,
+.security--scroll-gradient--y > .security--scroll-gradient__after {
   left: 0;
   height: 3rem;
   width: 100%;
 }
 
-.security--scroll-gradient--y .security--scroll-gradient__before {
+.security--scroll-gradient--y > .security--scroll-gradient__before {
   top: 0;
 }
 
-.security--scroll-gradient--y .security--scroll-gradient__after {
+.security--scroll-gradient--y > .security--scroll-gradient__after {
   bottom: 0;
 }
 
