@@ -407,22 +407,6 @@ Map {
       },
     },
   },
-  "CardModuleAction" => Object {
-    "propTypes": Object {
-      "children": Object {
-        "isRequired": true,
-        "type": "node",
-      },
-    },
-  },
-  "CardModuleCard" => Object {
-    "propTypes": Object {
-      "children": Object {
-        "isRequired": true,
-        "type": "node",
-      },
-    },
-  },
   "CardSkeleton" => Object {
     "defaultProps": Object {
       "className": null,
@@ -12976,11 +12960,7 @@ Map {
     "uiBackground": "var(--ui-background, #161616)",
     "visitedLink": "var(--visited-link, #be95ff)",
   },
-  "withBackground" => Object {
-    "displayName": "withBackground",
-  },
-  "withLayout" => Object {
-    "displayName": "withLayout",
-  },
+  "withBackground" => Object {},
+  "withLayout" => Object {},
 }
 `;

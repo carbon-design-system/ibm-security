@@ -1,0 +1,77 @@
+import { ArgsTable, Story } from '@storybook/addon-docs/blocks';
+
+import { parameters } from '../../../../.storybook/preview';
+import Canvas from '../../../../.storybook/components/Canvas';
+
+# CardModule
+
+The card module provides a means to orderly present related content and information using summary, navigational, or widget cards as the basis.
+
+- [Overview](#overview)
+- [Component API](#component-api)
+- [Grid placement](#grid-placement)
+- [Complimentary modules](#complimentary-modules)
+- [Anatomy](#anatomy)
+- [Examples](#examples)
+- [References](#references)
+- [Troubleshooting](#troubleshooting)
+
+## Overview
+
+You can build a card module using a combination of the `CardModule`, grid, and the `Card`, `SummaryCard`, or `Tile` components.
+
+Everything you pass in as a child of `CardModule` will be rendered.
+
+<Canvas>
+  <Story
+    id="patterns-unstable-layout-modules-cardmodule--default"
+    parameters={parameters}
+  />
+</Canvas>
+
+## Component API
+
+<ArgsTable />
+
+Additional props passed into `CardModule` will be forwarded along to the underlying card module container.
+
+## Grid placement
+
+Card modules can span between 4 and 16 columns. Following the [narrow grid](#references) implementation, the layout module container hangs 16 pixels in the left margin. The narrow grid position allows headings and copy outside of containers to align with the labels within the card module.
+
+```jsx
+<Column lg={10}>
+  <CardModule />
+</Column>
+```
+
+## Complimentary modules
+
+The card module can contain a
+
+<Canvas>
+  <Story
+    id="patterns-unstable-layout-modules-cardmodule--complimentary"
+    parameters={parameters}
+  />
+</Canvas>
+
+## Anatomy
+
+1. **Cards:** Cards can use `Card`, `SummaryCard`, or `Tile` components
+2. **Card spacer (optional):** If there are multiple rows of cards, use the 16-pixel spacer `$layout-01` to separate the rows
+3. **Bottom spacer:** The 32-pixel spacer `$layout-03` below the last card row provides the starting point for the layout module positioned directly underneath it
+
+## Examples
+
+Examples
+
+## References
+
+- #
+- #
+- #
+
+## Troubleshooting
+
+Visit our [GitHub](https://github.com/carbon-design-system/ibm-security) to view and submit issues, or reach out on [Slack](https://app.slack.com/client/T1V6D3RT7/CRV39QKP0) for additional support.

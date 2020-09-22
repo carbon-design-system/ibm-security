@@ -11,7 +11,7 @@ import LayoutModule from '..';
 const namespace = 'button-cluster';
 
 /**
- * Button clusters group secondary actions that can be taken on a whole page or component.
+ * The button cluster group secondary actions that can be taken on a whole page or component.
  */
 const ButtonCluster = ({ children, ...other }) => (
   <LayoutModule type={namespace} {...other}>

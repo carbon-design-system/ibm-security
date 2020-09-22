@@ -266,8 +266,6 @@ export LayoutModule, {
   ActionBarItems,
   ButtonCluster,
   CardModule,
-  CardModuleAction,
-  CardModuleCard,
   Description,
   DescriptionContent,
   ICAModule,

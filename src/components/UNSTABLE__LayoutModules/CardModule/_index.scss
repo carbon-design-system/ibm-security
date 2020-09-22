@@ -11,15 +11,5 @@
 @import '../variables';
 
 @include security--component($name: #{$layout-modules__name}--card) {
-  /// Spacing.
-  /// @type Length
-  $layout--card__spacing: $carbon--layout-03;
-
-  &__card {
-    margin-bottom: $layout--card__spacing;
-  }
-
-  &__action {
-    margin-bottom: $layout--card__spacing;
-  }
+  padding-bottom: $carbon--layout-01;
 }

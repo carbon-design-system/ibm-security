@@ -8,12 +8,10 @@ import React from 'react';
 
 import { layoutModuleNamespace } from '../LayoutModule';
 
-const displayName = 'withLayout';
-
-const withLayout = WrappedComponent => {
-  const WithLayout = ({ className, ...other }) => (
+const withEnhancement = (type, displayName) => WrappedComponent => {
+  const WithEnhancement = ({ className, ...other }) => (
     <WrappedComponent
-      className={classnames(`${layoutModuleNamespace}--layout`, className)}
+      className={classnames(`${layoutModuleNamespace}--${type}`, className)}
       {...other}
     />
   );
@@ -23,13 +21,15 @@ const withLayout = WrappedComponent => {
     name: wrappedComponentName,
   } = WrappedComponent;
 
-  WithLayout.displayName = `${displayName}(${wrappedComponentDisplayName ||
+  WithEnhancement.displayName = `${displayName}(${wrappedComponentDisplayName ||
     wrappedComponentName ||
     'Component'})`;
 
-  return WithLayout;
+  return WithEnhancement;
 };
 
-withLayout.displayName = displayName;
+export const withBackground = withEnhancement('background', 'withBackground');
+
+const withLayout = withEnhancement('layout', 'withLayout');
 
 export default withLayout;
