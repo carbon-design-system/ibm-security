@@ -9186,7 +9186,16 @@ Map {
       },
     },
   },
-  "SummaryCardSkeleton" => Object {},
+  "SummaryCardSkeleton" => Object {
+    "defaultProps": Object {
+      "className": null,
+    },
+    "propTypes": Object {
+      "className": Object {
+        "type": "string",
+      },
+    },
+  },
   "Switch" => Object {
     "$$typeof": Symbol(react.forward_ref),
     "defaultProps": Object {
