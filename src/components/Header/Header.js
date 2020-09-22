@@ -230,6 +230,11 @@ export default class Header extends Component {
             </div>
           </Fragment>
         </HeaderPopoverHeader>
+        {profile.description && (
+          <section className={`${namespace}__popover__profile__description`}>
+            {profile.description}
+          </section>
+        )}
         {hasAccount && (
           <section
             className={classnames(`${namespace}__popover__profile__body`, {
@@ -368,7 +373,7 @@ export default class Header extends Component {
           </span>
         )}
 
-        <footer className={`${namespace}__popover__footer`}>
+        <div className={`${namespace}__popover__footer`}>
           {links.notifications_view_all && (
             <HeaderPopoverLinkSecondary href={links.notifications_view_all}>
               {labels.notifications.link}{' '}
@@ -382,7 +387,7 @@ export default class Header extends Component {
               title={labels.notifications.preferences || ''}
             />
           )}
-        </footer>
+        </div>
       </div>,
       isActive.notifications
     );

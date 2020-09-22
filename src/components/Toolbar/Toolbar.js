@@ -1,17 +1,20 @@
 /**
  * @file Toolbar.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
-import ArrowLeft20 from '@carbon/icons-react/lib/arrow--left/20';
-import Close20 from '@carbon/icons-react/lib/close/20';
-import Help20 from '@carbon/icons-react/lib/help/20';
-import Menu20 from '@carbon/icons-react/lib/menu/20';
-import Settings20 from '@carbon/icons-react/lib/settings/20';
+import {
+  ArrowLeft20,
+  Close20,
+  Help20,
+  Menu20,
+  Settings20,
+} from '@carbon/icons-react';
 
 import classnames from 'classnames';
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+
 import { isClient } from '../../globals/utils/capabilities';
 import root from '../../globals/utils/globalRoot';
 
@@ -173,6 +176,7 @@ export default class Toolbar extends Component {
                       }) => (
                         <NavItem
                           key={navigationListItemId}
+                          id={navigationListItemId}
                           href={navigationListItemHref}
                           link={content === undefined}
                           handleItemSelect={() => this.toggleContent(content)}
@@ -192,6 +196,7 @@ export default class Toolbar extends Component {
                 ) : (
                   <NavItem
                     key={navigationItemId}
+                    id={navigationItemId}
                     href={href}
                     link={content === undefined}
                     handleItemSelect={() => this.toggleContent(content)}

@@ -1,10 +1,11 @@
 /**
  * @file Important content area tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
-import React from 'react';
 import { render } from '@testing-library/react';
+import React from 'react';
+
 import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { ICA } from '../../..';
@@ -59,6 +60,16 @@ describe('ICA', () => {
     );
     // Should display 2 occurances of `10` (the value & the total):
     expect(queryAllByText(/10/i).length).toBe(2);
+  });
+
+  test('should not truncate when forced', () => {
+    const value = 1000;
+
+    expect(
+      render(<ICA label="ICA" truncate={false} value={value} />).getByText(
+        `${value}`
+      )
+    ).toBeInTheDocument();
   });
 
   test('should render a percentage', () => {

@@ -924,6 +924,8 @@ Map {
     "defaultProps": Object {
       "className": "",
       "direction": "top",
+      "menuOffset": [Function],
+      "menuOffsetFlip": undefined,
       "selectorPrimaryFocus": "[data-overflow-menu-primary-focus]",
     },
     "propTypes": Object {
@@ -942,6 +944,92 @@ Map {
           ],
         ],
         "type": "oneOf",
+      },
+      "menuOffset": Object {
+        "args": Array [
+          Array [
+            Object {
+              "args": Array [
+                Object {
+                  "left": Object {
+                    "args": Array [
+                      Array [
+                        Object {
+                          "type": "number",
+                        },
+                        Object {
+                          "type": "string",
+                        },
+                      ],
+                    ],
+                    "type": "oneOf",
+                  },
+                  "top": Object {
+                    "args": Array [
+                      Array [
+                        Object {
+                          "type": "number",
+                        },
+                        Object {
+                          "type": "string",
+                        },
+                      ],
+                    ],
+                    "type": "oneOf",
+                  },
+                },
+              ],
+              "type": "shape",
+            },
+            Object {
+              "type": "func",
+            },
+          ],
+        ],
+        "type": "oneOfType",
+      },
+      "menuOffsetFlip": Object {
+        "args": Array [
+          Array [
+            Object {
+              "args": Array [
+                Object {
+                  "left": Object {
+                    "args": Array [
+                      Array [
+                        Object {
+                          "type": "number",
+                        },
+                        Object {
+                          "type": "string",
+                        },
+                      ],
+                    ],
+                    "type": "oneOf",
+                  },
+                  "top": Object {
+                    "args": Array [
+                      Array [
+                        Object {
+                          "type": "number",
+                        },
+                        Object {
+                          "type": "string",
+                        },
+                      ],
+                    ],
+                    "type": "oneOf",
+                  },
+                },
+              ],
+              "type": "shape",
+            },
+            Object {
+              "type": "func",
+            },
+          ],
+        ],
+        "type": "oneOfType",
       },
       "selectorPrimaryFocus": Object {
         "type": "string",
@@ -3937,6 +4025,9 @@ Map {
               ],
               "type": "shape",
             },
+            "description": Object {
+              "type": "node",
+            },
             "email": Object {
               "type": "string",
             },
@@ -4136,6 +4227,7 @@ Map {
       "locale": "en",
       "percentage": false,
       "total": 0,
+      "truncate": true,
       "value": null,
     },
     "propTypes": Object {
@@ -4196,6 +4288,9 @@ Map {
       },
       "total": Object {
         "type": "number",
+      },
+      "truncate": Object {
+        "type": "bool",
       },
       "value": Object {
         "type": "number",
@@ -5672,7 +5767,7 @@ Map {
       "element": "a",
       "handleItemSelect": null,
       "href": undefined,
-      "id": "security--nav__list__item",
+      "id": null,
       "label": "",
       "link": true,
       "onClick": [Function],
@@ -7074,11 +7169,13 @@ Map {
   "SearchBar" => Object {
     "defaultProps": Object {
       "className": "",
+      "hideScopesLabel": true,
       "onChange": [Function],
       "onSubmit": [Function],
       "scopeToString": [Function],
       "scopes": Array [],
       "selectedScopes": Array [],
+      "titleText": "Scopes multiselect",
       "value": "",
     },
     "propTypes": Object {
@@ -7088,6 +7185,9 @@ Map {
       "clearButtonLabelText": Object {
         "isRequired": true,
         "type": "string",
+      },
+      "hideScopesLabel": Object {
+        "type": "bool",
       },
       "labelText": Object {
         "isRequired": true,
@@ -7148,6 +7248,9 @@ Map {
       },
       "submitLabel": Object {
         "isRequired": true,
+        "type": "string",
+      },
+      "titleText": Object {
         "type": "string",
       },
       "translateWithId": Object {
@@ -7640,6 +7743,9 @@ Map {
                     ],
                     "type": "shape",
                   },
+                  "description": Object {
+                    "type": "node",
+                  },
                   "email": Object {
                     "type": "string",
                   },
@@ -7700,6 +7806,9 @@ Map {
                 },
               ],
               "type": "shape",
+            },
+            "description": Object {
+              "type": "node",
             },
             "email": Object {
               "type": "string",
@@ -9089,7 +9198,16 @@ Map {
       },
     },
   },
-  "SummaryCardSkeleton" => Object {},
+  "SummaryCardSkeleton" => Object {
+    "defaultProps": Object {
+      "className": null,
+    },
+    "propTypes": Object {
+      "className": Object {
+        "type": "string",
+      },
+    },
+  },
   "Switch" => Object {
     "$$typeof": Symbol(react.forward_ref),
     "defaultProps": Object {
@@ -12475,6 +12593,7 @@ Map {
       "isOpen": undefined,
       "isSequential": undefined,
       "labels": Object {},
+      "navLabel": "Steps navigation",
       "onClose": [Function],
       "onDelete": [Function],
       "rootNode": <body />,
@@ -12523,6 +12642,9 @@ Map {
           },
         ],
         "type": "objectOf",
+      },
+      "navLabel": Object {
+        "type": "string",
       },
       "onClose": Object {
         "type": "func",

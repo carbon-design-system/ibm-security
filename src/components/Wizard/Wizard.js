@@ -209,7 +209,7 @@ class Wizard extends Component {
     const { currentStep, valid } = this.state;
 
     return !this.sequentialMode ? (
-      <Nav label="">
+      <Nav label={this.props.navLabel}>
         {this.steps.map(({ title }, index) => (
           <NavItem
             key={title}
@@ -241,7 +241,15 @@ class Wizard extends Component {
    * Renders the component.
    */
   render() {
-    const { labels, focusTrap, title, subTitle, ...other } = this.props;
+    const {
+      labels,
+      focusTrap,
+      title,
+      subTitle,
+      className,
+      navLabel, // avoid spreading with rest of props.
+      ...other
+    } = this.props;
     const componentLabels = {
       ...defaultLabels.labels,
       ...labels,
@@ -335,7 +343,7 @@ class Wizard extends Component {
         }}
         loading={this.state.loading}
         loadingMessage={this.props.loadingMessage}
-        className={classnames(namespace, this.props.className)}
+        className={classnames(namespace, className)}
         {...other}
       />
     );
@@ -388,6 +396,9 @@ Wizard.propTypes = {
 
   /** Optional class name for the wrapper node. */
   className: PropTypes.string,
+
+  /** Provide an accessible label that describes the Wizard sidebar navigation. */
+  navLabel: PropTypes.string,
 };
 
 Wizard.defaultProps = {
@@ -403,6 +414,7 @@ Wizard.defaultProps = {
   onDelete: () => Promise.resolve(),
   isSequential: undefined,
   labels: {},
+  navLabel: 'Steps navigation',
 };
 
 export default Wizard;

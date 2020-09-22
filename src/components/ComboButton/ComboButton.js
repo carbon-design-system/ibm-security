@@ -25,6 +25,8 @@ const ComboButton = ({
   children,
   className,
   direction,
+  menuOffset,
+  menuOffsetFlip,
   selectorPrimaryFocus,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -140,9 +142,8 @@ const ComboButton = ({
               `${namespace}__overflow-menu`
             )}
             direction={direction}
-            menuOffset={() => ({
-              left: 'auto',
-            })}
+            menuOffset={menuOffset}
+            menuOffsetFlip={menuOffsetFlip}
             menuOptionsClass={`${carbonPrefix}list-box__menu`}
             onClose={() => setIsOpen(false)}
             onOpen={() => setIsOpen(true)}
@@ -170,6 +171,28 @@ ComboButton.propTypes = {
   direction: PropTypes.oneOf([TooltipDirection.TOP, TooltipDirection.BOTTOM]),
 
   /**
+   * The adjustment in position applied to the floating menu.
+   */
+  menuOffset: PropTypes.oneOfType([
+    PropTypes.shape({
+      top: PropTypes.oneOf([PropTypes.number, PropTypes.string]),
+      left: PropTypes.oneOf([PropTypes.number, PropTypes.string]),
+    }),
+    PropTypes.func,
+  ]),
+
+  /**
+   * The adjustment in position applied to the floating menu.
+   */
+  menuOffsetFlip: PropTypes.oneOfType([
+    PropTypes.shape({
+      top: PropTypes.oneOf([PropTypes.number, PropTypes.string]),
+      left: PropTypes.oneOf([PropTypes.number, PropTypes.string]),
+    }),
+    PropTypes.func,
+  ]),
+
+  /**
    * Specify a CSS selector that matches the DOM element that should
    * be focused when the OverflowMenu opens
    */
@@ -179,6 +202,10 @@ ComboButton.propTypes = {
 ComboButton.defaultProps = {
   className: '',
   direction: TooltipDirection.TOP,
+  menuOffset: () => ({
+    left: 'auto',
+  }),
+  menuOffsetFlip: undefined,
   selectorPrimaryFocus: '[data-overflow-menu-primary-focus]',
 };
 
