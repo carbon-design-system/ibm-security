@@ -184,7 +184,6 @@ class Portal extends Component {
         <FocusTrap
           active={focusTrap}
           focusTrapOptions={{
-            allowOutsideClick: () => true,
             fallbackFocus:
               focusTrapOptions.fallbackFocus ||
               (isClient() ? rootNode : Children.toArray(children)[0].type),

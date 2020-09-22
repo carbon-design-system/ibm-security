@@ -1227,7 +1227,6 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                         active={true}
                         focusTrapOptions={
                           Object {
-                            "allowOutsideClick": [Function],
                             "fallbackFocus": <body
                               class="security--portal__container"
                             >
@@ -3929,7 +3928,6 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                           active={true}
                           focusTrapOptions={
                             Object {
-                              "allowOutsideClick": [Function],
                               "fallbackFocus": <body
                                 class=""
                               >

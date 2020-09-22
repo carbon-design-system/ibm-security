@@ -6445,6 +6445,7 @@ Map {
       "className": null,
       "closeButton": undefined,
       "focusTrap": true,
+      "focusTrapOptions": Object {},
       "hasScrollingContent": false,
       "isOpen": true,
       "labels": Object {},
@@ -6493,6 +6494,91 @@ Map {
       },
       "focusTrap": Object {
         "type": "bool",
+      },
+      "focusTrapOptions": Object {
+        "args": Array [
+          Object {
+            "allowOutsideClick": Object {
+              "type": "func",
+            },
+            "clickOutsideDeactivates": Object {
+              "type": "bool",
+            },
+            "escapeDeactivates": Object {
+              "type": "bool",
+            },
+            "fallbackFocus": Object {
+              "args": Array [
+                Array [
+                  Object {
+                    "args": Array [
+                      [Function],
+                    ],
+                    "type": "instanceOf",
+                  },
+                  Object {
+                    "type": "string",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
+            },
+            "initialFocus": Object {
+              "args": Array [
+                Array [
+                  Object {
+                    "args": Array [
+                      [Function],
+                    ],
+                    "type": "instanceOf",
+                  },
+                  Object {
+                    "type": "string",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
+            },
+            "onActivate": Object {
+              "type": "func",
+            },
+            "onDeactivate": Object {
+              "type": "func",
+            },
+            "preventScroll": Object {
+              "type": "bool",
+            },
+            "returnFocusOnDeactivate": Object {
+              "type": "bool",
+            },
+            "setReturnFocus": Object {
+              "args": Array [
+                Array [
+                  Object {
+                    "args": Array [
+                      [Function],
+                    ],
+                    "type": "instanceOf",
+                  },
+                  Object {
+                    "type": "string",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
+            },
+          },
+        ],
+        "type": "shape",
       },
       "hasScrollingContent": Object {
         "type": "bool",
