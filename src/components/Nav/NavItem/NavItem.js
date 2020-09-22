@@ -4,15 +4,17 @@
  */
 
 import { Launch16 } from '@carbon/icons-react';
-
+import setupGetInstanceId from 'carbon-components-react/lib/tools/setupGetInstanceId';
 import classnames from 'classnames';
 import { bool, elementType, func, node, number, string } from 'prop-types';
 import React, { Component } from 'react';
 
-import { getComponentNamespace } from '../../../globals/namespace';
-
 import Icon from '../../Icon';
 import NavItemLink from '../NavItemLink';
+
+import { getComponentNamespace } from '../../../globals/namespace';
+
+const getInstanceId = setupGetInstanceId();
 
 export const namespace = getComponentNamespace('nav__list__item');
 
@@ -73,7 +75,7 @@ export default class NavItem extends Component {
     element: 'a',
     handleItemSelect: null,
     href: undefined,
-    id: namespace,
+    id: null,
     label: '',
     link: true,
     onClick: () => {},
@@ -88,6 +90,8 @@ export default class NavItem extends Component {
   static getDerivedStateFromProps(props, state) {
     return props.current === state.current ? null : { current: props.current };
   }
+
+  instanceId = `${namespace}__${getInstanceId()}`;
 
   render() {
     const {
@@ -112,9 +116,11 @@ export default class NavItem extends Component {
     const externalLink =
       isAbsoluteLink.test(href) && href.indexOf(window.location.host) === -1;
 
+    const navItemId = id || this.instanceId;
+
     const classNames = classnames(namespace, className, {
       [`${namespace}--active`]:
-        (this.state.current !== null && this.state.current === id) ||
+        (this.state.current !== null && this.state.current === navItemId) ||
         (activeHref !== undefined && activeHref === href && !externalLink),
       [`${namespace}--disabled`]: disabled,
     });
@@ -141,7 +147,7 @@ export default class NavItem extends Component {
       >
         {link ? (
           <NavItemLink
-            id={id}
+            id={navItemId}
             className={classnames(linkClassName, {
               [`${namespace}__link--external`]: externalLink,
             })}
@@ -161,7 +167,7 @@ export default class NavItem extends Component {
           </NavItemLink>
         ) : (
           <div
-            id={id}
+            id={navItemId}
             className={linkClassName}
             onClick={handleDisabled(handleItemSelect)}
             onKeyPress={handleDisabled(handleItemSelect)}
