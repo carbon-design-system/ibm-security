@@ -15101,7 +15101,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   display: flex;
   height: 24rem;
   min-width: 18rem;
-  overflow-y: hidden;
+  overflow: hidden;
   flex-direction: column;
 }
 
