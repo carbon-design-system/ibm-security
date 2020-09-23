@@ -39,7 +39,7 @@ export default class StatusIcon extends Component {
     status: oneOf(STATUS),
 
     /** @type {string} icon aria label. */
-    iconLabel: string,
+    iconDescription: string,
   };
 
   static defaultProps = {
@@ -47,7 +47,7 @@ export default class StatusIcon extends Component {
     message: null,
     size: defaultSize,
     status: undefined,
-    iconLabel: null,
+    iconDescription: null,
   };
 
   static getDerivedStateFromProps({ status }, state) {
@@ -63,7 +63,7 @@ export default class StatusIcon extends Component {
   };
 
   render() {
-    const { className, message, size, iconLabel } = this.props;
+    const { className, message, size, iconDescription } = this.props;
     const { status } = this.state;
 
     let statusIcon;
@@ -72,7 +72,9 @@ export default class StatusIcon extends Component {
       case STATUS[0]:
         statusIcon = (
           <Icon
-            aria-label={iconLabel && iconLabel.length ? iconLabel : null}
+            aria-label={
+              iconDescription && iconDescription.length ? iconDescription : null
+            }
             className={`${namespace}__icon ${namespace}__icon--success`}
             renderIcon={Checkmark20}
           />
@@ -82,7 +84,9 @@ export default class StatusIcon extends Component {
       case undefined:
         statusIcon = (
           <Loading
-            aria-label={iconLabel && iconLabel.length ? iconLabel : null}
+            aria-label={
+              iconDescription && iconDescription.length ? iconDescription : null
+            }
             className={`${namespace}__icon`}
             withOverlay={false}
           />
@@ -92,7 +96,9 @@ export default class StatusIcon extends Component {
       default:
         statusIcon = (
           <span
-            aria-label={iconLabel && iconLabel.length ? iconLabel : null}
+            aria-label={
+              iconDescription && iconDescription.length ? iconDescription : null
+            }
             className={`${namespace}__icon--color ${namespace}__icon--color--${status}`}
           />
         );

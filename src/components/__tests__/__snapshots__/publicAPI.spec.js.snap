@@ -8678,7 +8678,7 @@ Map {
   "StatusIcon" => Object {
     "defaultProps": Object {
       "className": null,
-      "iconLabel": null,
+      "iconDescription": null,
       "message": null,
       "size": "md",
       "status": undefined,
@@ -8687,7 +8687,7 @@ Map {
       "className": Object {
         "type": "string",
       },
-      "iconLabel": Object {
+      "iconDescription": Object {
         "type": "string",
       },
       "message": Object {
