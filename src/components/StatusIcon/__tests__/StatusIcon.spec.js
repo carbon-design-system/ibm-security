@@ -75,4 +75,11 @@ describe('StatusIcon', () => {
     const { queryByText } = render(<StatusIcon message="test message" />);
     expect(queryByText(/test message/i)).toBeVisible();
   });
+
+  test('should add an aria label', () => {
+    const { queryByLabelText } = render(
+      <StatusIcon iconLabel="has aria" message="test message" />
+    );
+    expect(queryByLabelText(/has aria/i)).toBeVisible();
+  });
 });

@@ -37,6 +37,9 @@ export default class StatusIcon extends Component {
 
     /** @type {string} Status. */
     status: oneOf(STATUS),
+
+    /** @type {string} icon aria label. */
+    iconLabel: string,
   };
 
   static defaultProps = {
@@ -44,6 +47,7 @@ export default class StatusIcon extends Component {
     message: null,
     size: defaultSize,
     status: undefined,
+    iconLabel: null,
   };
 
   static getDerivedStateFromProps({ status }, state) {
@@ -59,7 +63,7 @@ export default class StatusIcon extends Component {
   };
 
   render() {
-    const { className, message, size } = this.props;
+    const { className, message, size, iconLabel } = this.props;
     const { status } = this.state;
 
     let statusIcon;
@@ -68,6 +72,7 @@ export default class StatusIcon extends Component {
       case STATUS[0]:
         statusIcon = (
           <Icon
+            aria-label={iconLabel && iconLabel.length ? iconLabel : null}
             className={`${namespace}__icon ${namespace}__icon--success`}
             renderIcon={Checkmark20}
           />
@@ -76,13 +81,18 @@ export default class StatusIcon extends Component {
 
       case undefined:
         statusIcon = (
-          <Loading className={`${namespace}__icon`} withOverlay={false} />
+          <Loading
+            aria-label={iconLabel && iconLabel.length ? iconLabel : null}
+            className={`${namespace}__icon`}
+            withOverlay={false}
+          />
         );
         break;
 
       default:
         statusIcon = (
           <span
+            aria-label={iconLabel && iconLabel.length ? iconLabel : null}
             className={`${namespace}__icon--color ${namespace}__icon--color--${status}`}
           />
         );

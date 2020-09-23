@@ -8686,6 +8686,9 @@ Map {
       "className": Object {
         "type": "string",
       },
+      "iconLabel": Object {
+        "type": "string",
+      },
       "message": Object {
         "type": "string",
       },
