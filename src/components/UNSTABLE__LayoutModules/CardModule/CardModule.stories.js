@@ -35,7 +35,7 @@ export default {
 };
 
 export const Default = () => {
-  const EnhancedSummaryCard = withBackground(withLayout(SummaryCard));
+  const EnhancedSummaryCard = withLayout(withBackground(SummaryCard));
 
   return (
     <CardModule>

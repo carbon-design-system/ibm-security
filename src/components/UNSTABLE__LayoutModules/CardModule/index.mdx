@@ -18,7 +18,7 @@ The card module provides a means to orderly present related content and informat
 
 ## Overview
 
-You can build a card module using a combination of the `CardModule`, grid, and the `Card`, `SummaryCard`, or `Tile` components.
+The card module can be built using a combination of the `CardModule` andd [grid](#references), and enhancing either the [`Card`](#references), [`SummaryCard`](#references), or [`Tile`](#references) components with the `withLayout`, and optionally `withBackground`, [higher-order components](#references).
 
 Everything you pass in as a child of `CardModule` will be rendered.
 
@@ -29,6 +29,58 @@ Everything you pass in as a child of `CardModule` will be rendered.
   />
 </Canvas>
 
+### withLayout
+
+The `withLayout` higher-order component enhances cards to provide consistent spacing when using a card within the card module.
+
+```jsx
+const EnhancedCard = withLayout(Card);
+
+return (
+  <CardModule>
+    <Row>
+      <Column>
+        <EnhancedCard />
+      </Column>
+
+      <Column>
+        <EnhancedCard />
+      </Column>
+
+      <Column>
+        <EnhancedCard />
+      </Column>
+    </Row>
+  </CardModule>
+);
+```
+
+### withBackground
+
+The `withBackground` higher-order component enhances cards to provide consistent backgrounds when using a card within the card module.
+
+```jsx
+const EnhancedCard = withBackground(Card);
+
+return (
+  <CardModule>
+    <Row>
+      <Column>
+        <EnhancedCard />
+      </Column>
+
+      <Column>
+        <EnhancedCard />
+      </Column>
+
+      <Column>
+        <EnhancedCard />
+      </Column>
+    </Row>
+  </CardModule>
+);
+```
+
 ## Component API
 
 <ArgsTable />
@@ -37,7 +89,7 @@ Additional props passed into `CardModule` will be forwarded along to the underly
 
 ## Grid placement
 
-Card modules can span between 4 and 16 columns. Following the [narrow grid](#references) implementation, the layout module container hangs 16 pixels in the left margin. The narrow grid position allows headings and copy outside of containers to align with the labels within the card module.
+Card modules can span between 4 and 16 columns. Following the narrow grid implementation, the layout module container hangs 16 pixels in the left margin. The narrow grid position allows headings and copy outside of containers to align with the labels within the card module.
 
 ```jsx
 <Column lg={10}>
@@ -64,13 +116,16 @@ The card module can contain a
 
 ## Examples
 
-Examples
+- [Overview layout](?path=/story/patterns-unstable-layout-examples-beta--overview)
+- [Detail layout](?path=/story/patterns-unstable-layout-examples-beta--detail)
 
 ## References
 
-- #
-- #
-- #
+- [Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
+- [Card](?path=/story/components-card)
+- [SummaryCard](?path=/story/patterns-summarycard)
+- [Tile](https://react.carbondesignsystem.com/?path=/docs/tile)
+- [Higher-Order Components](https://reactjs.org/docs/higher-order-components.html)
 
 ## Troubleshooting
 
