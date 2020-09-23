@@ -5323,7 +5323,7 @@ a.bx--overflow-menu-options__btn::before {
   background-color: var(--ui-01, #262626);
   flex-direction: column;
   justify-content: space-between;
-  z-index: 6000;
+  z-index: 6001;
   outline: none;
 }
 
@@ -15754,14 +15754,6 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   justify-content: center;
   width: 3rem;
   flex: 0 0 auto;
-}
-
-.security--summary-card__action--icon-only, .security--summary-card__action--icon-only:hover, .security--summary-card__action--icon-only:focus, .security--summary-card__action--icon-only:active {
-  color: var(--text-01, #f4f4f4);
-}
-
-.security--summary-card__action--icon-only .bx--btn__icon path, .security--summary-card__action--icon-only:hover .bx--btn__icon path, .security--summary-card__action--icon-only:focus .bx--btn__icon path, .security--summary-card__action--icon-only:active .bx--btn__icon path {
-  fill: var(--icon-01, #f4f4f4);
 }
 
 .security--summary-card__action-overlay {
