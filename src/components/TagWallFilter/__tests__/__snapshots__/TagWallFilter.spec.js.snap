@@ -1734,15 +1734,19 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                               onClick={[MockFunction]}
                               size="large"
                               tabIndex={0}
+                              tooltipAlignment="center"
+                              tooltipPosition="top"
                               type="button"
                             >
-                              <ForwardRef(Button)
+                              <Button
                                 className="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large"
                                 disabled={false}
                                 kind="secondary"
                                 onClick={[MockFunction]}
                                 size={null}
                                 tabIndex={0}
+                                tooltipAlignment="center"
+                                tooltipPosition="top"
                                 type="button"
                               >
                                 <button
@@ -1754,7 +1758,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                 >
                                   Cancel
                                 </button>
-                              </ForwardRef(Button)>
+                              </Button>
                             </Button>
                             <Button
                               className="security--tearsheet--small__footer__button"
@@ -1765,15 +1769,19 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                               onClick={[MockFunction]}
                               size="large"
                               tabIndex={0}
+                              tooltipAlignment="center"
+                              tooltipPosition="top"
                               type="button"
                             >
-                              <ForwardRef(Button)
+                              <Button
                                 className="security--button security--tearsheet--small__footer__button security--button--large"
                                 disabled={false}
                                 kind="primary"
                                 onClick={[MockFunction]}
                                 size={null}
                                 tabIndex={0}
+                                tooltipAlignment="center"
+                                tooltipPosition="top"
                                 type="button"
                               >
                                 <button
@@ -1785,7 +1793,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                 >
                                   Save
                                 </button>
-                              </ForwardRef(Button)>
+                              </Button>
                             </Button>
                           </footer>
                           <IconButton
@@ -4205,15 +4213,19 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 onClick={[MockFunction]}
                                 size="large"
                                 tabIndex={0}
+                                tooltipAlignment="center"
+                                tooltipPosition="top"
                                 type="button"
                               >
-                                <ForwardRef(Button)
+                                <Button
                                   className="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large"
                                   disabled={false}
                                   kind="secondary"
                                   onClick={[MockFunction]}
                                   size={null}
                                   tabIndex={0}
+                                  tooltipAlignment="center"
+                                  tooltipPosition="top"
                                   type="button"
                                 >
                                   <button
@@ -4225,7 +4237,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   >
                                     Cancel
                                   </button>
-                                </ForwardRef(Button)>
+                                </Button>
                               </Button>
                               <Button
                                 className="security--tearsheet--small__footer__button"
@@ -4236,15 +4248,19 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 onClick={[MockFunction]}
                                 size="large"
                                 tabIndex={0}
+                                tooltipAlignment="center"
+                                tooltipPosition="top"
                                 type="button"
                               >
-                                <ForwardRef(Button)
+                                <Button
                                   className="security--button security--tearsheet--small__footer__button security--button--large"
                                   disabled={false}
                                   kind="primary"
                                   onClick={[MockFunction]}
                                   size={null}
                                   tabIndex={0}
+                                  tooltipAlignment="center"
+                                  tooltipPosition="top"
                                   type="button"
                                 >
                                   <button
@@ -4256,7 +4272,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   >
                                     Save
                                   </button>
-                                </ForwardRef(Button)>
+                                </Button>
                               </Button>
                             </footer>
                             <IconButton

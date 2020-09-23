@@ -61,6 +61,8 @@
 | `disabled-03`        | `cool-gray-50`    | `gray-50`         |
 | `highlight`          | `blue-20`         | `blue-80`         |
 | `decorative-01`      | `cool-gray-20`    | `gray-70`         |
+| `hover-light-ui`     | `#e5e5e5`         | `gray-70`         |
+| `button-separator`   | `cool-gray-20`    | `gray-100`        |
 | `skeleton-01`        | `#e0e4ea`         | `#353535`         |
 | `skeleton-02`        | `cool-gray-30`    | `gray-80`         |
 | `brand-01`           | `blue-60`         | `blue-60`         |

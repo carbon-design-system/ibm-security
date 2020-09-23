@@ -8,7 +8,10 @@ exports[`Panel Rendering does not render the open panel if \`shouldPanelOpen\` i
     largeText={null}
     loading={false}
     onClick={[Function]}
+    size="default"
     tabIndex={0}
+    tooltipAlignment="center"
+    tooltipPosition="top"
     type="button"
   >
     Label
@@ -49,7 +52,10 @@ exports[`Panel Rendering renders correctly 1`] = `
     largeText={null}
     loading={false}
     onClick={[Function]}
+    size="default"
     tabIndex={0}
+    tooltipAlignment="center"
+    tooltipPosition="top"
     type="button"
   >
     Label
@@ -100,7 +106,10 @@ exports[`Panel Rendering renders the open panel 1`] = `
     largeText={null}
     loading={false}
     onClick={[Function]}
+    size="default"
     tabIndex={0}
+    tooltipAlignment="center"
+    tooltipPosition="top"
     type="button"
   >
     Label
@@ -141,7 +150,10 @@ exports[`Panel Rendering renders the primary button variation 1`] = `
     largeText={null}
     loading={false}
     onClick={[Function]}
+    size="default"
     tabIndex={0}
+    tooltipAlignment="center"
+    tooltipPosition="top"
     type="button"
   >
     Label
@@ -182,7 +194,10 @@ exports[`Panel Rendering renders the secondary button variation 1`] = `
     largeText={null}
     loading={false}
     onClick={[Function]}
+    size="default"
     tabIndex={0}
+    tooltipAlignment="center"
+    tooltipPosition="top"
     type="button"
   >
     Label
@@ -223,7 +238,10 @@ exports[`Panel Rendering renders the secondary button variation 2`] = `
     largeText={null}
     loading={false}
     onClick={[Function]}
+    size="default"
     tabIndex={0}
+    tooltipAlignment="center"
+    tooltipPosition="top"
     type="button"
   >
     Label

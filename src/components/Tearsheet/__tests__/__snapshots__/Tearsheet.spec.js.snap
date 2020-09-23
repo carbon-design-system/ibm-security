@@ -64,7 +64,10 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
                 "render": [Function],
               }
             }
+            size="default"
             tabIndex={0}
+            tooltipAlignment="center"
+            tooltipPosition="top"
             type="button"
           >
             Delete - prop
@@ -144,6 +147,8 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
               onClick={[MockFunction]}
               size="large"
               tabIndex={0}
+              tooltipAlignment="center"
+              tooltipPosition="top"
               type="button"
             >
               Previous - prop
@@ -157,6 +162,8 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
               onClick={[MockFunction]}
               size="large"
               tabIndex={0}
+              tooltipAlignment="center"
+              tooltipPosition="top"
               type="button"
             >
               Next - prop
@@ -233,7 +240,10 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
                 "render": [Function],
               }
             }
+            size="default"
             tabIndex={0}
+            tooltipAlignment="center"
+            tooltipPosition="top"
             type="button"
           >
             Delete
@@ -313,6 +323,8 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
               onClick={[MockFunction]}
               size="large"
               tabIndex={0}
+              tooltipAlignment="center"
+              tooltipPosition="top"
               type="button"
             >
               Previous
@@ -326,6 +338,8 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
               onClick={[MockFunction]}
               size="large"
               tabIndex={0}
+              tooltipAlignment="center"
+              tooltipPosition="top"
               type="button"
             >
               Next

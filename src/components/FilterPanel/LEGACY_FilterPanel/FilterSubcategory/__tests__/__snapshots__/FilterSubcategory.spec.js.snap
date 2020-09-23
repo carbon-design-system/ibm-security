@@ -123,7 +123,10 @@ exports[`FilterSubcategory Events collapses expanded truncated list of filters 1
         "render": [Function],
       }
     }
+    size="default"
     tabIndex={0}
+    tooltipAlignment="center"
+    tooltipPosition="top"
     type="button"
   >
     View more (15)
@@ -514,7 +517,10 @@ exports[`FilterSubcategory Events expands truncated list of filters 1`] = `
         "render": [Function],
       }
     }
+    size="default"
     tabIndex={0}
+    tooltipAlignment="center"
+    tooltipPosition="top"
     type="button"
   >
     View less
@@ -1005,7 +1011,10 @@ exports[`FilterSubcategory Rendering truncates long list of filters 1`] = `
         "render": [Function],
       }
     }
+    size="default"
     tabIndex={0}
+    tooltipAlignment="center"
+    tooltipPosition="top"
     type="button"
   >
     View more (15)
