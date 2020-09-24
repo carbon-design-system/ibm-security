@@ -8690,12 +8690,16 @@ Map {
   "StatusIcon" => Object {
     "defaultProps": Object {
       "className": null,
+      "iconDescription": null,
       "message": null,
       "size": "md",
       "status": undefined,
     },
     "propTypes": Object {
       "className": Object {
+        "type": "string",
+      },
+      "iconDescription": Object {
         "type": "string",
       },
       "message": Object {
