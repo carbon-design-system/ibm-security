@@ -14,7 +14,7 @@ const namespace = 'page-tab';
  * Page tab modules provide orderly tab navigation for a page.
  */
 const PageTab = ({ children, ...other }) => (
-  <LayoutModule type={namespace} {...other}>
+  <LayoutModule namespace={namespace} {...other}>
     {children}
   </LayoutModule>
 );
@@ -25,7 +25,7 @@ PageTab.propTypes = {
 };
 
 const PageTabDetails = ({ children, ...other }) => (
-  <LayoutModule type={`${namespace}__details`} {...other}>
+  <LayoutModule namespace={`${namespace}__details`} {...other}>
     {children}
   </LayoutModule>
 );

@@ -3,49 +3,23 @@
  * @copyright IBM Security 2020
  */
 
-import classnames from 'classnames';
-import { bool, node, string } from 'prop-types';
+import { node } from 'prop-types';
 import React from 'react';
 
-import LayoutModule, {
-  createLayoutModuleFromChildren,
-  layoutModuleNamespace,
-} from '../LayoutModule';
+import LayoutModule from '../LayoutModule';
 
-const namespace = 'ica';
-const icaNamespace = `${namespace}__ica`;
-
+/**
+ * The ICA module provides a means to orderly layout at-a-glance statistics.
+ */
 const ICAModule = ({ children, ...other }) => (
-  <LayoutModule type={namespace} {...other}>
+  <LayoutModule namespace="ica" {...other}>
     {children}
   </LayoutModule>
 );
 
 ICAModule.propTypes = {
+  /** Provide the content for the `ICAModule` */
   children: node.isRequired,
-};
-
-const ICAModuleICA = ({ children, className, interactive, ...other }) =>
-  createLayoutModuleFromChildren({
-    children,
-    className: classnames(className, {
-      [`${layoutModuleNamespace}--${icaNamespace}--interactive`]: interactive,
-    }),
-    type: icaNamespace,
-    ...other,
-  });
-
-ICAModuleICA.propTypes = {
-  children: node.isRequired,
-  className: string,
-  interactive: bool,
-};
-
-ICAModuleICA.defaultProps = {
-  interactive: false,
-  className: null,
 };
 
 export default ICAModule;
-
-export { ICAModuleICA };

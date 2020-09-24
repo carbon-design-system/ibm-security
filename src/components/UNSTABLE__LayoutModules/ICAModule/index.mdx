@@ -1,0 +1,110 @@
+import { ArgsTable, Story } from '@storybook/addon-docs/blocks';
+
+import { parameters } from '../../../../.storybook/preview';
+import Canvas from '../../../../.storybook/components/Canvas';
+import { Column, Row } from '../../..';
+
+# ICAModule
+
+The ICA module provides a means to orderly layout at-a-glance statistics.
+
+- [Overview](#overview)
+- [withHover](#withhover)
+- [Component API](#component-api)
+- [Grid placement](#grid-placement)
+- [Examples](#examples)
+- [References](#references)
+- [Troubleshooting](#troubleshooting)
+
+## Overview
+
+The ICA module can be built using a combination of the `ICAModule`, [grid](#references), [`ICA`](#references), and optionally the `withHover`, [higher-order component](#references).
+
+Everything passed in as a child of `ICAModule` will be rendered.
+
+<Canvas>
+  <Story
+    id="patterns-unstable-layout-modules-icamodule--default"
+    parameters={parameters}
+  />
+</Canvas>
+
+## withHover
+
+The `withHover` higher-order component enhances columns to provide consistent hover styling when using an ICA within the ICA module.
+
+```jsx
+const ColumnWithHover = withHover(Column);
+
+return (
+  <ICAModule>
+    <Row>
+      <ColumnWithHover>
+        <ICA />
+      </ColumnWithHover>
+
+      <ColumnWithHover>
+        <ICA />
+      </ColumnWithHover>
+
+      <ColumnWithHover>
+        <ICA />
+      </ColumnWithHover>
+    </Row>
+  </ICAModule>
+);
+```
+
+## Component API
+
+<ArgsTable />
+
+Additional props passed into `ICAModule` will be forwarded along to the underlying ICA module container.
+
+## Grid placement
+
+ICAs within ICA modules can span across 2 or 3 columns, following the narrow grid implementation.
+
+<Row>
+  <Column>
+    <img alt="#" src="#" />
+  </Column>
+
+  <Column>
+    <img alt="#" src="#" />
+  </Column>
+</Row>
+
+```jsx
+<ICAModule>
+  <Row>
+    <Column lg={3}>
+      <ICA />
+    </Column>
+
+    <Column lg={3}>
+      <ICA />
+    </Column>
+
+    <Column lg={3}>
+      <ICA />
+    </Column>
+  </Row>
+</ICAModule>
+```
+
+## Examples
+
+- [Overview layout](?path=/story/patterns-unstable-layout-examples-beta--overview)
+- [Detail layout](?path=/story/patterns-unstable-layout-examples-beta--detail)
+
+## References
+
+- [Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
+- [ICA](?path=/story/components-ica)
+- [Higher-Order Components](https://reactjs.org/docs/higher-order-components.html)
+- [TitleBar](?path=/docs/patterns-unstable-layout-modules-titlebar)
+
+## Troubleshooting
+
+Visit our [GitHub](https://github.com/carbon-design-system/ibm-security) to view and submit issues, or reach out on [Slack](https://app.slack.com/client/T1V6D3RT7/CRV39QKP0) for additional support.

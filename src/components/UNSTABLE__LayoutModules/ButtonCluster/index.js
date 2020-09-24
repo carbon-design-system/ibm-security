@@ -14,9 +14,9 @@ const namespace = 'button-cluster';
  * The button cluster module group secondary actions that can be taken on a whole page or component.
  */
 const ButtonCluster = ({ children, ...other }) => (
-  <LayoutModule type={namespace} {...other}>
+  <LayoutModule namespace={namespace} {...other}>
     {Children.map(children, child => (
-      <LayoutModule type={`${namespace}__button`}>{child}</LayoutModule>
+      <LayoutModule namespace={`${namespace}__button`}>{child}</LayoutModule>
     ))}
   </LayoutModule>
 );

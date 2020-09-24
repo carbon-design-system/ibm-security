@@ -10,7 +10,9 @@
 @import '../../Component/mixins';
 @import '../variables';
 
-@include security--component($name: #{$layout-modules__name}--title-bar) {
+@import 'variables';
+
+@include security--component($name: $layout-modules__title-bar__name) {
   display: flex;
   align-items: center;
 

@@ -3,12 +3,15 @@
  * @copyright IBM Security 2020
  */
 
-import Activity16 from '@carbon/icons-react/lib/activity/16';
-import ArrowRight16 from '@carbon/icons-react/lib/arrow--right/16';
-import Copy16 from '@carbon/icons-react/lib/copy/16';
-import Filter16 from '@carbon/icons-react/lib/filter/16';
-import Search16 from '@carbon/icons-react/lib/search/16';
-import View16 from '@carbon/icons-react/lib/view/16';
+import {
+  Activity16,
+  ArrowRight16,
+  Copy16,
+  Filter16,
+  Search16,
+  View16,
+} from '@carbon/icons-react';
+
 import { layout04 } from '@carbon/layout';
 import { action } from '@storybook/addon-actions';
 
@@ -16,7 +19,6 @@ import { Grid, Row, Column } from 'carbon-components-react';
 import React from 'react';
 
 import { disableCentered, meta, patterns } from '../../../.storybook';
-import { header, profile, toolbar } from '../Shell/_mocks_';
 
 import {
   ActionBar,
@@ -52,12 +54,13 @@ import {
   withLayout,
 } from '../..';
 
+import { header, profile, toolbar } from '../Shell/_mocks_';
+
 const Shell = () => (
   <ShellComponent header={header} profile={profile} toolbar={toolbar} />
 );
 
-const EnhancedColumn = withBackground(Column);
-const EnhancedICA = withLayout(ICA);
+const ColumnWithBackground = withBackground(Column);
 const EnhancedSummaryCard = withLayout(withBackground(SummaryCard));
 
 const overview = () => (
@@ -73,7 +76,7 @@ const overview = () => (
     <Row>
       <Column lg={12}>
         <Row>
-          <EnhancedColumn>
+          <ColumnWithBackground>
             <TitleBar title="General settings and scope" subsection />
 
             <TypeLayout>
@@ -123,11 +126,11 @@ const overview = () => (
                 </TypeLayoutRow>
               </TypeLayoutBody>
             </TypeLayout>
-          </EnhancedColumn>
+          </ColumnWithBackground>
 
-          <EnhancedColumn>
+          <ColumnWithBackground>
             <Row>
-              <EnhancedColumn>
+              <ColumnWithBackground>
                 <TitleBar title="Schedule" subsection />
 
                 <TypeLayout>
@@ -148,7 +151,7 @@ const overview = () => (
                     </TypeLayoutRow>
                   </TypeLayoutBody>
                 </TypeLayout>
-              </EnhancedColumn>
+              </ColumnWithBackground>
             </Row>
 
             <Row>
@@ -173,11 +176,11 @@ const overview = () => (
                 </TypeLayout>
               </Column>
             </Row>
-          </EnhancedColumn>
+          </ColumnWithBackground>
         </Row>
 
         <Row>
-          <EnhancedColumn>
+          <ColumnWithBackground>
             <Row>
               <Column>
                 <TitleBar title="Campaign results" subsection>
@@ -192,13 +195,13 @@ const overview = () => (
             <ICAModule>
               <Row>
                 <Column sm={2} md={2} lg={3}>
-                  <EnhancedICA label="Reviews complete" value={300} />
+                  <ICA label="Reviews complete" value={300} />
                 </Column>
                 <Column sm={2} md={2} lg={3}>
-                  <EnhancedICA label="Approved" value={241} />
+                  <ICA label="Approved" value={241} />
                 </Column>
                 <Column sm={2} md={2} lg={3}>
-                  <EnhancedICA label="Rejected" value={28} />
+                  <ICA label="Rejected" value={28} />
                 </Column>
               </Row>
             </ICAModule>
@@ -259,7 +262,7 @@ const overview = () => (
                 />
               </Column>
             </Row>
-          </EnhancedColumn>
+          </ColumnWithBackground>
         </Row>
       </Column>
 
@@ -446,26 +449,22 @@ const detail = () => (
         </CardModule>
 
         <Row>
-          <EnhancedColumn>
-            <Row>
-              <Column>
-                <TitleBar element="h4" title="Indicators" />
-              </Column>
-            </Row>
-
+          <ColumnWithBackground>
             <ICAModule>
+              <TitleBar element="h4" title="Indicators" />
+
               <Row>
                 <Column sm={2} md={2} lg={3}>
-                  <EnhancedICA label="Malware" value={11} />
+                  <ICA label="Malware" value={11} />
                 </Column>
                 <Column sm={2} md={2} lg={3}>
-                  <EnhancedICA label="IPs" value={8} />
+                  <ICA label="IPs" value={8} />
                 </Column>
                 <Column sm={2} md={2} lg={3}>
-                  <EnhancedICA label="URLs" value={9} />
+                  <ICA label="URLs" value={9} />
                 </Column>
                 <Column sm={2} md={2} lg={3}>
-                  <EnhancedICA label="VULs" value={1} />
+                  <ICA label="VULs" value={1} />
                 </Column>
               </Row>
             </ICAModule>
@@ -545,7 +544,7 @@ const detail = () => (
                 />
               </Column>
             </Row>
-          </EnhancedColumn>
+          </ColumnWithBackground>
         </Row>
       </Tab>
       <Tab label="Evidence" />
@@ -554,7 +553,7 @@ const detail = () => (
 );
 
 export default meta(
-  patterns('UNSTABLE Layout Examples [Beta]'),
+  patterns('UNSTABLE Layout Examples'),
   null,
   disableCentered(),
   [

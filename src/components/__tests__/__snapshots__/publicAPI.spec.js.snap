@@ -4359,24 +4359,6 @@ Map {
       },
     },
   },
-  "ICAModuleICA" => Object {
-    "defaultProps": Object {
-      "className": null,
-      "interactive": false,
-    },
-    "propTypes": Object {
-      "children": Object {
-        "isRequired": true,
-        "type": "node",
-      },
-      "className": Object {
-        "type": "string",
-      },
-      "interactive": Object {
-        "type": "bool",
-      },
-    },
-  },
   "ICASkeleton" => Object {},
   "Icon" => Object {
     "defaultProps": Object {
@@ -4849,7 +4831,7 @@ Map {
       "className": Object {
         "type": "string",
       },
-      "type": Object {
+      "namespace": Object {
         "isRequired": true,
         "type": "string",
       },

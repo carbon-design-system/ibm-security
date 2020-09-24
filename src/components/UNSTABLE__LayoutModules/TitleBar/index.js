@@ -24,7 +24,7 @@ const TitleBar = ({
   title,
   ...other
 }) => (
-  <LayoutModule type={namespace} {...other}>
+  <LayoutModule namespace={namespace} {...other}>
     {createElement(
       element,
       {
@@ -32,14 +32,14 @@ const TitleBar = ({
           className: classnames({
             [`${layoutModuleNamespace}--${namespace}__title--subsection`]: subsection,
           }),
-          type: `${namespace}__title`,
+          namespace: `${namespace}__title`,
         }),
       },
       title
     )}
 
     {children && (
-      <LayoutModule type={`${namespace}__items`}>{children}</LayoutModule>
+      <LayoutModule namespace={`${namespace}__items`}>{children}</LayoutModule>
     )}
   </LayoutModule>
 );

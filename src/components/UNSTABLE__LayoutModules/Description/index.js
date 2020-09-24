@@ -14,7 +14,7 @@ const namespace = 'description';
  * Description modules provide a means to orderly layout short-form content.
  */
 const Description = ({ children, ...other }) => (
-  <LayoutModule type={namespace} {...other}>
+  <LayoutModule namespace={namespace} {...other}>
     {children}
   </LayoutModule>
 );
@@ -28,7 +28,7 @@ const DescriptionContent = ({ children, className, ...other }) => (
   <p
     {...getLayoutModuleProps({
       className,
-      type: `${namespace}__content`,
+      namespace: `${namespace}__content`,
     })}
     {...other}
   >

@@ -269,7 +269,6 @@ export LayoutModule, {
   Description,
   DescriptionContent,
   ICAModule,
-  ICAModuleICA,
   PageTab,
   PageTabDetails,
   TitleBar,

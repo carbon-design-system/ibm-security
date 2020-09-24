@@ -8,7 +8,7 @@ import React from 'react';
 
 import { layoutModuleNamespace } from '../LayoutModule';
 
-const withEnhancement = (type, displayName) => WrappedComponent => {
+const withLayoutEnhancement = (type, displayName) => WrappedComponent => {
   const WithEnhancement = ({ className, ...other }) => (
     <WrappedComponent
       className={classnames(`${layoutModuleNamespace}--${type}`, className)}
@@ -17,20 +17,25 @@ const withEnhancement = (type, displayName) => WrappedComponent => {
   );
 
   const {
+    defaultProps,
     displayName: wrappedComponentDisplayName,
-    name: wrappedComponentName,
+    name,
+    propTypes,
   } = WrappedComponent;
 
-  WithEnhancement.displayName = `${displayName}(${wrappedComponentDisplayName ||
-    wrappedComponentName ||
+  WithEnhancement.propTypes = propTypes;
+  WithEnhancement.defaultProps = defaultProps;
+
+  WithEnhancement.displayName = `with${displayName}(${wrappedComponentDisplayName ||
+    name ||
     'Component'})`;
 
   return WithEnhancement;
 };
 
-const withBackground = withEnhancement('background', 'withBackground');
-const withHover = withEnhancement('hover', 'withHover');
-const withLayout = withEnhancement('layout', 'withLayout');
+const withBackground = withLayoutEnhancement('background', 'Background');
+const withHover = withLayoutEnhancement('hover', 'Hover');
+const withLayout = withLayoutEnhancement('layout', 'Layout');
 
 export default withLayout;
 

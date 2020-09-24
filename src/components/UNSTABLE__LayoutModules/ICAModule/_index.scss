@@ -6,15 +6,23 @@
 
 @import '@carbon/layout/scss/spacing';
 
+@import '../../../globals/namespace/index';
 @import '../../Component/mixins';
+@import '../TitleBar/variables';
 @import '../variables';
 
 @include security--component($name: #{$layout-modules__name}--ica) {
   padding-top: $carbon--layout-01;
   padding-bottom: $carbon--layout-03;
 
-  > .security--unstable--layout__module--title-bar
-    > .security--unstable--layout__module--title-bar__title {
+  /// Title bar module namespace.
+  /// @type String
+  $layout-modules__title-bar__namespace: get-component-namespace(
+    $component-name: $layout-modules__title-bar__name,
+  );
+
+  > #{$layout-modules__title-bar__namespace}
+    > #{$layout-modules__title-bar__namespace}__title {
     margin-top: 0;
   }
 }

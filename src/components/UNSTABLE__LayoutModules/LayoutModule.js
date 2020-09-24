@@ -5,47 +5,34 @@
 
 import classnames from 'classnames';
 import { node, string } from 'prop-types';
-import React, { Children, cloneElement } from 'react';
+import React from 'react';
 
-import {
-  appendComponentNamespace,
-  getComponentNamespace,
-} from '../../globals/namespace';
+import { getComponentNamespace } from '../../globals/namespace';
 
-const namespace = getComponentNamespace('unstable--layout');
-const layoutModuleNamespace = appendComponentNamespace(namespace, 'module');
+const layoutModuleNamespace = getComponentNamespace('unstable--layout__module');
 
-const getLayoutModuleProps = ({ className, type }) => ({
+const getLayoutModuleProps = ({ className, namespace }) => ({
   className: classnames(
     layoutModuleNamespace,
-    `${layoutModuleNamespace}--${type}`,
+    `${layoutModuleNamespace}--${namespace}`,
     className
   ),
 });
 
-const createLayoutModuleFromChildren = ({ children, type, ...other }) => {
-  const { className, ...props } = other;
-
-  return Children.map(children, child =>
-    cloneElement(child, {
-      ...getLayoutModuleProps({
-        className: classnames(className, child.props.className),
-        type,
-      }),
-      ...props,
-    })
-  );
-};
-
-const LayoutModule = ({ className, children, type, ...other }) => (
-  <div {...getLayoutModuleProps({ className, type })} {...other}>
+const LayoutModule = ({ className, children, namespace, ...other }) => (
+  <div {...getLayoutModuleProps({ className, namespace })} {...other}>
     {children}
   </div>
 );
 
 LayoutModule.propTypes = {
+  /** Provide the content for the `LayoutModule` */
   children: node.isRequired,
-  type: string.isRequired,
+
+  /** Provide the style namespace for the `LayoutModule` */
+  namespace: string.isRequired,
+
+  /** Provide an optional class to be applied to the containing node */
   className: string,
 };
 
@@ -55,9 +42,4 @@ LayoutModule.defaultProps = {
 
 export default LayoutModule;
 
-export {
-  createLayoutModuleFromChildren,
-  getLayoutModuleProps,
-  layoutModuleNamespace,
-  namespace,
-};
+export { getLayoutModuleProps, layoutModuleNamespace };
