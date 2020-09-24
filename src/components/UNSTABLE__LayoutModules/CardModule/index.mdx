@@ -2,12 +2,15 @@ import { ArgsTable, Story } from '@storybook/addon-docs/blocks';
 
 import { parameters } from '../../../../.storybook/preview';
 import Canvas from '../../../../.storybook/components/Canvas';
+import { Column, Row } from '../../..';
 
 # CardModule
 
 The card module provides a means to orderly present related content and information using summary, navigational, or widget cards as the basis.
 
 - [Overview](#overview)
+- [withLayout](#withlayout)
+- [withBackground](#withbackground)
 - [Component API](#component-api)
 - [Grid placement](#grid-placement)
 - [Complimentary modules](#complimentary-modules)
@@ -18,9 +21,9 @@ The card module provides a means to orderly present related content and informat
 
 ## Overview
 
-The card module can be built using a combination of the `CardModule` andd [grid](#references), and enhancing either the [`Card`](#references), [`SummaryCard`](#references), or [`Tile`](#references) components with the `withLayout`, and optionally `withBackground`, [higher-order components](#references).
+The card module can be built using a combination of the `CardModule` and [grid](#references), and enhancing either the [`Card`](#references), [`SummaryCard`](#references), or [`Tile`](#references) components with the `withLayout`, and optionally `withBackground`, [higher-order components](#references).
 
-Everything you pass in as a child of `CardModule` will be rendered.
+Everything passed in as a child of `CardModule` will be rendered.
 
 <Canvas>
   <Story
@@ -29,7 +32,7 @@ Everything you pass in as a child of `CardModule` will be rendered.
   />
 </Canvas>
 
-### withLayout
+## withLayout
 
 The `withLayout` higher-order component enhances cards to provide consistent spacing when using a card within the card module.
 
@@ -55,7 +58,7 @@ return (
 );
 ```
 
-### withBackground
+## withBackground
 
 The `withBackground` higher-order component enhances cards to provide consistent backgrounds when using a card within the card module.
 
@@ -91,6 +94,16 @@ Additional props passed into `CardModule` will be forwarded along to the underly
 
 Card modules can span between 4 and 16 columns. Following the narrow grid implementation, the layout module container hangs 16 pixels in the left margin. The narrow grid position allows headings and copy outside of containers to align with the labels within the card module.
 
+<Row>
+  <Column>
+    <img alt="#" src="#" />
+  </Column>
+
+  <Column>
+    <img alt="#" src="#" />
+  </Column>
+</Row>
+
 ```jsx
 <Column lg={10}>
   <CardModule />
@@ -99,7 +112,11 @@ Card modules can span between 4 and 16 columns. Following the narrow grid implem
 
 ## Complimentary modules
 
-The card module can contain a
+The card module can contain a number of other layout modules within the parent to create a section of related modules. The following options can be used for this purpose.
+
+1. **[`TitleBar`](#references) using section title:** Section titles provide identification for the content
+2. **`TitleBar` using subsection title:** Subsection titles provide identification for the sub-content
+3. **[`ActionBar`](#references):** Provides a zone for actions related to the cards and content below it
 
 <Canvas>
   <Story
@@ -114,10 +131,11 @@ The card module can contain a
 2. **Card spacer (optional):** If there are multiple rows of cards, use the 16-pixel spacer `$layout-01` to separate the rows
 3. **Bottom spacer:** The 32-pixel spacer `$layout-03` below the last card row provides the starting point for the layout module positioned directly underneath it
 
+<img alt="`CardModule` anatomy" src="#" />
+
 ## Examples
 
-- [Overview layout](?path=/story/patterns-unstable-layout-examples-beta--overview)
-- [Detail layout](?path=/story/patterns-unstable-layout-examples-beta--detail)
+[Detail layout](?path=/story/patterns-unstable-layout-examples-beta--detail)
 
 ## References
 
@@ -126,6 +144,8 @@ The card module can contain a
 - [SummaryCard](?path=/story/patterns-summarycard)
 - [Tile](https://react.carbondesignsystem.com/?path=/docs/tile)
 - [Higher-Order Components](https://reactjs.org/docs/higher-order-components.html)
+- [TitleBar](?path=/docs/patterns-unstable-layout-modules-titlebar)
+- [ActionBar](?path=/docs/patterns-unstable-layout-modules-actionbar)
 
 ## Troubleshooting
 

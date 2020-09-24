@@ -74,16 +74,50 @@ export const Default = () => {
   );
 };
 
-export const Complimentary = () => (
-  <>
-    <TitleBar title="Section title" />
+export const Complimentary = () => {
+  const EnhancedSummaryCard = withLayout(withBackground(SummaryCard));
 
-    <TitleBar element="h3" title="Subsection title" subsection />
+  return (
+    <CardModule>
+      <TitleBar title="Section title" />
 
-    <ActionBar>
-      <Button kind="ghost">Button</Button>
-    </ActionBar>
+      <TitleBar element="h3" title="Subsection title" subsection />
 
-    {Default()}
-  </>
-);
+      <ActionBar>
+        <Button kind="ghost">Button</Button>
+      </ActionBar>
+
+      <Row>
+        <Column>
+          <EnhancedSummaryCard>
+            <SummaryCardHeader title="Label" />
+
+            <SummaryCardBody>
+              <TitleBar title="Title" />
+            </SummaryCardBody>
+          </EnhancedSummaryCard>
+        </Column>
+
+        <Column>
+          <EnhancedSummaryCard>
+            <SummaryCardHeader title="Label" />
+
+            <SummaryCardBody>
+              <TitleBar title="Title" />
+            </SummaryCardBody>
+          </EnhancedSummaryCard>
+        </Column>
+
+        <Column>
+          <EnhancedSummaryCard>
+            <SummaryCardHeader title="Label" />
+
+            <SummaryCardBody>
+              <TitleBar title="Title" />
+            </SummaryCardBody>
+          </EnhancedSummaryCard>
+        </Column>
+      </Row>
+    </CardModule>
+  );
+};

@@ -2,7 +2,6 @@ import { ArgsTable, Story } from '@storybook/addon-docs/blocks';
 
 import { parameters } from '../../../../.storybook/preview';
 import Canvas from '../../../../.storybook/components/Canvas';
-
 import { Column, Row } from '../../..';
 
 import anatomy from './images/anatomy.png';
@@ -35,7 +34,7 @@ The button cluster module can be built using a combination of the `ButtonCluster
 
 <ArgsTable />
 
-Additional props passed into `ButtonCluster` will be forwarded along to the underlying button cluster container.
+Additional props passed into `ButtonCluster` will be forwarded along to the underlying button cluster module container.
 
 ## Grid placement
 
@@ -63,7 +62,7 @@ Button cluster modules span across 4 columns. Following the [narrow grid](#refer
 
 ## Layout considerations
 
-Occassionally a spacing token will need to be included to offset the button cluster module to ensure it top-aligns with the adjacent layout container. If a top spacing token is necessary, reference the layout module that sits directly above it as the starting point for placement.
+Occassionally a [spacing token](#references) will need to be included to offset the button cluster module to ensure it top-aligns with the adjacent layout container. If a top spacing token is necessary, reference the layout module that sits directly above it as the starting point for placement.
 
 ## Anatomy
 
@@ -75,13 +74,13 @@ Occassionally a spacing token will need to be included to offset the button clus
 
 ## Examples
 
-- [Overview layout](?path=/story/patterns-unstable-layout-examples-beta--overview)
-- [Detail layout](?path=/story/patterns-unstable-layout-examples-beta--detail)
+[Overview layout](?path=/story/patterns-unstable-layout-examples-beta--overview)
 
 ## References
 
 - [Button](https://react.carbondesignsystem.com/?path=/docs/button)
 - [Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
+- [Spacing scale](https://carbondesignsystem.com/guidelines/spacing/overview#spacing-scale)
 
 ## Troubleshooting
 

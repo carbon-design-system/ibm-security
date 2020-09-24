@@ -1,5 +1,5 @@
 /**
- * @file Page tab stories.
+ * @file Page tab module stories.
  * @copyright IBM Security 2020
  */
 

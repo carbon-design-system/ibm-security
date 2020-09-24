@@ -1,5 +1,5 @@
 /**
- * @file Button cluster.
+ * @file Button cluster module.
  * @copyright IBM Security 2020
  */
 
@@ -11,7 +11,7 @@ import LayoutModule from '..';
 const namespace = 'button-cluster';
 
 /**
- * The button cluster group secondary actions that can be taken on a whole page or component.
+ * The button cluster module group secondary actions that can be taken on a whole page or component.
  */
 const ButtonCluster = ({ children, ...other }) => (
   <LayoutModule type={namespace} {...other}>

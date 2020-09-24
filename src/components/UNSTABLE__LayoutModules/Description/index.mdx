@@ -1,14 +1,23 @@
 import { ArgsTable, Story } from '@storybook/addon-docs/blocks';
 
 import Canvas from '../../../../.storybook/components/Canvas';
+import { Column, Row } from '../../..';
 
 # Description
 
+Description modules provide a means to orderly layout short-form content.
+
+- [Overview](#overview)
+- [Subsection title](#subsection-title)
+- [Component API](#component-api)
+- [Grid placement](#grid-placement)
+- [Examples](#examples)
+- [References](#references)
+- [Troubleshooting](#troubleshooting)
+
 ## Overview
 
-Descriptions provide a means to orderly layout short-form content.
-
-You can build a description using a combination of the [`TitleBar`](#references) and `DescriptionContent` components. Everything you pass in as a child of `DescriptionContent` will be rendered.
+The description module can be built using a combination of the [`TitleBar`](#references) and `DescriptionContent` components. Everything passed in as a child of `DescriptionContent` will be rendered.
 
 <Canvas>
   <Story id="patterns-unstable-layout-modules-description--default" />
@@ -22,9 +31,25 @@ If necessary, subsection titles can be used below section titles.
   <Story id="patterns-unstable-layout-modules-description--subsection-title" />
 </Canvas>
 
+## Component API
+
+<ArgsTable />
+
+Additional props passed into `Description` and `DescriptionContent` will be forwarded along to their underlying containers.
+
 ## Grid placement
 
-When placing a description on the [grid](#references), it should be placed in a maximum of 8 columns.
+Description modules span across 8 columns, following the [narrow grid](#references) implementation.
+
+<Row>
+  <Column>
+    <img alt="#" src="#" />
+  </Column>
+
+  <Column>
+    <img alt="#" src="#" />
+  </Column>
+</Row>
 
 ```jsx
 <Column lg={8}>
@@ -54,17 +79,15 @@ When placing a description on the [grid](#references), it should be placed in a 
 </Column>
 ```
 
-## Component API
+## Examples
 
-<ArgsTable />
-
-Additional props passed into `Description` and `DescriptionContent` will be forwarded along to their underlying containers.
+[Detail layout](?path=/story/patterns-unstable-layout-examples-beta--detail)
 
 ## References
 
 - [TitleBar](?path=/docs/patterns-unstable-layout-modules-titlebar)
 - [Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
 
-## Feedback
+## Troubleshooting
 
-Help us improve this component by providing feedback, asking questions, and leaving any other comments on [GitHub](https://github.com/carbon-design-system/ibm-security/edit/dev/src/components/UNSTABLE__Layout/LayoutModules/Description/index.mdx).
+Visit our [GitHub](https://github.com/carbon-design-system/ibm-security) to view and submit issues, or reach out on [Slack](https://app.slack.com/client/T1V6D3RT7/CRV39QKP0) for additional support.

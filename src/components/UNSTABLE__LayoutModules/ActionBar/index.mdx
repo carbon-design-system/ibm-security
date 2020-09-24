@@ -1,18 +1,25 @@
 import { ArgsTable, Story } from '@storybook/addon-docs/blocks';
 
 import { parameters } from '../../../../.storybook/preview';
-
 import Canvas from '../../../../.storybook/components/Canvas';
 
 # ActionBar
 
-## Overview
-
 Action bars allow users to take multiple actions on the subsequent section.
 
-You can build an action bar using a combination of the `ActionBar` and `ActionBarItems` components.
+- [Overview](#overview)
+- [Supplementary details](#supplementary-details)
+- [Component API](#component-api)
+- [Grid placement](#grid-placement)
+- [Examples](#examples)
+- [References](#references)
+- [Troubleshooting](#troubleshooting)
 
-`ActionBarItems` is responsible for positioning the actions, and everything you pass in as a child of `ActionBarItems` will be rendered.
+## Overview
+
+The action bar module can be built using a combination of the `ActionBar` and `ActionBarItems` components.
+
+`ActionBarItems` is responsible for positioning the actions, and everything passed in as a child of `ActionBarItems` will be rendered.
 
 <Canvas>
   <Story
@@ -32,9 +39,15 @@ If necessary, supplementary details can be placed inline with the actions.
   />
 </Canvas>
 
+## Component API
+
+<ArgsTable />
+
+Additional props passed into `ActionBar` and `ActionBarItems` will be forwarded along to their underlying containers.
+
 ## Grid placement
 
-When placing an action bar on the [grid](#references), it should be placed in a minimum of 4 columns and a maximum of 16.
+Action bar modules can span between 4 and 16 columns, following the [narrow grid](#references) implementation.
 
 ```jsx
 <Column lg={4}>
@@ -64,11 +77,10 @@ When placing an action bar on the [grid](#references), it should be placed in a 
 </Column>
 ```
 
-## Component API
+## Examples
 
-<ArgsTable />
-
-Additional props passed into `ActionBar` and `ActionBarItems` will be forwarded along to their underlying containers.
+- [Overview layout](?path=/story/patterns-unstable-layout-examples-beta--overview)
+- [Detail layout](?path=/story/patterns-unstable-layout-examples-beta--detail)
 
 ## References
 
@@ -76,6 +88,6 @@ Additional props passed into `ActionBar` and `ActionBarItems` will be forwarded 
 - [IconButtonBar](?path=/story/patterns-iconbuttonbar)
 - [Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
 
-## Feedback
+## Troubleshooting
 
-Help us improve this component by providing feedback, asking questions, and leaving any other comments on [GitHub](https://github.com/carbon-design-system/ibm-security/edit/dev/src/components/UNSTABLE__Layout/LayoutModules/ActionBar/index.mdx).
+Visit our [GitHub](https://github.com/carbon-design-system/ibm-security) to view and submit issues, or reach out on [Slack](https://app.slack.com/client/T1V6D3RT7/CRV39QKP0) for additional support.

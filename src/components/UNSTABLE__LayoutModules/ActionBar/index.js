@@ -1,5 +1,5 @@
 /**
- * @file Action bar.
+ * @file Action bar module.
  * @copyright IBM Security 2020
  */
 

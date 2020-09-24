@@ -1,5 +1,5 @@
 /**
- * @file Action bar stories.
+ * @file Action bar module stories.
  * @copyright IBM Security 2020
  */
 

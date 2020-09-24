@@ -5,8 +5,4 @@
 
 import React from 'react';
 
-export default Story => (
-  <div className="decorator">
-    <Story />
-  </div>
-);
+export default story => <div className="decorator">{story()}</div>;

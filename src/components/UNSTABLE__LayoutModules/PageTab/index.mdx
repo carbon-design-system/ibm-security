@@ -1,14 +1,23 @@
 import { ArgsTable, Story } from '@storybook/addon-docs/blocks';
 
 import Canvas from '../../../../.storybook/components/Canvas';
+import { Column, Row } from '../../..';
 
 # PageTab
 
+Page tab modules provide orderly tab navigation for a page.
+
+- [Overview](#overview)
+- [Supplementary details](#supplementary-details)
+- [Component API](#component-api)
+- [Grid placement](#grid-placement)
+- [Examples](#examples)
+- [References](#references)
+- [Troubleshooting](#troubleshooting)
+
 ## Overview
 
-Page tab provides orderly tab navigation for a page.
-
-You can build a page tab using a combination of the `PageTab`, [`Tabs`](#references), and `PageTabDetails` components.
+The page tab module can be built using a combination of the `PageTab`, [`Tabs`](#references), and `PageTabDetails` components.
 
 The `PageTab` accepts `Tabs`, and optionally `PageTabDetails`, components as `children` and each `Tab` is responsible for displaying the tab's label and panel content.
 
@@ -24,9 +33,25 @@ If necessary, supplementary details can be placed inline with the tabs.
   <Story id="patterns-unstable-layout-modules-pagetab--details" />
 </Canvas>
 
+## Component API
+
+<ArgsTable />
+
+Additional props passed into `PageTab` and `PageTabDetails` will be forwarded along to their underlying containers.
+
 ## Grid placement
 
-When placing a page tab on the [grid](#references), it should be placed directly in to the grid context.
+Following the [narrow grid](#references) implementation, page tab modules should be placed directly into the grid context.
+
+<Row>
+  <Column>
+    <img alt="#" src="#" />
+  </Column>
+
+  <Column>
+    <img alt="#" src="#" />
+  </Column>
+</Row>
 
 ```jsx
 <Grid>
@@ -45,17 +70,15 @@ When placing a page tab on the [grid](#references), it should be placed directly
 </Grid>
 ```
 
-## Component API
+## Examples
 
-<ArgsTable />
-
-Additional props passed into `PageTab` and `PageTabDetails` will be forwarded along to their underlying containers.
+[Detail layout](?path=/story/patterns-unstable-layout-examples-beta--detail)
 
 ## References
 
 - [Tabs](https://react.carbondesignsystem.com/?path=/docs/tabs)
 - [Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
 
-## Feedback
+## Troubleshooting
 
-Help us improve this component by providing feedback, asking questions, and leaving any other comments on [GitHub](https://github.com/carbon-design-system/ibm-security/edit/dev/src/components/UNSTABLE__Layout/LayoutModules/PageTab/index.mdx).
+Visit our [GitHub](https://github.com/carbon-design-system/ibm-security) to view and submit issues, or reach out on [Slack](https://app.slack.com/client/T1V6D3RT7/CRV39QKP0) for additional support.

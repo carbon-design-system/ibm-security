@@ -1,5 +1,5 @@
 /**
- * @file Title bar stories.
+ * @file Title bar module stories.
  * @copyright IBM Security 2020
  */
 
@@ -7,6 +7,7 @@ import { Add16, Edit16, Filter16 } from '@carbon/icons-react';
 import React from 'react';
 
 import withResponsive from '../../../../.storybook/decorators';
+
 import { IconButtonBar, TitleBar } from '../../..';
 import getTitle from '../stories';
 
@@ -24,6 +25,7 @@ export default {
       disable: true,
     },
   },
+
   decorators: [withResponsive],
 };
 

@@ -1,5 +1,5 @@
 /**
- * @file Button cluster stories.
+ * @file Button cluster module stories.
  * @copyright IBM Security 2020
  */
 

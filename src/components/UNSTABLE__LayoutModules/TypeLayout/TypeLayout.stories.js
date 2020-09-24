@@ -20,7 +20,7 @@ import page from './index.mdx';
 export default {
   title: getTitle(TypeLayout),
   component: TypeLayout,
-  subcomponents: { TitleBar, TypeLayoutBody, TypeLayoutCell, TypeLayoutRow },
+  subcomponents: { TypeLayoutBody, TypeLayoutCell, TypeLayoutRow },
   parameters: {
     docs: { page },
     info: {

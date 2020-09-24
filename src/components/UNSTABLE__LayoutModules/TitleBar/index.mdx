@@ -1,14 +1,24 @@
 import { ArgsTable, Story } from '@storybook/addon-docs/blocks';
 
 import Canvas from '../../../../.storybook/components/Canvas';
-
+import { Column, Row } from '../../..';
 import { Default } from './TitleBar.stories';
 
 # TitleBar
 
+Title bar modules provide interchangeable and reliable headings for establishing consistent hierarchies.
+
+- [Overview](#overview)
+- [Actions](#actions)
+- [Component API](#component-api)
+- [Grid placement](#grid-placement)
+- [Examples](#examples)
+- [References](#references)
+- [Troubleshooting](#troubleshooting)
+
 ## Overview
 
-Titles provide interchangeable and reliable headings for establishing consistent hierarchies when using layout modules. Everything you pass in as a child will be rendered.
+Everything passed in as a child of the title bar module will be rendered.
 
 <Canvas>
   <Story id="patterns-unstable-layout-modules-titlebar--default" />
@@ -22,9 +32,57 @@ If necessary, actions can be placed inline with the title.
   <Story id="patterns-unstable-layout-modules-titlebar--actions" />
 </Canvas>
 
+## Component API
+
+<ArgsTable />
+
+Additional props passed into `TitleBar` will be forwarded along to the underlying title bar module containers.
+
+### `subsection`
+
+Use the `subsection` prop to specify whether a subsection should be used.
+
+<Canvas withSource="none">
+  <Default title="Subsection title" subsection />
+</Canvas>
+
+```jsx
+<TitleBar title="Subsection title" subsection />
+```
+
+### `element`
+
+This prop specifies a different element to be rendered as a title.
+
+<Canvas withSource="none">
+  <Default element="h3" title="Section 3 title" />
+</Canvas>
+
+```jsx
+<TitleBar element="h3" title="Section 3 title" />
+```
+
+### `className`
+
+The `className` prop passed into `TitleBar` will be forwarded along to the underlying container. This is useful for specifying a custom class name for layout.
+
+```jsx
+<TitleBar className="class-name" title="Custom title" />
+```
+
 ## Grid placement
 
-When placing a title bar on the [grid](#references), it should be placed in a minimum of 4 columns and a maximum of 8.
+Title bar modules can span between 4 and 8 columns, following the [narrow grid](#references) implementation.
+
+<Row>
+  <Column>
+    <img alt="#" src="#" />
+  </Column>
+
+  <Column>
+    <img alt="#" src="#" />
+  </Column>
+</Row>
 
 ```jsx
 <Column lg={4}>
@@ -50,49 +108,16 @@ When placing a title bar on the [grid](#references), it should be placed in a mi
 </Column>
 ```
 
-## Component API
+## Examples
 
-<ArgsTable />
-
-Additional props passed into `TitleBar` and `TitleBarItems` will be forwarded along to their underlying containers.
-
-### `subsection`
-
-You can use the `subsection` prop to specify whether a subsection should be used.
-
-<Canvas withSource="none">
-  <Default title="Subsection title" subsection />
-</Canvas>
-
-```jsx
-<TitleBar title="Subsection title" subsection />
-```
-
-## `element`
-
-This prop allows you to specify a different element to be rendered as a title.
-
-<Canvas withSource="none">
-  <Default element="h3" title="Section 3 title" />
-</Canvas>
-
-```jsx
-<TitleBar element="h3" title="Section 3 title" />
-```
-
-### `className`
-
-The `className` prop passed into `TitleBar` will be forwarded along to the underlying container. This is useful for specifying a custom class name for layout.
-
-```jsx
-<TitleBar className="class-name" title="Custom title" />
-```
+- [Overview layout](?path=/story/patterns-unstable-layout-examples-beta--overview)
+- [Detail layout](?path=/story/patterns-unstable-layout-examples-beta--detail)
 
 ## References
 
 - [IconButtonBar](?path=/story/patterns-iconbuttonbar)
 - [Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
 
-## Feedback
+## Troubleshooting
 
-Help us improve this component by providing feedback, asking questions, and leaving any other comments on [GitHub](https://github.com/carbon-design-system/ibm-security/edit/dev/src/components/UNSTABLE__Layout/LayoutModules/TitleBar/index.mdx).
+Visit our [GitHub](https://github.com/carbon-design-system/ibm-security) to view and submit issues, or reach out on [Slack](https://app.slack.com/client/T1V6D3RT7/CRV39QKP0) for additional support.

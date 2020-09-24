@@ -11,7 +11,7 @@ import LayoutModule, { getLayoutModuleProps } from '../LayoutModule';
 const namespace = 'description';
 
 /**
- * Descriptions provide a means to orderly layout short-form content.
+ * Description modules provide a means to orderly layout short-form content.
  */
 const Description = ({ children, ...other }) => (
   <LayoutModule type={namespace} {...other}>

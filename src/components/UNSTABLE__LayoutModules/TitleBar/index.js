@@ -1,5 +1,5 @@
 /**
- * @file Title bar.
+ * @file Title bar module.
  * @copyright IBM Security 2020
  */
 
@@ -14,7 +14,7 @@ import LayoutModule from '..';
 const namespace = 'title-bar';
 
 /**
- * Title bars provide...
+ * Title bar modules provide interchangeable and reliable headings for establishing consistent hierarchies.
  */
 const TitleBar = ({
   children,
@@ -39,9 +39,7 @@ const TitleBar = ({
     )}
 
     {children && (
-      <LayoutModule type={`${namespace}__items`} {...other}>
-        {children}
-      </LayoutModule>
+      <LayoutModule type={`${namespace}__items`}>{children}</LayoutModule>
     )}
   </LayoutModule>
 );

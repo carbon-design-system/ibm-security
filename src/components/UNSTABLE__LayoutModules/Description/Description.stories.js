@@ -1,5 +1,5 @@
 /**
- * @file Description stories.
+ * @file Description module stories.
  * @copyright IBM Security 2020
  */
 
