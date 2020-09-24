@@ -12961,6 +12961,7 @@ Map {
     "visitedLink": "var(--visited-link, #be95ff)",
   },
   "withBackground" => Object {},
+  "withHover" => Object {},
   "withLayout" => Object {},
 }
 `;

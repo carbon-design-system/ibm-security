@@ -13,29 +13,26 @@ import { meta, patterns } from '../../../.storybook';
 import { ICA as ICAComponent, ICAModule, ICAModuleICA, TitleBar } from '../..';
 
 const ICA = () => (
-  <>
+  <ICAModule>
     <TitleBar title="Summary" />
-
-    <ICAModule>
-      <Row>
-        <ICAModuleICA interactive>
-          <Column>
-            <ICAComponent label="Reviews complete" value={300} />
-          </Column>
-        </ICAModuleICA>
-        <ICAModuleICA interactive>
-          <Column>
-            <ICAComponent label="Approved" value={241} />
-          </Column>
-        </ICAModuleICA>
-        <ICAModuleICA interactive>
-          <Column>
-            <ICAComponent label="Rejected" value={28} />
-          </Column>
-        </ICAModuleICA>
-      </Row>
-    </ICAModule>
-  </>
+    <Row>
+      <ICAModuleICA interactive>
+        <Column>
+          <ICAComponent label="Reviews complete" value={300} />
+        </Column>
+      </ICAModuleICA>
+      <ICAModuleICA interactive>
+        <Column>
+          <ICAComponent label="Approved" value={241} />
+        </Column>
+      </ICAModuleICA>
+      <ICAModuleICA interactive>
+        <Column>
+          <ICAComponent label="Rejected" value={28} />
+        </Column>
+      </ICAModuleICA>
+    </Row>
+  </ICAModule>
 );
 
 export default meta(patterns('UNSTABLE Layout Modules [Beta]'), null, null, [
