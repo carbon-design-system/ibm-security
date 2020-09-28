@@ -17,6 +17,7 @@ import { SIZE, STATUS } from './StatusIcon';
 const storyProps = () => ({
   message: text('Label (message)', 'Label'),
   size: select('Size (size)', SIZE, StatusIcon.defaultProps.size),
+  iconDescription: text('Icon ARIA label', 'Icon description.. '),
 });
 
 const status = STATUS[0];
