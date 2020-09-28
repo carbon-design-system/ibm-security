@@ -10,5 +10,8 @@
   "support": {
     "button": "Toggle support",
     "tooltip": "Support"
+  },
+  "mainNavigation": {
+    "ariaLabel": "Main navigation"
   }
 }
