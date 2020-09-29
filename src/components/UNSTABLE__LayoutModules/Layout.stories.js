@@ -25,17 +25,18 @@ import {
   ActionBarItems,
   ButtonCluster,
   Button,
+  CarbonHeader,
   CardModule,
   ContentSwitcher,
   DataTablePagination,
   Decorator,
   Description,
   DescriptionContent,
+  HeaderName,
   ICA,
   ICAModule,
   IconButtonBar,
   PageTab,
-  Shell as ShellComponent,
   SummaryCard,
   SummaryCardAction,
   SummaryCardBody,
@@ -54,10 +55,10 @@ import {
   withLayout,
 } from '../..';
 
-import { header, profile, toolbar } from '../Shell/_mocks_';
-
-const Shell = () => (
-  <ShellComponent header={header} profile={profile} toolbar={toolbar} />
+const UIShell = () => (
+  <CarbonHeader aria-label="IBM Security">
+    <HeaderName prefix="IBM">Security</HeaderName>
+  </CarbonHeader>
 );
 
 const ColumnWithBackground = withBackground(Column);
@@ -559,14 +560,15 @@ export default meta(
   [
     story => (
       <>
-        <Shell />
-        <div
+        <UIShell />
+
+        <Grid
           style={{
-            paddingLeft: layout04,
+            marginTop: layout04,
           }}
         >
-          <Grid>{story()}</Grid>
-        </div>
+          {story()}
+        </Grid>
       </>
     ),
   ]
