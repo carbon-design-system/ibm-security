@@ -3,16 +3,18 @@
  * @copyright IBM Security 2019 - 2020
  */
 
-import Launch16 from '@carbon/icons-react/lib/launch/16';
-
+import { Launch16 } from '@carbon/icons-react';
+import setupGetInstanceId from 'carbon-components-react/lib/tools/setupGetInstanceId';
 import classnames from 'classnames';
 import { bool, elementType, func, node, number, string } from 'prop-types';
 import React, { Component } from 'react';
-import NavItemLink from '../NavItemLink';
 
 import Icon from '../../Icon';
+import NavItemLink from '../NavItemLink';
 
 import { getComponentNamespace } from '../../../globals/namespace';
+
+const getInstanceId = setupGetInstanceId();
 
 export const namespace = getComponentNamespace('nav__list__item');
 
@@ -73,7 +75,7 @@ export default class NavItem extends Component {
     element: 'a',
     handleItemSelect: null,
     href: undefined,
-    id: namespace,
+    id: null,
     label: '',
     link: true,
     onClick: () => {},
@@ -88,6 +90,8 @@ export default class NavItem extends Component {
   static getDerivedStateFromProps(props, state) {
     return props.current === state.current ? null : { current: props.current };
   }
+
+  instanceId = `${namespace}__${getInstanceId()}`;
 
   render() {
     const {
@@ -112,9 +116,11 @@ export default class NavItem extends Component {
     const externalLink =
       isAbsoluteLink.test(href) && href.indexOf(window.location.host) === -1;
 
+    const navItemId = id || this.instanceId;
+
     const classNames = classnames(namespace, className, {
       [`${namespace}--active`]:
-        (this.state.current !== null && this.state.current === id) ||
+        (this.state.current !== null && this.state.current === navItemId) ||
         (activeHref !== undefined && activeHref === href && !externalLink),
       [`${namespace}--disabled`]: disabled,
     });
@@ -124,9 +130,12 @@ export default class NavItem extends Component {
       target: '_blank',
     };
 
-    const handleDisabled = action => (!disabled ? action : null);
+    const handleDisabled = (action, defaultValue = null) =>
+      !disabled ? action : defaultValue;
 
     const linkClassName = `${namespace}__link`;
+
+    const navItemTabIndex = handleDisabled(tabIndex, -1);
 
     return (
       <li
@@ -135,16 +144,16 @@ export default class NavItem extends Component {
         onClick={event => handleDisabled(onClick(event, href))}
         onKeyPress={event => handleDisabled(onClick(event, href))}
         role="menuitem"
-        tabIndex={handleDisabled(children ? -1 : tabIndex)}
       >
         {link ? (
           <NavItemLink
-            id={id}
+            id={navItemId}
             className={classnames(linkClassName, {
               [`${namespace}__link--external`]: externalLink,
             })}
             element={element}
             href={href}
+            tabIndex={navItemTabIndex}
             {...other}
             {...externalLinkProps}
           >
@@ -158,12 +167,12 @@ export default class NavItem extends Component {
           </NavItemLink>
         ) : (
           <div
-            id={id}
+            id={navItemId}
             className={linkClassName}
             onClick={handleDisabled(handleItemSelect)}
             onKeyPress={handleDisabled(handleItemSelect)}
             role="menuitem"
-            tabIndex={handleDisabled(tabIndex)}
+            tabIndex={navItemTabIndex}
           >
             {children}
           </div>

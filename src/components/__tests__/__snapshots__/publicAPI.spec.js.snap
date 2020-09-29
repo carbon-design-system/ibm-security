@@ -4227,6 +4227,7 @@ Map {
       "locale": "en",
       "percentage": false,
       "total": 0,
+      "truncate": true,
       "value": null,
     },
     "propTypes": Object {
@@ -4287,6 +4288,9 @@ Map {
       },
       "total": Object {
         "type": "number",
+      },
+      "truncate": Object {
+        "type": "bool",
       },
       "value": Object {
         "type": "number",
@@ -5763,7 +5767,7 @@ Map {
       "element": "a",
       "handleItemSelect": null,
       "href": undefined,
-      "id": "security--nav__list__item",
+      "id": null,
       "label": "",
       "link": true,
       "onClick": [Function],
@@ -7895,6 +7899,18 @@ Map {
             "labels": Object {
               "args": Array [
                 Object {
+                  "mainNavigation": Object {
+                    "args": Array [
+                      Object {
+                        "ariaLabel": Object {
+                          "isRequired": true,
+                          "type": "string",
+                        },
+                      },
+                    ],
+                    "isRequired": true,
+                    "type": "shape",
+                  },
                   "menu": Object {
                     "args": Array [
                       Object {
@@ -8674,12 +8690,16 @@ Map {
   "StatusIcon" => Object {
     "defaultProps": Object {
       "className": null,
+      "iconDescription": null,
       "message": null,
       "size": "md",
       "status": undefined,
     },
     "propTypes": Object {
       "className": Object {
+        "type": "string",
+      },
+      "iconDescription": Object {
         "type": "string",
       },
       "message": Object {
@@ -9182,7 +9202,16 @@ Map {
       },
     },
   },
-  "SummaryCardSkeleton" => Object {},
+  "SummaryCardSkeleton" => Object {
+    "defaultProps": Object {
+      "className": null,
+    },
+    "propTypes": Object {
+      "className": Object {
+        "type": "string",
+      },
+    },
+  },
   "Switch" => Object {
     "$$typeof": Symbol(react.forward_ref),
     "defaultProps": Object {
@@ -11603,6 +11632,18 @@ Map {
       "labels": Object {
         "args": Array [
           Object {
+            "mainNavigation": Object {
+              "args": Array [
+                Object {
+                  "ariaLabel": Object {
+                    "isRequired": true,
+                    "type": "string",
+                  },
+                },
+              ],
+              "isRequired": true,
+              "type": "shape",
+            },
             "menu": Object {
               "args": Array [
                 Object {
@@ -12556,6 +12597,7 @@ Map {
       "isOpen": undefined,
       "isSequential": undefined,
       "labels": Object {},
+      "navLabel": "Steps navigation",
       "onClose": [Function],
       "onDelete": [Function],
       "rootNode": <body />,
@@ -12604,6 +12646,9 @@ Map {
           },
         ],
         "type": "objectOf",
+      },
+      "navLabel": Object {
+        "type": "string",
       },
       "onClose": Object {
         "type": "func",
