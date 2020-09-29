@@ -19,7 +19,7 @@ import {
   withLayout,
 } from '../../..';
 
-import getTitle from '../stories';
+import getTitle, { getDocsParameters } from '../stories';
 
 import page from './index.mdx';
 
@@ -27,10 +27,7 @@ export default {
   title: getTitle(CardModule),
   component: CardModule,
   parameters: {
-    docs: { page },
-    info: {
-      disable: true,
-    },
+    ...getDocsParameters(page),
   },
 };
 

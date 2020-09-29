@@ -9,7 +9,7 @@ import React from 'react';
 import withResponsive from '../../../../.storybook/decorators';
 
 import { IconButtonBar, TitleBar } from '../../..';
-import getTitle from '../stories';
+import getTitle, { getDocsParameters } from '../stories';
 
 import page from './index.mdx';
 
@@ -20,10 +20,7 @@ export default {
     title: 'Section title',
   },
   parameters: {
-    docs: { page },
-    info: {
-      disable: true,
-    },
+    ...getDocsParameters(page),
   },
 
   decorators: [withResponsive],

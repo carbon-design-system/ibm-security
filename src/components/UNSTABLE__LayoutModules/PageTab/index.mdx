@@ -1,5 +1,6 @@
 import { ArgsTable, Story } from '@storybook/addon-docs/blocks';
 
+import { parameters } from '../../../../.storybook/preview';
 import Canvas from '../../../../.storybook/components/Canvas';
 import { Column, Row } from '../../..';
 
@@ -22,7 +23,10 @@ The page tab module can be built using a combination of the `PageTab`, [`Tabs`](
 The `PageTab` accepts `Tabs`, and optionally `PageTabDetails`, components as `children` and each `Tab` is responsible for displaying the tab's label and panel content.
 
 <Canvas>
-  <Story id="patterns-unstable-layout-modules-pagetab--default" />
+  <Story
+    id="patterns-unstable-layout-modules-pagetab--default"
+    parameters={parameters}
+  />
 </Canvas>
 
 ## Supplementary details
@@ -30,7 +34,10 @@ The `PageTab` accepts `Tabs`, and optionally `PageTabDetails`, components as `ch
 If necessary, supplementary details can be placed inline with the tabs.
 
 <Canvas>
-  <Story id="patterns-unstable-layout-modules-pagetab--details" />
+  <Story
+    id="patterns-unstable-layout-modules-pagetab--details"
+    parameters={parameters}
+  />
 </Canvas>
 
 ## Component API

@@ -1,5 +1,6 @@
 import { ArgsTable, Story } from '@storybook/addon-docs/blocks';
 
+import { parameters } from '../../../../.storybook/preview';
 import Canvas from '../../../../.storybook/components/Canvas';
 import { Column, Row } from '../../..';
 import { Default } from './TypeLayout.stories';
@@ -23,7 +24,10 @@ The type layout module can be built using a combination of the `TypeLayout` and 
 The `TypeLayout` accepts `TypeLayoutBody`, `TypeLayoutCell`, and `TypeLayoutRow` components as `children`.
 
 <Canvas>
-  <Story id="patterns-unstable-layout-modules-typelayout--default" />
+  <Story
+    id="patterns-unstable-layout-modules-typelayout--default"
+    parameters={parameters}
+  />
 </Canvas>
 
 ## Title
@@ -31,7 +35,10 @@ The `TypeLayout` accepts `TypeLayoutBody`, `TypeLayoutCell`, and `TypeLayoutRow`
 If necessary, both section and subsection titles can precede the type layout.
 
 <Canvas>
-  <Story id="patterns-unstable-layout-modules-typelayout--title" />
+  <Story
+    id="patterns-unstable-layout-modules-typelayout--title"
+    parameters={parameters}
+  />
 </Canvas>
 
 ## Component API
@@ -45,7 +52,7 @@ Additional props passed into `TypeLayout`, `TypeLayoutBody`, `TypeLayoutCell`, a
 This prop specifies which size the `TypeLayout` should be rendered at. Valid values are `xs`, `sm`, `md`, and `lg`. If no size is specified, it renders as `md`.
 
 <Canvas withSource="none">
-  <Default size="sm" />
+  <Default parameters={parameters} size="sm" />
 </Canvas>
 
 ```jsx
@@ -57,7 +64,7 @@ This prop specifies which size the `TypeLayout` should be rendered at. Valid val
 This prop specifies whether a border should be rendered.
 
 <Canvas withSource="none">
-  <Default border />
+  <Default parameters={parameters} border />
 </Canvas>
 
 ```jsx

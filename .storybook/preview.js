@@ -36,13 +36,17 @@ function getCategory(story) {
 const parameters = {
   controls: { expanded: true, hideNoControlsWarning: true },
   docs: {
-    page: null,
     theme: storybookTheme,
   },
   layout: 'centered',
   options: {
     storySort: (a, b) =>
       ORDER.indexOf(getCategory(a)) - ORDER.indexOf(getCategory(b)),
+  },
+  previewTabs: {
+    'storybook/docs/panel': {
+      hidden: true,
+    },
   },
 };
 

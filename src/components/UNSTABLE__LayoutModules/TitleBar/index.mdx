@@ -1,5 +1,6 @@
 import { ArgsTable, Story } from '@storybook/addon-docs/blocks';
 
+import { parameters } from '../../../../.storybook/preview';
 import Canvas from '../../../../.storybook/components/Canvas';
 import { Column, Row } from '../../..';
 import { Default } from './TitleBar.stories';
@@ -21,7 +22,10 @@ Title bar modules provide interchangeable and reliable headings for establishing
 Everything passed in as a child of the title bar module will be rendered.
 
 <Canvas>
-  <Story id="patterns-unstable-layout-modules-titlebar--default" />
+  <Story
+    id="patterns-unstable-layout-modules-titlebar--default"
+    parameters={parameters}
+  />
 </Canvas>
 
 ## Actions
@@ -29,7 +33,10 @@ Everything passed in as a child of the title bar module will be rendered.
 If necessary, actions can be placed inline with the title.
 
 <Canvas>
-  <Story id="patterns-unstable-layout-modules-titlebar--actions" />
+  <Story
+    id="patterns-unstable-layout-modules-titlebar--actions"
+    parameters={parameters}
+  />
 </Canvas>
 
 ## Component API
@@ -43,7 +50,7 @@ Additional props passed into `TitleBar` will be forwarded along to the underlyin
 Use the `subsection` prop to specify whether a subsection should be used.
 
 <Canvas withSource="none">
-  <Default title="Subsection title" subsection />
+  <Default title="Subsection title" subsection parameters={parameters} />
 </Canvas>
 
 ```jsx
@@ -55,7 +62,7 @@ Use the `subsection` prop to specify whether a subsection should be used.
 This prop specifies a different element to be rendered as a title.
 
 <Canvas withSource="none">
-  <Default element="h3" title="Section 3 title" />
+  <Default element="h3" title="Section 3 title" parameters={parameters} />
 </Canvas>
 
 ```jsx

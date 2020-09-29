@@ -6,17 +6,14 @@
 import React from 'react';
 
 import { Column, ICA, ICAModule, Row, withHover } from '../../..';
-import getTitle from '../stories';
+import getTitle, { getDocsParameters } from '../stories';
 import page from './index.mdx';
 
 export default {
   title: getTitle(ICAModule),
   component: ICAModule,
   parameters: {
-    docs: { page },
-    info: {
-      disable: true,
-    },
+    ...getDocsParameters(page),
   },
 };
 

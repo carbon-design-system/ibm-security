@@ -9,7 +9,7 @@ import React from 'react';
 
 import withResponsive from '../../../../.storybook/decorators';
 import { Button, ButtonCluster } from '../../..';
-import getTitle from '../stories';
+import getTitle, { getDocsParameters } from '../stories';
 
 import page from './index.mdx';
 
@@ -17,10 +17,7 @@ export default {
   title: getTitle(ButtonCluster),
   component: ButtonCluster,
   parameters: {
-    docs: { page },
-    info: {
-      disable: true,
-    },
+    ...getDocsParameters(page),
   },
   decorators: [withResponsive],
 };

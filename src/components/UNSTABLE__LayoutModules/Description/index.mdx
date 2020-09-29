@@ -1,5 +1,6 @@
 import { ArgsTable, Story } from '@storybook/addon-docs/blocks';
 
+import { parameters } from '../../../../.storybook/preview';
 import Canvas from '../../../../.storybook/components/Canvas';
 import { Column, Row } from '../../..';
 
@@ -20,7 +21,10 @@ Description modules provide a means to orderly layout short-form content.
 The description module can be built using a combination of the [`TitleBar`](#references) and `DescriptionContent` components. Everything passed in as a child of `DescriptionContent` will be rendered.
 
 <Canvas>
-  <Story id="patterns-unstable-layout-modules-description--default" />
+  <Story
+    id="patterns-unstable-layout-modules-description--default"
+    parameters={parameters}
+  />
 </Canvas>
 
 ## Subsection title
@@ -28,7 +32,10 @@ The description module can be built using a combination of the [`TitleBar`](#ref
 If necessary, subsection titles can be used below section titles.
 
 <Canvas>
-  <Story id="patterns-unstable-layout-modules-description--subsection-title" />
+  <Story
+    id="patterns-unstable-layout-modules-description--subsection-title"
+    parameters={parameters}
+  />
 </Canvas>
 
 ## Component API

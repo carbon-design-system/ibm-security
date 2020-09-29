@@ -7,7 +7,7 @@ import React from 'react';
 
 import withResponsive from '../../../../.storybook/decorators';
 import { PageTab, PageTabDetails, Tabs, Tab } from '../../..';
-import getTitle from '../stories';
+import getTitle, { getDocsParameters } from '../stories';
 
 import page from './index.mdx';
 
@@ -16,10 +16,7 @@ export default {
   component: PageTab,
   subcomponents: { PageTabDetails },
   parameters: {
-    docs: { page },
-    info: {
-      disable: true,
-    },
+    ...getDocsParameters(page),
   },
   decorators: [withResponsive],
 };
