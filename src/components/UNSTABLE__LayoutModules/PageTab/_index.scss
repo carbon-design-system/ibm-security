@@ -13,8 +13,6 @@
 @import '../variables';
 
 @include security--component($name: #{$layout-modules__name}--page-tab) {
-  $carbon--tabs: '.#{$prefix}--tabs';
-
   position: relative;
 
   &__details {
