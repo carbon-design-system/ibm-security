@@ -362,7 +362,7 @@ const detail = () => (
         </ActionBar>
 
         <CardModule>
-          <Row narrow>
+          <Row>
             <Column>
               <EnhancedSummaryCard>
                 <SummaryCardHeader title="Threat actor" />

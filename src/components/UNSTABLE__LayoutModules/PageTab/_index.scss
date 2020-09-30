@@ -13,8 +13,6 @@
 @import '../variables';
 
 @include security--component($name: #{$layout-modules__name}--page-tab) {
-  /// Carbon tabs selector.
-  /// @type Length
   $carbon--tabs: '.#{$prefix}--tabs';
 
   position: relative;
@@ -22,16 +20,13 @@
   &__details {
     display: flex;
     position: absolute;
+    right: 0;
     min-height: carbon--mini-units($count: 5);
     align-items: center;
   }
 
-  > #{$carbon--tabs} {
+  > .#{$prefix}--tabs {
     border-bottom: $border__sizing__width solid $ui-03;
-
-    > #{$carbon--tabs}__nav {
-      margin-left: auto;
-    }
   }
 
   > .#{$prefix}--tab-content {
