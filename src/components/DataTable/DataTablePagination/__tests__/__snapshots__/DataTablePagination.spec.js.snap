@@ -138,172 +138,176 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
         <div
           class="security--scroll-gradient__content"
         >
-          <table
-            class="bx--data-table bx--data-table--no-border"
+          <div
+            class="bx--data-table-content"
           >
-            <thead>
-              <tr>
-                <th
-                  scope="col"
-                >
-                  <div
-                    class="bx--table-header-label"
-                  >
-                    Last sighted
-                  </div>
-                </th>
-                <th
-                  scope="col"
-                >
-                  <div
-                    class="bx--table-header-label"
-                  >
-                    Name
-                  </div>
-                </th>
-                <th
-                  scope="col"
-                >
-                  <div
-                    class="bx--table-header-label"
-                  >
-                    Type
-                  </div>
-                </th>
-                <th
-                  scope="col"
-                >
-                  <div
-                    class="bx--table-header-label"
-                  >
-                    Attack phase
-                  </div>
-                </th>
-                <th
-                  scope="col"
-                >
-                  <div
-                    class="bx--table-header-label"
-                  >
-                    Method
-                  </div>
-                </th>
-                <th
-                  scope="col"
-                >
-                  <div
-                    class="bx--table-header-label"
-                  >
-                    Missing
-                  </div>
-                </th>
-              </tr>
-            </thead>
-            <tbody
-              aria-live="polite"
+            <table
+              class="bx--data-table bx--data-table--no-border"
             >
-              <tr>
-                <td>
-                  11/28/2018
-                </td>
-                <td>
-                  IBM X-Force
-                </td>
-                <td>
-                  IPv6
-                </td>
-                <td>
-                  Initial Compromise
-                </td>
-                <td>
-                  Phishing
-                </td>
-                <td>
-                  –
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  06/28/2017
-                </td>
-                <td>
-                  AppX
-                </td>
-                <td>
-                  Hash
-                </td>
-                <td>
-                  Establish Foothold
-                </td>
-                <td>
-                  Deploy backdoor
-                </td>
-                <td>
-                  –
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  05/30/2018
-                </td>
-                <td>
-                  Bigfix
-                </td>
-                <td>
-                  URL
-                </td>
-                <td>
-                  Escalate Privileges
-                </td>
-                <td>
-                  Credential dumping
-                </td>
-                <td>
-                  –
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  12/12/2018
-                </td>
-                <td>
-                  Am I Affected
-                </td>
-                <td>
-                  Hash
-                </td>
-                <td>
-                  Cross-Site Scripting
-                </td>
-                <td>
-                  Malicious Code
-                </td>
-                <td>
-                  –
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  11/11/2018
-                </td>
-                <td>
-                  QRadar
-                </td>
-                <td>
-                  Hash
-                </td>
-                <td>
-                  SQL Injection Attack
-                </td>
-                <td>
-                  SQL Vulnerabilities
-                </td>
-                <td>
-                  –
-                </td>
-              </tr>
-            </tbody>
-          </table>
+              <thead>
+                <tr>
+                  <th
+                    scope="col"
+                  >
+                    <div
+                      class="bx--table-header-label"
+                    >
+                      Last sighted
+                    </div>
+                  </th>
+                  <th
+                    scope="col"
+                  >
+                    <div
+                      class="bx--table-header-label"
+                    >
+                      Name
+                    </div>
+                  </th>
+                  <th
+                    scope="col"
+                  >
+                    <div
+                      class="bx--table-header-label"
+                    >
+                      Type
+                    </div>
+                  </th>
+                  <th
+                    scope="col"
+                  >
+                    <div
+                      class="bx--table-header-label"
+                    >
+                      Attack phase
+                    </div>
+                  </th>
+                  <th
+                    scope="col"
+                  >
+                    <div
+                      class="bx--table-header-label"
+                    >
+                      Method
+                    </div>
+                  </th>
+                  <th
+                    scope="col"
+                  >
+                    <div
+                      class="bx--table-header-label"
+                    >
+                      Missing
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody
+                aria-live="polite"
+              >
+                <tr>
+                  <td>
+                    11/28/2018
+                  </td>
+                  <td>
+                    IBM X-Force
+                  </td>
+                  <td>
+                    IPv6
+                  </td>
+                  <td>
+                    Initial Compromise
+                  </td>
+                  <td>
+                    Phishing
+                  </td>
+                  <td>
+                    –
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    06/28/2017
+                  </td>
+                  <td>
+                    AppX
+                  </td>
+                  <td>
+                    Hash
+                  </td>
+                  <td>
+                    Establish Foothold
+                  </td>
+                  <td>
+                    Deploy backdoor
+                  </td>
+                  <td>
+                    –
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    05/30/2018
+                  </td>
+                  <td>
+                    Bigfix
+                  </td>
+                  <td>
+                    URL
+                  </td>
+                  <td>
+                    Escalate Privileges
+                  </td>
+                  <td>
+                    Credential dumping
+                  </td>
+                  <td>
+                    –
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    12/12/2018
+                  </td>
+                  <td>
+                    Am I Affected
+                  </td>
+                  <td>
+                    Hash
+                  </td>
+                  <td>
+                    Cross-Site Scripting
+                  </td>
+                  <td>
+                    Malicious Code
+                  </td>
+                  <td>
+                    –
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    11/11/2018
+                  </td>
+                  <td>
+                    QRadar
+                  </td>
+                  <td>
+                    Hash
+                  </td>
+                  <td>
+                    SQL Injection Attack
+                  </td>
+                  <td>
+                    SQL Vulnerabilities
+                  </td>
+                  <td>
+                    –
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
         <div
           aria-hidden="true"
@@ -383,7 +387,7 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
         </div>
       </div>
       <span
-        class="bx--pagination__text"
+        class="bx--pagination__text bx--pagination__items-count"
       >
         1-5 of 11 items
       </span>
@@ -457,63 +461,67 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
       >
         1 of 3 pages
       </span>
-      <button
-        class="bx--pagination__button bx--pagination__button--backward bx--pagination__button--no-index bx--btn bx--btn--ghost bx--btn--disabled bx--btn--icon-only bx--tooltip__trigger bx--tooltip--a11y bx--tooltip--top bx--tooltip--align-center"
-        disabled=""
-        tabindex="0"
-        type="button"
+      <div
+        class="bx--pagination__control-buttons"
       >
-        <span
-          class="bx--assistive-text"
+        <button
+          class="bx--pagination__button bx--pagination__button--backward bx--pagination__button--no-index bx--btn bx--btn--ghost bx--btn--disabled bx--btn--icon-only bx--tooltip__trigger bx--tooltip--a11y bx--tooltip--top bx--tooltip--align-center"
+          disabled=""
+          tabindex="0"
+          type="button"
         >
-          Backward
-        </span>
-        <svg
-          aria-hidden="true"
-          aria-label="Backward"
-          class="bx--btn__icon"
-          fill="currentColor"
-          focusable="false"
-          height="16"
-          preserveAspectRatio="xMidYMid meet"
-          role="img"
-          viewBox="0 0 32 32"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
+          <span
+            class="bx--assistive-text"
+          >
+            Backward
+          </span>
+          <svg
+            aria-hidden="true"
+            aria-label="Backward"
+            class="bx--btn__icon"
+            fill="currentColor"
+            focusable="false"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            role="img"
+            viewBox="0 0 32 32"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20 24L10 16 20 8z"
+            />
+          </svg>
+        </button>
+        <button
+          class="bx--pagination__button bx--pagination__button--forward bx--btn bx--btn--ghost bx--btn--icon-only bx--tooltip__trigger bx--tooltip--a11y bx--tooltip--top bx--tooltip--align-end"
+          tabindex="0"
+          type="button"
         >
-          <path
-            d="M20 24L10 16 20 8z"
-          />
-        </svg>
-      </button>
-      <button
-        class="bx--pagination__button bx--pagination__button--forward bx--btn bx--btn--ghost bx--btn--icon-only bx--tooltip__trigger bx--tooltip--a11y bx--tooltip--top bx--tooltip--align-end"
-        tabindex="0"
-        type="button"
-      >
-        <span
-          class="bx--assistive-text"
-        >
-          Forward
-        </span>
-        <svg
-          aria-hidden="true"
-          aria-label="Forward"
-          class="bx--btn__icon"
-          fill="currentColor"
-          focusable="false"
-          height="16"
-          preserveAspectRatio="xMidYMid meet"
-          role="img"
-          viewBox="0 0 32 32"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M12 8L22 16 12 24z"
-          />
-        </svg>
-      </button>
+          <span
+            class="bx--assistive-text"
+          >
+            Forward
+          </span>
+          <svg
+            aria-hidden="true"
+            aria-label="Forward"
+            class="bx--btn__icon"
+            fill="currentColor"
+            focusable="false"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            role="img"
+            viewBox="0 0 32 32"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 8L22 16 12 24z"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </div>
