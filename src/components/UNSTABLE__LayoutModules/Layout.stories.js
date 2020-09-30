@@ -12,8 +12,7 @@ import {
   View16,
 } from '@carbon/icons-react';
 
-import { layout04 } from '@carbon/layout';
-import { action } from '@storybook/addon-actions';
+import { layout03, layout04 } from '@carbon/layout';
 
 import { Grid, Row, Column } from 'carbon-components-react';
 import React from 'react';
@@ -27,7 +26,6 @@ import {
   Button,
   CarbonHeader,
   CardModule,
-  ContentSwitcher,
   DataTablePagination,
   Decorator,
   Description,
@@ -42,7 +40,6 @@ import {
   SummaryCardBody,
   SummaryCardFooter,
   SummaryCardHeader,
-  Switch,
   Tabs,
   Tab,
   Tag,
@@ -56,9 +53,11 @@ import {
 } from '../..';
 
 const UIShell = () => (
-  <CarbonHeader aria-label="IBM Security">
-    <HeaderName prefix="IBM">Security</HeaderName>
-  </CarbonHeader>
+  <div style={{ height: layout04, marginBottom: layout03 }}>
+    <CarbonHeader aria-label="IBM Security">
+      <HeaderName prefix="IBM">Security</HeaderName>
+    </CarbonHeader>
+  </div>
 );
 
 const ColumnWithBackground = withBackground(Column);
@@ -66,14 +65,11 @@ const EnhancedSummaryCard = withLayout(withBackground(SummaryCard));
 
 const overview = () => (
   <>
-    <Row>
-      <Column>
-        <ActionBar>
-          <Tag type="gray">Closed</Tag>
-          ID: 12&nbsp;&nbsp;|&nbsp;&nbsp;Result: Completed
-        </ActionBar>
-      </Column>
-    </Row>
+    <ActionBar>
+      <Tag type="gray">Closed</Tag>
+      ID: 12&nbsp;&nbsp;|&nbsp;&nbsp;Result: Completed
+    </ActionBar>
+
     <Row>
       <Column lg={12}>
         <Row>
@@ -184,12 +180,7 @@ const overview = () => (
           <ColumnWithBackground>
             <Row>
               <Column>
-                <TitleBar title="Campaign results" subsection>
-                  <ContentSwitcher onChange={action('onChange')}>
-                    <Switch text="By reviewer" />
-                    <Switch text="By account" />
-                  </ContentSwitcher>
-                </TitleBar>
+                <TitleBar title="Campaign results" subsection />
               </Column>
             </Row>
 
@@ -314,11 +305,8 @@ const detail = () => (
     <Tabs selected={1}>
       <Tab label="Case" />
       <Tab label="Report">
-        <Row>
-          <Column>
-            <TitleBar title="Summary" />
-          </Column>
-        </Row>
+        <TitleBar title="Summary" />
+
         <Row>
           <Column lg={6}>
             <Description>
@@ -331,6 +319,7 @@ const detail = () => (
               </DescriptionContent>
             </Description>
           </Column>
+
           <Column lg={{ offset: 2, span: 8 }}>
             <TypeLayout>
               <TypeLayoutBody>
@@ -347,37 +336,33 @@ const detail = () => (
           </Column>
         </Row>
 
-        <Row>
-          <Column>
-            <TitleBar title="Related reports" />
+        <TitleBar title="Related reports" />
 
-            <ActionBar>
-              Supplementary details
-              <ActionBarItems>
-                <IconButtonBar
-                  actions={[
-                    {
-                      label: 'Search',
-                      renderIcon: Search16,
-                    },
-                    {
-                      label: 'Filter',
-                      renderIcon: Filter16,
-                    },
-                    {
-                      label: 'View',
-                      renderIcon: View16,
-                    },
-                  ]}
-                  size="md"
-                />
-              </ActionBarItems>
-            </ActionBar>
-          </Column>
-        </Row>
+        <ActionBar>
+          Supplementary details
+          <ActionBarItems>
+            <IconButtonBar
+              actions={[
+                {
+                  label: 'Search',
+                  renderIcon: Search16,
+                },
+                {
+                  label: 'Filter',
+                  renderIcon: Filter16,
+                },
+                {
+                  label: 'View',
+                  renderIcon: View16,
+                },
+              ]}
+              size="md"
+            />
+          </ActionBarItems>
+        </ActionBar>
 
         <CardModule>
-          <Row>
+          <Row narrow>
             <Column>
               <EnhancedSummaryCard>
                 <SummaryCardHeader title="Threat actor" />
@@ -562,13 +547,7 @@ export default meta(
       <>
         <UIShell />
 
-        <Grid
-          style={{
-            marginTop: layout04,
-          }}
-        >
-          {story()}
-        </Grid>
+        <Grid>{story()}</Grid>
       </>
     ),
   ]

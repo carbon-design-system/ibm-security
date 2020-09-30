@@ -30,7 +30,7 @@
     border-bottom: $border__sizing__width solid $ui-03;
 
     > #{$carbon--tabs}__nav {
-      right: 0;
+      margin-left: auto;
     }
   }
 

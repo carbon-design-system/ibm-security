@@ -15,9 +15,6 @@
 
 @include export-namespace($name: breadcrumb) {
   .#{$prefix}--breadcrumb {
-    // TODO: Remove when https://github.com/carbon-design-system/carbon/pull/5916 is absorbed.
-    @include reset;
-
     display: flex;
     flex-wrap: wrap;
 

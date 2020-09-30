@@ -58,7 +58,10 @@ exports[`SearchBar Rendering disables the submit button with no selected scopes 
     largeText={null}
     loading={false}
     name="search-submit"
+    size="default"
     tabIndex={0}
+    tooltipAlignment="center"
+    tooltipPosition="top"
     type="submit"
   >
     Submit
@@ -88,7 +91,10 @@ exports[`SearchBar Rendering disables the submit button with no value 1`] = `
     largeText={null}
     loading={false}
     name="search-submit"
+    size="default"
     tabIndex={0}
+    tooltipAlignment="center"
+    tooltipPosition="top"
     type="submit"
   >
     Submit
@@ -118,7 +124,10 @@ exports[`SearchBar Rendering renders 1`] = `
     largeText={null}
     loading={false}
     name="search-submit"
+    size="default"
     tabIndex={0}
+    tooltipAlignment="center"
+    tooltipPosition="top"
     type="submit"
   >
     Submit
@@ -148,7 +157,10 @@ exports[`SearchBar Rendering renders an initial value 1`] = `
     largeText={null}
     loading={false}
     name="search-submit"
+    size="default"
     tabIndex={0}
+    tooltipAlignment="center"
+    tooltipPosition="top"
     type="submit"
   >
     Submit
@@ -214,7 +226,10 @@ exports[`SearchBar Rendering renders scopes 1`] = `
     largeText={null}
     loading={false}
     name="search-submit"
+    size="default"
     tabIndex={0}
+    tooltipAlignment="center"
+    tooltipPosition="top"
     type="submit"
   >
     Submit
@@ -287,7 +302,10 @@ exports[`SearchBar Rendering renders selected scopes 1`] = `
     largeText={null}
     loading={false}
     name="search-submit"
+    size="default"
     tabIndex={0}
+    tooltipAlignment="center"
+    tooltipPosition="top"
     type="submit"
   >
     Submit
