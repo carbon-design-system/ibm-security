@@ -8205,6 +8205,18 @@ Map {
             "labels": Object {
               "args": Array [
                 Object {
+                  "mainNavigation": Object {
+                    "args": Array [
+                      Object {
+                        "ariaLabel": Object {
+                          "isRequired": true,
+                          "type": "string",
+                        },
+                      },
+                    ],
+                    "isRequired": true,
+                    "type": "shape",
+                  },
                   "menu": Object {
                     "args": Array [
                       Object {
@@ -11981,6 +11993,18 @@ Map {
       "labels": Object {
         "args": Array [
           Object {
+            "mainNavigation": Object {
+              "args": Array [
+                Object {
+                  "ariaLabel": Object {
+                    "isRequired": true,
+                    "type": "string",
+                  },
+                },
+              ],
+              "isRequired": true,
+              "type": "shape",
+            },
             "menu": Object {
               "args": Array [
                 Object {

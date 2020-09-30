@@ -3,6 +3,7 @@
 exports[`Toolbar Rendering renders correctly 1`] = `
 <div>
   <nav
+    aria-label="Main navigation"
     class="security--toolbar class"
   >
     <ul
@@ -102,6 +103,7 @@ exports[`Toolbar Rendering renders correctly 1`] = `
 exports[`Toolbar Rendering renders the HTML of the node's subtree 1`] = `
 <div>
   <nav
+    aria-label="Main navigation"
     class="security--toolbar class"
   >
     <ul
@@ -201,6 +203,7 @@ exports[`Toolbar Rendering renders the HTML of the node's subtree 1`] = `
 exports[`Toolbar Rendering renders the panel correctly 1`] = `
 <div>
   <nav
+    aria-label="Main navigation"
     className="security--toolbar class"
   >
     <ul
@@ -280,10 +283,11 @@ exports[`Toolbar Rendering renders the panel correctly 1`] = `
     component="span"
     timeout={160}
   >
-    <aside
+    <div
+      aria-label="menu"
       className="security--toolbar__panel"
       id="security--toolbar--toolbar--menu"
-      role="menu"
+      role="navigation"
     >
       <Transition
         className="security--toolbar__content"
@@ -303,7 +307,7 @@ exports[`Toolbar Rendering renders the panel correctly 1`] = `
         key="support"
         timeout={160}
       />
-    </aside>
+    </div>
   </Transition>
 </div>
 `;
@@ -371,6 +375,7 @@ exports[`Toolbar With renderAddons should render the addon icon tooltip 2`] = `n
 exports[`Toolbar With renderAddons should render the toolbar with addon icon 1`] = `
 <div>
   <nav
+    aria-label="Main navigation"
     className="security--toolbar"
   >
     <ul
@@ -480,6 +485,7 @@ exports[`Toolbar With renderAddons should render the toolbar with addon icon 1`]
 exports[`Toolbar With renderAddons should render the toolbar with addon icon 2`] = `
 <div>
   <nav
+    aria-label="Main navigation"
     class="security--toolbar"
   >
     <ul
