@@ -1,11 +1,9 @@
 /**
  * @file Header.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
-import Close20 from '@carbon/icons-react/lib/close/20';
-import Notification20 from '@carbon/icons-react/lib/notification/20';
-import Settings20 from '@carbon/icons-react/lib/settings/20';
+import { Close20, Notification20, Settings20 } from '@carbon/icons-react';
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
@@ -13,9 +11,19 @@ import React, { Component, Fragment } from 'react';
 
 import theme from '../../globals/theme';
 
-import { defaultProps, namespace, propTypes } from './constants';
-
 import toggle from '../Component';
+
+import { Accordion, AccordionItem } from '../Accordion';
+import Button from '../Button';
+import Icon from '../Icon';
+
+import IconButton from '../IconButton';
+import { namespace as iconButtonNamespace } from '../IconButton/IconButton';
+
+import Link from '../Link';
+import ProfileImage from '../ProfileImage';
+import ScrollGradient from '../ScrollGradient';
+import Transition from '../Transition';
 
 import HeaderListItem from './HeaderListItem';
 import { namespace as headerListItemNamespace } from './HeaderListItem/constants';
@@ -24,18 +32,11 @@ import HeaderNotification from './HeaderNotification';
 import HeaderPopoverHeader from './HeaderPopoverHeader';
 import HeaderPopoverLinkSecondary from './HeaderPopoverLinkSecondary';
 
-import { Accordion, AccordionItem } from '../Accordion';
-import Button from '../Button';
-import Icon from '../Icon';
-import IconButton from '../IconButton';
-import { namespace as iconButtonNamespace } from '../IconButton/IconButton';
-
-import Link from '../Link';
-import ScrollGradient from '../ScrollGradient/ScrollGradient';
-import ProfileImage from '../ProfileImage';
-import Transition from '../Transition';
+import { defaultProps, namespace, propTypes } from './constants';
 
 const headerButtonNamespace = `${namespace}__button`;
+
+const getPopoverLabelId = string => `${namespace}__popover__label--${string}`;
 
 /**
  * Renders the popover.
@@ -199,17 +200,19 @@ export default class Header extends Component {
     );
 
     const hasAccountList = accountList.length > 0;
+    const popoverLabelId = getPopoverLabelId('profile');
 
     return renderPopover(
       <div
         ref={userProfile => {
           this.userProfile = userProfile;
         }}
-        value="profile"
-        tabIndex="0"
-        role="tabpanel"
-        onBlur={() => this.closePopover(this.userProfile)}
         className={`${namespace}__popover--focus`}
+        aria-labelledby={popoverLabelId}
+        onBlur={() => this.closePopover(this.userProfile)}
+        role="tabpanel"
+        tabIndex="0"
+        value="profile"
       >
         <HeaderPopoverHeader
           className={`${namespace}__popover__profile__header`}
@@ -221,7 +224,10 @@ export default class Header extends Component {
               large
             />
             <div>
-              <span className={`${namespace}__popover__profile__header__title`}>
+              <span
+                id={popoverLabelId}
+                className={`${namespace}__popover__profile__header__title`}
+              >
                 {profile.name.first_name} {profile.name.surname}
               </span>
               <span className={`${namespace}__popover__profile__header__email`}>
@@ -301,22 +307,30 @@ export default class Header extends Component {
     const { labels, links, notifications, totalNotifications } = this.props;
     const { isActive } = this.state;
     const { length } = notifications;
+
     if (isActive.notifications)
       setTimeout(() => {
         this.notifications.focus();
       }, 0);
+
+    const popoverLabelId = getPopoverLabelId('notifications');
+
     return renderPopover(
       <div
         ref={notifications => {
           this.notifications = notifications;
         }}
+        className={`${namespace}__popover--focus`}
+        aria-labelledby={popoverLabelId}
+        onBlur={() => this.closePopover(this.notifications)}
         role="tabpanel"
         tabIndex="0"
         value="notifications"
-        onBlur={() => this.closePopover(this.notifications)}
-        className={`${namespace}__popover--focus`}
       >
-        <HeaderPopoverHeader title={labels.notifications.title} />
+        <HeaderPopoverHeader
+          id={popoverLabelId}
+          title={labels.notifications.title}
+        />
         {length > 0 && (
           <div className={`${namespace}__popover__content`}>
             <span className={`${namespace}__popover__label`}>
