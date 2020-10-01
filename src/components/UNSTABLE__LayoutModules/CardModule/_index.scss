@@ -12,4 +12,8 @@
 
 @include security--component($name: #{$layout-modules__name}--card) {
   padding-bottom: $carbon--layout-01;
+
+  &__component {
+    margin-bottom: $carbon--layout-01;
+  }
 }

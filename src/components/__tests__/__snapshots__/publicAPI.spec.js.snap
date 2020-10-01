@@ -435,7 +435,7 @@ Map {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
-        "type": "node",
+        "type": "func",
       },
     },
   },
@@ -2902,21 +2902,7 @@ Map {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
-        "type": "node",
-      },
-    },
-  },
-  "DescriptionContent" => Object {
-    "defaultProps": Object {
-      "className": null,
-    },
-    "propTypes": Object {
-      "children": Object {
-        "isRequired": true,
-        "type": "node",
-      },
-      "className": Object {
-        "type": "string",
+        "type": "func",
       },
     },
   },
@@ -4523,7 +4509,7 @@ Map {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
-        "type": "node",
+        "type": "func",
       },
     },
   },
@@ -4992,9 +4978,13 @@ Map {
   },
   "LayoutModule" => Object {
     "defaultProps": Object {
+      "as": "div",
       "className": null,
     },
     "propTypes": Object {
+      "as": Object {
+        "type": "elementType",
+      },
       "children": Object {
         "isRequired": true,
         "type": "node",
@@ -13634,7 +13624,5 @@ Map {
     },
   },
   "withBackground" => Object {},
-  "withHover" => Object {},
-  "withLayout" => Object {},
 }
 `;

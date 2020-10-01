@@ -4,7 +4,6 @@
 /// @copyright IBM Security 2020
 ////
 
-@import '@carbon/layout/scss/spacing';
 @import '@carbon/themes/scss/tokens';
 
 @import '../../../globals/border/index';
@@ -15,21 +14,5 @@
   &--background {
     background-color: $ui-01;
     outline: $border__sizing__width solid $ui-background;
-  }
-
-  &--hover {
-    $layout-module--hover__spacing: $carbon--layout-01;
-
-    padding-top: $layout-module--hover__spacing;
-    padding-bottom: $layout-module--hover__spacing;
-    cursor: pointer;
-
-    &:hover {
-      background-color: $hover-ui;
-    }
-  }
-
-  &--layout {
-    margin-bottom: $carbon--layout-01;
   }
 }

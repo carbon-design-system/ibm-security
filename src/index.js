@@ -267,14 +267,11 @@ export LayoutModule, {
   ButtonCluster,
   CardModule,
   Description,
-  DescriptionContent,
   ICAModule,
   PageTab,
   PageTabDetails,
   TitleBar,
   withBackground,
-  withHover,
-  withLayout,
 } from './components/UNSTABLE__LayoutModules';
 
 export UNSTABLE__Pagination, {

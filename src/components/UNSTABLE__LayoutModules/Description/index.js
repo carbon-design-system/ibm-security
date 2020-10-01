@@ -3,10 +3,11 @@
  * @copyright IBM Security 2020
  */
 
-import { node, string } from 'prop-types';
+import classnames from 'classnames';
+import { func } from 'prop-types';
 import React from 'react';
 
-import LayoutModule, { getLayoutModuleProps } from '../LayoutModule';
+import LayoutModule, { layoutModuleNamespace } from '../LayoutModule';
 
 const namespace = 'description';
 
@@ -15,39 +16,20 @@ const namespace = 'description';
  */
 const Description = ({ children, ...other }) => (
   <LayoutModule namespace={namespace} {...other}>
-    {children}
+    {children({
+      getLayoutProps: ({ className } = {}) => ({
+        className: classnames(
+          `${layoutModuleNamespace}--${namespace}__content`,
+          className
+        ),
+      }),
+    })}
   </LayoutModule>
 );
 
 Description.propTypes = {
-  /** Provide the `Title` and `DescriptionContent` for the `Description` */
-  children: node.isRequired,
-};
-
-const DescriptionContent = ({ children, className, ...other }) => (
-  <p
-    {...getLayoutModuleProps({
-      className,
-      namespace: `${namespace}__content`,
-    })}
-    {...other}
-  >
-    {children}
-  </p>
-);
-
-DescriptionContent.propTypes = {
-  /** Provide the contents of the `DescriptionContent` */
-  children: node.isRequired,
-
-  /** Provide an optional class to be applied to the containing node */
-  className: string,
-};
-
-DescriptionContent.defaultProps = {
-  className: null,
+  /** Provide the content for the `Description` */
+  children: func.isRequired,
 };
 
 export default Description;
-
-export { DescriptionContent };

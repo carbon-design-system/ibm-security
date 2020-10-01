@@ -2,6 +2,7 @@ import { ArgsTable, Story } from '@storybook/addon-docs/blocks';
 
 import { parameters } from '../../../../.storybook/preview';
 import Canvas from '../../../../.storybook/components/Canvas';
+import { Column, Row } from '../../..';
 
 # ActionBar
 
@@ -48,6 +49,16 @@ Additional props passed into `ActionBar` and `ActionBarItems` will be forwarded 
 ## Grid placement
 
 Action bar modules can span between 4 and 16 columns, following the [narrow grid](#references) implementation.
+
+<Row>
+  <Column>
+    <img alt="#" src="#" />
+  </Column>
+
+  <Column>
+    <img alt="#" src="#" />
+  </Column>
+</Row>
 
 ```jsx
 <Column lg={4}>

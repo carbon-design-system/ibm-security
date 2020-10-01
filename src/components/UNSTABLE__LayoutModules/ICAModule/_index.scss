@@ -5,6 +5,7 @@
 ////
 
 @import '@carbon/layout/scss/spacing';
+@import '@carbon/themes/scss/tokens';
 
 @import '../../../globals/namespace/index';
 @import '../../Component/mixins';
@@ -14,6 +15,20 @@
 @include security--component($name: #{$layout-modules__name}--ica) {
   padding-top: $carbon--layout-01;
   padding-bottom: $carbon--layout-03;
+
+  &--hover {
+    /// Hover spacing.
+    /// @type Length
+    $layout-module--hover__spacing: $carbon--layout-01;
+
+    padding-top: $layout-module--hover__spacing;
+    padding-bottom: $layout-module--hover__spacing;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $hover-ui;
+    }
+  }
 
   /// Title bar module namespace.
   /// @type String

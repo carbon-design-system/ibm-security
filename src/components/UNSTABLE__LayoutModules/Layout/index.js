@@ -33,10 +33,4 @@ const withLayoutEnhancement = (type, displayName) => WrappedComponent => {
   return WithEnhancement;
 };
 
-const withBackground = withLayoutEnhancement('background', 'Background');
-const withHover = withLayoutEnhancement('hover', 'Hover');
-const withLayout = withLayoutEnhancement('layout', 'Layout');
-
-export default withLayout;
-
-export { withBackground, withHover };
+export default withLayoutEnhancement('background', 'Background');

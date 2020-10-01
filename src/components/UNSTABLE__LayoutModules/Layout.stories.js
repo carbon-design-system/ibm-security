@@ -29,7 +29,6 @@ import {
   DataTablePagination,
   Decorator,
   Description,
-  DescriptionContent,
   HeaderName,
   ICA,
   ICAModule,
@@ -49,7 +48,6 @@ import {
   TypeLayoutRow,
   TypeLayoutCell,
   withBackground,
-  withLayout,
 } from '../..';
 
 const UIShell = () => (
@@ -61,7 +59,7 @@ const UIShell = () => (
 );
 
 const ColumnWithBackground = withBackground(Column);
-const EnhancedSummaryCard = withLayout(withBackground(SummaryCard));
+const EnhancedSummaryCard = withBackground(SummaryCard);
 
 const overview = () => (
   <>
@@ -185,17 +183,19 @@ const overview = () => (
             </Row>
 
             <ICAModule>
-              <Row>
-                <Column sm={2} md={2} lg={3}>
-                  <ICA label="Reviews complete" value={300} />
-                </Column>
-                <Column sm={2} md={2} lg={3}>
-                  <ICA label="Approved" value={241} />
-                </Column>
-                <Column sm={2} md={2} lg={3}>
-                  <ICA label="Rejected" value={28} />
-                </Column>
-              </Row>
+              {() => (
+                <Row>
+                  <Column sm={2} md={2} lg={3}>
+                    <ICA label="Reviews complete" value={300} />
+                  </Column>
+                  <Column sm={2} md={2} lg={3}>
+                    <ICA label="Approved" value={241} />
+                  </Column>
+                  <Column sm={2} md={2} lg={3}>
+                    <ICA label="Rejected" value={28} />
+                  </Column>
+                </Row>
+              )}
             </ICAModule>
 
             <Row condensed>
@@ -310,13 +310,15 @@ const detail = () => (
         <Row>
           <Column lg={6}>
             <Description>
-              <DescriptionContent>
-                BadFlick is a backdoor that is usually seen being distributed
-                using exploited word documents. It does not have any persistence
-                to survive reboot, but it is capable of opening a reverse shell
-                connection to its C2 server where it can download and execute
-                possibly other malware.
-              </DescriptionContent>
+              {({ getLayoutProps }) => (
+                <p {...getLayoutProps()}>
+                  BadFlick is a backdoor that is usually seen being distributed
+                  using exploited word documents. It does not have any
+                  persistence to survive reboot, but it is capable of opening a
+                  reverse shell connection to its C2 server where it can
+                  download and execute possibly other malware.
+                </p>
+              )}
             </Description>
           </Column>
 
@@ -362,97 +364,103 @@ const detail = () => (
         </ActionBar>
 
         <CardModule>
-          <Row>
-            <Column>
-              <EnhancedSummaryCard>
-                <SummaryCardHeader title="Threat actor" />
-                <SummaryCardBody>
-                  <TitleBar title="Suspected Chinese Cyber Espionage Group (TEMP.Periscope)" />
-                </SummaryCardBody>
-                <SummaryCardFooter>
-                  <SummaryCardAction
-                    renderIcon={ArrowRight16}
-                    iconDescription="Navigate"
-                    tooltipAlignment="center"
-                    tooltipPosition="right"
-                    hasIconOnly
-                  />
-                </SummaryCardFooter>
-              </EnhancedSummaryCard>
-            </Column>
-            <Column>
-              <EnhancedSummaryCard>
-                <SummaryCardHeader title="Threat report" />
-                <SummaryCardBody>
-                  <TitleBar title="XFTAS Daily Threat Assessment for Mar 2019" />
-                </SummaryCardBody>
-                <SummaryCardFooter>
-                  <SummaryCardAction
-                    renderIcon={ArrowRight16}
-                    iconDescription="Navigate"
-                    tooltipAlignment="center"
-                    tooltipPosition="right"
-                    hasIconOnly
-                  />
-                </SummaryCardFooter>
-              </EnhancedSummaryCard>
-            </Column>
-            <Column>
-              <EnhancedSummaryCard>
-                <SummaryCardHeader title="IP report" />
-                <SummaryCardBody>
-                  <TitleBar title="103.243.175.181" />
-                </SummaryCardBody>
-                <SummaryCardFooter>
-                  <SummaryCardAction
-                    renderIcon={ArrowRight16}
-                    iconDescription="Navigate"
-                    tooltipAlignment="center"
-                    tooltipPosition="right"
-                    hasIconOnly
-                  />
-                </SummaryCardFooter>
-              </EnhancedSummaryCard>
-            </Column>
-            <Column>
-              <EnhancedSummaryCard>
-                <SummaryCardHeader title="Vulnerability report" />
-                <SummaryCardBody>
-                  <TitleBar title="CVE-2017-11882" />
-                </SummaryCardBody>
-                <SummaryCardFooter>
-                  <SummaryCardAction
-                    renderIcon={ArrowRight16}
-                    iconDescription="Navigate"
-                    tooltipAlignment="center"
-                    tooltipPosition="right"
-                    hasIconOnly
-                  />
-                </SummaryCardFooter>
-              </EnhancedSummaryCard>
-            </Column>
-          </Row>
+          {({ getLayoutProps }) => (
+            <Row>
+              <Column>
+                <EnhancedSummaryCard {...getLayoutProps()}>
+                  <SummaryCardHeader title="Threat actor" />
+                  <SummaryCardBody>
+                    <TitleBar title="Suspected Chinese Cyber Espionage Group (TEMP.Periscope)" />
+                  </SummaryCardBody>
+                  <SummaryCardFooter>
+                    <SummaryCardAction
+                      renderIcon={ArrowRight16}
+                      iconDescription="Navigate"
+                      tooltipAlignment="center"
+                      tooltipPosition="right"
+                      hasIconOnly
+                    />
+                  </SummaryCardFooter>
+                </EnhancedSummaryCard>
+              </Column>
+              <Column>
+                <EnhancedSummaryCard {...getLayoutProps()}>
+                  <SummaryCardHeader title="Threat report" />
+                  <SummaryCardBody>
+                    <TitleBar title="XFTAS Daily Threat Assessment for Mar 2019" />
+                  </SummaryCardBody>
+                  <SummaryCardFooter>
+                    <SummaryCardAction
+                      renderIcon={ArrowRight16}
+                      iconDescription="Navigate"
+                      tooltipAlignment="center"
+                      tooltipPosition="right"
+                      hasIconOnly
+                    />
+                  </SummaryCardFooter>
+                </EnhancedSummaryCard>
+              </Column>
+              <Column>
+                <EnhancedSummaryCard {...getLayoutProps()}>
+                  <SummaryCardHeader title="IP report" />
+                  <SummaryCardBody>
+                    <TitleBar title="103.243.175.181" />
+                  </SummaryCardBody>
+                  <SummaryCardFooter>
+                    <SummaryCardAction
+                      renderIcon={ArrowRight16}
+                      iconDescription="Navigate"
+                      tooltipAlignment="center"
+                      tooltipPosition="right"
+                      hasIconOnly
+                    />
+                  </SummaryCardFooter>
+                </EnhancedSummaryCard>
+              </Column>
+              <Column>
+                <EnhancedSummaryCard {...getLayoutProps()}>
+                  <SummaryCardHeader title="Vulnerability report" />
+                  <SummaryCardBody>
+                    <TitleBar title="CVE-2017-11882" />
+                  </SummaryCardBody>
+                  <SummaryCardFooter>
+                    <SummaryCardAction
+                      renderIcon={ArrowRight16}
+                      iconDescription="Navigate"
+                      tooltipAlignment="center"
+                      tooltipPosition="right"
+                      hasIconOnly
+                    />
+                  </SummaryCardFooter>
+                </EnhancedSummaryCard>
+              </Column>
+            </Row>
+          )}
         </CardModule>
 
         <Row>
           <ColumnWithBackground>
             <ICAModule>
-              <TitleBar element="h4" title="Indicators" />
+              {() => (
+                <>
+                  <TitleBar element="h4" title="Indicators" />
 
-              <Row>
-                <Column sm={2} md={2} lg={3}>
-                  <ICA label="Malware" value={11} />
-                </Column>
-                <Column sm={2} md={2} lg={3}>
-                  <ICA label="IPs" value={8} />
-                </Column>
-                <Column sm={2} md={2} lg={3}>
-                  <ICA label="URLs" value={9} />
-                </Column>
-                <Column sm={2} md={2} lg={3}>
-                  <ICA label="VULs" value={1} />
-                </Column>
-              </Row>
+                  <Row>
+                    <Column sm={2} md={2} lg={3}>
+                      <ICA label="Malware" value={11} />
+                    </Column>
+                    <Column sm={2} md={2} lg={3}>
+                      <ICA label="IPs" value={8} />
+                    </Column>
+                    <Column sm={2} md={2} lg={3}>
+                      <ICA label="URLs" value={9} />
+                    </Column>
+                    <Column sm={2} md={2} lg={3}>
+                      <ICA label="VULs" value={1} />
+                    </Column>
+                  </Row>
+                </>
+              )}
             </ICAModule>
 
             <Row condensed>
