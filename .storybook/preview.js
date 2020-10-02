@@ -3,14 +3,20 @@
  * @copyright IBM Security 2020
  */
 
+import { spacing04, spacing05 } from '@carbon/layout';
+import { styles } from '@carbon/type';
 import { withInfo } from '@storybook/addon-info';
 import React from 'react';
+
+import random from '../src/globals/random';
+import theme from '../src/globals/theme';
 
 import { HIERARCHY_ROOT_SEPARATOR, ORDER } from '.';
 
 import withTheme from './addons/addon-theme';
 import Container from './components/Container';
-import storybookTheme from './theme';
+
+const { interactive01, text04 } = theme;
 
 const decorators = [
   withInfo,
@@ -34,6 +40,24 @@ function getCategory(story) {
 }
 
 const parameters = {
+  info: {
+    styles: {
+      button: {
+        base: {
+          padding: `${spacing04} ${spacing05}`,
+          color: text04,
+          background: interactive01,
+          zIndex: random(100000),
+          ...styles.bodyShort01,
+        },
+        topRight: {
+          top: 'auto',
+          bottom: 0,
+          borderRadius: 0,
+        },
+      },
+    },
+  },
   layout: 'centered',
   options: {
     storySort: (a, b) =>
