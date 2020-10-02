@@ -78,7 +78,7 @@ Map {
       "uid": [Function],
     },
   },
-  "ActionBar" => Object {
+  "ActionBarModule" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
@@ -86,7 +86,7 @@ Map {
       },
     },
   },
-  "ActionBarItems" => Object {
+  "ActionBarModuleItems" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
@@ -274,7 +274,7 @@ Map {
       },
     },
   },
-  "ButtonCluster" => Object {
+  "ButtonClusterModule" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
@@ -2898,7 +2898,7 @@ Map {
       },
     },
   },
-  "Description" => Object {
+  "DescriptionModule" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
@@ -6481,7 +6481,7 @@ Map {
       },
     },
   },
-  "PageTab" => Object {
+  "PageTabModule" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
@@ -6489,7 +6489,7 @@ Map {
       },
     },
   },
-  "PageTabDetails" => Object {
+  "PageTabModuleDetails" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
@@ -11864,7 +11864,7 @@ Map {
       },
     },
   },
-  "TitleBar" => Object {
+  "TitleBarModule" => Object {
     "defaultProps": Object {
       "children": null,
       "className": null,

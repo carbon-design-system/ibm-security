@@ -14,7 +14,7 @@ const namespace = 'description';
 /**
  * Description modules provide a means to orderly layout short-form content.
  */
-const Description = ({ children, ...other }) => (
+const DescriptionModule = ({ children, ...other }) => (
   <LayoutModule namespace={namespace} {...other}>
     {children({
       getLayoutProps: ({ className } = {}) => ({
@@ -27,9 +27,9 @@ const Description = ({ children, ...other }) => (
   </LayoutModule>
 );
 
-Description.propTypes = {
+DescriptionModule.propTypes = {
   /** Provide the content for the `Description` */
   children: func.isRequired,
 };
 
-export default Description;
+export default DescriptionModule;

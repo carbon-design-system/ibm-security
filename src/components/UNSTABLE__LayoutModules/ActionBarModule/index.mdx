@@ -4,7 +4,7 @@ import { parameters } from '../../../../.storybook/preview';
 import Canvas from '../../../../.storybook/components/Canvas';
 import { Column, Row } from '../../..';
 
-# ActionBar
+# ActionBarModule
 
 Action bars allow users to take multiple actions on the subsequent section.
 
@@ -18,13 +18,13 @@ Action bars allow users to take multiple actions on the subsequent section.
 
 ## Overview
 
-The action bar module can be built using a combination of the `ActionBar` and `ActionBarItems` components.
+The action bar module can be built using a combination of the `ActionBarModule` and `ActionBarModuleItems` components.
 
-`ActionBarItems` is responsible for positioning the actions, and everything passed in as a child of `ActionBarItems` will be rendered.
+`ActionBarModuleItems` is responsible for positioning the actions, and everything passed in as a child of `ActionBarModuleItems` will be rendered.
 
 <Canvas>
   <Story
-    id="patterns-unstable-layout-modules-actionbar--default"
+    id="patterns-unstable-layout-modules-actionbarmodule--default"
     parameters={parameters}
   />
 </Canvas>
@@ -35,7 +35,7 @@ If necessary, supplementary details can be placed inline with the actions.
 
 <Canvas>
   <Story
-    id="patterns-unstable-layout-modules-actionbar--details"
+    id="patterns-unstable-layout-modules-actionbarmodule--details"
     parameters={parameters}
   />
 </Canvas>
@@ -44,7 +44,7 @@ If necessary, supplementary details can be placed inline with the actions.
 
 <ArgsTable />
 
-Additional props passed into `ActionBar` and `ActionBarItems` will be forwarded along to their underlying containers.
+Additional props passed into `ActionBarModule` and `ActionBarModuleItems` will be forwarded along to their underlying containers.
 
 ## Grid placement
 
@@ -62,10 +62,10 @@ Action bar modules can span between 4 and 16 columns, following the [narrow grid
 
 ```jsx
 <Column lg={4}>
-  <ActionBar>
+  <ActionBarModule>
     <Button kind="ghost">Action 1</Button>
 
-    <ActionBarItems>
+    <ActionBarModuleItems>
       <IconButtonBar
         actions={[
           {
@@ -83,8 +83,8 @@ Action bar modules can span between 4 and 16 columns, following the [narrow grid
         ]}
         size="md"
       />
-    </ActionBarItems>
-  </ActionBar>
+    </ActionBarModuleItems>
+  </ActionBarModule>
 </Column>
 ```
 

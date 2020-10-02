@@ -6,14 +6,14 @@
 import React from 'react';
 
 import withResponsive from '../../../../.storybook/decorators';
-import { Description, TitleBar } from '../../..';
+import { DescriptionModule, TitleBarModule } from '../../..';
 import getTitle, { getDocsParameters } from '../stories';
 
 import page from './index.mdx';
 
 export default {
-  title: getTitle(Description),
-  component: Description,
+  title: getTitle(DescriptionModule),
+  component: DescriptionModule,
   parameters: {
     ...getDocsParameters(page),
   },
@@ -21,10 +21,10 @@ export default {
 };
 
 export const Default = () => (
-  <Description>
+  <DescriptionModule>
     {({ getLayoutProps }) => (
       <>
-        <TitleBar title="Section title" />
+        <TitleBarModule title="Section title" />
 
         <p {...getLayoutProps()}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
@@ -47,15 +47,15 @@ export const Default = () => (
         </p>
       </>
     )}
-  </Description>
+  </DescriptionModule>
 );
 
 export const subsectionTitle = () => (
-  <Description>
+  <DescriptionModule>
     {({ getLayoutProps }) => (
       <>
-        <TitleBar title="Section title" />
-        <TitleBar title="Subsection title" subsection />
+        <TitleBarModule title="Section title" />
+        <TitleBarModule title="Subsection title" subsection />
 
         <p {...getLayoutProps()}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
@@ -78,5 +78,5 @@ export const subsectionTitle = () => (
         </p>
       </>
     )}
-  </Description>
+  </DescriptionModule>
 );

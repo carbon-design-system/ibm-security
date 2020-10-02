@@ -20,20 +20,20 @@ import React from 'react';
 import { disableCentered, meta, patterns } from '../../../.storybook';
 
 import {
-  ActionBar,
-  ActionBarItems,
-  ButtonCluster,
+  ActionBarModule,
+  ActionBarModuleItems,
+  ButtonClusterModule,
   Button,
   CarbonHeader,
   CardModule,
   DataTablePagination,
   Decorator,
-  Description,
+  DescriptionModule,
   HeaderName,
   ICA,
   ICAModule,
   IconButtonBar,
-  PageTab,
+  PageTabModule,
   SummaryCard,
   SummaryCardAction,
   SummaryCardBody,
@@ -42,7 +42,7 @@ import {
   Tabs,
   Tab,
   Tag,
-  TitleBar,
+  TitleBarModule,
   TypeLayout,
   TypeLayoutBody,
   TypeLayoutRow,
@@ -59,20 +59,19 @@ const UIShell = () => (
 );
 
 const ColumnWithBackground = withBackground(Column);
-const EnhancedSummaryCard = withBackground(SummaryCard);
 
 const overview = () => (
   <>
-    <ActionBar>
+    <ActionBarModule>
       <Tag type="gray">Closed</Tag>
       ID: 12&nbsp;&nbsp;|&nbsp;&nbsp;Result: Completed
-    </ActionBar>
+    </ActionBarModule>
 
     <Row>
       <Column lg={12}>
         <Row>
           <ColumnWithBackground>
-            <TitleBar title="General settings and scope" subsection />
+            <TitleBarModule title="General settings and scope" subsection />
 
             <TypeLayout>
               <TypeLayoutBody>
@@ -126,7 +125,7 @@ const overview = () => (
           <ColumnWithBackground>
             <Row>
               <ColumnWithBackground>
-                <TitleBar title="Schedule" subsection />
+                <TitleBarModule title="Schedule" subsection />
 
                 <TypeLayout>
                   <TypeLayoutBody>
@@ -151,7 +150,7 @@ const overview = () => (
 
             <Row>
               <Column>
-                <TitleBar title="Campaign end" subsection />
+                <TitleBarModule title="Campaign end" subsection />
 
                 <TypeLayout>
                   <TypeLayoutBody>
@@ -178,7 +177,7 @@ const overview = () => (
           <ColumnWithBackground>
             <Row>
               <Column>
-                <TitleBar title="Campaign results" subsection />
+                <TitleBarModule title="Campaign results" subsection />
               </Column>
             </Row>
 
@@ -259,16 +258,16 @@ const overview = () => (
       </Column>
 
       <Column lg={4}>
-        <ButtonCluster>
+        <ButtonClusterModule>
           <Button kind="ghost" renderIcon={Copy16}>
             Duplicate campaign
           </Button>
           <Button kind="ghost" renderIcon={Activity16}>
             View activity report
           </Button>
-        </ButtonCluster>
+        </ButtonClusterModule>
 
-        <TitleBar title="Details" subsection />
+        <TitleBarModule title="Details" subsection />
 
         <TypeLayout>
           <TypeLayoutBody>
@@ -301,15 +300,15 @@ const overview = () => (
 );
 
 const detail = () => (
-  <PageTab>
+  <PageTabModule>
     <Tabs selected={1}>
       <Tab label="Case" />
       <Tab label="Report">
-        <TitleBar title="Summary" />
+        <TitleBarModule title="Summary" />
 
         <Row>
           <Column lg={6}>
-            <Description>
+            <DescriptionModule>
               {({ getLayoutProps }) => (
                 <p {...getLayoutProps()}>
                   BadFlick is a backdoor that is usually seen being distributed
@@ -319,7 +318,7 @@ const detail = () => (
                   download and execute possibly other malware.
                 </p>
               )}
-            </Description>
+            </DescriptionModule>
           </Column>
 
           <Column lg={{ offset: 2, span: 8 }}>
@@ -338,11 +337,11 @@ const detail = () => (
           </Column>
         </Row>
 
-        <TitleBar title="Related reports" />
+        <TitleBarModule title="Related reports" />
 
-        <ActionBar>
+        <ActionBarModule>
           Supplementary details
-          <ActionBarItems>
+          <ActionBarModuleItems>
             <IconButtonBar
               actions={[
                 {
@@ -360,17 +359,17 @@ const detail = () => (
               ]}
               size="md"
             />
-          </ActionBarItems>
-        </ActionBar>
+          </ActionBarModuleItems>
+        </ActionBarModule>
 
         <CardModule>
           {({ getLayoutProps }) => (
             <Row>
               <Column>
-                <EnhancedSummaryCard {...getLayoutProps()}>
+                <SummaryCard {...getLayoutProps()}>
                   <SummaryCardHeader title="Threat actor" />
                   <SummaryCardBody>
-                    <TitleBar title="Suspected Chinese Cyber Espionage Group (TEMP.Periscope)" />
+                    <TitleBarModule title="Suspected Chinese Cyber Espionage Group (TEMP.Periscope)" />
                   </SummaryCardBody>
                   <SummaryCardFooter>
                     <SummaryCardAction
@@ -381,13 +380,13 @@ const detail = () => (
                       hasIconOnly
                     />
                   </SummaryCardFooter>
-                </EnhancedSummaryCard>
+                </SummaryCard>
               </Column>
               <Column>
-                <EnhancedSummaryCard {...getLayoutProps()}>
+                <SummaryCard {...getLayoutProps()}>
                   <SummaryCardHeader title="Threat report" />
                   <SummaryCardBody>
-                    <TitleBar title="XFTAS Daily Threat Assessment for Mar 2019" />
+                    <TitleBarModule title="XFTAS Daily Threat Assessment for Mar 2019" />
                   </SummaryCardBody>
                   <SummaryCardFooter>
                     <SummaryCardAction
@@ -398,13 +397,13 @@ const detail = () => (
                       hasIconOnly
                     />
                   </SummaryCardFooter>
-                </EnhancedSummaryCard>
+                </SummaryCard>
               </Column>
               <Column>
-                <EnhancedSummaryCard {...getLayoutProps()}>
+                <SummaryCard {...getLayoutProps()}>
                   <SummaryCardHeader title="IP report" />
                   <SummaryCardBody>
-                    <TitleBar title="103.243.175.181" />
+                    <TitleBarModule title="103.243.175.181" />
                   </SummaryCardBody>
                   <SummaryCardFooter>
                     <SummaryCardAction
@@ -415,13 +414,13 @@ const detail = () => (
                       hasIconOnly
                     />
                   </SummaryCardFooter>
-                </EnhancedSummaryCard>
+                </SummaryCard>
               </Column>
               <Column>
-                <EnhancedSummaryCard {...getLayoutProps()}>
+                <SummaryCard {...getLayoutProps()}>
                   <SummaryCardHeader title="Vulnerability report" />
                   <SummaryCardBody>
-                    <TitleBar title="CVE-2017-11882" />
+                    <TitleBarModule title="CVE-2017-11882" />
                   </SummaryCardBody>
                   <SummaryCardFooter>
                     <SummaryCardAction
@@ -432,7 +431,7 @@ const detail = () => (
                       hasIconOnly
                     />
                   </SummaryCardFooter>
-                </EnhancedSummaryCard>
+                </SummaryCard>
               </Column>
             </Row>
           )}
@@ -443,7 +442,7 @@ const detail = () => (
             <ICAModule>
               {() => (
                 <>
-                  <TitleBar element="h4" title="Indicators" />
+                  <TitleBarModule element="h4" title="Indicators" />
 
                   <Row>
                     <Column sm={2} md={2} lg={3}>
@@ -543,7 +542,7 @@ const detail = () => (
       </Tab>
       <Tab label="Evidence" />
     </Tabs>
-  </PageTab>
+  </PageTabModule>
 );
 
 export default meta(

@@ -7,15 +7,20 @@ import { Add16, Edit16, Filter16 } from '@carbon/icons-react';
 import React from 'react';
 
 import withResponsive from '../../../../.storybook/decorators';
-import { ActionBar, ActionBarItems, Button, IconButtonBar } from '../../..';
+import {
+  ActionBarModule,
+  ActionBarModuleItems,
+  Button,
+  IconButtonBar,
+} from '../../..';
 import getTitle, { getDocsParameters } from '../stories';
 
 import page from './index.mdx';
 
 export default {
-  title: getTitle(ActionBar),
-  component: ActionBar,
-  subcomponents: { ActionBarItems },
+  title: getTitle(ActionBarModule),
+  component: ActionBarModule,
+  subcomponents: { ActionBarModuleItems },
   parameters: {
     ...getDocsParameters(page),
   },
@@ -23,10 +28,10 @@ export default {
 };
 
 export const Default = () => (
-  <ActionBar>
+  <ActionBarModule>
     <Button kind="ghost">Action 1</Button>
 
-    <ActionBarItems>
+    <ActionBarModuleItems>
       <IconButtonBar
         actions={[
           {
@@ -44,14 +49,14 @@ export const Default = () => (
         ]}
         size="md"
       />
-    </ActionBarItems>
-  </ActionBar>
+    </ActionBarModuleItems>
+  </ActionBarModule>
 );
 
 export const Details = () => (
-  <ActionBar>
+  <ActionBarModule>
     Supplementary details
-    <ActionBarItems>
+    <ActionBarModuleItems>
       <IconButtonBar
         actions={[
           {
@@ -69,6 +74,6 @@ export const Details = () => (
         ]}
         size="md"
       />
-    </ActionBarItems>
-  </ActionBar>
+    </ActionBarModuleItems>
+  </ActionBarModule>
 );

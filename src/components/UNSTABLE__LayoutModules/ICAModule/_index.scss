@@ -9,7 +9,7 @@
 
 @import '../../../globals/namespace/index';
 @import '../../Component/mixins';
-@import '../TitleBar/variables';
+@import '../TitleBarModule/variables';
 @import '../variables';
 
 @include security--component($name: #{$layout-modules__name}--ica) {

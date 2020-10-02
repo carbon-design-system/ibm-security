@@ -6,7 +6,7 @@ import { Column, Row } from '../../..';
 
 import anatomy from './images/anatomy.png';
 
-# ButtonCluster
+# ButtonClusterModule
 
 The button cluster module group secondary actions that can be taken on a whole page or component. Icons are used to help describe, at a glance, the action that can be taken.
 
@@ -21,11 +21,11 @@ The button cluster module group secondary actions that can be taken on a whole p
 
 ## Overview
 
-The button cluster module can be built using a combination of the `ButtonCluster` and [`Button`](#references) components. The `ButtonCluster` accepts a list of `Button` components as `children`.
+The button cluster module can be built using a combination of the `ButtonClusterModule` and [`Button`](#references) components. The `ButtonClusterModule` accepts a list of `Button` components as `children`.
 
 <Canvas>
   <Story
-    id="patterns-unstable-layout-modules-buttoncluster--default"
+    id="patterns-unstable-layout-modules-buttonclustermodule--default"
     parameters={parameters}
   />
 </Canvas>
@@ -34,7 +34,7 @@ The button cluster module can be built using a combination of the `ButtonCluster
 
 <ArgsTable />
 
-Additional props passed into `ButtonCluster` will be forwarded along to the underlying button cluster module container.
+Additional props passed into `ButtonClusterModule` will be forwarded along to the underlying button cluster module container.
 
 ## Grid placement
 
@@ -52,11 +52,11 @@ Button cluster modules span across 4 columns. Following the [narrow grid](#refer
 
 ```jsx
 <Column lg={4}>
-  <ButtonCluster>
+  <ButtonClusterModule>
     <Button kind="ghost">Button 1</Button>
 
     <Button kind="ghost">Button 2</Button>
-  </ButtonCluster>
+  </ButtonClusterModule>
 </Column>
 ```
 
@@ -70,7 +70,7 @@ Occassionally a [spacing token](#references) will need to be included to offset 
 2. **Divider lines:** Divider lines create structurality and provide separation between the ghost buttons
 3. **Bottom spacer:** The 16-pixel spacer `$layout-01` below the last button provides the starting point for the layout module positioned directly underneath it
 
-<img alt="`ButtonCluster` anatomy" src={anatomy} />
+<img alt="`ButtonClusterModule` anatomy" src={anatomy} />
 
 ## Examples
 

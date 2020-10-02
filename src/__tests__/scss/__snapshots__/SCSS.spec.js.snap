@@ -24927,6 +24927,8 @@ a.bx--navigation-link:focus {
 
 .security--unstable--layout__module--card__component {
   margin-bottom: 1rem;
+  background-color: var(--ui-01, #262626);
+  outline: 0.0625rem solid var(--ui-background, #161616);
 }
 
 .security--unstable--layout__module--description {

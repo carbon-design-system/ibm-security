@@ -6,7 +6,7 @@
 import React from 'react';
 
 import {
-  TitleBar,
+  TitleBarModule,
   TypeLayout,
   TypeLayoutBody,
   TypeLayoutCell,
@@ -71,7 +71,7 @@ export const Default = args => (
 
 export const title = args => (
   <>
-    <TitleBar title="Section title" />
+    <TitleBarModule title="Section title" />
 
     <TypeLayout {...args}>
       <TypeLayoutBody>

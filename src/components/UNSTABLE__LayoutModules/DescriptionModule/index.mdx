@@ -4,7 +4,7 @@ import { parameters } from '../../../../.storybook/preview';
 import Canvas from '../../../../.storybook/components/Canvas';
 import { Column, Row } from '../../..';
 
-# Description
+# DescriptionModule
 
 Description modules provide a means to orderly layout short-form content.
 
@@ -18,13 +18,13 @@ Description modules provide a means to orderly layout short-form content.
 
 ## Overview
 
-The description module can be built using a combination of the [`TitleBar`](#references) component and [paragraph elements](#references).
+The description module can be built using a combination of the [`TitleBarModule`](#references) component and [paragraph elements](#references).
 
-Everything passed in as a [render prop](#references) child of `Description` will be rendered.
+Everything passed in as a [render prop](#references) child of `DescriptionModule` will be rendered.
 
 <Canvas>
   <Story
-    id="patterns-unstable-layout-modules-description--default"
+    id="patterns-unstable-layout-modules-descriptionmodule--default"
     parameters={parameters}
   />
 </Canvas>
@@ -35,7 +35,7 @@ If necessary, subsection titles can be used below section titles.
 
 <Canvas>
   <Story
-    id="patterns-unstable-layout-modules-description--subsection-title"
+    id="patterns-unstable-layout-modules-descriptionmodule--subsection-title"
     parameters={parameters}
   />
 </Canvas>
@@ -44,7 +44,7 @@ If necessary, subsection titles can be used below section titles.
 
 <ArgsTable />
 
-Additional props passed into `Description` will be forwarded along to the underlying description module container.
+Additional props passed into `DescriptionModule` will be forwarded along to the underlying description module container.
 
 ## Grid placement
 
@@ -62,10 +62,10 @@ Description modules span across 8 columns, following the [narrow grid](#referenc
 
 ```jsx
 <Column lg={8}>
-  <Description>
+  <DescriptionModule>
     {({ getLayoutProps }) => (
       <>
-        <TitleBar title="Section title" />
+        <TitleBarModule title="Section title" />
 
         <p {...getLayoutProps()}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
@@ -88,7 +88,7 @@ Description modules span across 8 columns, following the [narrow grid](#referenc
         </p>
       </>
     )}
-  </Description>
+  </DescriptionModule>
 </Column>
 ```
 
@@ -98,7 +98,7 @@ Description modules span across 8 columns, following the [narrow grid](#referenc
 
 ## References
 
-- [TitleBar](?path=/docs/patterns-unstable-layout-modules-titlebar)
+- [TitleBarModule](?path=/docs/patterns-unstable-layout-modules-titlebarmodule)
 - [The Paragraph element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p)
 - [Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
 

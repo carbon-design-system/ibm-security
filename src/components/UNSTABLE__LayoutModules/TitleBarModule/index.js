@@ -16,7 +16,7 @@ const namespace = 'title-bar';
 /**
  * Title bar modules provide interchangeable and reliable headings for establishing consistent hierarchies.
  */
-const TitleBar = ({
+const TitleBarModule = ({
   children,
   className,
   element,
@@ -44,11 +44,11 @@ const TitleBar = ({
   </LayoutModule>
 );
 
-TitleBar.propTypes = {
-  /** Provide the title of the `TitleBar` */
+TitleBarModule.propTypes = {
+  /** Provide the title of the `TitleBarModule` */
   title: node.isRequired,
 
-  /** Provide the items for the `TitleBar` */
+  /** Provide the items for the `TitleBarModule` */
   children: node,
 
   /** Specify whether a subsection should be used */
@@ -61,11 +61,11 @@ TitleBar.propTypes = {
   className: string,
 };
 
-TitleBar.defaultProps = {
+TitleBarModule.defaultProps = {
   children: null,
   subsection: false,
   element: 'h2',
   className: null,
 };
 
-export default TitleBar;
+export default TitleBarModule;

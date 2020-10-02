@@ -9,7 +9,6 @@ import { Column, Row } from '../../..';
 The card module provides a means to orderly present related content and information using summary, navigational, or widget cards as the basis.
 
 - [Overview](#overview)
-- [withBackground](#withbackground)
 - [Component API](#component-api)
 - [Grid placement](#grid-placement)
 - [Complimentary modules](#complimentary-modules)
@@ -20,7 +19,7 @@ The card module provides a means to orderly present related content and informat
 
 ## Overview
 
-The card module can be built using a combination of the `CardModule`, [grid](#references), and either the [`Card`](#references), [`SummaryCard`](#references), or [`Tile`](#references) components, optionally enhancing with the `withBackground`, [higher-order component](#references).
+The card module can be built using a combination of the `CardModule`, [grid](#references), and either the [`Card`](#references), [`SummaryCard`](#references), or [`Tile`](#references) components.
 
 Everything passed in as a [render prop](#references) child of `CardModule` will be rendered.
 
@@ -30,34 +29,6 @@ Everything passed in as a [render prop](#references) child of `CardModule` will 
     parameters={parameters}
   />
 </Canvas>
-
-## withBackground
-
-The `withBackground` higher-order component enhances cards to provide consistent backgrounds when using a card within the card module.
-
-```jsx
-const CardWithBackground = withBackground(Card);
-
-return (
-  <CardModule>
-    {() => (
-      <Row>
-        <Column>
-          <CardWithBackground />
-        </Column>
-
-        <Column>
-          <CardWithBackground />
-        </Column>
-
-        <Column>
-          <CardWithBackground />
-        </Column>
-      </Row>
-    )}
-  </CardModule>
-);
-```
 
 ## Component API
 
@@ -89,9 +60,9 @@ Card modules can span between 4 and 16 columns. Following the narrow grid implem
 
 The card module can contain a number of other layout modules within the parent to create a section of related modules. The following options can be used for this purpose.
 
-1. **[`TitleBar`](#references) using section title:** Section titles provide identification for the content
-2. **`TitleBar` using subsection title:** Subsection titles provide identification for the sub-content
-3. **[`ActionBar`](#references):** Provides a zone for actions related to the cards and content below it
+1. **[`TitleBarModule`](#references) using section title:** Section titles provide identification for the content
+2. **`TitleBarModule` using subsection title:** Subsection titles provide identification for the sub-content
+3. **[`ActionBarModule`](#references):** Provides a zone for actions related to the cards and content below it
 
 <Canvas>
   <Story
@@ -118,10 +89,9 @@ The card module can contain a number of other layout modules within the parent t
 - [Card](?path=/story/components-card)
 - [SummaryCard](?path=/story/patterns-summarycard)
 - [Tile](https://react.carbondesignsystem.com/?path=/docs/tile)
-- [Higher-Order Components](https://reactjs.org/docs/higher-order-components.html)
 - [Render Props](https://reactjs.org/docs/render-props.html)
-- [TitleBar](?path=/docs/patterns-unstable-layout-modules-titlebar)
-- [ActionBar](?path=/docs/patterns-unstable-layout-modules-actionbar)
+- [TitleBarModule](?path=/docs/patterns-unstable-layout-modules-titlebarmodule)
+- [ActionBarModule](?path=/docs/patterns-unstable-layout-modules-actionbarmodule)
 
 ## Troubleshooting
 

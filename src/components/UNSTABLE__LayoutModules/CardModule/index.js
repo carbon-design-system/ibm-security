@@ -19,6 +19,7 @@ const CardModule = ({ children, ...other }) => (
     {children({
       getLayoutProps: ({ className } = {}) => ({
         className: classnames(
+          `${layoutModuleNamespace}--${namespace}--background`,
           `${layoutModuleNamespace}--${namespace}__component`,
           className
         ),

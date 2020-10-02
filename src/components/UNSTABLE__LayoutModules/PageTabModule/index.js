@@ -13,28 +13,28 @@ const namespace = 'page-tab';
 /**
  * Page tab modules provide orderly tab navigation for a page.
  */
-const PageTab = ({ children, ...other }) => (
+const PageTabModule = ({ children, ...other }) => (
   <LayoutModule namespace={namespace} {...other}>
     {children}
   </LayoutModule>
 );
 
-PageTab.propTypes = {
-  /** Provide the `Tabs`, and optionally `PageTabDetails`, for the `PageTab` */
+PageTabModule.propTypes = {
+  /** Provide the `Tabs`, and optionally `PageTabModuleDetails`, for the `PageTabModule` */
   children: node.isRequired,
 };
 
-const PageTabDetails = ({ children, ...other }) => (
+const PageTabModuleDetails = ({ children, ...other }) => (
   <LayoutModule namespace={`${namespace}__details`} {...other}>
     {children}
   </LayoutModule>
 );
 
-PageTabDetails.propTypes = {
-  /** Provide the contents of the `PageTabDetails` */
+PageTabModuleDetails.propTypes = {
+  /** Provide the contents of the `PageTabModuleDetails` */
   children: node.isRequired,
 };
 
-export default PageTab;
+export default PageTabModule;
 
-export { PageTabDetails };
+export { PageTabModuleDetails };

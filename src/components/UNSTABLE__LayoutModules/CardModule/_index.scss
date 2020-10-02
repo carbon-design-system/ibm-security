@@ -5,7 +5,9 @@
 ////
 
 @import '@carbon/layout/scss/spacing';
+@import '@carbon/themes/scss/tokens';
 
+@import '../../../globals/border/index';
 @import '../../Component/mixins';
 
 @import '../variables';
@@ -15,5 +17,7 @@
 
   &__component {
     margin-bottom: $carbon--layout-01;
+    background-color: $ui-01;
+    outline: $border__sizing__width solid $ui-background;
   }
 }
