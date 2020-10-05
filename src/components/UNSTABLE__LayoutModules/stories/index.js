@@ -10,11 +10,6 @@ export const getDocsParameters = page => ({
   info: {
     disable: true,
   },
-  previewTabs: {
-    'storybook/docs/panel': {
-      hidden: false,
-    },
-  },
 });
 
 export default ({ displayName, name }) =>
