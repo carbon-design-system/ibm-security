@@ -1,4 +1,5 @@
 import { ArgsTable, Story } from '@storybook/addon-docs/blocks';
+import LinkTo from '@storybook/addon-links/react';
 
 import { parameters } from '../../../../.storybook/preview';
 import Canvas from '../../../../.storybook/components/Canvas';
@@ -95,15 +96,23 @@ ICAs within ICA modules can span across 2 or 3 columns, following the narrow gri
 
 ## Examples
 
-- [Overview layout](?path=/story/patterns-unstable-layout-examples-beta--overview)
-- [Detail layout](?path=/story/patterns-unstable-layout-examples-beta--detail)
+- <LinkTo kind="patterns-unstable-layout-examples" story="overview">
+    Overview layout
+  </LinkTo>
+- <LinkTo kind="patterns-unstable-layout-examples" story="detail">
+    Detail layout
+  </LinkTo>
 
 ## References
 
 - [Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
-- [ICA](?path=/story/components-ica)
+- <LinkTo kind="components-ica" story="default">
+    ICA
+  </LinkTo>
 - [Higher-Order Components](https://reactjs.org/docs/higher-order-components.html)
-- [TitleBar](?path=/docs/patterns-unstable-layout-modules-titlebar)
+- <LinkTo kind="patterns-unstable-layout-modules-titlebar" story="default">
+    TitleBar
+  </LinkTo>
 
 ## Troubleshooting
 

@@ -43,6 +43,7 @@ function getCategory(story) {
 const parameters = {
   controls: { expanded: true, hideNoControlsWarning: true },
   docs: {
+    page: null,
     theme: storybookTheme,
   },
   info: {
@@ -68,11 +69,7 @@ const parameters = {
     storySort: (a, b) =>
       ORDER.indexOf(getCategory(a)) - ORDER.indexOf(getCategory(b)),
   },
-  previewTabs: {
-    'storybook/docs/panel': {
-      hidden: true,
-    },
-  },
+  viewMode: 'story',
 };
 
 // Set the Google Analytics tracking ID if the `master` branch is deployed.

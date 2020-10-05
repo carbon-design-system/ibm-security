@@ -1,4 +1,5 @@
 import { ArgsTable, Story } from '@storybook/addon-docs/blocks';
+import LinkTo from '@storybook/addon-links/react';
 
 import { parameters } from '../../../../.storybook/preview';
 import Canvas from '../../../../.storybook/components/Canvas';
@@ -135,17 +136,27 @@ The card module can contain a number of other layout modules within the parent t
 
 ## Examples
 
-[Detail layout](?path=/story/patterns-unstable-layout-examples-beta--detail)
+<LinkTo kind="patterns-unstable-layout-examples" story="detail">
+  Detail layout
+</LinkTo>
 
 ## References
 
 - [Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
-- [Card](?path=/story/components-card)
-- [SummaryCard](?path=/story/patterns-summarycard)
+- <LinkTo kind="components-card" story="default">
+    Card
+  </LinkTo>
+- <LinkTo kind="patterns-summarycard" story="with-primary-label">
+    SummaryCard
+  </LinkTo>
 - [Tile](https://react.carbondesignsystem.com/?path=/docs/tile)
 - [Higher-Order Components](https://reactjs.org/docs/higher-order-components.html)
-- [TitleBar](?path=/docs/patterns-unstable-layout-modules-titlebar)
-- [ActionBar](?path=/docs/patterns-unstable-layout-modules-actionbar)
+- <LinkTo kind="patterns-unstable-layout-modules-titlebar" story="default">
+    TitleBar
+  </LinkTo>
+- <LinkTo kind="patterns-unstable-layout-modules-actionbar" story="default">
+    ActionBar
+  </LinkTo>
 
 ## Troubleshooting
 

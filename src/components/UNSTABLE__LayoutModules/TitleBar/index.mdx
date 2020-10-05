@@ -1,4 +1,5 @@
 import { ArgsTable, Story } from '@storybook/addon-docs/blocks';
+import LinkTo from '@storybook/addon-links/react';
 
 import { parameters } from '../../../../.storybook/preview';
 import Canvas from '../../../../.storybook/components/Canvas';
@@ -117,12 +118,18 @@ Title bar modules can span between 4 and 8 columns, following the [narrow grid](
 
 ## Examples
 
-- [Overview layout](?path=/story/patterns-unstable-layout-examples-beta--overview)
-- [Detail layout](?path=/story/patterns-unstable-layout-examples-beta--detail)
+- <LinkTo kind="patterns-unstable-layout-examples" story="overview">
+    Overview layout
+  </LinkTo>
+- <LinkTo kind="patterns-unstable-layout-examples" story="detail">
+    Detail layout
+  </LinkTo>
 
 ## References
 
-- [IconButtonBar](?path=/story/patterns-iconbuttonbar)
+- <LinkTo kind="patterns-iconbuttonbar" story="default">
+    IconButtonBar
+  </LinkTo>
 - [Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
 
 ## Troubleshooting

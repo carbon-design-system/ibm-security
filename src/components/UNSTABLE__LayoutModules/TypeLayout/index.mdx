@@ -1,4 +1,5 @@
 import { ArgsTable, Story } from '@storybook/addon-docs/blocks';
+import LinkTo from '@storybook/addon-links/react';
 
 import { parameters } from '../../../../.storybook/preview';
 import Canvas from '../../../../.storybook/components/Canvas';
@@ -136,12 +137,18 @@ Type layout modules span across 8 columns, following the [narrow grid](#referenc
 
 ## Examples
 
-- [Overview layout](?path=/story/patterns-unstable-layout-examples-beta--overview)
-- [Detail layout](?path=/story/patterns-unstable-layout-examples-beta--detail)
+- <LinkTo kind="patterns-unstable-layout-examples" story="overview">
+    Overview layout
+  </LinkTo>
+- <LinkTo kind="patterns-unstable-layout-examples" story="detail">
+    Detail layout
+  </LinkTo>
 
 ## References
 
-- [TitleBar](?path=/docs/patterns-unstable-layout-modules-titlebar)
+- <LinkTo kind="patterns-unstable-layout-modules-titlebar" story="default">
+    TitleBar
+  </LinkTo>
 - [Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
 
 ## Troubleshooting
