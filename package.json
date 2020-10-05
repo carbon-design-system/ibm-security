@@ -100,6 +100,7 @@
     "@storybook/addon-knobs": "^6.0.22",
     "@storybook/addon-options": "^5.3.21",
     "@storybook/addon-storysource": "^6.0.22",
+    "@storybook/addon-viewport": "^6.0.22",
     "@storybook/addons": "^6.0.22",
     "@storybook/react": "^6.0.22",
     "@storybook/theming": "^6.0.22",
@@ -163,7 +164,7 @@
     "stylelint-config-recommended-scss": "^3.2.0",
     "stylelint-no-unsupported-browser-features": "^3.0.0",
     "stylelint-scss": "^3.5.2",
-    "webpack-merge": "^5.1.2",
+    "webpack-merge": "^5.1.4",
     "yarn": "^1.16.0"
   },
   "peerDependencies": {
