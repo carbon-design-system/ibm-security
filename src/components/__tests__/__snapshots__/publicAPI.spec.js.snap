@@ -12880,6 +12880,14 @@ Map {
       },
     },
   },
+  "TypeLayoutModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
   "TypeLayoutRow" => Object {
     "defaultProps": Object {
       "children": null,

@@ -22,3 +22,4 @@ export {
 } from './PageTabModule';
 
 export { default as TitleBarModule } from './TitleBarModule';
+export { default as TypeLayoutModule } from './TypeLayoutModule';

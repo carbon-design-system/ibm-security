@@ -271,6 +271,7 @@ export LayoutModule, {
   PageTabModule,
   PageTabModuleDetails,
   TitleBarModule,
+  TypeLayoutModule,
   withBackground,
 } from './components/UNSTABLE__LayoutModules';
 
