@@ -44,7 +44,7 @@ function getCategory(story) {
 }
 
 const parameters = {
-  controls: { disable: true, expanded: true, hideNoControlsWarning: true },
+  controls: { disable: true, expanded: true },
   docs: {
     page: DocsPage,
     theme: storybookTheme,
