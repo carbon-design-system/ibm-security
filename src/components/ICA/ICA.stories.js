@@ -1,6 +1,6 @@
 /**
  * @file Important content area stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import { boolean, select, number, text } from '@storybook/addon-knobs';
@@ -23,6 +23,7 @@ const storyProps = ({ value = icaValue, total } = {}) => ({
   total: number('Total (total)', total),
   percentage: boolean('Percentage (percentage)', false),
   forceShowTotal: boolean('Show total (forceShowTotal)', false),
+  truncate: boolean('Truncate (truncate)', ICA.defaultProps.truncate),
   locale: select('Locale (locale)', Locales, Locales[0]),
 });
 

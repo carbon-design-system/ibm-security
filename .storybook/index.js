@@ -1,6 +1,6 @@
 /**
  * @file Storybook helpers.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 // Category labels.
@@ -11,7 +11,7 @@ const CATEGORIES = {
 
 const { COMPONENTS, PATTERNS } = CATEGORIES;
 
-const HIERARCHY_ROOT_SEPARATOR = '|';
+const HIERARCHY_ROOT_SEPARATOR = '/';
 
 const ORDER = [PATTERNS, COMPONENTS];
 
@@ -56,9 +56,7 @@ const deprecate = name => `${name} [Deprecated]`;
  * @returns {Object<string, Object>} The disabled configuration.
  */
 const disableCentered = () => ({
-  centered: {
-    disable: true,
-  },
+  layout: 'fullscreen',
 });
 
 /**
@@ -68,6 +66,24 @@ const disableCentered = () => ({
  */
 const disableCenteredStories = stories =>
   stories.addParameters(disableCentered());
+
+/**
+ * Helper configuration for aligning stories supporting Storybook Docs with the same addon and tab configuration.
+ * @returns {Object<string, Object>} The helper configuration.
+ */
+const getDocsParameters = () => ({
+  controls: { disable: false },
+  info: {
+    disable: true,
+  },
+  knobs: { disabled: true },
+  previewTabs: {
+    'storybook/docs/panel': {
+      hidden: false,
+    },
+  },
+});
+
 /**
  * Configuration for applying information to individual stories.
  * @param {string} description The information to apply to individual stories.
@@ -83,26 +99,14 @@ Also refer to http://${component.library}.carbondesignsystem.com/?path=/story/${
       : description,
 });
 
-/**
- * Configuration for applying metadata information to stories.
- * @param {string} title The title to apply to stories.
- * @param {string} description The information to apply to individual stories.
- * @param {Object<string, Object>} parameters Additional parameters to apply to the stories.
- * @returns {Object<string, string>} The configuration containing information to apply.
- */
-const meta = (title, description, parameters) => ({
-  parameters: { ...info(description), ...parameters },
-  title,
-});
-
 export {
   deprecate,
   disableCentered,
   disableCenteredStories,
   getComponentsCategory as components,
+  getDocsParameters,
   getPatternsCategory as patterns,
   HIERARCHY_ROOT_SEPARATOR,
   info,
-  meta,
   ORDER,
 };

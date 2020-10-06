@@ -42,7 +42,7 @@
     z-index: 1;
   }
 
-  &--x {
+  &--x > {
     #{$block}__before,
     #{$block}__after {
       top: 0;
@@ -59,7 +59,7 @@
     }
   }
 
-  &--y {
+  &--y > {
     #{$block}__before,
     #{$block}__after {
       left: 0;

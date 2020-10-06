@@ -1,7 +1,7 @@
 ////
 /// Panel mixins.
 /// @group panel
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -59,7 +59,7 @@
   background-color: $ui-01;
   flex-direction: column;
   justify-content: space-between;
-  z-index: z($layer: floating);
+  z-index: z($layer: floating) + 1;
   outline: none;
 
   @include rtl {

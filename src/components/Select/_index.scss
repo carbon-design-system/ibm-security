@@ -1,7 +1,7 @@
 ////
 /// Select component.
 /// @group select
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import '@carbon/themes/scss/tokens';
@@ -14,11 +14,5 @@
 @include export-namespace($name: select) {
   .#{$prefix}--select-input {
     text-rendering: auto;
-
-    // TODO - remove when Carbon fix is released.
-    // https://github.com/carbon-design-system/carbon/pull/4343
-    &:focus {
-      color: $text-01;
-    }
   }
 }
