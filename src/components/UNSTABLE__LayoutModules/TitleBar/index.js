@@ -7,9 +7,10 @@ import classnames from 'classnames';
 import { bool, elementType, node, string } from 'prop-types';
 import React, { createElement } from 'react';
 
-import { getLayoutModuleProps, layoutModuleNamespace } from '../LayoutModule';
-
-import LayoutModule from '..';
+import LayoutModule, {
+  getLayoutModuleProps,
+  layoutModuleNamespace,
+} from '../LayoutModule';
 
 const namespace = 'title-bar';
 

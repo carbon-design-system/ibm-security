@@ -17,7 +17,7 @@ import { layout03, layout04 } from '@carbon/layout';
 import { Grid, Row, Column } from 'carbon-components-react';
 import React from 'react';
 
-import { disableCentered, meta, patterns } from '../../../.storybook';
+import { disableCentered, patterns } from '../../../.storybook';
 
 import {
   ActionBar,
@@ -35,7 +35,7 @@ import {
   ICAModule,
   IconButtonBar,
   PageTab,
-  SummaryCard,
+  SummaryCard as SummaryCardComponent,
   SummaryCardAction,
   SummaryCardBody,
   SummaryCardFooter,
@@ -48,9 +48,12 @@ import {
   TypeLayoutBody,
   TypeLayoutRow,
   TypeLayoutCell,
-  withBackground,
-  withLayout,
 } from '../..';
+
+import withLayout, { withBackground } from './Layout';
+
+const ColumnWithBackground = withBackground(Column);
+const SummaryCard = withLayout(withBackground(SummaryCardComponent));
 
 const UIShell = () => (
   <div style={{ height: layout04, marginBottom: layout03 }}>
@@ -60,10 +63,23 @@ const UIShell = () => (
   </div>
 );
 
-const ColumnWithBackground = withBackground(Column);
-const EnhancedSummaryCard = withLayout(withBackground(SummaryCard));
+export default {
+  title: patterns('UNSTABLE Layout Examples'),
+  parameters: {
+    ...disableCentered(),
+  },
+  decorators: [
+    story => (
+      <>
+        <UIShell />
 
-const overview = () => (
+        <Grid>{story()}</Grid>
+      </>
+    ),
+  ],
+};
+
+export const Overview = () => (
   <>
     <ActionBar>
       <Tag type="gray">Closed</Tag>
@@ -300,7 +316,7 @@ const overview = () => (
   </>
 );
 
-const detail = () => (
+export const Detail = () => (
   <PageTab>
     <Tabs selected={1}>
       <Tab label="Case" />
@@ -364,7 +380,7 @@ const detail = () => (
         <CardModule>
           <Row>
             <Column>
-              <EnhancedSummaryCard>
+              <SummaryCard>
                 <SummaryCardHeader title="Threat actor" />
                 <SummaryCardBody>
                   <TitleBar title="Suspected Chinese Cyber Espionage Group (TEMP.Periscope)" />
@@ -378,10 +394,10 @@ const detail = () => (
                     hasIconOnly
                   />
                 </SummaryCardFooter>
-              </EnhancedSummaryCard>
+              </SummaryCard>
             </Column>
             <Column>
-              <EnhancedSummaryCard>
+              <SummaryCard>
                 <SummaryCardHeader title="Threat report" />
                 <SummaryCardBody>
                   <TitleBar title="XFTAS Daily Threat Assessment for Mar 2019" />
@@ -395,10 +411,10 @@ const detail = () => (
                     hasIconOnly
                   />
                 </SummaryCardFooter>
-              </EnhancedSummaryCard>
+              </SummaryCard>
             </Column>
             <Column>
-              <EnhancedSummaryCard>
+              <SummaryCard>
                 <SummaryCardHeader title="IP report" />
                 <SummaryCardBody>
                   <TitleBar title="103.243.175.181" />
@@ -412,10 +428,10 @@ const detail = () => (
                     hasIconOnly
                   />
                 </SummaryCardFooter>
-              </EnhancedSummaryCard>
+              </SummaryCard>
             </Column>
             <Column>
-              <EnhancedSummaryCard>
+              <SummaryCard>
                 <SummaryCardHeader title="Vulnerability report" />
                 <SummaryCardBody>
                   <TitleBar title="CVE-2017-11882" />
@@ -429,7 +445,7 @@ const detail = () => (
                     hasIconOnly
                   />
                 </SummaryCardFooter>
-              </EnhancedSummaryCard>
+              </SummaryCard>
             </Column>
           </Row>
         </CardModule>
@@ -537,20 +553,3 @@ const detail = () => (
     </Tabs>
   </PageTab>
 );
-
-export default meta(
-  patterns('UNSTABLE Layout Examples'),
-  null,
-  disableCentered(),
-  [
-    story => (
-      <>
-        <UIShell />
-
-        <Grid>{story()}</Grid>
-      </>
-    ),
-  ]
-);
-
-export { detail, overview };

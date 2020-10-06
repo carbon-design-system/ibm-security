@@ -11,17 +11,18 @@ import {
   CardModule,
   Column,
   Row,
-  SummaryCard,
+  SummaryCard as SummaryCardComponent,
   SummaryCardBody,
   SummaryCardHeader,
   TitleBar,
-  withBackground,
-  withLayout,
 } from '../../..';
 
+import withLayout, { withBackground } from '../Layout';
 import getTitle, { getDocsParameters } from '../stories';
 
 import page from './index.mdx';
+
+const SummaryCard = withLayout(withBackground(SummaryCardComponent));
 
 export default {
   title: getTitle(CardModule),
@@ -31,90 +32,82 @@ export default {
   },
 };
 
-export const Default = () => {
-  const EnhancedSummaryCard = withLayout(withBackground(SummaryCard));
+export const Default = () => (
+  <CardModule>
+    <Row>
+      <Column>
+        <SummaryCard>
+          <SummaryCardHeader title="Label" />
 
-  return (
-    <CardModule>
-      <Row>
-        <Column>
-          <EnhancedSummaryCard>
-            <SummaryCardHeader title="Label" />
+          <SummaryCardBody>
+            <TitleBar title="Title" />
+          </SummaryCardBody>
+        </SummaryCard>
+      </Column>
 
-            <SummaryCardBody>
-              <TitleBar title="Title" />
-            </SummaryCardBody>
-          </EnhancedSummaryCard>
-        </Column>
+      <Column>
+        <SummaryCard>
+          <SummaryCardHeader title="Label" />
 
-        <Column>
-          <EnhancedSummaryCard>
-            <SummaryCardHeader title="Label" />
+          <SummaryCardBody>
+            <TitleBar title="Title" />
+          </SummaryCardBody>
+        </SummaryCard>
+      </Column>
 
-            <SummaryCardBody>
-              <TitleBar title="Title" />
-            </SummaryCardBody>
-          </EnhancedSummaryCard>
-        </Column>
+      <Column>
+        <SummaryCard>
+          <SummaryCardHeader title="Label" />
 
-        <Column>
-          <EnhancedSummaryCard>
-            <SummaryCardHeader title="Label" />
+          <SummaryCardBody>
+            <TitleBar title="Title" />
+          </SummaryCardBody>
+        </SummaryCard>
+      </Column>
+    </Row>
+  </CardModule>
+);
 
-            <SummaryCardBody>
-              <TitleBar title="Title" />
-            </SummaryCardBody>
-          </EnhancedSummaryCard>
-        </Column>
-      </Row>
-    </CardModule>
-  );
-};
+export const Complimentary = () => (
+  <CardModule>
+    <TitleBar title="Section title" />
 
-export const Complimentary = () => {
-  const EnhancedSummaryCard = withLayout(withBackground(SummaryCard));
+    <TitleBar element="h3" title="Subsection title" subsection />
 
-  return (
-    <CardModule>
-      <TitleBar title="Section title" />
+    <ActionBar>
+      <Button kind="ghost">Button</Button>
+    </ActionBar>
 
-      <TitleBar element="h3" title="Subsection title" subsection />
+    <Row>
+      <Column>
+        <SummaryCard>
+          <SummaryCardHeader title="Label" />
 
-      <ActionBar>
-        <Button kind="ghost">Button</Button>
-      </ActionBar>
+          <SummaryCardBody>
+            <TitleBar title="Title" />
+          </SummaryCardBody>
+        </SummaryCard>
+      </Column>
 
-      <Row>
-        <Column>
-          <EnhancedSummaryCard>
-            <SummaryCardHeader title="Label" />
+      <Column>
+        <SummaryCard>
+          <SummaryCardHeader title="Label" />
 
-            <SummaryCardBody>
-              <TitleBar title="Title" />
-            </SummaryCardBody>
-          </EnhancedSummaryCard>
-        </Column>
+          <SummaryCardBody>
+            <TitleBar title="Title" />
+          </SummaryCardBody>
+        </SummaryCard>
+      </Column>
 
-        <Column>
-          <EnhancedSummaryCard>
-            <SummaryCardHeader title="Label" />
+      <Column>
+        <SummaryCard>
+          <SummaryCardHeader title="Label" />
 
-            <SummaryCardBody>
-              <TitleBar title="Title" />
-            </SummaryCardBody>
-          </EnhancedSummaryCard>
-        </Column>
-
-        <Column>
-          <EnhancedSummaryCard>
-            <SummaryCardHeader title="Label" />
-
-            <SummaryCardBody>
-              <TitleBar title="Title" />
-            </SummaryCardBody>
-          </EnhancedSummaryCard>
-        </Column>
-      </Row>
-    </CardModule>
-  );
-};
+          <SummaryCardBody>
+            <TitleBar title="Title" />
+          </SummaryCardBody>
+        </SummaryCard>
+      </Column>
+    </Row>
+  </CardModule>
+);

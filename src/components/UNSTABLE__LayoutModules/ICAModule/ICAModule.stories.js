@@ -5,7 +5,9 @@
 
 import React from 'react';
 
-import { Column, ICA, ICAModule, Row, withHover } from '../../..';
+import { Column, ICA, ICAModule, Row } from '../../..';
+
+import { withHover } from '../Layout';
 import getTitle, { getDocsParameters } from '../stories';
 import page from './index.mdx';
 
