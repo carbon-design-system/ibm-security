@@ -76,7 +76,7 @@ const getDocsParameters = () => ({
   info: {
     disable: true,
   },
-  knobs: { disabled: true },
+  knobs: { disable: true },
   previewTabs: {
     'storybook/docs/panel': {
       hidden: false,

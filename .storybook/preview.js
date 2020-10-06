@@ -5,8 +5,8 @@
 
 import { spacing04, spacing05 } from '@carbon/layout';
 import { styles } from '@carbon/type';
-
 import { withInfo } from '@storybook/addon-info';
+
 import React from 'react';
 
 import random from '../src/globals/random';
@@ -18,6 +18,7 @@ import storybookTheme from './theme';
 import withTheme from './addons/addon-theme';
 
 import Container from './components/Container';
+import DocsPage from './components/DocsPage';
 
 const { interactive01, text04 } = theme;
 
@@ -45,6 +46,7 @@ function getCategory(story) {
 const parameters = {
   controls: { disable: true, expanded: true, hideNoControlsWarning: true },
   docs: {
+    page: DocsPage,
     theme: storybookTheme,
   },
   info: {

@@ -13,6 +13,8 @@
 @import '../src/components/index';
 @import '../src/platform/index';
 
+@import '../src/platform/body/mixins';
+
 * {
   box-sizing: border-box;
 }
@@ -31,4 +33,8 @@
       width: 100%;
     }
   }
+}
+
+.docs .sbdocs-preview {
+  background-color: $body__color__background;
 }
