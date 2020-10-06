@@ -6,7 +6,7 @@
 import { node } from 'prop-types';
 import React, { Children } from 'react';
 
-import LayoutModule from '..';
+import LayoutModule from '../LayoutModule';
 
 const namespace = 'button-cluster';
 

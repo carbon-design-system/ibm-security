@@ -4976,28 +4976,6 @@ Map {
       },
     },
   },
-  "LayoutModule" => Object {
-    "defaultProps": Object {
-      "as": "div",
-      "className": null,
-    },
-    "propTypes": Object {
-      "as": Object {
-        "type": "elementType",
-      },
-      "children": Object {
-        "isRequired": true,
-        "type": "node",
-      },
-      "className": Object {
-        "type": "string",
-      },
-      "namespace": Object {
-        "isRequired": true,
-        "type": "string",
-      },
-    },
-  },
   "Link" => Object {
     "propTypes": Object {
       "children": Object {
@@ -13631,6 +13609,5 @@ Map {
       },
     },
   },
-  "withBackground" => Object {},
 }
 `;

@@ -6,7 +6,7 @@
 import { node } from 'prop-types';
 import React from 'react';
 
-import LayoutModule from '..';
+import LayoutModule from '../LayoutModule';
 
 /**
  * Type layout modules provide a means to orderly layout terms and definitions.

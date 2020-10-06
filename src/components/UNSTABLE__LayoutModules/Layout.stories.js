@@ -17,7 +17,7 @@ import { layout03, layout04 } from '@carbon/layout';
 import { Grid, Row, Column } from 'carbon-components-react';
 import React from 'react';
 
-import { disableCentered, meta, patterns } from '../../../.storybook';
+import { disableCentered, patterns } from '../../../.storybook';
 
 import {
   ActionBarModule,
@@ -34,7 +34,7 @@ import {
   ICAModule,
   IconButtonBar,
   PageTabModule,
-  SummaryCard,
+  SummaryCard as SummaryCardComponent,
   SummaryCardAction,
   SummaryCardBody,
   SummaryCardFooter,
@@ -48,8 +48,12 @@ import {
   TypeLayoutCell,
   TypeLayoutModule,
   TypeLayoutRow,
-  withBackground,
 } from '../..';
+
+import withBackground from './Background';
+
+const ColumnWithBackground = withBackground(Column);
+const SummaryCard = withBackground(SummaryCardComponent);
 
 const UIShell = () => (
   <div style={{ height: layout04, marginBottom: layout03 }}>
@@ -59,9 +63,23 @@ const UIShell = () => (
   </div>
 );
 
-const ColumnWithBackground = withBackground(Column);
+export default {
+  title: patterns('UNSTABLE Layout Examples'),
+  parameters: {
+    ...disableCentered(),
+  },
+  decorators: [
+    story => (
+      <>
+        <UIShell />
 
-const overview = () => (
+        <Grid>{story()}</Grid>
+      </>
+    ),
+  ],
+};
+
+export const Overview = () => (
   <>
     <ActionBarModule>
       <Tag type="gray">Closed</Tag>
@@ -314,7 +332,7 @@ const overview = () => (
   </>
 );
 
-const detail = () => (
+export const Detail = () => (
   <PageTabModule>
     <Tabs selected={1}>
       <Tab label="Case" />
@@ -561,20 +579,3 @@ const detail = () => (
     </Tabs>
   </PageTabModule>
 );
-
-export default meta(
-  patterns('UNSTABLE Layout Examples'),
-  null,
-  disableCentered(),
-  [
-    story => (
-      <>
-        <UIShell />
-
-        <Grid>{story()}</Grid>
-      </>
-    ),
-  ]
-);
-
-export { detail, overview };

@@ -24903,6 +24903,11 @@ a.bx--navigation-link:focus {
   margin-left: auto;
 }
 
+.security--unstable--layout__module--background {
+  background-color: var(--ui-01, #262626);
+  outline: 0.0625rem solid var(--ui-background, #161616);
+}
+
 .security--unstable--layout__module--button-cluster {
   padding-bottom: 1rem;
 }
@@ -24927,8 +24932,6 @@ a.bx--navigation-link:focus {
 
 .security--unstable--layout__module--card__component {
   margin-bottom: 1rem;
-  background-color: var(--ui-01, #262626);
-  outline: 0.0625rem solid var(--ui-background, #161616);
 }
 
 .security--unstable--layout__module--description {
@@ -24965,11 +24968,6 @@ a.bx--navigation-link:focus {
 
 .security--unstable--layout__module--ica > .security--unstable--layout__module--title-bar > .security--unstable--layout__module--title-bar__title {
   margin-top: 0;
-}
-
-.security--unstable--layout__module--background {
-  background-color: var(--ui-01, #262626);
-  outline: 0.0625rem solid var(--ui-background, #161616);
 }
 
 .security--unstable--layout__module--page-tab {

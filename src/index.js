@@ -261,7 +261,7 @@ export UnorderedList from './components/UnorderedList';
 export { Wizard, WizardStep } from './components/Wizard';
 
 // Experimental.
-export LayoutModule, {
+export {
   ActionBarModule,
   ActionBarModuleItems,
   ButtonClusterModule,
@@ -272,7 +272,6 @@ export LayoutModule, {
   PageTabModuleDetails,
   TitleBarModule,
   TypeLayoutModule,
-  withBackground,
 } from './components/UNSTABLE__LayoutModules';
 
 export UNSTABLE__Pagination, {

@@ -11,15 +11,17 @@ import {
   CardModule,
   Column,
   Row,
-  SummaryCard,
+  SummaryCard as SummaryCardComponent,
   SummaryCardBody,
   SummaryCardHeader,
   TitleBarModule,
 } from '../../..';
 
+import withBackground from '../Background';
 import getTitle, { getDocsParameters } from '../stories';
-
 import page from './index.mdx';
+
+const SummaryCard = withBackground(SummaryCardComponent);
 
 export default {
   title: getTitle(CardModule),
