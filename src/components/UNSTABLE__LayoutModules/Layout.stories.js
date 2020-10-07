@@ -18,6 +18,7 @@ import { Grid, Row, Column } from 'carbon-components-react';
 import React from 'react';
 
 import { disableCentered, patterns } from '../../../.storybook';
+import withBackground from '../../../.storybook/components/Background';
 
 import {
   ActionBarModule,
@@ -49,8 +50,6 @@ import {
   TypeLayoutModule,
   TypeLayoutRow,
 } from '../..';
-
-import withBackground from './Background';
 
 const ColumnWithBackground = withBackground(Column);
 const SummaryCard = withBackground(SummaryCardComponent);

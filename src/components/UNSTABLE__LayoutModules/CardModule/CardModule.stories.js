@@ -5,6 +5,8 @@
 
 import React from 'react';
 
+import withBackground from '../../../../.storybook/components/Background';
+
 import {
   ActionBarModule,
   Button,
@@ -17,7 +19,6 @@ import {
   TitleBarModule,
 } from '../../..';
 
-import withBackground from '../Background';
 import getTitle, { getDocsParameters } from '../stories';
 import page from './index.mdx';
 
