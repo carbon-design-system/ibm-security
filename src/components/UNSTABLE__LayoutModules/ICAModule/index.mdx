@@ -5,7 +5,7 @@ import { parameters } from '../../../../.storybook/preview';
 The ICA module provides a means to orderly layout at-a-glance statistics.
 
 - [Overview](#overview)
-- [withHover](#withhover)
+- [Background hover](#background-hover)
 - [Component API](#component-api)
 - [Grid placement](#grid-placement)
 - [Examples](#examples)
@@ -14,9 +14,9 @@ The ICA module provides a means to orderly layout at-a-glance statistics.
 
 ## Overview
 
-The ICA module can be built using a combination of the `ICAModule`, [grid](#references), [`ICA`](#references), and optionally the `withHover`, [higher-order component](#references).
+The ICA module can be built using a combination of the `ICAModule`, [grid](#references), and [`ICA`](#references) components.
 
-Everything passed in as a child of `ICAModule` will be rendered.
+Everything passed in as a [render prop](#references) child of `ICAModule` will be rendered.
 
 <Canvas>
   <Story
@@ -25,31 +25,16 @@ Everything passed in as a child of `ICAModule` will be rendered.
   />
 </Canvas>
 
-## withHover
+## Background hover
 
-The `withHover` higher-order component enhances columns to provide consistent hover styling when using an ICA within the ICA module.
+If necessary, a background hover can be placed on the grid columns.
 
-```jsx
-const ColumnWithHover = withHover(Column);
-
-return (
-  <ICAModule>
-    <Row>
-      <ColumnWithHover>
-        <ICA />
-      </ColumnWithHover>
-
-      <ColumnWithHover>
-        <ICA />
-      </ColumnWithHover>
-
-      <ColumnWithHover>
-        <ICA />
-      </ColumnWithHover>
-    </Row>
-  </ICAModule>
-);
-```
+<Canvas>
+  <Story
+    id="patterns-unstable-layout-modules-icamodule--hover"
+    parameters={parameters}
+  />
+</Canvas>
 
 ## Component API
 
@@ -73,19 +58,21 @@ ICAs within ICA modules can span across 2 or 3 columns, following the narrow gri
 
 ```jsx
 <ICAModule>
-  <Row>
-    <Column lg={3}>
-      <ICA />
-    </Column>
+  {() => (
+    <Row>
+      <Column lg={3}>
+        <ICA />
+      </Column>
 
-    <Column lg={3}>
-      <ICA />
-    </Column>
+      <Column lg={3}>
+        <ICA />
+      </Column>
 
-    <Column lg={3}>
-      <ICA />
-    </Column>
-  </Row>
+      <Column lg={3}>
+        <ICA />
+      </Column>
+    </Row>
+  )}
 </ICAModule>
 ```
 
@@ -104,9 +91,12 @@ ICAs within ICA modules can span across 2 or 3 columns, following the narrow gri
 - <LinkTo kind="components-ica" story="default">
     ICA
   </LinkTo>
-- [Higher-Order Components](https://reactjs.org/docs/higher-order-components.html)
-- <LinkTo kind="patterns-unstable-layout-modules-titlebar" story="default">
-    TitleBar
+- [Render Props](https://reactjs.org/docs/render-props.html)
+- <LinkTo
+    kind="patterns-unstable-layout-modules-titlebarmodule"
+    story="default"
+  >
+    TitleBarModule
   </LinkTo>
 
 ## Troubleshooting

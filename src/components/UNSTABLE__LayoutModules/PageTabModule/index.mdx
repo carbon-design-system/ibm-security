@@ -1,6 +1,6 @@
 import { parameters } from '../../../../.storybook/preview';
 
-# PageTab
+# PageTabModule
 
 Page tab modules provide orderly tab navigation for a page.
 
@@ -14,13 +14,13 @@ Page tab modules provide orderly tab navigation for a page.
 
 ## Overview
 
-The page tab module can be built using a combination of the `PageTab`, [`Tabs`](#references), and `PageTabDetails` components.
+The page tab module can be built using a combination of the `PageTabModule`, [`Tabs`](#references), and `PageTabModuleDetails` components.
 
-The `PageTab` accepts `Tabs`, and optionally `PageTabDetails`, components as `children` and each `Tab` is responsible for displaying the tab's label and panel content.
+The `PageTabModule` accepts `Tabs`, and optionally `PageTabModuleDetails`, components as `children` and each `Tab` is responsible for displaying the tab's label and panel content.
 
 <Canvas>
   <Story
-    id="patterns-unstable-layout-modules-pagetab--default"
+    id="patterns-unstable-layout-modules-pagetabmodule--default"
     parameters={parameters}
   />
 </Canvas>
@@ -31,7 +31,7 @@ If necessary, supplementary details can be placed inline with the tabs.
 
 <Canvas>
   <Story
-    id="patterns-unstable-layout-modules-pagetab--details"
+    id="patterns-unstable-layout-modules-pagetabmodule--details"
     parameters={parameters}
   />
 </Canvas>
@@ -40,7 +40,7 @@ If necessary, supplementary details can be placed inline with the tabs.
 
 <ArgsTable />
 
-Additional props passed into `PageTab` and `PageTabDetails` will be forwarded along to their underlying containers.
+Additional props passed into `PageTabModule` and `PageTabModuleDetails` will be forwarded along to their underlying containers.
 
 ## Grid placement
 
@@ -58,7 +58,7 @@ Following the [narrow grid](#references) implementation, page tab modules should
 
 ```jsx
 <Grid>
-  <PageTab>
+  <PageTabModule>
     <Tabs>
       <Tab label="Tab 1">
         <Row>
@@ -69,7 +69,7 @@ Following the [narrow grid](#references) implementation, page tab modules should
       <Tab label="Tab 2" />
       <Tab label="Tab 3" />
     </Tabs>
-  </PageTab>
+  </PageTabModule>
 </Grid>
 ```
 

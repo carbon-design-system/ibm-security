@@ -20,21 +20,20 @@ import React from 'react';
 import { disableCentered, patterns } from '../../../.storybook';
 
 import {
-  ActionBar,
-  ActionBarItems,
-  ButtonCluster,
+  ActionBarModule,
+  ActionBarModuleItems,
+  ButtonClusterModule,
   Button,
   CarbonHeader,
   CardModule,
   DataTablePagination,
   Decorator,
-  Description,
-  DescriptionContent,
+  DescriptionModule,
   HeaderName,
   ICA,
   ICAModule,
   IconButtonBar,
-  PageTab,
+  PageTabModule,
   SummaryCard as SummaryCardComponent,
   SummaryCardAction,
   SummaryCardBody,
@@ -43,17 +42,18 @@ import {
   Tabs,
   Tab,
   Tag,
-  TitleBar,
+  TitleBarModule,
   TypeLayout,
   TypeLayoutBody,
-  TypeLayoutRow,
   TypeLayoutCell,
+  TypeLayoutModule,
+  TypeLayoutRow,
 } from '../..';
 
-import withLayout, { withBackground } from './Layout';
+import withBackground from './Background';
 
 const ColumnWithBackground = withBackground(Column);
-const SummaryCard = withLayout(withBackground(SummaryCardComponent));
+const SummaryCard = withBackground(SummaryCardComponent);
 
 const UIShell = () => (
   <div style={{ height: layout04, marginBottom: layout03 }}>
@@ -81,112 +81,124 @@ export default {
 
 export const Overview = () => (
   <>
-    <ActionBar>
+    <ActionBarModule>
       <Tag type="gray">Closed</Tag>
       ID: 12&nbsp;&nbsp;|&nbsp;&nbsp;Result: Completed
-    </ActionBar>
+    </ActionBarModule>
 
     <Row>
       <Column lg={12}>
         <Row>
           <ColumnWithBackground>
-            <TitleBar title="General settings and scope" subsection />
+            <TypeLayoutModule>
+              <TitleBarModule title="General settings and scope" subsection />
 
-            <TypeLayout>
-              <TypeLayoutBody>
-                <TypeLayoutRow>
-                  <TypeLayoutCell>Name</TypeLayoutCell>
-                  <TypeLayoutCell>
-                    ServiceNow entitlements review
-                  </TypeLayoutCell>
-                </TypeLayoutRow>
-                <TypeLayoutRow>
-                  <TypeLayoutCell>Description</TypeLayoutCell>
-                  <TypeLayoutCell>
-                    Sample description of the ServiceNow entitlements review
-                    campaign that may need to go to several lines.
-                  </TypeLayoutCell>
-                </TypeLayoutRow>
-                <TypeLayoutRow>
-                  <TypeLayoutCell>Type</TypeLayoutCell>
-                  <TypeLayoutCell>User entitlements</TypeLayoutCell>
-                </TypeLayoutRow>
-                <TypeLayoutRow>
-                  <TypeLayoutCell>Priority</TypeLayoutCell>
-                  <TypeLayoutCell>Medium</TypeLayoutCell>
-                </TypeLayoutRow>
-                <TypeLayoutRow>
-                  <TypeLayoutCell>Applications</TypeLayoutCell>
-                  <TypeLayoutCell>
-                    <ul>
-                      <li>ServiceNow 1</li>
-                      <li>ServiceNow 2</li>
-                      <li>ServiceNow 3</li>
-                    </ul>
-                  </TypeLayoutCell>
-                </TypeLayoutRow>
-                <TypeLayoutRow>
-                  <TypeLayoutCell>Include only</TypeLayoutCell>
-                  <TypeLayoutCell>All users and groups included</TypeLayoutCell>
-                </TypeLayoutRow>
-                <TypeLayoutRow>
-                  <TypeLayoutCell>Except for</TypeLayoutCell>
-                  <TypeLayoutCell>No users and groups excluded</TypeLayoutCell>
-                </TypeLayoutRow>
-                <TypeLayoutRow>
-                  <TypeLayoutCell>Reviewer</TypeLayoutCell>
-                  <TypeLayoutCell>User manager</TypeLayoutCell>
-                </TypeLayoutRow>
-              </TypeLayoutBody>
-            </TypeLayout>
+              <TypeLayout>
+                <TypeLayoutBody>
+                  <TypeLayoutRow>
+                    <TypeLayoutCell>Name</TypeLayoutCell>
+                    <TypeLayoutCell>
+                      ServiceNow entitlements review
+                    </TypeLayoutCell>
+                  </TypeLayoutRow>
+                  <TypeLayoutRow>
+                    <TypeLayoutCell>Description</TypeLayoutCell>
+                    <TypeLayoutCell>
+                      Sample description of the ServiceNow entitlements review
+                      campaign that may need to go to several lines.
+                    </TypeLayoutCell>
+                  </TypeLayoutRow>
+                  <TypeLayoutRow>
+                    <TypeLayoutCell>Type</TypeLayoutCell>
+                    <TypeLayoutCell>User entitlements</TypeLayoutCell>
+                  </TypeLayoutRow>
+                  <TypeLayoutRow>
+                    <TypeLayoutCell>Priority</TypeLayoutCell>
+                    <TypeLayoutCell>Medium</TypeLayoutCell>
+                  </TypeLayoutRow>
+                  <TypeLayoutRow>
+                    <TypeLayoutCell>Applications</TypeLayoutCell>
+                    <TypeLayoutCell>
+                      <ul>
+                        <li>ServiceNow 1</li>
+                        <li>ServiceNow 2</li>
+                        <li>ServiceNow 3</li>
+                      </ul>
+                    </TypeLayoutCell>
+                  </TypeLayoutRow>
+                  <TypeLayoutRow>
+                    <TypeLayoutCell>Include only</TypeLayoutCell>
+                    <TypeLayoutCell>
+                      All users and groups included
+                    </TypeLayoutCell>
+                  </TypeLayoutRow>
+                  <TypeLayoutRow>
+                    <TypeLayoutCell>Except for</TypeLayoutCell>
+                    <TypeLayoutCell>
+                      No users and groups excluded
+                    </TypeLayoutCell>
+                  </TypeLayoutRow>
+                  <TypeLayoutRow>
+                    <TypeLayoutCell>Reviewer</TypeLayoutCell>
+                    <TypeLayoutCell>User manager</TypeLayoutCell>
+                  </TypeLayoutRow>
+                </TypeLayoutBody>
+              </TypeLayout>
+            </TypeLayoutModule>
           </ColumnWithBackground>
 
           <ColumnWithBackground>
             <Row>
               <ColumnWithBackground>
-                <TitleBar title="Schedule" subsection />
+                <TypeLayoutModule>
+                  <TitleBarModule title="Schedule" subsection />
 
-                <TypeLayout>
-                  <TypeLayoutBody>
-                    <TypeLayoutRow>
-                      <TypeLayoutCell>Start date</TypeLayoutCell>
-                      <TypeLayoutCell>Jul 1 2019 at 12:00PM CST</TypeLayoutCell>
-                    </TypeLayoutRow>
-                    <TypeLayoutRow>
-                      <TypeLayoutCell>Duration</TypeLayoutCell>
-                      <TypeLayoutCell>20 days</TypeLayoutCell>
-                    </TypeLayoutRow>
-                    <TypeLayoutRow>
-                      <TypeLayoutCell>Frequency</TypeLayoutCell>
-                      <TypeLayoutCell>
-                        This campaign repeats every 3 months
-                      </TypeLayoutCell>
-                    </TypeLayoutRow>
-                  </TypeLayoutBody>
-                </TypeLayout>
+                  <TypeLayout>
+                    <TypeLayoutBody>
+                      <TypeLayoutRow>
+                        <TypeLayoutCell>Start date</TypeLayoutCell>
+                        <TypeLayoutCell>
+                          Jul 1 2019 at 12:00PM CST
+                        </TypeLayoutCell>
+                      </TypeLayoutRow>
+                      <TypeLayoutRow>
+                        <TypeLayoutCell>Duration</TypeLayoutCell>
+                        <TypeLayoutCell>20 days</TypeLayoutCell>
+                      </TypeLayoutRow>
+                      <TypeLayoutRow>
+                        <TypeLayoutCell>Frequency</TypeLayoutCell>
+                        <TypeLayoutCell>
+                          This campaign repeats every 3 months
+                        </TypeLayoutCell>
+                      </TypeLayoutRow>
+                    </TypeLayoutBody>
+                  </TypeLayout>
+                </TypeLayoutModule>
               </ColumnWithBackground>
             </Row>
 
             <Row>
               <Column>
-                <TitleBar title="Campaign end" subsection />
+                <TypeLayoutModule>
+                  <TitleBarModule title="Campaign end" subsection />
 
-                <TypeLayout>
-                  <TypeLayoutBody>
-                    <TypeLayoutRow>
-                      <TypeLayoutCell>Reminders</TypeLayoutCell>
-                      <TypeLayoutCell>
-                        Start 10 days before campaign ends
-                      </TypeLayoutCell>
-                    </TypeLayoutRow>
-                    <TypeLayoutRow>
-                      <TypeLayoutCell>Campaign end</TypeLayoutCell>
-                      <TypeLayoutCell>
-                        Take no action on entitlements not reviewed
-                      </TypeLayoutCell>
-                    </TypeLayoutRow>
-                  </TypeLayoutBody>
-                </TypeLayout>
+                  <TypeLayout>
+                    <TypeLayoutBody>
+                      <TypeLayoutRow>
+                        <TypeLayoutCell>Reminders</TypeLayoutCell>
+                        <TypeLayoutCell>
+                          Start 10 days before campaign ends
+                        </TypeLayoutCell>
+                      </TypeLayoutRow>
+                      <TypeLayoutRow>
+                        <TypeLayoutCell>Campaign end</TypeLayoutCell>
+                        <TypeLayoutCell>
+                          Take no action on entitlements not reviewed
+                        </TypeLayoutCell>
+                      </TypeLayoutRow>
+                    </TypeLayoutBody>
+                  </TypeLayout>
+                </TypeLayoutModule>
               </Column>
             </Row>
           </ColumnWithBackground>
@@ -196,22 +208,24 @@ export const Overview = () => (
           <ColumnWithBackground>
             <Row>
               <Column>
-                <TitleBar title="Campaign results" subsection />
+                <TitleBarModule title="Campaign results" subsection />
               </Column>
             </Row>
 
             <ICAModule>
-              <Row>
-                <Column sm={2} md={2} lg={3}>
-                  <ICA label="Reviews complete" value={300} />
-                </Column>
-                <Column sm={2} md={2} lg={3}>
-                  <ICA label="Approved" value={241} />
-                </Column>
-                <Column sm={2} md={2} lg={3}>
-                  <ICA label="Rejected" value={28} />
-                </Column>
-              </Row>
+              {() => (
+                <Row>
+                  <Column sm={2} md={2} lg={3}>
+                    <ICA label="Reviews complete" value={300} />
+                  </Column>
+                  <Column sm={2} md={2} lg={3}>
+                    <ICA label="Approved" value={241} />
+                  </Column>
+                  <Column sm={2} md={2} lg={3}>
+                    <ICA label="Rejected" value={28} />
+                  </Column>
+                </Row>
+              )}
             </ICAModule>
 
             <Row condensed>
@@ -275,88 +289,94 @@ export const Overview = () => (
       </Column>
 
       <Column lg={4}>
-        <ButtonCluster>
+        <ButtonClusterModule>
           <Button kind="ghost" renderIcon={Copy16}>
             Duplicate campaign
           </Button>
           <Button kind="ghost" renderIcon={Activity16}>
             View activity report
           </Button>
-        </ButtonCluster>
+        </ButtonClusterModule>
 
-        <TitleBar title="Details" subsection />
+        <TypeLayoutModule>
+          <TitleBarModule title="Details" subsection />
 
-        <TypeLayout>
-          <TypeLayoutBody>
-            <TypeLayoutRow>
-              <TypeLayoutCell>Created by</TypeLayoutCell>
-              <TypeLayoutCell>
-                <ul>
-                  <li>Scott Damon</li>
-                  <li>scottd@cse-bank.com</li>
-                </ul>
-              </TypeLayoutCell>
-            </TypeLayoutRow>
-            <TypeLayoutRow>
-              <TypeLayoutCell>Created on</TypeLayoutCell>
-              <TypeLayoutCell>Jun 21 2018</TypeLayoutCell>
-            </TypeLayoutRow>
-            <TypeLayoutRow>
-              <TypeLayoutCell>Modified on</TypeLayoutCell>
-              <TypeLayoutCell>–</TypeLayoutCell>
-            </TypeLayoutRow>
-            <TypeLayoutRow>
-              <TypeLayoutCell>Closed on</TypeLayoutCell>
-              <TypeLayoutCell>Jul 15 2018</TypeLayoutCell>
-            </TypeLayoutRow>
-          </TypeLayoutBody>
-        </TypeLayout>
+          <TypeLayout>
+            <TypeLayoutBody>
+              <TypeLayoutRow>
+                <TypeLayoutCell>Created by</TypeLayoutCell>
+                <TypeLayoutCell>
+                  <ul>
+                    <li>Scott Damon</li>
+                    <li>scottd@cse-bank.com</li>
+                  </ul>
+                </TypeLayoutCell>
+              </TypeLayoutRow>
+              <TypeLayoutRow>
+                <TypeLayoutCell>Created on</TypeLayoutCell>
+                <TypeLayoutCell>Jun 21 2018</TypeLayoutCell>
+              </TypeLayoutRow>
+              <TypeLayoutRow>
+                <TypeLayoutCell>Modified on</TypeLayoutCell>
+                <TypeLayoutCell>–</TypeLayoutCell>
+              </TypeLayoutRow>
+              <TypeLayoutRow>
+                <TypeLayoutCell>Closed on</TypeLayoutCell>
+                <TypeLayoutCell>Jul 15 2018</TypeLayoutCell>
+              </TypeLayoutRow>
+            </TypeLayoutBody>
+          </TypeLayout>
+        </TypeLayoutModule>
       </Column>
     </Row>
   </>
 );
 
 export const Detail = () => (
-  <PageTab>
+  <PageTabModule>
     <Tabs selected={1}>
       <Tab label="Case" />
       <Tab label="Report">
-        <TitleBar title="Summary" />
+        <TitleBarModule title="Summary" />
 
         <Row>
           <Column lg={6}>
-            <Description>
-              <DescriptionContent>
-                BadFlick is a backdoor that is usually seen being distributed
-                using exploited word documents. It does not have any persistence
-                to survive reboot, but it is capable of opening a reverse shell
-                connection to its C2 server where it can download and execute
-                possibly other malware.
-              </DescriptionContent>
-            </Description>
+            <DescriptionModule>
+              {({ getLayoutProps }) => (
+                <p {...getLayoutProps()}>
+                  BadFlick is a backdoor that is usually seen being distributed
+                  using exploited word documents. It does not have any
+                  persistence to survive reboot, but it is capable of opening a
+                  reverse shell connection to its C2 server where it can
+                  download and execute possibly other malware.
+                </p>
+              )}
+            </DescriptionModule>
           </Column>
 
           <Column lg={{ offset: 2, span: 8 }}>
-            <TypeLayout>
-              <TypeLayoutBody>
-                <TypeLayoutRow>
-                  <TypeLayoutCell>Created by</TypeLayoutCell>
-                  <TypeLayoutCell>X-Force IRIS</TypeLayoutCell>
-                </TypeLayoutRow>
-                <TypeLayoutRow>
-                  <TypeLayoutCell>Last updated</TypeLayoutCell>
-                  <TypeLayoutCell>Jul 14 2019</TypeLayoutCell>
-                </TypeLayoutRow>
-              </TypeLayoutBody>
-            </TypeLayout>
+            <TypeLayoutModule>
+              <TypeLayout>
+                <TypeLayoutBody>
+                  <TypeLayoutRow>
+                    <TypeLayoutCell>Created by</TypeLayoutCell>
+                    <TypeLayoutCell>X-Force IRIS</TypeLayoutCell>
+                  </TypeLayoutRow>
+                  <TypeLayoutRow>
+                    <TypeLayoutCell>Last updated</TypeLayoutCell>
+                    <TypeLayoutCell>Jul 14 2019</TypeLayoutCell>
+                  </TypeLayoutRow>
+                </TypeLayoutBody>
+              </TypeLayout>
+            </TypeLayoutModule>
           </Column>
         </Row>
 
-        <TitleBar title="Related reports" />
+        <TitleBarModule title="Related reports" />
 
-        <ActionBar>
+        <ActionBarModule>
           Supplementary details
-          <ActionBarItems>
+          <ActionBarModuleItems>
             <IconButtonBar
               actions={[
                 {
@@ -374,101 +394,107 @@ export const Detail = () => (
               ]}
               size="md"
             />
-          </ActionBarItems>
-        </ActionBar>
+          </ActionBarModuleItems>
+        </ActionBarModule>
 
         <CardModule>
-          <Row>
-            <Column>
-              <SummaryCard>
-                <SummaryCardHeader title="Threat actor" />
-                <SummaryCardBody>
-                  <TitleBar title="Suspected Chinese Cyber Espionage Group (TEMP.Periscope)" />
-                </SummaryCardBody>
-                <SummaryCardFooter>
-                  <SummaryCardAction
-                    renderIcon={ArrowRight16}
-                    iconDescription="Navigate"
-                    tooltipAlignment="center"
-                    tooltipPosition="right"
-                    hasIconOnly
-                  />
-                </SummaryCardFooter>
-              </SummaryCard>
-            </Column>
-            <Column>
-              <SummaryCard>
-                <SummaryCardHeader title="Threat report" />
-                <SummaryCardBody>
-                  <TitleBar title="XFTAS Daily Threat Assessment for Mar 2019" />
-                </SummaryCardBody>
-                <SummaryCardFooter>
-                  <SummaryCardAction
-                    renderIcon={ArrowRight16}
-                    iconDescription="Navigate"
-                    tooltipAlignment="center"
-                    tooltipPosition="right"
-                    hasIconOnly
-                  />
-                </SummaryCardFooter>
-              </SummaryCard>
-            </Column>
-            <Column>
-              <SummaryCard>
-                <SummaryCardHeader title="IP report" />
-                <SummaryCardBody>
-                  <TitleBar title="103.243.175.181" />
-                </SummaryCardBody>
-                <SummaryCardFooter>
-                  <SummaryCardAction
-                    renderIcon={ArrowRight16}
-                    iconDescription="Navigate"
-                    tooltipAlignment="center"
-                    tooltipPosition="right"
-                    hasIconOnly
-                  />
-                </SummaryCardFooter>
-              </SummaryCard>
-            </Column>
-            <Column>
-              <SummaryCard>
-                <SummaryCardHeader title="Vulnerability report" />
-                <SummaryCardBody>
-                  <TitleBar title="CVE-2017-11882" />
-                </SummaryCardBody>
-                <SummaryCardFooter>
-                  <SummaryCardAction
-                    renderIcon={ArrowRight16}
-                    iconDescription="Navigate"
-                    tooltipAlignment="center"
-                    tooltipPosition="right"
-                    hasIconOnly
-                  />
-                </SummaryCardFooter>
-              </SummaryCard>
-            </Column>
-          </Row>
+          {({ getLayoutProps }) => (
+            <Row>
+              <Column>
+                <SummaryCard {...getLayoutProps()}>
+                  <SummaryCardHeader title="Threat actor" />
+                  <SummaryCardBody>
+                    <TitleBarModule title="Suspected Chinese Cyber Espionage Group (TEMP.Periscope)" />
+                  </SummaryCardBody>
+                  <SummaryCardFooter>
+                    <SummaryCardAction
+                      renderIcon={ArrowRight16}
+                      iconDescription="Navigate"
+                      tooltipAlignment="center"
+                      tooltipPosition="right"
+                      hasIconOnly
+                    />
+                  </SummaryCardFooter>
+                </SummaryCard>
+              </Column>
+              <Column>
+                <SummaryCard {...getLayoutProps()}>
+                  <SummaryCardHeader title="Threat report" />
+                  <SummaryCardBody>
+                    <TitleBarModule title="XFTAS Daily Threat Assessment for Mar 2019" />
+                  </SummaryCardBody>
+                  <SummaryCardFooter>
+                    <SummaryCardAction
+                      renderIcon={ArrowRight16}
+                      iconDescription="Navigate"
+                      tooltipAlignment="center"
+                      tooltipPosition="right"
+                      hasIconOnly
+                    />
+                  </SummaryCardFooter>
+                </SummaryCard>
+              </Column>
+              <Column>
+                <SummaryCard {...getLayoutProps()}>
+                  <SummaryCardHeader title="IP report" />
+                  <SummaryCardBody>
+                    <TitleBarModule title="103.243.175.181" />
+                  </SummaryCardBody>
+                  <SummaryCardFooter>
+                    <SummaryCardAction
+                      renderIcon={ArrowRight16}
+                      iconDescription="Navigate"
+                      tooltipAlignment="center"
+                      tooltipPosition="right"
+                      hasIconOnly
+                    />
+                  </SummaryCardFooter>
+                </SummaryCard>
+              </Column>
+              <Column>
+                <SummaryCard {...getLayoutProps()}>
+                  <SummaryCardHeader title="Vulnerability report" />
+                  <SummaryCardBody>
+                    <TitleBarModule title="CVE-2017-11882" />
+                  </SummaryCardBody>
+                  <SummaryCardFooter>
+                    <SummaryCardAction
+                      renderIcon={ArrowRight16}
+                      iconDescription="Navigate"
+                      tooltipAlignment="center"
+                      tooltipPosition="right"
+                      hasIconOnly
+                    />
+                  </SummaryCardFooter>
+                </SummaryCard>
+              </Column>
+            </Row>
+          )}
         </CardModule>
 
         <Row>
           <ColumnWithBackground>
             <ICAModule>
-              <TitleBar element="h4" title="Indicators" />
+              {() => (
+                <>
+                  <TitleBarModule element="h4" title="Indicators" />
 
-              <Row>
-                <Column sm={2} md={2} lg={3}>
-                  <ICA label="Malware" value={11} />
-                </Column>
-                <Column sm={2} md={2} lg={3}>
-                  <ICA label="IPs" value={8} />
-                </Column>
-                <Column sm={2} md={2} lg={3}>
-                  <ICA label="URLs" value={9} />
-                </Column>
-                <Column sm={2} md={2} lg={3}>
-                  <ICA label="VULs" value={1} />
-                </Column>
-              </Row>
+                  <Row>
+                    <Column sm={2} md={2} lg={3}>
+                      <ICA label="Malware" value={11} />
+                    </Column>
+                    <Column sm={2} md={2} lg={3}>
+                      <ICA label="IPs" value={8} />
+                    </Column>
+                    <Column sm={2} md={2} lg={3}>
+                      <ICA label="URLs" value={9} />
+                    </Column>
+                    <Column sm={2} md={2} lg={3}>
+                      <ICA label="VULs" value={1} />
+                    </Column>
+                  </Row>
+                </>
+              )}
             </ICAModule>
 
             <Row condensed>
@@ -551,5 +577,5 @@ export const Detail = () => (
       </Tab>
       <Tab label="Evidence" />
     </Tabs>
-  </PageTab>
+  </PageTabModule>
 );

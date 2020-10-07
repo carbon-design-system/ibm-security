@@ -4,11 +4,12 @@
 /// @copyright IBM Security 2020
 ////
 
-@import 'ActionBar/index';
-@import 'ButtonCluster/index';
+@import 'ActionBarModule/index';
+@import 'Background/index';
+@import 'ButtonClusterModule/index';
 @import 'CardModule/index';
-@import 'Description/index';
+@import 'DescriptionModule/index';
 @import 'ICAModule/index';
-@import 'Layout/index';
-@import 'PageTab/index';
-@import 'TitleBar/index';
+@import 'PageTabModule/index';
+@import 'TitleBarModule/index';
+@import 'TypeLayoutModule/index';

@@ -1,5 +1,5 @@
 /**
- * @file Card module.
+ * @file Description module.
  * @copyright IBM Security 2020
  */
 
@@ -9,17 +9,17 @@ import React from 'react';
 
 import LayoutModule, { layoutModuleNamespace } from '../LayoutModule';
 
-const namespace = 'card';
+const namespace = 'description';
 
 /**
- * The card module provides a means to orderly present related content and information using summary, navigational, or widget cards as the basis.
+ * Description modules provide a means to orderly layout short-form content.
  */
-const CardModule = ({ children, ...other }) => (
+const DescriptionModule = ({ children, ...other }) => (
   <LayoutModule namespace={namespace} {...other}>
     {children({
       getLayoutProps: ({ className } = {}) => ({
         className: classnames(
-          `${layoutModuleNamespace}--${namespace}__component`,
+          `${layoutModuleNamespace}--${namespace}__content`,
           className
         ),
       }),
@@ -27,9 +27,9 @@ const CardModule = ({ children, ...other }) => (
   </LayoutModule>
 );
 
-CardModule.propTypes = {
-  /** Provide the content for the `CardModule` */
+DescriptionModule.propTypes = {
+  /** Provide the content for the `Description` */
   children: func.isRequired,
 };
 
-export default CardModule;
+export default DescriptionModule;

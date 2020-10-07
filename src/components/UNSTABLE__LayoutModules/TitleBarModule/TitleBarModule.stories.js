@@ -8,14 +8,14 @@ import React from 'react';
 
 import withResponsive from '../../../../.storybook/decorators';
 
-import { IconButtonBar, TitleBar } from '../../..';
+import { IconButtonBar, TitleBarModule } from '../../..';
 import getTitle, { getDocsParameters } from '../stories';
 
 import page from './index.mdx';
 
 export default {
-  title: getTitle(TitleBar),
-  component: TitleBar,
+  title: getTitle(TitleBarModule),
+  component: TitleBarModule,
   args: {
     title: 'Section title',
   },
@@ -26,10 +26,10 @@ export default {
   decorators: [withResponsive],
 };
 
-export const Default = args => <TitleBar {...args} />;
+export const Default = args => <TitleBarModule {...args} />;
 
 export const Actions = args => (
-  <TitleBar {...args}>
+  <TitleBarModule {...args}>
     <IconButtonBar
       actions={[
         {
@@ -47,5 +47,5 @@ export const Actions = args => (
       ]}
       size="md"
     />
-  </TitleBar>
+  </TitleBarModule>
 );

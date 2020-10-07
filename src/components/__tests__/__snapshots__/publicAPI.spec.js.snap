@@ -78,7 +78,7 @@ Map {
       "uid": [Function],
     },
   },
-  "ActionBar" => Object {
+  "ActionBarModule" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
@@ -86,7 +86,7 @@ Map {
       },
     },
   },
-  "ActionBarItems" => Object {
+  "ActionBarModuleItems" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
@@ -274,7 +274,7 @@ Map {
       },
     },
   },
-  "ButtonCluster" => Object {
+  "ButtonClusterModule" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
@@ -435,7 +435,7 @@ Map {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
-        "type": "node",
+        "type": "func",
       },
     },
   },
@@ -2898,25 +2898,11 @@ Map {
       },
     },
   },
-  "Description" => Object {
+  "DescriptionModule" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
-        "type": "node",
-      },
-    },
-  },
-  "DescriptionContent" => Object {
-    "defaultProps": Object {
-      "className": null,
-    },
-    "propTypes": Object {
-      "children": Object {
-        "isRequired": true,
-        "type": "node",
-      },
-      "className": Object {
-        "type": "string",
+        "type": "func",
       },
     },
   },
@@ -4523,7 +4509,7 @@ Map {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
-        "type": "node",
+        "type": "func",
       },
     },
   },
@@ -6473,7 +6459,7 @@ Map {
       },
     },
   },
-  "PageTab" => Object {
+  "PageTabModule" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
@@ -6481,7 +6467,7 @@ Map {
       },
     },
   },
-  "PageTabDetails" => Object {
+  "PageTabModuleDetails" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
@@ -11856,7 +11842,7 @@ Map {
       },
     },
   },
-  "TitleBar" => Object {
+  "TitleBarModule" => Object {
     "defaultProps": Object {
       "children": null,
       "className": null,
@@ -12869,6 +12855,14 @@ Map {
       },
       "className": Object {
         "type": "string",
+      },
+    },
+  },
+  "TypeLayoutModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
       },
     },
   },

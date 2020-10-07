@@ -6,15 +6,15 @@
 import React from 'react';
 
 import withResponsive from '../../../../.storybook/decorators';
-import { PageTab, PageTabDetails, Tabs, Tab } from '../../..';
+import { PageTabModule, PageTabModuleDetails, Tabs, Tab } from '../../..';
 import getTitle, { getDocsParameters } from '../stories';
 
 import page from './index.mdx';
 
 export default {
-  title: getTitle(PageTab),
-  component: PageTab,
-  subcomponents: { PageTabDetails },
+  title: getTitle(PageTabModule),
+  component: PageTabModule,
+  subcomponents: { PageTabModuleDetails },
   parameters: {
     ...getDocsParameters(page),
   },
@@ -22,23 +22,23 @@ export default {
 };
 
 export const Default = () => (
-  <PageTab>
+  <PageTabModule>
     <Tabs>
       <Tab label="Tab 1">Tab 1 content</Tab>
       <Tab label="Tab 2">Tab 2 content</Tab>
       <Tab label="Tab 3">Tab 3 content</Tab>
     </Tabs>
-  </PageTab>
+  </PageTabModule>
 );
 
 export const details = () => (
-  <PageTab>
-    <PageTabDetails>Supplementary details</PageTabDetails>
+  <PageTabModule>
+    <PageTabModuleDetails>Supplementary details</PageTabModuleDetails>
 
     <Tabs>
       <Tab label="Tab 1">Tab 1 content</Tab>
       <Tab label="Tab 2">Tab 2 content</Tab>
       <Tab label="Tab 3">Tab 3 content</Tab>
     </Tabs>
-  </PageTab>
+  </PageTabModule>
 );

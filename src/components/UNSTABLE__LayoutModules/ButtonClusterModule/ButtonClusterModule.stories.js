@@ -8,14 +8,14 @@ import { Add16, Edit16 } from '@carbon/icons-react';
 import React from 'react';
 
 import withResponsive from '../../../../.storybook/decorators';
-import { Button, ButtonCluster } from '../../..';
+import { Button, ButtonClusterModule } from '../../..';
 import getTitle, { getDocsParameters } from '../stories';
 
 import page from './index.mdx';
 
 export default {
-  title: getTitle(ButtonCluster),
-  component: ButtonCluster,
+  title: getTitle(ButtonClusterModule),
+  component: ButtonClusterModule,
   parameters: {
     ...getDocsParameters(page),
   },
@@ -23,7 +23,7 @@ export default {
 };
 
 export const Default = () => (
-  <ButtonCluster>
+  <ButtonClusterModule>
     <Button kind="ghost" renderIcon={Add16}>
       Button 1
     </Button>
@@ -31,5 +31,5 @@ export const Default = () => (
     <Button kind="ghost" renderIcon={Edit16}>
       Button 2
     </Button>
-  </ButtonCluster>
+  </ButtonClusterModule>
 );

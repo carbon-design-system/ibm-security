@@ -262,16 +262,16 @@ export { Wizard, WizardStep } from './components/Wizard';
 
 // Experimental.
 export {
-  ActionBar,
-  ActionBarItems,
-  ButtonCluster,
+  ActionBarModule,
+  ActionBarModuleItems,
+  ButtonClusterModule,
   CardModule,
-  Description,
-  DescriptionContent,
+  DescriptionModule,
   ICAModule,
-  PageTab,
-  PageTabDetails,
-  TitleBar,
+  PageTabModule,
+  PageTabModuleDetails,
+  TitleBarModule,
+  TypeLayoutModule,
 } from './components/UNSTABLE__LayoutModules';
 
 export UNSTABLE__Pagination, {

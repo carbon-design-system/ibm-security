@@ -1,8 +1,7 @@
 import { parameters } from '../../../../.storybook/preview';
+import { Default } from './TitleBarModule.stories';
 
-import { Default } from './TitleBar.stories';
-
-# TitleBar
+# TitleBarModule
 
 Title bar modules provide interchangeable and reliable headings for establishing consistent hierarchies.
 
@@ -20,7 +19,7 @@ Everything passed in as a child of the title bar module will be rendered.
 
 <Canvas>
   <Story
-    id="patterns-unstable-layout-modules-titlebar--default"
+    id="patterns-unstable-layout-modules-titlebarmodule--default"
     parameters={parameters}
   />
 </Canvas>
@@ -31,7 +30,7 @@ If necessary, actions can be placed inline with the title.
 
 <Canvas>
   <Story
-    id="patterns-unstable-layout-modules-titlebar--actions"
+    id="patterns-unstable-layout-modules-titlebarmodule--actions"
     parameters={parameters}
   />
 </Canvas>
@@ -40,7 +39,7 @@ If necessary, actions can be placed inline with the title.
 
 <ArgsTable />
 
-Additional props passed into `TitleBar` will be forwarded along to the underlying title bar module containers.
+Additional props passed into `TitleBarModule` will be forwarded along to the underlying title bar module containers.
 
 ### `subsection`
 
@@ -51,7 +50,7 @@ Use the `subsection` prop to specify whether a subsection should be used.
 </Canvas>
 
 ```jsx
-<TitleBar title="Subsection title" subsection />
+<TitleBarModule title="Subsection title" subsection />
 ```
 
 ### `element`
@@ -63,15 +62,15 @@ This prop specifies a different element to be rendered as a title.
 </Canvas>
 
 ```jsx
-<TitleBar element="h3" title="Section 3 title" />
+<TitleBarModule element="h3" title="Section 3 title" />
 ```
 
 ### `className`
 
-The `className` prop passed into `TitleBar` will be forwarded along to the underlying container. This is useful for specifying a custom class name for layout.
+The `className` prop passed into `TitleBarModule` will be forwarded along to the underlying container. This is useful for specifying a custom class name for layout.
 
 ```jsx
-<TitleBar className="class-name" title="Custom title" />
+<TitleBarModule className="class-name" title="Custom title" />
 ```
 
 ## Grid placement
@@ -90,7 +89,7 @@ Title bar modules can span between 4 and 8 columns, following the [narrow grid](
 
 ```jsx
 <Column lg={4}>
-  <TitleBar title="Section title">
+  <TitleBarModule title="Section title">
     <IconButtonBar
       actions={[
         {
@@ -108,7 +107,7 @@ Title bar modules can span between 4 and 8 columns, following the [narrow grid](
       ]}
       size="md"
     />
-  </TitleBar>
+  </TitleBarModule>
 </Column>
 ```
 
