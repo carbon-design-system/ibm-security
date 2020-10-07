@@ -9,7 +9,7 @@ import { components, getDocsParameters } from '../../../.storybook';
 import { TimeIndicator } from '../..';
 
 export default {
-  title: components('TimeIndicator'),
+  title: components(TimeIndicator.name),
   component: TimeIndicator,
   args: {
     children: '10 minute setup',
