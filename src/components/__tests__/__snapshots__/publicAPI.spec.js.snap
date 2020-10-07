@@ -1289,6 +1289,7 @@ Map {
       "focusTrap": true,
       "inline": false,
       "labels": Object {},
+      "midLineTruncation": Object {},
       "noIcon": false,
       "onClose": [Function],
       "onContextMenu": undefined,
@@ -1368,6 +1369,25 @@ Map {
           },
         ],
         "type": "objectOf",
+      },
+      "midLineTruncation": Object {
+        "args": Array [
+          Object {
+            "back": Object {
+              "type": "number",
+            },
+            "enabled": Object {
+              "type": "bool",
+            },
+            "front": Object {
+              "type": "number",
+            },
+            "maxLength": Object {
+              "type": "number",
+            },
+          },
+        ],
+        "type": "shape",
       },
       "noIcon": Object {
         "type": "bool",

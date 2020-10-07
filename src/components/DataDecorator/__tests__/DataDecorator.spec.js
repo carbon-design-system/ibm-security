@@ -36,7 +36,7 @@ describe('DataDecorator', () => {
     );
   });
 
-  test('should use the value of the data decorator to the panel title', () => {
+  test('should use the value of the data decorator to the panel title when no mid-line truncation is required due to within maxLength', () => {
     const { getByText, queryAllByText } = render(
       <DataDecorator type="IP" value="10.0.0.0" score={0} />
     );
@@ -50,6 +50,49 @@ describe('DataDecorator', () => {
     // Because the panel is open, we expect to see 2 elements with
     // the IP address -- the data decorator button AND the panel title.
     expect(queryAllByText(/10.0.0.0/i).length === 2);
+  });
+
+  test('should use the value of the data decorator to the panel title when no mid-line truncation is required due to mid-line truncation is disabled', () => {
+    const { getByText, queryAllByText } = render(
+      <DataDecorator
+        type="IP"
+        value="0f3deda483df5e5f8043ea20297d243b"
+        score={0}
+      />
+    );
+    // Because the panel is closed, we expect only 1 element with
+    // the IP address -- the data decorator.
+    expect(queryAllByText(/0f3deda483df5e5f8043ea20297d243b/i).length === 1);
+
+    // Open the panel:
+    userEvent.click(
+      getByText(/0f3deda483df5e5f8043ea20297d243b/i).closest('button')
+    );
+
+    // Because the panel is open, we expect to see 2 elements with
+    // the IP address -- the data decorator button AND the panel title.
+    expect(queryAllByText(/0f3deda483df5e5f8043ea20297d243b/i).length === 2);
+  });
+
+  test('should truncate the value of the data decorator and still show the whole value as panel title', () => {
+    const { getByText, queryAllByText } = render(
+      <DataDecorator
+        type="IP"
+        value="0f3deda483df5e5f8043ea20297d243b"
+        score={0}
+        midLineTruncation={{ enabled: true, maxLength: 20, front: 12, back: 4 }}
+      />
+    );
+    // Because the panel is closed, we expect only 1 element with
+    // the IP address -- the data decorator.
+    expect(queryAllByText(/0f3deda483df…243b/i).length === 1);
+
+    // Open the panel:
+    userEvent.click(getByText(/0f3deda483df…243b/i).closest('button'));
+
+    // Because the panel is open, we expect to see 2 elements with
+    // the IP address -- the data decorator button AND the panel title.
+    expect(queryAllByText(/0f3deda483df5e5f8043ea20297d243b/i).length === 1);
   });
 
   test('should invoke open mock when data decorator is clicked to open panel', () => {

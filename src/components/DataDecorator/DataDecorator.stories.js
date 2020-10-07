@@ -14,7 +14,7 @@ import { patterns } from '../../../.storybook';
 
 import { Button, DataDecorator, Decorator } from '../..';
 
-import props from './_mocks_';
+import { props, midLine } from './_mocks_';
 
 const { type, value, score, href } = props;
 const { scoreThresholds } = Decorator.defaultProps;
@@ -35,6 +35,28 @@ const storyProps = () => ({
   renderFooter: () => <Button size="large">Custom footer</Button>,
 });
 
-storiesOf(patterns('DataDecorator'), module).add('Default', () => (
-  <DataDecorator {...storyProps()} />
-));
+const midLineStoryPros = () => ({
+  type: text('Type (`type`)', midLine.type),
+  value: text('Value (`value`)', midLine.value),
+  score: number('Score (`score`)', midLine.score, {
+    max: scoreThresholds[scoreThresholds.length - 1],
+    min: scoreThresholds[0],
+    range: true,
+  }),
+  href: text('Link (`href`)', href),
+  onClick: action('onClick'),
+  inert: boolean('Non-interactive (`inert`)', false),
+  active: boolean('Active (`active`)', false),
+  noIcon: boolean('No icon (`noIcon`)', false),
+  renderFooter: () => <Button size="large">Custom footer</Button>,
+  midLineTruncation: {
+    enabled: true,
+    maxLength: 20,
+    front: 12,
+    back: 4,
+  },
+});
+
+storiesOf(patterns('DataDecorator'), module)
+  .add('Default', () => <DataDecorator {...storyProps()} />)
+  .add('mid-line truncation', () => <DataDecorator {...midLineStoryPros()} />);
