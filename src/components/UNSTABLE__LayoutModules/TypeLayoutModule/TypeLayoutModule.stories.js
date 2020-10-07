@@ -34,10 +34,7 @@ export const Default = () => (
           <TypeLayoutCell>Term 1</TypeLayoutCell>
 
           <TypeLayoutCell>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            accumsan, dui ut pulvinar mattis, diam est imperdiet ex, a varius
-            lacus ex at libero. Aenean euismod viverra odio, id volutpat turpis
-            commodo.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </TypeLayoutCell>
         </TypeLayoutRow>
 
@@ -58,8 +55,7 @@ export const Default = () => (
           <TypeLayoutCell>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
             accumsan, dui ut pulvinar mattis, diam est imperdiet ex, a varius
-            lacus ex at libero. Aenean euismod viverra odio, id volutpat turpis
-            commodo.
+            lacus ex at libero.
           </TypeLayoutCell>
         </TypeLayoutRow>
       </TypeLayoutBody>
@@ -77,10 +73,7 @@ export const title = () => (
           <TypeLayoutCell>Term 1</TypeLayoutCell>
 
           <TypeLayoutCell>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            accumsan, dui ut pulvinar mattis, diam est imperdiet ex, a varius
-            lacus ex at libero. Aenean euismod viverra odio, id volutpat turpis
-            commodo.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </TypeLayoutCell>
         </TypeLayoutRow>
 
@@ -101,8 +94,7 @@ export const title = () => (
           <TypeLayoutCell>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
             accumsan, dui ut pulvinar mattis, diam est imperdiet ex, a varius
-            lacus ex at libero. Aenean euismod viverra odio, id volutpat turpis
-            commodo.
+            lacus ex at libero.
           </TypeLayoutCell>
         </TypeLayoutRow>
       </TypeLayoutBody>
