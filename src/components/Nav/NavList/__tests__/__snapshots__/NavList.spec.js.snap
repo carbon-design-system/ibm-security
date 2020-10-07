@@ -103,7 +103,7 @@ exports[`Nav Rendering renders correctly 1`] = `
         element="a"
         handleItemSelect={null}
         href="#"
-        id="security--nav__list__item"
+        id={null}
         key="security--nav__list__item--0/.0"
         label=""
         link={true}
@@ -122,13 +122,13 @@ exports[`Nav Rendering renders correctly 1`] = `
             className="security--nav__list__item__link"
             element="a"
             href="#"
-            id="security--nav__list__item"
+            id="security--nav__list__item__1"
             tabIndex={0}
           >
             <a
               className="security--nav__list__item__link"
               href="#"
-              id="security--nav__list__item"
+              id="security--nav__list__item__1"
               tabIndex={0}
             >
               Label
@@ -184,7 +184,7 @@ exports[`Nav Rendering renders the HTML of the node's subtree 1`] = `
       <a
         class="security--nav__list__item__link"
         href="#"
-        id="security--nav__list__item"
+        id="security--nav__list__item__2"
         tabindex="0"
       >
         Label

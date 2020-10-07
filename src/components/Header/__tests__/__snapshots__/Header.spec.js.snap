@@ -217,15 +217,21 @@ exports[`Header Rendering renders correctly 1`] = `
               kind="primary"
               largeText={null}
               loading={false}
+              size="default"
               tabIndex={0}
+              tooltipAlignment="center"
+              tooltipPosition="top"
               type="button"
             >
-              <ForwardRef(Button)
+              <Button
                 className="security--button"
                 disabled={false}
                 href="#"
                 kind="primary"
+                size="default"
                 tabIndex={0}
+                tooltipAlignment="center"
+                tooltipPosition="top"
                 type="button"
               >
                 <a
@@ -235,7 +241,7 @@ exports[`Header Rendering renders correctly 1`] = `
                 >
                   Create an account
                 </a>
-              </ForwardRef(Button)>
+              </Button>
             </Button>
           </li>
         </HeaderListItem>
@@ -255,15 +261,21 @@ exports[`Header Rendering renders correctly 1`] = `
               kind="secondary"
               largeText={null}
               loading={false}
+              size="default"
               tabIndex={0}
+              tooltipAlignment="center"
+              tooltipPosition="top"
               type="button"
             >
-              <ForwardRef(Button)
+              <Button
                 className="security--button"
                 disabled={false}
                 href="#"
                 kind="secondary"
+                size="default"
                 tabIndex={0}
+                tooltipAlignment="center"
+                tooltipPosition="top"
                 type="button"
               >
                 <a
@@ -273,7 +285,7 @@ exports[`Header Rendering renders correctly 1`] = `
                 >
                   Sign in
                 </a>
-              </ForwardRef(Button)>
+              </Button>
             </Button>
           </li>
         </HeaderListItem>

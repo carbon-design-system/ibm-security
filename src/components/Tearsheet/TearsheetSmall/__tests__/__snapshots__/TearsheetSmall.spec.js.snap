@@ -60,6 +60,8 @@ exports[`TearsheetSmall renders 1`] = `
           onClick={[Function]}
           size="large"
           tabIndex={0}
+          tooltipAlignment="center"
+          tooltipPosition="top"
           type="button"
         >
           Cancel
@@ -73,6 +75,8 @@ exports[`TearsheetSmall renders 1`] = `
           onClick={[Function]}
           size="large"
           tabIndex={0}
+          tooltipAlignment="center"
+          tooltipPosition="top"
           type="button"
         >
           Action
@@ -162,6 +166,8 @@ exports[`TearsheetSmall renders disabled buttons 1`] = `
           onClick={[Function]}
           size="large"
           tabIndex={0}
+          tooltipAlignment="center"
+          tooltipPosition="top"
           type="button"
         >
           Cancel
@@ -175,6 +181,8 @@ exports[`TearsheetSmall renders disabled buttons 1`] = `
           onClick={[Function]}
           size="large"
           tabIndex={0}
+          tooltipAlignment="center"
+          tooltipPosition="top"
           type="button"
         >
           Action
@@ -253,6 +261,8 @@ exports[`TearsheetSmall renders loading state 1`] = `
           onClick={[Function]}
           size="large"
           tabIndex={0}
+          tooltipAlignment="center"
+          tooltipPosition="top"
           type="button"
         >
           Cancel
@@ -266,6 +276,8 @@ exports[`TearsheetSmall renders loading state 1`] = `
           onClick={[Function]}
           size="large"
           tabIndex={0}
+          tooltipAlignment="center"
+          tooltipPosition="top"
           type="button"
         >
           Action
@@ -355,6 +367,8 @@ exports[`TearsheetSmall should override \`labels\` if button label property prov
           onClick={[Function]}
           size="large"
           tabIndex={0}
+          tooltipAlignment="center"
+          tooltipPosition="top"
           type="button"
         >
           Secondary - prop
@@ -368,6 +382,8 @@ exports[`TearsheetSmall should override \`labels\` if button label property prov
           onClick={[Function]}
           size="large"
           tabIndex={0}
+          tooltipAlignment="center"
+          tooltipPosition="top"
           type="button"
         >
           Primary - prop
