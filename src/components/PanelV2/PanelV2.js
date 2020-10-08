@@ -1,28 +1,28 @@
 /**
  * @file Panel v2.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 /* eslint-disable no-useless-computed-key, react/require-default-props */
 
-import classnames from 'classnames';
-import PropTypes from 'prop-types';
-import React, { createRef, useEffect, useState } from 'react';
 import Close20 from '@carbon/icons-react/lib/close/20';
 
 import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
 import requiredIfGivenPropIsTruthy from 'carbon-components-react/lib/prop-types/requiredIfGivenPropIsTruthy';
 import setupGetInstanceId from 'carbon-components-react/lib/tools/setupGetInstanceId';
 
+import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React, { createRef, useEffect, useState } from 'react';
+
 import { getComponentNamespace } from '../../globals/namespace';
 import * as defaultLabels from '../../globals/nls';
-
 import { isClient, isNode } from '../../globals/utils/capabilities';
 
 import Button from '../Button';
 import IconButton from '../IconButton';
-import Transition from '../Transition';
 import Portal, { PORTAL_EVENTS } from '../Portal';
+import Transition from '../Transition';
 
 export const namespace = getComponentNamespace('panel--v2');
 const getInstanceId = setupGetInstanceId();
@@ -37,18 +37,19 @@ function PanelV2({
   className,
   closeButton,
   focusTrap,
+  focusTrapOptions,
+  hasScrollingContent,
+  isOpen,
+  labels,
+  onClose,
   primaryButton,
   renderFooter,
+  rootNode,
   secondaryButton,
   stopPropagation,
   stopPropagationEvents,
   subtitle,
   title,
-  hasScrollingContent,
-  labels,
-  isOpen,
-  onClose,
-  rootNode,
   ...other
 }) {
   const [bodyMargin, setBodyMargin] = useState(0);
@@ -116,10 +117,11 @@ function PanelV2({
         {isOpen && (
           <Portal
             focusTrap={focusTrap}
-            stopPropagation={stopPropagation}
-            stopPropagationEvents={stopPropagationEvents}
+            focusTrapOptions={focusTrapOptions}
             onOverlayClick={onClose}
             rootNode={rootNode}
+            stopPropagation={stopPropagation}
+            stopPropagationEvents={stopPropagationEvents}
           >
             {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
             <section
@@ -265,6 +267,9 @@ PanelV2.propTypes = {
   /** @type {boolean} Focus trap. */
   focusTrap: PropTypes.bool,
 
+  /** Pass any of the options available in https://github.com/focus-trap/focus-trap#createfocustrapelement-createoptions */
+  focusTrapOptions: Portal.propTypes.focusTrapOptions,
+
   /** @type {boolean} The open state. */
   isOpen: PropTypes.bool,
 
@@ -326,6 +331,7 @@ PanelV2.defaultProps = {
   className: null,
   closeButton: undefined,
   focusTrap: true,
+  focusTrapOptions: Portal.defaultProps.focusTrapOptions,
   isOpen: true,
   labels: {},
   primaryButton: undefined,
