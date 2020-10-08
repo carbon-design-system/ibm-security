@@ -30,10 +30,13 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
             "render": [Function],
           }
         }
+        size="default"
         tabIndex={0}
+        tooltipAlignment="center"
+        tooltipPosition="top"
         type="button"
       >
-        <ForwardRef(Button)
+        <Button
           className="security--button security--combo-button--primary"
           disabled={false}
           iconDescription=""
@@ -46,7 +49,10 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
               "render": [Function],
             }
           }
+          size="default"
           tabIndex={0}
+          tooltipAlignment="center"
+          tooltipPosition="top"
           type="button"
         >
           <button
@@ -98,7 +104,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
               </Icon>
             </ForwardRef(ArrowRight20)>
           </button>
-        </ForwardRef(Button)>
+        </Button>
       </Button>
       <ForwardRef(OverflowMenu)
         className="security--button bx--btn bx--btn--primary security--combo-button__button security--combo-button__overflow-menu"
@@ -143,6 +149,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
               onKeyDown={[Function]}
               open={false}
               tabIndex={0}
+              type="button"
             >
               <renderIcon
                 aria-label="open and close list of options"
@@ -220,10 +227,13 @@ exports[`ComboButton renders a combo button without an overflow menu 1`] = `
             "render": [Function],
           }
         }
+        size="default"
         tabIndex={0}
+        tooltipAlignment="center"
+        tooltipPosition="top"
         type="button"
       >
-        <ForwardRef(Button)
+        <Button
           className="security--button security--combo-button--primary"
           disabled={false}
           iconDescription=""
@@ -236,7 +246,10 @@ exports[`ComboButton renders a combo button without an overflow menu 1`] = `
               "render": [Function],
             }
           }
+          size="default"
           tabIndex={0}
+          tooltipAlignment="center"
+          tooltipPosition="top"
           type="button"
         >
           <button
@@ -288,7 +301,7 @@ exports[`ComboButton renders a combo button without an overflow menu 1`] = `
               </Icon>
             </ForwardRef(ArrowRight20)>
           </button>
-        </ForwardRef(Button)>
+        </Button>
       </Button>
     </div>
   </div>

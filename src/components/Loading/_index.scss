@@ -32,10 +32,5 @@
       width: $loading--small__sizing__dimensions;
       height: $loading--small__sizing__dimensions;
     }
-
-    // https://github.com/carbon-design-system/carbon/pull/6323
-    &-overlay {
-      background-color: $overlay-01;
-    }
   }
 }

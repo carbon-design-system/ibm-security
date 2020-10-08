@@ -1,6 +1,6 @@
 /**
  * @file Storybook helpers.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 // Category labels.
@@ -11,7 +11,7 @@ const CATEGORIES = {
 
 const { COMPONENTS, PATTERNS } = CATEGORIES;
 
-const HIERARCHY_ROOT_SEPARATOR = '|';
+const HIERARCHY_ROOT_SEPARATOR = '/';
 
 const ORDER = [PATTERNS, COMPONENTS];
 
@@ -56,9 +56,7 @@ const deprecate = name => `${name} [Deprecated]`;
  * @returns {Object<string, Object>} The disabled configuration.
  */
 const disableCentered = () => ({
-  centered: {
-    disable: true,
-  },
+  layout: 'fullscreen',
 });
 
 /**

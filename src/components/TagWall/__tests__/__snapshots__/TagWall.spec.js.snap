@@ -905,15 +905,19 @@ exports[`TagWall Rendering renders 1`] = `
       onClick={[Function]}
       size="small"
       tabIndex={0}
+      tooltipAlignment="center"
+      tooltipPosition="top"
       type="button"
     >
-      <ForwardRef(Button)
+      <Button
         className="security--button"
         disabled={false}
         kind="ghost"
         onClick={[Function]}
         size="small"
         tabIndex={0}
+        tooltipAlignment="center"
+        tooltipPosition="top"
         type="button"
       >
         <button
@@ -925,7 +929,7 @@ exports[`TagWall Rendering renders 1`] = `
         >
           Add
         </button>
-      </ForwardRef(Button)>
+      </Button>
     </Button>
   </section>
 </TagWall>
@@ -1552,15 +1556,19 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
       onClick={[Function]}
       size="small"
       tabIndex={0}
+      tooltipAlignment="center"
+      tooltipPosition="top"
       type="button"
     >
-      <ForwardRef(Button)
+      <Button
         className="security--button"
         disabled={true}
         kind="ghost"
         onClick={[Function]}
         size="small"
         tabIndex={0}
+        tooltipAlignment="center"
+        tooltipPosition="top"
         type="button"
       >
         <button
@@ -1572,7 +1580,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         >
           Add
         </button>
-      </ForwardRef(Button)>
+      </Button>
     </Button>
   </section>
 </TagWall>
