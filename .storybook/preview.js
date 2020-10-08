@@ -73,6 +73,7 @@ const parameters = {
       ORDER.indexOf(getCategory(a)) - ORDER.indexOf(getCategory(b)),
   },
   previewTabs: {
+    canvas: null,
     'storybook/docs/panel': {
       hidden: true,
     },

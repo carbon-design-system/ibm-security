@@ -6,6 +6,7 @@
 import { Add16, Edit16, Filter16 } from '@carbon/icons-react';
 import React from 'react';
 
+import { getDocsParameters } from '../../../../.storybook';
 import withResponsive from '../../../../.storybook/decorators';
 
 import {
@@ -21,6 +22,7 @@ export default {
   title: getTitle(ActionBarModule),
   component: ActionBarModule,
   subcomponents: { ActionBarModuleItems },
+  parameters: { ...getDocsParameters() },
   decorators: [withResponsive],
 };
 
