@@ -2958,15 +2958,6 @@
     regenerator-runtime "^0.13.3"
     ts-dedent "^1.1.1"
 
-"@storybook/addon-options@^5.3.21":
-  version "5.3.21"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-5.3.21.tgz#b4fec965a33dfb6c5051706cb86633d442e6bb7a"
-  integrity sha512-Q+xo6Irrb66NOQO9U4QWddAU6UEPNb+Mn5h9NHwJYV87mKl/3bqleApBhtOhSacWw5GjceiigzulXZTCs866Sw==
-  dependencies:
-    "@storybook/addons" "5.3.21"
-    core-js "^3.0.1"
-    util-deprecate "^1.0.2"
-
 "@storybook/addon-storysource@^6.0.22":
   version "6.0.26"
   resolved "https://registry.yarnpkg.com/@storybook/addon-storysource/-/addon-storysource-6.0.26.tgz#ee099f271846b45a5a4e9ac7f4264604e65d8062"
