@@ -264,6 +264,7 @@ export { Wizard, WizardStep } from './components/Wizard';
 export {
   ActionBarModule,
   ActionBarModuleItems,
+  ButtonClusterModule,
 } from './components/UNSTABLE__LayoutModules';
 
 export UNSTABLE__Pagination, {

@@ -274,6 +274,14 @@ Map {
       },
     },
   },
+  "ButtonClusterModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
   "ButtonSet" => Object {
     "$$typeof": Symbol(react.forward_ref),
     "displayName": "ButtonSet",
