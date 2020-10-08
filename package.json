@@ -60,7 +60,7 @@
     "downshift": "^1.31.14",
     "export-to-csv": "^0.2.1",
     "flatpickr": "^4.6.1",
-    "focus-trap-react": "^6.0.0",
+    "focus-trap-react": "^7.0.1",
     "invariant": "^2.2.3",
     "numeral": "^2.0.6",
     "prop-types": "^15.7.2",
