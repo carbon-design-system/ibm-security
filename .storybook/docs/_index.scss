@@ -1,0 +1,19 @@
+////
+/// Documentation styles.
+/// @group storybook
+/// @copyright IBM Security 2020
+////
+
+@import '@carbon/layout/scss/spacing';
+
+@import '../../src/platform/body/mixins';
+
+.sbdocs {
+  & &-preview {
+    background-color: $body__color__background;
+  }
+
+  [title='Required'] {
+    color: inherit;
+  }
+}
