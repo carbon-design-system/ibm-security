@@ -1,17 +1,17 @@
 /**
  * @file Portal.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import FocusTrap from 'focus-trap-react';
-import React, { Component } from 'react';
-import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
+import React, { Children, Component } from 'react';
+import { createPortal } from 'react-dom';
+
+import { getComponentNamespace } from '../../globals/namespace';
 
 import { isClient, isNode } from '../../globals/utils/capabilities';
 import composeEventHandlers from '../../globals/utils/events';
-
-import { getComponentNamespace } from '../../globals/namespace';
 
 const namespace = getComponentNamespace('portal');
 
@@ -171,6 +171,7 @@ class Portal extends Component {
     const {
       children,
       focusTrap,
+      focusTrapOptions,
       initialFocus,
       rootNode,
       stopPropagation,
@@ -183,7 +184,11 @@ class Portal extends Component {
         <FocusTrap
           active={focusTrap}
           focusTrapOptions={{
+            fallbackFocus:
+              focusTrapOptions.fallbackFocus ||
+              (isClient() ? rootNode : Children.toArray(children)[0].type),
             initialFocus,
+            ...focusTrapOptions,
           }}
         >
           {stopPropagation || stopPropagationEvents
@@ -202,6 +207,9 @@ Portal.propTypes = {
 
   /** @type {boolean} Focus trap. */
   focusTrap: PropTypes.bool,
+
+  /** Pass any of the options available in https://github.com/focus-trap/focus-trap#createfocustrapelement-createoptions */
+  focusTrapOptions: FocusTrap.propTypes.focusTrapOptions,
 
   /** @type {boolean} Include an overlay. */
   hasOverlay: PropTypes.bool,
@@ -225,6 +233,7 @@ Portal.propTypes = {
 Portal.defaultProps = {
   children: null,
   focusTrap: true,
+  focusTrapOptions: FocusTrap.defaultProps.focusTrapOptions,
   hasOverlay: true,
   initialFocus: null,
   rootNode: isClient() && document.body,
