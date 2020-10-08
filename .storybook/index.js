@@ -66,6 +66,24 @@ const disableCentered = () => ({
  */
 const disableCenteredStories = stories =>
   stories.addParameters(disableCentered());
+
+/**
+ * Helper configuration for aligning stories supporting Storybook Docs with the same addon and tab configuration.
+ * @returns {Object<string, Object>} The helper configuration.
+ */
+const getDocsParameters = () => ({
+  controls: { disable: false },
+  info: {
+    disable: true,
+  },
+  knobs: { disable: true },
+  previewTabs: {
+    'storybook/docs/panel': {
+      hidden: false,
+    },
+  },
+});
+
 /**
  * Configuration for applying information to individual stories.
  * @param {string} description The information to apply to individual stories.
@@ -86,6 +104,7 @@ export {
   disableCentered,
   disableCenteredStories,
   getComponentsCategory as components,
+  getDocsParameters,
   getPatternsCategory as patterns,
   HIERARCHY_ROOT_SEPARATOR,
   info,

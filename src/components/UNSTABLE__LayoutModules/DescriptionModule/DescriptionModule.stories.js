@@ -5,17 +5,21 @@
 
 import React from 'react';
 
+import { getDocsParameters } from '../../../../.storybook';
 import withResponsive from '../../../../.storybook/decorators';
-import { DescriptionModule, TitleBarModule } from '../../..';
-import getTitle, { getDocsParameters } from '../stories';
 
+import { DescriptionModule, TitleBarModule } from '../../..';
+
+import getTitle from '../stories';
 import page from './index.mdx';
 
 export default {
   title: getTitle(DescriptionModule),
   component: DescriptionModule,
   parameters: {
-    ...getDocsParameters(page),
+    docs: { page },
+
+    ...getDocsParameters(),
   },
   decorators: [withResponsive],
 };

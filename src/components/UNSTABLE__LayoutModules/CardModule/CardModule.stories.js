@@ -5,6 +5,7 @@
 
 import React from 'react';
 
+import { getDocsParameters } from '../../../../.storybook';
 import withBackground from '../../../../.storybook/components/Background';
 
 import {
@@ -19,7 +20,7 @@ import {
   TitleBarModule,
 } from '../../..';
 
-import getTitle, { getDocsParameters } from '../stories';
+import getTitle from '../stories';
 import page from './index.mdx';
 
 const SummaryCard = withBackground(SummaryCardComponent);
@@ -28,7 +29,9 @@ export default {
   title: getTitle(CardModule),
   component: CardModule,
   parameters: {
-    ...getDocsParameters(page),
+    docs: { page },
+
+    ...getDocsParameters(),
   },
 };
 

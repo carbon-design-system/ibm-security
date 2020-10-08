@@ -6,15 +6,17 @@
 import { Add16, Edit16, Filter16 } from '@carbon/icons-react';
 import React from 'react';
 
+import { getDocsParameters } from '../../../../.storybook';
 import withResponsive from '../../../../.storybook/decorators';
+
 import {
   ActionBarModule,
   ActionBarModuleItems,
   Button,
   IconButtonBar,
 } from '../../..';
-import getTitle, { getDocsParameters } from '../stories';
 
+import getTitle from '../stories';
 import page from './index.mdx';
 
 export default {
@@ -22,7 +24,9 @@ export default {
   component: ActionBarModule,
   subcomponents: { ActionBarModuleItems },
   parameters: {
-    ...getDocsParameters(page),
+    docs: { page },
+
+    ...getDocsParameters(),
   },
   decorators: [withResponsive],
 };

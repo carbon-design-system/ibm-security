@@ -47,7 +47,7 @@ function getCategory(story) {
 }
 
 const parameters = {
-  controls: { expanded: true, hideNoControlsWarning: true },
+  controls: { disable: true, expanded: true },
   docs: {
     components: {
       ArgsTable,
@@ -57,7 +57,6 @@ const parameters = {
       Row,
       Story,
     },
-    page: null,
     theme: storybookTheme,
   },
   info: {
@@ -82,6 +81,11 @@ const parameters = {
   options: {
     storySort: (a, b) =>
       ORDER.indexOf(getCategory(a)) - ORDER.indexOf(getCategory(b)),
+  },
+  previewTabs: {
+    'storybook/docs/panel': {
+      hidden: true,
+    },
   },
   viewMode: 'story',
 };

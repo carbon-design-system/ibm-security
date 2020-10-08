@@ -14,15 +14,18 @@ import {
   TypeLayoutRow,
 } from '../../..';
 
-import getTitle, { getDocsParameters } from '../stories';
+import { getDocsParameters } from '../../../../.storybook';
 
+import getTitle from '../stories';
 import page from './index.mdx';
 
 export default {
   title: getTitle(TypeLayoutModule),
   component: TypeLayoutModule,
   parameters: {
-    ...getDocsParameters(page),
+    docs: { page },
+
+    ...getDocsParameters(),
   },
 };
 

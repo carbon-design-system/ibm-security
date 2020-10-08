@@ -5,10 +5,12 @@
 
 import React from 'react';
 
+import { getDocsParameters } from '../../../../.storybook';
 import withResponsive from '../../../../.storybook/decorators';
-import { PageTabModule, PageTabModuleDetails, Tabs, Tab } from '../../..';
-import getTitle, { getDocsParameters } from '../stories';
 
+import { PageTabModule, PageTabModuleDetails, Tabs, Tab } from '../../..';
+
+import getTitle from '../stories';
 import page from './index.mdx';
 
 export default {
@@ -16,7 +18,9 @@ export default {
   component: PageTabModule,
   subcomponents: { PageTabModuleDetails },
   parameters: {
-    ...getDocsParameters(page),
+    docs: { page },
+
+    ...getDocsParameters(),
   },
   decorators: [withResponsive],
 };

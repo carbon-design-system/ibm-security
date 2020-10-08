@@ -5,15 +5,20 @@
 
 import React from 'react';
 
+import { getDocsParameters } from '../../../../.storybook';
+
 import { Column, ICA, ICAModule, Row } from '../../..';
-import getTitle, { getDocsParameters } from '../stories';
+
+import getTitle from '../stories';
 import page from './index.mdx';
 
 export default {
   title: getTitle(ICAModule),
   component: ICAModule,
   parameters: {
-    ...getDocsParameters(page),
+    docs: { page },
+
+    ...getDocsParameters(),
   },
 };
 
