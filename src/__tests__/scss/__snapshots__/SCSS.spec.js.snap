@@ -24888,6 +24888,21 @@ a.bx--navigation-link:focus {
   margin-left: 16rem;
 }
 
+.security--unstable--layout__module--action-bar {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: 0.16px;
+  display: flex;
+  padding-top: 0.125rem;
+  padding-bottom: 0.5rem;
+  align-items: center;
+}
+
+.security--unstable--layout__module--action-bar__items {
+  margin-left: auto;
+}
+
 .security--unstable-pagination {
   box-sizing: border-box;
   margin: 0;
