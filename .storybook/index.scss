@@ -15,6 +15,8 @@
 
 @import '../src/platform/body/mixins';
 
+@import 'decorators/index';
+
 * {
   box-sizing: border-box;
 }

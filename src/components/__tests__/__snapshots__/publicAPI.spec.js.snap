@@ -78,6 +78,22 @@ Map {
       "uid": [Function],
     },
   },
+  "ActionBarModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
+  "ActionBarModuleItems" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
   "Breadcrumb" => Object {
     "propTypes": Object {
       "aria-label": Object {
@@ -6736,6 +6752,7 @@ Map {
       "className": null,
       "closeButton": undefined,
       "focusTrap": true,
+      "focusTrapOptions": Object {},
       "hasScrollingContent": false,
       "isOpen": true,
       "labels": Object {},
@@ -6784,6 +6801,91 @@ Map {
       },
       "focusTrap": Object {
         "type": "bool",
+      },
+      "focusTrapOptions": Object {
+        "args": Array [
+          Object {
+            "allowOutsideClick": Object {
+              "type": "func",
+            },
+            "clickOutsideDeactivates": Object {
+              "type": "bool",
+            },
+            "escapeDeactivates": Object {
+              "type": "bool",
+            },
+            "fallbackFocus": Object {
+              "args": Array [
+                Array [
+                  Object {
+                    "args": Array [
+                      [Function],
+                    ],
+                    "type": "instanceOf",
+                  },
+                  Object {
+                    "type": "string",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
+            },
+            "initialFocus": Object {
+              "args": Array [
+                Array [
+                  Object {
+                    "args": Array [
+                      [Function],
+                    ],
+                    "type": "instanceOf",
+                  },
+                  Object {
+                    "type": "string",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
+            },
+            "onActivate": Object {
+              "type": "func",
+            },
+            "onDeactivate": Object {
+              "type": "func",
+            },
+            "preventScroll": Object {
+              "type": "bool",
+            },
+            "returnFocusOnDeactivate": Object {
+              "type": "bool",
+            },
+            "setReturnFocus": Object {
+              "args": Array [
+                Array [
+                  Object {
+                    "args": Array [
+                      [Function],
+                    ],
+                    "type": "instanceOf",
+                  },
+                  Object {
+                    "type": "string",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
+            },
+          },
+        ],
+        "type": "shape",
       },
       "hasScrollingContent": Object {
         "type": "bool",
@@ -6929,6 +7031,7 @@ Map {
     "defaultProps": Object {
       "children": null,
       "focusTrap": true,
+      "focusTrapOptions": Object {},
       "hasOverlay": true,
       "initialFocus": null,
       "onOverlayClick": undefined,
@@ -6942,6 +7045,91 @@ Map {
       },
       "focusTrap": Object {
         "type": "bool",
+      },
+      "focusTrapOptions": Object {
+        "args": Array [
+          Object {
+            "allowOutsideClick": Object {
+              "type": "func",
+            },
+            "clickOutsideDeactivates": Object {
+              "type": "bool",
+            },
+            "escapeDeactivates": Object {
+              "type": "bool",
+            },
+            "fallbackFocus": Object {
+              "args": Array [
+                Array [
+                  Object {
+                    "args": Array [
+                      [Function],
+                    ],
+                    "type": "instanceOf",
+                  },
+                  Object {
+                    "type": "string",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
+            },
+            "initialFocus": Object {
+              "args": Array [
+                Array [
+                  Object {
+                    "args": Array [
+                      [Function],
+                    ],
+                    "type": "instanceOf",
+                  },
+                  Object {
+                    "type": "string",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
+            },
+            "onActivate": Object {
+              "type": "func",
+            },
+            "onDeactivate": Object {
+              "type": "func",
+            },
+            "preventScroll": Object {
+              "type": "bool",
+            },
+            "returnFocusOnDeactivate": Object {
+              "type": "bool",
+            },
+            "setReturnFocus": Object {
+              "args": Array [
+                Array [
+                  Object {
+                    "args": Array [
+                      [Function],
+                    ],
+                    "type": "instanceOf",
+                  },
+                  Object {
+                    "type": "string",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
+            },
+          },
+        ],
+        "type": "shape",
       },
       "hasOverlay": Object {
         "type": "bool",
