@@ -16,15 +16,14 @@
   padding-bottom: $carbon--layout-01;
 
   &__button {
-    // Popover border width.
-    $layout--button-cluster__button__border: $border__sizing__width solid $ui-03;
+    $button-cluster__button__border: $border__sizing__width solid $ui-03;
 
     display: flex;
-    border-bottom: $layout--button-cluster__button__border;
+    border-bottom: $button-cluster__button__border;
     flex-flow: column;
 
     &:first-of-type {
-      border-top: $layout--button-cluster__button__border;
+      border-top: $button-cluster__button__border;
     }
 
     > .#{$prefix}--btn {
