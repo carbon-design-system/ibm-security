@@ -1,43 +1,24 @@
 /**
  * @file Theme component.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
-import { Component } from 'react';
+import { useEffect } from 'react';
 
 import { getComponentNamespace } from '../../../../src/globals/namespace';
 
 const namespace = getComponentNamespace('theme');
 
-/**
- * Theme class.
- * @class
- */
+export default ({ children, theme }) => {
+  useEffect(() => {
+    const { classList } = document.querySelector('html');
 
-export default class Theme extends Component {
-  componentDidMount = () => {
-    this.root = document.querySelector('html');
+    classList.remove(
+      [...classList].find(className => className.includes(namespace))
+    );
 
-    this.toggle(this.props.theme);
-  };
+    classList.add(`${namespace}--${theme}`);
+  }, []);
 
-  componentDidUpdate = prevProps => {
-    const { theme } = this.props;
-    const { theme: previousTheme } = prevProps;
-
-    if (theme !== previousTheme) {
-      this.toggle(previousTheme);
-      this.toggle(theme);
-    }
-  };
-
-  componentWillUnmount = () => this.toggle(this.props.theme);
-
-  /**
-   * Toggles the theme.
-   * @param {string} theme The theme to toggle.
-   */
-  toggle = theme => this.root.classList.toggle(`${namespace}--${theme}`);
-
-  render = () => this.props.children;
-}
+  return children;
+};

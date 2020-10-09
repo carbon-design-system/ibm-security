@@ -6,6 +6,7 @@
 import { spacing04, spacing05 } from '@carbon/layout';
 import { styles } from '@carbon/type';
 import { withInfo } from '@storybook/addon-info';
+
 import React from 'react';
 
 import random from '../src/globals/random';
@@ -13,6 +14,7 @@ import theme from '../src/globals/theme';
 
 import { HIERARCHY_ROOT_SEPARATOR, ORDER } from '.';
 
+import storybookTheme from './theme';
 import withTheme from './addons/addon-theme';
 import Container from './components/Container';
 
@@ -40,6 +42,10 @@ function getCategory(story) {
 }
 
 const parameters = {
+  controls: { disable: true, expanded: true },
+  docs: {
+    theme: storybookTheme,
+  },
   info: {
     styles: {
       button: {
@@ -63,6 +69,13 @@ const parameters = {
     storySort: (a, b) =>
       ORDER.indexOf(getCategory(a)) - ORDER.indexOf(getCategory(b)),
   },
+  previewTabs: {
+    canvas: null,
+    'storybook/docs/panel': {
+      hidden: true,
+    },
+  },
+  viewMode: 'story',
 };
 
 // Set the Google Analytics tracking ID if the `master` branch is deployed.

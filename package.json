@@ -93,6 +93,8 @@
     "@semantic-release/git": "^7.1.0-beta.3",
     "@storybook/addon-a11y": "^6.0.22",
     "@storybook/addon-actions": "^6.0.22",
+    "@storybook/addon-controls": "^6.0.22",
+    "@storybook/addon-docs": "^6.0.22",
     "@storybook/addon-google-analytics": "^6.0.22",
     "@storybook/addon-info": "^5.3.21",
     "@storybook/addon-knobs": "^6.0.22",
