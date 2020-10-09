@@ -1,0 +1,11 @@
+////
+/// Documentation styles.
+/// @group storybook
+/// @copyright IBM Security 2020
+////
+
+@import '../../src/platform/body/mixins';
+
+.sbdocs .sbdocs-preview {
+  background-color: $body__color__background;
+}

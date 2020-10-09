@@ -16,9 +16,7 @@ import { HIERARCHY_ROOT_SEPARATOR, ORDER } from '.';
 
 import storybookTheme from './theme';
 import withTheme from './addons/addon-theme';
-
 import Container from './components/Container';
-import DocsPage from './components/DocsPage';
 
 const { interactive01, text04 } = theme;
 
@@ -46,7 +44,6 @@ function getCategory(story) {
 const parameters = {
   controls: { disable: true, expanded: true },
   docs: {
-    page: DocsPage,
     theme: storybookTheme,
   },
   info: {
