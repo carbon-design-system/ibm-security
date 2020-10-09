@@ -7,3 +7,5 @@ export {
   default as ActionBarModule,
   ActionBarModuleItems,
 } from './ActionBarModule';
+
+export { default as ButtonClusterModule } from './ButtonClusterModule';
