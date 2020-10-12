@@ -19,10 +19,10 @@
   &--hover {
     /// Hover spacing.
     /// @type Length
-    $layout-module--hover__spacing: $carbon--layout-01;
+    $ica-module--hover__spacing: $carbon--layout-01;
 
-    padding-top: $layout-module--hover__spacing;
-    padding-bottom: $layout-module--hover__spacing;
+    padding-top: $ica-module--hover__spacing;
+    padding-bottom: $ica-module--hover__spacing;
     cursor: pointer;
 
     &:hover {
@@ -32,12 +32,11 @@
 
   /// Title bar module namespace.
   /// @type String
-  $layout-modules__title-bar__namespace: get-component-namespace(
+  $title-bar__namespace: get-component-namespace(
     $component-name: $layout-modules__title-bar__name,
   );
 
-  > #{$layout-modules__title-bar__namespace}
-    > #{$layout-modules__title-bar__namespace}__title {
+  > #{$title-bar__namespace} > #{$title-bar__namespace}__title {
     margin-top: 0;
   }
 }

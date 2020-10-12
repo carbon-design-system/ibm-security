@@ -12017,16 +12017,12 @@ Map {
   "TitleBarModule" => Object {
     "defaultProps": Object {
       "children": null,
-      "className": null,
       "element": "h2",
       "subsection": false,
     },
     "propTypes": Object {
       "children": Object {
         "type": "node",
-      },
-      "className": Object {
-        "type": "string",
       },
       "element": Object {
         "type": "elementType",
