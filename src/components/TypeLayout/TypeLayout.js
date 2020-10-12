@@ -22,7 +22,7 @@ export const namespace = getComponentNamespace('type-layout__container');
 // TODO: `2.x` - Remove deprecated prop `bordered`.
 
 /**
- * Type layouts provide a means to orderly layout terms and definitions.
+ * Type layouts provide an orderly layout of terms and definitions.
  */
 const TypeLayout = ({
   border,
