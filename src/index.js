@@ -265,6 +265,7 @@ export {
   ActionBarModule,
   ActionBarModuleItems,
   ButtonClusterModule,
+  TitleBarModule,
 } from './components/UNSTABLE__LayoutModules';
 
 export UNSTABLE__Pagination, {
