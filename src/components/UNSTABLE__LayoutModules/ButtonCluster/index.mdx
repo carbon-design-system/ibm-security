@@ -5,21 +5,30 @@ import Canvas from '../../../../.storybook/components/Canvas';
 import { Column, Row } from '../../..';
 
 import anatomy from './images/anatomy.png';
+import buttonClusterDo from './images/buttonClusterModule-do.png';
+import buttonClusterDont from './images/buttonClusterModule-dont.png';
+import buttonClusterLayoutConsiderations from './images/buttonCluster-layoutConsiderations.png';
+import OverviewLayout from '../../../images/Overview-layout_button.png';
+import DetailLayout from '../../../images/Detail-layout_button.png';
+import buttonClusterTroubleshootOne from './images/Troubleshooting 1.png';
+import buttonClusterTroubleshootTwo from './images/Troubleshooting 2.png';
 
-# ButtonCluster
+## ButtonCluster
 
 The button cluster module group secondary actions that can be taken on a whole page or component. Icons are used to help describe, at a glance, the action that can be taken.
 
-- [Overview](#overview)
-- [Component API](#component-api)
-- [Grid placement](#grid-placement)
-- [Layout considerations](#layout-considerations)
-- [Anatomy](#anatomy)
-- [Examples](#examples)
-- [References](#references)
-- [Troubleshooting](#troubleshooting)
+[↳ Overview](#overview)  
+[↳ Component API](#component-api)  
+[↳ Grid placement](#grid-placement)  
+[↳ Layout considerations](#layout-considerations)  
+[↳ Anatomy](#anatomy)  
+[↳ Examples](#examples)  
+[↳ References](#references)  
+[↳ Troubleshooting](#troubleshooting)
 
-## Overview
+<p>&nbsp;</p>
+
+### Overview
 
 The button cluster module can be built using a combination of the `ButtonCluster` and [`Button`](#references) components. The `ButtonCluster` accepts a list of `Button` components as `children`.
 
@@ -30,23 +39,27 @@ The button cluster module can be built using a combination of the `ButtonCluster
   />
 </Canvas>
 
-## Component API
+<p>&nbsp;</p>
+
+### Component API
 
 <ArgsTable />
 
+_*Required property_  
+
 Additional props passed into `ButtonCluster` will be forwarded along to the underlying button cluster module container.
 
-## Grid placement
+### Grid placement
 
 Button cluster modules span across 4 columns. Following the [narrow grid](#references) implementation, the layout module container hangs 16 pixels in the left margin. The narrow grid position allows headings and copy outside of containers to align with the labels within the button cluster module.
 
 <Row>
   <Column>
-    <img alt="#" src="#" />
+    <img alt="ButtonCluster do" src={buttonClusterDo} />
   </Column>
 
   <Column>
-    <img alt="#" src="#" />
+    <img alt="ButtonCluster dont" src={buttonClusterDont} />
   </Column>
 </Row>
 
@@ -60,11 +73,17 @@ Button cluster modules span across 4 columns. Following the [narrow grid](#refer
 </Column>
 ```
 
-## Layout considerations
+### Layout considerations
 
 Occassionally a [spacing token](#references) will need to be included to offset the button cluster module to ensure it top-aligns with the adjacent layout container. If a top spacing token is necessary, reference the layout module that sits directly above it as the starting point for placement.
 
-## Anatomy
+<Row>
+  <Column>
+    <img alt="ButtonCluster do" src={buttonClusterLayoutConsiderations} />
+  </Column>
+</Row>
+
+### Anatomy
 
 1. **Ghost buttons:** Ghost buttons stack directly below each other
 2. **Divider lines:** Divider lines create structurality and provide separation between the ghost buttons
@@ -72,16 +91,44 @@ Occassionally a [spacing token](#references) will need to be included to offset 
 
 <img alt="`ButtonCluster` anatomy" src={anatomy} />
 
-## Examples
+### Examples
 
-[Overview layout](?path=/story/patterns-unstable-layout-examples-beta--overview)
+<p> </p>
 
-## References
+<Row>
+  <Column>
+    <a className="storybook__image--link" href= "https://modular-layouts-documentation--ibm-security.netlify.app/?path=/docs/patterns-unstable-layout-examples--overview" >
+      <img alt="ButtonCluster layout page example " src={OverviewLayout}/> 
+    </a>
+  </Column>
 
-- [Button](https://react.carbondesignsystem.com/?path=/docs/button)
-- [Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
-- [Spacing scale](https://carbondesignsystem.com/guidelines/spacing/overview#spacing-scale)
+  <Column>
+    <a className="storybook__image--link" href= "https://modular-layouts-documentation--ibm-security.netlify.app/?path=/docs/patterns-unstable-layout-examples--detail" >
+      <img alt="ButtonCluster detail page example " src={DetailLayout}/> 
+    </a>
+  </Column>
+</Row>
 
-## Troubleshooting
+### References
+
+[↗ Button](https://react.carbondesignsystem.com/?path=/docs/button)  
+[↗ Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)  
+[↗ Spacing scale](https://carbondesignsystem.com/guidelines/spacing/overview#spacing-scale)
+
+### Troubleshooting
 
 Visit our [GitHub](https://github.com/carbon-design-system/ibm-security) to view and submit issues, or reach out on [Slack](https://app.slack.com/client/T1V6D3RT7/CRV39QKP0) for additional support.
+
+<Row>
+  <Column>
+    <a className="storybook__image--link" href= "https://github.com/carbon-design-system/ibm-security">
+      <img alt="ButtonCluster troubleshoot Github link " src={buttonClusterTroubleshootOne} /> 
+    </a>
+  </Column>
+
+  <Column>
+    <a className="storybook__image--link" href= "https://ibm.enterprise.slack.com/?redir=%2Fr-t63217127925%3Fredir%3D%252Fapp_redirect%253Fchannel%253Dcarbon-for-ibm-security">
+      <img alt="ButtonCluster troubleshoot Slack link " src={buttonClusterTroubleshootTwo} /> 
+    </a>
+  </Column>
+</Row>

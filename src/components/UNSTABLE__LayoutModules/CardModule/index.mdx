@@ -4,22 +4,33 @@ import { parameters } from '../../../../.storybook/preview';
 import Canvas from '../../../../.storybook/components/Canvas';
 import { Column, Row } from '../../..';
 
-# CardModule
+import CardModuleDo from './images/Card-module_do.png';
+import CardModuleDont from './images/Card-module_dont.png';
+import CardModuleLayoutConsiderations from './images/Card-module_layout-considerations.png';
+import CardModuleLayoutAnatomy from './images/Card-module_anatomy.png';
+import OverviewLayout from '../../../images/Overview-layout_button.png';
+import DetailLayout from '../../../images/Detail-layout_button.png';
+import CardModuleCarbonForSecurity from './images/Card-module_carbon-for-security_button.png';
+import CardModuleSlack from './images/Card-module_Slack_button.png';
+
+
+
+## CardModule
 
 The card module provides a means to orderly present related content and information using summary, navigational, or widget cards as the basis.
 
-- [Overview](#overview)
-- [withLayout](#withlayout)
-- [withBackground](#withbackground)
-- [Component API](#component-api)
-- [Grid placement](#grid-placement)
-- [Complimentary modules](#complimentary-modules)
-- [Anatomy](#anatomy)
-- [Examples](#examples)
-- [References](#references)
-- [Troubleshooting](#troubleshooting)
+[↳ Overview](#overview)  
+[↳ withLayout](#withlayout)  
+[↳ withBackground](#withbackground)  
+[↳ Component API](#component-api)  
+[↳ Grid placement](#grid-placement)  
+[↳ Complimentary modules](#complimentary-modules)  
+[↳ Anatomy](#anatomy)  
+[↳ Examples](#examples)  
+[↳ References](#references)  
+[↳ Troubleshooting](#troubleshooting)
 
-## Overview
+### Overview
 
 The card module can be built using a combination of the `CardModule` and [grid](#references), and enhancing either the [`Card`](#references), [`SummaryCard`](#references), or [`Tile`](#references) components with the `withLayout`, and optionally `withBackground`, [higher-order components](#references).
 
@@ -31,6 +42,8 @@ Everything passed in as a child of `CardModule` will be rendered.
     parameters={parameters}
   />
 </Canvas>
+
+<!--
 
 ## withLayout
 
@@ -83,24 +96,27 @@ return (
   </CardModule>
 );
 ```
+-->
 
-## Component API
+### Component API
 
 <ArgsTable />
 
+
+
 Additional props passed into `CardModule` will be forwarded along to the underlying card module container.
 
-## Grid placement
+### Grid placement
 
 Card modules can span between 4 and 16 columns. Following the narrow grid implementation, the layout module container hangs 16 pixels in the left margin. The narrow grid position allows headings and copy outside of containers to align with the labels within the card module.
 
 <Row>
   <Column>
-    <img alt="#" src="#" />
+    <img alt="CardModule do" src={CardModuleDo} />
   </Column>
 
   <Column>
-    <img alt="#" src="#" />
+    <img alt="CardModule do" src={CardModuleDont} />
   </Column>
 </Row>
 
@@ -110,7 +126,7 @@ Card modules can span between 4 and 16 columns. Following the narrow grid implem
 </Column>
 ```
 
-## Complimentary modules
+### Complimentary modules
 
 The card module can contain a number of other layout modules within the parent to create a section of related modules. The following options can be used for this purpose.
 
@@ -125,28 +141,48 @@ The card module can contain a number of other layout modules within the parent t
   />
 </Canvas>
 
-## Anatomy
+### Layout considerations
+The `CardModule` is a very flexible module, allowing for a number of configurations… 
+
+<Row>
+  <Column>
+    <img alt="Card Module Layout Considerations" src={CardModuleLayoutConsiderations} />
+  </Column>
+</Row>
+
+### Anatomy
 
 1. **Cards:** Cards can use `Card`, `SummaryCard`, or `Tile` components
 2. **Card spacer (optional):** If there are multiple rows of cards, use the 16-pixel spacer `$layout-01` to separate the rows
 3. **Bottom spacer:** The 32-pixel spacer `$layout-03` below the last card row provides the starting point for the layout module positioned directly underneath it
 
-<img alt="`CardModule` anatomy" src="#" />
+<img alt="`CardModule` anatomy" src={CardModuleLayoutAnatomy} />
 
-## Examples
+### Examples
 
 [Detail layout](?path=/story/patterns-unstable-layout-examples-beta--detail)
 
-## References
+<Row>
+  <Column>
+    <img alt="CardModule Overview Example Link" src={OverviewLayout} />
+  </Column>
 
-- [Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
-- [Card](?path=/story/components-card)
-- [SummaryCard](?path=/story/patterns-summarycard)
-- [Tile](https://react.carbondesignsystem.com/?path=/docs/tile)
-- [Higher-Order Components](https://reactjs.org/docs/higher-order-components.html)
-- [TitleBar](?path=/docs/patterns-unstable-layout-modules-titlebar)
-- [ActionBar](?path=/docs/patterns-unstable-layout-modules-actionbar)
+  <Column>
+    <img alt="CardModule Detail Example Link" src={DetailLayout} />
+  </Column>
+</Row>
 
-## Troubleshooting
+### References
+
+[↗ Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)  
+[↗ Card](?path=/story/components-card)  
+[↗ SummaryCard](?path=/story/patterns-summarycard)  
+[↗ Tile](https://react.carbondesignsystem.com/?path=/docs/tile)  
+[↗ Higher-Order Components](https://reactjs.org/docs/higher-order-components.html)  
+[↗ TitleBar](?path=/docs/patterns-unstable-layout-modules-titlebar)  
+[↗ ActionBar](?path=/docs/patterns-unstable-layout-modules-actionbar)  
+
+### Troubleshooting
 
 Visit our [GitHub](https://github.com/carbon-design-system/ibm-security) to view and submit issues, or reach out on [Slack](https://app.slack.com/client/T1V6D3RT7/CRV39QKP0) for additional support.
+
