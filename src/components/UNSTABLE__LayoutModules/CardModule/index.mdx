@@ -7,12 +7,6 @@ import layoutConsiderations from './images/layout-considerations.png';
 
 import anatomy from './images/anatomy.png';
 
-import overview from './images/overview-layout.png';
-import detail from './images/detail-layout.png';
-
-import github from './images/github.png';
-import slack from './images/slack.png';
-
 ## CardModule
 
 The card module provides a means to orderly present related content and information using summary, navigational, or widget cards as the basis.
@@ -39,7 +33,7 @@ Everything passed in as a [render prop](#references) child of `CardModule` will 
   />
 </Canvas>
 
-## Component API
+### Component API
 
 <ArgsTable />
 
@@ -98,29 +92,7 @@ The `CardModule` is a very flexible module, allowing for a number of configurati
 
 <img alt="`CardModule` anatomy" src={anatomy} />
 
-### Examples
-
-<Row>
-  <Column>
-    <LinkTo
-      className="storybook__image--link"
-      kind="patterns-unstable-modular-page-layouts"
-      story="overview"
-    >
-      <img alt="Overview layout page example" src={overview} />
-    </LinkTo>
-  </Column>
-
-  <Column>
-    <LinkTo
-      className="storybook__image--link"
-      kind="patterns-unstable-modular-page-layouts"
-      story="detail"
-    >
-      <img alt="Detail layout page example" src={detail} />
-    </LinkTo>
-  </Column>
-</Row>
+<Examples />
 
 ### References
 
@@ -134,8 +106,7 @@ The `CardModule` is a very flexible module, allowing for a number of configurati
   ↗ SummaryCard
 </LinkTo>
 
-[↗ Tile](https://react.carbondesignsystem.com/?path=/docs/tile)
-
+[↗ Tile](https://react.carbondesignsystem.com/?path=/docs/tile)  
 [↗ Render Props](https://reactjs.org/docs/render-props.html)
 
 <LinkTo kind="patterns-unstable-layout-modules-titlebarmodule" story="default">
@@ -146,20 +117,4 @@ The `CardModule` is a very flexible module, allowing for a number of configurati
   ↗ ActionBarModule
 </LinkTo>
 
-### Troubleshooting
-
-Visit our [GitHub](https://github.com/carbon-design-system/ibm-security) to view and submit issues, or reach out on [Slack](https://app.slack.com/client/T1V6D3RT7/CRV39QKP0) for additional support.
-
-<Row>
-  <Column>
-    <a className="storybook__image--link" href="https://github.com/carbon-design-system/ibm-security">
-      <img alt="Troubleshooting GitHub link" src={github} /> 
-    </a>
-  </Column>
-
-  <Column>
-    <a className="storybook__image--link" href="https://app.slack.com/client/T1V6D3RT7/CRV39QKP0">
-      <img alt="Troubleshooting Slack link" src={slack} /> 
-    </a>
-  </Column>
-</Row>
+<Troubleshooting />

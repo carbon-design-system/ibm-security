@@ -16,6 +16,9 @@ import { Column, Row } from '../src';
 import random from '../src/globals/random';
 import theme from '../src/globals/theme';
 
+import Examples from '../src/components/UNSTABLE__LayoutModules/docs/Examples/index.mdx';
+import Troubleshooting from '../src/components/UNSTABLE__LayoutModules/docs/Troubleshooting/index.mdx';
+
 import { HIERARCHY_ROOT_SEPARATOR, ORDER } from '.';
 
 import storybookTheme from './theme';
@@ -53,9 +56,11 @@ const parameters = {
       ArgsTable,
       Canvas,
       Column,
+      Examples,
       LinkTo,
       Row,
       Story,
+      Troubleshooting,
     },
     theme: storybookTheme,
   },
