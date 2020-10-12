@@ -13,16 +13,16 @@
 @import '../variables';
 
 @include security--component($name: #{$layout-modules__name}--ica) {
-  padding-top: $carbon--layout-01;
-  padding-bottom: $carbon--layout-03;
+  /// Spacing.
+  /// @type Length
+  $ica-module__spacing: $carbon--layout-01;
+
+  padding-top: $ica-module__spacing;
+  padding-bottom: $ica-module__spacing;
 
   &--hover {
-    /// Hover spacing.
-    /// @type Length
-    $ica-module--hover__spacing: $carbon--layout-01;
-
-    padding-top: $ica-module--hover__spacing;
-    padding-bottom: $ica-module--hover__spacing;
+    padding-top: $ica-module__spacing;
+    padding-bottom: $ica-module__spacing;
     cursor: pointer;
 
     &:hover {

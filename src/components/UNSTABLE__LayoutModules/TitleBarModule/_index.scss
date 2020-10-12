@@ -30,12 +30,6 @@
   }
 
   &__items {
-    /// Spacing.
-    /// @type Length
-    $title-bar__actions__spacing: $carbon--spacing-02;
-
-    margin-top: $title-bar__actions__spacing;
-    margin-bottom: $title-bar__actions__spacing;
     margin-left: auto;
   }
 }
