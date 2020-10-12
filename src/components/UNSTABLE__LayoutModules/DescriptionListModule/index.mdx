@@ -1,0 +1,91 @@
+import { parameters } from '../../../../.storybook/preview';
+
+import { Default } from './DescriptionListModule.stories';
+
+# DescriptionListModule
+
+Description list modules provide a means to orderly layout terms and definitions.
+
+- [Overview](#overview)
+- [Title](#title)
+- [Component API](#component-api)
+- [Grid placement](#grid-placement)
+- [Examples](#examples)
+- [References](#references)
+- [Troubleshooting](#troubleshooting)
+
+## Overview
+
+The description list module can be built using a combination of the [`TypeLayout`](#references) and [`TitleBarModule`](#references) components.
+
+Everything passed in as a child of `DescriptionListModule` will be rendered.
+
+<Canvas>
+  <Story
+    id="patterns-unstable-layout-modules-descriptionlistmodule--default"
+    parameters={parameters}
+  />
+</Canvas>
+
+## Title
+
+If necessary, both section and subsection titles can precede the type layout.
+
+<Canvas>
+  <Story
+    id="patterns-unstable-layout-modules-descriptionlistmodule--title"
+    parameters={parameters}
+  />
+</Canvas>
+
+## Component API
+
+<ArgsTable />
+
+Additional props passed into `DescriptionListModule` will be forwarded along to the underlying description list module container.
+
+## Grid placement
+
+Description list modules span across 8 columns, following the [narrow grid](#references) implementation.
+
+<Row>
+  <Column>
+    <img alt="#" src="#" />
+  </Column>
+
+  <Column>
+    <img alt="#" src="#" />
+  </Column>
+</Row>
+
+```jsx
+<Column lg={8}>
+  <DescriptionListModule />
+</Column>
+```
+
+## Examples
+
+- <LinkTo kind="patterns-unstable-layout-examples" story="overview">
+    Overview layout
+  </LinkTo>
+- <LinkTo kind="patterns-unstable-layout-examples" story="detail">
+    Detail layout
+  </LinkTo>
+
+## References
+
+- <LinkTo kind="components-typelayout" story="default">
+    TypeLayout
+  </LinkTo>
+- <LinkTo
+    kind="patterns-unstable-layout-modules-titlebarmodule"
+    story="default"
+  >
+    TitleBarModule
+  </LinkTo>
+- [Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
+
+## Troubleshooting
+
+Visit our [GitHub](https://github.com/carbon-design-system/ibm-security) to view and submit issues, or reach out on [Slack](https://app.slack.com/client/T1V6D3RT7/CRV39QKP0) for additional support.

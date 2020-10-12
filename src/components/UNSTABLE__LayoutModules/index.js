@@ -3,13 +3,20 @@
  * @copyright IBM Security 2020
  */
 
-export default from './LayoutModule';
+export {
+  default as ActionBarModule,
+  ActionBarModuleItems,
+} from './ActionBarModule';
 
-export { default as ActionBar, ActionBarItems } from './ActionBar';
-export { default as ButtonCluster } from './ButtonCluster';
+export { default as ButtonClusterModule } from './ButtonClusterModule';
 export { default as CardModule } from './CardModule';
-export { default as Description, DescriptionContent } from './Description';
+export { default as DescriptionListModule } from './DescriptionListModule';
+export { default as DescriptionModule } from './DescriptionModule';
 export { default as ICAModule } from './ICAModule';
-export { default as withLayout, withBackground, withHover } from './Layout';
-export { default as PageTab, PageTabDetails } from './PageTab';
-export { default as TitleBar } from './TitleBar';
+
+export {
+  default as PageTabModule,
+  PageTabModuleDetails,
+} from './PageTabModule';
+
+export { default as TitleBarModule } from './TitleBarModule';

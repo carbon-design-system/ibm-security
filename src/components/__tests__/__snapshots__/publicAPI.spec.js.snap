@@ -78,7 +78,7 @@ Map {
       "uid": [Function],
     },
   },
-  "ActionBar" => Object {
+  "ActionBarModule" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
@@ -86,7 +86,7 @@ Map {
       },
     },
   },
-  "ActionBarItems" => Object {
+  "ActionBarModuleItems" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
@@ -274,7 +274,7 @@ Map {
       },
     },
   },
-  "ButtonCluster" => Object {
+  "ButtonClusterModule" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
@@ -435,7 +435,7 @@ Map {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
-        "type": "node",
+        "type": "func",
       },
     },
   },
@@ -2898,7 +2898,7 @@ Map {
       },
     },
   },
-  "Description" => Object {
+  "DescriptionListModule" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
@@ -2906,17 +2906,11 @@ Map {
       },
     },
   },
-  "DescriptionContent" => Object {
-    "defaultProps": Object {
-      "className": null,
-    },
+  "DescriptionModule" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
-        "type": "node",
-      },
-      "className": Object {
-        "type": "string",
+        "type": "func",
       },
     },
   },
@@ -4523,7 +4517,7 @@ Map {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
-        "type": "node",
+        "type": "func",
       },
     },
   },
@@ -4987,24 +4981,6 @@ Map {
           ],
         ],
         "type": "oneOf",
-      },
-    },
-  },
-  "LayoutModule" => Object {
-    "defaultProps": Object {
-      "className": null,
-    },
-    "propTypes": Object {
-      "children": Object {
-        "isRequired": true,
-        "type": "node",
-      },
-      "className": Object {
-        "type": "string",
-      },
-      "namespace": Object {
-        "isRequired": true,
-        "type": "string",
       },
     },
   },
@@ -6491,7 +6467,7 @@ Map {
       },
     },
   },
-  "PageTab" => Object {
+  "PageTabModule" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
@@ -6499,7 +6475,7 @@ Map {
       },
     },
   },
-  "PageTabDetails" => Object {
+  "PageTabModuleDetails" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
@@ -6832,6 +6808,7 @@ Map {
       "className": null,
       "closeButton": undefined,
       "focusTrap": true,
+      "focusTrapOptions": Object {},
       "hasScrollingContent": false,
       "isOpen": true,
       "labels": Object {},
@@ -6880,6 +6857,91 @@ Map {
       },
       "focusTrap": Object {
         "type": "bool",
+      },
+      "focusTrapOptions": Object {
+        "args": Array [
+          Object {
+            "allowOutsideClick": Object {
+              "type": "func",
+            },
+            "clickOutsideDeactivates": Object {
+              "type": "bool",
+            },
+            "escapeDeactivates": Object {
+              "type": "bool",
+            },
+            "fallbackFocus": Object {
+              "args": Array [
+                Array [
+                  Object {
+                    "args": Array [
+                      [Function],
+                    ],
+                    "type": "instanceOf",
+                  },
+                  Object {
+                    "type": "string",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
+            },
+            "initialFocus": Object {
+              "args": Array [
+                Array [
+                  Object {
+                    "args": Array [
+                      [Function],
+                    ],
+                    "type": "instanceOf",
+                  },
+                  Object {
+                    "type": "string",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
+            },
+            "onActivate": Object {
+              "type": "func",
+            },
+            "onDeactivate": Object {
+              "type": "func",
+            },
+            "preventScroll": Object {
+              "type": "bool",
+            },
+            "returnFocusOnDeactivate": Object {
+              "type": "bool",
+            },
+            "setReturnFocus": Object {
+              "args": Array [
+                Array [
+                  Object {
+                    "args": Array [
+                      [Function],
+                    ],
+                    "type": "instanceOf",
+                  },
+                  Object {
+                    "type": "string",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
+            },
+          },
+        ],
+        "type": "shape",
       },
       "hasScrollingContent": Object {
         "type": "bool",
@@ -7025,6 +7087,7 @@ Map {
     "defaultProps": Object {
       "children": null,
       "focusTrap": true,
+      "focusTrapOptions": Object {},
       "hasOverlay": true,
       "initialFocus": null,
       "onOverlayClick": undefined,
@@ -7038,6 +7101,91 @@ Map {
       },
       "focusTrap": Object {
         "type": "bool",
+      },
+      "focusTrapOptions": Object {
+        "args": Array [
+          Object {
+            "allowOutsideClick": Object {
+              "type": "func",
+            },
+            "clickOutsideDeactivates": Object {
+              "type": "bool",
+            },
+            "escapeDeactivates": Object {
+              "type": "bool",
+            },
+            "fallbackFocus": Object {
+              "args": Array [
+                Array [
+                  Object {
+                    "args": Array [
+                      [Function],
+                    ],
+                    "type": "instanceOf",
+                  },
+                  Object {
+                    "type": "string",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
+            },
+            "initialFocus": Object {
+              "args": Array [
+                Array [
+                  Object {
+                    "args": Array [
+                      [Function],
+                    ],
+                    "type": "instanceOf",
+                  },
+                  Object {
+                    "type": "string",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
+            },
+            "onActivate": Object {
+              "type": "func",
+            },
+            "onDeactivate": Object {
+              "type": "func",
+            },
+            "preventScroll": Object {
+              "type": "bool",
+            },
+            "returnFocusOnDeactivate": Object {
+              "type": "bool",
+            },
+            "setReturnFocus": Object {
+              "args": Array [
+                Array [
+                  Object {
+                    "args": Array [
+                      [Function],
+                    ],
+                    "type": "instanceOf",
+                  },
+                  Object {
+                    "type": "string",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
+            },
+          },
+        ],
+        "type": "shape",
       },
       "hasOverlay": Object {
         "type": "bool",
@@ -11874,19 +12022,15 @@ Map {
       },
     },
   },
-  "TitleBar" => Object {
+  "TitleBarModule" => Object {
     "defaultProps": Object {
       "children": null,
-      "className": null,
       "element": "h2",
       "subsection": false,
     },
     "propTypes": Object {
       "children": Object {
         "type": "node",
-      },
-      "className": Object {
-        "type": "string",
       },
       "element": Object {
         "type": "elementType",
@@ -13633,8 +13777,5 @@ Map {
       },
     },
   },
-  "withBackground" => Object {},
-  "withHover" => Object {},
-  "withLayout" => Object {},
 }
 `;

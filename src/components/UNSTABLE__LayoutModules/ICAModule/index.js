@@ -3,23 +3,32 @@
  * @copyright IBM Security 2020
  */
 
-import { node } from 'prop-types';
+import classnames from 'classnames';
+import { func } from 'prop-types';
 import React from 'react';
 
-import LayoutModule from '../LayoutModule';
+import LayoutModule, { layoutModuleNamespace } from '../LayoutModule';
 
+const namespace = 'ica';
 /**
  * The ICA module provides a means to orderly layout at-a-glance statistics.
  */
 const ICAModule = ({ children, ...other }) => (
-  <LayoutModule namespace="ica" {...other}>
-    {children}
+  <LayoutModule namespace={namespace} {...other}>
+    {children({
+      getHoverProps: ({ className } = {}) => ({
+        className: classnames(
+          `${layoutModuleNamespace}--${namespace}--hover`,
+          className
+        ),
+      }),
+    })}
   </LayoutModule>
 );
 
 ICAModule.propTypes = {
   /** Provide the content for the `ICAModule` */
-  children: node.isRequired,
+  children: func.isRequired,
 };
 
 export default ICAModule;

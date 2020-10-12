@@ -1,0 +1,84 @@
+import { parameters } from '../../../../.storybook/preview';
+
+# DescriptionModule
+
+Description modules provide a means to orderly layout short-form content.
+
+- [Overview](#overview)
+- [Subsection title](#subsection-title)
+- [Component API](#component-api)
+- [Grid placement](#grid-placement)
+- [Examples](#examples)
+- [References](#references)
+- [Troubleshooting](#troubleshooting)
+
+## Overview
+
+The description module can be built using a combination of the [`TitleBarModule`](#references) component and [paragraph elements](#references).
+
+Everything passed in as a [render prop](#references) child of `DescriptionModule` will be rendered.
+
+<Canvas>
+  <Story
+    id="patterns-unstable-layout-modules-descriptionmodule--default"
+    parameters={parameters}
+  />
+</Canvas>
+
+## Subsection title
+
+If necessary, subsection titles can be used below section titles.
+
+<Canvas>
+  <Story
+    id="patterns-unstable-layout-modules-descriptionmodule--subsection-title"
+    parameters={parameters}
+  />
+</Canvas>
+
+## Component API
+
+<ArgsTable />
+
+Additional props passed into `DescriptionModule` will be forwarded along to the underlying description module container.
+
+## Grid placement
+
+Description modules span across 8 columns, following the [narrow grid](#references) implementation.
+
+<Row>
+  <Column>
+    <img alt="#" src="#" />
+  </Column>
+
+  <Column>
+    <img alt="#" src="#" />
+  </Column>
+</Row>
+
+```jsx
+<Column lg={8}>
+  <DescriptionModule />
+</Column>
+```
+
+## Examples
+
+<LinkTo kind="patterns-unstable-layout-examples" story="detail">
+  Detail layout
+</LinkTo>
+
+## References
+
+- <LinkTo
+    kind="patterns-unstable-layout-modules-titlebarmodule"
+    story="default"
+  >
+    TitleBarModule
+  </LinkTo>
+- [The Paragraph element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p)
+- [Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
+
+## Troubleshooting
+
+Visit our [GitHub](https://github.com/carbon-design-system/ibm-security) to view and submit issues, or reach out on [Slack](https://app.slack.com/client/T1V6D3RT7/CRV39QKP0) for additional support.

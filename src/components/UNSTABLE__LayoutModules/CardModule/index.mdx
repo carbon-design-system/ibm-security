@@ -1,27 +1,23 @@
-import { ArgsTable, Story } from '@storybook/addon-docs/blocks';
-
 import { parameters } from '../../../../.storybook/preview';
-import Canvas from '../../../../.storybook/components/Canvas';
-import { Column, Row } from '../../..';
 
-import CardModuleDo from './images/Card-module_do.png';
-import CardModuleDont from './images/Card-module_dont.png';
-import CardModuleLayoutConsiderations from './images/Card-module_layout-considerations.png';
-import CardModuleLayoutAnatomy from './images/Card-module_anatomy.png';
-import OverviewLayout from '../../../images/Overview-layout_button.png';
-import DetailLayout from '../../../images/Detail-layout_button.png';
-import CardModuleCarbonForSecurity from './images/Card-module_carbon-for-security_button.png';
-import CardModuleSlack from './images/Card-module_Slack_button.png';
+import doImage from './images/do.png';
+import dont from './images/dont.png';
 
+import layoutConsiderations from './images/layout-considerations.png';
 
+import anatomy from './images/anatomy.png';
+
+import overview from './images/overview-layout.png';
+import detail from './images/detail-layout.png';
+
+import github from './images/github.png';
+import slack from './images/slack.png';
 
 ## CardModule
 
 The card module provides a means to orderly present related content and information using summary, navigational, or widget cards as the basis.
 
 [↳ Overview](#overview)  
-[↳ withLayout](#withlayout)  
-[↳ withBackground](#withbackground)  
 [↳ Component API](#component-api)  
 [↳ Grid placement](#grid-placement)  
 [↳ Complimentary modules](#complimentary-modules)  
@@ -32,9 +28,9 @@ The card module provides a means to orderly present related content and informat
 
 ### Overview
 
-The card module can be built using a combination of the `CardModule` and [grid](#references), and enhancing either the [`Card`](#references), [`SummaryCard`](#references), or [`Tile`](#references) components with the `withLayout`, and optionally `withBackground`, [higher-order components](#references).
+The card module can be built using a combination of the `CardModule`, [grid](#references), and either the [`Card`](#references), [`SummaryCard`](#references), or [`Tile`](#references) components.
 
-Everything passed in as a child of `CardModule` will be rendered.
+Everything passed in as a [render prop](#references) child of `CardModule` will be rendered.
 
 <Canvas>
   <Story
@@ -43,66 +39,9 @@ Everything passed in as a child of `CardModule` will be rendered.
   />
 </Canvas>
 
-<!--
-
-## withLayout
-
-The `withLayout` higher-order component enhances cards to provide consistent spacing when using a card within the card module.
-
-```jsx
-const EnhancedCard = withLayout(Card);
-
-return (
-  <CardModule>
-    <Row>
-      <Column>
-        <EnhancedCard />
-      </Column>
-
-      <Column>
-        <EnhancedCard />
-      </Column>
-
-      <Column>
-        <EnhancedCard />
-      </Column>
-    </Row>
-  </CardModule>
-);
-```
-
-## withBackground
-
-The `withBackground` higher-order component enhances cards to provide consistent backgrounds when using a card within the card module.
-
-```jsx
-const CardWithBackground = withBackground(Card);
-
-return (
-  <CardModule>
-    <Row>
-      <Column>
-        <CardWithBackground />
-      </Column>
-
-      <Column>
-        <CardWithBackground />
-      </Column>
-
-      <Column>
-        <CardWithBackground />
-      </Column>
-    </Row>
-  </CardModule>
-);
-```
--->
-
-### Component API
+## Component API
 
 <ArgsTable />
-
-
 
 Additional props passed into `CardModule` will be forwarded along to the underlying card module container.
 
@@ -112,11 +51,11 @@ Card modules can span between 4 and 16 columns. Following the narrow grid implem
 
 <Row>
   <Column>
-    <img alt="CardModule do" src={CardModuleDo} />
+    <img alt="`CardModule` do" src={doImage} />
   </Column>
 
   <Column>
-    <img alt="CardModule do" src={CardModuleDont} />
+    <img alt="`CardModule` do" src={dont} />
   </Column>
 </Row>
 
@@ -130,9 +69,9 @@ Card modules can span between 4 and 16 columns. Following the narrow grid implem
 
 The card module can contain a number of other layout modules within the parent to create a section of related modules. The following options can be used for this purpose.
 
-1. **[`TitleBar`](#references) using section title:** Section titles provide identification for the content
-2. **`TitleBar` using subsection title:** Subsection titles provide identification for the sub-content
-3. **[`ActionBar`](#references):** Provides a zone for actions related to the cards and content below it
+1. **[`TitleBarModule`](#references) using section title:** Section titles provide identification for the content
+2. **`TitleBarModule` using subsection title:** Subsection titles provide identification for the sub-content
+3. **[`ActionBarModule`](#references):** Provides a zone for actions related to the cards and content below it
 
 <Canvas>
   <Story
@@ -142,11 +81,12 @@ The card module can contain a number of other layout modules within the parent t
 </Canvas>
 
 ### Layout considerations
-The `CardModule` is a very flexible module, allowing for a number of configurations… 
+
+The `CardModule` is a very flexible module, allowing for a number of configurations…
 
 <Row>
   <Column>
-    <img alt="Card Module Layout Considerations" src={CardModuleLayoutConsiderations} />
+    <img alt="`CardModule` layout cnsiderations" src={layoutConsiderations} />
   </Column>
 </Row>
 
@@ -156,33 +96,70 @@ The `CardModule` is a very flexible module, allowing for a number of configurati
 2. **Card spacer (optional):** If there are multiple rows of cards, use the 16-pixel spacer `$layout-01` to separate the rows
 3. **Bottom spacer:** The 32-pixel spacer `$layout-03` below the last card row provides the starting point for the layout module positioned directly underneath it
 
-<img alt="`CardModule` anatomy" src={CardModuleLayoutAnatomy} />
+<img alt="`CardModule` anatomy" src={anatomy} />
 
 ### Examples
 
-[Detail layout](?path=/story/patterns-unstable-layout-examples-beta--detail)
-
 <Row>
   <Column>
-    <img alt="CardModule Overview Example Link" src={OverviewLayout} />
+    <LinkTo
+      className="storybook__image--link"
+      kind="patterns-unstable-modular-page-layouts"
+      story="overview"
+    >
+      <img alt="Overview layout page example" src={overview} />
+    </LinkTo>
   </Column>
 
   <Column>
-    <img alt="CardModule Detail Example Link" src={DetailLayout} />
+    <LinkTo
+      className="storybook__image--link"
+      kind="patterns-unstable-modular-page-layouts"
+      story="detail"
+    >
+      <img alt="Detail layout page example" src={detail} />
+    </LinkTo>
   </Column>
 </Row>
 
 ### References
 
-[↗ Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)  
-[↗ Card](?path=/story/components-card)  
-[↗ SummaryCard](?path=/story/patterns-summarycard)  
-[↗ Tile](https://react.carbondesignsystem.com/?path=/docs/tile)  
-[↗ Higher-Order Components](https://reactjs.org/docs/higher-order-components.html)  
-[↗ TitleBar](?path=/docs/patterns-unstable-layout-modules-titlebar)  
-[↗ ActionBar](?path=/docs/patterns-unstable-layout-modules-actionbar)  
+- [↗ Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
+- <LinkTo kind="components-card" story="default">
+    ↗ Card
+  </LinkTo>
+- <LinkTo kind="patterns-summarycard" story="with-primary-label">
+    ↗ SummaryCard
+  </LinkTo>
+- [↗ Tile](https://react.carbondesignsystem.com/?path=/docs/tile)
+- [↗ Render Props](https://reactjs.org/docs/render-props.html)
+- <LinkTo
+    kind="patterns-unstable-layout-modules-titlebarmodule"
+    story="default"
+  >
+    ↗ TitleBarModule
+  </LinkTo>
+- <LinkTo
+    kind="patterns-unstable-layout-modules-actionbarmodule"
+    story="default"
+  >
+    ↗ ActionBarModule
+  </LinkTo>
 
 ### Troubleshooting
 
 Visit our [GitHub](https://github.com/carbon-design-system/ibm-security) to view and submit issues, or reach out on [Slack](https://app.slack.com/client/T1V6D3RT7/CRV39QKP0) for additional support.
 
+<Row>
+  <Column>
+    <a className="storybook__image--link" href="https://github.com/carbon-design-system/ibm-security">
+      <img alt="Troubleshooting GitHub link" src={github} /> 
+    </a>
+  </Column>
+
+  <Column>
+    <a className="storybook__image--link" href="https://app.slack.com/client/T1V6D3RT7/CRV39QKP0">
+      <img alt="Troubleshooting Slack link" src={slack} /> 
+    </a>
+  </Column>
+</Row>

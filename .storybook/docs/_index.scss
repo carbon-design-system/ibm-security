@@ -4,17 +4,20 @@
 /// @copyright IBM Security 2020
 ////
 
-@import '@carbon/colors/scss/colors';
 @import '@carbon/layout/scss/spacing';
 
-// Overrides must reside in this block due to specificity.
-.sbdocs-content {
+@import '../../src/platform/body/mixins';
+
+.sbdocs {
   .sbdocs-h3 {
-    margin-top: $carbon--layout-05;
+    &,
+    &:first-of-type {
+      margin-top: $carbon--layout-05;
+    }
   }
 
-  .sbdocs-h3:first-of-type {
-    margin-top: $carbon--layout-05;
+  & &-preview {
+    background-color: $body__color__background;
   }
 
   [title='Required'] {

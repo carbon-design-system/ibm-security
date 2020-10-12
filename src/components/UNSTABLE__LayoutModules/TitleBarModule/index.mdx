@@ -1,0 +1,106 @@
+import { parameters } from '../../../../.storybook/preview';
+import { Default } from './TitleBarModule.stories';
+
+# TitleBarModule
+
+Title bar modules provide interchangeable and reliable headings for establishing consistent hierarchies.
+
+- [Overview](#overview)
+- [Actions](#actions)
+- [Component API](#component-api)
+- [Grid placement](#grid-placement)
+- [Examples](#examples)
+- [References](#references)
+- [Troubleshooting](#troubleshooting)
+
+## Overview
+
+Everything passed in as a child of the title bar module will be rendered.
+
+<Canvas>
+  <Story
+    id="patterns-unstable-layout-modules-titlebarmodule--default"
+    parameters={parameters}
+  />
+</Canvas>
+
+## Actions
+
+If necessary, actions can be placed inline with the title.
+
+<Canvas>
+  <Story
+    id="patterns-unstable-layout-modules-titlebarmodule--actions"
+    parameters={parameters}
+  />
+</Canvas>
+
+## Component API
+
+<ArgsTable />
+
+Additional props passed into `TitleBarModule` will be forwarded along to the underlying title bar module containers.
+
+### `subsection`
+
+Use the `subsection` prop to specify whether a subsection should be used.
+
+<Canvas withSource="none">
+  <Default title="Subsection title" subsection parameters={parameters} />
+</Canvas>
+
+```jsx
+<TitleBarModule title="Subsection title" subsection />
+```
+
+### `element`
+
+This prop specifies a different element to be rendered as a title.
+
+<Canvas withSource="none">
+  <Default element="h3" title="Section 3 title" parameters={parameters} />
+</Canvas>
+
+```jsx
+<TitleBarModule element="h3" title="Section 3 title" />
+```
+
+## Grid placement
+
+Title bar modules can span between 4 and 8 columns, following the [narrow grid](#references) implementation.
+
+<Row>
+  <Column>
+    <img alt="#" src="#" />
+  </Column>
+
+  <Column>
+    <img alt="#" src="#" />
+  </Column>
+</Row>
+
+```jsx
+<Column lg={4}>
+  <TitleBarModule title="Section title" />
+</Column>
+```
+
+## Examples
+
+- <LinkTo kind="patterns-unstable-layout-examples" story="overview">
+    Overview layout
+  </LinkTo>
+- <LinkTo kind="patterns-unstable-layout-examples" story="detail">
+    Detail layout
+  </LinkTo>
+
+## References
+
+- <LinkTo kind="patterns-iconbuttonbar" story="default">
+    IconButtonBar
+  </LinkTo>
+- [Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
+
+## Troubleshooting
+
+Visit our [GitHub](https://github.com/carbon-design-system/ibm-security) to view and submit issues, or reach out on [Slack](https://app.slack.com/client/T1V6D3RT7/CRV39QKP0) for additional support.

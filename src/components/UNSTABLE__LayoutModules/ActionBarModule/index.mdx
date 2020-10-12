@@ -1,0 +1,84 @@
+import { parameters } from '../../../../.storybook/preview';
+
+# ActionBarModule
+
+Action bars allow users to take multiple actions on the subsequent section.
+
+- [Overview](#overview)
+- [Supplementary details](#supplementary-details)
+- [Component API](#component-api)
+- [Grid placement](#grid-placement)
+- [Examples](#examples)
+- [References](#references)
+- [Troubleshooting](#troubleshooting)
+
+## Overview
+
+The action bar module can be built using a combination of the `ActionBarModule` and `ActionBarModuleItems` components.
+
+`ActionBarModuleItems` is responsible for positioning the actions, and everything passed in as a child of `ActionBarModuleItems` will be rendered.
+
+<Canvas>
+  <Story
+    id="patterns-unstable-layout-modules-actionbarmodule--default"
+    parameters={parameters}
+  />
+</Canvas>
+
+## Supplementary details
+
+If necessary, supplementary details can be placed inline with the actions.
+
+<Canvas>
+  <Story
+    id="patterns-unstable-layout-modules-actionbarmodule--details"
+    parameters={parameters}
+  />
+</Canvas>
+
+## Component API
+
+<ArgsTable />
+
+Additional props passed into `ActionBarModule` and `ActionBarModuleItems` will be forwarded along to their underlying containers.
+
+## Grid placement
+
+Action bar modules can span between 4 and 16 columns, following the [narrow grid](#references) implementation.
+
+<Row>
+  <Column>
+    <img alt="#" src="#" />
+  </Column>
+
+  <Column>
+    <img alt="#" src="#" />
+  </Column>
+</Row>
+
+```jsx
+<Column lg={4}>
+  <ActionBarModule />
+</Column>
+```
+
+## Examples
+
+- <LinkTo kind="patterns-unstable-layout-examples" story="overview">
+    Overview layout
+  </LinkTo>
+- <LinkTo kind="patterns-unstable-layout-examples" story="detail">
+    Detail layout
+  </LinkTo>
+
+## References
+
+- [Button](https://react.carbondesignsystem.com/?path=/docs/button)
+- <LinkTo kind="patterns-iconbuttonbar" story="default">
+    IconButtonBar
+  </LinkTo>
+- [Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
+
+## Troubleshooting
+
+Visit our [GitHub](https://github.com/carbon-design-system/ibm-security) to view and submit issues, or reach out on [Slack](https://app.slack.com/client/T1V6D3RT7/CRV39QKP0) for additional support.

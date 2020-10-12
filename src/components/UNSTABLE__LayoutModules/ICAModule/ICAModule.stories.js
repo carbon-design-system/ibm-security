@@ -5,54 +5,59 @@
 
 import React from 'react';
 
-import { Column, ICA, ICAModule, Row, withHover } from '../../..';
-import getTitle, { getDocsParameters } from '../stories';
+import { getDocsParameters } from '../../../../.storybook';
+
+import { Column, ICA, ICAModule, Row } from '../../..';
+
+import getTitle from '../stories';
 import page from './index.mdx';
 
 export default {
   title: getTitle(ICAModule),
   component: ICAModule,
   parameters: {
-    ...getDocsParameters(page),
+    docs: { page },
+
+    ...getDocsParameters(),
   },
 };
 
 export const Default = () => (
   <ICAModule>
-    <Row>
-      <Column>
-        <ICA label="Label" value={100} />
-      </Column>
+    {() => (
+      <Row>
+        <Column>
+          <ICA label="Label" value={100} />
+        </Column>
 
-      <Column>
-        <ICA label="Label" value={100} />
-      </Column>
+        <Column>
+          <ICA label="Label" value={100} />
+        </Column>
 
-      <Column>
-        <ICA label="Label" value={100} />
-      </Column>
-    </Row>
+        <Column>
+          <ICA label="Label" value={100} />
+        </Column>
+      </Row>
+    )}
   </ICAModule>
 );
 
-export const Hover = () => {
-  const HoverColumn = withHover(Column);
-
-  return (
-    <ICAModule>
+export const Hover = () => (
+  <ICAModule>
+    {({ getHoverProps }) => (
       <Row>
-        <HoverColumn>
+        <Column {...getHoverProps()}>
           <ICA label="Label" value={100} />
-        </HoverColumn>
+        </Column>
 
-        <HoverColumn>
+        <Column {...getHoverProps()}>
           <ICA label="Label" value={100} />
-        </HoverColumn>
+        </Column>
 
-        <HoverColumn>
+        <Column {...getHoverProps()}>
           <ICA label="Label" value={100} />
-        </HoverColumn>
+        </Column>
       </Row>
-    </ICAModule>
-  );
-};
+    )}
+  </ICAModule>
+);

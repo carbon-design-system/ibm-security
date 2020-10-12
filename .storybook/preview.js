@@ -3,14 +3,27 @@
  * @copyright IBM Security 2020
  */
 
+import { spacing04, spacing05 } from '@carbon/layout';
+import { styles } from '@carbon/type';
+import { ArgsTable, Story } from '@storybook/addon-docs/blocks';
 import { withInfo } from '@storybook/addon-info';
+import LinkTo from '@storybook/addon-links/react';
+
 import React from 'react';
+
+import { Column, Row } from '../src';
+
+import random from '../src/globals/random';
+import theme from '../src/globals/theme';
 
 import { HIERARCHY_ROOT_SEPARATOR, ORDER } from '.';
 
+import storybookTheme from './theme';
 import withTheme from './addons/addon-theme';
 import Container from './components/Container';
-import storybookTheme from './theme';
+import Canvas from './components/Canvas';
+
+const { interactive01, text04 } = theme;
 
 const decorators = [
   withInfo,
@@ -34,9 +47,35 @@ function getCategory(story) {
 }
 
 const parameters = {
-  controls: { expanded: true, hideNoControlsWarning: true },
+  controls: { disable: true, expanded: true },
   docs: {
+    components: {
+      ArgsTable,
+      Canvas,
+      Column,
+      LinkTo,
+      Row,
+      Story,
+    },
     theme: storybookTheme,
+  },
+  info: {
+    styles: {
+      button: {
+        base: {
+          padding: `${spacing04} ${spacing05}`,
+          color: text04,
+          background: interactive01,
+          zIndex: random(100000),
+          ...styles.bodyShort01,
+        },
+        topRight: {
+          top: 'auto',
+          bottom: 0,
+          borderRadius: 0,
+        },
+      },
+    },
   },
   layout: 'centered',
   options: {
@@ -44,10 +83,12 @@ const parameters = {
       ORDER.indexOf(getCategory(a)) - ORDER.indexOf(getCategory(b)),
   },
   previewTabs: {
+    canvas: null,
     'storybook/docs/panel': {
       hidden: true,
     },
   },
+  viewMode: 'story',
 };
 
 // Set the Google Analytics tracking ID if the `master` branch is deployed.

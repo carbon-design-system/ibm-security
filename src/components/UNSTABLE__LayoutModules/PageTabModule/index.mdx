@@ -1,0 +1,86 @@
+import { parameters } from '../../../../.storybook/preview';
+
+# PageTabModule
+
+Page tab modules provide orderly tab navigation for a page.
+
+- [Overview](#overview)
+- [Supplementary details](#supplementary-details)
+- [Component API](#component-api)
+- [Grid placement](#grid-placement)
+- [Examples](#examples)
+- [References](#references)
+- [Troubleshooting](#troubleshooting)
+
+## Overview
+
+The page tab module can be built using a combination of the `PageTabModule`, [`Tabs`](#references), and `PageTabModuleDetails` components.
+
+The `PageTabModule` accepts `Tabs`, and optionally `PageTabModuleDetails`, components as `children` and each `Tab` is responsible for displaying the tab's label and panel content.
+
+<Canvas>
+  <Story
+    id="patterns-unstable-layout-modules-pagetabmodule--default"
+    parameters={parameters}
+  />
+</Canvas>
+
+## Supplementary details
+
+If necessary, supplementary details can be placed inline with the tabs.
+
+<Canvas>
+  <Story
+    id="patterns-unstable-layout-modules-pagetabmodule--details"
+    parameters={parameters}
+  />
+</Canvas>
+
+## Component API
+
+<ArgsTable />
+
+Additional props passed into `PageTabModule` and `PageTabModuleDetails` will be forwarded along to their underlying containers.
+
+## Grid placement
+
+Following the [narrow grid](#references) implementation, page tab modules should be placed directly into the grid context.
+
+<Row>
+  <Column>
+    <img alt="#" src="#" />
+  </Column>
+
+  <Column>
+    <img alt="#" src="#" />
+  </Column>
+</Row>
+
+```jsx
+<Grid>
+  <PageTabModule>
+    <Tabs>
+      <Tab label="Tab 1">
+        <Row>
+          <Column>Tab 1 content</Column>
+        </Row>
+      </Tab>
+    </Tabs>
+  </PageTabModule>
+</Grid>
+```
+
+## Examples
+
+<LinkTo kind="patterns-unstable-layout-examples" story="detail">
+  Detail layout
+</LinkTo>
+
+## References
+
+- [Tabs](https://react.carbondesignsystem.com/?path=/docs/tabs)
+- [Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
+
+## Troubleshooting
+
+Visit our [GitHub](https://github.com/carbon-design-system/ibm-security) to view and submit issues, or reach out on [Slack](https://app.slack.com/client/T1V6D3RT7/CRV39QKP0) for additional support.
