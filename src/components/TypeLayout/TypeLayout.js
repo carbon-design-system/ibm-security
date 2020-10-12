@@ -22,7 +22,7 @@ export const namespace = getComponentNamespace('type-layout__container');
 // TODO: `2.x` - Remove deprecated prop `bordered`.
 
 /**
- * Type layouts provide a means to orderly layout terms and definitions.
+ * Type layouts provide an orderly layout of terms and definitions.
  */
 const TypeLayout = ({
   border,
@@ -82,18 +82,11 @@ const propTypes = {
   className: string,
 };
 
-const defaultProps = {
-  children: null,
-  className: null,
-};
-
-const size = 'md';
-
 TypeLayout.propTypes = {
   ...propTypes,
 
   /** Specify the size of the type layout, from a list of available sizes */
-  size: oneOf(['xs', 'sm', size, 'lg']),
+  size: oneOf(['xs', 'sm', 'md', 'lg']),
 
   /** Specify if the type layout has a border */
   border: bool,
@@ -102,10 +95,15 @@ TypeLayout.propTypes = {
   bordered: deprecatedProp('border', bool),
 };
 
+const defaultProps = {
+  children: null,
+  className: null,
+};
+
 TypeLayout.defaultProps = {
   ...defaultProps,
 
-  size,
+  size: 'md',
   border: false,
   bordered: null,
 };
