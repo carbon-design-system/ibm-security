@@ -24888,6 +24888,39 @@ a.bx--navigation-link:focus {
   margin-left: 16rem;
 }
 
+.security--unstable--layout__module--action-bar {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: 0.16px;
+  display: flex;
+  padding-top: 0.125rem;
+  padding-bottom: 0.5rem;
+  align-items: center;
+}
+
+.security--unstable--layout__module--action-bar__items {
+  margin-left: auto;
+}
+
+.security--unstable--layout__module--button-cluster {
+  padding-bottom: 1rem;
+}
+
+.security--unstable--layout__module--button-cluster__button {
+  display: flex;
+  border-bottom: 0.0625rem solid var(--ui-03, #393939);
+  flex-flow: column;
+}
+
+.security--unstable--layout__module--button-cluster__button:first-of-type {
+  border-top: 0.0625rem solid var(--ui-03, #393939);
+}
+
+.security--unstable--layout__module--button-cluster__button > .bx--btn {
+  max-width: unset;
+}
+
 .security--unstable-pagination {
   box-sizing: border-box;
   margin: 0;
