@@ -57,7 +57,7 @@ const parameters = {
       Canvas,
       Column,
       Examples,
-      LinkTo,
+      LinkTo: props => <LinkTo className="storybook__link" {...props} />,
       Row,
       Story,
       Troubleshooting,

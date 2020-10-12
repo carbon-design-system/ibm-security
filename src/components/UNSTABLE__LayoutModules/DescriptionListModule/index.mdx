@@ -6,15 +6,15 @@ import { Default } from './DescriptionListModule.stories';
 
 Description list modules provide a means to orderly layout terms and definitions.
 
-- [Overview](#overview)
-- [Title](#title)
-- [Component API](#component-api)
-- [Grid placement](#grid-placement)
-- [Examples](#examples)
-- [References](#references)
-- [Troubleshooting](#troubleshooting)
+[↳ Overview](#overview)  
+[↳ Title](#title)  
+[↳ Component API](#component-api)  
+[↳ Grid placement](#grid-placement)  
+[↳ Examples](#examples)  
+[↳ References](#references)  
+[↳ Troubleshooting](#troubleshooting)
 
-## Overview
+### Overview
 
 The description list module can be built using a combination of the [`TypeLayout`](#references) and [`TitleBarModule`](#references) components.
 
@@ -27,7 +27,7 @@ Everything passed in as a child of `DescriptionListModule` will be rendered.
   />
 </Canvas>
 
-## Title
+### Title
 
 If necessary, both section and subsection titles can precede the type layout.
 
@@ -38,13 +38,13 @@ If necessary, both section and subsection titles can precede the type layout.
   />
 </Canvas>
 
-## Component API
+### Component API
 
 <ArgsTable />
 
 Additional props passed into `DescriptionListModule` will be forwarded along to the underlying description list module container.
 
-## Grid placement
+### Grid placement
 
 Description list modules span across 8 columns, following the [narrow grid](#references) implementation.
 
@@ -66,17 +66,16 @@ Description list modules span across 8 columns, following the [narrow grid](#ref
 
 <Examples />
 
-## References
+### References
 
-- <LinkTo kind="components-typelayout" story="default">
-    TypeLayout
-  </LinkTo>
-- <LinkTo
-    kind="patterns-unstable-layout-modules-titlebarmodule"
-    story="default"
-  >
-    TitleBarModule
-  </LinkTo>
-- [Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
+<LinkTo kind="components-typelayout" story="default">
+  ↗ TypeLayout
+</LinkTo>
+
+<LinkTo kind="patterns-unstable-layout-modules-titlebarmodule" story="default">
+  ↗ TitleBarModule
+</LinkTo>
+
+[↗ Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
 
 <Troubleshooting />

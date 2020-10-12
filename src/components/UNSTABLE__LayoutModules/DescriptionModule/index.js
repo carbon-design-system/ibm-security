@@ -17,11 +17,12 @@ const namespace = 'description';
 const DescriptionModule = ({ children, ...other }) => (
   <LayoutModule namespace={namespace} {...other}>
     {children({
-      getLayoutProps: ({ className } = {}) => ({
+      getLayoutProps: ({ className, ...rest } = {}) => ({
         className: classnames(
           `${layoutModuleNamespace}--${namespace}__content`,
           className
         ),
+        ...rest,
       }),
     })}
   </LayoutModule>

@@ -17,11 +17,12 @@ const namespace = 'card';
 const CardModule = ({ children, ...other }) => (
   <LayoutModule namespace={namespace} {...other}>
     {children({
-      getLayoutProps: ({ className } = {}) => ({
+      getLayoutProps: ({ className, ...rest } = {}) => ({
         className: classnames(
           `${layoutModuleNamespace}--${namespace}__component`,
           className
         ),
+        ...rest,
       }),
     })}
   </LayoutModule>

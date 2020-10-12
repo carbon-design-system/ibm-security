@@ -43,18 +43,18 @@ export const Default = () => (
 );
 
 export const Hover = () => (
-  <ICAModule>
-    {({ getHoverProps }) => (
+  <ICAModule hover>
+    {({ getLayoutProps }) => (
       <Row>
-        <Column {...getHoverProps()}>
+        <Column {...getLayoutProps()}>
           <ICA label="Label" value={100} />
         </Column>
 
-        <Column {...getHoverProps()}>
+        <Column {...getLayoutProps()}>
           <ICA label="Label" value={100} />
         </Column>
 
-        <Column {...getHoverProps()}>
+        <Column {...getLayoutProps()}>
           <ICA label="Label" value={100} />
         </Column>
       </Row>

@@ -4,15 +4,15 @@ import { parameters } from '../../../../.storybook/preview';
 
 Description modules provide a means to orderly layout short-form content.
 
-- [Overview](#overview)
-- [Subsection title](#subsection-title)
-- [Component API](#component-api)
-- [Grid placement](#grid-placement)
-- [Examples](#examples)
-- [References](#references)
-- [Troubleshooting](#troubleshooting)
+[↳ Overview](#overview)  
+[↳ Subsection title](#subsection-title)  
+[↳ Component API](#component-api)  
+[↳ Grid placement](#grid-placement)  
+[↳ Examples](#examples)  
+[↳ References](#references)  
+[↳ Troubleshooting](#troubleshooting)
 
-## Overview
+### Overview
 
 The description module can be built using a combination of the [`TitleBarModule`](#references) component and [paragraph elements](#references).
 
@@ -25,7 +25,7 @@ Everything passed in as a [render prop](#references) child of `DescriptionModule
   />
 </Canvas>
 
-## Subsection title
+### Subsection title
 
 If necessary, subsection titles can be used below section titles.
 
@@ -36,13 +36,21 @@ If necessary, subsection titles can be used below section titles.
   />
 </Canvas>
 
-## Component API
+### Component API
 
 <ArgsTable />
 
 Additional props passed into `DescriptionModule` will be forwarded along to the underlying description module container.
 
-## Grid placement
+#### Render props
+
+In order to make sure that everything works as intended, it's important to pass all of the props of the component as fields on the object given to the prop getter. For example, to add a `className`:
+
+```jsx
+<p {...getLayoutProps({ className: 'className' })} />
+```
+
+### Grid placement
 
 Description modules span across 8 columns, following the [narrow grid](#references) implementation.
 
@@ -64,15 +72,13 @@ Description modules span across 8 columns, following the [narrow grid](#referenc
 
 <Examples />
 
-## References
+### References
 
-- <LinkTo
-    kind="patterns-unstable-layout-modules-titlebarmodule"
-    story="default"
-  >
-    TitleBarModule
-  </LinkTo>
-- [The Paragraph element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p)
-- [Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
+<LinkTo kind="patterns-unstable-layout-modules-titlebarmodule" story="default">
+  ↗ TitleBarModule
+</LinkTo>
+
+[↗ The Paragraph element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p)  
+[↗ Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
 
 <Troubleshooting />

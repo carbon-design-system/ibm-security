@@ -1,15 +1,20 @@
 ////
-/// Documentation styles.
+/// Documentation.
 /// @group storybook
 /// @copyright IBM Security 2020
 ////
 
 @import '@carbon/layout/scss/spacing';
+@import '@carbon/motion/scss/motion';
+@import '@carbon/themes/scss/tokens';
+
+@import 'carbon-components/scss/globals/scss/motion';
 
 @import '../../src/platform/body/mixins';
 
 .sbdocs {
-  .sbdocs-h3 {
+  & &-h3,
+  & &-h4 {
     &,
     &:first-of-type {
       margin-top: $carbon--layout-05;
@@ -24,7 +29,19 @@
     color: inherit;
   }
 
-  .storybook__image--link:hover {
-    opacity: 0.9;
+  .storybook__link {
+    text-decoration: none;
+    color: $link-01;
+
+    &--image {
+      transition-duration: $duration--fast-01;
+      transition-property: opacity;
+      transition-timing-function: carbon--motion($name: standard);
+
+      &:focus,
+      &:hover {
+        opacity: 0.9;
+      }
+    }
   }
 }

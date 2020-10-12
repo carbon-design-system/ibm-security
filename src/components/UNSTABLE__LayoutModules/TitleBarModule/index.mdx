@@ -5,15 +5,15 @@ import { Default } from './TitleBarModule.stories';
 
 Title bar modules provide interchangeable and reliable headings for establishing consistent hierarchies.
 
-- [Overview](#overview)
-- [Actions](#actions)
-- [Component API](#component-api)
-- [Grid placement](#grid-placement)
-- [Examples](#examples)
-- [References](#references)
-- [Troubleshooting](#troubleshooting)
+[↳ Overview](#overview)  
+[↳ Actions](#actions)  
+[↳ Component API](#component-api)  
+[↳ Grid placement](#grid-placement)  
+[↳ Examples](#examples)  
+[↳ References](#references)  
+[↳ Troubleshooting](#troubleshooting)
 
-## Overview
+### Overview
 
 Everything passed in as a child of the title bar module will be rendered.
 
@@ -24,7 +24,7 @@ Everything passed in as a child of the title bar module will be rendered.
   />
 </Canvas>
 
-## Actions
+### Actions
 
 If necessary, actions can be placed inline with the title.
 
@@ -35,13 +35,13 @@ If necessary, actions can be placed inline with the title.
   />
 </Canvas>
 
-## Component API
+### Component API
 
 <ArgsTable />
 
 Additional props passed into `TitleBarModule` will be forwarded along to the underlying title bar module containers.
 
-### `subsection`
+#### `subsection`
 
 Use the `subsection` prop to specify whether a subsection should be used.
 
@@ -53,7 +53,7 @@ Use the `subsection` prop to specify whether a subsection should be used.
 <TitleBarModule title="Subsection title" subsection />
 ```
 
-### `element`
+#### `element`
 
 This prop specifies a different element to be rendered as a title.
 
@@ -65,7 +65,7 @@ This prop specifies a different element to be rendered as a title.
 <TitleBarModule element="h3" title="Section 3 title" />
 ```
 
-## Grid placement
+### Grid placement
 
 Title bar modules can span between 4 and 8 columns, following the [narrow grid](#references) implementation.
 
@@ -87,11 +87,12 @@ Title bar modules can span between 4 and 8 columns, following the [narrow grid](
 
 <Examples />
 
-## References
+### References
 
-- <LinkTo kind="patterns-iconbuttonbar" story="default">
-    IconButtonBar
-  </LinkTo>
-- [Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
+<LinkTo kind="patterns-iconbuttonbar" story="default">
+  ↗ IconButtonBar
+</LinkTo>
+
+[↗ Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
 
 <Troubleshooting />

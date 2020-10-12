@@ -4,7 +4,7 @@
  */
 
 import classnames from 'classnames';
-import { func } from 'prop-types';
+import { bool, func } from 'prop-types';
 import React from 'react';
 
 import LayoutModule, { layoutModuleNamespace } from '../LayoutModule';
@@ -13,14 +13,14 @@ const namespace = 'ica';
 /**
  * The ICA module provides a means to orderly layout at-a-glance statistics.
  */
-const ICAModule = ({ children, ...other }) => (
+const ICAModule = ({ children, hover, ...other }) => (
   <LayoutModule namespace={namespace} {...other}>
     {children({
-      getHoverProps: ({ className } = {}) => ({
-        className: classnames(
-          `${layoutModuleNamespace}--${namespace}--hover`,
-          className
-        ),
+      getLayoutProps: ({ className, ...rest } = {}) => ({
+        className: classnames(className, {
+          [`${layoutModuleNamespace}--${namespace}--hover`]: hover,
+        }),
+        ...rest,
       }),
     })}
   </LayoutModule>
@@ -29,6 +29,13 @@ const ICAModule = ({ children, ...other }) => (
 ICAModule.propTypes = {
   /** Provide the content for the `ICAModule` */
   children: func.isRequired,
+
+  /** Specify whether to use the hover variant */
+  hover: bool,
+};
+
+ICAModule.defaultProps = {
+  hover: false,
 };
 
 export default ICAModule;

@@ -1,18 +1,19 @@
 import { parameters } from '../../../../.storybook/preview';
+import { Hover } from './ICAModule.stories';
 
 # ICAModule
 
 The ICA module provides a means to orderly layout at-a-glance statistics.
 
-- [Overview](#overview)
-- [Background hover](#background-hover)
-- [Component API](#component-api)
-- [Grid placement](#grid-placement)
-- [Examples](#examples)
-- [References](#references)
-- [Troubleshooting](#troubleshooting)
+[↳ Overview](#overview)  
+[↳ Background hover](#background-hover)  
+[↳ Component API](#component-api)  
+[↳ Grid placement](#grid-placement)  
+[↳ Examples](#examples)  
+[↳ References](#references)  
+[↳ Troubleshooting](#troubleshooting)
 
-## Overview
+### Overview
 
 The ICA module can be built using a combination of the `ICAModule`, [grid](#references), and [`ICA`](#references) components.
 
@@ -25,7 +26,7 @@ Everything passed in as a [render prop](#references) child of `ICAModule` will b
   />
 </Canvas>
 
-## Background hover
+### Background hover
 
 If necessary, a background hover can be placed on the grid columns.
 
@@ -36,13 +37,33 @@ If necessary, a background hover can be placed on the grid columns.
   />
 </Canvas>
 
-## Component API
+### Component API
 
 <ArgsTable />
 
 Additional props passed into `ICAModule` will be forwarded along to the underlying ICA module container.
 
-## Grid placement
+#### `hover`
+
+Use the `hover` prop to specify whether the hover variant should be used.
+
+<Canvas withSource="none">
+  <Hover parameters={parameters} />
+</Canvas>
+
+```jsx
+<ICAModule hover />
+```
+
+#### Render props
+
+In order to make sure that everything works as intended, it's important to pass all of the props of the component as fields on the object given to the prop getter. For example, to add a `className`:
+
+```jsx
+<Column {...getLayoutProps({ className: 'className' })} />
+```
+
+### Grid placement
 
 ICAs within ICA modules can span across 2 or 3 columns, following the narrow grid implementation.
 
@@ -78,18 +99,18 @@ ICAs within ICA modules can span across 2 or 3 columns, following the narrow gri
 
 <Examples />
 
-## References
+### References
 
-- [Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
-- <LinkTo kind="components-ica" story="default">
-    ICA
-  </LinkTo>
-- [Render Props](https://reactjs.org/docs/render-props.html)
-- <LinkTo
-    kind="patterns-unstable-layout-modules-titlebarmodule"
-    story="default"
-  >
-    TitleBarModule
-  </LinkTo>
+[↗ Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
+
+<LinkTo kind="components-ica" story="default">
+  ↗ ICA
+</LinkTo>
+
+[↗ Render Props](https://reactjs.org/docs/render-props.html)
+
+<LinkTo kind="patterns-unstable-layout-modules-titlebarmodule" story="default">
+  ↗ TitleBarModule
+</LinkTo>
 
 <Troubleshooting />

@@ -4514,10 +4514,16 @@ Map {
     },
   },
   "ICAModule" => Object {
+    "defaultProps": Object {
+      "hover": false,
+    },
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
         "type": "func",
+      },
+      "hover": Object {
+        "type": "bool",
       },
     },
   },

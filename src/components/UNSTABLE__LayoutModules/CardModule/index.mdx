@@ -39,6 +39,14 @@ Everything passed in as a [render prop](#references) child of `CardModule` will 
 
 Additional props passed into `CardModule` will be forwarded along to the underlying card module container.
 
+#### Render props
+
+In order to make sure that everything works as intended, it's important to pass all of the props of the component as fields on the object given to the prop getter. For example, to add a `className`:
+
+```jsx
+<SummaryCard {...getLayoutProps({ className: 'className' })} />
+```
+
 ### Grid placement
 
 Card modules can span between 4 and 16 columns. Following the narrow grid implementation, the layout module container hangs 16 pixels in the left margin. The narrow grid position allows headings and copy outside of containers to align with the labels within the card module.
