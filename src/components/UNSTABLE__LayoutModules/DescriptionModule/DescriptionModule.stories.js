@@ -54,7 +54,7 @@ export const Default = () => (
   </DescriptionModule>
 );
 
-export const subsectionTitle = () => (
+export const SubsectionTitle = () => (
   <DescriptionModule>
     {({ getLayoutProps }) => (
       <>

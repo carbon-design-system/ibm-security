@@ -10,6 +10,7 @@ export {
 
 export { default as ButtonClusterModule } from './ButtonClusterModule';
 export { default as CardModule } from './CardModule';
+export { default as DescriptionListModule } from './DescriptionListModule';
 export { default as DescriptionModule } from './DescriptionModule';
 export { default as ICAModule } from './ICAModule';
 
@@ -19,4 +20,3 @@ export {
 } from './PageTabModule';
 
 export { default as TitleBarModule } from './TitleBarModule';
-export { default as TypeLayoutModule } from './TypeLayoutModule';

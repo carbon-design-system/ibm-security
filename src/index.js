@@ -266,12 +266,12 @@ export {
   ActionBarModuleItems,
   ButtonClusterModule,
   CardModule,
+  DescriptionListModule,
   DescriptionModule,
   ICAModule,
   PageTabModule,
   PageTabModuleDetails,
   TitleBarModule,
-  TypeLayoutModule,
 } from './components/UNSTABLE__LayoutModules';
 
 export UNSTABLE__Pagination, {

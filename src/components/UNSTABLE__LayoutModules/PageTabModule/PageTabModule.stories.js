@@ -35,7 +35,7 @@ export const Default = () => (
   </PageTabModule>
 );
 
-export const details = () => (
+export const Details = () => (
   <PageTabModule>
     <PageTabModuleDetails>Supplementary details</PageTabModuleDetails>
 

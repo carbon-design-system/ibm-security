@@ -1,16 +1,16 @@
 /**
- * @file Type layout module stories.
+ * @file Description list module stories.
  * @copyright IBM Security 2020
  */
 
 import React from 'react';
 
 import {
+  DescriptionListModule,
   TitleBarModule,
   TypeLayout,
   TypeLayoutBody,
   TypeLayoutCell,
-  TypeLayoutModule,
   TypeLayoutRow,
 } from '../../..';
 
@@ -20,8 +20,8 @@ import getTitle from '../stories';
 import page from './index.mdx';
 
 export default {
-  title: getTitle(TypeLayoutModule),
-  component: TypeLayoutModule,
+  title: getTitle(DescriptionListModule),
+  component: DescriptionListModule,
   parameters: {
     docs: { page },
 
@@ -30,7 +30,7 @@ export default {
 };
 
 export const Default = () => (
-  <TypeLayoutModule>
+  <DescriptionListModule>
     <TypeLayout>
       <TypeLayoutBody>
         <TypeLayoutRow>
@@ -63,11 +63,11 @@ export const Default = () => (
         </TypeLayoutRow>
       </TypeLayoutBody>
     </TypeLayout>
-  </TypeLayoutModule>
+  </DescriptionListModule>
 );
 
-export const title = () => (
-  <TypeLayoutModule>
+export const Title = () => (
+  <DescriptionListModule>
     <TitleBarModule title="Section title" />
 
     <TypeLayout>
@@ -102,5 +102,5 @@ export const title = () => (
         </TypeLayoutRow>
       </TypeLayoutBody>
     </TypeLayout>
-  </TypeLayoutModule>
+  </DescriptionListModule>
 );

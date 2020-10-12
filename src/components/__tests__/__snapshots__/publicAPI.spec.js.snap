@@ -2898,6 +2898,14 @@ Map {
       },
     },
   },
+  "DescriptionListModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
   "DescriptionModule" => Object {
     "propTypes": Object {
       "children": Object {
@@ -13023,14 +13031,6 @@ Map {
       },
       "className": Object {
         "type": "string",
-      },
-    },
-  },
-  "TypeLayoutModule" => Object {
-    "propTypes": Object {
-      "children": Object {
-        "isRequired": true,
-        "type": "node",
       },
     },
   },

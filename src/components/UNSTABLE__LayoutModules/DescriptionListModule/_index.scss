@@ -1,6 +1,6 @@
 ////
-/// Type layout module.
-/// @group type-layout-module
+/// Description list module.
+/// @group description-list-module
 /// @copyright IBM Security 2020
 ////
 
@@ -12,7 +12,9 @@
 
 @import '../variables';
 
-@include security--component($name: #{$layout-modules__name}--type-layout) {
+@include security--component(
+  $name: #{$layout-modules__name}--description-list
+) {
   padding-bottom: $carbon--layout-03;
 
   // TODO: `3.x` - Remove bottom margin from the `TypeLayout` component to allow it to be handled by the layout module.

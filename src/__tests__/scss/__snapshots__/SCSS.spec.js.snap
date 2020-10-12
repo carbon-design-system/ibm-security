@@ -24929,6 +24929,14 @@ a.bx--navigation-link:focus {
   margin-bottom: 1rem;
 }
 
+.security--unstable--layout__module--description-list {
+  padding-bottom: 2rem;
+}
+
+.security--unstable--layout__module--description-list > .security--type-layout__container {
+  margin-bottom: 0;
+}
+
 .security--unstable--layout__module--description {
   padding-bottom: 2rem;
 }
@@ -25011,14 +25019,6 @@ a.bx--navigation-link:focus {
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
   margin-left: auto;
-}
-
-.security--unstable--layout__module--type-layout {
-  padding-bottom: 2rem;
-}
-
-.security--unstable--layout__module--type-layout > .security--type-layout__container {
-  margin-bottom: 0;
 }
 
 .security--unstable-pagination {

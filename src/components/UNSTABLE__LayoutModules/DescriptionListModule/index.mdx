@@ -1,10 +1,10 @@
 import { parameters } from '../../../../.storybook/preview';
 
-import { Default } from './TypeLayoutModule.stories';
+import { Default } from './DescriptionListModule.stories';
 
-# TypeLayoutModule
+# DescriptionListModule
 
-Type layout modules provide a means to orderly layout terms and definitions.
+Description list modules provide a means to orderly layout terms and definitions.
 
 - [Overview](#overview)
 - [Title](#title)
@@ -16,13 +16,13 @@ Type layout modules provide a means to orderly layout terms and definitions.
 
 ## Overview
 
-The type layout module can be built using a combination of the [`TypeLayout`](#references) and [`TitleBarModule`](#references) components.
+The description list module can be built using a combination of the [`TypeLayout`](#references) and [`TitleBarModule`](#references) components.
 
-Everything passed in as a child of `TypeLayoutModule` will be rendered.
+Everything passed in as a child of `DescriptionListModule` will be rendered.
 
 <Canvas>
   <Story
-    id="patterns-unstable-layout-modules-typelayoutmodule--default"
+    id="patterns-unstable-layout-modules-descriptionlistmodule--default"
     parameters={parameters}
   />
 </Canvas>
@@ -33,7 +33,7 @@ If necessary, both section and subsection titles can precede the type layout.
 
 <Canvas>
   <Story
-    id="patterns-unstable-layout-modules-typelayoutmodule--title"
+    id="patterns-unstable-layout-modules-descriptionlistmodule--title"
     parameters={parameters}
   />
 </Canvas>
@@ -42,11 +42,11 @@ If necessary, both section and subsection titles can precede the type layout.
 
 <ArgsTable />
 
-Additional props passed into `TypeLayoutModule` will be forwarded along to the underlying type layout module container.
+Additional props passed into `DescriptionListModule` will be forwarded along to the underlying description list module container.
 
 ## Grid placement
 
-Type layout modules span across 8 columns, following the [narrow grid](#references) implementation.
+Description list modules span across 8 columns, following the [narrow grid](#references) implementation.
 
 <Row>
   <Column>
@@ -60,7 +60,7 @@ Type layout modules span across 8 columns, following the [narrow grid](#referenc
 
 ```jsx
 <Column lg={8}>
-  <TypeLayoutModule />
+  <DescriptionListModule />
 </Column>
 ```
 
