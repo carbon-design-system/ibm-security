@@ -4,7 +4,7 @@
  */
 
 import classnames from 'classnames';
-import { bool, elementType, node, string } from 'prop-types';
+import { bool, elementType, node } from 'prop-types';
 import React, { createElement } from 'react';
 
 import LayoutModule, {
@@ -17,14 +17,7 @@ const namespace = 'title-bar';
 /**
  * Title bar modules provide interchangeable and reliable headings for establishing consistent hierarchies.
  */
-const TitleBarModule = ({
-  children,
-  className,
-  element,
-  subsection,
-  title,
-  ...other
-}) => (
+const TitleBarModule = ({ children, element, subsection, title, ...other }) => (
   <LayoutModule namespace={namespace} {...other}>
     {createElement(
       element,
@@ -57,16 +50,12 @@ TitleBarModule.propTypes = {
 
   /** Specify the base element to use to build the title */
   element: elementType,
-
-  /** Provide an optional class to be applied to the containing node */
-  className: string,
 };
 
 TitleBarModule.defaultProps = {
   children: null,
   subsection: false,
   element: 'h2',
-  className: null,
 };
 
 export default TitleBarModule;
