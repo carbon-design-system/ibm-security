@@ -3,8 +3,19 @@
  * @copyright IBM Security 2019 - 2020
  */
 
+import React from 'react';
+
+import { deprecate } from '../../globals/deprecate';
+import { DescriptionList } from '../DescriptionList';
+
+// TODO: `2.x` - Remove.
+export const TypeLayout = props => {
+  deprecate('TypeLayout', 'DescriptionList');
+
+  return <DescriptionList {...props} />;
+};
+
 export {
-  DescriptionList as TypeLayout,
   DescriptionListBody as TypeLayoutBody,
   DescriptionListCell as TypeLayoutCell,
   DescriptionListRow as TypeLayoutRow,

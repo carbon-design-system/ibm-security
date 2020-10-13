@@ -13016,38 +13016,7 @@ Map {
       },
     },
   },
-  "TypeLayout" => Object {
-    "defaultProps": Object {
-      "border": false,
-      "bordered": null,
-      "children": null,
-      "className": null,
-      "size": "md",
-    },
-    "propTypes": Object {
-      "border": Object {
-        "type": "bool",
-      },
-      "bordered": [Function],
-      "children": Object {
-        "type": "node",
-      },
-      "className": Object {
-        "type": "string",
-      },
-      "size": Object {
-        "args": Array [
-          Array [
-            "xs",
-            "sm",
-            "md",
-            "lg",
-          ],
-        ],
-        "type": "oneOf",
-      },
-    },
-  },
+  "TypeLayout" => Object {},
   "TypeLayoutBody" => Object {
     "defaultProps": Object {
       "children": null,

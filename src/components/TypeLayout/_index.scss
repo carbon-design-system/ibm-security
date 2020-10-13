@@ -4,4 +4,12 @@
 /// @copyright IBM Security 2019 - 2020
 ////
 
+@import '../../globals/deprecate/index';
+@import '../Component/mixins';
+
 @import '../DescriptionList/index';
+
+// TODO: `2.x` - Remove.
+@include security--component($name: type-layout--deprecated) {
+  @warn deprecate($actual: 'TypeLayout', $expected: 'DescriptionList');
+}
