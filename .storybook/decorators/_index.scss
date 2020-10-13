@@ -14,8 +14,8 @@
 }
 
 .decorator {
-  width: 33vw;
+  width: 66vw;
 
-  max-width: breakpoints-width-get($name: md);
+  max-width: breakpoints-width-get($name: lg);
   min-width: breakpoints-width-get($name: sm);
 }
