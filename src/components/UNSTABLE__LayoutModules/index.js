@@ -9,6 +9,7 @@ export {
 } from './ActionBarModule';
 
 export { default as ButtonClusterModule } from './ButtonClusterModule';
+export { default as DescriptionListModule } from './DescriptionListModule';
 
 export {
   default as PageTabModule,
