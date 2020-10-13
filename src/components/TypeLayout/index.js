@@ -15,6 +15,11 @@ export const TypeLayout = props => {
   return <DescriptionList {...props} />;
 };
 
+const { defaultProps, propTypes } = DescriptionList;
+
+TypeLayout.defaultProps = defaultProps;
+TypeLayout.propTypes = propTypes;
+
 export {
   DescriptionListBody as TypeLayoutBody,
   DescriptionListCell as TypeLayoutCell,
