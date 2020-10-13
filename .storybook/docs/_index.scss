@@ -13,11 +13,32 @@
 @import '../../src/platform/body/mixins';
 
 .sbdocs {
+  $root: &;
+
   & &-h3,
   & &-h4 {
     &,
     &:first-of-type {
       margin-top: $carbon--layout-05;
+    }
+  }
+
+  & &-ul {
+    /// Spacing.
+    /// @type Length
+    $unordered-list__spacing: $carbon--spacing-05;
+
+    padding-left: $unordered-list__spacing;
+    list-style: none;
+
+    > #{$root}-li {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        left: -#{$unordered-list__spacing};
+        content: '–';
+      }
     }
   }
 
