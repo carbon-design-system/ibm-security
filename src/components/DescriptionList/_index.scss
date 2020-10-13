@@ -15,8 +15,9 @@
 
 @import '../Component/mixins';
 
-// TODO: `2.x` - Rename to `description-list`.
-@include security--component($name: type-layout__container) {
+@import 'variables';
+
+@include security--component($name: $description-list__name) {
   $root: &;
 
   @include carbon--type-style($name: body-short-01);

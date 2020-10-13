@@ -273,6 +273,7 @@ export {
   ActionBarModule,
   ActionBarModuleItems,
   ButtonClusterModule,
+  DescriptionListModule,
   PageTabModule,
   PageTabModuleDetails,
   TitleBarModule,

@@ -2950,6 +2950,14 @@ Map {
       },
     },
   },
+  "DescriptionListModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
   "DescriptionListRow" => Object {
     "defaultProps": Object {
       "children": null,
