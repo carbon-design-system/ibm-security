@@ -14,3 +14,5 @@ export {
   default as PageTabModule,
   PageTabModuleDetails,
 } from './PageTabModule';
+
+export { default as TitleBarModule } from './TitleBarModule';

@@ -267,6 +267,7 @@ export {
   ButtonClusterModule,
   PageTabModule,
   PageTabModuleDetails,
+  TitleBarModule,
 } from './components/UNSTABLE__LayoutModules';
 
 export UNSTABLE__Pagination, {
