@@ -1,13 +1,19 @@
 import { parameters } from '../../../../.storybook/preview';
 
+import doImage from './images/do.png';
+import dont from './images/dont.png';
+
+import anatomy from './images/anatomy.png';
+
 # ActionBarModule
 
 Action bars allow users to take multiple actions on the subsequent section.
 
 [↳ Overview](#overview)  
-[↳ Supplementary details](#supplementary-details)  
+[↳ Variations](#variations)  
 [↳ Component API](#component-api)  
 [↳ Grid placement](#grid-placement)  
+[↳ Anatomy](#anatomy)  
 [↳ Examples](#examples)  
 [↳ References](#references)  
 [↳ Troubleshooting](#troubleshooting)
@@ -25,7 +31,7 @@ The action bar module can be built using a combination of the `ActionBarModule` 
   />
 </Canvas>
 
-### Supplementary details
+### Variations
 
 If necessary, supplementary details can be placed inline with the actions.
 
@@ -48,11 +54,11 @@ Action bar modules can span between 4 and 16 columns, following the [narrow grid
 
 <Row>
   <Column>
-    <img alt="#" src="#" />
+    <img alt="`ActionBarModule` do" src={doImage} />
   </Column>
 
   <Column>
-    <img alt="#" src="#" />
+    <img alt="`ActionBarModule` don't" src={dont} />
   </Column>
 </Row>
 
@@ -61,6 +67,14 @@ Action bar modules can span between 4 and 16 columns, following the [narrow grid
   <ActionBarModule />
 </Column>
 ```
+
+### Anatomy
+
+1. **Ghost button:** The predominant action for the bar should be placed here as a ghost button. Alternatively a title can be supplemented, see [Variations](#variations)
+2. **Icon buttons:** Nulla et metus quis nulla consequat porttitor.
+3. **No spacing:** The action button bar contains internal spacing so it is placed flush to edge of the components above and below
+
+<img alt="`ActionBarModule` anatomy" src={anatomy} />
 
 <Examples />
 
