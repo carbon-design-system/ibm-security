@@ -1,6 +1,6 @@
 /**
- * @file Type layout tests.
- * @copyright IBM Security 2019
+ * @file Description list tests.
+ * @copyright IBM Security 2019 - 2020
  */
 
 import { render } from '@testing-library/react';
@@ -8,47 +8,47 @@ import React from 'react';
 import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import {
-  TypeLayout,
-  TypeLayoutBody,
-  TypeLayoutRow,
-  TypeLayoutCell,
+  DescriptionList,
+  DescriptionListBody,
+  DescriptionListCell,
+  DescriptionListRow,
 } from '../../..';
 
-import { namespace } from '../TypeLayout';
+import { namespace } from '../DescriptionList';
 
 const sizes = ['xs', 'sm', 'md', 'lg'];
 
-describe('TypeLayout', () => {
+describe('DescriptionList', () => {
   test('should have no Axe or DAP violations', async () => {
     const { container } = renderWithinLandmark(
-      <TypeLayout>
-        <TypeLayoutBody>
-          <TypeLayoutRow>
-            <TypeLayoutCell>test cell title 1</TypeLayoutCell>
-            <TypeLayoutCell>test cell content 1</TypeLayoutCell>
-          </TypeLayoutRow>
-          <TypeLayoutRow>
-            <TypeLayoutCell>test cell title 2</TypeLayoutCell>
-            <TypeLayoutCell>test cell content 2</TypeLayoutCell>
-          </TypeLayoutRow>
-        </TypeLayoutBody>
-      </TypeLayout>
+      <DescriptionList>
+        <DescriptionListBody>
+          <DescriptionListRow>
+            <DescriptionListCell>test cell title 1</DescriptionListCell>
+            <DescriptionListCell>test cell content 1</DescriptionListCell>
+          </DescriptionListRow>
+          <DescriptionListRow>
+            <DescriptionListCell>test cell title 2</DescriptionListCell>
+            <DescriptionListCell>test cell content 2</DescriptionListCell>
+          </DescriptionListRow>
+        </DescriptionListBody>
+      </DescriptionList>
     );
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations('TypeLayout');
+    await expect(container).toHaveNoDAPViolations('DescriptionList');
   });
 
   test('should add a custom class to each component', () => {
     const { getByText } = render(
-      <TypeLayout className="custom-layout-class">
-        <TypeLayoutBody className="custom-body-class">
-          <TypeLayoutRow className="custom-row-class">
-            <TypeLayoutCell className="custom-cell-class">
+      <DescriptionList className="custom-layout-class">
+        <DescriptionListBody className="custom-body-class">
+          <DescriptionListRow className="custom-row-class">
+            <DescriptionListCell className="custom-cell-class">
               test cell
-            </TypeLayoutCell>
-          </TypeLayoutRow>
-        </TypeLayoutBody>
-      </TypeLayout>
+            </DescriptionListCell>
+          </DescriptionListRow>
+        </DescriptionListBody>
+      </DescriptionList>
     );
     const cell = getByText(/test cell/i);
     expect(cell).toHaveClass('custom-cell-class');
@@ -64,15 +64,15 @@ describe('TypeLayout', () => {
 
   test('should pass through extra props via spread attribute', () => {
     const { queryByTestId } = render(
-      <TypeLayout data-testid="layout-test-id">
-        <TypeLayoutBody data-testid="body-test-id">
-          <TypeLayoutRow data-testid="row-test-id">
-            <TypeLayoutCell data-testid="cell-test-id">
+      <DescriptionList data-testid="layout-test-id">
+        <DescriptionListBody data-testid="body-test-id">
+          <DescriptionListRow data-testid="row-test-id">
+            <DescriptionListCell data-testid="cell-test-id">
               test cell
-            </TypeLayoutCell>
-          </TypeLayoutRow>
-        </TypeLayoutBody>
-      </TypeLayout>
+            </DescriptionListCell>
+          </DescriptionListRow>
+        </DescriptionListBody>
+      </DescriptionList>
     );
     expect(queryByTestId('layout-test-id')).toBeInTheDocument();
     expect(queryByTestId('body-test-id')).toBeInTheDocument();
@@ -82,15 +82,15 @@ describe('TypeLayout', () => {
 
   test('should apply `children` for each component', () => {
     const { queryByTestId } = render(
-      <TypeLayout data-testid="layout-test-id">
-        <TypeLayoutBody data-testid="body-test-id">
-          <TypeLayoutRow data-testid="row-test-id">
-            <TypeLayoutCell data-testid="cell-test-id">
+      <DescriptionList data-testid="layout-test-id">
+        <DescriptionListBody data-testid="body-test-id">
+          <DescriptionListRow data-testid="row-test-id">
+            <DescriptionListCell data-testid="cell-test-id">
               test cell
-            </TypeLayoutCell>
-          </TypeLayoutRow>
-        </TypeLayoutBody>
-      </TypeLayout>
+            </DescriptionListCell>
+          </DescriptionListRow>
+        </DescriptionListBody>
+      </DescriptionList>
     );
     expect(queryByTestId('layout-test-id').hasChildNodes).toBeTruthy();
     expect(queryByTestId('body-test-id').hasChildNodes).toBeTruthy();
@@ -99,13 +99,15 @@ describe('TypeLayout', () => {
   });
 
   test('should apply correct class when `border` is `true`', () => {
-    const { container } = render(<TypeLayout data-testid="test-id" border />);
+    const { container } = render(
+      <DescriptionList data-testid="test-id" border />
+    );
     expect(container.firstElementChild).toHaveClass(`${namespace}--bordered`);
   });
 
   sizes.forEach(size =>
     test(`should apply correct class when \`size\` is set to '${size}'`, () => {
-      const { container } = render(<TypeLayout size={size} />);
+      const { container } = render(<DescriptionList size={size} />);
       expect(container.firstElementChild).toHaveClass(`${namespace}--${size}`);
     })
   );

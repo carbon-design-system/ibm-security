@@ -65,6 +65,13 @@ export {
   DatePickerSkeleton,
 } from './components/DatePicker';
 
+export {
+  DescriptionList,
+  DescriptionListBody,
+  DescriptionListCell,
+  DescriptionListRow,
+} from './components/DescriptionList';
+
 export DelimitedList from './components/DelimitedList';
 export { Dropdown, DropdownSkeleton } from './components/Dropdown';
 export ErrorPage from './components/ErrorPage';
@@ -219,6 +226,7 @@ export Transition from './components/Transition';
 export TrendingCard from './components/TrendingCard';
 export TruncatedList from './components/TruncatedList';
 
+// TODO: `2.x` - Remove.
 export {
   TypeLayout,
   TypeLayoutBody,

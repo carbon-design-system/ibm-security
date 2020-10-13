@@ -2890,6 +2890,80 @@ Map {
       },
     },
   },
+  "DescriptionList" => Object {
+    "defaultProps": Object {
+      "border": false,
+      "bordered": null,
+      "children": null,
+      "className": null,
+      "size": "md",
+    },
+    "propTypes": Object {
+      "border": Object {
+        "type": "bool",
+      },
+      "bordered": [Function],
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+      "size": Object {
+        "args": Array [
+          Array [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+          ],
+        ],
+        "type": "oneOf",
+      },
+    },
+  },
+  "DescriptionListBody" => Object {
+    "defaultProps": Object {
+      "children": null,
+      "className": null,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+    },
+  },
+  "DescriptionListCell" => Object {
+    "defaultProps": Object {
+      "children": null,
+      "className": null,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+    },
+  },
+  "DescriptionListRow" => Object {
+    "defaultProps": Object {
+      "children": null,
+      "className": null,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+    },
+  },
   "Dropdown" => Object {
     "$$typeof": Symbol(react.forward_ref),
     "defaultProps": Object {

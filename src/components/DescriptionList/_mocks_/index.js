@@ -1,6 +1,6 @@
 /**
- * @file TypeLayout mocks.
- * @copyright IBM Security 2019
+ * @file Description list mocks.
+ * @copyright IBM Security 2019 - 2020
  */
 
 export default [

@@ -1,5 +1,5 @@
 /**
- * @file Type layout.
+ * @file Description list.
  * @copyright IBM Security 2019 - 2020
  */
 
@@ -17,14 +17,15 @@ import {
   StructuredListWrapper,
 } from '../StructuredList';
 
+// TODO: `2.x` - Rename to `description-list`.
 export const namespace = getComponentNamespace('type-layout__container');
 
 // TODO: `2.x` - Remove deprecated prop `bordered`.
 
 /**
- * Type layouts provide an orderly layout of terms and definitions.
+ * Description lists provide an orderly layout of terms and definitions.
  */
-const TypeLayout = ({
+const DescriptionList = ({
   border,
   bordered,
   children,
@@ -47,7 +48,7 @@ const TypeLayout = ({
   </StructuredListWrapper>
 );
 
-const TypeLayoutBody = ({ children, className, ...other }) => (
+const DescriptionListBody = ({ children, className, ...other }) => (
   <StructuredListBody
     className={classnames(`${namespace}__body`, className)}
     {...other}
@@ -56,7 +57,7 @@ const TypeLayoutBody = ({ children, className, ...other }) => (
   </StructuredListBody>
 );
 
-const TypeLayoutCell = ({ children, className, ...other }) => (
+const DescriptionListCell = ({ children, className, ...other }) => (
   <StructuredListCell
     className={classnames(`${namespace}__cell`, className)}
     {...other}
@@ -65,7 +66,7 @@ const TypeLayoutCell = ({ children, className, ...other }) => (
   </StructuredListCell>
 );
 
-const TypeLayoutRow = ({ children, className, ...other }) => (
+const DescriptionListRow = ({ children, className, ...other }) => (
   <StructuredListRow
     className={classnames(`${namespace}__row`, className)}
     {...other}
@@ -82,13 +83,13 @@ const propTypes = {
   className: string,
 };
 
-TypeLayout.propTypes = {
+DescriptionList.propTypes = {
   ...propTypes,
 
-  /** Specify the size of the type layout, from a list of available sizes */
+  /** Specify the size of the description list, from a list of available sizes */
   size: oneOf(['xs', 'sm', 'md', 'lg']),
 
-  /** Specify if the type layout has a border */
+  /** Specify if the description list has a border */
   border: bool,
 
   /** Deprecated in favor of `border` */
@@ -100,7 +101,7 @@ const defaultProps = {
   className: null,
 };
 
-TypeLayout.defaultProps = {
+DescriptionList.defaultProps = {
   ...defaultProps,
 
   size: 'md',
@@ -108,13 +109,18 @@ TypeLayout.defaultProps = {
   bordered: null,
 };
 
-TypeLayoutBody.propTypes = propTypes;
-TypeLayoutBody.defaultProps = defaultProps;
+DescriptionListBody.propTypes = propTypes;
+DescriptionListBody.defaultProps = defaultProps;
 
-TypeLayoutCell.propTypes = propTypes;
-TypeLayoutCell.defaultProps = defaultProps;
+DescriptionListCell.propTypes = propTypes;
+DescriptionListCell.defaultProps = defaultProps;
 
-TypeLayoutRow.propTypes = propTypes;
-TypeLayoutRow.defaultProps = defaultProps;
+DescriptionListRow.propTypes = propTypes;
+DescriptionListRow.defaultProps = defaultProps;
 
-export { TypeLayout, TypeLayoutBody, TypeLayoutCell, TypeLayoutRow };
+export {
+  DescriptionList,
+  DescriptionListBody,
+  DescriptionListCell,
+  DescriptionListRow,
+};
