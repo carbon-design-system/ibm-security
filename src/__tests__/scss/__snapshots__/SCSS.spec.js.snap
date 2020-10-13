@@ -24921,6 +24921,14 @@ a.bx--navigation-link:focus {
   max-width: unset;
 }
 
+.security--unstable--layout__module--description-list {
+  padding-bottom: 2rem;
+}
+
+.security--unstable--layout__module--description-list > .security--type-layout__container {
+  margin-bottom: 0;
+}
+
 .security--unstable--layout__module--page-tab {
   position: relative;
 }
