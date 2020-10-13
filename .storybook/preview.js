@@ -23,8 +23,8 @@ import { HIERARCHY_ROOT_SEPARATOR, ORDER } from '.';
 
 import storybookTheme from './theme';
 import withTheme from './addons/addon-theme';
-import Container from './components/Container';
 import Canvas from './components/Canvas';
+import Container from './components/Container';
 
 const { interactive01, text04 } = theme;
 
