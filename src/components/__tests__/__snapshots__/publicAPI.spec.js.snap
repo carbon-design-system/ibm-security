@@ -11998,6 +11998,28 @@ Map {
       },
     },
   },
+  "TitleBarModule" => Object {
+    "defaultProps": Object {
+      "children": null,
+      "element": "h2",
+      "subsection": false,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "element": Object {
+        "type": "elementType",
+      },
+      "subsection": Object {
+        "type": "bool",
+      },
+      "title": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
   "ToastNotification" => Object {
     "defaultProps": Object {
       "caption": "provide a caption",
