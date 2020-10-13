@@ -7,8 +7,7 @@ import React from 'react';
 
 import {
   DescriptionListModule,
-
-  // TitleBarModule,
+  TitleBarModule,
   TypeLayout,
   TypeLayoutBody,
   TypeLayoutCell,
@@ -66,7 +65,7 @@ export const Default = () => (
 
 export const Title = () => (
   <DescriptionListModule>
-    {/* <TitleBarModule title="Section title" /> */}
+    <TitleBarModule title="Section title" />
 
     <TypeLayout>
       <TypeLayoutBody>
