@@ -5,6 +5,7 @@
 
 import React from 'react';
 
+import { getDocsParameters } from '../../../../.storybook';
 import withResponsive from '../../../../.storybook/decorators';
 
 import { PageTabModule, PageTabModuleDetails, Tabs, Tab } from '../../..';
@@ -15,6 +16,9 @@ export default {
   title: getTitle(PageTabModule),
   component: PageTabModule,
   subcomponents: { PageTabModuleDetails },
+  parameters: {
+    ...getDocsParameters(),
+  },
   decorators: [withResponsive],
 };
 
