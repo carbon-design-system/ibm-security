@@ -39,8 +39,8 @@ export default create({
   // User interface.
   appBg: black,
   appBorderColor: ui03,
-  appBorderRadius: 0,
   appContentBg: ui01,
+  appBorderRadius: 0,
 
   // Typography.
   fontBase: sans,
@@ -52,11 +52,11 @@ export default create({
 
   // Toolbar.
   barBg: ui01,
-  barSelectedColor: text04,
   barTextColor: text01,
+  barSelectedColor: text04,
 
   // Form.
   inputBg: field02,
-  inputBorderRadius: 0,
   inputTextColor: text01,
+  inputBorderRadius: 0,
 });
