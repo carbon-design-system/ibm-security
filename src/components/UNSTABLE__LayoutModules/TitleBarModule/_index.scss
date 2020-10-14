@@ -8,21 +8,22 @@
 @import '@carbon/type/scss/styles';
 
 @import '../../Component/mixins';
-@import '../variables';
+@import 'variables';
 
-@include security--component($name: #{$layout-modules__name}--title-bar) {
+@include security--component($name: $layout-modules__title-bar__name) {
+  /// Spacing.
+  /// @type Length
+  $title-bar__spacing: $carbon--layout-01;
+
   display: flex;
+  padding-top: $title-bar__spacing;
+  padding-bottom: $title-bar__spacing;
   align-items: center;
 
   &__title {
-    /// Spacing.
-    /// @type Length
-    $title-bar__spacing: $carbon--layout-01;
-
     @include carbon--type-style($name: productive-heading-03);
-
-    margin-top: $title-bar__spacing;
-    margin-bottom: $title-bar__spacing;
+    margin-top: 0;
+    margin-bottom: 0;
 
     &--subsection {
       @include carbon--type-style($name: productive-heading-01);
@@ -30,12 +31,6 @@
   }
 
   &__items {
-    /// Spacing.
-    /// @type Length
-    $title-bar__actions__spacing: $carbon--spacing-02;
-
-    margin-top: $title-bar__actions__spacing;
-    margin-bottom: $title-bar__actions__spacing;
     margin-left: auto;
   }
 }
