@@ -24931,7 +24931,7 @@ a.bx--navigation-link:focus {
   line-height: 1.29;
   letter-spacing: 0.16px;
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1.12875rem;
 }
 
 .security--unstable--layout__module--description__content:last-child {

@@ -4,7 +4,6 @@
 /// @copyright IBM Security 2020
 ////
 
-@import '@carbon/layout/scss/spacing';
 @import '@carbon/type/scss/styles';
 
 @import '../../Component/mixins';
@@ -17,7 +16,8 @@
     @include carbon--type-style($name: body-short-01);
 
     margin-top: 0;
-    margin-bottom: $carbon--layout-03;
+    margin-bottom: map-get($map: $body-short-01, $key: font-size) *
+      map-get($map: $body-short-01, $key: line-height);
 
     &:last-child {
       margin-bottom: 0;
