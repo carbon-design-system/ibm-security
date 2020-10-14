@@ -2898,6 +2898,14 @@ Map {
       },
     },
   },
+  "DescriptionModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "func",
+      },
+    },
+  },
   "Dropdown" => Object {
     "$$typeof": Symbol(react.forward_ref),
     "defaultProps": Object {
