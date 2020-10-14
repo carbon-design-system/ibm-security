@@ -4,9 +4,8 @@
  */
 
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 
-import { components } from '../../../.storybook';
+import { components, getDocsParameters } from '../../../.storybook';
 
 import {
   DescriptionList,
@@ -15,106 +14,54 @@ import {
   DescriptionListRow,
 } from '../..';
 
-import rows from './_mocks_';
+export default {
+  title: components(DescriptionList.name),
+  component: DescriptionList,
+  subcomponents: {
+    DescriptionListBody,
+    DescriptionListCell,
+    DescriptionListRow,
+  },
+  argTypes: {
+    bordered: { table: { disable: true } },
+    children: { control: { disable: true } },
+  },
+  parameters: {
+    ...getDocsParameters(),
+  },
+};
 
-storiesOf(components(DescriptionList.name), module)
-  .add(`default`, () => (
-    <DescriptionList>
-      <DescriptionListBody>
-        {rows.map(row => {
-          const { id, title, description } = row;
+export const Default = args => (
+  <DescriptionList {...args}>
+    <DescriptionListBody>
+      <DescriptionListRow>
+        <DescriptionListCell>Term 1</DescriptionListCell>
 
-          return (
-            <DescriptionListRow key={id}>
-              <DescriptionListCell>{title}</DescriptionListCell>
-              <DescriptionListCell>
-                <ul>
-                  <li>{description}</li>
-                </ul>
-              </DescriptionListCell>
-            </DescriptionListRow>
-          );
-        })}
-      </DescriptionListBody>
-    </DescriptionList>
-  ))
-  .add(`with borders`, () => (
-    <DescriptionList border>
-      <DescriptionListBody>
-        {rows.map(row => {
-          const { id, title, description } = row;
+        <DescriptionListCell>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </DescriptionListCell>
+      </DescriptionListRow>
 
-          return (
-            <DescriptionListRow key={id}>
-              <DescriptionListCell>{title}</DescriptionListCell>
-              <DescriptionListCell>
-                <ul>
-                  <li>{description}</li>
-                </ul>
-              </DescriptionListCell>
-            </DescriptionListRow>
-          );
-        })}
-      </DescriptionListBody>
-    </DescriptionList>
-  ))
-  .add(`with x-small`, () => (
-    <DescriptionList size="xs">
-      <DescriptionListBody>
-        {rows.map(row => {
-          const { id, title, description } = row;
+      <DescriptionListRow>
+        <DescriptionListCell>Term 2</DescriptionListCell>
 
-          return (
-            <DescriptionListRow key={id}>
-              <DescriptionListCell>{title}</DescriptionListCell>
-              <DescriptionListCell>
-                <ul>
-                  <li>{description}</li>
-                </ul>
-              </DescriptionListCell>
-            </DescriptionListRow>
-          );
-        })}
-      </DescriptionListBody>
-    </DescriptionList>
-  ))
-  .add(`with small`, () => (
-    <DescriptionList size="sm">
-      <DescriptionListBody>
-        {rows.map(row => {
-          const { id, title, description } = row;
+        <DescriptionListCell>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+          accumsan, dui ut pulvinar mattis, diam est imperdiet ex, a varius
+          lacus ex at libero. Aenean euismod viverra odio, id volutpat turpis
+          commodo.
+        </DescriptionListCell>
+      </DescriptionListRow>
 
-          return (
-            <DescriptionListRow key={id}>
-              <DescriptionListCell>{title}</DescriptionListCell>
-              <DescriptionListCell>
-                <ul>
-                  <li>{description}</li>
-                </ul>
-              </DescriptionListCell>
-            </DescriptionListRow>
-          );
-        })}
-      </DescriptionListBody>
-    </DescriptionList>
-  ))
-  .add(`with large`, () => (
-    <DescriptionList size="lg">
-      <DescriptionListBody>
-        {rows.map(row => {
-          const { id, title, description } = row;
+      <DescriptionListRow>
+        <DescriptionListCell>Term 3</DescriptionListCell>
 
-          return (
-            <DescriptionListRow key={id}>
-              <DescriptionListCell>{title}</DescriptionListCell>
-              <DescriptionListCell>
-                <ul>
-                  <li>{description}</li>
-                </ul>
-              </DescriptionListCell>
-            </DescriptionListRow>
-          );
-        })}
-      </DescriptionListBody>
-    </DescriptionList>
-  ));
+        <DescriptionListCell>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+          accumsan, dui ut pulvinar mattis, diam est imperdiet ex, a varius
+          lacus ex at libero.
+        </DescriptionListCell>
+      </DescriptionListRow>
+    </DescriptionListBody>
+  </DescriptionList>
+);

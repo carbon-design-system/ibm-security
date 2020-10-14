@@ -24921,6 +24921,23 @@ a.bx--navigation-link:focus {
   max-width: unset;
 }
 
+.security--unstable--layout__module--description {
+  padding-bottom: 2rem;
+}
+
+.security--unstable--layout__module--description__content {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: 0.16px;
+  margin-top: 0;
+  margin-bottom: 1.12875rem;
+}
+
+.security--unstable--layout__module--description__content:last-child {
+  margin-bottom: 0;
+}
+
 .security--unstable--layout__module--description-list {
   padding-bottom: 2rem;
 }
