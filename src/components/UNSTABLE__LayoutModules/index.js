@@ -12,10 +12,4 @@ export { default as ButtonClusterModule } from './ButtonClusterModule';
 export { default as DescriptionListModule } from './DescriptionListModule';
 export { default as DescriptionModule } from './DescriptionModule';
 export { default as ICAModule } from './ICAModule';
-
-export {
-  default as PageTabModule,
-  PageTabModuleDetails,
-} from './PageTabModule';
-
 export { default as TitleBarModule } from './TitleBarModule';

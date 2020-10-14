@@ -268,8 +268,6 @@ export {
   DescriptionListModule,
   DescriptionModule,
   ICAModule,
-  PageTabModule,
-  PageTabModuleDetails,
   TitleBarModule,
 } from './components/UNSTABLE__LayoutModules';
 
