@@ -2890,6 +2890,14 @@ Map {
       },
     },
   },
+  "DescriptionListModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
   "Dropdown" => Object {
     "$$typeof": Symbol(react.forward_ref),
     "defaultProps": Object {
@@ -6432,6 +6440,22 @@ Map {
       "totalPages": Object {
         "isRequired": true,
         "type": "number",
+      },
+    },
+  },
+  "PageTabModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
+  "PageTabModuleDetails" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
       },
     },
   },
@@ -11969,6 +11993,28 @@ Map {
         "type": "bool",
       },
       "labelText": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
+  "TitleBarModule" => Object {
+    "defaultProps": Object {
+      "children": null,
+      "element": "h2",
+      "subsection": false,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "element": Object {
+        "type": "elementType",
+      },
+      "subsection": Object {
+        "type": "bool",
+      },
+      "title": Object {
         "isRequired": true,
         "type": "node",
       },
