@@ -57,7 +57,7 @@ export const Default = () => (
   </ActionBarModule>
 );
 
-export const Variation = () => (
+export const Variant = () => (
   <ActionBarModule>
     Supplementary details
     <ActionBarModuleItems>

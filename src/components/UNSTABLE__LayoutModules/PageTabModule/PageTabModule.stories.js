@@ -35,7 +35,7 @@ export const Default = () => (
   </PageTabModule>
 );
 
-export const Variation = () => (
+export const Variant = () => (
   <PageTabModule>
     <PageTabModuleDetails>Supplementary details</PageTabModuleDetails>
 

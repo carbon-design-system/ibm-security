@@ -54,7 +54,7 @@ export const Default = () => (
   </DescriptionModule>
 );
 
-export const Variation = () => (
+export const Variant = () => (
   <DescriptionModule>
     {({ getLayoutProps }) => (
       <>
