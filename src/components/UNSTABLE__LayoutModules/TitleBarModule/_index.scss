@@ -8,9 +8,9 @@
 @import '@carbon/type/scss/styles';
 
 @import '../../Component/mixins';
-@import '../variables';
+@import 'variables';
 
-@include security--component($name: #{$layout-modules__name}--title-bar) {
+@include security--component($name: $layout-modules__title-bar__name) {
   display: flex;
   align-items: center;
 
@@ -30,12 +30,6 @@
   }
 
   &__items {
-    /// Spacing.
-    /// @type Length
-    $title-bar__actions__spacing: $carbon--spacing-02;
-
-    margin-top: $title-bar__actions__spacing;
-    margin-bottom: $title-bar__actions__spacing;
     margin-left: auto;
   }
 }
