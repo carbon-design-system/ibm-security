@@ -1,5 +1,5 @@
 import { parameters } from '../../../../.storybook/preview';
-import { Hover } from './ICAModule.stories';
+import { Interaction } from './ICAModule.stories';
 
 # ICAModule
 
@@ -32,7 +32,7 @@ If necessary, a background hover can be placed on the grid columns.
 
 <Canvas>
   <Story
-    id="patterns-unstable-layout-modules-icamodule--hover"
+    id="patterns-unstable-layout-modules-icamodule--interaction"
     parameters={parameters}
   />
 </Canvas>
@@ -48,7 +48,7 @@ Additional props passed into `ICAModule` will be forwarded along to the underlyi
 Use the `hover` prop to specify whether the hover variant should be used.
 
 <Canvas withSource="none">
-  <Hover parameters={parameters} />
+  <Interaction parameters={parameters} />
 </Canvas>
 
 ```jsx
