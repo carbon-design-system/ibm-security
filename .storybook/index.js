@@ -82,6 +82,7 @@ const getDocsParameters = () => ({
       hidden: false,
     },
   },
+  viewMode: 'docs',
 });
 
 /**

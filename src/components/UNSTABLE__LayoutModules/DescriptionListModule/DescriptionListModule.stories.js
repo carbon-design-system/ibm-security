@@ -63,7 +63,7 @@ export const Default = () => (
   </DescriptionListModule>
 );
 
-export const Variation = () => (
+export const Variant = () => (
   <DescriptionListModule>
     <TitleBarModule title="Section title" />
 
