@@ -47,7 +47,7 @@ function getCategory(story) {
 }
 
 const parameters = {
-  controls: { disable: true, expanded: true },
+  controls: { disable: true, expanded: true, hideNoControlsWarning: true },
   docs: {
     components: {
       ArgsTable,
