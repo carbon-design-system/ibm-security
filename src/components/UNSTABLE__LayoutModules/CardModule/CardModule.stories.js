@@ -73,7 +73,7 @@ export const Default = () => (
   </CardModule>
 );
 
-export const Complimentary = () => (
+export const Variation = () => (
   <CardModule>
     {({ getLayoutProps }) => (
       <>
