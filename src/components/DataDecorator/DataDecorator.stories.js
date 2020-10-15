@@ -35,7 +35,7 @@ const storyProps = () => ({
   renderFooter: () => <Button size="large">Custom footer</Button>,
 });
 
-const midLineStoryPros = () => ({
+const midLineStoryProps = () => ({
   type: text('Type (`type`)', midLine.type),
   value: text('Value (`value`)', midLine.value),
   score: number('Score (`score`)', midLine.score, {
@@ -59,4 +59,4 @@ const midLineStoryPros = () => ({
 
 storiesOf(patterns('DataDecorator'), module)
   .add('Default', () => <DataDecorator {...storyProps()} />)
-  .add('mid-line truncation', () => <DataDecorator {...midLineStoryPros()} />);
+  .add('Mid-line truncation', () => <DataDecorator {...midLineStoryProps()} />);

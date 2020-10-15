@@ -37,6 +37,16 @@ class Decorator extends Component {
     this.props.onContextMenu(event, this.props.type, this.props.value);
   };
 
+  truncationUtil = (inputText, maxLength, front, back) => {
+    let truncationValue = inputText;
+    if (inputText.length > maxLength) {
+      truncationValue = `${inputText.substring(0, front)}…${inputText.substr(
+        inputText.length - back
+      )}`;
+    }
+    return truncationValue;
+  };
+
   renderDecorator = (
     inline,
     noIcon,
@@ -62,7 +72,14 @@ class Decorator extends Component {
       )}
       <span className={`${namespace}__type`}>{type}</span>
       <span className={`${namespace}__value`} title={title || value}>
-        {value}
+        {this.props.midLineTruncation.enabled
+          ? this.truncationUtil(
+              value,
+              this.props.midLineTruncation.maxLength,
+              this.props.midLineTruncation.front,
+              this.props.midLineTruncation.back
+            )
+          : value}
       </span>
     </>
   );
@@ -184,6 +201,14 @@ Decorator.propTypes = {
 
   /** @type {func} Descriptive text for screen readers that details the severity of a score. */
   scoreDescription: PropTypes.func,
+
+  /** @type {object} Mid-line truncation options applied to value of decorator if applicable. */
+  midLineTruncation: PropTypes.shape({
+    enabled: PropTypes.bool,
+    maxLength: PropTypes.number,
+    front: PropTypes.number,
+    back: PropTypes.number,
+  }),
 };
 
 Decorator.defaultProps = {
@@ -201,6 +226,12 @@ Decorator.defaultProps = {
     score
       ? `Score ${score} out of ${scoreThresholds.slice(-1)[0]}`
       : 'No score',
+  midLineTruncation: {
+    enabled: false,
+    maxLength: 20,
+    front: 12,
+    back: 4,
+  },
 };
 
 /**

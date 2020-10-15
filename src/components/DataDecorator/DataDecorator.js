@@ -61,23 +61,6 @@ class DataDecorator extends Component {
       onContextMenu: propOnContextMenu,
       midLineTruncation,
     } = this.props;
-    const truncationUtil = (inputText, maxLength, front, back) => {
-      let truncationValue = inputText;
-      if (inputText.length > maxLength) {
-        truncationValue = `${inputText.substring(0, front)}…${inputText.substr(
-          inputText.length - back
-        )}`;
-      }
-      return truncationValue;
-    };
-    const displayedValue = midLineTruncation.enabled
-      ? truncationUtil(
-          value,
-          midLineTruncation.maxLength,
-          midLineTruncation.front,
-          midLineTruncation.back
-        )
-      : value;
     const onContextMenu = propOnContextMenu
       ? event => {
           event.preventDefault();
@@ -90,11 +73,12 @@ class DataDecorator extends Component {
       noIcon,
       score,
       type,
-      value: displayedValue,
-      title: title || value,
+      value,
+      title,
       scoreThresholds,
       scoreDescription,
       onContextMenu,
+      midLineTruncation,
     };
     const componentLabels = {
       ...defaultLabels.labels,
@@ -314,7 +298,12 @@ DataDecorator.defaultProps = {
   stopPropagationEvents: undefined,
   scoreDescription: (score, scoreThresholds) =>
     `Score ${score} out of ${scoreThresholds.slice(-1)[0]}`,
-  midLineTruncation: {},
+  midLineTruncation: {
+    enabled: false,
+    maxLength: 20,
+    front: 12,
+    back: 4,
+  },
 };
 
 export default DataDecorator;

@@ -61,7 +61,7 @@ describe('DataDecorator', () => {
       />
     );
     // Because the panel is closed, we expect only 1 element with
-    // the IP address -- the data decorator.
+    // the MD5 hash -- the data decorator.
     expect(queryAllByText(/0f3deda483df5e5f8043ea20297d243b/i).length === 1);
 
     // Open the panel:
@@ -70,7 +70,7 @@ describe('DataDecorator', () => {
     );
 
     // Because the panel is open, we expect to see 2 elements with
-    // the IP address -- the data decorator button AND the panel title.
+    // the MD5 hash -- the data decorator button AND the panel title.
     expect(queryAllByText(/0f3deda483df5e5f8043ea20297d243b/i).length === 2);
   });
 
@@ -84,14 +84,14 @@ describe('DataDecorator', () => {
       />
     );
     // Because the panel is closed, we expect only 1 element with
-    // the IP address -- the data decorator.
+    // the MD5 hash -- the data decorator.
     expect(queryAllByText(/0f3deda483df…243b/i).length === 1);
 
     // Open the panel:
     userEvent.click(getByText(/0f3deda483df…243b/i).closest('button'));
 
     // Because the panel is open, we expect to see 2 elements with
-    // the IP address -- the data decorator button AND the panel title.
+    // the MD5 hash -- the data decorator button AND the panel title.
     expect(queryAllByText(/0f3deda483df5e5f8043ea20297d243b/i).length === 1);
   });
 
