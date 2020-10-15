@@ -1,6 +1,6 @@
 /**
  * @file Theme entry point.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import addons, { makeDecorator } from '@storybook/addons';
@@ -71,7 +71,11 @@ class Wrapper extends Component {
 export default makeDecorator({
   name: `with${title}`,
   parameterName: title,
-  wrapper: getStory => <Wrapper>{getStory()}</Wrapper>,
+  wrapper: Story => (
+    <Wrapper>
+      <Story />
+    </Wrapper>
+  ),
 });
 
 export { action, getStoredTheme, namespace, themes, title };

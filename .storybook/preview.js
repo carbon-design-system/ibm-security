@@ -5,15 +5,22 @@
 
 import { spacing04, spacing05 } from '@carbon/layout';
 import { styles } from '@carbon/type';
+import { ArgsTable, Story } from '@storybook/addon-docs/blocks';
 import { withInfo } from '@storybook/addon-info';
+import LinkTo from '@storybook/addon-links/react';
+
 import React from 'react';
+
+import { Column, Row } from '../src';
 
 import random from '../src/globals/random';
 import theme from '../src/globals/theme';
 
 import { HIERARCHY_ROOT_SEPARATOR, ORDER } from '.';
 
+import storybookTheme from './theme';
 import withTheme from './addons/addon-theme';
+import Canvas from './components/Canvas';
 import Container from './components/Container';
 
 const { interactive01, text04 } = theme;
@@ -40,6 +47,18 @@ function getCategory(story) {
 }
 
 const parameters = {
+  controls: { disable: true, expanded: true },
+  docs: {
+    components: {
+      ArgsTable,
+      Canvas,
+      Column,
+      LinkTo: props => <LinkTo className="storybook__link" {...props} />,
+      Row,
+      Story,
+    },
+    theme: storybookTheme,
+  },
   info: {
     styles: {
       button: {
@@ -63,6 +82,13 @@ const parameters = {
     storySort: (a, b) =>
       ORDER.indexOf(getCategory(a)) - ORDER.indexOf(getCategory(b)),
   },
+  previewTabs: {
+    canvas: null,
+    'storybook/docs/panel': {
+      hidden: true,
+    },
+  },
+  viewMode: 'story',
 };
 
 // Set the Google Analytics tracking ID if the `master` branch is deployed.

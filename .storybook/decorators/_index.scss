@@ -1,0 +1,21 @@
+////
+/// Decorators.
+/// @group storybook
+/// @copyright IBM Security 2020
+////
+
+@import '@carbon/layout/scss/breakpoint';
+
+@function breakpoints-width-get($name) {
+  @return map-get(
+    $map: map-get($map: $carbon--grid-breakpoints, $key: $name),
+    $key: width
+  );
+}
+
+.decorator {
+  width: 66vw;
+
+  max-width: breakpoints-width-get($name: lg);
+  min-width: breakpoints-width-get($name: sm);
+}

@@ -78,6 +78,22 @@ Map {
       "uid": [Function],
     },
   },
+  "ActionBarModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
+  "ActionBarModuleItems" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
   "Breadcrumb" => Object {
     "propTypes": Object {
       "aria-label": Object {
@@ -255,6 +271,14 @@ Map {
           ],
         ],
         "type": "oneOf",
+      },
+    },
+  },
+  "ButtonClusterModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
       },
     },
   },
@@ -2886,6 +2910,22 @@ Map {
       },
     },
   },
+  "DescriptionListModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
+  "DescriptionModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "func",
+      },
+    },
+  },
   "Dropdown" => Object {
     "$$typeof": Symbol(react.forward_ref),
     "defaultProps": Object {
@@ -4482,6 +4522,20 @@ Map {
       },
       "value": Object {
         "type": "number",
+      },
+    },
+  },
+  "ICAModule" => Object {
+    "defaultProps": Object {
+      "hover": false,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "func",
+      },
+      "hover": Object {
+        "type": "bool",
       },
     },
   },
@@ -6431,6 +6485,22 @@ Map {
       },
     },
   },
+  "PageTabModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
+  "PageTabModuleDetails" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
   "Pagination" => Object {
     "defaultProps": Object {
       "backwardText": "Previous page",
@@ -6756,6 +6826,7 @@ Map {
       "className": null,
       "closeButton": undefined,
       "focusTrap": true,
+      "focusTrapOptions": Object {},
       "hasScrollingContent": false,
       "isOpen": true,
       "labels": Object {},
@@ -6804,6 +6875,91 @@ Map {
       },
       "focusTrap": Object {
         "type": "bool",
+      },
+      "focusTrapOptions": Object {
+        "args": Array [
+          Object {
+            "allowOutsideClick": Object {
+              "type": "func",
+            },
+            "clickOutsideDeactivates": Object {
+              "type": "bool",
+            },
+            "escapeDeactivates": Object {
+              "type": "bool",
+            },
+            "fallbackFocus": Object {
+              "args": Array [
+                Array [
+                  Object {
+                    "args": Array [
+                      [Function],
+                    ],
+                    "type": "instanceOf",
+                  },
+                  Object {
+                    "type": "string",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
+            },
+            "initialFocus": Object {
+              "args": Array [
+                Array [
+                  Object {
+                    "args": Array [
+                      [Function],
+                    ],
+                    "type": "instanceOf",
+                  },
+                  Object {
+                    "type": "string",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
+            },
+            "onActivate": Object {
+              "type": "func",
+            },
+            "onDeactivate": Object {
+              "type": "func",
+            },
+            "preventScroll": Object {
+              "type": "bool",
+            },
+            "returnFocusOnDeactivate": Object {
+              "type": "bool",
+            },
+            "setReturnFocus": Object {
+              "args": Array [
+                Array [
+                  Object {
+                    "args": Array [
+                      [Function],
+                    ],
+                    "type": "instanceOf",
+                  },
+                  Object {
+                    "type": "string",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
+            },
+          },
+        ],
+        "type": "shape",
       },
       "hasScrollingContent": Object {
         "type": "bool",
@@ -6949,6 +7105,7 @@ Map {
     "defaultProps": Object {
       "children": null,
       "focusTrap": true,
+      "focusTrapOptions": Object {},
       "hasOverlay": true,
       "initialFocus": null,
       "onOverlayClick": undefined,
@@ -6962,6 +7119,91 @@ Map {
       },
       "focusTrap": Object {
         "type": "bool",
+      },
+      "focusTrapOptions": Object {
+        "args": Array [
+          Object {
+            "allowOutsideClick": Object {
+              "type": "func",
+            },
+            "clickOutsideDeactivates": Object {
+              "type": "bool",
+            },
+            "escapeDeactivates": Object {
+              "type": "bool",
+            },
+            "fallbackFocus": Object {
+              "args": Array [
+                Array [
+                  Object {
+                    "args": Array [
+                      [Function],
+                    ],
+                    "type": "instanceOf",
+                  },
+                  Object {
+                    "type": "string",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
+            },
+            "initialFocus": Object {
+              "args": Array [
+                Array [
+                  Object {
+                    "args": Array [
+                      [Function],
+                    ],
+                    "type": "instanceOf",
+                  },
+                  Object {
+                    "type": "string",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
+            },
+            "onActivate": Object {
+              "type": "func",
+            },
+            "onDeactivate": Object {
+              "type": "func",
+            },
+            "preventScroll": Object {
+              "type": "bool",
+            },
+            "returnFocusOnDeactivate": Object {
+              "type": "bool",
+            },
+            "setReturnFocus": Object {
+              "args": Array [
+                Array [
+                  Object {
+                    "args": Array [
+                      [Function],
+                    ],
+                    "type": "instanceOf",
+                  },
+                  Object {
+                    "type": "string",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
+            },
+          },
+        ],
+        "type": "shape",
       },
       "hasOverlay": Object {
         "type": "bool",
@@ -11798,6 +12040,28 @@ Map {
       },
     },
   },
+  "TitleBarModule" => Object {
+    "defaultProps": Object {
+      "children": null,
+      "element": "h2",
+      "subsection": false,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "element": Object {
+        "type": "elementType",
+      },
+      "subsection": Object {
+        "type": "bool",
+      },
+      "title": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
   "ToastNotification" => Object {
     "defaultProps": Object {
       "caption": "provide a caption",
@@ -12733,7 +12997,7 @@ Map {
       "border": false,
       "bordered": null,
       "children": null,
-      "className": "",
+      "className": null,
       "size": "md",
     },
     "propTypes": Object {
@@ -12763,7 +13027,7 @@ Map {
   "TypeLayoutBody" => Object {
     "defaultProps": Object {
       "children": null,
-      "className": "",
+      "className": null,
     },
     "propTypes": Object {
       "children": Object {
@@ -12777,7 +13041,7 @@ Map {
   "TypeLayoutCell" => Object {
     "defaultProps": Object {
       "children": null,
-      "className": "",
+      "className": null,
     },
     "propTypes": Object {
       "children": Object {
@@ -12791,7 +13055,7 @@ Map {
   "TypeLayoutRow" => Object {
     "defaultProps": Object {
       "children": null,
-      "className": "",
+      "className": null,
     },
     "propTypes": Object {
       "children": Object {
