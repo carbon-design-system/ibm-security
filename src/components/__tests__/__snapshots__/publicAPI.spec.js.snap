@@ -6473,22 +6473,6 @@ Map {
       },
     },
   },
-  "PageTabModule" => Object {
-    "propTypes": Object {
-      "children": Object {
-        "isRequired": true,
-        "type": "node",
-      },
-    },
-  },
-  "PageTabModuleDetails" => Object {
-    "propTypes": Object {
-      "children": Object {
-        "isRequired": true,
-        "type": "node",
-      },
-    },
-  },
   "Pagination" => Object {
     "defaultProps": Object {
       "backwardText": "Previous page",

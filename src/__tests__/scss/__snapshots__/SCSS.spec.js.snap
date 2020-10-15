@@ -24973,27 +24973,6 @@ a.bx--navigation-link:focus {
   padding-top: 0;
 }
 
-.security--unstable--layout__module--page-tab {
-  position: relative;
-}
-
-.security--unstable--layout__module--page-tab__details {
-  display: flex;
-  position: absolute;
-  right: 0;
-  min-height: 2.5rem;
-  align-items: center;
-}
-
-.security--unstable--layout__module--page-tab > .bx--tabs {
-  border-bottom: 0.0625rem solid var(--ui-03, #393939);
-}
-
-.security--unstable--layout__module--page-tab > .bx--tab-content {
-  padding-right: 0;
-  padding-left: 0;
-}
-
 .security--unstable--layout__module--title-bar {
   display: flex;
   padding-top: 1rem;
