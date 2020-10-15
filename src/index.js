@@ -265,6 +265,7 @@ export {
   ActionBarModule,
   ActionBarModuleItems,
   ButtonClusterModule,
+  CardModule,
   DescriptionListModule,
   DescriptionModule,
   ICAModule,
