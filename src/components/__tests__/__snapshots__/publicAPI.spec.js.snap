@@ -431,6 +431,14 @@ Map {
       },
     },
   },
+  "CardModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "func",
+      },
+    },
+  },
   "CardSkeleton" => Object {
     "defaultProps": Object {
       "className": null,
@@ -6512,22 +6520,6 @@ Map {
       "totalPages": Object {
         "isRequired": true,
         "type": "number",
-      },
-    },
-  },
-  "PageTabModule" => Object {
-    "propTypes": Object {
-      "children": Object {
-        "isRequired": true,
-        "type": "node",
-      },
-    },
-  },
-  "PageTabModuleDetails" => Object {
-    "propTypes": Object {
-      "children": Object {
-        "isRequired": true,
-        "type": "node",
       },
     },
   },

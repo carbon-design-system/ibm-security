@@ -24921,6 +24921,14 @@ a.bx--navigation-link:focus {
   max-width: unset;
 }
 
+.security--unstable--layout__module--card {
+  padding-bottom: 1rem;
+}
+
+.security--unstable--layout__module--card__component {
+  margin-bottom: 1rem;
+}
+
 .security--unstable--layout__module--description-list {
   padding-bottom: 2rem;
 }
@@ -24963,27 +24971,6 @@ a.bx--navigation-link:focus {
 
 .security--unstable--layout__module--ica > .security--unstable--layout__module--title-bar {
   padding-top: 0;
-}
-
-.security--unstable--layout__module--page-tab {
-  position: relative;
-}
-
-.security--unstable--layout__module--page-tab__details {
-  display: flex;
-  position: absolute;
-  right: 0;
-  min-height: 2.5rem;
-  align-items: center;
-}
-
-.security--unstable--layout__module--page-tab > .bx--tabs {
-  border-bottom: 0.0625rem solid var(--ui-03, #393939);
-}
-
-.security--unstable--layout__module--page-tab > .bx--tab-content {
-  padding-right: 0;
-  padding-left: 0;
 }
 
 .security--unstable--layout__module--title-bar {

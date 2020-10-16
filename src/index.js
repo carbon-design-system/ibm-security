@@ -265,11 +265,10 @@ export {
   ActionBarModule,
   ActionBarModuleItems,
   ButtonClusterModule,
+  CardModule,
   DescriptionListModule,
   DescriptionModule,
   ICAModule,
-  PageTabModule,
-  PageTabModuleDetails,
   TitleBarModule,
 } from './components/UNSTABLE__LayoutModules';
 
