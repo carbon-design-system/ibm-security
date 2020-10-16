@@ -16796,7 +16796,6 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   letter-spacing: 0;
   padding-right: 1.5rem;
   margin-top: 0;
-  margin-bottom: 1.5rem;
 }
 
 .security--tearsheet__main__content {
@@ -16806,6 +16805,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   min-height: 0;
   box-sizing: border-box;
   flex: 1;
+  margin-top: 1.5rem;
 }
 
 .security--tearsheet__container {
