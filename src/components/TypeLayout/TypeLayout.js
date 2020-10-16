@@ -1,11 +1,11 @@
 /**
  * @file Type layout.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import classnames from 'classnames';
-import React from 'react';
 import { bool, node, oneOf, string } from 'prop-types';
+import React from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
 import deprecatedProp from '../../globals/prop-types';
@@ -19,19 +19,10 @@ import {
 
 export const namespace = getComponentNamespace('type-layout__container');
 
-const TypeLayoutCell = ({ children, className, ...other }) => (
-  <StructuredListCell
-    className={classnames(`${namespace}__cell`, className)}
-    {...other}
-  >
-    {children}
-  </StructuredListCell>
-);
-
 // TODO: `2.x` - Remove deprecated prop `bordered`.
 
 /**
- * Type layout component.
+ * Type layouts provide an orderly layout of terms and definitions.
  */
 const TypeLayout = ({
   border,
@@ -56,15 +47,6 @@ const TypeLayout = ({
   </StructuredListWrapper>
 );
 
-const TypeLayoutRow = ({ children, className, ...other }) => (
-  <StructuredListRow
-    className={classnames(`${namespace}__row`, className)}
-    {...other}
-  >
-    {children}
-  </StructuredListRow>
-);
-
 const TypeLayoutBody = ({ children, className, ...other }) => (
   <StructuredListBody
     className={classnames(`${namespace}__body`, className)}
@@ -74,49 +56,65 @@ const TypeLayoutBody = ({ children, className, ...other }) => (
   </StructuredListBody>
 );
 
-const defaultProps = {
-  className: '',
-  children: null,
-};
+const TypeLayoutCell = ({ children, className, ...other }) => (
+  <StructuredListCell
+    className={classnames(`${namespace}__cell`, className)}
+    {...other}
+  >
+    {children}
+  </StructuredListCell>
+);
+
+const TypeLayoutRow = ({ children, className, ...other }) => (
+  <StructuredListRow
+    className={classnames(`${namespace}__row`, className)}
+    {...other}
+  >
+    {children}
+  </StructuredListRow>
+);
 
 const propTypes = {
-  /** @type {string} Extra classes. */
-  className: string,
-
-  /** @type {ReactNode} Component children. */
+  /** Provide the contents of the node */
   children: node,
+
+  /** Provide an optional class to be applied to the containing node */
+  className: string,
+};
+
+TypeLayout.propTypes = {
+  ...propTypes,
+
+  /** Specify the size of the type layout, from a list of available sizes */
+  size: oneOf(['xs', 'sm', 'md', 'lg']),
+
+  /** Specify if the type layout has a border */
+  border: bool,
+
+  /** Deprecated in favor of `border` */
+  bordered: deprecatedProp('border', bool),
+};
+
+const defaultProps = {
+  children: null,
+  className: null,
 };
 
 TypeLayout.defaultProps = {
+  ...defaultProps,
+
+  size: 'md',
   border: false,
   bordered: null,
-  className: '',
-  children: null,
-  size: 'md',
 };
 
-const { children, className } = propTypes;
-
-const borderPropType = bool;
-
-TypeLayout.propTypes = {
-  /** @type {boolean} Bordered option for type layout. */
-  border: borderPropType,
-  bordered: deprecatedProp('border', borderPropType),
-  className,
-  children,
-
-  /** @type {array<string>} The relative size of the type layout. */
-  size: oneOf(['xs', 'sm', 'md', 'lg']),
-};
-
-TypeLayoutRow.defaultProps = defaultProps;
-TypeLayoutRow.propTypes = propTypes;
-
-TypeLayoutBody.defaultProps = defaultProps;
 TypeLayoutBody.propTypes = propTypes;
+TypeLayoutBody.defaultProps = defaultProps;
 
-TypeLayoutCell.defaultProps = defaultProps;
 TypeLayoutCell.propTypes = propTypes;
+TypeLayoutCell.defaultProps = defaultProps;
 
-export { TypeLayout, TypeLayoutBody, TypeLayoutRow, TypeLayoutCell };
+TypeLayoutRow.propTypes = propTypes;
+TypeLayoutRow.defaultProps = defaultProps;
+
+export { TypeLayout, TypeLayoutBody, TypeLayoutCell, TypeLayoutRow };

@@ -1,0 +1,14 @@
+////
+/// Background.
+/// @group storybook
+/// @copyright IBM Security 2020
+////
+
+@import '@carbon/themes/scss/tokens';
+
+@import '../../../src/globals/border/index';
+
+.container--background {
+  background-color: $ui-01;
+  outline: $border__sizing__width solid $ui-background;
+}

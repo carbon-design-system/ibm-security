@@ -78,6 +78,22 @@ Map {
       "uid": [Function],
     },
   },
+  "ActionBarModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
+  "ActionBarModuleItems" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
   "Breadcrumb" => Object {
     "propTypes": Object {
       "aria-label": Object {
@@ -258,6 +274,14 @@ Map {
       },
     },
   },
+  "ButtonClusterModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
   "ButtonSet" => Object {
     "$$typeof": Symbol(react.forward_ref),
     "displayName": "ButtonSet",
@@ -403,6 +427,14 @@ Map {
         "type": "string",
       },
       "onClick": Object {
+        "type": "func",
+      },
+    },
+  },
+  "CardModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
         "type": "func",
       },
     },
@@ -1289,6 +1321,12 @@ Map {
       "focusTrap": true,
       "inline": false,
       "labels": Object {},
+      "midLineTruncation": Object {
+        "back": 4,
+        "enabled": false,
+        "front": 12,
+        "maxLength": 20,
+      },
       "noIcon": false,
       "onClose": [Function],
       "onContextMenu": undefined,
@@ -1368,6 +1406,25 @@ Map {
           },
         ],
         "type": "objectOf",
+      },
+      "midLineTruncation": Object {
+        "args": Array [
+          Object {
+            "back": Object {
+              "type": "number",
+            },
+            "enabled": Object {
+              "type": "bool",
+            },
+            "front": Object {
+              "type": "number",
+            },
+            "maxLength": Object {
+              "type": "number",
+            },
+          },
+        ],
+        "type": "shape",
       },
       "noIcon": Object {
         "type": "bool",
@@ -2783,6 +2840,12 @@ Map {
       "className": "",
       "href": undefined,
       "inline": false,
+      "midLineTruncation": Object {
+        "back": 4,
+        "enabled": false,
+        "front": 12,
+        "maxLength": 20,
+      },
       "noIcon": false,
       "onClick": undefined,
       "onContextMenu": [Function],
@@ -2809,6 +2872,25 @@ Map {
       "inert": [Function],
       "inline": Object {
         "type": "bool",
+      },
+      "midLineTruncation": Object {
+        "args": Array [
+          Object {
+            "back": Object {
+              "type": "number",
+            },
+            "enabled": Object {
+              "type": "bool",
+            },
+            "front": Object {
+              "type": "number",
+            },
+            "maxLength": Object {
+              "type": "number",
+            },
+          },
+        ],
+        "type": "shape",
       },
       "noIcon": Object {
         "type": "bool",
@@ -2863,6 +2945,22 @@ Map {
       },
       "truncate": Object {
         "type": "bool",
+      },
+    },
+  },
+  "DescriptionListModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
+  "DescriptionModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "func",
       },
     },
   },
@@ -4462,6 +4560,20 @@ Map {
       },
       "value": Object {
         "type": "number",
+      },
+    },
+  },
+  "ICAModule" => Object {
+    "defaultProps": Object {
+      "hover": false,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "func",
+      },
+      "hover": Object {
+        "type": "bool",
       },
     },
   },
@@ -11950,6 +12062,28 @@ Map {
       },
     },
   },
+  "TitleBarModule" => Object {
+    "defaultProps": Object {
+      "children": null,
+      "element": "h2",
+      "subsection": false,
+    },
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "element": Object {
+        "type": "elementType",
+      },
+      "subsection": Object {
+        "type": "bool",
+      },
+      "title": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+    },
+  },
   "ToastNotification" => Object {
     "defaultProps": Object {
       "caption": "provide a caption",
@@ -12885,7 +13019,7 @@ Map {
       "border": false,
       "bordered": null,
       "children": null,
-      "className": "",
+      "className": null,
       "size": "md",
     },
     "propTypes": Object {
@@ -12915,7 +13049,7 @@ Map {
   "TypeLayoutBody" => Object {
     "defaultProps": Object {
       "children": null,
-      "className": "",
+      "className": null,
     },
     "propTypes": Object {
       "children": Object {
@@ -12929,7 +13063,7 @@ Map {
   "TypeLayoutCell" => Object {
     "defaultProps": Object {
       "children": null,
-      "className": "",
+      "className": null,
     },
     "propTypes": Object {
       "children": Object {
@@ -12943,7 +13077,7 @@ Map {
   "TypeLayoutRow" => Object {
     "defaultProps": Object {
       "children": null,
-      "className": "",
+      "className": null,
     },
     "propTypes": Object {
       "children": Object {

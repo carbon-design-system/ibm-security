@@ -1,22 +1,22 @@
 /**
  * @file Time indicator stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
-import { text } from '@storybook/addon-knobs';
 import React from 'react';
 
-import { components, meta } from '../../../.storybook';
-
+import { components, getDocsParameters } from '../../../.storybook';
 import { TimeIndicator } from '../..';
 
-const props = () => ({
-  children: text('Children (children)', '10 minute setup'),
-});
+export default {
+  title: components(TimeIndicator.name),
+  component: TimeIndicator,
+  args: {
+    children: '10 minute setup',
+  },
+  parameters: {
+    ...getDocsParameters(),
+  },
+};
 
-export const Default = () => <TimeIndicator {...props()} />;
-
-export default meta(
-  components('TimeIndicator'),
-  'Time indicators display an estimated amount of time it takes to complete a flow. If there is unavailable space to accommodate the text, `minute` should be abbreviated to `min`.'
-);
+export const Default = args => <TimeIndicator {...args} />;

@@ -1,0 +1,42 @@
+////
+/// ICA module.
+/// @group ica-module
+/// @copyright IBM Security 2020
+////
+
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/themes/scss/tokens';
+
+@import '../../../globals/namespace/index';
+@import '../../Component/mixins';
+@import '../TitleBarModule/variables';
+@import '../variables';
+
+@include security--component($name: #{$layout-modules__name}--ica) {
+  /// Spacing.
+  /// @type Length
+  $ica-module__spacing: $carbon--layout-01;
+
+  padding-top: $ica-module__spacing;
+  padding-bottom: $ica-module__spacing;
+
+  &--hover {
+    padding-top: $ica-module__spacing;
+    padding-bottom: $ica-module__spacing;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $hover-ui;
+    }
+  }
+
+  /// Title bar module namespace.
+  /// @type String
+  $title-bar__namespace: get-component-namespace(
+    $component-name: $layout-modules__title-bar__name,
+  );
+
+  > #{$title-bar__namespace} {
+    padding-top: 0;
+  }
+}
