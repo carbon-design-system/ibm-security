@@ -78,6 +78,11 @@
     padding-left: 0;
   }
 
+  &--stacked &__cell {
+    display: block;
+    padding-left: 0;
+  }
+
   &__cell:first-of-type {
     color: $text-02;
     width: 1%;

@@ -30,6 +30,7 @@ const TypeLayout = ({
   children,
   className,
   size,
+  stacked,
   ...other
 }) => (
   <StructuredListWrapper
@@ -38,6 +39,7 @@ const TypeLayout = ({
       {
         [`${namespace}--bordered`]: border || bordered,
         [`${namespace}--${size}`]: size,
+        [`${namespace}--stacked`]: stacked,
       },
       className
     )}
@@ -91,6 +93,9 @@ TypeLayout.propTypes = {
   /** Specify if the type layout has a border */
   border: bool,
 
+  /** Specify wthere or not to use the stacked variant */
+  stacked: bool,
+
   /** Deprecated in favor of `border` */
   bordered: deprecatedProp('border', bool),
 };
@@ -105,6 +110,7 @@ TypeLayout.defaultProps = {
 
   size: 'md',
   border: false,
+  stacked: false,
   bordered: null,
 };
 

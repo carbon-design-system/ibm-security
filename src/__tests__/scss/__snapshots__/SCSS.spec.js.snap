@@ -17552,6 +17552,11 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   padding-left: 0;
 }
 
+.security--type-layout__container--stacked .security--type-layout__container__cell {
+  display: block;
+  padding-left: 0;
+}
+
 .security--type-layout__container__cell:first-of-type {
   color: var(--text-02, #c6c6c6);
   width: 1%;

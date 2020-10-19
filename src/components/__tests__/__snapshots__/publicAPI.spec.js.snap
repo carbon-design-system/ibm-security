@@ -13021,6 +13021,7 @@ Map {
       "children": null,
       "className": null,
       "size": "md",
+      "stacked": false,
     },
     "propTypes": Object {
       "border": Object {
@@ -13043,6 +13044,9 @@ Map {
           ],
         ],
         "type": "oneOf",
+      },
+      "stacked": Object {
+        "type": "bool",
       },
     },
   },

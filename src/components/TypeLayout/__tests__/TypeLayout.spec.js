@@ -1,10 +1,11 @@
 /**
  * @file Type layout tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import { render } from '@testing-library/react';
 import React from 'react';
+
 import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import {
@@ -34,6 +35,7 @@ describe('TypeLayout', () => {
         </TypeLayoutBody>
       </TypeLayout>
     );
+
     await expect(container).toHaveNoAxeViolations();
     await expect(container).toHaveNoDAPViolations('TypeLayout');
   });
@@ -101,6 +103,14 @@ describe('TypeLayout', () => {
   test('should apply correct class when `border` is `true`', () => {
     const { container } = render(<TypeLayout data-testid="test-id" border />);
     expect(container.firstElementChild).toHaveClass(`${namespace}--bordered`);
+  });
+
+  test('adds the stacked variant', () => {
+    expect(
+      render(<TypeLayout stacked />).container.querySelector(
+        `.${namespace}--stacked`
+      )
+    ).toBeInTheDocument();
   });
 
   sizes.forEach(size =>
