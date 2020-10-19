@@ -16,7 +16,8 @@ import { Column, Row } from '../src';
 import random from '../src/globals/random';
 import theme from '../src/globals/theme';
 
-import Examples from '../src/components/UNSTABLE__LayoutModules/docs/Examples/index.mdx';
+import Detail from '../src/components/UNSTABLE__LayoutModules/docs/examples/Detail/index.mdx';
+import Overview from '../src/components/UNSTABLE__LayoutModules/docs/examples/Overview/index.mdx';
 import Troubleshooting from '../src/components/UNSTABLE__LayoutModules/docs/Troubleshooting/index.mdx';
 
 import { HIERARCHY_ROOT_SEPARATOR, ORDER } from '.';
@@ -57,8 +58,9 @@ const parameters = {
       ArgsTable,
       Canvas,
       Column,
-      Examples,
+      Detail,
       LinkTo: props => <LinkTo className="storybook__link" {...props} />,
+      Overview,
       Row,
       Story,
       Troubleshooting,
