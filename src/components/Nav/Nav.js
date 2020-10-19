@@ -3,15 +3,14 @@
  * @copyright IBM Security 2019 - 2020
  */
 
-import React, { Children, Component } from 'react';
-import { node, string } from 'prop-types';
 import classnames from 'classnames';
+import { node, string } from 'prop-types';
+import React, { Children, Component } from 'react';
 
-import NavList from './NavList';
 import NavItem, { namespace as navItemNamespace } from './NavItem/NavItem';
+import NavList from './NavList';
 
 import window from '../../globals/utils/globalRoot';
-
 import { getComponentNamespace } from '../../globals/namespace';
 
 export const navNamespace = getComponentNamespace('nav');
@@ -61,7 +60,9 @@ export default class Nav extends Component {
         {...props}
         activeHref={this.state.activeHref}
         key={key}
-        onClick={this.handleItemClick}
+        onClick={(event, href) => {
+          this.handleItemClick(event, href, props.onClick);
+        }}
       />
     );
   }
@@ -95,7 +96,7 @@ export default class Nav extends Component {
    * @param {SyntheticEvent} event The event fired when the list item is toggled.
    * @param {string} activeHref The URL of the list item.
    */
-  handleItemClick(event, activeHref) {
+  handleItemClick(event, activeHref, onClick) {
     event.stopPropagation();
 
     const { type, which } = event;
@@ -106,6 +107,10 @@ export default class Nav extends Component {
     const diffHref = activeHref !== this.state.activeHref;
     if (acceptableEvent && diffHref) {
       this.setState({ activeHref });
+    }
+
+    if (onClick) {
+      onClick(event);
     }
   }
 

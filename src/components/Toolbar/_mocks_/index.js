@@ -52,6 +52,7 @@ const applicationsToGenerate = [
     ]),
   },
   {
+    onClick: console.log,
     title: 'Section 2',
     icon,
   },
