@@ -60,7 +60,7 @@ export default class NavList extends Component {
           onItemClick(event, href);
 
           if (onClick) {
-            onClick(event, href);
+            onClick(event);
           }
         }}
         activeHref={activeHref}
