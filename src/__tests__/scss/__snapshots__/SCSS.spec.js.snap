@@ -17511,25 +17511,31 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .security--type-layout__container__cell {
-  display: table-cell;
-  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  display: block;
+  padding-left: 0;
+  padding-top: 0.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 0.5rem;
   color: var(--text-01, #f4f4f4);
 }
 
-.security--type-layout__container__cell[dir=\\"rtl\\"]:first-of-type,
-[dir=\\"rtl\\"] .security--type-layout__container__cell:first-of-type {
-  padding-right: 0;
-  padding-left: unset;
-}
-
-.security--type-layout__container__cell[dir=\\"rtl\\"]:last-of-type,
-[dir=\\"rtl\\"] .security--type-layout__container__cell:last-of-type {
-  padding-right: unset;
-  padding-left: 0;
+@media (min-width: 42rem) {
+  .security--type-layout__container__cell {
+    display: table-cell;
+    padding-left: 0.5rem;
+  }
 }
 
 .security--type-layout__container--lg .security--type-layout__container__cell {
-  padding: 1rem 1.5rem 1rem 1rem;
+  padding-top: 1rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 42rem) {
+  .security--type-layout__container--lg .security--type-layout__container__cell {
+    padding-left: 1rem;
+  }
 }
 
 .security--type-layout__container--sm .security--type-layout__container__cell {
@@ -17537,7 +17543,15 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   font-weight: 400;
   line-height: 1.34;
   letter-spacing: 0.32px;
-  padding: 0.25rem 1.5rem 0.25rem 0.25rem;
+  padding-top: 0.25rem;
+  padding-right: 1.5rem;
+  padding-bottom: 0.25rem;
+}
+
+@media (min-width: 42rem) {
+  .security--type-layout__container--sm .security--type-layout__container__cell {
+    padding-left: 0.25rem;
+  }
 }
 
 .security--type-layout__container--xs .security--type-layout__container__cell {
@@ -17545,7 +17559,15 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   font-weight: 400;
   line-height: 1.34;
   letter-spacing: 0.32px;
-  padding: 0.25rem;
+  padding-top: 0.25rem;
+  padding-right: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+@media (min-width: 42rem) {
+  .security--type-layout__container--xs .security--type-layout__container__cell {
+    padding-left: 0.25rem;
+  }
 }
 
 .security--type-layout__container:not(.security--type-layout__container--xs) .security--type-layout__container__cell:first-of-type {
