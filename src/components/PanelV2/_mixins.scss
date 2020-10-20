@@ -17,6 +17,7 @@
 @import '../../globals/rtl/index';
 @import '../../globals/theme/mixins';
 
+@import '../ComboButton/variables';
 @import '../Header/mixins';
 @import '../IconButton/mixins';
 @import '../Toolbar/mixins';
@@ -154,9 +155,8 @@
     bottom: 0;
     width: $panel__sizing__width;
 
-    .#{$namespace}button:not(.#{$namespace}combo-button__overflow-menu) {
-      max-width: $panel__sizing__width;
-      flex-grow: 1;
+    #{get-component-namespace($component-name: $combo-button__name)} {
+      width: 100%;
     }
   }
 

@@ -1,9 +1,13 @@
 /**
- * @file Panel v2 stories.
- * @copyright IBM Security 2019
+ * @file Panel stories.
+ * @copyright IBM Security 2019 - 2020
  */
 
 import Add16 from '@carbon/icons-react/lib/add/16';
+import ArrowRight20 from '@carbon/icons-react/lib/arrow--right/20';
+import Filter20 from '@carbon/icons-react/lib/filter/20';
+import { spacing04, spacing05 } from '@carbon/layout/lib';
+import { styles } from '@carbon/type/lib';
 
 import { action } from '@storybook/addon-actions';
 import { boolean, radios, text } from '@storybook/addon-knobs';
@@ -11,17 +15,11 @@ import { storiesOf } from '@storybook/react';
 
 import React, { Fragment } from 'react';
 
-import ArrowRight20 from '@carbon/icons-react/lib/arrow--right/20';
-import Filter20 from '@carbon/icons-react/lib/filter/20';
-import { spacing04, spacing05 } from '@carbon/layout/lib';
-import { styles } from '@carbon/type/lib';
-
 import { disableCenteredStories, patterns } from '../../../.storybook';
 
-import { header, profile, toolbar } from '../Shell/_mocks_';
-import { labels } from './_mocks_';
-
 import { TooltipDirection } from '../IconButton/IconButton';
+import { header, profile, toolbar } from '../Shell/_mocks_';
+
 import {
   Button,
   ComboButton,
@@ -32,6 +30,8 @@ import {
   Shell,
   theme,
 } from '../..';
+
+import { labels } from './_mocks_';
 
 const { interactive01, text04 } = theme;
 
@@ -181,23 +181,21 @@ disableCenteredStories(storiesOf(patterns('PanelV2'), module))
                     >
                       Item 1 (becomes primary button and text will be truncated)
                     </ComboButtonItem>
-                    {Array(5)
-                      .fill(0)
-                      .map((item, index) => {
-                        const text = `Item ${index +
-                          2} - text may be long and will be truncated`;
-                        return (
-                          <ComboButtonItem
-                            className="some-class"
-                            key={item.id}
-                            index={index}
-                            onClick={action(`onClick (${text})`)}
-                            renderIcon={Filter20}
-                          >
-                            {text}
-                          </ComboButtonItem>
-                        );
-                      })}
+
+                    {new Array(5).fill().map((item, index) => {
+                      const key = `${ComboButtonItem.name}__${index}`;
+
+                      return (
+                        <ComboButtonItem
+                          key={key}
+                          onClick={action(`onClick (${text})`)}
+                          renderIcon={Filter20}
+                        >
+                          {`Item ${index +
+                            2} - text may be long and will be truncated`}
+                        </ComboButtonItem>
+                      );
+                    })}
                   </ComboButton>
                 )}
               >
