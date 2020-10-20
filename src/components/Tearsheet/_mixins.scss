@@ -194,7 +194,6 @@ $tearsheet__position: calc(
       @include carbon--type-style($name: productive-heading-04);
       padding-right: $tearsheet__spacing__padding;
       margin-top: 0;
-      margin-bottom: $tearsheet__spacing__padding;
     }
 
     &__content {
@@ -204,6 +203,7 @@ $tearsheet__position: calc(
       min-height: 0;
       box-sizing: border-box;
       flex: 1;
+      margin-top: $tearsheet__spacing__padding;
     }
   }
 
