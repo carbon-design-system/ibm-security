@@ -27,6 +27,7 @@ import withTheme from './addons/addon-theme';
 import Canvas from './components/Canvas';
 import Container from './components/Container';
 import DocsContainer from './components/DocsContainer';
+import Source from './components/Source';
 
 const { interactive01, text04 } = theme;
 
@@ -63,6 +64,7 @@ const parameters = {
       Overview,
       Row,
       Story,
+      Source,
       Troubleshooting,
     },
     container: DocsContainer,
