@@ -1,13 +1,19 @@
 import { parameters } from '../../../../.storybook/preview';
 
+import doImage from './images/do.png';
+import dont from './images/dont.png';
+
+import anatomy from './images/anatomy.png';
+
 # PageTabModule
 
 Page tab modules provide orderly tab navigation for a page.
 
 [↳ Overview](#overview)  
-[↳ Supplementary details](#supplementary-details)  
+[↳ Variants](#variants)  
 [↳ Component API](#component-api)  
-[↳ Grid placement](#grid-placement)  
+[↳ Grid placement](#grid-placement)   
+[↳ Anatomy](#anatomy)  
 [↳ Examples](#examples)  
 [↳ References](#references)  
 [↳ Troubleshooting](#troubleshooting)
@@ -25,7 +31,7 @@ The `PageTabModule` accepts `Tabs`, and optionally `PageTabModuleDetails`, compo
   />
 </Canvas>
 
-### Supplementary details
+### Variations
 
 If necessary, supplementary details can be placed inline with the tabs.
 
@@ -48,11 +54,11 @@ Following the [narrow grid](#references) implementation, page tab modules should
 
 <Row>
   <Column>
-    <img alt="#" src="#" />
+    <img alt="`PageTabModule` do" src={doImage} />
   </Column>
 
   <Column>
-    <img alt="#" src="#" />
+    <img alt="`PageTabModule` do" src={dont} />
   </Column>
 </Row>
 
@@ -69,6 +75,13 @@ Following the [narrow grid](#references) implementation, page tab modules should
   </PageTabModule>
 </Grid>
 ```
+
+### Anatomy
+
+1. **Tabs:** Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+2. **Bottom spacer:** Suspendisse ultrices, est quis ullamcorper placerat, magna lacus aliquet neque, in sollicitudin enim ipsum in ligula.
+
+<img alt="`PageTabModule` anatomy" src={anatomy} />
 
 <Examples />
 

@@ -1,13 +1,24 @@
 import { parameters } from '../../../../.storybook/preview';
 
+import doImage from './images/do.png';
+import dont from './images/dont.png';
+
+import Variants from './images/variants.png';
+
+import anatomy from './images/anatomy.png';
+
+import layoutConsiderations from './images/layout-considerations.png';
+
 # DescriptionModule
 
 Description modules provide a means to orderly layout short-form content.
 
 [↳ Overview](#overview)  
-[↳ Subsection title](#subsection-title)  
+[↳ Variants](#variants)  
 [↳ Component API](#component-api)  
 [↳ Grid placement](#grid-placement)  
+[↳ Layout considerations](#layout-considerations)  
+[↳ Anatomy](#anatomy)  
 [↳ Examples](#examples)  
 [↳ References](#references)  
 [↳ Troubleshooting](#troubleshooting)
@@ -25,9 +36,13 @@ Everything passed in as a [render prop](#references) child of `DescriptionModule
   />
 </Canvas>
 
-### Subsection title
+### Variants
 
-If necessary, subsection titles can be used below section titles.
+If necessary, subsection titles can be substituted or used below section titles. There are values already supplied for the title type styles so you shouldn't supplement your own. Learn more by reviewing the <LinkTo kind="patterns-unstable-layout-modules-titlebarmodule" story="default" > TitleBarModule. </LinkTo> 
+
+The description module can also be created without any title.
+
+<img alt="`DescriptionModule` Variants" src={Variants} />
 
 <Canvas>
   <Story
@@ -39,6 +54,8 @@ If necessary, subsection titles can be used below section titles.
 ### Component API
 
 <ArgsTable />
+
+_**\***Required property_
 
 Additional props passed into `DescriptionModule` will be forwarded along to the underlying description module container.
 
@@ -56,11 +73,11 @@ Description modules span across 8 columns, following the [narrow grid](#referenc
 
 <Row>
   <Column>
-    <img alt="#" src="#" />
+    <img alt="`DescriptionModule` do" src={doImage} />
   </Column>
 
   <Column>
-    <img alt="#" src="#" />
+    <img alt="`DescriptionModule` do" src={dont} />
   </Column>
 </Row>
 
@@ -69,6 +86,27 @@ Description modules span across 8 columns, following the [narrow grid](#referenc
   <DescriptionModule />
 </Column>
 ```
+
+### Layout considerations
+
+Occassionally a [spacing token](#references) will need to be included to offset the description module to ensure it top-aligns with the adjacent layout container. If a top spacing token is necessary, reference the layout module that sits directly above it as the starting point for placement.
+
+<Row>
+  <Column>
+    <img
+      alt="`ButtonClusterModule` layout considerations"
+      src={layoutConsiderations}
+    />
+  </Column>
+</Row>
+
+### Anatomy
+
+1. **Title:** This is the title, achieved by using the TitleBarModule. <LinkTo kind="patterns-unstable-layout-modules-titlebarmodule" story="default" > Learn more </LinkTo> about the TitleBarModule and potential variants.
+2. **Description:** This is the description itself, the type style is defined so you shouldn't supplement your own values.
+3. **Bottom spacer:** There is a 32-pixel (`$layout-03`) spacer included below the description. Any additional modules can be placed directly underneath.
+
+<img alt="`DescriptionModule` anatomy" src={anatomy} />
 
 <Examples />
 
@@ -83,5 +121,6 @@ Description modules span across 8 columns, following the [narrow grid](#referenc
 - [The Paragraph element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p)
 - [Render Props](https://reactjs.org/docs/render-props.html)
 - [Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
+- [Spacing scale](https://carbondesignsystem.com/guidelines/spacing/overview#spacing-scale)
 
 <Troubleshooting />

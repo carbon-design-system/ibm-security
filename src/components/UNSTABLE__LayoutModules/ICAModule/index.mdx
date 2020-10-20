@@ -1,14 +1,22 @@
 import { parameters } from '../../../../.storybook/preview';
 import { Hover } from './ICAModule.stories';
 
+import doImage from './images/do.png';
+import dont from './images/dont.png';
+
+import anatomy from './images/anatomy.png';
+
+import interactions from './images/interactions.png';
+
 # ICAModule
 
 The ICA module provides a means to orderly layout at-a-glance statistics.
 
 [↳ Overview](#overview)  
-[↳ Background hover](#background-hover)  
+[↳ Interactions](#interactions)  
 [↳ Component API](#component-api)  
 [↳ Grid placement](#grid-placement)  
+[↳ Anatomy](#anatomy)  
 [↳ Examples](#examples)  
 [↳ References](#references)  
 [↳ Troubleshooting](#troubleshooting)
@@ -26,9 +34,11 @@ Everything passed in as a [render prop](#references) child of `ICAModule` will b
   />
 </Canvas>
 
-### Background hover
+### Interactions
 
-If necessary, a background hover can be placed on the grid columns.
+If the ICA needs to be interactive, a background hover can be placed on the grid columns. This adds 16px to the height of the ICA module on hover.
+
+<img alt="`ICAModule` Interactions" src={interactions} />
 
 <Canvas>
   <Story
@@ -40,6 +50,8 @@ If necessary, a background hover can be placed on the grid columns.
 ### Component API
 
 <ArgsTable />
+
+_**\***Required property_
 
 Additional props passed into `ICAModule` will be forwarded along to the underlying ICA module container.
 
@@ -69,11 +81,11 @@ ICAs within ICA modules can span across 2 or 3 columns, following the narrow gri
 
 <Row>
   <Column>
-    <img alt="#" src="#" />
+    <img alt="`ICAModule` do" src={doImage} />
   </Column>
 
   <Column>
-    <img alt="#" src="#" />
+    <img alt="`ICAModule` do" src={dont} />
   </Column>
 </Row>
 
@@ -96,6 +108,14 @@ ICAs within ICA modules can span across 2 or 3 columns, following the narrow gri
   )}
 </ICAModule>
 ```
+
+### Anatomy
+
+1. **Top spacer:** There is a top spacer of 16px ($layout-01) included inside the module so additional modules can be placed directly on top. 
+2. **ICA:** This is the ICA itself, it comprises a value and a label. Spacing between the value and label, and between individual ICA's, is defined in the module.
+4. **Bottom spacer:** The is a bottom spacer of 16px ($layout-01) included inside the module so additional modules can be placed directly on top.
+
+<img alt="`ICAModule` anatomy" src={anatomy} />
 
 <Examples />
 
