@@ -16,7 +16,9 @@
 
 @import '../Component/mixins';
 
-@include security--component($name: combo-button) {
+@import 'variables';
+
+@include security--component($name: $combo-button__name) {
   $root: &;
 
   display: inline-flex;
