@@ -155,6 +155,10 @@
     bottom: 0;
     width: $panel__sizing__width;
 
+    &__button {
+      flex-grow: 1;
+    }
+
     #{get-component-namespace($component-name: $combo-button__name)} {
       width: 100%;
     }
