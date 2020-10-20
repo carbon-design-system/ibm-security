@@ -17524,8 +17524,13 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 
 @media (min-width: 42rem) {
   .security--type-layout__container__cell {
-    display: table-cell;
     padding-left: 0.5rem;
+  }
+}
+
+@media (min-width: 42rem) {
+  .security--type-layout__container__cell {
+    display: table-cell;
   }
 }
 
