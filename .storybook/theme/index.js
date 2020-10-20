@@ -9,23 +9,54 @@ import { fontFamilies } from '@carbon/type';
 import { create, themes } from '@storybook/theming';
 
 import { description, homepage, version } from '../../package.json';
-
 import lockup from './lockup.svg';
 
 const { mono, sans } = fontFamilies;
-const { focus, link01, ui01 } = g100;
+
+const {
+  activeUI,
+  field02,
+  inverse01,
+  link01,
+  text01,
+  text04,
+  ui01,
+  ui03,
+} = g100;
 
 // https://storybook.js.org/docs/react/configure/theming#create-a-theme-quickstart
 export default create({
   ...themes.dark,
 
-  appBg: black,
-  appContentBg: ui01,
-  barBg: ui01,
-  barSelectedColor: focus,
+  // Brand.
   brandTitle: `<img alt="IBM Security" src="${lockup}" /><br />${description} v${version}`,
   brandUrl: homepage,
+
+  // Colors.
+  colorPrimary: activeUI,
   colorSecondary: link01,
+
+  // User interface.
+  appBg: black,
+  appBorderColor: ui03,
+  appContentBg: ui01,
+  appBorderRadius: 0,
+
+  // Typography.
   fontBase: sans,
   fontCode: mono,
+
+  // Text.
+  textColor: text01,
+  textInverseColor: inverse01,
+
+  // Toolbar.
+  barBg: ui01,
+  barTextColor: text01,
+  barSelectedColor: text04,
+
+  // Form.
+  inputBg: field02,
+  inputTextColor: text01,
+  inputBorderRadius: 0,
 });

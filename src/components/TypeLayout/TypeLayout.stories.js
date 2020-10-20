@@ -1,11 +1,11 @@
 /**
  * @file Type layout stories.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2019 - 2020
  */
 
 import React from 'react';
 
-import { components } from '../../../.storybook';
+import { components, getDocsParameters } from '../../../.storybook';
 
 import {
   TypeLayout,
@@ -21,6 +21,9 @@ export default {
   argTypes: {
     bordered: { table: { disable: true } },
     children: { control: { disable: true } },
+  },
+  parameters: {
+    ...getDocsParameters(),
   },
 };
 

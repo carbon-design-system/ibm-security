@@ -16,15 +16,17 @@ import { Column, Row } from '../src';
 import random from '../src/globals/random';
 import theme from '../src/globals/theme';
 
-import Examples from '../src/components/UNSTABLE__LayoutModules/docs/Examples/index.mdx';
+import Detail from '../src/components/UNSTABLE__LayoutModules/docs/examples/Detail/index.mdx';
+import Overview from '../src/components/UNSTABLE__LayoutModules/docs/examples/Overview/index.mdx';
 import Troubleshooting from '../src/components/UNSTABLE__LayoutModules/docs/Troubleshooting/index.mdx';
 
 import { HIERARCHY_ROOT_SEPARATOR, ORDER } from '.';
 
 import storybookTheme from './theme';
 import withTheme from './addons/addon-theme';
-import Container from './components/Container';
 import Canvas from './components/Canvas';
+import Container from './components/Container';
+import DocsContainer from './components/DocsContainer';
 
 const { interactive01, text04 } = theme;
 
@@ -50,18 +52,20 @@ function getCategory(story) {
 }
 
 const parameters = {
-  controls: { disable: true, expanded: true },
+  controls: { disable: true, expanded: true, hideNoControlsWarning: true },
   docs: {
     components: {
       ArgsTable,
       Canvas,
       Column,
-      Examples,
+      Detail,
       LinkTo: props => <LinkTo className="storybook__link" {...props} />,
+      Overview,
       Row,
       Story,
       Troubleshooting,
     },
+    container: DocsContainer,
     theme: storybookTheme,
   },
   info: {

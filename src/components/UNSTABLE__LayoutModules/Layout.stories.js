@@ -35,14 +35,11 @@ import {
   ICA,
   ICAModule,
   IconButtonBar,
-  PageTabModule,
   SummaryCard as SummaryCardComponent,
   SummaryCardAction,
   SummaryCardBody,
   SummaryCardFooter,
   SummaryCardHeader,
-  Tabs,
-  Tab,
   Tag,
   TitleBarModule,
   TypeLayout,
@@ -79,251 +76,241 @@ export default {
 };
 
 export const Detail = () => (
-  <PageTabModule>
-    <Tabs selected={1}>
-      <Tab label="Case" />
-      <Tab label="Report">
-        <TitleBarModule title="Summary" />
+  <>
+    <TitleBarModule title="Summary" />
 
+    <Row>
+      <Column lg={6}>
+        <DescriptionModule>
+          {({ getLayoutProps }) => (
+            <p {...getLayoutProps()}>
+              BadFlick is a backdoor that is usually seen being distributed
+              using exploited word documents. It does not have any persistence
+              to survive reboot, but it is capable of opening a reverse shell
+              connection to its C2 server where it can download and execute
+              possibly other malware.
+            </p>
+          )}
+        </DescriptionModule>
+      </Column>
+
+      <Column lg={{ offset: 2, span: 8 }}>
+        <DescriptionListModule>
+          <TypeLayout>
+            <TypeLayoutBody>
+              <TypeLayoutRow>
+                <TypeLayoutCell>Created by</TypeLayoutCell>
+                <TypeLayoutCell>X-Force IRIS</TypeLayoutCell>
+              </TypeLayoutRow>
+              <TypeLayoutRow>
+                <TypeLayoutCell>Last updated</TypeLayoutCell>
+                <TypeLayoutCell>Jul 14 2019</TypeLayoutCell>
+              </TypeLayoutRow>
+            </TypeLayoutBody>
+          </TypeLayout>
+        </DescriptionListModule>
+      </Column>
+    </Row>
+
+    <TitleBarModule title="Related reports" />
+
+    <ActionBarModule>
+      Supplementary details
+      <ActionBarModuleItems>
+        <IconButtonBar
+          actions={[
+            {
+              label: 'Search',
+              renderIcon: Search16,
+            },
+            {
+              label: 'Filter',
+              renderIcon: Filter16,
+            },
+            {
+              label: 'View',
+              renderIcon: View16,
+            },
+          ]}
+          size="md"
+        />
+      </ActionBarModuleItems>
+    </ActionBarModule>
+
+    <CardModule>
+      {({ getLayoutProps }) => (
         <Row>
-          <Column lg={6}>
-            <DescriptionModule>
-              {({ getLayoutProps }) => (
-                <p {...getLayoutProps()}>
-                  BadFlick is a backdoor that is usually seen being distributed
-                  using exploited word documents. It does not have any
-                  persistence to survive reboot, but it is capable of opening a
-                  reverse shell connection to its C2 server where it can
-                  download and execute possibly other malware.
-                </p>
-              )}
-            </DescriptionModule>
+          <Column>
+            <SummaryCard {...getLayoutProps()}>
+              <SummaryCardHeader title="Threat actor" />
+              <SummaryCardBody>
+                <TitleBarModule title="Suspected Chinese Cyber Espionage Group (TEMP.Periscope)" />
+              </SummaryCardBody>
+              <SummaryCardFooter>
+                <SummaryCardAction
+                  renderIcon={ArrowRight16}
+                  iconDescription="Navigate"
+                  tooltipAlignment="center"
+                  tooltipPosition="right"
+                  hasIconOnly
+                />
+              </SummaryCardFooter>
+            </SummaryCard>
           </Column>
-
-          <Column lg={{ offset: 2, span: 8 }}>
-            <DescriptionListModule>
-              <TypeLayout>
-                <TypeLayoutBody>
-                  <TypeLayoutRow>
-                    <TypeLayoutCell>Created by</TypeLayoutCell>
-                    <TypeLayoutCell>X-Force IRIS</TypeLayoutCell>
-                  </TypeLayoutRow>
-                  <TypeLayoutRow>
-                    <TypeLayoutCell>Last updated</TypeLayoutCell>
-                    <TypeLayoutCell>Jul 14 2019</TypeLayoutCell>
-                  </TypeLayoutRow>
-                </TypeLayoutBody>
-              </TypeLayout>
-            </DescriptionListModule>
+          <Column>
+            <SummaryCard {...getLayoutProps()}>
+              <SummaryCardHeader title="Threat report" />
+              <SummaryCardBody>
+                <TitleBarModule title="XFTAS Daily Threat Assessment for Mar 2019" />
+              </SummaryCardBody>
+              <SummaryCardFooter>
+                <SummaryCardAction
+                  renderIcon={ArrowRight16}
+                  iconDescription="Navigate"
+                  tooltipAlignment="center"
+                  tooltipPosition="right"
+                  hasIconOnly
+                />
+              </SummaryCardFooter>
+            </SummaryCard>
+          </Column>
+          <Column>
+            <SummaryCard {...getLayoutProps()}>
+              <SummaryCardHeader title="IP report" />
+              <SummaryCardBody>
+                <TitleBarModule title="103.243.175.181" />
+              </SummaryCardBody>
+              <SummaryCardFooter>
+                <SummaryCardAction
+                  renderIcon={ArrowRight16}
+                  iconDescription="Navigate"
+                  tooltipAlignment="center"
+                  tooltipPosition="right"
+                  hasIconOnly
+                />
+              </SummaryCardFooter>
+            </SummaryCard>
+          </Column>
+          <Column>
+            <SummaryCard {...getLayoutProps()}>
+              <SummaryCardHeader title="Vulnerability report" />
+              <SummaryCardBody>
+                <TitleBarModule title="CVE-2017-11882" />
+              </SummaryCardBody>
+              <SummaryCardFooter>
+                <SummaryCardAction
+                  renderIcon={ArrowRight16}
+                  iconDescription="Navigate"
+                  tooltipAlignment="center"
+                  tooltipPosition="right"
+                  hasIconOnly
+                />
+              </SummaryCardFooter>
+            </SummaryCard>
           </Column>
         </Row>
+      )}
+    </CardModule>
 
-        <TitleBarModule title="Related reports" />
+    <Row>
+      <ColumnWithBackground>
+        <ICAModule>
+          {() => (
+            <>
+              <TitleBarModule element="h4" title="Indicators" />
 
-        <ActionBarModule>
-          Supplementary details
-          <ActionBarModuleItems>
-            <IconButtonBar
-              actions={[
+              <Row>
+                <Column sm={2} md={2} lg={3}>
+                  <ICA label="Malware" value={11} />
+                </Column>
+                <Column sm={2} md={2} lg={3}>
+                  <ICA label="IPs" value={8} />
+                </Column>
+                <Column sm={2} md={2} lg={3}>
+                  <ICA label="URLs" value={9} />
+                </Column>
+                <Column sm={2} md={2} lg={3}>
+                  <ICA label="VULs" value={1} />
+                </Column>
+              </Row>
+            </>
+          )}
+        </ICAModule>
+
+        <Row condensed>
+          <Column>
+            <DataTablePagination
+              headers={[
                 {
-                  label: 'Search',
-                  renderIcon: Search16,
+                  header: 'Name',
+                  key: 'name',
                 },
                 {
-                  label: 'Filter',
-                  renderIcon: Filter16,
-                },
-                {
-                  label: 'View',
-                  renderIcon: View16,
+                  header: 'Last sighted',
+                  key: 'lastSighted',
                 },
               ]}
-              size="md"
+              pageSize={5}
+              pageSizes={[5, 10, 25, 50]}
+              rows={[
+                {
+                  id: '0',
+                  lastSighted: 'Feb 3 2019 12:00 PM EST',
+                  name: (
+                    <Decorator
+                      score={7}
+                      type="MAL"
+                      value="5020c08bcc061236643293bf0d897321"
+                    />
+                  ),
+                },
+                {
+                  id: '1',
+                  lastSighted: 'Feb 5 2019 12:00 PM EST',
+                  name: (
+                    <Decorator
+                      score={7}
+                      type="MAL"
+                      value="aca7037286b64b0da05c9708d647c013"
+                    />
+                  ),
+                },
+                {
+                  id: '2',
+                  lastSighted: 'Feb 7 2019 12:00 PM EST',
+                  name: (
+                    <Decorator
+                      score={7}
+                      type="MAL"
+                      value="bd9e4c82bf12c4e7a58221fc52fed705"
+                    />
+                  ),
+                },
+                {
+                  id: '3',
+                  lastSighted: 'Apr 1 2019 12:00 PM EST',
+                  name: (
+                    <Decorator score={0} type="IP" value="103.243.175.181" />
+                  ),
+                },
+                {
+                  id: '4',
+                  lastSighted: 'Apr 1 2019 12:00 PM EST',
+                  name: (
+                    <Decorator
+                      score={7}
+                      type="MAL"
+                      value="5020c08bcc061236643293bf0d897321"
+                    />
+                  ),
+                },
+              ]}
             />
-          </ActionBarModuleItems>
-        </ActionBarModule>
-
-        <CardModule>
-          {({ getLayoutProps }) => (
-            <Row>
-              <Column>
-                <SummaryCard {...getLayoutProps()}>
-                  <SummaryCardHeader title="Threat actor" />
-                  <SummaryCardBody>
-                    <TitleBarModule title="Suspected Chinese Cyber Espionage Group (TEMP.Periscope)" />
-                  </SummaryCardBody>
-                  <SummaryCardFooter>
-                    <SummaryCardAction
-                      renderIcon={ArrowRight16}
-                      iconDescription="Navigate"
-                      tooltipAlignment="center"
-                      tooltipPosition="right"
-                      hasIconOnly
-                    />
-                  </SummaryCardFooter>
-                </SummaryCard>
-              </Column>
-              <Column>
-                <SummaryCard {...getLayoutProps()}>
-                  <SummaryCardHeader title="Threat report" />
-                  <SummaryCardBody>
-                    <TitleBarModule title="XFTAS Daily Threat Assessment for Mar 2019" />
-                  </SummaryCardBody>
-                  <SummaryCardFooter>
-                    <SummaryCardAction
-                      renderIcon={ArrowRight16}
-                      iconDescription="Navigate"
-                      tooltipAlignment="center"
-                      tooltipPosition="right"
-                      hasIconOnly
-                    />
-                  </SummaryCardFooter>
-                </SummaryCard>
-              </Column>
-              <Column>
-                <SummaryCard {...getLayoutProps()}>
-                  <SummaryCardHeader title="IP report" />
-                  <SummaryCardBody>
-                    <TitleBarModule title="103.243.175.181" />
-                  </SummaryCardBody>
-                  <SummaryCardFooter>
-                    <SummaryCardAction
-                      renderIcon={ArrowRight16}
-                      iconDescription="Navigate"
-                      tooltipAlignment="center"
-                      tooltipPosition="right"
-                      hasIconOnly
-                    />
-                  </SummaryCardFooter>
-                </SummaryCard>
-              </Column>
-              <Column>
-                <SummaryCard {...getLayoutProps()}>
-                  <SummaryCardHeader title="Vulnerability report" />
-                  <SummaryCardBody>
-                    <TitleBarModule title="CVE-2017-11882" />
-                  </SummaryCardBody>
-                  <SummaryCardFooter>
-                    <SummaryCardAction
-                      renderIcon={ArrowRight16}
-                      iconDescription="Navigate"
-                      tooltipAlignment="center"
-                      tooltipPosition="right"
-                      hasIconOnly
-                    />
-                  </SummaryCardFooter>
-                </SummaryCard>
-              </Column>
-            </Row>
-          )}
-        </CardModule>
-
-        <Row>
-          <ColumnWithBackground>
-            <ICAModule>
-              {() => (
-                <>
-                  <TitleBarModule element="h4" title="Indicators" />
-
-                  <Row>
-                    <Column sm={2} md={2} lg={3}>
-                      <ICA label="Malware" value={11} />
-                    </Column>
-                    <Column sm={2} md={2} lg={3}>
-                      <ICA label="IPs" value={8} />
-                    </Column>
-                    <Column sm={2} md={2} lg={3}>
-                      <ICA label="URLs" value={9} />
-                    </Column>
-                    <Column sm={2} md={2} lg={3}>
-                      <ICA label="VULs" value={1} />
-                    </Column>
-                  </Row>
-                </>
-              )}
-            </ICAModule>
-
-            <Row condensed>
-              <Column>
-                <DataTablePagination
-                  headers={[
-                    {
-                      header: 'Name',
-                      key: 'name',
-                    },
-                    {
-                      header: 'Last sighted',
-                      key: 'lastSighted',
-                    },
-                  ]}
-                  pageSize={5}
-                  pageSizes={[5, 10, 25, 50]}
-                  rows={[
-                    {
-                      id: '0',
-                      lastSighted: 'Feb 3 2019 12:00 PM EST',
-                      name: (
-                        <Decorator
-                          score={7}
-                          type="MAL"
-                          value="5020c08bcc061236643293bf0d897321"
-                        />
-                      ),
-                    },
-                    {
-                      id: '1',
-                      lastSighted: 'Feb 5 2019 12:00 PM EST',
-                      name: (
-                        <Decorator
-                          score={7}
-                          type="MAL"
-                          value="aca7037286b64b0da05c9708d647c013"
-                        />
-                      ),
-                    },
-                    {
-                      id: '2',
-                      lastSighted: 'Feb 7 2019 12:00 PM EST',
-                      name: (
-                        <Decorator
-                          score={7}
-                          type="MAL"
-                          value="bd9e4c82bf12c4e7a58221fc52fed705"
-                        />
-                      ),
-                    },
-                    {
-                      id: '3',
-                      lastSighted: 'Apr 1 2019 12:00 PM EST',
-                      name: (
-                        <Decorator
-                          score={0}
-                          type="IP"
-                          value="103.243.175.181"
-                        />
-                      ),
-                    },
-                    {
-                      id: '4',
-                      lastSighted: 'Apr 1 2019 12:00 PM EST',
-                      name: (
-                        <Decorator
-                          score={7}
-                          type="MAL"
-                          value="5020c08bcc061236643293bf0d897321"
-                        />
-                      ),
-                    },
-                  ]}
-                />
-              </Column>
-            </Row>
-          </ColumnWithBackground>
+          </Column>
         </Row>
-      </Tab>
-      <Tab label="Evidence" />
-    </Tabs>
-  </PageTabModule>
+      </ColumnWithBackground>
+    </Row>
+  </>
 );
 
 export const Overview = () => (

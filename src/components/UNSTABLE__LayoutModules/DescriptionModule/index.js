@@ -29,7 +29,7 @@ const DescriptionModule = ({ children, ...other }) => (
 );
 
 DescriptionModule.propTypes = {
-  /** Provide the content for the `Description` */
+  /** Provide the content for the `DescriptionModule` */
   children: func.isRequired,
 };
 

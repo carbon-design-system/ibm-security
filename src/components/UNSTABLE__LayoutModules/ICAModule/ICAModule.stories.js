@@ -42,7 +42,7 @@ export const Default = () => (
   </ICAModule>
 );
 
-export const Hover = () => (
+export const Interaction = () => (
   <ICAModule hover>
     {({ getLayoutProps }) => (
       <Row>
