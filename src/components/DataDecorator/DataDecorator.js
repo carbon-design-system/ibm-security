@@ -59,6 +59,7 @@ class DataDecorator extends Component {
       scoreThresholds,
       scoreDescription,
       onContextMenu: propOnContextMenu,
+      midLineTruncation,
     } = this.props;
     const onContextMenu = propOnContextMenu
       ? event => {
@@ -77,6 +78,7 @@ class DataDecorator extends Component {
       scoreThresholds,
       scoreDescription,
       onContextMenu,
+      midLineTruncation,
     };
     const componentLabels = {
       ...defaultLabels.labels,
@@ -263,6 +265,14 @@ DataDecorator.propTypes = {
 
   /** @type {func} Descriptive text for screen readers that details the severity of a score. */
   scoreDescription: PropTypes.func,
+
+  /** @type {object} Mid-line truncation options applied to value of decorator if applicable. */
+  midLineTruncation: PropTypes.shape({
+    enabled: PropTypes.bool,
+    maxLength: PropTypes.number,
+    front: PropTypes.number,
+    back: PropTypes.number,
+  }),
 };
 
 DataDecorator.defaultProps = {
@@ -288,6 +298,12 @@ DataDecorator.defaultProps = {
   stopPropagationEvents: undefined,
   scoreDescription: (score, scoreThresholds) =>
     `Score ${score} out of ${scoreThresholds.slice(-1)[0]}`,
+  midLineTruncation: {
+    enabled: false,
+    maxLength: 20,
+    front: 12,
+    back: 4,
+  },
 };
 
 export default DataDecorator;

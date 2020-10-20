@@ -1321,6 +1321,12 @@ Map {
       "focusTrap": true,
       "inline": false,
       "labels": Object {},
+      "midLineTruncation": Object {
+        "back": 4,
+        "enabled": false,
+        "front": 12,
+        "maxLength": 20,
+      },
       "noIcon": false,
       "onClose": [Function],
       "onContextMenu": undefined,
@@ -1400,6 +1406,25 @@ Map {
           },
         ],
         "type": "objectOf",
+      },
+      "midLineTruncation": Object {
+        "args": Array [
+          Object {
+            "back": Object {
+              "type": "number",
+            },
+            "enabled": Object {
+              "type": "bool",
+            },
+            "front": Object {
+              "type": "number",
+            },
+            "maxLength": Object {
+              "type": "number",
+            },
+          },
+        ],
+        "type": "shape",
       },
       "noIcon": Object {
         "type": "bool",
@@ -2815,6 +2840,12 @@ Map {
       "className": "",
       "href": undefined,
       "inline": false,
+      "midLineTruncation": Object {
+        "back": 4,
+        "enabled": false,
+        "front": 12,
+        "maxLength": 20,
+      },
       "noIcon": false,
       "onClick": undefined,
       "onContextMenu": [Function],
@@ -2841,6 +2872,25 @@ Map {
       "inert": [Function],
       "inline": Object {
         "type": "bool",
+      },
+      "midLineTruncation": Object {
+        "args": Array [
+          Object {
+            "back": Object {
+              "type": "number",
+            },
+            "enabled": Object {
+              "type": "bool",
+            },
+            "front": Object {
+              "type": "number",
+            },
+            "maxLength": Object {
+              "type": "number",
+            },
+          },
+        ],
+        "type": "shape",
       },
       "noIcon": Object {
         "type": "bool",
