@@ -8,7 +8,7 @@ import React from 'react';
 import userEvent from '@testing-library/user-event';
 import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
-import { Decorator } from '../../../..';
+import { DataDecorator, Decorator } from '../../../..';
 
 import { namespace, icons } from '../constants';
 
@@ -128,6 +128,19 @@ describe('Decorator', () => {
       <Decorator type="IP" value="10.0.0.0" inline />
     );
     expect(container.firstElementChild).toHaveClass(`${namespace}--inline`);
+  });
+
+  test('should use the value of the decorator to the panel title when mid-line truncation is required', () => {
+    const { queryAllByText } = render(
+      <Decorator
+        type="IP"
+        value="0f3deda483df5e5f8043ea20297d243b"
+        score={0}
+        midLineTruncation={{ enabled: true, maxLength: 20, front: 12, back: 4 }}
+      />
+    );
+    // the MD5 hash -- the data decorator.
+    expect(queryAllByText(/0f3deda483df…243b/i).length === 1);
   });
 });
 

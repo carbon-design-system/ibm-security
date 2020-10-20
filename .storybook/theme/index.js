@@ -1,32 +1,44 @@
 /**
  * @file Storybook theme.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
-import { black } from '@carbon/colors/lib';
-import { g100 } from '@carbon/themes/lib';
-import { fontFamilies } from '@carbon/type/lib';
+import { black } from '@carbon/colors';
+import { g100 } from '@carbon/themes';
+import { fontFamilies } from '@carbon/type';
+import { create, themes } from '@storybook/theming';
 
-import { create } from '@storybook/theming';
-
-import { name, homepage, version } from '../../package.json';
+import { description, homepage, version } from '../../package.json';
+import lockup from './lockup.svg';
 
 const { mono, sans } = fontFamilies;
-const { field02, inverse01, activeUI, text01, ui01, ui02 } = g100;
 
+const {
+  activeUI,
+  field02,
+  inverse01,
+  link01,
+  text01,
+  text04,
+  ui01,
+  ui03,
+} = g100;
+
+// https://storybook.js.org/docs/react/configure/theming#create-a-theme-quickstart
 export default create({
-  base: 'dark',
+  ...themes.dark,
 
-  // Brand information.
-  brandTitle: `<img src="${require('./lockup.svg')}" alt="IBM Security" /><br/><br/><code>${name}<br/>v${version}</code>`,
+  // Brand.
+  brandTitle: `<img alt="IBM Security" src="${lockup}" /><br />${description} v${version}`,
   brandUrl: homepage,
 
+  // Colors.
   colorPrimary: activeUI,
-  colorSecondary: activeUI,
+  colorSecondary: link01,
 
   // User interface.
   appBg: black,
-  appBorderColor: ui02,
+  appBorderColor: ui03,
   appContentBg: ui01,
   appBorderRadius: 0,
 
@@ -34,18 +46,17 @@ export default create({
   fontBase: sans,
   fontCode: mono,
 
-  // Text colors.
+  // Text.
   textColor: text01,
   textInverseColor: inverse01,
 
-  // Toolbar colors.
+  // Toolbar.
   barBg: ui01,
-  barSelectedColor: text01,
   barTextColor: text01,
+  barSelectedColor: text04,
 
-  // Form colors.
+  // Form.
   inputBg: field02,
-  inputBorder: field02,
   inputTextColor: text01,
   inputBorderRadius: 0,
 });

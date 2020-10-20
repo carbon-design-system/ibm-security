@@ -1,7 +1,7 @@
 ////
 /// Type.
 /// @group type
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import '@carbon/type/scss/classes';
@@ -20,22 +20,6 @@ $css--plex: true;
 @import '../deprecate/index';
 @import '../feature-flags/index';
 @import '../namespace/index';
-
-// TODO: Remove when fix is released in `@carbon/type` (https://github.com/carbon-design-system/carbon/pull/4927)
-
-$expressive-heading-01: map-merge(
-  $heading-01,
-  (
-    line-height: carbon--rem(20px),
-  )
-);
-
-$expressive-heading-02: map-merge(
-  $heading-02,
-  (
-    line-height: carbon--rem(24px),
-  )
-);
 
 // TODO: `2.x` - To be removed.
 

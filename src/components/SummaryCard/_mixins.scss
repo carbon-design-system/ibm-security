@@ -142,28 +142,11 @@
     }
 
     &--icon-only {
-      // TODO -- https://github.com/carbon-design-system/carbon/issues/4245
-      // Required until highly specific reset from Carbon is fixed.
+      // TODO - https://github.com/carbon-design-system/carbon/issues/4245
+
       justify-content: center;
       width: $footer--height;
       flex: 0 0 auto;
-
-      &,
-      &:hover,
-      &:focus,
-      &:active {
-        color: $text-01;
-
-        .#{$prefix}--btn__icon path {
-          fill: $icon-01;
-        }
-      }
-
-      // TODO -- https://github.com/carbon-design-system/carbon/issues/4245
-      // Required until highly specific reset from Carbon is fixed.
-      &.#{$prefix}--btn--icon-only:focus {
-        border: 3px solid $focus;
-      }
     }
   }
 

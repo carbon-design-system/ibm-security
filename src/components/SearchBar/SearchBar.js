@@ -5,7 +5,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classnames from 'classnames';
 import Button from '../Button';
 import Search from '../Search';
 import MultiSelect from '../MultiSelect';
@@ -89,6 +89,16 @@ export default class SearchBar extends React.Component {
      * with "selected" items moved to the start of the scope items array.
      */
     sortItems: PropTypes.func, // eslint-disable-line react/require-default-props
+
+    /**
+     * Provide accessible label text for the scopes MultiSelect.
+     */
+    titleText: PropTypes.string,
+
+    /**
+     * Whether or not the scopes MultiSelect label is visually hidden.
+     */
+    hideScopesLabel: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -99,6 +109,8 @@ export default class SearchBar extends React.Component {
     scopeToString: () => {},
     scopes: [],
     selectedScopes: [],
+    titleText: 'Scopes multiselect',
+    hideScopesLabel: true,
   };
 
   /**
@@ -154,6 +166,7 @@ export default class SearchBar extends React.Component {
       selectedScopes,
       translateWithId,
       sortItems,
+      titleText,
     } = this.props;
 
     if (scopes.length === 0) return null;
@@ -170,6 +183,7 @@ export default class SearchBar extends React.Component {
         itemToString={scopeToString}
         translateWithId={translateWithId}
         sortItems={sortItems}
+        titleText={titleText}
       />
     );
   }
@@ -184,11 +198,16 @@ export default class SearchBar extends React.Component {
       scopes,
       selectedScopes,
       clearButtonLabelText,
+      hideScopesLabel,
     } = this.props;
 
-    const formClassNames = classNames(namespace, className);
     return (
-      <form className={formClassNames} onSubmit={this.handleSubmit}>
+      <form
+        className={classnames(namespace, className, {
+          [`${namespace}--hide-scopes-label`]: hideScopesLabel,
+        })}
+        onSubmit={this.handleSubmit}
+      >
         {this.renderScopeSelector()}
         <Search
           name="search-input"

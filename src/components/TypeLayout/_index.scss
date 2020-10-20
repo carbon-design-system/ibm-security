@@ -15,7 +15,9 @@
 
 @import '../Component/mixins';
 
-@include security--component($name: type-layout__container) {
+@import 'variables';
+
+@include security--component($name: $type-layout__name) {
   $root: &;
 
   @include carbon--type-style($name: body-short-01);

@@ -1,20 +1,17 @@
 /**
  * @file Theme registration component.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
-import { spacing05 } from '@carbon/layout/lib';
 import addons from '@storybook/addons';
+import { Form } from '@storybook/components';
 
 import React, { Component } from 'react';
 
 import { action, getStoredTheme, namespace, themes, title } from '.';
 
-import { Form, Select, SelectItem } from '../../../src';
-
-import './index.scss';
-
 const { addPanel, getChannel, register } = addons;
+const { Field, Select } = Form;
 
 /**
  * Theme registration class.
@@ -39,31 +36,27 @@ class Theme extends Component {
 
   render = () =>
     this.props.active && (
-      <Form style={{ margin: spacing05 }}>
-        <Select
-          id={namespace}
-          labelText={title}
-          onChange={this.onChange}
-          value={this.state.value}
-        >
-          {Object.keys(themes).map(theme => (
-            <SelectItem key={theme} text={theme} value={themes[theme]} />
-          ))}
-        </Select>
+      <Form>
+        <Field label={title}>
+          <Select onChange={this.onChange} value={this.state.value}>
+            {Object.keys(themes).map(theme => (
+              <option key={theme} value={themes[theme]}>
+                {theme}
+              </option>
+            ))}
+          </Select>
+        </Field>
       </Form>
     );
 }
 
+const panel = `${namespace}/panel`;
+
 register(namespace, api =>
-  addPanel(`${namespace}/panel`, {
+  addPanel(panel, {
     title,
     render: ({ active }) => (
-      <Theme
-        key="storybook/theme/panel"
-        active={active}
-        api={api}
-        channel={getChannel()}
-      />
+      <Theme key={panel} active={active} api={api} channel={getChannel()} />
     ),
   })
 );

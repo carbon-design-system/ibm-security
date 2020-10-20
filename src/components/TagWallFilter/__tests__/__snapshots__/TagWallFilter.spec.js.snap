@@ -753,6 +753,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                 >
                   <Portal
                     focusTrap={true}
+                    focusTrapOptions={Object {}}
                     hasOverlay={true}
                     initialFocus={null}
                     rootNode={
@@ -1226,6 +1227,235 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                         active={true}
                         focusTrapOptions={
                           Object {
+                            "fallbackFocus": <body
+                              class="security--portal__container"
+                            >
+                              <section
+                                aria-hidden="false"
+                                class="security--tearsheet--small"
+                              >
+                                <header
+                                  class="security--tearsheet--small__header"
+                                >
+                                  <h1
+                                    class="security--tearsheet--small__title"
+                                  >
+                                    TagWallFilter Heading
+                                  </h1>
+                                  <div
+                                    class="security--tearsheet--small__description"
+                                  >
+                                    <div
+                                      class="security--tag-wall-filter__description"
+                                    >
+                                      What’s the secret to minced and ground doughnut? Always use small garlic.
+                                      <section
+                                        aria-label=""
+                                        class="security--tag-wall security--tag-wall-filter__tag-wall"
+                                      >
+                                        
+                                        <span
+                                          class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+                                        >
+                                          <span
+                                            class="bx--text-truncate--end"
+                                            title="Y"
+                                          >
+                                            Y
+                                          </span>
+                                          <button
+                                            aria-label=""
+                                            class="security--tag--interactive__button"
+                                          >
+                                            <svg
+                                              aria-hidden="true"
+                                              class="security--icon security--tag--interactive__button__icon"
+                                              fill="currentColor"
+                                              focusable="false"
+                                              height="16"
+                                              preserveAspectRatio="xMidYMid meet"
+                                              style="will-change: transform;"
+                                              viewBox="0 0 32 32"
+                                              width="16"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                              <path
+                                                d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                                              />
+                                            </svg>
+                                          </button>
+                                        </span>
+                                      </section>
+                                    </div>
+                                  </div>
+                                </header>
+                                <section
+                                  class="security--tearsheet--small__body"
+                                >
+                                  <div
+                                    class="security--scroll-gradient security--scroll-gradient--none security--scroll-gradient--y security--tearsheet--small__content"
+                                    role="presentation"
+                                  >
+                                    <div
+                                      aria-hidden="true"
+                                      class="security--scroll-gradient__before"
+                                      role="presentation"
+                                    />
+                                    <div
+                                      class="security--scroll-gradient__content"
+                                    >
+                                      <div
+                                        class="security--tearsheet--small__scroll-gradient__content"
+                                      >
+                                        <div
+                                          class="security--filter bx--list-box"
+                                          id="test-id"
+                                        >
+                                          <div
+                                            aria-expanded="true"
+                                            aria-haspopup="true"
+                                            aria-label="close menu"
+                                            class="bx--list-box__field"
+                                            data-toggle="true"
+                                            id="test-id"
+                                            role="button"
+                                            tabindex="-1"
+                                            type="button"
+                                          >
+                                            <input
+                                              aria-autocomplete="list"
+                                              aria-expanded="true"
+                                              autocomplete="off"
+                                              class="security--filter__input-field bx--text-input"
+                                              id="test-id"
+                                              placeholder="placeholder"
+                                              role="combobox"
+                                              value=""
+                                            />
+                                            <span
+                                              class="security--filter__search"
+                                            >
+                                              <svg
+                                                aria-hidden="true"
+                                                class="security--icon security--filter__search__icon"
+                                                fill="var(--icon-01, #f4f4f4)"
+                                                focusable="false"
+                                                height="20"
+                                                preserveAspectRatio="xMidYMid meet"
+                                                style="will-change: transform;"
+                                                viewBox="0 0 32 32"
+                                                width="20"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                              >
+                                                <path
+                                                  d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                                />
+                                              </svg>
+                                            </span>
+                                          </div>
+                                          <div
+                                            class="security--filter__list-container"
+                                            id="test-id"
+                                            role="listbox"
+                                          >
+                                            <div
+                                              class="security--filter__list-item"
+                                              id="downshift-0-item-0"
+                                              role="button"
+                                              tabindex="0"
+                                            >
+                                              <div
+                                                class="bx--list-box__menu-item__option"
+                                              >
+                                                <div
+                                                  aria-labelledby="downshift-0-item-0"
+                                                  class="security--filter__list-item__entry"
+                                                >
+                                                  <span
+                                                    class="bx--text-truncate--end"
+                                                    title="X"
+                                                  >
+                                                    X
+                                                  </span>
+                                                  <span
+                                                    class="security--filter__add"
+                                                  >
+                                                    <svg
+                                                      aria-hidden="true"
+                                                      class="security--icon security--filter__add__icon"
+                                                      fill="currentColor"
+                                                      focusable="false"
+                                                      height="20"
+                                                      preserveAspectRatio="xMidYMid meet"
+                                                      style="will-change: transform;"
+                                                      viewBox="0 0 32 32"
+                                                      width="20"
+                                                      xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                      <path
+                                                        d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                                      />
+                                                    </svg>
+                                                  </span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div
+                                      aria-hidden="true"
+                                      class="security--scroll-gradient__after"
+                                      role="presentation"
+                                    />
+                                  </div>
+                                </section>
+                                <footer
+                                  class="security--tearsheet--small__footer"
+                                >
+                                  <button
+                                    class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                                    tabindex="0"
+                                    type="button"
+                                  >
+                                    Cancel
+                                  </button>
+                                  <button
+                                    class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                                    tabindex="0"
+                                    type="button"
+                                  >
+                                    Save
+                                  </button>
+                                </footer>
+                                <button
+                                  aria-label="Close"
+                                  class="security--button--icon security--tearsheet--small__button--close security--button--icon--lg"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="security--icon"
+                                    fill="currentColor"
+                                    focusable="false"
+                                    height="20"
+                                    preserveAspectRatio="xMidYMid meet"
+                                    style="will-change: transform;"
+                                    viewBox="0 0 32 32"
+                                    width="20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                                    />
+                                  </svg>
+                                </button>
+                              </section>
+                              <div
+                                class="security--portal__overlay"
+                                tabindex="-1"
+                              />
+                            </body>,
                             "initialFocus": null,
                           }
                         }
@@ -1734,15 +1964,19 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                               onClick={[MockFunction]}
                               size="large"
                               tabIndex={0}
+                              tooltipAlignment="center"
+                              tooltipPosition="top"
                               type="button"
                             >
-                              <ForwardRef(Button)
+                              <Button
                                 className="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large"
                                 disabled={false}
                                 kind="secondary"
                                 onClick={[MockFunction]}
                                 size={null}
                                 tabIndex={0}
+                                tooltipAlignment="center"
+                                tooltipPosition="top"
                                 type="button"
                               >
                                 <button
@@ -1754,7 +1988,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                 >
                                   Cancel
                                 </button>
-                              </ForwardRef(Button)>
+                              </Button>
                             </Button>
                             <Button
                               className="security--tearsheet--small__footer__button"
@@ -1765,15 +1999,19 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                               onClick={[MockFunction]}
                               size="large"
                               tabIndex={0}
+                              tooltipAlignment="center"
+                              tooltipPosition="top"
                               type="button"
                             >
-                              <ForwardRef(Button)
+                              <Button
                                 className="security--button security--tearsheet--small__footer__button security--button--large"
                                 disabled={false}
                                 kind="primary"
                                 onClick={[MockFunction]}
                                 size={null}
                                 tabIndex={0}
+                                tooltipAlignment="center"
+                                tooltipPosition="top"
                                 type="button"
                               >
                                 <button
@@ -1785,7 +2023,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                 >
                                   Save
                                 </button>
-                              </ForwardRef(Button)>
+                              </Button>
                             </Button>
                           </footer>
                           <IconButton
@@ -2774,6 +3012,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                   >
                     <Portal
                       focusTrap={true}
+                      focusTrapOptions={Object {}}
                       hasOverlay={true}
                       initialFocus={null}
                       rootNode={
@@ -3697,6 +3936,460 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                           active={true}
                           focusTrapOptions={
                             Object {
+                              "fallbackFocus": <body
+                                class=""
+                              >
+                                <section
+                                  aria-hidden="false"
+                                  class="security--tearsheet--small"
+                                >
+                                  <header
+                                    class="security--tearsheet--small__header"
+                                  >
+                                    <h1
+                                      class="security--tearsheet--small__title"
+                                    >
+                                      TagWallFilter Heading
+                                    </h1>
+                                    <div
+                                      class="security--tearsheet--small__description"
+                                    >
+                                      <div
+                                        class="security--tag-wall-filter__description"
+                                      >
+                                        What’s the secret to minced and ground doughnut? Always use small garlic.
+                                        <section
+                                          aria-label=""
+                                          class="security--tag-wall security--tag-wall-filter__tag-wall"
+                                        >
+                                          
+                                          <span
+                                            class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+                                          >
+                                            <span
+                                              class="bx--text-truncate--end"
+                                              title="Y"
+                                            >
+                                              Y
+                                            </span>
+                                            <button
+                                              aria-label=""
+                                              class="security--tag--interactive__button"
+                                            >
+                                              <svg
+                                                aria-hidden="true"
+                                                class="security--icon security--tag--interactive__button__icon"
+                                                fill="currentColor"
+                                                focusable="false"
+                                                height="16"
+                                                preserveAspectRatio="xMidYMid meet"
+                                                style="will-change: transform;"
+                                                viewBox="0 0 32 32"
+                                                width="16"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                              >
+                                                <path
+                                                  d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                                                />
+                                              </svg>
+                                            </button>
+                                          </span>
+                                        </section>
+                                      </div>
+                                    </div>
+                                  </header>
+                                  <section
+                                    class="security--tearsheet--small__body"
+                                  >
+                                    <div
+                                      class="security--scroll-gradient security--scroll-gradient--none security--scroll-gradient--y security--tearsheet--small__content"
+                                      role="presentation"
+                                    >
+                                      <div
+                                        aria-hidden="true"
+                                        class="security--scroll-gradient__before"
+                                        role="presentation"
+                                      />
+                                      <div
+                                        class="security--scroll-gradient__content"
+                                      >
+                                        <div
+                                          class="security--tearsheet--small__scroll-gradient__content"
+                                        >
+                                          <div
+                                            class="security--filter bx--list-box"
+                                            id="test-id"
+                                          >
+                                            <div
+                                              aria-expanded="true"
+                                              aria-haspopup="true"
+                                              aria-label="close menu"
+                                              class="bx--list-box__field"
+                                              data-toggle="true"
+                                              id="test-id"
+                                              role="button"
+                                              tabindex="-1"
+                                              type="button"
+                                            >
+                                              <input
+                                                aria-autocomplete="list"
+                                                aria-expanded="true"
+                                                autocomplete="off"
+                                                class="security--filter__input-field bx--text-input"
+                                                id="test-id"
+                                                placeholder="placeholder"
+                                                role="combobox"
+                                                value=""
+                                              />
+                                              <span
+                                                class="security--filter__search"
+                                              >
+                                                <svg
+                                                  aria-hidden="true"
+                                                  class="security--icon security--filter__search__icon"
+                                                  fill="var(--icon-01, #f4f4f4)"
+                                                  focusable="false"
+                                                  height="20"
+                                                  preserveAspectRatio="xMidYMid meet"
+                                                  style="will-change: transform;"
+                                                  viewBox="0 0 32 32"
+                                                  width="20"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                  <path
+                                                    d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                                  />
+                                                </svg>
+                                              </span>
+                                            </div>
+                                            <div
+                                              class="security--filter__list-container"
+                                              id="test-id"
+                                              role="listbox"
+                                            >
+                                              <div
+                                                class="security--filter__list-item"
+                                                id="downshift-0-item-0"
+                                                role="button"
+                                                tabindex="0"
+                                              >
+                                                <div
+                                                  class="bx--list-box__menu-item__option"
+                                                >
+                                                  <div
+                                                    aria-labelledby="downshift-0-item-0"
+                                                    class="security--filter__list-item__entry"
+                                                  >
+                                                    <span
+                                                      class="bx--text-truncate--end"
+                                                      title="X"
+                                                    >
+                                                      X
+                                                    </span>
+                                                    <span
+                                                      class="security--filter__add"
+                                                    >
+                                                      <svg
+                                                        aria-hidden="true"
+                                                        class="security--icon security--filter__add__icon"
+                                                        fill="currentColor"
+                                                        focusable="false"
+                                                        height="20"
+                                                        preserveAspectRatio="xMidYMid meet"
+                                                        style="will-change: transform;"
+                                                        viewBox="0 0 32 32"
+                                                        width="20"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                      >
+                                                        <path
+                                                          d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                                        />
+                                                      </svg>
+                                                    </span>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div
+                                        aria-hidden="true"
+                                        class="security--scroll-gradient__after"
+                                        role="presentation"
+                                      />
+                                    </div>
+                                  </section>
+                                  <footer
+                                    class="security--tearsheet--small__footer"
+                                  >
+                                    <button
+                                      class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                                      tabindex="0"
+                                      type="button"
+                                    >
+                                      Cancel
+                                    </button>
+                                    <button
+                                      class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                                      tabindex="0"
+                                      type="button"
+                                    >
+                                      Save
+                                    </button>
+                                  </footer>
+                                  <button
+                                    aria-label="Close"
+                                    class="security--button--icon security--tearsheet--small__button--close security--button--icon--lg"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="security--icon"
+                                      fill="currentColor"
+                                      focusable="false"
+                                      height="20"
+                                      preserveAspectRatio="xMidYMid meet"
+                                      style="will-change: transform;"
+                                      viewBox="0 0 32 32"
+                                      width="20"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                                      />
+                                    </svg>
+                                  </button>
+                                </section>
+                                <div
+                                  class="security--portal__overlay"
+                                  tabindex="-1"
+                                />
+                                <section
+                                  aria-hidden="false"
+                                  class="security--tearsheet--small security--tag-wall-filter"
+                                >
+                                  <header
+                                    class="security--tearsheet--small__header"
+                                  >
+                                    <h1
+                                      class="security--tearsheet--small__title"
+                                    >
+                                      TagWallFilter Heading
+                                    </h1>
+                                    <div
+                                      class="security--tearsheet--small__description"
+                                    >
+                                      <div
+                                        class="security--tag-wall-filter__description"
+                                      >
+                                        What’s the secret to minced and ground doughnut? Always use small garlic.
+                                        <section
+                                          aria-label=""
+                                          class="security--tag-wall security--tag-wall-filter__tag-wall"
+                                        >
+                                          
+                                          <span
+                                            class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+                                          >
+                                            <span
+                                              class="bx--text-truncate--end"
+                                              title="X"
+                                            >
+                                              X
+                                            </span>
+                                            <button
+                                              aria-label=""
+                                              class="security--tag--interactive__button"
+                                            >
+                                              <svg
+                                                aria-hidden="true"
+                                                class="security--icon security--tag--interactive__button__icon"
+                                                fill="currentColor"
+                                                focusable="false"
+                                                height="16"
+                                                preserveAspectRatio="xMidYMid meet"
+                                                style="will-change: transform;"
+                                                viewBox="0 0 32 32"
+                                                width="16"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                              >
+                                                <path
+                                                  d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                                                />
+                                              </svg>
+                                            </button>
+                                          </span>
+                                        </section>
+                                      </div>
+                                    </div>
+                                  </header>
+                                  <section
+                                    class="security--tearsheet--small__body"
+                                  >
+                                    <div
+                                      class="security--scroll-gradient security--scroll-gradient--none security--scroll-gradient--y security--tearsheet--small__content"
+                                      role="presentation"
+                                    >
+                                      <div
+                                        aria-hidden="true"
+                                        class="security--scroll-gradient__before"
+                                        role="presentation"
+                                      />
+                                      <div
+                                        class="security--scroll-gradient__content"
+                                      >
+                                        <div
+                                          class=""
+                                        >
+                                          <div
+                                            class="security--filter bx--list-box"
+                                            id="test-id"
+                                          >
+                                            <div
+                                              aria-expanded="true"
+                                              aria-haspopup="true"
+                                              aria-label="close menu"
+                                              class="bx--list-box__field"
+                                              data-toggle="true"
+                                              id="test-id"
+                                              role="button"
+                                              tabindex="-1"
+                                              type="button"
+                                            >
+                                              <input
+                                                aria-autocomplete="list"
+                                                aria-expanded="true"
+                                                autocomplete="off"
+                                                class="security--filter__input-field bx--text-input"
+                                                id="test-id"
+                                                placeholder=""
+                                                role="combobox"
+                                                value=""
+                                              />
+                                              <span
+                                                class="security--filter__search"
+                                              >
+                                                <svg
+                                                  aria-hidden="true"
+                                                  class="security--icon security--filter__search__icon"
+                                                  fill="var(--icon-01, #f4f4f4)"
+                                                  focusable="false"
+                                                  height="20"
+                                                  preserveAspectRatio="xMidYMid meet"
+                                                  style="will-change: transform;"
+                                                  viewBox="0 0 32 32"
+                                                  width="20"
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                  <path
+                                                    d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                                  />
+                                                </svg>
+                                              </span>
+                                            </div>
+                                            <div
+                                              class="security--filter__list-container"
+                                              id="test-id"
+                                              role="listbox"
+                                            >
+                                              <div
+                                                class="security--filter__list-item"
+                                                id="downshift-1-item-0"
+                                                role="button"
+                                                tabindex="0"
+                                              >
+                                                <div
+                                                  class="bx--list-box__menu-item__option"
+                                                >
+                                                  <div
+                                                    aria-labelledby="downshift-1-item-0"
+                                                    class="security--filter__list-item__entry"
+                                                  >
+                                                    <span
+                                                      class="bx--text-truncate--end"
+                                                      title="Y"
+                                                    >
+                                                      Y
+                                                    </span>
+                                                    <span
+                                                      class="security--filter__add"
+                                                    >
+                                                      <svg
+                                                        aria-hidden="true"
+                                                        class="security--icon security--filter__add__icon"
+                                                        fill="currentColor"
+                                                        focusable="false"
+                                                        height="20"
+                                                        preserveAspectRatio="xMidYMid meet"
+                                                        style="will-change: transform;"
+                                                        viewBox="0 0 32 32"
+                                                        width="20"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                      >
+                                                        <path
+                                                          d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
+                                                        />
+                                                      </svg>
+                                                    </span>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div
+                                        aria-hidden="true"
+                                        class="security--scroll-gradient__after"
+                                        role="presentation"
+                                      />
+                                    </div>
+                                  </section>
+                                  <footer
+                                    class="security--tearsheet--small__footer"
+                                  >
+                                    <button
+                                      class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                                      tabindex="0"
+                                      type="button"
+                                    >
+                                      Cancel
+                                    </button>
+                                    <button
+                                      class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                                      tabindex="0"
+                                      type="button"
+                                    >
+                                      Save
+                                    </button>
+                                  </footer>
+                                  <button
+                                    aria-label="Close"
+                                    class="security--button--icon security--tearsheet--small__button--close security--button--icon--lg"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="security--icon"
+                                      fill="currentColor"
+                                      focusable="false"
+                                      height="20"
+                                      preserveAspectRatio="xMidYMid meet"
+                                      style="will-change: transform;"
+                                      viewBox="0 0 32 32"
+                                      width="20"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                                      />
+                                    </svg>
+                                  </button>
+                                </section>
+                                <div
+                                  class="security--portal__overlay"
+                                  tabindex="-1"
+                                />
+                              </body>,
                               "initialFocus": null,
                             }
                           }
@@ -4205,15 +4898,19 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 onClick={[MockFunction]}
                                 size="large"
                                 tabIndex={0}
+                                tooltipAlignment="center"
+                                tooltipPosition="top"
                                 type="button"
                               >
-                                <ForwardRef(Button)
+                                <Button
                                   className="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large"
                                   disabled={false}
                                   kind="secondary"
                                   onClick={[MockFunction]}
                                   size={null}
                                   tabIndex={0}
+                                  tooltipAlignment="center"
+                                  tooltipPosition="top"
                                   type="button"
                                 >
                                   <button
@@ -4225,7 +4922,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   >
                                     Cancel
                                   </button>
-                                </ForwardRef(Button)>
+                                </Button>
                               </Button>
                               <Button
                                 className="security--tearsheet--small__footer__button"
@@ -4236,15 +4933,19 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 onClick={[MockFunction]}
                                 size="large"
                                 tabIndex={0}
+                                tooltipAlignment="center"
+                                tooltipPosition="top"
                                 type="button"
                               >
-                                <ForwardRef(Button)
+                                <Button
                                   className="security--button security--tearsheet--small__footer__button security--button--large"
                                   disabled={false}
                                   kind="primary"
                                   onClick={[MockFunction]}
                                   size={null}
                                   tabIndex={0}
+                                  tooltipAlignment="center"
+                                  tooltipPosition="top"
                                   type="button"
                                 >
                                   <button
@@ -4256,7 +4957,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   >
                                     Save
                                   </button>
-                                </ForwardRef(Button)>
+                                </Button>
                               </Button>
                             </footer>
                             <IconButton

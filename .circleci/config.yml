@@ -1,7 +1,7 @@
 jobs:
   build:
     docker:
-      - image: circleci/node:11
+      - image: circleci/node:12
     steps:
       - checkout
       - run: yarn install --offline --frozen-lockfile

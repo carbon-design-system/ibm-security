@@ -1,7 +1,7 @@
 ////
 /// Multi select component.
 /// @group multi-select
-/// @copyright IBM Security 2018
+/// @copyright IBM Security 2018 - 2020
 ////
 
 @import '@carbon/themes/scss/tokens';
@@ -12,21 +12,6 @@
 
 @include export-namespace($name: multi-select) {
   .#{$prefix}--multi-select {
-    /// https://github.com/carbon-design-system/carbon-components/issues/2398
-    &,
-    * {
-      box-sizing: border-box;
-    }
-
-    /// https://github.com/carbon-design-system/carbon-components/pull/2400
-    .#{$prefix}--list-box__selection--multi > svg {
-      fill: $inverse-01;
-
-      &:hover {
-        fill: $icon-03;
-      }
-    }
-
     .#{$prefix}--list-box__menu-item__option {
       .#{$prefix}--checkbox-wrapper {
         width: 100%;

@@ -2,7 +2,7 @@
 
 exports[`SearchBar Rendering disables the submit button with no selected scopes 1`] = `
 <form
-  className="security--search-bar"
+  className="security--search-bar security--search-bar--hide-scopes-label"
   onSubmit={[Function]}
 >
   <MultiSelect
@@ -38,6 +38,7 @@ exports[`SearchBar Rendering disables the submit button with no selected scopes 
     selectionFeedback="top-after-reopen"
     sortItems={[Function]}
     title={false}
+    titleText="Scopes multiselect"
     type="default"
   />
   <Search
@@ -57,7 +58,10 @@ exports[`SearchBar Rendering disables the submit button with no selected scopes 
     largeText={null}
     loading={false}
     name="search-submit"
+    size="default"
     tabIndex={0}
+    tooltipAlignment="center"
+    tooltipPosition="top"
     type="submit"
   >
     Submit
@@ -67,7 +71,7 @@ exports[`SearchBar Rendering disables the submit button with no selected scopes 
 
 exports[`SearchBar Rendering disables the submit button with no value 1`] = `
 <form
-  className="security--search-bar"
+  className="security--search-bar security--search-bar--hide-scopes-label"
   onSubmit={[Function]}
 >
   <Search
@@ -87,7 +91,10 @@ exports[`SearchBar Rendering disables the submit button with no value 1`] = `
     largeText={null}
     loading={false}
     name="search-submit"
+    size="default"
     tabIndex={0}
+    tooltipAlignment="center"
+    tooltipPosition="top"
     type="submit"
   >
     Submit
@@ -97,7 +104,7 @@ exports[`SearchBar Rendering disables the submit button with no value 1`] = `
 
 exports[`SearchBar Rendering renders 1`] = `
 <form
-  className="security--search-bar"
+  className="security--search-bar security--search-bar--hide-scopes-label"
   onSubmit={[Function]}
 >
   <Search
@@ -117,7 +124,10 @@ exports[`SearchBar Rendering renders 1`] = `
     largeText={null}
     loading={false}
     name="search-submit"
+    size="default"
     tabIndex={0}
+    tooltipAlignment="center"
+    tooltipPosition="top"
     type="submit"
   >
     Submit
@@ -127,7 +137,7 @@ exports[`SearchBar Rendering renders 1`] = `
 
 exports[`SearchBar Rendering renders an initial value 1`] = `
 <form
-  className="security--search-bar"
+  className="security--search-bar security--search-bar--hide-scopes-label"
   onSubmit={[Function]}
 >
   <Search
@@ -147,7 +157,10 @@ exports[`SearchBar Rendering renders an initial value 1`] = `
     largeText={null}
     loading={false}
     name="search-submit"
+    size="default"
     tabIndex={0}
+    tooltipAlignment="center"
+    tooltipPosition="top"
     type="submit"
   >
     Submit
@@ -157,7 +170,7 @@ exports[`SearchBar Rendering renders an initial value 1`] = `
 
 exports[`SearchBar Rendering renders scopes 1`] = `
 <form
-  className="security--search-bar"
+  className="security--search-bar security--search-bar--hide-scopes-label"
   onSubmit={[Function]}
 >
   <MultiSelect
@@ -193,6 +206,7 @@ exports[`SearchBar Rendering renders scopes 1`] = `
     selectionFeedback="top-after-reopen"
     sortItems={[Function]}
     title={false}
+    titleText="Scopes multiselect"
     type="default"
   />
   <Search
@@ -212,7 +226,10 @@ exports[`SearchBar Rendering renders scopes 1`] = `
     largeText={null}
     loading={false}
     name="search-submit"
+    size="default"
     tabIndex={0}
+    tooltipAlignment="center"
+    tooltipPosition="top"
     type="submit"
   >
     Submit
@@ -222,7 +239,7 @@ exports[`SearchBar Rendering renders scopes 1`] = `
 
 exports[`SearchBar Rendering renders selected scopes 1`] = `
 <form
-  className="security--search-bar"
+  className="security--search-bar security--search-bar--hide-scopes-label"
   onSubmit={[Function]}
 >
   <MultiSelect
@@ -265,6 +282,7 @@ exports[`SearchBar Rendering renders selected scopes 1`] = `
     selectionFeedback="top-after-reopen"
     sortItems={[Function]}
     title={false}
+    titleText="Scopes multiselect"
     type="default"
   />
   <Search
@@ -284,7 +302,10 @@ exports[`SearchBar Rendering renders selected scopes 1`] = `
     largeText={null}
     loading={false}
     name="search-submit"
+    size="default"
     tabIndex={0}
+    tooltipAlignment="center"
+    tooltipPosition="top"
     type="submit"
   >
     Submit
