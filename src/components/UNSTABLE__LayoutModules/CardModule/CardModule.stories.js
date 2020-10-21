@@ -3,7 +3,7 @@
  * @copyright IBM Security 2020
  */
 
-import { Add16, Edit16, Filter16 } from '@carbon/icons-react';
+import { List16, Search16, Table16 } from '@carbon/icons-react';
 import React from 'react';
 
 import { getDocsParameters } from '../../../../.storybook';
@@ -89,16 +89,16 @@ export const Variant = () => (
             <IconButtonBar
               actions={[
                 {
+                  label: 'Action 1',
+                  renderIcon: Search16,
+                },
+                {
                   label: 'Action 2',
-                  renderIcon: Add16,
+                  renderIcon: List16,
                 },
                 {
                   label: 'Action 3',
-                  renderIcon: Edit16,
-                },
-                {
-                  label: 'Action 4',
-                  renderIcon: Filter16,
+                  renderIcon: Table16,
                 },
               ]}
               size="md"
