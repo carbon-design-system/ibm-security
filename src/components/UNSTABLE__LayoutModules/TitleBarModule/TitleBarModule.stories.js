@@ -30,8 +30,8 @@ export default {
 
 export const Default = args => <TitleBarModule {...args} />;
 
-export const Variant = args => (
-  <TitleBarModule {...args}>
+export const Variant = () => (
+  <TitleBarModule title="Sub-section title" subsection>
     <IconButtonBar
       actions={[
         {

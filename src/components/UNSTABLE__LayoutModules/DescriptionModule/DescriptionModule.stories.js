@@ -49,7 +49,8 @@ export const Variant = () => (
     {({ getLayoutProps }) => (
       <>
         <TitleBarModule title="Section title" />
-        <TitleBarModule title="Subsection title" subsection />
+
+        <TitleBarModule title="Sub-section title" subsection />
 
         <p {...getLayoutProps()}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer

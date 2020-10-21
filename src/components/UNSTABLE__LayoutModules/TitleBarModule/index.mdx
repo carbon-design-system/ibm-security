@@ -1,10 +1,10 @@
 import { parameters } from '../../../../.storybook/preview';
 import { Default } from './TitleBarModule.stories';
 
+import variants from './images/variants.png';
+
 import doImage from './images/do.png';
 import dont from './images/dont.png';
-
-import Variants from './images/variants.png';
 
 import anatomy from './images/anatomy.png';
 
@@ -38,7 +38,7 @@ If necessary, actions can be placed inline with the title.
 
 The title bar can also accept two type variants, sub-section title and section title, so you shouldn't supplement your own type style. [Learn more](#subsection) below.
 
-<img alt="`TitleBarModule` Variants" src={Variants} />
+<img alt="`TitleBarModule` variants" src={variants} />
 
 <Source id="patterns-unstable-layout-modules-titlebarmodule--variant" />
 
@@ -55,11 +55,11 @@ Additional props passed into `TitleBarModule` will be forwarded along to the und
 Use the `subsection` prop to specify whether a subsection should be used.
 
 <Canvas withSource="none">
-  <Default title="Subsection title" subsection parameters={parameters} />
+  <Default title="Sub-section title" subsection parameters={parameters} />
 </Canvas>
 
 ```jsx
-<TitleBarModule title="Subsection title" subsection />
+<TitleBarModule title="Sub-section title" subsection />
 ```
 
 #### `element`
@@ -84,7 +84,7 @@ Title bar modules can span between 4 and 8 columns, following the [narrow grid](
   </Column>
 
   <Column>
-    <img alt="`TitleBarModule` do" src={dont} />
+    <img alt="`TitleBarModule` don't" src={dont} />
   </Column>
 </Row>
 

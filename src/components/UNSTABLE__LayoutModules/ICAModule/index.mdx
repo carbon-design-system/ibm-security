@@ -1,12 +1,12 @@
 import { parameters } from '../../../../.storybook/preview';
 import { Interaction } from './ICAModule.stories';
 
+import interactions from './images/interactions.png';
+
 import doImage from './images/do.png';
 import dont from './images/dont.png';
 
 import anatomy from './images/anatomy.png';
-
-import interactions from './images/interactions.png';
 
 # ICAModule
 
@@ -38,7 +38,7 @@ Everything passed in as a [render prop](#references) child of `ICAModule` will b
 
 If the ICA needs to be interactive, a background hover can be placed on the grid columns. This adds 16px to the height of the ICA module on hover.
 
-<img alt="`ICAModule` Interactions" src={interactions} />
+<img alt="`ICAModule` interactions" src={interactions} />
 
 <Source id="patterns-unstable-layout-modules-icamodule--interaction" />
 
@@ -80,7 +80,7 @@ ICAs within ICA modules can span across 2 or 3 columns, following the narrow gri
   </Column>
 
   <Column>
-    <img alt="`ICAModule` do" src={dont} />
+    <img alt="`ICAModule` don't" src={dont} />
   </Column>
 </Row>
 

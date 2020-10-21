@@ -1,13 +1,13 @@
 import { parameters } from '../../../../.storybook/preview';
 
+import variants from './images/variants.png';
+
 import doImage from './images/do.png';
 import dont from './images/dont.png';
 
-import Variants from './images/variants.png';
+import layoutConsiderations from './images/layout-considerations.png';
 
 import anatomy from './images/anatomy.png';
-
-import layoutConsiderations from './images/layout-considerations.png';
 
 # DescriptionModule
 
@@ -42,7 +42,7 @@ If necessary, subsection titles can be substituted or used below section titles.
 
 The description module can also be created without any title.
 
-<img alt="`DescriptionModule` Variants" src={Variants} />
+<img alt="`DescriptionModule` variants" src={variants} />
 
 <Source id="patterns-unstable-layout-modules-descriptionmodule--variant" />
 
@@ -72,7 +72,7 @@ Description modules span across 8 columns, following the [narrow grid](#referenc
   </Column>
 
   <Column>
-    <img alt="`DescriptionModule` do" src={dont} />
+    <img alt="`DescriptionModule` don't" src={dont} />
   </Column>
 </Row>
 
@@ -86,14 +86,10 @@ Description modules span across 8 columns, following the [narrow grid](#referenc
 
 Occassionally a [spacing token](#references) will need to be included to offset the description module to ensure it top-aligns with the adjacent layout container. If a top spacing token is necessary, reference the layout module that sits directly above it as the starting point for placement.
 
-<Row>
-  <Column>
-    <img
-      alt="`ButtonClusterModule` layout considerations"
-      src={layoutConsiderations}
-    />
-  </Column>
-</Row>
+<img
+  alt="`DescriptionModule` layout considerations"
+  src={layoutConsiderations}
+/>
 
 ### Anatomy
 

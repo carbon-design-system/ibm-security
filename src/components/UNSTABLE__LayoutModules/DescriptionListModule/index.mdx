@@ -2,14 +2,14 @@ import { parameters } from '../../../../.storybook/preview';
 
 import { Default } from './DescriptionListModule.stories';
 
+import variants from './images/variants.png';
+
 import doImage from './images/do.png';
 import dont from './images/dont.png';
 
-import Variants from './images/variants.png';
+import layoutConsiderations from './images/layout-considerations.png';
 
 import anatomy from './images/anatomy.png';
-
-import layoutConsiderations from './images/layout-considerations.png';
 
 # DescriptionListModule
 
@@ -42,7 +42,7 @@ Everything passed in as a child of `DescriptionListModule` will be rendered.
 
 If necessary, both section and subsection titles can precede the type layout. There are two values already supplied for this so you shouldn't supplement your own type style. Learn more by reviewing the <LinkTo kind="patterns-unstable-layout-modules-titlebarmodule" story="default" > TitleBarModule. </LinkTo>
 
-<img alt="`DescriptionListModule` Variants" src={Variants} />
+<img alt="`DescriptionListModule` variants" src={variants} />
 
 <Source id="patterns-unstable-layout-modules-descriptionlistmodule--variant" />
 
@@ -66,7 +66,7 @@ Card modules can span between 4 and 16 columns. Following the narrow grid implem
   </Column>
 
   <Column>
-    <img alt="`DescriptionListModule` do" src={dont} />
+    <img alt="`DescriptionListModule` don't" src={dont} />
   </Column>
 </Row>
 
@@ -80,14 +80,10 @@ Card modules can span between 4 and 16 columns. Following the narrow grid implem
 
 Occassionally a [spacing token](#references) will need to be included to offset the description list module to ensure it top-aligns with the adjacent layout container. If a top spacing token is necessary, reference the layout module that sits directly above it as the starting point for placement.
 
-<Row>
-  <Column>
-    <img
-      alt="`ButtonClusterModule` layout considerations"
-      src={layoutConsiderations}
-    />
-  </Column>
-</Row>
+<img
+  alt="`DescriptionListModule` layout considerations"
+  src={layoutConsiderations}
+/>
 
 ### Anatomy
 

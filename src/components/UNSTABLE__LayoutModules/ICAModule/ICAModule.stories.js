@@ -47,15 +47,15 @@ export const Interaction = () => (
     {({ getLayoutProps }) => (
       <Row>
         <Column {...getLayoutProps()}>
-          <ICA label="Label" value={100} />
+          <ICA label="Label" value={0} percentage />
         </Column>
 
         <Column {...getLayoutProps()}>
-          <ICA label="Label" value={100} />
+          <ICA label="Label" value={0} percentage />
         </Column>
 
         <Column {...getLayoutProps()}>
-          <ICA label="Label" value={100} />
+          <ICA label="Label" value={0} percentage />
         </Column>
       </Row>
     )}
