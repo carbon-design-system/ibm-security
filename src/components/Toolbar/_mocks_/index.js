@@ -3,6 +3,8 @@
  * @copyright IBM Security 2018 - 2020
  */
 
+import { action } from '@storybook/addon-actions';
+
 import { icon, url, random } from '../../_mocks_';
 import labels from '../locales/en/Toolbar.json';
 
@@ -52,6 +54,7 @@ const applicationsToGenerate = [
     ]),
   },
   {
+    onClick: action('Toolbar NavItem onClick'),
     title: 'Section 2',
     icon,
   },
