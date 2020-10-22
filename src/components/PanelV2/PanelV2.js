@@ -117,7 +117,7 @@ function PanelV2({
       <Transition className={namespace}>
         {isOpen && (
           <Portal
-            focusTrap={focusTrap || withOverlay}
+            focusTrap={withOverlay || focusTrap}
             focusTrapOptions={focusTrapOptions}
             hasOverlay={withOverlay}
             onOverlayClick={onClose}
