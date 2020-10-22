@@ -16,7 +16,7 @@ storiesOf(components(name), module).add(
   'Default',
   () => (
     <div style={{ width: '300px' }}>
-      <Nav heading="Nav example" label="Nav">
+      <Nav heading="Nav example" label={Nav}>
         <NavList title="Nav list 1">
           <NavItem key="navitem_1-1" element="span" customprop="uniqueValue">
             Nav item 1-1 (with a custom element)
