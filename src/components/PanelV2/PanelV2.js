@@ -50,6 +50,7 @@ function PanelV2({
   stopPropagationEvents,
   subtitle,
   title,
+  withOverlay,
   ...other
 }) {
   const [bodyMargin, setBodyMargin] = useState(0);
@@ -116,8 +117,9 @@ function PanelV2({
       <Transition className={namespace}>
         {isOpen && (
           <Portal
-            focusTrap={focusTrap}
+            focusTrap={focusTrap || withOverlay}
             focusTrapOptions={focusTrapOptions}
+            hasOverlay={withOverlay}
             onOverlayClick={onClose}
             rootNode={rootNode}
             stopPropagation={stopPropagation}
@@ -324,6 +326,11 @@ PanelV2.propTypes = {
    * pressing the "Escape" key, or clicking outside of the panel area.
    */
   onClose: PropTypes.func,
+
+  /**
+   * Specify whether the panel should apply an overlay
+   */
+  withOverlay: PropTypes.bool,
 };
 
 PanelV2.defaultProps = {
@@ -344,6 +351,7 @@ PanelV2.defaultProps = {
   title: undefined,
   hasScrollingContent: false,
   onClose: () => {},
+  withOverlay: true,
 };
 /* eslint-enable */
 

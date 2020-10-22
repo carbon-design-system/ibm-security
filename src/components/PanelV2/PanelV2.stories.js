@@ -13,7 +13,7 @@ import { action } from '@storybook/addon-actions';
 import { boolean, radios, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
-import React, { Fragment } from 'react';
+import React from 'react';
 
 import { disableCenteredStories, patterns } from '../../../.storybook';
 
@@ -37,11 +37,17 @@ const { interactive01, text04 } = theme;
 
 const closeButtonLabel = 'Close';
 
+const {
+  defaultProps: { focusTrap, withOverlay },
+} = PanelV2;
+
 const props = () => ({
   title: text('title', 'Example title'),
   subtitle: text('subtitle', 'Example subtitle'),
   ['aria-label']: text('aria-label', 'Example aria-label'), // eslint-disable-line no-useless-computed-key
   labels,
+  focusTrap: boolean('Focus trap (focusTrap)', focusTrap),
+  withOverlay: boolean('With overlay (withOverlay)', withOverlay),
 });
 
 const comboButtonProps = () => ({
@@ -114,7 +120,7 @@ disableCenteredStories(storiesOf(patterns('PanelV2'), module))
 
         render() {
           return (
-            <Fragment>
+            <>
               <Shell header={header} profile={profile} toolbar={toolbar} />
               <div id="main" style={{ paddingLeft: '5rem' }}>
                 <Button key="b1" onClick={this.openFirst}>
@@ -149,7 +155,7 @@ disableCenteredStories(storiesOf(patterns('PanelV2'), module))
                 }}
               >
                 <PanelContent>
-                  <Fragment>
+                  <>
                     {content}
                     <p>
                       This example uses the
@@ -162,7 +168,7 @@ disableCenteredStories(storiesOf(patterns('PanelV2'), module))
                       </CodeSnippet>
                       props to render buttons in the footer.
                     </p>
-                  </Fragment>
+                  </>
                 </PanelContent>
               </PanelV2>
               <PanelV2
@@ -200,7 +206,7 @@ disableCenteredStories(storiesOf(patterns('PanelV2'), module))
                 )}
               >
                 <PanelContent>
-                  <Fragment>
+                  <>
                     {content}
                     <p>
                       This example uses the
@@ -213,7 +219,7 @@ disableCenteredStories(storiesOf(patterns('PanelV2'), module))
                       </CodeSnippet>
                       in a custom footer.
                     </p>
-                  </Fragment>
+                  </>
                 </PanelContent>
               </PanelV2>
               <PanelV2
@@ -226,7 +232,7 @@ disableCenteredStories(storiesOf(patterns('PanelV2'), module))
                 }}
               >
                 <PanelContent>
-                  <Fragment>
+                  <>
                     {content}
                     <p>
                       This example intentially does not include the
@@ -239,10 +245,10 @@ disableCenteredStories(storiesOf(patterns('PanelV2'), module))
                       </CodeSnippet>
                       props and therefore does not have a footer.
                     </p>
-                  </Fragment>
+                  </>
                 </PanelContent>
               </PanelV2>
-            </Fragment>
+            </>
           );
         }
       }

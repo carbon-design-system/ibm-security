@@ -97,7 +97,7 @@ export const PORTAL_EVENTS = [
 class Portal extends Component {
   componentDidMount() {
     if (isClient()) {
-      const { rootNode, hasOverlay } = this.props;
+      const { rootNode, hasOverlay, onOverlayClick } = this.props;
 
       rootNode.classList.toggle(this.containerClass);
 
@@ -110,7 +110,7 @@ class Portal extends Component {
         this.overlay.classList.add(`${namespace}__overlay`);
         rootNode.appendChild(this.overlay);
 
-        if (this.props.onOverlayClick) {
+        if (onOverlayClick) {
           this.overlay.addEventListener('mousedown', this.handleOverlayClick);
         }
       }
@@ -119,16 +119,19 @@ class Portal extends Component {
 
   componentWillUnmount() {
     if (isClient()) {
-      const { rootNode, hasOverlay } = this.props;
+      const { rootNode, hasOverlay, onOverlayClick } = this.props;
 
       rootNode.classList.toggle(this.containerClass);
 
       if (hasOverlay && this.overlay) {
         rootNode.removeChild(this.overlay);
-      }
 
-      if (this.props.onOverlayClick) {
-        this.overlay.removeEventListener('mousedown', this.handleOverlayClick);
+        if (onOverlayClick) {
+          this.overlay.removeEventListener(
+            'mousedown',
+            this.handleOverlayClick
+          );
+        }
       }
     }
   }

@@ -6861,6 +6861,7 @@ Map {
       "stopPropagationEvents": undefined,
       "subtitle": undefined,
       "title": undefined,
+      "withOverlay": true,
     },
     "propTypes": Object {
       "aria-label": [Function],
@@ -7098,6 +7099,9 @@ Map {
       },
       "title": Object {
         "type": "node",
+      },
+      "withOverlay": Object {
+        "type": "bool",
       },
     },
   },
