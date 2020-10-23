@@ -1,24 +1,27 @@
 /**
  * @file Navigation stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
-import React from 'react';
+import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
+import React from 'react';
 
 import { components } from '../../../.storybook';
 import { Nav, NavItem, NavList } from '../..';
 
-storiesOf(components('Nav'), module).add(
-  'default',
+const { name } = Nav;
+
+storiesOf(components(name), module).add(
+  'Default',
   () => (
     <div style={{ width: '300px' }}>
-      <Nav heading="Nav example" label="Nav">
+      <Nav heading="Nav example" label={Nav}>
         <NavList title="Nav list 1">
           <NavItem key="navitem_1-1" element="span" customprop="uniqueValue">
             Nav item 1-1 (with a custom element)
           </NavItem>
-          <NavItem key="navitem_1-2" href="#navitem_1-2">
+          <NavItem key="navitem_1-2" onClick={action('onClick')}>
             Nav item 1-2
           </NavItem>
         </NavList>
@@ -43,9 +46,7 @@ storiesOf(components('Nav'), module).add(
   ),
   {
     info: {
-      text: `
-          Basic implementation of a Nav component.
-        `,
+      text: `Basic implementation of the '${name}' component.`,
     },
   }
 );

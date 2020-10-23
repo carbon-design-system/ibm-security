@@ -13,12 +13,15 @@ process.env.STORYBOOK_BRANCH = BRANCH || CIRCLE_BRANCH || sync();
 
 module.exports = {
   addons: [
+    '@storybook/addon-docs',
     '@storybook/addon-google-analytics',
+    '@storybook/addon-links',
+    '@storybook/addon-viewport',
     '@storybook/addon-storysource',
     '@storybook/addon-knobs',
+    '@storybook/addon-controls',
     '@storybook/addon-actions',
     '@storybook/addon-a11y',
-    '@storybook/addon-viewport',
     './addons/addon-theme/register',
   ],
   stories: ['../src/**/*.stories.*'],

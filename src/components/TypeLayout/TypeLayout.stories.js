@@ -1,120 +1,63 @@
 /**
  * @file Type layout stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 
-import { components } from '../../../.storybook';
+import { components, getDocsParameters } from '../../../.storybook';
 
 import {
   TypeLayout,
   TypeLayoutBody,
-  TypeLayoutRow,
   TypeLayoutCell,
+  TypeLayoutRow,
 } from '../..';
 
-import rows from './_mocks_';
+export default {
+  title: components(TypeLayout.name),
+  component: TypeLayout,
+  subcomponents: { TypeLayoutBody, TypeLayoutCell, TypeLayoutRow },
+  argTypes: {
+    bordered: { table: { disable: true } },
+    children: { control: { disable: true } },
+  },
+  parameters: {
+    ...getDocsParameters(),
+  },
+};
 
-storiesOf(components('TypeLayout'), module)
-  .add(`default`, () => (
-    <TypeLayout>
-      <TypeLayoutBody>
-        {rows.map(row => {
-          const { id, title, description } = row;
+export const Default = args => (
+  <TypeLayout {...args}>
+    <TypeLayoutBody>
+      <TypeLayoutRow>
+        <TypeLayoutCell>Term 1</TypeLayoutCell>
 
-          return (
-            <TypeLayoutRow key={id}>
-              <TypeLayoutCell>{title}</TypeLayoutCell>
-              <TypeLayoutCell>
-                <ul>
-                  <li>{description}</li>
-                </ul>
-              </TypeLayoutCell>
-            </TypeLayoutRow>
-          );
-        })}
-      </TypeLayoutBody>
-    </TypeLayout>
-  ))
-  .add(`with borders`, () => (
-    <TypeLayout border>
-      <TypeLayoutBody>
-        {rows.map(row => {
-          const { id, title, description } = row;
+        <TypeLayoutCell>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </TypeLayoutCell>
+      </TypeLayoutRow>
 
-          return (
-            <TypeLayoutRow key={id}>
-              <TypeLayoutCell>{title}</TypeLayoutCell>
-              <TypeLayoutCell>
-                <ul>
-                  <li>{description}</li>
-                </ul>
-              </TypeLayoutCell>
-            </TypeLayoutRow>
-          );
-        })}
-      </TypeLayoutBody>
-    </TypeLayout>
-  ))
-  .add(`with x-small`, () => (
-    <TypeLayout size="xs">
-      <TypeLayoutBody>
-        {rows.map(row => {
-          const { id, title, description } = row;
+      <TypeLayoutRow>
+        <TypeLayoutCell>Term 2</TypeLayoutCell>
 
-          return (
-            <TypeLayoutRow key={id}>
-              <TypeLayoutCell>{title}</TypeLayoutCell>
-              <TypeLayoutCell>
-                <ul>
-                  <li>{description}</li>
-                </ul>
-              </TypeLayoutCell>
-            </TypeLayoutRow>
-          );
-        })}
-      </TypeLayoutBody>
-    </TypeLayout>
-  ))
-  .add(`with small`, () => (
-    <TypeLayout size="sm">
-      <TypeLayoutBody>
-        {rows.map(row => {
-          const { id, title, description } = row;
+        <TypeLayoutCell>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+          accumsan, dui ut pulvinar mattis, diam est imperdiet ex, a varius
+          lacus ex at libero. Aenean euismod viverra odio, id volutpat turpis
+          commodo.
+        </TypeLayoutCell>
+      </TypeLayoutRow>
 
-          return (
-            <TypeLayoutRow key={id}>
-              <TypeLayoutCell>{title}</TypeLayoutCell>
-              <TypeLayoutCell>
-                <ul>
-                  <li>{description}</li>
-                </ul>
-              </TypeLayoutCell>
-            </TypeLayoutRow>
-          );
-        })}
-      </TypeLayoutBody>
-    </TypeLayout>
-  ))
-  .add(`with large`, () => (
-    <TypeLayout size="lg">
-      <TypeLayoutBody>
-        {rows.map(row => {
-          const { id, title, description } = row;
+      <TypeLayoutRow>
+        <TypeLayoutCell>Term 3</TypeLayoutCell>
 
-          return (
-            <TypeLayoutRow key={id}>
-              <TypeLayoutCell>{title}</TypeLayoutCell>
-              <TypeLayoutCell>
-                <ul>
-                  <li>{description}</li>
-                </ul>
-              </TypeLayoutCell>
-            </TypeLayoutRow>
-          );
-        })}
-      </TypeLayoutBody>
-    </TypeLayout>
-  ));
+        <TypeLayoutCell>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+          accumsan, dui ut pulvinar mattis, diam est imperdiet ex, a varius
+          lacus ex at libero.
+        </TypeLayoutCell>
+      </TypeLayoutRow>
+    </TypeLayoutBody>
+  </TypeLayout>
+);

@@ -1,0 +1,22 @@
+////
+/// Documentation styles.
+/// @group storybook
+/// @copyright IBM Security 2020
+////
+
+@import '@carbon/themes/scss/tokens';
+
+@import '../../src/platform/body/mixins';
+
+.sbdocs {
+  & &-preview {
+    background-color: $body__color__background;
+  }
+
+  .storybook__link {
+    text-decoration: none;
+
+    // `.storybook/theme/index.js` - `colorSecondary`
+    color: $link-01;
+  }
+}

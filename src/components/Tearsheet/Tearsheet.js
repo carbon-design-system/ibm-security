@@ -126,13 +126,16 @@ class Tearsheet extends Component {
                   aria-hidden={this.state.loading}
                   className={`${namespace}__sidebar`}
                 >
-                  <h1 className={`${namespace}__sidebar__title`}>
-                    {sidebarTitle}
-                  </h1>
-                  <p className={`${namespace}__sidebar__subtitle`}>
-                    {sidebarSubtitle}
-                  </p>
-
+                  {sidebarTitle && (
+                    <h1 className={`${namespace}__sidebar__title`}>
+                      {sidebarTitle}
+                    </h1>
+                  )}
+                  {sidebarSubtitle && (
+                    <p className={`${namespace}__sidebar__subtitle`}>
+                      {sidebarSubtitle}
+                    </p>
+                  )}
                   <div className={`${namespace}__sidebar__content`}>
                     {renderSidebar()}
                   </div>
@@ -170,7 +173,9 @@ class Tearsheet extends Component {
                     disabled={this.state.loading}
                   />
                 )}
-                <h1 className={`${namespace}__main__title`}>{mainTitle}</h1>
+                {mainTitle && (
+                  <h1 className={`${namespace}__main__title`}>{mainTitle}</h1>
+                )}
                 <section className={`${namespace}__main__content`}>
                   <ScrollGradient
                     className={`${namespace}__main__scroll-gradient`}

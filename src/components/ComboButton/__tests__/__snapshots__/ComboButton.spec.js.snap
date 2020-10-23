@@ -111,8 +111,8 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
         direction="top"
         menuOffset={[Function]}
         menuOptionsClass="bx--list-box__menu"
+        onClick={[Function]}
         onClose={[Function]}
-        onOpen={[Function]}
         renderIcon={[Function]}
         selectorPrimaryFocus="[data-overflow-menu-primary-focus]"
       >
@@ -151,7 +151,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
               tabIndex={0}
               type="button"
             >
-              <renderIcon
+              <renderOverflowMenuIcon
                 aria-label="open and close list of options"
                 className="bx--overflow-menu__icon"
                 focusable="false"
@@ -187,7 +187,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
                     </svg>
                   </Icon>
                 </ForwardRef(ChevronDown16)>
-              </renderIcon>
+              </renderOverflowMenuIcon>
             </button>
           </ClickListener>
         </OverflowMenu>
