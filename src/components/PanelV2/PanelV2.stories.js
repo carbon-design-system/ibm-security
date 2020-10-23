@@ -45,9 +45,9 @@ const props = () => ({
   title: text('title', 'Example title'),
   subtitle: text('subtitle', 'Example subtitle'),
   ['aria-label']: text('aria-label', 'Example aria-label'), // eslint-disable-line no-useless-computed-key
-  labels,
   focusTrap: boolean('Focus trap (focusTrap)', focusTrap),
   withOverlay: boolean('With overlay (withOverlay)', withOverlay),
+  labels,
 });
 
 const comboButtonProps = () => ({

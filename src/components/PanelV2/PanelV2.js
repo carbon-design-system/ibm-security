@@ -1,5 +1,5 @@
 /**
- * @file Panel v2.
+ * @file Panel.
  * @copyright IBM Security 2019 - 2020
  */
 
@@ -249,6 +249,14 @@ const buttonType = PropTypes.shape({
   iconDescription: PropTypes.string,
 });
 
+const {
+  defaultProps: { focusTrapOptions, hasOverlay: withOverlay },
+  propTypes: {
+    focusTrapOptions: focusTrapOptionsPropType,
+    hasOverlay: withOverlayPropType,
+  },
+} = Portal;
+
 PanelV2.propTypes = {
   /** @type {ReactNode} The children of the panel container. */
   children: PropTypes.node,
@@ -270,7 +278,7 @@ PanelV2.propTypes = {
   focusTrap: PropTypes.bool,
 
   /** Pass any of the options available in https://github.com/focus-trap/focus-trap#createfocustrapelement-createoptions */
-  focusTrapOptions: Portal.propTypes.focusTrapOptions,
+  focusTrapOptions: focusTrapOptionsPropType,
 
   /** @type {boolean} The open state. */
   isOpen: PropTypes.bool,
@@ -330,7 +338,7 @@ PanelV2.propTypes = {
   /**
    * Specify whether the panel should apply an overlay
    */
-  withOverlay: PropTypes.bool,
+  withOverlay: withOverlayPropType,
 };
 
 PanelV2.defaultProps = {
@@ -338,9 +346,11 @@ PanelV2.defaultProps = {
   className: null,
   closeButton: undefined,
   focusTrap: true,
-  focusTrapOptions: Portal.defaultProps.focusTrapOptions,
+  focusTrapOptions,
+  hasScrollingContent: false,
   isOpen: true,
   labels: {},
+  onClose: () => {},
   primaryButton: undefined,
   renderFooter: null,
   rootNode: undefined,
@@ -349,9 +359,7 @@ PanelV2.defaultProps = {
   stopPropagationEvents: undefined,
   subtitle: undefined,
   title: undefined,
-  hasScrollingContent: false,
-  onClose: () => {},
-  withOverlay: true,
+  withOverlay,
 };
 /* eslint-enable */
 

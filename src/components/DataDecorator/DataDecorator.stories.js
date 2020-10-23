@@ -1,6 +1,6 @@
 /**
  * @file Data decorator stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import { action } from '@storybook/addon-actions';
@@ -19,6 +19,10 @@ import { props, midLine } from './_mocks_';
 const { type, value, score, href } = props;
 const { scoreThresholds } = Decorator.defaultProps;
 
+const {
+  defaultProps: { focusTrap, withOverlay },
+} = DataDecorator;
+
 const storyProps = () => ({
   type: text('Type (`type`)', type),
   value: text('Value (`value`)', value),
@@ -32,6 +36,8 @@ const storyProps = () => ({
   inert: boolean('Non-interactive (`inert`)', false),
   active: boolean('Active (`active`)', false),
   noIcon: boolean('No icon (`noIcon`)', false),
+  focusTrap: boolean('Focus trap (focusTrap)', focusTrap),
+  withOverlay: boolean('With overlay (withOverlay)', withOverlay),
   renderFooter: () => <Button size="large">Custom footer</Button>,
 });
 

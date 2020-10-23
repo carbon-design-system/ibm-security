@@ -1348,6 +1348,7 @@ Map {
       "stopPropagationEvents": undefined,
       "subtitle": undefined,
       "title": undefined,
+      "withOverlay": true,
     },
     "propTypes": Object {
       "children": Object {
@@ -1624,6 +1625,9 @@ Map {
       "value": Object {
         "isRequired": true,
         "type": "string",
+      },
+      "withOverlay": Object {
+        "type": "bool",
       },
     },
   },

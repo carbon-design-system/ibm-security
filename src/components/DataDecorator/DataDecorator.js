@@ -1,5 +1,5 @@
 /**
- * @file Data decorator
+ * @file Data decorator.
  * @copyright IBM Security 2019 - 2020
  */
 
@@ -45,22 +45,23 @@ class DataDecorator extends Component {
       focusTrapOptions,
       inline,
       labels,
+      midLineTruncation,
       noIcon,
+      onContextMenu: propOnContextMenu,
       primaryButton,
       renderFooter,
       rootNode,
       score,
+      scoreDescription,
+      scoreThresholds,
       secondaryButton,
       stopPropagation,
       stopPropagationEvents,
       subtitle,
+      title,
       type,
       value,
-      title,
-      scoreThresholds,
-      scoreDescription,
-      onContextMenu: propOnContextMenu,
-      midLineTruncation,
+      withOverlay,
     } = this.props;
 
     const onContextMenu = propOnContextMenu
@@ -73,15 +74,27 @@ class DataDecorator extends Component {
     const decoratorProps = {
       className,
       inline,
+      midLineTruncation,
       noIcon,
+      onContextMenu,
       score,
+      scoreDescription,
+      scoreThresholds,
+      title,
       type,
       value,
+    };
+
+    const panelProps = {
+      focusTrap,
+      focusTrapOptions,
+      renderFooter,
+      rootNode,
+      stopPropagation,
+      stopPropagationEvents,
+      subtitle,
       title,
-      scoreThresholds,
-      scoreDescription,
-      onContextMenu,
-      midLineTruncation,
+      withOverlay,
     };
 
     const componentLabels = {
@@ -108,6 +121,7 @@ class DataDecorator extends Component {
         />
 
         <PanelV2
+          {...panelProps}
           closeButton={{
             onClick: event => {
               this.close(event, type, value);
@@ -116,8 +130,6 @@ class DataDecorator extends Component {
               }
             },
           }}
-          focusTrap={focusTrap}
-          focusTrapOptions={focusTrapOptions}
           isOpen={this.state.isOpen}
           labels={{
             ...componentLabels,
@@ -147,8 +159,6 @@ class DataDecorator extends Component {
               },
             }
           }
-          renderFooter={renderFooter}
-          rootNode={rootNode}
           secondaryButton={
             secondaryButton && {
               ...secondaryButton,
@@ -165,10 +175,6 @@ class DataDecorator extends Component {
               },
             }
           }
-          stopPropagation={stopPropagation}
-          stopPropagationEvents={stopPropagationEvents}
-          subtitle={subtitle}
-          title={value}
         >
           {children}
         </PanelV2>
@@ -185,6 +191,11 @@ const buttonType = PropTypes.shape({
   icon: PropTypes.object,
   iconDescription: PropTypes.string,
 });
+
+const {
+  defaultProps: { withOverlay },
+  propTypes: { withOverlay: withOverlayPropType },
+} = PanelV2;
 
 DataDecorator.propTypes = {
   /** @type {ReactNode} The children of the DataDecorator. */
@@ -282,6 +293,11 @@ DataDecorator.propTypes = {
     front: PropTypes.number,
     back: PropTypes.number,
   }),
+
+  /**
+   * Specify whether the panel should apply an overlay
+   */
+  withOverlay: withOverlayPropType,
 };
 
 DataDecorator.defaultProps = {
@@ -292,6 +308,12 @@ DataDecorator.defaultProps = {
   focusTrapOptions: Portal.defaultProps.focusTrapOptions,
   inline: defaultProps.inline,
   labels: {},
+  midLineTruncation: {
+    enabled: false,
+    maxLength: 20,
+    front: 12,
+    back: 4,
+  },
   noIcon: false,
   onContextMenu: undefined,
   onClose: () => {},
@@ -300,20 +322,15 @@ DataDecorator.defaultProps = {
   renderFooter: null,
   rootNode: undefined,
   score: undefined,
-  scoreThresholds: [0, 4, 7, 10],
-  secondaryButton: undefined,
-  subtitle: undefined,
-  title: undefined,
-  stopPropagation: false,
-  stopPropagationEvents: undefined,
   scoreDescription: (score, scoreThresholds) =>
     `Score ${score} out of ${scoreThresholds.slice(-1)[0]}`,
-  midLineTruncation: {
-    enabled: false,
-    maxLength: 20,
-    front: 12,
-    back: 4,
-  },
+  scoreThresholds: [0, 4, 7, 10],
+  secondaryButton: undefined,
+  stopPropagation: false,
+  stopPropagationEvents: undefined,
+  subtitle: undefined,
+  title: undefined,
+  withOverlay,
 };
 
 export default DataDecorator;
