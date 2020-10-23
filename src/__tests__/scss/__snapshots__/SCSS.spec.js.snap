@@ -5493,9 +5493,12 @@ a.bx--overflow-menu-options__btn::before {
   width: 20rem;
 }
 
-.security--panel--v2__footer .security--button:not(.security--combo-button__overflow-menu) {
-  max-width: 20rem;
+.security--panel--v2__footer__button {
   flex-grow: 1;
+}
+
+.security--panel--v2__footer .security--combo-button {
+  width: 100%;
 }
 
 .security--panel--v2__transition--appear, .security--panel--v2__transition--enter {
@@ -16796,7 +16799,6 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   letter-spacing: 0;
   padding-right: 1.5rem;
   margin-top: 0;
-  margin-bottom: 1.5rem;
 }
 
 .security--tearsheet__main__content {
@@ -16806,6 +16808,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   min-height: 0;
   box-sizing: border-box;
   flex: 1;
+  margin-top: 1.5rem;
 }
 
 .security--tearsheet__container {
