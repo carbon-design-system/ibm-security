@@ -3,13 +3,14 @@
  * @copyright IBM Security 2020
  */
 
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
 
 import React from 'react';
 
 import { patterns, info } from '../../../../.storybook';
+
 import {
   FilterPanelCheckboxWithOverflowMenu,
   OverflowMenuItem,
@@ -19,7 +20,7 @@ storiesOf(
   patterns(`FilterPanel/${FilterPanelCheckboxWithOverflowMenu.name}`),
   module
 ).add(
-  'default',
+  'Default',
   () => (
     <FilterPanelCheckboxWithOverflowMenu
       labelText={text('Checkbox label (labelText)', 'Checkbox label')}

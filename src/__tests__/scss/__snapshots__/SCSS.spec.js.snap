@@ -8938,7 +8938,6 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .security--filter-panel-checkbox-with-overflow-menu--open > .security--filter-panel-checkbox-with-overflow-menu__overflow-button, .security--filter-panel-checkbox-with-overflow-menu:hover > .security--filter-panel-checkbox-with-overflow-menu__overflow-button, .security--filter-panel-checkbox-with-overflow-menu:focus-within > .security--filter-panel-checkbox-with-overflow-menu__overflow-button {
-  top: 0;
   right: 0;
   height: 1.5rem;
   width: 1.5rem;
