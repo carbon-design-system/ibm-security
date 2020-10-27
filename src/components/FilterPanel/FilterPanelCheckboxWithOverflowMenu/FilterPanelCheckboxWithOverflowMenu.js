@@ -5,7 +5,7 @@
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useState, useRef } from 'react';
 
 import { getComponentNamespace } from '../../../globals/namespace';
 
@@ -24,8 +24,8 @@ const FilterPanelCheckboxWithOverflowMenu = ({
   selectorPrimaryFocus,
   ...other
 }) => {
-  const containerRef = React.useRef(null);
-  const [overflowIsOpen, setOverflowIsOpen] = React.useState(false);
+  const containerRef = useRef(null);
+  const [isOverflowOpen, setIsOverflowOpen] = useState(false);
 
   /**
    * Sets the width of the overflow menu to match the width of this component's width and adjusts
@@ -52,7 +52,7 @@ const FilterPanelCheckboxWithOverflowMenu = ({
   return (
     <div
       className={classnames(className, namespace, {
-        [`${namespace}--open`]: overflowIsOpen,
+        [`${namespace}--open`]: isOverflowOpen,
       })}
       ref={containerRef}
     >
@@ -66,8 +66,8 @@ const FilterPanelCheckboxWithOverflowMenu = ({
         iconDescription={overflowMenuAriaLabel}
         menuOffsetFlip={updateMenuWidthAndSetOffset}
         menuOptionsClass={`${namespace}__overflow-options`}
-        onClose={() => setOverflowIsOpen(false)}
-        onOpen={() => setOverflowIsOpen(true)}
+        onClose={() => setIsOverflowOpen(false)}
+        onOpen={() => setIsOverflowOpen(true)}
         open={open}
         selectorPrimaryFocus={selectorPrimaryFocus}
         flipped
