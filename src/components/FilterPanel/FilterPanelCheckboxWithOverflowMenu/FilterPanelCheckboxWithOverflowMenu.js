@@ -3,40 +3,29 @@
  * @copyright IBM Security 2020
  */
 
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import classnames from 'classnames';
 
 import { getComponentNamespace } from '../../../globals/namespace';
 
 import FilterPanelCheckbox from '../FilterPanelCheckbox';
 import OverflowMenu from '../../OverflowMenu';
-import { useComponentFocus } from '../../../globals/utils/focus';
 
 export const namespace = getComponentNamespace(
   'filter-panel-checkbox-with-overflow-menu'
 );
 
 const FilterPanelCheckboxWithOverflowMenu = ({
-  className,
-  overflowMenuAriaLabel,
   children,
+  className,
   open,
+  overflowMenuAriaLabel,
   selectorPrimaryFocus,
   ...other
 }) => {
   const containerRef = React.useRef(null);
-  const [showOverflowButton, setShowOverflowButton] = React.useState(false);
   const [overflowIsOpen, setOverflowIsOpen] = React.useState(false);
-  const { createFocusHandler, createBlurHandler } = useComponentFocus(10);
-
-  const handleFocus = createFocusHandler(() => {
-    setShowOverflowButton(true);
-  });
-
-  const handleBlur = createBlurHandler(() => {
-    setShowOverflowButton(false);
-  });
 
   /**
    * Sets the width of the overflow menu to match the width of this component's width and adjusts
@@ -78,32 +67,26 @@ const FilterPanelCheckboxWithOverflowMenu = ({
       className={classnames(className, namespace, {
         [`${namespace}--open`]: overflowIsOpen,
       })}
-      onMouseOver={() => setShowOverflowButton(true)}
-      onMouseLeave={() => !overflowIsOpen && setShowOverflowButton(false)}
-      onFocus={handleFocus}
-      onBlur={handleBlur}
       ref={containerRef}
     >
       <FilterPanelCheckbox
         wrapperClassName={`${namespace}__wrapper`}
         {...other}
       />
-      {showOverflowButton && (
-        <OverflowMenu
-          open={open}
-          className={`${namespace}__overflow-button`}
-          menuOptionsClass={`${namespace}__overflow-options`}
-          menuOffsetFlip={updateMenuWidthAndSetOffset}
-          ariaLabel={overflowMenuAriaLabel}
-          iconDescription={overflowMenuAriaLabel}
-          onOpen={() => setOverflowIsOpen(true)}
-          onClose={() => setOverflowIsOpen(false)}
-          flipped
-          selectorPrimaryFocus={selectorPrimaryFocus}
-        >
-          {children}
-        </OverflowMenu>
-      )}
+      <OverflowMenu
+        className={`${namespace}__overflow-button`}
+        ariaLabel={overflowMenuAriaLabel}
+        iconDescription={overflowMenuAriaLabel}
+        menuOptionsClass={`${namespace}__overflow-options`}
+        menuOffsetFlip={updateMenuWidthAndSetOffset}
+        onClose={() => setOverflowIsOpen(false)}
+        onOpen={() => setOverflowIsOpen(true)}
+        open={open}
+        selectorPrimaryFocus={selectorPrimaryFocus}
+        flipped
+      >
+        {children}
+      </OverflowMenu>
     </div>
   );
 };

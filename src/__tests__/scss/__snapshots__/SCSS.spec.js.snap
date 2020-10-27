@@ -8937,13 +8937,27 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   background-color: var(--field-01, #262626);
 }
 
-.security--filter-panel-checkbox-with-overflow-menu__overflow-button {
-  position: absolute;
+.security--filter-panel-checkbox-with-overflow-menu--open > .security--filter-panel-checkbox-with-overflow-menu__overflow-button, .security--filter-panel-checkbox-with-overflow-menu:hover > .security--filter-panel-checkbox-with-overflow-menu__overflow-button, .security--filter-panel-checkbox-with-overflow-menu:focus-within > .security--filter-panel-checkbox-with-overflow-menu__overflow-button {
   top: 0;
   right: 0;
-  background-color: var(--field-01, #262626);
   height: 1.5rem;
   width: 1.5rem;
+  margin: unset;
+  background-color: var(--field-01, #262626);
+  clip: unset;
+}
+
+.security--filter-panel-checkbox-with-overflow-menu__overflow-button {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  visibility: inherit;
+  clip: rect(0, 0, 0, 0);
 }
 
 .security--filter-panel-checkbox-with-overflow-menu__overflow-options {

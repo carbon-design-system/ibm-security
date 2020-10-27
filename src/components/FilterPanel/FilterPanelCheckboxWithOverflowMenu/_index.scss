@@ -4,9 +4,11 @@
 /// @copyright IBM Security 2020
 ////
 
-@import 'carbon-components/scss/globals/scss/vars';
 @import '@carbon/layout/scss/spacing';
 @import '@carbon/themes/scss/tokens';
+
+@import 'carbon-components/scss/globals/scss/helper-mixins';
+@import 'carbon-components/scss/globals/scss/vars';
 
 @import '../../OverflowMenu/index';
 
@@ -23,15 +25,20 @@
   &:hover,
   &:focus-within {
     background-color: $field-01;
+
+    > #{$block}__overflow-button {
+      top: 0;
+      right: 0;
+      height: $carbon--layout-02;
+      width: $carbon--layout-02;
+      margin: unset;
+      background-color: $field-01;
+      clip: unset;
+    }
   }
 
   &__overflow-button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: $field-01;
-    height: $carbon--layout-02;
-    width: $carbon--layout-02;
+    @include hidden;
   }
 
   &__overflow-options {
