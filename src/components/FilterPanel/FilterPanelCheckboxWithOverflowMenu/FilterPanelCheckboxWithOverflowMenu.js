@@ -32,7 +32,7 @@ const FilterPanelCheckboxWithOverflowMenu = ({
    * its position so it is right alingned with the overflow menu button.
    *
    * @param {HTMLElement} menuBody Element containing the overflow menu options.
-   *  @param {string} direction The menu position relative to the menu button. Not used.
+   * @param {string} direction The menu position relative to the menu button. Not used.
    * @param {HTMLElement} menuButton Overflow menu button element.
    * @returns {{top: number, left: number}} The menu offset measurements.
    */
