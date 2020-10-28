@@ -3,14 +3,14 @@
  * @copyright IBM Security 2020
  */
 
-import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import classnames from 'classnames';
 
 import { getComponentNamespace } from '../../../globals/namespace';
 
-import OverflowMenu, { getMenuOffset } from '../../OverflowMenu';
 import FilterPanelCheckbox from '../FilterPanelCheckbox';
+import OverflowMenu, { getMenuOffset } from '../../OverflowMenu';
 
 export const namespace = getComponentNamespace(
   'filter-panel-checkbox-with-overflow-menu'
