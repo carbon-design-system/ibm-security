@@ -3,22 +3,21 @@
  * @copyright IBM Security 2020
  */
 
-import userEvent from '@testing-library/user-event';
-import { render, fireEvent, screen } from '@testing-library/react';
-
 import React from 'react';
+import { render, fireEvent, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
-import OverflowMenuItem from '../../../OverflowMenuItem';
 import FilterPanelCheckboxWithOverflowMenu from '../FilterPanelCheckboxWithOverflowMenu';
+import OverflowMenuItem from '../../../OverflowMenuItem';
 
 describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
   test('should have no Axe or DAP violations', async () => {
     const { container } = renderWithinLandmark(
       <FilterPanelCheckboxWithOverflowMenu
-        id="test-checkbox-id"
         labelText="test checkbox"
+        id="test-checkbox-id"
         overflowMenuAriaLabel="overflowMenuAriaLabel"
       />
     );

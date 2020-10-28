@@ -10,7 +10,6 @@ import { text } from '@storybook/addon-knobs';
 import React from 'react';
 
 import { patterns, info } from '../../../../.storybook';
-
 import {
   FilterPanelCheckboxWithOverflowMenu,
   OverflowMenuItem,
