@@ -5,7 +5,7 @@
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { useState, useRef } from 'react';
+import React from 'react';
 
 import { getComponentNamespace } from '../../../globals/namespace';
 
@@ -17,15 +17,15 @@ export const namespace = getComponentNamespace(
 );
 
 const FilterPanelCheckboxWithOverflowMenu = ({
-  children,
   className,
-  open,
   overflowMenuAriaLabel,
+  children,
+  open,
   selectorPrimaryFocus,
   ...other
 }) => {
-  const containerRef = useRef(null);
-  const [isOverflowOpen, setIsOverflowOpen] = useState(false);
+  const containerRef = React.useRef(null);
+  const [overflowIsOpen, setOverflowIsOpen] = React.useState(false);
 
   /**
    * Sets the width of the overflow menu to match the width of this component's width and adjusts
@@ -52,7 +52,7 @@ const FilterPanelCheckboxWithOverflowMenu = ({
   return (
     <div
       className={classnames(className, namespace, {
-        [`${namespace}--open`]: isOverflowOpen,
+        [`${namespace}--open`]: overflowIsOpen,
       })}
       ref={containerRef}
     >
@@ -61,16 +61,16 @@ const FilterPanelCheckboxWithOverflowMenu = ({
         {...other}
       />
       <OverflowMenu
+        open={open}
         className={`${namespace}__overflow-button`}
+        menuOptionsClass={`${namespace}__overflow-options`}
+        menuOffsetFlip={updateMenuWidthAndSetOffset}
         ariaLabel={overflowMenuAriaLabel}
         iconDescription={overflowMenuAriaLabel}
-        menuOffsetFlip={updateMenuWidthAndSetOffset}
-        menuOptionsClass={`${namespace}__overflow-options`}
-        onClose={() => setIsOverflowOpen(false)}
-        onOpen={() => setIsOverflowOpen(true)}
-        open={open}
-        selectorPrimaryFocus={selectorPrimaryFocus}
+        onOpen={() => setOverflowIsOpen(true)}
+        onClose={() => setOverflowIsOpen(false)}
         flipped
+        selectorPrimaryFocus={selectorPrimaryFocus}
       >
         {children}
       </OverflowMenu>
