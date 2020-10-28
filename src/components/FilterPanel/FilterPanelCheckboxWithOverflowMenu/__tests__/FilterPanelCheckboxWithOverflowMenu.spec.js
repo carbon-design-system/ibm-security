@@ -6,7 +6,6 @@
 import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-
 import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
 import FilterPanelCheckboxWithOverflowMenu from '../FilterPanelCheckboxWithOverflowMenu';
@@ -21,7 +20,6 @@ describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
         overflowMenuAriaLabel="overflowMenuAriaLabel"
       />
     );
-
     await expect(container).toHaveNoAxeViolations();
     await expect(container).toHaveNoDAPViolations(
       `${FilterPanelCheckboxWithOverflowMenu.name}-default`
