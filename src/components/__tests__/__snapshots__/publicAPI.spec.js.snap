@@ -1007,7 +1007,7 @@ Map {
       "className": "",
       "direction": "top",
       "menuOffset": [Function],
-      "menuOffsetFlip": undefined,
+      "menuOffsetFlip": [Function],
       "selectorPrimaryFocus": "[data-overflow-menu-primary-focus]",
     },
     "propTypes": Object {

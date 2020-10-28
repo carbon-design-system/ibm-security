@@ -7,12 +7,12 @@ import { ChevronDown16, ChevronUp16 } from '@carbon/icons-react';
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { createElement, useState } from 'react';
+import React, { createElement, useRef, useState } from 'react';
 
 import { carbonPrefix, getComponentNamespace } from '../../globals/namespace';
 
 import Button from '../Button';
-import OverflowMenu from '../OverflowMenu';
+import OverflowMenu, { getMenuOffset } from '../OverflowMenu';
 import OverflowMenuItem from '../OverflowMenuItem';
 import { TooltipDirection } from '../IconButton/IconButton';
 
@@ -28,6 +28,7 @@ const ComboButton = ({
   menuOffsetFlip,
   selectorPrimaryFocus,
 }) => {
+  const ref = useRef();
   const [isOpen, setIsOpen] = useState(false);
 
   const childrenArray = React.Children.toArray(children).filter(Boolean);
@@ -123,10 +124,7 @@ const ComboButton = ({
     });
 
   return (
-    <div
-      className={classnames(namespace, className)}
-      data-floating-menu-container
-    >
+    <div className={classnames(namespace, className)} ref={ref}>
       <div className={`${namespace}__group`}>
         {primaryActionWithProps}
 
@@ -146,12 +144,32 @@ const ComboButton = ({
             )}
             direction={direction}
             menuOffset={menuOffset}
-            menuOffsetFlip={menuOffsetFlip}
-            menuOptionsClass={`${carbonPrefix}list-box__menu`}
+            menuOffsetFlip={(menuBody, direction, trigger, ...args) => {
+              const width = ref.current.clientWidth;
+              const { left } = ref.current.getBoundingClientRect();
+
+              if (trigger) {
+                menuBody.style.width = `${width}px`;
+              }
+
+              const { left: offsetLeft, ...rest } = menuOffsetFlip(
+                menuBody,
+                direction,
+                trigger,
+                ...args
+              );
+
+              return {
+                left: left - width / 2,
+                ...rest,
+              };
+            }}
+            menuOptionsClass={`${namespace}__overflow-menu__options`}
             onClick={() => setIsOpen(!isOpen)}
             onClose={() => setIsOpen(false)}
             renderIcon={renderOverflowMenuIcon}
             selectorPrimaryFocus={selectorPrimaryFocus}
+            flipped
           >
             {overflowMenuItemWithProps}
           </OverflowMenu>
@@ -206,7 +224,7 @@ ComboButton.defaultProps = {
   menuOffset: () => ({
     left: 'auto',
   }),
-  menuOffsetFlip: undefined,
+  menuOffsetFlip: getMenuOffset,
   selectorPrimaryFocus: '[data-overflow-menu-primary-focus]',
 };
 

@@ -5,11 +5,11 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
   className=""
   direction="top"
   menuOffset={[Function]}
+  menuOffsetFlip={[Function]}
   selectorPrimaryFocus="[data-overflow-menu-primary-focus]"
 >
   <div
     className="security--combo-button"
-    data-floating-menu-container={true}
   >
     <div
       className="security--combo-button__group"
@@ -109,8 +109,10 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
       <ForwardRef(OverflowMenu)
         className="security--button bx--btn bx--btn--primary security--combo-button__button security--combo-button__overflow-menu"
         direction="top"
+        flipped={true}
         menuOffset={[Function]}
-        menuOptionsClass="bx--list-box__menu"
+        menuOffsetFlip={[Function]}
+        menuOptionsClass="security--combo-button__overflow-menu__options"
         onClick={[Function]}
         onClose={[Function]}
         renderIcon={[Function]}
@@ -120,13 +122,13 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
           ariaLabel="Menu"
           className="security--button bx--btn bx--btn--primary security--combo-button__button security--combo-button__overflow-menu"
           direction="top"
-          flipped={false}
+          flipped={true}
           iconDescription="open and close list of options"
           innerRef={null}
           light={false}
           menuOffset={[Function]}
           menuOffsetFlip={[Function]}
-          menuOptionsClass="bx--list-box__menu"
+          menuOptionsClass="security--combo-button__overflow-menu__options"
           onClick={[Function]}
           onClose={[Function]}
           onKeyDown={[Function]}
@@ -202,11 +204,11 @@ exports[`ComboButton renders a combo button without an overflow menu 1`] = `
   className=""
   direction="top"
   menuOffset={[Function]}
+  menuOffsetFlip={[Function]}
   selectorPrimaryFocus="[data-overflow-menu-primary-focus]"
 >
   <div
     className="security--combo-button"
-    data-floating-menu-container={true}
   >
     <div
       className="security--combo-button__group"

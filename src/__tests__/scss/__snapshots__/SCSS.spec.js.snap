@@ -5045,26 +5045,26 @@ a.bx--overflow-menu-options__btn::before {
   background-color: var(--active-primary, #002d9c);
 }
 
-.security--combo-button .bx--overflow-menu-options {
+.security--combo-button__overflow-menu__options {
   display: grid;
   width: 100%;
   background-color: var(--ui-02, #393939);
   outline: unset;
 }
 
-.security--combo-button .bx--overflow-menu-options__option {
+.security--combo-button__overflow-menu__options > .bx--overflow-menu-options__option {
   display: inherit;
 }
 
-.security--combo-button .bx--overflow-menu-options__option:hover {
+.security--combo-button__overflow-menu__options > .bx--overflow-menu-options__option:hover {
   background-color: var(--hover-selected-ui, #4c4c4c);
 }
 
-.security--combo-button .bx--overflow-menu-options__option:first-child .security--combo-button-item__wrapper {
+.security--combo-button__overflow-menu__options > .bx--overflow-menu-options__option:first-child .security--combo-button-item__wrapper {
   border-top-color: transparent;
 }
 
-.security--combo-button .bx--overflow-menu-options::after {
+.security--combo-button__overflow-menu__options::after {
   display: none;
 }
 
@@ -5074,7 +5074,7 @@ a.bx--overflow-menu-options__btn::before {
   justify-content: space-between;
 }
 
-.security--combo-button .security--combo-button-item__wrapper {
+.security--combo-button-item__wrapper {
   display: block;
   overflow-x: hidden;
   white-space: nowrap;
@@ -5090,7 +5090,7 @@ a.bx--overflow-menu-options__btn::before {
   justify-content: space-between;
 }
 
-.security--combo-button .security--combo-button-item__wrapper:focus {
+.security--combo-button-item__wrapper:focus {
   outline: 2px solid var(--focus, #ffffff);
   outline-offset: -2px;
   margin: 0;
@@ -5098,21 +5098,21 @@ a.bx--overflow-menu-options__btn::before {
   border-color: transparent;
 }
 
-.security--combo-button .security--combo-button-item__wrapper:hover {
+.security--combo-button-item__wrapper:hover {
   color: var(--text-01, #f4f4f4);
   background-color: unset;
 }
 
-.security--combo-button .security--combo-button-item__wrapper > span + svg {
+.security--combo-button-item__wrapper > span + svg {
   margin-left: 0.5rem;
   flex-shrink: 0;
 }
 
-.security--combo-button .security--combo-button-item__wrapper:disabled, .security--combo-button .security--combo-button-item__wrapper:disabled:hover {
+.security--combo-button-item__wrapper:disabled, .security--combo-button-item__wrapper:disabled:hover {
   color: var(--text-03, #6f6f6f);
 }
 
-.security--combo-button .security--combo-button-item__wrapper:disabled svg, .security--combo-button .security--combo-button-item__wrapper:disabled:hover svg {
+.security--combo-button-item__wrapper:disabled svg, .security--combo-button-item__wrapper:disabled:hover svg {
   fill: var(--text-03, #6f6f6f);
 }
 
