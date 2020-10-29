@@ -25,7 +25,14 @@ const FilterPanelCheckboxWithOverflowMenu = ({
   ...other
 }) => {
   const containerRef = React.useRef(null);
+  const [isOverflowMenuVisible, setIsOverflowMenuVisible] = React.useState(
+    false
+  );
   const [overflowIsOpen, setOverflowIsOpen] = React.useState(false);
+
+  const onEnter = isOverflowMenuVisible
+    ? null
+    : () => setIsOverflowMenuVisible(true);
 
   /**
    * Sets the width of the overflow menu to match the width of this component's width and adjusts
@@ -54,26 +61,31 @@ const FilterPanelCheckboxWithOverflowMenu = ({
       className={classnames(className, namespace, {
         [`${namespace}--open`]: overflowIsOpen,
       })}
+      onFocus={onEnter}
+      onMouseEnter={onEnter}
       ref={containerRef}
     >
       <FilterPanelCheckbox
         wrapperClassName={`${namespace}__wrapper`}
         {...other}
       />
-      <OverflowMenu
-        open={open}
-        className={`${namespace}__overflow-button`}
-        menuOptionsClass={`${namespace}__overflow-options`}
-        menuOffsetFlip={updateMenuWidthAndSetOffset}
-        ariaLabel={overflowMenuAriaLabel}
-        iconDescription={overflowMenuAriaLabel}
-        onOpen={() => setOverflowIsOpen(true)}
-        onClose={() => setOverflowIsOpen(false)}
-        flipped
-        selectorPrimaryFocus={selectorPrimaryFocus}
-      >
-        {children}
-      </OverflowMenu>
+
+      {isOverflowMenuVisible && (
+        <OverflowMenu
+          open={open}
+          className={`${namespace}__overflow-button`}
+          menuOptionsClass={`${namespace}__overflow-options`}
+          menuOffsetFlip={updateMenuWidthAndSetOffset}
+          ariaLabel={overflowMenuAriaLabel}
+          iconDescription={overflowMenuAriaLabel}
+          onOpen={() => setOverflowIsOpen(true)}
+          onClose={() => setOverflowIsOpen(false)}
+          flipped
+          selectorPrimaryFocus={selectorPrimaryFocus}
+        >
+          {children}
+        </OverflowMenu>
+      )}
     </div>
   );
 };
