@@ -126,11 +126,10 @@ function PanelV2({
             {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
             <section
               className={classnames(namespace, className)}
-              role="dialog"
               aria-label={ariaLabel}
               aria-modal="true"
               onKeyDown={handleKeyDown}
-              tabIndex={-1}
+              role="dialog"
             >
               <header ref={headerRef} className={`${namespace}__header`}>
                 <IconButton
