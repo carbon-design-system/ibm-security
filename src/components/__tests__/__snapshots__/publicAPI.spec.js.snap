@@ -1021,8 +1021,8 @@ Map {
       "direction": Object {
         "args": Array [
           Array [
-            "top",
             "bottom",
+            "top",
           ],
         ],
         "type": "oneOf",

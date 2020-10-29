@@ -20,6 +20,8 @@ import { namespace as buttonNamespace } from '../Button/Button';
 
 export const namespace = getComponentNamespace('combo-button');
 
+const { BOTTOM, TOP } = TooltipDirection;
+
 const ComboButton = ({
   children,
   className,
@@ -153,7 +155,7 @@ const ComboButton = ({
                 const top = offsetTop + window.pageYOffset;
 
                 return {
-                  top: direction === TooltipDirection.TOP ? top : top * -1,
+                  top: direction === TOP ? top : top * -1,
                   ...offset,
                 };
               })
@@ -181,7 +183,7 @@ ComboButton.propTypes = {
   className: PropTypes.string,
 
   /** @type {string} Overflow menu direction. */
-  direction: PropTypes.oneOf([TooltipDirection.TOP, TooltipDirection.BOTTOM]),
+  direction: PropTypes.oneOf([BOTTOM, TOP]),
 
   /**
    * The adjustment in position applied to the floating menu.
@@ -214,7 +216,7 @@ ComboButton.propTypes = {
 
 ComboButton.defaultProps = {
   className: '',
-  direction: TooltipDirection.TOP,
+  direction: TOP,
   menuOffset: () => ({
     left: 'auto',
   }),
