@@ -1,5 +1,5 @@
 /**
- * @file Panel v2.
+ * @file Panel.
  * @copyright IBM Security 2019 - 2020
  */
 
@@ -28,7 +28,7 @@ export const namespace = getComponentNamespace('panel--v2');
 const getInstanceId = setupGetInstanceId();
 
 /**
- * Panel v2 container component.
+ * Panel container component.
  * @param {Object.<string, *>} props Panel v2 container props.
  * @returns {PanelV2} Panel v2 container instance.
  */
