@@ -7,7 +7,7 @@ import { ChevronDown16, ChevronUp16 } from '@carbon/icons-react';
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { createElement, useRef, useState } from 'react';
+import React, { createElement, useState } from 'react';
 
 import { carbonPrefix, getComponentNamespace } from '../../globals/namespace';
 
@@ -28,9 +28,7 @@ const ComboButton = ({
   menuOffsetFlip,
   selectorPrimaryFocus,
 }) => {
-  const ref = useRef();
   const [isOpen, setIsOpen] = useState(false);
-  const [position, setPosition] = useState();
 
   const childrenArray = React.Children.toArray(children).filter(Boolean);
 
@@ -127,7 +125,6 @@ const ComboButton = ({
   return (
     <div
       className={classnames(namespace, className)}
-      ref={ref}
       data-floating-menu-container
     >
       <div className={`${namespace}__group`}>
@@ -151,15 +148,9 @@ const ComboButton = ({
             menuOffset={menuOffset}
             menuOffsetFlip={
               menuOffsetFlip ||
-              ((menuBody, direction, trigger, ...args) => {
-                const { top: offsetTop, ...offset } = getMenuOffset(
-                  menuBody,
-                  direction,
-                  trigger,
-                  ...args
-                );
-
-                const top = offsetTop + position;
+              ((...args) => {
+                const { top: offsetTop, ...offset } = getMenuOffset(...args);
+                const top = offsetTop + window.pageYOffset;
 
                 return {
                   top: direction === TooltipDirection.TOP ? top : top * -1,
@@ -170,7 +161,6 @@ const ComboButton = ({
             menuOptionsClass={`${carbonPrefix}list-box__menu`}
             onClick={() => setIsOpen(!isOpen)}
             onClose={() => setIsOpen(false)}
-            onOpen={() => setPosition(window.scrollY)}
             renderIcon={renderOverflowMenuIcon}
             selectorPrimaryFocus={selectorPrimaryFocus}
             flipped
