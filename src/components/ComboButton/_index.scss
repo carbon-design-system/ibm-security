@@ -56,13 +56,13 @@
     }
   }
 
-  &__overflow-menu__options {
+  .#{$prefix}--overflow-menu-options {
     display: grid;
     width: 100%;
     background-color: $ui-02;
     outline: unset;
 
-    > .#{$prefix}--overflow-menu-options__option {
+    &__option {
       display: inherit;
 
       &:hover {
@@ -85,8 +85,8 @@
     justify-content: space-between;
   }
 
-  &-item__wrapper {
-    @include text-overflow;
+  & &-item__wrapper {
+    @include text-overflow();
     outline: unset;
     padding: 0;
     margin: 0 1rem;
