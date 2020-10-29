@@ -29,8 +29,8 @@ const getInstanceId = setupGetInstanceId();
 
 /**
  * Panel container component.
- * @param {Object.<string, *>} props Panel v2 container props.
- * @returns {PanelV2} Panel v2 container instance.
+ * @param {Object.<string, *>} props Panel container props.
+ * @returns {PanelV2} Panel container instance.
  */
 function PanelV2({
   children,
