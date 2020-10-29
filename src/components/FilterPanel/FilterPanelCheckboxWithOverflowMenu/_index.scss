@@ -7,7 +7,6 @@
 @import '@carbon/layout/scss/spacing';
 @import '@carbon/themes/scss/tokens';
 
-@import 'carbon-components/scss/globals/scss/helper-mixins';
 @import 'carbon-components/scss/globals/scss/vars';
 
 @import '../../OverflowMenu/index';
@@ -27,17 +26,17 @@
     background-color: $field-01;
 
     > #{$block}__overflow-button {
-      right: 0;
-      height: $carbon--layout-02;
-      width: $carbon--layout-02;
-      margin: unset;
-      background-color: $field-01;
-      clip: unset;
+      opacity: 1;
     }
   }
 
   &__overflow-button {
-    @include hidden;
+    position: absolute;
+    right: 0;
+    height: $carbon--layout-02;
+    width: $carbon--layout-02;
+    background-color: inherit;
+    opacity: 0;
   }
 
   &__overflow-options {
