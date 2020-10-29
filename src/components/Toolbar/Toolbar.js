@@ -178,6 +178,7 @@ export default class Toolbar extends Component {
                       }) => (
                         <NavItem
                           key={navigationListItemId}
+                          onClick={() => this.togglePanel(type)}
                           id={navigationListItemId}
                           href={navigationListItemHref}
                           link={content === undefined}
@@ -200,6 +201,7 @@ export default class Toolbar extends Component {
                   <NavItem
                     key={navigationItemId}
                     id={navigationItemId}
+                    onClick={() => this.togglePanel(type)}
                     href={href}
                     link={content === undefined}
                     handleItemSelect={() => this.toggleContent(content)}
