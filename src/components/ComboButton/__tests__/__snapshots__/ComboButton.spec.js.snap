@@ -109,9 +109,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
       <ForwardRef(OverflowMenu)
         className="security--button bx--btn bx--btn--primary security--combo-button__button security--combo-button__overflow-menu"
         direction="top"
-        flipped={true}
         menuOffset={[Function]}
-        menuOffsetFlip={[Function]}
         menuOptionsClass="bx--list-box__menu"
         onClick={[Function]}
         onClose={[Function]}
@@ -122,7 +120,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
           ariaLabel="Menu"
           className="security--button bx--btn bx--btn--primary security--combo-button__button security--combo-button__overflow-menu"
           direction="top"
-          flipped={true}
+          flipped={false}
           iconDescription="open and close list of options"
           innerRef={null}
           light={false}

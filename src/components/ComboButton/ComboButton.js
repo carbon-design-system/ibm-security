@@ -12,7 +12,7 @@ import React, { createElement, useState } from 'react';
 import { carbonPrefix, getComponentNamespace } from '../../globals/namespace';
 
 import Button from '../Button';
-import OverflowMenu, { getMenuOffset } from '../OverflowMenu';
+import OverflowMenu from '../OverflowMenu';
 import OverflowMenuItem from '../OverflowMenuItem';
 import { TooltipDirection } from '../IconButton/IconButton';
 
@@ -147,25 +147,22 @@ const ComboButton = ({
               `${namespace}__overflow-menu`
             )}
             direction={direction}
-            menuOffset={menuOffset}
-            menuOffsetFlip={
-              menuOffsetFlip ||
-              ((...args) => {
-                const { top: offsetTop, ...offset } = getMenuOffset(...args);
-                const top = offsetTop + window.pageYOffset;
+            menuOffset={() => {
+              const top = window.pageYOffset;
 
-                return {
-                  top: direction === TOP ? top : top * -1,
-                  ...offset,
-                };
-              })
-            }
+              return {
+                top: direction === TOP ? top : top * -1,
+                ...(typeof menuOffset === 'function'
+                  ? menuOffset()
+                  : menuOffset),
+              };
+            }}
+            menuOffsetFlip={menuOffsetFlip}
             menuOptionsClass={`${carbonPrefix}list-box__menu`}
             onClick={() => setIsOpen(!isOpen)}
             onClose={() => setIsOpen(false)}
             renderIcon={renderOverflowMenuIcon}
             selectorPrimaryFocus={selectorPrimaryFocus}
-            flipped
           >
             {overflowMenuItemWithProps}
           </OverflowMenu>

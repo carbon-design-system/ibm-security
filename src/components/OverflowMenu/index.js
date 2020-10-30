@@ -4,7 +4,3 @@
  */
 
 export default from 'carbon-components-react/lib/components/OverflowMenu';
-
-export {
-  getMenuOffset,
-} from 'carbon-components-react/lib/components/OverflowMenu/OverflowMenu';
