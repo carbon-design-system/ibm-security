@@ -8939,10 +8939,11 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 
 .security--filter-panel-checkbox-with-overflow-menu__overflow-button {
   position: absolute;
+  top: 0;
   right: 0;
+  background-color: var(--field-01, #262626);
   height: 1.5rem;
   width: 1.5rem;
-  background-color: inherit;
 }
 
 .security--filter-panel-checkbox-with-overflow-menu__overflow-options {
