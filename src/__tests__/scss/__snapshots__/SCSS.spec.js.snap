@@ -8937,17 +8937,12 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   background-color: var(--field-01, #262626);
 }
 
-.security--filter-panel-checkbox-with-overflow-menu--open > .security--filter-panel-checkbox-with-overflow-menu__overflow-button, .security--filter-panel-checkbox-with-overflow-menu:hover > .security--filter-panel-checkbox-with-overflow-menu__overflow-button, .security--filter-panel-checkbox-with-overflow-menu:focus-within > .security--filter-panel-checkbox-with-overflow-menu__overflow-button {
-  opacity: 1;
-}
-
 .security--filter-panel-checkbox-with-overflow-menu__overflow-button {
   position: absolute;
   right: 0;
   height: 1.5rem;
   width: 1.5rem;
   background-color: inherit;
-  opacity: 0;
 }
 
 .security--filter-panel-checkbox-with-overflow-menu__overflow-options {

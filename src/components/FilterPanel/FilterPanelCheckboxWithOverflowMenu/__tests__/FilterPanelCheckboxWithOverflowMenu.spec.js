@@ -3,13 +3,14 @@
  * @copyright IBM Security 2020
  */
 
-import React from 'react';
-import { render, fireEvent, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
-import FilterPanelCheckboxWithOverflowMenu from '../FilterPanelCheckboxWithOverflowMenu';
+import React from 'react';
+
+import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 import OverflowMenuItem from '../../../OverflowMenuItem';
+import FilterPanelCheckboxWithOverflowMenu from '../FilterPanelCheckboxWithOverflowMenu';
 
 describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
   test('should have no Axe or DAP violations', async () => {
@@ -106,6 +107,104 @@ describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
       'checkbox-id',
       expect.anything()
     );
+  });
+
+  it('does not render the overflow menu button by default', () => {
+    const { queryByLabelText } = render(
+      <FilterPanelCheckboxWithOverflowMenu
+        labelText="checkbox label"
+        overflowMenuAriaLabel="filter selection options"
+        id="checkbox-id"
+      />
+    );
+
+    expect(
+      queryByLabelText(/filter selection options/i)
+    ).not.toBeInTheDocument();
+  });
+
+  it('renders the overflow menu button when the user hovers over the checkbox', () => {
+    const { getByLabelText, getAllByLabelText } = render(
+      <FilterPanelCheckboxWithOverflowMenu
+        labelText="checkbox label"
+        overflowMenuAriaLabel="filter selection options"
+        id="checkbox-id"
+      />
+    );
+
+    fireEvent.mouseEnter(getByLabelText(/checkbox label/i));
+    expect(
+      getAllByLabelText(/filter selection options/i)[0]
+    ).toBeInTheDocument();
+  });
+
+  it('removes the overflow menu button when the user stops hovering over the checkbox', () => {
+    const { getByLabelText, queryByLabelText } = render(
+      <FilterPanelCheckboxWithOverflowMenu
+        labelText="checkbox label"
+        overflowMenuAriaLabel="filter selection options"
+        id="checkbox-id"
+      />
+    );
+
+    const checkbox = getByLabelText(/checkbox label/i);
+    fireEvent.mouseEnter(checkbox);
+    fireEvent.mouseLeave(checkbox);
+
+    expect(
+      queryByLabelText(/filter selection options/i)
+    ).not.toBeInTheDocument();
+  });
+
+  it('renders the overflow menu button when the user focuses on the checkbox', () => {
+    const { getByLabelText, getAllByLabelText } = render(
+      <FilterPanelCheckboxWithOverflowMenu
+        labelText="checkbox label"
+        overflowMenuAriaLabel="filter selection options"
+        id="checkbox-id"
+      />
+    );
+
+    fireEvent.focus(getByLabelText(/checkbox label/i));
+
+    expect(
+      getAllByLabelText(/filter selection options/i)[0]
+    ).toBeInTheDocument();
+  });
+
+  it('renders the overflow menu button when the user focuses on the overflow button', () => {
+    const { getByLabelText, getAllByLabelText } = render(
+      <FilterPanelCheckboxWithOverflowMenu
+        labelText="checkbox label"
+        overflowMenuAriaLabel="filter selection options"
+        id="checkbox-id"
+      />
+    );
+
+    fireEvent.focus(getByLabelText(/checkbox label/i));
+
+    const overflowButton = getAllByLabelText(/filter selection options/i)[0];
+    fireEvent.focus(overflowButton);
+
+    expect(overflowButton).toBeInTheDocument();
+  });
+
+  it('removes the overflow menu button when the user removes focuses', async () => {
+    const { getByLabelText, queryByLabelText } = render(
+      <FilterPanelCheckboxWithOverflowMenu
+        labelText="checkbox label"
+        overflowMenuAriaLabel="filter selection options"
+        id="checkbox-id"
+      />
+    );
+
+    const checkbox = getByLabelText(/checkbox label/i);
+    fireEvent.focus(checkbox);
+    fireEvent.blur(checkbox);
+
+    expect(
+      queryByLabelText(/filter selection options/i)
+    ).not.toBeInTheDocument();
   });
 
   it('renders the provided overflow menu options when the user opens the menu', async () => {

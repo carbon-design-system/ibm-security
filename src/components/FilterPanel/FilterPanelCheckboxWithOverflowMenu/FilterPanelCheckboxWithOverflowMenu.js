@@ -3,14 +3,14 @@
  * @copyright IBM Security 2020
  */
 
-import PropTypes from 'prop-types';
-import React from 'react';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React, { useEffect, useRef, useState } from 'react';
 
 import { getComponentNamespace } from '../../../globals/namespace';
 
-import FilterPanelCheckbox from '../FilterPanelCheckbox';
 import OverflowMenu, { getMenuOffset } from '../../OverflowMenu';
+import FilterPanelCheckbox from '../FilterPanelCheckbox';
 
 export const namespace = getComponentNamespace(
   'filter-panel-checkbox-with-overflow-menu'
@@ -24,15 +24,17 @@ const FilterPanelCheckboxWithOverflowMenu = ({
   selectorPrimaryFocus,
   ...other
 }) => {
-  const containerRef = React.useRef(null);
-  const [isOverflowMenuVisible, setIsOverflowMenuVisible] = React.useState(
-    false
-  );
-  const [overflowIsOpen, setOverflowIsOpen] = React.useState(false);
+  const containerRef = useRef(null);
 
-  const onEnter = isOverflowMenuVisible
-    ? null
-    : () => setIsOverflowMenuVisible(true);
+  const [isOverflowButtonVisible, setIsOverflowButtonVisible] = useState(false);
+  const [overflowIsOpen, setOverflowIsOpen] = useState(false);
+
+  const hideOverflowButton = activeElement =>
+    !overflowIsOpen &&
+    !containerRef.current.contains(activeElement) &&
+    setIsOverflowButtonVisible(false);
+
+  const showOverflowButton = () => setIsOverflowButtonVisible(true);
 
   /**
    * Sets the width of the overflow menu to match the width of this component's width and adjusts
@@ -56,13 +58,17 @@ const FilterPanelCheckboxWithOverflowMenu = ({
     return getMenuOffset(menuBody, direction, menuButton, ...args);
   };
 
+  useEffect(() => setIsOverflowButtonVisible(overflowIsOpen), [overflowIsOpen]);
+
   return (
     <div
       className={classnames(className, namespace, {
         [`${namespace}--open`]: overflowIsOpen,
       })}
-      onFocus={onEnter}
-      onMouseEnter={onEnter}
+      onBlur={({ relatedTarget }) => hideOverflowButton(relatedTarget)}
+      onFocus={showOverflowButton}
+      onMouseEnter={showOverflowButton}
+      onMouseLeave={() => hideOverflowButton(document.activeElement)}
       ref={containerRef}
     >
       <FilterPanelCheckbox
@@ -70,7 +76,7 @@ const FilterPanelCheckboxWithOverflowMenu = ({
         {...other}
       />
 
-      {isOverflowMenuVisible && (
+      {isOverflowButtonVisible && (
         <OverflowMenu
           open={open}
           className={`${namespace}__overflow-button`}

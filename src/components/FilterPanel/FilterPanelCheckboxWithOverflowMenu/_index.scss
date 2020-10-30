@@ -24,10 +24,6 @@
   &:hover,
   &:focus-within {
     background-color: $field-01;
-
-    > #{$block}__overflow-button {
-      opacity: 1;
-    }
   }
 
   &__overflow-button {
@@ -36,7 +32,6 @@
     height: $carbon--layout-02;
     width: $carbon--layout-02;
     background-color: inherit;
-    opacity: 0;
   }
 
   &__overflow-options {
