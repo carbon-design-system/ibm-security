@@ -1,0 +1,136 @@
+import { parameters } from '../../../../.storybook/preview';
+import { Interaction } from './ICAModule.stories';
+
+import anatomy from './images/anatomy.png';
+
+import interactions from './images/interactions.png';
+
+import doImage from './images/do.png';
+import dont from './images/dont.png';
+
+# ICAModule
+
+The ICA module provides a means to orderly layout at-a-glance statistics.
+
+[↳ Overview](#overview)  
+[↳ Component API](#component-api)  
+[↳ Anatomy](#anatomy)  
+[↳ Interactions](#interactions)  
+[↳ Grid placement](#grid-placement)  
+[↳ Examples](#examples)  
+[↳ References](#references)  
+[↳ Troubleshooting](#troubleshooting)
+
+### Overview
+
+The ICA module can be built using a combination of the `ICAModule`, [grid](#references), and [`ICA`](#references) components.
+
+Everything passed in as a [render prop](#references) child of `ICAModule` will be rendered.
+
+<Canvas>
+  <Story
+    id="patterns-unstable-layout-modules-icamodule--default"
+    parameters={parameters}
+  />
+</Canvas>
+
+### Component API
+
+<ArgsTable />
+
+_**\***Required property_
+
+Additional props passed into `ICAModule` will be forwarded along to the underlying ICA module container.
+
+#### `hover`
+
+Use the `hover` prop to specify whether the hover variant should be used.
+
+<Canvas withSource="none">
+  <Interaction parameters={parameters} />
+</Canvas>
+
+```jsx
+<ICAModule hover />
+```
+
+#### Render props
+
+In order to make sure that everything works as intended, it's important to pass all of the props of the component as fields on the object given to the prop getter. For example, to add a `className`:
+
+```jsx
+<Column {...getLayoutProps({ className: 'className' })} />
+```
+
+### Anatomy
+
+1. **Top spacer:** There is a top spacer of 16px (\$layout-01) included inside the module so additional modules can be placed directly on top.
+2. **ICA:** This is the ICA itself, it comprises a value and a label. Spacing between the value and label, and between individual ICA's, is defined in the module.
+3. **Bottom spacer:** The is a bottom spacer of 16px (\$layout-01) included inside the module so additional modules can be placed directly on top.
+
+<img alt="`ICAModule` anatomy" src={anatomy} />
+
+### Interactions
+
+If the ICA needs to be interactive, a background hover can be placed on the grid columns. This adds 16px to the height of the ICA module on hover.
+
+<img alt="`ICAModule` interactions" src={interactions} />
+
+<Source id="patterns-unstable-layout-modules-icamodule--interaction" />
+
+### Grid placement
+
+ICAs within ICA modules can span across 2 or 3 columns, following the narrow grid implementation.
+
+<Row>
+  <Column>
+    <img alt="`ICAModule` do" src={doImage} />
+  </Column>
+
+  <Column>
+    <img alt="`ICAModule` don't" src={dont} />
+  </Column>
+</Row>
+
+```jsx
+<ICAModule>
+  {() => (
+    <Row>
+      <Column lg={3}>
+        <ICA />
+      </Column>
+
+      <Column lg={3}>
+        <ICA />
+      </Column>
+
+      <Column lg={3}>
+        <ICA />
+      </Column>
+    </Row>
+  )}
+</ICAModule>
+```
+
+### Examples
+
+<Row>
+  <Detail />
+  <Overview />
+</Row>
+
+### References
+
+- [Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
+- <LinkTo kind="components-ica" story="default">
+    ICA
+  </LinkTo>
+- [Render Props](https://reactjs.org/docs/render-props.html)
+- <LinkTo
+    kind="patterns-unstable-layout-modules-titlebarmodule"
+    story="default"
+  >
+    TitleBarModule
+  </LinkTo>
+
+<Troubleshooting />

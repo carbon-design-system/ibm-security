@@ -17,11 +17,14 @@ import {
 import { getDocsParameters } from '../../../../.storybook';
 
 import getTitle from '../stories';
+import page from './index.mdx';
 
 export default {
   title: getTitle(DescriptionListModule),
   component: DescriptionListModule,
   parameters: {
+    docs: { page },
+
     ...getDocsParameters(),
   },
 };

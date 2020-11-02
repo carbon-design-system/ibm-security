@@ -10,11 +10,14 @@ import { getDocsParameters } from '../../../../.storybook';
 import { Column, ICA, ICAModule, Row } from '../../..';
 
 import getTitle from '../stories';
+import page from './index.mdx';
 
 export default {
   title: getTitle(ICAModule),
   component: ICAModule,
   parameters: {
+    docs: { page },
+
     ...getDocsParameters(),
   },
 };
@@ -44,15 +47,15 @@ export const Interaction = () => (
     {({ getLayoutProps }) => (
       <Row>
         <Column {...getLayoutProps()}>
-          <ICA label="Label" value={100} />
+          <ICA label="Label" value={0} percentage />
         </Column>
 
         <Column {...getLayoutProps()}>
-          <ICA label="Label" value={100} />
+          <ICA label="Label" value={0} percentage />
         </Column>
 
         <Column {...getLayoutProps()}>
-          <ICA label="Label" value={100} />
+          <ICA label="Label" value={0} percentage />
         </Column>
       </Row>
     )}

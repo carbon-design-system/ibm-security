@@ -12,6 +12,7 @@ import withResponsive from '../../../../.storybook/decorators';
 import { IconButtonBar, TitleBarModule } from '../../..';
 
 import getTitle from '../stories';
+import page from './index.mdx';
 
 export default {
   title: getTitle(TitleBarModule),
@@ -20,6 +21,8 @@ export default {
     title: 'Section title',
   },
   parameters: {
+    docs: { page },
+
     ...getDocsParameters(),
   },
   decorators: [withResponsive],
@@ -27,8 +30,8 @@ export default {
 
 export const Default = args => <TitleBarModule {...args} />;
 
-export const Variant = args => (
-  <TitleBarModule {...args}>
+export const Variant = () => (
+  <TitleBarModule title="Sub-section title" subsection>
     <IconButtonBar
       actions={[
         {

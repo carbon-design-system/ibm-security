@@ -17,12 +17,17 @@ import {
 } from '../../..';
 
 import getTitle from '../stories';
+import page from './index.mdx';
 
 export default {
   title: getTitle(ActionBarModule),
   component: ActionBarModule,
   subcomponents: { ActionBarModuleItems },
-  parameters: { ...getDocsParameters() },
+  parameters: {
+    docs: { page },
+
+    ...getDocsParameters(),
+  },
   decorators: [withResponsive],
 };
 
