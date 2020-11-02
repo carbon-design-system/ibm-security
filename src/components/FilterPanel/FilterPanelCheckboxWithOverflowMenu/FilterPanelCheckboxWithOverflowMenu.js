@@ -65,7 +65,7 @@ const FilterPanelCheckboxWithOverflowMenu = ({
       })}
       onBlur={({ relatedTarget }) => hideOverflowButton(relatedTarget)}
       onFocus={() => setShowOverflowButton(true)}
-      onMouseEnter={() => setShowOverflowButton(true)}
+      onMouseOver={() => setShowOverflowButton(true)}
       onMouseLeave={() => hideOverflowButton(document.activeElement)}
       ref={containerRef}
     >
