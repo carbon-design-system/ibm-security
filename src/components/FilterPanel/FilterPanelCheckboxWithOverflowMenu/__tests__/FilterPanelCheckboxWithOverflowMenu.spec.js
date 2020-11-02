@@ -3,18 +3,14 @@
  * @copyright IBM Security 2020
  */
 
-import React from 'react';
-import {
-  render,
-  fireEvent,
-  waitForElementToBeRemoved,
-  screen,
-} from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
-import FilterPanelCheckboxWithOverflowMenu from '../FilterPanelCheckboxWithOverflowMenu';
+import React from 'react';
+
+import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 import OverflowMenuItem from '../../../OverflowMenuItem';
+import FilterPanelCheckboxWithOverflowMenu from '../FilterPanelCheckboxWithOverflowMenu';
 
 describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
   test('should have no Axe or DAP violations', async () => {
@@ -22,6 +18,7 @@ describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
       <FilterPanelCheckboxWithOverflowMenu
         labelText="test checkbox"
         id="test-checkbox-id"
+        overflowMenuAriaLabel="overflowMenuAriaLabel"
       />
     );
     await expect(container).toHaveNoAxeViolations();
@@ -193,7 +190,7 @@ describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
   });
 
   it('removes the overflow menu button when the user removes focuses', async () => {
-    const { getByLabelText, queryAllByLabelText, queryByLabelText } = render(
+    const { getByLabelText, queryByLabelText } = render(
       <FilterPanelCheckboxWithOverflowMenu
         labelText="checkbox label"
         overflowMenuAriaLabel="filter selection options"
@@ -204,10 +201,6 @@ describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
     const checkbox = getByLabelText(/checkbox label/i);
     fireEvent.focus(checkbox);
     fireEvent.blur(checkbox);
-
-    await waitForElementToBeRemoved(
-      () => queryAllByLabelText(/filter selection options/i)[0]
-    );
 
     expect(
       queryByLabelText(/filter selection options/i)
