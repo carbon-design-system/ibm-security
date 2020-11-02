@@ -14,11 +14,11 @@ import anatomy from './images/anatomy.png';
 Description modules provide a means to orderly layout short-form content.
 
 [↳ Overview](#overview)  
-[↳ Variants](#variants)  
 [↳ Component API](#component-api)  
+[↳ Anatomy](#anatomy)  
+[↳ Variants](#variants)  
 [↳ Grid placement](#grid-placement)  
 [↳ Layout considerations](#layout-considerations)  
-[↳ Anatomy](#anatomy)  
 [↳ Examples](#examples)  
 [↳ References](#references)  
 [↳ Troubleshooting](#troubleshooting)
@@ -36,16 +36,6 @@ Everything passed in as a [render prop](#references) child of `DescriptionModule
   />
 </Canvas>
 
-### Variants
-
-If necessary, subsection titles can be substituted or used below section titles. There are values already supplied for the title type styles so you shouldn't supplement your own. Learn more by reviewing the <LinkTo kind="patterns-unstable-layout-modules-titlebarmodule" story="default" > TitleBarModule. </LinkTo>
-
-The description module can also be created without any title.
-
-<img alt="`DescriptionModule` variants" src={variants} />
-
-<Source id="patterns-unstable-layout-modules-descriptionmodule--variant" />
-
 ### Component API
 
 <ArgsTable />
@@ -61,6 +51,24 @@ In order to make sure that everything works as intended, it's important to pass 
 ```jsx
 <p {...getLayoutProps({ className: 'className' })} />
 ```
+
+### Anatomy
+
+1. **Title:** This is the title, achieved by using the TitleBarModule. <LinkTo kind="patterns-unstable-layout-modules-titlebarmodule" story="default" > Learn more </LinkTo> about the TitleBarModule and potential variants.
+2. **Description:** This is the description itself, the type style is defined so you shouldn't supplement your own values.
+3. **Bottom spacer:** There is a 32-pixel (`$layout-03`) spacer included below the description. Any additional modules can be placed directly underneath.
+
+<img alt="`DescriptionModule` anatomy" src={anatomy} />
+
+### Variants
+
+If necessary, subsection titles can be substituted or used below section titles. There are values already supplied for the title type styles so you shouldn't supplement your own. Learn more by reviewing the <LinkTo kind="patterns-unstable-layout-modules-titlebarmodule" story="default" > TitleBarModule. </LinkTo>
+
+The description module can also be created without any title.
+
+<img alt="`DescriptionModule` variants" src={variants} />
+
+<Source id="patterns-unstable-layout-modules-descriptionmodule--variant" />
 
 ### Grid placement
 
@@ -90,14 +98,6 @@ Occassionally a [spacing token](#references) will need to be included to offset 
   alt="`DescriptionModule` layout considerations"
   src={layoutConsiderations}
 />
-
-### Anatomy
-
-1. **Title:** This is the title, achieved by using the TitleBarModule. <LinkTo kind="patterns-unstable-layout-modules-titlebarmodule" story="default" > Learn more </LinkTo> about the TitleBarModule and potential variants.
-2. **Description:** This is the description itself, the type style is defined so you shouldn't supplement your own values.
-3. **Bottom spacer:** There is a 32-pixel (`$layout-03`) spacer included below the description. Any additional modules can be placed directly underneath.
-
-<img alt="`DescriptionModule` anatomy" src={anatomy} />
 
 ### Examples
 

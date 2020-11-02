@@ -13,10 +13,10 @@ import anatomy from './images/anatomy.png';
 Title bar modules provide interchangeable and reliable headings for establishing consistent hierarchies.
 
 [↳ Overview](#overview)  
-[↳ Variants](#variants)  
 [↳ Component API](#component-api)  
-[↳ Grid placement](#grid-placement)  
 [↳ Anatomy](#anatomy)  
+[↳ Variants](#variants)  
+[↳ Grid placement](#grid-placement)  
 [↳ Examples](#examples)  
 [↳ References](#references)  
 [↳ Troubleshooting](#troubleshooting)
@@ -31,16 +31,6 @@ Everything passed in as a child of the title bar module will be rendered.
     parameters={parameters}
   />
 </Canvas>
-
-### Variants
-
-If necessary, actions can be placed inline with the title.
-
-The title bar can also accept two type variants, sub-section title and section title, so you shouldn't supplement your own type style. [Learn more](#subsection) below.
-
-<img alt="`TitleBarModule` variants" src={variants} />
-
-<Source id="patterns-unstable-layout-modules-titlebarmodule--variant" />
 
 ### Component API
 
@@ -74,6 +64,24 @@ This prop specifies a different element to be rendered as a title.
 <TitleBarModule element="h3" title="Section 3 title" />
 ```
 
+### Anatomy
+
+1. **Title:** This the title itself, learn more about potential [variants](#variants) above.
+2. **Top spacer:** There is 16px spacer `$layout-01`, included at the top of the TitleBarModule.
+3. **Bottom spacer:** The 16px spacer `$layout-01`, included inside the bar, means that the module can be placed flush to edge of the components below.
+
+<img alt="`TitleBarModule` anatomy" src={anatomy} />
+
+### Variants
+
+If necessary, actions can be placed inline with the title.
+
+The title bar can also accept two type variants, sub-section title and section title, so you shouldn't supplement your own type style. [Learn more](#subsection) below.
+
+<img alt="`TitleBarModule` variants" src={variants} />
+
+<Source id="patterns-unstable-layout-modules-titlebarmodule--variant" />
+
 ### Grid placement
 
 Title bar modules can span between 4 and 8 columns, following the [narrow grid](#references) implementation.
@@ -93,14 +101,6 @@ Title bar modules can span between 4 and 8 columns, following the [narrow grid](
   <TitleBarModule title="Section title" />
 </Column>
 ```
-
-### Anatomy
-
-1. **Title:** This the title itself, learn more about potential [variants](#variants) above.
-2. **Top spacer:** There is 16px spacer `$layout-01`, included at the top of the TitleBarModule.
-3. **Bottom spacer:** The 16px spacer `$layout-01`, included inside the bar, means that the module can be placed flush to edge of the components below.
-
-<img alt="`TitleBarModule` anatomy" src={anatomy} />
 
 ### Examples
 
