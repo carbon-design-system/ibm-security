@@ -16,11 +16,11 @@ import anatomy from './images/anatomy.png';
 Description list modules provide a means to orderly layout terms and definitions.
 
 [↳ Overview](#overview)  
-[↳ Variants](#variants)  
 [↳ Component API](#component-api)  
+[↳ Anatomy](#anatomy)  
+[↳ Variants](#variants)  
 [↳ Grid placement](#grid-placement)  
 [↳ Layout considerations](#layout-considerations)  
-[↳ Anatomy](#anatomy)  
 [↳ Examples](#examples)  
 [↳ References](#references)  
 [↳ Troubleshooting](#troubleshooting)
@@ -38,14 +38,6 @@ Everything passed in as a child of `DescriptionListModule` will be rendered.
   />
 </Canvas>
 
-### Variants
-
-If necessary, both section and subsection titles can precede the type layout. There are two values already supplied for this so you shouldn't supplement your own type style. Learn more by reviewing the <LinkTo kind="patterns-unstable-layout-modules-titlebarmodule" story="default" > TitleBarModule. </LinkTo>
-
-<img alt="`DescriptionListModule` variants" src={variants} />
-
-<Source id="patterns-unstable-layout-modules-descriptionlistmodule--variant" />
-
 ### Component API
 
 <ArgsTable />
@@ -53,6 +45,23 @@ If necessary, both section and subsection titles can precede the type layout. Th
 _**\***Required property_
 
 Additional props passed into `DescriptionListModule` will be forwarded along to the underlying description list module container.
+
+### Anatomy
+
+1. **Term:** This is the label, it should left aligned to a grid column.
+2. **Description:** The description placement is relative to the term label, it will always fall 32px to the right of the term.
+3. **Row spacer:** The 16-pixel spacer `$layout-01` below each row provides padding between the rows.
+4. **Bottom spacer:** The 16-pixel spacer `$layout-01` below the 'Row spacer' row provides the starting point for the layout module positioned directly underneath it. At the end of the description list module both the 'Row spacer' and 'Bottom spacer' join together to create a 32px buffer.
+
+<img alt="`DescriptionListModule` anatomy" src={anatomy} />
+
+### Variants
+
+If necessary, both section and subsection titles can precede the type layout. There are two values already supplied for this so you shouldn't supplement your own type style. Learn more by reviewing the <LinkTo kind="patterns-unstable-layout-modules-titlebarmodule" story="default" > TitleBarModule. </LinkTo>
+
+<img alt="`DescriptionListModule` variants" src={variants} />
+
+<Source id="patterns-unstable-layout-modules-descriptionlistmodule--variant" />
 
 ### Grid placement
 
@@ -84,15 +93,6 @@ Occassionally a [spacing token](#references) will need to be included to offset 
   alt="`DescriptionListModule` layout considerations"
   src={layoutConsiderations}
 />
-
-### Anatomy
-
-1. **Term:** This is the label, it should left aligned to a grid column.
-2. **Description:** The description placement is relative to the term label, it will always fall 32px to the right of the term.
-3. **Row spacer:** The 16-pixel spacer `$layout-01` below each row provides padding between the rows.
-4. **Bottom spacer:** The 16-pixel spacer `$layout-01` below the 'Row spacer' row provides the starting point for the layout module positioned directly underneath it. At the end of the description list module both the 'Row spacer' and 'Bottom spacer' join together to create a 32px buffer.
-
-<img alt="`DescriptionListModule` anatomy" src={anatomy} />
 
 ### Examples
 
