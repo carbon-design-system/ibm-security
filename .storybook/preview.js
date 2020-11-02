@@ -22,6 +22,7 @@ import storybookTheme from './theme';
 import withTheme from './addons/addon-theme';
 import Canvas from './components/Canvas';
 import Container from './components/Container';
+import DocsContainer from './components/DocsContainer';
 
 const { interactive01, text04 } = theme;
 
@@ -57,6 +58,7 @@ const parameters = {
       Row,
       Story,
     },
+    container: DocsContainer,
     theme: storybookTheme,
   },
   info: {
