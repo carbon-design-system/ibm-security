@@ -1,6 +1,7 @@
 ---
 name: Carbon upgrade
 about: Issue template for upgrading Carbon
+labels: 'type: task'
 ---
 
 ## Upgrade to Carbon `vx.x.x`
