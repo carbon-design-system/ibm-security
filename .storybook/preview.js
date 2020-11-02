@@ -5,7 +5,7 @@
 
 import { spacing04, spacing05 } from '@carbon/layout';
 import { styles } from '@carbon/type';
-import { ArgsTable, Story } from '@storybook/addon-docs/blocks';
+import { ArgsTable, Story, Source } from '@storybook/addon-docs/blocks';
 import { withInfo } from '@storybook/addon-info';
 import LinkTo from '@storybook/addon-links/react';
 
@@ -26,8 +26,6 @@ import storybookTheme from './theme';
 import withTheme from './addons/addon-theme';
 import Canvas from './components/Canvas';
 import Container from './components/Container';
-import DocsContainer from './components/DocsContainer';
-import Source from './components/Source';
 
 const { interactive01, text04 } = theme;
 
@@ -67,7 +65,6 @@ const parameters = {
       Source,
       Troubleshooting,
     },
-    container: DocsContainer,
     theme: storybookTheme,
   },
   info: {
