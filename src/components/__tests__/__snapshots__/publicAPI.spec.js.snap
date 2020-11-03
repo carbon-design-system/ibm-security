@@ -7217,6 +7217,7 @@ Map {
       "hasOverlay": true,
       "initialFocus": null,
       "onOverlayClick": undefined,
+      "overlayClassName": null,
       "rootNode": <body />,
       "stopPropagation": false,
       "stopPropagationEvents": undefined,
@@ -7331,6 +7332,9 @@ Map {
       },
       "onOverlayClick": Object {
         "type": "func",
+      },
+      "overlayClassName": Object {
+        "type": "string",
       },
       "rootNode": Object {
         "args": Array [

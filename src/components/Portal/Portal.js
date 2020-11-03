@@ -97,7 +97,12 @@ export const PORTAL_EVENTS = [
 class Portal extends Component {
   componentDidMount() {
     if (isClient()) {
-      const { rootNode, hasOverlay } = this.props;
+      const {
+        rootNode,
+        hasOverlay,
+        onOverlayClick,
+        overlayClassName,
+      } = this.props;
 
       rootNode.classList.toggle(this.containerClass);
 
@@ -106,11 +111,16 @@ class Portal extends Component {
         document.getElementsByClassName(namespace).length === 0
       ) {
         this.overlay = document.createElement('div');
+
         this.overlay.setAttribute('tabIndex', '-1');
-        this.overlay.classList.add(`${namespace}__overlay`);
+
+        this.overlay.classList.add(
+          ...[`${namespace}__overlay`, overlayClassName].filter(Boolean)
+        );
+
         rootNode.appendChild(this.overlay);
 
-        if (this.props.onOverlayClick) {
+        if (onOverlayClick) {
           this.overlay.addEventListener('mousedown', this.handleOverlayClick);
         }
       }
@@ -217,6 +227,11 @@ Portal.propTypes = {
   /** @type {node} Initially focused element. */
   initialFocus: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
 
+  /** Click handler for the overlay. */
+  onOverlayClick: PropTypes.func,
+
+  overlayClassName: PropTypes.string,
+
   /** @type {ReactNode|any} The root node for rendering the panel */
   rootNode: isNode() ? PropTypes.instanceOf(Node) : PropTypes.any,
 
@@ -225,9 +240,6 @@ Portal.propTypes = {
 
   /** @type {array} Array of event types to stop propagation. */
   stopPropagationEvents: PropTypes.arrayOf(PropTypes.oneOf(PORTAL_EVENTS)),
-
-  /** Click handler for the overlay. */
-  onOverlayClick: PropTypes.func,
 };
 
 Portal.defaultProps = {
@@ -236,10 +248,11 @@ Portal.defaultProps = {
   focusTrapOptions: FocusTrap.defaultProps.focusTrapOptions,
   hasOverlay: true,
   initialFocus: null,
+  onOverlayClick: undefined,
+  overlayClassName: null,
   rootNode: isClient() && document.body,
   stopPropagation: false,
   stopPropagationEvents: undefined,
-  onOverlayClick: undefined,
 };
 
 export default Portal;
