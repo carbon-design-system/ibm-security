@@ -240,7 +240,7 @@ Portal.propTypes = {
     /** Provide an optional class to be applied to the overlay */
     className: PropTypes.string,
 
-    /** Specifiy the click event handler for the overlay */
+    /** Specify the click event handler for the overlay */
     onClick: PropTypes.func,
   }),
 
