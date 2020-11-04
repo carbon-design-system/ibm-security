@@ -232,7 +232,7 @@ Portal.propTypes = {
   /** @type {node} Initially focused element. */
   initialFocus: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
 
-  /** Specifiy the click event handler for the overlay */
+  /** Deprecated in favor of `overlayOptions.onClick` */
   onOverlayClick: deprecatedProp('overlayOptions.onClick', PropTypes.func),
 
   /** Specify the options for the overlay */
