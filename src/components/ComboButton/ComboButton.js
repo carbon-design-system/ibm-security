@@ -148,16 +148,13 @@ const ComboButton = ({
             )}
             direction={direction}
             menuOffset={() => {
-              const {
-                bottom,
-                height,
-                top,
-              } = ref.current.getBoundingClientRect();
-
-              const offset = bottom - top - height + window.pageYOffset;
+              const { pageYOffset } = window;
 
               return {
-                top: direction === TooltipDirection.TOP ? offset : offset * -1,
+                top:
+                  direction === TooltipDirection.TOP
+                    ? pageYOffset
+                    : pageYOffset * -1,
                 ...(typeof menuOffset === 'function'
                   ? menuOffset()
                   : menuOffset),
