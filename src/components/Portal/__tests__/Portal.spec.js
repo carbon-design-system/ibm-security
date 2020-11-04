@@ -147,7 +147,7 @@ describe(name, () => {
     const className = 'className';
 
     render(
-      <Portal overlayClassName={className}>
+      <Portal overlayOptions={{ className }}>
         <span>{name}</span>
       </Portal>
     );

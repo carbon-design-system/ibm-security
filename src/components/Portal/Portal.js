@@ -8,6 +8,7 @@ import PropTypes from 'prop-types';
 import React, { Children, Component } from 'react';
 import { createPortal } from 'react-dom';
 
+import deprecatedProp from '../../globals/prop-types';
 import { getComponentNamespace } from '../../globals/namespace';
 
 import { isClient, isNode } from '../../globals/utils/capabilities';
@@ -101,8 +102,10 @@ class Portal extends Component {
         rootNode,
         hasOverlay,
         onOverlayClick,
-        overlayClassName,
+        overlayOptions: { className, onClick },
       } = this.props;
+
+      this.onOverlayClick = onClick || onOverlayClick;
 
       rootNode.classList.toggle(this.containerClass);
 
@@ -115,12 +118,12 @@ class Portal extends Component {
         this.overlay.setAttribute('tabIndex', '-1');
 
         this.overlay.classList.add(
-          ...[`${namespace}__overlay`, overlayClassName].filter(Boolean)
+          ...[`${namespace}__overlay`, className].filter(Boolean)
         );
 
         rootNode.appendChild(this.overlay);
 
-        if (onOverlayClick) {
+        if (this.onOverlayClick) {
           this.overlay.addEventListener('mousedown', this.handleOverlayClick);
         }
       }
@@ -137,14 +140,14 @@ class Portal extends Component {
         rootNode.removeChild(this.overlay);
       }
 
-      if (this.props.onOverlayClick) {
+      if (this.onOverlayClick) {
         this.overlay.removeEventListener('mousedown', this.handleOverlayClick);
       }
     }
   }
 
   handleOverlayClick = () => {
-    this.props.onOverlayClick();
+    this.onOverlayClick();
   };
 
   createPropagationTrap = () => {
@@ -211,6 +214,8 @@ class Portal extends Component {
   }
 }
 
+// TODO: `2.x` - Remove deprecated prop `onOverlayClick`.
+
 Portal.propTypes = {
   /** @type {element} The children of the panel. */
   children: PropTypes.element,
@@ -227,10 +232,17 @@ Portal.propTypes = {
   /** @type {node} Initially focused element. */
   initialFocus: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
 
-  /** Click handler for the overlay. */
-  onOverlayClick: PropTypes.func,
+  /** Specifiy the click event handler for the overlay */
+  onOverlayClick: deprecatedProp('overlayOptions.onClick', PropTypes.func),
 
-  overlayClassName: PropTypes.string,
+  /** Specify the options for the overlay */
+  overlayOptions: PropTypes.shape({
+    /** Provide an optional class to be applied to the overlay */
+    className: PropTypes.string,
+
+    /** Specifiy the click event handler for the overlay */
+    onClick: PropTypes.func,
+  }),
 
   /** @type {ReactNode|any} The root node for rendering the panel */
   rootNode: isNode() ? PropTypes.instanceOf(Node) : PropTypes.any,
@@ -249,7 +261,7 @@ Portal.defaultProps = {
   hasOverlay: true,
   initialFocus: null,
   onOverlayClick: undefined,
-  overlayClassName: null,
+  overlayOptions: {},
   rootNode: isClient() && document.body,
   stopPropagation: false,
   stopPropagationEvents: undefined,
