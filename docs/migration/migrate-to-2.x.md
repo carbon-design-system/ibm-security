@@ -37,6 +37,7 @@ Remove any `@ibmduo`-scoped packages if they're listed as a dependency
 | `MultiSelect`         | [Migrate](../../src/components/MultiSelect/migrate-to-2.x.md)   |
 | `Pagination`          | [Migrate](../../src/components/Pagination/migrate-to-2.x.md)    |
 | `Panel`               | [Migrate](../../src/components/Panel/migrate-to-2.x.md)         |
+| `Portal`              | [Migrate](../../src/components/Portal/migrate-to-2.x.md)        |
 | `Search`              | [Migrate](../../src/components/Search/migrate-to-2.x.md)        |
 | `StepIndicator`       | [Migrate](../../src/components/StepIndicator/migrate-to-2.x.md) |
 | `Tag`                 | [Migrate](../../src/components/Tag/migrate-to-2.x.md)           |
