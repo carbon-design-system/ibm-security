@@ -5,6 +5,7 @@ jobs:
     steps:
       - checkout
       - run: yarn install --offline --frozen-lockfile
+      - run: if [[ ! -z $CIRCLE_PULL_REQUEST ]] ; then yarn run audit ; fi # https://github.com/IBM/audit-ci#set-up
       - run: scripts/ci/build.sh
       - run: yarn test
       - run: yarn semantic-release

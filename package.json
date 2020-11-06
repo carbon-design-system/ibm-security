@@ -12,6 +12,7 @@
     ".storybook/addons/**"
   ],
   "scripts": {
+    "audit": "audit-ci -m",
     "build": "run-s build:*",
     "build:pre": "run-s build:pre:*",
     "build:pre:clean": "rm -rf css es lib scss storybook-static",
@@ -108,6 +109,7 @@
     "@testing-library/react": "9.3.2",
     "@testing-library/user-event": "8.1.0",
     "accessibility-checker": "^3.0.4",
+    "audit-ci": "^3.1.1",
     "autoprefixer": "^9.4.10",
     "axe-core": "^3.4.1",
     "babel-eslint": "^10.0.1",
@@ -157,7 +159,7 @@
     "rollup": "^0.66.5",
     "rollup-plugin-babel": "^4.3.1",
     "rollup-plugin-node-resolve": "^4.2.4",
-    "rollup-plugin-postcss": "^1.6.2",
+    "rollup-plugin-postcss": "^3.1.8",
     "sass-extract": "^2.1.0",
     "semantic-release": "^16.0.3",
     "style-loader": "^0.23.1",
