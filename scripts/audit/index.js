@@ -7,7 +7,7 @@ const { exec, exit } = require('shelljs'); // https://www.npmjs.com/package/shel
 const { inspect } = require('util');
 
 exec(
-  'yarn audit --groups dependencies --level moderate --json',
+  'yarn audit --groups dependencies --level moderate --json', // https://classic.yarnpkg.com/en/docs/cli/audit
   { silent: true },
   (code, stdout) => {
     const auditAdvisories = stdout
