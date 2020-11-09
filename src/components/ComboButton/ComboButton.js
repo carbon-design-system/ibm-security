@@ -33,40 +33,30 @@ const ComboButton = ({
   const childrenArray = React.Children.toArray(children).filter(Boolean);
 
   // Save first child (e.g., primary action) to use as a `Button`:
-  const primaryActionWithProps = [childrenArray[0]].map(button => {
-    // Need to explicitly define props, versus using `...rest`,
-    // because otherwise unused `OverflowMenuItem`-related props from
-    // may trigger invalid DOM warnings.
-    const {
-      children,
-      className,
-      disabled,
-      href,
-      iconDescription,
-      onClick,
-      id,
-      renderIcon: Icon,
-    } = button.props;
-
-    return (
-      <Button
-        className={classnames(className, `${namespace}--primary`)}
-        disabled={disabled}
-        href={href}
-        iconDescription={iconDescription}
-        kind="primary"
-        id={id}
-        key={id || `button-${href}`}
-        onClick={onClick}
-        renderIcon={Icon}
-        type="button"
+  const button = childrenArray[0];
+  // Need to explicitly define props, versus using `...rest`,
+  // because otherwise unused `OverflowMenuItem`-related props from
+  // may trigger invalid DOM warnings.
+  const primaryActionWithProps = (
+    <Button
+      className={classnames(button.props.className, `${namespace}--primary`)}
+      disabled={button.props.disabled}
+      href={button.props.href}
+      iconDescription={button.props.iconDescription}
+      kind="primary"
+      id={button.props.id}
+      onClick={button.props.onClick}
+      renderIcon={button.props.renderIcon}
+      type="button"
+    >
+      <span
+        className={`${carbonPrefix}text-truncate--end`}
+        title={button.props.children}
       >
-        <span className={`${carbonPrefix}text-truncate--end`} title={children}>
-          {children}
-        </span>
-      </Button>
-    );
-  });
+        {button.props.children}
+      </span>
+    </Button>
+  );
 
   // Save remaining children to be displayed in the `OverflowMenu`:
   let overflowItems;
@@ -86,7 +76,6 @@ const ComboButton = ({
         href,
         iconDescription,
         id,
-        key,
         onClick,
         renderIcon: Icon,
         ...other
@@ -109,7 +98,7 @@ const ComboButton = ({
             </>
           }
           id={id}
-          key={key || id || `${namespace}__item__${index}`}
+          key={id || index}
           onClick={onClick}
           {...other}
         />
