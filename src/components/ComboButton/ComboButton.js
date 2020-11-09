@@ -33,27 +33,27 @@ const ComboButton = ({
   const childrenArray = React.Children.toArray(children).filter(Boolean);
 
   // Save first child (e.g., primary action) to use as a `Button`:
-  const button = childrenArray[0];
+  const buttonProps = childrenArray[0].props;
   // Need to explicitly define props, versus using `...rest`,
   // because otherwise unused `OverflowMenuItem`-related props from
   // may trigger invalid DOM warnings.
   const primaryActionWithProps = (
     <Button
-      className={classnames(button.props.className, `${namespace}--primary`)}
-      disabled={button.props.disabled}
-      href={button.props.href}
-      iconDescription={button.props.iconDescription}
+      className={classnames(buttonProps.className, `${namespace}--primary`)}
+      disabled={buttonProps.disabled}
+      href={buttonProps.href}
+      iconDescription={buttonProps.iconDescription}
       kind="primary"
-      id={button.props.id}
-      onClick={button.props.onClick}
-      renderIcon={button.props.renderIcon}
+      id={buttonProps.id}
+      onClick={buttonProps.onClick}
+      renderIcon={buttonProps.renderIcon}
       type="button"
     >
       <span
         className={`${carbonPrefix}text-truncate--end`}
-        title={button.props.children}
+        title={buttonProps.children}
       >
-        {button.props.children}
+        {buttonProps.children}
       </span>
     </Button>
   );
