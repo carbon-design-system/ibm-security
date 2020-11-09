@@ -2,7 +2,8 @@ name: CodeQL
 
 on:
   push:
-    branches: codeql
+    branches:
+      - codeql
 
 jobs:
   CodeQL:
@@ -14,13 +15,11 @@ jobs:
         with:
           fetch-depth: 2
 
-      # https://github.com/github/codeql-action#usage
-      # - name: Checkout
-      #   if: ${{ github.event_name == 'pull_request' }}
-      #   run: git checkout HEAD^2
+      - if: ${{ github.event_name == 'pull_request' }} # https://github.com/github/codeql-action#usage
+        run: git checkout HEAD^2
 
       - name: Initialize
-        uses: github/codeql-action/init@v1 # https://github.com/github/codeql-action#usage
+        uses: github/codeql-action/init@v1
         with:
           languages: javascript
 
