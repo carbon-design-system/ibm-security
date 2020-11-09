@@ -118,7 +118,7 @@ function PanelV2({
           <Portal
             focusTrap={focusTrap}
             focusTrapOptions={focusTrapOptions}
-            onOverlayClick={onClose}
+            overlayOptions={{ onClick: onClose }}
             rootNode={rootNode}
             stopPropagation={stopPropagation}
             stopPropagationEvents={stopPropagationEvents}
