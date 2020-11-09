@@ -3,15 +3,14 @@
  * @copyright IBM Security 2020
  */
 
-import PropTypes from 'prop-types';
-import React from 'react';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React, { useEffect, useRef, useState } from 'react';
 
 import { getComponentNamespace } from '../../../globals/namespace';
 
+import OverflowMenu, { getMenuOffset } from '../../OverflowMenu';
 import FilterPanelCheckbox from '../FilterPanelCheckbox';
-import OverflowMenu from '../../OverflowMenu';
-import { useComponentFocus } from '../../../globals/utils/focus';
 
 export const namespace = getComponentNamespace(
   'filter-panel-checkbox-with-overflow-menu'
@@ -25,18 +24,15 @@ const FilterPanelCheckboxWithOverflowMenu = ({
   selectorPrimaryFocus,
   ...other
 }) => {
-  const containerRef = React.useRef(null);
-  const [showOverflowButton, setShowOverflowButton] = React.useState(false);
-  const [overflowIsOpen, setOverflowIsOpen] = React.useState(false);
-  const { createFocusHandler, createBlurHandler } = useComponentFocus(10);
+  const containerRef = useRef(null);
 
-  const handleFocus = createFocusHandler(() => {
-    setShowOverflowButton(true);
-  });
+  const [showOverflowButton, setShowOverflowButton] = useState(false);
+  const [overflowIsOpen, setOverflowIsOpen] = useState(false);
 
-  const handleBlur = createBlurHandler(() => {
+  const hideOverflowButton = activeElement =>
+    !overflowIsOpen &&
+    !containerRef.current.contains(activeElement) &&
     setShowOverflowButton(false);
-  });
 
   /**
    * Sets the width of the overflow menu to match the width of this component's width and adjusts
@@ -47,47 +43,37 @@ const FilterPanelCheckboxWithOverflowMenu = ({
    * @param {HTMLElement} menuButton Overflow menu button element.
    * @returns {{top: number, left: number}} The menu offset measurements.
    */
-  const updateMenuWidthAndSetOffset = (menuBody, direction, menuButton) => {
+  const updateMenuWidthAndSetOffset = (
+    menuBody,
+    direction,
+    menuButton,
+    ...args
+  ) => {
     if (menuButton) {
-      const width = containerRef.current.clientWidth;
-      const left = width / 2 - width + menuButton.clientWidth / 2;
-
-      // Set the menu's width.
-      // eslint-disable-next-line no-param-reassign
-      menuBody.style.width = `${width}px`;
-
-      // Set the menu's left position to match the return left position value. We need to do this so
-      // that the overflow menu is initially positioned properly when the menu is too close to the
-      // edge of the viewport.
-      if (!overflowIsOpen) {
-        // eslint-disable-next-line no-param-reassign
-        menuBody.style.left = `${left}px`;
-      }
-
-      return {
-        top: 0,
-        left,
-      };
+      menuBody.style.width = `${containerRef.current.clientWidth}px`;
     }
 
-    return { top: 0, left: 0 };
+    return getMenuOffset(menuBody, direction, menuButton, ...args);
   };
+
+  useEffect(() => setShowOverflowButton(overflowIsOpen), [overflowIsOpen]);
 
   return (
     <div
       className={classnames(className, namespace, {
         [`${namespace}--open`]: overflowIsOpen,
       })}
+      onBlur={({ relatedTarget }) => hideOverflowButton(relatedTarget)}
+      onFocus={() => setShowOverflowButton(true)}
       onMouseOver={() => setShowOverflowButton(true)}
-      onMouseLeave={() => !overflowIsOpen && setShowOverflowButton(false)}
-      onFocus={handleFocus}
-      onBlur={handleBlur}
+      onMouseLeave={() => hideOverflowButton(document.activeElement)}
       ref={containerRef}
     >
       <FilterPanelCheckbox
         wrapperClassName={`${namespace}__wrapper`}
         {...other}
       />
+
       {showOverflowButton && (
         <OverflowMenu
           open={open}

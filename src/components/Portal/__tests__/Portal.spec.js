@@ -1,15 +1,17 @@
 /**
  * @file Portal tests.
- * @copyright IBM Security 2018
+ * @copyright IBM Security 2018 - 2020
  */
 
-import { render, fireEvent } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 import React from 'react';
-import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
+import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 import { Portal } from '../../..';
 
-describe('Portal', () => {
+const { name } = Portal;
+
+describe(name, () => {
   test('should have no Axe or DAP violations with overlay', async () => {
     const { container } = renderWithinLandmark(
       <div>
@@ -139,5 +141,16 @@ describe('Portal', () => {
     // `onMouseDown` event is NOT blocked:
     fireEvent.mouseDown(getByTestId('in-portal'));
     expect(mouseDownHandler).toHaveBeenCalledTimes(1);
+  });
+
+  test('adds a class to the overlay', () => {
+    const className = 'className';
+
+    render(
+      <Portal overlayOptions={{ className }}>
+        <span>{name}</span>
+      </Portal>
+    );
+    expect(document.querySelector(`.${className}`)).toBeInTheDocument();
   });
 });
