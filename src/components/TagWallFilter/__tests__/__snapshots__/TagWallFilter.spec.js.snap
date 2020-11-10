@@ -756,6 +756,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                     focusTrapOptions={Object {}}
                     hasOverlay={true}
                     initialFocus={null}
+                    overlayOptions={Object {}}
                     rootNode={
                       <body
                         class="security--portal__container"
@@ -3015,6 +3016,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                       focusTrapOptions={Object {}}
                       hasOverlay={true}
                       initialFocus={null}
+                      overlayOptions={Object {}}
                       rootNode={
                         <body
                           class=""

@@ -1,16 +1,53 @@
 ////
-/// Documentation styles.
+/// Documentation.
 /// @group storybook
 /// @copyright IBM Security 2020
 ////
 
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/motion/scss/motion';
 @import '@carbon/themes/scss/tokens';
+
+@import 'carbon-components/scss/globals/scss/motion';
 
 @import '../../src/platform/body/mixins';
 
 .sbdocs {
+  $root: &;
+
+  & &-h3,
+  & &-h4 {
+    &,
+    &:first-of-type {
+      margin-top: $carbon--layout-05;
+    }
+  }
+
+  & &-ul {
+    /// Spacing.
+    /// @type Length
+    $unordered-list__spacing: $carbon--spacing-05;
+
+    padding-left: $unordered-list__spacing;
+    list-style: none;
+
+    > #{$root}-li {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        left: -#{$unordered-list__spacing};
+        content: '–';
+      }
+    }
+  }
+
   & &-preview {
     background-color: $body__color__background;
+  }
+
+  [title='Required'] {
+    color: inherit;
   }
 
   .storybook__link {
@@ -18,5 +55,16 @@
 
     // `.storybook/theme/index.js` - `colorSecondary`
     color: $link-01;
+
+    &--image {
+      transition-duration: $duration--fast-01;
+      transition-property: opacity;
+      transition-timing-function: carbon--motion($name: standard);
+
+      &:focus,
+      &:hover {
+        opacity: 0.9;
+      }
+    }
   }
 }
