@@ -5,7 +5,7 @@
 
 import { spacing04, spacing05 } from '@carbon/layout';
 import { styles } from '@carbon/type';
-import { ArgsTable, Story, Source } from '@storybook/addon-docs/blocks';
+import { ArgsTable, Story } from '@storybook/addon-docs/blocks';
 import { withInfo } from '@storybook/addon-info';
 import LinkTo from '@storybook/addon-links/react';
 
@@ -64,7 +64,6 @@ const parameters = {
       Row,
       Source,
       Story,
-      Source,
       Troubleshooting,
     },
     theme: storybookTheme,
