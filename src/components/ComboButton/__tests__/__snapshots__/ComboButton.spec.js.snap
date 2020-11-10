@@ -19,7 +19,6 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
         disabled={false}
         iconDescription=""
         id="test-1"
-        key="test-1"
         kind="primary"
         largeText={null}
         loading={false}
@@ -134,7 +133,6 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
           open={false}
           renderIcon={[Function]}
           selectorPrimaryFocus="[data-overflow-menu-primary-focus]"
-          tabIndex={0}
         >
           <ClickListener
             onClickOutside={[Function]}
@@ -148,13 +146,11 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
               onClose={[Function]}
               onKeyDown={[Function]}
               open={false}
-              tabIndex={0}
               type="button"
             >
               <renderOverflowMenuIcon
                 aria-label="open and close list of options"
                 className="bx--overflow-menu__icon"
-                focusable="false"
                 onClick={[Function]}
                 onKeyDown={[Function]}
               >
@@ -216,7 +212,6 @@ exports[`ComboButton renders a combo button without an overflow menu 1`] = `
         disabled={false}
         iconDescription=""
         id="test-1"
-        key="test-1"
         kind="primary"
         largeText={null}
         loading={false}
