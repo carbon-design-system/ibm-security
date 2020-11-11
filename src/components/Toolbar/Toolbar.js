@@ -170,6 +170,7 @@ export default class Toolbar extends Component {
                     {children.map(
                       ({
                         href: navigationListItemHref,
+                        element: navigationListItemElement,
                         content,
                         icon,
                         id: navigationListItemId,
@@ -181,6 +182,7 @@ export default class Toolbar extends Component {
                           onClick={() => this.togglePanel(type)}
                           id={navigationListItemId}
                           href={navigationListItemHref}
+                          element={navigationListItemElement}
                           link={content === undefined}
                           handleItemSelect={() => this.toggleContent(content)}
                           {...props}
