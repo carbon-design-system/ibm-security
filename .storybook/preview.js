@@ -22,6 +22,7 @@ import storybookTheme from './theme';
 import withTheme from './addons/addon-theme';
 import Canvas from './components/Canvas';
 import Container from './components/Container';
+import Source from './components/Source';
 
 const { interactive01, text04 } = theme;
 
@@ -55,6 +56,7 @@ const parameters = {
       Column,
       LinkTo: props => <LinkTo className="storybook__link" {...props} />,
       Row,
+      Source,
       Story,
     },
     theme: storybookTheme,
