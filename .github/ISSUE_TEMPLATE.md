@@ -1,5 +1,5 @@
 ---
-labels: 'status: refining'
+labels: 'status: triage'
 ---
 
 ## _As a_ <!--  persona -->, _I want_ <!-- need --> _so that_ <!-- rationale -->

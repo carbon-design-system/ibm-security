@@ -1,7 +1,7 @@
 ---
 name: Proposal
 about: Suggest an idea
-labels: 'status: refining', 'type: proposal'
+labels: 'status: triage', 'type: proposal'
 ---
 
 ## Proposal - <!-- Short description -->
