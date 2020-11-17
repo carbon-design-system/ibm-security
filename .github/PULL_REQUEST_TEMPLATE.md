@@ -1,11 +1,13 @@
-## Affected issues
+## Pull request - <!-- Short description -->
+
+### Affected issues
 
 - Resolves #<!-- Issue number -->
 
-## Proposed changes
+### Proposed changes
 
 - <!-- List of changes proposed in pull request (PR) -->
 
-## Testing instructions
+### Testing instructions
 
 - <!-- List of instructions for reviewer to test that proposed changes in this PR work properly -->
