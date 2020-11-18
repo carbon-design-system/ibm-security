@@ -19,7 +19,6 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
         disabled={false}
         iconDescription=""
         id="test-1"
-        key="test-1"
         kind="primary"
         largeText={null}
         loading={false}
@@ -213,7 +212,6 @@ exports[`ComboButton renders a combo button without an overflow menu 1`] = `
         disabled={false}
         iconDescription=""
         id="test-1"
-        key="test-1"
         kind="primary"
         largeText={null}
         loading={false}
