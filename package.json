@@ -160,7 +160,7 @@
     "rollup-plugin-node-resolve": "^4.2.4",
     "rollup-plugin-postcss": "^1.6.2",
     "sass-extract": "^2.1.0",
-    "semantic-release": "^16.0.3",
+    "semantic-release": "^17.2.3",
     "shelljs": "^0.8.4",
     "style-loader": "^0.23.1",
     "stylelint": "^9.1.1",
