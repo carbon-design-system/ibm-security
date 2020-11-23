@@ -184,6 +184,7 @@ exports[`Header Rendering renders correctly 1`] = `
         <a
           className="bx--link security--header__link"
           href="#"
+          rel={null}
         >
           IBM 
           <span
