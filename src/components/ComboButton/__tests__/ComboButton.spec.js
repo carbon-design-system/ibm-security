@@ -42,6 +42,10 @@ const renderComboButton = (overflowMenuItemCount = 0) => {
 };
 
 const getComboBox = () => screen.getByTestId(COMBO_BUTTON_TESTID);
+const getOverflowMenuButton = () => screen.getByLabelText('Menu');
+const clickComboBox = overflowMenuButton => {
+  userEvent.click(overflowMenuButton);
+};
 
 describe('ComboButton', () => {
   it('renders a combo button without an overflow menu', () => {
@@ -61,13 +65,13 @@ describe('ComboButton', () => {
   it('renders overflow menu items when overflow menu is clicked (opened) and removes overflow menu items when clicked again (closed)', () => {
     const MENU_ITEM_COUNT = 2;
     const getMenuItemsLength = () => screen.queryAllByRole('menuitem').length;
-    const clickComboBox = overflowMenuButton => {
-      userEvent.click(overflowMenuButton);
-    };
 
     renderComboButton(MENU_ITEM_COUNT);
-    const overflowMenuButton = screen.getByLabelText('Menu');
+    const overflowMenuButton = getOverflowMenuButton();
 
+    /*
+      Let's test the opening and closing of the ComboButton menu 
+    */
     expect(getMenuItemsLength()).toEqual(0); // Menu items should not be shown
     clickComboBox(overflowMenuButton); // Open the menu
     expect(getMenuItemsLength()).toEqual(MENU_ITEM_COUNT); // Menu items should now be shown
@@ -75,12 +79,21 @@ describe('ComboButton', () => {
     expect(getMenuItemsLength()).toEqual(0); // Menu items should not be shown again
   });
 
-  it('should have no Axe or DAP violations', () => {
-    renderComboButton(3);
+  it('should have no Axe or DAP violations', async () => {
+    renderComboButton(4);
 
     const comboButton = getComboBox();
+    const assertHasNoViolations = async () => {
+      await expect(comboButton).toHaveNoAxeViolations();
+      await expect(comboButton).toHaveNoDAPViolations('ComboButton');
+    };
 
-    expect(comboButton).toHaveNoAxeViolations();
-    expect(comboButton).toHaveNoDAPViolations('ComboButton');
+    await assertHasNoViolations();
+
+    // Now let's open the ComboButton menu and re-assert conditions
+    const overflowMenuButton = getOverflowMenuButton();
+    clickComboBox(overflowMenuButton);
+
+    await assertHasNoViolations();
   });
 });
