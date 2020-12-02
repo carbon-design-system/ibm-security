@@ -2306,6 +2306,18 @@ body {
   letter-spacing: 0;
 }
 
+.card {
+  border: 0.0625rem solid var(--ui-03, #393939);
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.29;
+  letter-spacing: 0.16px;
+  margin-bottom: 1rem;
+}
+
 .bx--link {
   box-sizing: border-box;
   margin: 0;
