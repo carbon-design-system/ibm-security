@@ -65,3 +65,7 @@ export const Variant = () => (
     )}
   </DescriptionModule>
 );
+
+Variant.parameters = {
+  viewMode: 'canvas',
+};

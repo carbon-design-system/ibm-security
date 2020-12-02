@@ -27,7 +27,7 @@ Description list modules provide a means to orderly layout terms and definitions
 
 ### Overview
 
-The description list module can be built using a combination of the [`TypeLayout`](#references) and [`TitleBarModule`](#references) components.
+The description list module can be built using a combination of the <LinkTo kind="components-typelayout" story="default">`TypeLayout`</LinkTo> and <LinkTo kind="patterns-unstable-layout-modules-titlebarmodule" story="default">`TitleBarModule`</LinkTo> components.
 
 Everything passed in as a child of `DescriptionListModule` will be rendered.
 
@@ -65,7 +65,7 @@ If necessary, both section and subsection titles can precede the type layout. Th
 
 ### Grid placement
 
-Description list modules span across 8 columns, following the [narrow grid](#references) implementation.
+Description list modules span across 8 columns, following the [narrow grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow) implementation.
 
 Card modules can span between 4 and 16 columns. Following the narrow grid implementation, the layout module container hangs 16 pixels in the left margin. The narrow grid position allows headings and copy outside of containers to align with the labels within the card module.
 
@@ -87,7 +87,7 @@ Card modules can span between 4 and 16 columns. Following the narrow grid implem
 
 ### Layout considerations
 
-Occassionally a [spacing token](#references) will need to be included to offset the description list module to ensure it top-aligns with the adjacent layout container. If a top spacing token is necessary, reference the layout module that sits directly above it as the starting point for placement.
+Occassionally a [spacing token](https://carbondesignsystem.com/guidelines/spacing/overview#spacing-scale) will need to be included to offset the description list module to ensure it top-aligns with the adjacent layout container. If a top spacing token is necessary, reference the layout module that sits directly above it as the starting point for placement.
 
 <img
   alt="`DescriptionListModule` layout considerations"

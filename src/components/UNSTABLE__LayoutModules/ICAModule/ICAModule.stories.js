@@ -61,3 +61,7 @@ export const Interaction = () => (
     )}
   </ICAModule>
 );
+
+Interaction.parameters = {
+  viewMode: 'canvas',
+};

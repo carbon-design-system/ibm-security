@@ -51,3 +51,7 @@ export const Variant = () => (
     />
   </TitleBarModule>
 );
+
+Variant.parameters = {
+  viewMode: 'canvas',
+};

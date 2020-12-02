@@ -81,3 +81,7 @@ export const Variant = () => (
     </ActionBarModuleItems>
   </ActionBarModule>
 );
+
+Variant.parameters = {
+  viewMode: 'canvas',
+};

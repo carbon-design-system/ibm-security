@@ -141,3 +141,7 @@ export const Variant = () => (
     )}
   </CardModule>
 );
+
+Variant.parameters = {
+  viewMode: 'canvas',
+};
