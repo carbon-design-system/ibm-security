@@ -26,6 +26,7 @@ import storybookTheme from './theme';
 import withTheme from './addons/addon-theme';
 import Canvas from './components/Canvas';
 import Container from './components/Container';
+import DocsContainer from './components/DocsContainer';
 import Source from './components/Source';
 
 const { interactive01, text04 } = theme;
@@ -66,6 +67,7 @@ const parameters = {
       Story,
       Troubleshooting,
     },
+    container: DocsContainer,
     theme: storybookTheme,
   },
   info: {
@@ -99,9 +101,5 @@ const parameters = {
   },
   viewMode: 'story',
 };
-
-// Set the Google Analytics tracking ID if the `master` branch is deployed.
-window.STORYBOOK_GA_ID =
-  process.env.STORYBOOK_BRANCH === 'master' && 'UA-80770450-3';
 
 export { decorators, parameters };

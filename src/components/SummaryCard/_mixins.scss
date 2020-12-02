@@ -133,6 +133,7 @@
 
     &__text {
       @include text-overflow;
+      overflow-y: hidden;
     }
 
     // Accommodates the loading spinner:
