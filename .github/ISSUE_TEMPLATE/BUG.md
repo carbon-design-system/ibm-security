@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: Something isn't working as expected? Here is the right place to report
-labels: 'status: triage', 'type: bug'
+labels: 'status: triage, type: bug'
 ---
 
 ## Bug - <!-- Short description -->
