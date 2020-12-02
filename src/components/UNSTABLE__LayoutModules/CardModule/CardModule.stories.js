@@ -6,7 +6,6 @@
 import React from 'react';
 
 import { getDocsParameters } from '../../../../.storybook';
-import withBackground from '../../../../.storybook/components/Background';
 
 import {
   ActionBarModule,
@@ -18,6 +17,7 @@ import {
   SummaryCardBody,
   SummaryCardHeader,
   TitleBarModule,
+  withBackground,
 } from '../../..';
 
 import getTitle from '../stories';
