@@ -18,7 +18,6 @@ import { Grid, Row, Column } from 'carbon-components-react';
 import React from 'react';
 
 import { disableCentered, patterns } from '../../../.storybook';
-import withBackground from '../../../.storybook/components/Background';
 
 import {
   ActionBarModule,
@@ -46,6 +45,7 @@ import {
   TypeLayoutBody,
   TypeLayoutCell,
   TypeLayoutRow,
+  withBackground,
 } from '../..';
 
 const ColumnWithBackground = withBackground(Column);
