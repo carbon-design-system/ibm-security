@@ -11,12 +11,15 @@ import withResponsive from '../../../../.storybook/decorators';
 import { PageTabModule, PageTabModuleDetails, Tabs, Tab } from '../../..';
 
 import getTitle from '../stories';
+import page from './index.mdx';
 
 export default {
   title: getTitle(PageTabModule),
   component: PageTabModule,
   subcomponents: { PageTabModuleDetails },
   parameters: {
+    docs: { page },
+
     ...getDocsParameters(),
   },
   decorators: [withResponsive],

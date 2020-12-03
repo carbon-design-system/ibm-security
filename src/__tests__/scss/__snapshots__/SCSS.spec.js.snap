@@ -5671,8 +5671,8 @@ a.bx--overflow-menu-options__btn::before {
   background-color: var(--ui-01, #262626);
   flex-direction: column;
   justify-content: space-between;
-  z-index: 6001;
   outline: none;
+  z-index: 9000;
 }
 
 .security--theme--cg10 .security--panel--v2 {
@@ -13040,7 +13040,7 @@ li.bx--accordion__item--disabled:last-of-type {
   background-color: var(--ui-01, #262626);
   flex-direction: column;
   justify-content: space-between;
-  z-index: 6000;
+  z-index: 9000;
 }
 
 .security--theme--cg10 .security--panel {
@@ -16309,6 +16309,7 @@ li.bx--accordion__item--disabled:last-of-type {
   overflow-x: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  overflow-y: hidden;
 }
 
 .security--summary-card__action.security--button--loading {
@@ -17472,7 +17473,7 @@ li.bx--accordion__item--disabled:last-of-type {
   padding: 0.5rem 0.25rem;
   background-color: var(--ui-background, #161616);
   box-sizing: border-box;
-  z-index: 6002;
+  z-index: 8002;
 }
 
 .security--toolbar[dir=\\"rtl\\"],
@@ -17676,7 +17677,7 @@ li.bx--accordion__item--disabled:last-of-type {
   box-sizing: border-box;
   overflow-x: hidden;
   overflow-y: auto;
-  z-index: 6001;
+  z-index: 8001;
 }
 
 .security--toolbar__panel[dir=\\"rtl\\"],
@@ -18626,7 +18627,7 @@ li.bx--accordion__item--disabled:last-of-type {
   align-items: center;
   background-color: inherit;
   color: inherit;
-  z-index: 6000;
+  z-index: 8000;
 }
 
 .security--header__container {
@@ -19294,7 +19295,7 @@ li.bx--accordion__item--disabled:last-of-type {
   background-size: 10rem 1.5rem;
   align-items: center;
   transition: 0.2s background-size cubic-bezier(0.2, 0, 0.38, 0.9);
-  z-index: 6000;
+  z-index: 8000;
 }
 
 .security--theme--cg10 .security--shell__banner {
@@ -26176,6 +26177,11 @@ a.bx--navigation-link:focus {
 
 .security--unstable--layout__module--action-bar__items {
   margin-left: auto;
+}
+
+.security--unstable--layout__module--background {
+  background-color: var(--ui-01, #262626);
+  outline: 0.0625rem solid var(--ui-background, #161616);
 }
 
 .security--unstable--layout__module--button-cluster {
