@@ -14039,5 +14039,6 @@ Map {
       },
     },
   },
+  "withBackground" => Object {},
 }
 `;

@@ -270,6 +270,7 @@ export {
   DescriptionModule,
   ICAModule,
   TitleBarModule,
+  withBackground,
 } from './components/UNSTABLE__LayoutModules';
 
 export UNSTABLE__Pagination, {
