@@ -10372,6 +10372,17 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-bottom: 0.5rem;
 }
 
+.icon {
+  fill: var(--icon-01, #f4f4f4);
+}
+
+.label {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
 .security--ne-section {
   min-height: 12.5rem;
   background-position: center right;
