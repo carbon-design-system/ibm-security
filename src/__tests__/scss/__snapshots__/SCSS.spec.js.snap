@@ -8616,6 +8616,10 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   background-color: var(--ui-03, #393939);
 }
 
+.security--data-table .bx--data-table-content {
+  overflow: unset;
+}
+
 .security--data-table .bx--data-table.bx--skeleton th {
   border-bottom-width: 0;
 }
