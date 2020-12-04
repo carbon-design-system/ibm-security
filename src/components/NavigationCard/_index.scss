@@ -1,10 +1,10 @@
+@import '@carbon/layout/scss/spacing';
 @import '@carbon/themes/scss/tokens';
 @import '@carbon/type/scss/styles';
 
-.icon {
-  fill: $icon-01;
-}
-
 .label {
   @include carbon--type-style($name: productive-heading-03);
+
+  padding-bottom: $carbon--spacing-05;
+  border-bottom: 1px solid $ui-03;
 }

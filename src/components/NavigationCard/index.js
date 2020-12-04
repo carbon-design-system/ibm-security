@@ -8,7 +8,7 @@ import Link from '../Link';
 
 const NavigationCard = ({ label, link }) => (
   <Card>
-    <ArrowRight16 className="icon" />
+    <ArrowRight16 />
 
     <h3 className="label">{label}</h3>
 
