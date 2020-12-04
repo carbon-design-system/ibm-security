@@ -39,6 +39,7 @@ const ComboButton = ({
   // may trigger invalid DOM warnings.
   const primaryActionWithProps = (
     <Button
+      {...buttonProps}
       className={classnames(buttonProps.className, `${namespace}--primary`)}
       disabled={buttonProps.disabled}
       href={buttonProps.href}
