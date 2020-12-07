@@ -26175,6 +26175,11 @@ a.bx--navigation-link:focus {
   margin-left: auto;
 }
 
+.security--unstable--layout__module--background {
+  background-color: var(--ui-01, #262626);
+  outline: 0.0625rem solid var(--ui-background, #161616);
+}
+
 .security--unstable--layout__module--button-cluster {
   padding-bottom: 1rem;
 }
