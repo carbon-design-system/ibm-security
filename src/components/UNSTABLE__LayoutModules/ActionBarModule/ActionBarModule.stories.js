@@ -17,12 +17,17 @@ import {
 } from '../../..';
 
 import getTitle from '../stories';
+import page from './index.mdx';
 
 export default {
   title: getTitle(ActionBarModule),
   component: ActionBarModule,
   subcomponents: { ActionBarModuleItems },
-  parameters: { ...getDocsParameters() },
+  parameters: {
+    docs: { page },
+
+    ...getDocsParameters(),
+  },
   decorators: [withResponsive],
 };
 
@@ -76,3 +81,7 @@ export const Variant = () => (
     </ActionBarModuleItems>
   </ActionBarModule>
 );
+
+Variant.parameters = {
+  viewMode: 'canvas',
+};

@@ -8616,6 +8616,10 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   background-color: var(--ui-03, #393939);
 }
 
+.security--data-table .bx--data-table-content {
+  overflow: unset;
+}
+
 .security--data-table .bx--data-table.bx--skeleton th {
   border-bottom-width: 0;
 }
@@ -16309,6 +16313,7 @@ li.bx--accordion__item--disabled:last-of-type {
   overflow-x: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  overflow-y: hidden;
 }
 
 .security--summary-card__action.security--button--loading {
@@ -19275,17 +19280,14 @@ li.bx--accordion__item--disabled:last-of-type {
   width: calc(100% - 3rem);
 }
 
-.security--shell--active--return, .security--shell--active--return__toolbar,
+.security--shell--active--return__toolbar,
 .security--shell--active--return__header > .security--header,
 .security--shell--active--return .security--toolbar__panel {
-  margin-top: 1.5rem;
+  top: 1.5rem;
 }
 
 .security--shell__banner {
   display: flex;
-  position: fixed;
-  top: 0;
-  width: 100%;
   height: 1.5rem;
   padding-left: 1rem;
   background-color: var(--ui-01, #262626);
@@ -19294,7 +19296,6 @@ li.bx--accordion__item--disabled:last-of-type {
   background-size: 10rem 1.5rem;
   align-items: center;
   transition: 0.2s background-size cubic-bezier(0.2, 0, 0.38, 0.9);
-  z-index: 8000;
 }
 
 .security--theme--cg10 .security--shell__banner {
@@ -26176,6 +26177,11 @@ a.bx--navigation-link:focus {
 
 .security--unstable--layout__module--action-bar__items {
   margin-left: auto;
+}
+
+.security--unstable--layout__module--background {
+  background-color: var(--ui-01, #262626);
+  outline: 0.0625rem solid var(--ui-background, #161616);
 }
 
 .security--unstable--layout__module--button-cluster {
