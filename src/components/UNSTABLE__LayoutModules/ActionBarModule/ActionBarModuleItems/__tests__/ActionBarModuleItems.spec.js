@@ -1,18 +1,20 @@
 /**
- * @file Action bar module tests.
+ * @file Action bar module items tests.
  * @copyright IBM Security 2020
  */
 
 import { render } from '@testing-library/react';
 import React from 'react';
 
-import { ActionBarModule } from '../../../..';
+import { ActionBarModuleItems } from '../../../../..';
 
-const { name } = ActionBarModule;
+const { name } = ActionBarModuleItems;
 
 describe(name, () => {
   test('has no accessibility violations', async () => {
-    const { container } = render(<ActionBarModule>{name}</ActionBarModule>);
+    const { container } = render(
+      <ActionBarModuleItems>{name}</ActionBarModuleItems>
+    );
 
     await expect(container).toHaveNoAxeViolations();
     await expect(container).toHaveNoDAPViolations(name);
@@ -20,7 +22,9 @@ describe(name, () => {
 
   test(`adds content for the '${name}'`, () => {
     expect(
-      render(<ActionBarModule>{name}</ActionBarModule>).getByText(name)
+      render(<ActionBarModuleItems>{name}</ActionBarModuleItems>).getByText(
+        name
+      )
     ).toBeInTheDocument();
   });
 
@@ -29,7 +33,9 @@ describe(name, () => {
 
     expect(
       render(
-        <ActionBarModule data-testid={dataTestId}>{name}</ActionBarModule>
+        <ActionBarModuleItems data-testid={dataTestId}>
+          {name}
+        </ActionBarModuleItems>
       ).getByTestId(dataTestId)
     ).toBeInTheDocument();
   });
