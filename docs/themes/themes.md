@@ -36,8 +36,7 @@
 | `inverse-support-03` | `yellow-30`       | `yellow-30`       |
 | `inverse-support-04` | `blue-50`         | `blue-60`         |
 | `overlay-01`         | `gray-100`        | `gray-100`        |
-| `danger-01`          | `red-60`          | `red-60`          |
-| `danger-02`          | `red-60`          | `red-50`          |
+| `danger`             | `red-60`          | `red-60`          |
 | `focus`              | `blue-60`         | `white-0`         |
 | `inverse-focus-ui`   | `white-0`         | `blue-60`         |
 | `hover-primary`      | `#0353e9`         | `#0353e9`         |
@@ -60,7 +59,7 @@
 | `disabled-01`        | `white-0`         | `gray-90`         |
 | `disabled-02`        | `cool-gray-30`    | `gray-70`         |
 | `disabled-03`        | `cool-gray-50`    | `gray-50`         |
-| `highlight`          | `blue-10`         | `blue-80`         |
+| `highlight`          | `blue-20`         | `blue-80`         |
 | `decorative-01`      | `cool-gray-20`    | `gray-70`         |
 | `hover-light-ui`     | `#e5e5e5`         | `gray-70`         |
 | `button-separator`   | `cool-gray-20`    | `gray-100`        |
@@ -71,4 +70,3 @@
 | `brand-03`           | `blue-60`         | `white-0`         |
 | `active-01`          | `cool-gray-30`    | `gray-70`         |
 | `hover-field`        | `#e0e4ea`         | `#353535`         |
-| `danger`             | `red-60`          | `red-60`          |
