@@ -14,6 +14,8 @@ import LayoutModule, {
 
 const namespace = 'title-bar';
 
+export const subsectionNamespace = `${layoutModuleNamespace}--${namespace}__title--subsection`;
+
 /**
  * Title bar modules provide interchangeable and reliable headings for establishing consistent hierarchies.
  */
@@ -24,7 +26,7 @@ const TitleBarModule = ({ children, element, subsection, title, ...other }) => (
       {
         ...getLayoutModuleProps({
           className: classnames({
-            [`${layoutModuleNamespace}--${namespace}__title--subsection`]: subsection,
+            [`${subsectionNamespace}`]: subsection,
           }),
           namespace: `${namespace}__title`,
         }),
