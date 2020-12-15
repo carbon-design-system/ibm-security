@@ -45,7 +45,6 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
         aria-haspopup="true"
         aria-label="Menu"
         class="security--button bx--btn bx--btn--primary security--combo-button__button security--combo-button__overflow-menu bx--overflow-menu"
-        tabindex="0"
         type="button"
       >
         <svg
