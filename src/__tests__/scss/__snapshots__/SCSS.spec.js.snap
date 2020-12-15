@@ -17104,7 +17104,6 @@ li.bx--accordion__item--disabled:last-of-type {
   width: 100%;
   margin-bottom: 6rem;
   flex-grow: 1;
-  overflow: auto;
 }
 
 .security--tearsheet--small__scroll-gradient__content {
@@ -17358,7 +17357,6 @@ li.bx--accordion__item--disabled:last-of-type {
   flex: 1;
   flex-direction: column;
   justify-content: space-between;
-  overflow-x: auto;
 }
 
 .security--tearsheet__main__title, .security--tearsheet__main__content {
