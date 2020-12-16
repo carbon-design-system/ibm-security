@@ -7,7 +7,7 @@ import classnames from 'classnames';
 import { func } from 'prop-types';
 import React from 'react';
 
-import LayoutModule, { layoutModuleNamespace } from '../LayoutModule';
+import LayoutModule, { getLayoutModuleNamespace } from '../LayoutModule';
 
 const namespace = 'description';
 
@@ -19,7 +19,7 @@ const DescriptionModule = ({ children, ...other }) => (
     {children({
       getLayoutProps: ({ className, ...rest } = {}) => ({
         className: classnames(
-          `${layoutModuleNamespace}--${namespace}__content`,
+          getLayoutModuleNamespace(`${namespace}__content`),
           className
         ),
         ...rest,

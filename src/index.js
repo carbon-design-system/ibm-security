@@ -269,6 +269,7 @@ export {
   DescriptionListModule,
   DescriptionModule,
   ICAModule,
+  LayoutModule,
   TitleBarModule,
   withBackground,
 } from './components/UNSTABLE__LayoutModules';

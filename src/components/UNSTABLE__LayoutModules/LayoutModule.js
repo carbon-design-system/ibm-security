@@ -11,10 +11,13 @@ import { getComponentNamespace } from '../../globals/namespace';
 
 const layoutModuleNamespace = getComponentNamespace('unstable--layout__module');
 
+const getLayoutModuleNamespace = namespace =>
+  `${layoutModuleNamespace}--${namespace}`;
+
 const getLayoutModuleProps = ({ className, namespace }) => ({
   className: classnames(
     layoutModuleNamespace,
-    `${layoutModuleNamespace}--${namespace}`,
+    getLayoutModuleNamespace(namespace),
     className
   ),
 });
@@ -50,4 +53,4 @@ LayoutModule.defaultProps = {
 
 export default LayoutModule;
 
-export { getLayoutModuleProps, layoutModuleNamespace };
+export { getLayoutModuleNamespace, getLayoutModuleProps };

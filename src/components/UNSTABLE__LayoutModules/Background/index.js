@@ -6,12 +6,12 @@
 import classnames from 'classnames';
 import React from 'react';
 
-import { layoutModuleNamespace } from '../LayoutModule';
+import { getLayoutModuleNamespace } from '../LayoutModule';
 
 export default WrappedComponent => {
   const WithBackground = ({ className, ...other }) => (
     <WrappedComponent
-      className={classnames(`${layoutModuleNamespace}--background`, className)}
+      className={classnames(getLayoutModuleNamespace('background'), className)}
       {...other}
     />
   );

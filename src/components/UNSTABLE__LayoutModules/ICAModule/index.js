@@ -7,7 +7,7 @@ import classnames from 'classnames';
 import { bool, func } from 'prop-types';
 import React from 'react';
 
-import LayoutModule, { layoutModuleNamespace } from '../LayoutModule';
+import LayoutModule, { getLayoutModuleNamespace } from '../LayoutModule';
 
 const namespace = 'ica';
 /**
@@ -18,7 +18,7 @@ const ICAModule = ({ children, hover, ...other }) => (
     {children({
       getLayoutProps: ({ className, ...rest } = {}) => ({
         className: classnames(className, {
-          [`${layoutModuleNamespace}--${namespace}--hover`]: hover,
+          [getLayoutModuleNamespace(`${namespace}--hover`)]: hover,
         }),
         ...rest,
       }),

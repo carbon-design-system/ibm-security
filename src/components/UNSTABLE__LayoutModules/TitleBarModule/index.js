@@ -8,8 +8,8 @@ import { bool, elementType, node } from 'prop-types';
 import React, { createElement } from 'react';
 
 import LayoutModule, {
+  getLayoutModuleNamespace,
   getLayoutModuleProps,
-  layoutModuleNamespace,
 } from '../LayoutModule';
 
 const namespace = 'title-bar';
@@ -24,7 +24,9 @@ const TitleBarModule = ({ children, element, subsection, title, ...other }) => (
       {
         ...getLayoutModuleProps({
           className: classnames({
-            [`${layoutModuleNamespace}--${namespace}__title--subsection`]: subsection,
+            [getLayoutModuleNamespace(
+              `${namespace}__title--subsection`
+            )]: subsection,
           }),
           namespace: `${namespace}__title`,
         }),
