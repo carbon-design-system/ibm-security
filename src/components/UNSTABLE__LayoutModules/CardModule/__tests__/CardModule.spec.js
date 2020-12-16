@@ -1,5 +1,5 @@
 /**
- * @file Title bar module tests.
+ * @file Card module tests.
  * @copyright IBM Security 2020
  */
 
