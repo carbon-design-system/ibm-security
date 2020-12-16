@@ -26,7 +26,7 @@ const TitleBarModule = ({ children, element, subsection, title, ...other }) => (
       {
         ...getLayoutModuleProps({
           className: classnames({
-            [`${subsectionNamespace}`]: subsection,
+            [subsectionNamespace]: subsection,
           }),
           namespace: `${namespace}__title`,
         }),
