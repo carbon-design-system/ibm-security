@@ -10,6 +10,8 @@ import React from 'react';
 import LayoutModule, { layoutModuleNamespace } from '../LayoutModule';
 
 const namespace = 'ica';
+export const hoverNamespace = `${layoutModuleNamespace}--${namespace}--hover`;
+
 /**
  * The ICA module provides a means to orderly layout at-a-glance statistics.
  */
@@ -18,7 +20,7 @@ const ICAModule = ({ children, hover, ...other }) => (
     {children({
       getLayoutProps: ({ className, ...rest } = {}) => ({
         className: classnames(className, {
-          [`${layoutModuleNamespace}--${namespace}--hover`]: hover,
+          [hoverNamespace]: hover,
         }),
         ...rest,
       }),
