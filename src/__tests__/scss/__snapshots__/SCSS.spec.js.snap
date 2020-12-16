@@ -8616,6 +8616,10 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   background-color: var(--ui-03, #393939);
 }
 
+.security--data-table .bx--data-table-content {
+  overflow: unset;
+}
+
 .security--data-table .bx--data-table.bx--skeleton th {
   border-bottom-width: 0;
 }
@@ -17100,7 +17104,6 @@ li.bx--accordion__item--disabled:last-of-type {
   width: 100%;
   margin-bottom: 6rem;
   flex-grow: 1;
-  overflow: auto;
 }
 
 .security--tearsheet--small__scroll-gradient__content {
@@ -17354,7 +17357,6 @@ li.bx--accordion__item--disabled:last-of-type {
   flex: 1;
   flex-direction: column;
   justify-content: space-between;
-  overflow-x: auto;
 }
 
 .security--tearsheet__main__title, .security--tearsheet__main__content {
@@ -19276,17 +19278,14 @@ li.bx--accordion__item--disabled:last-of-type {
   width: calc(100% - 3rem);
 }
 
-.security--shell--active--return, .security--shell--active--return__toolbar,
+.security--shell--active--return__toolbar,
 .security--shell--active--return__header > .security--header,
 .security--shell--active--return .security--toolbar__panel {
-  margin-top: 1.5rem;
+  top: 1.5rem;
 }
 
 .security--shell__banner {
   display: flex;
-  position: fixed;
-  top: 0;
-  width: 100%;
   height: 1.5rem;
   padding-left: 1rem;
   background-color: var(--ui-01, #262626);
@@ -19295,7 +19294,6 @@ li.bx--accordion__item--disabled:last-of-type {
   background-size: 10rem 1.5rem;
   align-items: center;
   transition: 0.2s background-size cubic-bezier(0.2, 0, 0.38, 0.9);
-  z-index: 8000;
 }
 
 .security--theme--cg10 .security--shell__banner {

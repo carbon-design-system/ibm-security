@@ -115,6 +115,18 @@ storiesOf(components('DataTable'), module)
       },
     }
   )
+  .add(
+    'with scroll gradient',
+    () => require('./stories/with-scroll-gradient').default(props()),
+    {
+      info: {
+        text: `
+          DataTable with scroll gradient. The DataTable is wrapped in a \`ScrollGradient\` component,
+          which will display when the columns oveflow the surrounding container.    
+        `,
+      },
+    }
+  )
   .add('with skeleton', () =>
     require('./stories/with-skeleton').default(props())
   );
