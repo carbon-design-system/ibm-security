@@ -55,7 +55,11 @@
     @include security--theme--cg10__cg100;
 
     display: flex;
-    height: $shell__banner__sizing__height;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: inherit;
     padding-left: $carbon--spacing-05;
     background-color: $ui-01;
     background-position: left;
@@ -64,11 +68,16 @@
       $shell__banner__background__sizing__height;
     align-items: center;
     transition: $transition-duration background-size $timing-function;
+    z-index: $header__layer;
 
     &,
     &:hover,
     &:visited {
       color: $text-01;
+    }
+
+    &__container {
+      height: $shell__banner__sizing__height;
     }
 
     &__icon {

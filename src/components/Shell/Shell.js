@@ -60,26 +60,28 @@ const Shell = ({
         </div>
       )}
       {returnToBanner && (
-        <Link
-          id="returnToBanner"
-          className={`${namespace}__banner`}
-          href={returnToBanner.href}
-          style={{
-            backgroundImage: `url(${dataUri(
-              '../../images/aurora-banner@2x.png'
-            )})`,
-          }}
-        >
-          <Icon
-            className={`${namespace}__banner__icon`}
-            renderIcon={ArrowLeft16}
-          />
-          <span className={`${namespace}__banner__text`}>
-            {returnToBanner.view
-              ? `Return to ${returnToBanner.application} / ${returnToBanner.view}`
-              : `Return to ${returnToBanner.application}`}
-          </span>
-        </Link>
+        <div className={`${namespace}__banner__container`}>
+          <Link
+            id="returnToBanner"
+            className={`${namespace}__banner`}
+            href={returnToBanner.href}
+            style={{
+              backgroundImage: `url(${dataUri(
+                '../../images/aurora-banner@2x.png'
+              )})`,
+            }}
+          >
+            <Icon
+              className={`${namespace}__banner__icon`}
+              renderIcon={ArrowLeft16}
+            />
+            <span className={`${namespace}__banner__text`}>
+              {returnToBanner.view
+                ? `Return to ${returnToBanner.application} / ${returnToBanner.view}`
+                : `Return to ${returnToBanner.application}`}
+            </span>
+          </Link>
+        </div>
       )}
       <div
         className={classnames(namespace, {
