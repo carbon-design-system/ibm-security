@@ -238,6 +238,7 @@ export default class Toolbar extends Component {
     } = this.props;
     const renderSupport = this.props.support.length > 0;
     const renderSettings = this.props.settings.length > 0;
+    const height = renderSupport && renderSettings ? '100%' : '50px';
     const classes = classnames(namespace, className);
     const { isActive } = this.state;
     const activeItems = Object.entries(isActive)
@@ -251,7 +252,11 @@ export default class Toolbar extends Component {
 
     return (
       <div ref={this.wrapper}>
-        <nav aria-label={ariaLabel} className={classes}>
+        <nav
+          aria-label={ariaLabel}
+          className={classes}
+          style={{ height }}
+        >
           <ul className={`${namespace}__group`}>
             <li>{this.toggleIcon(menu.button, Menu20, 'menu')}</li>
             {renderSettings && (
@@ -394,7 +399,7 @@ Toolbar.propTypes = {
 
       /** @type {string} The tooltip label. */
       tooltip: PropTypes.string,
-    }).isRequired,
+    }),
   }).isRequired,
 
   /** @type {Function} Toggle handler. */
