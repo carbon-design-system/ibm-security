@@ -135,19 +135,7 @@ const ComboButton = ({
               `${namespace}__overflow-menu`
             )}
             direction={direction}
-            menuOffset={() => {
-              const { pageYOffset } = window;
-
-              return {
-                top:
-                  direction === TooltipDirection.TOP
-                    ? pageYOffset
-                    : pageYOffset * -1,
-                ...(typeof menuOffset === 'function'
-                  ? menuOffset()
-                  : menuOffset),
-              };
-            }}
+            menuOffset={menuOffset}
             menuOffsetFlip={menuOffsetFlip}
             menuOptionsClass={`${carbonPrefix}list-box__menu`}
             onClick={() => setIsOpen(!isOpen)}
