@@ -238,8 +238,9 @@ export default class Toolbar extends Component {
     } = this.props;
     const renderSupport = this.props.support.length > 0;
     const renderSettings = this.props.settings.length > 0;
-    const height = renderSupport && renderSettings ? '100%' : '50px';
-    const classes = classnames(namespace, className);
+    const classes = classnames(namespace, className, {
+      [`${namespace}__minimized`]: !renderSupport && !renderSettings,
+    });
     const { isActive } = this.state;
     const activeItems = Object.entries(isActive)
       // eslint-disable-next-line no-unused-vars
@@ -252,11 +253,7 @@ export default class Toolbar extends Component {
 
     return (
       <div ref={this.wrapper}>
-        <nav
-          aria-label={ariaLabel}
-          className={classes}
-          style={{ height }}
-        >
+        <nav aria-label={ariaLabel} className={classes}>
           <ul className={`${namespace}__group`}>
             <li>{this.toggleIcon(menu.button, Menu20, 'menu')}</li>
             {renderSettings && (
