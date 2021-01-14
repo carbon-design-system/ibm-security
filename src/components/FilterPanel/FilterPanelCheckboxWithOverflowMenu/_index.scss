@@ -35,7 +35,7 @@
   }
 
   &__overflow-options {
-    width: auto;
+    width: 100%;
 
     .#{$prefix}--overflow-menu-options__option {
       height: $carbon--layout-02;
