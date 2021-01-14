@@ -579,7 +579,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"
                               />
                             </svg>
                           </span>
@@ -879,7 +879,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                           xmlns="http://www.w3.org/2000/svg"
                                         >
                                           <path
-                                            d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                            d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"
                                           />
                                         </svg>
                                       </span>
@@ -1113,7 +1113,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                             xmlns="http://www.w3.org/2000/svg"
                                           >
                                             <path
-                                              d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                              d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"
                                             />
                                           </svg>
                                         </span>
@@ -1349,7 +1349,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                 xmlns="http://www.w3.org/2000/svg"
                                               >
                                                 <path
-                                                  d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                                  d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"
                                                 />
                                               </svg>
                                             </span>
@@ -1806,7 +1806,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                           xmlns="http://www.w3.org/2000/svg"
                                                         >
                                                           <path
-                                                            d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                                            d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"
                                                           />
                                                         </svg>
                                                       </Icon>
@@ -2614,7 +2614,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                  d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"
                                 />
                               </svg>
                             </span>
@@ -2839,7 +2839,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                  d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"
                                 />
                               </svg>
                             </span>
@@ -3139,7 +3139,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                             xmlns="http://www.w3.org/2000/svg"
                                           >
                                             <path
-                                              d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                              d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"
                                             />
                                           </svg>
                                         </span>
@@ -3364,7 +3364,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                             xmlns="http://www.w3.org/2000/svg"
                                           >
                                             <path
-                                              d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                              d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"
                                             />
                                           </svg>
                                         </span>
@@ -3598,7 +3598,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                               xmlns="http://www.w3.org/2000/svg"
                                             >
                                               <path
-                                                d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                                d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"
                                               />
                                             </svg>
                                           </span>
@@ -3823,7 +3823,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                               xmlns="http://www.w3.org/2000/svg"
                                             >
                                               <path
-                                                d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                                d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"
                                               />
                                             </svg>
                                           </span>
@@ -4059,7 +4059,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                   xmlns="http://www.w3.org/2000/svg"
                                                 >
                                                   <path
-                                                    d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                                    d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"
                                                   />
                                                 </svg>
                                               </span>
@@ -4284,7 +4284,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                   xmlns="http://www.w3.org/2000/svg"
                                                 >
                                                   <path
-                                                    d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                                    d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"
                                                   />
                                                 </svg>
                                               </span>
@@ -4741,7 +4741,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                             xmlns="http://www.w3.org/2000/svg"
                                                           >
                                                             <path
-                                                              d="M30,28.59,22.45,21A11,11,0,1,0,21,22.45L28.59,30ZM5,14a9,9,0,1,1,9,9A9,9,0,0,1,5,14Z"
+                                                              d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"
                                                             />
                                                           </svg>
                                                         </Icon>

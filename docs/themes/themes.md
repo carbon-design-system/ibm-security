@@ -48,7 +48,9 @@
 | `hover-tertiary`     | `#0353e9`         | `gray-10`         |
 | `active-tertiary`    | `blue-80`         | `gray-30`         |
 | `hover-ui`           | `#e0e4ea`         | `#353535`         |
+| `hover-light-ui`     | `#e5e5e5`         | `#4c4c4c`         |
 | `active-ui`          | `cool-gray-30`    | `gray-70`         |
+| `active-light-ui`    | `cool-gray-30`    | `gray-60`         |
 | `selected-ui`        | `cool-gray-20`    | `gray-80`         |
 | `selected-light-ui`  | `cool-gray-20`    | `gray-70`         |
 | `inverse-hover-ui`   | `#464c51`         | `#e5e5e5`         |
@@ -62,7 +64,6 @@
 | `disabled-03`        | `cool-gray-50`    | `gray-50`         |
 | `highlight`          | `blue-10`         | `blue-80`         |
 | `decorative-01`      | `cool-gray-20`    | `gray-70`         |
-| `hover-light-ui`     | `#e5e5e5`         | `gray-70`         |
 | `button-separator`   | `cool-gray-20`    | `gray-100`        |
 | `skeleton-01`        | `#e0e4ea`         | `#353535`         |
 | `skeleton-02`        | `cool-gray-30`    | `gray-80`         |
