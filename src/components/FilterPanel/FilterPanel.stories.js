@@ -11,11 +11,9 @@ import { compose, withState, withHandlers, getDisplayName } from 'recompose';
 import React from 'react';
 
 import { patterns } from '../../../.storybook';
-
-import { AccordionItem, Accordion } from '../Accordion';
 import Checkbox from '../Checkbox';
-import OverflowMenuItem from '../OverflowMenuItem';
 import Search from '../Search';
+import { AccordionItem, Accordion } from '../Accordion';
 
 import {
   filterData,
@@ -28,12 +26,11 @@ import {
 } from './_mocks_';
 
 import FilterPanel, {
+  FilterPanelSearch,
   FilterPanelAccordion,
   FilterPanelAccordionItem,
   FilterPanelCheckbox,
-  FilterPanelCheckboxWithOverflowMenu,
   FilterPanelGroup,
-  FilterPanelSearch,
 } from '.';
 
 // Ensure that passed down props are shown in types table.
@@ -127,28 +124,22 @@ storiesOf(patterns('FilterPanel'), module)
           expandLabel="View more"
           collapseLabel="View less"
         >
-          {new Array(20).fill().map((item, id) => {
-            const key = `FilterPanelCheckboxWithOverflowMenu__${id}`;
-
-            return (
-              <FilterPanelCheckboxWithOverflowMenu
-                key={key}
-                id={key}
-                labelText={`${id} ${FilterPanelCheckboxWithOverflowMenu.name}`}
-              >
-                {new Array(2).fill().map((item, id) => {
-                  const key = `OverflowMenuItem__${id}`;
-
-                  return (
-                    <OverflowMenuItem
-                      key={key}
-                      itemText={`${id} ${OverflowMenuItem.name}`}
-                    />
-                  );
-                })}
-              </FilterPanelCheckboxWithOverflowMenu>
-            );
-          })}
+          <FilterPanelCheckbox
+            labelText="Filter checkbox"
+            id="filter-checkbox"
+            {...checkboxProps()}
+          />
+          <FilterPanelCheckbox
+            labelText="Long filter checkbox  label"
+            id="long-filter-checkbox"
+            {...checkboxProps()}
+          />
+          <FilterPanelCheckbox
+            labelText="Checked"
+            id="checked"
+            defaultChecked
+            {...checkboxProps()}
+          />
         </FilterPanelAccordionItem>
         <FilterPanelAccordionItem
           title="Truncated accordion item"
