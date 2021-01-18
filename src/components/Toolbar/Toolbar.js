@@ -326,7 +326,7 @@ const navigation = {
   id: PropTypes.string.isRequired,
 
   /** @type {string} The title of the navigation. */
-  title: PropTypes.string.isRequired,
+  title: PropTypes.node.isRequired,
 
   /** @type {node} Content. */
   content: PropTypes.node,
