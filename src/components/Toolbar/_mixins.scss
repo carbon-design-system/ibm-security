@@ -141,6 +141,10 @@ $toolbar__panel__transition__timing-function: $timing-function;
   box-sizing: border-box;
   z-index: $toolbar__layer;
 
+  &__minimized {
+    bottom: unset;
+  }
+
   @include rtl {
     right: 0;
     left: unset;
