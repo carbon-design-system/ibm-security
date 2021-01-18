@@ -8752,7 +8752,6 @@ Map {
                         },
                       },
                     ],
-                    "isRequired": true,
                     "type": "shape",
                   },
                   "support": Object {
@@ -8767,7 +8766,6 @@ Map {
                         },
                       },
                     ],
-                    "isRequired": true,
                     "type": "shape",
                   },
                 },
@@ -12558,7 +12556,6 @@ Map {
                   },
                 },
               ],
-              "isRequired": true,
               "type": "shape",
             },
             "support": Object {
@@ -12573,7 +12570,6 @@ Map {
                   },
                 },
               ],
-              "isRequired": true,
               "type": "shape",
             },
           },
