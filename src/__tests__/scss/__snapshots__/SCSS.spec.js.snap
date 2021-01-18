@@ -9631,7 +9631,7 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 .security--filter-panel-checkbox-with-overflow-menu__overflow-options {
-  width: auto;
+  width: 100%;
 }
 
 .security--filter-panel-checkbox-with-overflow-menu__overflow-options .bx--overflow-menu-options__option {
