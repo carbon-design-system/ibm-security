@@ -17621,6 +17621,10 @@ li.bx--accordion__item--disabled:last-of-type {
   overflow-y: hidden;
 }
 
+.security--portal__container .bx--tooltip {
+  z-index: 9000;
+}
+
 @keyframes rotate {
   0% {
     transform: rotate(0deg);

@@ -1,11 +1,13 @@
 ////
 /// Portal mixins.
 /// @group portal
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import 'carbon-components/scss/globals/scss/layout';
 @import '@carbon/themes/scss/tokens';
+
+@import '../Tearsheet/mixins';
 
 @mixin portal {
   &__overlay {
@@ -26,5 +28,9 @@
 
   &__container {
     overflow-y: hidden;
+
+    .#{$prefix}--tooltip {
+      z-index: $tearsheet__layer;
+    }
   }
 }
