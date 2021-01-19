@@ -1,7 +1,7 @@
 ////
 /// Tearsheet mixins.
 /// @group tearsheet
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/spacing';
@@ -39,6 +39,10 @@ $tearsheet__position: calc(
   -#{$tearsheet__position__base} - #{$tearsheet__sizing__margin}
 );
 
+$tearsheet__layer: z(
+  $layer: modal,
+);
+
 @mixin tearsheet--base {
   /// Dimensions.
   /// @type Length
@@ -57,7 +61,7 @@ $tearsheet__position: calc(
   margin-left: $tearsheet__sizing__margin;
   background-color: $tearsheet__color__background;
   transform: translate3d(#{$tearsheet__position}, 0, 0);
-  z-index: z($layer: modal);
+  z-index: $tearsheet__layer;
 
   &__transition {
     &--enter,
