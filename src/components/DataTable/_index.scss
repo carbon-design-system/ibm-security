@@ -21,12 +21,8 @@
 @import '../Component/mixins';
 
 @include security--component($name: data-table) {
-  &__table-wrapper {
-    z-index: 0;
-  }
-
   &__overflow-cell .#{$prefix}--overflow-menu {
-    z-index: z($layer: overlay);
+    z-index: $scroll-gradient__layer + 1;
   }
 
   .#{$prefix}--data-table {

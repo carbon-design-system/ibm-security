@@ -1,7 +1,7 @@
 ////
 /// Scroll gradient component.
 /// @group scroll-gradient
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/spacing';
@@ -10,6 +10,8 @@
 @import '../../globals/motion/index';
 
 @import '../Component/mixins';
+
+$scroll-gradient__layer: 1;
 
 @include security--component($name: scroll-gradient) {
   /// Thickness of gradient.
@@ -39,7 +41,7 @@
     transition-duration: $transition-duration;
     transition-property: opacity;
     transition-timing-function: carbon--motion($name: standard);
-    z-index: 1;
+    z-index: $scroll-gradient__layer;
   }
 
   &--x > {
