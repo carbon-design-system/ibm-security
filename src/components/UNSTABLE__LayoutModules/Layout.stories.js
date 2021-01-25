@@ -18,7 +18,7 @@ import { Grid, Row, Column } from 'carbon-components-react';
 import React from 'react';
 
 import { disableCentered, patterns } from '../../../.storybook';
-import ExampleContainer from '../../../.storybook/components/ExampleContainer';
+import ExampleBackgroundContainer from '../../../.storybook/components/ExampleBackgroundContainer';
 
 import {
   ActionBarModule,
@@ -51,7 +51,6 @@ import {
 
 const ColumnWithBackground = withBackground(Column);
 const SummaryCard = withBackground(SummaryCardComponent);
-const Section = ExampleContainer;
 
 const UIShell = () => (
   <div style={{ height: layout04, marginBottom: layout03 }}>
@@ -214,34 +213,34 @@ export const Detail = () => (
       )}
     </CardModule>
 
-    <Row narrow>
-      <Column>
-        <ExampleContainer>
+    <ExampleBackgroundContainer>
+      <Row narrow>
+        <Column>
           <TitleBarModule element="h4" title="Indicators" />
-        </ExampleContainer>
-      </Column>
-    </Row>
+        </Column>
+      </Row>
 
-    <ICAModule>
-      {() => (
-        <Row narrow>
-          <Column sm={2} md={2} lg={3}>
-            <ICA label="Malware" value={11} />
-          </Column>
-          <Column sm={2} md={2} lg={3}>
-            <ICA label="IPs" value={8} />
-          </Column>
-          <Column sm={2} md={2} lg={3}>
-            <ICA label="URLs" value={9} />
-          </Column>
-          <Column sm={2} md={2} lg={3}>
-            <ICA label="VULs" value={1} />
-          </Column>
-        </Row>
-      )}
-    </ICAModule>
+      <ICAModule>
+        {() => (
+          <Row narrow>
+            <Column sm={2} md={2} lg={3}>
+              <ICA label="Malware" value={11} />
+            </Column>
+            <Column sm={2} md={2} lg={3}>
+              <ICA label="IPs" value={8} />
+            </Column>
+            <Column sm={2} md={2} lg={3}>
+              <ICA label="URLs" value={9} />
+            </Column>
+            <Column sm={2} md={2} lg={3}>
+              <ICA label="VULs" value={1} />
+            </Column>
+          </Row>
+        )}
+      </ICAModule>
+    </ExampleBackgroundContainer>
 
-    <Row condensed>
+    <Row narrow>
       <Column>
         <DataTablePagination
           headers={[

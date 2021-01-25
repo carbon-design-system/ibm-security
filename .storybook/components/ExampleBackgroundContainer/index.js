@@ -1,5 +1,5 @@
 /**
- * @file Example container.
+ * @file Example background container.
  * @copyright IBM Security 2021
  */
 
