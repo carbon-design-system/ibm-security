@@ -1,0 +1,16 @@
+////
+/// Example container.
+/// @group storybook
+/// @copyright IBM Security 2021
+////
+
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/themes/scss/tokens';
+
+.container--example {
+  $container--example__padding: $carbon--spacing-05;
+
+  background-color: $ui-01;
+  padding-right: $container--example__padding;
+  padding-left: $container--example__padding;
+}

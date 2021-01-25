@@ -18,6 +18,7 @@ import { Grid, Row, Column } from 'carbon-components-react';
 import React from 'react';
 
 import { disableCentered, patterns } from '../../../.storybook';
+import ExampleContainer from '../../../.storybook/components/ExampleContainer';
 
 import {
   ActionBarModule,
@@ -50,6 +51,7 @@ import {
 
 const ColumnWithBackground = withBackground(Column);
 const SummaryCard = withBackground(SummaryCardComponent);
+const Section = ExampleContainer;
 
 const UIShell = () => (
   <div style={{ height: layout04, marginBottom: layout03 }}>
@@ -139,7 +141,7 @@ export const Detail = () => (
 
     <CardModule>
       {({ getLayoutProps }) => (
-        <Row>
+        <Row narrow>
           <Column>
             <SummaryCard {...getLayoutProps()}>
               <SummaryCardHeader title="Threat actor" />
@@ -212,103 +214,101 @@ export const Detail = () => (
       )}
     </CardModule>
 
-    <Row>
-      <ColumnWithBackground>
-        <ICAModule>
-          {() => (
-            <>
-              <TitleBarModule element="h4" title="Indicators" />
+    <Row narrow>
+      <Column>
+        <ExampleContainer>
+          <TitleBarModule element="h4" title="Indicators" />
+        </ExampleContainer>
+      </Column>
+    </Row>
 
-              <Row>
-                <Column sm={2} md={2} lg={3}>
-                  <ICA label="Malware" value={11} />
-                </Column>
-                <Column sm={2} md={2} lg={3}>
-                  <ICA label="IPs" value={8} />
-                </Column>
-                <Column sm={2} md={2} lg={3}>
-                  <ICA label="URLs" value={9} />
-                </Column>
-                <Column sm={2} md={2} lg={3}>
-                  <ICA label="VULs" value={1} />
-                </Column>
-              </Row>
-            </>
-          )}
-        </ICAModule>
-
-        <Row condensed>
-          <Column>
-            <DataTablePagination
-              headers={[
-                {
-                  header: 'Name',
-                  key: 'name',
-                },
-                {
-                  header: 'Last sighted',
-                  key: 'lastSighted',
-                },
-              ]}
-              pageSize={5}
-              pageSizes={[5, 10, 25, 50]}
-              rows={[
-                {
-                  id: '0',
-                  lastSighted: 'Feb 3 2019 12:00 PM EST',
-                  name: (
-                    <Decorator
-                      score={7}
-                      type="MAL"
-                      value="5020c08bcc061236643293bf0d897321"
-                    />
-                  ),
-                },
-                {
-                  id: '1',
-                  lastSighted: 'Feb 5 2019 12:00 PM EST',
-                  name: (
-                    <Decorator
-                      score={7}
-                      type="MAL"
-                      value="aca7037286b64b0da05c9708d647c013"
-                    />
-                  ),
-                },
-                {
-                  id: '2',
-                  lastSighted: 'Feb 7 2019 12:00 PM EST',
-                  name: (
-                    <Decorator
-                      score={7}
-                      type="MAL"
-                      value="bd9e4c82bf12c4e7a58221fc52fed705"
-                    />
-                  ),
-                },
-                {
-                  id: '3',
-                  lastSighted: 'Apr 1 2019 12:00 PM EST',
-                  name: (
-                    <Decorator score={0} type="IP" value="103.243.175.181" />
-                  ),
-                },
-                {
-                  id: '4',
-                  lastSighted: 'Apr 1 2019 12:00 PM EST',
-                  name: (
-                    <Decorator
-                      score={7}
-                      type="MAL"
-                      value="5020c08bcc061236643293bf0d897321"
-                    />
-                  ),
-                },
-              ]}
-            />
+    <ICAModule>
+      {() => (
+        <Row narrow>
+          <Column sm={2} md={2} lg={3}>
+            <ICA label="Malware" value={11} />
+          </Column>
+          <Column sm={2} md={2} lg={3}>
+            <ICA label="IPs" value={8} />
+          </Column>
+          <Column sm={2} md={2} lg={3}>
+            <ICA label="URLs" value={9} />
+          </Column>
+          <Column sm={2} md={2} lg={3}>
+            <ICA label="VULs" value={1} />
           </Column>
         </Row>
-      </ColumnWithBackground>
+      )}
+    </ICAModule>
+
+    <Row condensed>
+      <Column>
+        <DataTablePagination
+          headers={[
+            {
+              header: 'Name',
+              key: 'name',
+            },
+            {
+              header: 'Last sighted',
+              key: 'lastSighted',
+            },
+          ]}
+          pageSize={5}
+          pageSizes={[5, 10, 25, 50]}
+          rows={[
+            {
+              id: '0',
+              lastSighted: 'Feb 3 2019 12:00 PM EST',
+              name: (
+                <Decorator
+                  score={7}
+                  type="MAL"
+                  value="5020c08bcc061236643293bf0d897321"
+                />
+              ),
+            },
+            {
+              id: '1',
+              lastSighted: 'Feb 5 2019 12:00 PM EST',
+              name: (
+                <Decorator
+                  score={7}
+                  type="MAL"
+                  value="aca7037286b64b0da05c9708d647c013"
+                />
+              ),
+            },
+            {
+              id: '2',
+              lastSighted: 'Feb 7 2019 12:00 PM EST',
+              name: (
+                <Decorator
+                  score={7}
+                  type="MAL"
+                  value="bd9e4c82bf12c4e7a58221fc52fed705"
+                />
+              ),
+            },
+            {
+              id: '3',
+              lastSighted: 'Apr 1 2019 12:00 PM EST',
+              name: <Decorator score={0} type="IP" value="103.243.175.181" />,
+            },
+            {
+              id: '4',
+              lastSighted: 'Apr 1 2019 12:00 PM EST',
+              name: (
+                <Decorator
+                  score={7}
+                  type="MAL"
+                  value="5020c08bcc061236643293bf0d897321"
+                />
+              ),
+            },
+          ]}
+        />
+      </Column>
     </Row>
   </>
 );
