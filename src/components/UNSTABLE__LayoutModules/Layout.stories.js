@@ -1,6 +1,6 @@
 /**
  * @file Layout module stories.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import {
