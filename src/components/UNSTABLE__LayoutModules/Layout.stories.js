@@ -437,129 +437,136 @@ export const Overview = () => (
           </ColumnWithBackground>
         </Row>
 
-        <Row>
-          <ColumnWithBackground>
-            <Row>
-              <Column>
-                <TitleBarModule title="Campaign results" subsection />
-              </Column>
-            </Row>
+        <ExampleBackgroundContainer>
+          <Row narrow>
+            <Column>
+              <TitleBarModule title="Campaign results" subsection />
+            </Column>
+          </Row>
 
-            <ICAModule>
-              {() => (
-                <Row>
-                  <Column sm={2} md={2} lg={3}>
-                    <ICA label="Reviews complete" value={300} />
-                  </Column>
-                  <Column sm={2} md={2} lg={3}>
-                    <ICA label="Approved" value={241} />
-                  </Column>
-                  <Column sm={2} md={2} lg={3}>
-                    <ICA label="Rejected" value={28} />
-                  </Column>
-                </Row>
-              )}
-            </ICAModule>
+          <ICAModule>
+            {() => (
+              <Row narrow>
+                <Column sm={2} md={2} lg={3}>
+                  <ICA label="Reviews complete" value={300} />
+                </Column>
+                <Column sm={2} md={2} lg={3}>
+                  <ICA label="Approved" value={241} />
+                </Column>
+                <Column sm={2} md={2} lg={3}>
+                  <ICA label="Rejected" value={28} />
+                </Column>
+              </Row>
+            )}
+          </ICAModule>
+        </ExampleBackgroundContainer>
 
-            <Row condensed>
-              <Column>
-                <DataTablePagination
-                  headers={[
-                    {
-                      header: 'Reviewer',
-                      key: 'reviewer',
-                    },
-                    {
-                      header: 'Approved',
-                      key: 'approved',
-                    },
-                    {
-                      header: 'Rejected',
-                      key: 'rejected',
-                    },
-                    {
-                      header: 'Not reviewed',
-                      key: 'notReviewed',
-                    },
-                    {
-                      header: 'Completion',
-                      key: 'completion',
-                    },
-                  ]}
-                  pageSize={5}
-                  pageSizes={[5, 10, 25, 50]}
-                  rows={[
-                    {
-                      approved: 5,
-                      completion: '10%',
-                      id: '0',
-                      notReviewed: 54,
-                      rejected: 0,
-                      reviewer: 'john@cse-bank.com',
-                    },
-                    {
-                      approved: 64,
-                      completion: '92%',
-                      id: '1',
-                      notReviewed: 6,
-                      rejected: 5,
-                      reviewer: 'maria@cse-bank.com',
-                    },
-                    {
-                      approved: 71,
-                      completion: '100%',
-                      id: '2',
-                      notReviewed: 0,
-                      rejected: 0,
-                      reviewer: 'rogelio@cse-bank.com',
-                    },
-                  ]}
-                />
-              </Column>
-            </Row>
-          </ColumnWithBackground>
+        <Row narrow>
+          <Column>
+            <DataTablePagination
+              headers={[
+                {
+                  header: 'Reviewer',
+                  key: 'reviewer',
+                },
+                {
+                  header: 'Approved',
+                  key: 'approved',
+                },
+                {
+                  header: 'Rejected',
+                  key: 'rejected',
+                },
+                {
+                  header: 'Not reviewed',
+                  key: 'notReviewed',
+                },
+                {
+                  header: 'Completion',
+                  key: 'completion',
+                },
+              ]}
+              pageSize={5}
+              pageSizes={[5, 10, 25, 50]}
+              rows={[
+                {
+                  approved: 5,
+                  completion: '10%',
+                  id: '0',
+                  notReviewed: 54,
+                  rejected: 0,
+                  reviewer: 'john@cse-bank.com',
+                },
+                {
+                  approved: 64,
+                  completion: '92%',
+                  id: '1',
+                  notReviewed: 6,
+                  rejected: 5,
+                  reviewer: 'maria@cse-bank.com',
+                },
+                {
+                  approved: 71,
+                  completion: '100%',
+                  id: '2',
+                  notReviewed: 0,
+                  rejected: 0,
+                  reviewer: 'rogelio@cse-bank.com',
+                },
+              ]}
+            />
+          </Column>
         </Row>
       </Column>
 
       <Column lg={4}>
-        <ButtonClusterModule>
-          <Button kind="ghost" renderIcon={Copy16}>
-            Duplicate campaign
-          </Button>
-          <Button kind="ghost" renderIcon={Activity16}>
-            View activity report
-          </Button>
-        </ButtonClusterModule>
+        <Row narrow>
+          <Column>
+            <ButtonClusterModule>
+              <Button kind="ghost" renderIcon={Copy16}>
+                Duplicate campaign
+              </Button>
 
-        <DescriptionListModule>
-          <TitleBarModule title="Details" subsection />
+              <Button kind="ghost" renderIcon={Activity16}>
+                View activity report
+              </Button>
+            </ButtonClusterModule>
+          </Column>
+        </Row>
 
-          <TypeLayout>
-            <TypeLayoutBody>
-              <TypeLayoutRow>
-                <TypeLayoutCell>Created by</TypeLayoutCell>
-                <TypeLayoutCell>
-                  <ul>
-                    <li>Scott Damon</li>
-                    <li>scottd@cse-bank.com</li>
-                  </ul>
-                </TypeLayoutCell>
-              </TypeLayoutRow>
-              <TypeLayoutRow>
-                <TypeLayoutCell>Created on</TypeLayoutCell>
-                <TypeLayoutCell>Jun 21 2018</TypeLayoutCell>
-              </TypeLayoutRow>
-              <TypeLayoutRow>
-                <TypeLayoutCell>Modified on</TypeLayoutCell>
-                <TypeLayoutCell>–</TypeLayoutCell>
-              </TypeLayoutRow>
-              <TypeLayoutRow>
-                <TypeLayoutCell>Closed on</TypeLayoutCell>
-                <TypeLayoutCell>Jul 15 2018</TypeLayoutCell>
-              </TypeLayoutRow>
-            </TypeLayoutBody>
-          </TypeLayout>
-        </DescriptionListModule>
+        <Row>
+          <Column>
+            <DescriptionListModule>
+              <TitleBarModule title="Details" subsection />
+
+              <TypeLayout>
+                <TypeLayoutBody>
+                  <TypeLayoutRow>
+                    <TypeLayoutCell>Created by</TypeLayoutCell>
+                    <TypeLayoutCell>
+                      <ul>
+                        <li>Scott Damon</li>
+                        <li>scottd@cse-bank.com</li>
+                      </ul>
+                    </TypeLayoutCell>
+                  </TypeLayoutRow>
+                  <TypeLayoutRow>
+                    <TypeLayoutCell>Created on</TypeLayoutCell>
+                    <TypeLayoutCell>Jun 21 2018</TypeLayoutCell>
+                  </TypeLayoutRow>
+                  <TypeLayoutRow>
+                    <TypeLayoutCell>Modified on</TypeLayoutCell>
+                    <TypeLayoutCell>–</TypeLayoutCell>
+                  </TypeLayoutRow>
+                  <TypeLayoutRow>
+                    <TypeLayoutCell>Closed on</TypeLayoutCell>
+                    <TypeLayoutCell>Jul 15 2018</TypeLayoutCell>
+                  </TypeLayoutRow>
+                </TypeLayoutBody>
+              </TypeLayout>
+            </DescriptionListModule>
+          </Column>
+        </Row>
       </Column>
     </Row>
   </>
