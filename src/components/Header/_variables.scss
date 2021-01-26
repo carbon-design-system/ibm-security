@@ -1,17 +1,10 @@
 ////
 /// Header variables.
 /// @group header
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/spacing';
-@import 'carbon-components/scss/globals/scss/layout';
-
-/// Layer.
-/// @type Number
-$header__layer: z(
-  $layer: header,
-);
 
 /// Padding.
 /// @type Length

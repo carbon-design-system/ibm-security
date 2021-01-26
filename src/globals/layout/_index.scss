@@ -1,7 +1,7 @@
 ////
 /// Layout.
 /// @group layout
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/layout';
@@ -23,3 +23,29 @@
 
   @return carbon--mini-units($count: $unitQuantity);
 }
+
+/// https://github.com/carbon-design-system/carbon/blob/master/packages/components/src/globals/scss/_layout.scss#L14
+/// @type Map<String, Length>
+/// @access private
+$z-indexes: map-merge(
+  $map1: $z-indexes,
+  $map2: (
+    security--panel:
+      z(
+        $layer: modal,
+      ),
+    security--portal:
+      z(
+        $layer: overlay,
+      ),
+    security--scroll-gradient: 1,
+    security--shell:
+      z(
+        $layer: header,
+      ),
+    security--tearsheet:
+      z(
+        $layer: modal,
+      ),
+  ),
+);

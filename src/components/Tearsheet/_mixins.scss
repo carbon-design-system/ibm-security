@@ -8,10 +8,10 @@
 @import '@carbon/layout/scss/mini-unit';
 @import '@carbon/type/scss/index';
 @import '@carbon/themes/scss/tokens';
-@import 'carbon-components/scss/globals/scss/layout';
 @import 'carbon-components/scss/globals/scss/vars';
 
 @import '../../globals/border/index';
+@import '../../globals/layout/index';
 @import '../../globals/motion/index';
 @import '../../globals/theme/mixins';
 
@@ -39,10 +39,6 @@ $tearsheet__position: calc(
   -#{$tearsheet__position__base} - #{$tearsheet__sizing__margin}
 );
 
-$tearsheet__layer: z(
-  $layer: modal,
-);
-
 @mixin tearsheet--base {
   /// Dimensions.
   /// @type Length
@@ -61,7 +57,7 @@ $tearsheet__layer: z(
   margin-left: $tearsheet__sizing__margin;
   background-color: $tearsheet__color__background;
   transform: translate3d(#{$tearsheet__position}, 0, 0);
-  z-index: $tearsheet__layer;
+  z-index: z($layer: security--tearsheet);
 
   &__transition {
     &--enter,

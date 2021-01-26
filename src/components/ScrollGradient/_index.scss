@@ -7,11 +7,10 @@
 @import '@carbon/layout/scss/spacing';
 @import '@carbon/motion/scss/motion';
 
+@import '../../globals/layout/index';
 @import '../../globals/motion/index';
 
 @import '../Component/mixins';
-
-$scroll-gradient__layer: 1;
 
 @include security--component($name: scroll-gradient) {
   /// Thickness of gradient.
@@ -41,7 +40,7 @@ $scroll-gradient__layer: 1;
     transition-duration: $transition-duration;
     transition-property: opacity;
     transition-timing-function: carbon--motion($name: standard);
-    z-index: $scroll-gradient__layer;
+    z-index: z($layer: security--scroll-gradient);
   }
 
   &--x > {

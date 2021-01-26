@@ -1,7 +1,7 @@
 ////
 /// Header mixins.
 /// @group header
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -9,8 +9,8 @@
 @import '@carbon/themes/scss/tokens';
 @import '@carbon/type/scss/styles';
 @import 'carbon-components/scss/globals/scss/helper-mixins';
-@import 'carbon-components/scss/globals/scss/layout';
 
+@import '../../globals/layout/index';
 @import '../../globals/motion/index';
 @import '../../globals/namespace/index';
 
@@ -102,7 +102,7 @@ $header__transition__timing-function: $timing-function;
   align-items: center;
   background-color: inherit;
   color: inherit;
-  z-index: $header__layer;
+  z-index: z($layer: security--shell);
 
   &__container {
     width: $header__sizing__width;

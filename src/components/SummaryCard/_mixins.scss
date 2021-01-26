@@ -1,7 +1,7 @@
 ////
 /// Summary card mixins.
 /// @group summary-card
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -10,11 +10,11 @@
 @import '@carbon/themes/scss/tokens';
 @import '@carbon/type/scss/styles';
 
-@import '../../globals/namespace/index';
-
 @import 'carbon-components/scss/globals/scss/helper-mixins';
-@import 'carbon-components/scss/globals/scss/layout';
 @import 'carbon-components/scss/globals/scss/vars';
+
+@import '../../globals/layout/index';
+@import '../../globals/namespace/index';
 
 @mixin summary-card {
   /// Container height.

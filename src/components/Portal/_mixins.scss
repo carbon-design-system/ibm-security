@@ -4,8 +4,9 @@
 /// @copyright IBM Security 2019 - 2021
 ////
 
-@import 'carbon-components/scss/globals/scss/layout';
 @import '@carbon/themes/scss/tokens';
+
+@import '../../globals/layout/index';
 
 @import '../Tearsheet/mixins';
 
@@ -19,7 +20,7 @@
     left: 0;
     background-color: $overlay-01;
     justify-content: center;
-    z-index: z($layer: overlay);
+    z-index: z($layer: security--portal);
 
     &:focus {
       outline: unset;
@@ -30,7 +31,7 @@
     overflow-y: hidden;
 
     .#{$prefix}--tooltip {
-      z-index: $tearsheet__layer;
+      z-index: z($layer: security--tearsheet);
     }
   }
 }

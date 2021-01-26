@@ -1,14 +1,14 @@
 ////
 /// Filter panel search mixins.
 /// @group filter-panel
-/// @copyright IBM Security 2020
+/// @copyright IBM Security 2020 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
 @import '@carbon/layout/scss/spacing';
 @import '@carbon/themes/scss/tokens';
 
-@import 'carbon-components/scss/globals/scss/layout';
+@import '../../../globals/layout/index';
 
 @mixin filter-panel-search {
   position: relative;
