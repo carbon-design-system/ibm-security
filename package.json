@@ -53,7 +53,7 @@
     "@carbon/import-once": "10.4.0",
     "@carbon/layout": "10.16.0",
     "@carbon/motion": "10.11.0",
-    "@carbon/telemetry": "^0.0.0-alpha.6",
+    "@carbon/telemetry": "0.0.0-alpha.6",
     "@carbon/themes": "10.25.0",
     "@carbon/type": "10.19.0",
     "carbon-components": "10.26.0",
