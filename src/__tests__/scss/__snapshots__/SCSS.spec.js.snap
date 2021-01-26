@@ -19813,7 +19813,11 @@ li.bx--accordion__item--disabled:last-of-type {
 
 .security--shell__banner {
   display: flex;
-  height: 1.5rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: inherit;
   padding-left: 1rem;
   background-color: var(--ui-01, #262626);
   background-position: left;
@@ -19821,6 +19825,7 @@ li.bx--accordion__item--disabled:last-of-type {
   background-size: 10rem 1.5rem;
   align-items: center;
   transition: 0.2s background-size cubic-bezier(0.2, 0, 0.38, 0.9);
+  z-index: 8000;
 }
 
 .security--theme--cg10 .security--shell__banner {
@@ -19899,6 +19904,10 @@ li.bx--accordion__item--disabled:last-of-type {
 
 .security--shell__banner, .security--shell__banner:hover, .security--shell__banner:visited {
   color: var(--text-01, #f4f4f4);
+}
+
+.security--shell__banner__container {
+  height: 1.5rem;
 }
 
 .security--shell__banner__icon {
