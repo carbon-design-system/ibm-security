@@ -7,19 +7,23 @@
 @import '@carbon/layout/scss/breakpoint';
 @import '@carbon/themes/scss/tokens';
 
+@import '../../../src/globals/border/index';
+
 .container--example {
-  $container--example__padding: ($carbon--grid-gutter / 2);
+  $container--example__spacing: ($carbon--grid-gutter / 2);
 
   position: relative;
-  padding-left: $container--example__padding;
+  padding-right: $container--example__spacing;
+  padding-left: $container--example__spacing;
 
   &::before {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
-    left: -#{$container--example__padding};
+    left: -#{$container--example__spacing};
     background-color: $ui-01;
+    outline: $border__sizing__width solid $ui-background;
     z-index: -1;
     content: '';
   }
