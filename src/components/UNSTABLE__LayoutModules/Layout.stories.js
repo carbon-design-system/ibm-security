@@ -212,7 +212,7 @@ export const Detail = () => (
       )}
     </CardModule>
 
-    <ExampleBackgroundContainer>
+    <ExampleBackgroundContainer narrow>
       <Row narrow>
         <Column>
           <TitleBarModule element="h4" title="Indicators" />
@@ -313,144 +313,130 @@ export const Detail = () => (
 
 export const Overview = () => (
   <>
-    <ActionBarModule>
-      <Tag type="gray">Closed</Tag>
-      ID: 12&nbsp;&nbsp;|&nbsp;&nbsp;Result: Completed
-    </ActionBarModule>
+    <Row>
+      <Column>
+        <ActionBarModule>
+          <Tag type="gray">Closed</Tag>
+          ID: 12&nbsp;&nbsp;|&nbsp;&nbsp;Result: Completed
+        </ActionBarModule>
+      </Column>
+    </Row>
 
     <Row>
       <Column lg={12}>
-        <Row>
+        <Row condensed>
           <Column>
             <ExampleBackgroundContainer>
-              <Row narrow>
-                <Column>
-                  <DescriptionListModule>
-                    <TitleBarModule
-                      title="General settings and scope"
-                      subsection
-                    />
+              <DescriptionListModule>
+                <TitleBarModule title="General settings and scope" subsection />
 
-                    <TypeLayout>
-                      <TypeLayoutBody>
-                        <TypeLayoutRow>
-                          <TypeLayoutCell>Name</TypeLayoutCell>
-                          <TypeLayoutCell>
-                            ServiceNow entitlements review
-                          </TypeLayoutCell>
-                        </TypeLayoutRow>
-                        <TypeLayoutRow>
-                          <TypeLayoutCell>Description</TypeLayoutCell>
-                          <TypeLayoutCell>
-                            Sample description of the ServiceNow entitlements
-                            review campaign that may need to go to several
-                            lines.
-                          </TypeLayoutCell>
-                        </TypeLayoutRow>
-                        <TypeLayoutRow>
-                          <TypeLayoutCell>Type</TypeLayoutCell>
-                          <TypeLayoutCell>User entitlements</TypeLayoutCell>
-                        </TypeLayoutRow>
-                        <TypeLayoutRow>
-                          <TypeLayoutCell>Priority</TypeLayoutCell>
-                          <TypeLayoutCell>Medium</TypeLayoutCell>
-                        </TypeLayoutRow>
-                        <TypeLayoutRow>
-                          <TypeLayoutCell>Applications</TypeLayoutCell>
-                          <TypeLayoutCell>
-                            <ul>
-                              <li>ServiceNow 1</li>
-                              <li>ServiceNow 2</li>
-                              <li>ServiceNow 3</li>
-                            </ul>
-                          </TypeLayoutCell>
-                        </TypeLayoutRow>
-                        <TypeLayoutRow>
-                          <TypeLayoutCell>Include only</TypeLayoutCell>
-                          <TypeLayoutCell>
-                            All users and groups included
-                          </TypeLayoutCell>
-                        </TypeLayoutRow>
-                        <TypeLayoutRow>
-                          <TypeLayoutCell>Except for</TypeLayoutCell>
-                          <TypeLayoutCell>
-                            No users and groups excluded
-                          </TypeLayoutCell>
-                        </TypeLayoutRow>
-                        <TypeLayoutRow>
-                          <TypeLayoutCell>Reviewer</TypeLayoutCell>
-                          <TypeLayoutCell>User manager</TypeLayoutCell>
-                        </TypeLayoutRow>
-                      </TypeLayoutBody>
-                    </TypeLayout>
-                  </DescriptionListModule>
-                </Column>
-              </Row>
+                <TypeLayout>
+                  <TypeLayoutBody>
+                    <TypeLayoutRow>
+                      <TypeLayoutCell>Name</TypeLayoutCell>
+                      <TypeLayoutCell>
+                        ServiceNow entitlements review
+                      </TypeLayoutCell>
+                    </TypeLayoutRow>
+                    <TypeLayoutRow>
+                      <TypeLayoutCell>Description</TypeLayoutCell>
+                      <TypeLayoutCell>
+                        Sample description of the ServiceNow entitlements review
+                        campaign that may need to go to several lines.
+                      </TypeLayoutCell>
+                    </TypeLayoutRow>
+                    <TypeLayoutRow>
+                      <TypeLayoutCell>Type</TypeLayoutCell>
+                      <TypeLayoutCell>User entitlements</TypeLayoutCell>
+                    </TypeLayoutRow>
+                    <TypeLayoutRow>
+                      <TypeLayoutCell>Priority</TypeLayoutCell>
+                      <TypeLayoutCell>Medium</TypeLayoutCell>
+                    </TypeLayoutRow>
+                    <TypeLayoutRow>
+                      <TypeLayoutCell>Applications</TypeLayoutCell>
+                      <TypeLayoutCell>
+                        <ul>
+                          <li>ServiceNow 1</li>
+                          <li>ServiceNow 2</li>
+                          <li>ServiceNow 3</li>
+                        </ul>
+                      </TypeLayoutCell>
+                    </TypeLayoutRow>
+                    <TypeLayoutRow>
+                      <TypeLayoutCell>Include only</TypeLayoutCell>
+                      <TypeLayoutCell>
+                        All users and groups included
+                      </TypeLayoutCell>
+                    </TypeLayoutRow>
+                    <TypeLayoutRow>
+                      <TypeLayoutCell>Except for</TypeLayoutCell>
+                      <TypeLayoutCell>
+                        No users and groups excluded
+                      </TypeLayoutCell>
+                    </TypeLayoutRow>
+                    <TypeLayoutRow>
+                      <TypeLayoutCell>Reviewer</TypeLayoutCell>
+                      <TypeLayoutCell>User manager</TypeLayoutCell>
+                    </TypeLayoutRow>
+                  </TypeLayoutBody>
+                </TypeLayout>
+              </DescriptionListModule>
             </ExampleBackgroundContainer>
           </Column>
 
           <Column>
             <ExampleBackgroundContainer>
-              <Row narrow>
-                <Column>
-                  <DescriptionListModule>
-                    <TitleBarModule title="Schedule" subsection />
+              <DescriptionListModule>
+                <TitleBarModule title="Schedule" subsection />
 
-                    <TypeLayout>
-                      <TypeLayoutBody>
-                        <TypeLayoutRow>
-                          <TypeLayoutCell>Start date</TypeLayoutCell>
-                          <TypeLayoutCell>
-                            Jul 1 2019 at 12:00PM CST
-                          </TypeLayoutCell>
-                        </TypeLayoutRow>
-                        <TypeLayoutRow>
-                          <TypeLayoutCell>Duration</TypeLayoutCell>
-                          <TypeLayoutCell>20 days</TypeLayoutCell>
-                        </TypeLayoutRow>
-                        <TypeLayoutRow>
-                          <TypeLayoutCell>Frequency</TypeLayoutCell>
-                          <TypeLayoutCell>
-                            This campaign repeats every 3 months
-                          </TypeLayoutCell>
-                        </TypeLayoutRow>
-                      </TypeLayoutBody>
-                    </TypeLayout>
-                  </DescriptionListModule>
-                </Column>
-              </Row>
+                <TypeLayout>
+                  <TypeLayoutBody>
+                    <TypeLayoutRow>
+                      <TypeLayoutCell>Start date</TypeLayoutCell>
+                      <TypeLayoutCell>Jul 1 2019 at 12:00PM CST</TypeLayoutCell>
+                    </TypeLayoutRow>
+                    <TypeLayoutRow>
+                      <TypeLayoutCell>Duration</TypeLayoutCell>
+                      <TypeLayoutCell>20 days</TypeLayoutCell>
+                    </TypeLayoutRow>
+                    <TypeLayoutRow>
+                      <TypeLayoutCell>Frequency</TypeLayoutCell>
+                      <TypeLayoutCell>
+                        This campaign repeats every 3 months
+                      </TypeLayoutCell>
+                    </TypeLayoutRow>
+                  </TypeLayoutBody>
+                </TypeLayout>
+              </DescriptionListModule>
             </ExampleBackgroundContainer>
 
             <ExampleBackgroundContainer>
-              <Row narrow>
-                <Column>
-                  <DescriptionListModule>
-                    <TitleBarModule title="Campaign end" subsection />
+              <DescriptionListModule>
+                <TitleBarModule title="Campaign end" subsection />
 
-                    <TypeLayout>
-                      <TypeLayoutBody>
-                        <TypeLayoutRow>
-                          <TypeLayoutCell>Reminders</TypeLayoutCell>
-                          <TypeLayoutCell>
-                            Start 10 days before campaign ends
-                          </TypeLayoutCell>
-                        </TypeLayoutRow>
-                        <TypeLayoutRow>
-                          <TypeLayoutCell>Campaign end</TypeLayoutCell>
-                          <TypeLayoutCell>
-                            Take no action on entitlements not reviewed
-                          </TypeLayoutCell>
-                        </TypeLayoutRow>
-                      </TypeLayoutBody>
-                    </TypeLayout>
-                  </DescriptionListModule>
-                </Column>
-              </Row>
+                <TypeLayout>
+                  <TypeLayoutBody>
+                    <TypeLayoutRow>
+                      <TypeLayoutCell>Reminders</TypeLayoutCell>
+                      <TypeLayoutCell>
+                        Start 10 days before campaign ends
+                      </TypeLayoutCell>
+                    </TypeLayoutRow>
+                    <TypeLayoutRow>
+                      <TypeLayoutCell>Campaign end</TypeLayoutCell>
+                      <TypeLayoutCell>
+                        Take no action on entitlements not reviewed
+                      </TypeLayoutCell>
+                    </TypeLayoutRow>
+                  </TypeLayoutBody>
+                </TypeLayout>
+              </DescriptionListModule>
             </ExampleBackgroundContainer>
           </Column>
         </Row>
 
-        <ExampleBackgroundContainer>
+        <ExampleBackgroundContainer narrow>
           <Row narrow>
             <Column>
               <TitleBarModule title="Campaign results" subsection />
