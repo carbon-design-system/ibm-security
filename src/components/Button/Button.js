@@ -27,25 +27,25 @@ const Button = ({
   loading,
   kind,
   renderIcon,
-  size,
+  size: sizeProp,
   ...other
 }) => {
-  const isSize = value => size === value;
-
-  const sizeAdapter =
-    isSize('large') || largeText || isSize('xlg') ? 'lg' : size;
+  const isSize = value => sizeProp === value;
+  const size = isSize('large') || largeText || isSize('xlg') ? 'lg' : sizeProp;
 
   const isGhostDanger = kind === 'ghost-danger';
 
+  const buttonClasses = classnames(className, {
+    [`${namespace}--ghost-danger`]: isGhostDanger,
+    [`${namespace}--loading`]: loading,
+  });
+
   return (
     <CarbonButton
-      className={classnames(className, {
-        [`${namespace}--ghost-danger`]: isGhostDanger,
-        [`${namespace}--loading`]: loading,
-      })}
+      className={buttonClasses}
       kind={isGhostDanger || loading ? 'ghost' : kind}
       renderIcon={loading ? InlineLoading : renderIcon}
-      size={sizeAdapter}
+      size={size}
       {...other}
     />
   );

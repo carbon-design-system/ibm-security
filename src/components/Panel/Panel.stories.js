@@ -1,6 +1,6 @@
 /**
  * @file Panel stories.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import Add16 from '@carbon/icons-react/lib/add/16';

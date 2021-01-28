@@ -1,6 +1,6 @@
 /**
  * @file Button stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import Add16 from '@carbon/icons-react/lib/add/16';
@@ -16,7 +16,6 @@ import { settings } from 'carbon-components';
 import React from 'react';
 
 import { components } from '../../../.storybook';
-
 import { Button, ButtonSkeleton } from '../..';
 
 const { prefix } = settings;
@@ -32,8 +31,9 @@ const kinds = {
 const sizes = {
   Default: 'default',
   Field: 'field',
-  Large: 'large',
-  Small: 'small',
+  'Small (sm)': 'small',
+  'Large (lg)': 'lg',
+  'Extra large size (xl)': 'xl',
 };
 
 const iconsToUse = {
