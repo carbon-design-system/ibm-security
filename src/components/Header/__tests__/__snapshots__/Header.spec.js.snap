@@ -225,7 +225,7 @@ exports[`Header Rendering renders correctly 1`] = `
               type="button"
             >
               <Button
-                className="security--button"
+                className=""
                 disabled={false}
                 href="#"
                 kind="primary"
@@ -236,7 +236,7 @@ exports[`Header Rendering renders correctly 1`] = `
                 type="button"
               >
                 <a
-                  className="security--button bx--btn bx--btn--primary"
+                  className="bx--btn bx--btn--primary"
                   href="#"
                   tabIndex={0}
                 >
@@ -269,7 +269,7 @@ exports[`Header Rendering renders correctly 1`] = `
               type="button"
             >
               <Button
-                className="security--button"
+                className=""
                 disabled={false}
                 href="#"
                 kind="secondary"
@@ -280,7 +280,7 @@ exports[`Header Rendering renders correctly 1`] = `
                 type="button"
               >
                 <a
-                  className="security--button bx--btn bx--btn--secondary"
+                  className="bx--btn bx--btn--secondary"
                   href="#"
                   tabIndex={0}
                 >

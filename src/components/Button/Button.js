@@ -1,25 +1,23 @@
 /**
  * @file Button.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
+import { bool, func, object, oneOf, oneOfType } from 'prop-types';
 import React from 'react';
 
 import CarbonButton from 'carbon-components-react/lib/components/Button';
 import { ButtonKinds } from 'carbon-components-react/lib/prop-types/types';
-import InlineLoading from '../InlineLoading';
 
 import { getComponentNamespace } from '../../globals/namespace';
 import deprecatedProp from '../../globals/prop-types';
 
+import InlineLoading from '../InlineLoading';
+
 export const namespace = getComponentNamespace('button');
 
-// Add our `ghost-danger` kind to the existing array of button kinds:
-ButtonKinds.push('ghost-danger');
-
-const { defaultProps, propTypes } = CarbonButton;
+ButtonKinds.push('ghost-danger'); // Add `ghost-danger` kind to the existing `kind`s.
 
 // TODO: `2.x` - Remove deprecated props `largeText`.
 
@@ -33,50 +31,52 @@ const Button = ({
   ...other
 }) => {
   const isSize = value => size === value;
-  const isLarge = isSize('large') || largeText || isSize('lg') || isSize('xlg');
-  const isGhostDanger = kind === 'ghost-danger';
 
-  const buttonClasses = classnames(namespace, className, {
-    [`${namespace}--ghost-danger`]: isGhostDanger,
-    [`${namespace}--large`]: isLarge,
-    [`${namespace}--loading`]: loading,
-  });
+  const sizeAdapter =
+    isSize('large') || largeText || isSize('xlg') ? 'lg' : size;
+
+  const isGhostDanger = kind === 'ghost-danger';
 
   return (
     <CarbonButton
-      className={buttonClasses}
+      className={classnames(className, {
+        [`${namespace}--ghost-danger`]: isGhostDanger,
+        [`${namespace}--loading`]: loading,
+      })}
       kind={isGhostDanger || loading ? 'ghost' : kind}
       renderIcon={loading ? InlineLoading : renderIcon}
-      size={!isLarge ? size : null}
+      size={sizeAdapter}
       {...other}
     />
   );
 };
 
+const { defaultProps, propTypes } = CarbonButton;
+
 Button.defaultProps = {
   ...defaultProps,
-  largeText: null,
+
   loading: false,
-  renderIcon: undefined,
+  largeText: null,
 };
 
 Button.propTypes = {
   ...propTypes,
 
-  /** @type {boolean} Specify whether or not the button is in a loading state. While loading, icons provided via the `renderIcon` prop will not be displayed. */
-  loading: PropTypes.bool,
+  /** Specify the kind of `Button` */
+  kind: oneOf(ButtonKinds),
 
-  /** @type {Function|object} Optional prop to allow overriding the icon rendering. Can be a React component class. */
-  renderIcon: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+  /** Optional prop to allow overriding the icon rendering. Can be a React component class */
+  renderIcon: oneOfType([func, object]),
 
-  /** The size of the button. */
-  size: PropTypes.oneOf(['default', 'field', 'large', 'small']),
+  /** Specify the [size of the button](https://react.carbondesignsystem.com/?path=/docs/button--default#button-size), from a list of available sizes. For `default` buttons, this prop can remain unspecified */
+  size: oneOf(['default', 'field', 'small', 'sm', 'large', 'lg', 'xl']),
 
-  /** The kind of button. */
-  kind: PropTypes.oneOf(ButtonKinds),
+  /** Specify whether or not the `Button` is in a loading state. While active, the `renderIcon` prop is disabled */
+  loading: bool,
 
-  // Deprecated prop.
-  largeText: deprecatedProp('size="large"', PropTypes.bool),
+  /** Deprecated in favor of `size` */
+  largeText: deprecatedProp('size="large"', bool),
 };
 
 export default Button;
