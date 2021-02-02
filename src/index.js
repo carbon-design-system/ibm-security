@@ -1,6 +1,6 @@
 /**
  * @file Entry point.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 // Carbon.
@@ -269,6 +269,7 @@ export {
   DescriptionListModule,
   DescriptionModule,
   ICAModule,
+  ListModule,
   TitleBarModule,
   withBackground,
 } from './components/UNSTABLE__LayoutModules';

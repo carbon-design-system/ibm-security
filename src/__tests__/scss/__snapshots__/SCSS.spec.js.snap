@@ -27172,6 +27172,17 @@ a.bx--navigation-link:focus {
   padding-top: 0;
 }
 
+.security--unstable--layout__module--list {
+  display: flex;
+  padding: 1rem;
+  background-color: var(--ui-01, #262626);
+}
+
+.security--unstable--layout__module--list__column {
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
 .security--unstable--layout__module--title-bar {
   display: flex;
   padding-top: 1rem;
