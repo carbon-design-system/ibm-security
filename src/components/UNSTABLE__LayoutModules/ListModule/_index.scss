@@ -6,17 +6,52 @@
 
 @import '@carbon/layout/scss/spacing';
 @import '@carbon/themes/scss/tokens';
+@import '@carbon/type/scss/styles';
 
 @import '../../Component/mixins';
 @import '../variables';
 
 @include security--component($name: #{$layout-modules__name}--list) {
-  display: flex;
+  /// Spacing.
+  /// @type Length
+  $list-module__spacing: $carbon--spacing-02;
+
+  display: grid;
   padding: $carbon--spacing-05;
   background-color: $ui-01;
+  grid-template-columns: repeat(2, max-content);
 
   &__column {
     margin-right: $carbon--spacing-05;
-    flex-shrink: 0;
+  }
+
+  &__title {
+    @include carbon--type-style($name: body-short-01);
+  }
+
+  &__description {
+    @include carbon--type-style($name: body-long-01);
+  }
+
+  &__label {
+    @include carbon--type-style($name: label-01);
+
+    margin-top: $list-module__spacing;
+  }
+
+  &__title,
+  &__description {
+    margin-top: 0;
+  }
+
+  &__title,
+  &__description,
+  &__label {
+    margin-bottom: $list-module__spacing;
+    grid-column-start: -1;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }

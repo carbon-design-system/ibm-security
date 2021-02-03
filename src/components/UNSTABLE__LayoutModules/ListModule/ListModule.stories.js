@@ -29,10 +29,12 @@ export const Default = () => (
   <ListModule>
     {({ getLayoutProps }) => (
       <>
-        <Bee16 {...getLayoutProps()} />
-        <UserAvatar16 {...getLayoutProps()} />
+        <Bee16 {...getLayoutProps('column')} />
+        <UserAvatar16 {...getLayoutProps('column')} />
 
-        {ListModule.name}
+        <h2 {...getLayoutProps('title')}>Title</h2>
+        <p {...getLayoutProps('description')}>Description</p>
+        <span {...getLayoutProps('label')}>Label</span>
       </>
     )}
   </ListModule>
