@@ -16788,10 +16788,6 @@ li.bx--accordion__item--disabled:last-of-type {
   color: var(--text-01, #f4f4f4);
 }
 
-.security--summary-card__action-overlay__close-button .bx--btn__icon path, .security--summary-card__action-overlay__close-button:hover .bx--btn__icon path, .security--summary-card__action-overlay__close-button:focus .bx--btn__icon path, .security--summary-card__action-overlay__close-button:active .bx--btn__icon path {
-  fill: var(--icon-01, #f4f4f4);
-}
-
 .security--summary-card__action-overlay__close-button .bx--btn__icon {
   margin-left: 0;
   height: 1.25rem;

@@ -1,7 +1,7 @@
 ////
 /// Summary card mixins.
 /// @group summary-card
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -192,10 +192,6 @@
       &:focus,
       &:active {
         color: $text-01;
-
-        .#{$prefix}--btn__icon path {
-          fill: $icon-01;
-        }
       }
 
       .#{$prefix}--btn__icon {
