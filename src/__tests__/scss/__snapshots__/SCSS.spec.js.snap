@@ -27176,11 +27176,19 @@ a.bx--navigation-link:focus {
   display: grid;
   padding: 1rem;
   background-color: var(--ui-01, #262626);
-  grid-template-columns: repeat(2, max-content);
 }
 
 .security--unstable--layout__module--list__column {
   margin-right: 1rem;
+  grid-row: 1 / -1;
+}
+
+.security--unstable--layout__module--list__title, .security--unstable--layout__module--list__description, .security--unstable--layout__module--list__label, .security--unstable--layout__module--list__component, .security--unstable--layout__module--list__avatar {
+  grid-column-start: end;
+}
+
+.security--unstable--layout__module--list__title, .security--unstable--layout__module--list__description {
+  margin-top: 0;
 }
 
 .security--unstable--layout__module--list__title {
@@ -27205,17 +27213,21 @@ a.bx--navigation-link:focus {
   margin-top: 0.25rem;
 }
 
-.security--unstable--layout__module--list__title, .security--unstable--layout__module--list__description {
-  margin-top: 0;
-}
-
 .security--unstable--layout__module--list__title, .security--unstable--layout__module--list__description, .security--unstable--layout__module--list__label {
   margin-bottom: 0.25rem;
-  grid-column-start: -1;
 }
 
 .security--unstable--layout__module--list__title:last-child, .security--unstable--layout__module--list__description:last-child, .security--unstable--layout__module--list__label:last-child {
   margin-bottom: 0;
+}
+
+.security--unstable--layout__module--list__component {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+
+.security--unstable--layout__module--list__avatar {
+  margin-top: 0.25rem;
 }
 
 .security--unstable--layout__module--title-bar {

@@ -19,10 +19,23 @@
   display: grid;
   padding: $carbon--spacing-05;
   background-color: $ui-01;
-  grid-template-columns: repeat(2, max-content);
 
   &__column {
     margin-right: $carbon--spacing-05;
+    grid-row: 1 / -1;
+  }
+
+  &__title,
+  &__description,
+  &__label,
+  &__component,
+  &__avatar {
+    grid-column-start: end;
+  }
+
+  &__title,
+  &__description {
+    margin-top: 0;
   }
 
   &__title {
@@ -40,18 +53,21 @@
   }
 
   &__title,
-  &__description {
-    margin-top: 0;
-  }
-
-  &__title,
   &__description,
   &__label {
     margin-bottom: $list-module__spacing;
-    grid-column-start: -1;
 
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  &__component {
+    margin-top: $carbon--spacing-04;
+    margin-bottom: 0;
+  }
+
+  &__avatar {
+    margin-top: $list-module__spacing;
   }
 }

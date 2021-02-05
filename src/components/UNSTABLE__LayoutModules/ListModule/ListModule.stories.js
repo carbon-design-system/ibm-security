@@ -35,6 +35,10 @@ export const Default = () => (
         <h2 {...getLayoutProps('title')}>Title</h2>
         <p {...getLayoutProps('description')}>Description</p>
         <span {...getLayoutProps('label')}>Label</span>
+
+        <section {...getLayoutProps('component')}>Component</section>
+
+        <UserAvatar16 {...getLayoutProps('avatar')} />
       </>
     )}
   </ListModule>
