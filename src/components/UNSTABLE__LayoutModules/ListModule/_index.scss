@@ -16,21 +16,24 @@
   /// @type Length
   $list-module__spacing: $carbon--spacing-02;
 
-  display: grid;
+  display: flex;
   padding: $carbon--spacing-05;
   background-color: $ui-01;
 
   &__column {
     margin-right: $carbon--spacing-05;
-    grid-row: 1 / -1;
+
+    &:last-of-type {
+      margin-right: 0;
+      flex-grow: 1;
+    }
   }
 
   &__title,
   &__description,
   &__label,
-  &__component,
-  &__avatar {
-    grid-column-start: end;
+  &__component {
+    display: block;
   }
 
   &__title,
@@ -38,8 +41,14 @@
     margin-top: 0;
   }
 
+  $root: &;
+
   &__title {
     @include carbon--type-style($name: body-short-01);
+
+    + #{$root}__component {
+      margin-top: $carbon--spacing-04;
+    }
   }
 
   &__description {
@@ -63,7 +72,7 @@
   }
 
   &__component {
-    margin-top: $carbon--spacing-04;
+    margin-top: $carbon--spacing-05;
     margin-bottom: 0;
   }
 

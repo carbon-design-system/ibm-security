@@ -27,18 +27,27 @@ export default {
 
 export const Default = () => (
   <ListModule>
-    {({ getLayoutProps }) => (
+    {({ Column, getLayoutProps }) => (
       <>
-        <Bee16 {...getLayoutProps('column')} />
-        <UserAvatar16 {...getLayoutProps('column')} />
+        <Column>
+          <Bee16 />
+        </Column>
 
-        <h2 {...getLayoutProps('title')}>Title</h2>
-        <p {...getLayoutProps('description')}>Description</p>
-        <span {...getLayoutProps('label')}>Label</span>
+        <Column>
+          <UserAvatar16 />
+        </Column>
 
-        <section {...getLayoutProps('component')}>Component</section>
+        <Column>
+          <h2 {...getLayoutProps('title')}>Title</h2>
+          <p {...getLayoutProps('description')}>Description</p>
+          <span {...getLayoutProps('label')}>Label</span>
 
-        <UserAvatar16 {...getLayoutProps('avatar')} />
+          <section {...getLayoutProps('component')}>Component</section>
+
+          <UserAvatar16 {...getLayoutProps('avatar')} />
+          <UserAvatar16 {...getLayoutProps('avatar')} />
+          <UserAvatar16 {...getLayoutProps('avatar')} />
+        </Column>
       </>
     )}
   </ListModule>
