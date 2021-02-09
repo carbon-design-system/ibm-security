@@ -27153,9 +27153,9 @@ a.bx--navigation-link:focus {
   margin-bottom: 0;
 }
 
-.security--unstable--layout__module--ica {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.security--unstable--layout__module--ica__component {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .security--unstable--layout__module--ica--hover {

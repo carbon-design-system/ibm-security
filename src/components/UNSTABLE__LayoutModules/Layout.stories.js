@@ -19,7 +19,6 @@ import classnames from 'classnames';
 import React from 'react';
 
 import { disableCentered, patterns } from '../../../.storybook';
-import ExampleBackgroundContainer from '../../../.storybook/components/ExampleBackgroundContainer';
 
 import {
   ActionBarModule,
@@ -75,6 +74,16 @@ export default {
     ),
   ],
 };
+
+const withContainer = WrappedComponent => ({ className, ...other }) => {
+  const namespace = 'container--narrow';
+
+  return (
+    <WrappedComponent className={classnames(namespace, className)} {...other} />
+  );
+};
+
+const RowWithContainer = withContainer(Row);
 
 export const Detail = () => (
   <>
@@ -213,32 +222,30 @@ export const Detail = () => (
       )}
     </CardModule>
 
-    <ExampleBackgroundContainer>
-      <Row narrow>
-        <Column>
-          <TitleBarModule element="h4" title="Indicators" />
-        </Column>
-      </Row>
+    <RowWithContainer narrow>
+      <Column>
+        <TitleBarModule element="h4" title="Indicators" />
+      </Column>
+    </RowWithContainer>
 
-      <ICAModule>
-        {() => (
-          <Row narrow>
-            <Column sm={2} md={2} lg={3}>
-              <ICA label="Malware" value={11} />
-            </Column>
-            <Column sm={2} md={2} lg={3}>
-              <ICA label="IPs" value={8} />
-            </Column>
-            <Column sm={2} md={2} lg={3}>
-              <ICA label="URLs" value={9} />
-            </Column>
-            <Column sm={2} md={2} lg={3}>
-              <ICA label="VULs" value={1} />
-            </Column>
-          </Row>
-        )}
-      </ICAModule>
-    </ExampleBackgroundContainer>
+    <ICAModule>
+      {({ getLayoutProps }) => (
+        <RowWithContainer narrow>
+          <Column sm={2} md={2} lg={3} {...getLayoutProps()}>
+            <ICA label="Malware" value={11} />
+          </Column>
+          <Column sm={2} md={2} lg={3} {...getLayoutProps()}>
+            <ICA label="IPs" value={8} />
+          </Column>
+          <Column sm={2} md={2} lg={3} {...getLayoutProps()}>
+            <ICA label="URLs" value={9} />
+          </Column>
+          <Column sm={2} md={2} lg={3} {...getLayoutProps()}>
+            <ICA label="VULs" value={1} />
+          </Column>
+        </RowWithContainer>
+      )}
+    </ICAModule>
 
     <Row narrow>
       <Column>
@@ -312,24 +319,26 @@ export const Detail = () => (
   </>
 );
 
-const namespace = 'container__border';
-
 const withBorder = WrappedComponent => ({
   className,
   direction,
   nested,
   ...other
-}) => (
-  <WrappedComponent
-    className={classnames(namespace, className, {
-      [`${namespace}--${direction}`]: direction,
-      [`${namespace}--nested`]: nested,
-    })}
-    {...other}
-  />
-);
+}) => {
+  const namespace = 'container__border';
 
-const RowWithBorder = withBorder(Row);
+  return (
+    <WrappedComponent
+      className={classnames(namespace, className, {
+        [`${namespace}--${direction}`]: direction,
+        [`${namespace}--nested`]: nested,
+      })}
+      {...other}
+    />
+  );
+};
+
+const RowWithBorderContainer = withBorder(withContainer(Row));
 const ColumnWithBorder = withBorder(Column);
 const DescriptionListModuleWithBorder = withBorder(DescriptionListModule);
 
@@ -342,11 +351,7 @@ export const Overview = () => (
 
     <Row>
       <Column lg={12}>
-        <RowWithBorder
-          className="container--example--narrow"
-          direction="bottom"
-          narrow
-        >
+        <RowWithBorderContainer direction="bottom" narrow>
           <ColumnWithBorder direction="right">
             <DescriptionListModule>
               <TitleBarModule title="General settings and scope" subsection />
@@ -450,31 +455,31 @@ export const Overview = () => (
               </TypeLayout>
             </DescriptionListModule>
           </Column>
-        </RowWithBorder>
+        </RowWithBorderContainer>
 
-        <ExampleBackgroundContainer>
-          <Row narrow>
-            <Column>
-              <TitleBarModule title="Campaign results" subsection />
-            </Column>
-          </Row>
+        <RowWithContainer narrow>
+          <Column>
+            <TitleBarModule title="Campaign results" subsection />
+          </Column>
+        </RowWithContainer>
 
-          <ICAModule>
-            {() => (
-              <Row narrow>
-                <Column sm={2} md={2} lg={3}>
-                  <ICA label="Reviews complete" value={300} />
-                </Column>
-                <Column sm={2} md={2} lg={3}>
-                  <ICA label="Approved" value={241} />
-                </Column>
-                <Column sm={2} md={2} lg={3}>
-                  <ICA label="Rejected" value={28} />
-                </Column>
-              </Row>
-            )}
-          </ICAModule>
-        </ExampleBackgroundContainer>
+        <ICAModule>
+          {({ getLayoutProps }) => (
+            <RowWithContainer narrow>
+              <Column sm={2} md={2} lg={3} {...getLayoutProps()}>
+                <ICA label="Reviews complete" value={300} />
+              </Column>
+
+              <Column sm={2} md={2} lg={3} {...getLayoutProps()}>
+                <ICA label="Approved" value={241} />
+              </Column>
+
+              <Column sm={2} md={2} lg={3} {...getLayoutProps()}>
+                <ICA label="Rejected" value={28} />
+              </Column>
+            </RowWithContainer>
+          )}
+        </ICAModule>
 
         <Row narrow>
           <Column>

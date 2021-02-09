@@ -94,17 +94,17 @@ ICAs within ICA modules can span across 2 or 3 columns, following the narrow gri
 
 ```jsx
 <ICAModule>
-  {() => (
+  {({ getLayoutProps }) => (
     <Row>
-      <Column lg={3}>
+      <Column lg={3} {...getLayoutProps()}>
         <ICA />
       </Column>
 
-      <Column lg={3}>
+      <Column lg={3} {...getLayoutProps()}>
         <ICA />
       </Column>
 
-      <Column lg={3}>
+      <Column lg={3} {...getLayoutProps()}>
         <ICA />
       </Column>
     </Row>
