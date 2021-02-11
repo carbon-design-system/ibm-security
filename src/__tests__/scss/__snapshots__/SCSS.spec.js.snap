@@ -14036,14 +14036,8 @@ li.bx--accordion__item--disabled:last-of-type {
   align-items: center;
 }
 
-.bx--loading {
-  width: 4rem;
-  height: 4rem;
-}
-
-.bx--loading--small {
-  width: 2rem;
-  height: 2rem;
+.security--loading-message__loading {
+  margin-right: 0.5rem;
 }
 
 .security--status-icon {
