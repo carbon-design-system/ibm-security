@@ -27,17 +27,6 @@
     border-width: 0;
   }
 
-  &__column:last-of-type {
-    flex-grow: 1;
-  }
-
-  &__title,
-  &__description,
-  &__label,
-  &__component {
-    display: block;
-  }
-
   &__title,
   &__description {
     margin-top: 0;

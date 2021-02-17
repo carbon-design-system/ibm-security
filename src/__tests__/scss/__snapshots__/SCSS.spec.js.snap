@@ -27177,14 +27177,6 @@ a.bx--navigation-link:focus {
   border-width: 0;
 }
 
-.security--unstable--layout__module--list-item__column:last-of-type {
-  flex-grow: 1;
-}
-
-.security--unstable--layout__module--list-item__title, .security--unstable--layout__module--list-item__description, .security--unstable--layout__module--list-item__label, .security--unstable--layout__module--list-item__component {
-  display: block;
-}
-
 .security--unstable--layout__module--list-item__title, .security--unstable--layout__module--list-item__description {
   margin-top: 0;
 }
