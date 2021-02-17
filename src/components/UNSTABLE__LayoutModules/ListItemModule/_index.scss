@@ -1,6 +1,6 @@
 ////
-/// List module.
-/// @group list-module
+/// List item module.
+/// @group list-item-module
 /// @copyright IBM Security 2021
 ////
 
@@ -8,25 +8,27 @@
 @import '@carbon/themes/scss/tokens';
 @import '@carbon/type/scss/styles';
 
+@import '../../../globals/border/index';
+
 @import '../../Component/mixins';
 @import '../variables';
 
-@include security--component($name: #{$layout-modules__name}--list) {
+@include security--component($name: #{$layout-modules__name}--list-item) {
   /// Spacing.
   /// @type Length
-  $list-module__spacing: $carbon--spacing-02;
+  $list-item-module__spacing: $carbon--spacing-02;
 
   display: flex;
   padding: $carbon--spacing-05;
   background-color: $ui-01;
+  border-bottom: $border__sizing__width solid $ui-03;
 
-  &__column {
-    margin-right: $carbon--spacing-05;
+  &:last-of-type {
+    border-width: 0;
+  }
 
-    &:last-of-type {
-      margin-right: 0;
-      flex-grow: 1;
-    }
+  &__column:last-of-type {
+    flex-grow: 1;
   }
 
   &__title,
@@ -41,14 +43,26 @@
     margin-top: 0;
   }
 
-  $root: &;
+  &__icon {
+    margin-right: $carbon--spacing-05;
+  }
+
+  &__avatar {
+    margin-top: $list-item-module__spacing;
+    margin-right: $carbon--spacing-04;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 
   &__title {
     @include carbon--type-style($name: body-short-01);
+  }
 
-    + #{$root}__component {
-      margin-top: $carbon--spacing-04;
-    }
+  &__description,
+  &__label {
+    color: $text-02;
   }
 
   &__description {
@@ -58,13 +72,13 @@
   &__label {
     @include carbon--type-style($name: label-01);
 
-    margin-top: $list-module__spacing;
+    margin-top: $list-item-module__spacing;
   }
 
   &__title,
   &__description,
   &__label {
-    margin-bottom: $list-module__spacing;
+    margin-bottom: $list-item-module__spacing;
 
     &:last-child {
       margin-bottom: 0;
@@ -74,9 +88,5 @@
   &__component {
     margin-top: $carbon--spacing-05;
     margin-bottom: 0;
-  }
-
-  &__avatar {
-    margin-top: $list-module__spacing;
   }
 }

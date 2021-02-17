@@ -1,22 +1,22 @@
 /**
- * @file Action bar module stories.
+ * @file List item module stories.
  * @copyright IBM Security 2021
  */
 
-import { Bee16, UserAvatar16 } from '@carbon/icons-react';
+import { Bee16, UserAvatar20 } from '@carbon/icons-react';
 import React from 'react';
 
 import { getDocsParameters } from '../../../../.storybook';
 import withResponsive from '../../../../.storybook/decorators';
 
-import { ListModule } from '../../..';
+import { ListItemModule } from '../../..';
 
 import getTitle from '../stories';
 import page from './index.mdx';
 
 export default {
-  title: getTitle(ListModule),
-  component: ListModule,
+  title: getTitle(ListItemModule),
+  component: ListItemModule,
   parameters: {
     docs: { page },
 
@@ -26,29 +26,27 @@ export default {
 };
 
 export const Default = () => (
-  <ListModule>
+  <ListItemModule>
     {({ Column, getLayoutProps }) => (
       <>
         <Column>
-          <Bee16 />
-        </Column>
-
-        <Column>
-          <UserAvatar16 />
+          <Bee16 {...getLayoutProps('icon')} />
         </Column>
 
         <Column>
           <h2 {...getLayoutProps('title')}>Title</h2>
+
           <p {...getLayoutProps('description')}>Description</p>
+
           <span {...getLayoutProps('label')}>Label</span>
 
           <section {...getLayoutProps('component')}>Component</section>
 
-          <UserAvatar16 {...getLayoutProps('avatar')} />
-          <UserAvatar16 {...getLayoutProps('avatar')} />
-          <UserAvatar16 {...getLayoutProps('avatar')} />
+          <UserAvatar20 {...getLayoutProps('avatar')} />
+          <UserAvatar20 {...getLayoutProps('avatar')} />
+          <UserAvatar20 {...getLayoutProps('avatar')} />
         </Column>
       </>
     )}
-  </ListModule>
+  </ListItemModule>
 );

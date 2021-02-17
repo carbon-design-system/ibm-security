@@ -5465,7 +5465,7 @@ Map {
       },
     },
   },
-  "ListModule" => Object {
+  "ListItemModule" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
