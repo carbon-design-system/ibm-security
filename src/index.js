@@ -1,6 +1,6 @@
 /**
  * @file Entry point.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 // Carbon.
@@ -95,6 +95,18 @@ export IconButton from './components/IconButton';
 export IconButtonBar from './components/IconButtonBar';
 export InlineLoading from './components/InlineLoading';
 export InteractiveTag from './components/InteractiveTag';
+
+export {
+  ActionBarModule,
+  ActionBarModuleItems,
+  ButtonClusterModule,
+  CardModule,
+  DescriptionListModule,
+  DescriptionModule,
+  ICAModule,
+  TitleBarModule,
+} from './components/LayoutModules';
+
 export Link from './components/Link';
 export ListBox from './components/ListBox';
 export ListItem from './components/ListItem';
@@ -261,17 +273,7 @@ export UnorderedList from './components/UnorderedList';
 export { Wizard, WizardStep } from './components/Wizard';
 
 // Experimental.
-export {
-  ActionBarModule,
-  ActionBarModuleItems,
-  ButtonClusterModule,
-  CardModule,
-  DescriptionListModule,
-  DescriptionModule,
-  ICAModule,
-  TitleBarModule,
-  withBackground,
-} from './components/UNSTABLE__LayoutModules';
+export withBackground from './components/UNSTABLE__Background';
 
 export UNSTABLE__Pagination, {
   PageSelector,
