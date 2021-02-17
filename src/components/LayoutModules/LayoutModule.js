@@ -9,7 +9,7 @@ import { createElement } from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
 
-const layoutModuleNamespace = getComponentNamespace('layout__module');
+const layoutModuleNamespace = getComponentNamespace('layout-module');
 
 const getLayoutModuleProps = ({ className, namespace }) => ({
   className: classnames(
