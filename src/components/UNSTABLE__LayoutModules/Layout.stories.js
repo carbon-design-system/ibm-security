@@ -69,14 +69,14 @@ export default {
       <>
         <UIShell />
 
-        <Grid>{story()}</Grid>
+        {story()}
       </>
     ),
   ],
 };
 
 export const Detail = () => (
-  <>
+  <Grid>
     <TitleBarModule title="Summary" />
 
     <Row>
@@ -308,265 +308,278 @@ export const Detail = () => (
         />
       </Column>
     </Row>
-  </>
+  </Grid>
 );
 
 export const Overview = () => (
   <>
-    <Row>
-      <Column>
-        <ActionBarModule>
-          <Tag type="gray">Closed</Tag>
-          ID: 12&nbsp;&nbsp;|&nbsp;&nbsp;Result: Completed
-        </ActionBarModule>
-      </Column>
-    </Row>
+    <Grid>
+      <Row>
+        <Column>
+          <ActionBarModule>
+            <Tag type="gray">Closed</Tag>
+            ID: 12&nbsp;&nbsp;|&nbsp;&nbsp;Result: Completed
+          </ActionBarModule>
+        </Column>
+      </Row>
+    </Grid>
 
-    <Row>
-      <Column lg={12}>
-        <Row condensed>
-          <Column>
-            <ExampleBackgroundContainer>
+    <Grid className="grid--layout">
+      <Row>
+        <Column>
+          <Row condensed>
+            <Column>
+              <ExampleBackgroundContainer>
+                <DescriptionListModule>
+                  <TitleBarModule
+                    title="General settings and scope"
+                    subsection
+                  />
+
+                  <TypeLayout>
+                    <TypeLayoutBody>
+                      <TypeLayoutRow>
+                        <TypeLayoutCell>Name</TypeLayoutCell>
+                        <TypeLayoutCell>
+                          ServiceNow entitlements review
+                        </TypeLayoutCell>
+                      </TypeLayoutRow>
+                      <TypeLayoutRow>
+                        <TypeLayoutCell>Description</TypeLayoutCell>
+                        <TypeLayoutCell>
+                          Sample description of the ServiceNow entitlements
+                          review campaign that may need to go to several lines.
+                        </TypeLayoutCell>
+                      </TypeLayoutRow>
+                      <TypeLayoutRow>
+                        <TypeLayoutCell>Type</TypeLayoutCell>
+                        <TypeLayoutCell>User entitlements</TypeLayoutCell>
+                      </TypeLayoutRow>
+                      <TypeLayoutRow>
+                        <TypeLayoutCell>Priority</TypeLayoutCell>
+                        <TypeLayoutCell>Medium</TypeLayoutCell>
+                      </TypeLayoutRow>
+                      <TypeLayoutRow>
+                        <TypeLayoutCell>Applications</TypeLayoutCell>
+                        <TypeLayoutCell>
+                          <ul>
+                            <li>ServiceNow 1</li>
+                            <li>ServiceNow 2</li>
+                            <li>ServiceNow 3</li>
+                          </ul>
+                        </TypeLayoutCell>
+                      </TypeLayoutRow>
+                      <TypeLayoutRow>
+                        <TypeLayoutCell>Include only</TypeLayoutCell>
+                        <TypeLayoutCell>
+                          All users and groups included
+                        </TypeLayoutCell>
+                      </TypeLayoutRow>
+                      <TypeLayoutRow>
+                        <TypeLayoutCell>Except for</TypeLayoutCell>
+                        <TypeLayoutCell>
+                          No users and groups excluded
+                        </TypeLayoutCell>
+                      </TypeLayoutRow>
+                      <TypeLayoutRow>
+                        <TypeLayoutCell>Reviewer</TypeLayoutCell>
+                        <TypeLayoutCell>User manager</TypeLayoutCell>
+                      </TypeLayoutRow>
+                    </TypeLayoutBody>
+                  </TypeLayout>
+                </DescriptionListModule>
+              </ExampleBackgroundContainer>
+            </Column>
+
+            <Column>
+              <ExampleBackgroundContainer>
+                <DescriptionListModule>
+                  <TitleBarModule title="Schedule" subsection />
+
+                  <TypeLayout>
+                    <TypeLayoutBody>
+                      <TypeLayoutRow>
+                        <TypeLayoutCell>Start date</TypeLayoutCell>
+                        <TypeLayoutCell>
+                          Jul 1 2019 at 12:00PM CST
+                        </TypeLayoutCell>
+                      </TypeLayoutRow>
+                      <TypeLayoutRow>
+                        <TypeLayoutCell>Duration</TypeLayoutCell>
+                        <TypeLayoutCell>20 days</TypeLayoutCell>
+                      </TypeLayoutRow>
+                      <TypeLayoutRow>
+                        <TypeLayoutCell>Frequency</TypeLayoutCell>
+                        <TypeLayoutCell>
+                          This campaign repeats every 3 months
+                        </TypeLayoutCell>
+                      </TypeLayoutRow>
+                    </TypeLayoutBody>
+                  </TypeLayout>
+                </DescriptionListModule>
+              </ExampleBackgroundContainer>
+
+              <ExampleBackgroundContainer>
+                <DescriptionListModule>
+                  <TitleBarModule title="Campaign end" subsection />
+
+                  <TypeLayout>
+                    <TypeLayoutBody>
+                      <TypeLayoutRow>
+                        <TypeLayoutCell>Reminders</TypeLayoutCell>
+                        <TypeLayoutCell>
+                          Start 10 days before campaign ends
+                        </TypeLayoutCell>
+                      </TypeLayoutRow>
+                      <TypeLayoutRow>
+                        <TypeLayoutCell>Campaign end</TypeLayoutCell>
+                        <TypeLayoutCell>
+                          Take no action on entitlements not reviewed
+                        </TypeLayoutCell>
+                      </TypeLayoutRow>
+                    </TypeLayoutBody>
+                  </TypeLayout>
+                </DescriptionListModule>
+              </ExampleBackgroundContainer>
+            </Column>
+          </Row>
+
+          <ExampleBackgroundContainer narrow>
+            <Row narrow>
+              <Column>
+                <TitleBarModule title="Campaign results" subsection />
+              </Column>
+            </Row>
+
+            <ICAModule>
+              {() => (
+                <Row narrow>
+                  <Column sm={2} md={2} lg={3}>
+                    <ICA label="Reviews complete" value={300} />
+                  </Column>
+                  <Column sm={2} md={2} lg={3}>
+                    <ICA label="Approved" value={241} />
+                  </Column>
+                  <Column sm={2} md={2} lg={3}>
+                    <ICA label="Rejected" value={28} />
+                  </Column>
+                </Row>
+              )}
+            </ICAModule>
+          </ExampleBackgroundContainer>
+
+          <Row narrow>
+            <Column>
+              <DataTablePagination
+                headers={[
+                  {
+                    header: 'Reviewer',
+                    key: 'reviewer',
+                  },
+                  {
+                    header: 'Approved',
+                    key: 'approved',
+                  },
+                  {
+                    header: 'Rejected',
+                    key: 'rejected',
+                  },
+                  {
+                    header: 'Not reviewed',
+                    key: 'notReviewed',
+                  },
+                  {
+                    header: 'Completion',
+                    key: 'completion',
+                  },
+                ]}
+                pageSize={5}
+                pageSizes={[5, 10, 25, 50]}
+                rows={[
+                  {
+                    approved: 5,
+                    completion: '10%',
+                    id: '0',
+                    notReviewed: 54,
+                    rejected: 0,
+                    reviewer: 'john@cse-bank.com',
+                  },
+                  {
+                    approved: 64,
+                    completion: '92%',
+                    id: '1',
+                    notReviewed: 6,
+                    rejected: 5,
+                    reviewer: 'maria@cse-bank.com',
+                  },
+                  {
+                    approved: 71,
+                    completion: '100%',
+                    id: '2',
+                    notReviewed: 0,
+                    rejected: 0,
+                    reviewer: 'rogelio@cse-bank.com',
+                  },
+                ]}
+              />
+            </Column>
+          </Row>
+        </Column>
+      </Row>
+    </Grid>
+
+    <Grid>
+      <Row>
+        <Column>
+          <Row narrow>
+            <Column>
+              <ButtonClusterModule>
+                <Button kind="ghost" renderIcon={Copy16}>
+                  Duplicate campaign
+                </Button>
+
+                <Button kind="ghost" renderIcon={Activity16}>
+                  View activity report
+                </Button>
+              </ButtonClusterModule>
+            </Column>
+          </Row>
+
+          <Row>
+            <Column>
               <DescriptionListModule>
-                <TitleBarModule title="General settings and scope" subsection />
+                <TitleBarModule title="Details" subsection />
 
                 <TypeLayout>
                   <TypeLayoutBody>
                     <TypeLayoutRow>
-                      <TypeLayoutCell>Name</TypeLayoutCell>
-                      <TypeLayoutCell>
-                        ServiceNow entitlements review
-                      </TypeLayoutCell>
-                    </TypeLayoutRow>
-                    <TypeLayoutRow>
-                      <TypeLayoutCell>Description</TypeLayoutCell>
-                      <TypeLayoutCell>
-                        Sample description of the ServiceNow entitlements review
-                        campaign that may need to go to several lines.
-                      </TypeLayoutCell>
-                    </TypeLayoutRow>
-                    <TypeLayoutRow>
-                      <TypeLayoutCell>Type</TypeLayoutCell>
-                      <TypeLayoutCell>User entitlements</TypeLayoutCell>
-                    </TypeLayoutRow>
-                    <TypeLayoutRow>
-                      <TypeLayoutCell>Priority</TypeLayoutCell>
-                      <TypeLayoutCell>Medium</TypeLayoutCell>
-                    </TypeLayoutRow>
-                    <TypeLayoutRow>
-                      <TypeLayoutCell>Applications</TypeLayoutCell>
+                      <TypeLayoutCell>Created by</TypeLayoutCell>
                       <TypeLayoutCell>
                         <ul>
-                          <li>ServiceNow 1</li>
-                          <li>ServiceNow 2</li>
-                          <li>ServiceNow 3</li>
+                          <li>Scott Damon</li>
+                          <li>scottd@cse-bank.com</li>
                         </ul>
                       </TypeLayoutCell>
                     </TypeLayoutRow>
                     <TypeLayoutRow>
-                      <TypeLayoutCell>Include only</TypeLayoutCell>
-                      <TypeLayoutCell>
-                        All users and groups included
-                      </TypeLayoutCell>
+                      <TypeLayoutCell>Created on</TypeLayoutCell>
+                      <TypeLayoutCell>Jun 21 2018</TypeLayoutCell>
                     </TypeLayoutRow>
                     <TypeLayoutRow>
-                      <TypeLayoutCell>Except for</TypeLayoutCell>
-                      <TypeLayoutCell>
-                        No users and groups excluded
-                      </TypeLayoutCell>
+                      <TypeLayoutCell>Modified on</TypeLayoutCell>
+                      <TypeLayoutCell>–</TypeLayoutCell>
                     </TypeLayoutRow>
                     <TypeLayoutRow>
-                      <TypeLayoutCell>Reviewer</TypeLayoutCell>
-                      <TypeLayoutCell>User manager</TypeLayoutCell>
+                      <TypeLayoutCell>Closed on</TypeLayoutCell>
+                      <TypeLayoutCell>Jul 15 2018</TypeLayoutCell>
                     </TypeLayoutRow>
                   </TypeLayoutBody>
                 </TypeLayout>
               </DescriptionListModule>
-            </ExampleBackgroundContainer>
-          </Column>
-
-          <Column>
-            <ExampleBackgroundContainer>
-              <DescriptionListModule>
-                <TitleBarModule title="Schedule" subsection />
-
-                <TypeLayout>
-                  <TypeLayoutBody>
-                    <TypeLayoutRow>
-                      <TypeLayoutCell>Start date</TypeLayoutCell>
-                      <TypeLayoutCell>Jul 1 2019 at 12:00PM CST</TypeLayoutCell>
-                    </TypeLayoutRow>
-                    <TypeLayoutRow>
-                      <TypeLayoutCell>Duration</TypeLayoutCell>
-                      <TypeLayoutCell>20 days</TypeLayoutCell>
-                    </TypeLayoutRow>
-                    <TypeLayoutRow>
-                      <TypeLayoutCell>Frequency</TypeLayoutCell>
-                      <TypeLayoutCell>
-                        This campaign repeats every 3 months
-                      </TypeLayoutCell>
-                    </TypeLayoutRow>
-                  </TypeLayoutBody>
-                </TypeLayout>
-              </DescriptionListModule>
-            </ExampleBackgroundContainer>
-
-            <ExampleBackgroundContainer>
-              <DescriptionListModule>
-                <TitleBarModule title="Campaign end" subsection />
-
-                <TypeLayout>
-                  <TypeLayoutBody>
-                    <TypeLayoutRow>
-                      <TypeLayoutCell>Reminders</TypeLayoutCell>
-                      <TypeLayoutCell>
-                        Start 10 days before campaign ends
-                      </TypeLayoutCell>
-                    </TypeLayoutRow>
-                    <TypeLayoutRow>
-                      <TypeLayoutCell>Campaign end</TypeLayoutCell>
-                      <TypeLayoutCell>
-                        Take no action on entitlements not reviewed
-                      </TypeLayoutCell>
-                    </TypeLayoutRow>
-                  </TypeLayoutBody>
-                </TypeLayout>
-              </DescriptionListModule>
-            </ExampleBackgroundContainer>
-          </Column>
-        </Row>
-
-        <ExampleBackgroundContainer narrow>
-          <Row narrow>
-            <Column>
-              <TitleBarModule title="Campaign results" subsection />
             </Column>
           </Row>
-
-          <ICAModule>
-            {() => (
-              <Row narrow>
-                <Column sm={2} md={2} lg={3}>
-                  <ICA label="Reviews complete" value={300} />
-                </Column>
-                <Column sm={2} md={2} lg={3}>
-                  <ICA label="Approved" value={241} />
-                </Column>
-                <Column sm={2} md={2} lg={3}>
-                  <ICA label="Rejected" value={28} />
-                </Column>
-              </Row>
-            )}
-          </ICAModule>
-        </ExampleBackgroundContainer>
-
-        <Row narrow>
-          <Column>
-            <DataTablePagination
-              headers={[
-                {
-                  header: 'Reviewer',
-                  key: 'reviewer',
-                },
-                {
-                  header: 'Approved',
-                  key: 'approved',
-                },
-                {
-                  header: 'Rejected',
-                  key: 'rejected',
-                },
-                {
-                  header: 'Not reviewed',
-                  key: 'notReviewed',
-                },
-                {
-                  header: 'Completion',
-                  key: 'completion',
-                },
-              ]}
-              pageSize={5}
-              pageSizes={[5, 10, 25, 50]}
-              rows={[
-                {
-                  approved: 5,
-                  completion: '10%',
-                  id: '0',
-                  notReviewed: 54,
-                  rejected: 0,
-                  reviewer: 'john@cse-bank.com',
-                },
-                {
-                  approved: 64,
-                  completion: '92%',
-                  id: '1',
-                  notReviewed: 6,
-                  rejected: 5,
-                  reviewer: 'maria@cse-bank.com',
-                },
-                {
-                  approved: 71,
-                  completion: '100%',
-                  id: '2',
-                  notReviewed: 0,
-                  rejected: 0,
-                  reviewer: 'rogelio@cse-bank.com',
-                },
-              ]}
-            />
-          </Column>
-        </Row>
-      </Column>
-
-      <Column lg={4}>
-        <Row narrow>
-          <Column>
-            <ButtonClusterModule>
-              <Button kind="ghost" renderIcon={Copy16}>
-                Duplicate campaign
-              </Button>
-
-              <Button kind="ghost" renderIcon={Activity16}>
-                View activity report
-              </Button>
-            </ButtonClusterModule>
-          </Column>
-        </Row>
-
-        <Row>
-          <Column>
-            <DescriptionListModule>
-              <TitleBarModule title="Details" subsection />
-
-              <TypeLayout>
-                <TypeLayoutBody>
-                  <TypeLayoutRow>
-                    <TypeLayoutCell>Created by</TypeLayoutCell>
-                    <TypeLayoutCell>
-                      <ul>
-                        <li>Scott Damon</li>
-                        <li>scottd@cse-bank.com</li>
-                      </ul>
-                    </TypeLayoutCell>
-                  </TypeLayoutRow>
-                  <TypeLayoutRow>
-                    <TypeLayoutCell>Created on</TypeLayoutCell>
-                    <TypeLayoutCell>Jun 21 2018</TypeLayoutCell>
-                  </TypeLayoutRow>
-                  <TypeLayoutRow>
-                    <TypeLayoutCell>Modified on</TypeLayoutCell>
-                    <TypeLayoutCell>–</TypeLayoutCell>
-                  </TypeLayoutRow>
-                  <TypeLayoutRow>
-                    <TypeLayoutCell>Closed on</TypeLayoutCell>
-                    <TypeLayoutCell>Jul 15 2018</TypeLayoutCell>
-                  </TypeLayoutRow>
-                </TypeLayoutBody>
-              </TypeLayout>
-            </DescriptionListModule>
-          </Column>
-        </Row>
-      </Column>
-    </Row>
+        </Column>
+      </Row>
+    </Grid>
   </>
 );

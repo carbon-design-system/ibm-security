@@ -3,7 +3,7 @@
 /// @group storybook
 /// @copyright IBM Security 2019 - 2021
 ////
-
+@import '@carbon/layout/scss/breakpoint';
 @import '@carbon/layout/scss/spacing';
 
 @import '../src/globals/index';
@@ -19,6 +19,13 @@
 
 * {
   box-sizing: border-box;
+}
+
+.grid--layout {
+  @include carbon--breakpoint($name: md) {
+    float: left;
+    width: calc(100% - #{breakpoints-width-get($name: sm)});
+  }
 }
 
 .wizard__form {
