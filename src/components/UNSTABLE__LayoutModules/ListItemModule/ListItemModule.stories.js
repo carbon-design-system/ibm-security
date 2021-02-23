@@ -30,21 +30,23 @@ export const Default = () => (
     {({ Column, getLayoutProps }) => (
       <>
         <Column>
-          <Bee16 {...getLayoutProps('icon')} />
+          <Bee16 {...getLayoutProps({ type: 'icon' })} />
         </Column>
 
         <Column>
-          <h2 {...getLayoutProps('title')}>Title</h2>
+          <h2 {...getLayoutProps({ type: 'title' })}>Title</h2>
 
-          <p {...getLayoutProps('description')}>Description</p>
+          <p {...getLayoutProps({ type: 'description' })}>Description</p>
 
-          <span {...getLayoutProps('label')}>Label</span>
+          <span {...getLayoutProps({ type: 'label' })}>Label</span>
 
-          <section {...getLayoutProps('component')}>Component</section>
+          <section {...getLayoutProps({ type: 'component' })}>
+            Component
+          </section>
 
-          <UserAvatar20 {...getLayoutProps('avatar')} />
-          <UserAvatar20 {...getLayoutProps('avatar')} />
-          <UserAvatar20 {...getLayoutProps('avatar')} />
+          <UserAvatar20 {...getLayoutProps({ type: 'avatar' })} />
+          <UserAvatar20 {...getLayoutProps({ type: 'avatar' })} />
+          <UserAvatar20 {...getLayoutProps({ type: 'avatar' })} />
         </Column>
       </>
     )}

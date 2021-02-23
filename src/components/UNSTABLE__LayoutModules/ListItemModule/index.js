@@ -21,7 +21,7 @@ const ListItemModule = ({ children, ...other }) => (
         <LayoutModule namespace={`${namespace}__column`} {...props} />
       ),
 
-      getLayoutProps: (type, { className, ...rest } = {}) => ({
+      getLayoutProps: ({ className, type, ...rest } = {}) => ({
         className: classnames(className, {
           [`${layoutModuleNamespace}--${namespace}__${type}`]: type,
         }),
