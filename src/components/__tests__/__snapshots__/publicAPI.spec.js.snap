@@ -4673,6 +4673,7 @@ Map {
       "forceShowTotal": false,
       "locale": "en",
       "percentage": false,
+      "size": "default",
       "total": 0,
       "truncate": true,
       "value": null,
@@ -4732,6 +4733,16 @@ Map {
       },
       "percentage": Object {
         "type": "bool",
+      },
+      "size": Object {
+        "args": Array [
+          Array [
+            "default",
+            "large",
+            "xlarge",
+          ],
+        ],
+        "type": "oneOf",
       },
       "total": Object {
         "type": "number",

@@ -36,4 +36,24 @@
   & &__percentage-mark {
     @include carbon--type-style($name: productive-heading-03);
   }
+
+  &--large {
+    & &__value {
+      @include carbon--type-style($name: productive-heading-06);
+    }
+
+    & &__total {
+      @include carbon--type-style($name: productive-heading-03);
+    }
+  }
+
+  &--xlarge {
+    & &__value {
+      @include carbon--type-style($name: productive-heading-07);
+    }
+
+    & &__total {
+      @include carbon--type-style($name: productive-heading-04);
+    }
+  }
 }

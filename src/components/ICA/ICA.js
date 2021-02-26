@@ -3,6 +3,7 @@
  * @copyright IBM Security 2019 - 2020
  */
 
+import classnames from 'classnames';
 import numeral from 'numeral';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -65,11 +66,21 @@ const ICA = ({
   label,
   locale,
   percentage,
+  size,
   truncate,
   total,
   value,
   ...other
 }) => {
+  const isSize = sizeValue => size === sizeValue;
+  const isLarge = isSize('large') || isSize('lg');
+  const isXLarge = isSize('xlarge') || isSize('xlg');
+
+  const ICAClasses = classnames(namespace, className, {
+    [`${namespace}--large`]: isLarge,
+    [`${namespace}--xlarge`]: isXLarge,
+  });
+
   if (Locales.includes(locale)) {
     numeral.locale(locale);
   } else {
@@ -89,11 +100,16 @@ const ICA = ({
     (forceShowTotal && truncatedTotal > 0);
 
   return (
-    <div className={`${namespace} ${className}`} {...other}>
-      <h4 className={`${namespace}__label`}>{label} </h4>
-      <span className={`${namespace}__value`}>{truncatedValue}</span>
+    <div className={ICAClasses} {...other}>
+      <h4 className={`${namespace}__label ${ICAClasses}__label`}>{label} </h4>
+      <span className={`${namespace}__value ${ICAClasses}__value`}>
+        {truncatedValue}
+      </span>
       {shouldDisplayof ? (
-        <span className={`${namespace}__total`}> / {truncatedTotal}</span>
+        <span className={`${namespace}__total ${ICAClasses}__total`}>
+          {' '}
+          / {truncatedTotal}
+        </span>
       ) : null}
     </div>
   );
@@ -146,6 +162,9 @@ ICA.propTypes = {
 
   /** Specify whether or not the values should be truncated. */
   truncate: PropTypes.bool,
+
+  /** The size of the ICA */
+  size: PropTypes.oneOf(['default', 'large', 'xlarge']),
 };
 
 ICA.defaultProps = {
@@ -153,6 +172,7 @@ ICA.defaultProps = {
   className: '',
   locale: 'en',
   percentage: false,
+  size: 'default',
   value: null,
   forceShowTotal: false,
   truncate: true,
