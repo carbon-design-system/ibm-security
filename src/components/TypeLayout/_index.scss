@@ -1,7 +1,7 @@
 ////
 /// Type layout component.
 /// @group type-layout
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/breakpoint';
@@ -10,44 +10,53 @@
 @import '@carbon/themes/scss/tokens';
 @import '@carbon/type/scss/styles';
 
-@import '../StructuredList/index';
+@import 'carbon-components/scss/globals/scss/css--reset';
+
+@import '../../globals/border/index';
 
 @import '../Component/mixins';
-
 @import 'variables';
+
+@import '../StructuredList/index';
 
 @mixin description-list--stacked {
   display: block;
+  padding-right: 0;
   padding-left: 0;
 }
 
 @mixin description-list__padding($top, $right, $bottom, $left) {
-  @include carbon--breakpoint($name: md) {
-    padding-left: $left;
+  &:first-of-type {
+    padding-top: $top;
+
+    @include carbon--breakpoint($name: md) {
+      padding-right: $right;
+    }
   }
 
-  padding-top: $top;
-  padding-right: $right;
-  padding-bottom: $bottom;
+  &:last-of-type {
+    padding-bottom: $bottom;
+
+    @include carbon--breakpoint($name: md) {
+      padding-left: $left;
+    }
+  }
 }
 
 @include security--component($name: $type-layout__name) {
   $root: &;
 
   @include carbon--type-style($name: body-short-01);
-
-  max-width: unset;
-  min-width: unset;
-  margin-bottom: $carbon--spacing-07;
+  margin-bottom: $carbon--layout-03;
 
   &__row {
     border-width: 0;
 
-    &:first-of-type > #{$root}__cell {
+    &:first-of-type > #{$root}__cell:first-of-type {
       padding-top: 0;
     }
 
-    &:last-of-type > #{$root}__cell {
+    &:last-of-type > #{$root}__cell:last-of-type {
       padding-bottom: 0;
     }
   }
@@ -66,7 +75,24 @@
       display: table-cell;
     }
 
-    color: $text-01;
+    &:first-of-type {
+      width: 1%;
+      padding-bottom: 0;
+      white-space: nowrap;
+    }
+
+    &:last-of-type {
+      padding-top: 0;
+      color: $text-01;
+    }
+
+    ul {
+      @include reset;
+
+      > li {
+        margin-bottom: $carbon--spacing-03;
+      }
+    }
   }
 
   &--lg &__cell {
@@ -100,38 +126,12 @@
     );
   }
 
-  // xs size should always have a little left padding:
-  &:not(&--xs) #{$root}__cell:first-of-type {
-    padding-left: 0;
-  }
-
   &--stacked &__cell {
     @include description-list--stacked;
   }
 
-  &__cell:first-of-type {
-    color: $text-02;
-    width: 1%;
-    white-space: nowrap;
-  }
-
-  &__cell:last-of-type {
-    padding-right: 0;
-  }
-
-  &__cell ul {
-    padding-left: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    list-style: none;
-
-    li {
-      margin-bottom: carbon--mini-units($count: 1);
-    }
-  }
-
   &--bordered &__row {
-    border-bottom: 1px solid $ui-03;
+    border-width: $border__sizing__width;
 
     &:last-child {
       border-width: 0;

@@ -1,6 +1,6 @@
 /**
  * @file Type layout tests.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { render } from '@testing-library/react';

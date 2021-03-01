@@ -1,6 +1,6 @@
 /**
  * @file Type layout.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import classnames from 'classnames';
