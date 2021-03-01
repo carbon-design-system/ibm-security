@@ -18586,14 +18586,15 @@ li.bx--accordion__item--disabled:last-of-type {
   padding-left: 0;
 }
 
-.security--type-layout__container__cell:first-of-type {
-  padding-top: 0.5rem;
+@media (min-width: 42rem) {
+  .security--type-layout__container__cell {
+    padding-right: 1.5rem;
+    padding-left: 0.5rem;
+  }
 }
 
-@media (min-width: 42rem) {
-  .security--type-layout__container__cell:first-of-type {
-    padding-right: 1.5rem;
-  }
+.security--type-layout__container__cell:first-of-type {
+  padding-top: 0.5rem;
 }
 
 .security--type-layout__container__cell:last-of-type {
@@ -18601,26 +18602,9 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 @media (min-width: 42rem) {
-  .security--type-layout__container__cell:last-of-type {
-    padding-left: 0.5rem;
-  }
-}
-
-@media (min-width: 42rem) {
   .security--type-layout__container__cell {
     display: table-cell;
   }
-}
-
-.security--type-layout__container__cell:first-of-type {
-  width: 1%;
-  padding-bottom: 0;
-  white-space: nowrap;
-}
-
-.security--type-layout__container__cell:last-of-type {
-  padding-top: 0;
-  color: var(--text-01, #f4f4f4);
 }
 
 .security--type-layout__container__cell ul {
@@ -18643,24 +18627,19 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-bottom: 0.5rem;
 }
 
+@media (min-width: 42rem) {
+  .security--type-layout__container--lg .security--type-layout__container__cell {
+    padding-right: 1.5rem;
+    padding-left: 1rem;
+  }
+}
+
 .security--type-layout__container--lg .security--type-layout__container__cell:first-of-type {
   padding-top: 1rem;
 }
 
-@media (min-width: 42rem) {
-  .security--type-layout__container--lg .security--type-layout__container__cell:first-of-type {
-    padding-right: 1.5rem;
-  }
-}
-
 .security--type-layout__container--lg .security--type-layout__container__cell:last-of-type {
   padding-bottom: 1rem;
-}
-
-@media (min-width: 42rem) {
-  .security--type-layout__container--lg .security--type-layout__container__cell:last-of-type {
-    padding-left: 1rem;
-  }
 }
 
 .security--type-layout__container--sm .security--type-layout__container__cell {
@@ -18670,24 +18649,19 @@ li.bx--accordion__item--disabled:last-of-type {
   letter-spacing: 0.32px;
 }
 
+@media (min-width: 42rem) {
+  .security--type-layout__container--sm .security--type-layout__container__cell {
+    padding-right: 1.5rem;
+    padding-left: 0.25rem;
+  }
+}
+
 .security--type-layout__container--sm .security--type-layout__container__cell:first-of-type {
   padding-top: 0.25rem;
 }
 
-@media (min-width: 42rem) {
-  .security--type-layout__container--sm .security--type-layout__container__cell:first-of-type {
-    padding-right: 1.5rem;
-  }
-}
-
 .security--type-layout__container--sm .security--type-layout__container__cell:last-of-type {
   padding-bottom: 0.25rem;
-}
-
-@media (min-width: 42rem) {
-  .security--type-layout__container--sm .security--type-layout__container__cell:last-of-type {
-    padding-left: 0.25rem;
-  }
 }
 
 .security--type-layout__container--xs .security--type-layout__container__cell {
@@ -18697,30 +18671,38 @@ li.bx--accordion__item--disabled:last-of-type {
   letter-spacing: 0.32px;
 }
 
-.security--type-layout__container--xs .security--type-layout__container__cell:first-of-type {
-  padding-top: 0.25rem;
+@media (min-width: 42rem) {
+  .security--type-layout__container--xs .security--type-layout__container__cell {
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
+  }
 }
 
-@media (min-width: 42rem) {
-  .security--type-layout__container--xs .security--type-layout__container__cell:first-of-type {
-    padding-right: 0.25rem;
-  }
+.security--type-layout__container--xs .security--type-layout__container__cell:first-of-type {
+  padding-top: 0.25rem;
 }
 
 .security--type-layout__container--xs .security--type-layout__container__cell:last-of-type {
   padding-bottom: 0.25rem;
 }
 
-@media (min-width: 42rem) {
-  .security--type-layout__container--xs .security--type-layout__container__cell:last-of-type {
-    padding-left: 0.25rem;
-  }
-}
-
 .security--type-layout__container--stacked .security--type-layout__container__cell {
   display: block;
   padding-right: 0;
   padding-left: 0;
+}
+
+.security--type-layout__container__cell:first-of-type {
+  width: 1%;
+  padding-bottom: 0;
+  padding-left: 0;
+  white-space: nowrap;
+}
+
+.security--type-layout__container__cell:last-of-type {
+  padding-top: 0;
+  padding-right: 0;
+  color: var(--text-01, #f4f4f4);
 }
 
 .security--type-layout__container--bordered .security--type-layout__container__row {

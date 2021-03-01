@@ -26,20 +26,17 @@
 }
 
 @mixin description-list__padding($top, $right, $bottom, $left) {
+  @include carbon--breakpoint($name: md) {
+    padding-right: $right;
+    padding-left: $left;
+  }
+
   &:first-of-type {
     padding-top: $top;
-
-    @include carbon--breakpoint($name: md) {
-      padding-right: $right;
-    }
   }
 
   &:last-of-type {
     padding-bottom: $bottom;
-
-    @include carbon--breakpoint($name: md) {
-      padding-left: $left;
-    }
   }
 }
 
@@ -73,17 +70,6 @@
 
     @include carbon--breakpoint($name: md) {
       display: table-cell;
-    }
-
-    &:first-of-type {
-      width: 1%;
-      padding-bottom: 0;
-      white-space: nowrap;
-    }
-
-    &:last-of-type {
-      padding-top: 0;
-      color: $text-01;
     }
 
     ul {
@@ -128,6 +114,19 @@
 
   &--stacked &__cell {
     @include description-list--stacked;
+  }
+
+  &__cell:first-of-type {
+    width: 1%;
+    padding-bottom: 0;
+    padding-left: 0;
+    white-space: nowrap;
+  }
+
+  &__cell:last-of-type {
+    padding-top: 0;
+    padding-right: 0;
+    color: $text-01;
   }
 
   &--bordered &__row {
