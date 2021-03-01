@@ -30,6 +30,7 @@ const storyProps = ({ value = icaValue, total } = {}) => ({
   percentage: boolean('Percentage (percentage)', false),
   size: select('ICA size (size)', sizes, 'default'),
   forceShowTotal: boolean('Show total (forceShowTotal)', false),
+  trending: boolean('Show trending arrow (trending)', false),
   truncate: boolean('Truncate (truncate)', ICA.defaultProps.truncate),
   locale: select('Locale (locale)', Locales, Locales[0]),
 });

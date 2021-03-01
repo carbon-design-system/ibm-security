@@ -9752,6 +9752,19 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-bottom: 0;
 }
 
+.security--ica .security--ica__total__trend {
+  padding-left: 16px;
+}
+
+.security--ica .security--ica__trend {
+  vertical-align: top;
+  margin-top: 0.5rem;
+}
+
+.security--ica .security--ica__row {
+  display: flex;
+}
+
 .security--ica .security--ica__percentage {
   font-size: 1.75rem;
   font-weight: 400;
@@ -9780,6 +9793,10 @@ li.bx--accordion__item--disabled:last-of-type {
   letter-spacing: 0;
 }
 
+.security--ica--large .security--ica--large__total__trend {
+  padding-left: 20px;
+}
+
 .security--ica--xlarge .security--ica--xlarge__value {
   font-size: 3.375rem;
   font-weight: 300;
@@ -9792,6 +9809,14 @@ li.bx--accordion__item--disabled:last-of-type {
   font-weight: 400;
   line-height: 1.29;
   letter-spacing: 0;
+}
+
+.security--ica--xlarge .security--ica--xlarge__total__trend {
+  padding-left: 24px;
+}
+
+.security--ica--xlarge .security--ica--xlarge__trend {
+  margin-top: 0.75rem;
 }
 
 .security--icon-button-bar {

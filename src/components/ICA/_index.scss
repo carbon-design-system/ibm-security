@@ -27,6 +27,19 @@
   & &__total {
     @include carbon--type-style($name: body-short-01);
     margin-bottom: 0;
+
+    &__trend {
+      padding-left: 16px;
+    }
+  }
+
+  & &__trend {
+    vertical-align: top;
+    margin-top: $spacing-03;
+  }
+
+  & &__row {
+    display: flex;
   }
 
   & &__percentage {
@@ -44,6 +57,10 @@
 
     & &__total {
       @include carbon--type-style($name: productive-heading-03);
+
+      &__trend {
+        padding-left: 20px;
+      }
     }
   }
 
@@ -54,6 +71,14 @@
 
     & &__total {
       @include carbon--type-style($name: productive-heading-04);
+
+      &__trend {
+        padding-left: 24px;
+      }
+    }
+
+    & &__trend {
+      margin-top: $spacing-04;
     }
   }
 }

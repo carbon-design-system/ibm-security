@@ -10,6 +10,9 @@ import React from 'react';
 
 import 'numeral/locales';
 
+import { ArrowUp16, ArrowUp20, ArrowUp24 } from '@carbon/icons-react/lib/';
+import Icon from '../Icon/Icon';
+
 import isDevelopment from '../../globals/env';
 import { getComponentNamespace } from '../../globals/namespace';
 
@@ -67,6 +70,7 @@ const ICA = ({
   locale,
   percentage,
   size,
+  trending,
   truncate,
   total,
   value,
@@ -75,6 +79,13 @@ const ICA = ({
   const isSize = sizeValue => size === sizeValue;
   const isLarge = isSize('large') || isSize('lg');
   const isXLarge = isSize('xlarge') || isSize('xlg');
+
+  let renderIcon = ArrowUp16;
+  if (isLarge) {
+    renderIcon = ArrowUp20;
+  } else if (isXLarge) {
+    renderIcon = ArrowUp24;
+  }
 
   const ICAClasses = classnames(namespace, className, {
     [`${namespace}--large`]: isLarge,
@@ -102,11 +113,22 @@ const ICA = ({
   return (
     <div className={ICAClasses} {...other}>
       <h4 className={`${namespace}__label ${ICAClasses}__label`}>{label} </h4>
-      <span className={`${namespace}__value ${ICAClasses}__value`}>
-        {truncatedValue}
+      <span className={`${namespace}__row`}>
+        {trending && (
+          <Icon
+            className={`${namespace}__trend ${ICAClasses}__trend`}
+            renderIcon={renderIcon}
+          />
+        )}
+        <span className={`${namespace}__value ${ICAClasses}__value`}>
+          {truncatedValue}
+        </span>
       </span>
       {shouldDisplayof ? (
-        <span className={`${namespace}__total ${ICAClasses}__total`}>
+        <span
+          className={`${namespace}__total ${ICAClasses}__total ${trending &&
+            `${ICAClasses}__total__trend`}`}
+        >
           {' '}
           / {truncatedTotal}
         </span>
@@ -163,8 +185,16 @@ ICA.propTypes = {
   /** Specify whether or not the values should be truncated. */
   truncate: PropTypes.bool,
 
-  /** The size of the ICA */
+  /** The size of the ICA
+   * @type string
+   */
   size: PropTypes.oneOf(['default', 'large', 'xlarge']),
+
+  /**
+   * Display trending icon
+   * @type bool
+   */
+  trending: PropTypes.bool,
 };
 
 ICA.defaultProps = {
@@ -175,6 +205,7 @@ ICA.defaultProps = {
   size: 'default',
   value: null,
   forceShowTotal: false,
+  trending: false,
   truncate: true,
 };
 

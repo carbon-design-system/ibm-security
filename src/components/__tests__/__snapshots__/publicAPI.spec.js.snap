@@ -4675,6 +4675,7 @@ Map {
       "percentage": false,
       "size": "default",
       "total": 0,
+      "trending": false,
       "truncate": true,
       "value": null,
     },
@@ -4746,6 +4747,9 @@ Map {
       },
       "total": Object {
         "type": "number",
+      },
+      "trending": Object {
+        "type": "bool",
       },
       "truncate": Object {
         "type": "bool",
