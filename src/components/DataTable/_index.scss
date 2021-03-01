@@ -32,6 +32,10 @@
   .#{$prefix}--data-table {
     background-color: $ui-03;
 
+    &-content {
+      overflow: unset;
+    }
+
     &.#{$prefix}--skeleton th {
       border-bottom-width: 0;
     }

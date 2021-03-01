@@ -36,7 +36,8 @@
 | `inverse-support-03` | `yellow-30`       | `yellow-30`       |
 | `inverse-support-04` | `blue-50`         | `blue-60`         |
 | `overlay-01`         | `gray-100`        | `gray-100`        |
-| `danger`             | `red-60`          | `red-60`          |
+| `danger-01`          | `red-60`          | `red-60`          |
+| `danger-02`          | `red-60`          | `red-50`          |
 | `focus`              | `blue-60`         | `white-0`         |
 | `inverse-focus-ui`   | `white-0`         | `blue-60`         |
 | `hover-primary`      | `#0353e9`         | `#0353e9`         |
@@ -47,7 +48,9 @@
 | `hover-tertiary`     | `#0353e9`         | `gray-10`         |
 | `active-tertiary`    | `blue-80`         | `gray-30`         |
 | `hover-ui`           | `#e0e4ea`         | `#353535`         |
+| `hover-light-ui`     | `#e5e5e5`         | `#4c4c4c`         |
 | `active-ui`          | `cool-gray-30`    | `gray-70`         |
+| `active-light-ui`    | `cool-gray-30`    | `gray-60`         |
 | `selected-ui`        | `cool-gray-20`    | `gray-80`         |
 | `selected-light-ui`  | `cool-gray-20`    | `gray-70`         |
 | `inverse-hover-ui`   | `#464c51`         | `#e5e5e5`         |
@@ -59,9 +62,8 @@
 | `disabled-01`        | `white-0`         | `gray-90`         |
 | `disabled-02`        | `cool-gray-30`    | `gray-70`         |
 | `disabled-03`        | `cool-gray-50`    | `gray-50`         |
-| `highlight`          | `blue-20`         | `blue-80`         |
+| `highlight`          | `blue-10`         | `blue-80`         |
 | `decorative-01`      | `cool-gray-20`    | `gray-70`         |
-| `hover-light-ui`     | `#e5e5e5`         | `gray-70`         |
 | `button-separator`   | `cool-gray-20`    | `gray-100`        |
 | `skeleton-01`        | `#e0e4ea`         | `#353535`         |
 | `skeleton-02`        | `cool-gray-30`    | `gray-80`         |
@@ -70,3 +72,4 @@
 | `brand-03`           | `blue-60`         | `white-0`         |
 | `active-01`          | `cool-gray-30`    | `gray-70`         |
 | `hover-field`        | `#e0e4ea`         | `#353535`         |
+| `danger`             | `red-60`          | `red-60`          |

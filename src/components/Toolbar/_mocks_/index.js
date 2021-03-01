@@ -3,8 +3,11 @@
  * @copyright IBM Security 2018 - 2020
  */
 
+import { action } from '@storybook/addon-actions';
+import React from 'react';
 import { icon, url, random } from '../../_mocks_';
 import labels from '../locales/en/Toolbar.json';
+import Tag from '../../Tag';
 
 /**
  * Generates the initial navigation model.
@@ -48,10 +51,17 @@ const applicationsToGenerate = [
     children: generateApplications([
       { title: 'Applications' },
       { title: 'Plugins' },
-      { title: 'Users' },
+      {
+        title: (
+          <div>
+            Applications<Tag>Beta</Tag>
+          </div>
+        ),
+      },
     ]),
   },
   {
+    onClick: action('Toolbar NavItem onClick'),
     title: 'Section 2',
     icon,
   },

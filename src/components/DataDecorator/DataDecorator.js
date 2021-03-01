@@ -1,18 +1,18 @@
 /**
- * @file DataDecorator
- * @copyright IBM Security 2019
+ * @file Data decorator
+ * @copyright IBM Security 2019 - 2020
  */
 
-import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
-
 import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+
+import * as defaultLabels from '../../globals/nls';
+import { isNode } from '../../globals/utils/capabilities';
 
 import Decorator from './Decorator';
 import PanelV2 from '../PanelV2';
-import { PORTAL_EVENTS } from '../Portal';
-import * as defaultLabels from '../../globals/nls';
-import { isNode } from '../../globals/utils/capabilities';
+import Portal, { PORTAL_EVENTS } from '../Portal';
 
 const { defaultProps, propTypes } = Decorator;
 
@@ -42,6 +42,7 @@ class DataDecorator extends Component {
       className,
       closeButton,
       focusTrap,
+      focusTrapOptions,
       inline,
       labels,
       noIcon,
@@ -61,12 +62,14 @@ class DataDecorator extends Component {
       onContextMenu: propOnContextMenu,
       midLineTruncation,
     } = this.props;
+
     const onContextMenu = propOnContextMenu
       ? event => {
           event.preventDefault();
           propOnContextMenu(event);
         }
       : undefined;
+
     const decoratorProps = {
       className,
       inline,
@@ -80,6 +83,7 @@ class DataDecorator extends Component {
       onContextMenu,
       midLineTruncation,
     };
+
     const componentLabels = {
       ...defaultLabels.labels,
       ...labels,
@@ -91,8 +95,9 @@ class DataDecorator extends Component {
         DATA_DECORATOR_CLOSE_BUTTON: (closeButton && closeButton.label) || '',
       }),
     };
+
     return (
-      <Fragment>
+      <>
         <Decorator
           {...decoratorProps}
           active={this.state.isOpen}
@@ -101,13 +106,8 @@ class DataDecorator extends Component {
             this.toggleOpen();
           }}
         />
+
         <PanelV2
-          isOpen={this.state.isOpen}
-          onClose={this.close}
-          stopPropagation={stopPropagation}
-          stopPropagationEvents={stopPropagationEvents}
-          rootNode={rootNode}
-          focusTrap={focusTrap}
           closeButton={{
             onClick: event => {
               this.close(event, type, value);
@@ -116,6 +116,21 @@ class DataDecorator extends Component {
               }
             },
           }}
+          focusTrap={focusTrap}
+          focusTrapOptions={focusTrapOptions}
+          isOpen={this.state.isOpen}
+          labels={{
+            ...componentLabels,
+            ...defaultLabels.filterFalsey({
+              PANEL_CONTAINER_PRIMARY_BUTTON:
+                componentLabels.DATA_DECORATOR_PRIMARY_BUTTON,
+              PANEL_CONTAINER_SECONDARY_BUTTON:
+                componentLabels.DATA_DECORATOR_SECONDARY_BUTTON,
+              PANEL_CONTAINER_CLOSE_BUTTON:
+                componentLabels.DATA_DECORATOR_CLOSE_BUTTON,
+            }),
+          }}
+          onClose={this.close}
           primaryButton={
             primaryButton && {
               ...primaryButton,
@@ -133,6 +148,7 @@ class DataDecorator extends Component {
             }
           }
           renderFooter={renderFooter}
+          rootNode={rootNode}
           secondaryButton={
             secondaryButton && {
               ...secondaryButton,
@@ -149,23 +165,14 @@ class DataDecorator extends Component {
               },
             }
           }
+          stopPropagation={stopPropagation}
+          stopPropagationEvents={stopPropagationEvents}
           subtitle={subtitle}
           title={value}
-          labels={{
-            ...componentLabels,
-            ...defaultLabels.filterFalsey({
-              PANEL_CONTAINER_PRIMARY_BUTTON:
-                componentLabels.DATA_DECORATOR_PRIMARY_BUTTON,
-              PANEL_CONTAINER_SECONDARY_BUTTON:
-                componentLabels.DATA_DECORATOR_SECONDARY_BUTTON,
-              PANEL_CONTAINER_CLOSE_BUTTON:
-                componentLabels.DATA_DECORATOR_CLOSE_BUTTON,
-            }),
-          }}
         >
           {children}
         </PanelV2>
-      </Fragment>
+      </>
     );
   }
 }
@@ -191,6 +198,8 @@ DataDecorator.propTypes = {
 
   /** @type {boolean} Focus trap. */
   focusTrap: PropTypes.bool,
+
+  focusTrapOptions: Portal.propTypes.focusTrapOptions,
 
   /** @type {boolean} Determines if this is inline or not. */
   inline: propTypes.inline,
@@ -280,6 +289,7 @@ DataDecorator.defaultProps = {
   className: undefined,
   closeButton: undefined,
   focusTrap: true,
+  focusTrapOptions: Portal.defaultProps.focusTrapOptions,
   inline: defaultProps.inline,
   labels: {},
   noIcon: false,

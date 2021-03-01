@@ -1,309 +1,114 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ComboButton renders a combo button with children and an overflow menu 1`] = `
-<ComboButton
-  className=""
-  direction="top"
-  menuOffset={[Function]}
-  selectorPrimaryFocus="[data-overflow-menu-primary-focus]"
+<div
+  data-testid="combo-button"
 >
   <div
-    className="security--combo-button"
-    data-floating-menu-container={true}
+    class="security--combo-button"
+    data-floating-menu-container="true"
   >
     <div
-      className="security--combo-button__group"
+      class="security--combo-button__group"
     >
-      <Button
-        className="security--combo-button--primary"
-        disabled={false}
-        iconDescription=""
-        id="test-1"
-        key="test-1"
-        kind="primary"
-        largeText={null}
-        loading={false}
-        onClick={[Function]}
-        renderIcon={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "render": [Function],
-          }
-        }
-        size="default"
-        tabIndex={0}
-        tooltipAlignment="center"
-        tooltipPosition="top"
+      <button
+        class="security--button security--combo-button--primary bx--btn bx--btn--primary"
+        id="test-primary-item"
+        tabindex="0"
         type="button"
       >
-        <Button
-          className="security--button security--combo-button--primary"
-          disabled={false}
-          iconDescription=""
-          id="test-1"
-          kind="primary"
-          onClick={[Function]}
-          renderIcon={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "render": [Function],
-            }
-          }
-          size="default"
-          tabIndex={0}
-          tooltipAlignment="center"
-          tooltipPosition="top"
-          type="button"
+        <span
+          class="bx--text-truncate--end"
+          title="Primary task"
         >
-          <button
-            className="security--button security--combo-button--primary bx--btn bx--btn--primary"
-            disabled={false}
-            id="test-1"
-            onClick={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <span
-              className="bx--text-truncate--end"
-              title="Start a task"
-            >
-              Start a task
-            </span>
-            <ForwardRef(ArrowRight20)
-              aria-hidden="true"
-              aria-label=""
-              className="bx--btn__icon"
-            >
-              <Icon
-                aria-hidden="true"
-                aria-label=""
-                className="bx--btn__icon"
-                fill="currentColor"
-                height={20}
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 20 20"
-                width={20}
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <svg
-                  aria-hidden={true}
-                  aria-label=""
-                  className="bx--btn__icon"
-                  fill="currentColor"
-                  focusable="false"
-                  height={20}
-                  preserveAspectRatio="xMidYMid meet"
-                  viewBox="0 0 20 20"
-                  width={20}
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M11.8 2.8L10.8 3.8 16.2 9.3 1 9.3 1 10.7 16.2 10.7 10.8 16.2 11.8 17.2 19 10z"
-                  />
-                </svg>
-              </Icon>
-            </ForwardRef(ArrowRight20)>
-          </button>
-        </Button>
-      </Button>
-      <ForwardRef(OverflowMenu)
-        className="security--button bx--btn bx--btn--primary security--combo-button__button security--combo-button__overflow-menu"
-        direction="top"
-        menuOffset={[Function]}
-        menuOptionsClass="bx--list-box__menu"
-        onClick={[Function]}
-        onClose={[Function]}
-        renderIcon={[Function]}
-        selectorPrimaryFocus="[data-overflow-menu-primary-focus]"
+          Primary task
+        </span>
+        <svg
+          aria-hidden="true"
+          aria-label=""
+          class="bx--btn__icon"
+          fill="currentColor"
+          focusable="false"
+          height="20"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 20 20"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11.8 2.8L10.8 3.8 16.2 9.3 1 9.3 1 10.7 16.2 10.7 10.8 16.2 11.8 17.2 19 10z"
+          />
+        </svg>
+      </button>
+      <button
+        aria-expanded="false"
+        aria-haspopup="true"
+        aria-label="Menu"
+        class="security--button bx--btn bx--btn--primary security--combo-button__button security--combo-button__overflow-menu bx--overflow-menu"
+        type="button"
       >
-        <OverflowMenu
-          ariaLabel="Menu"
-          className="security--button bx--btn bx--btn--primary security--combo-button__button security--combo-button__overflow-menu"
-          direction="top"
-          flipped={false}
-          iconDescription="open and close list of options"
-          innerRef={null}
-          light={false}
-          menuOffset={[Function]}
-          menuOffsetFlip={[Function]}
-          menuOptionsClass="bx--list-box__menu"
-          onClick={[Function]}
-          onClose={[Function]}
-          onKeyDown={[Function]}
-          onOpen={[Function]}
-          open={false}
-          renderIcon={[Function]}
-          selectorPrimaryFocus="[data-overflow-menu-primary-focus]"
-          tabIndex={0}
+        <svg
+          aria-hidden="true"
+          class="security--combo-button__icon"
+          fill="currentColor"
+          focusable="false"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <ClickListener
-            onClickOutside={[Function]}
-          >
-            <button
-              aria-expanded={false}
-              aria-haspopup={true}
-              aria-label="Menu"
-              className="security--button bx--btn bx--btn--primary security--combo-button__button security--combo-button__overflow-menu bx--overflow-menu"
-              onClick={[Function]}
-              onClose={[Function]}
-              onKeyDown={[Function]}
-              open={false}
-              tabIndex={0}
-              type="button"
-            >
-              <renderOverflowMenuIcon
-                aria-label="open and close list of options"
-                className="bx--overflow-menu__icon"
-                focusable="false"
-                onClick={[Function]}
-                onKeyDown={[Function]}
-              >
-                <ForwardRef(ChevronDown16)
-                  className="security--combo-button__icon"
-                >
-                  <Icon
-                    className="security--combo-button__icon"
-                    fill="currentColor"
-                    height={16}
-                    preserveAspectRatio="xMidYMid meet"
-                    viewBox="0 0 16 16"
-                    width={16}
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <svg
-                      aria-hidden={true}
-                      className="security--combo-button__icon"
-                      fill="currentColor"
-                      focusable="false"
-                      height={16}
-                      preserveAspectRatio="xMidYMid meet"
-                      viewBox="0 0 16 16"
-                      width={16}
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8 11L3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z"
-                      />
-                    </svg>
-                  </Icon>
-                </ForwardRef(ChevronDown16)>
-              </renderOverflowMenuIcon>
-            </button>
-          </ClickListener>
-        </OverflowMenu>
-      </ForwardRef(OverflowMenu)>
+          <path
+            d="M8 11L3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z"
+          />
+        </svg>
+      </button>
     </div>
   </div>
-</ComboButton>
+</div>
 `;
 
 exports[`ComboButton renders a combo button without an overflow menu 1`] = `
-<ComboButton
-  className=""
-  direction="top"
-  menuOffset={[Function]}
-  selectorPrimaryFocus="[data-overflow-menu-primary-focus]"
+<div
+  data-testid="combo-button"
 >
   <div
-    className="security--combo-button"
-    data-floating-menu-container={true}
+    class="security--combo-button"
+    data-floating-menu-container="true"
   >
     <div
-      className="security--combo-button__group"
+      class="security--combo-button__group"
     >
-      <Button
-        className="security--combo-button--primary"
-        disabled={false}
-        iconDescription=""
-        id="test-1"
-        key="test-1"
-        kind="primary"
-        largeText={null}
-        loading={false}
-        onClick={[Function]}
-        renderIcon={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "render": [Function],
-          }
-        }
-        size="default"
-        tabIndex={0}
-        tooltipAlignment="center"
-        tooltipPosition="top"
+      <button
+        class="security--button security--combo-button--primary bx--btn bx--btn--primary"
+        id="test-primary-item"
+        tabindex="0"
         type="button"
       >
-        <Button
-          className="security--button security--combo-button--primary"
-          disabled={false}
-          iconDescription=""
-          id="test-1"
-          kind="primary"
-          onClick={[Function]}
-          renderIcon={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "render": [Function],
-            }
-          }
-          size="default"
-          tabIndex={0}
-          tooltipAlignment="center"
-          tooltipPosition="top"
-          type="button"
+        <span
+          class="bx--text-truncate--end"
+          title="Primary task"
         >
-          <button
-            className="security--button security--combo-button--primary bx--btn bx--btn--primary"
-            disabled={false}
-            id="test-1"
-            onClick={[Function]}
-            tabIndex={0}
-            type="button"
-          >
-            <span
-              className="bx--text-truncate--end"
-              title="Start a task"
-            >
-              Start a task
-            </span>
-            <ForwardRef(ArrowRight20)
-              aria-hidden="true"
-              aria-label=""
-              className="bx--btn__icon"
-            >
-              <Icon
-                aria-hidden="true"
-                aria-label=""
-                className="bx--btn__icon"
-                fill="currentColor"
-                height={20}
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 20 20"
-                width={20}
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <svg
-                  aria-hidden={true}
-                  aria-label=""
-                  className="bx--btn__icon"
-                  fill="currentColor"
-                  focusable="false"
-                  height={20}
-                  preserveAspectRatio="xMidYMid meet"
-                  viewBox="0 0 20 20"
-                  width={20}
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M11.8 2.8L10.8 3.8 16.2 9.3 1 9.3 1 10.7 16.2 10.7 10.8 16.2 11.8 17.2 19 10z"
-                  />
-                </svg>
-              </Icon>
-            </ForwardRef(ArrowRight20)>
-          </button>
-        </Button>
-      </Button>
+          Primary task
+        </span>
+        <svg
+          aria-hidden="true"
+          aria-label=""
+          class="bx--btn__icon"
+          fill="currentColor"
+          focusable="false"
+          height="20"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 20 20"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11.8 2.8L10.8 3.8 16.2 9.3 1 9.3 1 10.7 16.2 10.7 10.8 16.2 11.8 17.2 19 10z"
+          />
+        </svg>
+      </button>
     </div>
   </div>
-</ComboButton>
+</div>
 `;

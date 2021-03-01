@@ -1,6 +1,6 @@
 /**
  * @file Decorator stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import { action } from '@storybook/addon-actions';
@@ -10,9 +10,7 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 
 import { components } from '../../../../.storybook';
-
-import { Button, Decorator } from '../../..';
-
+import { Decorator } from '../../..';
 import { props, midLine } from '../_mocks_';
 
 const { type, value, score, href } = props;

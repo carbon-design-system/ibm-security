@@ -1,7 +1,7 @@
 ////
 /// Shell mixins.
 /// @group shell
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -35,11 +35,10 @@
     }
 
     &--return {
-      &,
       &#{$toolbar},
       &#{$header} > #{$header__namespace},
       #{$toolbar__namespace}__panel {
-        margin-top: $shell__banner__sizing__height;
+        top: $shell__banner__sizing__height;
       }
     }
   }
@@ -58,8 +57,9 @@
     display: flex;
     position: fixed;
     top: 0;
-    width: 100%;
-    height: $shell__banner__sizing__height;
+    right: 0;
+    left: 0;
+    height: inherit;
     padding-left: $carbon--spacing-05;
     background-color: $ui-01;
     background-position: left;
@@ -74,6 +74,10 @@
     &:hover,
     &:visited {
       color: $text-01;
+    }
+
+    &__container {
+      height: $shell__banner__sizing__height;
     }
 
     &__icon {

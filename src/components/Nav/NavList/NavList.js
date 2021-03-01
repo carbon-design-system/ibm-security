@@ -1,17 +1,17 @@
 /**
  * @file Navigation list class.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2020
  */
 
 import ChevronDown16 from '@carbon/icons-react/lib/chevron--down/16';
 
-import React, { Component } from 'react';
-import { bool, func, node, number, string } from 'prop-types';
 import classnames from 'classnames';
-
-import Icon from '../../Icon';
+import { bool, func, node, number, string } from 'prop-types';
+import React, { Component } from 'react';
 
 import { getComponentNamespace } from '../../../globals/namespace';
+
+import Icon from '../../Icon';
 import NavItem, { namespace as navItemNamespace } from '../NavItem/NavItem';
 
 export const navListNamespace = getComponentNamespace('nav__list');
@@ -50,11 +50,19 @@ export default class NavList extends Component {
   buildNewItemChild({ props }, index) {
     const { onItemClick, activeHref } = this.props;
 
+    const { onClick } = props;
+
     return (
       <NavItem
         {...props}
         key={`${navItemNamespace}--${index}`}
-        onClick={onItemClick}
+        onClick={(event, href) => {
+          onItemClick(event, href);
+
+          if (onClick) {
+            onClick(event);
+          }
+        }}
         activeHref={activeHref}
         tabIndex={this.state.open ? 0 : -1}
       />

@@ -13,11 +13,16 @@ import withResponsive from '../../../../.storybook/decorators';
 import { Button, ButtonClusterModule } from '../../..';
 
 import getTitle from '../stories';
+import page from './index.mdx';
 
 export default {
   title: getTitle(ButtonClusterModule),
   component: ButtonClusterModule,
-  parameters: { ...getDocsParameters() },
+  parameters: {
+    docs: { page },
+
+    ...getDocsParameters(),
+  },
   decorators: [withResponsive],
 };
 
