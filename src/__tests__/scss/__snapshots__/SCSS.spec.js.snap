@@ -18580,16 +18580,17 @@ li.bx--accordion__item--disabled:last-of-type {
   padding-bottom: 0;
 }
 
-.security--type-layout__container__cell {
+.security--type-layout__container__cell, .security--type-layout__container--stacked__cell {
   display: block;
-  padding-right: 0;
+}
+
+.security--type-layout__container__cell {
   padding-left: 0;
 }
 
 @media (min-width: 42rem) {
   .security--type-layout__container__cell {
-    padding-right: 1.5rem;
-    padding-left: 0.5rem;
+    padding-right: 2rem;
   }
 }
 
@@ -18629,8 +18630,7 @@ li.bx--accordion__item--disabled:last-of-type {
 
 @media (min-width: 42rem) {
   .security--type-layout__container--lg .security--type-layout__container__cell {
-    padding-right: 1.5rem;
-    padding-left: 1rem;
+    padding-right: 2.5rem;
   }
 }
 
@@ -18652,7 +18652,6 @@ li.bx--accordion__item--disabled:last-of-type {
 @media (min-width: 42rem) {
   .security--type-layout__container--sm .security--type-layout__container__cell {
     padding-right: 1.5rem;
-    padding-left: 0.25rem;
   }
 }
 
@@ -18673,8 +18672,7 @@ li.bx--accordion__item--disabled:last-of-type {
 
 @media (min-width: 42rem) {
   .security--type-layout__container--xs .security--type-layout__container__cell {
-    padding-right: 0.25rem;
-    padding-left: 0.25rem;
+    padding-right: 0.5rem;
   }
 }
 
@@ -18686,16 +18684,9 @@ li.bx--accordion__item--disabled:last-of-type {
   padding-bottom: 0.25rem;
 }
 
-.security--type-layout__container--stacked .security--type-layout__container__cell {
-  display: block;
-  padding-right: 0;
-  padding-left: 0;
-}
-
 .security--type-layout__container__cell:first-of-type {
   width: 1%;
   padding-bottom: 0;
-  padding-left: 0;
   white-space: nowrap;
 }
 

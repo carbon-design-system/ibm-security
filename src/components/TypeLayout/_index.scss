@@ -21,22 +21,19 @@
 
 @mixin description-list--stacked {
   display: block;
-  padding-right: 0;
-  padding-left: 0;
 }
 
-@mixin description-list__padding($top, $right, $bottom, $left) {
+@mixin description-list__padding($block, $inline) {
   @include carbon--breakpoint($name: md) {
-    padding-right: $right;
-    padding-left: $left;
+    padding-right: $inline;
   }
 
   &:first-of-type {
-    padding-top: $top;
+    padding-top: $block;
   }
 
   &:last-of-type {
-    padding-bottom: $bottom;
+    padding-bottom: $block;
   }
 }
 
@@ -58,14 +55,21 @@
     }
   }
 
+  &,
+  &--stacked {
+    &__cell {
+      display: block;
+    }
+  }
+
   &__cell {
-    @include description-list--stacked;
+    // @include description-list--stacked;
+
+    padding-left: 0;
 
     @include description-list__padding(
-      $top: $carbon--spacing-03,
-      $right: $carbon--spacing-06,
-      $bottom: $carbon--spacing-03,
-      $left: $carbon--spacing-03
+      $block: $carbon--spacing-03,
+      $inline: $carbon--spacing-07
     );
 
     @include carbon--breakpoint($name: md) {
@@ -83,10 +87,8 @@
 
   &--lg &__cell {
     @include description-list__padding(
-      $top: $carbon--spacing-05,
-      $right: $carbon--spacing-06,
-      $bottom: $carbon--spacing-05,
-      $left: $carbon--spacing-05
+      $block: $carbon--spacing-05,
+      $inline: $carbon--spacing-08
     );
   }
 
@@ -94,10 +96,8 @@
     @include carbon--type-style($name: caption-01);
 
     @include description-list__padding(
-      $top: $carbon--spacing-02,
-      $right: $carbon--spacing-06,
-      $bottom: $carbon--spacing-02,
-      $left: $carbon--spacing-02
+      $block: $carbon--spacing-02,
+      $inline: $carbon--spacing-06
     );
   }
 
@@ -105,21 +105,18 @@
     @include carbon--type-style($name: caption-01);
 
     @include description-list__padding(
-      $top: $carbon--spacing-02,
-      $right: $carbon--spacing-02,
-      $bottom: $carbon--spacing-02,
-      $left: $carbon--spacing-02
+      $block: $carbon--spacing-02,
+      $inline: $carbon--spacing-03
     );
   }
 
   &--stacked &__cell {
-    @include description-list--stacked;
+    // @include description-list--stacked;
   }
 
   &__cell:first-of-type {
     width: 1%;
     padding-bottom: 0;
-    padding-left: 0;
     white-space: nowrap;
   }
 
