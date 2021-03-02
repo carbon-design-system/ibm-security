@@ -18580,11 +18580,8 @@ li.bx--accordion__item--disabled:last-of-type {
   padding-bottom: 0;
 }
 
-.security--type-layout__container__cell, .security--type-layout__container--stacked__cell {
-  display: block;
-}
-
 .security--type-layout__container__cell {
+  display: block;
   padding-left: 0;
 }
 
@@ -18682,6 +18679,10 @@ li.bx--accordion__item--disabled:last-of-type {
 
 .security--type-layout__container--xs .security--type-layout__container__cell:last-of-type {
   padding-bottom: 0.25rem;
+}
+
+.security--type-layout__container--stacked .security--type-layout__container__cell {
+  display: block;
 }
 
 .security--type-layout__container__cell:first-of-type {

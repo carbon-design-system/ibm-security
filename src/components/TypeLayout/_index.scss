@@ -55,15 +55,8 @@
     }
   }
 
-  &,
-  &--stacked {
-    &__cell {
-      display: block;
-    }
-  }
-
   &__cell {
-    // @include description-list--stacked;
+    @include description-list--stacked;
 
     padding-left: 0;
 
@@ -111,7 +104,7 @@
   }
 
   &--stacked &__cell {
-    // @include description-list--stacked;
+    @include description-list--stacked;
   }
 
   &__cell:first-of-type {
