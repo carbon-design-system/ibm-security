@@ -27137,7 +27137,7 @@ a.bx--navigation-link:focus {
 .security--unstable--layout__module--description__content {
   font-size: 0.875rem;
   font-weight: 400;
-  line-height: 1.29;
+  line-height: 1.43;
   letter-spacing: 0.16px;
   margin-top: 0;
   margin-bottom: 1.12875rem;
@@ -27145,6 +27145,17 @@ a.bx--navigation-link:focus {
 
 .security--unstable--layout__module--description__content:last-child {
   margin-bottom: 0;
+}
+
+.security--unstable--layout__module--description--short {
+  padding-bottom: 1rem;
+}
+
+.security--unstable--layout__module--description--short > .security--unstable--layout__module--description__content {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: 0.16px;
 }
 
 .security--unstable--layout__module--ica {

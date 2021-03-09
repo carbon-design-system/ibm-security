@@ -1,6 +1,6 @@
 /**
  * @file Description module stories.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import React from 'react';
@@ -67,5 +67,19 @@ export const Variant = () => (
 );
 
 Variant.parameters = {
+  viewMode: 'canvas',
+};
+
+export const Short = () => (
+  <DescriptionModule short>
+    {({ getLayoutProps }) => (
+      <p {...getLayoutProps()}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+    )}
+  </DescriptionModule>
+);
+
+Short.parameters = {
   viewMode: 'canvas',
 };

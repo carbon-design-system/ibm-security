@@ -3119,10 +3119,16 @@ Map {
     },
   },
   "DescriptionModule" => Object {
+    "defaultProps": Object {
+      "short": false,
+    },
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
         "type": "func",
+      },
+      "short": Object {
+        "type": "bool",
       },
     },
   },

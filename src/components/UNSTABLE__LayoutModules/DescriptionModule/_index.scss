@@ -1,7 +1,7 @@
 ////
 /// Description module.
 /// @group description-module
-/// @copyright IBM Security 2020
+/// @copyright IBM Security 2020 - 2021
 ////
 
 @import '@carbon/layout/scss/spacing';
@@ -14,7 +14,7 @@
   padding-bottom: $carbon--layout-03;
 
   &__content {
-    @include carbon--type-style($name: body-short-01);
+    @include carbon--type-style($name: body-long-01);
 
     margin-top: 0;
     margin-bottom: map-get($map: $body-short-01, $key: font-size) *
@@ -22,6 +22,16 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  $root: &;
+
+  &--short {
+    padding-bottom: $carbon--layout-01;
+
+    > #{$root}__content {
+      @include carbon--type-style($name: body-short-01);
     }
   }
 }
