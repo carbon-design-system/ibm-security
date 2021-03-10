@@ -18585,6 +18585,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--type-layout__container__cell {
   display: table-cell;
   padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  font: inherit;
   color: var(--text-01, #f4f4f4);
 }
 
@@ -27082,7 +27083,6 @@ a.bx--navigation-link:focus {
   line-height: 1.29;
   letter-spacing: 0.16px;
   display: flex;
-  padding-top: 0.125rem;
   padding-bottom: 0.5rem;
   align-items: center;
 }
@@ -27162,14 +27162,12 @@ a.bx--navigation-link:focus {
   background-color: var(--hover-ui, #353535);
 }
 
-.security--unstable--layout__module--ica > .security--unstable--layout__module--title-bar {
-  padding-top: 0;
+.security--unstable--layout__module--ica > .security--unstable--layout__module--title-bar > .security--unstable--layout__module--title-bar__title {
+  margin-top: 0;
 }
 
 .security--unstable--layout__module--title-bar {
   display: flex;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   align-items: center;
 }
 
@@ -27178,15 +27176,15 @@ a.bx--navigation-link:focus {
   font-weight: 400;
   line-height: 1.4;
   letter-spacing: 0;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .security--unstable--layout__module--title-bar__title--subsection {
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 600;
-  line-height: 1.29;
-  letter-spacing: 0.16px;
+  line-height: 1.375;
+  letter-spacing: 0;
 }
 
 .security--unstable--layout__module--title-bar__items {

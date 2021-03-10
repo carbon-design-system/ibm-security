@@ -1,7 +1,7 @@
 ////
 /// ICA module.
 /// @group ica-module
-/// @copyright IBM Security 2020
+/// @copyright IBM Security 2020 - 2021
 ////
 
 @import '@carbon/layout/scss/spacing';
@@ -36,7 +36,7 @@
     $component-name: $layout-modules__title-bar__name,
   );
 
-  > #{$title-bar__namespace} {
-    padding-top: 0;
+  > #{$title-bar__namespace} > #{$title-bar__namespace}__title {
+    margin-top: 0;
   }
 }

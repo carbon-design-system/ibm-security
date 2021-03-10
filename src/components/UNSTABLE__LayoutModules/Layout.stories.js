@@ -1,6 +1,6 @@
 /**
  * @file Layout module stories.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import {
@@ -132,7 +132,7 @@ export const Detail = () => (
               renderIcon: View16,
             },
           ]}
-          size="md"
+          size="lg"
         />
       </ActionBarModuleItems>
     </ActionBarModule>

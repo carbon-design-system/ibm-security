@@ -1,6 +1,6 @@
 /**
  * @file Card module stories.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import { List16, Search16, Table16 } from '@carbon/icons-react';
@@ -101,7 +101,7 @@ export const Variant = () => (
                   renderIcon: Table16,
                 },
               ]}
-              size="md"
+              size="lg"
             />
           </ActionBarModuleItems>
         </ActionBarModule>

@@ -1,7 +1,7 @@
 ////
 /// Title bar module.
 /// @group title-bar-module
-/// @copyright IBM Security 2020
+/// @copyright IBM Security 2020 - 2021
 ////
 
 @import '@carbon/layout/scss/spacing';
@@ -16,17 +16,15 @@
   $title-bar__spacing: $carbon--layout-01;
 
   display: flex;
-  padding-top: $title-bar__spacing;
-  padding-bottom: $title-bar__spacing;
   align-items: center;
 
   &__title {
     @include carbon--type-style($name: productive-heading-03);
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: $title-bar__spacing;
+    margin-bottom: $title-bar__spacing;
 
     &--subsection {
-      @include carbon--type-style($name: productive-heading-01);
+      @include carbon--type-style($name: productive-heading-02);
     }
   }
 
