@@ -1,6 +1,6 @@
 /**
  * @file Description list module stories.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import React from 'react';
@@ -34,7 +34,17 @@ export const Default = () => (
     <TypeLayout>
       <TypeLayoutBody>
         <TypeLayoutRow>
-          <TypeLayoutCell>Term 1</TypeLayoutCell>
+          <TypeLayoutCell>Term</TypeLayoutCell>
+
+          <TypeLayoutCell>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            accumsan, dui ut pulvinar mattis, diam est imperdiet ex, a varius
+            lacus ex at libero.
+          </TypeLayoutCell>
+        </TypeLayoutRow>
+
+        <TypeLayoutRow>
+          <TypeLayoutCell>Term</TypeLayoutCell>
 
           <TypeLayoutCell>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -42,23 +52,18 @@ export const Default = () => (
         </TypeLayoutRow>
 
         <TypeLayoutRow>
-          <TypeLayoutCell>Term 2</TypeLayoutCell>
+          <TypeLayoutCell>Term</TypeLayoutCell>
 
           <TypeLayoutCell>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            accumsan, dui ut pulvinar mattis, diam est imperdiet ex, a varius
-            lacus ex at libero. Aenean euismod viverra odio, id volutpat turpis
-            commodo.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </TypeLayoutCell>
         </TypeLayoutRow>
 
         <TypeLayoutRow>
-          <TypeLayoutCell>Term 3</TypeLayoutCell>
+          <TypeLayoutCell>Term</TypeLayoutCell>
 
           <TypeLayoutCell>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            accumsan, dui ut pulvinar mattis, diam est imperdiet ex, a varius
-            lacus ex at libero.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </TypeLayoutCell>
         </TypeLayoutRow>
       </TypeLayoutBody>
@@ -73,7 +78,17 @@ export const Variant = () => (
     <TypeLayout>
       <TypeLayoutBody>
         <TypeLayoutRow>
-          <TypeLayoutCell>Term 1</TypeLayoutCell>
+          <TypeLayoutCell>Term</TypeLayoutCell>
+
+          <TypeLayoutCell>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            accumsan, dui ut pulvinar mattis, diam est imperdiet ex, a varius
+            lacus ex at libero.
+          </TypeLayoutCell>
+        </TypeLayoutRow>
+
+        <TypeLayoutRow>
+          <TypeLayoutCell>Term</TypeLayoutCell>
 
           <TypeLayoutCell>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -81,23 +96,18 @@ export const Variant = () => (
         </TypeLayoutRow>
 
         <TypeLayoutRow>
-          <TypeLayoutCell>Term 2</TypeLayoutCell>
+          <TypeLayoutCell>Term</TypeLayoutCell>
 
           <TypeLayoutCell>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            accumsan, dui ut pulvinar mattis, diam est imperdiet ex, a varius
-            lacus ex at libero. Aenean euismod viverra odio, id volutpat turpis
-            commodo.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </TypeLayoutCell>
         </TypeLayoutRow>
 
         <TypeLayoutRow>
-          <TypeLayoutCell>Term 3</TypeLayoutCell>
+          <TypeLayoutCell>Term</TypeLayoutCell>
 
           <TypeLayoutCell>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            accumsan, dui ut pulvinar mattis, diam est imperdiet ex, a varius
-            lacus ex at libero.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </TypeLayoutCell>
         </TypeLayoutRow>
       </TypeLayoutBody>

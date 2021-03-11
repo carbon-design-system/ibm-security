@@ -1,6 +1,6 @@
 /**
  * @file Type layout stories.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
@@ -31,7 +31,17 @@ export const Default = args => (
   <TypeLayout {...args}>
     <TypeLayoutBody>
       <TypeLayoutRow>
-        <TypeLayoutCell>Term 1</TypeLayoutCell>
+        <TypeLayoutCell>Term</TypeLayoutCell>
+
+        <TypeLayoutCell>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+          accumsan, dui ut pulvinar mattis, diam est imperdiet ex, a varius
+          lacus ex at libero.
+        </TypeLayoutCell>
+      </TypeLayoutRow>
+
+      <TypeLayoutRow>
+        <TypeLayoutCell>Term</TypeLayoutCell>
 
         <TypeLayoutCell>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -39,23 +49,18 @@ export const Default = args => (
       </TypeLayoutRow>
 
       <TypeLayoutRow>
-        <TypeLayoutCell>Term 2</TypeLayoutCell>
+        <TypeLayoutCell>Term</TypeLayoutCell>
 
         <TypeLayoutCell>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-          accumsan, dui ut pulvinar mattis, diam est imperdiet ex, a varius
-          lacus ex at libero. Aenean euismod viverra odio, id volutpat turpis
-          commodo.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </TypeLayoutCell>
       </TypeLayoutRow>
 
       <TypeLayoutRow>
-        <TypeLayoutCell>Term 3</TypeLayoutCell>
+        <TypeLayoutCell>Term</TypeLayoutCell>
 
         <TypeLayoutCell>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-          accumsan, dui ut pulvinar mattis, diam est imperdiet ex, a varius
-          lacus ex at libero.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </TypeLayoutCell>
       </TypeLayoutRow>
     </TypeLayoutBody>
