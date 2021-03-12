@@ -36,13 +36,14 @@
   }
 
   &__cell {
-    @include carbon--type-style($name: body-short-01);
+    @include carbon--type-style($name: body-long-01);
 
     padding: $carbon--spacing-03 $carbon--spacing-06 $carbon--spacing-03
       $carbon--spacing-03;
 
     ul {
       @include reset;
+      list-style: none;
 
       > li {
         margin-bottom: $carbon--spacing-03;

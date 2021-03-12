@@ -16,7 +16,6 @@ import {
   IconButtonBar,
   Row,
   SummaryCard as SummaryCardComponent,
-  SummaryCardBody,
   SummaryCardHeader,
   TitleBarModule,
   withBackground,
@@ -44,30 +43,18 @@ export const Default = () => (
         <Column>
           <SummaryCard {...getLayoutProps()}>
             <SummaryCardHeader title="Label" />
-
-            <SummaryCardBody>
-              <TitleBarModule title="Title" />
-            </SummaryCardBody>
           </SummaryCard>
         </Column>
 
         <Column>
           <SummaryCard {...getLayoutProps()}>
             <SummaryCardHeader title="Label" />
-
-            <SummaryCardBody>
-              <TitleBarModule title="Title" />
-            </SummaryCardBody>
           </SummaryCard>
         </Column>
 
         <Column>
           <SummaryCard {...getLayoutProps()}>
             <SummaryCardHeader title="Label" />
-
-            <SummaryCardBody>
-              <TitleBarModule title="Title" />
-            </SummaryCardBody>
           </SummaryCard>
         </Column>
       </Row>
@@ -110,30 +97,18 @@ export const Variant = () => (
           <Column>
             <SummaryCard {...getLayoutProps()}>
               <SummaryCardHeader title="Label" />
-
-              <SummaryCardBody>
-                <TitleBarModule title="Title" />
-              </SummaryCardBody>
             </SummaryCard>
           </Column>
 
           <Column>
             <SummaryCard {...getLayoutProps()}>
               <SummaryCardHeader title="Label" />
-
-              <SummaryCardBody>
-                <TitleBarModule title="Title" />
-              </SummaryCardBody>
             </SummaryCard>
           </Column>
 
           <Column>
             <SummaryCard {...getLayoutProps()}>
               <SummaryCardHeader title="Label" />
-
-              <SummaryCardBody>
-                <TitleBarModule title="Title" />
-              </SummaryCardBody>
             </SummaryCard>
           </Column>
         </Row>

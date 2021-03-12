@@ -36,7 +36,6 @@ import {
   IconButtonBar,
   SummaryCard as SummaryCardComponent,
   SummaryCardAction,
-  SummaryCardBody,
   SummaryCardFooter,
   SummaryCardHeader,
   Tag,
@@ -143,9 +142,7 @@ export const Detail = () => (
           <Column>
             <SummaryCard {...getLayoutProps()}>
               <SummaryCardHeader title="Threat actor" />
-              <SummaryCardBody>
-                <TitleBarModule title="Suspected Chinese Cyber Espionage Group (TEMP.Periscope)" />
-              </SummaryCardBody>
+
               <SummaryCardFooter>
                 <SummaryCardAction
                   renderIcon={ArrowRight16}
@@ -160,9 +157,7 @@ export const Detail = () => (
           <Column>
             <SummaryCard {...getLayoutProps()}>
               <SummaryCardHeader title="Threat report" />
-              <SummaryCardBody>
-                <TitleBarModule title="XFTAS Daily Threat Assessment for Mar 2019" />
-              </SummaryCardBody>
+
               <SummaryCardFooter>
                 <SummaryCardAction
                   renderIcon={ArrowRight16}
@@ -177,9 +172,7 @@ export const Detail = () => (
           <Column>
             <SummaryCard {...getLayoutProps()}>
               <SummaryCardHeader title="IP report" />
-              <SummaryCardBody>
-                <TitleBarModule title="103.243.175.181" />
-              </SummaryCardBody>
+
               <SummaryCardFooter>
                 <SummaryCardAction
                   renderIcon={ArrowRight16}
@@ -194,9 +187,7 @@ export const Detail = () => (
           <Column>
             <SummaryCard {...getLayoutProps()}>
               <SummaryCardHeader title="Vulnerability report" />
-              <SummaryCardBody>
-                <TitleBarModule title="CVE-2017-11882" />
-              </SummaryCardBody>
+
               <SummaryCardFooter>
                 <SummaryCardAction
                   renderIcon={ArrowRight16}
