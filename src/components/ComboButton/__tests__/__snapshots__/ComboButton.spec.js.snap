@@ -12,13 +12,13 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
       class="security--combo-button__group"
     >
       <button
-        class="security--button security--combo-button--primary bx--btn bx--btn--primary"
+        class="security--button security--combo-button--primary security--bx--btn security--bx--btn--primary"
         id="test-primary-item"
         tabindex="0"
         type="button"
       >
         <span
-          class="bx--text-truncate--end"
+          class="security--bx--text-truncate--end"
           title="Primary task"
         >
           Primary task
@@ -26,7 +26,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
         <svg
           aria-hidden="true"
           aria-label=""
-          class="bx--btn__icon"
+          class="security--bx--btn__icon"
           fill="currentColor"
           focusable="false"
           height="20"
@@ -44,7 +44,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
         aria-expanded="false"
         aria-haspopup="true"
         aria-label="Menu"
-        class="security--button bx--btn bx--btn--primary security--combo-button__button security--combo-button__overflow-menu bx--overflow-menu"
+        class="security--button security--bx--btn security--bx--btn--primary security--combo-button__button security--combo-button__overflow-menu security--bx--overflow-menu"
         type="button"
       >
         <svg
@@ -80,13 +80,13 @@ exports[`ComboButton renders a combo button without an overflow menu 1`] = `
       class="security--combo-button__group"
     >
       <button
-        class="security--button security--combo-button--primary bx--btn bx--btn--primary"
+        class="security--button security--combo-button--primary security--bx--btn security--bx--btn--primary"
         id="test-primary-item"
         tabindex="0"
         type="button"
       >
         <span
-          class="bx--text-truncate--end"
+          class="security--bx--text-truncate--end"
           title="Primary task"
         >
           Primary task
@@ -94,7 +94,7 @@ exports[`ComboButton renders a combo button without an overflow menu 1`] = `
         <svg
           aria-hidden="true"
           aria-label=""
-          class="bx--btn__icon"
+          class="security--bx--btn__icon"
           fill="currentColor"
           focusable="false"
           height="20"

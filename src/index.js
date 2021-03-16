@@ -1,7 +1,10 @@
 /**
  * @file Entry point.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
+
+// Namespace negotiation.
+import './globals/namespace';
 
 // Carbon.
 export * from 'carbon-components-react';

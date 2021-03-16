@@ -1,6 +1,6 @@
 /**
  * @file Important content area stories.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { boolean, select, number, text } from '@storybook/addon-knobs';
@@ -9,8 +9,9 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 
 import { components } from '../../../.storybook';
+import { carbonPrefix } from '../../globals/namespace/index';
 
-import { ICA } from '../..';
+import { ICA } from '../../..';
 import { Locales } from './ICA';
 
 import props from './_mocks_';
@@ -40,36 +41,38 @@ storiesOf(components('ICA'), module)
   .add(
     'in an ICA wall',
     () => (
-      <div className="bx--grid bx--grid--full-width">
-        <div className="bx--row">
-          <div className="bx--col">
+      <div
+        className={`${carbonPrefix}--grid ${carbonPrefix}--grid--full-width`}
+      >
+        <div className={`${carbonPrefix}--row`}>
+          <div className={`${carbonPrefix}--col`}>
             <h4>4 spaced</h4>
           </div>
         </div>
-        <div className="bx--row">
+        <div className={`${carbonPrefix}--row`}>
           {Array(4)
             .fill(0)
             .map(item => (
               <div
                 key={item.id}
-                className="bx--col-sm-4 bx--col-md-2 bx--col-lg-4"
+                className={`${carbonPrefix}--col-sm-4 ${carbonPrefix}--col-md-2 ${carbonPrefix}--col-lg-4`}
               >
                 <ICA {...storyProps({ total })} />
               </div>
             ))}
         </div>
-        <div className="bx--row">
-          <div className="bx--col">
+        <div className={`${carbonPrefix}--row`}>
+          <div className={`${carbonPrefix}--col`}>
             <h4>8 condensed</h4>
           </div>
         </div>
-        <div className="bx--row">
+        <div className={`${carbonPrefix}--row`}>
           {Array(8)
             .fill(0)
             .map(item => (
               <div
                 key={item.id}
-                className="bx--col-sm-2 bx--col-md-2 bx--col-lg-2"
+                className={`${carbonPrefix}--col-sm-2 ${carbonPrefix}--col-md-2 ${carbonPrefix}--col-lg-2`}
               >
                 <ICA {...storyProps({ total })} />
               </div>

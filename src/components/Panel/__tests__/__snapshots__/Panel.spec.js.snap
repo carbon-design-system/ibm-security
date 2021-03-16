@@ -90,7 +90,7 @@ exports[`Panel Rendering renders correctly 1`] = `
 
 exports[`Panel Rendering renders the HTML of the node's subtree 1`] = `
 <button
-  class="security--button bx--btn bx--btn--primary"
+  class="security--button security--bx--btn security--bx--btn--primary"
   tabindex="0"
   type="button"
 >

@@ -1,6 +1,6 @@
 /**
  * @file Combo button.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { ChevronDown16, ChevronUp16 } from '@carbon/icons-react';
@@ -51,7 +51,7 @@ const ComboButton = ({
       type="button"
     >
       <span
-        className={`${carbonPrefix}text-truncate--end`}
+        className={`${carbonPrefix}--text-truncate--end`}
         title={buttonProps.children}
       >
         {buttonProps.children}
@@ -90,7 +90,7 @@ const ComboButton = ({
           itemText={
             <>
               <span
-                className={`${carbonPrefix}text-truncate--end`}
+                className={`${carbonPrefix}--text-truncate--end`}
                 title={children}
               >
                 {children}
@@ -125,8 +125,8 @@ const ComboButton = ({
             className={classnames(
               // Button-specific classes for styling:
               buttonNamespace,
-              `${carbonPrefix}btn`,
-              `${carbonPrefix}btn--primary`,
+              `${carbonPrefix}--btn`,
+              `${carbonPrefix}--btn--primary`,
 
               // Button as a child of combo button:
               `${namespace}__button`,
@@ -137,7 +137,7 @@ const ComboButton = ({
             direction={direction}
             menuOffset={menuOffset}
             menuOffsetFlip={menuOffsetFlip}
-            menuOptionsClass={`${carbonPrefix}list-box__menu`}
+            menuOptionsClass={`${carbonPrefix}--list-box__menu`}
             onClick={() => setIsOpen(!isOpen)}
             onClose={() => setIsOpen(false)}
             renderIcon={renderOverflowMenuIcon}

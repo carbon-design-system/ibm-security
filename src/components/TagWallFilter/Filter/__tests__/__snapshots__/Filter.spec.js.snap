@@ -28,14 +28,14 @@ exports[`Filter render renders correctly 1`] = `
 
 exports[`Filter render renders the HTML of the node's subtree 1`] = `
 <div
-  class="security--filter bx--list-box"
+  class="security--filter security--bx--list-box"
   id="test-id"
 >
   <div
     aria-expanded="true"
     aria-haspopup="true"
     aria-label="close menu"
-    class="bx--list-box__field"
+    class="security--bx--list-box__field"
     data-toggle="true"
     id="test-id"
     role="button"
@@ -46,7 +46,7 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
       aria-autocomplete="list"
       aria-expanded="true"
       autocomplete="off"
-      class="security--filter__input-field bx--text-input"
+      class="security--filter__input-field security--bx--text-input"
       id="test-id"
       placeholder="Label"
       role="combobox"
@@ -85,14 +85,14 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
       tabindex="0"
     >
       <div
-        class="bx--list-box__menu-item__option"
+        class="security--bx--list-box__menu-item__option"
       >
         <div
           aria-labelledby="downshift-0-item-0"
           class="security--filter__list-item__entry"
         >
           <span
-            class="bx--text-truncate--end"
+            class="security--bx--text-truncate--end"
             title="Abuja"
           >
             Abuja
@@ -127,14 +127,14 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
       tabindex="0"
     >
       <div
-        class="bx--list-box__menu-item__option"
+        class="security--bx--list-box__menu-item__option"
       >
         <div
           aria-labelledby="downshift-0-item-1"
           class="security--filter__list-item__entry"
         >
           <span
-            class="bx--text-truncate--end"
+            class="security--bx--text-truncate--end"
             title="Beijing"
           >
             Beijing
@@ -169,14 +169,14 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
       tabindex="0"
     >
       <div
-        class="bx--list-box__menu-item__option"
+        class="security--bx--list-box__menu-item__option"
       >
         <div
           aria-labelledby="downshift-0-item-2"
           class="security--filter__list-item__entry"
         >
           <span
-            class="bx--text-truncate--end"
+            class="security--bx--text-truncate--end"
             title="Berlin"
           >
             Berlin
@@ -211,14 +211,14 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
       tabindex="0"
     >
       <div
-        class="bx--list-box__menu-item__option"
+        class="security--bx--list-box__menu-item__option"
       >
         <div
           aria-labelledby="downshift-0-item-3"
           class="security--filter__list-item__entry"
         >
           <span
-            class="bx--text-truncate--end"
+            class="security--bx--text-truncate--end"
             title="Johannesburg"
           >
             Johannesburg
@@ -253,14 +253,14 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
       tabindex="0"
     >
       <div
-        class="bx--list-box__menu-item__option"
+        class="security--bx--list-box__menu-item__option"
       >
         <div
           aria-labelledby="downshift-0-item-4"
           class="security--filter__list-item__entry"
         >
           <span
-            class="bx--text-truncate--end"
+            class="security--bx--text-truncate--end"
             title="London"
           >
             London
@@ -295,14 +295,14 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
       tabindex="0"
     >
       <div
-        class="bx--list-box__menu-item__option"
+        class="security--bx--list-box__menu-item__option"
       >
         <div
           aria-labelledby="downshift-0-item-5"
           class="security--filter__list-item__entry"
         >
           <span
-            class="bx--text-truncate--end"
+            class="security--bx--text-truncate--end"
             title="Montreal"
           >
             Montreal
@@ -337,14 +337,14 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
       tabindex="0"
     >
       <div
-        class="bx--list-box__menu-item__option"
+        class="security--bx--list-box__menu-item__option"
       >
         <div
           aria-labelledby="downshift-0-item-6"
           class="security--filter__list-item__entry"
         >
           <span
-            class="bx--text-truncate--end"
+            class="security--bx--text-truncate--end"
             title="New Delhi"
           >
             New Delhi
@@ -379,14 +379,14 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
       tabindex="0"
     >
       <div
-        class="bx--list-box__menu-item__option"
+        class="security--bx--list-box__menu-item__option"
       >
         <div
           aria-labelledby="downshift-0-item-7"
           class="security--filter__list-item__entry"
         >
           <span
-            class="bx--text-truncate--end"
+            class="security--bx--text-truncate--end"
             title="New York"
           >
             New York
@@ -421,14 +421,14 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
       tabindex="0"
     >
       <div
-        class="bx--list-box__menu-item__option"
+        class="security--bx--list-box__menu-item__option"
       >
         <div
           aria-labelledby="downshift-0-item-8"
           class="security--filter__list-item__entry"
         >
           <span
-            class="bx--text-truncate--end"
+            class="security--bx--text-truncate--end"
             title="Rio de Janeiro"
           >
             Rio de Janeiro
@@ -463,14 +463,14 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
       tabindex="0"
     >
       <div
-        class="bx--list-box__menu-item__option"
+        class="security--bx--list-box__menu-item__option"
       >
         <div
           aria-labelledby="downshift-0-item-9"
           class="security--filter__list-item__entry"
         >
           <span
-            class="bx--text-truncate--end"
+            class="security--bx--text-truncate--end"
             title="San Fransisco"
           >
             San Fransisco
@@ -505,14 +505,14 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
       tabindex="0"
     >
       <div
-        class="bx--list-box__menu-item__option"
+        class="security--bx--list-box__menu-item__option"
       >
         <div
           aria-labelledby="downshift-0-item-10"
           class="security--filter__list-item__entry"
         >
           <span
-            class="bx--text-truncate--end"
+            class="security--bx--text-truncate--end"
             title="Tokyo"
           >
             Tokyo

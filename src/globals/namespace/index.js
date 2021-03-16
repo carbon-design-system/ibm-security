@@ -1,11 +1,16 @@
 /**
  * @file Namespace.
- * @copyright IBM Security 2018
+ * @copyright IBM Security 2018 - 2021
  */
 
-const carbonPrefix = 'bx--';
+const { settings } = require('carbon-components');
+
+const { prefix } = settings;
 
 const namespace = 'security--';
+const carbonPrefix = `${namespace}${prefix}`;
+
+settings.prefix = carbonPrefix;
 
 /**
  * Appends the namespace for a component to another namespace.
@@ -23,4 +28,4 @@ const appendComponentNamespace = (componentNamespace, componentName) =>
  */
 const getComponentNamespace = componentName => `${namespace}${componentName}`;
 
-export { appendComponentNamespace, getComponentNamespace, carbonPrefix };
+export { appendComponentNamespace, carbonPrefix, getComponentNamespace };
