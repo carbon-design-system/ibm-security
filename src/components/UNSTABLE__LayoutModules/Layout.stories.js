@@ -5,7 +5,6 @@
 
 import {
   Activity16,
-  ArrowRight16,
   Copy16,
   Filter16,
   Search16,
@@ -35,8 +34,6 @@ import {
   ICAModule,
   IconButtonBar,
   SummaryCard as SummaryCardComponent,
-  SummaryCardAction,
-  SummaryCardFooter,
   SummaryCardHeader,
   Tag,
   TitleBarModule,
@@ -142,61 +139,21 @@ export const Detail = () => (
           <Column>
             <SummaryCard {...getLayoutProps()}>
               <SummaryCardHeader title="Threat actor" />
-
-              <SummaryCardFooter>
-                <SummaryCardAction
-                  renderIcon={ArrowRight16}
-                  iconDescription="Navigate"
-                  tooltipAlignment="center"
-                  tooltipPosition="right"
-                  hasIconOnly
-                />
-              </SummaryCardFooter>
             </SummaryCard>
           </Column>
           <Column>
             <SummaryCard {...getLayoutProps()}>
               <SummaryCardHeader title="Threat report" />
-
-              <SummaryCardFooter>
-                <SummaryCardAction
-                  renderIcon={ArrowRight16}
-                  iconDescription="Navigate"
-                  tooltipAlignment="center"
-                  tooltipPosition="right"
-                  hasIconOnly
-                />
-              </SummaryCardFooter>
             </SummaryCard>
           </Column>
           <Column>
             <SummaryCard {...getLayoutProps()}>
               <SummaryCardHeader title="IP report" />
-
-              <SummaryCardFooter>
-                <SummaryCardAction
-                  renderIcon={ArrowRight16}
-                  iconDescription="Navigate"
-                  tooltipAlignment="center"
-                  tooltipPosition="right"
-                  hasIconOnly
-                />
-              </SummaryCardFooter>
             </SummaryCard>
           </Column>
           <Column>
             <SummaryCard {...getLayoutProps()}>
               <SummaryCardHeader title="Vulnerability report" />
-
-              <SummaryCardFooter>
-                <SummaryCardAction
-                  renderIcon={ArrowRight16}
-                  iconDescription="Navigate"
-                  tooltipAlignment="center"
-                  tooltipPosition="right"
-                  hasIconOnly
-                />
-              </SummaryCardFooter>
             </SummaryCard>
           </Column>
         </Row>

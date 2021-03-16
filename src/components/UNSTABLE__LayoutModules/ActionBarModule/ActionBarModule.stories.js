@@ -59,21 +59,23 @@ export const Default = () => (
 
 export const Variant = () => (
   <ActionBarModule>
-    Supplementary details
+    <Button
+      iconDescription="Action 1"
+      kind="ghost"
+      renderIcon={Filter16}
+      hasIconOnly
+    />
+
     <ActionBarModuleItems>
       <IconButtonBar
         actions={[
           {
-            label: 'Action 1',
+            label: 'Action 2',
             renderIcon: Add16,
           },
           {
-            label: 'Action 2',
-            renderIcon: Edit16,
-          },
-          {
             label: 'Action 3',
-            renderIcon: Filter16,
+            renderIcon: Edit16,
           },
         ]}
         size="lg"
