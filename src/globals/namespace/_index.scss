@@ -11,9 +11,19 @@
 /// @access private
 $namespace: 'security--';
 
-/// Carbon namespace.
+/// Carbon prefix.
 /// @type String
-$prefix: '#{$namespace}bx';
+/// @access private
+$prefix--carbon: 'bx';
+
+/// Carbon compatibility prefix.
+/// @type String
+/// @access private
+$security--prefix--carbon: '#{$namespace}#{$prefix--carbon}';
+
+/// Sets the prefix for all Carbon classes.
+/// @type String
+$prefix: $security--prefix--carbon;
 
 ///
 /// Appends the namespace for a component to another namespace.

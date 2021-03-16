@@ -1,14 +1,18 @@
 ////
 /// Grid helpers.
 /// @group grid
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
+
+@import '../namespace/index';
 
 @import '@carbon/grid/scss/mixins';
 
 @import '../deprecate/index';
 @import '../feature-flags/index';
-@import '../namespace/index';
+
+// Sets the prefix for grid compatibility.
+$prefix: $prefix--carbon;
 
 @import 'css-gridish/scss/functions';
 @import 'css-gridish/scss/mixins';
@@ -137,3 +141,6 @@
     }
   }
 }
+
+// Resets the prefix after grid compatibility.
+$prefix: $security--prefix--carbon;
