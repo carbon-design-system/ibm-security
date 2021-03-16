@@ -9750,10 +9750,7 @@ li.bx--accordion__item--disabled:last-of-type {
   line-height: 1.29;
   letter-spacing: 0.16px;
   margin-bottom: 0;
-}
-
-.security--ica .security--ica__total__trend {
-  padding-left: 16px;
+  padding-top: 0.875rem;
 }
 
 .security--ica .security--ica__trend {
@@ -9773,46 +9770,51 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 .security--ica .security--ica__percentage-mark {
-  font-size: 1.25rem;
+  font-size: 0.875rem;
   font-weight: 400;
-  line-height: 1.4;
-  letter-spacing: 0;
+  line-height: 1.29;
+  letter-spacing: 0.16px;
 }
 
-.security--ica--large .security--ica--large__value {
+.security--ica--large .security--ica--large__value,
+.security--ica--large .security--ica--large__percentage {
   font-size: 2.625rem;
   font-weight: 300;
   line-height: 1.199;
   letter-spacing: 0;
 }
 
-.security--ica--large .security--ica--large__total {
+.security--ica--large .security--ica--large__total,
+.security--ica--large .security--ica--large__percentage-mark {
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.4;
   letter-spacing: 0;
+  padding-top: 1.25rem;
 }
 
-.security--ica--large .security--ica--large__total__trend {
-  padding-left: 20px;
+.security--ica--xlarge .security--ica--xlarge__label {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: 0.16px;
 }
 
-.security--ica--xlarge .security--ica--xlarge__value {
+.security--ica--xlarge .security--ica--xlarge__value,
+.security--ica--xlarge .security--ica--xlarge__percentage {
   font-size: 3.375rem;
   font-weight: 300;
   line-height: 1.19;
   letter-spacing: 0;
 }
 
-.security--ica--xlarge .security--ica--xlarge__total {
+.security--ica--xlarge .security--ica--xlarge__total,
+.security--ica--xlarge .security--ica--xlarge__percentage-mark {
   font-size: 1.75rem;
   font-weight: 400;
   line-height: 1.29;
   letter-spacing: 0;
-}
-
-.security--ica--xlarge .security--ica--xlarge__total__trend {
-  padding-left: 24px;
+  padding-top: 1.5rem;
 }
 
 .security--ica--xlarge .security--ica--xlarge__trend {

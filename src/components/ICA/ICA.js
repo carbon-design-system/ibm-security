@@ -51,12 +51,16 @@ const formatValue = (value, truncate) => {
  * @param {boolean} truncate Whether or not the value should be truncated.
  * @returns {string} Formatted string.
  */
-const truncateValue = (percentage, value, truncate) => {
+const truncateValue = (percentage, value, truncate, ICAClasses) => {
   if (percentage)
     return (
-      <div className={`${namespace}__percentage`}>
+      <div className={`${namespace}__percentage  ${ICAClasses}__percentage`}>
         {value}
-        <sup className={`${namespace}__percentage-mark`}>%</sup>
+        <span
+          className={`${namespace}__percentage-mark ${ICAClasses}__percentage-mark`}
+        >
+          %
+        </span>
       </div>
     );
 
@@ -103,7 +107,7 @@ const ICA = ({
     numeral.locale(ICA.defaultProps.locale);
   }
 
-  const truncatedValue = truncateValue(percentage, value, truncate);
+  const truncatedValue = truncateValue(percentage, value, truncate, ICAClasses);
   const truncatedTotal = formatValue(total, truncate);
 
   const shouldDisplayof =
@@ -123,16 +127,16 @@ const ICA = ({
         <span className={`${namespace}__value ${ICAClasses}__value`}>
           {truncatedValue}
         </span>
+        {shouldDisplayof ? (
+          <span
+            className={`${namespace}__total ${ICAClasses}__total ${trending &&
+              `${ICAClasses}__total__trend`}`}
+          >
+            {' '}
+            <span>/ {truncatedTotal}</span>
+          </span>
+        ) : null}
       </span>
-      {shouldDisplayof ? (
-        <span
-          className={`${namespace}__total ${ICAClasses}__total ${trending &&
-            `${ICAClasses}__total__trend`}`}
-        >
-          {' '}
-          / {truncatedTotal}
-        </span>
-      ) : null}
     </div>
   );
 };
