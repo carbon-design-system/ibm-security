@@ -1,7 +1,7 @@
 ////
 /// Entry point.
 /// @group storybook
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/spacing';
@@ -15,10 +15,6 @@
 
 @import 'decorators/index';
 @import 'docs/index';
-
-* {
-  box-sizing: border-box;
-}
 
 .wizard__form {
   width: 50%;
