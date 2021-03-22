@@ -4,7 +4,7 @@
 
 ## Usage
 
-Themes are used for applying color and offered by outputting Carbon for IBM Security-specific [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) as theme tokens, independently of [Carbon's experimental `enable-css-custom-properties` feature flag](https://github.com/carbon-design-system/carbon/blob/master/packages/components/src/globals/scss/_feature-flags.scss).
+Themes are used for applying color and offered by outputting [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) as theme tokens.
 
 Each theme is assigned universal color variables, which are determined by [common roles and usage](https://www.carbondesignsystem.com/guidelines/color/usage). This allows for uniform color application across themes while maintaining full styling flexibility.
 
@@ -27,8 +27,8 @@ Currently, only 2 themes are supported: **Gray 100**, activated by default, and 
 All of the components' processed and minified styles automatically includes and initializes all tokens as CSS custom properties for use with CSS. For example:
 
 ```css
-var(--interactive-01);
-var(--interactive-02);
+var(--cds-interactive-01);
+var(--cds-interactive-02);
 ```
 
 ### Sass
@@ -54,11 +54,11 @@ $interactive-02;
 
 #### Feature flags
 
-You can disable Carbon for IBM Security custom theme output using a feature flag by writing the following Sass code before importing:
+You can disable theme output using a feature flag by writing the following Sass code before importing:
 
 ```scss
 $security--feature-flags: (
-  security--css-custom-property-theming: false,
+  enable-css-custom-properties: false,
 );
 ```
 

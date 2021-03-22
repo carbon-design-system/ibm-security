@@ -1,7 +1,7 @@
 ////
 /// Feature flags.
 /// @group feature-flags
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import 'carbon-components/scss/globals/scss/feature-flags';
@@ -19,7 +19,7 @@ $platform__name: platform;
 
 /// Theme feature flag.
 /// @type String
-$theme__name: security--css-custom-property-theming;
+$theme__name: enable-css-custom-properties;
 
 // TODO: `2.x` - Deprecate after teams have migrated to `@carbon/type`.
 
