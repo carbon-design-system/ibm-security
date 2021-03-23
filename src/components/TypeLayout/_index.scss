@@ -71,6 +71,7 @@
 
     ul {
       @include reset;
+      list-style: none;
 
       > li {
         margin-bottom: $carbon--spacing-03;
