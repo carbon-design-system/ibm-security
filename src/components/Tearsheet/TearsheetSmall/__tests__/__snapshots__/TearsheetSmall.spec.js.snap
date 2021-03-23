@@ -38,7 +38,7 @@ exports[`TearsheetSmall renders 1`] = `
       >
         <ScrollGradient
           className="security--tearsheet--small__content"
-          color="var(--ui-01, #262626)"
+          color="var(--cds-ui-01, #262626)"
           direction="Y"
           getScrollElementRef={[Function]}
           hideStartGradient={false}
@@ -145,7 +145,7 @@ exports[`TearsheetSmall renders disabled buttons 1`] = `
       >
         <ScrollGradient
           className="security--tearsheet--small__content"
-          color="var(--ui-01, #262626)"
+          color="var(--cds-ui-01, #262626)"
           direction="Y"
           getScrollElementRef={[Function]}
           hideStartGradient={false}
@@ -241,7 +241,7 @@ exports[`TearsheetSmall renders loading state 1`] = `
       >
         <ScrollGradient
           className="security--tearsheet--small__content"
-          color="var(--ui-01, #262626)"
+          color="var(--cds-ui-01, #262626)"
           direction="Y"
           getScrollElementRef={[Function]}
           hideStartGradient={false}
@@ -348,7 +348,7 @@ exports[`TearsheetSmall should override \`labels\` if button label property prov
       >
         <ScrollGradient
           className="security--tearsheet--small__content"
-          color="var(--ui-01, #262626)"
+          color="var(--cds-ui-01, #262626)"
           direction="Y"
           getScrollElementRef={[Function]}
           hideStartGradient={false}
