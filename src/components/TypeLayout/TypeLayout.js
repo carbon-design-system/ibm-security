@@ -93,7 +93,7 @@ TypeLayout.propTypes = {
   /** Specify if the type layout has a border */
   border: bool,
 
-  /** Specify wthere or not to use the stacked variant */
+  /** Specify whether or not to use the stacked variant */
   stacked: bool,
 
   /** Deprecated in favor of `border` */
