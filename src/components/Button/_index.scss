@@ -1,14 +1,13 @@
 ////
 /// Button component.
 /// @group button
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2020
 ////
-
-@import 'carbon-components/scss/components/button/button';
 
 @import '../Component/mixins';
 
 @import 'mixins';
+@import 'vendor';
 
 @include security--component($name: button) {
   @include button;

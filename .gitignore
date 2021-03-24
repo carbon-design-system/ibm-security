@@ -4,11 +4,12 @@
 
 # Generated directories.
 coverage
-/css
+css
 es
 lib
 node_modules
 /scss
+temp
 storybook-static
 
 # Logs.

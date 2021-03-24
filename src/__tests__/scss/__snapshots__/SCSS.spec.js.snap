@@ -2681,6 +2681,7 @@ body {
   margin-top: auto;
 }
 
+/* css-ignore-enable */
 .bx--assistive-text,
 .bx--visually-hidden {
   position: absolute;
@@ -3722,6 +3723,7 @@ body {
   box-shadow: none;
 }
 
+/* css-ignore-disable */
 .security--button--ghost-danger {
   color: var(--text-01, #f4f4f4);
 }
@@ -5621,6 +5623,8 @@ a.bx--overflow-menu-options__btn::before {
   fill: var(--text-03, #6f6f6f);
 }
 
+/* css-ignore-enable */
+/* css-ignore-disable */
 .security--button--icon {
   box-sizing: border-box;
   margin: 0;
@@ -9456,6 +9460,8 @@ li.bx--accordion__item--disabled:last-of-type {
   white-space: nowrap;
 }
 
+/* css-ignore-enable */
+/* css-ignore-disable */
 .security--filter-subcategory {
   border-top-width: 0;
 }
@@ -9579,6 +9585,8 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-bottom: 1rem;
 }
 
+/* css-ignore-enable */
+/* css-ignore-disable */
 .security--truncated-list {
   margin: 0;
 }
@@ -13517,6 +13525,8 @@ li.bx--accordion__item--disabled:last-of-type {
   color: var(--text-01, #f4f4f4);
 }
 
+/* css-ignore-enable */
+/* css-ignore-disable */
 .security--panel {
   display: flex;
   position: fixed;
@@ -13704,6 +13714,10 @@ li.bx--accordion__item--disabled:last-of-type {
   flex-grow: 1;
 }
 
+/* css-ignore-enable */
+/* css-ignore-disable */
+/* css-ignore-enable */
+/* css-ignore-disable */
 .security--pill {
   border-radius: 6.25rem;
   padding: 0 0.5rem;
@@ -14075,6 +14089,8 @@ li.bx--accordion__item--disabled:last-of-type {
   height: 100%;
 }
 
+/* css-ignore-enable */
+/* css-ignore-disable */
 .bx--multi-select .bx--tag {
   min-width: auto;
   margin: 0 0.5rem 0 0;
@@ -14306,6 +14322,8 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-left: 0.5rem;
 }
 
+/* css-ignore-enable */
+/* css-ignore-disable */
 .security--status-indicator {
   display: flex;
   flex-direction: column;
@@ -16590,6 +16608,8 @@ li.bx--accordion__item--disabled:last-of-type {
   border-width: 0;
 }
 
+/* css-ignore-enable */
+/* css-ignore-disable */
 .bx--select {
   box-sizing: border-box;
   margin: 0;
@@ -17031,6 +17051,8 @@ li.bx--accordion__item--disabled:last-of-type {
   z-index: 5999;
 }
 
+/* css-ignore-enable */
+/* css-ignore-disable */
 .security--tag-wall__label {
   font-size: 0.75rem;
   font-weight: 400;
@@ -17687,6 +17709,8 @@ li.bx--accordion__item--disabled:last-of-type {
   display: flex;
 }
 
+/* css-ignore-enable */
+/* css-ignore-disable */
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -17897,6 +17921,8 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-top: 2.5rem;
 }
 
+/* css-ignore-enable */
+/* css-ignore-disable */
 .security--portal__overlay {
   display: flex;
   position: fixed;
@@ -17921,6 +17947,8 @@ li.bx--accordion__item--disabled:last-of-type {
   z-index: 9000;
 }
 
+/* css-ignore-enable */
+/* css-ignore-disable */
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -18137,6 +18165,8 @@ li.bx--accordion__item--disabled:last-of-type {
   flex-wrap: wrap;
 }
 
+/* css-ignore-enable */
+/* css-ignore-disable */
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -18594,6 +18624,8 @@ li.bx--accordion__item--disabled:last-of-type {
   color: var(--text-02, #c6c6c6);
 }
 
+/* css-ignore-enable */
+/* css-ignore-disable */
 .bx--structured-list--selection .bx--structured-list-td,
 .bx--structured-list--selection .bx--structured-list-th {
   padding-right: 1rem;
@@ -18919,6 +18951,10 @@ li.bx--accordion__item--disabled:last-of-type {
   border-width: 0;
 }
 
+/* css-ignore-enable */
+/* css-ignore-disable */
+/* css-ignore-enable */
+/* css-ignore-disable */
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -19012,6 +19048,8 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* css-ignore-enable */
+/* css-ignore-disable */
 .security--header__list__item {
   height: inherit;
 }
@@ -20031,6 +20069,8 @@ li.bx--accordion__item--disabled:last-of-type {
   user-select: text;
 }
 
+/* css-ignore-enable */
+/* css-ignore-disable */
 @keyframes collapse-accordion {
   0% {
     height: 100%;
@@ -20057,6 +20097,8 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* css-ignore-enable */
+/* css-ignore-disable */
 .security--shell--active {
   margin-left: 3rem;
 }
@@ -20242,6 +20284,8 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* css-ignore-enable */
+/* css-ignore-disable */
 @keyframes hide-feedback {
   0% {
     visibility: inherit;

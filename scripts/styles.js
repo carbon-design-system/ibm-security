@@ -1,26 +1,41 @@
-const postcss = require('postcss');
 const autoprefixer = require('autoprefixer');
+const { outputFileSync, readFile, readFileSync } = require('fs-extra');
+const { sync } = require('glob');
+const { resolve } = require('path');
+
+const postcss = require('postcss');
 const postcssNodeSass = require('postcss-node-sass');
 const postcssScss = require('postcss-scss');
-const { outputFile, readFile } = require('fs-extra');
-const path = require('path');
 
-const srcIndex = path.resolve(__dirname, '../src', 'index.scss');
-const distDir = path.resolve(__dirname, '../css');
-const distIndex = dir => path.resolve(dir, 'index.css');
+const srcIndex = resolve(__dirname, '../temp', 'components/Button/_index.scss');
+const distDir = resolve(__dirname, '../css');
+const distIndex = dir => resolve(dir, 'index.css');
 
-readFile(srcIndex, async (err, css) => {
-  if (err) throw err;
+const sourceDirectory = 'src';
+
+sync(`${sourceDirectory}/**/*.scss`).forEach(file => {
+  let content = readFileSync(file, 'utf8');
+  content = content.replace(new RegExp(`@import 'vendor';`, 'g'), '');
+
+  outputFileSync(file.replace(sourceDirectory, 'temp'), content);
+});
+
+readFile(srcIndex, async (error, styles) => {
+  if (error) {
+    throw error;
+  }
+
   try {
-    const result = await postcss([
+    const { css } = await postcss([
       postcssNodeSass({ includePaths: ['node_modules'] }),
       autoprefixer,
-    ]).process(css, {
+    ]).process(styles, {
       from: srcIndex,
       to: distIndex(distDir),
       syntax: postcssScss,
     });
-    outputFile(distIndex(distDir), result, { encoding: 'utf8' });
+
+    outputFileSync(distIndex(distDir), css, { encoding: 'utf8' });
   } catch (error) {
     console.error(error);
   }
