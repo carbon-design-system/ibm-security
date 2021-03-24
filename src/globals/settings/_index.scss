@@ -1,0 +1,21 @@
+////
+/// Settings.
+/// @group settings
+/// @copyright IBM Security 2021
+////
+
+@import '@carbon/themes/scss/theme-maps';
+
+/// Theme.
+/// @type Map<String, Color>
+$carbon--theme: $carbon--theme--g100;
+
+/// CSS reset - https://cssreset.com/
+/// @type boolean
+$css--reset: false;
+
+/// Feature flags.
+/// @type Map<String, String>
+$feature-flags: (
+  enable-css-custom-properties: true,
+);

@@ -1,7 +1,7 @@
 ////
 /// Theme variables.
 /// @group theme
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/colors/scss/colors';
@@ -14,14 +14,10 @@
 /// @access private
 $security--theme__ignore-list: ();
 
-/// Security theme.
-/// @type Map<String, Color>
-$security--theme: $carbon--theme--g100 !default;
-
 /// Default theme.
 /// @type Map<String, Color>
 /// @access private
-$-theme: $security--theme;
+$-theme: $carbon--theme;
 
 // Filter out token that are not colors.
 @each $token, $value in $-theme {
