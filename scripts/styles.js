@@ -20,7 +20,10 @@ const tmp = 'tmp';
 sync(resolve(src, '**', '*.scss')).forEach(file =>
   outputFileSync(
     file.replace(src, tmp),
-    readFileSync(file, 'utf8').replace(new RegExp(`@import 'vendor';`, 'g'), '')
+    readFileSync(file, 'utf8').replace(
+      new RegExp(`.*carbon-components/scss/components.*\n`, 'g'),
+      ''
+    )
   )
 );
 
