@@ -9,8 +9,8 @@ es
 lib
 node_modules
 /scss
-temp
 storybook-static
+tmp
 
 # Logs.
 *.log

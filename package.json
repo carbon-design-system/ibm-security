@@ -15,7 +15,7 @@
     "audit": "node scripts/audit",
     "build": "run-s build:*",
     "build:pre": "run-s build:pre:*",
-    "build:pre:clean": "rm -rf css es lib scss storybook-static",
+    "build:pre:clean": "rm -rf css es lib scss storybook-static tmp",
     "build:main": "run-p build:main:*",
     "build:main:copy-assets": "node scripts/copyAssets.js",
     "build:main:cjs": "babel src -d lib --ignore **/_mocks_/**,**/__tests__/**,**/*.stories.js,src/globals/scss-exports/index.js",

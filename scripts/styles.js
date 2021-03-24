@@ -1,3 +1,8 @@
+/**
+ * @file Styles.
+ * @copyright IBM Security 2019 - 2021
+ */
+
 const autoprefixer = require('autoprefixer');
 const { outputFileSync, readFile, readFileSync } = require('fs-extra');
 const { sync } = require('glob');
@@ -7,35 +12,38 @@ const postcss = require('postcss');
 const postcssNodeSass = require('postcss-node-sass');
 const postcssScss = require('postcss-scss');
 
-const srcIndex = resolve(__dirname, '../temp', 'components/Button/_index.scss');
-const distDir = resolve(__dirname, '../css');
-const distIndex = dir => resolve(dir, 'index.css');
+const root = resolve(__dirname, '..');
 
-const sourceDirectory = 'src';
+const src = resolve(root, 'src');
+const tmp = 'tmp';
 
-sync(`${sourceDirectory}/**/*.scss`).forEach(file => {
-  let content = readFileSync(file, 'utf8');
-  content = content.replace(new RegExp(`@import 'vendor';`, 'g'), '');
+sync(resolve(src, '**', '*.scss')).forEach(file =>
+  outputFileSync(
+    file.replace(src, tmp),
+    readFileSync(file, 'utf8').replace(new RegExp(`@import 'vendor';`, 'g'), '')
+  )
+);
 
-  outputFileSync(file.replace(sourceDirectory, 'temp'), content);
-});
+const from = resolve(root, tmp, 'index.scss');
 
-readFile(srcIndex, async (error, styles) => {
+readFile(from, async (error, styles) => {
   if (error) {
     throw error;
   }
 
   try {
+    const to = resolve(root, 'css', 'index.css');
+
     const { css } = await postcss([
       postcssNodeSass({ includePaths: ['node_modules'] }),
       autoprefixer,
     ]).process(styles, {
-      from: srcIndex,
-      to: distIndex(distDir),
+      from,
+      to,
       syntax: postcssScss,
     });
 
-    outputFileSync(distIndex(distDir), css, { encoding: 'utf8' });
+    outputFileSync(to, css);
   } catch (error) {
     console.error(error);
   }
