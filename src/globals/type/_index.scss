@@ -1,21 +1,10 @@
 ////
 /// Type.
 /// @group type
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
-@import '@carbon/type/scss/classes';
 @import '@carbon/type/scss/type';
-
-/// `@font-face` declarations.
-/// @type boolean
-$css--font-face: true !default;
-
-/// IBM Plex.
-/// @type boolean
-$css--plex: true;
-
-@import 'carbon-components/scss/globals/scss/css--font-face';
 
 @import '../deprecate/index';
 @import '../feature-flags/index';

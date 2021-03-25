@@ -13,10 +13,6 @@
 /// @type String
 $grid__name: css-gridish;
 
-/// Platform feature flag.
-/// @type String
-$platform__name: platform;
-
 /// Theme feature flag.
 /// @type String
 $theme__name: enable-css-custom-properties;
@@ -31,7 +27,6 @@ $type__name: ibm-type;
 /// @type Map<String, String>
 $security--default-feature-flags: (
   #{$grid__name}: true,
-  #{$platform__name}: true,
   #{$theme__name}: true,
   #{$type__name}: true
 );

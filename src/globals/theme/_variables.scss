@@ -9,14 +9,10 @@
 
 @import '../color/index';
 
-/// Security theme.
-/// @type Map<String, Color>
-$security--theme: $carbon--theme--g100 !default;
-
 /// Default theme.
 /// @type Map<String, Color>
 /// @access private
-$-theme: $security--theme;
+$-theme: $carbon--theme;
 
 /// 'Cool gray' hover overrides.
 /// @type Map<String, Map>

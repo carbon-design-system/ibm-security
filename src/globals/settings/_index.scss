@@ -1,0 +1,30 @@
+////
+/// Settings.
+/// @group settings
+/// @copyright IBM Security 2021
+////
+
+@import '@carbon/grid/scss/mixins';
+@import '@carbon/themes/scss/theme-maps';
+@import '@carbon/type/scss/classes';
+@import '@carbon/type/scss/reset';
+
+/// Theme.
+/// @type Map<String, Color>
+$carbon--theme: $carbon--theme--g100;
+
+/// CSS reset - https://cssreset.com/
+/// @type boolean
+$css--reset: false;
+
+/// Feature flags.
+/// @type Map<String, String>
+$feature-flags: (
+  enable-css-custom-properties: true,
+);
+
+@import 'carbon-components/scss/globals/scss/css--body';
+
+@include carbon--grid;
+@include carbon--type-classes;
+@include carbon--type-reset;
