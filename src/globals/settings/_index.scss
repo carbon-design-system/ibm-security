@@ -4,7 +4,10 @@
 /// @copyright IBM Security 2021
 ////
 
+@import '@carbon/grid/scss/mixins';
 @import '@carbon/themes/scss/theme-maps';
+@import '@carbon/type/scss/classes';
+@import '@carbon/type/scss/reset';
 
 /// Theme.
 /// @type Map<String, Color>
@@ -19,3 +22,7 @@ $css--reset: false;
 $feature-flags: (
   enable-css-custom-properties: true,
 );
+
+@include carbon--grid;
+@include carbon--type-classes;
+@include carbon--type-reset;
