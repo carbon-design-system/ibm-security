@@ -17,15 +17,16 @@ const root = resolve(__dirname, '..');
 const src = resolve(root, 'src');
 const tmp = 'tmp';
 
-sync(resolve(src, '**', '*.scss')).forEach(file =>
+sync(resolve(src, '**', '*.scss')).forEach(file => {
   outputFileSync(
     file.replace(src, tmp),
-    readFileSync(file, 'utf8').replace(
-      new RegExp(`.*carbon-components/scss/components.*\n`, 'g'),
-      ''
+    ['carbon-components/scss/components'].reduce(
+      (accumulator, expression) =>
+        accumulator.replace(new RegExp(`.*${expression}.*\n`, 'g'), ''),
+      readFileSync(file, 'utf8')
     )
-  )
-);
+  );
+});
 
 const from = resolve(root, tmp, 'index.scss');
 
