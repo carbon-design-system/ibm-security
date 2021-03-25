@@ -23,6 +23,8 @@ $feature-flags: (
   enable-css-custom-properties: true,
 );
 
+@import 'carbon-components/scss/globals/scss/css--body';
+
 @include carbon--grid;
 @include carbon--type-classes;
 @include carbon--type-reset;
