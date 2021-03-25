@@ -1,11 +1,10 @@
 ////
 /// Unstable pagination component.
 /// @group unstable-pagination
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import 'carbon-components/scss/globals/scss/vars';
-@import 'carbon-components/scss/globals/scss/css--reset';
 
 @import '../../globals/layout/index';
 @import '../../globals/namespace/index';
@@ -13,7 +12,6 @@
 @import '../../globals/type/index';
 
 @include security--component($name: unstable-pagination) {
-  @include reset;
   @include carbon--type-style('body-short-01');
   width: 100%;
   background-color: $ui-01;
@@ -58,7 +56,6 @@
   }
 
   &__button {
-    @include reset;
     border: none;
     background: none;
     cursor: pointer;

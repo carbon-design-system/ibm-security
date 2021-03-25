@@ -464,6 +464,191 @@ exports[`SCSS Bundle 1`] = `
   --cds-icon-size-02: 1.25rem;
 }
 
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  border: 0;
+}
+
+button,
+select,
+input,
+textarea {
+  font-family: inherit;
+  border-radius: 0;
+}
+
+input[type=\\"text\\"]::-ms-clear {
+  display: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+sup {
+  vertical-align: super;
+}
+
+sub {
+  vertical-align: sub;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: \\"\\";
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  margin: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-weight: 400;
+  font-family: \\"IBM Plex Sans\\", \\"Helvetica Neue\\", Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: \\"IBM Plex Mono\\", \\"Menlo\\", \\"DejaVu Sans Mono\\", \\"Bitstream Vera Sans Mono\\", Courier, monospace;
+}
+
+strong {
+  font-weight: 600;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  svg {
+    fill: ButtonText;
+  }
+}
+
 h1 {
   font-size: var(--cds-productive-heading-06-font-size, 2.625rem);
   font-weight: var(--cds-productive-heading-06-font-weight, 300);
@@ -26282,22 +26467,6 @@ bx--text-area.bx--skeleton::placeholder {
   }
 }
 
-.bx--tile-group {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-  border: 0;
-}
-
-.bx--tile-group *,
-.bx--tile-group *::before,
-.bx--tile-group *::after {
-  box-sizing: inherit;
-}
-
 .bx--time-picker {
   display: flex;
   align-items: flex-end;
@@ -28283,13 +28452,6 @@ a.bx--navigation-link:focus {
 }
 
 .security--unstable-pagination {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-  border: 0;
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
   line-height: var(--cds-body-short-01-line-height, 1.29);
@@ -28302,12 +28464,6 @@ a.bx--navigation-link:focus {
   border-top: 1px solid var(--cds-ui-03, #393939);
   height: 3rem;
   overflow: hidden;
-}
-
-.security--unstable-pagination *,
-.security--unstable-pagination *::before,
-.security--unstable-pagination *::after {
-  box-sizing: inherit;
 }
 
 .security--unstable-pagination__text {
@@ -28345,13 +28501,6 @@ a.bx--navigation-link:focus {
 }
 
 .security--unstable-pagination__button {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-  border: 0;
   border: none;
   background: none;
   cursor: pointer;
@@ -28365,12 +28514,6 @@ a.bx--navigation-link:focus {
   fill: var(--cds-ui-05, #f4f4f4);
   transition: outline 110ms cubic-bezier(0.2, 0, 0.38, 0.9);
   transition: background-color 110ms cubic-bezier(0.2, 0, 0.38, 0.9);
-}
-
-.security--unstable-pagination__button *,
-.security--unstable-pagination__button *::before,
-.security--unstable-pagination__button *::after {
-  box-sizing: inherit;
 }
 
 .security--unstable-pagination__button.bx--btn .bx--btn__icon {
@@ -30510,26 +30653,6 @@ body *::after {
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-html {
-  font-size: 100%;
-}
-
-body {
-  font-weight: 400;
-  font-family: \\"IBM Plex Sans\\", \\"Helvetica Neue\\", Arial, sans-serif;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: \\"IBM Plex Mono\\", \\"Menlo\\", \\"DejaVu Sans Mono\\", \\"Bitstream Vera Sans Mono\\", Courier, monospace;
-}
-
-strong {
-  font-weight: 600;
 }
 
 .bx--type-mono {
