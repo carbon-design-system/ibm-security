@@ -182,7 +182,7 @@ exports[`Header Rendering renders correctly 1`] = `
         href="#"
       >
         <a
-          className="security--bx--link security--header__link"
+          className="bx--link security--header__link"
           href="#"
           rel={null}
         >

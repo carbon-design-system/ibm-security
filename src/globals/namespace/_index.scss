@@ -1,7 +1,7 @@
 ////
 /// Assets related to namespacing selectors.
 /// @group namespace
-/// @copyright IBM Security 2019 - 2021
+/// @copyright IBM Security 2019
 ////
 
 @import '@carbon/import-once/scss/import-once';
@@ -10,20 +10,6 @@
 /// @type String
 /// @access private
 $namespace: 'security--';
-
-/// Carbon prefix.
-/// @type String
-/// @access private
-$prefix--carbon: 'bx';
-
-/// Carbon compatibility prefix.
-/// @type String
-/// @access private
-$security--prefix--carbon: '#{$namespace}#{$prefix--carbon}';
-
-/// Sets the prefix for all Carbon classes.
-/// @type String
-$prefix: $security--prefix--carbon;
 
 ///
 /// Appends the namespace for a component to another namespace.

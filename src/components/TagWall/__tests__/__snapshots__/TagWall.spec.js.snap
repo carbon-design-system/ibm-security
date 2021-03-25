@@ -107,12 +107,12 @@ exports[`TagWall Rendering renders 1`] = `
         type="gray"
       >
         <span
-          className="security--bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected security--bx--tag--gray"
+          className="bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected bx--tag--gray"
           example-attribute="example-value"
           title={null}
         >
           <span
-            className="security--bx--text-truncate--end"
+            className="bx--text-truncate--end"
             title="Tag 1"
           >
             Tag 1
@@ -208,12 +208,12 @@ exports[`TagWall Rendering renders 1`] = `
         type="gray"
       >
         <span
-          className="security--bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected security--bx--tag--gray"
+          className="bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected bx--tag--gray"
           example-attribute="example-value"
           title={null}
         >
           <span
-            className="security--bx--text-truncate--end"
+            className="bx--text-truncate--end"
             title="Tag 2"
           >
             Tag 2
@@ -309,12 +309,12 @@ exports[`TagWall Rendering renders 1`] = `
         type="gray"
       >
         <span
-          className="security--bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected security--bx--tag--gray"
+          className="bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected bx--tag--gray"
           example-attribute="example-value"
           title={null}
         >
           <span
-            className="security--bx--text-truncate--end"
+            className="bx--text-truncate--end"
             title="Tag 3"
           >
             Tag 3
@@ -410,12 +410,12 @@ exports[`TagWall Rendering renders 1`] = `
         type="gray"
       >
         <span
-          className="security--bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable security--bx--tag--gray"
+          className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
           example-attribute="example-value"
           title={null}
         >
           <span
-            className="security--bx--text-truncate--end"
+            className="bx--text-truncate--end"
             title="Tag 4"
           >
             Tag 4
@@ -511,12 +511,12 @@ exports[`TagWall Rendering renders 1`] = `
         type="gray"
       >
         <span
-          className="security--bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable security--bx--tag--gray"
+          className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
           example-attribute="example-value"
           title={null}
         >
           <span
-            className="security--bx--text-truncate--end"
+            className="bx--text-truncate--end"
             title="Tag 5"
           >
             Tag 5
@@ -612,12 +612,12 @@ exports[`TagWall Rendering renders 1`] = `
         type="gray"
       >
         <span
-          className="security--bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable security--bx--tag--gray"
+          className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
           example-attribute="example-value"
           title={null}
         >
           <span
-            className="security--bx--text-truncate--end"
+            className="bx--text-truncate--end"
             title="Tag 6"
           >
             Tag 6
@@ -713,12 +713,12 @@ exports[`TagWall Rendering renders 1`] = `
         type="gray"
       >
         <span
-          className="security--bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable security--bx--tag--gray"
+          className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
           example-attribute="example-value"
           title={null}
         >
           <span
-            className="security--bx--text-truncate--end"
+            className="bx--text-truncate--end"
             title="Tag 7"
           >
             Tag 7
@@ -814,12 +814,12 @@ exports[`TagWall Rendering renders 1`] = `
         type="gray"
       >
         <span
-          className="security--bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable security--bx--tag--gray"
+          className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
           example-attribute="example-value"
           title={null}
         >
           <span
-            className="security--bx--text-truncate--end"
+            className="bx--text-truncate--end"
             title="Tag 8"
           >
             Tag 8
@@ -921,7 +921,7 @@ exports[`TagWall Rendering renders 1`] = `
         type="button"
       >
         <button
-          className="security--button security--bx--btn security--bx--btn--sm security--bx--btn--ghost"
+          className="security--button bx--btn bx--btn--sm bx--btn--ghost"
           disabled={false}
           onClick={[Function]}
           tabIndex={0}
@@ -946,11 +946,11 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
     Label
   </h2>
   <span
-    class="security--bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected security--bx--tag--gray"
+    class="bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected bx--tag--gray"
     example-attribute="example-value"
   >
     <span
-      class="security--bx--text-truncate--end"
+      class="bx--text-truncate--end"
       title="Tag 1"
     >
       Tag 1
@@ -978,11 +978,11 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
     </button>
   </span>
   <span
-    class="security--bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected security--bx--tag--gray"
+    class="bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected bx--tag--gray"
     example-attribute="example-value"
   >
     <span
-      class="security--bx--text-truncate--end"
+      class="bx--text-truncate--end"
       title="Tag 2"
     >
       Tag 2
@@ -1010,11 +1010,11 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
     </button>
   </span>
   <span
-    class="security--bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected security--bx--tag--gray"
+    class="bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected bx--tag--gray"
     example-attribute="example-value"
   >
     <span
-      class="security--bx--text-truncate--end"
+      class="bx--text-truncate--end"
       title="Tag 3"
     >
       Tag 3
@@ -1042,11 +1042,11 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
     </button>
   </span>
   <span
-    class="security--bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable security--bx--tag--gray"
+    class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
     example-attribute="example-value"
   >
     <span
-      class="security--bx--text-truncate--end"
+      class="bx--text-truncate--end"
       title="Tag 4"
     >
       Tag 4
@@ -1074,11 +1074,11 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
     </button>
   </span>
   <span
-    class="security--bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable security--bx--tag--gray"
+    class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
     example-attribute="example-value"
   >
     <span
-      class="security--bx--text-truncate--end"
+      class="bx--text-truncate--end"
       title="Tag 5"
     >
       Tag 5
@@ -1106,11 +1106,11 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
     </button>
   </span>
   <span
-    class="security--bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable security--bx--tag--gray"
+    class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
     example-attribute="example-value"
   >
     <span
-      class="security--bx--text-truncate--end"
+      class="bx--text-truncate--end"
       title="Tag 6"
     >
       Tag 6
@@ -1138,11 +1138,11 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
     </button>
   </span>
   <span
-    class="security--bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable security--bx--tag--gray"
+    class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
     example-attribute="example-value"
   >
     <span
-      class="security--bx--text-truncate--end"
+      class="bx--text-truncate--end"
       title="Tag 7"
     >
       Tag 7
@@ -1170,11 +1170,11 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
     </button>
   </span>
   <span
-    class="security--bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable security--bx--tag--gray"
+    class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
     example-attribute="example-value"
   >
     <span
-      class="security--bx--text-truncate--end"
+      class="bx--text-truncate--end"
       title="Tag 8"
     >
       Tag 8
@@ -1202,7 +1202,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
     </button>
   </span>
   <button
-    class="security--button security--bx--btn security--bx--btn--sm security--bx--btn--ghost"
+    class="security--button bx--btn bx--btn--sm bx--btn--ghost"
     tabindex="0"
     type="button"
   >
@@ -1318,12 +1318,12 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         type="gray"
       >
         <span
-          className="security--bx--tag security--tag--interactive security--tag--interactive--selected security--bx--tag--gray"
+          className="bx--tag security--tag--interactive security--tag--interactive--selected bx--tag--gray"
           example-attribute="example-value"
           title={null}
         >
           <span
-            className="security--bx--text-truncate--end"
+            className="bx--text-truncate--end"
             title="Tag 1"
           >
             Tag 1
@@ -1349,12 +1349,12 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         type="gray"
       >
         <span
-          className="security--bx--tag security--tag--interactive security--tag--interactive--selected security--bx--tag--gray"
+          className="bx--tag security--tag--interactive security--tag--interactive--selected bx--tag--gray"
           example-attribute="example-value"
           title={null}
         >
           <span
-            className="security--bx--text-truncate--end"
+            className="bx--text-truncate--end"
             title="Tag 2"
           >
             Tag 2
@@ -1380,12 +1380,12 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         type="gray"
       >
         <span
-          className="security--bx--tag security--tag--interactive security--tag--interactive--selected security--bx--tag--gray"
+          className="bx--tag security--tag--interactive security--tag--interactive--selected bx--tag--gray"
           example-attribute="example-value"
           title={null}
         >
           <span
-            className="security--bx--text-truncate--end"
+            className="bx--text-truncate--end"
             title="Tag 3"
           >
             Tag 3
@@ -1411,12 +1411,12 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         type="gray"
       >
         <span
-          className="security--bx--tag security--tag--interactive security--tag--interactive--default security--bx--tag--gray"
+          className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--gray"
           example-attribute="example-value"
           title={null}
         >
           <span
-            className="security--bx--text-truncate--end"
+            className="bx--text-truncate--end"
             title="Tag 4"
           >
             Tag 4
@@ -1442,12 +1442,12 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         type="gray"
       >
         <span
-          className="security--bx--tag security--tag--interactive security--tag--interactive--default security--bx--tag--gray"
+          className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--gray"
           example-attribute="example-value"
           title={null}
         >
           <span
-            className="security--bx--text-truncate--end"
+            className="bx--text-truncate--end"
             title="Tag 5"
           >
             Tag 5
@@ -1473,12 +1473,12 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         type="gray"
       >
         <span
-          className="security--bx--tag security--tag--interactive security--tag--interactive--default security--bx--tag--gray"
+          className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--gray"
           example-attribute="example-value"
           title={null}
         >
           <span
-            className="security--bx--text-truncate--end"
+            className="bx--text-truncate--end"
             title="Tag 6"
           >
             Tag 6
@@ -1504,12 +1504,12 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         type="gray"
       >
         <span
-          className="security--bx--tag security--tag--interactive security--tag--interactive--default security--bx--tag--gray"
+          className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--gray"
           example-attribute="example-value"
           title={null}
         >
           <span
-            className="security--bx--text-truncate--end"
+            className="bx--text-truncate--end"
             title="Tag 7"
           >
             Tag 7
@@ -1535,12 +1535,12 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         type="gray"
       >
         <span
-          className="security--bx--tag security--tag--interactive security--tag--interactive--default security--bx--tag--gray"
+          className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--gray"
           example-attribute="example-value"
           title={null}
         >
           <span
-            className="security--bx--text-truncate--end"
+            className="bx--text-truncate--end"
             title="Tag 8"
           >
             Tag 8
@@ -1572,7 +1572,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         type="button"
       >
         <button
-          className="security--button security--bx--btn security--bx--btn--sm security--bx--btn--ghost security--bx--btn--disabled"
+          className="security--button bx--btn bx--btn--sm bx--btn--ghost bx--btn--disabled"
           disabled={true}
           onClick={[Function]}
           tabIndex={0}

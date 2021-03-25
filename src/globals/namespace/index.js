@@ -3,14 +3,11 @@
  * @copyright IBM Security 2018 - 2021
  */
 
-const { settings } = require('carbon-components');
-
-const { prefix } = settings;
+const {
+  settings: { prefix: carbonPrefix },
+} = require('carbon-components');
 
 const namespace = 'security--';
-const carbonPrefix = `${namespace}${prefix}`;
-
-settings.prefix = carbonPrefix;
 
 /**
  * Appends the namespace for a component to another namespace.

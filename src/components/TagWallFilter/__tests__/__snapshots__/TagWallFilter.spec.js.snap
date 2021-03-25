@@ -486,10 +486,10 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                     >
                       
                       <span
-                        class="security--bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable security--bx--tag--gray"
+                        class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                       >
                         <span
-                          class="security--bx--text-truncate--end"
+                          class="bx--text-truncate--end"
                           title="Y"
                         >
                           Y
@@ -539,14 +539,14 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                       class="security--tearsheet--small__scroll-gradient__content"
                     >
                       <div
-                        class="security--filter security--bx--list-box"
+                        class="security--filter bx--list-box"
                         id="test-id"
                       >
                         <div
                           aria-expanded="true"
                           aria-haspopup="true"
                           aria-label="close menu"
-                          class="security--bx--list-box__field"
+                          class="bx--list-box__field"
                           data-toggle="true"
                           id="test-id"
                           role="button"
@@ -557,7 +557,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                             aria-autocomplete="list"
                             aria-expanded="true"
                             autocomplete="off"
-                            class="security--filter__input-field security--bx--text-input"
+                            class="security--filter__input-field bx--text-input"
                             id="test-id"
                             placeholder="placeholder"
                             role="combobox"
@@ -596,14 +596,14 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                             tabindex="0"
                           >
                             <div
-                              class="security--bx--list-box__menu-item__option"
+                              class="bx--list-box__menu-item__option"
                             >
                               <div
                                 aria-labelledby="downshift-0-item-0"
                                 class="security--filter__list-item__entry"
                               >
                                 <span
-                                  class="security--bx--text-truncate--end"
+                                  class="bx--text-truncate--end"
                                   title="X"
                                 >
                                   X
@@ -646,14 +646,14 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                 class="security--tearsheet--small__footer"
               >
                 <button
-                  class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large security--bx--btn security--bx--btn--secondary"
+                  class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
                   tabindex="0"
                   type="button"
                 >
                   Cancel
                 </button>
                 <button
-                  class="security--button security--tearsheet--small__footer__button security--button--large security--bx--btn security--bx--btn--primary"
+                  class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
                   tabindex="0"
                   type="button"
                 >
@@ -786,10 +786,10 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                 >
                                   
                                   <span
-                                    class="security--bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable security--bx--tag--gray"
+                                    class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                   >
                                     <span
-                                      class="security--bx--text-truncate--end"
+                                      class="bx--text-truncate--end"
                                       title="Y"
                                     >
                                       Y
@@ -839,14 +839,14 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                   class="security--tearsheet--small__scroll-gradient__content"
                                 >
                                   <div
-                                    class="security--filter security--bx--list-box"
+                                    class="security--filter bx--list-box"
                                     id="test-id"
                                   >
                                     <div
                                       aria-expanded="true"
                                       aria-haspopup="true"
                                       aria-label="close menu"
-                                      class="security--bx--list-box__field"
+                                      class="bx--list-box__field"
                                       data-toggle="true"
                                       id="test-id"
                                       role="button"
@@ -857,7 +857,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                         aria-autocomplete="list"
                                         aria-expanded="true"
                                         autocomplete="off"
-                                        class="security--filter__input-field security--bx--text-input"
+                                        class="security--filter__input-field bx--text-input"
                                         id="test-id"
                                         placeholder="placeholder"
                                         role="combobox"
@@ -896,14 +896,14 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                         tabindex="0"
                                       >
                                         <div
-                                          class="security--bx--list-box__menu-item__option"
+                                          class="bx--list-box__menu-item__option"
                                         >
                                           <div
                                             aria-labelledby="downshift-0-item-0"
                                             class="security--filter__list-item__entry"
                                           >
                                             <span
-                                              class="security--bx--text-truncate--end"
+                                              class="bx--text-truncate--end"
                                               title="X"
                                             >
                                               X
@@ -946,14 +946,14 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                             class="security--tearsheet--small__footer"
                           >
                             <button
-                              class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large security--bx--btn security--bx--btn--secondary"
+                              class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
                               tabindex="0"
                               type="button"
                             >
                               Cancel
                             </button>
                             <button
-                              class="security--button security--tearsheet--small__footer__button security--button--large security--bx--btn security--bx--btn--primary"
+                              class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
                               tabindex="0"
                               type="button"
                             >
@@ -1020,10 +1020,10 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                   >
                                     
                                     <span
-                                      class="security--bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable security--bx--tag--gray"
+                                      class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                     >
                                       <span
-                                        class="security--bx--text-truncate--end"
+                                        class="bx--text-truncate--end"
                                         title="Y"
                                       >
                                         Y
@@ -1073,14 +1073,14 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                     class="security--tearsheet--small__scroll-gradient__content"
                                   >
                                     <div
-                                      class="security--filter security--bx--list-box"
+                                      class="security--filter bx--list-box"
                                       id="test-id"
                                     >
                                       <div
                                         aria-expanded="true"
                                         aria-haspopup="true"
                                         aria-label="close menu"
-                                        class="security--bx--list-box__field"
+                                        class="bx--list-box__field"
                                         data-toggle="true"
                                         id="test-id"
                                         role="button"
@@ -1091,7 +1091,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                           aria-autocomplete="list"
                                           aria-expanded="true"
                                           autocomplete="off"
-                                          class="security--filter__input-field security--bx--text-input"
+                                          class="security--filter__input-field bx--text-input"
                                           id="test-id"
                                           placeholder="placeholder"
                                           role="combobox"
@@ -1130,14 +1130,14 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                           tabindex="0"
                                         >
                                           <div
-                                            class="security--bx--list-box__menu-item__option"
+                                            class="bx--list-box__menu-item__option"
                                           >
                                             <div
                                               aria-labelledby="downshift-0-item-0"
                                               class="security--filter__list-item__entry"
                                             >
                                               <span
-                                                class="security--bx--text-truncate--end"
+                                                class="bx--text-truncate--end"
                                                 title="X"
                                               >
                                                 X
@@ -1180,14 +1180,14 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                               class="security--tearsheet--small__footer"
                             >
                               <button
-                                class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large security--bx--btn security--bx--btn--secondary"
+                                class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
                                 tabindex="0"
                                 type="button"
                               >
                                 Cancel
                               </button>
                               <button
-                                class="security--button security--tearsheet--small__footer__button security--button--large security--bx--btn security--bx--btn--primary"
+                                class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
                                 tabindex="0"
                                 type="button"
                               >
@@ -1256,10 +1256,10 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                       >
                                         
                                         <span
-                                          class="security--bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable security--bx--tag--gray"
+                                          class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                         >
                                           <span
-                                            class="security--bx--text-truncate--end"
+                                            class="bx--text-truncate--end"
                                             title="Y"
                                           >
                                             Y
@@ -1309,14 +1309,14 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                         class="security--tearsheet--small__scroll-gradient__content"
                                       >
                                         <div
-                                          class="security--filter security--bx--list-box"
+                                          class="security--filter bx--list-box"
                                           id="test-id"
                                         >
                                           <div
                                             aria-expanded="true"
                                             aria-haspopup="true"
                                             aria-label="close menu"
-                                            class="security--bx--list-box__field"
+                                            class="bx--list-box__field"
                                             data-toggle="true"
                                             id="test-id"
                                             role="button"
@@ -1327,7 +1327,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                               aria-autocomplete="list"
                                               aria-expanded="true"
                                               autocomplete="off"
-                                              class="security--filter__input-field security--bx--text-input"
+                                              class="security--filter__input-field bx--text-input"
                                               id="test-id"
                                               placeholder="placeholder"
                                               role="combobox"
@@ -1366,14 +1366,14 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                               tabindex="0"
                                             >
                                               <div
-                                                class="security--bx--list-box__menu-item__option"
+                                                class="bx--list-box__menu-item__option"
                                               >
                                                 <div
                                                   aria-labelledby="downshift-0-item-0"
                                                   class="security--filter__list-item__entry"
                                                 >
                                                   <span
-                                                    class="security--bx--text-truncate--end"
+                                                    class="bx--text-truncate--end"
                                                     title="X"
                                                   >
                                                     X
@@ -1416,14 +1416,14 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                   class="security--tearsheet--small__footer"
                                 >
                                   <button
-                                    class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large security--bx--btn security--bx--btn--secondary"
+                                    class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
                                     tabindex="0"
                                     type="button"
                                   >
                                     Cancel
                                   </button>
                                   <button
-                                    class="security--button security--tearsheet--small__footer__button security--button--large security--bx--btn security--bx--btn--primary"
+                                    class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
                                     tabindex="0"
                                     type="button"
                                   >
@@ -1520,11 +1520,11 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                         type="gray"
                                       >
                                         <span
-                                          className="security--bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable security--bx--tag--gray"
+                                          className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                           title={null}
                                         >
                                           <span
-                                            className="security--bx--text-truncate--end"
+                                            className="bx--text-truncate--end"
                                             title="Y"
                                           >
                                             Y
@@ -1694,7 +1694,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                           type="default"
                                         >
                                           <div
-                                            className="security--filter security--bx--list-box"
+                                            className="security--filter bx--list-box"
                                             id="test-id"
                                             innerRef={[Function]}
                                             onClick={[Function]}
@@ -1718,7 +1718,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                 aria-expanded={true}
                                                 aria-haspopup={true}
                                                 aria-label="close menu"
-                                                className="security--bx--list-box__field"
+                                                className="bx--list-box__field"
                                                 data-toggle={true}
                                                 id="test-id"
                                                 onBlur={[Function]}
@@ -1733,7 +1733,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                   aria-autocomplete="list"
                                                   aria-expanded={true}
                                                   autoComplete="off"
-                                                  className="security--filter__input-field security--bx--text-input"
+                                                  className="security--filter__input-field bx--text-input"
                                                   disabled={false}
                                                   id="test-id"
                                                   onBlur={[Function]}
@@ -1848,14 +1848,14 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                     tabIndex="0"
                                                   >
                                                     <div
-                                                      className="security--bx--list-box__menu-item__option"
+                                                      className="bx--list-box__menu-item__option"
                                                     >
                                                       <div
                                                         aria-labelledby="downshift-0-item-0"
                                                         className="security--filter__list-item__entry"
                                                       >
                                                         <span
-                                                          className="security--bx--text-truncate--end"
+                                                          className="bx--text-truncate--end"
                                                           title="X"
                                                         >
                                                           X
@@ -1981,7 +1981,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                 type="button"
                               >
                                 <button
-                                  className="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large security--bx--btn security--bx--btn--secondary"
+                                  className="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
                                   disabled={false}
                                   onClick={[MockFunction]}
                                   tabIndex={0}
@@ -2016,7 +2016,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                 type="button"
                               >
                                 <button
-                                  className="security--button security--tearsheet--small__footer__button security--button--large security--bx--btn security--bx--btn--primary"
+                                  className="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
                                   disabled={false}
                                   onClick={[MockFunction]}
                                   tabIndex={0}
@@ -2173,11 +2173,11 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 2`] = 
         type="gray"
       >
         <span
-          className="security--bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable security--bx--tag--gray"
+          className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
           title={null}
         >
           <span
-            className="security--bx--text-truncate--end"
+            className="bx--text-truncate--end"
             title="Y"
           >
             Y
@@ -2521,10 +2521,10 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                       >
                         
                         <span
-                          class="security--bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable security--bx--tag--gray"
+                          class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                         >
                           <span
-                            class="security--bx--text-truncate--end"
+                            class="bx--text-truncate--end"
                             title="Y"
                           >
                             Y
@@ -2574,14 +2574,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                         class="security--tearsheet--small__scroll-gradient__content"
                       >
                         <div
-                          class="security--filter security--bx--list-box"
+                          class="security--filter bx--list-box"
                           id="test-id"
                         >
                           <div
                             aria-expanded="true"
                             aria-haspopup="true"
                             aria-label="close menu"
-                            class="security--bx--list-box__field"
+                            class="bx--list-box__field"
                             data-toggle="true"
                             id="test-id"
                             role="button"
@@ -2592,7 +2592,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               aria-autocomplete="list"
                               aria-expanded="true"
                               autocomplete="off"
-                              class="security--filter__input-field security--bx--text-input"
+                              class="security--filter__input-field bx--text-input"
                               id="test-id"
                               placeholder="placeholder"
                               role="combobox"
@@ -2631,14 +2631,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               tabindex="0"
                             >
                               <div
-                                class="security--bx--list-box__menu-item__option"
+                                class="bx--list-box__menu-item__option"
                               >
                                 <div
                                   aria-labelledby="downshift-0-item-0"
                                   class="security--filter__list-item__entry"
                                 >
                                   <span
-                                    class="security--bx--text-truncate--end"
+                                    class="bx--text-truncate--end"
                                     title="X"
                                   >
                                     X
@@ -2681,14 +2681,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                   class="security--tearsheet--small__footer"
                 >
                   <button
-                    class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large security--bx--btn security--bx--btn--secondary"
+                    class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
                     tabindex="0"
                     type="button"
                   >
                     Cancel
                   </button>
                   <button
-                    class="security--button security--tearsheet--small__footer__button security--button--large security--bx--btn security--bx--btn--primary"
+                    class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
                     tabindex="0"
                     type="button"
                   >
@@ -2746,10 +2746,10 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                       >
                         
                         <span
-                          class="security--bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable security--bx--tag--gray"
+                          class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                         >
                           <span
-                            class="security--bx--text-truncate--end"
+                            class="bx--text-truncate--end"
                             title="X"
                           >
                             X
@@ -2799,14 +2799,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                         class=""
                       >
                         <div
-                          class="security--filter security--bx--list-box"
+                          class="security--filter bx--list-box"
                           id="test-id"
                         >
                           <div
                             aria-expanded="true"
                             aria-haspopup="true"
                             aria-label="close menu"
-                            class="security--bx--list-box__field"
+                            class="bx--list-box__field"
                             data-toggle="true"
                             id="test-id"
                             role="button"
@@ -2817,7 +2817,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               aria-autocomplete="list"
                               aria-expanded="true"
                               autocomplete="off"
-                              class="security--filter__input-field security--bx--text-input"
+                              class="security--filter__input-field bx--text-input"
                               id="test-id"
                               placeholder=""
                               role="combobox"
@@ -2856,14 +2856,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               tabindex="0"
                             >
                               <div
-                                class="security--bx--list-box__menu-item__option"
+                                class="bx--list-box__menu-item__option"
                               >
                                 <div
                                   aria-labelledby="downshift-1-item-0"
                                   class="security--filter__list-item__entry"
                                 >
                                   <span
-                                    class="security--bx--text-truncate--end"
+                                    class="bx--text-truncate--end"
                                     title="Y"
                                   >
                                     Y
@@ -2906,14 +2906,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                   class="security--tearsheet--small__footer"
                 >
                   <button
-                    class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large security--bx--btn security--bx--btn--secondary"
+                    class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
                     tabindex="0"
                     type="button"
                   >
                     Cancel
                   </button>
                   <button
-                    class="security--button security--tearsheet--small__footer__button security--button--large security--bx--btn security--bx--btn--primary"
+                    class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
                     tabindex="0"
                     type="button"
                   >
@@ -3046,10 +3046,10 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   >
                                     
                                     <span
-                                      class="security--bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable security--bx--tag--gray"
+                                      class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                     >
                                       <span
-                                        class="security--bx--text-truncate--end"
+                                        class="bx--text-truncate--end"
                                         title="Y"
                                       >
                                         Y
@@ -3099,14 +3099,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     class="security--tearsheet--small__scroll-gradient__content"
                                   >
                                     <div
-                                      class="security--filter security--bx--list-box"
+                                      class="security--filter bx--list-box"
                                       id="test-id"
                                     >
                                       <div
                                         aria-expanded="true"
                                         aria-haspopup="true"
                                         aria-label="close menu"
-                                        class="security--bx--list-box__field"
+                                        class="bx--list-box__field"
                                         data-toggle="true"
                                         id="test-id"
                                         role="button"
@@ -3117,7 +3117,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           aria-autocomplete="list"
                                           aria-expanded="true"
                                           autocomplete="off"
-                                          class="security--filter__input-field security--bx--text-input"
+                                          class="security--filter__input-field bx--text-input"
                                           id="test-id"
                                           placeholder="placeholder"
                                           role="combobox"
@@ -3156,14 +3156,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           tabindex="0"
                                         >
                                           <div
-                                            class="security--bx--list-box__menu-item__option"
+                                            class="bx--list-box__menu-item__option"
                                           >
                                             <div
                                               aria-labelledby="downshift-0-item-0"
                                               class="security--filter__list-item__entry"
                                             >
                                               <span
-                                                class="security--bx--text-truncate--end"
+                                                class="bx--text-truncate--end"
                                                 title="X"
                                               >
                                                 X
@@ -3206,14 +3206,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               class="security--tearsheet--small__footer"
                             >
                               <button
-                                class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large security--bx--btn security--bx--btn--secondary"
+                                class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
                                 tabindex="0"
                                 type="button"
                               >
                                 Cancel
                               </button>
                               <button
-                                class="security--button security--tearsheet--small__footer__button security--button--large security--bx--btn security--bx--btn--primary"
+                                class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
                                 tabindex="0"
                                 type="button"
                               >
@@ -3271,10 +3271,10 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   >
                                     
                                     <span
-                                      class="security--bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable security--bx--tag--gray"
+                                      class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                     >
                                       <span
-                                        class="security--bx--text-truncate--end"
+                                        class="bx--text-truncate--end"
                                         title="X"
                                       >
                                         X
@@ -3324,14 +3324,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     class=""
                                   >
                                     <div
-                                      class="security--filter security--bx--list-box"
+                                      class="security--filter bx--list-box"
                                       id="test-id"
                                     >
                                       <div
                                         aria-expanded="true"
                                         aria-haspopup="true"
                                         aria-label="close menu"
-                                        class="security--bx--list-box__field"
+                                        class="bx--list-box__field"
                                         data-toggle="true"
                                         id="test-id"
                                         role="button"
@@ -3342,7 +3342,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           aria-autocomplete="list"
                                           aria-expanded="true"
                                           autocomplete="off"
-                                          class="security--filter__input-field security--bx--text-input"
+                                          class="security--filter__input-field bx--text-input"
                                           id="test-id"
                                           placeholder=""
                                           role="combobox"
@@ -3381,14 +3381,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           tabindex="0"
                                         >
                                           <div
-                                            class="security--bx--list-box__menu-item__option"
+                                            class="bx--list-box__menu-item__option"
                                           >
                                             <div
                                               aria-labelledby="downshift-1-item-0"
                                               class="security--filter__list-item__entry"
                                             >
                                               <span
-                                                class="security--bx--text-truncate--end"
+                                                class="bx--text-truncate--end"
                                                 title="Y"
                                               >
                                                 Y
@@ -3431,14 +3431,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               class="security--tearsheet--small__footer"
                             >
                               <button
-                                class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large security--bx--btn security--bx--btn--secondary"
+                                class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
                                 tabindex="0"
                                 type="button"
                               >
                                 Cancel
                               </button>
                               <button
-                                class="security--button security--tearsheet--small__footer__button security--button--large security--bx--btn security--bx--btn--primary"
+                                class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
                                 tabindex="0"
                                 type="button"
                               >
@@ -3505,10 +3505,10 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     >
                                       
                                       <span
-                                        class="security--bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable security--bx--tag--gray"
+                                        class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                       >
                                         <span
-                                          class="security--bx--text-truncate--end"
+                                          class="bx--text-truncate--end"
                                           title="Y"
                                         >
                                           Y
@@ -3558,14 +3558,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       class="security--tearsheet--small__scroll-gradient__content"
                                     >
                                       <div
-                                        class="security--filter security--bx--list-box"
+                                        class="security--filter bx--list-box"
                                         id="test-id"
                                       >
                                         <div
                                           aria-expanded="true"
                                           aria-haspopup="true"
                                           aria-label="close menu"
-                                          class="security--bx--list-box__field"
+                                          class="bx--list-box__field"
                                           data-toggle="true"
                                           id="test-id"
                                           role="button"
@@ -3576,7 +3576,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                             aria-autocomplete="list"
                                             aria-expanded="true"
                                             autocomplete="off"
-                                            class="security--filter__input-field security--bx--text-input"
+                                            class="security--filter__input-field bx--text-input"
                                             id="test-id"
                                             placeholder="placeholder"
                                             role="combobox"
@@ -3615,14 +3615,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                             tabindex="0"
                                           >
                                             <div
-                                              class="security--bx--list-box__menu-item__option"
+                                              class="bx--list-box__menu-item__option"
                                             >
                                               <div
                                                 aria-labelledby="downshift-0-item-0"
                                                 class="security--filter__list-item__entry"
                                               >
                                                 <span
-                                                  class="security--bx--text-truncate--end"
+                                                  class="bx--text-truncate--end"
                                                   title="X"
                                                 >
                                                   X
@@ -3665,14 +3665,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 class="security--tearsheet--small__footer"
                               >
                                 <button
-                                  class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large security--bx--btn security--bx--btn--secondary"
+                                  class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
                                   tabindex="0"
                                   type="button"
                                 >
                                   Cancel
                                 </button>
                                 <button
-                                  class="security--button security--tearsheet--small__footer__button security--button--large security--bx--btn security--bx--btn--primary"
+                                  class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
                                   tabindex="0"
                                   type="button"
                                 >
@@ -3730,10 +3730,10 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     >
                                       
                                       <span
-                                        class="security--bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable security--bx--tag--gray"
+                                        class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                       >
                                         <span
-                                          class="security--bx--text-truncate--end"
+                                          class="bx--text-truncate--end"
                                           title="X"
                                         >
                                           X
@@ -3783,14 +3783,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       class=""
                                     >
                                       <div
-                                        class="security--filter security--bx--list-box"
+                                        class="security--filter bx--list-box"
                                         id="test-id"
                                       >
                                         <div
                                           aria-expanded="true"
                                           aria-haspopup="true"
                                           aria-label="close menu"
-                                          class="security--bx--list-box__field"
+                                          class="bx--list-box__field"
                                           data-toggle="true"
                                           id="test-id"
                                           role="button"
@@ -3801,7 +3801,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                             aria-autocomplete="list"
                                             aria-expanded="true"
                                             autocomplete="off"
-                                            class="security--filter__input-field security--bx--text-input"
+                                            class="security--filter__input-field bx--text-input"
                                             id="test-id"
                                             placeholder=""
                                             role="combobox"
@@ -3840,14 +3840,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                             tabindex="0"
                                           >
                                             <div
-                                              class="security--bx--list-box__menu-item__option"
+                                              class="bx--list-box__menu-item__option"
                                             >
                                               <div
                                                 aria-labelledby="downshift-1-item-0"
                                                 class="security--filter__list-item__entry"
                                               >
                                                 <span
-                                                  class="security--bx--text-truncate--end"
+                                                  class="bx--text-truncate--end"
                                                   title="Y"
                                                 >
                                                   Y
@@ -3890,14 +3890,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 class="security--tearsheet--small__footer"
                               >
                                 <button
-                                  class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large security--bx--btn security--bx--btn--secondary"
+                                  class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
                                   tabindex="0"
                                   type="button"
                                 >
                                   Cancel
                                 </button>
                                 <button
-                                  class="security--button security--tearsheet--small__footer__button security--button--large security--bx--btn security--bx--btn--primary"
+                                  class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
                                   tabindex="0"
                                   type="button"
                                 >
@@ -3966,10 +3966,10 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         >
                                           
                                           <span
-                                            class="security--bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable security--bx--tag--gray"
+                                            class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                           >
                                             <span
-                                              class="security--bx--text-truncate--end"
+                                              class="bx--text-truncate--end"
                                               title="Y"
                                             >
                                               Y
@@ -4019,14 +4019,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           class="security--tearsheet--small__scroll-gradient__content"
                                         >
                                           <div
-                                            class="security--filter security--bx--list-box"
+                                            class="security--filter bx--list-box"
                                             id="test-id"
                                           >
                                             <div
                                               aria-expanded="true"
                                               aria-haspopup="true"
                                               aria-label="close menu"
-                                              class="security--bx--list-box__field"
+                                              class="bx--list-box__field"
                                               data-toggle="true"
                                               id="test-id"
                                               role="button"
@@ -4037,7 +4037,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                 aria-autocomplete="list"
                                                 aria-expanded="true"
                                                 autocomplete="off"
-                                                class="security--filter__input-field security--bx--text-input"
+                                                class="security--filter__input-field bx--text-input"
                                                 id="test-id"
                                                 placeholder="placeholder"
                                                 role="combobox"
@@ -4076,14 +4076,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                 tabindex="0"
                                               >
                                                 <div
-                                                  class="security--bx--list-box__menu-item__option"
+                                                  class="bx--list-box__menu-item__option"
                                                 >
                                                   <div
                                                     aria-labelledby="downshift-0-item-0"
                                                     class="security--filter__list-item__entry"
                                                   >
                                                     <span
-                                                      class="security--bx--text-truncate--end"
+                                                      class="bx--text-truncate--end"
                                                       title="X"
                                                     >
                                                       X
@@ -4126,14 +4126,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     class="security--tearsheet--small__footer"
                                   >
                                     <button
-                                      class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large security--bx--btn security--bx--btn--secondary"
+                                      class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
                                       tabindex="0"
                                       type="button"
                                     >
                                       Cancel
                                     </button>
                                     <button
-                                      class="security--button security--tearsheet--small__footer__button security--button--large security--bx--btn security--bx--btn--primary"
+                                      class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
                                       tabindex="0"
                                       type="button"
                                     >
@@ -4191,10 +4191,10 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         >
                                           
                                           <span
-                                            class="security--bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable security--bx--tag--gray"
+                                            class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                           >
                                             <span
-                                              class="security--bx--text-truncate--end"
+                                              class="bx--text-truncate--end"
                                               title="X"
                                             >
                                               X
@@ -4244,14 +4244,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           class=""
                                         >
                                           <div
-                                            class="security--filter security--bx--list-box"
+                                            class="security--filter bx--list-box"
                                             id="test-id"
                                           >
                                             <div
                                               aria-expanded="true"
                                               aria-haspopup="true"
                                               aria-label="close menu"
-                                              class="security--bx--list-box__field"
+                                              class="bx--list-box__field"
                                               data-toggle="true"
                                               id="test-id"
                                               role="button"
@@ -4262,7 +4262,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                 aria-autocomplete="list"
                                                 aria-expanded="true"
                                                 autocomplete="off"
-                                                class="security--filter__input-field security--bx--text-input"
+                                                class="security--filter__input-field bx--text-input"
                                                 id="test-id"
                                                 placeholder=""
                                                 role="combobox"
@@ -4301,14 +4301,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                 tabindex="0"
                                               >
                                                 <div
-                                                  class="security--bx--list-box__menu-item__option"
+                                                  class="bx--list-box__menu-item__option"
                                                 >
                                                   <div
                                                     aria-labelledby="downshift-1-item-0"
                                                     class="security--filter__list-item__entry"
                                                   >
                                                     <span
-                                                      class="security--bx--text-truncate--end"
+                                                      class="bx--text-truncate--end"
                                                       title="Y"
                                                     >
                                                       Y
@@ -4351,14 +4351,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     class="security--tearsheet--small__footer"
                                   >
                                     <button
-                                      class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large security--bx--btn security--bx--btn--secondary"
+                                      class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
                                       tabindex="0"
                                       type="button"
                                     >
                                       Cancel
                                     </button>
                                     <button
-                                      class="security--button security--tearsheet--small__footer__button security--button--large security--bx--btn security--bx--btn--primary"
+                                      class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
                                       tabindex="0"
                                       type="button"
                                     >
@@ -4455,11 +4455,11 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           type="gray"
                                         >
                                           <span
-                                            className="security--bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable security--bx--tag--gray"
+                                            className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                             title={null}
                                           >
                                             <span
-                                              className="security--bx--text-truncate--end"
+                                              className="bx--text-truncate--end"
                                               title="X"
                                             >
                                               X
@@ -4629,7 +4629,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                             type="default"
                                           >
                                             <div
-                                              className="security--filter security--bx--list-box"
+                                              className="security--filter bx--list-box"
                                               id="test-id"
                                               innerRef={[Function]}
                                               onClick={[Function]}
@@ -4653,7 +4653,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                   aria-expanded={true}
                                                   aria-haspopup={true}
                                                   aria-label="close menu"
-                                                  className="security--bx--list-box__field"
+                                                  className="bx--list-box__field"
                                                   data-toggle={true}
                                                   id="test-id"
                                                   onBlur={[Function]}
@@ -4668,7 +4668,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                     aria-autocomplete="list"
                                                     aria-expanded={true}
                                                     autoComplete="off"
-                                                    className="security--filter__input-field security--bx--text-input"
+                                                    className="security--filter__input-field bx--text-input"
                                                     disabled={false}
                                                     id="test-id"
                                                     onBlur={[Function]}
@@ -4783,14 +4783,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                       tabIndex="0"
                                                     >
                                                       <div
-                                                        className="security--bx--list-box__menu-item__option"
+                                                        className="bx--list-box__menu-item__option"
                                                       >
                                                         <div
                                                           aria-labelledby="downshift-1-item-0"
                                                           className="security--filter__list-item__entry"
                                                         >
                                                           <span
-                                                            className="security--bx--text-truncate--end"
+                                                            className="bx--text-truncate--end"
                                                             title="Y"
                                                           >
                                                             Y
@@ -4916,7 +4916,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   type="button"
                                 >
                                   <button
-                                    className="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large security--bx--btn security--bx--btn--secondary"
+                                    className="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
                                     disabled={false}
                                     onClick={[MockFunction]}
                                     tabIndex={0}
@@ -4951,7 +4951,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   type="button"
                                 >
                                   <button
-                                    className="security--button security--tearsheet--small__footer__button security--button--large security--bx--btn security--bx--btn--primary"
+                                    className="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
                                     disabled={false}
                                     onClick={[MockFunction]}
                                     tabIndex={0}
