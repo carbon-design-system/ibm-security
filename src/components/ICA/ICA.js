@@ -133,7 +133,7 @@ const ICA = ({
               `${ICAClasses}__total__trend`}`}
           >
             {' '}
-            <span>/ {truncatedTotal}</span>
+            <span>/{truncatedTotal}</span>
           </span>
         ) : null}
       </span>
