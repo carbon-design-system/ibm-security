@@ -100,6 +100,7 @@ export ListBox from './components/ListBox';
 export ListItem from './components/ListItem';
 export Loading, { LoadingMessage } from './components/Loading';
 
+export { Microlayout, CardMicrolayout } from './components/Microlayout';
 export MultiSelect from './components/MultiSelect';
 export Modal from './components/Modal';
 export ModalWrapper from './components/ModalWrapper';

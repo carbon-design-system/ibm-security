@@ -1,0 +1,95 @@
+@import '@carbon/charts/styles-g90.css';
+
+// .card-microlayout {
+//   background: pink;
+// }
+
+$prefix: card-microlayout;
+
+.#{$prefix}--buttons-card {
+  padding-bottom: 0;
+}
+
+.security--microlayout {
+  &.security--microlayout--card-microlayout {
+    .#{$prefix}--query {
+      @include carbon--type-style('code-02');
+    }
+    .#{$prefix}--query-ip {
+      color: $teal-40;
+    }
+    .#{$prefix}--query-equals {
+      color: $magenta-60;
+    }
+    .#{$prefix}--query-start {
+      color: $purple-60;
+    }
+    .#{$prefix}--query-date {
+      color: $green-30;
+    }
+
+    .#{$prefix}--loader {
+      padding-bottom: $spacing-07;
+    }
+
+    .chart-holder {
+      background: none;
+    }
+
+    /***
+      These styles will be unnecessary when migrating to C&CS, 
+      since setting a Card to "productive" will automatically set these styles
+    ***/
+
+    hr {
+      @include carbon--theme();
+      background: $ui-02;
+      color: $ui-02;
+      border: 1px solid $ui-02;
+      margin-top: $spacing-05;
+      margin-bottom: 0;
+      margin-left: -$spacing-05;
+      margin-right: -$spacing-05;
+    }
+
+    .#{$prefix}--toolbar-row {
+      margin-top: $spacing-05;
+    }
+
+    .#{$prefix}--toolbar-icons {
+      justify-content: flex-end;
+      padding-right: $spacing-03;
+      margin-left: -$spacing-05;
+      margin-right: -$spacing-05;
+      button {
+        margin-left: $spacing-03;
+      }
+    }
+
+    .#{$prefix}--toolbar-text {
+      @include carbon--type-style('body-short-01');
+      margin: 0;
+    }
+
+    svg.#{$prefix}--warning-icon {
+      fill: $support-03;
+      margin-right: $spacing-03;
+    }
+
+    .#{$prefix}--toolbar-btns {
+      margin-left: -$spacing-05;
+      width: calc(50% + 16px);
+
+      .bx--btn--ghost {
+        box-shadow: none;
+        justify-content: flex-start;
+      }
+
+      .#{$prefix}--right-btn {
+        display: inline-block;
+        text-align: end;
+        padding-right: $spacing-07;
+      }
+    }
+  }
+}
