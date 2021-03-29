@@ -26,9 +26,9 @@ $type__name: ibm-type;
 /// Default feature flag values.
 /// @type Map<String, String>
 $security--default-feature-flags: (
-  #{$grid__name}: true,
+  #{$grid__name}: false,
   #{$theme__name}: true,
-  #{$type__name}: true
+  #{$type__name}: false
 );
 
 $security--feature-flags: () !default;

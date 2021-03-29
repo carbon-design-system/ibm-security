@@ -28,7 +28,7 @@ sync(resolve(src, '**', '*.scss')).forEach(file => {
   );
 });
 
-const from = resolve(root, tmp, 'index.scss');
+const from = resolve(root, tmp, 'globals', 'build', 'index.scss');
 
 readFile(from, async (error, styles) => {
   if (error) {

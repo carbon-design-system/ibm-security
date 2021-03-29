@@ -4,17 +4,18 @@
 /// @copyright IBM Security 2019 - 2021
 ////
 
+@import '@carbon/grid/scss/mixins';
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/type/scss/classes';
+@import '@carbon/type/scss/reset';
+
 @import '../src/globals/settings/index';
 
-@import '@carbon/layout/scss/spacing';
-
-@import '../src/globals/index';
-
+@import 'carbon-components/scss/globals/scss/css--body';
 @import 'carbon-components/scss/globals/scss/css--font-face';
 @import 'carbon-components/scss/globals/scss/vars';
 
-@import '../src/components/index';
-@import '../src/platform/index';
+@import '../src/index';
 
 @import 'decorators/index';
 @import 'docs/index';
@@ -34,3 +35,7 @@
     }
   }
 }
+
+@include carbon--grid;
+@include carbon--type-classes;
+@include carbon--type-reset;

@@ -1,0 +1,31 @@
+////
+/// Build.
+/// @group build
+/// @copyright IBM Security 2021
+////
+
+@import '../settings/index';
+
+// Global flags - https://github.com/carbon-design-system/carbon/blob/main/docs/guides/sass.md#global-flags
+
+/// Body.
+/// @type Bool
+$css--body: false;
+
+/// Default type.
+/// @type boolean
+$css--default-type: false;
+
+/// Font face.
+/// @type boolean
+$css--font-face: false;
+
+/// CSS helpers.
+/// @type boolean
+$css--helpers: false;
+
+/// CSS reset - https://cssreset.com/
+/// @type boolean
+$css--reset: false;
+
+@import '../../index';
