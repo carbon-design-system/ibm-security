@@ -8,7 +8,6 @@ const postcssSass = require('@csstools/postcss-sass');
 const autoprefixer = require('autoprefixer');
 const { outputFile, readFile } = require('fs-extra');
 const path = require('path');
-
 const postcss = require('postcss');
 const postcssScss = require('postcss-scss');
 
@@ -24,8 +23,8 @@ readFile(srcIndex, async (err, css) => {
       autoprefixer,
     ]).process(css, {
       from: srcIndex,
-      to: distIndex(distDir),
       syntax: postcssScss,
+      to: distIndex(distDir),
     });
     outputFile(distIndex(distDir), result, { encoding: 'utf8' });
   } catch (error) {

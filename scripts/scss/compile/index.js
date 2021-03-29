@@ -1,10 +1,10 @@
 /**
  * @file SCSS compilation helpers.
- * @copyright IBM Security 2020 - 2021
+ * @copyright IBM Security 2020
  */
 
 const { sync } = require('glob');
-const { renderSync } = require('sass');
+const { renderSync } = require('node-sass');
 
 module.exports = {
   compile: file =>

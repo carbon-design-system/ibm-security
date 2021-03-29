@@ -1,8 +1,6 @@
 /**
  * @file SCSS tests.
- * @copyright IBM Security 2020 - 2021
- *
- * @jest-environment node
+ * @copyright IBM Security 2020
  */
 
 import { compile, forEachImport } from '../../../scripts/scss/compile';
