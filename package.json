@@ -22,7 +22,7 @@
     "build:main:es": "BABEL_ENV=es babel src -d es --ignore **/_mocks_/**,**/__tests__/**,**/*.stories.js,src/globals/scss-exports/index.js",
     "build:main:scss": "gulp copy:scss",
     "build:main:scss-exports": "rollup -c rollup.config.js",
-    "build:main:styles": "node scripts/styles.js",
+    "build:main:styles": "node -e 'require(\"./scripts/styles\").compile()'",
     "build:post": "run-p build:post:*",
     "build:post:clean-css": "cleancss -O2 -o css/index.min.css css/index.css",
     "build:post:storybook": "build-storybook -s public",

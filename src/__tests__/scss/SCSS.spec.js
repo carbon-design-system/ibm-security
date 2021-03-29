@@ -1,14 +1,17 @@
 /**
  * @file SCSS tests.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import { compile, forEachImport } from '../../../scripts/scss/compile';
+import { excludeExternals } from '../../../scripts/styles';
 
 describe('SCSS', () => {
   test('Bundle', () => {
+    excludeExternals();
+
     expect(
-      compile('src/index.scss')
+      compile('tmp/globals/build/index.scss')
         .css.toString()
         .replace(/'/g, '"')
     ).toMatchSnapshot();

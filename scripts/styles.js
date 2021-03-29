@@ -17,38 +17,45 @@ const root = resolve(__dirname, '..');
 const src = resolve(root, 'src');
 const tmp = 'tmp';
 
-sync(resolve(src, '**', '*.scss')).forEach(file => {
-  outputFileSync(
-    file.replace(src, tmp),
-    ['carbon-components/scss/components'].reduce(
-      (accumulator, expression) =>
-        accumulator.replace(new RegExp(`.*${expression}.*\n`, 'g'), ''),
-      readFileSync(file, 'utf8')
-    )
-  );
-});
+const excludeExternals = () =>
+  sync(resolve(src, '**', '*.scss')).forEach(file => {
+    outputFileSync(
+      file.replace(src, tmp),
+      ['carbon-components/scss/components'].reduce(
+        (accumulator, expression) =>
+          accumulator.replace(new RegExp(`.*${expression}.*\n`, 'g'), ''),
+        readFileSync(file, 'utf8')
+      )
+    );
+  });
 
-const from = resolve(root, tmp, 'globals', 'build', 'index.scss');
+function compile() {
+  excludeExternals();
 
-readFile(from, async (error, styles) => {
-  if (error) {
-    throw error;
-  }
+  const from = resolve(root, tmp, 'globals', 'build', 'index.scss');
 
-  try {
-    const to = resolve(root, 'css', 'index.css');
+  readFile(from, async (error, styles) => {
+    if (error) {
+      throw error;
+    }
 
-    const { css } = await postcss([
-      postcssNodeSass({ includePaths: ['node_modules'] }),
-      autoprefixer,
-    ]).process(styles, {
-      from,
-      to,
-      syntax: postcssScss,
-    });
+    try {
+      const to = resolve(root, 'css', 'index.css');
 
-    outputFileSync(to, css);
-  } catch (error) {
-    console.error(error);
-  }
-});
+      const { css } = await postcss([
+        postcssNodeSass({ includePaths: ['node_modules'] }),
+        autoprefixer,
+      ]).process(styles, {
+        from,
+        to,
+        syntax: postcssScss,
+      });
+
+      outputFileSync(to, css);
+    } catch (error) {
+      console.error(error);
+    }
+  });
+}
+
+module.exports = { compile, excludeExternals };
