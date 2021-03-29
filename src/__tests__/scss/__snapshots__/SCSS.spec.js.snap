@@ -154,114 +154,6 @@ exports[`SCSS Bundle 1`] = `
   --danger: #da1e28;
 }
 
-h1 {
-  font-size: 2.625rem;
-  font-weight: 300;
-  line-height: 1.199;
-  letter-spacing: 0;
-}
-
-h2 {
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 1.25;
-  letter-spacing: 0;
-}
-
-h3 {
-  font-size: 1.75rem;
-  font-weight: 400;
-  line-height: 1.29;
-  letter-spacing: 0;
-}
-
-h4 {
-  font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 1.4;
-  letter-spacing: 0;
-}
-
-h5 {
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.375;
-  letter-spacing: 0;
-}
-
-h6 {
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1.29;
-  letter-spacing: 0.16px;
-}
-
-p {
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0;
-}
-
-a {
-  color: var(--link-01, #78a9ff);
-}
-
-em {
-  font-style: italic;
-}
-
-@keyframes skeleton {
-  0% {
-    right: auto;
-    left: 0;
-    width: 0%;
-    opacity: 0.3;
-  }
-  20% {
-    right: auto;
-    left: 0;
-    width: 100%;
-    opacity: 1;
-  }
-  28% {
-    right: 0;
-    left: auto;
-    width: 100%;
-  }
-  51% {
-    right: 0;
-    left: auto;
-    width: 0%;
-  }
-  58% {
-    right: 0;
-    left: auto;
-    width: 0%;
-  }
-  82% {
-    right: 0;
-    left: auto;
-    width: 100%;
-  }
-  83% {
-    right: auto;
-    left: 0;
-    width: 100%;
-  }
-  96% {
-    right: auto;
-    left: 0;
-    width: 0%;
-  }
-  100% {
-    right: auto;
-    left: 0;
-    width: 0%;
-    opacity: 0.3;
-  }
-}
-
 html {
   font-size: 16px;
 }
@@ -2306,6 +2198,114 @@ body {
   font-weight: 600;
   line-height: 1.19;
   letter-spacing: 0;
+}
+
+h1 {
+  font-size: 2.625rem;
+  font-weight: 300;
+  line-height: 1.199;
+  letter-spacing: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: 0;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.375;
+  letter-spacing: 0;
+}
+
+h6 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.29;
+  letter-spacing: 0.16px;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+a {
+  color: var(--link-01, #78a9ff);
+}
+
+em {
+  font-style: italic;
+}
+
+@keyframes skeleton {
+  0% {
+    right: auto;
+    left: 0;
+    width: 0%;
+    opacity: 0.3;
+  }
+  20% {
+    right: auto;
+    left: 0;
+    width: 100%;
+    opacity: 1;
+  }
+  28% {
+    right: 0;
+    left: auto;
+    width: 100%;
+  }
+  51% {
+    right: 0;
+    left: auto;
+    width: 0%;
+  }
+  58% {
+    right: 0;
+    left: auto;
+    width: 0%;
+  }
+  82% {
+    right: 0;
+    left: auto;
+    width: 100%;
+  }
+  83% {
+    right: auto;
+    left: 0;
+    width: 100%;
+  }
+  96% {
+    right: auto;
+    left: 0;
+    width: 0%;
+  }
+  100% {
+    right: auto;
+    left: 0;
+    width: 0%;
+    opacity: 0.3;
+  }
 }
 
 .bx--link {
