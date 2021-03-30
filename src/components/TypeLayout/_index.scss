@@ -21,6 +21,10 @@
 
 @mixin description-list--stacked {
   display: block;
+
+  &:first-of-type {
+    @include carbon--type-style($name: label-01);
+  }
 }
 
 @mixin description-list__padding($block, $inline) {
@@ -39,8 +43,6 @@
 
 @include security--component($name: $type-layout__name) {
   $root: &;
-
-  @include carbon--type-style($name: body-short-01);
   margin-bottom: $carbon--layout-03;
 
   &__row {
@@ -56,6 +58,7 @@
   }
 
   &__cell {
+    @include carbon--type-style($name: body-short-01);
     @include description-list--stacked;
 
     padding-left: 0;
@@ -67,6 +70,10 @@
 
     @include carbon--breakpoint($name: md) {
       display: table-cell;
+
+      &:first-of-type {
+        @include carbon--type-style($name: body-short-01);
+      }
     }
 
     ul {
