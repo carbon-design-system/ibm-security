@@ -1,16 +1,16 @@
 ////
 /// Title bar module.
 /// @group title-bar-module
-/// @copyright IBM Security 2020
+/// @copyright IBM Security 2020 - 2021
 ////
 
 @import '@carbon/layout/scss/spacing';
 @import '@carbon/type/scss/styles';
 
 @import '../../Component/mixins';
-@import 'variables';
+@import '../variables';
 
-@include security--component($name: $layout-modules__title-bar__name) {
+@include security--component($name: #{$layout-modules__name}--title-bar) {
   /// Spacing.
   /// @type Length
   $title-bar__spacing: $carbon--layout-01;
