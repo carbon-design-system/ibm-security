@@ -31,7 +31,7 @@ const kinds = {
 const sizes = {
   Default: 'default',
   Field: 'field',
-  'Small (sm)': 'small',
+  'Small (sm)': 'sm',
   'Large (lg)': 'lg',
   'Extra large size (xl)': 'xl',
 };
