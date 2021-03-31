@@ -63,7 +63,7 @@ Button.defaultProps = {
 Button.propTypes = {
   ...propTypes,
 
-  /** Specify the kind of `Button` */
+  /** Specify the [kind of `Button`](https://react.carbondesignsystem.com/?path=/docs/components-button--default#button-kind) you want to create */
   kind: oneOf(ButtonKinds),
 
   /** Optional prop to allow overriding the icon rendering. Can be a React component class */
