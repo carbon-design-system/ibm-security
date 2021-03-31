@@ -25,11 +25,3 @@ package-lock.json
 
 # AAT test results from DAP/Axe
 results/
-
-# Yarn
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
