@@ -67,7 +67,8 @@ describe('InteractiveTag', () => {
 
   test('should invoke remove mock when remove button is clicked', () => {
     const onRemoveMock = jest.fn();
-    const { getByLabelText } = render(
+
+    const { getByTitle } = render(
       <InteractiveTag
         onRemove={onRemoveMock}
         removable
@@ -77,7 +78,7 @@ describe('InteractiveTag', () => {
       </InteractiveTag>
     );
 
-    userEvent.click(getByLabelText(/test remove button/i));
+    userEvent.click(getByTitle('test remove button'));
     expect(onRemoveMock).toHaveBeenCalledTimes(1);
   });
 });

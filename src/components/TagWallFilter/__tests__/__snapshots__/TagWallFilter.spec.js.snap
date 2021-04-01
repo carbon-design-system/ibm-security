@@ -486,39 +486,37 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                     >
                       
                       <div
-                        class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+                        aria-label=" Y"
+                        class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
                         id="y"
                       >
-                        
-                        <span>
-                          <span
-                            class="bx--text-truncate--end"
-                            title="Y"
-                          >
-                            Y
-                          </span>
-                          <button
-                            aria-label=""
-                            class="security--tag--interactive__button"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="security--icon security--tag--interactive__button__icon"
-                              fill="currentColor"
-                              focusable="false"
-                              height="16"
-                              preserveAspectRatio="xMidYMid meet"
-                              style="will-change: transform;"
-                              viewBox="0 0 32 32"
-                              width="16"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                              />
-                            </svg>
-                          </button>
+                        <span
+                          class="bx--tag__label"
+                          title="Y"
+                        >
+                          Y
                         </span>
+                        <button
+                          aria-labelledby="y"
+                          class="bx--tag__close-icon"
+                          title=""
+                          type="button"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            fill="currentColor"
+                            focusable="false"
+                            height="16"
+                            preserveAspectRatio="xMidYMid meet"
+                            viewBox="0 0 32 32"
+                            width="16"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                            />
+                          </svg>
+                        </button>
                       </div>
                     </section>
                   </div>
@@ -790,39 +788,37 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                 >
                                   
                                   <div
-                                    class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+                                    aria-label=" Y"
+                                    class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
                                     id="y"
                                   >
-                                    
-                                    <span>
-                                      <span
-                                        class="bx--text-truncate--end"
-                                        title="Y"
-                                      >
-                                        Y
-                                      </span>
-                                      <button
-                                        aria-label=""
-                                        class="security--tag--interactive__button"
-                                      >
-                                        <svg
-                                          aria-hidden="true"
-                                          class="security--icon security--tag--interactive__button__icon"
-                                          fill="currentColor"
-                                          focusable="false"
-                                          height="16"
-                                          preserveAspectRatio="xMidYMid meet"
-                                          style="will-change: transform;"
-                                          viewBox="0 0 32 32"
-                                          width="16"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                          <path
-                                            d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                                          />
-                                        </svg>
-                                      </button>
+                                    <span
+                                      class="bx--tag__label"
+                                      title="Y"
+                                    >
+                                      Y
                                     </span>
+                                    <button
+                                      aria-labelledby="y"
+                                      class="bx--tag__close-icon"
+                                      title=""
+                                      type="button"
+                                    >
+                                      <svg
+                                        aria-hidden="true"
+                                        fill="currentColor"
+                                        focusable="false"
+                                        height="16"
+                                        preserveAspectRatio="xMidYMid meet"
+                                        viewBox="0 0 32 32"
+                                        width="16"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                                        />
+                                      </svg>
+                                    </button>
                                   </div>
                                 </section>
                               </div>
@@ -1028,39 +1024,37 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                   >
                                     
                                     <div
-                                      class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+                                      aria-label=" Y"
+                                      class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
                                       id="y"
                                     >
-                                      
-                                      <span>
-                                        <span
-                                          class="bx--text-truncate--end"
-                                          title="Y"
-                                        >
-                                          Y
-                                        </span>
-                                        <button
-                                          aria-label=""
-                                          class="security--tag--interactive__button"
-                                        >
-                                          <svg
-                                            aria-hidden="true"
-                                            class="security--icon security--tag--interactive__button__icon"
-                                            fill="currentColor"
-                                            focusable="false"
-                                            height="16"
-                                            preserveAspectRatio="xMidYMid meet"
-                                            style="will-change: transform;"
-                                            viewBox="0 0 32 32"
-                                            width="16"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                          >
-                                            <path
-                                              d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                                            />
-                                          </svg>
-                                        </button>
+                                      <span
+                                        class="bx--tag__label"
+                                        title="Y"
+                                      >
+                                        Y
                                       </span>
+                                      <button
+                                        aria-labelledby="y"
+                                        class="bx--tag__close-icon"
+                                        title=""
+                                        type="button"
+                                      >
+                                        <svg
+                                          aria-hidden="true"
+                                          fill="currentColor"
+                                          focusable="false"
+                                          height="16"
+                                          preserveAspectRatio="xMidYMid meet"
+                                          viewBox="0 0 32 32"
+                                          width="16"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                          <path
+                                            d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                                          />
+                                        </svg>
+                                      </button>
                                     </div>
                                   </section>
                                 </div>
@@ -1268,39 +1262,37 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                       >
                                         
                                         <div
-                                          class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+                                          aria-label=" Y"
+                                          class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
                                           id="y"
                                         >
-                                          
-                                          <span>
-                                            <span
-                                              class="bx--text-truncate--end"
-                                              title="Y"
-                                            >
-                                              Y
-                                            </span>
-                                            <button
-                                              aria-label=""
-                                              class="security--tag--interactive__button"
-                                            >
-                                              <svg
-                                                aria-hidden="true"
-                                                class="security--icon security--tag--interactive__button__icon"
-                                                fill="currentColor"
-                                                focusable="false"
-                                                height="16"
-                                                preserveAspectRatio="xMidYMid meet"
-                                                style="will-change: transform;"
-                                                viewBox="0 0 32 32"
-                                                width="16"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                              >
-                                                <path
-                                                  d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                                                />
-                                              </svg>
-                                            </button>
+                                          <span
+                                            class="bx--tag__label"
+                                            title="Y"
+                                          >
+                                            Y
                                           </span>
+                                          <button
+                                            aria-labelledby="y"
+                                            class="bx--tag__close-icon"
+                                            title=""
+                                            type="button"
+                                          >
+                                            <svg
+                                              aria-hidden="true"
+                                              fill="currentColor"
+                                              focusable="false"
+                                              height="16"
+                                              preserveAspectRatio="xMidYMid meet"
+                                              viewBox="0 0 32 32"
+                                              width="16"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                              <path
+                                                d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                                              />
+                                            </svg>
+                                          </button>
                                         </div>
                                       </section>
                                     </div>
@@ -1530,95 +1522,57 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                       type="gray"
                                     >
                                       <Tag
-                                        className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
-                                        filter={false}
+                                        className="security--tag--interactive security--tag--interactive--default"
+                                        filter={true}
                                         id="y"
+                                        onClose={[Function]}
+                                        title=""
                                         type="gray"
                                       >
                                         <div
-                                          className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+                                          aria-label=" Y"
+                                          className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
                                           id="y"
                                         >
                                           <span
-                                            title={null}
+                                            className="bx--tag__label"
+                                            title="Y"
                                           >
-                                            <span
-                                              className="bx--text-truncate--end"
-                                              title="Y"
-                                            >
-                                              Y
-                                            </span>
-                                            <button
-                                              aria-label=""
-                                              className="security--tag--interactive__button"
-                                              onClick={[Function]}
-                                            >
-                                              <Icon
-                                                className="security--tag--interactive__button__icon"
-                                                height={null}
-                                                path={null}
-                                                renderIcon={
-                                                  Object {
-                                                    "$$typeof": Symbol(react.forward_ref),
-                                                    "render": [Function],
-                                                  }
-                                                }
-                                                size={20}
-                                                viewBox="0 0 32 32"
-                                                width={null}
-                                              >
-                                                <ForwardRef(Close16)
-                                                  aria-hidden="true"
-                                                  className="security--icon security--tag--interactive__button__icon"
-                                                  focusable={false}
-                                                  preserveAspectRatio="xMidYMid meet"
-                                                  style={
-                                                    Object {
-                                                      "willChange": "transform",
-                                                    }
-                                                  }
-                                                >
-                                                  <Icon
-                                                    aria-hidden="true"
-                                                    className="security--icon security--tag--interactive__button__icon"
-                                                    fill="currentColor"
-                                                    focusable={false}
-                                                    height={16}
-                                                    preserveAspectRatio="xMidYMid meet"
-                                                    style={
-                                                      Object {
-                                                        "willChange": "transform",
-                                                      }
-                                                    }
-                                                    viewBox="0 0 32 32"
-                                                    width={16}
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                  >
-                                                    <svg
-                                                      aria-hidden={true}
-                                                      className="security--icon security--tag--interactive__button__icon"
-                                                      fill="currentColor"
-                                                      focusable={false}
-                                                      height={16}
-                                                      preserveAspectRatio="xMidYMid meet"
-                                                      style={
-                                                        Object {
-                                                          "willChange": "transform",
-                                                        }
-                                                      }
-                                                      viewBox="0 0 32 32"
-                                                      width={16}
-                                                      xmlns="http://www.w3.org/2000/svg"
-                                                    >
-                                                      <path
-                                                        d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                                                      />
-                                                    </svg>
-                                                  </Icon>
-                                                </ForwardRef(Close16)>
-                                              </Icon>
-                                            </button>
+                                            Y
                                           </span>
+                                          <button
+                                            aria-labelledby="y"
+                                            className="bx--tag__close-icon"
+                                            onClick={[Function]}
+                                            title=""
+                                            type="button"
+                                          >
+                                            <ForwardRef(Close16)>
+                                              <Icon
+                                                fill="currentColor"
+                                                height={16}
+                                                preserveAspectRatio="xMidYMid meet"
+                                                viewBox="0 0 32 32"
+                                                width={16}
+                                                xmlns="http://www.w3.org/2000/svg"
+                                              >
+                                                <svg
+                                                  aria-hidden={true}
+                                                  fill="currentColor"
+                                                  focusable="false"
+                                                  height={16}
+                                                  preserveAspectRatio="xMidYMid meet"
+                                                  viewBox="0 0 32 32"
+                                                  width={16}
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                  <path
+                                                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                                                  />
+                                                </svg>
+                                              </Icon>
+                                            </ForwardRef(Close16)>
+                                          </button>
                                         </div>
                                       </Tag>
                                     </InteractiveTag>
@@ -2189,95 +2143,57 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 2`] = 
       type="gray"
     >
       <Tag
-        className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
-        filter={false}
+        className="security--tag--interactive security--tag--interactive--default"
+        filter={true}
         id="y"
+        onClose={[Function]}
+        title=""
         type="gray"
       >
         <div
-          className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+          aria-label=" Y"
+          className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
           id="y"
         >
           <span
-            title={null}
+            className="bx--tag__label"
+            title="Y"
           >
-            <span
-              className="bx--text-truncate--end"
-              title="Y"
-            >
-              Y
-            </span>
-            <button
-              aria-label=""
-              className="security--tag--interactive__button"
-              onClick={[Function]}
-            >
-              <Icon
-                className="security--tag--interactive__button__icon"
-                height={null}
-                path={null}
-                renderIcon={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "render": [Function],
-                  }
-                }
-                size={20}
-                viewBox="0 0 32 32"
-                width={null}
-              >
-                <ForwardRef(Close16)
-                  aria-hidden="true"
-                  className="security--icon security--tag--interactive__button__icon"
-                  focusable={false}
-                  preserveAspectRatio="xMidYMid meet"
-                  style={
-                    Object {
-                      "willChange": "transform",
-                    }
-                  }
-                >
-                  <Icon
-                    aria-hidden="true"
-                    className="security--icon security--tag--interactive__button__icon"
-                    fill="currentColor"
-                    focusable={false}
-                    height={16}
-                    preserveAspectRatio="xMidYMid meet"
-                    style={
-                      Object {
-                        "willChange": "transform",
-                      }
-                    }
-                    viewBox="0 0 32 32"
-                    width={16}
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <svg
-                      aria-hidden={true}
-                      className="security--icon security--tag--interactive__button__icon"
-                      fill="currentColor"
-                      focusable={false}
-                      height={16}
-                      preserveAspectRatio="xMidYMid meet"
-                      style={
-                        Object {
-                          "willChange": "transform",
-                        }
-                      }
-                      viewBox="0 0 32 32"
-                      width={16}
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                      />
-                    </svg>
-                  </Icon>
-                </ForwardRef(Close16)>
-              </Icon>
-            </button>
+            Y
           </span>
+          <button
+            aria-labelledby="y"
+            className="bx--tag__close-icon"
+            onClick={[Function]}
+            title=""
+            type="button"
+          >
+            <ForwardRef(Close16)>
+              <Icon
+                fill="currentColor"
+                height={16}
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 32 32"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <svg
+                  aria-hidden={true}
+                  fill="currentColor"
+                  focusable="false"
+                  height={16}
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 32 32"
+                  width={16}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                  />
+                </svg>
+              </Icon>
+            </ForwardRef(Close16)>
+          </button>
         </div>
       </Tag>
     </InteractiveTag>
@@ -2547,39 +2463,37 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                       >
                         
                         <div
-                          class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+                          aria-label=" Y"
+                          class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
                           id="y"
                         >
-                          
-                          <span>
-                            <span
-                              class="bx--text-truncate--end"
-                              title="Y"
-                            >
-                              Y
-                            </span>
-                            <button
-                              aria-label=""
-                              class="security--tag--interactive__button"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="security--icon security--tag--interactive__button__icon"
-                                fill="currentColor"
-                                focusable="false"
-                                height="16"
-                                preserveAspectRatio="xMidYMid meet"
-                                style="will-change: transform;"
-                                viewBox="0 0 32 32"
-                                width="16"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                                />
-                              </svg>
-                            </button>
+                          <span
+                            class="bx--tag__label"
+                            title="Y"
+                          >
+                            Y
                           </span>
+                          <button
+                            aria-labelledby="y"
+                            class="bx--tag__close-icon"
+                            title=""
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              fill="currentColor"
+                              focusable="false"
+                              height="16"
+                              preserveAspectRatio="xMidYMid meet"
+                              viewBox="0 0 32 32"
+                              width="16"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                              />
+                            </svg>
+                          </button>
                         </div>
                       </section>
                     </div>
@@ -2776,39 +2690,37 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                       >
                         
                         <div
-                          class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+                          aria-label=" X"
+                          class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
                           id="x"
                         >
-                          
-                          <span>
-                            <span
-                              class="bx--text-truncate--end"
-                              title="X"
-                            >
-                              X
-                            </span>
-                            <button
-                              aria-label=""
-                              class="security--tag--interactive__button"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="security--icon security--tag--interactive__button__icon"
-                                fill="currentColor"
-                                focusable="false"
-                                height="16"
-                                preserveAspectRatio="xMidYMid meet"
-                                style="will-change: transform;"
-                                viewBox="0 0 32 32"
-                                width="16"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                                />
-                              </svg>
-                            </button>
+                          <span
+                            class="bx--tag__label"
+                            title="X"
+                          >
+                            X
                           </span>
+                          <button
+                            aria-labelledby="x"
+                            class="bx--tag__close-icon"
+                            title=""
+                            type="button"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              fill="currentColor"
+                              focusable="false"
+                              height="16"
+                              preserveAspectRatio="xMidYMid meet"
+                              viewBox="0 0 32 32"
+                              width="16"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                              />
+                            </svg>
+                          </button>
                         </div>
                       </section>
                     </div>
@@ -3080,39 +2992,37 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   >
                                     
                                     <div
-                                      class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+                                      aria-label=" Y"
+                                      class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
                                       id="y"
                                     >
-                                      
-                                      <span>
-                                        <span
-                                          class="bx--text-truncate--end"
-                                          title="Y"
-                                        >
-                                          Y
-                                        </span>
-                                        <button
-                                          aria-label=""
-                                          class="security--tag--interactive__button"
-                                        >
-                                          <svg
-                                            aria-hidden="true"
-                                            class="security--icon security--tag--interactive__button__icon"
-                                            fill="currentColor"
-                                            focusable="false"
-                                            height="16"
-                                            preserveAspectRatio="xMidYMid meet"
-                                            style="will-change: transform;"
-                                            viewBox="0 0 32 32"
-                                            width="16"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                          >
-                                            <path
-                                              d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                                            />
-                                          </svg>
-                                        </button>
+                                      <span
+                                        class="bx--tag__label"
+                                        title="Y"
+                                      >
+                                        Y
                                       </span>
+                                      <button
+                                        aria-labelledby="y"
+                                        class="bx--tag__close-icon"
+                                        title=""
+                                        type="button"
+                                      >
+                                        <svg
+                                          aria-hidden="true"
+                                          fill="currentColor"
+                                          focusable="false"
+                                          height="16"
+                                          preserveAspectRatio="xMidYMid meet"
+                                          viewBox="0 0 32 32"
+                                          width="16"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                          <path
+                                            d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                                          />
+                                        </svg>
+                                      </button>
                                     </div>
                                   </section>
                                 </div>
@@ -3309,39 +3219,37 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   >
                                     
                                     <div
-                                      class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+                                      aria-label=" X"
+                                      class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
                                       id="x"
                                     >
-                                      
-                                      <span>
-                                        <span
-                                          class="bx--text-truncate--end"
-                                          title="X"
-                                        >
-                                          X
-                                        </span>
-                                        <button
-                                          aria-label=""
-                                          class="security--tag--interactive__button"
-                                        >
-                                          <svg
-                                            aria-hidden="true"
-                                            class="security--icon security--tag--interactive__button__icon"
-                                            fill="currentColor"
-                                            focusable="false"
-                                            height="16"
-                                            preserveAspectRatio="xMidYMid meet"
-                                            style="will-change: transform;"
-                                            viewBox="0 0 32 32"
-                                            width="16"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                          >
-                                            <path
-                                              d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                                            />
-                                          </svg>
-                                        </button>
+                                      <span
+                                        class="bx--tag__label"
+                                        title="X"
+                                      >
+                                        X
                                       </span>
+                                      <button
+                                        aria-labelledby="x"
+                                        class="bx--tag__close-icon"
+                                        title=""
+                                        type="button"
+                                      >
+                                        <svg
+                                          aria-hidden="true"
+                                          fill="currentColor"
+                                          focusable="false"
+                                          height="16"
+                                          preserveAspectRatio="xMidYMid meet"
+                                          viewBox="0 0 32 32"
+                                          width="16"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                          <path
+                                            d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                                          />
+                                        </svg>
+                                      </button>
                                     </div>
                                   </section>
                                 </div>
@@ -3547,39 +3455,37 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     >
                                       
                                       <div
-                                        class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+                                        aria-label=" Y"
+                                        class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
                                         id="y"
                                       >
-                                        
-                                        <span>
-                                          <span
-                                            class="bx--text-truncate--end"
-                                            title="Y"
-                                          >
-                                            Y
-                                          </span>
-                                          <button
-                                            aria-label=""
-                                            class="security--tag--interactive__button"
-                                          >
-                                            <svg
-                                              aria-hidden="true"
-                                              class="security--icon security--tag--interactive__button__icon"
-                                              fill="currentColor"
-                                              focusable="false"
-                                              height="16"
-                                              preserveAspectRatio="xMidYMid meet"
-                                              style="will-change: transform;"
-                                              viewBox="0 0 32 32"
-                                              width="16"
-                                              xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                              <path
-                                                d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                                              />
-                                            </svg>
-                                          </button>
+                                        <span
+                                          class="bx--tag__label"
+                                          title="Y"
+                                        >
+                                          Y
                                         </span>
+                                        <button
+                                          aria-labelledby="y"
+                                          class="bx--tag__close-icon"
+                                          title=""
+                                          type="button"
+                                        >
+                                          <svg
+                                            aria-hidden="true"
+                                            fill="currentColor"
+                                            focusable="false"
+                                            height="16"
+                                            preserveAspectRatio="xMidYMid meet"
+                                            viewBox="0 0 32 32"
+                                            width="16"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                          >
+                                            <path
+                                              d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                                            />
+                                          </svg>
+                                        </button>
                                       </div>
                                     </section>
                                   </div>
@@ -3776,39 +3682,37 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     >
                                       
                                       <div
-                                        class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+                                        aria-label=" X"
+                                        class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
                                         id="x"
                                       >
-                                        
-                                        <span>
-                                          <span
-                                            class="bx--text-truncate--end"
-                                            title="X"
-                                          >
-                                            X
-                                          </span>
-                                          <button
-                                            aria-label=""
-                                            class="security--tag--interactive__button"
-                                          >
-                                            <svg
-                                              aria-hidden="true"
-                                              class="security--icon security--tag--interactive__button__icon"
-                                              fill="currentColor"
-                                              focusable="false"
-                                              height="16"
-                                              preserveAspectRatio="xMidYMid meet"
-                                              style="will-change: transform;"
-                                              viewBox="0 0 32 32"
-                                              width="16"
-                                              xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                              <path
-                                                d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                                              />
-                                            </svg>
-                                          </button>
+                                        <span
+                                          class="bx--tag__label"
+                                          title="X"
+                                        >
+                                          X
                                         </span>
+                                        <button
+                                          aria-labelledby="x"
+                                          class="bx--tag__close-icon"
+                                          title=""
+                                          type="button"
+                                        >
+                                          <svg
+                                            aria-hidden="true"
+                                            fill="currentColor"
+                                            focusable="false"
+                                            height="16"
+                                            preserveAspectRatio="xMidYMid meet"
+                                            viewBox="0 0 32 32"
+                                            width="16"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                          >
+                                            <path
+                                              d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                                            />
+                                          </svg>
+                                        </button>
                                       </div>
                                     </section>
                                   </div>
@@ -4016,39 +3920,37 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         >
                                           
                                           <div
-                                            class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+                                            aria-label=" Y"
+                                            class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
                                             id="y"
                                           >
-                                            
-                                            <span>
-                                              <span
-                                                class="bx--text-truncate--end"
-                                                title="Y"
-                                              >
-                                                Y
-                                              </span>
-                                              <button
-                                                aria-label=""
-                                                class="security--tag--interactive__button"
-                                              >
-                                                <svg
-                                                  aria-hidden="true"
-                                                  class="security--icon security--tag--interactive__button__icon"
-                                                  fill="currentColor"
-                                                  focusable="false"
-                                                  height="16"
-                                                  preserveAspectRatio="xMidYMid meet"
-                                                  style="will-change: transform;"
-                                                  viewBox="0 0 32 32"
-                                                  width="16"
-                                                  xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                  <path
-                                                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                                                  />
-                                                </svg>
-                                              </button>
+                                            <span
+                                              class="bx--tag__label"
+                                              title="Y"
+                                            >
+                                              Y
                                             </span>
+                                            <button
+                                              aria-labelledby="y"
+                                              class="bx--tag__close-icon"
+                                              title=""
+                                              type="button"
+                                            >
+                                              <svg
+                                                aria-hidden="true"
+                                                fill="currentColor"
+                                                focusable="false"
+                                                height="16"
+                                                preserveAspectRatio="xMidYMid meet"
+                                                viewBox="0 0 32 32"
+                                                width="16"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                              >
+                                                <path
+                                                  d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                                                />
+                                              </svg>
+                                            </button>
                                           </div>
                                         </section>
                                       </div>
@@ -4245,39 +4147,37 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         >
                                           
                                           <div
-                                            class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+                                            aria-label=" X"
+                                            class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
                                             id="x"
                                           >
-                                            
-                                            <span>
-                                              <span
-                                                class="bx--text-truncate--end"
-                                                title="X"
-                                              >
-                                                X
-                                              </span>
-                                              <button
-                                                aria-label=""
-                                                class="security--tag--interactive__button"
-                                              >
-                                                <svg
-                                                  aria-hidden="true"
-                                                  class="security--icon security--tag--interactive__button__icon"
-                                                  fill="currentColor"
-                                                  focusable="false"
-                                                  height="16"
-                                                  preserveAspectRatio="xMidYMid meet"
-                                                  style="will-change: transform;"
-                                                  viewBox="0 0 32 32"
-                                                  width="16"
-                                                  xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                  <path
-                                                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                                                  />
-                                                </svg>
-                                              </button>
+                                            <span
+                                              class="bx--tag__label"
+                                              title="X"
+                                            >
+                                              X
                                             </span>
+                                            <button
+                                              aria-labelledby="x"
+                                              class="bx--tag__close-icon"
+                                              title=""
+                                              type="button"
+                                            >
+                                              <svg
+                                                aria-hidden="true"
+                                                fill="currentColor"
+                                                focusable="false"
+                                                height="16"
+                                                preserveAspectRatio="xMidYMid meet"
+                                                viewBox="0 0 32 32"
+                                                width="16"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                              >
+                                                <path
+                                                  d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                                                />
+                                              </svg>
+                                            </button>
                                           </div>
                                         </section>
                                       </div>
@@ -4507,95 +4407,57 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         type="gray"
                                       >
                                         <Tag
-                                          className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
-                                          filter={false}
+                                          className="security--tag--interactive security--tag--interactive--default"
+                                          filter={true}
                                           id="x"
+                                          onClose={[Function]}
+                                          title=""
                                           type="gray"
                                         >
                                           <div
-                                            className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+                                            aria-label=" X"
+                                            className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
                                             id="x"
                                           >
                                             <span
-                                              title={null}
+                                              className="bx--tag__label"
+                                              title="X"
                                             >
-                                              <span
-                                                className="bx--text-truncate--end"
-                                                title="X"
-                                              >
-                                                X
-                                              </span>
-                                              <button
-                                                aria-label=""
-                                                className="security--tag--interactive__button"
-                                                onClick={[Function]}
-                                              >
-                                                <Icon
-                                                  className="security--tag--interactive__button__icon"
-                                                  height={null}
-                                                  path={null}
-                                                  renderIcon={
-                                                    Object {
-                                                      "$$typeof": Symbol(react.forward_ref),
-                                                      "render": [Function],
-                                                    }
-                                                  }
-                                                  size={20}
-                                                  viewBox="0 0 32 32"
-                                                  width={null}
-                                                >
-                                                  <ForwardRef(Close16)
-                                                    aria-hidden="true"
-                                                    className="security--icon security--tag--interactive__button__icon"
-                                                    focusable={false}
-                                                    preserveAspectRatio="xMidYMid meet"
-                                                    style={
-                                                      Object {
-                                                        "willChange": "transform",
-                                                      }
-                                                    }
-                                                  >
-                                                    <Icon
-                                                      aria-hidden="true"
-                                                      className="security--icon security--tag--interactive__button__icon"
-                                                      fill="currentColor"
-                                                      focusable={false}
-                                                      height={16}
-                                                      preserveAspectRatio="xMidYMid meet"
-                                                      style={
-                                                        Object {
-                                                          "willChange": "transform",
-                                                        }
-                                                      }
-                                                      viewBox="0 0 32 32"
-                                                      width={16}
-                                                      xmlns="http://www.w3.org/2000/svg"
-                                                    >
-                                                      <svg
-                                                        aria-hidden={true}
-                                                        className="security--icon security--tag--interactive__button__icon"
-                                                        fill="currentColor"
-                                                        focusable={false}
-                                                        height={16}
-                                                        preserveAspectRatio="xMidYMid meet"
-                                                        style={
-                                                          Object {
-                                                            "willChange": "transform",
-                                                          }
-                                                        }
-                                                        viewBox="0 0 32 32"
-                                                        width={16}
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                      >
-                                                        <path
-                                                          d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                                                        />
-                                                      </svg>
-                                                    </Icon>
-                                                  </ForwardRef(Close16)>
-                                                </Icon>
-                                              </button>
+                                              X
                                             </span>
+                                            <button
+                                              aria-labelledby="x"
+                                              className="bx--tag__close-icon"
+                                              onClick={[Function]}
+                                              title=""
+                                              type="button"
+                                            >
+                                              <ForwardRef(Close16)>
+                                                <Icon
+                                                  fill="currentColor"
+                                                  height={16}
+                                                  preserveAspectRatio="xMidYMid meet"
+                                                  viewBox="0 0 32 32"
+                                                  width={16}
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                  <svg
+                                                    aria-hidden={true}
+                                                    fill="currentColor"
+                                                    focusable="false"
+                                                    height={16}
+                                                    preserveAspectRatio="xMidYMid meet"
+                                                    viewBox="0 0 32 32"
+                                                    width={16}
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                  >
+                                                    <path
+                                                      d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                                                    />
+                                                  </svg>
+                                                </Icon>
+                                              </ForwardRef(Close16)>
+                                            </button>
                                           </div>
                                         </Tag>
                                       </InteractiveTag>

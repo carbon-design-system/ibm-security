@@ -8468,21 +8468,6 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   }
 }
 
-.bx--checkbox:focus + .bx--checkbox-label::before,
-.bx--checkbox-label__focus::before,
-.bx--checkbox:checked:focus + .bx--checkbox-label::before,
-.bx--checkbox-label[data-contained-checkbox-state=\\"true\\"].bx--checkbox-label__focus::before,
-.bx--checkbox:indeterminate:focus + .bx--checkbox-label::before,
-.bx--checkbox-label[data-contained-checkbox-state=\\"mixed\\"].bx--checkbox-label__focus::before {
-  border-color: var(--interactive-04, #4589ff);
-  border-width: 3px;
-  width: 1.25rem;
-  height: 1.25rem;
-  left: -2px;
-  top: 0;
-  box-shadow: none;
-}
-
 .security--scroll-gradient {
   width: inherit;
   height: inherit;
@@ -10504,62 +10489,8 @@ li.bx--accordion__item--disabled:last-of-type {
   background-color: var(--active-ui, #525252);
 }
 
-.security--tag--interactive--removable {
-  padding-right: 0.125rem;
-}
-
-.security--tag--interactive__button {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-  border: 0;
-  display: inline-block;
-  padding: 0;
-  background: none;
-  border: 0;
-  cursor: pointer;
-  appearance: none;
-  width: 100%;
-  position: relative;
-  margin-left: 0.5rem;
-  height: 1.25rem;
-  width: 1.25rem;
-  color: currentColor;
-  vertical-align: middle;
-}
-
-.security--tag--interactive__button *,
-.security--tag--interactive__button *::before,
-.security--tag--interactive__button *::after {
-  box-sizing: inherit;
-}
-
-.security--tag--interactive__button::-moz-focus-inner {
-  border: 0;
-}
-
-.security--tag--interactive__button:focus, .security--tag--interactive__button:hover {
-  outline: none;
-}
-
-.security--tag--interactive__button:focus > .security--tag--interactive__button__icon, .security--tag--interactive__button:hover > .security--tag--interactive__button__icon {
-  border-color: currentColor;
-}
-
-.security--tag--interactive__button__icon {
-  transition-duration: 0.1s;
-  transition-property: border-color;
-  transition-timing-function: cubic-bezier(0.2, 0, 0.38, 0.9);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border: 0.125rem solid transparent;
-  border-radius: 50%;
-  fill: currentColor;
-  transform: translate(-50%, -50%);
+.security--tag--interactive > .bx--tag__close-icon:hover {
+  background-color: inherit;
 }
 
 .security--nav {
@@ -16943,9 +16874,7 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 .security--summary-card__action--icon-only {
-  justify-content: center;
-  width: 3rem;
-  flex: 0 0 auto;
+  flex: 0;
 }
 
 .security--summary-card__action-overlay {
@@ -17043,9 +16972,7 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 .security--tag-wall > .security--tag--interactive {
-  margin-right: 0.5rem;
   max-width: 40ex;
-  justify-content: space-between;
 }
 
 .security--tag-wall > .security--tag--interactive__button {

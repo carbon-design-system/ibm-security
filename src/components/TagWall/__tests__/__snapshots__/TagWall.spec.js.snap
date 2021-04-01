@@ -100,97 +100,59 @@ exports[`TagWall Rendering renders 1`] = `
       type="gray"
     >
       <Tag
-        className="security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
+        className="security--tag--interactive security--tag--interactive--selected"
         example-attribute="example-value"
-        filter={false}
+        filter={true}
         id="0"
+        onClose={[Function]}
+        title=""
         type="gray"
       >
         <div
-          className="bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected bx--tag--gray"
+          aria-label=" Tag 1"
+          className="bx--tag security--tag--interactive security--tag--interactive--selected bx--tag--filter bx--tag--gray"
           example-attribute="example-value"
           id="0"
         >
           <span
-            title={null}
+            className="bx--tag__label"
+            title="Tag 1"
           >
-            <span
-              className="bx--text-truncate--end"
-              title="Tag 1"
-            >
-              Tag 1
-            </span>
-            <button
-              aria-label=""
-              className="security--tag--interactive__button"
-              onClick={[Function]}
-            >
-              <Icon
-                className="security--tag--interactive__button__icon"
-                height={null}
-                path={null}
-                renderIcon={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "render": [Function],
-                  }
-                }
-                size={20}
-                viewBox="0 0 32 32"
-                width={null}
-              >
-                <ForwardRef(Close16)
-                  aria-hidden="true"
-                  className="security--icon security--tag--interactive__button__icon"
-                  focusable={false}
-                  preserveAspectRatio="xMidYMid meet"
-                  style={
-                    Object {
-                      "willChange": "transform",
-                    }
-                  }
-                >
-                  <Icon
-                    aria-hidden="true"
-                    className="security--icon security--tag--interactive__button__icon"
-                    fill="currentColor"
-                    focusable={false}
-                    height={16}
-                    preserveAspectRatio="xMidYMid meet"
-                    style={
-                      Object {
-                        "willChange": "transform",
-                      }
-                    }
-                    viewBox="0 0 32 32"
-                    width={16}
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <svg
-                      aria-hidden={true}
-                      className="security--icon security--tag--interactive__button__icon"
-                      fill="currentColor"
-                      focusable={false}
-                      height={16}
-                      preserveAspectRatio="xMidYMid meet"
-                      style={
-                        Object {
-                          "willChange": "transform",
-                        }
-                      }
-                      viewBox="0 0 32 32"
-                      width={16}
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                      />
-                    </svg>
-                  </Icon>
-                </ForwardRef(Close16)>
-              </Icon>
-            </button>
+            Tag 1
           </span>
+          <button
+            aria-labelledby="0"
+            className="bx--tag__close-icon"
+            onClick={[Function]}
+            title=""
+            type="button"
+          >
+            <ForwardRef(Close16)>
+              <Icon
+                fill="currentColor"
+                height={16}
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 32 32"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <svg
+                  aria-hidden={true}
+                  fill="currentColor"
+                  focusable="false"
+                  height={16}
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 32 32"
+                  width={16}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                  />
+                </svg>
+              </Icon>
+            </ForwardRef(Close16)>
+          </button>
         </div>
       </Tag>
     </InteractiveTag>
@@ -205,97 +167,59 @@ exports[`TagWall Rendering renders 1`] = `
       type="gray"
     >
       <Tag
-        className="security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
+        className="security--tag--interactive security--tag--interactive--selected"
         example-attribute="example-value"
-        filter={false}
+        filter={true}
         id="1"
+        onClose={[Function]}
+        title=""
         type="gray"
       >
         <div
-          className="bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected bx--tag--gray"
+          aria-label=" Tag 2"
+          className="bx--tag security--tag--interactive security--tag--interactive--selected bx--tag--filter bx--tag--gray"
           example-attribute="example-value"
           id="1"
         >
           <span
-            title={null}
+            className="bx--tag__label"
+            title="Tag 2"
           >
-            <span
-              className="bx--text-truncate--end"
-              title="Tag 2"
-            >
-              Tag 2
-            </span>
-            <button
-              aria-label=""
-              className="security--tag--interactive__button"
-              onClick={[Function]}
-            >
-              <Icon
-                className="security--tag--interactive__button__icon"
-                height={null}
-                path={null}
-                renderIcon={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "render": [Function],
-                  }
-                }
-                size={20}
-                viewBox="0 0 32 32"
-                width={null}
-              >
-                <ForwardRef(Close16)
-                  aria-hidden="true"
-                  className="security--icon security--tag--interactive__button__icon"
-                  focusable={false}
-                  preserveAspectRatio="xMidYMid meet"
-                  style={
-                    Object {
-                      "willChange": "transform",
-                    }
-                  }
-                >
-                  <Icon
-                    aria-hidden="true"
-                    className="security--icon security--tag--interactive__button__icon"
-                    fill="currentColor"
-                    focusable={false}
-                    height={16}
-                    preserveAspectRatio="xMidYMid meet"
-                    style={
-                      Object {
-                        "willChange": "transform",
-                      }
-                    }
-                    viewBox="0 0 32 32"
-                    width={16}
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <svg
-                      aria-hidden={true}
-                      className="security--icon security--tag--interactive__button__icon"
-                      fill="currentColor"
-                      focusable={false}
-                      height={16}
-                      preserveAspectRatio="xMidYMid meet"
-                      style={
-                        Object {
-                          "willChange": "transform",
-                        }
-                      }
-                      viewBox="0 0 32 32"
-                      width={16}
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                      />
-                    </svg>
-                  </Icon>
-                </ForwardRef(Close16)>
-              </Icon>
-            </button>
+            Tag 2
           </span>
+          <button
+            aria-labelledby="1"
+            className="bx--tag__close-icon"
+            onClick={[Function]}
+            title=""
+            type="button"
+          >
+            <ForwardRef(Close16)>
+              <Icon
+                fill="currentColor"
+                height={16}
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 32 32"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <svg
+                  aria-hidden={true}
+                  fill="currentColor"
+                  focusable="false"
+                  height={16}
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 32 32"
+                  width={16}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                  />
+                </svg>
+              </Icon>
+            </ForwardRef(Close16)>
+          </button>
         </div>
       </Tag>
     </InteractiveTag>
@@ -310,97 +234,59 @@ exports[`TagWall Rendering renders 1`] = `
       type="gray"
     >
       <Tag
-        className="security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected"
+        className="security--tag--interactive security--tag--interactive--selected"
         example-attribute="example-value"
-        filter={false}
+        filter={true}
         id="2"
+        onClose={[Function]}
+        title=""
         type="gray"
       >
         <div
-          className="bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected bx--tag--gray"
+          aria-label=" Tag 3"
+          className="bx--tag security--tag--interactive security--tag--interactive--selected bx--tag--filter bx--tag--gray"
           example-attribute="example-value"
           id="2"
         >
           <span
-            title={null}
+            className="bx--tag__label"
+            title="Tag 3"
           >
-            <span
-              className="bx--text-truncate--end"
-              title="Tag 3"
-            >
-              Tag 3
-            </span>
-            <button
-              aria-label=""
-              className="security--tag--interactive__button"
-              onClick={[Function]}
-            >
-              <Icon
-                className="security--tag--interactive__button__icon"
-                height={null}
-                path={null}
-                renderIcon={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "render": [Function],
-                  }
-                }
-                size={20}
-                viewBox="0 0 32 32"
-                width={null}
-              >
-                <ForwardRef(Close16)
-                  aria-hidden="true"
-                  className="security--icon security--tag--interactive__button__icon"
-                  focusable={false}
-                  preserveAspectRatio="xMidYMid meet"
-                  style={
-                    Object {
-                      "willChange": "transform",
-                    }
-                  }
-                >
-                  <Icon
-                    aria-hidden="true"
-                    className="security--icon security--tag--interactive__button__icon"
-                    fill="currentColor"
-                    focusable={false}
-                    height={16}
-                    preserveAspectRatio="xMidYMid meet"
-                    style={
-                      Object {
-                        "willChange": "transform",
-                      }
-                    }
-                    viewBox="0 0 32 32"
-                    width={16}
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <svg
-                      aria-hidden={true}
-                      className="security--icon security--tag--interactive__button__icon"
-                      fill="currentColor"
-                      focusable={false}
-                      height={16}
-                      preserveAspectRatio="xMidYMid meet"
-                      style={
-                        Object {
-                          "willChange": "transform",
-                        }
-                      }
-                      viewBox="0 0 32 32"
-                      width={16}
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                      />
-                    </svg>
-                  </Icon>
-                </ForwardRef(Close16)>
-              </Icon>
-            </button>
+            Tag 3
           </span>
+          <button
+            aria-labelledby="2"
+            className="bx--tag__close-icon"
+            onClick={[Function]}
+            title=""
+            type="button"
+          >
+            <ForwardRef(Close16)>
+              <Icon
+                fill="currentColor"
+                height={16}
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 32 32"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <svg
+                  aria-hidden={true}
+                  fill="currentColor"
+                  focusable="false"
+                  height={16}
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 32 32"
+                  width={16}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                  />
+                </svg>
+              </Icon>
+            </ForwardRef(Close16)>
+          </button>
         </div>
       </Tag>
     </InteractiveTag>
@@ -415,97 +301,59 @@ exports[`TagWall Rendering renders 1`] = `
       type="gray"
     >
       <Tag
-        className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        className="security--tag--interactive security--tag--interactive--default"
         example-attribute="example-value"
-        filter={false}
+        filter={true}
         id="3"
+        onClose={[Function]}
+        title=""
         type="gray"
       >
         <div
-          className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+          aria-label=" Tag 4"
+          className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
           example-attribute="example-value"
           id="3"
         >
           <span
-            title={null}
+            className="bx--tag__label"
+            title="Tag 4"
           >
-            <span
-              className="bx--text-truncate--end"
-              title="Tag 4"
-            >
-              Tag 4
-            </span>
-            <button
-              aria-label=""
-              className="security--tag--interactive__button"
-              onClick={[Function]}
-            >
-              <Icon
-                className="security--tag--interactive__button__icon"
-                height={null}
-                path={null}
-                renderIcon={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "render": [Function],
-                  }
-                }
-                size={20}
-                viewBox="0 0 32 32"
-                width={null}
-              >
-                <ForwardRef(Close16)
-                  aria-hidden="true"
-                  className="security--icon security--tag--interactive__button__icon"
-                  focusable={false}
-                  preserveAspectRatio="xMidYMid meet"
-                  style={
-                    Object {
-                      "willChange": "transform",
-                    }
-                  }
-                >
-                  <Icon
-                    aria-hidden="true"
-                    className="security--icon security--tag--interactive__button__icon"
-                    fill="currentColor"
-                    focusable={false}
-                    height={16}
-                    preserveAspectRatio="xMidYMid meet"
-                    style={
-                      Object {
-                        "willChange": "transform",
-                      }
-                    }
-                    viewBox="0 0 32 32"
-                    width={16}
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <svg
-                      aria-hidden={true}
-                      className="security--icon security--tag--interactive__button__icon"
-                      fill="currentColor"
-                      focusable={false}
-                      height={16}
-                      preserveAspectRatio="xMidYMid meet"
-                      style={
-                        Object {
-                          "willChange": "transform",
-                        }
-                      }
-                      viewBox="0 0 32 32"
-                      width={16}
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                      />
-                    </svg>
-                  </Icon>
-                </ForwardRef(Close16)>
-              </Icon>
-            </button>
+            Tag 4
           </span>
+          <button
+            aria-labelledby="3"
+            className="bx--tag__close-icon"
+            onClick={[Function]}
+            title=""
+            type="button"
+          >
+            <ForwardRef(Close16)>
+              <Icon
+                fill="currentColor"
+                height={16}
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 32 32"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <svg
+                  aria-hidden={true}
+                  fill="currentColor"
+                  focusable="false"
+                  height={16}
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 32 32"
+                  width={16}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                  />
+                </svg>
+              </Icon>
+            </ForwardRef(Close16)>
+          </button>
         </div>
       </Tag>
     </InteractiveTag>
@@ -520,97 +368,59 @@ exports[`TagWall Rendering renders 1`] = `
       type="gray"
     >
       <Tag
-        className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        className="security--tag--interactive security--tag--interactive--default"
         example-attribute="example-value"
-        filter={false}
+        filter={true}
         id="4"
+        onClose={[Function]}
+        title=""
         type="gray"
       >
         <div
-          className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+          aria-label=" Tag 5"
+          className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
           example-attribute="example-value"
           id="4"
         >
           <span
-            title={null}
+            className="bx--tag__label"
+            title="Tag 5"
           >
-            <span
-              className="bx--text-truncate--end"
-              title="Tag 5"
-            >
-              Tag 5
-            </span>
-            <button
-              aria-label=""
-              className="security--tag--interactive__button"
-              onClick={[Function]}
-            >
-              <Icon
-                className="security--tag--interactive__button__icon"
-                height={null}
-                path={null}
-                renderIcon={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "render": [Function],
-                  }
-                }
-                size={20}
-                viewBox="0 0 32 32"
-                width={null}
-              >
-                <ForwardRef(Close16)
-                  aria-hidden="true"
-                  className="security--icon security--tag--interactive__button__icon"
-                  focusable={false}
-                  preserveAspectRatio="xMidYMid meet"
-                  style={
-                    Object {
-                      "willChange": "transform",
-                    }
-                  }
-                >
-                  <Icon
-                    aria-hidden="true"
-                    className="security--icon security--tag--interactive__button__icon"
-                    fill="currentColor"
-                    focusable={false}
-                    height={16}
-                    preserveAspectRatio="xMidYMid meet"
-                    style={
-                      Object {
-                        "willChange": "transform",
-                      }
-                    }
-                    viewBox="0 0 32 32"
-                    width={16}
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <svg
-                      aria-hidden={true}
-                      className="security--icon security--tag--interactive__button__icon"
-                      fill="currentColor"
-                      focusable={false}
-                      height={16}
-                      preserveAspectRatio="xMidYMid meet"
-                      style={
-                        Object {
-                          "willChange": "transform",
-                        }
-                      }
-                      viewBox="0 0 32 32"
-                      width={16}
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                      />
-                    </svg>
-                  </Icon>
-                </ForwardRef(Close16)>
-              </Icon>
-            </button>
+            Tag 5
           </span>
+          <button
+            aria-labelledby="4"
+            className="bx--tag__close-icon"
+            onClick={[Function]}
+            title=""
+            type="button"
+          >
+            <ForwardRef(Close16)>
+              <Icon
+                fill="currentColor"
+                height={16}
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 32 32"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <svg
+                  aria-hidden={true}
+                  fill="currentColor"
+                  focusable="false"
+                  height={16}
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 32 32"
+                  width={16}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                  />
+                </svg>
+              </Icon>
+            </ForwardRef(Close16)>
+          </button>
         </div>
       </Tag>
     </InteractiveTag>
@@ -625,97 +435,59 @@ exports[`TagWall Rendering renders 1`] = `
       type="gray"
     >
       <Tag
-        className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        className="security--tag--interactive security--tag--interactive--default"
         example-attribute="example-value"
-        filter={false}
+        filter={true}
         id="5"
+        onClose={[Function]}
+        title=""
         type="gray"
       >
         <div
-          className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+          aria-label=" Tag 6"
+          className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
           example-attribute="example-value"
           id="5"
         >
           <span
-            title={null}
+            className="bx--tag__label"
+            title="Tag 6"
           >
-            <span
-              className="bx--text-truncate--end"
-              title="Tag 6"
-            >
-              Tag 6
-            </span>
-            <button
-              aria-label=""
-              className="security--tag--interactive__button"
-              onClick={[Function]}
-            >
-              <Icon
-                className="security--tag--interactive__button__icon"
-                height={null}
-                path={null}
-                renderIcon={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "render": [Function],
-                  }
-                }
-                size={20}
-                viewBox="0 0 32 32"
-                width={null}
-              >
-                <ForwardRef(Close16)
-                  aria-hidden="true"
-                  className="security--icon security--tag--interactive__button__icon"
-                  focusable={false}
-                  preserveAspectRatio="xMidYMid meet"
-                  style={
-                    Object {
-                      "willChange": "transform",
-                    }
-                  }
-                >
-                  <Icon
-                    aria-hidden="true"
-                    className="security--icon security--tag--interactive__button__icon"
-                    fill="currentColor"
-                    focusable={false}
-                    height={16}
-                    preserveAspectRatio="xMidYMid meet"
-                    style={
-                      Object {
-                        "willChange": "transform",
-                      }
-                    }
-                    viewBox="0 0 32 32"
-                    width={16}
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <svg
-                      aria-hidden={true}
-                      className="security--icon security--tag--interactive__button__icon"
-                      fill="currentColor"
-                      focusable={false}
-                      height={16}
-                      preserveAspectRatio="xMidYMid meet"
-                      style={
-                        Object {
-                          "willChange": "transform",
-                        }
-                      }
-                      viewBox="0 0 32 32"
-                      width={16}
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                      />
-                    </svg>
-                  </Icon>
-                </ForwardRef(Close16)>
-              </Icon>
-            </button>
+            Tag 6
           </span>
+          <button
+            aria-labelledby="5"
+            className="bx--tag__close-icon"
+            onClick={[Function]}
+            title=""
+            type="button"
+          >
+            <ForwardRef(Close16)>
+              <Icon
+                fill="currentColor"
+                height={16}
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 32 32"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <svg
+                  aria-hidden={true}
+                  fill="currentColor"
+                  focusable="false"
+                  height={16}
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 32 32"
+                  width={16}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                  />
+                </svg>
+              </Icon>
+            </ForwardRef(Close16)>
+          </button>
         </div>
       </Tag>
     </InteractiveTag>
@@ -730,97 +502,59 @@ exports[`TagWall Rendering renders 1`] = `
       type="gray"
     >
       <Tag
-        className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        className="security--tag--interactive security--tag--interactive--default"
         example-attribute="example-value"
-        filter={false}
+        filter={true}
         id="6"
+        onClose={[Function]}
+        title=""
         type="gray"
       >
         <div
-          className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+          aria-label=" Tag 7"
+          className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
           example-attribute="example-value"
           id="6"
         >
           <span
-            title={null}
+            className="bx--tag__label"
+            title="Tag 7"
           >
-            <span
-              className="bx--text-truncate--end"
-              title="Tag 7"
-            >
-              Tag 7
-            </span>
-            <button
-              aria-label=""
-              className="security--tag--interactive__button"
-              onClick={[Function]}
-            >
-              <Icon
-                className="security--tag--interactive__button__icon"
-                height={null}
-                path={null}
-                renderIcon={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "render": [Function],
-                  }
-                }
-                size={20}
-                viewBox="0 0 32 32"
-                width={null}
-              >
-                <ForwardRef(Close16)
-                  aria-hidden="true"
-                  className="security--icon security--tag--interactive__button__icon"
-                  focusable={false}
-                  preserveAspectRatio="xMidYMid meet"
-                  style={
-                    Object {
-                      "willChange": "transform",
-                    }
-                  }
-                >
-                  <Icon
-                    aria-hidden="true"
-                    className="security--icon security--tag--interactive__button__icon"
-                    fill="currentColor"
-                    focusable={false}
-                    height={16}
-                    preserveAspectRatio="xMidYMid meet"
-                    style={
-                      Object {
-                        "willChange": "transform",
-                      }
-                    }
-                    viewBox="0 0 32 32"
-                    width={16}
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <svg
-                      aria-hidden={true}
-                      className="security--icon security--tag--interactive__button__icon"
-                      fill="currentColor"
-                      focusable={false}
-                      height={16}
-                      preserveAspectRatio="xMidYMid meet"
-                      style={
-                        Object {
-                          "willChange": "transform",
-                        }
-                      }
-                      viewBox="0 0 32 32"
-                      width={16}
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                      />
-                    </svg>
-                  </Icon>
-                </ForwardRef(Close16)>
-              </Icon>
-            </button>
+            Tag 7
           </span>
+          <button
+            aria-labelledby="6"
+            className="bx--tag__close-icon"
+            onClick={[Function]}
+            title=""
+            type="button"
+          >
+            <ForwardRef(Close16)>
+              <Icon
+                fill="currentColor"
+                height={16}
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 32 32"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <svg
+                  aria-hidden={true}
+                  fill="currentColor"
+                  focusable="false"
+                  height={16}
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 32 32"
+                  width={16}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                  />
+                </svg>
+              </Icon>
+            </ForwardRef(Close16)>
+          </button>
         </div>
       </Tag>
     </InteractiveTag>
@@ -835,97 +569,59 @@ exports[`TagWall Rendering renders 1`] = `
       type="gray"
     >
       <Tag
-        className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        className="security--tag--interactive security--tag--interactive--default"
         example-attribute="example-value"
-        filter={false}
+        filter={true}
         id="7"
+        onClose={[Function]}
+        title=""
         type="gray"
       >
         <div
-          className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+          aria-label=" Tag 8"
+          className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
           example-attribute="example-value"
           id="7"
         >
           <span
-            title={null}
+            className="bx--tag__label"
+            title="Tag 8"
           >
-            <span
-              className="bx--text-truncate--end"
-              title="Tag 8"
-            >
-              Tag 8
-            </span>
-            <button
-              aria-label=""
-              className="security--tag--interactive__button"
-              onClick={[Function]}
-            >
-              <Icon
-                className="security--tag--interactive__button__icon"
-                height={null}
-                path={null}
-                renderIcon={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "render": [Function],
-                  }
-                }
-                size={20}
-                viewBox="0 0 32 32"
-                width={null}
-              >
-                <ForwardRef(Close16)
-                  aria-hidden="true"
-                  className="security--icon security--tag--interactive__button__icon"
-                  focusable={false}
-                  preserveAspectRatio="xMidYMid meet"
-                  style={
-                    Object {
-                      "willChange": "transform",
-                    }
-                  }
-                >
-                  <Icon
-                    aria-hidden="true"
-                    className="security--icon security--tag--interactive__button__icon"
-                    fill="currentColor"
-                    focusable={false}
-                    height={16}
-                    preserveAspectRatio="xMidYMid meet"
-                    style={
-                      Object {
-                        "willChange": "transform",
-                      }
-                    }
-                    viewBox="0 0 32 32"
-                    width={16}
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <svg
-                      aria-hidden={true}
-                      className="security--icon security--tag--interactive__button__icon"
-                      fill="currentColor"
-                      focusable={false}
-                      height={16}
-                      preserveAspectRatio="xMidYMid meet"
-                      style={
-                        Object {
-                          "willChange": "transform",
-                        }
-                      }
-                      viewBox="0 0 32 32"
-                      width={16}
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                      />
-                    </svg>
-                  </Icon>
-                </ForwardRef(Close16)>
-              </Icon>
-            </button>
+            Tag 8
           </span>
+          <button
+            aria-labelledby="7"
+            className="bx--tag__close-icon"
+            onClick={[Function]}
+            title=""
+            type="button"
+          >
+            <ForwardRef(Close16)>
+              <Icon
+                fill="currentColor"
+                height={16}
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 32 32"
+                width={16}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <svg
+                  aria-hidden={true}
+                  fill="currentColor"
+                  focusable="false"
+                  height={16}
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 32 32"
+                  width={16}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                  />
+                </svg>
+              </Icon>
+            </ForwardRef(Close16)>
+          </button>
         </div>
       </Tag>
     </InteractiveTag>
@@ -979,284 +675,276 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
     Label
   </h2>
   <div
-    class="bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected bx--tag--gray"
+    aria-label=" Tag 1"
+    class="bx--tag security--tag--interactive security--tag--interactive--selected bx--tag--filter bx--tag--gray"
     example-attribute="example-value"
     id="0"
   >
-    <span>
-      <span
-        class="bx--text-truncate--end"
-        title="Tag 1"
-      >
-        Tag 1
-      </span>
-      <button
-        aria-label=""
-        class="security--tag--interactive__button"
-      >
-        <svg
-          aria-hidden="true"
-          class="security--icon security--tag--interactive__button__icon"
-          fill="currentColor"
-          focusable="false"
-          height="16"
-          preserveAspectRatio="xMidYMid meet"
-          style="will-change: transform;"
-          viewBox="0 0 32 32"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-          />
-        </svg>
-      </button>
+    <span
+      class="bx--tag__label"
+      title="Tag 1"
+    >
+      Tag 1
     </span>
+    <button
+      aria-labelledby="0"
+      class="bx--tag__close-icon"
+      title=""
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        fill="currentColor"
+        focusable="false"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 32 32"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+        />
+      </svg>
+    </button>
   </div>
   <div
-    class="bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected bx--tag--gray"
+    aria-label=" Tag 2"
+    class="bx--tag security--tag--interactive security--tag--interactive--selected bx--tag--filter bx--tag--gray"
     example-attribute="example-value"
     id="1"
   >
-    <span>
-      <span
-        class="bx--text-truncate--end"
-        title="Tag 2"
-      >
-        Tag 2
-      </span>
-      <button
-        aria-label=""
-        class="security--tag--interactive__button"
-      >
-        <svg
-          aria-hidden="true"
-          class="security--icon security--tag--interactive__button__icon"
-          fill="currentColor"
-          focusable="false"
-          height="16"
-          preserveAspectRatio="xMidYMid meet"
-          style="will-change: transform;"
-          viewBox="0 0 32 32"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-          />
-        </svg>
-      </button>
+    <span
+      class="bx--tag__label"
+      title="Tag 2"
+    >
+      Tag 2
     </span>
+    <button
+      aria-labelledby="1"
+      class="bx--tag__close-icon"
+      title=""
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        fill="currentColor"
+        focusable="false"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 32 32"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+        />
+      </svg>
+    </button>
   </div>
   <div
-    class="bx--tag security--tag--interactive security--tag--interactive--removable security--tag--interactive--selected bx--tag--gray"
+    aria-label=" Tag 3"
+    class="bx--tag security--tag--interactive security--tag--interactive--selected bx--tag--filter bx--tag--gray"
     example-attribute="example-value"
     id="2"
   >
-    <span>
-      <span
-        class="bx--text-truncate--end"
-        title="Tag 3"
-      >
-        Tag 3
-      </span>
-      <button
-        aria-label=""
-        class="security--tag--interactive__button"
-      >
-        <svg
-          aria-hidden="true"
-          class="security--icon security--tag--interactive__button__icon"
-          fill="currentColor"
-          focusable="false"
-          height="16"
-          preserveAspectRatio="xMidYMid meet"
-          style="will-change: transform;"
-          viewBox="0 0 32 32"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-          />
-        </svg>
-      </button>
+    <span
+      class="bx--tag__label"
+      title="Tag 3"
+    >
+      Tag 3
     </span>
+    <button
+      aria-labelledby="2"
+      class="bx--tag__close-icon"
+      title=""
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        fill="currentColor"
+        focusable="false"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 32 32"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+        />
+      </svg>
+    </button>
   </div>
   <div
-    class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+    aria-label=" Tag 4"
+    class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
     example-attribute="example-value"
     id="3"
   >
-    <span>
-      <span
-        class="bx--text-truncate--end"
-        title="Tag 4"
-      >
-        Tag 4
-      </span>
-      <button
-        aria-label=""
-        class="security--tag--interactive__button"
-      >
-        <svg
-          aria-hidden="true"
-          class="security--icon security--tag--interactive__button__icon"
-          fill="currentColor"
-          focusable="false"
-          height="16"
-          preserveAspectRatio="xMidYMid meet"
-          style="will-change: transform;"
-          viewBox="0 0 32 32"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-          />
-        </svg>
-      </button>
+    <span
+      class="bx--tag__label"
+      title="Tag 4"
+    >
+      Tag 4
     </span>
+    <button
+      aria-labelledby="3"
+      class="bx--tag__close-icon"
+      title=""
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        fill="currentColor"
+        focusable="false"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 32 32"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+        />
+      </svg>
+    </button>
   </div>
   <div
-    class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+    aria-label=" Tag 5"
+    class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
     example-attribute="example-value"
     id="4"
   >
-    <span>
-      <span
-        class="bx--text-truncate--end"
-        title="Tag 5"
-      >
-        Tag 5
-      </span>
-      <button
-        aria-label=""
-        class="security--tag--interactive__button"
-      >
-        <svg
-          aria-hidden="true"
-          class="security--icon security--tag--interactive__button__icon"
-          fill="currentColor"
-          focusable="false"
-          height="16"
-          preserveAspectRatio="xMidYMid meet"
-          style="will-change: transform;"
-          viewBox="0 0 32 32"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-          />
-        </svg>
-      </button>
+    <span
+      class="bx--tag__label"
+      title="Tag 5"
+    >
+      Tag 5
     </span>
+    <button
+      aria-labelledby="4"
+      class="bx--tag__close-icon"
+      title=""
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        fill="currentColor"
+        focusable="false"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 32 32"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+        />
+      </svg>
+    </button>
   </div>
   <div
-    class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+    aria-label=" Tag 6"
+    class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
     example-attribute="example-value"
     id="5"
   >
-    <span>
-      <span
-        class="bx--text-truncate--end"
-        title="Tag 6"
-      >
-        Tag 6
-      </span>
-      <button
-        aria-label=""
-        class="security--tag--interactive__button"
-      >
-        <svg
-          aria-hidden="true"
-          class="security--icon security--tag--interactive__button__icon"
-          fill="currentColor"
-          focusable="false"
-          height="16"
-          preserveAspectRatio="xMidYMid meet"
-          style="will-change: transform;"
-          viewBox="0 0 32 32"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-          />
-        </svg>
-      </button>
+    <span
+      class="bx--tag__label"
+      title="Tag 6"
+    >
+      Tag 6
     </span>
+    <button
+      aria-labelledby="5"
+      class="bx--tag__close-icon"
+      title=""
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        fill="currentColor"
+        focusable="false"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 32 32"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+        />
+      </svg>
+    </button>
   </div>
   <div
-    class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+    aria-label=" Tag 7"
+    class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
     example-attribute="example-value"
     id="6"
   >
-    <span>
-      <span
-        class="bx--text-truncate--end"
-        title="Tag 7"
-      >
-        Tag 7
-      </span>
-      <button
-        aria-label=""
-        class="security--tag--interactive__button"
-      >
-        <svg
-          aria-hidden="true"
-          class="security--icon security--tag--interactive__button__icon"
-          fill="currentColor"
-          focusable="false"
-          height="16"
-          preserveAspectRatio="xMidYMid meet"
-          style="will-change: transform;"
-          viewBox="0 0 32 32"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-          />
-        </svg>
-      </button>
+    <span
+      class="bx--tag__label"
+      title="Tag 7"
+    >
+      Tag 7
     </span>
+    <button
+      aria-labelledby="6"
+      class="bx--tag__close-icon"
+      title=""
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        fill="currentColor"
+        focusable="false"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 32 32"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+        />
+      </svg>
+    </button>
   </div>
   <div
-    class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+    aria-label=" Tag 8"
+    class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
     example-attribute="example-value"
     id="7"
   >
-    <span>
-      <span
-        class="bx--text-truncate--end"
-        title="Tag 8"
-      >
-        Tag 8
-      </span>
-      <button
-        aria-label=""
-        class="security--tag--interactive__button"
-      >
-        <svg
-          aria-hidden="true"
-          class="security--icon security--tag--interactive__button__icon"
-          fill="currentColor"
-          focusable="false"
-          height="16"
-          preserveAspectRatio="xMidYMid meet"
-          style="will-change: transform;"
-          viewBox="0 0 32 32"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-          />
-        </svg>
-      </button>
+    <span
+      class="bx--tag__label"
+      title="Tag 8"
+    >
+      Tag 8
     </span>
+    <button
+      aria-labelledby="7"
+      class="bx--tag__close-icon"
+      title=""
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        fill="currentColor"
+        focusable="false"
+        height="16"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 32 32"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+        />
+      </svg>
+    </button>
   </div>
   <button
     class="security--button bx--btn bx--btn--sm bx--btn--ghost"
@@ -1372,6 +1060,8 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         example-attribute="example-value"
         filter={false}
         id="0"
+        onClose={[Function]}
+        title=""
         type="gray"
       >
         <div
@@ -1380,14 +1070,9 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
           id="0"
         >
           <span
-            title={null}
+            title="Tag 1"
           >
-            <span
-              className="bx--text-truncate--end"
-              title="Tag 1"
-            >
-              Tag 1
-            </span>
+            Tag 1
           </span>
         </div>
       </Tag>
@@ -1407,6 +1092,8 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         example-attribute="example-value"
         filter={false}
         id="1"
+        onClose={[Function]}
+        title=""
         type="gray"
       >
         <div
@@ -1415,14 +1102,9 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
           id="1"
         >
           <span
-            title={null}
+            title="Tag 2"
           >
-            <span
-              className="bx--text-truncate--end"
-              title="Tag 2"
-            >
-              Tag 2
-            </span>
+            Tag 2
           </span>
         </div>
       </Tag>
@@ -1442,6 +1124,8 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         example-attribute="example-value"
         filter={false}
         id="2"
+        onClose={[Function]}
+        title=""
         type="gray"
       >
         <div
@@ -1450,14 +1134,9 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
           id="2"
         >
           <span
-            title={null}
+            title="Tag 3"
           >
-            <span
-              className="bx--text-truncate--end"
-              title="Tag 3"
-            >
-              Tag 3
-            </span>
+            Tag 3
           </span>
         </div>
       </Tag>
@@ -1477,6 +1156,8 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         example-attribute="example-value"
         filter={false}
         id="3"
+        onClose={[Function]}
+        title=""
         type="gray"
       >
         <div
@@ -1485,14 +1166,9 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
           id="3"
         >
           <span
-            title={null}
+            title="Tag 4"
           >
-            <span
-              className="bx--text-truncate--end"
-              title="Tag 4"
-            >
-              Tag 4
-            </span>
+            Tag 4
           </span>
         </div>
       </Tag>
@@ -1512,6 +1188,8 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         example-attribute="example-value"
         filter={false}
         id="4"
+        onClose={[Function]}
+        title=""
         type="gray"
       >
         <div
@@ -1520,14 +1198,9 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
           id="4"
         >
           <span
-            title={null}
+            title="Tag 5"
           >
-            <span
-              className="bx--text-truncate--end"
-              title="Tag 5"
-            >
-              Tag 5
-            </span>
+            Tag 5
           </span>
         </div>
       </Tag>
@@ -1547,6 +1220,8 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         example-attribute="example-value"
         filter={false}
         id="5"
+        onClose={[Function]}
+        title=""
         type="gray"
       >
         <div
@@ -1555,14 +1230,9 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
           id="5"
         >
           <span
-            title={null}
+            title="Tag 6"
           >
-            <span
-              className="bx--text-truncate--end"
-              title="Tag 6"
-            >
-              Tag 6
-            </span>
+            Tag 6
           </span>
         </div>
       </Tag>
@@ -1582,6 +1252,8 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         example-attribute="example-value"
         filter={false}
         id="6"
+        onClose={[Function]}
+        title=""
         type="gray"
       >
         <div
@@ -1590,14 +1262,9 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
           id="6"
         >
           <span
-            title={null}
+            title="Tag 7"
           >
-            <span
-              className="bx--text-truncate--end"
-              title="Tag 7"
-            >
-              Tag 7
-            </span>
+            Tag 7
           </span>
         </div>
       </Tag>
@@ -1617,6 +1284,8 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         example-attribute="example-value"
         filter={false}
         id="7"
+        onClose={[Function]}
+        title=""
         type="gray"
       >
         <div
@@ -1625,14 +1294,9 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
           id="7"
         >
           <span
-            title={null}
+            title="Tag 8"
           >
-            <span
-              className="bx--text-truncate--end"
-              title="Tag 8"
-            >
-              Tag 8
-            </span>
+            Tag 8
           </span>
         </div>
       </Tag>

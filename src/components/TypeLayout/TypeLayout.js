@@ -1,6 +1,6 @@
 /**
  * @file Type layout.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import classnames from 'classnames';
@@ -68,6 +68,7 @@ const TypeLayoutCell = ({ children, className, ...other }) => (
 const TypeLayoutRow = ({ children, className, ...other }) => (
   <StructuredListRow
     className={classnames(`${namespace}__row`, className)}
+    role="row" // TODO: Remove workaround - https://github.com/carbon-design-system/carbon/issues/1937
     {...other}
   >
     {children}
