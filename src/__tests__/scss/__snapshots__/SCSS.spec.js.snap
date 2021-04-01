@@ -10390,6 +10390,14 @@ li.bx--accordion__item--disabled:last-of-type {
   transform: translate(-50%, -50%);
 }
 
+.security--card-microlayout {
+  padding-bottom: 1rem;
+}
+
+.security--card-microlayout__component {
+  margin-bottom: 1rem;
+}
+
 .security--nav {
   position: relative;
 }
