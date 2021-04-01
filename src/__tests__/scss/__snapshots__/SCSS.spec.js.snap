@@ -109,6 +109,19 @@ em {
   }
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 html {
   font-size: 16px;
 }
@@ -1294,6 +1307,32 @@ body {
   text-overflow: ellipsis;
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .security--input__background__color--light .bx--date-picker__input, .security--input__background__color--light .bx--dropdown,
 .security--input__background__color--light .bx--number input[type=\\"number\\"], .security--input__background__color--light .bx--search-input, .security--input__background__color--light .bx--select-input, .security--input__background__color--light .bx--text-area, .security--input__background__color--light .bx--text-input, .security--input__background__color--light .bx--list-box, .security--input__background__color--light .bx--list-box__menu, .security--input__background__color--light .security--button--icon:focus, .security--input__background__color--light .security--button--icon:hover, .security--card .bx--number .security--input__background__color--light input[type=\\"number\\"], .security--tearsheet--small .bx--number .security--input__background__color--light input[type=\\"number\\"], .security--tearsheet .bx--number .security--input__background__color--light input[type=\\"number\\"] {
   background-color: var(--cds-ui-02, #393939);
@@ -2513,6 +2552,19 @@ body {
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 [class*=\\"ibm-type\\"] {
   margin-top: 0;
 }
@@ -2622,6 +2674,19 @@ body {
   breakpoints: var(--cds-display-04-breakpoints, (md: (font-size: 4.25rem, line-height: 1.15), lg: (font-size: 5.75rem, line-height: 1.11, letter-spacing: -0.64px), xlg: (font-size: 7.625rem, line-height: 1.07, letter-spacing: -0.64px), max: (font-size: 9.75rem, line-height: 1.05, letter-spacing: -0.96px)));
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .bx--link {
   box-sizing: border-box;
   margin: 0;
@@ -2913,6 +2978,19 @@ body {
   height: 1rem;
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .security--card--skeleton__wrapper {
   display: flex;
 }
@@ -2921,6 +2999,19 @@ body {
   margin-right: 0.5rem;
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .security--card {
   display: flex;
   width: auto;
@@ -5881,6 +5972,19 @@ a.bx--overflow-menu-options__btn::before {
   fill: var(--cds-text-03, #6f6f6f);
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .security--button--icon {
   box-sizing: border-box;
   margin: 0;
@@ -6083,6 +6187,58 @@ a.bx--overflow-menu-options__btn::before {
   transform: translate(0.25rem, -50%);
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .security--panel--v2 {
   display: flex;
   position: fixed;
@@ -8863,6 +9019,19 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   box-shadow: none;
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .security--scroll-gradient {
   width: inherit;
   height: inherit;
@@ -10235,6 +10404,19 @@ li.bx--accordion__item--disabled:last-of-type {
   letter-spacing: var(--cds-productive-heading-03-letter-spacing, 0);
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .security--icon-button-bar {
   display: flex;
   overflow: none;
@@ -10303,6 +10485,19 @@ li.bx--accordion__item--disabled:last-of-type {
   width: 1px;
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -11102,6 +11297,19 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-bottom: 0.5rem;
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .security--ne-section {
   min-height: 12.5rem;
   background-position: center right;
@@ -13802,6 +14010,71 @@ li.bx--accordion__item--disabled:last-of-type {
   color: #161616;
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .security--panel {
   display: flex;
   position: fixed;
@@ -14143,6 +14416,136 @@ li.bx--accordion__item--disabled:last-of-type {
   flex-grow: 1;
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .security--pill {
   border-radius: 6.25rem;
   padding: 0 0.5rem;
@@ -17959,6 +18362,71 @@ li.bx--accordion__item--disabled:last-of-type {
   flex-direction: column;
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .security--filter .bx--list-box__field {
   position: fixed;
   height: 2.5rem;
@@ -18046,6 +18514,19 @@ li.bx--accordion__item--disabled:last-of-type {
   display: flex;
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -18086,6 +18567,201 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .security--tearsheet--small {
   display: flex;
   position: fixed;
@@ -18228,6 +18904,136 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-left: 0;
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .security--tag-wall-filter__tag-wall {
   min-height: 1.5rem;
   margin-top: 0.75rem;
@@ -18256,6 +19062,71 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-top: 2.5rem;
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .security--portal__overlay {
   display: flex;
   position: fixed;
@@ -18280,6 +19151,19 @@ li.bx--accordion__item--disabled:last-of-type {
   z-index: 9000;
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -18320,6 +19204,266 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .security--tearsheet {
   display: flex;
   position: fixed;
@@ -18496,6 +19640,19 @@ li.bx--accordion__item--disabled:last-of-type {
   flex-wrap: wrap;
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -18536,6 +19693,201 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .security--time-indicator {
   font-size: var(--cds-label-01-font-size, 0.75rem);
   font-weight: var(--cds-label-01-font-weight, 400);
@@ -18551,6 +19903,32 @@ li.bx--accordion__item--disabled:last-of-type {
   fill: var(--cds-icon-01, #f4f4f4);
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .security--toolbar {
   position: fixed;
   top: 0;
@@ -19587,6 +20965,84 @@ li.bx--accordion__item--disabled:last-of-type {
   border-width: 0;
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -19627,6 +21083,266 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .security--wizard__navItem {
   margin-left: -1.5rem;
 }
@@ -19680,6 +21396,32 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .security--header__list__item {
   height: inherit;
 }
@@ -19697,6 +21439,32 @@ li.bx--accordion__item--disabled:last-of-type {
   min-height: inherit;
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .security--header__notification {
   display: flex;
   width: 100%;
@@ -20028,6 +21796,19 @@ li.bx--accordion__item--disabled:last-of-type {
   max-height: 0;
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .security--header__popover__header {
   display: flex;
   flex-wrap: nowrap;
@@ -20042,6 +21823,19 @@ li.bx--accordion__item--disabled:last-of-type {
   letter-spacing: var(--cds-heading-02-letter-spacing, 0);
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .security--header__popover__link--secondary, .security--header__popover__link--secondary:focus, .security--header__popover__link--secondary:hover, .security--header__popover__link--secondary:visited {
   color: var(--cds-inverse-link, #0f62fe);
 }
@@ -20050,6 +21844,19 @@ li.bx--accordion__item--disabled:last-of-type {
   outline-color: var(--cds-inverse-link, #0f62fe);
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .security--header {
   display: flex;
   position: fixed;
@@ -20725,6 +22532,162 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .security--shell--active {
   margin-left: 3rem;
 }
@@ -28282,6 +30245,45 @@ a.bx--navigation-link:focus {
   margin-left: auto;
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .security--unstable-pagination {
   box-sizing: border-box;
   margin: 0;
@@ -28479,6 +30481,19 @@ body *::after {
   box-sizing: inherit;
 }
 
+/* $feature-flags: map-merge(
+  $map1:
+    map-merge(
+      $map1: $feature-flags,
+      $map2: (
+        enable-css-custom-properties: map-get(
+            $map: $security--feature-flags,
+            $key: $theme__name--security,
+          ),
+      ),
+    ),
+  $map2: $security--feature-flags,
+); */
 .bx--grid {
   margin-right: auto;
   margin-left: auto;

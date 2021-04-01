@@ -21,6 +21,10 @@ $platform__name: platform;
 /// @type String
 $theme__name: enable-css-custom-properties;
 
+/// Security theme feature flag.
+/// @type String
+$theme__name--security: security--css-custom-property-theming;
+
 // TODO: `2.x` - Deprecate after teams have migrated to `@carbon/type`.
 
 /// Type feature flag.
@@ -32,7 +36,7 @@ $type__name: ibm-type;
 $security--default-feature-flags: (
   #{$grid__name}: true,
   #{$platform__name}: true,
-  #{$theme__name}: true,
+  #{$theme__name--security}: true,
   #{$type__name}: true
 );
 
@@ -41,6 +45,16 @@ $security--feature-flags: () !default;
 $security--feature-flags: map-merge(
   $map1: $security--default-feature-flags,
   $map2: $security--feature-flags,
+);
+
+$security--feature-flags: map-merge(
+  $map1: $security--feature-flags,
+  $map2: (
+    #{$theme__name}: map-get(
+        $map: $security--feature-flags,
+        $key: $theme__name--security,
+      ),
+  ),
 );
 
 $feature-flags: map-merge(
