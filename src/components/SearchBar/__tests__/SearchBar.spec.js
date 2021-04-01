@@ -1,6 +1,6 @@
 /**
  * @file Search bar tests.
- * @copyright IBM Security 2019 - 2021
+ * @copyright IBM Security 2019
  */
 
 import { shallow } from 'enzyme';
@@ -14,19 +14,19 @@ import { namespace } from '../SearchBar';
 const {
   clearButtonLabelText,
   labelText,
-  placeholder,
+  placeHolderText,
+  selectedScopes,
   scopes,
   scopesTypeLabel,
-  selectedScopes,
   submitLabel,
   value,
 } = props;
 
 const regularProps = {
-  clearButtonLabelText,
-  labelText,
-  placeholder,
   submitLabel,
+  placeHolderText,
+  labelText,
+  clearButtonLabelText,
 };
 
 const { fn } = jest;
