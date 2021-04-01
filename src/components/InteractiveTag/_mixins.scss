@@ -1,7 +1,7 @@
 ////
 /// Interactive tag mixins.
 /// @group tag--interactive
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/spacing';
@@ -56,6 +56,7 @@ $tag--interactive__namespace: get-component-namespace(
     height: $tag--interactive__button__sizing__height;
     width: $tag--interactive__button__sizing__height;
     color: currentColor;
+    vertical-align: middle;
 
     &:focus,
     &:hover {

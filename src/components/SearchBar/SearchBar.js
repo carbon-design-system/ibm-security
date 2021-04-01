@@ -1,6 +1,6 @@
 /**
  * @file SearchBar.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
@@ -210,13 +210,13 @@ export default class SearchBar extends React.Component {
       >
         {this.renderScopeSelector()}
         <Search
-          name="search-input"
           className={`${namespace}__input`}
-          placeHolderText={placeHolderText}
-          labelText={labelText}
-          value={value}
-          onChange={this.handleInputChange}
           closeButtonLabelText={clearButtonLabelText}
+          labelText={labelText}
+          name="search-input"
+          onChange={this.handleInputChange}
+          placeholder={placeHolderText}
+          value={value}
         />
         <Button
           name="search-submit"

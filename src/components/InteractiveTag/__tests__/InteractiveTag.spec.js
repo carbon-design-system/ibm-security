@@ -1,6 +1,6 @@
 /**
  * @file Interactive tag tests.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import userEvent from '@testing-library/user-event';
@@ -13,6 +13,8 @@ import { InteractiveTag } from '../../..';
 import { namespace } from '../InteractiveTag';
 
 describe('InteractiveTag', () => {
+  const dataTestId = 'dataTestId';
+
   test('should have no Axe or DAP violations', async () => {
     const { container } = renderWithinLandmark(
       <InteractiveTag removable>test tag</InteractiveTag>
@@ -36,24 +38,31 @@ describe('InteractiveTag', () => {
   });
 
   test('should add a custom class', () => {
-    const { getByText } = render(
-      <InteractiveTag className="custom-class">test tag</InteractiveTag>
+    const { queryByTestId } = render(
+      <InteractiveTag className="custom-class" data-testid={dataTestId}>
+        test tag
+      </InteractiveTag>
     );
-    expect(getByText(/test tag/i)).toHaveClass('custom-class');
+
+    expect(queryByTestId(dataTestId)).toHaveClass('custom-class');
   });
 
   test('should add selected class when `isSelected` is `true`', () => {
-    const { getByText } = render(
-      <InteractiveTag isSelected>test tag</InteractiveTag>
+    const { queryByTestId } = render(
+      <InteractiveTag data-testid={dataTestId} isSelected>
+        test tag
+      </InteractiveTag>
     );
-    expect(getByText(/test tag/i)).toHaveClass(`${namespace}--selected`);
+
+    expect(queryByTestId(dataTestId)).toHaveClass(`${namespace}--selected`);
   });
 
   test('should pass through extra props via spread attribute', () => {
     const { queryByTestId } = render(
-      <InteractiveTag data-testid="test-id">test tag</InteractiveTag>
+      <InteractiveTag data-testid={dataTestId}>test tag</InteractiveTag>
     );
-    expect(queryByTestId('test-id')).toBeInTheDocument();
+
+    expect(queryByTestId(dataTestId)).toBeInTheDocument();
   });
 
   test('should invoke remove mock when remove button is clicked', () => {

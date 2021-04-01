@@ -1,6 +1,6 @@
 /**
  * @file Search bar mocks.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 const scopes = [
@@ -19,13 +19,13 @@ const scopes = [
 ];
 
 export default {
-  submitLabel: 'Submit',
-  placeHolderText: 'Placeholder',
-  labelText: 'Label',
-  clearButtonLabelText: 'Clear',
-  value: 'Initial value',
-  scopes,
-  selectedScopes: [scopes[0]],
-  scopesTypeLabel: 'Scopes',
   allSelectedScopesLabel: 'All scopes',
+  clearButtonLabelText: 'Clear',
+  labelText: 'Label',
+  placeholder: 'Placeholder',
+  scopes,
+  scopesTypeLabel: 'Scopes',
+  selectedScopes: [scopes[0]],
+  submitLabel: 'Submit',
+  value: 'Initial value',
 };
