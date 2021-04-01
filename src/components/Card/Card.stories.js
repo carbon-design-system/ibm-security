@@ -1,6 +1,6 @@
 /**
  * @file Card stories.
- * @copyright IBM Security 2019 - 2021
+ * @copyright IBM Security 2019
  */
 
 import { action } from '@storybook/addon-actions';
@@ -57,7 +57,7 @@ storiesOf(components('Card'), module)
       <SearchBar
         clearButtonLabelText="Clear"
         labelText={searchLabelText}
-        placeholder={searchLabelText}
+        placeHolderText={searchLabelText}
         submitLabel="Submit"
       />
     </Card>
