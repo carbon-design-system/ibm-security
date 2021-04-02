@@ -36,15 +36,15 @@ To install Carbon for IBM Security in your project, you'll need to run one of th
 
 ```bash
 # npm - https://www.npmjs.com
-npm i -S @carbon/ibm-security
+npm i -S carbon-components carbon-components-react @carbon/ibm-security
 
 # Yarn - https://yarnpkg.com
-yarn add @carbon/ibm-security
+yarn add carbon-components carbon-components-react @carbon/ibm-security
 ```
 
 ### Distribution tags
 
-Please use [distribution tags](https://docs.npmjs.com/cli/dist-tag) to install the most relevant version of this framework. e.g. `npm i -S @carbon/ibm-security@latest`:
+Please use [distribution tags](https://docs.npmjs.com/cli/dist-tag) to install the most relevant version of this library. e.g. `npm i -S @carbon/ibm-security@latest`:
 
 - `@latest` - Stable
 - `@canary` - Unstable prerelease
@@ -63,13 +63,11 @@ import { ComponentName } from '@carbon/ibm-security';
 const { ComponentName } = require('@carbon/ibm-security');
 ```
 
-[Babel](https://babeljs.io) builds both of these variants and imports `carbon-components-react` using a [plugin](https://github.com/carbon-design-system/ibm-security/blob/master/babel/carbon-imports.babel-plugin.js), so that no further transpilation is required.
-
 ### SCSS
 
 To add a component style to your build, import the component directly. Importing a component this way will bring in any dependencies that component has as well. The import system removes duplicate dependencies, so shared dependencies between components will not create extra CSS.
 
-In addition, to resolve your `@import` declarations, you will need to setup `node-sass` so that `node_modules` is included in the [`includePaths`](https://github.com/sass/node-sass#includepaths) option.
+In addition, to resolve your `@import` declarations, you will need to setup `sass` so that `node_modules` is included in the [`includePaths`](https://github.com/sass/node-sass#includepaths) option.
 
 ```scss
 @import '@carbon/ibm-security/scss/components/ComponentName/index';
@@ -93,7 +91,7 @@ Also refer to [feature flags in Carbon](https://github.com/carbon-design-system/
 
 ### CSS
 
-To add all of the components' processed and minified styles, reference `@carbon/ibm-security/css/index.min.css`.
+To add all of the components' processed and minified styles, reference both `carbon-components/css/carbon-components.min.css` and `@carbon/ibm-security/css/index.min.css`.
 
 ## Documentation
 

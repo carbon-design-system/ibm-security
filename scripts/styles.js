@@ -3,13 +3,13 @@
  * @copyright IBM Security 2019 - 2021
  */
 
+const postcssSass = require('@csstools/postcss-sass');
 const autoprefixer = require('autoprefixer');
 const { outputFileSync, readFile, readFileSync } = require('fs-extra');
 const { sync } = require('glob');
 const { resolve } = require('path');
 
 const postcss = require('postcss');
-const postcssNodeSass = require('postcss-node-sass');
 const postcssScss = require('postcss-scss');
 
 const root = resolve(__dirname, '..');
@@ -43,7 +43,7 @@ function compile() {
       const to = resolve(root, 'css', 'index.css');
 
       const { css } = await postcss([
-        postcssNodeSass({ includePaths: ['node_modules'] }),
+        postcssSass({ includePaths: ['node_modules'] }),
         autoprefixer,
       ]).process(styles, {
         from,
