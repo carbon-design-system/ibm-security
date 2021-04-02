@@ -626,6 +626,7 @@ exports[`TagWall Rendering renders 1`] = `
       </Tag>
     </InteractiveTag>
     <Button
+      dangerDescription="danger"
       disabled={false}
       kind="ghost"
       largeText={null}
@@ -639,6 +640,7 @@ exports[`TagWall Rendering renders 1`] = `
     >
       <Button
         className="security--button"
+        dangerDescription="danger"
         disabled={false}
         kind="ghost"
         onClick={[Function]}
@@ -649,10 +651,15 @@ exports[`TagWall Rendering renders 1`] = `
         type="button"
       >
         <button
+          aria-describedby={null}
           aria-pressed={null}
           className="security--button bx--btn bx--btn--sm bx--btn--ghost"
           disabled={false}
+          onBlur={[Function]}
           onClick={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
           tabIndex={0}
           type="button"
         >
@@ -1302,6 +1309,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
       </Tag>
     </InteractiveTag>
     <Button
+      dangerDescription="danger"
       disabled={true}
       kind="ghost"
       largeText={null}
@@ -1315,6 +1323,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     >
       <Button
         className="security--button"
+        dangerDescription="danger"
         disabled={true}
         kind="ghost"
         onClick={[Function]}
@@ -1325,10 +1334,15 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         type="button"
       >
         <button
+          aria-describedby={null}
           aria-pressed={null}
           className="security--button bx--btn bx--btn--sm bx--btn--ghost bx--btn--disabled"
           disabled={true}
+          onBlur={[Function]}
           onClick={[Function]}
+          onFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
           tabIndex={0}
           type="button"
         >

@@ -196,6 +196,7 @@ Map {
   },
   "Button" => Object {
     "defaultProps": Object {
+      "dangerDescription": "danger",
       "disabled": false,
       "kind": "primary",
       "largeText": null,
@@ -230,6 +231,9 @@ Map {
       "className": Object {
         "type": "string",
       },
+      "dangerDescription": Object {
+        "type": "string",
+      },
       "disabled": Object {
         "type": "bool",
       },
@@ -262,6 +266,18 @@ Map {
       "largeText": [Function],
       "loading": Object {
         "type": "bool",
+      },
+      "onBlur": Object {
+        "type": "func",
+      },
+      "onFocus": Object {
+        "type": "func",
+      },
+      "onMouseEnter": Object {
+        "type": "func",
+      },
+      "onMouseLeave": Object {
+        "type": "func",
       },
       "renderIcon": Object {
         "args": Array [
@@ -615,11 +631,20 @@ Map {
       "feedback": Object {
         "type": "string",
       },
+      "feedbackTimeout": Object {
+        "type": "number",
+      },
       "hideCopyButton": Object {
         "type": "bool",
       },
       "light": Object {
         "type": "bool",
+      },
+      "maxCollapsedNumberOfRows": Object {
+        "type": "number",
+      },
+      "maxExpandedNumberOfRows": Object {
+        "type": "number",
       },
       "onClick": Object {
         "type": "func",
@@ -1312,9 +1337,7 @@ Map {
       "className": Object {
         "type": "string",
       },
-      "light": Object {
-        "type": "bool",
-      },
+      "light": [Function],
       "onChange": Object {
         "isRequired": true,
         "type": "func",
@@ -4198,6 +4221,7 @@ Map {
   },
   "FormGroup" => Object {
     "defaultProps": Object {
+      "hasMargin": true,
       "invalid": false,
       "message": false,
       "messageText": "",
@@ -4208,6 +4232,9 @@ Map {
       },
       "className": Object {
         "type": "string",
+      },
+      "hasMargin": Object {
+        "type": "bool",
       },
       "invalid": Object {
         "type": "bool",
@@ -5191,6 +5218,9 @@ Map {
       "notificationType": Object {
         "type": "string",
       },
+      "onClose": Object {
+        "type": "func",
+      },
       "onCloseButtonClick": Object {
         "type": "func",
       },
@@ -5373,8 +5403,34 @@ Map {
           "args": Array [
             Array [
               Object {
+                "type": "node",
+              },
+              Object {
                 "args": Array [
-                  [Function],
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "defaultProps": Object {
+                      "isActive": false,
+                      "isHighlighted": false,
+                    },
+                    "propTypes": Object {
+                      "children": Object {
+                        "type": "node",
+                      },
+                      "isActive": Object {
+                        "isRequired": true,
+                        "type": "bool",
+                      },
+                      "isHighlighted": Object {
+                        "isRequired": true,
+                        "type": "bool",
+                      },
+                      "title": Object {
+                        "type": "string",
+                      },
+                    },
+                    "render": [Function],
+                  },
                 ],
                 "type": "arrayOf",
               },
@@ -5384,7 +5440,30 @@ Map {
                     "type": Object {
                       "args": Array [
                         Array [
-                          [Function],
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "defaultProps": Object {
+                              "isActive": false,
+                              "isHighlighted": false,
+                            },
+                            "propTypes": Object {
+                              "children": Object {
+                                "type": "node",
+                              },
+                              "isActive": Object {
+                                "isRequired": true,
+                                "type": "bool",
+                              },
+                              "isHighlighted": Object {
+                                "isRequired": true,
+                                "type": "bool",
+                              },
+                              "title": Object {
+                                "type": "string",
+                              },
+                            },
+                            "render": [Function],
+                          },
                         ],
                       ],
                       "type": "oneOf",
@@ -5423,6 +5502,7 @@ Map {
       },
     },
     "MenuItem": Object {
+      "$$typeof": Symbol(react.forward_ref),
       "defaultProps": Object {
         "isActive": false,
         "isHighlighted": false,
@@ -5439,7 +5519,11 @@ Map {
           "isRequired": true,
           "type": "bool",
         },
+        "title": Object {
+          "type": "string",
+        },
       },
+      "render": [Function],
     },
     "Selection": Object {
       "defaultProps": Object {
@@ -7893,6 +7977,9 @@ Map {
       "defaultChecked": Object {
         "type": "bool",
       },
+      "disabled": Object {
+        "type": "bool",
+      },
       "iconDescription": [Function],
       "id": Object {
         "type": "string",
@@ -8406,6 +8493,9 @@ Map {
       },
       "className": Object {
         "type": "string",
+      },
+      "disabled": Object {
+        "type": "bool",
       },
       "handleClick": Object {
         "type": "func",
@@ -12549,6 +12639,9 @@ Map {
       "notificationType": Object {
         "type": "string",
       },
+      "onClose": Object {
+        "type": "func",
+      },
       "onCloseButtonClick": Object {
         "type": "func",
       },
@@ -13294,10 +13387,16 @@ Map {
       "id": Object {
         "type": "string",
       },
+      "onBlur": Object {
+        "type": "func",
+      },
       "onFocus": Object {
         "type": "func",
       },
       "onMouseEnter": Object {
+        "type": "func",
+      },
+      "onMouseLeave": Object {
         "type": "func",
       },
       "tooltipText": Object {
@@ -13870,6 +13969,7 @@ Map {
     "spacing10": "var(--spacing-10, 4rem)",
     "spacing11": "var(--spacing-11, 5rem)",
     "spacing12": "var(--spacing-12, 6rem)",
+    "spacing13": "var(--spacing-13, 10rem)",
     "support01": "var(--support-01, #fa4d56)",
     "support02": "var(--support-02, #42be65)",
     "support03": "var(--support-03, #f1c21b)",
@@ -13908,6 +14008,15 @@ Map {
         },
         "disabled": Object {
           "type": "bool",
+        },
+        "kind": Object {
+          "args": Array [
+            Array [
+              "default",
+              "danger",
+            ],
+          ],
+          "type": "oneOf",
         },
         "label": Object {
           "isRequired": true,
@@ -13995,6 +14104,15 @@ Map {
       },
       "disabled": Object {
         "type": "bool",
+      },
+      "kind": Object {
+        "args": Array [
+          Array [
+            "default",
+            "danger",
+          ],
+        ],
+        "type": "oneOf",
       },
       "label": Object {
         "isRequired": true,

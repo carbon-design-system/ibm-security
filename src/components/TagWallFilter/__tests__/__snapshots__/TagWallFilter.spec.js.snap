@@ -592,7 +592,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                           role="listbox"
                         >
                           <div
-                            class="security--filter__list-item"
+                            class="bx--list-box__menu-item"
                             id="downshift-0-item-0"
                             role="button"
                             tabindex="0"
@@ -894,7 +894,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                       role="listbox"
                                     >
                                       <div
-                                        class="security--filter__list-item"
+                                        class="bx--list-box__menu-item"
                                         id="downshift-0-item-0"
                                         role="button"
                                         tabindex="0"
@@ -1130,7 +1130,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                         role="listbox"
                                       >
                                         <div
-                                          class="security--filter__list-item"
+                                          class="bx--list-box__menu-item"
                                           id="downshift-0-item-0"
                                           role="button"
                                           tabindex="0"
@@ -1368,7 +1368,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                             role="listbox"
                                           >
                                             <div
-                                              class="security--filter__list-item"
+                                              class="bx--list-box__menu-item"
                                               id="downshift-0-item-0"
                                               role="button"
                                               tabindex="0"
@@ -1798,7 +1798,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                 id="test-id"
                                                 role="listbox"
                                               >
-                                                <ListBoxMenuItem
+                                                <ForwardRef(ListBoxMenuItem)
                                                   className="security--filter__list-item"
                                                   id="downshift-0-item-0"
                                                   isActive={false}
@@ -1812,7 +1812,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                   tabIndex="0"
                                                 >
                                                   <div
-                                                    className="security--filter__list-item"
+                                                    className="bx--list-box__menu-item"
                                                     id="downshift-0-item-0"
                                                     onClick={[Function]}
                                                     onKeyDown={[Function]}
@@ -1905,7 +1905,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                       </div>
                                                     </div>
                                                   </div>
-                                                </ListBoxMenuItem>
+                                                </ForwardRef(ListBoxMenuItem)>
                                               </div>
                                             </ListBoxMenu>
                                           </div>
@@ -1932,6 +1932,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                           >
                             <Button
                               className="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary"
+                              dangerDescription="danger"
                               disabled={false}
                               kind="secondary"
                               largeText={null}
@@ -1945,6 +1946,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                             >
                               <Button
                                 className="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large"
+                                dangerDescription="danger"
                                 disabled={false}
                                 kind="secondary"
                                 onClick={[MockFunction]}
@@ -1955,10 +1957,15 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                 type="button"
                               >
                                 <button
+                                  aria-describedby={null}
                                   aria-pressed={null}
                                   className="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
                                   disabled={false}
+                                  onBlur={[Function]}
                                   onClick={[MockFunction]}
+                                  onFocus={[Function]}
+                                  onMouseEnter={[Function]}
+                                  onMouseLeave={[Function]}
                                   tabIndex={0}
                                   type="button"
                                 >
@@ -1968,6 +1975,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                             </Button>
                             <Button
                               className="security--tearsheet--small__footer__button"
+                              dangerDescription="danger"
                               disabled={false}
                               kind="primary"
                               largeText={null}
@@ -1981,6 +1989,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                             >
                               <Button
                                 className="security--button security--tearsheet--small__footer__button security--button--large"
+                                dangerDescription="danger"
                                 disabled={false}
                                 kind="primary"
                                 onClick={[MockFunction]}
@@ -1991,10 +2000,15 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                 type="button"
                               >
                                 <button
+                                  aria-describedby={null}
                                   aria-pressed={null}
                                   className="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
                                   disabled={false}
+                                  onBlur={[Function]}
                                   onClick={[MockFunction]}
+                                  onFocus={[Function]}
+                                  onMouseEnter={[Function]}
+                                  onMouseLeave={[Function]}
                                   tabIndex={0}
                                   type="button"
                                 >
@@ -2569,7 +2583,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                             role="listbox"
                           >
                             <div
-                              class="security--filter__list-item"
+                              class="bx--list-box__menu-item"
                               id="downshift-0-item-0"
                               role="button"
                               tabindex="0"
@@ -2796,7 +2810,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                             role="listbox"
                           >
                             <div
-                              class="security--filter__list-item"
+                              class="bx--list-box__menu-item"
                               id="downshift-1-item-0"
                               role="button"
                               tabindex="0"
@@ -3098,7 +3112,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         role="listbox"
                                       >
                                         <div
-                                          class="security--filter__list-item"
+                                          class="bx--list-box__menu-item"
                                           id="downshift-0-item-0"
                                           role="button"
                                           tabindex="0"
@@ -3325,7 +3339,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         role="listbox"
                                       >
                                         <div
-                                          class="security--filter__list-item"
+                                          class="bx--list-box__menu-item"
                                           id="downshift-1-item-0"
                                           role="button"
                                           tabindex="0"
@@ -3561,7 +3575,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           role="listbox"
                                         >
                                           <div
-                                            class="security--filter__list-item"
+                                            class="bx--list-box__menu-item"
                                             id="downshift-0-item-0"
                                             role="button"
                                             tabindex="0"
@@ -3788,7 +3802,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           role="listbox"
                                         >
                                           <div
-                                            class="security--filter__list-item"
+                                            class="bx--list-box__menu-item"
                                             id="downshift-1-item-0"
                                             role="button"
                                             tabindex="0"
@@ -4026,7 +4040,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                               role="listbox"
                                             >
                                               <div
-                                                class="security--filter__list-item"
+                                                class="bx--list-box__menu-item"
                                                 id="downshift-0-item-0"
                                                 role="button"
                                                 tabindex="0"
@@ -4253,7 +4267,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                               role="listbox"
                                             >
                                               <div
-                                                class="security--filter__list-item"
+                                                class="bx--list-box__menu-item"
                                                 id="downshift-1-item-0"
                                                 role="button"
                                                 tabindex="0"
@@ -4683,7 +4697,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                   id="test-id"
                                                   role="listbox"
                                                 >
-                                                  <ListBoxMenuItem
+                                                  <ForwardRef(ListBoxMenuItem)
                                                     className="security--filter__list-item"
                                                     id="downshift-1-item-0"
                                                     isActive={false}
@@ -4697,7 +4711,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                     tabIndex="0"
                                                   >
                                                     <div
-                                                      className="security--filter__list-item"
+                                                      className="bx--list-box__menu-item"
                                                       id="downshift-1-item-0"
                                                       onClick={[Function]}
                                                       onKeyDown={[Function]}
@@ -4790,7 +4804,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                         </div>
                                                       </div>
                                                     </div>
-                                                  </ListBoxMenuItem>
+                                                  </ForwardRef(ListBoxMenuItem)>
                                                 </div>
                                               </ListBoxMenu>
                                             </div>
@@ -4817,6 +4831,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                             >
                               <Button
                                 className="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary"
+                                dangerDescription="danger"
                                 disabled={false}
                                 kind="secondary"
                                 largeText={null}
@@ -4830,6 +4845,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               >
                                 <Button
                                   className="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large"
+                                  dangerDescription="danger"
                                   disabled={false}
                                   kind="secondary"
                                   onClick={[MockFunction]}
@@ -4840,10 +4856,15 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   type="button"
                                 >
                                   <button
+                                    aria-describedby={null}
                                     aria-pressed={null}
                                     className="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
                                     disabled={false}
+                                    onBlur={[Function]}
                                     onClick={[MockFunction]}
+                                    onFocus={[Function]}
+                                    onMouseEnter={[Function]}
+                                    onMouseLeave={[Function]}
                                     tabIndex={0}
                                     type="button"
                                   >
@@ -4853,6 +4874,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               </Button>
                               <Button
                                 className="security--tearsheet--small__footer__button"
+                                dangerDescription="danger"
                                 disabled={false}
                                 kind="primary"
                                 largeText={null}
@@ -4866,6 +4888,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               >
                                 <Button
                                   className="security--button security--tearsheet--small__footer__button security--button--large"
+                                  dangerDescription="danger"
                                   disabled={false}
                                   kind="primary"
                                   onClick={[MockFunction]}
@@ -4876,10 +4899,15 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   type="button"
                                 >
                                   <button
+                                    aria-describedby={null}
                                     aria-pressed={null}
                                     className="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
                                     disabled={false}
+                                    onBlur={[Function]}
                                     onClick={[MockFunction]}
+                                    onFocus={[Function]}
+                                    onMouseEnter={[Function]}
+                                    onMouseLeave={[Function]}
                                     tabIndex={0}
                                     type="button"
                                   >
