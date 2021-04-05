@@ -13,6 +13,8 @@
 @import '../../Component/mixins';
 @import '../variables';
 
+@import '../../../globals/motion/index';
+
 @include security--component($name: #{$layout-modules__name}--list-item) {
   /// Spacing.
   /// @type Length
@@ -27,6 +29,42 @@
     border-width: 0;
   }
 
+  &--a,
+  &--button {
+    @include transition($transition-property: background-color);
+
+    // display: block;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &--button {
+    text-align: left;
+    // TODO: width: 33vw; ?
+  }
+
+  &--button:focus,
+  &--button:hover {
+    background-color: $hover-ui;
+  }
+
+  &--button:focus {
+    @include focus-outline($type: outline);
+  }
+
+  &__centered-column {
+    align-self: center;
+  }
+
+  &__right-column {
+    margin-left: auto;
+  }
+
+  &__narrow-column {
+    margin-right: auto;
+  }
+
   &__title,
   &__description {
     margin-top: 0;
@@ -34,6 +72,11 @@
 
   &__icon {
     margin-right: $carbon--spacing-05;
+  }
+
+  &__top-icon {
+    // margin-left: $carbon--spacing-05;
+    margin-bottom: $carbon--spacing-05;
   }
 
   &__avatar {
@@ -60,7 +103,7 @@
 
   &__label {
     @include carbon--type-style($name: label-01);
-
+    display: block;
     margin-top: $list-item-module__spacing;
   }
 
@@ -74,8 +117,26 @@
     }
   }
 
+  // TODO: class naming (right-to-left readers, etc)
+  // TODO: wide screens, Button does not cover entire bottom
+
   &__component {
     margin-top: $carbon--spacing-05;
     margin-bottom: 0;
+
+    /****
+    * For ghost button as last component
+    *
+    &:last-child {
+      min-width: 100%;
+      margin-right: -$carbon--spacing-05;
+      margin-bottom: -$carbon--spacing-05;
+      margin-left: -$carbon--spacing-05;
+
+      button:last-child {
+        min-width: 100%;
+        justify-content: flex-start;
+      }
+    }****/
   }
 }
