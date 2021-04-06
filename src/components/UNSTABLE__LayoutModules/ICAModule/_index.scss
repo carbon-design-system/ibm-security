@@ -9,7 +9,7 @@
 
 @import '../../../globals/namespace/index';
 @import '../../Component/mixins';
-@import '../TitleBarModule/variables';
+
 @import '../variables';
 
 @include security--component($name: #{$layout-modules__name}--ica) {
@@ -17,8 +17,11 @@
   /// @type Length
   $ica-module__spacing: $carbon--layout-01;
 
-  padding-top: $ica-module__spacing;
   padding-bottom: $ica-module__spacing;
+
+  &__component {
+    margin-bottom: $ica-module__spacing;
+  }
 
   &--hover {
     padding-top: $ica-module__spacing;
@@ -28,15 +31,5 @@
     &:hover {
       background-color: $hover-ui;
     }
-  }
-
-  /// Title bar module namespace.
-  /// @type String
-  $title-bar__namespace: get-component-namespace(
-    $component-name: $layout-modules__title-bar__name,
-  );
-
-  > #{$title-bar__namespace} > #{$title-bar__namespace}__title {
-    margin-top: 0;
   }
 }

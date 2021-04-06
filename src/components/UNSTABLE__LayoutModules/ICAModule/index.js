@@ -1,6 +1,6 @@
 /**
  * @file ICA module.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import classnames from 'classnames';
@@ -17,9 +17,13 @@ const ICAModule = ({ children, hover, ...other }) => (
   <LayoutModule namespace={namespace} {...other}>
     {children({
       getLayoutProps: ({ className, ...rest } = {}) => ({
-        className: classnames(className, {
-          [`${layoutModuleNamespace}--${namespace}--hover`]: hover,
-        }),
+        className: classnames(
+          `${layoutModuleNamespace}--${namespace}__component`,
+          className,
+          {
+            [`${layoutModuleNamespace}--${namespace}--hover`]: hover,
+          }
+        ),
         ...rest,
       }),
     })}

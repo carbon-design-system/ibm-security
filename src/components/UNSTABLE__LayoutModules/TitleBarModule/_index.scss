@@ -8,9 +8,9 @@
 @import '@carbon/type/scss/styles';
 
 @import '../../Component/mixins';
-@import 'variables';
+@import '../variables';
 
-@include security--component($name: $layout-modules__title-bar__name) {
+@include security--component($name: #{$layout-modules__name}--title-bar) {
   /// Spacing.
   /// @type Length
   $title-bar__spacing: $carbon--layout-01;

@@ -27137,8 +27137,11 @@ a.bx--navigation-link:focus {
 }
 
 .security--unstable--layout__module--ica {
-  padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.security--unstable--layout__module--ica__component {
+  margin-bottom: 1rem;
 }
 
 .security--unstable--layout__module--ica--hover {
@@ -27149,10 +27152,6 @@ a.bx--navigation-link:focus {
 
 .security--unstable--layout__module--ica--hover:hover {
   background-color: var(--hover-ui, #353535);
-}
-
-.security--unstable--layout__module--ica > .security--unstable--layout__module--title-bar > .security--unstable--layout__module--title-bar__title {
-  margin-top: 0;
 }
 
 .security--unstable--layout__module--title-bar {
