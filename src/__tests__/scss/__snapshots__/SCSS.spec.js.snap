@@ -27177,12 +27177,52 @@ a.bx--navigation-link:focus {
   border-width: 0;
 }
 
+.security--unstable--layout__module--list-item--a, .security--unstable--layout__module--list-item--button {
+  transition-duration: 0.2s;
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.2, 0, 0.38, 0.9);
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.security--unstable--layout__module--list-item--button {
+  text-align: left;
+}
+
+.security--unstable--layout__module--list-item--a:focus, .security--unstable--layout__module--list-item--a:hover, .security--unstable--layout__module--list-item--button:focus, .security--unstable--layout__module--list-item--button:hover {
+  background-color: var(--hover-ui, #353535);
+}
+
+.security--unstable--layout__module--list-item--a:focus, .security--unstable--layout__module--list-item--button:focus {
+  outline: 2px solid var(--focus, #ffffff);
+  outline-offset: -2px;
+}
+
+@media screen and (prefers-contrast) {
+  .security--unstable--layout__module--list-item--a:focus, .security--unstable--layout__module--list-item--button:focus {
+    outline-style: dotted;
+  }
+}
+
+.security--unstable--layout__module--list-item__farside-column {
+  margin-left: auto;
+}
+
+.security--unstable--layout__module--list-item__distributed-column {
+  margin-right: auto;
+}
+
 .security--unstable--layout__module--list-item__title, .security--unstable--layout__module--list-item__description {
   margin-top: 0;
 }
 
 .security--unstable--layout__module--list-item__icon {
   margin-right: 1rem;
+}
+
+.security--unstable--layout__module--list-item__top-icon {
+  margin-bottom: 1rem;
 }
 
 .security--unstable--layout__module--list-item__avatar {
@@ -27217,6 +27257,7 @@ a.bx--navigation-link:focus {
   font-weight: 400;
   line-height: 1.34;
   letter-spacing: 0.32px;
+  display: block;
   margin-top: 0.25rem;
 }
 
@@ -27226,6 +27267,11 @@ a.bx--navigation-link:focus {
 
 .security--unstable--layout__module--list-item__title:last-child, .security--unstable--layout__module--list-item__description:last-child, .security--unstable--layout__module--list-item__label:last-child {
   margin-bottom: 0;
+}
+
+.security--unstable--layout__module--list-item .bx--tag {
+  margin-top: -0.25rem;
+  margin-bottom: -0.25rem;
 }
 
 .security--unstable--layout__module--list-item__component {
