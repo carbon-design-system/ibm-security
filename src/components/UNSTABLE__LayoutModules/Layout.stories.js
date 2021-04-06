@@ -11,7 +11,7 @@ import {
   View16,
 } from '@carbon/icons-react';
 
-import { layout03, layout04 } from '@carbon/layout';
+import { layout04 } from '@carbon/layout';
 
 import { Grid, Row, Column } from 'carbon-components-react';
 import React from 'react';
@@ -32,6 +32,7 @@ import {
   HeaderName,
   ICA,
   ICAModule,
+  InlineNotification,
   IconButtonBar,
   SummaryCard as SummaryCardComponent,
   SummaryCardHeader,
@@ -48,7 +49,7 @@ const ColumnWithBackground = withBackground(Column);
 const SummaryCard = withBackground(SummaryCardComponent);
 
 const UIShell = () => (
-  <div style={{ height: layout04, marginBottom: layout03 }}>
+  <div style={{ height: layout04 }}>
     <CarbonHeader aria-label="IBM Security">
       <HeaderName prefix="IBM">Security</HeaderName>
     </CarbonHeader>
@@ -64,6 +65,16 @@ export default {
     story => (
       <>
         <UIShell />
+
+        <InlineNotification
+          className="page-layouts__banner"
+          hideCloseButton
+          kind="info"
+          notificationType="inline"
+          role="alert"
+          subtitle="Page layouts will remain Canary until Carbon v11 2x Grid release"
+          title=""
+        />
 
         <Grid>{story()}</Grid>
       </>
