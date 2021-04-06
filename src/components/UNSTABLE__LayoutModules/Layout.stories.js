@@ -1,6 +1,6 @@
 /**
  * @file Layout module stories.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import {
@@ -215,21 +215,21 @@ export const Detail = () => (
     <Row>
       <ColumnWithBackground>
         <ICAModule>
-          {() => (
+          {({ getLayoutProps }) => (
             <>
               <TitleBarModule element="h4" title="Indicators" />
 
               <Row>
-                <Column sm={2} md={2} lg={3}>
+                <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
                   <ICA label="Malware" value={11} />
                 </Column>
-                <Column sm={2} md={2} lg={3}>
+                <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
                   <ICA label="IPs" value={8} />
                 </Column>
-                <Column sm={2} md={2} lg={3}>
+                <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
                   <ICA label="URLs" value={9} />
                 </Column>
-                <Column sm={2} md={2} lg={3}>
+                <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
                   <ICA label="VULs" value={1} />
                 </Column>
               </Row>
@@ -447,15 +447,15 @@ export const Overview = () => (
             </Row>
 
             <ICAModule>
-              {() => (
+              {({ getLayoutProps }) => (
                 <Row>
-                  <Column sm={2} md={2} lg={3}>
+                  <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
                     <ICA label="Reviews complete" value={300} />
                   </Column>
-                  <Column sm={2} md={2} lg={3}>
+                  <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
                     <ICA label="Approved" value={241} />
                   </Column>
-                  <Column sm={2} md={2} lg={3}>
+                  <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
                     <ICA label="Rejected" value={28} />
                   </Column>
                 </Row>
