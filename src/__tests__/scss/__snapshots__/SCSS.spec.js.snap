@@ -27188,6 +27188,7 @@ a.bx--navigation-link:focus {
 
 .security--unstable--layout__module--list-item--button {
   text-align: left;
+  width: inherit;
 }
 
 .security--unstable--layout__module--list-item--a:focus, .security--unstable--layout__module--list-item--a:hover, .security--unstable--layout__module--list-item--button:focus, .security--unstable--layout__module--list-item--button:hover {
