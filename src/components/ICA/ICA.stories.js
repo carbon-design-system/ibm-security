@@ -11,7 +11,7 @@ import React from 'react';
 import { components } from '../../../.storybook';
 import { carbonPrefix } from '../../globals/namespace/index';
 
-import { ICA } from '../../..';
+import { ICA } from '../..';
 import { Locales } from './ICA';
 
 import props from './_mocks_';
