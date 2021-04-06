@@ -1,6 +1,6 @@
 /**
  * @file Card module stories.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import { List16, Search16, Table16 } from '@carbon/icons-react';
@@ -16,7 +16,6 @@ import {
   IconButtonBar,
   Row,
   SummaryCard as SummaryCardComponent,
-  SummaryCardBody,
   SummaryCardHeader,
   TitleBarModule,
   withBackground,
@@ -44,30 +43,18 @@ export const Default = () => (
         <Column>
           <SummaryCard {...getLayoutProps()}>
             <SummaryCardHeader title="Label" />
-
-            <SummaryCardBody>
-              <TitleBarModule title="Title" />
-            </SummaryCardBody>
           </SummaryCard>
         </Column>
 
         <Column>
           <SummaryCard {...getLayoutProps()}>
             <SummaryCardHeader title="Label" />
-
-            <SummaryCardBody>
-              <TitleBarModule title="Title" />
-            </SummaryCardBody>
           </SummaryCard>
         </Column>
 
         <Column>
           <SummaryCard {...getLayoutProps()}>
             <SummaryCardHeader title="Label" />
-
-            <SummaryCardBody>
-              <TitleBarModule title="Title" />
-            </SummaryCardBody>
           </SummaryCard>
         </Column>
       </Row>
@@ -101,7 +88,7 @@ export const Variant = () => (
                   renderIcon: Table16,
                 },
               ]}
-              size="md"
+              size="lg"
             />
           </ActionBarModuleItems>
         </ActionBarModule>
@@ -110,30 +97,18 @@ export const Variant = () => (
           <Column>
             <SummaryCard {...getLayoutProps()}>
               <SummaryCardHeader title="Label" />
-
-              <SummaryCardBody>
-                <TitleBarModule title="Title" />
-              </SummaryCardBody>
             </SummaryCard>
           </Column>
 
           <Column>
             <SummaryCard {...getLayoutProps()}>
               <SummaryCardHeader title="Label" />
-
-              <SummaryCardBody>
-                <TitleBarModule title="Title" />
-              </SummaryCardBody>
             </SummaryCard>
           </Column>
 
           <Column>
             <SummaryCard {...getLayoutProps()}>
               <SummaryCardHeader title="Label" />
-
-              <SummaryCardBody>
-                <TitleBarModule title="Title" />
-              </SummaryCardBody>
             </SummaryCard>
           </Column>
         </Row>

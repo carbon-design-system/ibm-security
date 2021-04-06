@@ -16,21 +16,25 @@
   $title-bar__spacing: $carbon--layout-01;
 
   display: flex;
-  padding-top: $title-bar__spacing;
-  padding-bottom: $title-bar__spacing;
-  align-items: center;
 
   &__title {
     @include carbon--type-style($name: productive-heading-03);
-    margin-top: 0;
-    margin-bottom: 0;
-
-    &--subsection {
-      @include carbon--type-style($name: productive-heading-01);
-    }
+    margin-top: $title-bar__spacing;
+    margin-bottom: $title-bar__spacing;
   }
 
   &__items {
+    margin-top: $carbon--spacing-02;
     margin-left: auto;
+  }
+
+  &--subsection > & {
+    &__title {
+      @include carbon--type-style($name: productive-heading-02);
+    }
+
+    &__items {
+      margin-top: 0;
+    }
   }
 }
