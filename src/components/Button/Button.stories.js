@@ -15,7 +15,7 @@ import { storiesOf } from '@storybook/react';
 import { settings } from 'carbon-components';
 import React from 'react';
 
-import { components } from '../../../.storybook';
+import { components, info } from '../../../.storybook';
 import { Button, ButtonSkeleton } from '../..';
 
 const { prefix } = settings;
@@ -99,6 +99,10 @@ const CustomLink = ({ children, href, ...other }) => (
 );
 /* eslint-enable react/prop-types */
 
+const documentation = info('', {
+  story: 'button',
+});
+
 storiesOf(components('Button'), module)
   .add(
     'default',
@@ -135,25 +139,7 @@ storiesOf(components('Button'), module)
         </div>
       );
     },
-    {
-      info: {
-        text: `
-          Buttons are used to initialize an action, either in the background or
-          foreground of an experience.
-          There are several kinds of buttons.
-          Primary buttons should be used for the principle call to action
-          on the page.
-          Secondary buttons should be used for secondary actions on each page.
-          Danger buttons should be used for a negative action (such as Delete) on the page.
-          Modify the behavior of the button by changing its event properties.
-          Small buttons may be used when there is not enough space for a
-          regular sized button. This issue is most found in tables. Small button should have three words
-          or less.
-          When words are not enough, icons can be used in buttons to better communicate what the button does. Icons are
-          always paired with text.
-        `,
-      },
-    }
+    documentation
   )
   .add(
     'Sets of Buttons',
@@ -170,13 +156,7 @@ storiesOf(components('Button'), module)
         </div>
       );
     },
-    {
-      info: {
-        text: `
-          When an action required by the user has more than one option, always use a a negative action button (secondary) paired with a positive action button (primary) in that order. Negative action buttons will be on the left. Positive action buttons should be on the right. When these two types buttons are paired in the correct order, they will automatically space themselves apart.
-        `,
-      },
-    }
+    documentation
   )
   .add(
     'skeleton',
@@ -189,11 +169,5 @@ storiesOf(components('Button'), module)
         <ButtonSkeleton small />
       </div>
     ),
-    {
-      info: {
-        text: `
-          Placeholder skeleton state to use when content is loading.
-        `,
-      },
-    }
+    documentation
   );

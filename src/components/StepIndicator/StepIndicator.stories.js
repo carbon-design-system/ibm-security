@@ -1,6 +1,6 @@
 /**
  * @file Step indicator stories.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { number } from '@storybook/addon-knobs';
@@ -42,9 +42,7 @@ storiesOf(components(deprecate('StepIndicator')), module).add(
   info(
     '`StepIndicator` and `Step` have been deprecated - please use the vertical `ProgressIndicator` and `ProgressStep` instead.',
     {
-      library: 'ibm-security',
-      story: 'components-progressindicator',
-      id: 'default',
+      story: 'progressindicator',
     }
   )
 );
