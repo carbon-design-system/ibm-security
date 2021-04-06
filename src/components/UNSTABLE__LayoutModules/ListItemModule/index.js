@@ -12,7 +12,7 @@ import LayoutModule, { layoutModuleNamespace } from '../LayoutModule';
 const namespace = 'list-item';
 
 /**
- * TODO: Description.
+ * The ListItem is a module designed for flexibility. It consists of optional pieces that can be used to design & build variants with universal consistency.
  */
 const ListItemModule = ({ children, as, href, onClick, ...other }) => {
   const content = children({
@@ -30,15 +30,13 @@ const ListItemModule = ({ children, as, href, onClick, ...other }) => {
 
   let component = 'div';
 
-  if (as) {
+  if (as !== 'div') {
     component = as;
   } else if (href) {
     component = 'a';
   } else if (onClick) {
     component = 'button';
   }
-
-  // div under button which is a flexbox with text-align: left
 
   return (
     <LayoutModule
@@ -52,18 +50,6 @@ const ListItemModule = ({ children, as, href, onClick, ...other }) => {
     </LayoutModule>
   );
 };
-
-/*    <>
-      {hover ? (
-        <LayoutModule namespace={`${namespace} ${layoutModuleNamespace}--${namespace}--hover`} as={'a'} href="#" {...other}>
-          {content}
-        </LayoutModule>
-      ) : (
-        <LayoutModule namespace={namespace} {...other}>
-          {content}
-        </LayoutModule>
-      )}
-    </> */
 
 ListItemModule.propTypes = {
   /** Provide the content for the `ListItemModule` */

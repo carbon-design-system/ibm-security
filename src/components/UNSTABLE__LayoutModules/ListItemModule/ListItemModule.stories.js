@@ -3,7 +3,12 @@
  * @copyright IBM Security 2021
  */
 
-import { Bee16, Locked16, UserAvatar20 } from '@carbon/icons-react';
+import {
+  Bee16,
+  InProgress16,
+  Locked16,
+  UserAvatar20,
+} from '@carbon/icons-react';
 import React from 'react';
 
 import { getDocsParameters } from '../../../../.storybook';
@@ -39,7 +44,7 @@ export const Default = () => (
   </ListItemModule>
 );
 
-export const Static = () => (
+export const NonInteractive = () => (
   <ListItemModule>
     {({ Column, getLayoutProps }) => (
       <>
@@ -93,7 +98,7 @@ export const Detailed = () => (
           <UserAvatar20 {...getLayoutProps({ type: 'avatar' })} />
         </Column>
 
-        <Column {...getLayoutProps({ type: 'right-column' })}>
+        <Column {...getLayoutProps({ type: 'farside-column' })}>
           <Locked16 />
         </Column>
       </>
@@ -135,11 +140,11 @@ export const WithTag = () => (
   <ListItemModule href="#">
     {({ Column, getLayoutProps }) => (
       <>
-        <Column {...getLayoutProps({ type: 'centered-column' })}>
+        <Column {...getLayoutProps()}>
           <h2 {...getLayoutProps({ type: 'title' })}>Bill Callahan</h2>
         </Column>
 
-        <Column {...getLayoutProps({ type: 'right-column' })}>
+        <Column {...getLayoutProps({ type: 'farside-column' })}>
           <Tag>16</Tag>
         </Column>
       </>
@@ -162,21 +167,6 @@ export const WithComponent = () => (
 
           <section {...getLayoutProps({ type: 'component' })}>
             <ICA label="Label" value={100} />
-            {/* <Button
-              iconDescription="Button icon"
-              kind="ghost"
-              largeText={null}
-              onClick={function noRefCheck(){}}
-              onFocus={function noRefCheck(){}}
-              renderIcon={Add16}
-              size="field"
-              tabIndex={0}
-              tooltipAlignment="center"
-              tooltipPosition="top"
-              type="button"
-            >
-              Add to canvas
-            </Button> */}
           </section>
         </Column>
       </>
@@ -196,7 +186,7 @@ export const WithStatusIcon = () => (
           <span {...getLayoutProps({ type: 'label' })}>Threat activity</span>
         </Column>
 
-        <Column {...getLayoutProps({ type: 'right-column' })}>
+        <Column {...getLayoutProps({ type: 'farside-column' })}>
           <StatusIcon iconDescription="Status Icon" size="lg" status="info" />
         </Column>
       </>
@@ -204,12 +194,12 @@ export const WithStatusIcon = () => (
   </ListItemModule>
 );
 
-export const WithInProgressStatus = () => (
+export const WithInProgressIcon = () => (
   <ListItemModule href="#">
     {({ Column, getLayoutProps }) => (
       <>
         <Column>
-          <Bee16 {...getLayoutProps({ type: 'icon' })} />
+          <InProgress16 {...getLayoutProps({ type: 'icon' })} />
         </Column>
 
         <Column>
@@ -224,7 +214,7 @@ export const WithInProgressStatus = () => (
   </ListItemModule>
 );
 
-export const Columns = () => (
+export const WithDistributedColumns = () => (
   <ListItemModule href="#">
     {({ Column, getLayoutProps }) => (
       <>
@@ -232,15 +222,15 @@ export const Columns = () => (
           <Bee16 {...getLayoutProps({ type: 'icon' })} />
         </Column>
 
-        <Column {...getLayoutProps({ type: 'narrow-column' })}>
+        <Column {...getLayoutProps({ type: 'distributed-column' })}>
           <h2 {...getLayoutProps({ type: 'title' })}>Asset_name</h2>
         </Column>
 
-        <Column {...getLayoutProps({ type: 'narrow-column' })}>
+        <Column {...getLayoutProps({ type: 'distributed-column' })}>
           <h2 {...getLayoutProps({ type: 'title' })}>Data set</h2>
         </Column>
 
-        <Column {...getLayoutProps({ type: 'narrow-column' })}>
+        <Column {...getLayoutProps({ type: 'distributed-column' })}>
           <h2 {...getLayoutProps({ type: 'title' })}>3:47 pm</h2>
         </Column>
       </>

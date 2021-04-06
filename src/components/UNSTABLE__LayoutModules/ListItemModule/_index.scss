@@ -33,7 +33,6 @@
   &--button {
     @include transition($transition-property: background-color);
 
-    // display: block;
     color: inherit;
     text-decoration: none;
     cursor: pointer;
@@ -41,27 +40,25 @@
 
   &--button {
     text-align: left;
-    // TODO: width: 33vw; ?
   }
 
+  &--a:focus,
+  &--a:hover,
   &--button:focus,
   &--button:hover {
     background-color: $hover-ui;
   }
 
+  &--a:focus,
   &--button:focus {
     @include focus-outline($type: outline);
   }
 
-  &__centered-column {
-    align-self: center;
-  }
-
-  &__right-column {
+  &__farside-column {
     margin-left: auto;
   }
 
-  &__narrow-column {
+  &__distributed-column {
     margin-right: auto;
   }
 
@@ -75,7 +72,6 @@
   }
 
   &__top-icon {
-    // margin-left: $carbon--spacing-05;
     margin-bottom: $carbon--spacing-05;
   }
 
@@ -117,26 +113,15 @@
     }
   }
 
+  .bx--tag {
+    margin-top: -$carbon--spacing-02;
+    margin-bottom: -$carbon--spacing-02;
+  }
+
   // TODO: class naming (right-to-left readers, etc)
-  // TODO: wide screens, Button does not cover entire bottom
 
   &__component {
     margin-top: $carbon--spacing-05;
     margin-bottom: 0;
-
-    /****
-    * For ghost button as last component
-    *
-    &:last-child {
-      min-width: 100%;
-      margin-right: -$carbon--spacing-05;
-      margin-bottom: -$carbon--spacing-05;
-      margin-left: -$carbon--spacing-05;
-
-      button:last-child {
-        min-width: 100%;
-        justify-content: flex-start;
-      }
-    }****/
   }
 }
