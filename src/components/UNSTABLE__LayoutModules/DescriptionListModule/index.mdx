@@ -49,15 +49,17 @@ Additional props passed into `DescriptionListModule` will be forwarded along to 
 ### Anatomy
 
 1. **Term:** This is the label, it should left aligned to a grid column.
-2. **Description:** The description placement is relative to the term label, it will always fall 32px to the right of the term.
-3. **Row spacer:** The 16-pixel spacer `$layout-01` below each row provides padding between the rows.
-4. **Bottom spacer:** The 16-pixel spacer `$layout-01` below the 'Row spacer' row provides the starting point for the layout module positioned directly underneath it. At the end of the description list module both the 'Row spacer' and 'Bottom spacer' join together to create a 32px buffer.
+2. **Gutter:** There is always a 32px gutter between the 'term' and 'description' columns. In this way, the 'description' column is always offset from the term column by exactly 32px.
+3. **Description:** The description placement is relative to the term label, it will always fall 32px to the right of the term.
+4. **Bottom spacer:** The 16-pixel spacer `$spacing-05` below the 'Row spacer' row provides the starting point for the layout module positioned directly underneath it. At the end of the description list module both the 'Row spacer' and 'Bottom spacer' join together to create a 32px buffer.
 
 <img alt="`DescriptionListModule` anatomy" src={anatomy} />
 
 ### Variants
 
-If necessary, both section and subsection titles can precede the type layout. There are two values already supplied for this so you shouldn't supplement your own type style. Learn more by reviewing the <LinkTo kind="patterns-unstable-layout-modules-titlebarmodule" story="default" > TitleBarModule. </LinkTo>
+A description list can have a title, both section and subsection title bars can precede the type layout. Learn more by reviewing the <LinkTo kind="patterns-unstable-layout-modules-titlebarmodule" story="default" > TitleBarModule. </LinkTo>
+
+There is also a stacked variant of the DescriptionListModule for narrower spaces.
 
 <img alt="`DescriptionListModule` variants" src={variants} />
 
@@ -65,9 +67,7 @@ If necessary, both section and subsection titles can precede the type layout. Th
 
 ### Grid placement
 
-Description list modules span across 8 columns, following the [narrow grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow) implementation.
-
-Card modules can span between 4 and 16 columns. Following the narrow grid implementation, the layout module container hangs 16 pixels in the left margin. The narrow grid position allows headings and copy outside of containers to align with the labels within the card module.
+Description list modules span a minimum of 4 columns, following the [narrow grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow) implementation. The 'term' column should left align with the grid, the 'description' column will be offset from the 'term' column by exactly 32px. It may or may not align to the grid, don't force it.
 
 <Row>
   <Column>
@@ -80,14 +80,14 @@ Card modules can span between 4 and 16 columns. Following the narrow grid implem
 </Row>
 
 ```jsx
-<Column lg={8}>
+<Column lg={4}>
   <DescriptionListModule />
 </Column>
 ```
 
 ### Layout considerations
 
-Occassionally a [spacing token](https://carbondesignsystem.com/guidelines/spacing/overview#spacing-scale) will need to be included to offset the description list module to ensure it top-aligns with the adjacent layout container. If a top spacing token is necessary, reference the layout module that sits directly above it as the starting point for placement.
+Occassionally [spacing tokens](https://carbondesignsystem.com/guidelines/spacing/overview#spacing-scale) will need to be included to offset the description list module to ensure it top-aligns with the adjacent layout container. If top spacing tokens are necessary, reference the layout module that sits directly above it as the starting point for placement.
 
 <img
   alt="`DescriptionListModule` layout considerations"

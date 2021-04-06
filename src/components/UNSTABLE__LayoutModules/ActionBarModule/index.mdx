@@ -41,16 +41,15 @@ Additional props passed into `ActionBarModule` and `ActionBarModuleItems` will b
 
 ### Anatomy
 
-1. **Ghost button:** The predominant action for the bar should be placed here as a ghost button, alternatively a title can be supplemented, see [variants](#variants). Both the ghost button text and the title variant text should align with the text above and below.
+1. **Ghost button:** The predominant action for the bar should be placed here as a ghost button, alternatively a title can be supplemented, see [variants](#variants). Both the ghost button text and the title variant text should left-align with the text above and below.
 2. **Icon button bar:** The icon buttons are contained inside the <LinkTo kind="patterns-iconbuttonbar" story="default">icon button bar</LinkTo> and are 16px in height.
-3. **Top spacer:** There is a 2px spacer `$spacing-01` included at the top of the actionBarModule
-4. **Bottom spacer:** The 8px spacer `$spacing-03`, included inside the action bar, means that the module can be placed flush to edge of the components below.
+3. **Bottom spacer:** The 8px spacer `$spacing-03`, included inside the action bar, means that the module can be placed flush to the top edge of the components below.
 
 <img alt="`ActionBarModule` anatomy" src={anatomy} />
 
 ### Variants
 
-If necessary, supplementary details can be placed inline with the actions instead of the ghost button.
+If necessary, supplementary details or an icon button can be passed into the action bar instead of the ghost button. Both are the same height as the ghost button and top aligned with the action button bar.
 
 <Canvas>
   <Story
