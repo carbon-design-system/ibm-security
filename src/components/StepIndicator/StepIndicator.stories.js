@@ -1,16 +1,16 @@
 /**
  * @file Step indicator stories.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { number } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { components, deprecate, info } from '../../../.storybook';
+import { deprecated, info } from '../../../.storybook';
 import { Step, StepIndicator } from '../..';
 
-storiesOf(components(deprecate('StepIndicator')), module).add(
+storiesOf(deprecated('StepIndicator'), module).add(
   'default',
   () => (
     <StepIndicator currentIndex={number('Current progress (currentIndex)', 1)}>
