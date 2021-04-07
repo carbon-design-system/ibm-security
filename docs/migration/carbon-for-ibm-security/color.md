@@ -16,17 +16,3 @@ Also refer to [migration in Carbon](https://github.com/carbon-design-system/carb
 | `carbon-addons-security`                   | `@carbon/ibm-security`          |
 | ------------------------------------------ | ------------------------------- |
 | `$ibm-colors__white` / `$ibm-color__white` | `$carbon--white-0` / `$white-0` |
-
-# <<<<<<< HEAD:docs/migration/2.x-color.md
-
-### Feature flags
-
-If using `@carbon/grid`, you can disable the legacy grid output using a feature flag by writing the following Sass code before importing:
-
-```scss
-$security--feature-flags: (
-  css-gridish: false,
-);
-```
-
-> > > > > > > 86a0cab59d9... docs(migration): restructure migration documentation:docs/migration/carbon-for-ibm-security/color.md

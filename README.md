@@ -97,16 +97,10 @@ To add all of the components' processed and minified styles, reference `@carbon/
 
 ## Documentation
 
-<<<<<<< HEAD
-
 - [Contributing](.github/CONTRIBUTING.md): Guidelines for making contributions to this repo
 - [Migration Guides](docs/migration)
-  - # [`v1` to `v2`](docs/migration/migrate-to-2.x.md)
-- [Guidelines for making contributions](.github/CONTRIBUTING.md) to this repo
-- [Migration guides](docs/migration)
   - [`carbon-addons-security` to `@carbon/ibm-security`](docs/migration/carbon-for-ibm-security/README.md)
   - [`v1` to `v2`](docs/migration/2.x/README.md)
-    > > > > > > > 86a0cab59d9... docs(migration): restructure migration documentation
 - [Storybook](docs/storybook.md)
 - [Themes](docs/themes)
 
