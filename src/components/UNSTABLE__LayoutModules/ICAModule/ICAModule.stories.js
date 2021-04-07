@@ -13,7 +13,7 @@ import getTitle from '../stories';
 import page from './index.mdx';
 
 export default {
-  title: getTitle(ICAModule),
+  title: getTitle(ICAModule.name),
   component: ICAModule,
   parameters: {
     docs: { page },
