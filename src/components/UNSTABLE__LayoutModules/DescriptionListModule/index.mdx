@@ -5,6 +5,7 @@ import { Default } from './DescriptionListModule.stories';
 import anatomy from './images/anatomy.png';
 
 import variants from './images/variants.png';
+import variantsTwo from './images/variants2.png';
 
 import doImage from './images/do.png';
 import dont from './images/dont.png';
@@ -49,9 +50,9 @@ Additional props passed into `DescriptionListModule` will be forwarded along to 
 ### Anatomy
 
 1. **Term:** This is the label, it should left aligned to a grid column.
-2. **Gutter:** There is always a 32px gutter between the 'term' and 'description' columns. In this way, the 'description' column is always offset from the term column by exactly 32px.
+2. **Gutter:** There is always a 32px gutter between the ‘term’ and ‘description’ columns. In this way, the ‘description’ column is always offset from the term column by exactly 32px.
 3. **Description:** The description placement is relative to the term label, it will always fall 32px to the right of the term.
-4. **Bottom spacer:** The 16-pixel spacer `$spacing-05` below the 'Row spacer' row provides the starting point for the layout module positioned directly underneath it. At the end of the description list module both the 'Row spacer' and 'Bottom spacer' join together to create a 32px buffer.
+4. **Bottom spacer:** The 16-pixel spacer `$spacing-05` below the ‘Row spacer’ row provides the starting point for the layout module positioned directly underneath it. At the end of the description list module both the ‘Row spacer’ and ‘Bottom spacer’ join together to create a 32px buffer.
 
 <img alt="`DescriptionListModule` anatomy" src={anatomy} />
 
@@ -59,15 +60,19 @@ Additional props passed into `DescriptionListModule` will be forwarded along to 
 
 A description list can have a title, both section and subsection title bars can precede the type layout. Learn more by reviewing the <LinkTo kind="patterns-unstable-layout-modules-titlebarmodule" story="default" > TitleBarModule. </LinkTo>
 
-There is also a stacked variant of the DescriptionListModule for narrower spaces.
-
-<img alt="`DescriptionListModule` variants" src={variants} />
-
+<img alt="`DescriptionListModule` title variants" src={variants} />
 <Source id="patterns-unstable-layout-modules-descriptionlistmodule--variant" />
+
+#### Coming soon...
+
+There is also a `stacked` variant for narrower spaces, it's ideal for 4 columns.  
+The `short` variant works in scenarios where there is less vertical space.
+
+<img alt="`DescriptionListModule` size variants" src={variantsTwo} />
 
 ### Grid placement
 
-Description list modules span a minimum of 4 columns, following the [narrow grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow) implementation. The 'term' column should left align with the grid, the 'description' column will be offset from the 'term' column by exactly 32px. It may or may not align to the grid, don't force it.
+Description list modules span a minimum of 4 columns, following the [narrow grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow) implementation. The ‘term’ column should left align with the grid, the ‘description’ column will be offset from the ‘term’ column by exactly 32px. It may or may not align to the grid, donʼt force it.
 
 <Row>
   <Column>

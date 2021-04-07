@@ -59,7 +59,7 @@ Use the `hover` prop to specify whether the hover variant should be used.
 
 #### Render props
 
-In order to make sure that everything works as intended, it's important to pass all of the props of the component as fields on the object given to the prop getter. For example, to add a `className`:
+In order to make sure that everything works as intended, itʼs important to pass all of the props of the component as fields on the object given to the prop getter. For example, to add a `className`:
 
 ```jsx
 <Column {...getLayoutProps({ className: 'className' })} />
@@ -67,7 +67,7 @@ In order to make sure that everything works as intended, it's important to pass 
 
 ### Anatomy
 
-1. **ICA:** This is the ICA itself, it comprises a value and a label. Spacing between the value and label, and between individual ICA's, is defined in the module.
+1. **ICA:** This is the ICA itself, it comprises a value and a label. Spacing between the value and label, and between individual ICAs, is defined in the module.
 2. **ICA spacer (optional):** If there are multiple rows of ICAs, use the 16-pixel spacer `$spacing-05` to separate the rows.
 3. **Bottom spacer:** The is a bottom spacer of 32px (`$spacing-07`) included inside the module.
 
@@ -83,13 +83,15 @@ If the ICA needs to be interactive, a background hover can be placed on the grid
 
 ### Variants
 
-ICA's come in 3 sizes: default, large (`lg`) and extra-large (`xl`).
+#### Coming soon...
+
+Right now the ICA has a default size. Soon there will also be a large (`lg`) and extra-large (`xl`) variant.
 
 <img alt="`ICA` variants" src={variants} />
 
 ### Grid placement
 
-Individual ICA's within the module should span no more than 4 columns. Following the narrow grid implementation, the ICA values should always align to grid columns. As illustrated in the [Anatomy](#anatomy) section, ICA's can also be stacked.
+Individual ICAs within the module should span no more than 4 columns. Following the narrow grid implementation, the ICA values should always align to grid columns. As illustrated in the [Anatomy](#anatomy) section, ICAs can also be stacked.
 
 <Row>
   <Column>
@@ -103,17 +105,17 @@ Individual ICA's within the module should span no more than 4 columns. Following
 
 ```jsx
 <ICAModule>
-  {() => (
+  {({ getLayoutProps }) => (
     <Row>
-      <Column lg={3}>
+      <Column {...getLayoutProps({ lg: 3 })}>
         <ICA />
       </Column>
 
-      <Column lg={3}>
+      <Column {...getLayoutProps({ lg: 3 })}>
         <ICA />
       </Column>
 
-      <Column lg={3}>
+      <Column {...getLayoutProps({ lg: 3 })}>
         <ICA />
       </Column>
     </Row>

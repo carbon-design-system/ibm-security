@@ -1,61 +1,90 @@
 import { parameters } from '../../../../.storybook/preview';
 
-import menu1 from './images/menu1.png';
-import menu2 from './images/menu2.png';
-import menu3 from './images/menu3.png';
+import descriptionModule from './images/descriptionModule.png';
+import descriptionListModule from './images/descriptionListModule.png';
+import titleBarModule from './images/titleBarModule.png';
+import icaModule from './images/icaModule.png';
+import buttonClusterModule from './images/buttonClusterModule.png';
+import actionBarModule from './images/actionBarModule.png';
+import cardModule from './images/cardModule.png';
 
 <Row>
-  <Column>
-    <a className="storybook__link--image" href="https://app.slack.com/client/T1V6D3RT7/CRV39QKP0" rel="noopener noreferrer" target="_blank">
-      <img alt="Troubleshooting Slack link" src={menu2} />
-    </a>
-  </Column>
 
 <Column>
-  <a
+  <LinkTo
     className="storybook__link--image"
-    href="https://app.slack.com/client/T1V6D3RT7/CRV39QKP0"
-    rel="noopener noreferrer"
-    target="_blank"
+    kind="patterns-unstable-layout-modules-actionbarmodule"
+    story="default"
   >
-    <img alt="Troubleshooting Slack link" src={menu2} />
-  </a>
+    <img alt="Link to action bar module" src={actionBarModule} />
+  </LinkTo>
 </Column>
 
 <Column>
-  <a
+  <LinkTo
+    className="storybook__link--image"
+    kind="patterns-unstable-layout-modules-buttonclustermodule"
+    story="default"
+  >
+    <img alt="Link to button cluster module" src={buttonClusterModule} />
+  </LinkTo>
+</Column>
+
+<Column>
+  <LinkTo
+    className="storybook__link--image"
+    kind="patterns-unstable-layout-modules-cardmodule"
+    story="default"
+  >
+    <img alt="Link to card module" src={cardModule} />
+  </LinkTo>
+</Column>
+
+</Row>
+
+<Row>
+    <Column>
+    <LinkTo className="storybook__link--image" href="patterns-iconbuttonbar" rel="noopener noreferrer" target="_blank">
+      <img alt="Link to description module" src={descriptionModule} />
+    </LinkTo>
+  </Column>
+
+<Column>
+  <LinkTo
     className="storybook__link--image"
     href="https://app.slack.com/client/T1V6D3RT7/CRV39QKP0"
     rel="noopener noreferrer"
     target="_blank"
   >
-    <img alt="Troubleshooting Slack link" src={menu2} />
-  </a>
+    <img alt="Link to description list module" src={descriptionListModule} />
+  </LinkTo>
+</Column>
+
+<Column>
+  <LinkTo
+    className="storybook__link--image"
+    href="https://app.slack.com/client/T1V6D3RT7/CRV39QKP0"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <img alt="Link to ICA module" src={icaModule} />
+  </LinkTo>
 </Column>
 
 </Row>
 
 <Row>
   <Column>
-    <a className="storybook__link--image" href="https://app.slack.com/client/T1V6D3RT7/CRV39QKP0" rel="noopener noreferrer" target="_blank">
-      <img alt="Troubleshooting Slack link" src={menu2} />
-    </a>
+    <LinkTo
+      className="storybook__link--image"
+      href="https://app.slack.com/client/T1V6D3RT7/CRV39QKP0"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <img alt="Link to title bar module" src={titleBarModule} />
+    </LinkTo>
   </Column>
 
-<Column>
-  <a
-    className="storybook__link--image"
-    href="https://app.slack.com/client/T1V6D3RT7/CRV39QKP0"
-    rel="noopener noreferrer"
-    target="_blank"
-  >
-    <img alt="Troubleshooting Slack link" src={menu2} />
-  </a>
-</Column>
-
-   <Column>
-    <a className="storybook__link--image" href="https://app.slack.com/client/T1V6D3RT7/CRV39QKP0" rel="noopener noreferrer" target="_blank">
-      <img alt="Troubleshooting Slack link" src={menu2} />
-    </a>
-  </Column>
+  <Column></Column>
+  <Column></Column>
 </Row>

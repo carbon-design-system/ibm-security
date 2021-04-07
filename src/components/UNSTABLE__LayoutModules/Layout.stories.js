@@ -1,11 +1,10 @@
 /**
  * @file Layout module stories.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import {
   Activity16,
-  ArrowRight16,
   Copy16,
   Filter16,
   Search16,
@@ -35,9 +34,6 @@ import {
   ICAModule,
   IconButtonBar,
   SummaryCard as SummaryCardComponent,
-  SummaryCardAction,
-  SummaryCardBody,
-  SummaryCardFooter,
   SummaryCardHeader,
   Tag,
   TitleBarModule,
@@ -132,7 +128,7 @@ export const Detail = () => (
               renderIcon: View16,
             },
           ]}
-          size="md"
+          size="lg"
         />
       </ActionBarModuleItems>
     </ActionBarModule>
@@ -143,69 +139,21 @@ export const Detail = () => (
           <Column>
             <SummaryCard {...getLayoutProps()}>
               <SummaryCardHeader title="Threat actor" />
-              <SummaryCardBody>
-                <TitleBarModule title="Suspected Chinese Cyber Espionage Group (TEMP.Periscope)" />
-              </SummaryCardBody>
-              <SummaryCardFooter>
-                <SummaryCardAction
-                  renderIcon={ArrowRight16}
-                  iconDescription="Navigate"
-                  tooltipAlignment="center"
-                  tooltipPosition="right"
-                  hasIconOnly
-                />
-              </SummaryCardFooter>
             </SummaryCard>
           </Column>
           <Column>
             <SummaryCard {...getLayoutProps()}>
               <SummaryCardHeader title="Threat report" />
-              <SummaryCardBody>
-                <TitleBarModule title="XFTAS Daily Threat Assessment for Mar 2019" />
-              </SummaryCardBody>
-              <SummaryCardFooter>
-                <SummaryCardAction
-                  renderIcon={ArrowRight16}
-                  iconDescription="Navigate"
-                  tooltipAlignment="center"
-                  tooltipPosition="right"
-                  hasIconOnly
-                />
-              </SummaryCardFooter>
             </SummaryCard>
           </Column>
           <Column>
             <SummaryCard {...getLayoutProps()}>
               <SummaryCardHeader title="IP report" />
-              <SummaryCardBody>
-                <TitleBarModule title="103.243.175.181" />
-              </SummaryCardBody>
-              <SummaryCardFooter>
-                <SummaryCardAction
-                  renderIcon={ArrowRight16}
-                  iconDescription="Navigate"
-                  tooltipAlignment="center"
-                  tooltipPosition="right"
-                  hasIconOnly
-                />
-              </SummaryCardFooter>
             </SummaryCard>
           </Column>
           <Column>
             <SummaryCard {...getLayoutProps()}>
               <SummaryCardHeader title="Vulnerability report" />
-              <SummaryCardBody>
-                <TitleBarModule title="CVE-2017-11882" />
-              </SummaryCardBody>
-              <SummaryCardFooter>
-                <SummaryCardAction
-                  renderIcon={ArrowRight16}
-                  iconDescription="Navigate"
-                  tooltipAlignment="center"
-                  tooltipPosition="right"
-                  hasIconOnly
-                />
-              </SummaryCardFooter>
             </SummaryCard>
           </Column>
         </Row>
@@ -215,21 +163,21 @@ export const Detail = () => (
     <Row>
       <ColumnWithBackground>
         <ICAModule>
-          {() => (
+          {({ getLayoutProps }) => (
             <>
               <TitleBarModule element="h4" title="Indicators" />
 
               <Row>
-                <Column sm={2} md={2} lg={3}>
+                <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
                   <ICA label="Malware" value={11} />
                 </Column>
-                <Column sm={2} md={2} lg={3}>
+                <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
                   <ICA label="IPs" value={8} />
                 </Column>
-                <Column sm={2} md={2} lg={3}>
+                <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
                   <ICA label="URLs" value={9} />
                 </Column>
-                <Column sm={2} md={2} lg={3}>
+                <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
                   <ICA label="VULs" value={1} />
                 </Column>
               </Row>
@@ -447,15 +395,15 @@ export const Overview = () => (
             </Row>
 
             <ICAModule>
-              {() => (
+              {({ getLayoutProps }) => (
                 <Row>
-                  <Column sm={2} md={2} lg={3}>
+                  <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
                     <ICA label="Reviews complete" value={300} />
                   </Column>
-                  <Column sm={2} md={2} lg={3}>
+                  <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
                     <ICA label="Approved" value={241} />
                   </Column>
-                  <Column sm={2} md={2} lg={3}>
+                  <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
                     <ICA label="Rejected" value={28} />
                   </Column>
                 </Row>

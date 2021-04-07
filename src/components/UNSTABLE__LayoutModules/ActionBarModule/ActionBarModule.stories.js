@@ -59,7 +59,7 @@ export const Default = () => (
             renderIcon: OverflowMenuVertical16,
           },
         ]}
-        size="md"
+        size="lg"
       />
     </ActionBarModuleItems>
   </ActionBarModule>
@@ -67,24 +67,26 @@ export const Default = () => (
 
 export const Variant = () => (
   <ActionBarModule>
-    Supplementary details
+    <Button
+      iconDescription="Action 1"
+      kind="ghost"
+      renderIcon={Filter16}
+      hasIconOnly
+    />
+
     <ActionBarModuleItems>
       <IconButtonBar
         actions={[
           {
-            label: 'Action 1',
+            label: 'Action 2',
             renderIcon: Add16,
           },
           {
-            label: 'Action 2',
+            label: 'Action 3',
             renderIcon: Edit16,
           },
-          {
-            label: 'Action 3',
-            renderIcon: Filter16,
-          },
         ]}
-        size="md"
+        size="lg"
       />
     </ActionBarModuleItems>
   </ActionBarModule>
