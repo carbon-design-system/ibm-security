@@ -1,6 +1,6 @@
 /**
  * @file Description list module stories.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import React from 'react';
@@ -20,7 +20,7 @@ import getTitle from '../stories';
 import page from './index.mdx';
 
 export default {
-  title: getTitle(DescriptionListModule),
+  title: getTitle(DescriptionListModule.name),
   component: DescriptionListModule,
   parameters: {
     docs: { page },
