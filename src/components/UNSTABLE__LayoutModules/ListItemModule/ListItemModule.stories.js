@@ -23,7 +23,10 @@ import getTitle from '../stories';
 import page from './index.mdx';
 
 export default {
-  title: getTitle(ListItemModule),
+  title: getTitle({
+    displayName: 'ListItemModule (Canary)',
+    name: 'ListItemModule',
+  }),
   component: ListItemModule,
   parameters: {
     docs: { page },
@@ -154,7 +157,7 @@ export const WithComponent = () => (
     {({ Column, getLayoutProps }) => (
       <>
         <Column>
-          <Bee16 {...getLayoutProps({ type: 'top-icon' })} />
+          <Bee16 {...getLayoutProps({ type: 'icon' })} />
 
           <h2 {...getLayoutProps({ type: 'title' })}>List title</h2>
 
@@ -211,26 +214,34 @@ export const WithInProgressIcon = () => (
   </ListItemModule>
 );
 
-export const WithDistributedColumns = () => (
-  <ListItemModule href="#">
-    {({ Column, getLayoutProps }) => (
-      <>
-        <Column>
-          <Bee16 {...getLayoutProps({ type: 'icon' })} />
-        </Column>
+NonInteractive.parameters = {
+  viewMode: 'canvas',
+};
 
-        <Column {...getLayoutProps({ type: 'distributed-column' })}>
-          <h2 {...getLayoutProps({ type: 'title' })}>Asset_name</h2>
-        </Column>
+AsButton.parameters = {
+  viewMode: 'canvas',
+};
 
-        <Column {...getLayoutProps({ type: 'distributed-column' })}>
-          <h2 {...getLayoutProps({ type: 'title' })}>Data set</h2>
-        </Column>
+Detailed.parameters = {
+  viewMode: 'canvas',
+};
 
-        <Column {...getLayoutProps({ type: 'distributed-column' })}>
-          <h2 {...getLayoutProps({ type: 'title' })}>3:47 pm</h2>
-        </Column>
-      </>
-    )}
-  </ListItemModule>
-);
+WithProfileImage.parameters = {
+  viewMode: 'canvas',
+};
+
+WithTag.parameters = {
+  viewMode: 'canvas',
+};
+
+WithComponent.parameters = {
+  viewMode: 'canvas',
+};
+
+WithStatusIcon.parameters = {
+  viewMode: 'canvas',
+};
+
+WithInProgressIcon.parameters = {
+  viewMode: 'canvas',
+};

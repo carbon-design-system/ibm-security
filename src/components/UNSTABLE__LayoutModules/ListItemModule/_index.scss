@@ -61,10 +61,6 @@
     margin-left: auto;
   }
 
-  &__distributed-column {
-    margin-right: auto;
-  }
-
   &__title,
   &__description {
     margin-top: 0;
@@ -72,9 +68,6 @@
 
   &__icon {
     margin-right: $carbon--spacing-05;
-  }
-
-  &__top-icon {
     margin-bottom: $carbon--spacing-05;
   }
 
@@ -120,8 +113,6 @@
     margin-top: -$carbon--spacing-02;
     margin-bottom: -$carbon--spacing-02;
   }
-
-  // TODO: class naming (right-to-left readers, etc)
 
   &__component {
     margin-top: $carbon--spacing-05;

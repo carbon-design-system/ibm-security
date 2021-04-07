@@ -2,22 +2,19 @@ import { parameters } from '../../../../.storybook/preview';
 
 # ListItemModule
 
+The ListItem is a module designed for flexibility. It consists of optional pieces that can be used to design & build variants with universal consistency.
+
 [↳ Overview](#overview)  
 [↳ Component API](#component-api)  
 [↳ Troubleshooting](#troubleshooting)
 
 ### Overview
 
-<Canvas>
-  <Story
-    id="patterns-unstable-layout-modules-listitemmodule--default"
-    parameters={parameters}
-  />
-</Canvas>
+Everything passed in as a [render prop](https://reactjs.org/docs/render-props.html) child of `ListItemModule` will be rendered.
 
 <Canvas>
   <Story
-      id="patterns-unstable-layout-modules-listitemmodule--detailed"
+      id="patterns-unstable-layout-modules-listitemmodule-canary--detailed"
       parameters={parameters}
     />
 </Canvas>
@@ -29,5 +26,19 @@ import { parameters } from '../../../../.storybook/preview';
 _**\***Required property_
 
 Additional props passed into `ListItemModule` will be forwarded along to the underlying list item module container.
+
+#### Columns
+
+Children should be nested inside one or more `Column` as needed. If using more than one `Column`, be sure to wrap them in a `<Fragment>` or `<>` when passing into a `ListItemModule`.
+
+#### Render props
+
+In order to make sure that everything works as intended, it's important to pass all of the props of the component as fields on the object given to the prop getter. For example, to add a `title` child inside a `ListItemModule`:
+
+```jsx
+<h2 {...getLayoutProps({ type: 'title' })}>List title</h2>
+```
+
+Props provided are `title`, `label`, `description`, `component`, `icon`, `avatar`, and `farside-column` (added to a `Column` to align its content to the farside of the `ListItemModule`).
 
 <Troubleshooting />
