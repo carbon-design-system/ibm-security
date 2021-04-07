@@ -9,6 +9,9 @@ import {
   Locked16,
   UserAvatar20,
 } from '@carbon/icons-react';
+
+import { action } from '@storybook/addon-actions';
+
 import React from 'react';
 
 import { getDocsParameters } from '../../../../.storybook';
@@ -33,13 +36,11 @@ export default {
 export const Default = () => (
   <ListItemModule href="#">
     {({ Column, getLayoutProps }) => (
-      <>
-        <Column>
-          <h2 {...getLayoutProps({ type: 'title' })}>List title</h2>
+      <Column>
+        <h2 {...getLayoutProps({ type: 'title' })}>List title</h2>
 
-          <span {...getLayoutProps({ type: 'label' })}>Label</span>
-        </Column>
-      </>
+        <span {...getLayoutProps({ type: 'label' })}>Label</span>
+      </Column>
     )}
   </ListItemModule>
 );
@@ -47,27 +48,23 @@ export const Default = () => (
 export const NonInteractive = () => (
   <ListItemModule>
     {({ Column, getLayoutProps }) => (
-      <>
-        <Column>
-          <h2 {...getLayoutProps({ type: 'title' })}>List title</h2>
+      <Column>
+        <h2 {...getLayoutProps({ type: 'title' })}>List title</h2>
 
-          <span {...getLayoutProps({ type: 'label' })}>Label</span>
-        </Column>
-      </>
+        <span {...getLayoutProps({ type: 'label' })}>Label</span>
+      </Column>
     )}
   </ListItemModule>
 );
 
 export const AsButton = () => (
-  <ListItemModule onClick={() => console.log('hi')}>
+  <ListItemModule onClick={action('onClick')}>
     {({ Column, getLayoutProps }) => (
-      <>
-        <Column>
-          <h2 {...getLayoutProps({ type: 'title' })}>List title</h2>
+      <Column>
+        <h2 {...getLayoutProps({ type: 'title' })}>List title</h2>
 
-          <span {...getLayoutProps({ type: 'label' })}>Label</span>
-        </Column>
-      </>
+        <span {...getLayoutProps({ type: 'label' })}>Label</span>
+      </Column>
     )}
   </ListItemModule>
 );
