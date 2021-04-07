@@ -5,4 +5,4 @@
 
 import { layoutModules } from '../../../../.storybook';
 
-export default ({ displayName, name }) => layoutModules(displayName || name);
+export default title => layoutModules(title);
