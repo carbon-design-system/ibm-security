@@ -4739,8 +4739,8 @@ Map {
         "args": Array [
           Array [
             "default",
-            "large",
-            "xlarge",
+            "lg",
+            "xlg",
           ],
         ],
         "type": "oneOf",

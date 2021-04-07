@@ -10,7 +10,7 @@ import React from 'react';
 
 import 'numeral/locales';
 
-import { ArrowUp16, ArrowUp20, ArrowUp24 } from '@carbon/icons-react/lib/';
+import { ArrowUp16, ArrowUp20, ArrowUp24 } from '@carbon/icons-react';
 import Icon from '../Icon/Icon';
 
 import isDevelopment from '../../globals/env';
@@ -54,13 +54,9 @@ const formatValue = (value, truncate) => {
 const truncateValue = (percentage, value, truncate, ICAClasses) => {
   if (percentage)
     return (
-      <div className={`${namespace}__percentage  ${ICAClasses}__percentage`}>
+      <div className={`${namespace}__percentage  ${ICAClasses}`}>
         {value}
-        <span
-          className={`${namespace}__percentage-mark ${ICAClasses}__percentage-mark`}
-        >
-          %
-        </span>
+        <span className={`${namespace}__percentage-mark ${ICAClasses}`}>%</span>
       </div>
     );
 
@@ -91,9 +87,9 @@ const ICA = ({
     renderIcon = ArrowUp24;
   }
 
-  const ICAClasses = classnames(namespace, className, {
-    [`${namespace}--large`]: isLarge,
-    [`${namespace}--xlarge`]: isXLarge,
+  const ICAClasses = classnames(className, {
+    [`${namespace}--lg`]: isLarge,
+    [`${namespace}--xlg`]: isXLarge,
   });
 
   if (Locales.includes(locale)) {
@@ -115,23 +111,20 @@ const ICA = ({
     (forceShowTotal && truncatedTotal > 0);
 
   return (
-    <div className={ICAClasses} {...other}>
-      <h4 className={`${namespace}__label ${ICAClasses}__label`}>{label} </h4>
+    <div {...other}>
+      <h4 className={`${namespace}__label ${ICAClasses}`}>{label} </h4>
       <span className={`${namespace}__row`}>
         {trending && (
           <Icon
-            className={`${namespace}__trend ${ICAClasses}__trend`}
+            className={`${namespace}__trend ${ICAClasses}`}
             renderIcon={renderIcon}
           />
         )}
-        <span className={`${namespace}__value ${ICAClasses}__value`}>
+        <span className={`${namespace}__value ${ICAClasses}`}>
           {truncatedValue}
         </span>
         {shouldDisplayof ? (
-          <span
-            className={`${namespace}__total ${ICAClasses}__total ${trending &&
-              `${ICAClasses}__total__trend`}`}
-          >
+          <span className={`${namespace}__total ${ICAClasses}`}>
             {' '}
             <span>/{truncatedTotal}</span>
           </span>
@@ -189,10 +182,8 @@ ICA.propTypes = {
   /** Specify whether or not the values should be truncated. */
   truncate: PropTypes.bool,
 
-  /** The size of the ICA
-   * @type string
-   */
-  size: PropTypes.oneOf(['default', 'large', 'xlarge']),
+  /** The size of the ICA. */
+  size: PropTypes.oneOf(['default', 'lg', 'xlg']),
 
   /**
    * Display trending icon

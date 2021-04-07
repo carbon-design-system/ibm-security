@@ -12,72 +12,70 @@
 @import '../Component/mixins';
 
 @include security--component($name: ica) {
-  & &__label {
+  &__label {
     @include carbon--type-style($name: label-01);
     display: block;
     color: $text-02;
     margin: 0;
   }
 
-  & &__value {
+  &__value {
     @include carbon--type-style($name: productive-heading-04);
     margin-bottom: 0;
   }
 
-  & &__total {
+  &__total {
     @include carbon--type-style($name: body-short-01);
     margin-bottom: 0;
-    padding-top: $spacing-01 + $spacing-04;
+    padding-top: $carbon--spacing-01 + $carbon--spacing-04;
   }
 
-  & &__trend {
+  &__trend {
     vertical-align: top;
-    margin-top: $spacing-03;
+    margin-top: $carbon--spacing-03;
   }
 
-  & &__row {
+  &__row {
     display: flex;
   }
 
-  & &__percentage {
+  &__percentage {
     @include carbon--type-style($name: productive-heading-04);
   }
 
-  & &__percentage-mark {
+  &__percentage-mark {
     @include carbon--type-style($name: body-short-01);
   }
 
-  &--large {
-    & &__value,
-    & &__percentage {
-      @include carbon--type-style($name: productive-heading-06);
-    }
-
-    & &__total,
-    & &__percentage-mark {
-      @include carbon--type-style($name: productive-heading-03);
-      padding-top: $spacing-03 + $spacing-04;
-    }
+  // Lg Styling
+  &__value#{&}--lg,
+  &__percentage#{&}--lg {
+    @include carbon--type-style($name: productive-heading-06);
   }
 
-  &--xlarge {
-    & &__label {
-      @include carbon--type-style($name: body-short-01);
-    }
+  &__total#{&}--lg,
+  &__percentage-mark#{&}--lg {
+    @include carbon--type-style($name: productive-heading-03);
+    padding-top: $carbon--spacing-03 + $carbon--spacing-04;
+  }
 
-    & &__value,
-    & &__percentage {
-      @include carbon--type-style($name: productive-heading-07);
-    }
+  // Xlg Styling
+  &__label#{&}--xlg {
+    @include carbon--type-style($name: body-short-01);
+  }
 
-    & &__total,
-    & &__percentage-mark {
-      @include carbon--type-style($name: productive-heading-04);
-      padding-top: $spacing-06;
-    }
+  &__value#{&}--xlg,
+  &__percentage#{&}--xlg {
+    @include carbon--type-style($name: productive-heading-07);
+  }
 
-    & &__trend {
-      margin-top: $spacing-04;
-    }
+  &__total#{&}--xlg,
+  &__percentage-mark#{&}--xlg {
+    @include carbon--type-style($name: productive-heading-04);
+    padding-top: $carbon--spacing-06;
+  }
+
+  &__trend#{&}--xlg {
+    margin-top: $carbon--spacing-04;
   }
 }

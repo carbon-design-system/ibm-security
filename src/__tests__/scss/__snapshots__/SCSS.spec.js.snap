@@ -9726,7 +9726,7 @@ li.bx--accordion__item--disabled:last-of-type {
   margin: 0;
 }
 
-.security--ica .security--ica__label {
+.security--ica__label {
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1.34;
@@ -9736,7 +9736,7 @@ li.bx--accordion__item--disabled:last-of-type {
   margin: 0;
 }
 
-.security--ica .security--ica__value {
+.security--ica__value {
   font-size: 1.75rem;
   font-weight: 400;
   line-height: 1.29;
@@ -9744,7 +9744,7 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-bottom: 0;
 }
 
-.security--ica .security--ica__total {
+.security--ica__total {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.29;
@@ -9753,39 +9753,37 @@ li.bx--accordion__item--disabled:last-of-type {
   padding-top: 0.875rem;
 }
 
-.security--ica .security--ica__trend {
+.security--ica__trend {
   vertical-align: top;
   margin-top: 0.5rem;
 }
 
-.security--ica .security--ica__row {
+.security--ica__row {
   display: flex;
 }
 
-.security--ica .security--ica__percentage {
+.security--ica__percentage {
   font-size: 1.75rem;
   font-weight: 400;
   line-height: 1.29;
   letter-spacing: 0;
 }
 
-.security--ica .security--ica__percentage-mark {
+.security--ica__percentage-mark {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.29;
   letter-spacing: 0.16px;
 }
 
-.security--ica--large .security--ica--large__value,
-.security--ica--large .security--ica--large__percentage {
+.security--ica__value.security--ica--lg, .security--ica__percentage.security--ica--lg {
   font-size: 2.625rem;
   font-weight: 300;
   line-height: 1.199;
   letter-spacing: 0;
 }
 
-.security--ica--large .security--ica--large__total,
-.security--ica--large .security--ica--large__percentage-mark {
+.security--ica__total.security--ica--lg, .security--ica__percentage-mark.security--ica--lg {
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.4;
@@ -9793,23 +9791,21 @@ li.bx--accordion__item--disabled:last-of-type {
   padding-top: 1.25rem;
 }
 
-.security--ica--xlarge .security--ica--xlarge__label {
+.security--ica__label.security--ica--xlg {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.29;
   letter-spacing: 0.16px;
 }
 
-.security--ica--xlarge .security--ica--xlarge__value,
-.security--ica--xlarge .security--ica--xlarge__percentage {
+.security--ica__value.security--ica--xlg, .security--ica__percentage.security--ica--xlg {
   font-size: 3.375rem;
   font-weight: 300;
   line-height: 1.19;
   letter-spacing: 0;
 }
 
-.security--ica--xlarge .security--ica--xlarge__total,
-.security--ica--xlarge .security--ica--xlarge__percentage-mark {
+.security--ica__total.security--ica--xlg, .security--ica__percentage-mark.security--ica--xlg {
   font-size: 1.75rem;
   font-weight: 400;
   line-height: 1.29;
@@ -9817,7 +9813,7 @@ li.bx--accordion__item--disabled:last-of-type {
   padding-top: 1.5rem;
 }
 
-.security--ica--xlarge .security--ica--xlarge__trend {
+.security--ica__trend.security--ica--xlg {
   margin-top: 0.75rem;
 }
 
