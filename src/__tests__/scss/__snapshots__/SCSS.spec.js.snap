@@ -27183,6 +27183,13 @@ a.bx--navigation-link:focus {
   margin-top: 0;
 }
 
+.page-layouts__banner {
+  margin-top: 0;
+  max-width: 100%;
+  background-color: var(--ui-02, #393939);
+  color: var(--text-01, #f4f4f4);
+}
+
 .security--unstable-pagination {
   box-sizing: border-box;
   margin: 0;
