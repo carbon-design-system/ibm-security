@@ -14,6 +14,7 @@ import {
 import { layout03, layout04 } from '@carbon/layout';
 
 import { Grid, Row, Column } from 'carbon-components-react';
+import classnames from 'classnames';
 import React from 'react';
 
 import { disableCentered, patterns } from '../../../.storybook';
@@ -44,7 +45,6 @@ import {
   withBackground,
 } from '../..';
 
-const ColumnWithBackground = withBackground(Column);
 const SummaryCard = withBackground(SummaryCardComponent);
 
 const UIShell = () => (
@@ -70,6 +70,16 @@ export default {
     ),
   ],
 };
+
+const withContainer = WrappedComponent => ({ className, ...other }) => {
+  const namespace = 'container--narrow';
+
+  return (
+    <WrappedComponent className={classnames(namespace, className)} {...other} />
+  );
+};
+
+const RowWithContainer = withContainer(Row);
 
 export const Detail = () => (
   <>
@@ -135,7 +145,7 @@ export const Detail = () => (
 
     <CardModule>
       {({ getLayoutProps }) => (
-        <Row>
+        <Row narrow>
           <Column>
             <SummaryCard {...getLayoutProps()}>
               <SummaryCardHeader title="Threat actor" />
@@ -160,106 +170,125 @@ export const Detail = () => (
       )}
     </CardModule>
 
-    <Row>
-      <ColumnWithBackground>
-        <ICAModule>
-          {({ getLayoutProps }) => (
-            <>
-              <TitleBarModule element="h4" title="Indicators" />
+    <RowWithContainer narrow>
+      <Column>
+        <TitleBarModule element="h4" title="Indicators" />
+      </Column>
+    </RowWithContainer>
 
-              <Row>
-                <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
-                  <ICA label="Malware" value={11} />
-                </Column>
-                <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
-                  <ICA label="IPs" value={8} />
-                </Column>
-                <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
-                  <ICA label="URLs" value={9} />
-                </Column>
-                <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
-                  <ICA label="VULs" value={1} />
-                </Column>
-              </Row>
-            </>
-          )}
-        </ICAModule>
-
-        <Row condensed>
-          <Column>
-            <DataTablePagination
-              headers={[
-                {
-                  header: 'Name',
-                  key: 'name',
-                },
-                {
-                  header: 'Last sighted',
-                  key: 'lastSighted',
-                },
-              ]}
-              pageSize={5}
-              pageSizes={[5, 10, 25, 50]}
-              rows={[
-                {
-                  id: '0',
-                  lastSighted: 'Feb 3 2019 12:00 PM EST',
-                  name: (
-                    <Decorator
-                      score={7}
-                      type="MAL"
-                      value="5020c08bcc061236643293bf0d897321"
-                    />
-                  ),
-                },
-                {
-                  id: '1',
-                  lastSighted: 'Feb 5 2019 12:00 PM EST',
-                  name: (
-                    <Decorator
-                      score={7}
-                      type="MAL"
-                      value="aca7037286b64b0da05c9708d647c013"
-                    />
-                  ),
-                },
-                {
-                  id: '2',
-                  lastSighted: 'Feb 7 2019 12:00 PM EST',
-                  name: (
-                    <Decorator
-                      score={7}
-                      type="MAL"
-                      value="bd9e4c82bf12c4e7a58221fc52fed705"
-                    />
-                  ),
-                },
-                {
-                  id: '3',
-                  lastSighted: 'Apr 1 2019 12:00 PM EST',
-                  name: (
-                    <Decorator score={0} type="IP" value="103.243.175.181" />
-                  ),
-                },
-                {
-                  id: '4',
-                  lastSighted: 'Apr 1 2019 12:00 PM EST',
-                  name: (
-                    <Decorator
-                      score={7}
-                      type="MAL"
-                      value="5020c08bcc061236643293bf0d897321"
-                    />
-                  ),
-                },
-              ]}
-            />
+    <ICAModule>
+      {({ getLayoutProps }) => (
+        <RowWithContainer narrow>
+          <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
+            <ICA label="Malware" value={11} />
           </Column>
-        </Row>
-      </ColumnWithBackground>
+          <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
+            <ICA label="IPs" value={8} />
+          </Column>
+          <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
+            <ICA label="URLs" value={9} />
+          </Column>
+          <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
+            <ICA label="VULs" value={1} />
+          </Column>
+        </RowWithContainer>
+      )}
+    </ICAModule>
+
+    <Row narrow>
+      <Column>
+        <DataTablePagination
+          headers={[
+            {
+              header: 'Name',
+              key: 'name',
+            },
+            {
+              header: 'Last sighted',
+              key: 'lastSighted',
+            },
+          ]}
+          pageSize={5}
+          pageSizes={[5, 10, 25, 50]}
+          rows={[
+            {
+              id: '0',
+              lastSighted: 'Feb 3 2019 12:00 PM EST',
+              name: (
+                <Decorator
+                  score={7}
+                  type="MAL"
+                  value="5020c08bcc061236643293bf0d897321"
+                />
+              ),
+            },
+            {
+              id: '1',
+              lastSighted: 'Feb 5 2019 12:00 PM EST',
+              name: (
+                <Decorator
+                  score={7}
+                  type="MAL"
+                  value="aca7037286b64b0da05c9708d647c013"
+                />
+              ),
+            },
+            {
+              id: '2',
+              lastSighted: 'Feb 7 2019 12:00 PM EST',
+              name: (
+                <Decorator
+                  score={7}
+                  type="MAL"
+                  value="bd9e4c82bf12c4e7a58221fc52fed705"
+                />
+              ),
+            },
+            {
+              id: '3',
+              lastSighted: 'Apr 1 2019 12:00 PM EST',
+              name: <Decorator score={0} type="IP" value="103.243.175.181" />,
+            },
+            {
+              id: '4',
+              lastSighted: 'Apr 1 2019 12:00 PM EST',
+              name: (
+                <Decorator
+                  score={7}
+                  type="MAL"
+                  value="5020c08bcc061236643293bf0d897321"
+                />
+              ),
+            },
+          ]}
+        />
+      </Column>
     </Row>
   </>
 );
+
+const withBorder = WrappedComponent => ({
+  className,
+  direction,
+  nested,
+  ...other
+}) => {
+  const namespace = 'container__border';
+
+  return (
+    <WrappedComponent
+      className={classnames(namespace, className, {
+        [`${namespace}--${direction}`]: direction,
+        [`${namespace}--nested`]: nested,
+      })}
+      {...other}
+    />
+  );
+};
+
+const RowWithBorderContainer = withBorder(withContainer(Row));
+const ColumnWithBorder = withBorder(Column);
+const DescriptionListModuleWithBorder = withBorder(DescriptionListModule);
 
 export const Overview = () => (
   <>
@@ -270,8 +299,8 @@ export const Overview = () => (
 
     <Row>
       <Column lg={12}>
-        <Row>
-          <ColumnWithBackground>
+        <RowWithBorderContainer direction="bottom" narrow>
+          <ColumnWithBorder direction="right">
             <DescriptionListModule>
               <TitleBarModule title="General settings and scope" subsection />
 
@@ -327,188 +356,183 @@ export const Overview = () => (
                 </TypeLayoutBody>
               </TypeLayout>
             </DescriptionListModule>
-          </ColumnWithBackground>
+          </ColumnWithBorder>
 
-          <ColumnWithBackground>
-            <Row>
-              <ColumnWithBackground>
-                <DescriptionListModule>
-                  <TitleBarModule title="Schedule" subsection />
+          <Column>
+            <DescriptionListModuleWithBorder direction="bottom" nested>
+              <TitleBarModule title="Schedule" subsection />
 
-                  <TypeLayout>
-                    <TypeLayoutBody>
-                      <TypeLayoutRow>
-                        <TypeLayoutCell>Start date</TypeLayoutCell>
-                        <TypeLayoutCell>
-                          Jul 1 2019 at 12:00PM CST
-                        </TypeLayoutCell>
-                      </TypeLayoutRow>
-                      <TypeLayoutRow>
-                        <TypeLayoutCell>Duration</TypeLayoutCell>
-                        <TypeLayoutCell>20 days</TypeLayoutCell>
-                      </TypeLayoutRow>
-                      <TypeLayoutRow>
-                        <TypeLayoutCell>Frequency</TypeLayoutCell>
-                        <TypeLayoutCell>
-                          This campaign repeats every 3 months
-                        </TypeLayoutCell>
-                      </TypeLayoutRow>
-                    </TypeLayoutBody>
-                  </TypeLayout>
-                </DescriptionListModule>
-              </ColumnWithBackground>
-            </Row>
+              <TypeLayout>
+                <TypeLayoutBody>
+                  <TypeLayoutRow>
+                    <TypeLayoutCell>Start date</TypeLayoutCell>
+                    <TypeLayoutCell>Jul 1 2019 at 12:00PM CST</TypeLayoutCell>
+                  </TypeLayoutRow>
+                  <TypeLayoutRow>
+                    <TypeLayoutCell>Duration</TypeLayoutCell>
+                    <TypeLayoutCell>20 days</TypeLayoutCell>
+                  </TypeLayoutRow>
+                  <TypeLayoutRow>
+                    <TypeLayoutCell>Frequency</TypeLayoutCell>
+                    <TypeLayoutCell>
+                      This campaign repeats every 3 months
+                    </TypeLayoutCell>
+                  </TypeLayoutRow>
+                </TypeLayoutBody>
+              </TypeLayout>
+            </DescriptionListModuleWithBorder>
 
-            <Row>
-              <Column>
-                <DescriptionListModule>
-                  <TitleBarModule title="Campaign end" subsection />
+            <DescriptionListModule>
+              <TitleBarModule title="Campaign end" subsection />
 
-                  <TypeLayout>
-                    <TypeLayoutBody>
-                      <TypeLayoutRow>
-                        <TypeLayoutCell>Reminders</TypeLayoutCell>
-                        <TypeLayoutCell>
-                          Start 10 days before campaign ends
-                        </TypeLayoutCell>
-                      </TypeLayoutRow>
-                      <TypeLayoutRow>
-                        <TypeLayoutCell>Campaign end</TypeLayoutCell>
-                        <TypeLayoutCell>
-                          Take no action on entitlements not reviewed
-                        </TypeLayoutCell>
-                      </TypeLayoutRow>
-                    </TypeLayoutBody>
-                  </TypeLayout>
-                </DescriptionListModule>
+              <TypeLayout>
+                <TypeLayoutBody>
+                  <TypeLayoutRow>
+                    <TypeLayoutCell>Reminders</TypeLayoutCell>
+                    <TypeLayoutCell>
+                      Start 10 days before campaign ends
+                    </TypeLayoutCell>
+                  </TypeLayoutRow>
+                  <TypeLayoutRow>
+                    <TypeLayoutCell>Campaign end</TypeLayoutCell>
+                    <TypeLayoutCell>
+                      Take no action on entitlements not reviewed
+                    </TypeLayoutCell>
+                  </TypeLayoutRow>
+                </TypeLayoutBody>
+              </TypeLayout>
+            </DescriptionListModule>
+          </Column>
+        </RowWithBorderContainer>
+
+        <RowWithContainer narrow>
+          <Column>
+            <TitleBarModule title="Campaign results" subsection />
+          </Column>
+        </RowWithContainer>
+
+        <ICAModule>
+          {({ getLayoutProps }) => (
+            <RowWithContainer narrow>
+              <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
+                <ICA label="Reviews complete" value={300} />
               </Column>
-            </Row>
-          </ColumnWithBackground>
-        </Row>
-
-        <Row>
-          <ColumnWithBackground>
-            <Row>
-              <Column>
-                <TitleBarModule title="Campaign results" subsection />
+              <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
+                <ICA label="Approved" value={241} />
               </Column>
-            </Row>
-
-            <ICAModule>
-              {({ getLayoutProps }) => (
-                <Row>
-                  <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
-                    <ICA label="Reviews complete" value={300} />
-                  </Column>
-                  <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
-                    <ICA label="Approved" value={241} />
-                  </Column>
-                  <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
-                    <ICA label="Rejected" value={28} />
-                  </Column>
-                </Row>
-              )}
-            </ICAModule>
-
-            <Row condensed>
-              <Column>
-                <DataTablePagination
-                  headers={[
-                    {
-                      header: 'Reviewer',
-                      key: 'reviewer',
-                    },
-                    {
-                      header: 'Approved',
-                      key: 'approved',
-                    },
-                    {
-                      header: 'Rejected',
-                      key: 'rejected',
-                    },
-                    {
-                      header: 'Not reviewed',
-                      key: 'notReviewed',
-                    },
-                    {
-                      header: 'Completion',
-                      key: 'completion',
-                    },
-                  ]}
-                  pageSize={5}
-                  pageSizes={[5, 10, 25, 50]}
-                  rows={[
-                    {
-                      approved: 5,
-                      completion: '10%',
-                      id: '0',
-                      notReviewed: 54,
-                      rejected: 0,
-                      reviewer: 'john@cse-bank.com',
-                    },
-                    {
-                      approved: 64,
-                      completion: '92%',
-                      id: '1',
-                      notReviewed: 6,
-                      rejected: 5,
-                      reviewer: 'maria@cse-bank.com',
-                    },
-                    {
-                      approved: 71,
-                      completion: '100%',
-                      id: '2',
-                      notReviewed: 0,
-                      rejected: 0,
-                      reviewer: 'rogelio@cse-bank.com',
-                    },
-                  ]}
-                />
+              <Column {...getLayoutProps({ lg: 3, md: 2, sm: 2 })}>
+                <ICA label="Rejected" value={28} />
               </Column>
-            </Row>
-          </ColumnWithBackground>
+            </RowWithContainer>
+          )}
+        </ICAModule>
+
+        <Row narrow>
+          <Column>
+            <DataTablePagination
+              headers={[
+                {
+                  header: 'Reviewer',
+                  key: 'reviewer',
+                },
+                {
+                  header: 'Approved',
+                  key: 'approved',
+                },
+                {
+                  header: 'Rejected',
+                  key: 'rejected',
+                },
+                {
+                  header: 'Not reviewed',
+                  key: 'notReviewed',
+                },
+                {
+                  header: 'Completion',
+                  key: 'completion',
+                },
+              ]}
+              pageSize={5}
+              pageSizes={[5, 10, 25, 50]}
+              rows={[
+                {
+                  approved: 5,
+                  completion: '10%',
+                  id: '0',
+                  notReviewed: 54,
+                  rejected: 0,
+                  reviewer: 'john@cse-bank.com',
+                },
+                {
+                  approved: 64,
+                  completion: '92%',
+                  id: '1',
+                  notReviewed: 6,
+                  rejected: 5,
+                  reviewer: 'maria@cse-bank.com',
+                },
+                {
+                  approved: 71,
+                  completion: '100%',
+                  id: '2',
+                  notReviewed: 0,
+                  rejected: 0,
+                  reviewer: 'rogelio@cse-bank.com',
+                },
+              ]}
+            />
+          </Column>
         </Row>
       </Column>
 
       <Column lg={4}>
-        <ButtonClusterModule>
-          <Button kind="ghost" renderIcon={Copy16}>
-            Duplicate campaign
-          </Button>
-          <Button kind="ghost" renderIcon={Activity16}>
-            View activity report
-          </Button>
-        </ButtonClusterModule>
+        <Row narrow>
+          <Column>
+            <ButtonClusterModule>
+              <Button kind="ghost" renderIcon={Copy16}>
+                Duplicate campaign
+              </Button>
 
-        <DescriptionListModule>
-          <TitleBarModule title="Details" subsection />
+              <Button kind="ghost" renderIcon={Activity16}>
+                View activity report
+              </Button>
+            </ButtonClusterModule>
+          </Column>
+        </Row>
 
-          <TypeLayout>
-            <TypeLayoutBody>
-              <TypeLayoutRow>
-                <TypeLayoutCell>Created by</TypeLayoutCell>
-                <TypeLayoutCell>
-                  <ul>
-                    <li>Scott Damon</li>
-                    <li>scottd@cse-bank.com</li>
-                  </ul>
-                </TypeLayoutCell>
-              </TypeLayoutRow>
-              <TypeLayoutRow>
-                <TypeLayoutCell>Created on</TypeLayoutCell>
-                <TypeLayoutCell>Jun 21 2018</TypeLayoutCell>
-              </TypeLayoutRow>
-              <TypeLayoutRow>
-                <TypeLayoutCell>Modified on</TypeLayoutCell>
-                <TypeLayoutCell>–</TypeLayoutCell>
-              </TypeLayoutRow>
-              <TypeLayoutRow>
-                <TypeLayoutCell>Closed on</TypeLayoutCell>
-                <TypeLayoutCell>Jul 15 2018</TypeLayoutCell>
-              </TypeLayoutRow>
-            </TypeLayoutBody>
-          </TypeLayout>
-        </DescriptionListModule>
+        <Row>
+          <Column>
+            <DescriptionListModule>
+              <TitleBarModule title="Details" subsection />
+
+              <TypeLayout>
+                <TypeLayoutBody>
+                  <TypeLayoutRow>
+                    <TypeLayoutCell>Created by</TypeLayoutCell>
+                    <TypeLayoutCell>
+                      <ul>
+                        <li>Scott Damon</li>
+                        <li>scottd@cse-bank.com</li>
+                      </ul>
+                    </TypeLayoutCell>
+                  </TypeLayoutRow>
+                  <TypeLayoutRow>
+                    <TypeLayoutCell>Created on</TypeLayoutCell>
+                    <TypeLayoutCell>Jun 21 2018</TypeLayoutCell>
+                  </TypeLayoutRow>
+                  <TypeLayoutRow>
+                    <TypeLayoutCell>Modified on</TypeLayoutCell>
+                    <TypeLayoutCell>–</TypeLayoutCell>
+                  </TypeLayoutRow>
+                  <TypeLayoutRow>
+                    <TypeLayoutCell>Closed on</TypeLayoutCell>
+                    <TypeLayoutCell>Jul 15 2018</TypeLayoutCell>
+                  </TypeLayoutRow>
+                </TypeLayoutBody>
+              </TypeLayout>
+            </DescriptionListModule>
+          </Column>
+        </Row>
       </Column>
     </Row>
   </>
