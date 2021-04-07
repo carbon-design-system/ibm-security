@@ -3,6 +3,8 @@
  * @copyright IBM Security 2019 - 2021
  */
 
+import { OVERVIEW } from '../src/components/UNSTABLE__LayoutModules/stories';
+
 // Category labels.
 const CATEGORIES = {
   COMPONENTS: 'Components',
@@ -20,7 +22,14 @@ const {
   PATTERNS,
 } = CATEGORIES;
 
-const ORDER = [LAYOUT_MODULES, PAGE_LAYOUTS, PATTERNS, COMPONENTS, DEPRECATED];
+const ORDER = [
+  LAYOUT_MODULES,
+  [OVERVIEW],
+  PAGE_LAYOUTS,
+  PATTERNS,
+  COMPONENTS,
+  DEPRECATED,
+];
 
 /**
  * Returns a formatted string for the Storybook category.
