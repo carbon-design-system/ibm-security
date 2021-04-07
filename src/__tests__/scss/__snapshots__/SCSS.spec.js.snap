@@ -27210,19 +27210,12 @@ a.bx--navigation-link:focus {
   margin-left: auto;
 }
 
-.security--unstable--layout__module--list-item__distributed-column {
-  margin-right: auto;
-}
-
 .security--unstable--layout__module--list-item__title, .security--unstable--layout__module--list-item__description {
   margin-top: 0;
 }
 
 .security--unstable--layout__module--list-item__icon {
   margin-right: 1rem;
-}
-
-.security--unstable--layout__module--list-item__top-icon {
   margin-bottom: 1rem;
 }
 
