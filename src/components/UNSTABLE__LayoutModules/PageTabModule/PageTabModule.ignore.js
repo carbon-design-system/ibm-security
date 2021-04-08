@@ -1,6 +1,6 @@
 /**
  * @file Page tab module stories.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import React from 'react';
@@ -14,7 +14,7 @@ import getTitle from '../stories';
 import page from './index.mdx';
 
 export default {
-  title: getTitle(PageTabModule),
+  title: getTitle(PageTabModule.name),
   component: PageTabModule,
   subcomponents: { PageTabModuleDetails },
   parameters: {

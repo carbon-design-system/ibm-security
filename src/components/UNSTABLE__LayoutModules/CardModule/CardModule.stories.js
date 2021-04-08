@@ -27,7 +27,7 @@ import page from './index.mdx';
 const SummaryCard = withBackground(SummaryCardComponent);
 
 export default {
-  title: getTitle(CardModule),
+  title: getTitle(CardModule.name),
   component: CardModule,
   parameters: {
     docs: { page },
