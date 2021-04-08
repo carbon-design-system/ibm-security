@@ -16,6 +16,8 @@
 @import 'decorators/index';
 @import 'docs/index';
 
+@import 'vendor/@carbon/grid/css-grid'; // Workaround for https://github.com/yibn2008/fast-sass-loader/issues/67
+
 * {
   box-sizing: border-box;
 }
