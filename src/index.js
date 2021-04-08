@@ -1,6 +1,6 @@
 /**
  * @file Entry point.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 // Carbon.
@@ -265,7 +265,7 @@ export {
   ActionBarModule,
   ActionBarModuleItems,
   ButtonClusterModule,
-  CardModule,
+  CardAreaModule,
   DescriptionListModule,
   DescriptionModule,
   ICAModule,
