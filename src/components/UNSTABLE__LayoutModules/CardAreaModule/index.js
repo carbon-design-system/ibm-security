@@ -1,6 +1,6 @@
 /**
- * @file Card module.
- * @copyright IBM Security 2020
+ * @file Card area module.
+ * @copyright IBM Security 2020 - 2021
  */
 
 import classnames from 'classnames';
@@ -9,12 +9,12 @@ import React from 'react';
 
 import LayoutModule, { layoutModuleNamespace } from '../LayoutModule';
 
-const namespace = 'card';
+const namespace = 'card-area';
 
 /**
- * The card module provides a means to orderly present related content and information using summary, navigational, or widget cards as the basis.
+ * The card area module provides a means to orderly present related content and information using summary, navigational, or widget cards as the basis.
  */
-const CardModule = ({ children, ...other }) => (
+const CardAreaModule = ({ children, ...other }) => (
   <LayoutModule namespace={namespace} {...other}>
     {children({
       getLayoutProps: ({ className, ...rest } = {}) => ({
@@ -28,9 +28,9 @@ const CardModule = ({ children, ...other }) => (
   </LayoutModule>
 );
 
-CardModule.propTypes = {
-  /** Provide the content for the `CardModule` */
+CardAreaModule.propTypes = {
+  /** Provide the content for the `CardAreaModule` */
   children: func.isRequired,
 };
 
-export default CardModule;
+export default CardAreaModule;

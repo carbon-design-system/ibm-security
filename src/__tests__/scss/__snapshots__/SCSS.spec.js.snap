@@ -27154,11 +27154,11 @@ a.bx--navigation-link:focus {
   max-width: unset;
 }
 
-.security--unstable--layout__module--card {
+.security--unstable--layout__module--card-area {
   padding-bottom: 1rem;
 }
 
-.security--unstable--layout__module--card__component {
+.security--unstable--layout__module--card-area__component {
   margin-bottom: 1rem;
 }
 
