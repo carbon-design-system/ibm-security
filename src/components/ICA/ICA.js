@@ -51,12 +51,12 @@ const formatValue = (value, truncate) => {
  * @param {boolean} truncate Whether or not the value should be truncated.
  * @returns {string} Formatted string.
  */
-const truncateValue = (percentage, value, truncate, ICAClasses) => {
+const truncateValue = (percentage, value, truncate) => {
   if (percentage)
     return (
-      <div className={`${namespace}__percentage  ${ICAClasses}`}>
+      <div className={`${namespace}__percentage`}>
         {value}
-        <span className={`${namespace}__percentage-mark ${ICAClasses}`}>%</span>
+        <span className={`${namespace}__percentage-mark`}>%</span>
       </div>
     );
 
@@ -103,7 +103,7 @@ const ICA = ({
     numeral.locale(ICA.defaultProps.locale);
   }
 
-  const truncatedValue = truncateValue(percentage, value, truncate, ICAClasses);
+  const truncatedValue = truncateValue(percentage, value, truncate);
   const truncatedTotal = formatValue(total, truncate);
 
   const shouldDisplayof =
@@ -111,20 +111,15 @@ const ICA = ({
     (forceShowTotal && truncatedTotal > 0);
 
   return (
-    <div {...other}>
-      <h4 className={`${namespace}__label ${ICAClasses}`}>{label} </h4>
+    <div className={`${ICAClasses}`} {...other}>
+      <h4 className={`${namespace}__label`}>{label} </h4>
       <span className={`${namespace}__row`}>
         {trending && (
-          <Icon
-            className={`${namespace}__trend ${ICAClasses}`}
-            renderIcon={renderIcon}
-          />
+          <Icon className={`${namespace}__trend`} renderIcon={renderIcon} />
         )}
-        <span className={`${namespace}__value ${ICAClasses}`}>
-          {truncatedValue}
-        </span>
+        <span className={`${namespace}__value`}>{truncatedValue}</span>
         {shouldDisplayof ? (
-          <span className={`${namespace}__total ${ICAClasses}`}>
+          <span className={`${namespace}__total`}>
             {' '}
             <span>/{truncatedTotal}</span>
           </span>

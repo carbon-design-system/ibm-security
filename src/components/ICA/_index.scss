@@ -48,34 +48,38 @@
   }
 
   // Lg Styling
-  &__value#{&}--lg,
-  &__percentage#{&}--lg {
-    @include carbon--type-style($name: productive-heading-06);
+  &--lg & {
+    &__value,
+    &__percentage {
+      @include carbon--type-style($name: productive-heading-06);
+    }
+
+    &__total,
+    &__percentage-mark {
+      @include carbon--type-style($name: productive-heading-03);
+      padding-top: $carbon--spacing-03 + $carbon--spacing-04;
+    }
   }
 
-  &__total#{&}--lg,
-  &__percentage-mark#{&}--lg {
-    @include carbon--type-style($name: productive-heading-03);
-    padding-top: $carbon--spacing-03 + $carbon--spacing-04;
-  }
+  //  Styling
+  &--xl & {
+    &__label {
+      @include carbon--type-style($name: body-short-01);
+    }
 
-  // Xlg Styling
-  &__label#{&}--xlg {
-    @include carbon--type-style($name: body-short-01);
-  }
+    &__value,
+    &__percentage {
+      @include carbon--type-style($name: productive-heading-07);
+    }
 
-  &__value#{&}--xlg,
-  &__percentage#{&}--xlg {
-    @include carbon--type-style($name: productive-heading-07);
-  }
+    &__total,
+    &__percentage-mark {
+      @include carbon--type-style($name: productive-heading-04);
+      padding-top: $carbon--spacing-06;
+    }
 
-  &__total#{&}--xlg,
-  &__percentage-mark#{&}--xlg {
-    @include carbon--type-style($name: productive-heading-04);
-    padding-top: $carbon--spacing-06;
-  }
-
-  &__trend#{&}--xlg {
-    margin-top: $carbon--spacing-04;
+    &__trend {
+      margin-top: $carbon--spacing-04;
+    }
   }
 }

@@ -9776,14 +9776,14 @@ li.bx--accordion__item--disabled:last-of-type {
   letter-spacing: 0.16px;
 }
 
-.security--ica__value.security--ica--lg, .security--ica__percentage.security--ica--lg {
+.security--ica--lg .security--ica__value, .security--ica--lg .security--ica__percentage {
   font-size: 2.625rem;
   font-weight: 300;
   line-height: 1.199;
   letter-spacing: 0;
 }
 
-.security--ica__total.security--ica--lg, .security--ica__percentage-mark.security--ica--lg {
+.security--ica--lg .security--ica__total, .security--ica--lg .security--ica__percentage-mark {
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.4;
@@ -9791,21 +9791,21 @@ li.bx--accordion__item--disabled:last-of-type {
   padding-top: 1.25rem;
 }
 
-.security--ica__label.security--ica--xlg {
+.security--ica--xl .security--ica__label {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.29;
   letter-spacing: 0.16px;
 }
 
-.security--ica__value.security--ica--xlg, .security--ica__percentage.security--ica--xlg {
+.security--ica--xl .security--ica__value, .security--ica--xl .security--ica__percentage {
   font-size: 3.375rem;
   font-weight: 300;
   line-height: 1.19;
   letter-spacing: 0;
 }
 
-.security--ica__total.security--ica--xlg, .security--ica__percentage-mark.security--ica--xlg {
+.security--ica--xl .security--ica__total, .security--ica--xl .security--ica__percentage-mark {
   font-size: 1.75rem;
   font-weight: 400;
   line-height: 1.29;
@@ -9813,7 +9813,7 @@ li.bx--accordion__item--disabled:last-of-type {
   padding-top: 1.5rem;
 }
 
-.security--ica__trend.security--ica--xlg {
+.security--ica--xl .security--ica__trend {
   margin-top: 0.75rem;
 }
 

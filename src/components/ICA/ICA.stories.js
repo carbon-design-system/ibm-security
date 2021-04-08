@@ -20,7 +20,7 @@ const { label, total, value: icaValue } = props;
 const sizes = {
   Default: 'default',
   Large: 'lg',
-  XLarge: 'xlg',
+  XLarge: 'xl',
 };
 
 const storyProps = ({ value = icaValue, total } = {}) => ({

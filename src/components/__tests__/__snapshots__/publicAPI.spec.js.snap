@@ -4740,7 +4740,7 @@ Map {
           Array [
             "default",
             "lg",
-            "xlg",
+            "xl",
           ],
         ],
         "type": "oneOf",
