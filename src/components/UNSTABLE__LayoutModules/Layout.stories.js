@@ -82,7 +82,7 @@ export default {
           kind="info"
           notificationType="inline"
           role="alert"
-          subtitle="Page layouts utilize Carbon CSS Grid updates. They will remain Canary until the 2021 Carbon release."
+          subtitle="Page layouts will remain Canary until the 2021 Carbon release."
           title=""
         />
 
