@@ -57,7 +57,7 @@
       position: absolute;
       top: 0;
       right: $container--narrow__spacing;
-      bottom: 0;
+      bottom: -$container--narrow__spacing;
       left: 0;
       background-color: $ui-01;
       z-index: -1;
