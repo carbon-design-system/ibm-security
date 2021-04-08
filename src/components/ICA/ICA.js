@@ -77,8 +77,8 @@ const ICA = ({
   ...other
 }) => {
   const isSize = sizeValue => size === sizeValue;
-  const isLarge = isSize('large') || isSize('lg');
-  const isXLarge = isSize('xlarge') || isSize('xlg');
+  const isLarge = isSize('lg');
+  const isXLarge = isSize('xl');
 
   let renderIcon = ArrowUp16;
   if (isLarge) {
@@ -89,7 +89,7 @@ const ICA = ({
 
   const ICAClasses = classnames(className, {
     [`${namespace}--lg`]: isLarge,
-    [`${namespace}--xlg`]: isXLarge,
+    [`${namespace}--xl`]: isXLarge,
   });
 
   if (Locales.includes(locale)) {
@@ -183,12 +183,9 @@ ICA.propTypes = {
   truncate: PropTypes.bool,
 
   /** The size of the ICA. */
-  size: PropTypes.oneOf(['default', 'lg', 'xlg']),
+  size: PropTypes.oneOf(['default', 'lg', 'xl']),
 
-  /**
-   * Display trending icon
-   * @type bool
-   */
+  /** Display trending icon. */
   trending: PropTypes.bool,
 };
 
