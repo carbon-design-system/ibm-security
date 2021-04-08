@@ -34,6 +34,7 @@ import {
   ICAModule,
   InlineNotification,
   IconButtonBar,
+  NotificationActionButton,
   SummaryCard as SummaryCardComponent,
   SummaryCardHeader,
   Tag,
@@ -67,12 +68,24 @@ export default {
         <UIShell />
 
         <InlineNotification
+          actions={
+            <NotificationActionButton
+              onClick={() =>
+                window.open(
+                  'https://github.com/carbon-design-system/carbon/issues/7717',
+                  '_blank'
+                )
+              }
+            >
+              More info
+            </NotificationActionButton>
+          }
           className="page-layouts__banner"
           hideCloseButton
           kind="info"
           notificationType="inline"
           role="alert"
-          subtitle="Page layouts will remain Canary until Carbon v11 2x Grid release"
+          subtitle="Page layouts utilize Carbon CSS Grid updates. They will remain Canary until the 2021 Carbon release."
           title=""
         />
 

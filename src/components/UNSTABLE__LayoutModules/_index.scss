@@ -12,12 +12,3 @@
 @import 'DescriptionModule/index';
 @import 'ICAModule/index';
 @import 'TitleBarModule/index';
-
-@import '@carbon/themes/scss/tokens';
-
-.page-layouts__banner {
-  margin-top: 0;
-  max-width: 100%;
-  background-color: $ui-02;
-  color: $text-01;
-}
