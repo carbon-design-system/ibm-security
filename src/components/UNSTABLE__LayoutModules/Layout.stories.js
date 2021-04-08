@@ -70,12 +70,9 @@ export default {
         <InlineNotification
           actions={
             <NotificationActionButton
-              onClick={() =>
-                window.open(
-                  'https://github.com/carbon-design-system/carbon/issues/7717',
-                  '_blank'
-                )
-              }
+              href="https://github.com/carbon-design-system/carbon/issues/7717"
+              rel="noopener noreferrer"
+              target="_blank"
             >
               More info
             </NotificationActionButton>
