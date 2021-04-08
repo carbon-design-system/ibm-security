@@ -28,13 +28,13 @@ Description list modules provide a means to orderly layout terms and definitions
 
 ### Overview
 
-The description list module can be built using a combination of the <LinkTo kind="components-typelayout" story="default">`TypeLayout`</LinkTo> and <LinkTo kind="patterns-unstable-layout-modules-titlebarmodule" story="default">`TitleBarModule`</LinkTo> components.
+The description list module can be built using a combination of the <LinkTo kind="components-typelayout" story="default">`TypeLayout`</LinkTo> and <LinkTo kind="layout-modules-titlebarmodule" story="default">`TitleBarModule`</LinkTo> components.
 
 Everything passed in as a child of `DescriptionListModule` will be rendered.
 
 <Canvas>
   <Story
-    id="patterns-unstable-layout-modules-descriptionlistmodule--default"
+    id="layout-modules-descriptionlistmodule--default"
     parameters={parameters}
   />
 </Canvas>
@@ -58,13 +58,12 @@ Additional props passed into `DescriptionListModule` will be forwarded along to 
 
 ### Variants
 
-A description list can have a title, both section and subsection title bars can precede the type layout. Learn more by reviewing the <LinkTo kind="patterns-unstable-layout-modules-titlebarmodule" story="default" > TitleBarModule. </LinkTo>
+A description list can have a title, both section and subsection title bars can precede the type layout. Learn more by reviewing the <LinkTo kind="layout-modules-titlebarmodule" story="default" > TitleBarModule. </LinkTo>
 
 <img alt="`DescriptionListModule` title variants" src={variants} />
-<Source id="patterns-unstable-layout-modules-descriptionlistmodule--variant" />
+<Source id="layout-modules-descriptionlistmodule--variant" />
 
-#### Coming soon...
-
+**Coming soon...**  
 There is also a `stacked` variant for narrower spaces, it's ideal for 4 columns.  
 The `short` variant works in scenarios where there is less vertical space.
 
@@ -111,10 +110,7 @@ Occassionally [spacing tokens](https://carbondesignsystem.com/guidelines/spacing
 - <LinkTo kind="components-typelayout" story="default">
     TypeLayout
   </LinkTo>
-- <LinkTo
-    kind="patterns-unstable-layout-modules-titlebarmodule"
-    story="default"
-  >
+- <LinkTo kind="layout-modules-titlebarmodule" story="default">
     TitleBarModule
   </LinkTo>
 - [Grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)

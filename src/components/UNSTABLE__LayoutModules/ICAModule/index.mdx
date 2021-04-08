@@ -31,10 +31,7 @@ The ICA module can be built using a combination of the `ICAModule`, [grid](https
 Everything passed in as a [render prop](https://reactjs.org/docs/render-props.html) child of `ICAModule` will be rendered.
 
 <Canvas>
-  <Story
-    id="patterns-unstable-layout-modules-icamodule--default"
-    parameters={parameters}
-  />
+  <Story id="layout-modules-icamodule--default" parameters={parameters} />
 </Canvas>
 
 ### Component API
@@ -79,19 +76,18 @@ If the ICA needs to be interactive, a background hover can be placed on the grid
 
 <img alt="`ICAModule` interactions" src={interactions} />
 
-<Source id="patterns-unstable-layout-modules-icamodule--interaction" />
+<Source id="layout-modules-icamodule--interaction" />
 
 ### Variants
 
-#### Coming soon...
-
+**Coming soon...**  
 Right now the ICA has a default size. Soon there will also be a large (`lg`) and extra-large (`xl`) variant.
 
 <img alt="`ICA` variants" src={variants} />
 
 ### Grid placement
 
-Individual ICAs within the module should span no more than 4 columns. Following the narrow grid implementation, the ICA values should always align to grid columns. As illustrated in the [Anatomy](#anatomy) section, ICAs can also be stacked.
+Individual ICAs within the module should span no more than 4 columns. Following the [narrow grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow) implementation, the ICA values should always align to grid columns. As illustrated in the [Anatomy](#anatomy) section, ICAs can also be stacked.
 
 <Row>
   <Column>
@@ -137,10 +133,7 @@ Individual ICAs within the module should span no more than 4 columns. Following 
     ICA
   </LinkTo>
 - [Render Props](https://reactjs.org/docs/render-props.html)
-- <LinkTo
-    kind="patterns-unstable-layout-modules-titlebarmodule"
-    story="default"
-  >
+- <LinkTo kind="layout-modules-titlebarmodule" story="default">
     TitleBarModule
   </LinkTo>
 

@@ -67,4 +67,19 @@
       }
     }
   }
+
+  .column__typeStyles {
+    margin-top: $carbon--spacing-05;
+    margin-bottom: $carbon--spacing-07;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .overview__row {
+    margin-bottom: $carbon--spacing-07;
+
+    &:first-of-type {
+      margin-top: $carbon--spacing-09;
+    }
+  }
 }

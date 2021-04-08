@@ -9,7 +9,7 @@ import getTitle from '../stories';
 import page from './index.mdx';
 
 export default {
-  title: getTitle({ name: 'Overview' }),
+  title: getTitle('Overview (Old)'),
   parameters: {
     docs: { page },
 

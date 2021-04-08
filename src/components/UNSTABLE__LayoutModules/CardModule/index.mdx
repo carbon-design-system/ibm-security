@@ -27,10 +27,7 @@ The card module can be built using a combination of the `CardModule`, [grid](htt
 Everything passed in as a [render prop](https://reactjs.org/docs/render-props.html) child of `CardModule` will be rendered.
 
 <Canvas>
-  <Story
-    id="patterns-unstable-layout-modules-cardmodule--default"
-    parameters={parameters}
-  />
+  <Story id="layout-modules-cardmodule--default" parameters={parameters} />
 </Canvas>
 
 ### Component API
@@ -70,11 +67,11 @@ Feel free to use just one or two of the TitleBarModule or ActionBarModule varian
 
 <img alt="`CardModule` variants" src={variants} />
 
-<Source id="patterns-unstable-layout-modules-cardmodule--variant" />
+<Source id="layout-modules-cardmodule--variant" />
 
 ### Grid placement
 
-Card modules can span between 4 and 16 columns. Following the narrow grid implementation, the layout module container hangs 16 pixels in the left margin. The narrow grid position allows headings and copy outside of containers to align with the labels within the card module.
+Card modules can span between 4 and 16 columns. Following the [narrow grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow) implementation, the layout module container hangs 16 pixels in the left margin. The narrow grid position allows headings and copy outside of containers to align with the labels within the card module.
 
 <Row>
   <Column>
@@ -109,16 +106,10 @@ Card modules can span between 4 and 16 columns. Following the narrow grid implem
   </LinkTo>
 - [Tile](https://react.carbondesignsystem.com/?path=/docs/tile)
 - [Render Props](https://reactjs.org/docs/render-props.html)
-- <LinkTo
-    kind="patterns-unstable-layout-modules-titlebarmodule"
-    story="default"
-  >
+- <LinkTo kind="layout-modules-titlebarmodule" story="default">
     TitleBarModule
   </LinkTo>
-- <LinkTo
-    kind="patterns-unstable-layout-modules-actionbarmodule"
-    story="default"
-  >
+- <LinkTo kind="layout-modules-actionbarmodule" story="default">
     ActionBarModule
   </LinkTo>
 - <LinkTo kind="patterns-iconbuttonbar" story="default">
