@@ -24,7 +24,7 @@ import {
   ButtonClusterModule,
   Button,
   CarbonHeader,
-  CardModule,
+  CardAreaModule,
   DataTablePagination,
   Decorator,
   DescriptionModule,
@@ -133,7 +133,7 @@ export const Detail = () => (
       </ActionBarModuleItems>
     </ActionBarModule>
 
-    <CardModule>
+    <CardAreaModule>
       {({ getLayoutProps }) => (
         <Row>
           <Column>
@@ -158,7 +158,7 @@ export const Detail = () => (
           </Column>
         </Row>
       )}
-    </CardModule>
+    </CardAreaModule>
 
     <Row>
       <ColumnWithBackground>

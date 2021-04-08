@@ -1,6 +1,6 @@
 /**
  * @file Layout modules entry point.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 export {
@@ -10,7 +10,7 @@ export {
 
 export { default as withBackground } from './Background';
 export { default as ButtonClusterModule } from './ButtonClusterModule';
-export { default as CardModule } from './CardModule';
+export { default as CardAreaModule } from './CardAreaModule';
 export { default as DescriptionListModule } from './DescriptionListModule';
 export { default as DescriptionModule } from './DescriptionModule';
 export { default as ICAModule } from './ICAModule';
