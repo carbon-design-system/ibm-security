@@ -4,9 +4,8 @@
 /// @copyright IBM Security 2019 - 2021
 ////
 
-@import '@carbon/themes/scss/themes';
-@import '@carbon/themes/scss/tokens';
 @import '@carbon/layout/scss/spacing';
+@import '@carbon/themes/scss/theme-maps';
 
 @import '../src/globals/index';
 
@@ -22,6 +21,15 @@
   box-sizing: border-box;
 }
 
+.page-layouts__banner {
+  @include security--generate-css-custom-properties(
+    $theme: $carbon--theme--g10
+  );
+
+  max-width: 100%;
+  margin-top: 0;
+}
+
 .wizard__form {
   width: 50%;
 
@@ -34,29 +42,6 @@
     &--text-input__field-wrapper,
     &--text-area__wrapper {
       width: 100%;
-    }
-  }
-}
-
-@include carbon--theme($carbon--theme--g10) {
-  .page-layouts__banner {
-    margin-top: 0;
-    max-width: 100%;
-    background-color: $inverse-02;
-    border-left: 3px solid $inverse-support-04;
-    color: $inverse-01;
-
-    svg.bx--inline-notification__icon {
-      fill: $inverse-support-04;
-    }
-
-    button.bx--btn--ghost {
-      color: $inverse-link;
-    }
-
-    button.bx--btn--ghost:hover,
-    button.bx--btn--ghost:focus {
-      background-color: $hover-secondary;
     }
   }
 }

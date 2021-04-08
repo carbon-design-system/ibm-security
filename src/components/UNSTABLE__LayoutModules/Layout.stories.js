@@ -68,25 +68,20 @@ export default {
         <UIShell />
 
         <InlineNotification
+          className="page-layouts__banner"
           actions={
             <NotificationActionButton
-              onClick={() =>
-                window.open(
-                  'https://github.com/carbon-design-system/carbon/issues/7717',
-                  '_blank'
-                )
-              }
+              href="https://github.com/carbon-design-system/carbon/issues/7717"
+              rel="noopener noreferrer"
+              target="_blank"
             >
               More info
             </NotificationActionButton>
           }
-          className="page-layouts__banner"
-          hideCloseButton
           kind="info"
-          notificationType="inline"
-          role="alert"
           subtitle="Page layouts utilize Carbon CSS Grid updates. They will remain Canary until the 2021 Carbon release."
           title=""
+          hideCloseButton
         />
 
         <Grid>{story()}</Grid>
