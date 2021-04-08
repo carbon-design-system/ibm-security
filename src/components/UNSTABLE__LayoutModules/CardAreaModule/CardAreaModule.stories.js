@@ -1,5 +1,5 @@
 /**
- * @file Card module stories.
+ * @file Card area module stories.
  * @copyright IBM Security 2020 - 2021
  */
 
@@ -11,7 +11,7 @@ import { getDocsParameters } from '../../../../.storybook';
 import {
   ActionBarModule,
   ActionBarModuleItems,
-  CardModule,
+  CardAreaModule,
   Column,
   IconButtonBar,
   Row,
@@ -27,8 +27,8 @@ import page from './index.mdx';
 const SummaryCard = withBackground(SummaryCardComponent);
 
 export default {
-  title: getTitle(CardModule.name),
-  component: CardModule,
+  title: getTitle(CardAreaModule.name),
+  component: CardAreaModule,
   parameters: {
     docs: { page },
 
@@ -37,7 +37,7 @@ export default {
 };
 
 export const Default = () => (
-  <CardModule>
+  <CardAreaModule>
     {({ getLayoutProps }) => (
       <Row>
         <Column>
@@ -59,11 +59,11 @@ export const Default = () => (
         </Column>
       </Row>
     )}
-  </CardModule>
+  </CardAreaModule>
 );
 
 export const Variant = () => (
-  <CardModule>
+  <CardAreaModule>
     {({ getLayoutProps }) => (
       <>
         <TitleBarModule title="Section title" />
@@ -114,7 +114,7 @@ export const Variant = () => (
         </Row>
       </>
     )}
-  </CardModule>
+  </CardAreaModule>
 );
 
 Variant.parameters = {

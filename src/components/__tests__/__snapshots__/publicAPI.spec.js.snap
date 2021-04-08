@@ -481,7 +481,7 @@ Map {
       },
     },
   },
-  "CardModule" => Object {
+  "CardAreaModule" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,

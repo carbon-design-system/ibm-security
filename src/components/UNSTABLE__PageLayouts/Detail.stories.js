@@ -13,7 +13,7 @@ import { pageLayouts } from '../../../.storybook';
 import {
   ActionBarModule,
   ActionBarModuleItems,
-  CardModule,
+  CardAreaModule,
   DataTablePagination,
   Decorator,
   DescriptionModule,
@@ -106,7 +106,7 @@ export const Default = () => (
       </ActionBarModuleItems>
     </ActionBarModule>
 
-    <CardModule>
+    <CardAreaModule>
       {({ getLayoutProps }) => (
         <Row narrow>
           <Column>
@@ -131,7 +131,7 @@ export const Default = () => (
           </Column>
         </Row>
       )}
-    </CardModule>
+    </CardAreaModule>
 
     <RowWithContainer narrow>
       <Column>

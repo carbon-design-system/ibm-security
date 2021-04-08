@@ -5,6 +5,7 @@
 ////
 
 @import '@carbon/layout/scss/spacing';
+@import '@carbon/themes/scss/theme-maps';
 
 @import '../src/globals/index';
 
@@ -19,6 +20,15 @@
 
 * {
   box-sizing: border-box;
+}
+
+.page-layouts__banner {
+  @include security--generate-css-custom-properties(
+    $theme: $carbon--theme--g10
+  );
+
+  max-width: 100%;
+  margin-top: 0;
 }
 
 .wizard__form {

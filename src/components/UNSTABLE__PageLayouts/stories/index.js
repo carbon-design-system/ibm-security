@@ -3,15 +3,19 @@
  * @copyright IBM Security 2020 - 2021
  */
 
-import { layout03, layout04 } from '@carbon/layout';
-
-import { Grid } from 'carbon-components-react';
+import { layout04 } from '@carbon/layout';
 import classnames from 'classnames';
 import React from 'react';
 
 import { disableCentered } from '../../../../.storybook';
 
-import { CarbonHeader, HeaderName } from '../../..';
+import {
+  CarbonHeader,
+  Grid,
+  HeaderName,
+  InlineNotification,
+  NotificationActionButton,
+} from '../../..';
 
 export default {
   parameters: {
@@ -20,11 +24,28 @@ export default {
   decorators: [
     story => (
       <>
-        <div style={{ height: layout04, marginBottom: layout03 }}>
+        <div style={{ height: layout04 }}>
           <CarbonHeader aria-label="IBM Security">
             <HeaderName prefix="IBM">Security</HeaderName>
           </CarbonHeader>
         </div>
+
+        <InlineNotification
+          className="page-layouts__banner"
+          actions={
+            <NotificationActionButton
+              href="https://github.com/carbon-design-system/carbon/issues/7717"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              More info
+            </NotificationActionButton>
+          }
+          kind="info"
+          subtitle="Page layouts utilize Carbon CSS Grid updates. They will remain Canary until the 2021 Carbon release."
+          title=""
+          hideCloseButton
+        />
 
         <Grid>{story()}</Grid>
       </>
