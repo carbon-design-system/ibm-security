@@ -7,9 +7,9 @@ import variants from './images/variants.png';
 import doImage from './images/do.png';
 import dont from './images/dont.png';
 
-# CardModule
+# CardAreaModule
 
-The card module provides a means to orderly present related content and information using summary, navigational, or widget cards as the basis.
+The card area module provides a means to orderly present related content and information using summary, navigational, or widget cards as the basis.
 
 [↳ Overview](#overview)  
 [↳ Component API](#component-api)  
@@ -22,12 +22,12 @@ The card module provides a means to orderly present related content and informat
 
 ### Overview
 
-The card module can be built using a combination of the `CardModule`, [grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow), and either the <LinkTo kind="components-card" story="default">`Card`</LinkTo>, <LinkTo kind="patterns-summarycard" story="with-primary-label">`SummaryCard`</LinkTo>, or [`Tile`](https://react.carbondesignsystem.com/?path=/docs/tile) components.
+The card area module can be built using a combination of the `CardAreaModule`, [grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow), and either the <LinkTo kind="components-card" story="default">`Card`</LinkTo>, <LinkTo kind="patterns-summarycard" story="with-primary-label">`SummaryCard`</LinkTo>, or [`Tile`](https://react.carbondesignsystem.com/?path=/docs/tile) components.
 
-Everything passed in as a [render prop](https://reactjs.org/docs/render-props.html) child of `CardModule` will be rendered.
+Everything passed in as a [render prop](https://reactjs.org/docs/render-props.html) child of `CardAreaModule` will be rendered.
 
 <Canvas>
-  <Story id="layout-modules-cardmodule--default" parameters={parameters} />
+  <Story id="layout-modules-cardareamodule--default" parameters={parameters} />
 </Canvas>
 
 ### Component API
@@ -36,7 +36,7 @@ Everything passed in as a [render prop](https://reactjs.org/docs/render-props.ht
 
 _**\***Required property_
 
-Additional props passed into `CardModule` will be forwarded along to the underlying card module container.
+Additional props passed into `CardAreaModule` will be forwarded along to the underlying card area module container.
 
 #### Render props
 
@@ -52,11 +52,11 @@ In order to make sure that everything works as intended, itʼs important to pass
 2. **Card spacer (optional):** If there are multiple rows of cards, use the 16-pixel spacer `$spacing-05` to separate the rows.
 3. **Bottom spacer:** The 32-pixel spacer `$spacing-07` below the last card row provides the starting point for the layout module positioned directly underneath it.
 
-<img alt="`CardModule` anatomy" src={anatomy} />
+<img alt="`CardAreaModule` anatomy" src={anatomy} />
 
 ### Variants
 
-The card module can contain a number of complimentary layout modules within the parent to create a section of related modules. The following options can be used for this purpose.
+The card area module can contain a number of complimentary layout modules within the parent to create a section of related modules. The following options can be used for this purpose.
 The cards within the module can also be arranged in a number of different ways.
 
 1. **[`TitleBarModule`](#references) using section title:** Section titles provide identification for the content
@@ -65,27 +65,27 @@ The cards within the module can also be arranged in a number of different ways.
 
 Feel free to use just one or two of the TitleBarModule or ActionBarModule variants, or all three at once as illustrated.
 
-<img alt="`CardModule` variants" src={variants} />
+<img alt="`CardAreaModule` variants" src={variants} />
 
-<Source id="layout-modules-cardmodule--variant" />
+<Source id="layout-modules-cardareamodule--variant" />
 
 ### Grid placement
 
-Card modules can span between 4 and 16 columns. Following the [narrow grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow) implementation, the layout module container hangs 16 pixels in the left margin. The narrow grid position allows headings and copy outside of containers to align with the labels within the card module.
+Card area modules can span between 4 and 16 columns. Following the [narrow grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow) implementation, the layout module container hangs 16 pixels in the left margin. The narrow grid position allows headings and copy outside of containers to align with the labels within the card area module.
 
 <Row>
   <Column>
-    <img alt="`CardModule` do" src={doImage} />
+    <img alt="`CardAreaModule` do" src={doImage} />
   </Column>
 
   <Column>
-    <img alt="`CardModule` don't" src={dont} />
+    <img alt="`CardAreaModule` don't" src={dont} />
   </Column>
 </Row>
 
 ```jsx
 <Column lg={16}>
-  <CardModule />
+  <CardAreaModule />
 </Column>
 ```
 

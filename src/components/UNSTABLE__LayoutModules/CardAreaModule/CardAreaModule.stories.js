@@ -1,9 +1,9 @@
 /**
- * @file Card module stories.
+ * @file Card area module stories.
  * @copyright IBM Security 2020 - 2021
  */
 
-import { List16, Search16, Table16, Filter16 } from '@carbon/icons-react';
+import { Filter16, List16, Search16, Table16 } from '@carbon/icons-react';
 import React from 'react';
 
 import { getDocsParameters } from '../../../../.storybook';
@@ -12,7 +12,7 @@ import {
   ActionBarModule,
   ActionBarModuleItems,
   Button,
-  CardModule,
+  CardAreaModule,
   Column,
   IconButtonBar,
   Row,
@@ -28,8 +28,8 @@ import page from './index.mdx';
 const SummaryCard = withBackground(SummaryCardComponent);
 
 export default {
-  title: getTitle(CardModule.name),
-  component: CardModule,
+  title: getTitle(CardAreaModule.name),
+  component: CardAreaModule,
   parameters: {
     docs: { page },
 
@@ -38,7 +38,7 @@ export default {
 };
 
 export const Default = () => (
-  <CardModule>
+  <CardAreaModule>
     {({ getLayoutProps }) => (
       <Row>
         <Column>
@@ -60,46 +60,48 @@ export const Default = () => (
         </Column>
       </Row>
     )}
-  </CardModule>
+  </CardAreaModule>
 );
 
 export const Variant = () => (
-  <CardModule>
+  <CardAreaModule>
     {({ getLayoutProps }) => (
       <>
         <TitleBarModule title="Section title" />
         <TitleBarModule element="h3" title="Sub-section title" subsection />
 
-        <ActionBarModule>
-          <Row narrow>
-            <Button
-              iconDescription="Action 1"
-              kind="ghost"
-              renderIcon={Filter16}
-              hasIconOnly
-            />
-          </Row>
+        <Row narrow>
+          <Column>
+            <ActionBarModule>
+              <Button
+                iconDescription="Action 1"
+                kind="ghost"
+                renderIcon={Filter16}
+                hasIconOnly
+              />
 
-          <ActionBarModuleItems>
-            <IconButtonBar
-              actions={[
-                {
-                  label: 'Action 2',
-                  renderIcon: Search16,
-                },
-                {
-                  label: 'Action 3',
-                  renderIcon: List16,
-                },
-                {
-                  label: 'Action 4',
-                  renderIcon: Table16,
-                },
-              ]}
-              size="lg"
-            />
-          </ActionBarModuleItems>
-        </ActionBarModule>
+              <ActionBarModuleItems>
+                <IconButtonBar
+                  actions={[
+                    {
+                      label: 'Action 2',
+                      renderIcon: Search16,
+                    },
+                    {
+                      label: 'Action 3',
+                      renderIcon: List16,
+                    },
+                    {
+                      label: 'Action 4',
+                      renderIcon: Table16,
+                    },
+                  ]}
+                  size="lg"
+                />
+              </ActionBarModuleItems>
+            </ActionBarModule>
+          </Column>
+        </Row>
 
         <Row narrow>
           <Column>
@@ -122,7 +124,7 @@ export const Variant = () => (
         </Row>
       </>
     )}
-  </CardModule>
+  </CardAreaModule>
 );
 
 Variant.parameters = {
