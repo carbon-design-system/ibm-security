@@ -37,6 +37,7 @@ export default {
   decorators,
 };
 
+// TODO: Remove workaround for https://github.ibm.com/security/design-core-experience/issues/241
 const withBorder = WrappedComponent => ({
   className,
   direction,

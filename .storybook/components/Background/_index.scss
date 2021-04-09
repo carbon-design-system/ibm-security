@@ -9,6 +9,7 @@
 
 @import '../../../src/globals/border/index';
 
+// TODO: Remove workaround for https://github.ibm.com/security/design-core-experience/issues/241
 .container {
   $container--narrow__spacing: ($carbon--grid-gutter / 2);
 
