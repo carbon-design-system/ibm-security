@@ -3,7 +3,7 @@
  * @copyright IBM Security 2019 - 2021
  */
 
-import { OVERVIEW } from '../src/components/UNSTABLE__LayoutModules/stories';
+import { LIBRARY } from '../src/components/UNSTABLE__LayoutModules/stories';
 
 // Category labels.
 const CATEGORIES = {
@@ -24,7 +24,7 @@ const {
 
 const ORDER = [
   LAYOUT_MODULES,
-  [OVERVIEW],
+  [LIBRARY],
   PAGE_LAYOUTS,
   PATTERNS,
   COMPONENTS,
