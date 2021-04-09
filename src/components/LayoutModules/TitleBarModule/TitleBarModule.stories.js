@@ -1,6 +1,6 @@
 /**
  * @file Title bar module stories.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import { Add16, Edit16, Filter16 } from '@carbon/icons-react';
@@ -15,7 +15,7 @@ import getTitle from '../stories';
 import page from './index.mdx';
 
 export default {
-  title: getTitle(TitleBarModule),
+  title: getTitle(TitleBarModule.name),
   component: TitleBarModule,
   args: {
     title: 'Section title',
@@ -47,7 +47,7 @@ export const Variant = () => (
           renderIcon: Filter16,
         },
       ]}
-      size="md"
+      size="lg"
     />
   </TitleBarModule>
 );

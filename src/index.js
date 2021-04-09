@@ -100,7 +100,7 @@ export {
   ActionBarModule,
   ActionBarModuleItems,
   ButtonClusterModule,
-  CardModule,
+  CardAreaModule,
   DescriptionListModule,
   DescriptionModule,
   ICAModule,

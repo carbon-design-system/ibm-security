@@ -1,9 +1,17 @@
 /**
  * @file Action bar module stories.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
-import { Add16, Edit16, Filter16 } from '@carbon/icons-react';
+import {
+  Add16,
+  Edit16,
+  Filter16,
+  OverflowMenuVertical16,
+  Search16,
+  Table16,
+} from '@carbon/icons-react';
+
 import React from 'react';
 
 import { getDocsParameters } from '../../../../.storybook';
@@ -20,7 +28,7 @@ import getTitle from '../stories';
 import page from './index.mdx';
 
 export default {
-  title: getTitle(ActionBarModule),
+  title: getTitle(ActionBarModule.name),
   component: ActionBarModule,
   subcomponents: { ActionBarModuleItems },
   parameters: {
@@ -33,25 +41,25 @@ export default {
 
 export const Default = () => (
   <ActionBarModule>
-    <Button kind="ghost">Action 1</Button>
+    <Button kind="ghost">Ghost button</Button>
 
     <ActionBarModuleItems>
       <IconButtonBar
         actions={[
           {
             label: 'Action 2',
-            renderIcon: Add16,
+            renderIcon: Search16,
           },
           {
             label: 'Action 3',
-            renderIcon: Edit16,
+            renderIcon: Table16,
           },
           {
             label: 'Action 4',
-            renderIcon: Filter16,
+            renderIcon: OverflowMenuVertical16,
           },
         ]}
-        size="md"
+        size="lg"
       />
     </ActionBarModuleItems>
   </ActionBarModule>
@@ -59,24 +67,26 @@ export const Default = () => (
 
 export const Variant = () => (
   <ActionBarModule>
-    Supplementary details
+    <Button
+      iconDescription="Action 1"
+      kind="ghost"
+      renderIcon={Filter16}
+      hasIconOnly
+    />
+
     <ActionBarModuleItems>
       <IconButtonBar
         actions={[
           {
-            label: 'Action 1',
+            label: 'Action 2',
             renderIcon: Add16,
           },
           {
-            label: 'Action 2',
+            label: 'Action 3',
             renderIcon: Edit16,
           },
-          {
-            label: 'Action 3',
-            renderIcon: Filter16,
-          },
         ]}
-        size="md"
+        size="lg"
       />
     </ActionBarModuleItems>
   </ActionBarModule>

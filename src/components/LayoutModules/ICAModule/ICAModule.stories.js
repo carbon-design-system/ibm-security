@@ -1,6 +1,6 @@
 /**
  * @file ICA module stories.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import React from 'react';
@@ -13,7 +13,7 @@ import getTitle from '../stories';
 import page from './index.mdx';
 
 export default {
-  title: getTitle(ICAModule),
+  title: getTitle(ICAModule.name),
   component: ICAModule,
   parameters: {
     docs: { page },
@@ -24,17 +24,17 @@ export default {
 
 export const Default = () => (
   <ICAModule>
-    {() => (
+    {({ getLayoutProps }) => (
       <Row>
-        <Column>
+        <Column {...getLayoutProps()}>
           <ICA label="Label" value={100} />
         </Column>
 
-        <Column>
+        <Column {...getLayoutProps()}>
           <ICA label="Label" value={100} />
         </Column>
 
-        <Column>
+        <Column {...getLayoutProps()}>
           <ICA label="Label" value={100} />
         </Column>
       </Row>
