@@ -343,7 +343,7 @@ export const Overview = () => (
     >
       <div className={`${settings.prefix}--col-span-6`}>
         <DivWithBackground>
-          <DescriptionListModule>
+          <DescriptionListModule className={`${settings.prefix}--gutter-start`}>
             <TitleBarModule title="General settings and scope" subsection />
 
             <TypeLayout>
@@ -399,7 +399,7 @@ export const Overview = () => (
 
       <div className={`${settings.prefix}--col-span-6`}>
         <DivWithBackground>
-          <DescriptionListModule>
+          <DescriptionListModule className={`${settings.prefix}--gutter-start`}>
             <TitleBarModule title="Schedule" subsection />
 
             <TypeLayout>
@@ -422,7 +422,7 @@ export const Overview = () => (
             </TypeLayout>
           </DescriptionListModule>
 
-          <DescriptionListModule>
+          <DescriptionListModule className={`${settings.prefix}--gutter-start`}>
             <TitleBarModule title="Campaign end" subsection />
 
             <TypeLayout>
@@ -447,9 +447,13 @@ export const Overview = () => (
 
       <div className={`${settings.prefix}--col-span-12`}>
         <DivWithBackground>
-          <TitleBarModule title="Campaign results" subsection />
+          <TitleBarModule
+            title="Campaign results"
+            subsection
+            className={`${settings.prefix}--gutter-start`}
+          />
 
-          <ICAModule>
+          <ICAModule className={`${settings.prefix}--gutter-start`}>
             {() => (
               <Row>
                 <Column sm={2} md={2} lg={3}>
