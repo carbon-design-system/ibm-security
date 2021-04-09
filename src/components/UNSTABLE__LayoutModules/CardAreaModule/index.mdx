@@ -40,7 +40,7 @@ Additional props passed into `CardAreaModule` will be forwarded along to the und
 
 #### Render props
 
-In order to make sure that everything works as intended, it's important to pass all of the props of the component as fields on the object given to the prop getter. For example, to add a `className`:
+In order to make sure that everything works as intended, itʼs important to pass all of the props of the component as fields on the object given to the prop getter. For example, to add a `className`:
 
 ```jsx
 <SummaryCard {...getLayoutProps({ className: 'className' })} />
@@ -48,9 +48,9 @@ In order to make sure that everything works as intended, it's important to pass 
 
 ### Anatomy
 
-1. **Cards:** Cards can use `Card`, `SummaryCard`, or `Tile` components.
-2. **Card spacer (optional):** If there are multiple rows of cards, use the 16-pixel spacer `$layout-01` to separate the rows.
-3. **Bottom spacer:** The 32-pixel spacer `$layout-03` below the last card row provides the starting point for the layout module positioned directly underneath it.
+1. **Cards:** Cards can use any card component, for example `Card`, `SummaryCard`, `Tile`.
+2. **Card spacer (optional):** If there are multiple rows of cards, use the 16-pixel spacer `$spacing-05` to separate the rows.
+3. **Bottom spacer:** The 32-pixel spacer `$spacing-07` below the last card row provides the starting point for the layout module positioned directly underneath it.
 
 <img alt="`CardAreaModule` anatomy" src={anatomy} />
 
@@ -60,8 +60,10 @@ The card area module can contain a number of complimentary layout modules within
 The cards within the module can also be arranged in a number of different ways.
 
 1. **[`TitleBarModule`](#references) using section title:** Section titles provide identification for the content
-2. **`TitleBarModule` using subsection title:** Subsection titles provide identification for the sub-content
-3. **[`ActionBarModule`](#references):** Provides a zone for actions related to the cards and content below it
+2. **`TitleBarModule` using `subsection` title:** Sub-section titles provide identification for the sub-content
+3. **[`ActionBarModule`](#references):** Provides a zone for actions related to the cards and content below it.
+
+Feel free to use just one or two of the TitleBarModule or ActionBarModule variants, or all three at once as illustrated.
 
 <img alt="`CardAreaModule` variants" src={variants} />
 
@@ -69,7 +71,7 @@ The cards within the module can also be arranged in a number of different ways.
 
 ### Grid placement
 
-Card area modules can span between 4 and 16 columns. Following the narrow grid implementation, the layout module container hangs 16 pixels in the left margin. The narrow grid position allows headings and copy outside of containers to align with the labels within the card area module.
+Card area modules can span between 4 and 16 columns. Following the [narrow grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow) implementation, the layout module container hangs 16 pixels in the left margin. The narrow grid position allows headings and copy outside of containers to align with the labels within the card area module.
 
 <Row>
   <Column>
@@ -82,7 +84,7 @@ Card area modules can span between 4 and 16 columns. Following the narrow grid i
 </Row>
 
 ```jsx
-<Column lg={10}>
+<Column lg={16}>
   <CardAreaModule />
 </Column>
 ```

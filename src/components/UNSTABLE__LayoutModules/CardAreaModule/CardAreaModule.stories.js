@@ -3,7 +3,7 @@
  * @copyright IBM Security 2020 - 2021
  */
 
-import { List16, Search16, Table16 } from '@carbon/icons-react';
+import { Filter16, List16, Search16, Table16 } from '@carbon/icons-react';
 import React from 'react';
 
 import { getDocsParameters } from '../../../../.storybook';
@@ -11,6 +11,7 @@ import { getDocsParameters } from '../../../../.storybook';
 import {
   ActionBarModule,
   ActionBarModuleItems,
+  Button,
   CardAreaModule,
   Column,
   IconButtonBar,
@@ -67,33 +68,42 @@ export const Variant = () => (
     {({ getLayoutProps }) => (
       <>
         <TitleBarModule title="Section title" />
-
         <TitleBarModule element="h3" title="Sub-section title" subsection />
 
-        <ActionBarModule>
-          Supplementary details
-          <ActionBarModuleItems>
-            <IconButtonBar
-              actions={[
-                {
-                  label: 'Action 1',
-                  renderIcon: Search16,
-                },
-                {
-                  label: 'Action 2',
-                  renderIcon: List16,
-                },
-                {
-                  label: 'Action 3',
-                  renderIcon: Table16,
-                },
-              ]}
-              size="lg"
-            />
-          </ActionBarModuleItems>
-        </ActionBarModule>
+        <Row narrow>
+          <Column>
+            <ActionBarModule>
+              <Button
+                iconDescription="Action 1"
+                kind="ghost"
+                renderIcon={Filter16}
+                hasIconOnly
+              />
 
-        <Row>
+              <ActionBarModuleItems>
+                <IconButtonBar
+                  actions={[
+                    {
+                      label: 'Action 2',
+                      renderIcon: Search16,
+                    },
+                    {
+                      label: 'Action 3',
+                      renderIcon: List16,
+                    },
+                    {
+                      label: 'Action 4',
+                      renderIcon: Table16,
+                    },
+                  ]}
+                  size="lg"
+                />
+              </ActionBarModuleItems>
+            </ActionBarModule>
+          </Column>
+        </Row>
+
+        <Row narrow>
           <Column>
             <SummaryCard {...getLayoutProps()}>
               <SummaryCardHeader title="Label" />

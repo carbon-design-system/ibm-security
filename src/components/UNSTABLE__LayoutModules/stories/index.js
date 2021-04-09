@@ -5,6 +5,6 @@
 
 import { layoutModules } from '../../../../.storybook';
 
-export const OVERVIEW = 'Overview';
+export const LIBRARY = 'Library';
 
 export default title => layoutModules(title);
