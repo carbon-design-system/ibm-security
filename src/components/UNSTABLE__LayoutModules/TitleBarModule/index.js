@@ -1,6 +1,6 @@
 /**
  * @file Title bar module.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import classnames from 'classnames';
@@ -18,14 +18,17 @@ const namespace = 'title-bar';
  * Title bar modules provide interchangeable and reliable headings for establishing consistent hierarchies.
  */
 const TitleBarModule = ({ children, element, subsection, title, ...other }) => (
-  <LayoutModule namespace={namespace} {...other}>
+  <LayoutModule
+    className={classnames({
+      [`${layoutModuleNamespace}--${namespace}--subsection`]: subsection,
+    })}
+    namespace={namespace}
+    {...other}
+  >
     {createElement(
       element,
       {
         ...getLayoutModuleProps({
-          className: classnames({
-            [`${layoutModuleNamespace}--${namespace}__title--subsection`]: subsection,
-          }),
           namespace: `${namespace}__title`,
         }),
       },
