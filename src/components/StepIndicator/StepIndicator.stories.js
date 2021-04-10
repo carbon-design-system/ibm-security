@@ -42,9 +42,7 @@ storiesOf(deprecated('StepIndicator'), module).add(
   info(
     '`StepIndicator` and `Step` have been deprecated - please use the vertical `ProgressIndicator` and `ProgressStep` instead.',
     {
-      library: 'ibm-security',
-      story: 'components-progressindicator',
-      id: 'default',
+      story: 'progressindicator',
     }
   )
 );

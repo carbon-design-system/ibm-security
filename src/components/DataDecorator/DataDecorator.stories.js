@@ -1,6 +1,6 @@
 /**
  * @file Data decorator stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { action } from '@storybook/addon-actions';
@@ -32,7 +32,7 @@ const storyProps = () => ({
   inert: boolean('Non-interactive (`inert`)', false),
   active: boolean('Active (`active`)', false),
   noIcon: boolean('No icon (`noIcon`)', false),
-  renderFooter: () => <Button size="large">Custom footer</Button>,
+  renderFooter: () => <Button size="xl">Custom footer</Button>,
 });
 
 const midLineStoryProps = () => ({
@@ -48,7 +48,7 @@ const midLineStoryProps = () => ({
   inert: boolean('Non-interactive (`inert`)', false),
   active: boolean('Active (`active`)', false),
   noIcon: boolean('No icon (`noIcon`)', false),
-  renderFooter: () => <Button size="large">Custom footer</Button>,
+  renderFooter: () => <Button size="xl">Custom footer</Button>,
   midLineTruncation: {
     enabled: true,
     maxLength: 20,
