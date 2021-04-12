@@ -1,17 +1,20 @@
 /**
  * @file Background.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import classnames from 'classnames';
 import React from 'react';
 
-import { layoutModuleNamespace } from '../LayoutModule';
+import { getComponentNamespace } from '../../globals/namespace';
 
 export default WrappedComponent => {
   const WithBackground = ({ className, ...other }) => (
     <WrappedComponent
-      className={classnames(`${layoutModuleNamespace}--background`, className)}
+      className={classnames(
+        getComponentNamespace('unstable--background'),
+        className
+      )}
       {...other}
     />
   );

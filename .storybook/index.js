@@ -3,7 +3,7 @@
  * @copyright IBM Security 2019 - 2021
  */
 
-import { LIBRARY } from '../src/components/UNSTABLE__LayoutModules/stories';
+import { LIBRARY } from '../src/components/LayoutModules/stories';
 
 // Category labels.
 const CATEGORIES = {
@@ -120,13 +120,16 @@ const getDocsParameters = () => ({
  * @param {{library: string, story: string, id: string}} [component={}] An object containing component information to redirect to.
  * @returns {Object<string, string>} The configuration containing information to apply.
  */
-const info = (description, component = {}) => ({
-  info:
-    component.library && component.story && component.id
-      ? `${description}
 
-Also refer to http://${component.library}.carbondesignsystem.com/?path=/story/${component.story}--${component.id}`
-      : description,
+const info = (
+  description,
+  { group = 'components', library = 'react', story } = {}
+) => ({
+  info: story
+    ? `${description}
+
+Also refer to http://${library}.carbondesignsystem.com/?path=/docs/${group}-${story}`
+    : description,
 });
 
 export {

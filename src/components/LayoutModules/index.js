@@ -8,7 +8,6 @@ export {
   ActionBarModuleItems,
 } from './ActionBarModule';
 
-export { default as withBackground } from './Background';
 export { default as ButtonClusterModule } from './ButtonClusterModule';
 export { default as CardAreaModule } from './CardAreaModule';
 export { default as DescriptionListModule } from './DescriptionListModule';

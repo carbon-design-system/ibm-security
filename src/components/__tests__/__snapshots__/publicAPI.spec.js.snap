@@ -200,7 +200,6 @@ Map {
       "kind": "primary",
       "largeText": null,
       "loading": false,
-      "renderIcon": undefined,
       "size": "default",
       "tabIndex": 0,
       "tooltipAlignment": "center",
@@ -281,8 +280,11 @@ Map {
           Array [
             "default",
             "field",
-            "large",
             "small",
+            "sm",
+            "large",
+            "lg",
+            "xl",
           ],
         ],
         "type": "oneOf",
@@ -482,6 +484,14 @@ Map {
     },
   },
   "CardAreaModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "func",
+      },
+    },
+  },
+  "CardModule" => Object {
     "propTypes": Object {
       "children": Object {
         "isRequired": true,
