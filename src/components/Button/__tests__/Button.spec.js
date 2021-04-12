@@ -105,12 +105,12 @@ describe('Button', () => {
 
   test('should apply correct class when `size` is `large`', () => {
     const { getByText } = render(<Button size="large">test button</Button>);
-    expect(getByText(/test button/i)).toHaveClass(`${carbonPrefix}btn--lg`);
+    expect(getByText(/test button/i)).toHaveClass(`${carbonPrefix}--btn--lg`);
   });
 
   // TODO: `2.x` - Remove test for deprecated prop `largeText`.
   test('should apply correct large class when `largeText` is `true`', () => {
     const { getByText } = render(<Button largeText>test button</Button>);
-    expect(getByText(/test button/i)).toHaveClass(`${carbonPrefix}btn--lg`);
+    expect(getByText(/test button/i)).toHaveClass(`${carbonPrefix}--btn--lg`);
   });
 });
