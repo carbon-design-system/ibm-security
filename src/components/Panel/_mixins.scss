@@ -1,14 +1,16 @@
 ////
 /// Panel mixins.
 /// @group panel
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/spacing';
 @import '@carbon/layout/scss/mini-unit';
 @import '@carbon/type/scss/index';
 @import '@carbon/themes/scss/tokens';
+
 @import 'carbon-components/scss/globals/scss/layout';
+@import 'carbon-components/scss/globals/scss/vars';
 
 @import '../../globals/rtl/index';
 @import '../../globals/theme/mixins';
@@ -149,6 +151,7 @@
     bottom: 0;
     width: $panel__sizing__width;
 
+    > .#{$prefix}--btn,
     &__button {
       max-width: $panel__sizing__width;
       flex-grow: 1;
