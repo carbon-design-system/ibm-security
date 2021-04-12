@@ -4,6 +4,7 @@
  */
 
 import { Filter16, List16, Search16, Table16 } from '@carbon/icons-react';
+import { Column, Row } from 'carbon-components-react';
 import React from 'react';
 
 import { getDocsParameters } from '../../../../.storybook';
@@ -13,9 +14,7 @@ import {
   ActionBarModuleItems,
   Button,
   CardAreaModule,
-  Column,
   IconButtonBar,
-  Row,
   SummaryCard as SummaryCardComponent,
   SummaryCardHeader,
   TitleBarModule,
@@ -40,7 +39,7 @@ export default {
 export const Default = () => (
   <CardAreaModule>
     {({ getLayoutProps }) => (
-      <Row>
+      <Row narrow>
         <Column>
           <SummaryCard {...getLayoutProps()}>
             <SummaryCardHeader title="Label" />
