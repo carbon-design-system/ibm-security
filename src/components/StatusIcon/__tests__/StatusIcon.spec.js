@@ -1,6 +1,6 @@
 /**
  * @file Status icon tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { render } from '@testing-library/react';
@@ -63,7 +63,7 @@ describe('StatusIcon', () => {
 
   test('should render a loading icon when `status` is `undefined`', () => {
     render(<StatusIcon />);
-    expect(document.querySelector(`.${carbonPrefix}loading`)).toBeVisible();
+    expect(document.querySelector(`.${carbonPrefix}--loading`)).toBeVisible();
   });
 
   test('should add a custom class', () => {

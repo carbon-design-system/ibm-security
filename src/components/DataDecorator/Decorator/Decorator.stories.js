@@ -1,6 +1,6 @@
 /**
  * @file Decorator stories.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { action } from '@storybook/addon-actions';
@@ -10,7 +10,10 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 
 import { components } from '../../../../.storybook';
+import { carbonPrefix } from '../../../globals/namespace';
+
 import { Decorator } from '../../..';
+
 import { props, midLine } from '../_mocks_';
 
 const { type, value, score, href } = props;
@@ -50,7 +53,9 @@ const midLineStoryProps = () => ({
 storiesOf(components('Decorator'), module)
   .add('Default', () => (
     <>
-      <p className="bx--type-body-long-01">This Decorator is inert.</p>
+      <p className={`${carbonPrefix}--type-body-long-01`}>
+        This Decorator is inert.
+      </p>
       <p>
         <Decorator {...storyProps()} />
       </p>
@@ -58,7 +63,7 @@ storiesOf(components('Decorator'), module)
   ))
   .add('Mid-line truncation', () => (
     <>
-      <p className="bx--type-body-long-01">
+      <p className={`${carbonPrefix}--type-body-long-01`}>
         This Decorator is with mid-line truncation.
       </p>
       <p>
@@ -67,14 +72,16 @@ storiesOf(components('Decorator'), module)
     </>
   ))
   .add('Inline', () => (
-    <p className="bx--type-body-long-01">
+    <p className={`${carbonPrefix}--type-body-long-01`}>
       This is an inline Decorator <Decorator {...storyProps()} inline /> that
       appears alongside some text.
     </p>
   ))
   .add('with href', () => (
     <>
-      <p className="bx--type-body-long-01">This Decorator is a link.</p>
+      <p className={`${carbonPrefix}--type-body-long-01`}>
+        This Decorator is a link.
+      </p>
       <p>
         <Decorator {...storyProps()} href={text('Link (`href`)', href)} />
       </p>
@@ -82,7 +89,9 @@ storiesOf(components('Decorator'), module)
   ))
   .add('with onClick', () => (
     <>
-      <p className="bx--type-body-long-01">This Decorator is a button.</p>
+      <p className={`${carbonPrefix}--type-body-long-01`}>
+        This Decorator is a button.
+      </p>
       <p>
         <Decorator {...storyProps()} onClick={action('onClick')} />
       </p>
@@ -100,7 +109,7 @@ storiesOf(components('Decorator'), module)
 
     return (
       <>
-        <p className="bx--type-body-long-01">
+        <p className={`${carbonPrefix}--type-body-long-01`}>
           You can use Decorator icons as separate components.
         </p>
         <p>

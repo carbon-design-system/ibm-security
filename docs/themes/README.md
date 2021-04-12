@@ -22,15 +22,6 @@ Currently, only 2 themes are supported: **Gray 100**, activated by default, and 
 | Gray 100 (default) | `security--theme--g100` |
 | Cool gray 10       | `security--theme--cg10` |
 
-#### Tokens
-
-All of the components' processed and minified styles automatically includes and initializes all tokens as CSS custom properties for use with CSS. For example:
-
-```css
-var(--cds-interactive-01);
-var(--cds-interactive-02);
-```
-
 ### Sass
 
 If your project is using Sass, you can include the following in your Sass file:
@@ -58,7 +49,7 @@ You can disable theme output using a feature flag by writing the following Sass 
 
 ```scss
 $security--feature-flags: (
-  enable-css-custom-properties: false,
+  security--css-custom-property-theming: false,
 );
 ```
 

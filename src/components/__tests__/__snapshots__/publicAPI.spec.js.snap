@@ -491,6 +491,14 @@ Map {
       },
     },
   },
+  "CardModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "func",
+      },
+    },
+  },
   "CardSkeleton" => Object {
     "defaultProps": Object {
       "className": null,
