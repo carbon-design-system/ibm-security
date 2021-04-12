@@ -3,11 +3,12 @@
  * @copyright IBM Security 2020 - 2021
  */
 
+import { Column, Row } from 'carbon-components-react';
 import React from 'react';
 
 import { getDocsParameters } from '../../../../.storybook';
 
-import { Column, ICA, ICAModule, Row } from '../../..';
+import { ICA, ICAModule } from '../../..';
 
 import getTitle from '../stories';
 import page from './index.mdx';
