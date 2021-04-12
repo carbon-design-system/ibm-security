@@ -1,6 +1,6 @@
 /**
  * @file Configuration.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import { spacing04, spacing05 } from '@carbon/layout';
@@ -16,11 +16,11 @@ import { Column, Row } from '../src';
 import random from '../src/globals/random';
 import theme from '../src/globals/theme';
 
-import Detail from '../src/components/UNSTABLE__LayoutModules/docs/examples/Detail/index.mdx';
-import Overview from '../src/components/UNSTABLE__LayoutModules/docs/examples/Overview/index.mdx';
-import Troubleshooting from '../src/components/UNSTABLE__LayoutModules/docs/Troubleshooting/index.mdx';
+import Detail from '../src/components/LayoutModules/docs/examples/Detail/index.mdx';
+import Overview from '../src/components/LayoutModules/docs/examples/Overview/index.mdx';
+import Troubleshooting from '../src/components/LayoutModules/docs/Troubleshooting/index.mdx';
 
-import { HIERARCHY_ROOT_SEPARATOR, ORDER } from '.';
+import { ORDER } from '.';
 
 import storybookTheme from './theme';
 import withTheme from './addons/addon-theme';
@@ -40,17 +40,6 @@ const decorators = [
     </Container>
   ),
 ];
-
-/**
- * Returns the Storybook category.
- * @param {Array<*>} story The story to retrieve the category from.
- * @returns {string} The formatted category name.
- */
-function getCategory(story) {
-  const { kind } = story[1];
-
-  return kind.substring(0, kind.indexOf(HIERARCHY_ROOT_SEPARATOR));
-}
 
 const parameters = {
   controls: { disable: true, expanded: true, hideNoControlsWarning: true },
@@ -90,8 +79,9 @@ const parameters = {
   },
   layout: 'centered',
   options: {
-    storySort: (a, b) =>
-      ORDER.indexOf(getCategory(a)) - ORDER.indexOf(getCategory(b)),
+    storySort: {
+      order: ORDER,
+    },
   },
   previewTabs: {
     canvas: null,
