@@ -3,7 +3,7 @@
  * @copyright IBM Security 2019 - 2021
  */
 
-import { LIBRARY } from '../src/components/UNSTABLE__LayoutModules/stories';
+import { LIBRARY } from '../src/components/LayoutModules/stories';
 
 // Category labels.
 const CATEGORIES = {

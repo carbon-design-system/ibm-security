@@ -1,6 +1,6 @@
 /**
  * @file Layout module.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import classnames from 'classnames';
@@ -9,7 +9,7 @@ import { createElement } from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
 
-const layoutModuleNamespace = getComponentNamespace('unstable--layout__module');
+const layoutModuleNamespace = getComponentNamespace('layout-module');
 
 const getLayoutModuleProps = ({ className, namespace }) => ({
   className: classnames(
