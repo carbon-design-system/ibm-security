@@ -1,6 +1,6 @@
 /**
  * @file SCSS tests.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import { compile, forEachImport } from '../../../scripts/scss/compile';
@@ -8,7 +8,7 @@ import { compile, forEachImport } from '../../../scripts/scss/compile';
 describe('SCSS', () => {
   test('Bundle', () => {
     expect(
-      compile('src/index.scss')
+      compile('src/globals/build/index.scss')
         .css.toString()
         .replace(/'/g, '"')
     ).toMatchSnapshot();

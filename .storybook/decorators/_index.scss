@@ -1,7 +1,7 @@
 ////
 /// Decorators.
 /// @group storybook
-/// @copyright IBM Security 2020
+/// @copyright IBM Security 2020 - 2021
 ////
 
 @import '@carbon/layout/scss/breakpoint';
@@ -16,6 +16,6 @@
 .decorator {
   width: 33vw;
 
-  max-width: breakpoints-width-get($name: md);
+  max-width: breakpoints-width-get($name: md) * 0.66;
   min-width: breakpoints-width-get($name: sm);
 }

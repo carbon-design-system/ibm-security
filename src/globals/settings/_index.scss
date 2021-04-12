@@ -12,6 +12,12 @@ $feature-flags: (
   enable-css-custom-properties: true,
 );
 
+// Global flags - https://github.com/carbon-design-system/carbon/blob/main/docs/guides/sass.md#global-flags
+
 /// Default theme - https://github.com/carbon-design-system/carbon/tree/main/packages/themes#sass
 /// @type Map<String, Color>
 $carbon--theme: $carbon--theme--g100;
+
+/// CSS reset - https://cssreset.com
+/// @type boolean
+$css--reset: false;
