@@ -5,7 +5,7 @@
 
 import { Grid } from 'carbon-components-react';
 import { layout04 } from '@carbon/layout';
-
+import classnames from 'classnames';
 import React from 'react';
 
 import { disableCentered } from '../../../../.storybook';
@@ -52,3 +52,11 @@ export default {
     ),
   ],
 };
+
+// TODO: Remove workaround for https://github.ibm.com/security/design-core-experience/issues/241
+export const withContainer = WrappedComponent => ({ className, ...other }) => (
+  <WrappedComponent
+    className={classnames('container--narrow', className)}
+    {...other}
+  />
+);
