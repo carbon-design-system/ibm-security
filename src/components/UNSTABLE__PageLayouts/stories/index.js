@@ -3,7 +3,6 @@
  * @copyright IBM Security 2020 - 2021
  */
 
-import { Grid } from 'carbon-components-react';
 import { layout04 } from '@carbon/layout';
 import classnames from 'classnames';
 import React from 'react';
@@ -47,7 +46,7 @@ export default {
           hideCloseButton
         />
 
-        <Grid>{story()}</Grid>
+        {story()}
       </>
     ),
   ],
