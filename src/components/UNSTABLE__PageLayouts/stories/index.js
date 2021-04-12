@@ -3,6 +3,7 @@
  * @copyright IBM Security 2020 - 2021
  */
 
+import { Grid } from 'carbon-components-react';
 import { layout04 } from '@carbon/layout';
 
 import React from 'react';
@@ -11,7 +12,6 @@ import { disableCentered } from '../../../../.storybook';
 
 import {
   CarbonHeader,
-  Grid,
   HeaderName,
   InlineNotification,
   NotificationActionButton,
@@ -42,7 +42,7 @@ export default {
             </NotificationActionButton>
           }
           kind="info"
-          subtitle="Page layouts utilize Carbon CSS Grid updates. They will remain Canary until the 2021 Carbon release."
+          subtitle="Page layouts will remain Canary until the 2021 Carbon release."
           title=""
           hideCloseButton
         />
