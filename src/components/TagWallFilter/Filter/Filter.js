@@ -14,7 +14,7 @@ import React, { Component } from 'react';
 import {
   carbonPrefix,
   getComponentNamespace,
-} from '../../../globals/namespace/index';
+} from '../../../globals/namespace';
 
 import theme from '../../../globals/theme';
 

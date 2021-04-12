@@ -7,10 +7,7 @@ import classnames from 'classnames';
 import { arrayOf, bool, func, shape, string, object } from 'prop-types';
 import React from 'react';
 
-import {
-  carbonPrefix,
-  getComponentNamespace,
-} from '../../globals/namespace/index';
+import { carbonPrefix, getComponentNamespace } from '../../globals/namespace';
 
 import * as defaultLabels from '../../globals/nls';
 

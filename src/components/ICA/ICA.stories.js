@@ -9,7 +9,7 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 
 import { components } from '../../../.storybook';
-import { carbonPrefix } from '../../globals/namespace/index';
+import { carbonPrefix } from '../../globals/namespace';
 
 import { ICA } from '../..';
 import { Locales } from './ICA';
