@@ -1,6 +1,6 @@
 /**
  * @file Button tests.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import Add16 from '@carbon/icons-react/lib/add/16';
@@ -46,14 +46,14 @@ describe('Button', () => {
     const { getByText } = render(<Button disabled>test loading button</Button>);
     expect(getByText(/test loading button/i)).toHaveAttribute('disabled');
     expect(getByText(/test loading button/i)).toHaveClass(
-      `${carbonPrefix}btn--disabled`
+      `${carbonPrefix}--btn--disabled`
     );
   });
 
   test('should set button to `ghost` kind when it is `loading`', () => {
     const { getByText } = render(<Button loading>test loading button</Button>);
     expect(getByText(/test loading button/i)).toHaveClass(
-      `${carbonPrefix}btn--ghost`
+      `${carbonPrefix}--btn--ghost`
     );
   });
 
@@ -62,7 +62,7 @@ describe('Button', () => {
       test(`should add correct class when \`kind\` is ${kind}`, () => {
         const { getByText } = render(<Button kind={kind}>test button</Button>);
         expect(getByText(/test button/i)).toHaveClass(
-          `${carbonPrefix}btn--${kind}`
+          `${carbonPrefix}--btn--${kind}`
         );
       });
     }
@@ -73,7 +73,7 @@ describe('Button', () => {
       <Button kind="ghost-danger">test button</Button>
     );
     expect(getByText(/test button/i)).toHaveClass(
-      `${carbonPrefix}btn--ghost ${namespace}--ghost-danger`
+      `${carbonPrefix}--btn--ghost ${namespace}--ghost-danger`
     );
   });
 
@@ -93,22 +93,24 @@ describe('Button', () => {
 
   test('should apply correct class when `size` is `small`', () => {
     const { getByText } = render(<Button size="small">test button</Button>);
-    expect(getByText(/test button/i)).toHaveClass(`${carbonPrefix}btn--sm`);
+    expect(getByText(/test button/i)).toHaveClass(`${carbonPrefix}--btn--sm`);
   });
 
   test('should apply correct class when `size` is `field`', () => {
     const { getByText } = render(<Button size="field">test button</Button>);
-    expect(getByText(/test button/i)).toHaveClass(`${carbonPrefix}btn--field`);
+    expect(getByText(/test button/i)).toHaveClass(
+      `${carbonPrefix}--btn--field`
+    );
   });
 
   test('should apply correct class when `size` is `large`', () => {
     const { getByText } = render(<Button size="large">test button</Button>);
-    expect(getByText(/test button/i)).toHaveClass(`${namespace}--large`);
+    expect(getByText(/test button/i)).toHaveClass(`${carbonPrefix}--btn--lg`);
   });
 
   // TODO: `2.x` - Remove test for deprecated prop `largeText`.
   test('should apply correct large class when `largeText` is `true`', () => {
     const { getByText } = render(<Button largeText>test button</Button>);
-    expect(getByText(/test button/i)).toHaveClass(`${namespace}--large`);
+    expect(getByText(/test button/i)).toHaveClass(`${carbonPrefix}--btn--lg`);
   });
 });

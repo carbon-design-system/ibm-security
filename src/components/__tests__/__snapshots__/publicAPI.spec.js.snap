@@ -201,7 +201,6 @@ Map {
       "kind": "primary",
       "largeText": null,
       "loading": false,
-      "renderIcon": undefined,
       "size": "default",
       "tabIndex": 0,
       "tooltipAlignment": "center",
@@ -300,8 +299,11 @@ Map {
           Array [
             "default",
             "field",
-            "large",
             "small",
+            "sm",
+            "large",
+            "lg",
+            "xl",
           ],
         ],
         "type": "oneOf",
@@ -496,6 +498,14 @@ Map {
         "type": "string",
       },
       "onClick": Object {
+        "type": "func",
+      },
+    },
+  },
+  "CardAreaModule" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
         "type": "func",
       },
     },
@@ -4751,7 +4761,9 @@ Map {
       "forceShowTotal": false,
       "locale": "en",
       "percentage": false,
+      "size": "default",
       "total": 0,
+      "trending": false,
       "truncate": true,
       "value": null,
     },
@@ -4811,8 +4823,21 @@ Map {
       "percentage": Object {
         "type": "bool",
       },
+      "size": Object {
+        "args": Array [
+          Array [
+            "default",
+            "lg",
+            "xl",
+          ],
+        ],
+        "type": "oneOf",
+      },
       "total": Object {
         "type": "number",
+      },
+      "trending": Object {
+        "type": "bool",
       },
       "truncate": Object {
         "type": "bool",

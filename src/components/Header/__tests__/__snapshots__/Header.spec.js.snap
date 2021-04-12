@@ -213,7 +213,6 @@ exports[`Header Rendering renders correctly 1`] = `
             className="security--header__list__item"
           >
             <Button
-              dangerDescription="danger"
               disabled={false}
               href="#"
               kind="primary"
@@ -226,8 +225,7 @@ exports[`Header Rendering renders correctly 1`] = `
               type="button"
             >
               <Button
-                className="security--button"
-                dangerDescription="danger"
+                className=""
                 disabled={false}
                 href="#"
                 kind="primary"
@@ -238,12 +236,8 @@ exports[`Header Rendering renders correctly 1`] = `
                 type="button"
               >
                 <a
-                  className="security--button bx--btn bx--btn--primary"
+                  className="bx--btn bx--btn--primary"
                   href="#"
-                  onBlur={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
                   tabIndex={0}
                 >
                   Create an account
@@ -263,7 +257,6 @@ exports[`Header Rendering renders correctly 1`] = `
             className="security--header__list__item"
           >
             <Button
-              dangerDescription="danger"
               disabled={false}
               href="#"
               kind="secondary"
@@ -276,8 +269,7 @@ exports[`Header Rendering renders correctly 1`] = `
               type="button"
             >
               <Button
-                className="security--button"
-                dangerDescription="danger"
+                className=""
                 disabled={false}
                 href="#"
                 kind="secondary"
@@ -288,12 +280,8 @@ exports[`Header Rendering renders correctly 1`] = `
                 type="button"
               >
                 <a
-                  className="security--button bx--btn bx--btn--secondary"
+                  className="bx--btn bx--btn--secondary"
                   href="#"
-                  onBlur={[Function]}
-                  onFocus={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
                   tabIndex={0}
                 >
                   Sign in

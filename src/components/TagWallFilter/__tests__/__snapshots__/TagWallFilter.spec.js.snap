@@ -485,29 +485,27 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                       class="security--tag-wall security--tag-wall-filter__tag-wall"
                     >
                       
-                      <div
-                        aria-label=" Y"
-                        class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
-                        id="y"
+                      <span
+                        class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                       >
                         <span
-                          class="bx--tag__label"
+                          class="bx--text-truncate--end"
                           title="Y"
                         >
                           Y
                         </span>
                         <button
-                          aria-labelledby="y"
-                          class="bx--tag__close-icon"
-                          title=""
-                          type="button"
+                          aria-label=""
+                          class="security--tag--interactive__button"
                         >
                           <svg
                             aria-hidden="true"
+                            class="security--icon security--tag--interactive__button__icon"
                             fill="currentColor"
                             focusable="false"
                             height="16"
                             preserveAspectRatio="xMidYMid meet"
+                            style="will-change: transform;"
                             viewBox="0 0 32 32"
                             width="16"
                             xmlns="http://www.w3.org/2000/svg"
@@ -517,7 +515,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                             />
                           </svg>
                         </button>
-                      </div>
+                      </span>
                     </section>
                   </div>
                 </div>
@@ -592,7 +590,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                           role="listbox"
                         >
                           <div
-                            class="bx--list-box__menu-item"
+                            class="security--filter__list-item"
                             id="downshift-0-item-0"
                             role="button"
                             tabindex="0"
@@ -648,14 +646,14 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                 class="security--tearsheet--small__footer"
               >
                 <button
-                  class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                  class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                   tabindex="0"
                   type="button"
                 >
                   Cancel
                 </button>
                 <button
-                  class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                  class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                   tabindex="0"
                   type="button"
                 >
@@ -787,29 +785,27 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                   class="security--tag-wall security--tag-wall-filter__tag-wall"
                                 >
                                   
-                                  <div
-                                    aria-label=" Y"
-                                    class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
-                                    id="y"
+                                  <span
+                                    class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                   >
                                     <span
-                                      class="bx--tag__label"
+                                      class="bx--text-truncate--end"
                                       title="Y"
                                     >
                                       Y
                                     </span>
                                     <button
-                                      aria-labelledby="y"
-                                      class="bx--tag__close-icon"
-                                      title=""
-                                      type="button"
+                                      aria-label=""
+                                      class="security--tag--interactive__button"
                                     >
                                       <svg
                                         aria-hidden="true"
+                                        class="security--icon security--tag--interactive__button__icon"
                                         fill="currentColor"
                                         focusable="false"
                                         height="16"
                                         preserveAspectRatio="xMidYMid meet"
+                                        style="will-change: transform;"
                                         viewBox="0 0 32 32"
                                         width="16"
                                         xmlns="http://www.w3.org/2000/svg"
@@ -819,7 +815,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                         />
                                       </svg>
                                     </button>
-                                  </div>
+                                  </span>
                                 </section>
                               </div>
                             </div>
@@ -894,7 +890,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                       role="listbox"
                                     >
                                       <div
-                                        class="bx--list-box__menu-item"
+                                        class="security--filter__list-item"
                                         id="downshift-0-item-0"
                                         role="button"
                                         tabindex="0"
@@ -950,14 +946,14 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                             class="security--tearsheet--small__footer"
                           >
                             <button
-                              class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                              class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                               tabindex="0"
                               type="button"
                             >
                               Cancel
                             </button>
                             <button
-                              class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                              class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                               tabindex="0"
                               type="button"
                             >
@@ -1023,29 +1019,27 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                     class="security--tag-wall security--tag-wall-filter__tag-wall"
                                   >
                                     
-                                    <div
-                                      aria-label=" Y"
-                                      class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
-                                      id="y"
+                                    <span
+                                      class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                     >
                                       <span
-                                        class="bx--tag__label"
+                                        class="bx--text-truncate--end"
                                         title="Y"
                                       >
                                         Y
                                       </span>
                                       <button
-                                        aria-labelledby="y"
-                                        class="bx--tag__close-icon"
-                                        title=""
-                                        type="button"
+                                        aria-label=""
+                                        class="security--tag--interactive__button"
                                       >
                                         <svg
                                           aria-hidden="true"
+                                          class="security--icon security--tag--interactive__button__icon"
                                           fill="currentColor"
                                           focusable="false"
                                           height="16"
                                           preserveAspectRatio="xMidYMid meet"
+                                          style="will-change: transform;"
                                           viewBox="0 0 32 32"
                                           width="16"
                                           xmlns="http://www.w3.org/2000/svg"
@@ -1055,7 +1049,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                           />
                                         </svg>
                                       </button>
-                                    </div>
+                                    </span>
                                   </section>
                                 </div>
                               </div>
@@ -1130,7 +1124,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                         role="listbox"
                                       >
                                         <div
-                                          class="bx--list-box__menu-item"
+                                          class="security--filter__list-item"
                                           id="downshift-0-item-0"
                                           role="button"
                                           tabindex="0"
@@ -1186,14 +1180,14 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                               class="security--tearsheet--small__footer"
                             >
                               <button
-                                class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                                class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                                 tabindex="0"
                                 type="button"
                               >
                                 Cancel
                               </button>
                               <button
-                                class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                                class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                                 tabindex="0"
                                 type="button"
                               >
@@ -1261,29 +1255,27 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                         class="security--tag-wall security--tag-wall-filter__tag-wall"
                                       >
                                         
-                                        <div
-                                          aria-label=" Y"
-                                          class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
-                                          id="y"
+                                        <span
+                                          class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                         >
                                           <span
-                                            class="bx--tag__label"
+                                            class="bx--text-truncate--end"
                                             title="Y"
                                           >
                                             Y
                                           </span>
                                           <button
-                                            aria-labelledby="y"
-                                            class="bx--tag__close-icon"
-                                            title=""
-                                            type="button"
+                                            aria-label=""
+                                            class="security--tag--interactive__button"
                                           >
                                             <svg
                                               aria-hidden="true"
+                                              class="security--icon security--tag--interactive__button__icon"
                                               fill="currentColor"
                                               focusable="false"
                                               height="16"
                                               preserveAspectRatio="xMidYMid meet"
+                                              style="will-change: transform;"
                                               viewBox="0 0 32 32"
                                               width="16"
                                               xmlns="http://www.w3.org/2000/svg"
@@ -1293,7 +1285,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                               />
                                             </svg>
                                           </button>
-                                        </div>
+                                        </span>
                                       </section>
                                     </div>
                                   </div>
@@ -1368,7 +1360,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                             role="listbox"
                                           >
                                             <div
-                                              class="bx--list-box__menu-item"
+                                              class="security--filter__list-item"
                                               id="downshift-0-item-0"
                                               role="button"
                                               tabindex="0"
@@ -1424,14 +1416,14 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                   class="security--tearsheet--small__footer"
                                 >
                                   <button
-                                    class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                                    class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                                     tabindex="0"
                                     type="button"
                                   >
                                     Cancel
                                   </button>
                                   <button
-                                    class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                                    class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                                     tabindex="0"
                                     type="button"
                                   >
@@ -1522,58 +1514,92 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                       type="gray"
                                     >
                                       <Tag
-                                        className="security--tag--interactive security--tag--interactive--default"
-                                        filter={true}
+                                        className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                                        filter={false}
                                         id="y"
-                                        onClose={[Function]}
-                                        title=""
                                         type="gray"
                                       >
-                                        <div
-                                          aria-label=" Y"
-                                          className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
-                                          id="y"
+                                        <span
+                                          className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+                                          title={null}
                                         >
                                           <span
-                                            className="bx--tag__label"
+                                            className="bx--text-truncate--end"
                                             title="Y"
                                           >
                                             Y
                                           </span>
                                           <button
-                                            aria-labelledby="y"
-                                            className="bx--tag__close-icon"
+                                            aria-label=""
+                                            className="security--tag--interactive__button"
                                             onClick={[Function]}
-                                            title=""
-                                            type="button"
                                           >
-                                            <ForwardRef(Close16)>
-                                              <Icon
-                                                fill="currentColor"
-                                                height={16}
+                                            <Icon
+                                              className="security--tag--interactive__button__icon"
+                                              height={null}
+                                              path={null}
+                                              renderIcon={
+                                                Object {
+                                                  "$$typeof": Symbol(react.forward_ref),
+                                                  "render": [Function],
+                                                }
+                                              }
+                                              size={20}
+                                              viewBox="0 0 32 32"
+                                              width={null}
+                                            >
+                                              <ForwardRef(Close16)
+                                                aria-hidden="true"
+                                                className="security--icon security--tag--interactive__button__icon"
+                                                focusable={false}
                                                 preserveAspectRatio="xMidYMid meet"
-                                                viewBox="0 0 32 32"
-                                                width={16}
-                                                xmlns="http://www.w3.org/2000/svg"
+                                                style={
+                                                  Object {
+                                                    "willChange": "transform",
+                                                  }
+                                                }
                                               >
-                                                <svg
-                                                  aria-hidden={true}
+                                                <Icon
+                                                  aria-hidden="true"
+                                                  className="security--icon security--tag--interactive__button__icon"
                                                   fill="currentColor"
-                                                  focusable="false"
+                                                  focusable={false}
                                                   height={16}
                                                   preserveAspectRatio="xMidYMid meet"
+                                                  style={
+                                                    Object {
+                                                      "willChange": "transform",
+                                                    }
+                                                  }
                                                   viewBox="0 0 32 32"
                                                   width={16}
                                                   xmlns="http://www.w3.org/2000/svg"
                                                 >
-                                                  <path
-                                                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                                                  />
-                                                </svg>
-                                              </Icon>
-                                            </ForwardRef(Close16)>
+                                                  <svg
+                                                    aria-hidden={true}
+                                                    className="security--icon security--tag--interactive__button__icon"
+                                                    fill="currentColor"
+                                                    focusable={false}
+                                                    height={16}
+                                                    preserveAspectRatio="xMidYMid meet"
+                                                    style={
+                                                      Object {
+                                                        "willChange": "transform",
+                                                      }
+                                                    }
+                                                    viewBox="0 0 32 32"
+                                                    width={16}
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                  >
+                                                    <path
+                                                      d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                                                    />
+                                                  </svg>
+                                                </Icon>
+                                              </ForwardRef(Close16)>
+                                            </Icon>
                                           </button>
-                                        </div>
+                                        </span>
                                       </Tag>
                                     </InteractiveTag>
                                   </section>
@@ -1798,7 +1824,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                 id="test-id"
                                                 role="listbox"
                                               >
-                                                <ForwardRef(ListBoxMenuItem)
+                                                <ListBoxMenuItem
                                                   className="security--filter__list-item"
                                                   id="downshift-0-item-0"
                                                   isActive={false}
@@ -1812,7 +1838,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                   tabIndex="0"
                                                 >
                                                   <div
-                                                    className="bx--list-box__menu-item"
+                                                    className="security--filter__list-item"
                                                     id="downshift-0-item-0"
                                                     onClick={[Function]}
                                                     onKeyDown={[Function]}
@@ -1905,7 +1931,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                       </div>
                                                     </div>
                                                   </div>
-                                                </ForwardRef(ListBoxMenuItem)>
+                                                </ListBoxMenuItem>
                                               </div>
                                             </ListBoxMenu>
                                           </div>
@@ -1932,40 +1958,32 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                           >
                             <Button
                               className="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary"
-                              dangerDescription="danger"
                               disabled={false}
                               kind="secondary"
                               largeText={null}
                               loading={false}
                               onClick={[MockFunction]}
-                              size="large"
+                              size="xl"
                               tabIndex={0}
                               tooltipAlignment="center"
                               tooltipPosition="top"
                               type="button"
                             >
                               <Button
-                                className="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large"
-                                dangerDescription="danger"
+                                className="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary"
                                 disabled={false}
                                 kind="secondary"
                                 onClick={[MockFunction]}
-                                size={null}
+                                size="xl"
                                 tabIndex={0}
                                 tooltipAlignment="center"
                                 tooltipPosition="top"
                                 type="button"
                               >
                                 <button
-                                  aria-describedby={null}
-                                  aria-pressed={null}
-                                  className="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                                  className="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                                   disabled={false}
-                                  onBlur={[Function]}
                                   onClick={[MockFunction]}
-                                  onFocus={[Function]}
-                                  onMouseEnter={[Function]}
-                                  onMouseLeave={[Function]}
                                   tabIndex={0}
                                   type="button"
                                 >
@@ -1975,40 +1993,32 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                             </Button>
                             <Button
                               className="security--tearsheet--small__footer__button"
-                              dangerDescription="danger"
                               disabled={false}
                               kind="primary"
                               largeText={null}
                               loading={false}
                               onClick={[MockFunction]}
-                              size="large"
+                              size="xl"
                               tabIndex={0}
                               tooltipAlignment="center"
                               tooltipPosition="top"
                               type="button"
                             >
                               <Button
-                                className="security--button security--tearsheet--small__footer__button security--button--large"
-                                dangerDescription="danger"
+                                className="security--tearsheet--small__footer__button"
                                 disabled={false}
                                 kind="primary"
                                 onClick={[MockFunction]}
-                                size={null}
+                                size="xl"
                                 tabIndex={0}
                                 tooltipAlignment="center"
                                 tooltipPosition="top"
                                 type="button"
                               >
                                 <button
-                                  aria-describedby={null}
-                                  aria-pressed={null}
-                                  className="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                                  className="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                                   disabled={false}
-                                  onBlur={[Function]}
                                   onClick={[MockFunction]}
-                                  onFocus={[Function]}
-                                  onMouseEnter={[Function]}
-                                  onMouseLeave={[Function]}
                                   tabIndex={0}
                                   type="button"
                                 >
@@ -2157,58 +2167,92 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 2`] = 
       type="gray"
     >
       <Tag
-        className="security--tag--interactive security--tag--interactive--default"
-        filter={true}
+        className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+        filter={false}
         id="y"
-        onClose={[Function]}
-        title=""
         type="gray"
       >
-        <div
-          aria-label=" Y"
-          className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
-          id="y"
+        <span
+          className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+          title={null}
         >
           <span
-            className="bx--tag__label"
+            className="bx--text-truncate--end"
             title="Y"
           >
             Y
           </span>
           <button
-            aria-labelledby="y"
-            className="bx--tag__close-icon"
+            aria-label=""
+            className="security--tag--interactive__button"
             onClick={[Function]}
-            title=""
-            type="button"
           >
-            <ForwardRef(Close16)>
-              <Icon
-                fill="currentColor"
-                height={16}
+            <Icon
+              className="security--tag--interactive__button__icon"
+              height={null}
+              path={null}
+              renderIcon={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "render": [Function],
+                }
+              }
+              size={20}
+              viewBox="0 0 32 32"
+              width={null}
+            >
+              <ForwardRef(Close16)
+                aria-hidden="true"
+                className="security--icon security--tag--interactive__button__icon"
+                focusable={false}
                 preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 32 32"
-                width={16}
-                xmlns="http://www.w3.org/2000/svg"
+                style={
+                  Object {
+                    "willChange": "transform",
+                  }
+                }
               >
-                <svg
-                  aria-hidden={true}
+                <Icon
+                  aria-hidden="true"
+                  className="security--icon security--tag--interactive__button__icon"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height={16}
                   preserveAspectRatio="xMidYMid meet"
+                  style={
+                    Object {
+                      "willChange": "transform",
+                    }
+                  }
                   viewBox="0 0 32 32"
                   width={16}
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path
-                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                  />
-                </svg>
-              </Icon>
-            </ForwardRef(Close16)>
+                  <svg
+                    aria-hidden={true}
+                    className="security--icon security--tag--interactive__button__icon"
+                    fill="currentColor"
+                    focusable={false}
+                    height={16}
+                    preserveAspectRatio="xMidYMid meet"
+                    style={
+                      Object {
+                        "willChange": "transform",
+                      }
+                    }
+                    viewBox="0 0 32 32"
+                    width={16}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                    />
+                  </svg>
+                </Icon>
+              </ForwardRef(Close16)>
+            </Icon>
           </button>
-        </div>
+        </span>
       </Tag>
     </InteractiveTag>
   </section>
@@ -2476,29 +2520,27 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                         class="security--tag-wall security--tag-wall-filter__tag-wall"
                       >
                         
-                        <div
-                          aria-label=" Y"
-                          class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
-                          id="y"
+                        <span
+                          class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                         >
                           <span
-                            class="bx--tag__label"
+                            class="bx--text-truncate--end"
                             title="Y"
                           >
                             Y
                           </span>
                           <button
-                            aria-labelledby="y"
-                            class="bx--tag__close-icon"
-                            title=""
-                            type="button"
+                            aria-label=""
+                            class="security--tag--interactive__button"
                           >
                             <svg
                               aria-hidden="true"
+                              class="security--icon security--tag--interactive__button__icon"
                               fill="currentColor"
                               focusable="false"
                               height="16"
                               preserveAspectRatio="xMidYMid meet"
+                              style="will-change: transform;"
                               viewBox="0 0 32 32"
                               width="16"
                               xmlns="http://www.w3.org/2000/svg"
@@ -2508,7 +2550,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               />
                             </svg>
                           </button>
-                        </div>
+                        </span>
                       </section>
                     </div>
                   </div>
@@ -2583,7 +2625,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                             role="listbox"
                           >
                             <div
-                              class="bx--list-box__menu-item"
+                              class="security--filter__list-item"
                               id="downshift-0-item-0"
                               role="button"
                               tabindex="0"
@@ -2639,14 +2681,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                   class="security--tearsheet--small__footer"
                 >
                   <button
-                    class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                    class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                     tabindex="0"
                     type="button"
                   >
                     Cancel
                   </button>
                   <button
-                    class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                    class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                     tabindex="0"
                     type="button"
                   >
@@ -2703,29 +2745,27 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                         class="security--tag-wall security--tag-wall-filter__tag-wall"
                       >
                         
-                        <div
-                          aria-label=" X"
-                          class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
-                          id="x"
+                        <span
+                          class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                         >
                           <span
-                            class="bx--tag__label"
+                            class="bx--text-truncate--end"
                             title="X"
                           >
                             X
                           </span>
                           <button
-                            aria-labelledby="x"
-                            class="bx--tag__close-icon"
-                            title=""
-                            type="button"
+                            aria-label=""
+                            class="security--tag--interactive__button"
                           >
                             <svg
                               aria-hidden="true"
+                              class="security--icon security--tag--interactive__button__icon"
                               fill="currentColor"
                               focusable="false"
                               height="16"
                               preserveAspectRatio="xMidYMid meet"
+                              style="will-change: transform;"
                               viewBox="0 0 32 32"
                               width="16"
                               xmlns="http://www.w3.org/2000/svg"
@@ -2735,7 +2775,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               />
                             </svg>
                           </button>
-                        </div>
+                        </span>
                       </section>
                     </div>
                   </div>
@@ -2810,7 +2850,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                             role="listbox"
                           >
                             <div
-                              class="bx--list-box__menu-item"
+                              class="security--filter__list-item"
                               id="downshift-1-item-0"
                               role="button"
                               tabindex="0"
@@ -2866,14 +2906,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                   class="security--tearsheet--small__footer"
                 >
                   <button
-                    class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                    class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                     tabindex="0"
                     type="button"
                   >
                     Cancel
                   </button>
                   <button
-                    class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                    class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                     tabindex="0"
                     type="button"
                   >
@@ -3005,29 +3045,27 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     class="security--tag-wall security--tag-wall-filter__tag-wall"
                                   >
                                     
-                                    <div
-                                      aria-label=" Y"
-                                      class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
-                                      id="y"
+                                    <span
+                                      class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                     >
                                       <span
-                                        class="bx--tag__label"
+                                        class="bx--text-truncate--end"
                                         title="Y"
                                       >
                                         Y
                                       </span>
                                       <button
-                                        aria-labelledby="y"
-                                        class="bx--tag__close-icon"
-                                        title=""
-                                        type="button"
+                                        aria-label=""
+                                        class="security--tag--interactive__button"
                                       >
                                         <svg
                                           aria-hidden="true"
+                                          class="security--icon security--tag--interactive__button__icon"
                                           fill="currentColor"
                                           focusable="false"
                                           height="16"
                                           preserveAspectRatio="xMidYMid meet"
+                                          style="will-change: transform;"
                                           viewBox="0 0 32 32"
                                           width="16"
                                           xmlns="http://www.w3.org/2000/svg"
@@ -3037,7 +3075,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           />
                                         </svg>
                                       </button>
-                                    </div>
+                                    </span>
                                   </section>
                                 </div>
                               </div>
@@ -3112,7 +3150,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         role="listbox"
                                       >
                                         <div
-                                          class="bx--list-box__menu-item"
+                                          class="security--filter__list-item"
                                           id="downshift-0-item-0"
                                           role="button"
                                           tabindex="0"
@@ -3168,14 +3206,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               class="security--tearsheet--small__footer"
                             >
                               <button
-                                class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                                class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                                 tabindex="0"
                                 type="button"
                               >
                                 Cancel
                               </button>
                               <button
-                                class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                                class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                                 tabindex="0"
                                 type="button"
                               >
@@ -3232,29 +3270,27 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     class="security--tag-wall security--tag-wall-filter__tag-wall"
                                   >
                                     
-                                    <div
-                                      aria-label=" X"
-                                      class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
-                                      id="x"
+                                    <span
+                                      class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                     >
                                       <span
-                                        class="bx--tag__label"
+                                        class="bx--text-truncate--end"
                                         title="X"
                                       >
                                         X
                                       </span>
                                       <button
-                                        aria-labelledby="x"
-                                        class="bx--tag__close-icon"
-                                        title=""
-                                        type="button"
+                                        aria-label=""
+                                        class="security--tag--interactive__button"
                                       >
                                         <svg
                                           aria-hidden="true"
+                                          class="security--icon security--tag--interactive__button__icon"
                                           fill="currentColor"
                                           focusable="false"
                                           height="16"
                                           preserveAspectRatio="xMidYMid meet"
+                                          style="will-change: transform;"
                                           viewBox="0 0 32 32"
                                           width="16"
                                           xmlns="http://www.w3.org/2000/svg"
@@ -3264,7 +3300,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           />
                                         </svg>
                                       </button>
-                                    </div>
+                                    </span>
                                   </section>
                                 </div>
                               </div>
@@ -3339,7 +3375,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         role="listbox"
                                       >
                                         <div
-                                          class="bx--list-box__menu-item"
+                                          class="security--filter__list-item"
                                           id="downshift-1-item-0"
                                           role="button"
                                           tabindex="0"
@@ -3395,14 +3431,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               class="security--tearsheet--small__footer"
                             >
                               <button
-                                class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                                class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                                 tabindex="0"
                                 type="button"
                               >
                                 Cancel
                               </button>
                               <button
-                                class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                                class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                                 tabindex="0"
                                 type="button"
                               >
@@ -3468,29 +3504,27 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       class="security--tag-wall security--tag-wall-filter__tag-wall"
                                     >
                                       
-                                      <div
-                                        aria-label=" Y"
-                                        class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
-                                        id="y"
+                                      <span
+                                        class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                       >
                                         <span
-                                          class="bx--tag__label"
+                                          class="bx--text-truncate--end"
                                           title="Y"
                                         >
                                           Y
                                         </span>
                                         <button
-                                          aria-labelledby="y"
-                                          class="bx--tag__close-icon"
-                                          title=""
-                                          type="button"
+                                          aria-label=""
+                                          class="security--tag--interactive__button"
                                         >
                                           <svg
                                             aria-hidden="true"
+                                            class="security--icon security--tag--interactive__button__icon"
                                             fill="currentColor"
                                             focusable="false"
                                             height="16"
                                             preserveAspectRatio="xMidYMid meet"
+                                            style="will-change: transform;"
                                             viewBox="0 0 32 32"
                                             width="16"
                                             xmlns="http://www.w3.org/2000/svg"
@@ -3500,7 +3534,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                             />
                                           </svg>
                                         </button>
-                                      </div>
+                                      </span>
                                     </section>
                                   </div>
                                 </div>
@@ -3575,7 +3609,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           role="listbox"
                                         >
                                           <div
-                                            class="bx--list-box__menu-item"
+                                            class="security--filter__list-item"
                                             id="downshift-0-item-0"
                                             role="button"
                                             tabindex="0"
@@ -3631,14 +3665,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 class="security--tearsheet--small__footer"
                               >
                                 <button
-                                  class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                                  class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                                   tabindex="0"
                                   type="button"
                                 >
                                   Cancel
                                 </button>
                                 <button
-                                  class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                                  class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                                   tabindex="0"
                                   type="button"
                                 >
@@ -3695,29 +3729,27 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       class="security--tag-wall security--tag-wall-filter__tag-wall"
                                     >
                                       
-                                      <div
-                                        aria-label=" X"
-                                        class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
-                                        id="x"
+                                      <span
+                                        class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                       >
                                         <span
-                                          class="bx--tag__label"
+                                          class="bx--text-truncate--end"
                                           title="X"
                                         >
                                           X
                                         </span>
                                         <button
-                                          aria-labelledby="x"
-                                          class="bx--tag__close-icon"
-                                          title=""
-                                          type="button"
+                                          aria-label=""
+                                          class="security--tag--interactive__button"
                                         >
                                           <svg
                                             aria-hidden="true"
+                                            class="security--icon security--tag--interactive__button__icon"
                                             fill="currentColor"
                                             focusable="false"
                                             height="16"
                                             preserveAspectRatio="xMidYMid meet"
+                                            style="will-change: transform;"
                                             viewBox="0 0 32 32"
                                             width="16"
                                             xmlns="http://www.w3.org/2000/svg"
@@ -3727,7 +3759,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                             />
                                           </svg>
                                         </button>
-                                      </div>
+                                      </span>
                                     </section>
                                   </div>
                                 </div>
@@ -3802,7 +3834,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           role="listbox"
                                         >
                                           <div
-                                            class="bx--list-box__menu-item"
+                                            class="security--filter__list-item"
                                             id="downshift-1-item-0"
                                             role="button"
                                             tabindex="0"
@@ -3858,14 +3890,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 class="security--tearsheet--small__footer"
                               >
                                 <button
-                                  class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                                  class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                                   tabindex="0"
                                   type="button"
                                 >
                                   Cancel
                                 </button>
                                 <button
-                                  class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                                  class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                                   tabindex="0"
                                   type="button"
                                 >
@@ -3933,29 +3965,27 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           class="security--tag-wall security--tag-wall-filter__tag-wall"
                                         >
                                           
-                                          <div
-                                            aria-label=" Y"
-                                            class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
-                                            id="y"
+                                          <span
+                                            class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                           >
                                             <span
-                                              class="bx--tag__label"
+                                              class="bx--text-truncate--end"
                                               title="Y"
                                             >
                                               Y
                                             </span>
                                             <button
-                                              aria-labelledby="y"
-                                              class="bx--tag__close-icon"
-                                              title=""
-                                              type="button"
+                                              aria-label=""
+                                              class="security--tag--interactive__button"
                                             >
                                               <svg
                                                 aria-hidden="true"
+                                                class="security--icon security--tag--interactive__button__icon"
                                                 fill="currentColor"
                                                 focusable="false"
                                                 height="16"
                                                 preserveAspectRatio="xMidYMid meet"
+                                                style="will-change: transform;"
                                                 viewBox="0 0 32 32"
                                                 width="16"
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -3965,7 +3995,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                 />
                                               </svg>
                                             </button>
-                                          </div>
+                                          </span>
                                         </section>
                                       </div>
                                     </div>
@@ -4040,7 +4070,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                               role="listbox"
                                             >
                                               <div
-                                                class="bx--list-box__menu-item"
+                                                class="security--filter__list-item"
                                                 id="downshift-0-item-0"
                                                 role="button"
                                                 tabindex="0"
@@ -4096,14 +4126,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     class="security--tearsheet--small__footer"
                                   >
                                     <button
-                                      class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                                      class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                                       tabindex="0"
                                       type="button"
                                     >
                                       Cancel
                                     </button>
                                     <button
-                                      class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                                      class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                                       tabindex="0"
                                       type="button"
                                     >
@@ -4160,29 +4190,27 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           class="security--tag-wall security--tag-wall-filter__tag-wall"
                                         >
                                           
-                                          <div
-                                            aria-label=" X"
-                                            class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
-                                            id="x"
+                                          <span
+                                            class="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
                                           >
                                             <span
-                                              class="bx--tag__label"
+                                              class="bx--text-truncate--end"
                                               title="X"
                                             >
                                               X
                                             </span>
                                             <button
-                                              aria-labelledby="x"
-                                              class="bx--tag__close-icon"
-                                              title=""
-                                              type="button"
+                                              aria-label=""
+                                              class="security--tag--interactive__button"
                                             >
                                               <svg
                                                 aria-hidden="true"
+                                                class="security--icon security--tag--interactive__button__icon"
                                                 fill="currentColor"
                                                 focusable="false"
                                                 height="16"
                                                 preserveAspectRatio="xMidYMid meet"
+                                                style="will-change: transform;"
                                                 viewBox="0 0 32 32"
                                                 width="16"
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -4192,7 +4220,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                 />
                                               </svg>
                                             </button>
-                                          </div>
+                                          </span>
                                         </section>
                                       </div>
                                     </div>
@@ -4267,7 +4295,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                               role="listbox"
                                             >
                                               <div
-                                                class="bx--list-box__menu-item"
+                                                class="security--filter__list-item"
                                                 id="downshift-1-item-0"
                                                 role="button"
                                                 tabindex="0"
@@ -4323,14 +4351,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     class="security--tearsheet--small__footer"
                                   >
                                     <button
-                                      class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                                      class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                                       tabindex="0"
                                       type="button"
                                     >
                                       Cancel
                                     </button>
                                     <button
-                                      class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                                      class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                                       tabindex="0"
                                       type="button"
                                     >
@@ -4421,58 +4449,92 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         type="gray"
                                       >
                                         <Tag
-                                          className="security--tag--interactive security--tag--interactive--default"
-                                          filter={true}
+                                          className="security--tag--interactive security--tag--interactive--default security--tag--interactive--removable"
+                                          filter={false}
                                           id="x"
-                                          onClose={[Function]}
-                                          title=""
                                           type="gray"
                                         >
-                                          <div
-                                            aria-label=" X"
-                                            className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
-                                            id="x"
+                                          <span
+                                            className="bx--tag security--tag--interactive security--tag--interactive--default security--tag--interactive--removable bx--tag--gray"
+                                            title={null}
                                           >
                                             <span
-                                              className="bx--tag__label"
+                                              className="bx--text-truncate--end"
                                               title="X"
                                             >
                                               X
                                             </span>
                                             <button
-                                              aria-labelledby="x"
-                                              className="bx--tag__close-icon"
+                                              aria-label=""
+                                              className="security--tag--interactive__button"
                                               onClick={[Function]}
-                                              title=""
-                                              type="button"
                                             >
-                                              <ForwardRef(Close16)>
-                                                <Icon
-                                                  fill="currentColor"
-                                                  height={16}
+                                              <Icon
+                                                className="security--tag--interactive__button__icon"
+                                                height={null}
+                                                path={null}
+                                                renderIcon={
+                                                  Object {
+                                                    "$$typeof": Symbol(react.forward_ref),
+                                                    "render": [Function],
+                                                  }
+                                                }
+                                                size={20}
+                                                viewBox="0 0 32 32"
+                                                width={null}
+                                              >
+                                                <ForwardRef(Close16)
+                                                  aria-hidden="true"
+                                                  className="security--icon security--tag--interactive__button__icon"
+                                                  focusable={false}
                                                   preserveAspectRatio="xMidYMid meet"
-                                                  viewBox="0 0 32 32"
-                                                  width={16}
-                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  style={
+                                                    Object {
+                                                      "willChange": "transform",
+                                                    }
+                                                  }
                                                 >
-                                                  <svg
-                                                    aria-hidden={true}
+                                                  <Icon
+                                                    aria-hidden="true"
+                                                    className="security--icon security--tag--interactive__button__icon"
                                                     fill="currentColor"
-                                                    focusable="false"
+                                                    focusable={false}
                                                     height={16}
                                                     preserveAspectRatio="xMidYMid meet"
+                                                    style={
+                                                      Object {
+                                                        "willChange": "transform",
+                                                      }
+                                                    }
                                                     viewBox="0 0 32 32"
                                                     width={16}
                                                     xmlns="http://www.w3.org/2000/svg"
                                                   >
-                                                    <path
-                                                      d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                                                    />
-                                                  </svg>
-                                                </Icon>
-                                              </ForwardRef(Close16)>
+                                                    <svg
+                                                      aria-hidden={true}
+                                                      className="security--icon security--tag--interactive__button__icon"
+                                                      fill="currentColor"
+                                                      focusable={false}
+                                                      height={16}
+                                                      preserveAspectRatio="xMidYMid meet"
+                                                      style={
+                                                        Object {
+                                                          "willChange": "transform",
+                                                        }
+                                                      }
+                                                      viewBox="0 0 32 32"
+                                                      width={16}
+                                                      xmlns="http://www.w3.org/2000/svg"
+                                                    >
+                                                      <path
+                                                        d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                                                      />
+                                                    </svg>
+                                                  </Icon>
+                                                </ForwardRef(Close16)>
+                                              </Icon>
                                             </button>
-                                          </div>
+                                          </span>
                                         </Tag>
                                       </InteractiveTag>
                                     </section>
@@ -4697,7 +4759,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                   id="test-id"
                                                   role="listbox"
                                                 >
-                                                  <ForwardRef(ListBoxMenuItem)
+                                                  <ListBoxMenuItem
                                                     className="security--filter__list-item"
                                                     id="downshift-1-item-0"
                                                     isActive={false}
@@ -4711,7 +4773,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                     tabIndex="0"
                                                   >
                                                     <div
-                                                      className="bx--list-box__menu-item"
+                                                      className="security--filter__list-item"
                                                       id="downshift-1-item-0"
                                                       onClick={[Function]}
                                                       onKeyDown={[Function]}
@@ -4804,7 +4866,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                         </div>
                                                       </div>
                                                     </div>
-                                                  </ForwardRef(ListBoxMenuItem)>
+                                                  </ListBoxMenuItem>
                                                 </div>
                                               </ListBoxMenu>
                                             </div>
@@ -4831,40 +4893,32 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                             >
                               <Button
                                 className="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary"
-                                dangerDescription="danger"
                                 disabled={false}
                                 kind="secondary"
                                 largeText={null}
                                 loading={false}
                                 onClick={[MockFunction]}
-                                size="large"
+                                size="xl"
                                 tabIndex={0}
                                 tooltipAlignment="center"
                                 tooltipPosition="top"
                                 type="button"
                               >
                                 <Button
-                                  className="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large"
-                                  dangerDescription="danger"
+                                  className="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary"
                                   disabled={false}
                                   kind="secondary"
                                   onClick={[MockFunction]}
-                                  size={null}
+                                  size="xl"
                                   tabIndex={0}
                                   tooltipAlignment="center"
                                   tooltipPosition="top"
                                   type="button"
                                 >
                                   <button
-                                    aria-describedby={null}
-                                    aria-pressed={null}
-                                    className="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                                    className="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                                     disabled={false}
-                                    onBlur={[Function]}
                                     onClick={[MockFunction]}
-                                    onFocus={[Function]}
-                                    onMouseEnter={[Function]}
-                                    onMouseLeave={[Function]}
                                     tabIndex={0}
                                     type="button"
                                   >
@@ -4874,40 +4928,32 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               </Button>
                               <Button
                                 className="security--tearsheet--small__footer__button"
-                                dangerDescription="danger"
                                 disabled={false}
                                 kind="primary"
                                 largeText={null}
                                 loading={false}
                                 onClick={[MockFunction]}
-                                size="large"
+                                size="xl"
                                 tabIndex={0}
                                 tooltipAlignment="center"
                                 tooltipPosition="top"
                                 type="button"
                               >
                                 <Button
-                                  className="security--button security--tearsheet--small__footer__button security--button--large"
-                                  dangerDescription="danger"
+                                  className="security--tearsheet--small__footer__button"
                                   disabled={false}
                                   kind="primary"
                                   onClick={[MockFunction]}
-                                  size={null}
+                                  size="xl"
                                   tabIndex={0}
                                   tooltipAlignment="center"
                                   tooltipPosition="top"
                                   type="button"
                                 >
                                   <button
-                                    aria-describedby={null}
-                                    aria-pressed={null}
-                                    className="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                                    className="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                                     disabled={false}
-                                    onBlur={[Function]}
                                     onClick={[MockFunction]}
-                                    onFocus={[Function]}
-                                    onMouseEnter={[Function]}
-                                    onMouseLeave={[Function]}
                                     tabIndex={0}
                                     type="button"
                                   >

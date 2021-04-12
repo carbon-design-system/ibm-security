@@ -7,7 +7,7 @@ import classnames from 'classnames';
 import { arrayOf, bool, func, shape, string, object } from 'prop-types';
 import React from 'react';
 
-import { getComponentNamespace } from '../../globals/namespace/index';
+import { carbonPrefix, getComponentNamespace } from '../../globals/namespace';
 
 import * as defaultLabels from '../../globals/nls';
 
@@ -74,7 +74,12 @@ const TagWall = ({
             type="gray"
             {...item.props}
           >
-            {itemToString(item)}
+            <span
+              className={`${carbonPrefix}--text-truncate--end`}
+              title={itemToString(item)}
+            >
+              {itemToString(item)}
+            </span>
           </InteractiveTag>
         );
       })}
