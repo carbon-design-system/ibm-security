@@ -1,19 +1,20 @@
 /**
  * @file ICA module stories.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
+import { Column, Row } from 'carbon-components-react';
 import React from 'react';
 
 import { getDocsParameters } from '../../../../.storybook';
 
-import { Column, ICA, ICAModule, Row } from '../../..';
+import { ICA, ICAModule } from '../../..';
 
 import getTitle from '../stories';
 import page from './index.mdx';
 
 export default {
-  title: getTitle(ICAModule),
+  title: getTitle(ICAModule.name),
   component: ICAModule,
   parameters: {
     docs: { page },
@@ -24,17 +25,17 @@ export default {
 
 export const Default = () => (
   <ICAModule>
-    {() => (
+    {({ getLayoutProps }) => (
       <Row>
-        <Column>
+        <Column {...getLayoutProps()}>
           <ICA label="Label" value={100} />
         </Column>
 
-        <Column>
+        <Column {...getLayoutProps()}>
           <ICA label="Label" value={100} />
         </Column>
 
-        <Column>
+        <Column {...getLayoutProps()}>
           <ICA label="Label" value={100} />
         </Column>
       </Row>

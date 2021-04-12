@@ -26,7 +26,7 @@ The button cluster module can be built using a combination of the `ButtonCluster
 
 <Canvas>
   <Story
-    id="patterns-unstable-layout-modules-buttonclustermodule--default"
+    id="layout-modules-buttonclustermodule--default"
     parameters={parameters}
   />
 </Canvas>
@@ -43,13 +43,13 @@ Additional props passed into `ButtonClusterModule` will be forwarded along to th
 
 1. **Ghost buttons:** Ghost buttons stack directly below each other.
 2. **Divider lines:** Divider lines create structure and provide separation between the ghost buttons.
-3. **Bottom spacer:** The 16-pixel spacer `$layout-01` below the last button provides the starting point for the layout module positioned directly underneath it.
+3. **Bottom spacer:** The 16-pixel spacer `$spacing-05` below the last button provides the starting point for the layout module positioned directly underneath it.
 
 <img alt="`ButtonClusterModule` anatomy" src={anatomy} />
 
 ### Grid placement
 
-Button cluster modules span across 4 columns. Following the [narrow grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow) implementation, the layout module container hangs 16 pixels in the left margin. The narrow grid position allows headings and copy outside of containers to align with the labels within the button cluster module.
+Button cluster modules span across 4 columns. Following the [narrow grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow) implementation, the button text aligns to the grid and the text below. The divider lines will overhang to the left by 16px.
 
 <Row>
   <Column>
@@ -69,7 +69,7 @@ Button cluster modules span across 4 columns. Following the [narrow grid](https:
 
 ### Layout considerations
 
-Occassionally a [spacing token](https://carbondesignsystem.com/guidelines/spacing/overview#spacing-scale) will need to be included to offset the button cluster module to ensure it top-aligns with the adjacent layout container. If a top spacing token is necessary, reference the layout module that sits directly above it as the starting point for placement.
+Occassionally [spacing tokens](https://carbondesignsystem.com/guidelines/spacing/overview#spacing-scale) will need to be included to offset the button cluster module to ensure it top-aligns with the adjacent layout container. If top spacing tokens are necessary, reference the layout module that sits directly above it as the starting point for placement.
 
 <img
   alt="`ButtonClusterModule` layout considerations"

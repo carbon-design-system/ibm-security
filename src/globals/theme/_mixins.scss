@@ -87,6 +87,12 @@
     $theme: $theme,
     $emit-custom-properties: feature-flag-enabled($feature: $theme__name)
   );
+
+  @each $token, $value in $theme {
+    @if (type-of($value: $value) == 'color') {
+      --#{$token}: var(--#{$custom-property-prefix}-#{$token}, #{$value});
+    }
+  }
 }
 
 /// Mixin to generate CSS custom properties for the 'cool gray 10' theme.
