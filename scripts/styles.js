@@ -1,9 +1,15 @@
-const postcss = require('postcss');
+/**
+ * @file Styles.
+ * @copyright IBM Security 2020 - 2021
+ */
+
+const postcssSass = require('@csstools/postcss-sass');
+
 const autoprefixer = require('autoprefixer');
-const postcssNodeSass = require('postcss-node-sass');
-const postcssScss = require('postcss-scss');
 const { outputFile, readFile } = require('fs-extra');
 const path = require('path');
+const postcss = require('postcss');
+const postcssScss = require('postcss-scss');
 
 const srcIndex = path.resolve(__dirname, '../src', 'index.scss');
 const distDir = path.resolve(__dirname, '../css');
@@ -13,12 +19,12 @@ readFile(srcIndex, async (err, css) => {
   if (err) throw err;
   try {
     const result = await postcss([
-      postcssNodeSass({ includePaths: ['node_modules'] }),
+      postcssSass({ includePaths: ['node_modules'] }),
       autoprefixer,
     ]).process(css, {
       from: srcIndex,
-      to: distIndex(distDir),
       syntax: postcssScss,
+      to: distIndex(distDir),
     });
     outputFile(distIndex(distDir), result, { encoding: 'utf8' });
   } catch (error) {
