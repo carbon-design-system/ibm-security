@@ -10,6 +10,7 @@
 
 @import '../../components/IconButton/variables';
 
+@import '../deprecate/index';
 @import '../feature-flags/index';
 @import '../namespace/index';
 
@@ -89,6 +90,8 @@
   );
 
   @if (feature-flag-enabled($feature: $theme__name--security)) {
+    @warn deprecate($actual: $theme__name--security, $expected: $theme__name);
+
     @each $token, $value in $theme {
       @if (type-of($value: $value) == 'color') {
         --#{$token}: var(--#{$custom-property-prefix}-#{$token}, #{$value});
