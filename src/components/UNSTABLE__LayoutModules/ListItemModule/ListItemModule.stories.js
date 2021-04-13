@@ -39,42 +39,6 @@ export default {
 export const Default = () => (
   <ListItemModule href="#">
     {({ Column, getLayoutProps }) => (
-      <Column>
-        <h2 {...getLayoutProps({ type: 'title' })}>List title</h2>
-
-        <span {...getLayoutProps({ type: 'label' })}>Label</span>
-      </Column>
-    )}
-  </ListItemModule>
-);
-
-export const NonInteractive = () => (
-  <ListItemModule>
-    {({ Column, getLayoutProps }) => (
-      <Column>
-        <h2 {...getLayoutProps({ type: 'title' })}>List title</h2>
-
-        <span {...getLayoutProps({ type: 'label' })}>Label</span>
-      </Column>
-    )}
-  </ListItemModule>
-);
-
-export const AsButton = () => (
-  <ListItemModule onClick={action('onClick')}>
-    {({ Column, getLayoutProps }) => (
-      <Column>
-        <h2 {...getLayoutProps({ type: 'title' })}>List title</h2>
-
-        <span {...getLayoutProps({ type: 'label' })}>Label</span>
-      </Column>
-    )}
-  </ListItemModule>
-);
-
-export const Detailed = () => (
-  <ListItemModule href="#">
-    {({ Column, getLayoutProps }) => (
       <>
         <Column>
           <Bee16 {...getLayoutProps({ type: 'icon' })} />
@@ -102,6 +66,30 @@ export const Detailed = () => (
           <Locked16 />
         </Column>
       </>
+    )}
+  </ListItemModule>
+);
+
+export const NonInteractive = () => (
+  <ListItemModule>
+    {({ Column, getLayoutProps }) => (
+      <Column>
+        <h2 {...getLayoutProps({ type: 'title' })}>List title</h2>
+
+        <span {...getLayoutProps({ type: 'label' })}>Label</span>
+      </Column>
+    )}
+  </ListItemModule>
+);
+
+export const AsButton = () => (
+  <ListItemModule onClick={action('onClick')}>
+    {({ Column, getLayoutProps }) => (
+      <Column>
+        <h2 {...getLayoutProps({ type: 'title' })}>List title</h2>
+
+        <span {...getLayoutProps({ type: 'label' })}>Label</span>
+      </Column>
     )}
   </ListItemModule>
 );
@@ -219,10 +207,6 @@ NonInteractive.parameters = {
 };
 
 AsButton.parameters = {
-  viewMode: 'canvas',
-};
-
-Detailed.parameters = {
   viewMode: 'canvas',
 };
 
