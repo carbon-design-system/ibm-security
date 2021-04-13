@@ -36,6 +36,7 @@ $type__name: ibm-type;
 $security--default-feature-flags: (
   #{$grid__name}: true,
   #{$platform__name}: true,
+  #{$theme__name}: false,
   #{$theme__name--security}: true,
   #{$type__name}: true
 );
@@ -47,12 +48,21 @@ $security--feature-flags: map-merge(
   $map2: $security--feature-flags,
 );
 
+/// Check if a feature flag is enabled.
+/// @param {String} $name
+/// @returns {Boolean}
+/// @access private
+@function security--feature-flag-enabled($name) {
+  @return map-get($map: $security--feature-flags, $key: $name);
+}
+
 $security--feature-flags: map-merge(
   $map1: $security--feature-flags,
   $map2: (
-    #{$theme__name}: map-get(
-        $map: $security--feature-flags,
-        $key: $theme__name--security,
+    #{$theme__name}: security--feature-flag-enabled(
+        $name: $theme__name,
+      ) or security--feature-flag-enabled(
+        $name: $theme__name--security,
       ),
   ),
 );

@@ -88,9 +88,11 @@
     $emit-custom-properties: feature-flag-enabled($feature: $theme__name)
   );
 
-  @each $token, $value in $theme {
-    @if (type-of($value: $value) == 'color') {
-      --#{$token}: var(--#{$custom-property-prefix}-#{$token}, #{$value});
+  @if (feature-flag-enabled($feature: $theme__name--security)) {
+    @each $token, $value in $theme {
+      @if (type-of($value: $value) == 'color') {
+        --#{$token}: var(--#{$custom-property-prefix}-#{$token}, #{$value});
+      }
     }
   }
 }
