@@ -84,7 +84,7 @@ export const Detailed = () => (
           <h2 {...getLayoutProps({ type: 'title' })}>List title</h2>
 
           <p {...getLayoutProps({ type: 'description' })}>
-            This is where the description goes. It can go up to three lines.
+            Description here. It can go up to three lines before truncating.
           </p>
 
           <section {...getLayoutProps({ type: 'component' })}>
@@ -112,7 +112,7 @@ export const WithProfileImage = () => (
       <>
         <Column>
           <ProfileImage
-            {...getLayoutProps({ type: 'avatar' })}
+            {...getLayoutProps({ type: 'profile-image' })}
             profile={{
               description: <span>Profile Image</span>,
               image_url: null,
@@ -126,7 +126,7 @@ export const WithProfileImage = () => (
 
         <Column>
           <p {...getLayoutProps({ type: 'description' })}>
-            This is where the description goes. It can go up to three lines.
+            Description here. It can go up to three lines before truncating.
           </p>
 
           <span {...getLayoutProps({ type: 'label' })}>Today 11:50 AM</span>
@@ -162,7 +162,7 @@ export const WithComponent = () => (
           <h2 {...getLayoutProps({ type: 'title' })}>List title</h2>
 
           <p {...getLayoutProps({ type: 'description' })}>
-            This is where the description goes. It can go up to three lines.
+            Description here. It can go up to three lines before truncating.
           </p>
 
           <section {...getLayoutProps({ type: 'component' })}>

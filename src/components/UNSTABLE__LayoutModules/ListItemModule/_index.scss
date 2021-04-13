@@ -81,6 +81,12 @@
     }
   }
 
+  &__profile-image {
+    margin-right: $carbon--spacing-04;
+    height: 24px;
+    width: 24px;
+  }
+
   &__title {
     @include carbon--type-style($name: body-short-01);
   }
@@ -91,13 +97,13 @@
   }
 
   &__description {
-    @include carbon--type-style($name: body-long-01);
+    @include carbon--type-style($name: body-short-01);
   }
 
   &__label {
     @include carbon--type-style($name: label-01);
     display: block;
-    margin-top: $list-item-module__spacing;
+    padding-top: $list-item-module__spacing;
   }
 
   &__title,
@@ -116,7 +122,7 @@
   }
 
   &__component {
-    margin-top: $carbon--spacing-05;
+    padding-top: $carbon--spacing-05;
     margin-bottom: 0;
   }
 }
