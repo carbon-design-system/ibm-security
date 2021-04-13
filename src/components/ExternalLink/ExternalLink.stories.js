@@ -1,6 +1,6 @@
 /**
  * @file External link stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { text } from '@storybook/addon-knobs';
@@ -9,6 +9,7 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 
 import { components } from '../../../.storybook';
+import { carbonPrefix } from '../../globals/namespace';
 
 import { ExternalLink } from '../..';
 
@@ -22,7 +23,7 @@ const storyProps = () => ({
 });
 
 storiesOf(components('ExternalLink'), module).add('Default', () => (
-  <p className="bx--type-body-long-01">
+  <p className={`${carbonPrefix}--type-body-long-01`}>
     This is an external link <ExternalLink {...storyProps()} /> that appears
     alongside some text.
   </p>

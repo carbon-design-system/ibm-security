@@ -1,6 +1,6 @@
 /**
  * @file Loading message tests.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import { render } from '@testing-library/react';
@@ -71,32 +71,32 @@ describe('LoadingMessage', () => {
 
   test('should render a small loading icon when `small` is `true`', () => {
     render(<LoadingMessage small>test message</LoadingMessage>);
-    expect(document.querySelector(`.${carbonPrefix}loading`)).toHaveClass(
-      `${carbonPrefix}loading--small`
+    expect(document.querySelector(`.${carbonPrefix}--loading`)).toHaveClass(
+      `${carbonPrefix}--loading--small`
     );
   });
 
   test('should render an animated icon without any "stop" classes when `active` is `true`', () => {
     render(<LoadingMessage active>test message</LoadingMessage>);
     // The "stop" class should NOT be applied to the inner loading component:
-    expect(document.querySelector(`.${carbonPrefix}loading`)).not.toHaveClass(
-      `${carbonPrefix}loading--stop`
+    expect(document.querySelector(`.${carbonPrefix}--loading`)).not.toHaveClass(
+      `${carbonPrefix}--loading--stop`
     );
     // The "stop" class should NOT applied to the overlay:
     expect(
-      document.querySelector(`.${carbonPrefix}loading-overlay`)
-    ).not.toHaveClass(`${carbonPrefix}loading-overlay--stop`);
+      document.querySelector(`.${carbonPrefix}--loading-overlay`)
+    ).not.toHaveClass(`${carbonPrefix}--loading-overlay--stop`);
   });
 
   test('should add the correct "stop" classes when `active` is `false`', () => {
     render(<LoadingMessage active={false}>test message</LoadingMessage>);
     // The "stop" class applied to the inner loading component:
-    expect(document.querySelector(`.${carbonPrefix}loading`)).toHaveClass(
-      `${carbonPrefix}loading--stop`
+    expect(document.querySelector(`.${carbonPrefix}--loading`)).toHaveClass(
+      `${carbonPrefix}--loading--stop`
     );
     // The "stop" class applied to the overlay:
     expect(
-      document.querySelector(`.${carbonPrefix}loading-overlay`)
-    ).toHaveClass(`${carbonPrefix}loading-overlay--stop`);
+      document.querySelector(`.${carbonPrefix}--loading-overlay`)
+    ).toHaveClass(`${carbonPrefix}--loading-overlay--stop`);
   });
 });

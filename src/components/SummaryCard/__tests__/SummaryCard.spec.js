@@ -1,6 +1,6 @@
 /**
  * @file Summary card tests.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import Folder20 from '@carbon/icons-react/lib/folder/20';
@@ -113,7 +113,7 @@ describe('SummaryCard', () => {
     );
 
     const titleSelector = document.querySelector(
-      `.${headerNamespace}__title button.${carbonPrefix}tooltip--a11y`
+      `.${headerNamespace}__title button.${carbonPrefix}--tooltip--a11y`
     );
 
     userEvent.tab();

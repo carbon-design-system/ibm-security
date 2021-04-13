@@ -1,12 +1,13 @@
 ////
 /// Documentation.
 /// @group storybook
-/// @copyright IBM Security 2020
+/// @copyright IBM Security 2020 - 2021
 ////
 
 @import '@carbon/layout/scss/spacing';
 @import '@carbon/motion/scss/motion';
 @import '@carbon/themes/scss/tokens';
+@import '@carbon/type/scss/styles';
 
 @import 'carbon-components/scss/globals/scss/motion';
 
@@ -65,6 +66,19 @@
       &:hover {
         opacity: 0.9;
       }
+    }
+  }
+
+  .library {
+    &__type,
+    &__row {
+      margin-bottom: $carbon--spacing-07;
+    }
+
+    &__type {
+      @include carbon--type-style($name: body-long-01);
+
+      margin-top: $carbon--spacing-05;
     }
   }
 }
