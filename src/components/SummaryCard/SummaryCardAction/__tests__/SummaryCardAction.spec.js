@@ -1,6 +1,6 @@
 /**
  * @file Summary card tests.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import { render } from '@testing-library/react';
@@ -121,7 +121,7 @@ describe('SummaryCardAction', () => {
     expect(queryByText(/test icon/i)).toBeVisible();
     // Expect button to have Carbon's icon-only class:
     expect(queryByText(/test icon/i).closest('button')).toHaveClass(
-      `${carbonPrefix}btn--icon-only`
+      `${carbonPrefix}--btn--icon-only`
     );
   });
 

@@ -1,6 +1,6 @@
 /**
  * @file Accordion tests.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import { render } from '@testing-library/react';
@@ -12,7 +12,7 @@ import { Accordion, AccordionItem } from '../../..';
 describe('Accordion', () => {
   test('has icon aligned at start by default', () => {
     expect(render(<Accordion />).container.firstChild).toHaveClass(
-      `${carbonPrefix}accordion--start`
+      `${carbonPrefix}--accordion--start`
     );
   });
 

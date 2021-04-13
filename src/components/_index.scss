@@ -1,7 +1,7 @@
 ////
 /// Components entry point.
 /// @group entry
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 // Application.
@@ -19,6 +19,7 @@
 @import 'IconButton/index';
 @import 'InlineLoading/index';
 @import 'InteractiveTag/index';
+@import 'LayoutModules/index';
 @import 'ListBox/index';
 @import 'Nav/index';
 @import 'NonEntitledSection/index';
@@ -87,9 +88,6 @@
 @import 'Tooltip/index';
 @import 'UIShell/index';
 
-/// Hidden Carbon proxy.
-@import 'carbon-components/scss/components/list/list';
-
-/// Unstable experimental components.
-@import 'UNSTABLE__LayoutModules/index';
+/// Experimental.
+@import 'UNSTABLE__Background/index';
 @import 'UNSTABLE__Pagination/index';

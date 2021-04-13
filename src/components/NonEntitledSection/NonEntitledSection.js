@@ -1,6 +1,6 @@
 /**
  * @file Non entitled section.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
@@ -26,7 +26,7 @@ const NonEntitledSection = ({
   style,
   ...other
 }) => {
-  const classes = classnames(className, namespace, `${carbonPrefix}grid`);
+  const classes = classnames(className, namespace, `${carbonPrefix}--grid`);
 
   return (
     <section
@@ -39,9 +39,9 @@ const NonEntitledSection = ({
       }
       {...other}
     >
-      <div className={`${namespace}__content-wrapper ${carbonPrefix}row`}>
+      <div className={`${namespace}__content-wrapper ${carbonPrefix}--row`}>
         <div
-          className={`${namespace}__content ${carbonPrefix}col-lg-5 ${carbonPrefix}col-md-4`}
+          className={`${namespace}__content ${carbonPrefix}--col-lg-5 ${carbonPrefix}--col-md-4`}
         >
           <h2 className={`${namespace}__title`}>{title}</h2>
           <h3 className={`${namespace}__sub-title`}>{subTitle}</h3>

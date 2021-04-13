@@ -1,6 +1,6 @@
 /**
  * @file Step indicator tests.
- * @copyright IBM Security 2019-2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
@@ -51,7 +51,7 @@ describe('StepIndicator', () => {
     );
     // A step with `current={true}` will recieve a specific class:
     expect(queryByText('test label 2').closest('li')).toHaveClass(
-      `${carbonPrefix}progress-step--current`
+      `${carbonPrefix}--progress-step--current`
     );
   });
 });
