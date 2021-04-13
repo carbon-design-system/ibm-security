@@ -76,8 +76,6 @@ export default {
         >
           {story()}
         </div>
-
-        {/* <Grid>{story()}</Grid> */}
       </>
     ),
   ],
