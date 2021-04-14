@@ -54,7 +54,6 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
           className="security--tearsheet__sidebar__footer"
         >
           <Button
-            dangerDescription="danger"
             disabled={false}
             iconDescription="Delete - prop"
             kind="ghost-danger"
@@ -143,7 +142,6 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
           >
             <Button
               className="security--tearsheet__button security--tearsheet__button--secondary"
-              dangerDescription="danger"
               disabled={false}
               kind="secondary"
               largeText={null}
@@ -159,7 +157,6 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
             </Button>
             <Button
               className="security--tearsheet__button"
-              dangerDescription="danger"
               disabled={false}
               kind="primary"
               largeText={null}
@@ -235,7 +232,6 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
           className="security--tearsheet__sidebar__footer"
         >
           <Button
-            dangerDescription="danger"
             disabled={false}
             iconDescription="Delete"
             kind="ghost-danger"
@@ -324,7 +320,6 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
           >
             <Button
               className="security--tearsheet__button security--tearsheet__button--secondary"
-              dangerDescription="danger"
               disabled={false}
               kind="secondary"
               largeText={null}
@@ -340,7 +335,6 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
             </Button>
             <Button
               className="security--tearsheet__button"
-              dangerDescription="danger"
               disabled={false}
               kind="primary"
               largeText={null}

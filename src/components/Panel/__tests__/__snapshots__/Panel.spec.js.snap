@@ -3,7 +3,6 @@
 exports[`Panel Rendering does not render the open panel if \`shouldPanelOpen\` is false 1`] = `
 <Fragment>
   <Button
-    dangerDescription="danger"
     disabled={false}
     kind="primary"
     largeText={null}
@@ -48,7 +47,6 @@ exports[`Panel Rendering does not render the open panel if \`shouldPanelOpen\` i
 exports[`Panel Rendering renders correctly 1`] = `
 <Fragment>
   <Button
-    dangerDescription="danger"
     disabled={false}
     kind="primary"
     largeText={null}
@@ -103,7 +101,6 @@ exports[`Panel Rendering renders the HTML of the node's subtree 1`] = `
 exports[`Panel Rendering renders the open panel 1`] = `
 <Fragment>
   <Button
-    dangerDescription="danger"
     disabled={false}
     kind="primary"
     largeText={null}
@@ -148,7 +145,6 @@ exports[`Panel Rendering renders the open panel 1`] = `
 exports[`Panel Rendering renders the primary button variation 1`] = `
 <Fragment>
   <Button
-    dangerDescription="danger"
     disabled={false}
     kind="primary"
     largeText={null}
@@ -193,7 +189,6 @@ exports[`Panel Rendering renders the primary button variation 1`] = `
 exports[`Panel Rendering renders the secondary button variation 1`] = `
 <Fragment>
   <Button
-    dangerDescription="danger"
     disabled={false}
     kind="primary"
     largeText={null}
@@ -238,7 +233,6 @@ exports[`Panel Rendering renders the secondary button variation 1`] = `
 exports[`Panel Rendering renders the secondary button variation 2`] = `
 <Fragment>
   <Button
-    dangerDescription="danger"
     disabled={false}
     kind="primary"
     largeText={null}

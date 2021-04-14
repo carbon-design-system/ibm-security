@@ -7,8 +7,6 @@ exports[`SearchBar Rendering disables the submit button with no selected scopes 
 >
   <MultiSelect
     className="security--search-bar__scopes"
-    clearSelectionDescription="Total items selected: "
-    clearSelectionText="To clear selection, press Delete or Backspace,"
     compareItems={[Function]}
     direction="bottom"
     disabled={false}
@@ -50,13 +48,11 @@ exports[`SearchBar Rendering disables the submit button with no selected scopes 
     name="search-input"
     onChange={[Function]}
     placeHolderText="Placeholder"
-    placeholder=""
     type="text"
     value=""
   />
   <Button
     className="security--search-bar__submit"
-    dangerDescription="danger"
     disabled={true}
     kind="primary"
     largeText={null}
@@ -85,13 +81,11 @@ exports[`SearchBar Rendering disables the submit button with no value 1`] = `
     name="search-input"
     onChange={[Function]}
     placeHolderText="Placeholder"
-    placeholder=""
     type="text"
     value={null}
   />
   <Button
     className="security--search-bar__submit"
-    dangerDescription="danger"
     disabled={true}
     kind="primary"
     largeText={null}
@@ -120,13 +114,11 @@ exports[`SearchBar Rendering renders 1`] = `
     name="search-input"
     onChange={[Function]}
     placeHolderText="Placeholder"
-    placeholder=""
     type="text"
     value=""
   />
   <Button
     className="security--search-bar__submit"
-    dangerDescription="danger"
     disabled={true}
     kind="primary"
     largeText={null}
@@ -155,13 +147,11 @@ exports[`SearchBar Rendering renders an initial value 1`] = `
     name="search-input"
     onChange={[Function]}
     placeHolderText="Placeholder"
-    placeholder=""
     type="text"
     value="Initial value"
   />
   <Button
     className="security--search-bar__submit"
-    dangerDescription="danger"
     disabled={false}
     kind="primary"
     largeText={null}
@@ -185,8 +175,6 @@ exports[`SearchBar Rendering renders scopes 1`] = `
 >
   <MultiSelect
     className="security--search-bar__scopes"
-    clearSelectionDescription="Total items selected: "
-    clearSelectionText="To clear selection, press Delete or Backspace,"
     compareItems={[Function]}
     direction="bottom"
     disabled={false}
@@ -228,13 +216,11 @@ exports[`SearchBar Rendering renders scopes 1`] = `
     name="search-input"
     onChange={[Function]}
     placeHolderText="Placeholder"
-    placeholder=""
     type="text"
     value=""
   />
   <Button
     className="security--search-bar__submit"
-    dangerDescription="danger"
     disabled={true}
     kind="primary"
     largeText={null}
@@ -258,8 +244,6 @@ exports[`SearchBar Rendering renders selected scopes 1`] = `
 >
   <MultiSelect
     className="security--search-bar__scopes"
-    clearSelectionDescription="Total items selected: "
-    clearSelectionText="To clear selection, press Delete or Backspace,"
     compareItems={[Function]}
     direction="bottom"
     disabled={false}
@@ -308,13 +292,11 @@ exports[`SearchBar Rendering renders selected scopes 1`] = `
     name="search-input"
     onChange={[Function]}
     placeHolderText="Placeholder"
-    placeholder=""
     type="text"
     value=""
   />
   <Button
     className="security--search-bar__submit"
-    dangerDescription="danger"
     disabled={true}
     kind="primary"
     largeText={null}

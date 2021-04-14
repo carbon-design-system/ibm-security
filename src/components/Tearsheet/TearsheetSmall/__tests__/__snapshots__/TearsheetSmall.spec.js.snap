@@ -54,7 +54,6 @@ exports[`TearsheetSmall renders 1`] = `
       >
         <Button
           className="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary"
-          dangerDescription="danger"
           disabled={false}
           kind="secondary"
           largeText={null}
@@ -70,7 +69,6 @@ exports[`TearsheetSmall renders 1`] = `
         </Button>
         <Button
           className="security--tearsheet--small__footer__button"
-          dangerDescription="danger"
           disabled={false}
           kind="primary"
           largeText={null}
@@ -163,7 +161,6 @@ exports[`TearsheetSmall renders disabled buttons 1`] = `
       >
         <Button
           className="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary"
-          dangerDescription="danger"
           disabled={true}
           kind="secondary"
           largeText={null}
@@ -179,7 +176,6 @@ exports[`TearsheetSmall renders disabled buttons 1`] = `
         </Button>
         <Button
           className="security--tearsheet--small__footer__button"
-          dangerDescription="danger"
           disabled={true}
           kind="primary"
           largeText={null}
@@ -261,7 +257,6 @@ exports[`TearsheetSmall renders loading state 1`] = `
       >
         <Button
           className="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary"
-          dangerDescription="danger"
           disabled={true}
           kind="secondary"
           largeText={null}
@@ -277,7 +272,6 @@ exports[`TearsheetSmall renders loading state 1`] = `
         </Button>
         <Button
           className="security--tearsheet--small__footer__button"
-          dangerDescription="danger"
           disabled={true}
           kind="primary"
           largeText={null}
@@ -370,7 +364,6 @@ exports[`TearsheetSmall should override \`labels\` if button label property prov
       >
         <Button
           className="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary"
-          dangerDescription="danger"
           disabled={false}
           kind="secondary"
           largeText={null}
@@ -386,7 +379,6 @@ exports[`TearsheetSmall should override \`labels\` if button label property prov
         </Button>
         <Button
           className="security--tearsheet--small__footer__button"
-          dangerDescription="danger"
           disabled={false}
           kind="primary"
           largeText={null}

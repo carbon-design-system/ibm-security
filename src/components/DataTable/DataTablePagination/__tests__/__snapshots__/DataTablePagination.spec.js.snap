@@ -470,11 +470,11 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
           tabindex="0"
           type="button"
         >
-          <div
+          <span
             class="bx--assistive-text"
           >
             Backward
-          </div>
+          </span>
           <svg
             aria-hidden="true"
             aria-label="Backward"
@@ -498,11 +498,11 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
           tabindex="0"
           type="button"
         >
-          <div
+          <span
             class="bx--assistive-text"
           >
             Forward
-          </div>
+          </span>
           <svg
             aria-hidden="true"
             aria-label="Forward"
