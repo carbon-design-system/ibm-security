@@ -12,28 +12,74 @@
 @import '../Component/mixins';
 
 @include security--component($name: ica) {
-  & &__label {
+  &__label {
     @include carbon--type-style($name: label-01);
     display: block;
     color: $text-02;
     margin: 0;
   }
 
-  & &__value {
+  &__value {
     @include carbon--type-style($name: productive-heading-04);
     margin-bottom: 0;
   }
 
-  & &__total {
+  &__total {
     @include carbon--type-style($name: body-short-01);
     margin-bottom: 0;
+    padding-top: $carbon--spacing-01 + $carbon--spacing-04;
   }
 
-  & &__percentage {
+  &__trend {
+    vertical-align: top;
+    margin-top: $carbon--spacing-03;
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__percentage {
     @include carbon--type-style($name: productive-heading-04);
   }
 
-  & &__percentage-mark {
-    @include carbon--type-style($name: productive-heading-03);
+  &__percentage-mark {
+    @include carbon--type-style($name: body-short-01);
+  }
+
+  // Lg Styling
+  &--lg & {
+    &__value,
+    &__percentage {
+      @include carbon--type-style($name: productive-heading-06);
+    }
+
+    &__total,
+    &__percentage-mark {
+      @include carbon--type-style($name: productive-heading-03);
+      padding-top: $carbon--spacing-03 + $carbon--spacing-04;
+    }
+  }
+
+  //  Styling
+  &--xl & {
+    &__label {
+      @include carbon--type-style($name: body-short-01);
+    }
+
+    &__value,
+    &__percentage {
+      @include carbon--type-style($name: productive-heading-07);
+    }
+
+    &__total,
+    &__percentage-mark {
+      @include carbon--type-style($name: productive-heading-04);
+      padding-top: $carbon--spacing-06;
+    }
+
+    &__trend {
+      margin-top: $carbon--spacing-04;
+    }
   }
 }

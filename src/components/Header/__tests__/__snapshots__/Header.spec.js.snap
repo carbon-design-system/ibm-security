@@ -226,7 +226,7 @@ exports[`Header Rendering renders correctly 1`] = `
               type="button"
             >
               <Button
-                className="security--button"
+                className=""
                 dangerDescription="danger"
                 disabled={false}
                 href="#"
@@ -238,7 +238,7 @@ exports[`Header Rendering renders correctly 1`] = `
                 type="button"
               >
                 <a
-                  className="security--button bx--btn bx--btn--primary"
+                  className="bx--btn bx--btn--primary"
                   href="#"
                   onBlur={[Function]}
                   onFocus={[Function]}
@@ -276,7 +276,7 @@ exports[`Header Rendering renders correctly 1`] = `
               type="button"
             >
               <Button
-                className="security--button"
+                className=""
                 dangerDescription="danger"
                 disabled={false}
                 href="#"
@@ -288,7 +288,7 @@ exports[`Header Rendering renders correctly 1`] = `
                 type="button"
               >
                 <a
-                  className="security--button bx--btn bx--btn--secondary"
+                  className="bx--btn bx--btn--secondary"
                   href="#"
                   onBlur={[Function]}
                   onFocus={[Function]}

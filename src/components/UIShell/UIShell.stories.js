@@ -1,6 +1,6 @@
 /**
  * @file UI shell stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { storiesOf } from '@storybook/react';
@@ -11,19 +11,20 @@ import { disableCenteredStories, info, patterns } from '../../../.storybook';
 import {
   CarbonHeader,
   HeaderContainer,
+  HeaderMenu,
   HeaderMenuButton,
+  HeaderMenuItem,
   HeaderName,
   HeaderNavigation,
-  HeaderMenu,
-  HeaderMenuItem,
   HeaderSideNavItems,
-  SkipToContent,
   SideNav,
   SideNavItems,
+  SkipToContent,
 } from '../..';
 
-const description = "Carbon's `UIShell` component.";
-const story = 'ui-shell';
+const documentation = info("Carbon's `UIShell` component.", {
+  story: 'ui-shell',
+});
 
 disableCenteredStories(
   storiesOf(patterns('UIShell (Carbon)'), module)
@@ -36,11 +37,7 @@ disableCenteredStories(
           </HeaderName>
         </CarbonHeader>
       ),
-      info(description, {
-        story,
-        library: 'react',
-        id: 'header-base',
-      })
+      documentation
     )
     .add(
       'Header Base w/ Navigation',
@@ -91,10 +88,6 @@ disableCenteredStories(
           )}
         />
       ),
-      info(description, {
-        story,
-        library: 'react',
-        id: 'header-base-w-navigation',
-      })
+      documentation
     )
 );

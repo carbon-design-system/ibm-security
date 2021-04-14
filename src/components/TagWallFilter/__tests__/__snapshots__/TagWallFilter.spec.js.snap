@@ -648,14 +648,14 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                 class="security--tearsheet--small__footer"
               >
                 <button
-                  class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                  class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                   tabindex="0"
                   type="button"
                 >
                   Cancel
                 </button>
                 <button
-                  class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                  class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                   tabindex="0"
                   type="button"
                 >
@@ -950,14 +950,14 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                             class="security--tearsheet--small__footer"
                           >
                             <button
-                              class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                              class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                               tabindex="0"
                               type="button"
                             >
                               Cancel
                             </button>
                             <button
-                              class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                              class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                               tabindex="0"
                               type="button"
                             >
@@ -1186,14 +1186,14 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                               class="security--tearsheet--small__footer"
                             >
                               <button
-                                class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                                class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                                 tabindex="0"
                                 type="button"
                               >
                                 Cancel
                               </button>
                               <button
-                                class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                                class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                                 tabindex="0"
                                 type="button"
                               >
@@ -1424,14 +1424,14 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                   class="security--tearsheet--small__footer"
                                 >
                                   <button
-                                    class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                                    class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                                     tabindex="0"
                                     type="button"
                                   >
                                     Cancel
                                   </button>
                                   <button
-                                    class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                                    class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                                     tabindex="0"
                                     type="button"
                                   >
@@ -1938,19 +1938,19 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                               largeText={null}
                               loading={false}
                               onClick={[MockFunction]}
-                              size="large"
+                              size="xl"
                               tabIndex={0}
                               tooltipAlignment="center"
                               tooltipPosition="top"
                               type="button"
                             >
                               <Button
-                                className="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large"
+                                className="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary"
                                 dangerDescription="danger"
                                 disabled={false}
                                 kind="secondary"
                                 onClick={[MockFunction]}
-                                size={null}
+                                size="xl"
                                 tabIndex={0}
                                 tooltipAlignment="center"
                                 tooltipPosition="top"
@@ -1959,7 +1959,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                 <button
                                   aria-describedby={null}
                                   aria-pressed={null}
-                                  className="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                                  className="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                                   disabled={false}
                                   onBlur={[Function]}
                                   onClick={[MockFunction]}
@@ -1981,19 +1981,19 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                               largeText={null}
                               loading={false}
                               onClick={[MockFunction]}
-                              size="large"
+                              size="xl"
                               tabIndex={0}
                               tooltipAlignment="center"
                               tooltipPosition="top"
                               type="button"
                             >
                               <Button
-                                className="security--button security--tearsheet--small__footer__button security--button--large"
+                                className="security--tearsheet--small__footer__button"
                                 dangerDescription="danger"
                                 disabled={false}
                                 kind="primary"
                                 onClick={[MockFunction]}
-                                size={null}
+                                size="xl"
                                 tabIndex={0}
                                 tooltipAlignment="center"
                                 tooltipPosition="top"
@@ -2002,7 +2002,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                 <button
                                   aria-describedby={null}
                                   aria-pressed={null}
-                                  className="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                                  className="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                                   disabled={false}
                                   onBlur={[Function]}
                                   onClick={[MockFunction]}
@@ -2639,14 +2639,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                   class="security--tearsheet--small__footer"
                 >
                   <button
-                    class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                    class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                     tabindex="0"
                     type="button"
                   >
                     Cancel
                   </button>
                   <button
-                    class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                    class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                     tabindex="0"
                     type="button"
                   >
@@ -2866,14 +2866,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                   class="security--tearsheet--small__footer"
                 >
                   <button
-                    class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                    class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                     tabindex="0"
                     type="button"
                   >
                     Cancel
                   </button>
                   <button
-                    class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                    class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                     tabindex="0"
                     type="button"
                   >
@@ -3168,14 +3168,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               class="security--tearsheet--small__footer"
                             >
                               <button
-                                class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                                class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                                 tabindex="0"
                                 type="button"
                               >
                                 Cancel
                               </button>
                               <button
-                                class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                                class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                                 tabindex="0"
                                 type="button"
                               >
@@ -3395,14 +3395,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               class="security--tearsheet--small__footer"
                             >
                               <button
-                                class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                                class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                                 tabindex="0"
                                 type="button"
                               >
                                 Cancel
                               </button>
                               <button
-                                class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                                class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                                 tabindex="0"
                                 type="button"
                               >
@@ -3631,14 +3631,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 class="security--tearsheet--small__footer"
                               >
                                 <button
-                                  class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                                  class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                                   tabindex="0"
                                   type="button"
                                 >
                                   Cancel
                                 </button>
                                 <button
-                                  class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                                  class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                                   tabindex="0"
                                   type="button"
                                 >
@@ -3858,14 +3858,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 class="security--tearsheet--small__footer"
                               >
                                 <button
-                                  class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                                  class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                                   tabindex="0"
                                   type="button"
                                 >
                                   Cancel
                                 </button>
                                 <button
-                                  class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                                  class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                                   tabindex="0"
                                   type="button"
                                 >
@@ -4096,14 +4096,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     class="security--tearsheet--small__footer"
                                   >
                                     <button
-                                      class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                                      class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                                       tabindex="0"
                                       type="button"
                                     >
                                       Cancel
                                     </button>
                                     <button
-                                      class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                                      class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                                       tabindex="0"
                                       type="button"
                                     >
@@ -4323,14 +4323,14 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     class="security--tearsheet--small__footer"
                                   >
                                     <button
-                                      class="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                                      class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                                       tabindex="0"
                                       type="button"
                                     >
                                       Cancel
                                     </button>
                                     <button
-                                      class="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                                      class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                                       tabindex="0"
                                       type="button"
                                     >
@@ -4837,19 +4837,19 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 largeText={null}
                                 loading={false}
                                 onClick={[MockFunction]}
-                                size="large"
+                                size="xl"
                                 tabIndex={0}
                                 tooltipAlignment="center"
                                 tooltipPosition="top"
                                 type="button"
                               >
                                 <Button
-                                  className="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large"
+                                  className="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary"
                                   dangerDescription="danger"
                                   disabled={false}
                                   kind="secondary"
                                   onClick={[MockFunction]}
-                                  size={null}
+                                  size="xl"
                                   tabIndex={0}
                                   tooltipAlignment="center"
                                   tooltipPosition="top"
@@ -4858,7 +4858,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   <button
                                     aria-describedby={null}
                                     aria-pressed={null}
-                                    className="security--button security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary security--button--large bx--btn bx--btn--secondary"
+                                    className="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
                                     disabled={false}
                                     onBlur={[Function]}
                                     onClick={[MockFunction]}
@@ -4880,19 +4880,19 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 largeText={null}
                                 loading={false}
                                 onClick={[MockFunction]}
-                                size="large"
+                                size="xl"
                                 tabIndex={0}
                                 tooltipAlignment="center"
                                 tooltipPosition="top"
                                 type="button"
                               >
                                 <Button
-                                  className="security--button security--tearsheet--small__footer__button security--button--large"
+                                  className="security--tearsheet--small__footer__button"
                                   dangerDescription="danger"
                                   disabled={false}
                                   kind="primary"
                                   onClick={[MockFunction]}
-                                  size={null}
+                                  size="xl"
                                   tabIndex={0}
                                   tooltipAlignment="center"
                                   tooltipPosition="top"
@@ -4901,7 +4901,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   <button
                                     aria-describedby={null}
                                     aria-pressed={null}
-                                    className="security--button security--tearsheet--small__footer__button security--button--large bx--btn bx--btn--primary"
+                                    className="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
                                     disabled={false}
                                     onBlur={[Function]}
                                     onClick={[MockFunction]}

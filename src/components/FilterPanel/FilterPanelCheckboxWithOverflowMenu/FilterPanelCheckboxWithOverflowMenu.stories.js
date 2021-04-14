@@ -1,15 +1,16 @@
 /**
  * @file Filter panel checkbox with overflow menu stories.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
 
 import React from 'react';
 
 import { patterns, info } from '../../../../.storybook';
+
 import {
   FilterPanelCheckboxWithOverflowMenu,
   OverflowMenuItem,
@@ -46,9 +47,9 @@ This component allows consumers to provide more than one option when selecting a
 use-case is when the application must provide an exclusionary filter option (also known as a
 not-filter). The overflow menu options give users more ways to interact with a given filter.`,
     {
+      group: 'patterns',
       library: 'ibm-security',
-      story: 'patterns-filterpanelcheckbox',
-      id: 'default',
+      story: 'filterpanel-filterpanelcheckbox',
     }
   )
 );

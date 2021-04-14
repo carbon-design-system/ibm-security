@@ -639,7 +639,7 @@ exports[`TagWall Rendering renders 1`] = `
       type="button"
     >
       <Button
-        className="security--button"
+        className=""
         dangerDescription="danger"
         disabled={false}
         kind="ghost"
@@ -653,7 +653,7 @@ exports[`TagWall Rendering renders 1`] = `
         <button
           aria-describedby={null}
           aria-pressed={null}
-          className="security--button bx--btn bx--btn--sm bx--btn--ghost"
+          className="bx--btn bx--btn--sm bx--btn--ghost"
           disabled={false}
           onBlur={[Function]}
           onClick={[Function]}
@@ -954,7 +954,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
     </button>
   </div>
   <button
-    class="security--button bx--btn bx--btn--sm bx--btn--ghost"
+    class="bx--btn bx--btn--sm bx--btn--ghost"
     tabindex="0"
     type="button"
   >
@@ -1322,7 +1322,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
       type="button"
     >
       <Button
-        className="security--button"
+        className=""
         dangerDescription="danger"
         disabled={true}
         kind="ghost"
@@ -1336,7 +1336,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         <button
           aria-describedby={null}
           aria-pressed={null}
-          className="security--button bx--btn bx--btn--sm bx--btn--ghost bx--btn--disabled"
+          className="bx--btn bx--btn--sm bx--btn--ghost bx--btn--disabled"
           disabled={true}
           onBlur={[Function]}
           onClick={[Function]}

@@ -43,7 +43,7 @@ describe('TagWall', () => {
       tagWall
         .find(InteractiveTag)
         .first()
-        .find(`.${carbonPrefix}tag__close-icon`);
+        .find(`.${carbonPrefix}--tag__close-icon`);
 
     it('should call the `onChange` method', () => {
       const onChange = fn();
