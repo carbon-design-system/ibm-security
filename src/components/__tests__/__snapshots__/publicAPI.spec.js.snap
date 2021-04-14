@@ -491,6 +491,14 @@ Map {
       },
     },
   },
+  "CardMicrolayout" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "isRequired": true,
+        "type": "func",
+      },
+    },
+  },
   "CardModule" => Object {
     "propTypes": Object {
       "children": Object {
