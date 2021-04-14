@@ -1,6 +1,6 @@
 /**
  * @file Tearsheet.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import Close20 from '@carbon/icons-react/lib/close/20';
@@ -196,7 +196,7 @@ class Tearsheet extends Component {
                         disabled={isDisabled || this.state.loading}
                         kind="ghost"
                         onClick={tertiaryButton.onClick}
-                        size="large"
+                        size="xl"
                       >
                         {componentLabels.TEARSHEET_TERTIARY_BUTTON}
                         {tertiaryButton.secondaryText.length > 0 && (
@@ -218,7 +218,7 @@ class Tearsheet extends Component {
                         }
                         kind="secondary"
                         onClick={secondaryButton.onClick}
-                        size="large"
+                        size="xl"
                       >
                         {componentLabels.TEARSHEET_SECONDARY_BUTTON}
                       </Button>
@@ -227,7 +227,7 @@ class Tearsheet extends Component {
                       className={`${namespace}__button`}
                       disabled={primaryButton.isDisabled || this.state.loading}
                       onClick={primaryButton.onClick}
-                      size="large"
+                      size="xl"
                     >
                       {componentLabels.TEARSHEET_PRIMARY_BUTTON}
                     </Button>

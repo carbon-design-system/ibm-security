@@ -1,6 +1,6 @@
 /**
  * @file Filter.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { Add20, Search20 } from '@carbon/icons-react';
@@ -14,7 +14,7 @@ import React, { Component } from 'react';
 import {
   carbonPrefix,
   getComponentNamespace,
-} from '../../../globals/namespace/index';
+} from '../../../globals/namespace';
 
 import theme from '../../../globals/theme';
 
@@ -135,7 +135,7 @@ class Filter extends Component {
             aria-labelledby={itemProps.id}
           >
             <span
-              className={`${carbonPrefix}text-truncate--end`}
+              className={`${carbonPrefix}--text-truncate--end`}
               title={itemText}
             >
               {itemText}
@@ -195,7 +195,7 @@ class Filter extends Component {
           >
             <Field {...getButtonProps({ disabled, tabIndex: -1 })} id={id}>
               <input
-                className={`${namespace}__input-field ${carbonPrefix}text-input`}
+                className={`${namespace}__input-field ${carbonPrefix}--text-input`}
                 {...getInputProps({
                   disabled,
                   id,

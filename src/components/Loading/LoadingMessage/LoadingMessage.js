@@ -15,7 +15,7 @@ import {
 } from '../../../globals/namespace';
 
 const namespace = getComponentNamespace('loading-message');
-const overlayNamespace = `${carbonPrefix}loading-overlay`;
+const overlayNamespace = `${carbonPrefix}--loading-overlay`;
 
 const LoadingMessage = ({
   active,

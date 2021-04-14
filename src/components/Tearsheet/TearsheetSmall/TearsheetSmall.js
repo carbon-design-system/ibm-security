@@ -1,6 +1,6 @@
 /**
  * @file Small tearsheet.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import Close20 from '@carbon/icons-react/lib/close/20';
@@ -135,7 +135,7 @@ class TearsheetSmall extends PureComponent {
                     disabled={secondaryButton.isDisabled || this.state.loading}
                     kind="secondary"
                     onClick={secondaryButton.onClick}
-                    size="large"
+                    size="xl"
                   >
                     {componentLabels.TEARSHEET_SMALL_SECONDARY_BUTTON}
                   </Button>
@@ -145,7 +145,7 @@ class TearsheetSmall extends PureComponent {
                     className={`${namespace}__footer__button`}
                     disabled={primaryButton.isDisabled || this.state.loading}
                     onClick={primaryButton.onClick}
-                    size="large"
+                    size="xl"
                   >
                     {componentLabels.TEARSHEET_SMALL_PRIMARY_BUTTON}
                   </Button>
