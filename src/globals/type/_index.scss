@@ -1,15 +1,17 @@
 ////
 /// Type.
 /// @group type
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
-@import '@carbon/type/scss/classes';
-@import '@carbon/type/scss/type';
+@use 'sass:map';
 
-/// `@font-face` declarations.
-/// @type boolean
-$css--font-face: true !default;
+@use '@carbon/type/scss/modules/font-family';
+@use '@carbon/type/scss/modules/styles';
+
+@use '../deprecate';
+@use '../feature-flags';
+@use '../namespace';
 
 /// IBM Plex.
 /// @type boolean
@@ -17,27 +19,23 @@ $css--plex: true;
 
 @import 'carbon-components/scss/globals/scss/css--font-face';
 
-@import '../deprecate/index';
-@import '../feature-flags/index';
-@import '../namespace/index';
-
 // TODO: `2.x` - To be removed.
 
 /// Monospaced font family.
 /// @type string
-$font-family-mono: carbon--font-family(
+$font-family-mono: font-family.font-family(
   $name: mono,
 );
 
 /// Sans serif font family.
 /// @type string
-$font-family-sans-serif: carbon--font-family(
+$font-family-sans-serif: font-family.font-family(
   $name: sans,
 );
 
 /// Serif font family.
 /// @type string
-$font-family-serif: carbon--font-family(
+$font-family-serif: font-family.font-family(
   $name: serif,
 );
 
@@ -45,11 +43,11 @@ $font-family-serif: carbon--font-family(
 /// @type Map<string, string>
 $font-family-deprecation-map: (
   mono:
-    carbon--font-family(
+    font-family.font-family(
       $name: mono,
     ),
   serif:
-    carbon--font-family(
+    font-family.font-family(
       $name: serif,
     ),
 );
@@ -58,11 +56,11 @@ $font-family-deprecation-map: (
 /// @type Map<string, Length>
 $font-weight-deprecation-map: (
   light:
-    carbon--font-weight(
+    font-family.font-weight(
       $weight: light,
     ),
   semibold:
-    carbon--font-weight(
+    font-family.font-weight(
       $weight: semibold,
     ),
 );
@@ -88,25 +86,25 @@ $type-style-deprecation-map: (
 /// @param {string} $scale-item The deprecated scale item parameter.
 ///
 @mixin type-scale-item($scale-item) {
-  $name: map-get(
+  $name: map.get(
     $map: $type-style-deprecation-map,
     $key: $scale-item,
   );
 
-  @warn deprecate($actual: 'type-scale-item($scale-item: #{$scale-item})', $expected: 'carbon--type-style($name: #{$name})');
-  @include carbon--type-style($name: $name);
+  @warn deprecate.deprecate($actual: 'type-scale-item($scale-item: #{$scale-item})', $expected: 'carbon--type-style($name: #{$name})');
+  @include styles.type-style($name: $name);
 }
 
 // TODO: `2.x` - Deprecate after teams have migrated to `@carbon/type`.
 
-@if feature-flag-enabled($feature: $type__name) {
-  @include export-namespace($name: $type__name) {
-    [class*='#{$type__name}'] {
+@if feature-flags.feature-flag-enabled($feature: feature-flags.$type__name) {
+  @include namespace.export-namespace($name: feature-flags.$type__name) {
+    [class*='#{feature-flags.$type__name}'] {
       margin-top: 0;
     }
 
-    .#{$type__name} {
-      font-family: carbon--font-family($name: sans);
+    .#{feature-flags.$type__name} {
+      font-family: font-family.font-family($name: sans);
 
       &-italic {
         font-style: italic;
@@ -123,14 +121,14 @@ $type-style-deprecation-map: (
 
     @each $font-weight-class, $font-weight-value in $font-weight-deprecation-map
     {
-      .#{$type__name}-#{$font-weight-class} {
+      .#{feature-flags.$type__name}-#{$font-weight-class} {
         font-weight: $font-weight-value;
       }
     }
 
     @each $type-class, $type-style-name in $type-style-deprecation-map {
-      .#{$type__name}-#{$type-class} {
-        @include carbon--type-style($name: $type-style-name);
+      .#{feature-flags.$type__name}-#{$type-class} {
+        @include styles.type-style($name: $type-style-name);
       }
     }
   }

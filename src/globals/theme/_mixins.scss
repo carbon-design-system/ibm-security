@@ -1,17 +1,19 @@
 ////
 /// Theme mixins.
 /// @group theme
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
-@import '@carbon/themes/scss/tokens';
-@import 'carbon-components/scss/globals/scss/vars';
+@use '@carbon/themes/scss/tokens';
+@use 'carbon-components/scss/globals/scss/vars';
 
-@import '../../components/IconButton/variables';
+@use 'sass:map';
 
-@import '../namespace/index';
+@use '../../components/IconButton/variables' as icon-button;
 
-@import 'variables';
+@use '../namespace';
+
+@use 'variables';
 
 /// Changes background color for form elements.
 /// @param {Color} [$background-color=$ui-02] The background color to use.
@@ -19,13 +21,13 @@
 ///   body {
 ///     @include input__background-color;
 ///   }
-@mixin input__background-color($background-color: $ui-02) {
+@mixin input__background-color($background-color: tokens.$ui-02) {
   %input__background-color {
     background-color: $background-color;
   }
 
   // Carbon components.
-  .#{$prefix} {
+  .#{vars.$prefix} {
     // `DatePicker`.
     &--date-picker__input,
 
@@ -59,7 +61,7 @@
   }
 
   // `IconButton`
-  #{$button--icon__namespace} {
+  #{icon-button.$button--icon__namespace} {
     &:focus,
     &:hover {
       @extend %input__background-color;
@@ -81,8 +83,8 @@
 ///     --interactive-03: #ffffff;
 ///   }
 @mixin security--generate-css-custom-properties($theme) {
-  @each $token in $security--theme__ignore-list {
-    $theme: map-remove(
+  @each $token in variables.$security--theme__ignore-list {
+    $theme: map.remove(
       $map: $theme,
       $key: $token,
     );
@@ -97,7 +99,7 @@
 /// @param {Map<String, Color>} $theme The theme to generate the CSS custom properties from.
 /// @access private
 @mixin security--theme--cg10($theme) {
-  #{get-component-namespace($component-name: theme--cg10)} & {
+  #{namespace.get-component-namespace($component-name: theme--cg10)} & {
     @include security--generate-css-custom-properties($theme: $theme);
   }
 }
@@ -115,7 +117,7 @@
 ///     --interactive-03: #0062ff;
 ///   }
 @mixin security--theme--cg10__cg10 {
-  @include security--theme--cg10($theme: $security--theme--cg10);
+  @include security--theme--cg10($theme: variables.$security--theme--cg10);
 }
 
 /// Mixin to apply 'cool gray 100' theme to children of the selector within the 'cool gray 10' theme.
@@ -134,7 +136,7 @@
   @include security--theme--cg10(
     $theme:
       security--cool-gray(
-        $theme: map-get($map: $security--themes, $key: theme--g100),
+        $theme: map.get($map: variables.$security--themes, $key: theme--g100),
         $grade: 100
       )
   );

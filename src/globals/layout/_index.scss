@@ -1,15 +1,15 @@
 ////
 /// Layout.
 /// @group layout
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
-@import '@carbon/layout/scss/layout';
+@forward '@carbon/layout';
+@forward '@carbon/layout/scss/mini-unit';
 
-@import 'carbon-components/scss/globals/scss/layout';
-@import 'carbon-components/scss/globals/scss/spacing';
+@use '@carbon/layout/scss/mini-unit';
 
-@import '../deprecate/index';
+@use '../deprecate';
 
 // TODO: `2.x` - To be removed.
 
@@ -19,7 +19,7 @@
 /// @return {Length} The correct `mini-unit` size.
 ///
 @function get-fixed-size($unitQuantity) {
-  @warn deprecate($actual: 'get-fixed-size($unitQuantity: #{$unitQuantity})', $expected: 'carbon--mini-units($count: #{$unitQuantity})');
+  @warn deprecate.deprecate($actual: 'get-fixed-size($unitQuantity: #{$unitQuantity})', $expected: 'carbon--mini-units($count: #{$unitQuantity})');
 
-  @return carbon--mini-units($count: $unitQuantity);
+  @return mini-unit.carbon--mini-units($count: $unitQuantity);
 }

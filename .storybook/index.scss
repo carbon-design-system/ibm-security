@@ -4,29 +4,32 @@
 /// @copyright IBM Security 2019 - 2021
 ////
 
-@import '@carbon/layout/scss/spacing';
-@import '@carbon/themes/scss/theme-maps';
+@use '@carbon/layout';
+@use '@carbon/themes/scss/theme-maps';
 
-@import '../src/globals/index';
+@use '../src/globals';
 
-@import 'carbon-components/scss/globals/scss/vars';
+@use 'carbon-components/scss/globals/scss/vars';
 
-@import '../src/components/index';
-@import '../src/platform/index';
+@use '../src/globals/theme/mixins';
+
+// @use '../src/components';
+
+@use '../src/platform';
 
 // TODO: Remove workaround for https://github.ibm.com/security/design-core-experience/issues/241
-@import 'components/Background/index';
+@use 'components/Background';
 
-@import 'decorators/index';
-@import 'docs/index';
+@use 'decorators';
+@use 'docs';
 
 * {
   box-sizing: border-box;
 }
 
 .page-layouts__banner {
-  @include security--generate-css-custom-properties(
-    $theme: $carbon--theme--g10
+  @include mixins.security--generate-css-custom-properties(
+    $theme: theme-maps.$carbon--theme--g10
   );
 
   max-width: 100%;
@@ -37,10 +40,10 @@
   width: 50%;
 
   &__input {
-    margin-bottom: $carbon--spacing-06;
+    margin-bottom: layout.$spacing-06;
   }
 
-  .#{$prefix} {
+  .#{vars.$prefix} {
     &--number,
     &--text-input__field-wrapper,
     &--text-area__wrapper {

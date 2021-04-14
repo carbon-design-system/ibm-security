@@ -4,14 +4,14 @@
 /// @copyright IBM Security 2020 - 2021
 ////
 
-@import '@carbon/layout/scss/spacing';
-@import '@carbon/motion/scss/motion';
-@import '@carbon/themes/scss/tokens';
-@import '@carbon/type/scss/styles';
+@use '@carbon/layout/scss/spacing';
+@use '@carbon/motion';
+@use '@carbon/themes/scss/tokens';
+@use '@carbon/type/scss/styles';
 
-@import 'carbon-components/scss/globals/scss/motion';
+@use 'carbon-components/scss/globals/scss/motion' as duration;
 
-@import '../../src/platform/body/mixins';
+@use '../../src/platform/body/mixins';
 
 .sbdocs {
   $root: &;
@@ -20,14 +20,14 @@
   & &-h4 {
     &,
     &:first-of-type {
-      margin-top: $carbon--layout-05;
+      margin-top: spacing.$layout-05;
     }
   }
 
   & &-ul {
     /// Spacing.
     /// @type Length
-    $unordered-list__spacing: $carbon--spacing-05;
+    $unordered-list__spacing: spacing.$spacing-05;
 
     padding-left: $unordered-list__spacing;
     list-style: none;
@@ -44,7 +44,7 @@
   }
 
   & &-preview {
-    background-color: $body__color__background;
+    background-color: mixins.$body__color__background;
   }
 
   [title='Required'] {
@@ -55,12 +55,12 @@
     text-decoration: none;
 
     // `.storybook/theme/index.js` - `colorSecondary`
-    color: $link-01;
+    color: tokens.$link-01;
 
     &--image {
-      transition-duration: $duration--fast-01;
+      transition-duration: duration.$duration--fast-01;
       transition-property: opacity;
-      transition-timing-function: carbon--motion($name: standard);
+      transition-timing-function: motion.motion($name: standard);
 
       &:focus,
       &:hover {
@@ -72,13 +72,13 @@
   .library {
     &__type,
     &__row {
-      margin-bottom: $carbon--spacing-07;
+      margin-bottom: spacing.$spacing-07;
     }
 
     &__type {
-      @include carbon--type-style($name: body-long-01);
+      @include styles.carbon--type-style($name: body-long-01);
 
-      margin-top: $carbon--spacing-05;
+      margin-top: spacing.$spacing-05;
     }
   }
 }

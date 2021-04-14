@@ -4,14 +4,14 @@
 /// @copyright IBM Security 2021
 ////
 
-@import '@carbon/layout/scss/breakpoint';
-@import '@carbon/themes/scss/tokens';
+@use '@carbon/layout/scss/modules/breakpoint';
+@use '@carbon/themes/scss/tokens';
 
-@import '../../../src/globals/border/index';
+@use '../../../src/globals/border';
 
 // TODO: Remove workaround for https://github.ibm.com/security/design-core-experience/issues/241
 .container {
-  $container--narrow__spacing: ($carbon--grid-gutter / 2);
+  $container--narrow__spacing: (breakpoint.$grid-gutter / 2);
 
   &__border,
   &--narrow {
@@ -22,7 +22,7 @@
     &::after {
       position: absolute;
       bottom: 0;
-      background-color: $ui-background;
+      background-color: tokens.$ui-background;
       content: '';
     }
 
@@ -36,13 +36,13 @@
     &--bottom {
       &::after {
         left: 0;
-        height: $border__sizing__width;
+        height: border.$border__sizing__width;
       }
     }
 
     &--right::after {
       top: 0;
-      width: $border__sizing__width;
+      width: border.$border__sizing__width;
     }
 
     &--nested::after {
@@ -60,7 +60,7 @@
       right: $container--narrow__spacing;
       bottom: -$container--narrow__spacing;
       left: 0;
-      background-color: $ui-01;
+      background-color: tokens.$ui-01;
       z-index: -1;
       content: '';
     }

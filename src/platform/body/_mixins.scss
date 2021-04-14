@@ -1,24 +1,24 @@
 ////
 /// Body mixins.
 /// @group body
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
-@import '@carbon/grid/scss/mixins';
-@import '@carbon/themes/scss/tokens';
-@import '@carbon/type/scss/classes';
-@import '@carbon/type/scss/reset';
+@use '@carbon/grid/scss/modules/mixins';
+@use '@carbon/themes/scss/tokens';
+@use '@carbon/type/scss/modules/classes';
+@use '@carbon/type/scss/modules/reset';
 
 /// Background color.
 /// @type Color
-$body__color__background: $ui-background;
+$body__color__background: tokens.$ui-background;
 
 /// Text color.
 /// @type Color
-$body__color__text: $text-01;
+$body__color__text: tokens.$text-01;
 
 @mixin body {
-  @include carbon--grid;
-  @include carbon--type-reset;
-  @include carbon--type-classes;
+  @include mixins.grid;
+  @include classes.type-classes;
+  @include reset.type-reset;
 }

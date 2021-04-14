@@ -1,16 +1,16 @@
 ////
 /// Colors.
 /// @group colors
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
-@import '@carbon/colors/scss/colors';
-@import '@carbon/themes/scss/tokens';
+@forward '@carbon/colors/scss/colors';
+@use '@carbon/themes/scss/tokens';
 
 /// TODO: `2.x` - Deprecate in favor of `$hover-ui`.
 /// @type Color
 /// @deprecated
-$security-color__gray-90--hover: $hover-ui;
+$security-color__gray-90--hover: tokens.$hover-ui;
 
 /// 'Cool gray 10' hover.
 /// @type Color

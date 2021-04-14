@@ -1,18 +1,19 @@
 ////
 /// Body entry point.
 /// @group body
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
-@import 'carbon-components/scss/globals/scss/css--body';
+@use 'carbon-components/scss/globals/scss/css--body';
 
-@import '../../globals/feature-flags/index';
-@import '../../globals/namespace/index';
+@use '../../globals/feature-flags';
+@use '../../globals/namespace';
 
-@import 'mixins';
+@use 'mixins';
 
-@if feature-flag-enabled($feature: $platform__name) {
-  @include export-namespace($name: $platform__name) {
-    @include body;
+@if feature-flags.feature-flag-enabled($feature: feature-flags.$platform__name)
+{
+  @include namespace.export-namespace($name: feature-flags.$platform__name) {
+    @include mixins.body;
   }
 }

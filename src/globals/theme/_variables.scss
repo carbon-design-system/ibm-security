@@ -1,13 +1,15 @@
 ////
 /// Theme variables.
 /// @group theme
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
-@import '@carbon/colors/scss/colors';
-@import '@carbon/themes/scss/theme-maps';
+@use '@carbon/colors/scss/colors';
+@use '@carbon/themes/scss/theme-maps';
 
-@import '../color/index';
+@use 'sass:map';
+
+@use '../color';
 
 // Theme ignore list.
 /// @type List<String>
@@ -16,7 +18,7 @@ $security--theme__ignore-list: ();
 
 /// Security theme.
 /// @type Map<String, Color>
-$security--theme: $carbon--theme--g100 !default;
+$security--theme: theme-maps.$carbon--theme--g100 !default;
 
 /// Default theme.
 /// @type Map<String, Color>
@@ -45,22 +47,22 @@ $-theme: $security--theme;
 /// @access private
 $security--cool-gray--hover__overrides: (
   10: (
-    hover-field: $security--cool-gray-10--hover,
-    hover-ui: $security--cool-gray-10--hover,
-    hover-secondary: $security--cool-gray-80--hover,
-    hover-selected-ui: $security--cool-gray-20--hover,
-    hover-row: $security--cool-gray-10--hover,
-    inverse-hover-ui: $security--cool-gray-80--hover,
-    skeleton-01: $security--cool-gray-10--hover,
+    hover-field: color.$security--cool-gray-10--hover,
+    hover-ui: color.$security--cool-gray-10--hover,
+    hover-secondary: color.$security--cool-gray-80--hover,
+    hover-selected-ui: color.$security--cool-gray-20--hover,
+    hover-row: color.$security--cool-gray-10--hover,
+    inverse-hover-ui: color.$security--cool-gray-80--hover,
+    skeleton-01: color.$security--cool-gray-10--hover,
   ),
   100: (
-    hover-field: $security--cool-gray-90--hover,
-    hover-ui: $security--cool-gray-90--hover,
-    hover-secondary: $security--cool-gray-60--hover,
-    hover-selected-ui: $security--cool-gray-80--hover,
-    hover-row: $security--cool-gray-90--hover,
-    inverse-hover-ui: $security--cool-gray-10--hover,
-    skeleton-01: $security--cool-gray-90--hover,
+    hover-field: color.$security--cool-gray-90--hover,
+    hover-ui: color.$security--cool-gray-90--hover,
+    hover-secondary: color.$security--cool-gray-60--hover,
+    hover-selected-ui: color.$security--cool-gray-80--hover,
+    hover-row: color.$security--cool-gray-90--hover,
+    inverse-hover-ui: color.$security--cool-gray-10--hover,
+    skeleton-01: color.$security--cool-gray-90--hover,
   ),
 );
 
@@ -71,7 +73,7 @@ $security--cool-gray--hover__overrides: (
 /// @returns {Map<string, Color>} The merged theme.
 /// @access private
 @function security--merge-theme($theme, $token-key, $token) {
-  @return map-merge(
+  @return map.merge(
     $map1: $theme,
     $map2: (
       $token-key: $token,
@@ -89,11 +91,11 @@ $security--cool-gray--hover__overrides: (
 
   @each $token-key, $token-value in $theme {
     @each $color-key,
-      $color-value in map-get($map: $carbon--colors, $key: 'gray')
+      $color-value in map.get($map: colors.$carbon--colors, $key: 'gray')
     {
-      $override: map-get(
+      $override: map.get(
         $map:
-          map-get(
+          map.get(
             $map: $security--cool-gray--hover__overrides,
             $key: $grade,
           ),
@@ -116,10 +118,10 @@ $security--cool-gray--hover__overrides: (
                 $theme: $theme--cool-gray,
                 $token-key: $token-key,
                 $token:
-                  map-get(
+                  map.get(
                     $map:
-                      map-get(
-                        $map: $carbon--colors,
+                      map.get(
+                        $map: colors.$carbon--colors,
                         $key: 'cool-gray',
                       ),
                     $key: $color-key,
@@ -138,7 +140,7 @@ $security--cool-gray--hover__overrides: (
 /// @type Map<String, Color>
 /// @access private
 $security--theme--cg10: security--cool-gray(
-  $theme: $carbon--theme--g10,
+  $theme: theme-maps.$carbon--theme--g10,
   $grade: 10,
 );
 
@@ -147,5 +149,5 @@ $security--theme--cg10: security--cool-gray(
 /// @access private
 $security--themes: (
   theme--cg10: $security--theme--cg10,
-  theme--g100: $carbon--theme--g100,
+  theme--g100: theme-maps.$carbon--theme--g100,
 );

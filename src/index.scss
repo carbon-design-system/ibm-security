@@ -1,9 +1,11 @@
 ////
 /// Entry point.
 /// @group entry
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
-@import 'globals/index';
-@import 'components/index';
-@import 'platform/index';
+@use 'globals';
+
+// @use 'components';
+
+@use 'platform';

@@ -1,10 +1,10 @@
 ////
 /// Assets related to namespacing selectors.
 /// @group namespace
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
-@import '@carbon/import-once/scss/import-once';
+@use '@carbon/import-once/scss/import-once';
 
 /// The prefix used to namespace all selectors in the CSS.
 /// @type String
@@ -45,7 +45,7 @@ $namespace: 'security--';
 ///   }
 ///
 @mixin export-namespace($name) {
-  @include exports($name: #{$namespace}#{$name}) {
+  @include import-once.exports($name: #{$namespace}#{$name}) {
     @content;
   }
 }

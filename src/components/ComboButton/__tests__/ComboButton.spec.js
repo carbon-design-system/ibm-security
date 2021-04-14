@@ -1,6 +1,6 @@
 /**
  * @file Combo button tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -42,7 +42,8 @@ const renderComboButton = (overflowMenuItemCount = 0) => {
 };
 
 const getComboBox = () => screen.getByTestId(COMBO_BUTTON_TESTID);
-const getOverflowMenuButton = () => screen.getByLabelText('Menu');
+const getOverflowMenuButton = () =>
+  screen.getByLabelText('open and close list of options');
 const clickComboBox = overflowMenuButton => {
   userEvent.click(overflowMenuButton);
 };

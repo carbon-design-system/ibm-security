@@ -1,10 +1,10 @@
 ////
 /// Icon button variables.
 /// @group button--icon
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
-@import '../../globals/namespace/index';
+@use '../../globals/namespace';
 
 /// Name.
 /// @type String
@@ -12,6 +12,6 @@ $button--icon__name: button--icon;
 
 /// Namespace.
 /// @type String
-$button--icon__namespace: get-component-namespace(
+$button--icon__namespace: namespace.get-component-namespace(
   $component-name: $button--icon__name,
 );

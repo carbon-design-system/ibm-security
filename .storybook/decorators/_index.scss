@@ -4,11 +4,12 @@
 /// @copyright IBM Security 2020 - 2021
 ////
 
-@import '@carbon/layout/scss/breakpoint';
+@use '@carbon/layout/scss/modules/breakpoint';
+@use 'sass:map';
 
 @function breakpoints-width-get($name) {
-  @return map-get(
-    $map: map-get($map: $carbon--grid-breakpoints, $key: $name),
+  @return map.get(
+    $map: map.get($map: breakpoint.$grid-breakpoints, $key: $name),
     $key: width
   );
 }
