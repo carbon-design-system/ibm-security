@@ -1,57 +1,520 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SCSS Bundle 1`] = `
-"h1 {
-  font-size: 2.625rem;
-  font-weight: 300;
-  line-height: 1.199;
-  letter-spacing: 0;
+".security--input__background__color--light .bx--date-picker__input, .security--input__background__color--light .bx--dropdown,
+.security--input__background__color--light .bx--number input[type=\\"number\\"], .security--input__background__color--light .bx--search-input, .security--input__background__color--light .bx--select-input, .security--input__background__color--light .bx--text-area, .security--input__background__color--light .bx--text-input, .security--input__background__color--light .bx--list-box, .security--input__background__color--light .bx--list-box__menu, .security--input__background__color--light .security--button--icon:focus, .security--input__background__color--light .security--button--icon:hover, .security--card .bx--number .security--input__background__color--light input[type=\\"number\\"], .security--tearsheet--small .bx--number .security--input__background__color--light input[type=\\"number\\"], .security--tearsheet .bx--number .security--input__background__color--light input[type=\\"number\\"] {
+  background-color: var(--cds-ui-02, #393939);
+}
+
+.security--theme--cg10 {
+  --cds-interactive-01: #0f62fe;
+  --cds-interactive-02: #343a3f;
+  --cds-interactive-03: #0f62fe;
+  --cds-interactive-04: #0f62fe;
+  --cds-ui-background: #f2f4f8;
+  --cds-ui-01: #ffffff;
+  --cds-ui-02: #f2f4f8;
+  --cds-ui-03: #dde1e6;
+  --cds-ui-04: #878d96;
+  --cds-ui-05: #121619;
+  --cds-text-01: #121619;
+  --cds-text-02: #4d5358;
+  --cds-text-03: #a2a9b0;
+  --cds-text-04: #ffffff;
+  --cds-text-05: #697077;
+  --cds-text-error: #da1e28;
+  --cds-icon-01: #121619;
+  --cds-icon-02: #4d5358;
+  --cds-icon-03: #ffffff;
+  --cds-link-01: #0f62fe;
+  --cds-inverse-link: #78a9ff;
+  --cds-field-01: #ffffff;
+  --cds-field-02: #f2f4f8;
+  --cds-inverse-01: #ffffff;
+  --cds-inverse-02: #343a3f;
+  --cds-support-01: #da1e28;
+  --cds-support-02: #24a148;
+  --cds-support-03: #f1c21b;
+  --cds-support-04: #0043ce;
+  --cds-inverse-support-01: #fa4d56;
+  --cds-inverse-support-02: #42be65;
+  --cds-inverse-support-03: #f1c21b;
+  --cds-inverse-support-04: #4589ff;
+  --cds-overlay-01: rgba(22, 22, 22, 0.5);
+  --cds-danger-01: #da1e28;
+  --cds-danger-02: #da1e28;
+  --cds-focus: #0f62fe;
+  --cds-inverse-focus-ui: #ffffff;
+  --cds-hover-primary: #0353e9;
+  --cds-active-primary: #002d9c;
+  --cds-hover-primary-text: #0043ce;
+  --cds-hover-secondary: #464c51;
+  --cds-active-secondary: #697077;
+  --cds-hover-tertiary: #0353e9;
+  --cds-active-tertiary: #002d9c;
+  --cds-hover-ui: #e0e4ea;
+  --cds-hover-light-ui: #e5e5e5;
+  --cds-hover-selected-ui: #c4c9d1;
+  --cds-active-ui: #c1c7cd;
+  --cds-active-light-ui: #c1c7cd;
+  --cds-selected-ui: #dde1e6;
+  --cds-selected-light-ui: #dde1e6;
+  --cds-inverse-hover-ui: #464c51;
+  --cds-hover-danger: #b81921;
+  --cds-active-danger: #750e13;
+  --cds-hover-row: #e0e4ea;
+  --cds-visited-link: #8a3ffc;
+  --cds-disabled-01: #ffffff;
+  --cds-disabled-02: #c1c7cd;
+  --cds-disabled-03: #878d96;
+  --cds-highlight: #edf5ff;
+  --cds-decorative-01: #dde1e6;
+  --cds-button-separator: #dde1e6;
+  --cds-skeleton-01: #e0e4ea;
+  --cds-skeleton-02: #c1c7cd;
+  --cds-brand-01: #0f62fe;
+  --cds-brand-02: #343a3f;
+  --cds-brand-03: #0f62fe;
+  --cds-active-01: #c1c7cd;
+  --cds-hover-field: #e0e4ea;
+  --cds-danger: #da1e28;
+  --cds-caption-01-font-size: 0.75rem;
+  --cds-caption-01-font-weight: 400;
+  --cds-caption-01-line-height: 1.34;
+  --cds-caption-01-letter-spacing: 0.32px;
+  --cds-label-01-font-size: 0.75rem;
+  --cds-label-01-font-weight: 400;
+  --cds-label-01-line-height: 1.34;
+  --cds-label-01-letter-spacing: 0.32px;
+  --cds-helper-text-01-font-size: 0.75rem;
+  --cds-helper-text-01-line-height: 1.34;
+  --cds-helper-text-01-letter-spacing: 0.32px;
+  --cds-body-short-01-font-size: 0.875rem;
+  --cds-body-short-01-font-weight: 400;
+  --cds-body-short-01-line-height: 1.29;
+  --cds-body-short-01-letter-spacing: 0.16px;
+  --cds-body-long-01-font-size: 0.875rem;
+  --cds-body-long-01-font-weight: 400;
+  --cds-body-long-01-line-height: 1.43;
+  --cds-body-long-01-letter-spacing: 0.16px;
+  --cds-body-short-02-font-size: 1rem;
+  --cds-body-short-02-font-weight: 400;
+  --cds-body-short-02-line-height: 1.375;
+  --cds-body-short-02-letter-spacing: 0;
+  --cds-body-long-02-font-size: 1rem;
+  --cds-body-long-02-font-weight: 400;
+  --cds-body-long-02-line-height: 1.5;
+  --cds-body-long-02-letter-spacing: 0;
+  --cds-code-01-font-family: \\"IBM Plex Mono\\", \\"Menlo\\", \\"DejaVu Sans Mono\\", \\"Bitstream Vera Sans Mono\\", Courier, monospace;
+  --cds-code-01-font-size: 0.75rem;
+  --cds-code-01-font-weight: 400;
+  --cds-code-01-line-height: 1.34;
+  --cds-code-01-letter-spacing: 0.32px;
+  --cds-code-02-font-family: \\"IBM Plex Mono\\", \\"Menlo\\", \\"DejaVu Sans Mono\\", \\"Bitstream Vera Sans Mono\\", Courier, monospace;
+  --cds-code-02-font-size: 0.875rem;
+  --cds-code-02-font-weight: 400;
+  --cds-code-02-line-height: 1.43;
+  --cds-code-02-letter-spacing: 0.32px;
+  --cds-heading-01-font-size: 0.875rem;
+  --cds-heading-01-font-weight: 600;
+  --cds-heading-01-line-height: 1.29;
+  --cds-heading-01-letter-spacing: 0.16px;
+  --cds-productive-heading-01-font-size: 0.875rem;
+  --cds-productive-heading-01-font-weight: 600;
+  --cds-productive-heading-01-line-height: 1.29;
+  --cds-productive-heading-01-letter-spacing: 0.16px;
+  --cds-heading-02-font-size: 1rem;
+  --cds-heading-02-font-weight: 600;
+  --cds-heading-02-line-height: 1.375;
+  --cds-heading-02-letter-spacing: 0;
+  --cds-productive-heading-02-font-size: 1rem;
+  --cds-productive-heading-02-font-weight: 600;
+  --cds-productive-heading-02-line-height: 1.375;
+  --cds-productive-heading-02-letter-spacing: 0;
+  --cds-productive-heading-03-font-size: 1.25rem;
+  --cds-productive-heading-03-font-weight: 400;
+  --cds-productive-heading-03-line-height: 1.4;
+  --cds-productive-heading-03-letter-spacing: 0;
+  --cds-productive-heading-04-font-size: 1.75rem;
+  --cds-productive-heading-04-font-weight: 400;
+  --cds-productive-heading-04-line-height: 1.29;
+  --cds-productive-heading-04-letter-spacing: 0;
+  --cds-productive-heading-05-font-size: 2rem;
+  --cds-productive-heading-05-font-weight: 400;
+  --cds-productive-heading-05-line-height: 1.25;
+  --cds-productive-heading-05-letter-spacing: 0;
+  --cds-productive-heading-06-font-size: 2.625rem;
+  --cds-productive-heading-06-font-weight: 300;
+  --cds-productive-heading-06-line-height: 1.199;
+  --cds-productive-heading-06-letter-spacing: 0;
+  --cds-productive-heading-07-font-size: 3.375rem;
+  --cds-productive-heading-07-font-weight: 300;
+  --cds-productive-heading-07-line-height: 1.19;
+  --cds-productive-heading-07-letter-spacing: 0;
+  --cds-expressive-heading-01-font-size: 0.875rem;
+  --cds-expressive-heading-01-font-weight: 600;
+  --cds-expressive-heading-01-line-height: 1.25;
+  --cds-expressive-heading-01-letter-spacing: 0.16px;
+  --cds-expressive-heading-02-font-size: 1rem;
+  --cds-expressive-heading-02-font-weight: 600;
+  --cds-expressive-heading-02-line-height: 1.5;
+  --cds-expressive-heading-02-letter-spacing: 0;
+  --cds-expressive-heading-03-font-size: 1.25rem;
+  --cds-expressive-heading-03-font-weight: 400;
+  --cds-expressive-heading-03-line-height: 1.4;
+  --cds-expressive-heading-03-letter-spacing: 0;
+  --cds-expressive-heading-04-font-size: 1.75rem;
+  --cds-expressive-heading-04-font-weight: 400;
+  --cds-expressive-heading-04-line-height: 1.29;
+  --cds-expressive-heading-04-letter-spacing: 0;
+  --cds-expressive-heading-05-font-size: 2rem;
+  --cds-expressive-heading-05-font-weight: 400;
+  --cds-expressive-heading-05-line-height: 1.25;
+  --cds-expressive-heading-05-letter-spacing: 0;
+  --cds-expressive-heading-06-font-size: 2rem;
+  --cds-expressive-heading-06-font-weight: 600;
+  --cds-expressive-heading-06-line-height: 1.25;
+  --cds-expressive-heading-06-letter-spacing: 0;
+  --cds-expressive-paragraph-01-font-size: 1.5rem;
+  --cds-expressive-paragraph-01-font-weight: 300;
+  --cds-expressive-paragraph-01-line-height: 1.334;
+  --cds-expressive-paragraph-01-letter-spacing: 0;
+  --cds-quotation-01-font-size: 1.25rem;
+  --cds-quotation-01-font-weight: 400;
+  --cds-quotation-01-line-height: 1.3;
+  --cds-quotation-01-letter-spacing: 0;
+  --cds-quotation-02-font-size: 2rem;
+  --cds-quotation-02-font-weight: 300;
+  --cds-quotation-02-line-height: 1.25;
+  --cds-quotation-02-letter-spacing: 0;
+  --cds-display-01-font-size: 2.625rem;
+  --cds-display-01-font-weight: 300;
+  --cds-display-01-line-height: 1.19;
+  --cds-display-01-letter-spacing: 0;
+  --cds-display-02-font-size: 2.625rem;
+  --cds-display-02-font-weight: 600;
+  --cds-display-02-line-height: 1.19;
+  --cds-display-02-letter-spacing: 0;
+  --cds-display-03-font-size: 2.625rem;
+  --cds-display-03-font-weight: 300;
+  --cds-display-03-line-height: 1.19;
+  --cds-display-03-letter-spacing: 0;
+  --cds-display-04-font-size: 2.625rem;
+  --cds-display-04-font-weight: 600;
+  --cds-display-04-line-height: 1.19;
+  --cds-display-04-letter-spacing: 0;
+  --cds-spacing-01: 0.125rem;
+  --cds-spacing-02: 0.25rem;
+  --cds-spacing-03: 0.5rem;
+  --cds-spacing-04: 0.75rem;
+  --cds-spacing-05: 1rem;
+  --cds-spacing-06: 1.5rem;
+  --cds-spacing-07: 2rem;
+  --cds-spacing-08: 2.5rem;
+  --cds-spacing-09: 3rem;
+  --cds-spacing-10: 4rem;
+  --cds-spacing-11: 5rem;
+  --cds-spacing-12: 6rem;
+  --cds-fluid-spacing-01: 0;
+  --cds-fluid-spacing-02: 2vw;
+  --cds-fluid-spacing-03: 5vw;
+  --cds-fluid-spacing-04: 10vw;
+  --cds-layout-01: 1rem;
+  --cds-layout-02: 1.5rem;
+  --cds-layout-03: 2rem;
+  --cds-layout-04: 3rem;
+  --cds-layout-05: 4rem;
+  --cds-layout-06: 6rem;
+  --cds-layout-07: 10rem;
+  --cds-container-01: 1.5rem;
+  --cds-container-02: 2rem;
+  --cds-container-03: 2.5rem;
+  --cds-container-04: 3rem;
+  --cds-container-05: 4rem;
+  --cds-icon-size-01: 1rem;
+  --cds-icon-size-02: 1.25rem;
+}
+
+.security--theme--g100 {
+  --cds-interactive-01: #0f62fe;
+  --cds-interactive-02: #6f6f6f;
+  --cds-interactive-03: #ffffff;
+  --cds-interactive-04: #4589ff;
+  --cds-ui-background: #161616;
+  --cds-ui-01: #262626;
+  --cds-ui-02: #393939;
+  --cds-ui-03: #393939;
+  --cds-ui-04: #6f6f6f;
+  --cds-ui-05: #f4f4f4;
+  --cds-text-01: #f4f4f4;
+  --cds-text-02: #c6c6c6;
+  --cds-text-03: #6f6f6f;
+  --cds-text-04: #ffffff;
+  --cds-text-05: #8d8d8d;
+  --cds-text-error: #ff8389;
+  --cds-icon-01: #f4f4f4;
+  --cds-icon-02: #c6c6c6;
+  --cds-icon-03: #ffffff;
+  --cds-link-01: #78a9ff;
+  --cds-inverse-link: #0f62fe;
+  --cds-field-01: #262626;
+  --cds-field-02: #393939;
+  --cds-inverse-01: #161616;
+  --cds-inverse-02: #f4f4f4;
+  --cds-support-01: #fa4d56;
+  --cds-support-02: #42be65;
+  --cds-support-03: #f1c21b;
+  --cds-support-04: #4589ff;
+  --cds-inverse-support-01: #da1e28;
+  --cds-inverse-support-02: #24a148;
+  --cds-inverse-support-03: #f1c21b;
+  --cds-inverse-support-04: #0f62fe;
+  --cds-overlay-01: rgba(22, 22, 22, 0.7);
+  --cds-danger-01: #da1e28;
+  --cds-danger-02: #fa4d56;
+  --cds-focus: #ffffff;
+  --cds-inverse-focus-ui: #0f62fe;
+  --cds-hover-primary: #0353e9;
+  --cds-active-primary: #002d9c;
+  --cds-hover-primary-text: #a6c8ff;
+  --cds-hover-secondary: #606060;
+  --cds-active-secondary: #393939;
+  --cds-hover-tertiary: #f4f4f4;
+  --cds-active-tertiary: #c6c6c6;
+  --cds-hover-ui: #353535;
+  --cds-hover-light-ui: #4c4c4c;
+  --cds-hover-selected-ui: #4c4c4c;
+  --cds-active-ui: #525252;
+  --cds-active-light-ui: #6f6f6f;
+  --cds-selected-ui: #393939;
+  --cds-selected-light-ui: #525252;
+  --cds-inverse-hover-ui: #e5e5e5;
+  --cds-hover-danger: #b81921;
+  --cds-active-danger: #750e13;
+  --cds-hover-row: #353535;
+  --cds-visited-link: #be95ff;
+  --cds-disabled-01: #262626;
+  --cds-disabled-02: #525252;
+  --cds-disabled-03: #8d8d8d;
+  --cds-highlight: #002d9c;
+  --cds-decorative-01: #525252;
+  --cds-button-separator: #161616;
+  --cds-skeleton-01: #353535;
+  --cds-skeleton-02: #393939;
+  --cds-brand-01: #0f62fe;
+  --cds-brand-02: #6f6f6f;
+  --cds-brand-03: #ffffff;
+  --cds-active-01: #525252;
+  --cds-hover-field: #353535;
+  --cds-danger: #da1e28;
+  --cds-caption-01-font-size: 0.75rem;
+  --cds-caption-01-font-weight: 400;
+  --cds-caption-01-line-height: 1.34;
+  --cds-caption-01-letter-spacing: 0.32px;
+  --cds-label-01-font-size: 0.75rem;
+  --cds-label-01-font-weight: 400;
+  --cds-label-01-line-height: 1.34;
+  --cds-label-01-letter-spacing: 0.32px;
+  --cds-helper-text-01-font-size: 0.75rem;
+  --cds-helper-text-01-line-height: 1.34;
+  --cds-helper-text-01-letter-spacing: 0.32px;
+  --cds-body-short-01-font-size: 0.875rem;
+  --cds-body-short-01-font-weight: 400;
+  --cds-body-short-01-line-height: 1.29;
+  --cds-body-short-01-letter-spacing: 0.16px;
+  --cds-body-long-01-font-size: 0.875rem;
+  --cds-body-long-01-font-weight: 400;
+  --cds-body-long-01-line-height: 1.43;
+  --cds-body-long-01-letter-spacing: 0.16px;
+  --cds-body-short-02-font-size: 1rem;
+  --cds-body-short-02-font-weight: 400;
+  --cds-body-short-02-line-height: 1.375;
+  --cds-body-short-02-letter-spacing: 0;
+  --cds-body-long-02-font-size: 1rem;
+  --cds-body-long-02-font-weight: 400;
+  --cds-body-long-02-line-height: 1.5;
+  --cds-body-long-02-letter-spacing: 0;
+  --cds-code-01-font-family: \\"IBM Plex Mono\\", \\"Menlo\\", \\"DejaVu Sans Mono\\", \\"Bitstream Vera Sans Mono\\", Courier, monospace;
+  --cds-code-01-font-size: 0.75rem;
+  --cds-code-01-font-weight: 400;
+  --cds-code-01-line-height: 1.34;
+  --cds-code-01-letter-spacing: 0.32px;
+  --cds-code-02-font-family: \\"IBM Plex Mono\\", \\"Menlo\\", \\"DejaVu Sans Mono\\", \\"Bitstream Vera Sans Mono\\", Courier, monospace;
+  --cds-code-02-font-size: 0.875rem;
+  --cds-code-02-font-weight: 400;
+  --cds-code-02-line-height: 1.43;
+  --cds-code-02-letter-spacing: 0.32px;
+  --cds-heading-01-font-size: 0.875rem;
+  --cds-heading-01-font-weight: 600;
+  --cds-heading-01-line-height: 1.29;
+  --cds-heading-01-letter-spacing: 0.16px;
+  --cds-productive-heading-01-font-size: 0.875rem;
+  --cds-productive-heading-01-font-weight: 600;
+  --cds-productive-heading-01-line-height: 1.29;
+  --cds-productive-heading-01-letter-spacing: 0.16px;
+  --cds-heading-02-font-size: 1rem;
+  --cds-heading-02-font-weight: 600;
+  --cds-heading-02-line-height: 1.375;
+  --cds-heading-02-letter-spacing: 0;
+  --cds-productive-heading-02-font-size: 1rem;
+  --cds-productive-heading-02-font-weight: 600;
+  --cds-productive-heading-02-line-height: 1.375;
+  --cds-productive-heading-02-letter-spacing: 0;
+  --cds-productive-heading-03-font-size: 1.25rem;
+  --cds-productive-heading-03-font-weight: 400;
+  --cds-productive-heading-03-line-height: 1.4;
+  --cds-productive-heading-03-letter-spacing: 0;
+  --cds-productive-heading-04-font-size: 1.75rem;
+  --cds-productive-heading-04-font-weight: 400;
+  --cds-productive-heading-04-line-height: 1.29;
+  --cds-productive-heading-04-letter-spacing: 0;
+  --cds-productive-heading-05-font-size: 2rem;
+  --cds-productive-heading-05-font-weight: 400;
+  --cds-productive-heading-05-line-height: 1.25;
+  --cds-productive-heading-05-letter-spacing: 0;
+  --cds-productive-heading-06-font-size: 2.625rem;
+  --cds-productive-heading-06-font-weight: 300;
+  --cds-productive-heading-06-line-height: 1.199;
+  --cds-productive-heading-06-letter-spacing: 0;
+  --cds-productive-heading-07-font-size: 3.375rem;
+  --cds-productive-heading-07-font-weight: 300;
+  --cds-productive-heading-07-line-height: 1.19;
+  --cds-productive-heading-07-letter-spacing: 0;
+  --cds-expressive-heading-01-font-size: 0.875rem;
+  --cds-expressive-heading-01-font-weight: 600;
+  --cds-expressive-heading-01-line-height: 1.25;
+  --cds-expressive-heading-01-letter-spacing: 0.16px;
+  --cds-expressive-heading-02-font-size: 1rem;
+  --cds-expressive-heading-02-font-weight: 600;
+  --cds-expressive-heading-02-line-height: 1.5;
+  --cds-expressive-heading-02-letter-spacing: 0;
+  --cds-expressive-heading-03-font-size: 1.25rem;
+  --cds-expressive-heading-03-font-weight: 400;
+  --cds-expressive-heading-03-line-height: 1.4;
+  --cds-expressive-heading-03-letter-spacing: 0;
+  --cds-expressive-heading-04-font-size: 1.75rem;
+  --cds-expressive-heading-04-font-weight: 400;
+  --cds-expressive-heading-04-line-height: 1.29;
+  --cds-expressive-heading-04-letter-spacing: 0;
+  --cds-expressive-heading-05-font-size: 2rem;
+  --cds-expressive-heading-05-font-weight: 400;
+  --cds-expressive-heading-05-line-height: 1.25;
+  --cds-expressive-heading-05-letter-spacing: 0;
+  --cds-expressive-heading-06-font-size: 2rem;
+  --cds-expressive-heading-06-font-weight: 600;
+  --cds-expressive-heading-06-line-height: 1.25;
+  --cds-expressive-heading-06-letter-spacing: 0;
+  --cds-expressive-paragraph-01-font-size: 1.5rem;
+  --cds-expressive-paragraph-01-font-weight: 300;
+  --cds-expressive-paragraph-01-line-height: 1.334;
+  --cds-expressive-paragraph-01-letter-spacing: 0;
+  --cds-quotation-01-font-size: 1.25rem;
+  --cds-quotation-01-font-weight: 400;
+  --cds-quotation-01-line-height: 1.3;
+  --cds-quotation-01-letter-spacing: 0;
+  --cds-quotation-02-font-size: 2rem;
+  --cds-quotation-02-font-weight: 300;
+  --cds-quotation-02-line-height: 1.25;
+  --cds-quotation-02-letter-spacing: 0;
+  --cds-display-01-font-size: 2.625rem;
+  --cds-display-01-font-weight: 300;
+  --cds-display-01-line-height: 1.19;
+  --cds-display-01-letter-spacing: 0;
+  --cds-display-02-font-size: 2.625rem;
+  --cds-display-02-font-weight: 600;
+  --cds-display-02-line-height: 1.19;
+  --cds-display-02-letter-spacing: 0;
+  --cds-display-03-font-size: 2.625rem;
+  --cds-display-03-font-weight: 300;
+  --cds-display-03-line-height: 1.19;
+  --cds-display-03-letter-spacing: 0;
+  --cds-display-04-font-size: 2.625rem;
+  --cds-display-04-font-weight: 600;
+  --cds-display-04-line-height: 1.19;
+  --cds-display-04-letter-spacing: 0;
+  --cds-spacing-01: 0.125rem;
+  --cds-spacing-02: 0.25rem;
+  --cds-spacing-03: 0.5rem;
+  --cds-spacing-04: 0.75rem;
+  --cds-spacing-05: 1rem;
+  --cds-spacing-06: 1.5rem;
+  --cds-spacing-07: 2rem;
+  --cds-spacing-08: 2.5rem;
+  --cds-spacing-09: 3rem;
+  --cds-spacing-10: 4rem;
+  --cds-spacing-11: 5rem;
+  --cds-spacing-12: 6rem;
+  --cds-fluid-spacing-01: 0;
+  --cds-fluid-spacing-02: 2vw;
+  --cds-fluid-spacing-03: 5vw;
+  --cds-fluid-spacing-04: 10vw;
+  --cds-layout-01: 1rem;
+  --cds-layout-02: 1.5rem;
+  --cds-layout-03: 2rem;
+  --cds-layout-04: 3rem;
+  --cds-layout-05: 4rem;
+  --cds-layout-06: 6rem;
+  --cds-layout-07: 10rem;
+  --cds-container-01: 1.5rem;
+  --cds-container-02: 2rem;
+  --cds-container-03: 2.5rem;
+  --cds-container-04: 3rem;
+  --cds-container-05: 4rem;
+  --cds-icon-size-01: 1rem;
+  --cds-icon-size-02: 1.25rem;
+}
+
+h1 {
+  font-size: var(--cds-productive-heading-06-font-size, 2.625rem);
+  font-weight: var(--cds-productive-heading-06-font-weight, 300);
+  line-height: var(--cds-productive-heading-06-line-height, 1.199);
+  letter-spacing: var(--cds-productive-heading-06-letter-spacing, 0);
 }
 
 h2 {
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 1.25;
-  letter-spacing: 0;
+  font-size: var(--cds-productive-heading-05-font-size, 2rem);
+  font-weight: var(--cds-productive-heading-05-font-weight, 400);
+  line-height: var(--cds-productive-heading-05-line-height, 1.25);
+  letter-spacing: var(--cds-productive-heading-05-letter-spacing, 0);
 }
 
 h3 {
-  font-size: 1.75rem;
-  font-weight: 400;
-  line-height: 1.29;
-  letter-spacing: 0;
+  font-size: var(--cds-productive-heading-04-font-size, 1.75rem);
+  font-weight: var(--cds-productive-heading-04-font-weight, 400);
+  line-height: var(--cds-productive-heading-04-line-height, 1.29);
+  letter-spacing: var(--cds-productive-heading-04-letter-spacing, 0);
 }
 
 h4 {
-  font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 1.4;
-  letter-spacing: 0;
+  font-size: var(--cds-productive-heading-03-font-size, 1.25rem);
+  font-weight: var(--cds-productive-heading-03-font-weight, 400);
+  line-height: var(--cds-productive-heading-03-line-height, 1.4);
+  letter-spacing: var(--cds-productive-heading-03-letter-spacing, 0);
 }
 
 h5 {
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.375;
-  letter-spacing: 0;
+  font-size: var(--cds-productive-heading-02-font-size, 1rem);
+  font-weight: var(--cds-productive-heading-02-font-weight, 600);
+  line-height: var(--cds-productive-heading-02-line-height, 1.375);
+  letter-spacing: var(--cds-productive-heading-02-letter-spacing, 0);
 }
 
 h6 {
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1.29;
-  letter-spacing: 0.16px;
+  font-size: var(--cds-productive-heading-01-font-size, 0.875rem);
+  font-weight: var(--cds-productive-heading-01-font-weight, 600);
+  line-height: var(--cds-productive-heading-01-line-height, 1.29);
+  letter-spacing: var(--cds-productive-heading-01-letter-spacing, 0.16px);
 }
 
 p {
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0;
+  font-size: var(--cds-body-long-02-font-size, 1rem);
+  font-weight: var(--cds-body-long-02-font-weight, 400);
+  line-height: var(--cds-body-long-02-line-height, 1.5);
+  letter-spacing: var(--cds-body-long-02-letter-spacing, 0);
 }
 
 a {
-  color: #0f62fe;
+  color: #78a9ff;
 }
 
 em {
@@ -1292,611 +1755,6 @@ body {
   direction: rtl;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-
-.security--input__background__color--light .bx--date-picker__input, .security--input__background__color--light .bx--dropdown,
-.security--input__background__color--light .bx--number input[type=\\"number\\"], .security--input__background__color--light .bx--search-input, .security--input__background__color--light .bx--select-input, .security--input__background__color--light .bx--text-area, .security--input__background__color--light .bx--text-input, .security--input__background__color--light .bx--list-box, .security--input__background__color--light .bx--list-box__menu, .security--input__background__color--light .security--button--icon:focus, .security--input__background__color--light .security--button--icon:hover, .security--card .bx--number .security--input__background__color--light input[type=\\"number\\"], .security--tearsheet--small .bx--number .security--input__background__color--light input[type=\\"number\\"], .security--tearsheet .bx--number .security--input__background__color--light input[type=\\"number\\"] {
-  background-color: var(--cds-ui-02, #393939);
-}
-
-.security--theme--cg10 {
-  --cds-interactive-01: #0f62fe;
-  --cds-interactive-02: #343a3f;
-  --cds-interactive-03: #0f62fe;
-  --cds-interactive-04: #0f62fe;
-  --cds-ui-background: #f2f4f8;
-  --cds-ui-01: #ffffff;
-  --cds-ui-02: #f2f4f8;
-  --cds-ui-03: #dde1e6;
-  --cds-ui-04: #878d96;
-  --cds-ui-05: #121619;
-  --cds-text-01: #121619;
-  --cds-text-02: #4d5358;
-  --cds-text-03: #a2a9b0;
-  --cds-text-04: #ffffff;
-  --cds-text-05: #697077;
-  --cds-text-error: #da1e28;
-  --cds-icon-01: #121619;
-  --cds-icon-02: #4d5358;
-  --cds-icon-03: #ffffff;
-  --cds-link-01: #0f62fe;
-  --cds-inverse-link: #78a9ff;
-  --cds-field-01: #ffffff;
-  --cds-field-02: #f2f4f8;
-  --cds-inverse-01: #ffffff;
-  --cds-inverse-02: #343a3f;
-  --cds-support-01: #da1e28;
-  --cds-support-02: #24a148;
-  --cds-support-03: #f1c21b;
-  --cds-support-04: #0043ce;
-  --cds-inverse-support-01: #fa4d56;
-  --cds-inverse-support-02: #42be65;
-  --cds-inverse-support-03: #f1c21b;
-  --cds-inverse-support-04: #4589ff;
-  --cds-overlay-01: rgba(22, 22, 22, 0.5);
-  --cds-danger-01: #da1e28;
-  --cds-danger-02: #da1e28;
-  --cds-focus: #0f62fe;
-  --cds-inverse-focus-ui: #ffffff;
-  --cds-hover-primary: #0353e9;
-  --cds-active-primary: #002d9c;
-  --cds-hover-primary-text: #0043ce;
-  --cds-hover-secondary: #464c51;
-  --cds-active-secondary: #697077;
-  --cds-hover-tertiary: #0353e9;
-  --cds-active-tertiary: #002d9c;
-  --cds-hover-ui: #e0e4ea;
-  --cds-hover-light-ui: #e5e5e5;
-  --cds-hover-selected-ui: #c4c9d1;
-  --cds-active-ui: #c1c7cd;
-  --cds-active-light-ui: #c1c7cd;
-  --cds-selected-ui: #dde1e6;
-  --cds-selected-light-ui: #dde1e6;
-  --cds-inverse-hover-ui: #464c51;
-  --cds-hover-danger: #b81921;
-  --cds-active-danger: #750e13;
-  --cds-hover-row: #e0e4ea;
-  --cds-visited-link: #8a3ffc;
-  --cds-disabled-01: #ffffff;
-  --cds-disabled-02: #c1c7cd;
-  --cds-disabled-03: #878d96;
-  --cds-highlight: #edf5ff;
-  --cds-decorative-01: #dde1e6;
-  --cds-button-separator: #dde1e6;
-  --cds-skeleton-01: #e0e4ea;
-  --cds-skeleton-02: #c1c7cd;
-  --cds-brand-01: #0f62fe;
-  --cds-brand-02: #343a3f;
-  --cds-brand-03: #0f62fe;
-  --cds-active-01: #c1c7cd;
-  --cds-hover-field: #e0e4ea;
-  --cds-danger: #da1e28;
-  --cds-caption-01-font-size: 0.75rem;
-  --cds-caption-01-font-weight: 400;
-  --cds-caption-01-line-height: 1.34;
-  --cds-caption-01-letter-spacing: 0.32px;
-  --cds-label-01-font-size: 0.75rem;
-  --cds-label-01-font-weight: 400;
-  --cds-label-01-line-height: 1.34;
-  --cds-label-01-letter-spacing: 0.32px;
-  --cds-helper-text-01-font-size: 0.75rem;
-  --cds-helper-text-01-line-height: 1.34;
-  --cds-helper-text-01-letter-spacing: 0.32px;
-  --cds-body-short-01-font-size: 0.875rem;
-  --cds-body-short-01-font-weight: 400;
-  --cds-body-short-01-line-height: 1.29;
-  --cds-body-short-01-letter-spacing: 0.16px;
-  --cds-body-long-01-font-size: 0.875rem;
-  --cds-body-long-01-font-weight: 400;
-  --cds-body-long-01-line-height: 1.43;
-  --cds-body-long-01-letter-spacing: 0.16px;
-  --cds-body-short-02-font-size: 1rem;
-  --cds-body-short-02-font-weight: 400;
-  --cds-body-short-02-line-height: 1.375;
-  --cds-body-short-02-letter-spacing: 0;
-  --cds-body-long-02-font-size: 1rem;
-  --cds-body-long-02-font-weight: 400;
-  --cds-body-long-02-line-height: 1.5;
-  --cds-body-long-02-letter-spacing: 0;
-  --cds-code-01-font-family: \\"IBM Plex Mono\\", \\"Menlo\\", \\"DejaVu Sans Mono\\", \\"Bitstream Vera Sans Mono\\", Courier, monospace;
-  --cds-code-01-font-size: 0.75rem;
-  --cds-code-01-font-weight: 400;
-  --cds-code-01-line-height: 1.34;
-  --cds-code-01-letter-spacing: 0.32px;
-  --cds-code-02-font-family: \\"IBM Plex Mono\\", \\"Menlo\\", \\"DejaVu Sans Mono\\", \\"Bitstream Vera Sans Mono\\", Courier, monospace;
-  --cds-code-02-font-size: 0.875rem;
-  --cds-code-02-font-weight: 400;
-  --cds-code-02-line-height: 1.43;
-  --cds-code-02-letter-spacing: 0.32px;
-  --cds-heading-01-font-size: 0.875rem;
-  --cds-heading-01-font-weight: 600;
-  --cds-heading-01-line-height: 1.29;
-  --cds-heading-01-letter-spacing: 0.16px;
-  --cds-productive-heading-01-font-size: 0.875rem;
-  --cds-productive-heading-01-font-weight: 600;
-  --cds-productive-heading-01-line-height: 1.29;
-  --cds-productive-heading-01-letter-spacing: 0.16px;
-  --cds-heading-02-font-size: 1rem;
-  --cds-heading-02-font-weight: 600;
-  --cds-heading-02-line-height: 1.375;
-  --cds-heading-02-letter-spacing: 0;
-  --cds-productive-heading-02-font-size: 1rem;
-  --cds-productive-heading-02-font-weight: 600;
-  --cds-productive-heading-02-line-height: 1.375;
-  --cds-productive-heading-02-letter-spacing: 0;
-  --cds-productive-heading-03-font-size: 1.25rem;
-  --cds-productive-heading-03-font-weight: 400;
-  --cds-productive-heading-03-line-height: 1.4;
-  --cds-productive-heading-03-letter-spacing: 0;
-  --cds-productive-heading-04-font-size: 1.75rem;
-  --cds-productive-heading-04-font-weight: 400;
-  --cds-productive-heading-04-line-height: 1.29;
-  --cds-productive-heading-04-letter-spacing: 0;
-  --cds-productive-heading-05-font-size: 2rem;
-  --cds-productive-heading-05-font-weight: 400;
-  --cds-productive-heading-05-line-height: 1.25;
-  --cds-productive-heading-05-letter-spacing: 0;
-  --cds-productive-heading-06-font-size: 2.625rem;
-  --cds-productive-heading-06-font-weight: 300;
-  --cds-productive-heading-06-line-height: 1.199;
-  --cds-productive-heading-06-letter-spacing: 0;
-  --cds-productive-heading-07-font-size: 3.375rem;
-  --cds-productive-heading-07-font-weight: 300;
-  --cds-productive-heading-07-line-height: 1.19;
-  --cds-productive-heading-07-letter-spacing: 0;
-  --cds-expressive-heading-01-font-size: 0.875rem;
-  --cds-expressive-heading-01-font-weight: 600;
-  --cds-expressive-heading-01-line-height: 1.25;
-  --cds-expressive-heading-01-letter-spacing: 0.16px;
-  --cds-expressive-heading-02-font-size: 1rem;
-  --cds-expressive-heading-02-font-weight: 600;
-  --cds-expressive-heading-02-line-height: 1.5;
-  --cds-expressive-heading-02-letter-spacing: 0;
-  --cds-expressive-heading-03-font-size: 1.25rem;
-  --cds-expressive-heading-03-font-weight: 400;
-  --cds-expressive-heading-03-line-height: 1.4;
-  --cds-expressive-heading-03-letter-spacing: 0;
-  --cds-expressive-heading-04-font-size: 1.75rem;
-  --cds-expressive-heading-04-font-weight: 400;
-  --cds-expressive-heading-04-line-height: 1.29;
-  --cds-expressive-heading-04-letter-spacing: 0;
-  --cds-expressive-heading-05-font-size: 2rem;
-  --cds-expressive-heading-05-font-weight: 400;
-  --cds-expressive-heading-05-line-height: 1.25;
-  --cds-expressive-heading-05-letter-spacing: 0;
-  --cds-expressive-heading-06-font-size: 2rem;
-  --cds-expressive-heading-06-font-weight: 600;
-  --cds-expressive-heading-06-line-height: 1.25;
-  --cds-expressive-heading-06-letter-spacing: 0;
-  --cds-expressive-paragraph-01-font-size: 1.5rem;
-  --cds-expressive-paragraph-01-font-weight: 300;
-  --cds-expressive-paragraph-01-line-height: 1.334;
-  --cds-expressive-paragraph-01-letter-spacing: 0;
-  --cds-quotation-01-font-size: 1.25rem;
-  --cds-quotation-01-font-weight: 400;
-  --cds-quotation-01-line-height: 1.3;
-  --cds-quotation-01-letter-spacing: 0;
-  --cds-quotation-02-font-size: 2rem;
-  --cds-quotation-02-font-weight: 300;
-  --cds-quotation-02-line-height: 1.25;
-  --cds-quotation-02-letter-spacing: 0;
-  --cds-display-01-font-size: 2.625rem;
-  --cds-display-01-font-weight: 300;
-  --cds-display-01-line-height: 1.19;
-  --cds-display-01-letter-spacing: 0;
-  --cds-display-02-font-size: 2.625rem;
-  --cds-display-02-font-weight: 600;
-  --cds-display-02-line-height: 1.19;
-  --cds-display-02-letter-spacing: 0;
-  --cds-display-03-font-size: 2.625rem;
-  --cds-display-03-font-weight: 300;
-  --cds-display-03-line-height: 1.19;
-  --cds-display-03-letter-spacing: 0;
-  --cds-display-04-font-size: 2.625rem;
-  --cds-display-04-font-weight: 600;
-  --cds-display-04-line-height: 1.19;
-  --cds-display-04-letter-spacing: 0;
-  --cds-spacing-01: 0.125rem;
-  --cds-spacing-02: 0.25rem;
-  --cds-spacing-03: 0.5rem;
-  --cds-spacing-04: 0.75rem;
-  --cds-spacing-05: 1rem;
-  --cds-spacing-06: 1.5rem;
-  --cds-spacing-07: 2rem;
-  --cds-spacing-08: 2.5rem;
-  --cds-spacing-09: 3rem;
-  --cds-spacing-10: 4rem;
-  --cds-spacing-11: 5rem;
-  --cds-spacing-12: 6rem;
-  --cds-fluid-spacing-01: 0;
-  --cds-fluid-spacing-02: 2vw;
-  --cds-fluid-spacing-03: 5vw;
-  --cds-fluid-spacing-04: 10vw;
-  --cds-layout-01: 1rem;
-  --cds-layout-02: 1.5rem;
-  --cds-layout-03: 2rem;
-  --cds-layout-04: 3rem;
-  --cds-layout-05: 4rem;
-  --cds-layout-06: 6rem;
-  --cds-layout-07: 10rem;
-  --cds-container-01: 1.5rem;
-  --cds-container-02: 2rem;
-  --cds-container-03: 2.5rem;
-  --cds-container-04: 3rem;
-  --cds-container-05: 4rem;
-  --cds-icon-size-01: 1rem;
-  --cds-icon-size-02: 1.25rem;
-  --interactive-01: var(--cds-interactive-01, #0f62fe);
-  --interactive-02: var(--cds-interactive-02, #343a3f);
-  --interactive-03: var(--cds-interactive-03, #0f62fe);
-  --interactive-04: var(--cds-interactive-04, #0f62fe);
-  --ui-background: var(--cds-ui-background, #f2f4f8);
-  --ui-01: var(--cds-ui-01, #ffffff);
-  --ui-02: var(--cds-ui-02, #f2f4f8);
-  --ui-03: var(--cds-ui-03, #dde1e6);
-  --ui-04: var(--cds-ui-04, #878d96);
-  --ui-05: var(--cds-ui-05, #121619);
-  --text-01: var(--cds-text-01, #121619);
-  --text-02: var(--cds-text-02, #4d5358);
-  --text-03: var(--cds-text-03, #a2a9b0);
-  --text-04: var(--cds-text-04, #ffffff);
-  --text-05: var(--cds-text-05, #697077);
-  --text-error: var(--cds-text-error, #da1e28);
-  --icon-01: var(--cds-icon-01, #121619);
-  --icon-02: var(--cds-icon-02, #4d5358);
-  --icon-03: var(--cds-icon-03, #ffffff);
-  --link-01: var(--cds-link-01, #0f62fe);
-  --inverse-link: var(--cds-inverse-link, #78a9ff);
-  --field-01: var(--cds-field-01, #ffffff);
-  --field-02: var(--cds-field-02, #f2f4f8);
-  --inverse-01: var(--cds-inverse-01, #ffffff);
-  --inverse-02: var(--cds-inverse-02, #343a3f);
-  --support-01: var(--cds-support-01, #da1e28);
-  --support-02: var(--cds-support-02, #24a148);
-  --support-03: var(--cds-support-03, #f1c21b);
-  --support-04: var(--cds-support-04, #0043ce);
-  --inverse-support-01: var(--cds-inverse-support-01, #fa4d56);
-  --inverse-support-02: var(--cds-inverse-support-02, #42be65);
-  --inverse-support-03: var(--cds-inverse-support-03, #f1c21b);
-  --inverse-support-04: var(--cds-inverse-support-04, #4589ff);
-  --overlay-01: var(--cds-overlay-01, rgba(22, 22, 22, 0.5));
-  --danger-01: var(--cds-danger-01, #da1e28);
-  --danger-02: var(--cds-danger-02, #da1e28);
-  --focus: var(--cds-focus, #0f62fe);
-  --inverse-focus-ui: var(--cds-inverse-focus-ui, #ffffff);
-  --hover-primary: var(--cds-hover-primary, #0353e9);
-  --active-primary: var(--cds-active-primary, #002d9c);
-  --hover-primary-text: var(--cds-hover-primary-text, #0043ce);
-  --hover-secondary: var(--cds-hover-secondary, #464c51);
-  --active-secondary: var(--cds-active-secondary, #697077);
-  --hover-tertiary: var(--cds-hover-tertiary, #0353e9);
-  --active-tertiary: var(--cds-active-tertiary, #002d9c);
-  --hover-ui: var(--cds-hover-ui, #e0e4ea);
-  --hover-light-ui: var(--cds-hover-light-ui, #e5e5e5);
-  --active-ui: var(--cds-active-ui, #c1c7cd);
-  --active-light-ui: var(--cds-active-light-ui, #c1c7cd);
-  --selected-ui: var(--cds-selected-ui, #dde1e6);
-  --selected-light-ui: var(--cds-selected-light-ui, #dde1e6);
-  --inverse-hover-ui: var(--cds-inverse-hover-ui, #464c51);
-  --hover-selected-ui: var(--cds-hover-selected-ui, #c4c9d1);
-  --hover-danger: var(--cds-hover-danger, #b81921);
-  --active-danger: var(--cds-active-danger, #750e13);
-  --hover-row: var(--cds-hover-row, #e0e4ea);
-  --visited-link: var(--cds-visited-link, #8a3ffc);
-  --disabled-01: var(--cds-disabled-01, #ffffff);
-  --disabled-02: var(--cds-disabled-02, #c1c7cd);
-  --disabled-03: var(--cds-disabled-03, #878d96);
-  --highlight: var(--cds-highlight, #edf5ff);
-  --decorative-01: var(--cds-decorative-01, #dde1e6);
-  --button-separator: var(--cds-button-separator, #dde1e6);
-  --skeleton-01: var(--cds-skeleton-01, #e0e4ea);
-  --skeleton-02: var(--cds-skeleton-02, #c1c7cd);
-  --brand-01: var(--cds-brand-01, #0f62fe);
-  --brand-02: var(--cds-brand-02, #343a3f);
-  --brand-03: var(--cds-brand-03, #0f62fe);
-  --active-01: var(--cds-active-01, #c1c7cd);
-  --hover-field: var(--cds-hover-field, #e0e4ea);
-  --danger: var(--cds-danger, #da1e28);
-}
-
-.security--theme--g100 {
-  --cds-interactive-01: #0f62fe;
-  --cds-interactive-02: #6f6f6f;
-  --cds-interactive-03: #ffffff;
-  --cds-interactive-04: #4589ff;
-  --cds-ui-background: #161616;
-  --cds-ui-01: #262626;
-  --cds-ui-02: #393939;
-  --cds-ui-03: #393939;
-  --cds-ui-04: #6f6f6f;
-  --cds-ui-05: #f4f4f4;
-  --cds-text-01: #f4f4f4;
-  --cds-text-02: #c6c6c6;
-  --cds-text-03: #6f6f6f;
-  --cds-text-04: #ffffff;
-  --cds-text-05: #8d8d8d;
-  --cds-text-error: #ff8389;
-  --cds-icon-01: #f4f4f4;
-  --cds-icon-02: #c6c6c6;
-  --cds-icon-03: #ffffff;
-  --cds-link-01: #78a9ff;
-  --cds-inverse-link: #0f62fe;
-  --cds-field-01: #262626;
-  --cds-field-02: #393939;
-  --cds-inverse-01: #161616;
-  --cds-inverse-02: #f4f4f4;
-  --cds-support-01: #fa4d56;
-  --cds-support-02: #42be65;
-  --cds-support-03: #f1c21b;
-  --cds-support-04: #4589ff;
-  --cds-inverse-support-01: #da1e28;
-  --cds-inverse-support-02: #24a148;
-  --cds-inverse-support-03: #f1c21b;
-  --cds-inverse-support-04: #0f62fe;
-  --cds-overlay-01: rgba(22, 22, 22, 0.7);
-  --cds-danger-01: #da1e28;
-  --cds-danger-02: #fa4d56;
-  --cds-focus: #ffffff;
-  --cds-inverse-focus-ui: #0f62fe;
-  --cds-hover-primary: #0353e9;
-  --cds-active-primary: #002d9c;
-  --cds-hover-primary-text: #a6c8ff;
-  --cds-hover-secondary: #606060;
-  --cds-active-secondary: #393939;
-  --cds-hover-tertiary: #f4f4f4;
-  --cds-active-tertiary: #c6c6c6;
-  --cds-hover-ui: #353535;
-  --cds-hover-light-ui: #4c4c4c;
-  --cds-hover-selected-ui: #4c4c4c;
-  --cds-active-ui: #525252;
-  --cds-active-light-ui: #6f6f6f;
-  --cds-selected-ui: #393939;
-  --cds-selected-light-ui: #525252;
-  --cds-inverse-hover-ui: #e5e5e5;
-  --cds-hover-danger: #b81921;
-  --cds-active-danger: #750e13;
-  --cds-hover-row: #353535;
-  --cds-visited-link: #be95ff;
-  --cds-disabled-01: #262626;
-  --cds-disabled-02: #525252;
-  --cds-disabled-03: #8d8d8d;
-  --cds-highlight: #002d9c;
-  --cds-decorative-01: #525252;
-  --cds-button-separator: #161616;
-  --cds-skeleton-01: #353535;
-  --cds-skeleton-02: #393939;
-  --cds-brand-01: #0f62fe;
-  --cds-brand-02: #6f6f6f;
-  --cds-brand-03: #ffffff;
-  --cds-active-01: #525252;
-  --cds-hover-field: #353535;
-  --cds-danger: #da1e28;
-  --cds-caption-01-font-size: 0.75rem;
-  --cds-caption-01-font-weight: 400;
-  --cds-caption-01-line-height: 1.34;
-  --cds-caption-01-letter-spacing: 0.32px;
-  --cds-label-01-font-size: 0.75rem;
-  --cds-label-01-font-weight: 400;
-  --cds-label-01-line-height: 1.34;
-  --cds-label-01-letter-spacing: 0.32px;
-  --cds-helper-text-01-font-size: 0.75rem;
-  --cds-helper-text-01-line-height: 1.34;
-  --cds-helper-text-01-letter-spacing: 0.32px;
-  --cds-body-short-01-font-size: 0.875rem;
-  --cds-body-short-01-font-weight: 400;
-  --cds-body-short-01-line-height: 1.29;
-  --cds-body-short-01-letter-spacing: 0.16px;
-  --cds-body-long-01-font-size: 0.875rem;
-  --cds-body-long-01-font-weight: 400;
-  --cds-body-long-01-line-height: 1.43;
-  --cds-body-long-01-letter-spacing: 0.16px;
-  --cds-body-short-02-font-size: 1rem;
-  --cds-body-short-02-font-weight: 400;
-  --cds-body-short-02-line-height: 1.375;
-  --cds-body-short-02-letter-spacing: 0;
-  --cds-body-long-02-font-size: 1rem;
-  --cds-body-long-02-font-weight: 400;
-  --cds-body-long-02-line-height: 1.5;
-  --cds-body-long-02-letter-spacing: 0;
-  --cds-code-01-font-family: \\"IBM Plex Mono\\", \\"Menlo\\", \\"DejaVu Sans Mono\\", \\"Bitstream Vera Sans Mono\\", Courier, monospace;
-  --cds-code-01-font-size: 0.75rem;
-  --cds-code-01-font-weight: 400;
-  --cds-code-01-line-height: 1.34;
-  --cds-code-01-letter-spacing: 0.32px;
-  --cds-code-02-font-family: \\"IBM Plex Mono\\", \\"Menlo\\", \\"DejaVu Sans Mono\\", \\"Bitstream Vera Sans Mono\\", Courier, monospace;
-  --cds-code-02-font-size: 0.875rem;
-  --cds-code-02-font-weight: 400;
-  --cds-code-02-line-height: 1.43;
-  --cds-code-02-letter-spacing: 0.32px;
-  --cds-heading-01-font-size: 0.875rem;
-  --cds-heading-01-font-weight: 600;
-  --cds-heading-01-line-height: 1.29;
-  --cds-heading-01-letter-spacing: 0.16px;
-  --cds-productive-heading-01-font-size: 0.875rem;
-  --cds-productive-heading-01-font-weight: 600;
-  --cds-productive-heading-01-line-height: 1.29;
-  --cds-productive-heading-01-letter-spacing: 0.16px;
-  --cds-heading-02-font-size: 1rem;
-  --cds-heading-02-font-weight: 600;
-  --cds-heading-02-line-height: 1.375;
-  --cds-heading-02-letter-spacing: 0;
-  --cds-productive-heading-02-font-size: 1rem;
-  --cds-productive-heading-02-font-weight: 600;
-  --cds-productive-heading-02-line-height: 1.375;
-  --cds-productive-heading-02-letter-spacing: 0;
-  --cds-productive-heading-03-font-size: 1.25rem;
-  --cds-productive-heading-03-font-weight: 400;
-  --cds-productive-heading-03-line-height: 1.4;
-  --cds-productive-heading-03-letter-spacing: 0;
-  --cds-productive-heading-04-font-size: 1.75rem;
-  --cds-productive-heading-04-font-weight: 400;
-  --cds-productive-heading-04-line-height: 1.29;
-  --cds-productive-heading-04-letter-spacing: 0;
-  --cds-productive-heading-05-font-size: 2rem;
-  --cds-productive-heading-05-font-weight: 400;
-  --cds-productive-heading-05-line-height: 1.25;
-  --cds-productive-heading-05-letter-spacing: 0;
-  --cds-productive-heading-06-font-size: 2.625rem;
-  --cds-productive-heading-06-font-weight: 300;
-  --cds-productive-heading-06-line-height: 1.199;
-  --cds-productive-heading-06-letter-spacing: 0;
-  --cds-productive-heading-07-font-size: 3.375rem;
-  --cds-productive-heading-07-font-weight: 300;
-  --cds-productive-heading-07-line-height: 1.19;
-  --cds-productive-heading-07-letter-spacing: 0;
-  --cds-expressive-heading-01-font-size: 0.875rem;
-  --cds-expressive-heading-01-font-weight: 600;
-  --cds-expressive-heading-01-line-height: 1.25;
-  --cds-expressive-heading-01-letter-spacing: 0.16px;
-  --cds-expressive-heading-02-font-size: 1rem;
-  --cds-expressive-heading-02-font-weight: 600;
-  --cds-expressive-heading-02-line-height: 1.5;
-  --cds-expressive-heading-02-letter-spacing: 0;
-  --cds-expressive-heading-03-font-size: 1.25rem;
-  --cds-expressive-heading-03-font-weight: 400;
-  --cds-expressive-heading-03-line-height: 1.4;
-  --cds-expressive-heading-03-letter-spacing: 0;
-  --cds-expressive-heading-04-font-size: 1.75rem;
-  --cds-expressive-heading-04-font-weight: 400;
-  --cds-expressive-heading-04-line-height: 1.29;
-  --cds-expressive-heading-04-letter-spacing: 0;
-  --cds-expressive-heading-05-font-size: 2rem;
-  --cds-expressive-heading-05-font-weight: 400;
-  --cds-expressive-heading-05-line-height: 1.25;
-  --cds-expressive-heading-05-letter-spacing: 0;
-  --cds-expressive-heading-06-font-size: 2rem;
-  --cds-expressive-heading-06-font-weight: 600;
-  --cds-expressive-heading-06-line-height: 1.25;
-  --cds-expressive-heading-06-letter-spacing: 0;
-  --cds-expressive-paragraph-01-font-size: 1.5rem;
-  --cds-expressive-paragraph-01-font-weight: 300;
-  --cds-expressive-paragraph-01-line-height: 1.334;
-  --cds-expressive-paragraph-01-letter-spacing: 0;
-  --cds-quotation-01-font-size: 1.25rem;
-  --cds-quotation-01-font-weight: 400;
-  --cds-quotation-01-line-height: 1.3;
-  --cds-quotation-01-letter-spacing: 0;
-  --cds-quotation-02-font-size: 2rem;
-  --cds-quotation-02-font-weight: 300;
-  --cds-quotation-02-line-height: 1.25;
-  --cds-quotation-02-letter-spacing: 0;
-  --cds-display-01-font-size: 2.625rem;
-  --cds-display-01-font-weight: 300;
-  --cds-display-01-line-height: 1.19;
-  --cds-display-01-letter-spacing: 0;
-  --cds-display-02-font-size: 2.625rem;
-  --cds-display-02-font-weight: 600;
-  --cds-display-02-line-height: 1.19;
-  --cds-display-02-letter-spacing: 0;
-  --cds-display-03-font-size: 2.625rem;
-  --cds-display-03-font-weight: 300;
-  --cds-display-03-line-height: 1.19;
-  --cds-display-03-letter-spacing: 0;
-  --cds-display-04-font-size: 2.625rem;
-  --cds-display-04-font-weight: 600;
-  --cds-display-04-line-height: 1.19;
-  --cds-display-04-letter-spacing: 0;
-  --cds-spacing-01: 0.125rem;
-  --cds-spacing-02: 0.25rem;
-  --cds-spacing-03: 0.5rem;
-  --cds-spacing-04: 0.75rem;
-  --cds-spacing-05: 1rem;
-  --cds-spacing-06: 1.5rem;
-  --cds-spacing-07: 2rem;
-  --cds-spacing-08: 2.5rem;
-  --cds-spacing-09: 3rem;
-  --cds-spacing-10: 4rem;
-  --cds-spacing-11: 5rem;
-  --cds-spacing-12: 6rem;
-  --cds-fluid-spacing-01: 0;
-  --cds-fluid-spacing-02: 2vw;
-  --cds-fluid-spacing-03: 5vw;
-  --cds-fluid-spacing-04: 10vw;
-  --cds-layout-01: 1rem;
-  --cds-layout-02: 1.5rem;
-  --cds-layout-03: 2rem;
-  --cds-layout-04: 3rem;
-  --cds-layout-05: 4rem;
-  --cds-layout-06: 6rem;
-  --cds-layout-07: 10rem;
-  --cds-container-01: 1.5rem;
-  --cds-container-02: 2rem;
-  --cds-container-03: 2.5rem;
-  --cds-container-04: 3rem;
-  --cds-container-05: 4rem;
-  --cds-icon-size-01: 1rem;
-  --cds-icon-size-02: 1.25rem;
-  --interactive-01: var(--cds-interactive-01, #0f62fe);
-  --interactive-02: var(--cds-interactive-02, #6f6f6f);
-  --interactive-03: var(--cds-interactive-03, #ffffff);
-  --interactive-04: var(--cds-interactive-04, #4589ff);
-  --ui-background: var(--cds-ui-background, #161616);
-  --ui-01: var(--cds-ui-01, #262626);
-  --ui-02: var(--cds-ui-02, #393939);
-  --ui-03: var(--cds-ui-03, #393939);
-  --ui-04: var(--cds-ui-04, #6f6f6f);
-  --ui-05: var(--cds-ui-05, #f4f4f4);
-  --text-01: var(--cds-text-01, #f4f4f4);
-  --text-02: var(--cds-text-02, #c6c6c6);
-  --text-03: var(--cds-text-03, #6f6f6f);
-  --text-04: var(--cds-text-04, #ffffff);
-  --text-05: var(--cds-text-05, #8d8d8d);
-  --text-error: var(--cds-text-error, #ff8389);
-  --icon-01: var(--cds-icon-01, #f4f4f4);
-  --icon-02: var(--cds-icon-02, #c6c6c6);
-  --icon-03: var(--cds-icon-03, #ffffff);
-  --link-01: var(--cds-link-01, #78a9ff);
-  --inverse-link: var(--cds-inverse-link, #0f62fe);
-  --field-01: var(--cds-field-01, #262626);
-  --field-02: var(--cds-field-02, #393939);
-  --inverse-01: var(--cds-inverse-01, #161616);
-  --inverse-02: var(--cds-inverse-02, #f4f4f4);
-  --support-01: var(--cds-support-01, #fa4d56);
-  --support-02: var(--cds-support-02, #42be65);
-  --support-03: var(--cds-support-03, #f1c21b);
-  --support-04: var(--cds-support-04, #4589ff);
-  --inverse-support-01: var(--cds-inverse-support-01, #da1e28);
-  --inverse-support-02: var(--cds-inverse-support-02, #24a148);
-  --inverse-support-03: var(--cds-inverse-support-03, #f1c21b);
-  --inverse-support-04: var(--cds-inverse-support-04, #0f62fe);
-  --overlay-01: var(--cds-overlay-01, rgba(22, 22, 22, 0.7));
-  --danger-01: var(--cds-danger-01, #da1e28);
-  --danger-02: var(--cds-danger-02, #fa4d56);
-  --focus: var(--cds-focus, #ffffff);
-  --inverse-focus-ui: var(--cds-inverse-focus-ui, #0f62fe);
-  --hover-primary: var(--cds-hover-primary, #0353e9);
-  --active-primary: var(--cds-active-primary, #002d9c);
-  --hover-primary-text: var(--cds-hover-primary-text, #a6c8ff);
-  --hover-secondary: var(--cds-hover-secondary, #606060);
-  --active-secondary: var(--cds-active-secondary, #393939);
-  --hover-tertiary: var(--cds-hover-tertiary, #f4f4f4);
-  --active-tertiary: var(--cds-active-tertiary, #c6c6c6);
-  --hover-ui: var(--cds-hover-ui, #353535);
-  --hover-light-ui: var(--cds-hover-light-ui, #4c4c4c);
-  --active-ui: var(--cds-active-ui, #525252);
-  --active-light-ui: var(--cds-active-light-ui, #6f6f6f);
-  --selected-ui: var(--cds-selected-ui, #393939);
-  --selected-light-ui: var(--cds-selected-light-ui, #525252);
-  --inverse-hover-ui: var(--cds-inverse-hover-ui, #e5e5e5);
-  --hover-selected-ui: var(--cds-hover-selected-ui, #4c4c4c);
-  --hover-danger: var(--cds-hover-danger, #b81921);
-  --active-danger: var(--cds-active-danger, #750e13);
-  --hover-row: var(--cds-hover-row, #353535);
-  --visited-link: var(--cds-visited-link, #be95ff);
-  --disabled-01: var(--cds-disabled-01, #262626);
-  --disabled-02: var(--cds-disabled-02, #525252);
-  --disabled-03: var(--cds-disabled-03, #8d8d8d);
-  --highlight: var(--cds-highlight, #002d9c);
-  --decorative-01: var(--cds-decorative-01, #525252);
-  --button-separator: var(--cds-button-separator, #161616);
-  --skeleton-01: var(--cds-skeleton-01, #353535);
-  --skeleton-02: var(--cds-skeleton-02, #393939);
-  --brand-01: var(--cds-brand-01, #0f62fe);
-  --brand-02: var(--cds-brand-02, #6f6f6f);
-  --brand-03: var(--cds-brand-03, #ffffff);
-  --active-01: var(--cds-active-01, #525252);
-  --hover-field: var(--cds-hover-field, #353535);
-  --danger: var(--cds-danger, #da1e28);
 }
 
 @font-face {
@@ -4179,7 +4037,7 @@ body {
 }
 
 .bx--btn--danger-ghost:disabled, .bx--btn--danger-ghost:hover:disabled, .bx--btn--danger-ghost:focus:disabled, .bx--btn--danger-ghost.bx--btn--disabled, .bx--btn--danger-ghost.bx--btn--disabled:hover, .bx--btn--danger-ghost.bx--btn--disabled:focus, .bx--btn--danger--ghost:disabled, .bx--btn--danger--ghost:hover:disabled, .bx--btn--danger--ghost:focus:disabled, .bx--btn--danger--ghost.bx--btn--disabled, .bx--btn--danger--ghost.bx--btn--disabled:hover, .bx--btn--danger--ghost.bx--btn--disabled:focus {
-  color: #c6c6c6;
+  color: var(--cds-disabled-02, #525252);
   background: transparent;
   border-color: transparent;
   outline: none;
@@ -6561,77 +6419,6 @@ a.bx--overflow-menu-options__btn::before {
   --cds-container-05: 4rem;
   --cds-icon-size-01: 1rem;
   --cds-icon-size-02: 1.25rem;
-  --interactive-01: var(--cds-interactive-01, #0f62fe);
-  --interactive-02: var(--cds-interactive-02, #697077);
-  --interactive-03: var(--cds-interactive-03, #ffffff);
-  --interactive-04: var(--cds-interactive-04, #4589ff);
-  --ui-background: var(--cds-ui-background, #121619);
-  --ui-01: var(--cds-ui-01, #21272a);
-  --ui-02: var(--cds-ui-02, #343a3f);
-  --ui-03: var(--cds-ui-03, #343a3f);
-  --ui-04: var(--cds-ui-04, #697077);
-  --ui-05: var(--cds-ui-05, #f2f4f8);
-  --text-01: var(--cds-text-01, #f2f4f8);
-  --text-02: var(--cds-text-02, #c1c7cd);
-  --text-03: var(--cds-text-03, #697077);
-  --text-04: var(--cds-text-04, #ffffff);
-  --text-05: var(--cds-text-05, #878d96);
-  --text-error: var(--cds-text-error, #ff8389);
-  --icon-01: var(--cds-icon-01, #f2f4f8);
-  --icon-02: var(--cds-icon-02, #c1c7cd);
-  --icon-03: var(--cds-icon-03, #ffffff);
-  --link-01: var(--cds-link-01, #78a9ff);
-  --inverse-link: var(--cds-inverse-link, #0f62fe);
-  --field-01: var(--cds-field-01, #21272a);
-  --field-02: var(--cds-field-02, #343a3f);
-  --inverse-01: var(--cds-inverse-01, #121619);
-  --inverse-02: var(--cds-inverse-02, #f2f4f8);
-  --support-01: var(--cds-support-01, #fa4d56);
-  --support-02: var(--cds-support-02, #42be65);
-  --support-03: var(--cds-support-03, #f1c21b);
-  --support-04: var(--cds-support-04, #4589ff);
-  --inverse-support-01: var(--cds-inverse-support-01, #da1e28);
-  --inverse-support-02: var(--cds-inverse-support-02, #24a148);
-  --inverse-support-03: var(--cds-inverse-support-03, #f1c21b);
-  --inverse-support-04: var(--cds-inverse-support-04, #0f62fe);
-  --overlay-01: var(--cds-overlay-01, rgba(22, 22, 22, 0.7));
-  --danger-01: var(--cds-danger-01, #da1e28);
-  --danger-02: var(--cds-danger-02, #fa4d56);
-  --focus: var(--cds-focus, #ffffff);
-  --inverse-focus-ui: var(--cds-inverse-focus-ui, #0f62fe);
-  --hover-primary: var(--cds-hover-primary, #0353e9);
-  --active-primary: var(--cds-active-primary, #002d9c);
-  --hover-primary-text: var(--cds-hover-primary-text, #a6c8ff);
-  --hover-secondary: var(--cds-hover-secondary, #5a6066);
-  --active-secondary: var(--cds-active-secondary, #343a3f);
-  --hover-tertiary: var(--cds-hover-tertiary, #f2f4f8);
-  --active-tertiary: var(--cds-active-tertiary, #c1c7cd);
-  --hover-ui: var(--cds-hover-ui, #2f353a);
-  --hover-light-ui: var(--cds-hover-light-ui, #4c4c4c);
-  --active-ui: var(--cds-active-ui, #4d5358);
-  --active-light-ui: var(--cds-active-light-ui, #697077);
-  --selected-ui: var(--cds-selected-ui, #343a3f);
-  --selected-light-ui: var(--cds-selected-light-ui, #4d5358);
-  --inverse-hover-ui: var(--cds-inverse-hover-ui, #e0e4ea);
-  --hover-selected-ui: var(--cds-hover-selected-ui, #464c51);
-  --hover-danger: var(--cds-hover-danger, #b81921);
-  --active-danger: var(--cds-active-danger, #750e13);
-  --hover-row: var(--cds-hover-row, #2f353a);
-  --visited-link: var(--cds-visited-link, #be95ff);
-  --disabled-01: var(--cds-disabled-01, #21272a);
-  --disabled-02: var(--cds-disabled-02, #4d5358);
-  --disabled-03: var(--cds-disabled-03, #878d96);
-  --highlight: var(--cds-highlight, #002d9c);
-  --decorative-01: var(--cds-decorative-01, #4d5358);
-  --button-separator: var(--cds-button-separator, #121619);
-  --skeleton-01: var(--cds-skeleton-01, #2f353a);
-  --skeleton-02: var(--cds-skeleton-02, #343a3f);
-  --brand-01: var(--cds-brand-01, #0f62fe);
-  --brand-02: var(--cds-brand-02, #697077);
-  --brand-03: var(--cds-brand-03, #ffffff);
-  --active-01: var(--cds-active-01, #4d5358);
-  --hover-field: var(--cds-hover-field, #2f353a);
-  --danger: var(--cds-danger, #da1e28);
 }
 
 .security--panel--v2[dir=\\"rtl\\"],
@@ -7155,7 +6942,7 @@ a.bx--overflow-menu-options__btn::before {
 
 .bx--toolbar-action[disabled] .bx--toolbar-action__icon {
   cursor: not-allowed;
-  fill: #c6c6c6;
+  fill: var(--cds-disabled-02, #525252);
 }
 
 .bx--toolbar-action:focus:not([disabled]),
@@ -7660,9 +7447,9 @@ a.bx--overflow-menu-options__btn::before {
 }
 
 .bx--data-table--zebra tbody tr:not(.bx--parent-row):nth-child(even) td {
-  background-color: #ffffff;
-  border-top: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
+  background-color: var(--cds-ui-02, #393939);
+  border-top: 1px solid var(--cds-ui-02, #393939);
+  border-bottom: 1px solid var(--cds-ui-02, #393939);
 }
 
 .bx--data-table--zebra tbody tr:not(.bx--parent-row):hover td {
@@ -7712,7 +7499,7 @@ a.bx--overflow-menu-options__btn::before {
 }
 
 .bx--date-table tbody th.bx--table-column-checkbox:hover {
-  background: #cacaca;
+  background: var(--cds-hover-selected-ui, #4c4c4c);
 }
 
 .bx--table-column-radio {
@@ -7748,15 +7535,15 @@ tr.bx--data-table--selected:last-of-type td {
 }
 
 .bx--data-table--zebra tbody tr:nth-child(even).bx--data-table--selected:hover td {
-  border-bottom: 1px solid #cacaca;
+  border-bottom: 1px solid var(--cds-hover-selected-ui, #4c4c4c);
 }
 
 .bx--data-table--zebra tbody tr:nth-child(odd).bx--data-table--selected:hover td,
 .bx--data-table tbody .bx--data-table--selected:hover td {
   color: var(--cds-text-01, #f4f4f4);
-  background: #cacaca;
-  border-top: 1px solid #cacaca;
-  border-bottom: 1px solid #cacaca;
+  background: var(--cds-hover-selected-ui, #4c4c4c);
+  border-top: 1px solid var(--cds-hover-selected-ui, #4c4c4c);
+  border-bottom: 1px solid var(--cds-hover-selected-ui, #4c4c4c);
 }
 
 .bx--data-table--selected .bx--overflow-menu .bx--overflow-menu__icon {
@@ -8265,9 +8052,9 @@ tr.bx--parent-row.bx--data-table--selected td.bx--table-expand + td::after {
 
 .bx--data-table--zebra tbody tr[data-parent-row]:nth-child(4n + 1) td,
 .bx--data-table--zebra tbody tr[data-child-row]:nth-child(4n + 2) td {
-  background-color: #ffffff;
-  border-top: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
+  background-color: var(--cds-ui-02, #393939);
+  border-top: 1px solid var(--cds-ui-02, #393939);
+  border-bottom: 1px solid var(--cds-ui-02, #393939);
 }
 
 .bx--data-table--zebra tr.bx--parent-row td,
@@ -8404,7 +8191,7 @@ tr.bx--parent-row.bx--data-table--selected.bx--expandable-row--hover + tr[data-c
 }
 
 .bx--table-sort:hover {
-  background: #cacaca;
+  background: var(--cds-hover-selected-ui, #4c4c4c);
 }
 
 .bx--table-sort:focus svg,
@@ -8463,7 +8250,7 @@ tr.bx--parent-row.bx--data-table--selected.bx--expandable-row--hover + tr[data-c
 }
 
 .bx--table-sort.bx--table-sort--active {
-  background: #cacaca;
+  background: var(--cds-hover-selected-ui, #4c4c4c);
 }
 
 .bx--table-sort.bx--table-sort--active .bx--table-sort__icon-unsorted {
@@ -9315,14 +9102,14 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .bx--search-input[disabled] {
-  color: #c6c6c6;
+  color: var(--cds-disabled-02, #525252);
   background-color: var(--cds-disabled-01, #262626);
   border-bottom: 1px solid transparent;
   cursor: not-allowed;
 }
 
 .bx--search-input[disabled]::placeholder {
-  color: #c6c6c6;
+  color: var(--cds-disabled-02, #525252);
 }
 
 .bx--search--light .bx--search-input {
@@ -9506,7 +9293,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 }
 
 .bx--search--disabled svg {
-  fill: #c6c6c6;
+  fill: var(--cds-disabled-02, #525252);
 }
 
 .bx--search-close:focus::before,
@@ -14513,77 +14300,6 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-container-05: 4rem;
   --cds-icon-size-01: 1rem;
   --cds-icon-size-02: 1.25rem;
-  --interactive-01: var(--cds-interactive-01, #0f62fe);
-  --interactive-02: var(--cds-interactive-02, #697077);
-  --interactive-03: var(--cds-interactive-03, #ffffff);
-  --interactive-04: var(--cds-interactive-04, #4589ff);
-  --ui-background: var(--cds-ui-background, #121619);
-  --ui-01: var(--cds-ui-01, #21272a);
-  --ui-02: var(--cds-ui-02, #343a3f);
-  --ui-03: var(--cds-ui-03, #343a3f);
-  --ui-04: var(--cds-ui-04, #697077);
-  --ui-05: var(--cds-ui-05, #f2f4f8);
-  --text-01: var(--cds-text-01, #f2f4f8);
-  --text-02: var(--cds-text-02, #c1c7cd);
-  --text-03: var(--cds-text-03, #697077);
-  --text-04: var(--cds-text-04, #ffffff);
-  --text-05: var(--cds-text-05, #878d96);
-  --text-error: var(--cds-text-error, #ff8389);
-  --icon-01: var(--cds-icon-01, #f2f4f8);
-  --icon-02: var(--cds-icon-02, #c1c7cd);
-  --icon-03: var(--cds-icon-03, #ffffff);
-  --link-01: var(--cds-link-01, #78a9ff);
-  --inverse-link: var(--cds-inverse-link, #0f62fe);
-  --field-01: var(--cds-field-01, #21272a);
-  --field-02: var(--cds-field-02, #343a3f);
-  --inverse-01: var(--cds-inverse-01, #121619);
-  --inverse-02: var(--cds-inverse-02, #f2f4f8);
-  --support-01: var(--cds-support-01, #fa4d56);
-  --support-02: var(--cds-support-02, #42be65);
-  --support-03: var(--cds-support-03, #f1c21b);
-  --support-04: var(--cds-support-04, #4589ff);
-  --inverse-support-01: var(--cds-inverse-support-01, #da1e28);
-  --inverse-support-02: var(--cds-inverse-support-02, #24a148);
-  --inverse-support-03: var(--cds-inverse-support-03, #f1c21b);
-  --inverse-support-04: var(--cds-inverse-support-04, #0f62fe);
-  --overlay-01: var(--cds-overlay-01, rgba(22, 22, 22, 0.7));
-  --danger-01: var(--cds-danger-01, #da1e28);
-  --danger-02: var(--cds-danger-02, #fa4d56);
-  --focus: var(--cds-focus, #ffffff);
-  --inverse-focus-ui: var(--cds-inverse-focus-ui, #0f62fe);
-  --hover-primary: var(--cds-hover-primary, #0353e9);
-  --active-primary: var(--cds-active-primary, #002d9c);
-  --hover-primary-text: var(--cds-hover-primary-text, #a6c8ff);
-  --hover-secondary: var(--cds-hover-secondary, #5a6066);
-  --active-secondary: var(--cds-active-secondary, #343a3f);
-  --hover-tertiary: var(--cds-hover-tertiary, #f2f4f8);
-  --active-tertiary: var(--cds-active-tertiary, #c1c7cd);
-  --hover-ui: var(--cds-hover-ui, #2f353a);
-  --hover-light-ui: var(--cds-hover-light-ui, #4c4c4c);
-  --active-ui: var(--cds-active-ui, #4d5358);
-  --active-light-ui: var(--cds-active-light-ui, #697077);
-  --selected-ui: var(--cds-selected-ui, #343a3f);
-  --selected-light-ui: var(--cds-selected-light-ui, #4d5358);
-  --inverse-hover-ui: var(--cds-inverse-hover-ui, #e0e4ea);
-  --hover-selected-ui: var(--cds-hover-selected-ui, #464c51);
-  --hover-danger: var(--cds-hover-danger, #b81921);
-  --active-danger: var(--cds-active-danger, #750e13);
-  --hover-row: var(--cds-hover-row, #2f353a);
-  --visited-link: var(--cds-visited-link, #be95ff);
-  --disabled-01: var(--cds-disabled-01, #21272a);
-  --disabled-02: var(--cds-disabled-02, #4d5358);
-  --disabled-03: var(--cds-disabled-03, #878d96);
-  --highlight: var(--cds-highlight, #002d9c);
-  --decorative-01: var(--cds-decorative-01, #4d5358);
-  --button-separator: var(--cds-button-separator, #121619);
-  --skeleton-01: var(--cds-skeleton-01, #2f353a);
-  --skeleton-02: var(--cds-skeleton-02, #343a3f);
-  --brand-01: var(--cds-brand-01, #0f62fe);
-  --brand-02: var(--cds-brand-02, #697077);
-  --brand-03: var(--cds-brand-03, #ffffff);
-  --active-01: var(--cds-active-01, #4d5358);
-  --hover-field: var(--cds-hover-field, #2f353a);
-  --danger: var(--cds-danger, #da1e28);
 }
 
 .security--panel[dir=\\"rtl\\"],
@@ -14946,12 +14662,12 @@ li.bx--accordion__item--disabled:last-of-type {
 
 .bx--progress-step--disabled svg {
   cursor: not-allowed;
-  fill: #c6c6c6;
+  fill: var(--cds-disabled-02, #525252);
 }
 
 .bx--progress-step--disabled .bx--progress-label,
 .bx--progress-step--disabled .bx--progress-label:hover {
-  color: #c6c6c6;
+  color: var(--cds-disabled-02, #525252);
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -17756,7 +17472,7 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 .bx--select--inline .bx--select-input:disabled {
-  color: #c6c6c6;
+  color: var(--cds-disabled-02, #525252);
   cursor: not-allowed;
 }
 
@@ -19343,77 +19059,6 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-container-05: 4rem;
   --cds-icon-size-01: 1rem;
   --cds-icon-size-02: 1.25rem;
-  --interactive-01: var(--cds-interactive-01, #0f62fe);
-  --interactive-02: var(--cds-interactive-02, #697077);
-  --interactive-03: var(--cds-interactive-03, #ffffff);
-  --interactive-04: var(--cds-interactive-04, #4589ff);
-  --ui-background: var(--cds-ui-background, #121619);
-  --ui-01: var(--cds-ui-01, #21272a);
-  --ui-02: var(--cds-ui-02, #343a3f);
-  --ui-03: var(--cds-ui-03, #343a3f);
-  --ui-04: var(--cds-ui-04, #697077);
-  --ui-05: var(--cds-ui-05, #f2f4f8);
-  --text-01: var(--cds-text-01, #f2f4f8);
-  --text-02: var(--cds-text-02, #c1c7cd);
-  --text-03: var(--cds-text-03, #697077);
-  --text-04: var(--cds-text-04, #ffffff);
-  --text-05: var(--cds-text-05, #878d96);
-  --text-error: var(--cds-text-error, #ff8389);
-  --icon-01: var(--cds-icon-01, #f2f4f8);
-  --icon-02: var(--cds-icon-02, #c1c7cd);
-  --icon-03: var(--cds-icon-03, #ffffff);
-  --link-01: var(--cds-link-01, #78a9ff);
-  --inverse-link: var(--cds-inverse-link, #0f62fe);
-  --field-01: var(--cds-field-01, #21272a);
-  --field-02: var(--cds-field-02, #343a3f);
-  --inverse-01: var(--cds-inverse-01, #121619);
-  --inverse-02: var(--cds-inverse-02, #f2f4f8);
-  --support-01: var(--cds-support-01, #fa4d56);
-  --support-02: var(--cds-support-02, #42be65);
-  --support-03: var(--cds-support-03, #f1c21b);
-  --support-04: var(--cds-support-04, #4589ff);
-  --inverse-support-01: var(--cds-inverse-support-01, #da1e28);
-  --inverse-support-02: var(--cds-inverse-support-02, #24a148);
-  --inverse-support-03: var(--cds-inverse-support-03, #f1c21b);
-  --inverse-support-04: var(--cds-inverse-support-04, #0f62fe);
-  --overlay-01: var(--cds-overlay-01, rgba(22, 22, 22, 0.7));
-  --danger-01: var(--cds-danger-01, #da1e28);
-  --danger-02: var(--cds-danger-02, #fa4d56);
-  --focus: var(--cds-focus, #ffffff);
-  --inverse-focus-ui: var(--cds-inverse-focus-ui, #0f62fe);
-  --hover-primary: var(--cds-hover-primary, #0353e9);
-  --active-primary: var(--cds-active-primary, #002d9c);
-  --hover-primary-text: var(--cds-hover-primary-text, #a6c8ff);
-  --hover-secondary: var(--cds-hover-secondary, #5a6066);
-  --active-secondary: var(--cds-active-secondary, #343a3f);
-  --hover-tertiary: var(--cds-hover-tertiary, #f2f4f8);
-  --active-tertiary: var(--cds-active-tertiary, #c1c7cd);
-  --hover-ui: var(--cds-hover-ui, #2f353a);
-  --hover-light-ui: var(--cds-hover-light-ui, #4c4c4c);
-  --active-ui: var(--cds-active-ui, #4d5358);
-  --active-light-ui: var(--cds-active-light-ui, #697077);
-  --selected-ui: var(--cds-selected-ui, #343a3f);
-  --selected-light-ui: var(--cds-selected-light-ui, #4d5358);
-  --inverse-hover-ui: var(--cds-inverse-hover-ui, #e0e4ea);
-  --hover-selected-ui: var(--cds-hover-selected-ui, #464c51);
-  --hover-danger: var(--cds-hover-danger, #b81921);
-  --active-danger: var(--cds-active-danger, #750e13);
-  --hover-row: var(--cds-hover-row, #2f353a);
-  --visited-link: var(--cds-visited-link, #be95ff);
-  --disabled-01: var(--cds-disabled-01, #21272a);
-  --disabled-02: var(--cds-disabled-02, #4d5358);
-  --disabled-03: var(--cds-disabled-03, #878d96);
-  --highlight: var(--cds-highlight, #002d9c);
-  --decorative-01: var(--cds-decorative-01, #4d5358);
-  --button-separator: var(--cds-button-separator, #121619);
-  --skeleton-01: var(--cds-skeleton-01, #2f353a);
-  --skeleton-02: var(--cds-skeleton-02, #343a3f);
-  --brand-01: var(--cds-brand-01, #0f62fe);
-  --brand-02: var(--cds-brand-02, #697077);
-  --brand-03: var(--cds-brand-03, #ffffff);
-  --active-01: var(--cds-active-01, #4d5358);
-  --hover-field: var(--cds-hover-field, #2f353a);
-  --danger: var(--cds-danger, #da1e28);
 }
 
 .security--toolbar__group {
@@ -19667,77 +19312,6 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-container-05: 4rem;
   --cds-icon-size-01: 1rem;
   --cds-icon-size-02: 1.25rem;
-  --interactive-01: var(--cds-interactive-01, #0f62fe);
-  --interactive-02: var(--cds-interactive-02, #343a3f);
-  --interactive-03: var(--cds-interactive-03, #0f62fe);
-  --interactive-04: var(--cds-interactive-04, #0f62fe);
-  --ui-background: var(--cds-ui-background, #f2f4f8);
-  --ui-01: var(--cds-ui-01, #ffffff);
-  --ui-02: var(--cds-ui-02, #f2f4f8);
-  --ui-03: var(--cds-ui-03, #dde1e6);
-  --ui-04: var(--cds-ui-04, #878d96);
-  --ui-05: var(--cds-ui-05, #121619);
-  --text-01: var(--cds-text-01, #121619);
-  --text-02: var(--cds-text-02, #4d5358);
-  --text-03: var(--cds-text-03, #a2a9b0);
-  --text-04: var(--cds-text-04, #ffffff);
-  --text-05: var(--cds-text-05, #697077);
-  --text-error: var(--cds-text-error, #da1e28);
-  --icon-01: var(--cds-icon-01, #121619);
-  --icon-02: var(--cds-icon-02, #4d5358);
-  --icon-03: var(--cds-icon-03, #ffffff);
-  --link-01: var(--cds-link-01, #0f62fe);
-  --inverse-link: var(--cds-inverse-link, #78a9ff);
-  --field-01: var(--cds-field-01, #ffffff);
-  --field-02: var(--cds-field-02, #f2f4f8);
-  --inverse-01: var(--cds-inverse-01, #ffffff);
-  --inverse-02: var(--cds-inverse-02, #343a3f);
-  --support-01: var(--cds-support-01, #da1e28);
-  --support-02: var(--cds-support-02, #24a148);
-  --support-03: var(--cds-support-03, #f1c21b);
-  --support-04: var(--cds-support-04, #0043ce);
-  --inverse-support-01: var(--cds-inverse-support-01, #fa4d56);
-  --inverse-support-02: var(--cds-inverse-support-02, #42be65);
-  --inverse-support-03: var(--cds-inverse-support-03, #f1c21b);
-  --inverse-support-04: var(--cds-inverse-support-04, #4589ff);
-  --overlay-01: var(--cds-overlay-01, rgba(22, 22, 22, 0.5));
-  --danger-01: var(--cds-danger-01, #da1e28);
-  --danger-02: var(--cds-danger-02, #da1e28);
-  --focus: var(--cds-focus, #0f62fe);
-  --inverse-focus-ui: var(--cds-inverse-focus-ui, #ffffff);
-  --hover-primary: var(--cds-hover-primary, #0353e9);
-  --active-primary: var(--cds-active-primary, #002d9c);
-  --hover-primary-text: var(--cds-hover-primary-text, #0043ce);
-  --hover-secondary: var(--cds-hover-secondary, #464c51);
-  --active-secondary: var(--cds-active-secondary, #697077);
-  --hover-tertiary: var(--cds-hover-tertiary, #0353e9);
-  --active-tertiary: var(--cds-active-tertiary, #002d9c);
-  --hover-ui: var(--cds-hover-ui, #e0e4ea);
-  --hover-light-ui: var(--cds-hover-light-ui, #e5e5e5);
-  --active-ui: var(--cds-active-ui, #c1c7cd);
-  --active-light-ui: var(--cds-active-light-ui, #c1c7cd);
-  --selected-ui: var(--cds-selected-ui, #dde1e6);
-  --selected-light-ui: var(--cds-selected-light-ui, #dde1e6);
-  --inverse-hover-ui: var(--cds-inverse-hover-ui, #464c51);
-  --hover-selected-ui: var(--cds-hover-selected-ui, #c4c9d1);
-  --hover-danger: var(--cds-hover-danger, #b81921);
-  --active-danger: var(--cds-active-danger, #750e13);
-  --hover-row: var(--cds-hover-row, #e0e4ea);
-  --visited-link: var(--cds-visited-link, #8a3ffc);
-  --disabled-01: var(--cds-disabled-01, #ffffff);
-  --disabled-02: var(--cds-disabled-02, #c1c7cd);
-  --disabled-03: var(--cds-disabled-03, #878d96);
-  --highlight: var(--cds-highlight, #edf5ff);
-  --decorative-01: var(--cds-decorative-01, #dde1e6);
-  --button-separator: var(--cds-button-separator, #dde1e6);
-  --skeleton-01: var(--cds-skeleton-01, #e0e4ea);
-  --skeleton-02: var(--cds-skeleton-02, #c1c7cd);
-  --brand-01: var(--cds-brand-01, #0f62fe);
-  --brand-02: var(--cds-brand-02, #343a3f);
-  --brand-03: var(--cds-brand-03, #0f62fe);
-  --active-01: var(--cds-active-01, #c1c7cd);
-  --hover-field: var(--cds-hover-field, #e0e4ea);
-  --danger: var(--cds-danger, #da1e28);
 }
 
 .security--toolbar__icon {
@@ -21656,77 +21230,6 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-container-05: 4rem;
   --cds-icon-size-01: 1rem;
   --cds-icon-size-02: 1.25rem;
-  --interactive-01: var(--cds-interactive-01, #0f62fe);
-  --interactive-02: var(--cds-interactive-02, #697077);
-  --interactive-03: var(--cds-interactive-03, #ffffff);
-  --interactive-04: var(--cds-interactive-04, #4589ff);
-  --ui-background: var(--cds-ui-background, #121619);
-  --ui-01: var(--cds-ui-01, #21272a);
-  --ui-02: var(--cds-ui-02, #343a3f);
-  --ui-03: var(--cds-ui-03, #343a3f);
-  --ui-04: var(--cds-ui-04, #697077);
-  --ui-05: var(--cds-ui-05, #f2f4f8);
-  --text-01: var(--cds-text-01, #f2f4f8);
-  --text-02: var(--cds-text-02, #c1c7cd);
-  --text-03: var(--cds-text-03, #697077);
-  --text-04: var(--cds-text-04, #ffffff);
-  --text-05: var(--cds-text-05, #878d96);
-  --text-error: var(--cds-text-error, #ff8389);
-  --icon-01: var(--cds-icon-01, #f2f4f8);
-  --icon-02: var(--cds-icon-02, #c1c7cd);
-  --icon-03: var(--cds-icon-03, #ffffff);
-  --link-01: var(--cds-link-01, #78a9ff);
-  --inverse-link: var(--cds-inverse-link, #0f62fe);
-  --field-01: var(--cds-field-01, #21272a);
-  --field-02: var(--cds-field-02, #343a3f);
-  --inverse-01: var(--cds-inverse-01, #121619);
-  --inverse-02: var(--cds-inverse-02, #f2f4f8);
-  --support-01: var(--cds-support-01, #fa4d56);
-  --support-02: var(--cds-support-02, #42be65);
-  --support-03: var(--cds-support-03, #f1c21b);
-  --support-04: var(--cds-support-04, #4589ff);
-  --inverse-support-01: var(--cds-inverse-support-01, #da1e28);
-  --inverse-support-02: var(--cds-inverse-support-02, #24a148);
-  --inverse-support-03: var(--cds-inverse-support-03, #f1c21b);
-  --inverse-support-04: var(--cds-inverse-support-04, #0f62fe);
-  --overlay-01: var(--cds-overlay-01, rgba(22, 22, 22, 0.7));
-  --danger-01: var(--cds-danger-01, #da1e28);
-  --danger-02: var(--cds-danger-02, #fa4d56);
-  --focus: var(--cds-focus, #ffffff);
-  --inverse-focus-ui: var(--cds-inverse-focus-ui, #0f62fe);
-  --hover-primary: var(--cds-hover-primary, #0353e9);
-  --active-primary: var(--cds-active-primary, #002d9c);
-  --hover-primary-text: var(--cds-hover-primary-text, #a6c8ff);
-  --hover-secondary: var(--cds-hover-secondary, #5a6066);
-  --active-secondary: var(--cds-active-secondary, #343a3f);
-  --hover-tertiary: var(--cds-hover-tertiary, #f2f4f8);
-  --active-tertiary: var(--cds-active-tertiary, #c1c7cd);
-  --hover-ui: var(--cds-hover-ui, #2f353a);
-  --hover-light-ui: var(--cds-hover-light-ui, #4c4c4c);
-  --active-ui: var(--cds-active-ui, #4d5358);
-  --active-light-ui: var(--cds-active-light-ui, #697077);
-  --selected-ui: var(--cds-selected-ui, #343a3f);
-  --selected-light-ui: var(--cds-selected-light-ui, #4d5358);
-  --inverse-hover-ui: var(--cds-inverse-hover-ui, #e0e4ea);
-  --hover-selected-ui: var(--cds-hover-selected-ui, #464c51);
-  --hover-danger: var(--cds-hover-danger, #b81921);
-  --active-danger: var(--cds-active-danger, #750e13);
-  --hover-row: var(--cds-hover-row, #2f353a);
-  --visited-link: var(--cds-visited-link, #be95ff);
-  --disabled-01: var(--cds-disabled-01, #21272a);
-  --disabled-02: var(--cds-disabled-02, #4d5358);
-  --disabled-03: var(--cds-disabled-03, #878d96);
-  --highlight: var(--cds-highlight, #002d9c);
-  --decorative-01: var(--cds-decorative-01, #4d5358);
-  --button-separator: var(--cds-button-separator, #121619);
-  --skeleton-01: var(--cds-skeleton-01, #2f353a);
-  --skeleton-02: var(--cds-skeleton-02, #343a3f);
-  --brand-01: var(--cds-brand-01, #0f62fe);
-  --brand-02: var(--cds-brand-02, #697077);
-  --brand-03: var(--cds-brand-03, #ffffff);
-  --active-01: var(--cds-active-01, #4d5358);
-  --hover-field: var(--cds-hover-field, #2f353a);
-  --danger: var(--cds-danger, #da1e28);
 }
 
 .security--shell__banner, .security--shell__banner:hover, .security--shell__banner:visited {
@@ -21883,7 +21386,7 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 .bx--snippet--inline:active {
-  background-color: #c6c6c6;
+  background-color: var(--cds-active-ui, #525252);
 }
 
 .bx--snippet--inline:focus {
@@ -22018,7 +21521,7 @@ li.bx--accordion__item--disabled:last-of-type {
   position: relative;
   width: 100%;
   max-width: 37.5rem;
-  background-color: #f4f4f4;
+  background-color: var(--cds-field-01, #262626);
   display: flex;
   align-items: center;
   max-width: 47.5rem;
@@ -22079,7 +21582,7 @@ li.bx--accordion__item--disabled:last-of-type {
   position: relative;
   width: 100%;
   max-width: 37.5rem;
-  background-color: #f4f4f4;
+  background-color: var(--cds-field-01, #262626);
   display: flex;
   max-width: 100%;
   padding: 1rem;
@@ -22206,7 +21709,7 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 .bx--snippet-button:active {
-  background-color: #c6c6c6;
+  background-color: var(--cds-active-ui, #525252);
 }
 
 .bx--btn--copy__feedback {
@@ -22224,7 +21727,7 @@ li.bx--accordion__item--disabled:last-of-type {
 
 .bx--btn--copy__feedback::before,
 .bx--btn--copy__feedback::after {
-  background: #393939;
+  background: var(--cds-inverse-02, #f4f4f4);
 }
 
 .bx--btn--copy__feedback::after {
@@ -22280,7 +21783,7 @@ button.bx--btn.bx--snippet-btn--expand:hover {
 }
 
 .bx--snippet-btn--expand:active {
-  background-color: #c6c6c6;
+  background-color: var(--cds-active-ui, #525252);
 }
 
 .bx--snippet-btn--expand:focus {
@@ -22874,7 +22377,7 @@ bx--snippet--multi.bx--skeleton {
   display: block;
   width: 0.0625rem;
   height: 1rem;
-  background-color: #e0e0e0;
+  background-color: var(--cds-ui-03, #393939);
   content: \\"\\";
 }
 
@@ -24813,7 +24316,7 @@ bx--snippet--multi.bx--skeleton {
 }
 
 .bx--number input[type=\\"number\\"]:disabled ~ .bx--number__controls svg {
-  fill: #c6c6c6;
+  fill: var(--cds-disabled-02, #525252);
 }
 
 .bx--number input[type=\\"number\\"]::-ms-clear {
@@ -24826,7 +24329,7 @@ bx--snippet--multi.bx--skeleton {
 
 .bx--number input[type=\\"number\\"]:disabled,
 .bx--number--readonly input[type=\\"number\\"] {
-  color: #c6c6c6;
+  color: var(--cds-disabled-02, #525252);
   background-color: var(--cds-disabled-01, #262626);
   border-bottom-color: transparent;
   cursor: not-allowed;
@@ -24934,7 +24437,7 @@ bx--snippet--multi.bx--skeleton {
 }
 
 .bx--number__control-btn:disabled {
-  color: #c6c6c6;
+  color: var(--cds-disabled-02, #525252);
   cursor: not-allowed;
 }
 
@@ -25424,18 +24927,18 @@ span.bx--pagination__text {
 }
 
 .bx--radio-button:disabled + .bx--radio-button__label {
-  color: #c6c6c6;
+  color: var(--cds-disabled-02, #525252);
   cursor: not-allowed;
 }
 
 .bx--radio-button:disabled + .bx--radio-button__label .bx--radio-button__appearance,
 .bx--radio-button:disabled:checked + .bx--radio-button__label .bx--radio-button__appearance {
-  border-color: #c6c6c6;
+  border-color: var(--cds-disabled-02, #525252);
 }
 
 .bx--radio-button:disabled + .bx--radio-button__label .bx--radio-button__appearance::before,
 .bx--radio-button:disabled:checked + .bx--radio-button__label .bx--radio-button__appearance::before {
-  background-color: #c6c6c6;
+  background-color: var(--cds-disabled-02, #525252);
 }
 
 .bx--radio-button:focus + .bx--radio-button__label .bx--radio-button__appearance {
@@ -26078,7 +25581,7 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
     margin: 0;
     padding: var(--cds-spacing-04, 0.75rem) var(--cds-spacing-05, 1rem) var(--cds-spacing-03, 0.5rem);
     line-height: inherit;
-    border-bottom: 2px solid #e0e0e0;
+    border-bottom: 2px solid var(--cds-ui-03, #393939);
   }
   a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
     width: 10rem;
@@ -26102,7 +25605,7 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
 @media (min-width: 42rem) {
   .bx--tabs__nav-item:hover:not(.bx--tabs__nav-item--selected):not(.bx--tabs__nav-item--disabled) .bx--tabs__nav-link {
     color: var(--cds-text-01, #f4f4f4);
-    border-bottom: 2px solid #8d8d8d;
+    border-bottom: 2px solid var(--cds-ui-04, #6f6f6f);
   }
 }
 
@@ -26113,19 +25616,19 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
 }
 
 .bx--tabs__nav-item--disabled .bx--tabs__nav-link {
-  color: #c6c6c6;
-  border-bottom: 2px solid #f4f4f4;
+  color: var(--cds-disabled-02, #525252);
+  border-bottom: 2px solid var(--cds-disabled-01, #262626);
   pointer-events: none;
 }
 
 .bx--tabs__nav-item--disabled:hover .bx--tabs__nav-link {
-  border-bottom: 2px solid #f4f4f4;
+  border-bottom: 2px solid var(--cds-disabled-01, #262626);
   cursor: no-drop;
 }
 
 .bx--tabs__nav-item--disabled .bx--tabs__nav-link:focus,
 .bx--tabs__nav-item--disabled a.bx--tabs__nav-link:active {
-  border-bottom: 2px solid #f4f4f4;
+  border-bottom: 2px solid var(--cds-disabled-01, #262626);
   outline: none;
 }
 
@@ -26501,7 +26004,7 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
   text-align: left;
   text-decoration: none;
   text-overflow: ellipsis;
-  border-bottom: 2px solid #e0e0e0;
+  border-bottom: 2px solid var(--cds-ui-03, #393939);
   transition: border 70ms cubic-bezier(0.2, 0, 0.38, 0.9), outline 70ms cubic-bezier(0.2, 0, 0.38, 0.9);
 }
 
@@ -26535,7 +26038,7 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
 
 .bx--tabs--scrollable .bx--tabs--scrollable__nav-item:hover .bx--tabs--scrollable__nav-link {
   color: var(--cds-text-01, #f4f4f4);
-  border-bottom: 2px solid #8d8d8d;
+  border-bottom: 2px solid var(--cds-ui-04, #6f6f6f);
 }
 
 .bx--tabs--scrollable.bx--tabs--scrollable--container .bx--tabs--scrollable__nav-item .bx--tabs--scrollable__nav-link {
@@ -26543,20 +26046,20 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
 }
 
 .bx--tabs--scrollable .bx--tabs--scrollable__nav-item--disabled .bx--tabs--scrollable__nav-link {
-  color: #c6c6c6;
-  border-bottom: 2px solid #f4f4f4;
+  color: var(--cds-disabled-02, #525252);
+  border-bottom: 2px solid var(--cds-disabled-01, #262626);
 }
 
 .bx--tabs--scrollable .bx--tabs--scrollable__nav-item--disabled:hover .bx--tabs--scrollable__nav-link {
-  color: #c6c6c6;
-  border-bottom: 2px solid #f4f4f4;
+  color: var(--cds-disabled-02, #525252);
+  border-bottom: 2px solid var(--cds-disabled-01, #262626);
   cursor: not-allowed;
   pointer-events: none;
 }
 
 .bx--tabs--scrollable .bx--tabs--scrollable__nav-item--disabled .bx--tabs--scrollable__nav-link:focus,
 .bx--tabs--scrollable .bx--tabs--scrollable__nav-item--disabled .bx--tabs--scrollable__nav-link:active {
-  border-bottom: 2px solid #f4f4f4;
+  border-bottom: 2px solid var(--cds-disabled-01, #262626);
   outline: none;
 }
 
@@ -27255,7 +26758,7 @@ bx--text-area.bx--skeleton::placeholder {
 
 .bx--toggle:disabled + .bx--toggle__label .bx--toggle__text--left,
 .bx--toggle:disabled + .bx--toggle__label .bx--toggle__text--right {
-  color: #c6c6c6;
+  color: var(--cds-disabled-02, #525252);
 }
 
 .bx--toggle:disabled:active + .bx--toggle__label .bx--toggle__appearance:before {
@@ -27424,7 +26927,7 @@ bx--text-area.bx--skeleton::placeholder {
 }
 
 .bx--toggle-input:disabled + .bx--toggle-input__label {
-  color: #c6c6c6;
+  color: var(--cds-disabled-02, #525252);
   cursor: not-allowed;
 }
 

@@ -3,6 +3,11 @@
     'master',
     'next',
     {
+      channel: 'alpha',
+      name: 'spike/css-custom-propereties',
+      prerelease: 'alpha',
+    },
+    {
       channel: 'canary',
       name: 'dev',
       prerelease: 'prerelease',

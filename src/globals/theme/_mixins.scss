@@ -94,7 +94,7 @@
 
     @each $token, $value in $theme {
       @if (type-of($value: $value) == 'color') {
-        --#{$token}: var(--#{$custom-property-prefix}-#{$token}, #{$value});
+        // --#{$token}: var(--#{$custom-property-prefix}-#{$token}, #{$value});
       }
     }
   }

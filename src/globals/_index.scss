@@ -1,9 +1,10 @@
 ////
 /// Globals entry point.
 /// @group entry
-/// @copyright IBM Security 2019 - 2021
+/// @copyright IBM Security 2019 - 2020
 ////
 
+@import 'theme/index';
 @import 'variables/index';
 
 @import 'carbon-components/scss/globals/scss/helper-mixins';
@@ -12,7 +13,6 @@
 @import 'grid/index';
 @import 'layout/index';
 @import 'motion/index';
-@import 'theme/index';
 @import 'type/index';
 
 @import 'border/index';
