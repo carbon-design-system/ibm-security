@@ -95,6 +95,20 @@ export IconButton from './components/IconButton';
 export IconButtonBar from './components/IconButtonBar';
 export InlineLoading from './components/InlineLoading';
 export InteractiveTag from './components/InteractiveTag';
+
+export {
+  ActionBarModule,
+  ActionBarModuleItems,
+  ButtonClusterModule,
+  CardAreaModule,
+  CardAreaModule as CardModule,
+  DescriptionListModule,
+  DescriptionModule,
+  ICAModule,
+  ListItemModule,
+  TitleBarModule,
+} from './components/LayoutModules';
+
 export Link from './components/Link';
 export ListBox from './components/ListBox';
 export ListItem from './components/ListItem';
@@ -261,18 +275,7 @@ export UnorderedList from './components/UnorderedList';
 export { Wizard, WizardStep } from './components/Wizard';
 
 // Experimental.
-export {
-  ActionBarModule,
-  ActionBarModuleItems,
-  ButtonClusterModule,
-  CardModule,
-  DescriptionListModule,
-  DescriptionModule,
-  ICAModule,
-  ListItemModule,
-  TitleBarModule,
-  withBackground,
-} from './components/UNSTABLE__LayoutModules';
+export withBackground from './components/UNSTABLE__Background';
 
 export UNSTABLE__Pagination, {
   PageSelector,

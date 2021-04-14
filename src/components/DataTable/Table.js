@@ -1,6 +1,6 @@
 /**
  * @file Data table table subcomponent.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React, { Component } from 'react';
@@ -38,7 +38,7 @@ class Table extends Component {
       const { scrollLeft, clientWidth, scrollWidth } = tableWrapper;
       [
         ...tableWrapper.querySelectorAll(
-          `.${overflowCellNamespace} .${carbonPrefix}overflow-menu`
+          `.${overflowCellNamespace} .${carbonPrefix}--overflow-menu`
         ),
       ].forEach(overflow => {
         // eslint-disable-next-line no-param-reassign

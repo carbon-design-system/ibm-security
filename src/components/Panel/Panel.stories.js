@@ -1,6 +1,6 @@
 /**
  * @file Panel stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import Add16 from '@carbon/icons-react/lib/add/16';
@@ -131,7 +131,7 @@ storiesOf(patterns('Panel'), module).add(
                   onClick: toggleActive,
                   label: text('closeButton.label', closeButtonLabel),
                 }}
-                renderFooter={() => <Button size="large">{footerLabel}</Button>}
+                renderFooter={() => <Button size="xl">{footerLabel}</Button>}
               />
             </PanelController>
           </Fragment>
