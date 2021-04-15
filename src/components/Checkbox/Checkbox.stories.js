@@ -1,6 +1,6 @@
 /**
  * @file Checkbox stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { action } from '@storybook/addon-actions';
@@ -11,7 +11,7 @@ import React from 'react';
 
 import { settings } from 'carbon-components';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import { Checkbox, CheckboxSkeleton } from '../..';
 
@@ -29,7 +29,7 @@ const props = () => ({
   onChange: action('onChange'),
 });
 
-storiesOf(components('Checkbox'), module)
+storiesOf(carbon('Checkbox'), module)
   .add(
     'checked',
     () => {

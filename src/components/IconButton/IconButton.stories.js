@@ -1,6 +1,6 @@
 /**
  * @file Icon button stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import Add16 from '@carbon/icons-react/lib/add/16';
@@ -12,7 +12,7 @@ import { storiesOf } from '@storybook/react';
 
 import React from 'react';
 
-import { components } from '../../../.storybook';
+import { security } from '../../../.storybook';
 
 import { className, iconClassName, label, sizes } from './_mocks_';
 
@@ -35,7 +35,7 @@ const iconButtonProps = () => ({
   ),
 });
 
-storiesOf(components('IconButton'), module).add(
+storiesOf(security('IconButton'), module).add(
   'Default',
   () => <IconButton {...iconButtonProps()} />,
   {

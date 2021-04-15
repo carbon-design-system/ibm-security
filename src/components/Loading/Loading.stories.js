@@ -1,6 +1,6 @@
 /**
  * @file Loading stories.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { boolean, text } from '@storybook/addon-knobs';
@@ -8,7 +8,7 @@ import { storiesOf } from '@storybook/react';
 
 import React from 'react';
 
-import { components, info } from '../../../.storybook';
+import { carbon, info } from '../../../.storybook';
 import { Loading, LoadingMessage } from '../..';
 
 const props = () => ({
@@ -17,7 +17,7 @@ const props = () => ({
   small: boolean('Small (small)', false),
 });
 
-storiesOf(components('Loading'), module)
+storiesOf(carbon('Loading'), module)
   .add(
     'Default',
     () => <Loading {...props()} />,

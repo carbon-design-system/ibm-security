@@ -1,6 +1,6 @@
 /**
  * @file Dropdown stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
@@ -10,7 +10,7 @@ import { boolean, select, text } from '@storybook/addon-knobs';
 
 import { Dropdown, DropdownSkeleton } from '../../';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 const items = [
   {
@@ -64,7 +64,7 @@ const itemToElement = item => {
   );
 };
 
-storiesOf(components('Dropdown'), module)
+storiesOf(carbon('Dropdown'), module)
   .add(
     'default',
     () => (

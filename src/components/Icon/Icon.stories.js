@@ -1,6 +1,6 @@
 /**
  * @file Icon stories.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { Add20, Add24, Add32 } from '@carbon/icons-react';
@@ -9,7 +9,7 @@ import { miniUnits } from '@carbon/layout';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { components } from '../../../.storybook';
+import { security } from '../../../.storybook';
 import theme from '../../globals/theme';
 
 import { Icon } from '../..';
@@ -20,7 +20,7 @@ const iconProps = {
   style: { fill: theme.icon01, margin: miniUnits(1) },
 };
 
-storiesOf(components('Icon'), module).add(
+storiesOf(security('Icon'), module).add(
   'Default',
   () => (
     <>

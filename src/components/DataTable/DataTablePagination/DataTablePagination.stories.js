@@ -1,6 +1,6 @@
 /**
  * @file Data table pagination stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
@@ -25,7 +25,7 @@ import {
   TableToolbarContent,
 } from '../../..';
 
-import { components } from '../../../../.storybook';
+import { security } from '../../../../.storybook';
 import Button from '../../Button';
 import IconButton from '../../IconButton';
 import Search from '../../Search';
@@ -121,7 +121,7 @@ const dataTablePaginationProps = {
   totalItems: rows.length,
 };
 
-storiesOf(components('DataTablePagination'), module)
+storiesOf(security('DataTablePagination'), module)
   .add('pagination data table', () => {
     DataTablePagination.__docgenInfo = {
       ...DataTablePagination.__docgenInfo,

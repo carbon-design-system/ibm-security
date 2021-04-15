@@ -1,6 +1,6 @@
 /**
  * @file Breadcrumb stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
@@ -8,7 +8,7 @@ import { boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import { Breadcrumb, BreadcrumbItem, BreadcrumbSkeleton } from '../..';
 
@@ -18,7 +18,7 @@ const props = () => ({
   onClick: action('onClick'),
 });
 
-storiesOf(components('Breadcrumb'), module)
+storiesOf(carbon('Breadcrumb'), module)
   .add(
     'default',
     () => (

@@ -1,6 +1,6 @@
 /**
  * @file Tooltip stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import OverflowMenuVertical16 from '@carbon/icons-react/lib/overflow-menu--vertical/16';
@@ -11,7 +11,7 @@ import { settings } from 'carbon-components';
 
 import React from 'react';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import { Link, Tooltip } from '../..';
 
@@ -68,7 +68,7 @@ const props = {
 
 const { customIcon, customIconOnly, link, withIcon, withoutIcon } = props;
 
-storiesOf(components('Tooltip'), module)
+storiesOf(carbon('Tooltip'), module)
   .add(
     'default (bottom)',
     () => (

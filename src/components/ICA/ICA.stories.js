@@ -8,7 +8,7 @@ import { storiesOf } from '@storybook/react';
 
 import React from 'react';
 
-import { components } from '../../../.storybook';
+import { security } from '../../../.storybook';
 import { carbonPrefix } from '../../globals/namespace';
 
 import { ICA } from '../..';
@@ -36,7 +36,7 @@ const storyProps = ({ value = icaValue, total } = {}) => ({
   locale: select('Locale (locale)', Locales, Locales[0]),
 });
 
-storiesOf(components('ICA'), module)
+storiesOf(security('ICA'), module)
   .add('default', () => <ICA {...storyProps()} />)
   .add('with null value', () => <ICA {...storyProps({ value: null })} />)
   .add('with 1000 value', () => (

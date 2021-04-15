@@ -1,6 +1,6 @@
 /**
  * @file Modal wrapper stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
@@ -12,7 +12,7 @@ import { boolean, text, select } from '@storybook/addon-knobs';
 
 import { settings } from 'carbon-components';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import {
   ModalWrapper,
@@ -79,7 +79,7 @@ const props = () => {
   };
 };
 
-storiesOf(components('ModalWrapper'), module)
+storiesOf(carbon('ModalWrapper'), module)
   .add(
     'transactional/passive modal',
     () => (
