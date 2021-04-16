@@ -5928,7 +5928,7 @@ a.bx--overflow-menu-options__btn::before {
 
 .security--panel--v2__footer {
   display: flex;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 20rem;
 }
