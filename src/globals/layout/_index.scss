@@ -23,6 +23,8 @@
   $deprecate: deprecate(
     $actual: 'get-fixed-size($unitQuantity: #{$unitQuantity})',
     $expected: 'carbon--mini-units($count: #{$unitQuantity})',
+    $url:
+      'https://github.com/carbon-design-system/carbon/tree/main/packages/type#type-styles',
   );
 
   @return carbon--mini-units($count: $unitQuantity);

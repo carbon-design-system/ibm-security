@@ -88,6 +88,8 @@ $type-style-deprecation-map: (
   $deprecate: deprecate(
     $actual: 'type-scale-item($scale-item: #{$scale-item})',
     $expected: 'carbon--type-style($name: #{$name})',
+    $url:
+      'https://github.com/carbon-design-system/carbon/tree/main/packages/type#type-styles',
   );
 
   @include carbon--type-style($name: $name);
