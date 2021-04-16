@@ -6,13 +6,12 @@
 
 @import 'globals/suppress/index';
 
+// TODO: `2.x` - To be removed.
 @import 'globals/theme/index';
 @import 'globals/variables/index';
-
 @import 'carbon-components/scss/globals/scss/helper-mixins';
-
 @import 'globals/grid/index';
 @import 'globals/type/index';
 
 @import 'components/index';
-@import 'platform/index';
+@import 'platform/index'; // TODO: `2.x` - To be removed.
