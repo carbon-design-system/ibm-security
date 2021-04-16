@@ -11,7 +11,7 @@ const path = require('path');
 const postcss = require('postcss');
 const postcssScss = require('postcss-scss');
 
-const srcIndex = path.resolve(__dirname, '../scripts/build.scss');
+const srcIndex = path.resolve(__dirname, '../src', 'index.scss');
 const distDir = path.resolve(__dirname, '../css');
 const distIndex = dir => path.resolve(dir, 'index.css');
 
