@@ -1,9 +1,18 @@
 ////
 /// Entry point.
 /// @group entry
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
-@import 'globals/index';
+@import 'globals/suppress/index';
+
+@import 'globals/theme/index';
+@import 'globals/variables/index';
+
+@import 'carbon-components/scss/globals/scss/helper-mixins';
+
+@import 'globals/grid/index';
+@import 'globals/type/index';
+
 @import 'components/index';
 @import 'platform/index';

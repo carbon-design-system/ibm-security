@@ -1,20 +1,12 @@
 ////
 /// Type.
 /// @group type
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
+// TODO: `2.x` - To be removed.
 @import '@carbon/type/scss/classes';
 @import '@carbon/type/scss/type';
-
-/// `@font-face` declarations.
-/// @type boolean
-$css--font-face: true !default;
-
-/// IBM Plex.
-/// @type boolean
-$css--plex: true;
-
 @import 'carbon-components/scss/globals/scss/css--font-face';
 
 @import '../deprecate/index';
@@ -93,7 +85,11 @@ $type-style-deprecation-map: (
     $key: $scale-item,
   );
 
-  @warn deprecate($actual: 'type-scale-item($scale-item: #{$scale-item})', $expected: 'carbon--type-style($name: #{$name})');
+  $deprecate: deprecate(
+    $actual: 'type-scale-item($scale-item: #{$scale-item})',
+    $expected: 'carbon--type-style($name: #{$name})',
+  );
+
   @include carbon--type-style($name: $name);
 }
 
@@ -134,4 +130,13 @@ $type-style-deprecation-map: (
       }
     }
   }
+}
+
+@include export-namespace($name: type) {
+  $deprecate: deprecate(
+    $actual: '@carbon/ibm-security/scss/globals/type/index',
+    $expected: '@carbon/type',
+    $url:
+      'https://github.com/carbon-design-system/carbon/tree/main/packages/type',
+  );
 }

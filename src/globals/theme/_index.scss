@@ -1,7 +1,7 @@
 ////
 /// Theme helpers.
 /// @group theme
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/themes/scss/mixins';
@@ -9,6 +9,7 @@
 @import '../../components/Component/mixins';
 @import '../deprecate/index';
 @import '../feature-flags/index';
+@import '../namespace/index';
 
 @import 'variables';
 
@@ -57,7 +58,12 @@ $theme: dark;
 /// @access private
 /// @deprecated
 @function theme($light, $dark) {
-  @warn deprecate($actual: 'theme', $expected: '@carbon/themes');
+  $deprecate: deprecate(
+    $actual: 'theme',
+    $expected: '@carbon/themes',
+    $url:
+      'https://github.com/carbon-design-system/carbon/tree/main/packages/themes',
+  );
 
   @return if($theme == dark, $dark, $light);
 }
@@ -73,4 +79,13 @@ $theme: dark;
       @include security--generate-css-custom-properties($theme: $tokens);
     }
   }
+}
+
+@include export-namespace($name: theme) {
+  $deprecate: deprecate(
+    $actual: '@carbon/ibm-security/scss/globals/theme/index',
+    $expected: '@carbon/themes',
+    $url:
+      'https://github.com/carbon-design-system/carbon/tree/main/packages/themes',
+  );
 }

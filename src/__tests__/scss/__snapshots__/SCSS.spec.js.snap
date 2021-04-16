@@ -1430,23 +1430,6 @@ body {
   display: none;
 }
 
-.bx--text-truncate--end {
-  display: inline-block;
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.bx--text-truncate--front {
-  display: inline-block;
-  width: 100%;
-  overflow: hidden;
-  direction: rtl;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
 @font-face {
   font-weight: 300;
   font-family: \\"IBM Plex Mono\\";
@@ -2306,6 +2289,23 @@ body {
   font-weight: 600;
   line-height: 1.19;
   letter-spacing: 0;
+}
+
+.bx--text-truncate--end {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.bx--text-truncate--front {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  direction: rtl;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .bx--link {

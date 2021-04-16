@@ -1,15 +1,16 @@
 ////
 /// Layout.
 /// @group layout
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
+// TODO: `2.x` - To be removed.
 @import '@carbon/layout/scss/layout';
-
 @import 'carbon-components/scss/globals/scss/layout';
 @import 'carbon-components/scss/globals/scss/spacing';
 
 @import '../deprecate/index';
+@import '../namespace/index';
 
 // TODO: `2.x` - To be removed.
 
@@ -19,7 +20,19 @@
 /// @return {Length} The correct `mini-unit` size.
 ///
 @function get-fixed-size($unitQuantity) {
-  @warn deprecate($actual: 'get-fixed-size($unitQuantity: #{$unitQuantity})', $expected: 'carbon--mini-units($count: #{$unitQuantity})');
+  $deprecate: deprecate(
+    $actual: 'get-fixed-size($unitQuantity: #{$unitQuantity})',
+    $expected: 'carbon--mini-units($count: #{$unitQuantity})',
+  );
 
   @return carbon--mini-units($count: $unitQuantity);
+}
+
+@include export-namespace($name: layout) {
+  $deprecate: deprecate(
+    $actual: '@carbon/ibm-security/scss/globals/layout/index',
+    $expected: '@carbon/layout',
+    $url:
+      'https://github.com/carbon-design-system/carbon/tree/main/packages/layout',
+  );
 }

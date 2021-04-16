@@ -7,9 +7,10 @@
 @import '@carbon/layout/scss/spacing';
 @import '@carbon/themes/scss/theme-maps';
 
-@import '../src/globals/index';
-
 @import 'carbon-components/scss/globals/scss/vars';
+
+@import '../src/globals/theme/index';
+@import '../src/globals/variables/index';
 
 @import '../src/components/index';
 @import '../src/platform/index';

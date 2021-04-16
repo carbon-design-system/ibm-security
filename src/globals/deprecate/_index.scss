@@ -1,8 +1,10 @@
 ////
 /// Deprecated methods.
 /// @group deprecate
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
+
+@import 'carbon-components/scss/globals/scss/deprecate';
 
 ///
 /// Helper for generating a deprecation warning.
@@ -12,5 +14,13 @@
 /// @return {string} The message generated as a deprecation warning.
 ///
 @function deprecate($actual, $expected, $url: null) {
-  @return '`#{$actual}` has been deprecated in favour of `#{$expected}` — This will be removed in the next major version. #{$url}';
+  @if (
+    not
+      variable-exists(security--deprecations-message-suppress) or not
+      $security--deprecations-message-suppress
+  ) {
+    @warn '`#{$actual}` has been deprecated in favor of `#{$expected}` — This will be removed in the next major version. #{$url}';
+  }
+
+  @return null;
 }

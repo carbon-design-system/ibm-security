@@ -1,8 +1,20 @@
 ////
-/// Globals entry point.
+/// Globals entry point -  TODO: `2.x` - To be removed.
 /// @group entry
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
+
+@import 'deprecate/index';
+@import 'namespace/index';
+
+@include export-namespace($name: globals) {
+  $deprecate: deprecate(
+    $actual: '@carbon/ibm-security/scss/globals/index',
+    $expected: '@carbon/ibm-security/scss/index',
+  );
+}
+
+@import 'suppress/index';
 
 @import 'theme/index';
 @import 'variables/index';
@@ -16,7 +28,5 @@
 @import 'type/index';
 
 @import 'border/index';
-@import 'deprecate/index';
 @import 'feature-flags/index';
-@import 'namespace/index';
 @import 'rtl/index';

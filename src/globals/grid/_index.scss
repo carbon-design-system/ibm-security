@@ -1,7 +1,7 @@
 ////
 /// Grid helpers.
 /// @group grid
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/grid/scss/mixins';
@@ -17,7 +17,12 @@
 
 @if feature-flag-enabled($feature: $grid__name) {
   @include export-namespace($name: $grid__name) {
-    @warn deprecate($actual: '@ibmduo/grid', $expected: '@carbon/grid', $url: 'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x-grid.md#feature-flags');
+    $deprecate: deprecate(
+      $actual: '@ibmduo/grid',
+      $expected: '@carbon/grid',
+      $url:
+        'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x-grid.md#feature-flags',
+    );
 
     html {
       font-size: map-get($grid-values, 'rem') * 1px;
@@ -136,4 +141,13 @@
       display: none;
     }
   }
+}
+
+@include export-namespace($name: grid) {
+  $deprecate: deprecate(
+    $actual: '@carbon/ibm-security/scss/globals/grid/index',
+    $expected: '@carbon/grid',
+    $url:
+      'https://github.com/carbon-design-system/carbon/tree/main/packages/grid',
+  );
 }
