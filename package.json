@@ -36,6 +36,7 @@
     "lint:scss": "yarn lint:scss:precommit '**/*.scss'",
     "lint:scss:precommit": "stylelint --fix --ignore-path .gitignore",
     "lint-staged": "lint-staged",
+    "postinstall": "npm_config_yes=true npx @carbon/telemetry@0.0.0-alpha.6 collect --install",
     "semantic-release": "semantic-release",
     "start": "start-storybook -p 3000 -s public",
     "test": "yarn jest spec --ci -i",
