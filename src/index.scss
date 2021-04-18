@@ -4,7 +4,10 @@
 /// @copyright IBM Security 2019 - 2021
 ////
 
-@import 'globals/suppress/index';
+/// Suppress deprecations messages.
+/// @type boolean
+/// @access private
+$security--deprecations-message-suppress: true;
 
 // TODO: `2.x` - To be removed.
 @import 'globals/theme/index';
