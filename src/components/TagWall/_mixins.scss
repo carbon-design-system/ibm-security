@@ -1,7 +1,7 @@
 ////
 /// Tag wall mixins.
 /// @group tag-wall
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/type/scss/index';
@@ -10,7 +10,11 @@
 
 @mixin tag-wall {
   &__label {
+    $tag-wall__spacing: $carbon--spacing-03;
+
     @include carbon--type-style($name: caption-01);
+    margin-top: $tag-wall__spacing;
+    margin-bottom: $tag-wall__spacing;
   }
 
   > #{$tag--interactive__namespace} {

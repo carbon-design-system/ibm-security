@@ -197,6 +197,7 @@ $tearsheet__layer: z(
       @include carbon--type-style($name: productive-heading-04);
       padding-right: $tearsheet__spacing__padding;
       margin-top: 0;
+      margin-bottom: $tearsheet__spacing__padding;
     }
 
     &__content {
