@@ -22,15 +22,15 @@ If you only want to try out Carbon for IBM Security, you can also use
 
 If you're trying to find something specific, here's a full list of packages that we support!
 
-| Package name                                                                                             | Description                          |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| [`carbon-components`](https://github.com/carbon-design-system/carbon/tree/master/packages/components)    | Carbon component styles              |
-| [`carbon-components-react`](https://github.com/carbon-design-system/carbon/tree/master/packages/react)   | Carbon React components              |
-| [`@carbon/colors`](https://github.com/carbon-design-system/carbon/tree/master/packages/colors)           | Work with IBM Design Language colors |
-| [`@carbon/grid`](https://github.com/carbon-design-system/carbon/tree/master/packages/grid)               | Build layouts using the grid system  |
-| [`@carbon/icons-react`](https://github.com/carbon-design-system/carbon/tree/master/packages/icons-react) | Iconography assets                   |
-| [`@carbon/layout`](https://github.com/carbon-design-system/carbon/tree/master/packages/layout)           | Layout-based units and spacing scale |
-| [`@carbon/type`](https://github.com/carbon-design-system/carbon/tree/master/packages/type)               | Type tokens used alongside IBM Plex  |
+| Package name                                                                                           | Description                          |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------ |
+| [`carbon-components`](https://github.com/carbon-design-system/carbon/tree/main/packages/components)    | Carbon component styles              |
+| [`carbon-components-react`](https://github.com/carbon-design-system/carbon/tree/main/packages/react)   | Carbon React components              |
+| [`@carbon/colors`](https://github.com/carbon-design-system/carbon/tree/main/packages/colors)           | Work with IBM Design Language colors |
+| [`@carbon/grid`](https://github.com/carbon-design-system/carbon/tree/main/packages/grid)               | Build layouts using the grid system  |
+| [`@carbon/icons-react`](https://github.com/carbon-design-system/carbon/tree/main/packages/icons-react) | Iconography assets                   |
+| [`@carbon/layout`](https://github.com/carbon-design-system/carbon/tree/main/packages/layout)           | Layout-based units and spacing scale |
+| [`@carbon/type`](https://github.com/carbon-design-system/carbon/tree/main/packages/type)               | Type tokens used alongside IBM Plex  |
 
 To install Carbon for IBM Security in your project, you'll need to run one of the following commands using a package manager:
 
@@ -89,7 +89,7 @@ $security--feature-flags: (
 @import '@carbon/ibm-security/scss/components/ComponentName/index';
 ```
 
-Also refer to [feature flags in Carbon](https://github.com/carbon-design-system/carbon/blob/master/packages/components/src/globals/scss/_feature-flags.scss).
+Also refer to [feature flags in Carbon](https://github.com/carbon-design-system/carbon/blob/main/packages/components/src/globals/scss/_feature-flags.scss).
 
 ### CSS
 
@@ -106,7 +106,7 @@ To add all of the components' processed and minified styles, reference `@carbon/
 
 ## Contributing
 
-We're always looking for contributors to help us fix bugs, build new features, or help us improve the project documentation. If you're interested, definitely check out our [Contributing Guide](/.github/CONTRIBUTING.md) and [Carbon's Developer Guide](https://github.com/carbon-design-system/carbon/tree/master/docs/developer-handbook.md).
+We're always looking for contributors to help us fix bugs, build new features, or help us improve the project documentation. If you're interested, definitely check out our [Contributing Guide](/.github/CONTRIBUTING.md) and [Carbon's Developer Guide](https://github.com/carbon-design-system/carbon/tree/main/docs/developer-handbook.md).
 
 ## License
 

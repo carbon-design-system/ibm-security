@@ -1,6 +1,6 @@
 # Contributing
 
-Also refer to [contributing in Carbon](https://github.com/carbon-design-system/carbon/blob/master/.github/CONTRIBUTING.md).
+Also refer to [contributing in Carbon](https://github.com/carbon-design-system/carbon/blob/main/.github/CONTRIBUTING.md).
 
 ## 1. Fork the repo
 

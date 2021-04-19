@@ -1,8 +1,8 @@
 # Grid
 
-The existing grid specification will be deprecated in the next major version in favor of [Carbon's grid](https://github.com/carbon-design-system/carbon/tree/master/packages/grid#usage).
+The existing grid specification will be deprecated in the next major version in favor of [Carbon's grid](https://github.com/carbon-design-system/carbon/tree/main/packages/grid#usage).
 
-Also refer to [migration in Carbon](https://github.com/carbon-design-system/carbon/blob/master/docs/migration/10.x-grid.md).
+Also refer to [migration in Carbon](https://github.com/carbon-design-system/carbon/blob/main/docs/migration/10.x-grid.md).
 
 ## Migrating
 
