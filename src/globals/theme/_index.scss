@@ -60,9 +60,9 @@ $theme: dark;
 @function theme($light, $dark) {
   $deprecate: deprecate(
     $actual: 'theme',
-    $expected: '@carbon/themes',
+    $expected: '@carbon/themes/scss/themes',
     $url:
-      'https://github.com/carbon-design-system/carbon/tree/main/packages/themes',
+      'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x/themes.md#functions',
   );
 
   @return if($theme == dark, $dark, $light);
@@ -84,8 +84,8 @@ $theme: dark;
 @include export-namespace($name: theme) {
   $deprecate: deprecate(
     $actual: '@carbon/ibm-security/scss/globals/theme/index',
-    $expected: '@carbon/themes',
+    $expected: '@carbon/themes/scss/themes',
     $url:
-      'https://github.com/carbon-design-system/carbon/tree/main/packages/themes',
+      'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x/themes.md#imports',
   );
 }

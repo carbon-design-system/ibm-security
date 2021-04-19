@@ -21,7 +21,7 @@
       $actual: '@ibmduo/grid',
       $expected: '@carbon/grid',
       $url:
-        'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x-grid.md#feature-flags',
+        'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/carbon-for-ibm-security/grid.md#feature-flags',
     );
 
     html {
@@ -146,8 +146,8 @@
 @include export-namespace($name: grid) {
   $deprecate: deprecate(
     $actual: '@carbon/ibm-security/scss/globals/grid/index',
-    $expected: '@carbon/grid',
+    $expected: '@carbon/grid/scss/grid',
     $url:
-      'https://github.com/carbon-design-system/carbon/tree/main/packages/grid',
+      'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x/grid.md#imports',
   );
 }

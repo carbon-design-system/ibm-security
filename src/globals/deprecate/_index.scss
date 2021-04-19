@@ -17,7 +17,7 @@
       variable-exists(security--deprecations-message-suppress) or not
       $security--deprecations-message-suppress
   ) {
-    @warn '`#{$actual}` has been deprecated in favor of `#{$expected}` — This will be removed in the next major version. #{$url}';
+    @warn '`#{$actual}` has been deprecated in favor of `#{$expected}` and will be removed in the next major version. #{$url}';
   }
 
   @return null;

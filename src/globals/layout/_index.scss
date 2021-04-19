@@ -24,7 +24,7 @@
     $actual: 'get-fixed-size($unitQuantity: #{$unitQuantity})',
     $expected: 'carbon--mini-units($count: #{$unitQuantity})',
     $url:
-      'https://github.com/carbon-design-system/carbon/tree/main/packages/layout#usage',
+      'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/carbon-for-ibm-security/layout.md#functions',
   );
 
   @return carbon--mini-units($count: $unitQuantity);
@@ -33,8 +33,8 @@
 @include export-namespace($name: layout) {
   $deprecate: deprecate(
     $actual: '@carbon/ibm-security/scss/globals/layout/index',
-    $expected: '@carbon/layout',
+    $expected: '@carbon/layout/scss/layout',
     $url:
-      'https://github.com/carbon-design-system/carbon/tree/main/packages/layout',
+      'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x/layout.md#imports',
   );
 }

@@ -19,8 +19,8 @@ $security-color__gray-90--hover: $hover-ui;
 @include export-namespace($name: color) {
   $deprecate: deprecate(
     $actual: '@carbon/ibm-security/scss/globals/color/index',
-    $expected: '@carbon/colors',
+    $expected: '@carbon/colors/scss/colors',
     $url:
-      'https://github.com/carbon-design-system/carbon/tree/main/packages/colors',
+      'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x/color.md#imports',
   );
 }

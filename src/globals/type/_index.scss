@@ -89,7 +89,7 @@ $type-style-deprecation-map: (
     $actual: 'type-scale-item($scale-item: #{$scale-item})',
     $expected: 'carbon--type-style($name: #{$name})',
     $url:
-      'https://github.com/carbon-design-system/carbon/tree/main/packages/type#type-styles',
+      'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/carbon-for-ibm-security/type.md#functions',
   );
 
   @include carbon--type-style($name: $name);
@@ -137,8 +137,8 @@ $type-style-deprecation-map: (
 @include export-namespace($name: type) {
   $deprecate: deprecate(
     $actual: '@carbon/ibm-security/scss/globals/type/index',
-    $expected: '@carbon/type',
+    $expected: '@carbon/type/scss/type',
     $url:
-      'https://github.com/carbon-design-system/carbon/tree/main/packages/type',
+      'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x/type.md#imports',
   );
 }
