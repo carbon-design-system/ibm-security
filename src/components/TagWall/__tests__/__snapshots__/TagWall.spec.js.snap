@@ -910,7 +910,7 @@ exports[`TagWall Rendering renders 1`] = `
       type="button"
     >
       <Button
-        className="security--button"
+        className=""
         disabled={false}
         kind="ghost"
         onClick={[Function]}
@@ -921,7 +921,7 @@ exports[`TagWall Rendering renders 1`] = `
         type="button"
       >
         <button
-          className="security--button bx--btn bx--btn--sm bx--btn--ghost"
+          className="bx--btn bx--btn--sm bx--btn--ghost"
           disabled={false}
           onClick={[Function]}
           tabIndex={0}
@@ -1202,7 +1202,7 @@ exports[`TagWall Rendering renders the HTML of the node's subtree 1`] = `
     </button>
   </span>
   <button
-    class="security--button bx--btn bx--btn--sm bx--btn--ghost"
+    class="bx--btn bx--btn--sm bx--btn--ghost"
     tabindex="0"
     type="button"
   >
@@ -1561,7 +1561,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
       type="button"
     >
       <Button
-        className="security--button"
+        className=""
         disabled={true}
         kind="ghost"
         onClick={[Function]}
@@ -1572,7 +1572,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         type="button"
       >
         <button
-          className="security--button bx--btn bx--btn--sm bx--btn--ghost bx--btn--disabled"
+          className="bx--btn bx--btn--sm bx--btn--ghost bx--btn--disabled"
           disabled={true}
           onClick={[Function]}
           tabIndex={0}

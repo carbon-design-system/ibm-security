@@ -111,3 +111,7 @@ We're always looking for contributors to help us fix bugs, build new features, o
 ## License
 
 Licensed under the [Apache License, Version 2.0](./LICENSE).
+
+## Telemetry
+
+This project [collects product dependency information for IBM and Carbon Design System properties](https://www.carbondesignsystem.com/help/faq/#telemetry).

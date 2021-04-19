@@ -1,16 +1,13 @@
 /**
  * @file Tag wall.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import classnames from 'classnames';
 import { arrayOf, bool, func, shape, string, object } from 'prop-types';
 import React from 'react';
 
-import {
-  carbonPrefix,
-  getComponentNamespace,
-} from '../../globals/namespace/index';
+import { carbonPrefix, getComponentNamespace } from '../../globals/namespace';
 
 import * as defaultLabels from '../../globals/nls';
 
@@ -78,7 +75,7 @@ const TagWall = ({
             {...item.props}
           >
             <span
-              className={`${carbonPrefix}text-truncate--end`}
+              className={`${carbonPrefix}--text-truncate--end`}
               title={itemToString(item)}
             >
               {itemToString(item)}
