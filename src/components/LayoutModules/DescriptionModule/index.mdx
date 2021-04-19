@@ -46,7 +46,7 @@ Additional props passed into `DescriptionModule` will be forwarded along to the 
 
 #### Render props
 
-In order to make sure that everything works as intended, itʼs important to pass all of the props of the component as fields on the object given to the prop getter. For example, to add a `className`:
+In order to make sure that everything works as intended, it’s important to pass all of the props of the component as fields on the object given to the prop getter. For example, to add a `className`:
 
 ```jsx
 <p {...getLayoutProps({ className: 'className' })} />
@@ -55,14 +55,14 @@ In order to make sure that everything works as intended, itʼs important to pass
 ### Anatomy
 
 1. **Title:** This is the title, achieved by using the `TitleBarModule`. Learn more about the <LinkTo kind="layout-modules-titlebarmodule" story="default">TitleBarModule</LinkTo> and potential variants.
-2. **Description:** This is the description itself, the type style is defined so you shouldnʼt supplement your own values.
+2. **Description:** This is the description itself, the type style is defined so you shouldn’t supplement your own values.
 3. **Bottom spacer:** There is a 32-pixel `$spacing-07` spacer included below the description. Any additional modules can be placed directly underneath.
 
 <img alt="`DescriptionModule` anatomy" src={anatomy} />
 
 ### Variants
 
-If necessary, subsection titles can be substituted or used below section titles. There are values already supplied for the title type styles so you shouldnʼt supplement your own. Learn more by reviewing the <LinkTo kind="layout-modules-titlebarmodule" story="default" > TitleBarModule. </LinkTo>
+If necessary, subsection titles can be substituted or used below section titles. There are values already supplied for the title type styles so you shouldn’t supplement your own. Learn more by reviewing the <LinkTo kind="layout-modules-titlebarmodule" story="default" > TitleBarModule. </LinkTo>
 
 The description module can also be created without any title.
 
