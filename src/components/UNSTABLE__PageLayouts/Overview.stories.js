@@ -32,6 +32,7 @@ import {
 import config, { withContainer } from './stories';
 
 const { decorators, parameters } = config;
+const { prefix } = settings;
 
 export default {
   title: pageLayouts('Overview'),
@@ -64,24 +65,16 @@ const DivWithBackground = withBackground(`div`);
 const DescriptionListModuleWithBorder = withBorder(DescriptionListModule);
 
 export const Default = () => (
-  <div
-    className={`${settings.prefix}--css-grid ${settings.prefix}--css-grid--narrow`}
-  >
-    <div
-      className={`${settings.prefix}--col-span-100 ${settings.prefix}--gutter-start`}
-    >
+  <div className={`${prefix}--css-grid ${prefix}--css-grid--narrow`}>
+    <div className={`${prefix}--col-span-100 ${prefix}--gutter-start`}>
       <ActionBarModule>
         <Tag type="gray">Closed</Tag>
         ID: 12&nbsp;&nbsp;|&nbsp;&nbsp;Result: Completed
       </ActionBarModule>
     </div>
 
-    <DivWithBackground
-      className={`${settings.prefix}--col-span-12 ${settings.prefix}--subgrid`}
-    >
-      <div
-        className={`${settings.prefix}--col-span-6 ${settings.prefix}--gutter-start`}
-      >
+    <DivWithBackground className={`${prefix}--col-span-12 ${prefix}--subgrid`}>
+      <div className={`${prefix}--col-span-6 ${prefix}--gutter-start`}>
         <DescriptionListModule>
           <TitleBarModule title="General settings and scope" subsection />
 
@@ -133,7 +126,7 @@ export const Default = () => (
         </DescriptionListModule>
       </div>
 
-      <div className={`${settings.prefix}--col-span-6`}>
+      <div className={`${prefix}--col-span-6`}>
         <DescriptionListModuleWithBorder direction="bottom" nested>
           <TitleBarModule title="Schedule" subsection />
 
@@ -179,8 +172,8 @@ export const Default = () => (
         </DescriptionListModule>
       </div>
 
-      <DivWithBackground className={`${settings.prefix}--col-span-12`}>
-        <div className={`${settings.prefix}--gutter-start`}>
+      <DivWithBackground className={`${prefix}--col-span-12`}>
+        <div className={`${prefix}--gutter-start`}>
           <TitleBarModule title="Campaign results" subsection />
 
           <ICAModule>
@@ -255,7 +248,7 @@ export const Default = () => (
       </DivWithBackground>
     </DivWithBackground>
 
-    <div className={`${settings.prefix}--col-span-4`}>
+    <div className={`${prefix}--col-span-4`}>
       <ButtonClusterModule>
         <Button kind="ghost" renderIcon={Copy16}>
           Duplicate campaign
@@ -266,7 +259,7 @@ export const Default = () => (
         </Button>
       </ButtonClusterModule>
 
-      <div className={`${settings.prefix}--gutter-start`}>
+      <div className={`${prefix}--gutter-start`}>
         <DescriptionListModule>
           <TitleBarModule title="Details" subsection />
 
