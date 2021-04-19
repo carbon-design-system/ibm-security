@@ -4,7 +4,7 @@
 
 ## Usage
 
-Themes are used for applying color and offered by outputting Carbon for IBM Security-specific [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) as theme tokens, independently of [Carbon's experimental `enable-css-custom-properties` feature flag](https://github.com/carbon-design-system/carbon/blob/master/packages/components/src/globals/scss/_feature-flags.scss).
+Themes are used for applying color and offered by outputting Carbon for IBM Security-specific [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) as theme tokens, independently of [Carbon's experimental `enable-css-custom-properties` feature flag](https://github.com/carbon-design-system/carbon/blob/main/packages/components/src/globals/scss/_feature-flags.scss).
 
 Each theme is assigned universal color variables, which are determined by [common roles and usage](https://www.carbondesignsystem.com/guidelines/color/usage). This allows for uniform color application across themes while maintaining full styling flexibility.
 
