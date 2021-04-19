@@ -90,11 +90,11 @@
   );
 
   @if (feature-flag-enabled($feature: $theme__name--security)) {
-    @warn deprecate($actual: $theme__name--security, $expected: $theme__name);
+    @warn deprecate($actual: $theme__name--security, $expected: $theme__name, $url: 'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x/themes.md#feature-flags');
 
     @each $token, $value in $theme {
       @if (type-of($value: $value) == 'color') {
-        // --#{$token}: var(--#{$custom-property-prefix}-#{$token}, #{$value});
+        --#{$token}: var(--#{$custom-property-prefix}-#{$token}, #{$value});
       }
     }
   }
