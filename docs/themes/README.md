@@ -33,27 +33,6 @@ var(--interactive-02);
 
 ### Sass
 
-If your project is using Sass, you can include the following in your Sass file:
-
-```scss
-@import '@carbon/ibm-security/scss/globals/theme/index';
-```
-
-This will include theming styles and tokens for the **Gray 100 theme _by default_**.
-
-In order to then set the **Cool gray 10 theme**, you need to [add the `security--theme--cg10` class name](#css) in your HTML.
-
-#### Tokens
-
-This file automatically includes tokens, denoted by the prefix `$`, which initializes all the theme variables for use with Sass. For example:
-
-```scss
-$interactive-01;
-$interactive-02;
-```
-
-#### Feature flags
-
 You can disable Carbon for IBM Security custom theme output using a feature flag by writing the following Sass code before importing:
 
 ```scss
