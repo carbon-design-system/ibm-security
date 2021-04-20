@@ -1,6 +1,6 @@
 # Type
 
-The existing type specification will be deprecated in the next major version in favor of [Carbon's type](https://github.com/carbon-design-system/carbon/tree/main/packages/type#usage).
+The existing type specification will be removed in an upcoming major release in favor of [Carbon's type](https://github.com/carbon-design-system/carbon/tree/main/packages/type#usage).
 
 Also refer to [migration in Carbon](https://github.com/carbon-design-system/carbon/blob/main/docs/migration/10.x-type.md).
 

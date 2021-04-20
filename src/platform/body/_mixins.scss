@@ -1,7 +1,7 @@
 ////
 /// Body mixins.
 /// @group body
-/// @copyright IBM Security 2019 - 2021
+/// @copyright IBM Security 2019
 ////
 
 @import '@carbon/grid/scss/mixins';
@@ -18,7 +18,6 @@ $body__color__background: $ui-background;
 $body__color__text: $text-01;
 
 @mixin body {
-  // TODO: `2.x` - To be removed.
   @include carbon--grid;
   @include carbon--type-reset;
   @include carbon--type-classes;

@@ -1,10 +1,10 @@
 ////
 /// Body entry point.
 /// @group body
-/// @copyright IBM Security 2019 - 2021
+/// @copyright IBM Security 2019
 ////
 
-@import 'carbon-components/scss/globals/scss/css--body'; // TODO: `2.x` - To be removed.
+@import 'carbon-components/scss/globals/scss/css--body';
 
 @import '../../globals/feature-flags/index';
 @import '../../globals/namespace/index';
