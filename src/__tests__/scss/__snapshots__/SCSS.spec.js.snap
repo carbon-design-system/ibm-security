@@ -2719,6 +2719,8 @@ body {
   font-weight: 400;
   line-height: 1.34;
   letter-spacing: 0.32px;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 .security--card__body {
@@ -6002,6 +6004,7 @@ a.bx--overflow-menu-options__btn::before {
   line-height: 1.4;
   letter-spacing: 0;
   display: block;
+  margin-top: 1rem;
   margin-bottom: 0.75rem;
 }
 
@@ -6038,7 +6041,7 @@ a.bx--overflow-menu-options__btn::before {
 
 .security--panel--v2__footer {
   display: flex;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 20rem;
 }
@@ -9360,6 +9363,7 @@ li.bx--accordion__item--disabled:last-of-type {
   letter-spacing: 0.32px;
   font-weight: 600;
   display: flex;
+  margin-top: 0.5rem;
   margin-bottom: 1rem;
   justify-content: space-between;
 }
@@ -9767,6 +9771,8 @@ li.bx--accordion__item--disabled:last-of-type {
   font-weight: 400;
   line-height: 1.29;
   letter-spacing: 0.16px;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 .security--filter-panel__search {
@@ -17410,6 +17416,8 @@ li.bx--accordion__item--disabled:last-of-type {
   font-weight: 400;
   line-height: 1.34;
   letter-spacing: 0.32px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .security--tag-wall > .security--tag--interactive {
@@ -18487,6 +18495,7 @@ li.bx--accordion__item--disabled:last-of-type {
   letter-spacing: 0;
   padding-right: 1.5rem;
   margin-top: 0;
+  margin-bottom: 1.5rem;
 }
 
 .security--tearsheet__main__content {

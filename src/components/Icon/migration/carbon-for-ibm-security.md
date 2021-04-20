@@ -6,10 +6,10 @@ If using the above method, the `size` prop is no longer required as the size is 
 
 ## Props
 
-| `1.x`                | `2.x`        |
-| -------------------- | ------------ |
-| `height` and `width` | `size`       |
-| `iconName`           | `renderIcon` |
+| `carbon-addons-security` | `@carbon/ibm-security` |
+| ------------------------ | ---------------------- |
+| `height` and `width`     | `size`                 |
+| `iconName`               | `renderIcon`           |
 
 ## Example
 
