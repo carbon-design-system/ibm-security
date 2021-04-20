@@ -1,5 +1,13 @@
 # Themes
 
+### Feature flags
+
+Theme-related feature flags now directly reference underlying Carbon feature flags to provide consistency in accessing common variables.
+
+| `1.x`                                   | `2.x`                          |
+| --------------------------------------- | ------------------------------ |
+| `security--css-custom-property-theming` | `enable-css-custom-properties` |
+
 ### Functions
 
 | `1.x`   | `2.x`                            |
@@ -8,16 +16,9 @@
 
 ### Variables
 
-| `1.x`              | `2.x`                            |
-| ------------------ | -------------------------------- |
-| `$security--theme` | [Themes](../../themes/README.md) |
+Theme-related variables now directly reference underlying Carbon variables to provide consistency in accessing common variables.
 
-### Feature flags
-
-If using `@carbon/themes`, you can disable the legacy theme output using a feature flag by writing the following Sass code before importing:
-
-```scss
-$security--feature-flags: (
-  security--css-custom-property-theming: false,
-);
-```
+| `1.x`                   | `2.x`                            |
+| ----------------------- | -------------------------------- |
+| `$security--theme`      | [Themes](../../themes/README.md) |
+| `var(--interactive-01)` | `$interactive-01`                |
