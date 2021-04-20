@@ -24,6 +24,9 @@
 @include export-namespace($name: globals) {
   $deprecate: deprecate(
     $actual: '@carbon/ibm-security/scss/globals/index',
-    $expected: '@carbon/ibm-security/scss/index',
+    $expected:
+      "'@carbon/ibm-security/scss/index' and 'carbon-components/scss/globals/scss/helper-mixins'",
+    $url:
+      'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x/README.md#globals',
   );
 }

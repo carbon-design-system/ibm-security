@@ -9,9 +9,9 @@
 /// @param {string} $actual The value provided.
 /// @param {string} $expected The expected value.
 /// @param {string} $url The URL to assist with migrating.
-/// @return {string} The message generated as a deprecation warning.
+/// @return {null}
 ///
-@function deprecate($actual, $expected, $url: null) {
+@function deprecate($actual, $expected, $url) {
   @if (
     not
       variable-exists(security--deprecations-message-suppress) or not
