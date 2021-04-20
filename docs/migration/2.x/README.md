@@ -17,14 +17,13 @@ Global-related code now directly references underlying Carbon modules to provide
 
 ## Elements
 
-| Name    | `2.x`                 |
-| ------- | --------------------- |
-| Color   | [Migrate](color.md)   |
-| Layout  | [Migrate](layout.md)  |
-| Globals | [Migrate](globals.md) |
-| Grid    | [Migrate](grid.md)    |
-| Themes  | [Migrate](themes.md)  |
-| Type    | [Migrate](type.md)    |
+| Name   | `2.x`                |
+| ------ | -------------------- |
+| Color  | [Migrate](color.md)  |
+| Layout | [Migrate](layout.md) |
+| Grid   | [Migrate](grid.md)   |
+| Themes | [Migrate](themes.md) |
+| Type   | [Migrate](type.md)   |
 
 ## Components
 
