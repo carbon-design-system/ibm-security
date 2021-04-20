@@ -1,5 +1,5 @@
 ////
-/// Theme helpers.
+/// Theme helpers - TODO: `2.x` - To be removed.
 /// @group theme
 /// @copyright IBM Security 2019 - 2021
 ////
@@ -42,8 +42,6 @@ $carbon--theme: $-theme;
 
 @import 'carbon-components/scss/globals/scss/theme-tokens';
 @import 'mixins';
-
-// TODO: `2.x` - To be removed after the `theme` function is deprecated.
 
 /// Dark theme.
 /// @type String

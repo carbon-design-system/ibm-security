@@ -1,18 +1,15 @@
 ////
-/// Layout.
+/// Layout - TODO: `2.x` - To be removed.
 /// @group layout
 /// @copyright IBM Security 2019 - 2021
 ////
 
-// TODO: `2.x` - To be removed.
 @import '@carbon/layout/scss/layout';
 @import 'carbon-components/scss/globals/scss/layout';
 @import 'carbon-components/scss/globals/scss/spacing';
 
 @import '../deprecate/index';
 @import '../namespace/index';
-
-// TODO: `2.x` - To be removed.
 
 ///
 /// Deprecation warning method for `get-fixed-size`.

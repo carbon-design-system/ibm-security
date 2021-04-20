@@ -1,17 +1,16 @@
 ////
-/// Colors.
+/// Colors - TODO: `2.x` - To be removed.
 /// @group colors
 /// @copyright IBM Security 2019 - 2021
 ////
 
-@import '@carbon/colors/scss/colors'; // TODO: `2.x` - To be removed.
+@import '@carbon/colors/scss/colors';
 
 @import '@carbon/themes/scss/tokens';
 
 @import '../deprecate/index';
 @import '../namespace/index';
 
-/// TODO: `2.x` - Deprecate in favor of `$hover-ui`.
 /// @type Color
 /// @deprecated
 $security-color__gray-90--hover: $hover-ui;

@@ -1,10 +1,9 @@
 ////
-/// Type.
+/// Type - TODO: `2.x` - To be removed.
 /// @group type
 /// @copyright IBM Security 2019 - 2021
 ////
 
-// TODO: `2.x` - To be removed.
 @import '@carbon/type/scss/classes';
 @import '@carbon/type/scss/type';
 @import 'carbon-components/scss/globals/scss/css--font-face';
@@ -12,8 +11,6 @@
 @import '../deprecate/index';
 @import '../feature-flags/index';
 @import '../namespace/index';
-
-// TODO: `2.x` - To be removed.
 
 /// Monospaced font family.
 /// @type string
@@ -94,8 +91,6 @@ $type-style-deprecation-map: (
 
   @include carbon--type-style($name: $name);
 }
-
-// TODO: `2.x` - Deprecate after teams have migrated to `@carbon/type`.
 
 @if feature-flag-enabled($feature: $type__name) {
   @include export-namespace($name: $type__name) {
