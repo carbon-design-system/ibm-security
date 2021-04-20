@@ -1,6 +1,6 @@
 /**
  * @file Filter panel search tests.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import { act, render, wait } from '@testing-library/react';
@@ -33,7 +33,7 @@ describe(name, () => {
     const { getByTestId, getByPlaceholderText } = render(
       <FilterPanelSearch
         labelText="search label"
-        placeHolderText="search placeholder"
+        placeholder="search placeholder"
       >
         <div data-testid="result-content" />
       </FilterPanelSearch>
@@ -47,7 +47,7 @@ describe(name, () => {
     const { queryByTestId, getByPlaceholderText } = render(
       <FilterPanelSearch
         labelText="search label"
-        placeHolderText="search placeholder"
+        placeholder="search placeholder"
       >
         <div data-testid="result-content" />
       </FilterPanelSearch>
@@ -67,7 +67,7 @@ describe(name, () => {
     const { getByTestId, getByPlaceholderText, container } = render(
       <FilterPanelSearch
         labelText="search label"
-        placeHolderText="search placeholder"
+        placeholder="search placeholder"
       >
         <div data-testid="result-content">
           <Checkbox labelText="checkbox" id="checkbox" />

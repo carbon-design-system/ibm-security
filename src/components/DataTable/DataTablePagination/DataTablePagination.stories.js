@@ -1,6 +1,6 @@
 /**
  * @file Data table pagination stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
@@ -59,7 +59,7 @@ const render = ({
     </TableBatchActions>
     <TableToolbar>
       <TableToolbarContent>
-        <Search placeHolderText="Search" collapsible onChange={onInputChange} />
+        <Search onChange={onInputChange} placeholder="Search" collapsible />
         <IconButton
           label={label}
           onClick={action(label)}

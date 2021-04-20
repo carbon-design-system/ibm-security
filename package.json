@@ -45,18 +45,23 @@
     "test:scss": "node scripts/scss",
     "test:ssr": "node scripts/ssr"
   },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "sass": "^1.32.8"
+  },
   "dependencies": {
     "@babel/runtime": "^7.4.3",
-    "@carbon/colors": "10.18.0",
-    "@carbon/grid": "10.18.0",
-    "@carbon/icons-react": "10.23.0",
-    "@carbon/import-once": "10.4.0",
-    "@carbon/layout": "10.16.0",
-    "@carbon/motion": "10.11.0",
-    "@carbon/themes": "10.25.0",
-    "@carbon/type": "10.19.0",
-    "carbon-components": "10.26.0",
-    "carbon-components-react": "7.26.0",
+    "@carbon/colors": "10.22.0",
+    "@carbon/grid": "10.24.0",
+    "@carbon/icons-react": "10.29.0",
+    "@carbon/import-once": "10.5.0",
+    "@carbon/layout": "10.22.0",
+    "@carbon/motion": "10.15.0",
+    "@carbon/themes": "10.31.0",
+    "@carbon/type": "10.25.0",
+    "carbon-components": "10.32.0",
+    "carbon-components-react": "7.32.0",
     "carbon-icons": "7.0.7",
     "classnames": "^2.2.5",
     "downshift": "^1.31.14",
@@ -171,11 +176,6 @@
     "stylelint-scss": "^3.5.2",
     "webpack-merge": "^5.1.4",
     "yarn": "^1.16.0"
-  },
-  "peerDependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "sass": "^1.32.8"
   },
   "browserslist": [
     "> 1%",
