@@ -1,6 +1,6 @@
 /**
  * @file Search stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
@@ -8,7 +8,7 @@ import { storiesOf } from '@storybook/react';
 import { boolean, text } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import {
   Search,
@@ -28,11 +28,11 @@ const props = () => ({
     'The label text for the close button (closeButtonLabelText)',
     ''
   ),
-  placeHolderText: text('Placeholder text (placeHolderText)', 'Search'),
+  placeholder: text('Placeholder text (placeholder)', 'Search'),
   onChange: action('onChange'),
 });
 
-storiesOf(components('Search'), module)
+storiesOf(carbon('Search'), module)
   .add('Default', () => <Search {...props()} id="search-1" />, {
     info: {
       text: `

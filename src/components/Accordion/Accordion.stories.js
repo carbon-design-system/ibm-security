@@ -9,7 +9,7 @@ import { storiesOf } from '@storybook/react';
 
 import React from 'react';
 
-import { components, info } from '../../../.storybook';
+import { carbon, info } from '../../../.storybook';
 
 import { Accordion, AccordionItem, AccordionSkeleton, Button } from '../..';
 
@@ -31,7 +31,7 @@ const documentation = info(
   }
 );
 
-storiesOf(components('Accordion'), module)
+storiesOf(carbon('Accordion'), module)
   .add(
     'Default',
     () => (

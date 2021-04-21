@@ -8,7 +8,7 @@ import { storiesOf } from '@storybook/react';
 
 import React from 'react';
 
-import { components } from '../../../.storybook';
+import { security } from '../../../.storybook';
 import { carbonPrefix } from '../../globals/namespace';
 
 import { ICA } from '../..';
@@ -36,7 +36,7 @@ const storyProps = ({ value = icaValue, total } = {}) => ({
   locale: select('Locale (locale)', Locales, Locales[0]),
 });
 
-storiesOf(components('ICA'), module)
+storiesOf(security('ICA'), module)
   .add('default', () => <ICA {...storyProps()} />)
   .add('with null value', () => <ICA {...storyProps({ value: null })} />)
   .add('with 1000 value', () => (
@@ -94,8 +94,8 @@ storiesOf(components('ICA'), module)
         Multiple \`ICA\` components (i.e., an "ICA Wall") should be presented in a grid using the correct class names.
 
         These two row examples show different combinations of breakpoints and spans set per column with specific class names.
-
-        For more information the 16 column IBM grid, please review the [\`@carbon/grid\` package documentation](https://github.com/carbon-design-system/carbon/tree/master/packages/grid).
+        
+        For more information the 16 column IBM grid, please review the [\`@carbon/grid\` package documentation](https://github.com/carbon-design-system/carbon/tree/main/packages/grid).
       `,
       },
     }

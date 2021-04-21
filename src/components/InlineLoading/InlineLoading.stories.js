@@ -1,6 +1,6 @@
 /**
  * @file Loading stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { action } from '@storybook/addon-actions';
@@ -9,7 +9,7 @@ import { storiesOf } from '@storybook/react';
 
 import React, { PureComponent } from 'react';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import { Button, InlineLoading } from '../..';
 
@@ -30,7 +30,7 @@ const props = () => ({
   onSuccess: action('onSuccess'),
 });
 
-storiesOf(components('InlineLoading'), module)
+storiesOf(carbon('InlineLoading'), module)
   .add('default', () => <InlineLoading {...props()} />, {
     info:
       "Basic implementation of an Inline Loading component. Inline Loading spinners are used when creating, updating, or deleting an item. They help notify users that their change is underway, with different states for 'loading' and 'success'.",

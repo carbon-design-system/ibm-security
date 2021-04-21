@@ -1,6 +1,6 @@
 /**
  * @file Summary card container tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { render } from '@testing-library/react';
@@ -236,7 +236,7 @@ describe('SummaryCardContainer', () => {
     // We can't check `not.toBeVisible` because the batch actions
     // are absolutely positioned & not hidden/removed from the DOM.
     // So instead, we query the default batch actions text with 0 selected:
-    expect(queryByText(/0 item selected/i)).toBeInTheDocument();
+    expect(queryByText(/0 items selected/i)).toBeInTheDocument();
 
     userEvent.click(getByLabelText(/test select 0/i));
 
@@ -289,7 +289,7 @@ describe('SummaryCardContainer', () => {
     userEvent.click(getByText(/Cancel/i));
 
     // Expect the batch actions text to be updated:
-    expect(queryByText(/0 item selected/i)).toBeInTheDocument();
+    expect(queryByText(/0 items selected/i)).toBeInTheDocument();
 
     // Expect both summary cards to not be selected:
     expect(getByLabelText(/test select 0/i)).not.toBeChecked();

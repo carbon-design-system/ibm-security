@@ -1,6 +1,6 @@
 /**
  * @file Tag stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { action } from '@storybook/addon-actions';
@@ -11,7 +11,7 @@ import { types as typesList } from 'carbon-components-react/lib/components/Tag';
 
 import React from 'react';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import { InteractiveTag, Tag, TagSkeleton } from '../..';
 
@@ -36,7 +36,7 @@ const interactiveTagProps = () => ({
 
 const content = () => text('Content (children)', 'This is not a tag');
 
-storiesOf(components('Tag'), module)
+storiesOf(carbon('Tag'), module)
   .add(
     'Default',
     () => (

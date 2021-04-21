@@ -1,6 +1,6 @@
 /**
  * @file Shell stories.
- * @copyright IBM Security 2018
+ * @copyright IBM Security 2018 - 2021
  */
 
 import Camera20 from '@carbon/icons-react/lib/camera/20';
@@ -29,7 +29,7 @@ const shellProps = {
   toolbar,
 };
 
-disableCenteredStories(storiesOf(patterns('Shell (Security)'), module))
+disableCenteredStories(storiesOf(patterns('Shell'), module))
   .add('default', () => <Shell {...shellProps} />, {
     info: {
       text: `

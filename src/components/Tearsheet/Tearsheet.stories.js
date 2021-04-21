@@ -1,6 +1,6 @@
 /**
  * @file Tearsheet stories.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { action } from '@storybook/addon-actions';
@@ -108,9 +108,9 @@ const renderMain = ({ isLoading }) => (
     <Search
       id={id}
       className={className}
-      labelText={searchLabel}
-      placeHolderText={searchLabel}
       disabled={isLoading}
+      labelText={searchLabel}
+      placeholder={searchLabel}
     />
 
     <TextInput
