@@ -59,7 +59,7 @@ const render = ({
     </TableBatchActions>
     <TableToolbar>
       <TableToolbarContent>
-        <Search placeHolderText="Search" collapsible onChange={onInputChange} />
+        <Search onChange={onInputChange} placeholder="Search" collapsible />
         <IconButton
           label={label}
           onClick={action(label)}
