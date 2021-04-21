@@ -1,6 +1,6 @@
 /**
  * @file Status icon stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { select, text } from '@storybook/addon-knobs';
@@ -9,7 +9,7 @@ import { storiesOf } from '@storybook/react';
 import { compose, getDisplayName, lifecycle } from 'recompose';
 import React from 'react';
 
-import { components } from '../../../.storybook';
+import { security } from '../../../.storybook';
 
 import { StatusIcon } from '../..';
 import { SIZE, STATUS } from './StatusIcon';
@@ -22,7 +22,7 @@ const storyProps = () => ({
 
 const status = STATUS[0];
 
-storiesOf(components('StatusIcon'), module)
+storiesOf(security('StatusIcon'), module)
   .add('Default', () => <StatusIcon {...storyProps()} />)
   .add('Status', () => (
     <StatusIcon

@@ -9,7 +9,7 @@ import { storiesOf } from '@storybook/react';
 
 import React from 'react';
 
-import { components } from '../../../../.storybook';
+import { security } from '../../../../.storybook';
 import { carbonPrefix } from '../../../globals/namespace';
 
 import { Decorator } from '../../..';
@@ -50,7 +50,7 @@ const midLineStoryProps = () => ({
   },
 });
 
-storiesOf(components('Decorator'), module)
+storiesOf(security('Decorator'), module)
   .add('Default', () => (
     <>
       <p className={`${carbonPrefix}--type-body-long-01`}>

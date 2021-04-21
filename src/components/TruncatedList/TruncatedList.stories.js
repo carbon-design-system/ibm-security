@@ -1,6 +1,6 @@
 /**
  * @file Truncated list stories.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import { number, color } from '@storybook/addon-knobs';
@@ -8,11 +8,11 @@ import { storiesOf } from '@storybook/react';
 
 import React from 'react';
 
-import { components } from '../../../.storybook';
+import { security } from '../../../.storybook';
 import { TruncatedList, UnorderedList } from '../..';
 import { createChildrenArray } from './_mocks_';
 
-storiesOf(components(TruncatedList.name), module)
+storiesOf(security(TruncatedList.name), module)
   .addDecorator(story => (
     <div style={{ minWidth: 150, minHeight: 300 }}>{story()}</div>
   ))

@@ -1,16 +1,16 @@
 /**
  * @file Ordered list stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import { ListItem, OrderedList } from '../..';
 
-storiesOf(components('OrderedList'), module)
+storiesOf(carbon('OrderedList'), module)
   .add(
     'Default',
     () => (

@@ -1,15 +1,15 @@
 /**
  * @file Trending card stories.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
 
-import { components, getDocsParameters } from '../../../.storybook';
+import { getDocsParameters, security } from '../../../.storybook';
 import { TrendingCard } from '../..';
 
 export default {
-  title: components(TrendingCard.name),
+  title: security(TrendingCard.name),
   component: TrendingCard,
   args: {
     title: 'Title',

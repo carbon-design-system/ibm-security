@@ -1,6 +1,6 @@
 /**
  * @file Text area section stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
@@ -8,7 +8,7 @@ import { storiesOf } from '@storybook/react';
 import { boolean, number, text } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import { TextArea, TextAreaSkeleton } from '../..';
 
@@ -32,7 +32,7 @@ const TextAreaProps = () => ({
   onClick: action('onClick'),
 });
 
-storiesOf(components('TextArea'), module)
+storiesOf(carbon('TextArea'), module)
   .add('Default', () => <TextArea {...TextAreaProps()} />, {
     info: {
       text: `

@@ -1,6 +1,6 @@
 /**
  * @file Unstable pagination stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
@@ -10,7 +10,7 @@ import { array, boolean, number, text } from '@storybook/addon-knobs';
 
 import { UNSTABLE__Pagination, PageSelector } from '../..';
 
-import { components } from '../../../.storybook';
+import { security } from '../../../.storybook';
 
 const props = () => ({
   disabled: boolean('Disable backward/forward buttons (disabled)', false),
@@ -31,7 +31,7 @@ const props = () => ({
   onChange: action('onChange'),
 });
 
-storiesOf(components('UNSTABLE Pagination'), module)
+storiesOf(security('UNSTABLE Pagination'), module)
   .addDecorator(story => <div style={{ width: '800px' }}>{story()}</div>)
   .add(
     'default',

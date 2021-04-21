@@ -1,6 +1,6 @@
 /**
  * @file Select stories.
- * @copyright IBM Security 2018-2020
+ * @copyright IBM Security 2018 - 2021
  */
 
 import React from 'react';
@@ -8,7 +8,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { boolean, text } from '@storybook/addon-knobs';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import { Select, SelectItem, SelectItemGroup, SelectSkeleton } from '../../';
 
@@ -35,7 +35,7 @@ const props = {
   }),
 };
 
-storiesOf(components('Select'), module)
+storiesOf(carbon('Select'), module)
   .add(
     'Default',
     () => {
