@@ -29,6 +29,8 @@ Map {
         "args": Array [
           Array [
             "sm",
+            "md",
+            "lg",
             "xl",
           ],
         ],
@@ -267,6 +269,9 @@ Map {
         "type": "bool",
       },
       "onBlur": Object {
+        "type": "func",
+      },
+      "onClick": Object {
         "type": "func",
       },
       "onFocus": Object {
@@ -654,6 +659,12 @@ Map {
         "type": "number",
       },
       "maxExpandedNumberOfRows": Object {
+        "type": "number",
+      },
+      "minCollapsedNumberOfRows": Object {
+        "type": "number",
+      },
+      "minExpandedNumberOfRows": Object {
         "type": "number",
       },
       "onClick": Object {
@@ -1075,6 +1086,8 @@ Map {
         "args": Array [
           Array [
             "sm",
+            "md",
+            "lg",
             "xl",
           ],
         ],
@@ -1311,6 +1324,7 @@ Map {
           Array [
             "xs",
             "sm",
+            "md",
             "lg",
           ],
         ],
@@ -1368,6 +1382,8 @@ Map {
         "args": Array [
           Array [
             "sm",
+            "md",
+            "lg",
             "xl",
           ],
         ],
@@ -2917,6 +2933,8 @@ Map {
         "args": Array [
           Array [
             "sm",
+            "md",
+            "lg",
             "xl",
           ],
         ],
@@ -3313,6 +3331,8 @@ Map {
         "args": Array [
           Array [
             "sm",
+            "md",
+            "lg",
             "xl",
           ],
         ],
@@ -3352,6 +3372,8 @@ Map {
         "args": Array [
           Array [
             "sm",
+            "md",
+            "lg",
             "xl",
           ],
         ],
@@ -3483,6 +3505,79 @@ Map {
       },
       "title": Object {
         "type": "string",
+      },
+    },
+  },
+  "ExpandableSearch" => Object {
+    "propTypes": Object {
+      "className": Object {
+        "type": "string",
+      },
+      "closeButtonLabelText": Object {
+        "type": "string",
+      },
+      "defaultValue": Object {
+        "args": Array [
+          Array [
+            Object {
+              "type": "string",
+            },
+            Object {
+              "type": "number",
+            },
+          ],
+        ],
+        "type": "oneOfType",
+      },
+      "disabled": Object {
+        "type": "bool",
+      },
+      "id": Object {
+        "type": "string",
+      },
+      "labelText": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+      "light": Object {
+        "type": "bool",
+      },
+      "onChange": Object {
+        "type": "func",
+      },
+      "onKeyDown": Object {
+        "type": "func",
+      },
+      "placeHolderText": [Function],
+      "placeholder": Object {
+        "type": "string",
+      },
+      "size": Object {
+        "args": Array [
+          Array [
+            "sm",
+            "lg",
+            "xl",
+          ],
+        ],
+        "type": "oneOf",
+      },
+      "small": [Function],
+      "type": Object {
+        "type": "string",
+      },
+      "value": Object {
+        "args": Array [
+          Array [
+            Object {
+              "type": "string",
+            },
+            Object {
+              "type": "number",
+            },
+          ],
+        ],
+        "type": "oneOfType",
       },
     },
   },
@@ -4304,6 +4399,9 @@ Map {
       },
       "className": Object {
         "type": "string",
+      },
+      "columns": Object {
+        "type": "number",
       },
       "condensed": Object {
         "type": "bool",
@@ -5321,6 +5419,7 @@ Map {
         "args": Array [
           Array [
             "sm",
+            "md",
           ],
         ],
         "type": "oneOf",
@@ -5365,10 +5464,24 @@ Map {
       "inline": Object {
         "type": "bool",
       },
+      "renderIcon": Object {
+        "args": Array [
+          Array [
+            Object {
+              "type": "func",
+            },
+            Object {
+              "type": "object",
+            },
+          ],
+        ],
+        "type": "oneOfType",
+      },
       "size": Object {
         "args": Array [
           Array [
             "sm",
+            "md",
             "lg",
           ],
         ],
@@ -5612,6 +5725,8 @@ Map {
         "args": Array [
           Array [
             "sm",
+            "md",
+            "lg",
             "xl",
           ],
         ],
@@ -5800,6 +5915,7 @@ Map {
           Array [
             "xs",
             "sm",
+            "md",
             "lg",
           ],
         ],
@@ -6237,6 +6353,8 @@ Map {
           "args": Array [
             Array [
               "sm",
+              "md",
+              "lg",
               "xl",
             ],
           ],
@@ -6476,6 +6594,8 @@ Map {
         "args": Array [
           Array [
             "sm",
+            "md",
+            "lg",
             "xl",
           ],
         ],
@@ -6999,7 +7119,9 @@ Map {
       "page": Object {
         "type": "number",
       },
-      "pageInputDisabled": [Function],
+      "pageInputDisabled": Object {
+        "type": "bool",
+      },
       "pageNumberText": Object {
         "type": "string",
       },
@@ -7008,6 +7130,9 @@ Map {
       },
       "pageSize": Object {
         "type": "number",
+      },
+      "pageSizeInputDisabled": Object {
+        "type": "bool",
       },
       "pageSizes": Object {
         "args": Array [
@@ -8429,6 +8554,8 @@ Map {
         "args": Array [
           Array [
             "sm",
+            "md",
+            "lg",
             "xl",
           ],
         ],
@@ -8503,10 +8630,7 @@ Map {
   },
   "SelectableTile" => Object {
     "defaultProps": Object {
-      "handleClick": [Function],
-      "handleKeyDown": [Function],
       "light": false,
-      "onChange": [Function],
       "selected": false,
       "tabIndex": 0,
       "title": "title",
@@ -8522,12 +8646,8 @@ Map {
       "disabled": Object {
         "type": "bool",
       },
-      "handleClick": Object {
-        "type": "func",
-      },
-      "handleKeyDown": Object {
-        "type": "func",
-      },
+      "handleClick": [Function],
+      "handleKeyDown": [Function],
       "iconDescription": [Function],
       "id": Object {
         "type": "string",
@@ -8539,6 +8659,12 @@ Map {
         "type": "string",
       },
       "onChange": Object {
+        "type": "func",
+      },
+      "onClick": Object {
+        "type": "func",
+      },
+      "onKeyDown": Object {
         "type": "func",
       },
       "selected": Object {
@@ -9934,124 +10060,11 @@ Map {
       },
     },
   },
-  "StructuredListBody" => Object {
-    "defaultProps": Object {
-      "onKeyDown": [Function],
-    },
-    "propTypes": Object {
-      "children": Object {
-        "type": "node",
-      },
-      "className": Object {
-        "type": "string",
-      },
-      "head": Object {
-        "type": "bool",
-      },
-      "onKeyDown": Object {
-        "type": "func",
-      },
-    },
-  },
-  "StructuredListCell" => Object {
-    "defaultProps": Object {
-      "head": false,
-      "noWrap": false,
-    },
-    "propTypes": Object {
-      "children": Object {
-        "type": "node",
-      },
-      "className": Object {
-        "type": "string",
-      },
-      "head": Object {
-        "type": "bool",
-      },
-      "noWrap": Object {
-        "type": "bool",
-      },
-    },
-  },
-  "StructuredListHead" => Object {
-    "propTypes": Object {
-      "children": Object {
-        "type": "node",
-      },
-      "className": Object {
-        "type": "string",
-      },
-    },
-  },
-  "StructuredListInput" => Object {
-    "defaultProps": Object {
-      "onChange": [Function],
-      "title": "title",
-      "value": "value",
-    },
-    "propTypes": Object {
-      "className": Object {
-        "type": "string",
-      },
-      "defaultChecked": Object {
-        "type": "bool",
-      },
-      "id": Object {
-        "type": "string",
-      },
-      "name": Object {
-        "type": "string",
-      },
-      "onChange": Object {
-        "type": "func",
-      },
-      "title": Object {
-        "type": "string",
-      },
-      "value": Object {
-        "args": Array [
-          Array [
-            Object {
-              "type": "string",
-            },
-            Object {
-              "type": "number",
-            },
-          ],
-        ],
-        "isRequired": true,
-        "type": "oneOfType",
-      },
-    },
-  },
-  "StructuredListRow" => Object {
-    "defaultProps": Object {
-      "head": false,
-      "label": false,
-      "onKeyDown": [Function],
-      "tabIndex": 0,
-    },
-    "propTypes": Object {
-      "children": Object {
-        "type": "node",
-      },
-      "className": Object {
-        "type": "string",
-      },
-      "head": Object {
-        "type": "bool",
-      },
-      "label": Object {
-        "type": "bool",
-      },
-      "onKeyDown": Object {
-        "type": "func",
-      },
-      "tabIndex": Object {
-        "type": "number",
-      },
-    },
-  },
+  "StructuredListBody" => Object {},
+  "StructuredListCell" => Object {},
+  "StructuredListHead" => Object {},
+  "StructuredListInput" => Object {},
+  "StructuredListRow" => Object {},
   "StructuredListSkeleton" => Object {
     "defaultProps": Object {
       "border": false,
@@ -10069,27 +10082,7 @@ Map {
       },
     },
   },
-  "StructuredListWrapper" => Object {
-    "defaultProps": Object {
-      "ariaLabel": "Structured list section",
-      "selection": false,
-    },
-    "propTypes": Object {
-      "ariaLabel": Object {
-        "type": "string",
-      },
-      "border": [Function],
-      "children": Object {
-        "type": "node",
-      },
-      "className": Object {
-        "type": "string",
-      },
-      "selection": Object {
-        "type": "bool",
-      },
-    },
-  },
+  "StructuredListWrapper" => Object {},
   "SummaryCard" => Object {
     "defaultProps": Object {
       "className": "",
@@ -11154,6 +11147,7 @@ Map {
         "args": Array [
           Array [
             "sm",
+            "md",
           ],
         ],
         "type": "oneOf",
@@ -12095,6 +12089,9 @@ Map {
         "hideLabel": Object {
           "type": "bool",
         },
+        "hidePasswordLabel": Object {
+          "type": "string",
+        },
         "id": Object {
           "isRequired": true,
           "type": "string",
@@ -12119,6 +12116,9 @@ Map {
           "type": "func",
         },
         "placeholder": Object {
+          "type": "string",
+        },
+        "showPasswordLabel": Object {
           "type": "string",
         },
         "size": Object {
@@ -12344,6 +12344,8 @@ Map {
         "args": Array [
           Array [
             "sm",
+            "md",
+            "lg",
             "xl",
           ],
         ],
@@ -12545,6 +12547,8 @@ Map {
         "args": Array [
           Array [
             "sm",
+            "md",
+            "lg",
             "xl",
           ],
         ],
@@ -12733,6 +12737,7 @@ Map {
         "args": Array [
           Array [
             "sm",
+            "md",
           ],
         ],
         "type": "oneOf",
@@ -13415,6 +13420,9 @@ Map {
       "onBlur": Object {
         "type": "func",
       },
+      "onClick": Object {
+        "type": "func",
+      },
       "onFocus": Object {
         "type": "func",
       },
@@ -13426,7 +13434,7 @@ Map {
       },
       "tooltipText": Object {
         "isRequired": true,
-        "type": "string",
+        "type": "node",
       },
     },
   },
@@ -13885,14 +13893,42 @@ Map {
     "activeSecondary": "var(--active-secondary, #393939)",
     "activeTertiary": "var(--active-tertiary, #c6c6c6)",
     "activeUI": "var(--active-ui, #525252)",
+    "background": "var(--background, #161616)",
+    "backgroundActive": "var(--background-active, #525252)",
+    "backgroundBrand": "var(--background-brand, #0f62fe)",
+    "backgroundHover": "var(--background-hover, #353535)",
+    "backgroundInverse": "var(--background-inverse, #f4f4f4)",
+    "backgroundInverseHover": "var(--background-inverse-hover, #e5e5e5)",
+    "backgroundSelected": "var(--background-selected, #393939)",
+    "backgroundSelectedHover": "var(--background-selected-hover, #4c4c4c)",
     "bodyLong01": "var(--body-long-01, [object Object])",
     "bodyLong02": "var(--body-long-02, [object Object])",
     "bodyShort01": "var(--body-short-01, [object Object])",
     "bodyShort02": "var(--body-short-02, [object Object])",
+    "borderDisabled": "var(--border-disabled, #262626)",
+    "borderInteractive": "var(--border-interactive, #4589ff)",
+    "borderInverse": "var(--border-inverse, #f4f4f4)",
+    "borderStrong": "var(--border-strong, #6f6f6f)",
+    "borderSubtle": "var(--border-subtle, #393939)",
+    "borderSubtleSelected": "var(--border-subtle-selected, #525252)",
     "brand01": "var(--brand-01, #0f62fe)",
     "brand02": "var(--brand-02, #6f6f6f)",
     "brand03": "var(--brand-03, #ffffff)",
+    "buttonDangerActive": "var(--button-danger-active, #750e13)",
+    "buttonDangerHover": "var(--button-danger-hover, #b81921)",
+    "buttonDangerPrimary": "var(--button-danger-primary, #da1e28)",
+    "buttonDangerSecondary": "var(--button-danger-secondary, #fa4d56)",
+    "buttonDisabled": "var(--button-disabled, #525252)",
+    "buttonPrimary": "var(--button-primary, #0f62fe)",
+    "buttonPrimaryActive": "var(--button-primary-active, #002d9c)",
+    "buttonPrimaryHover": "var(--button-primary-hover, #0353e9)",
+    "buttonSecondary": "var(--button-secondary, #6f6f6f)",
+    "buttonSecondaryActive": "var(--button-secondary-active, #393939)",
+    "buttonSecondaryHover": "var(--button-secondary-hover, #606060)",
     "buttonSeparator": "var(--button-separator, #161616)",
+    "buttonTertiary": "var(--button-tertiary, #ffffff)",
+    "buttonTertiaryActive": "var(--button-tertiary-active, #c6c6c6)",
+    "buttonTertiaryHover": "var(--button-tertiary-hover, #f4f4f4)",
     "caption01": "var(--caption-01, [object Object])",
     "code01": "var(--code-01, [object Object])",
     "code02": "var(--code-02, [object Object])",
@@ -13919,13 +13955,18 @@ Map {
     "expressiveHeading05": "var(--expressive-heading-05, [object Object])",
     "expressiveHeading06": "var(--expressive-heading-06, [object Object])",
     "expressiveParagraph01": "var(--expressive-paragraph-01, [object Object])",
+    "field": "var(--field, #262626)",
     "field01": "var(--field-01, #262626)",
     "field02": "var(--field-02, #393939)",
+    "fieldDisabled": "var(--field-disabled, #262626)",
+    "fieldHover": "var(--field-hover, #353535)",
     "fluidSpacing01": "var(--fluid-spacing-01, 0)",
     "fluidSpacing02": "var(--fluid-spacing-02, 2vw)",
     "fluidSpacing03": "var(--fluid-spacing-03, 5vw)",
     "fluidSpacing04": "var(--fluid-spacing-04, 10vw)",
     "focus": "var(--focus, #ffffff)",
+    "focusInset": "var(--focus-inset, #161616)",
+    "focusInverse": "var(--focus-inverse, #0f62fe)",
     "heading01": "var(--heading-01, [object Object])",
     "heading02": "var(--heading-02, [object Object])",
     "helperText01": "var(--helper-text-01, [object Object])",
@@ -13943,8 +13984,15 @@ Map {
     "icon01": "var(--icon-01, #f4f4f4)",
     "icon02": "var(--icon-02, #c6c6c6)",
     "icon03": "var(--icon-03, #ffffff)",
+    "iconDisabled": "var(--icon-disabled, #525252)",
+    "iconInverse": "var(--icon-inverse, #161616)",
+    "iconOnColor": "var(--icon-on-color, #ffffff)",
+    "iconOnColorDisabled": "var(--icon-on-color-disabled, #8d8d8d)",
+    "iconPrimary": "var(--icon-primary, #f4f4f4)",
+    "iconSecondary": "var(--icon-secondary, #c6c6c6)",
     "iconSize01": "var(--icon-size-01, 1rem)",
     "iconSize02": "var(--icon-size-02, 1.25rem)",
+    "interactive": "var(--interactive, #4589ff)",
     "interactive01": "var(--interactive-01, #0f62fe)",
     "interactive02": "var(--interactive-02, #6f6f6f)",
     "interactive03": "var(--interactive-03, #ffffff)",
@@ -13959,6 +14007,15 @@ Map {
     "inverseSupport03": "var(--inverse-support-03, #f1c21b)",
     "inverseSupport04": "var(--inverse-support-04, #0f62fe)",
     "label01": "var(--label-01, [object Object])",
+    "layer": "var(--layer, #262626)",
+    "layerAccent": "var(--layer-accent, #393939)",
+    "layerActive": "var(--layer-active, #525252)",
+    "layerDisabled": "var(--layer-disabled, #262626)",
+    "layerHover": "var(--layer-hover, #353535)",
+    "layerSelected": "var(--layer-selected, #393939)",
+    "layerSelectedDisabled": "var(--layer-selected-disabled, #8d8d8d)",
+    "layerSelectedHover": "var(--layer-selected-hover, #4c4c4c)",
+    "layerSelectedInverse": "var(--layer-selected-inverse, #f4f4f4)",
     "layout01": "var(--layout-01, 1rem)",
     "layout02": "var(--layout-02, 1.5rem)",
     "layout03": "var(--layout-03, 2rem)",
@@ -13968,6 +14025,12 @@ Map {
     "layout07": "var(--layout-07, 10rem)",
     "link01": "var(--link-01, #78a9ff)",
     "link02": "var(--link-02, #a6c8ff)",
+    "linkInverse": "var(--link-inverse, #0f62fe)",
+    "linkPrimary": "var(--link-primary, #78a9ff)",
+    "linkPrimaryHover": "var(--link-primary-hover, #a6c8ff)",
+    "linkSecondary": "var(--link-secondary, #a6c8ff)",
+    "linkVisited": "var(--link-visited, #be95ff)",
+    "overlay": "var(--overlay, rgba(22, 22, 22, 0.7))",
     "overlay01": "var(--overlay-01, rgba(22, 22, 22, 0.7))",
     "productiveHeading01": "var(--productive-heading-01, [object Object])",
     "productiveHeading02": "var(--productive-heading-02, [object Object])",
@@ -13982,6 +14045,8 @@ Map {
     "selectedUI": "var(--selected-ui, #393939)",
     "skeleton01": "var(--skeleton-01, #353535)",
     "skeleton02": "var(--skeleton-02, #525252)",
+    "skeletonBackground": "var(--skeleton-background, #353535)",
+    "skeletonElement": "var(--skeleton-element, #525252)",
     "spacing01": "var(--spacing-01, 0.125rem)",
     "spacing02": "var(--spacing-02, 0.25rem)",
     "spacing03": "var(--spacing-03, 0.5rem)",
@@ -13999,12 +14064,29 @@ Map {
     "support02": "var(--support-02, #42be65)",
     "support03": "var(--support-03, #f1c21b)",
     "support04": "var(--support-04, #4589ff)",
+    "supportError": "var(--support-error, #fa4d56)",
+    "supportErrorInverse": "var(--support-error-inverse, #da1e28)",
+    "supportInfo": "var(--support-info, #4589ff)",
+    "supportInfoInverse": "var(--support-info-inverse, #0f62fe)",
+    "supportSuccess": "var(--support-success, #42be65)",
+    "supportSuccessInverse": "var(--support-success-inverse, #24a148)",
+    "supportWarning": "var(--support-warning, #f1c21b)",
+    "supportWarningInverse": "var(--support-warning-inverse, #f1c21b)",
     "text01": "var(--text-01, #f4f4f4)",
     "text02": "var(--text-02, #c6c6c6)",
     "text03": "var(--text-03, #6f6f6f)",
     "text04": "var(--text-04, #ffffff)",
     "text05": "var(--text-05, #8d8d8d)",
+    "textDisabled": "var(--text-disabled, #525252)",
     "textError": "var(--text-error, #ff8389)",
+    "textHelper": "var(--text-helper, #8d8d8d)",
+    "textInverse": "var(--text-inverse, #161616)",
+    "textOnColor": "var(--text-on-color, #ffffff)",
+    "textOnColorDisabled": "var(--text-on-color-disabled, #8d8d8d)",
+    "textPlaceholder": "var(--text-placeholder, #6f6f6f)",
+    "textPrimary": "var(--text-primary, #f4f4f4)",
+    "textSecondary": "var(--text-secondary, #c6c6c6)",
+    "toggleOff": "var(--toggle-off, #6f6f6f)",
     "ui01": "var(--ui-01, #262626)",
     "ui02": "var(--ui-02, #393939)",
     "ui03": "var(--ui-03, #393939)",
@@ -14182,6 +14264,21 @@ Map {
       },
       "onChange": Object {
         "type": "func",
+      },
+    },
+  },
+  "unstable_FeatureFlags" => Object {
+    "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
+      "flags": Object {
+        "args": Array [
+          Object {
+            "type": "bool",
+          },
+        ],
+        "type": "objectOf",
       },
     },
   },
@@ -14565,6 +14662,8 @@ Map {
     },
   },
   "unstable_useContextMenu" => Object {},
+  "unstable_useFeatureFlag" => Object {},
+  "unstable_useFeatureFlags" => Object {},
   "withBackground" => Object {},
 }
 `;
