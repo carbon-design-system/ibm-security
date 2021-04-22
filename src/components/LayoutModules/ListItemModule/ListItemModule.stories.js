@@ -23,10 +23,7 @@ import getTitle from '../stories';
 import page from './index.mdx';
 
 export default {
-  title: getTitle({
-    displayName: 'ListItemModule (Canary)',
-    name: 'ListItemModule',
-  }),
+  title: getTitle('ListItemModule (Canary)'),
   component: ListItemModule,
   parameters: {
     docs: { page },
@@ -38,167 +35,203 @@ export default {
 
 export const Default = () => (
   <ListItemModule href="#">
-    {({ Column, getLayoutProps }) => (
-      <>
-        <Column>
-          <Bee16 {...getLayoutProps({ type: 'icon' })} />
-        </Column>
+    {({ Column, getLayoutProps }) => {
+      const {
+        avatar,
+        component,
+        description,
+        icon,
+        label,
+        title,
+      } = getLayoutProps();
 
-        <Column>
-          <h2 {...getLayoutProps({ type: 'title' })}>List title</h2>
+      return (
+        <>
+          <Column>
+            <Bee16 {...icon} />
+          </Column>
 
-          <p {...getLayoutProps({ type: 'description' })}>
-            Description here. It can go up to three lines before truncating.
-          </p>
+          <Column>
+            {console.log()}
+            <h2 {...title}>List title</h2>
 
-          <section {...getLayoutProps({ type: 'component' })}>
-            Nested Component
-          </section>
+            <p {...description}>
+              Description here. It can go up to three lines before truncating.
+            </p>
 
-          <span {...getLayoutProps({ type: 'label' })}>Time stamp / label</span>
+            <section {...component}>Nested Component</section>
 
-          <UserAvatar20 {...getLayoutProps({ type: 'avatar' })} />
-          <UserAvatar20 {...getLayoutProps({ type: 'avatar' })} />
-          <UserAvatar20 {...getLayoutProps({ type: 'avatar' })} />
-        </Column>
+            <span {...label}>Time stamp / label</span>
 
-        <Column {...getLayoutProps({ type: 'farside-column' })}>
-          <Locked16 />
-        </Column>
-      </>
-    )}
+            <UserAvatar20 {...avatar} />
+            <UserAvatar20 {...avatar} />
+            <UserAvatar20 {...avatar} />
+          </Column>
+
+          <Column>
+            <Locked16 />
+          </Column>
+        </>
+      );
+    }}
   </ListItemModule>
 );
 
 export const NonInteractive = () => (
   <ListItemModule>
-    {({ Column, getLayoutProps }) => (
-      <Column>
-        <h2 {...getLayoutProps({ type: 'title' })}>List title</h2>
+    {({ Column, getLayoutProps }) => {
+      const { label, title } = getLayoutProps();
 
-        <span {...getLayoutProps({ type: 'label' })}>Label</span>
-      </Column>
-    )}
+      return (
+        <Column>
+          <h2 {...title}>List title</h2>
+
+          <span {...label}>Label</span>
+        </Column>
+      );
+    }}
   </ListItemModule>
 );
 
 export const AsButton = () => (
   <ListItemModule onClick={action('onClick')}>
-    {({ Column, getLayoutProps }) => (
-      <Column>
-        <h2 {...getLayoutProps({ type: 'title' })}>List title</h2>
+    {({ Column, getLayoutProps }) => {
+      const { label, title } = getLayoutProps();
 
-        <span {...getLayoutProps({ type: 'label' })}>Label</span>
-      </Column>
-    )}
+      return (
+        <Column>
+          <h2 {...title}>List title</h2>
+
+          <span {...label}>Label</span>
+        </Column>
+      );
+    }}
   </ListItemModule>
 );
 
 export const WithProfileImage = () => (
   <ListItemModule href="#">
-    {({ Column, getLayoutProps }) => (
-      <>
-        <Column>
-          <ProfileImage
-            {...getLayoutProps({ type: 'profile-image' })}
-            profile={{
-              description: <span>Profile Image</span>,
-              image_url: null,
-              name: {
-                first_name: 'Sample',
-                surname: 'User',
-              },
-            }}
-          />
-        </Column>
+    {({ Column, getLayoutProps }) => {
+      const { label, description, profileimage } = getLayoutProps();
 
-        <Column>
-          <p {...getLayoutProps({ type: 'description' })}>
-            Description here. It can go up to three lines before truncating.
-          </p>
+      return (
+        <>
+          <Column>
+            <ProfileImage
+              {...profileimage}
+              profile={{
+                description: <span>Profile Image</span>,
+                image_url: null,
+                name: {
+                  first_name: 'Sample',
+                  surname: 'User',
+                },
+              }}
+            />
+          </Column>
 
-          <span {...getLayoutProps({ type: 'label' })}>Today 11:50 AM</span>
-        </Column>
-      </>
-    )}
+          <Column>
+            <p {...description}>
+              Description here. It can go up to three lines before truncating.
+            </p>
+
+            <span {...label}>Today 11:50 AM</span>
+          </Column>
+        </>
+      );
+    }}
   </ListItemModule>
 );
 
 export const WithTag = () => (
   <ListItemModule href="#">
-    {({ Column, getLayoutProps }) => (
-      <>
-        <Column {...getLayoutProps()}>
-          <h2 {...getLayoutProps({ type: 'title' })}>Bill Callahan</h2>
-        </Column>
+    {({ Column, getLayoutProps }) => {
+      const { title, farsidecolumn } = getLayoutProps();
 
-        <Column {...getLayoutProps({ type: 'farside-column' })}>
-          <Tag>16</Tag>
-        </Column>
-      </>
-    )}
+      return (
+        <>
+          <Column>
+            <h2 {...title}>Bill Callahan</h2>
+          </Column>
+
+          <Column {...farsidecolumn}>
+            <Tag>16</Tag>
+          </Column>
+        </>
+      );
+    }}
   </ListItemModule>
 );
 
 export const WithComponent = () => (
   <ListItemModule href="#">
-    {({ Column, getLayoutProps }) => (
-      <>
-        <Column>
-          <Bee16 {...getLayoutProps({ type: 'icon' })} />
+    {({ Column, getLayoutProps }) => {
+      const { component, description, icon, title } = getLayoutProps();
 
-          <h2 {...getLayoutProps({ type: 'title' })}>List title</h2>
+      return (
+        <>
+          <Column>
+            <Bee16 {...icon} />
 
-          <p {...getLayoutProps({ type: 'description' })}>
-            Description here. It can go up to three lines before truncating.
-          </p>
+            <h2 {...title}>List title</h2>
 
-          <section {...getLayoutProps({ type: 'component' })}>
-            <ICA label="Label" value={100} />
-          </section>
-        </Column>
-      </>
-    )}
+            <p {...description}>
+              Description here. It can go up to three lines before truncating.
+            </p>
+
+            <section {...component}>
+              <ICA label="Label" value={100} />
+            </section>
+          </Column>
+        </>
+      );
+    }}
   </ListItemModule>
 );
 
 export const WithStatusIcon = () => (
   <ListItemModule href="#">
-    {({ Column, getLayoutProps }) => (
-      <>
-        <Column>
-          <h2 {...getLayoutProps({ type: 'title' })}>
-            GPON vulnerability exploited
-          </h2>
+    {({ Column, getLayoutProps }) => {
+      const { farsidecolumn, label, title } = getLayoutProps();
 
-          <span {...getLayoutProps({ type: 'label' })}>Threat activity</span>
-        </Column>
+      return (
+        <>
+          <Column>
+            <h2 {...title}>GPON vulnerability exploited</h2>
 
-        <Column {...getLayoutProps({ type: 'farside-column' })}>
-          <StatusIcon iconDescription="Status Icon" size="lg" status="info" />
-        </Column>
-      </>
-    )}
+            <span {...label}>Threat activity</span>
+          </Column>
+
+          <Column {...farsidecolumn}>
+            <StatusIcon iconDescription="Status Icon" size="lg" status="info" />
+          </Column>
+        </>
+      );
+    }}
   </ListItemModule>
 );
 
 export const WithInProgressIcon = () => (
   <ListItemModule href="#">
-    {({ Column, getLayoutProps }) => (
-      <>
-        <Column>
-          <InProgress16 {...getLayoutProps({ type: 'icon' })} />
-        </Column>
+    {({ Column, getLayoutProps }) => {
+      const { avatar, icon, title } = getLayoutProps();
 
-        <Column>
-          <h2 {...getLayoutProps({ type: 'title' })}>Create new doc types</h2>
+      return (
+        <>
+          <Column>
+            <InProgress16 {...icon} />
+          </Column>
 
-          <UserAvatar20 {...getLayoutProps({ type: 'avatar' })} />
-          <UserAvatar20 {...getLayoutProps({ type: 'avatar' })} />
-          <UserAvatar20 {...getLayoutProps({ type: 'avatar' })} />
-        </Column>
-      </>
-    )}
+          <Column>
+            <h2 {...title}>Create new doc types</h2>
+
+            <UserAvatar20 {...avatar} />
+            <UserAvatar20 {...avatar} />
+            <UserAvatar20 {...avatar} />
+          </Column>
+        </>
+      );
+    }}
   </ListItemModule>
 );
 

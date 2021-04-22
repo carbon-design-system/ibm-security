@@ -20,12 +20,25 @@ const ListItemModule = ({ children, as, href, onClick, ...other }) => {
       <LayoutModule namespace={`${namespace}__column`} {...props} />
     ),
 
-    getLayoutProps: ({ className, type, ...rest } = {}) => ({
-      className: classnames(className, {
-        [`${layoutModuleNamespace}--${namespace}__${type}`]: type,
-      }),
-      ...rest,
-    }),
+    getLayoutProps: ({ className, ...rest } = {}) => {
+      const assignClassName = type => ({
+        className: classnames(className, {
+          [`${layoutModuleNamespace}--${namespace}__${type}`]: type,
+        }),
+      });
+
+      return {
+        avatar: assignClassName('avatar'),
+        component: assignClassName('component'),
+        description: assignClassName('description'),
+        farsidecolumn: assignClassName('farside-column'),
+        icon: assignClassName('icon'),
+        label: assignClassName('label'),
+        profileimage: assignClassName('profile-image'),
+        title: assignClassName('title'),
+        ...rest,
+      };
+    },
   });
 
   let component = 'div';
