@@ -1,6 +1,6 @@
 /**
  * @file Toggle stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
@@ -8,7 +8,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { boolean, text } from '@storybook/addon-knobs';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import { Toggle, ToggleSkeleton } from '../../';
 
@@ -22,7 +22,7 @@ const toggleProps = () => ({
   onToggle: action('onToggle'),
 });
 
-storiesOf(components('Toggle'), module)
+storiesOf(carbon('Toggle'), module)
   .add(
     'toggled',
     () => (

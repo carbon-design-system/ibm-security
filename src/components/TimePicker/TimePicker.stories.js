@@ -1,6 +1,6 @@
 /**
  * @file Time picker stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { action } from '@storybook/addon-actions';
@@ -8,7 +8,7 @@ import { boolean, number, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import { TimePicker, TimePickerSelect, SelectItem } from '../..';
 
@@ -53,7 +53,7 @@ const props = {
   }),
 };
 
-storiesOf(components('TimePicker'), module).add(
+storiesOf(carbon('TimePicker'), module).add(
   'Default',
   () => {
     const selectProps = props.select();
