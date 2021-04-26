@@ -53,6 +53,9 @@ $security--feature-flags: map-merge(
     #{$theme__name}: map-get(
         $map: $security--feature-flags,
         $key: $theme__name--security,
+      ) or map-get(
+        $map: $feature-flags,
+        $key: $theme__name,
       ),
   ),
 );
