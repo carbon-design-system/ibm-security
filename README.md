@@ -36,10 +36,10 @@ To install Carbon for IBM Security in your project, you'll need to run one of th
 
 ```bash
 # npm - https://www.npmjs.com
-npm i -S carbon-components carbon-components-react @carbon/ibm-security
+npm i -S @carbon/ibm-security carbon-components carbon-components-react
 
 # Yarn - https://yarnpkg.com
-yarn add carbon-components carbon-components-react @carbon/ibm-security
+yarn add @carbon/ibm-security carbon-components carbon-components-react
 ```
 
 ### Distribution tags
