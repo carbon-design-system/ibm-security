@@ -135,7 +135,7 @@
 @mixin security--theme--cg10__cg100 {
   @include security--theme--cg10(
     $theme:
-      security--cool-gray(
+      variables.security--cool-gray(
         $theme: map.get($map: variables.$security--themes, $key: theme--g100),
         $grade: 100
       )

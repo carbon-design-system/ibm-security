@@ -4,7 +4,7 @@
 /// @copyright IBM Security 2019 - 2021
 ////
 
-@import '../../globals/namespace';
+@use '../../globals/namespace';
 
 /// Mixin to create component styles that conform to a standard way to namespacing, exporting, and
 /// styling all components.
@@ -21,8 +21,8 @@
 ///     background-color: #fff;
 ///   }
 @mixin security--component($name) {
-  @include export-namespace($name: $name) {
-    @include namespace($selector: $name) {
+  @include namespace.export-namespace($name: $name) {
+    @include namespace.namespace($selector: $name) {
       @content;
     }
   }

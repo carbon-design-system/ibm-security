@@ -6,10 +6,20 @@
 
 // @use 'theme';
 
-@use 'variables';
-
-@use 'carbon-components/scss/globals/scss/helper-mixins';
+@use 'color';
 
 // @use 'grid';
 
+@use 'layout';
+@use 'motion';
 @use 'type';
+
+@use 'border';
+@use 'deprecate';
+@use 'feature-flags';
+@use 'namespace';
+@use 'rtl';
+
+@use 'variables' as *;
+
+@use 'carbon-components/scss/globals/scss/helper-mixins';
