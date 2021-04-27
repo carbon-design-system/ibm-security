@@ -2070,7 +2070,7 @@
   resolved "https://registry.yarnpkg.com/@carbon/motion/-/motion-10.16.0.tgz#5f569fc7f5000f72499d880fd5d7102534e0acde"
   integrity sha512-j0/9QtPhLRyZge0x9gr7u0vRF5rr0KU+kppwBEXwm2UJGHJjGdcecdW8NcfZQY5iUD/7YgzR2X2fZwjmcGlUUg==
 
-"@carbon/telemetry@0.0.0-alpha.6":
+"@carbon/telemetry@0.0.0-alpha.6", "@carbon/telemetry@^0.0.0-alpha.6":
   version "0.0.0-alpha.6"
   resolved "https://registry.yarnpkg.com/@carbon/telemetry/-/telemetry-0.0.0-alpha.6.tgz#1d11e64f310e98f32c3db0c55f02e047f2398087"
   integrity sha512-DCE8ui/tFi+qvCH+mewbUbWzsiq5Ko3HU1lgrVbpjWv1LfswLKFmMg4Os+PmX6edYoBj39qVChJPeaN/UyfJDw==

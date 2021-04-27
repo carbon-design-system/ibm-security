@@ -1,6 +1,6 @@
 /**
  * @file Type layout.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import classnames from 'classnames';
@@ -59,6 +59,7 @@ const TypeLayoutBody = ({ children, className, ...other }) => (
 const TypeLayoutCell = ({ children, className, ...other }) => (
   <StructuredListCell
     className={classnames(`${namespace}__cell`, className)}
+    tabIndex={-1}
     {...other}
   >
     {children}
@@ -68,6 +69,7 @@ const TypeLayoutCell = ({ children, className, ...other }) => (
 const TypeLayoutRow = ({ children, className, ...other }) => (
   <StructuredListRow
     className={classnames(`${namespace}__row`, className)}
+    role="row"
     {...other}
   >
     {children}
