@@ -21,7 +21,12 @@
 
 @include security--component($name: filter-panel) {
   &__title {
+    $filter-panel__spacing: $carbon--spacing-04;
+
     @include carbon--type-style($name: body-short-01);
+
+    margin-top: $filter-panel__spacing;
+    margin-bottom: $filter-panel__spacing;
   }
 
   &__search {

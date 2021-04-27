@@ -28,6 +28,7 @@
     @include carbon--font-weight($weight: semibold);
 
     display: flex;
+    margin-top: $carbon--spacing-03;
     margin-bottom: $carbon--spacing-05;
     justify-content: space-between;
   }

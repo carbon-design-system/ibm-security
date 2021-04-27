@@ -1,6 +1,6 @@
 /**
  * @file Copy button stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
@@ -10,7 +10,7 @@ import { action } from '@storybook/addon-actions';
 
 import { number, text } from '@storybook/addon-knobs';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import { CopyButton } from '../..';
 
@@ -27,7 +27,7 @@ const props = () => ({
   onClick: action('onClick'),
 });
 
-storiesOf(components('CopyButton'), module).add(
+storiesOf(carbon('CopyButton'), module).add(
   'Default',
   () => (
     <div style={{ position: 'relative' }}>

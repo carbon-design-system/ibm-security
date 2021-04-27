@@ -70,7 +70,11 @@ $card__name: card;
     }
 
     &__tag {
+      $card__tag__spacing: $carbon--spacing-04;
+
       @include carbon--type-style($name: caption-01);
+      margin-top: $card__tag__spacing;
+      margin-bottom: $card__tag__spacing;
     }
   }
 

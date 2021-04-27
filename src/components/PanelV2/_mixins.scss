@@ -118,6 +118,7 @@
       @include carbon--type-style($name: productive-heading-03);
 
       display: block;
+      margin-top: $carbon--spacing-05;
       margin-bottom: $carbon--spacing-04;
     }
 
@@ -151,7 +152,7 @@
 
   &__footer {
     display: flex;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: $panel__sizing__width;
 

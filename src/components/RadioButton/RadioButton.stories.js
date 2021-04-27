@@ -1,6 +1,6 @@
 /**
  * @file Radio button stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { storiesOf } from '@storybook/react';
@@ -9,7 +9,7 @@ import { boolean, select, text } from '@storybook/addon-knobs';
 
 import React from 'react';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import { RadioButton, RadioButtonSkeleton } from '../../';
 
@@ -32,7 +32,7 @@ const radioProps = () => ({
   onChange: action('onChange'),
 });
 
-storiesOf(components('RadioButton'), module)
+storiesOf(carbon('RadioButton'), module)
   .add('Default', () => <RadioButton id="radio-1" {...radioProps()} />, {
     info: {
       text: `
