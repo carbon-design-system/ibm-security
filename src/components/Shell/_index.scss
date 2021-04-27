@@ -1,14 +1,14 @@
 ////
 /// Shell component.
 /// @group shell
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
-@import '../Breadcrumb/index';
-@import '../Button/index';
-@import '../Header/index';
-@import '../Link/index';
-@import '../Toolbar/index';
+@import '../Breadcrumb';
+@import '../Button';
+@import '../Header';
+@import '../Link';
+@import '../Toolbar';
 
 @import '../Component/mixins';
 

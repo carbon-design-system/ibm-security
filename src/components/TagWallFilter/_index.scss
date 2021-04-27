@@ -1,11 +1,11 @@
 ////
 /// Tag wall filter component.
 /// @group tag-wall-filter
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
-@import './Filter/index';
-@import '../Tearsheet/TearsheetSmall/index';
+@import './Filter';
+@import '../Tearsheet/TearsheetSmall';
 
 @import '../Component/mixins';
 

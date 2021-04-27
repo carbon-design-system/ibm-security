@@ -1,7 +1,7 @@
 ////
 /// Filter panel accordion item mixins.
 /// @group filter-panel
-/// @copyright IBM Security 2020
+/// @copyright IBM Security 2020 - 2021
 ////
 
 @import '@carbon/layout/scss/spacing';
@@ -12,7 +12,7 @@
 @import 'carbon-components/scss/globals/scss/helper-mixins';
 @import 'carbon-components/scss/globals/scss/vars';
 
-@import '../../../globals/motion/index';
+@import '../../../globals/motion';
 
 @mixin filter-panel-accordion-item__heading {
   /// Heading padding.

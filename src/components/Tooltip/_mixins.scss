@@ -1,7 +1,7 @@
 ////
 /// Tooltip mixins.
 /// @group tooltip
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -9,8 +9,8 @@
 @import '@carbon/themes/scss/tokens';
 @import '@carbon/type/scss/styles';
 
-@import '../../globals/motion/index';
-@import '../../globals/rtl/index';
+@import '../../globals/motion';
+@import '../../globals/rtl';
 
 @import '../Toolbar/mixins';
 

@@ -1,7 +1,7 @@
 ////
 /// Breadcrumb component.
 /// @group breadcrumb
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/themes/scss/tokens';
@@ -11,7 +11,7 @@
 @import 'carbon-components/scss/globals/scss/css--reset';
 @import 'carbon-components/scss/globals/scss/vars';
 
-@import '../../globals/namespace/index';
+@import '../../globals/namespace';
 
 @include export-namespace($name: breadcrumb) {
   .#{$prefix}--breadcrumb {

@@ -1,14 +1,14 @@
 ////
 /// Grid helpers.
 /// @group grid
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/grid/scss/mixins';
 
-@import '../deprecate/index';
-@import '../feature-flags/index';
-@import '../namespace/index';
+@import '../deprecate';
+@import '../feature-flags';
+@import '../namespace';
 
 @import 'css-gridish/scss/functions';
 @import 'css-gridish/scss/mixins';

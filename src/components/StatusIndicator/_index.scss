@@ -1,7 +1,7 @@
 ////
 /// Status indicator component.
 /// @group status-indicator
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -13,7 +13,7 @@
 
 @import '../../platform/body/mixins';
 
-@import '../Button/index';
+@import '../Button';
 
 @import '../Component/mixins';
 

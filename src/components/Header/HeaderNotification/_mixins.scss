@@ -1,7 +1,7 @@
 ////
 /// Header notification mixins.
 /// @group header__notification
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -12,7 +12,7 @@
 @import 'carbon-components/scss/globals/scss/layout';
 @import 'carbon-components/scss/globals/scss/vars';
 
-@import '../../../globals/motion/index';
+@import '../../../globals/motion';
 
 @import '../mixins';
 

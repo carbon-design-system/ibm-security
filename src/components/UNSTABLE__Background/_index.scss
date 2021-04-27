@@ -6,7 +6,7 @@
 
 @import '@carbon/themes/scss/tokens';
 
-@import '../../globals/border/index';
+@import '../../globals/border';
 @import '../Component/mixins';
 
 @include security--component($name: unstable--background) {

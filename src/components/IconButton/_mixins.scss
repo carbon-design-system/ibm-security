@@ -1,7 +1,7 @@
 ////
 /// Icon button mixins.
 /// @group button--icon
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -10,7 +10,7 @@
 @import 'carbon-components/scss/globals/scss/helper-mixins';
 @import 'carbon-components/scss/globals/scss/layout';
 
-@import '../../globals/motion/index';
+@import '../../globals/motion';
 
 @import '../Tooltip/mixins';
 

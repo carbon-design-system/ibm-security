@@ -1,14 +1,14 @@
 ////
 /// Theme helpers.
 /// @group theme
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/themes/scss/mixins';
 
 @import '../../components/Component/mixins';
-@import '../deprecate/index';
-@import '../feature-flags/index';
+@import '../deprecate';
+@import '../feature-flags';
 
 @import 'variables';
 

@@ -1,14 +1,14 @@
 ////
 /// Multi select component.
 /// @group multi-select
-/// @copyright IBM Security 2018 - 2020
+/// @copyright IBM Security 2018 - 2021
 ////
 
 @import '@carbon/themes/scss/tokens';
 @import 'carbon-components/scss/components/multi-select/multi-select';
 @import 'carbon-components/scss/globals/scss/vars';
 
-@import '../../globals/namespace/index';
+@import '../../globals/namespace';
 
 @include export-namespace($name: multi-select) {
   .#{$prefix}--multi-select {

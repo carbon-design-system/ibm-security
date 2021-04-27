@@ -1,15 +1,15 @@
 ////
 /// Truncated list styles.
 /// @group list-truncator
-/// @copyright IBM Security 2020
+/// @copyright IBM Security 2020 - 2021
 ////
 
 @import '@carbon/themes/scss/tokens';
 
-@import '../../globals/motion/index';
+@import '../../globals/motion';
 
-@import '../Button/index';
-@import '../ScrollGradient/index';
+@import '../Button';
+@import '../ScrollGradient';
 
 @import '../Component/mixins';
 

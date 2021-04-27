@@ -1,7 +1,7 @@
 ////
 /// Data table component.
 /// @group data-table
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/themes/scss/tokens';
@@ -11,12 +11,12 @@
 @import 'carbon-components/scss/globals/scss/layout';
 @import 'carbon-components/scss/globals/scss/vars';
 
-@import '../../globals/namespace/index';
+@import '../../globals/namespace';
 
-@import '../Checkbox/index';
-@import '../IconButton/index';
-@import '../ScrollGradient/index';
-@import '../Search/index';
+@import '../Checkbox';
+@import '../IconButton';
+@import '../ScrollGradient';
+@import '../Search';
 
 @import '../Component/mixins';
 

@@ -1,11 +1,11 @@
 ////
 /// Card component.
 /// @group card
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
-@import '../SkeletonText/index';
-@import 'CardSkeleton/index';
+@import '../SkeletonText';
+@import 'CardSkeleton';
 
 @import '../Component/mixins';
 

@@ -1,7 +1,7 @@
 ////
 /// Select component.
 /// @group select
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/themes/scss/tokens';
@@ -9,7 +9,7 @@
 
 @import 'carbon-components/scss/globals/scss/vars';
 
-@import '../../globals/namespace/index';
+@import '../../globals/namespace';
 
 @include export-namespace($name: select) {
   .#{$prefix}--select-input {

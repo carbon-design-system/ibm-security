@@ -1,11 +1,11 @@
 ////
 /// Decorator component.
 /// @group decorator
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
-@import '../Link/index';
-@import '../PanelV2/index';
+@import '../Link';
+@import '../PanelV2';
 
 @import '../Component/mixins';
 @import 'mixins';

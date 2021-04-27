@@ -1,7 +1,7 @@
 ////
 /// Filter search styles.
 /// @group filter-panel
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -11,7 +11,7 @@
 
 @import 'carbon-components/scss/globals/scss/layout';
 
-@import '../../Search/index';
+@import '../../Search';
 
 @import '../../Component/mixins';
 

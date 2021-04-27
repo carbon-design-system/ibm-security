@@ -1,14 +1,14 @@
 ////
 /// Filter panel checkbox with overflow menu styles.
 /// @group filter-panel
-/// @copyright IBM Security 2020
+/// @copyright IBM Security 2020 - 2021
 ////
 
 @import 'carbon-components/scss/globals/scss/vars';
 @import '@carbon/layout/scss/spacing';
 @import '@carbon/themes/scss/tokens';
 
-@import '../../OverflowMenu/index';
+@import '../../OverflowMenu';
 
 @import '../../Component/mixins';
 

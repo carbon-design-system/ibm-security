@@ -11,10 +11,10 @@
 
 @import 'carbon-components/scss/globals/scss/css--reset';
 
-@import '../../globals/border/index';
+@import '../../globals/border';
 @import '../Component/mixins';
 
-@import '../StructuredList/index';
+@import '../StructuredList';
 
 @import 'variables';
 

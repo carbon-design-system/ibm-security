@@ -1,7 +1,7 @@
 ////
 /// Shell mixins.
 /// @group shell
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -11,7 +11,7 @@
 @import 'carbon-components/scss/globals/scss/helper-mixins';
 @import 'carbon-components/scss/globals/scss/layout';
 
-@import '../../globals/motion/index';
+@import '../../globals/motion';
 @import '../../globals/theme/mixins';
 
 @import '../Header/mixins';

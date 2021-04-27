@@ -1,10 +1,10 @@
 ////
 /// Mixins for base components.
 /// @group component
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
-@import '../../globals/namespace/index';
+@import '../../globals/namespace';
 
 /// Mixin to create component styles that conform to a standard way to namespacing, exporting, and
 /// styling all components.

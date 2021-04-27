@@ -1,7 +1,7 @@
 ////
 /// Combo button component.
 /// @group combo-button
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -10,9 +10,9 @@
 
 @import 'carbon-components/scss/globals/scss/helper-mixins';
 
-@import '../Button/index';
-@import '../Dropdown/index';
-@import '../OverflowMenu/index';
+@import '../Button';
+@import '../Dropdown';
+@import '../OverflowMenu';
 
 @import '../Component/mixins';
 

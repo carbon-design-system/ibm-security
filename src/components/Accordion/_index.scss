@@ -1,16 +1,16 @@
 ////
 /// Accordion component.
 /// @group accordion
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import 'carbon-components/scss/components/accordion/accordion';
 
 @import 'carbon-components/scss/globals/scss/vars';
 
-@import '../../globals/namespace/index';
+@import '../../globals/namespace';
 
-@import '../SkeletonText/index';
+@import '../SkeletonText';
 
 @include export-namespace($name: accordion) {
   .#{$prefix}--accordion {

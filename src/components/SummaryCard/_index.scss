@@ -1,16 +1,16 @@
 ////
 /// Summary card component.
 /// @group summary-card
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import 'carbon-components/scss/components/data-table/data-table-action';
 
-@import '../Button/index';
-@import '../ScrollGradient/index';
-@import '../Select/index';
-@import '../Tooltip/index';
-@import '../SkeletonText/index';
+@import '../Button';
+@import '../ScrollGradient';
+@import '../Select';
+@import '../Tooltip';
+@import '../SkeletonText';
 
 @import '../Component/mixins';
 

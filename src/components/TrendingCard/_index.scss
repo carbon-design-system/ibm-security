@@ -1,7 +1,7 @@
 ////
 /// Trending card.
 /// @group trending-card
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -12,7 +12,7 @@
 
 @import 'carbon-components/scss/globals/scss/helper-mixins';
 
-@import '../../globals/motion/index';
+@import '../../globals/motion';
 @import '../../platform/body/mixins';
 @import '../Component/mixins';
 

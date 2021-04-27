@@ -1,7 +1,7 @@
 ////
 /// Non etitled section component.
 /// @group ne-section
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/grid/scss/mixins';
@@ -10,8 +10,8 @@
 @import '@carbon/themes/scss/tokens';
 @import '@carbon/type/scss/scale';
 
-@import '../IconButton/index';
-@import '../Link/index';
+@import '../IconButton';
+@import '../Link';
 
 @import '../Component/mixins';
 

@@ -1,13 +1,13 @@
 ////
 /// Important content area component.
 /// @group ica
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/type/scss/styles';
 @import '@carbon/themes/scss/tokens';
 
-@import 'ICASkeleton/index';
+@import 'ICASkeleton';
 
 @import '../Component/mixins';
 

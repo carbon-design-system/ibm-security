@@ -1,7 +1,7 @@
 ////
 /// Filter category styles.
 /// @group filter-panel
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -10,7 +10,7 @@
 @import '@carbon/type/scss/font-family';
 @import '@carbon/type/scss/styles';
 
-@import '../../../Accordion/index';
+@import '../../../Accordion';
 
 @import '../../../Component/mixins';
 

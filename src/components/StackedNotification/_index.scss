@@ -1,12 +1,12 @@
 ////
 /// Stacked notification.
 /// @group stacked-notification
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/spacing';
 
-@import '../Notification/ToastNotification/index';
+@import '../Notification/ToastNotification';
 
 @import '../Component/mixins';
 

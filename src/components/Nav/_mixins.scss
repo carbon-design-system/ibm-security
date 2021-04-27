@@ -1,7 +1,7 @@
 ////
 /// Navigation mixins.
 /// @group nav
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -13,8 +13,8 @@
 @import 'carbon-components/scss/globals/scss/layout';
 @import 'carbon-components/scss/globals/scss/motion';
 
-@import '../../globals/motion/index';
-@import '../../globals/rtl/index';
+@import '../../globals/motion';
+@import '../../globals/rtl';
 
 @mixin nav {
   $nav__heading: '#{&}__heading';

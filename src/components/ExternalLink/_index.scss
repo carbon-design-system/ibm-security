@@ -1,15 +1,15 @@
 ////
 /// External link component.
 /// @group link--external
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/spacing';
 @import '@carbon/type/scss/styles';
 
-@import '../../globals/rtl/index';
+@import '../../globals/rtl';
 
-@import '../Link/index';
+@import '../Link';
 
 @import '../Component/mixins';
 

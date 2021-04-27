@@ -1,14 +1,14 @@
 ////
 /// Date picker component.
 /// @group date-picker
-/// @copyright IBM Security 2018 - 2020
+/// @copyright IBM Security 2018 - 2021
 ////
 
 @import 'carbon-components/scss/components/date-picker/date-picker';
 
 @import 'carbon-components/scss/globals/scss/vars';
 
-@import '../../globals/namespace/index';
+@import '../../globals/namespace';
 
 // Carbon needs to add theming support for this component.
 @include export-namespace($name: datepicker) {

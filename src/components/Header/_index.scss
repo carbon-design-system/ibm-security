@@ -1,19 +1,19 @@
 ////
 /// Header component.
 /// @group header
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
-@import '../Accordion/index';
-@import '../Button/index';
-@import '../IconButton/index';
-@import '../Link/index';
-@import '../ProfileImage/index';
+@import '../Accordion';
+@import '../Button';
+@import '../IconButton';
+@import '../Link';
+@import '../ProfileImage';
 
-@import 'HeaderListItem/index';
-@import 'HeaderNotification/index';
-@import 'HeaderPopoverHeader/index';
-@import 'HeaderPopoverLinkSecondary/index';
+@import 'HeaderListItem';
+@import 'HeaderNotification';
+@import 'HeaderPopoverHeader';
+@import 'HeaderPopoverLinkSecondary';
 
 @import '../Component/mixins';
 
