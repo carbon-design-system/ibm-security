@@ -59,7 +59,7 @@ const TypeLayoutBody = ({ children, className, ...other }) => (
 const TypeLayoutCell = ({ children, className, ...other }) => (
   <StructuredListCell
     className={classnames(`${namespace}__cell`, className)}
-    tabIndex={-1}
+    tabIndex="-1"
     {...other}
   >
     {children}
