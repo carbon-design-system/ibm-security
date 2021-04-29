@@ -1,15 +1,15 @@
 /**
  * @file Time indicator stories.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
 
-import { components, getDocsParameters } from '../../../.storybook';
+import { getDocsParameters, security } from '../../../.storybook';
 import { TimeIndicator } from '../..';
 
 export default {
-  title: components(TimeIndicator.name),
+  title: security(TimeIndicator.name),
   component: TimeIndicator,
   args: {
     children: '10 minute setup',

@@ -1,6 +1,6 @@
 /**
  * @file Tile stories.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { action } from '@storybook/addon-actions';
@@ -9,7 +9,7 @@ import { storiesOf } from '@storybook/react';
 
 import React from 'react';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import {
   ClickableTile,
@@ -68,7 +68,7 @@ const props = {
   }),
 };
 
-storiesOf(components('Tile'), module)
+storiesOf(carbon('Tile'), module)
   .add('Default', () => <Tile>Default tile</Tile>, {
     info: {
       text: `

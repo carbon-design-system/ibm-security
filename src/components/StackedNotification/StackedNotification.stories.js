@@ -1,6 +1,6 @@
 /**
  * @file Stacked notification stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
@@ -10,7 +10,7 @@ import { text, boolean } from '@storybook/addon-knobs';
 
 import { iconDescription, title, subtitle, caption } from './_mocks_';
 
-import { components } from '../../../.storybook';
+import { security } from '../../../.storybook';
 
 import { StackedNotification } from '../..';
 
@@ -22,6 +22,6 @@ const props = () => ({
   hideCloseButton: boolean('Hide close button (hideCloseButton)', false),
 });
 
-storiesOf(components('StackedNotification'), module).add('Default', () => (
+storiesOf(security('StackedNotification'), module).add('Default', () => (
   <StackedNotification {...props()} />
 ));

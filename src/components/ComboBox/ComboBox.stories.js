@@ -1,6 +1,6 @@
 /**
  * @file Combo box stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
@@ -10,7 +10,7 @@ import { boolean, text } from '@storybook/addon-knobs';
 import WithState from 'carbon-components-react/es/tools/withState';
 import { ComboBox } from '../..';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 const items = [
   {
@@ -59,7 +59,7 @@ const itemToElement = item => {
   );
 };
 
-storiesOf(components('ComboBox'), module)
+storiesOf(carbon('ComboBox'), module)
   .add(
     'Default',
     () => (

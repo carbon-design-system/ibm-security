@@ -15,7 +15,7 @@ import { storiesOf } from '@storybook/react';
 import { settings } from 'carbon-components';
 import React from 'react';
 
-import { components, info } from '../../../.storybook';
+import { carbon, info } from '../../../.storybook';
 import { Button, ButtonSkeleton } from '../..';
 
 const { prefix } = settings;
@@ -103,7 +103,7 @@ const documentation = info('', {
   story: 'button',
 });
 
-storiesOf(components('Button'), module)
+storiesOf(carbon('Button'), module)
   .add(
     'default',
     () => {

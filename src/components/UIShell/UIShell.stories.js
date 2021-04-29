@@ -6,7 +6,7 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { disableCenteredStories, info, patterns } from '../../../.storybook';
+import { carbon, disableCenteredStories, info } from '../../../.storybook';
 
 import {
   CarbonHeader,
@@ -27,7 +27,7 @@ const documentation = info("Carbon's `UIShell` component.", {
 });
 
 disableCenteredStories(
-  storiesOf(patterns('UIShell (Carbon)'), module)
+  storiesOf(carbon('UIShell (Carbon)'), module)
     .add(
       'Header Base',
       () => (

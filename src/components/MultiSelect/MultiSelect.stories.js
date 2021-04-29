@@ -1,6 +1,6 @@
 /**
  * @file Multi select stories.
- * @copyright IBM Security 2018
+ * @copyright IBM Security 2018 - 2021
  */
 
 import React from 'react';
@@ -9,7 +9,7 @@ import { action } from '@storybook/addon-actions';
 
 import { boolean, select, text, object } from '@storybook/addon-knobs';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import MultiSelect from './';
 
@@ -70,7 +70,7 @@ const props = () => ({
   ),
 });
 
-storiesOf(components('MultiSelect'), module)
+storiesOf(carbon('MultiSelect'), module)
   .add(
     'default',
     () => {

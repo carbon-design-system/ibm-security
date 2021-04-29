@@ -1,18 +1,18 @@
 /**
  * @file Navigation stories.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { components } from '../../../.storybook';
+import { security } from '../../../.storybook';
 import { Nav, NavItem, NavList } from '../..';
 
 const { name } = Nav;
 
-storiesOf(components(name), module).add(
+storiesOf(security(name), module).add(
   'Default',
   () => (
     <div style={{ width: '300px' }}>

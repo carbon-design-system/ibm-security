@@ -1,6 +1,6 @@
 /**
  * @file Number input stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { storiesOf } from '@storybook/react';
@@ -10,7 +10,7 @@ import { boolean, number, text, object } from '@storybook/addon-knobs';
 
 import React from 'react';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import { NumberInput, NumberInputSkeleton } from '../../';
 
@@ -44,7 +44,7 @@ const props = () => ({
   ),
 });
 
-storiesOf(components('NumberInput'), module)
+storiesOf(carbon('NumberInput'), module)
   .add(
     'Default',
     () => {
