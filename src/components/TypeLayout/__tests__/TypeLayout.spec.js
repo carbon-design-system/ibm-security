@@ -6,7 +6,7 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 
-// import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
+import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import {
   TypeLayout,
@@ -20,9 +20,7 @@ import { namespace } from '../TypeLayout';
 const sizes = ['xs', 'sm', 'md', 'lg'];
 
 describe('TypeLayout', () => {
-  // https://github.com/carbon-design-system/carbon/issues/1937
-
-  /* test('should have no Axe or DAP violations', async () => {
+  test('should have no Axe or DAP violations', async () => {
     const { container } = renderWithinLandmark(
       <TypeLayout>
         <TypeLayoutBody>
@@ -39,7 +37,7 @@ describe('TypeLayout', () => {
     );
     await expect(container).toHaveNoAxeViolations();
     await expect(container).toHaveNoDAPViolations('TypeLayout');
-  }); */
+  });
 
   test('should add a custom class to each component', () => {
     const { getByText } = render(
