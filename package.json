@@ -61,6 +61,7 @@
     "@carbon/telemetry": "^0.0.0-alpha.6",
     "@carbon/themes": "10.31.0",
     "@carbon/type": "10.25.0",
+    "@shakacode/recompose": "^0.30.3",
     "carbon-components": "10.32.0",
     "carbon-components-react": "7.32.0",
     "carbon-icons": "7.0.7",
@@ -75,7 +76,6 @@
     "ramda": "^0.26.1",
     "react-is": "^16.13.0",
     "react-transition-group": "^4.3.0",
-    "recompose": "0.30.0",
     "reduced-utils": "0.1.2",
     "resize-observer-polyfill": "^1.5.1",
     "throttle-debounce": "^2.0.1"

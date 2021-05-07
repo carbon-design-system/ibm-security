@@ -3,11 +3,17 @@
  * @copyright IBM Security 2020 - 2021
  */
 
+import {
+  compose,
+  getDisplayName,
+  withHandlers,
+  withState,
+} from '@shakacode/recompose';
+
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text, object } from '@storybook/addon-knobs';
 
-import { compose, withState, withHandlers, getDisplayName } from 'recompose';
 import React from 'react';
 
 import { patterns } from '../../../.storybook';

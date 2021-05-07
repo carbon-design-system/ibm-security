@@ -3,10 +3,11 @@
  * @copyright IBM Security 2019 - 2021
  */
 
+import { compose, getDisplayName, lifecycle } from '@shakacode/recompose';
+
 import { select, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
-import { compose, getDisplayName, lifecycle } from 'recompose';
 import React from 'react';
 
 import { security } from '../../../.storybook';

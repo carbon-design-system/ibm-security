@@ -1,11 +1,12 @@
 /**
  * @file TagWallFilter
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
+
+import { compose, mapProps, withReducer } from '@shakacode/recompose';
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import { withReducer, mapProps, compose } from 'recompose';
 import { createReducer, combineReducers } from 'reduced-utils';
 
 import { getComponentNamespace } from '../../globals/namespace/index';

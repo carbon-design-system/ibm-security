@@ -1,14 +1,20 @@
 /**
  * @file Search bar stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
+
+import {
+  compose,
+  getDisplayName,
+  withHandlers,
+  withState,
+} from '@shakacode/recompose';
 
 import { action } from '@storybook/addon-actions';
 import { boolean, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
 import React from 'react';
-import { compose, getDisplayName, withHandlers, withState } from 'recompose';
 
 import { patterns } from '../../../.storybook';
 

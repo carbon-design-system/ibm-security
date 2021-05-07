@@ -1,8 +1,11 @@
 /**
  * @file Wizard stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 /* eslint-disable compat/compat */
+
+import { withReducer } from '@shakacode/recompose';
+
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { object, boolean, select } from '@storybook/addon-knobs';
@@ -10,7 +13,6 @@ import { action } from '@storybook/addon-actions';
 import FormGroup from 'carbon-components-react/lib/components/FormGroup';
 import 'prismjs';
 import 'prismjs/components/prism-jsx';
-import { withReducer } from 'recompose';
 
 import { settings } from 'carbon-components';
 

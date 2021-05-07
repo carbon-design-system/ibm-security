@@ -1,14 +1,15 @@
 /**
  * @file Filter stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 /* eslint-disable no-param-reassign */
+
+import { compose } from '@shakacode/recompose';
+
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { boolean, object } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
-
-import { compose } from 'recompose';
 
 import { patterns } from '../../../.storybook';
 
