@@ -1,14 +1,17 @@
 ////
 /// Theme mixins.
 /// @group theme
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
+@import '@carbon/themes/scss/mixins';
 @import '@carbon/themes/scss/tokens';
 @import 'carbon-components/scss/globals/scss/vars';
 
 @import '../../components/IconButton/variables';
 
+@import '../deprecate/index';
+@import '../feature-flags/index';
 @import '../namespace/index';
 
 @import 'variables';
@@ -76,20 +79,28 @@
 ///   }
 /// @output css
 ///   body {
-///     --interactive-01: #0062ff;
-///     --interactive-02: #6f6f6f;
-///     --interactive-03: #ffffff;
+///     --cds-interactive-01: #0062ff;
+///     --cds-interactive-02: #6f6f6f;
+///     --cds-interactive-03: #ffffff;
 ///   }
 @mixin security--generate-css-custom-properties($theme) {
-  @each $token in $security--theme__ignore-list {
-    $theme: map-remove(
-      $map: $theme,
-      $key: $token,
-    );
-  }
+  @include carbon--theme(
+    $theme: $theme,
+    $emit-custom-properties: feature-flag-enabled($feature: $theme__name)
+  );
 
-  @each $token, $value in $theme {
-    --#{$token}: #{$value};
+  @if (feature-flag-enabled($feature: $theme__name--security)) {
+    @each $token, $value in $theme {
+      @if (type-of($value: $value) == 'color') {
+        --#{$token}: var(--#{$custom-property-prefix}-#{$token}, #{$value});
+      }
+    }
+
+    @include export-namespace($name: $theme__name--security) {
+      @warn deprecate($actual: $theme__name--security, $expected: $theme__name, $url: 'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x/themes.md#feature-flags');
+
+      @warn deprecate($actual: "'var(--token)', for example 'var(--interactive-01)'", $expected: "'$token', for example '$interactive-01'", $url: 'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x/themes.md#variables');
+    }
   }
 }
 
@@ -110,9 +121,9 @@
 ///   }
 /// @output css
 ///   .security--theme--cg10 body {
-///     --interactive-01: #0062ff;
-///     --interactive-02: #373d42;
-///     --interactive-03: #0062ff;
+///     --cds-interactive-01: #0062ff;
+///     --cds-interactive-02: #373d42;
+///     --cds-interactive-03: #0062ff;
 ///   }
 @mixin security--theme--cg10__cg10 {
   @include security--theme--cg10($theme: $security--theme--cg10);
@@ -126,9 +137,9 @@
 ///   }
 /// @output css
 ///   .security--theme--cg10 body {
-///     --interactive-01: #0062ff;
-///     --interactive-02: #697077;
-///     --interactive-03: #ffffff;
+///     --cds-interactive-01: #0062ff;
+///     --cds-interactive-02: #697077;
+///     --cds-interactive-03: #ffffff;
 ///   }
 @mixin security--theme--cg10__cg100 {
   @include security--theme--cg10(
