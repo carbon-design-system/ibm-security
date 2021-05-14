@@ -9,7 +9,7 @@
 @import '../../globals/border/index';
 @import '../Component/mixins';
 
-@include security--component($name: unstable--background) {
+@include security--component($name: background) {
   background-color: $ui-01;
   outline: $border__sizing__width solid $ui-background;
 }

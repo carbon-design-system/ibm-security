@@ -28,7 +28,7 @@ import {
   TypeLayoutBody,
   TypeLayoutCell,
   TypeLayoutRow,
-  withBackground,
+  unstable_withBackground,
 } from '../..';
 
 import config, { withContainer } from './stories';
@@ -38,7 +38,7 @@ const { decorators, parameters } = config;
 // TODO: Remove workaround for https://github.ibm.com/security/design-core-experience/issues/241
 const RowWithContainer = withContainer(Row);
 
-const SummaryCard = withBackground(SummaryCardComponent);
+const SummaryCard = unstable_withBackground(SummaryCardComponent);
 
 export default {
   title: pageLayouts('Detail'),
