@@ -133,7 +133,7 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
           aria-hidden="true"
           class="security--scroll-gradient__before"
           role="presentation"
-          style="background-image:linear-gradient(-90deg, rgba(0,0,0,0), var(--ui-01, #262626) 90%)"
+          style="background-image:linear-gradient(-90deg, rgba(0,0,0,0), var(--cds-ui-01, #262626) 90%)"
         />
         <div
           class="security--scroll-gradient__content"
@@ -313,7 +313,7 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
           aria-hidden="true"
           class="security--scroll-gradient__after"
           role="presentation"
-          style="background-image:linear-gradient(-90deg, var(--ui-01, #262626) 10%, rgba(0,0,0,0))"
+          style="background-image:linear-gradient(-90deg, var(--cds-ui-01, #262626) 10%, rgba(0,0,0,0))"
         />
       </div>
     </div>

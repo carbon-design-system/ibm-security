@@ -96,13 +96,6 @@ describe('Button', () => {
     expect(getByText(/test button/i)).toHaveClass(`${carbonPrefix}--btn--sm`);
   });
 
-  test('should apply correct class when `size` is `field`', () => {
-    const { getByText } = render(<Button size="field">test button</Button>);
-    expect(getByText(/test button/i)).toHaveClass(
-      `${carbonPrefix}--btn--field`
-    );
-  });
-
   test('should apply correct class when `size` is `large`', () => {
     const { getByText } = render(<Button size="large">test button</Button>);
     expect(getByText(/test button/i)).toHaveClass(`${carbonPrefix}--btn--lg`);

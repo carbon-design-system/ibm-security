@@ -38,7 +38,7 @@ exports[`TearsheetSmall renders 1`] = `
       >
         <ScrollGradient
           className="security--tearsheet--small__content"
-          color="var(--ui-01, #262626)"
+          color="var(--cds-ui-01, #262626)"
           direction="Y"
           getScrollElementRef={[Function]}
           hideStartGradient={false}
@@ -56,6 +56,7 @@ exports[`TearsheetSmall renders 1`] = `
           className="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary"
           dangerDescription="danger"
           disabled={false}
+          isExpressive={false}
           kind="secondary"
           largeText={null}
           loading={false}
@@ -72,6 +73,7 @@ exports[`TearsheetSmall renders 1`] = `
           className="security--tearsheet--small__footer__button"
           dangerDescription="danger"
           disabled={false}
+          isExpressive={false}
           kind="primary"
           largeText={null}
           loading={false}
@@ -147,7 +149,7 @@ exports[`TearsheetSmall renders disabled buttons 1`] = `
       >
         <ScrollGradient
           className="security--tearsheet--small__content"
-          color="var(--ui-01, #262626)"
+          color="var(--cds-ui-01, #262626)"
           direction="Y"
           getScrollElementRef={[Function]}
           hideStartGradient={false}
@@ -165,6 +167,7 @@ exports[`TearsheetSmall renders disabled buttons 1`] = `
           className="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary"
           dangerDescription="danger"
           disabled={true}
+          isExpressive={false}
           kind="secondary"
           largeText={null}
           loading={false}
@@ -181,6 +184,7 @@ exports[`TearsheetSmall renders disabled buttons 1`] = `
           className="security--tearsheet--small__footer__button"
           dangerDescription="danger"
           disabled={true}
+          isExpressive={false}
           kind="primary"
           largeText={null}
           loading={false}
@@ -245,7 +249,7 @@ exports[`TearsheetSmall renders loading state 1`] = `
       >
         <ScrollGradient
           className="security--tearsheet--small__content"
-          color="var(--ui-01, #262626)"
+          color="var(--cds-ui-01, #262626)"
           direction="Y"
           getScrollElementRef={[Function]}
           hideStartGradient={false}
@@ -263,6 +267,7 @@ exports[`TearsheetSmall renders loading state 1`] = `
           className="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary"
           dangerDescription="danger"
           disabled={true}
+          isExpressive={false}
           kind="secondary"
           largeText={null}
           loading={false}
@@ -279,6 +284,7 @@ exports[`TearsheetSmall renders loading state 1`] = `
           className="security--tearsheet--small__footer__button"
           dangerDescription="danger"
           disabled={true}
+          isExpressive={false}
           kind="primary"
           largeText={null}
           loading={false}
@@ -354,7 +360,7 @@ exports[`TearsheetSmall should override \`labels\` if button label property prov
       >
         <ScrollGradient
           className="security--tearsheet--small__content"
-          color="var(--ui-01, #262626)"
+          color="var(--cds-ui-01, #262626)"
           direction="Y"
           getScrollElementRef={[Function]}
           hideStartGradient={false}
@@ -372,6 +378,7 @@ exports[`TearsheetSmall should override \`labels\` if button label property prov
           className="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary"
           dangerDescription="danger"
           disabled={false}
+          isExpressive={false}
           kind="secondary"
           largeText={null}
           loading={false}
@@ -388,6 +395,7 @@ exports[`TearsheetSmall should override \`labels\` if button label property prov
           className="security--tearsheet--small__footer__button"
           dangerDescription="danger"
           disabled={false}
+          isExpressive={false}
           kind="primary"
           largeText={null}
           loading={false}

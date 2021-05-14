@@ -29,7 +29,7 @@
 | `inverse-01`                | `white-0`         | `gray-100`        |
 | `inverse-02`                | `cool-gray-80`    | `gray-10`         |
 | `support-01`                | `red-60`          | `red-50`          |
-| `support-02`                | `green-50`        | `green-40`        |
+| `support-02`                | `green-60`        | `green-40`        |
 | `support-03`                | `yellow-30`       | `yellow-30`       |
 | `support-04`                | `blue-70`         | `blue-50`         |
 | `inverse-support-01`        | `red-50`          | `red-60`          |
@@ -94,7 +94,7 @@
 | `icon-on-color`             | `white-0`         | `white-0`         |
 | `icon-inverse`              | `white-0`         | `gray-100`        |
 | `support-error`             | `red-60`          | `red-50`          |
-| `support-success`           | `green-50`        | `green-40`        |
+| `support-success`           | `green-60`        | `green-40`        |
 | `support-warning`           | `yellow-30`       | `yellow-30`       |
 | `support-info`              | `blue-70`         | `blue-50`         |
 | `support-error-inverse`     | `red-50`          | `red-60`          |

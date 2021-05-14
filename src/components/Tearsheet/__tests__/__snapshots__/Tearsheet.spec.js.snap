@@ -57,6 +57,7 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
             dangerDescription="danger"
             disabled={false}
             iconDescription="Delete - prop"
+            isExpressive={false}
             kind="ghost-danger"
             largeText={null}
             loading={false}
@@ -110,7 +111,7 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
         >
           <ScrollGradient
             className="security--tearsheet__main__scroll-gradient"
-            color="var(--ui-01, #262626)"
+            color="var(--cds-ui-01, #262626)"
             direction="Y"
             getScrollElementRef={[Function]}
             hideStartGradient={false}
@@ -145,6 +146,7 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
               className="security--tearsheet__button security--tearsheet__button--secondary"
               dangerDescription="danger"
               disabled={false}
+              isExpressive={false}
               kind="secondary"
               largeText={null}
               loading={false}
@@ -161,6 +163,7 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
               className="security--tearsheet__button"
               dangerDescription="danger"
               disabled={false}
+              isExpressive={false}
               kind="primary"
               largeText={null}
               loading={false}
@@ -238,6 +241,7 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
             dangerDescription="danger"
             disabled={false}
             iconDescription="Delete"
+            isExpressive={false}
             kind="ghost-danger"
             largeText={null}
             loading={false}
@@ -291,7 +295,7 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
         >
           <ScrollGradient
             className="security--tearsheet__main__scroll-gradient"
-            color="var(--ui-01, #262626)"
+            color="var(--cds-ui-01, #262626)"
             direction="Y"
             getScrollElementRef={[Function]}
             hideStartGradient={false}
@@ -326,6 +330,7 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
               className="security--tearsheet__button security--tearsheet__button--secondary"
               dangerDescription="danger"
               disabled={false}
+              isExpressive={false}
               kind="secondary"
               largeText={null}
               loading={false}
@@ -342,6 +347,7 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
               className="security--tearsheet__button"
               dangerDescription="danger"
               disabled={false}
+              isExpressive={false}
               kind="primary"
               largeText={null}
               loading={false}
