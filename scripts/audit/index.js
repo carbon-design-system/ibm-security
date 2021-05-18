@@ -1,6 +1,6 @@
 /**
  * @file Audit.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 const { exec, exit } = require('shelljs'); // https://www.npmjs.com/package/shelljs
@@ -16,12 +16,10 @@ exec(
       .map(JSON.parse)
       .filter(({ type }) => type === 'auditAdvisory');
 
-    const { length: hasAuditAdvisories } = auditAdvisories;
-
-    if (hasAuditAdvisories) {
+    if (auditAdvisories.length) {
       console.log(inspect(auditAdvisories, { colors: true, depth: null }));
     }
 
-    exit(hasAuditAdvisories);
+    exit();
   }
 );
