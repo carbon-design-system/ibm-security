@@ -11466,12 +11466,13 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--layout-module--list-item {
   display: flex;
   padding: 1rem;
-  background-color: var(--ui-01, #262626);
-  border-bottom: 0.0625rem solid var(--ui-03, #393939);
+  background-color: var(--cds-ui-01, #262626);
+  border: none;
+  border-top: 0.0625rem solid var(--cds-ui-03, #393939);
 }
 
 .security--layout-module--list-item:last-of-type {
-  border-width: 0;
+  border-bottom: 0.0625rem solid var(--cds-ui-03, #393939);
 }
 
 .security--layout-module--list-item--a, .security--layout-module--list-item--button {
@@ -11490,11 +11491,11 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 .security--layout-module--list-item--a:focus, .security--layout-module--list-item--a:hover, .security--layout-module--list-item--button:focus, .security--layout-module--list-item--button:hover {
-  background-color: var(--hover-ui, #353535);
+  background-color: var(--cds-hover-ui, #353535);
 }
 
 .security--layout-module--list-item--a:focus, .security--layout-module--list-item--button:focus {
-  outline: 2px solid var(--focus, #ffffff);
+  outline: 2px solid var(--cds-focus, #ffffff);
   outline-offset: -2px;
 }
 
@@ -11533,28 +11534,28 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 .security--layout-module--list-item__title {
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 1.29;
-  letter-spacing: 0.16px;
+  font-size: var(--cds-body-short-01-font-size, 0.875rem);
+  font-weight: var(--cds-body-short-01-font-weight, 400);
+  line-height: var(--cds-body-short-01-line-height, 1.29);
+  letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
 .security--layout-module--list-item__description, .security--layout-module--list-item__label {
-  color: var(--text-02, #c6c6c6);
+  color: var(--cds-text-02, #c6c6c6);
 }
 
 .security--layout-module--list-item__description {
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 1.29;
-  letter-spacing: 0.16px;
+  font-size: var(--cds-body-short-01-font-size, 0.875rem);
+  font-weight: var(--cds-body-short-01-font-weight, 400);
+  line-height: var(--cds-body-short-01-line-height, 1.29);
+  letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
 .security--layout-module--list-item__label {
-  font-size: 0.75rem;
-  font-weight: 400;
-  line-height: 1.34;
-  letter-spacing: 0.32px;
+  font-size: var(--cds-label-01-font-size, 0.75rem);
+  font-weight: var(--cds-label-01-font-weight, 400);
+  line-height: var(--cds-label-01-line-height, 1.34);
+  letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
   display: block;
   padding-top: 0.25rem;
 }
