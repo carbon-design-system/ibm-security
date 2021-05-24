@@ -275,8 +275,4 @@ export UnorderedList from './components/UnorderedList';
 export { Wizard, WizardStep } from './components/Wizard';
 
 // Experimental.
-export withBackground from './components/UNSTABLE__Background';
-
-export UNSTABLE__Pagination, {
-  PageSelector,
-} from './components/UNSTABLE__Pagination';
+export unstable_withBackground from './components/Background';

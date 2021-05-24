@@ -1,7 +1,7 @@
 ////
 /// Theme helpers.
 /// @group theme
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/themes/scss/mixins';
@@ -11,27 +11,6 @@
 @import '../feature-flags/index';
 
 @import 'variables';
-
-@if feature-flag-enabled($feature: $theme__name) {
-  @each $token, $value in $-theme {
-    // Map the theme tokens as CSS custom properties.
-    $-theme: map-merge(
-      $map1: $-theme,
-      $map2: (
-        $token:
-          if(
-            $condition:
-              index(
-                $list: $security--theme__ignore-list,
-                $value: $token,
-              ),
-            $if_true: $value,
-            $if_false: var(--#{$token}, $value),
-          ),
-      ),
-    );
-  }
-}
 
 /// Carbon theme.
 /// @type Map<String, Color>
