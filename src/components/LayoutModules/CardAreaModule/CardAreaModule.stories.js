@@ -18,13 +18,13 @@ import {
   SummaryCard as SummaryCardComponent,
   SummaryCardHeader,
   TitleBarModule,
-  withBackground,
+  unstable_withBackground,
 } from '../../..';
 
 import getTitle from '../stories';
 import page from './index.mdx';
 
-const SummaryCard = withBackground(SummaryCardComponent);
+const SummaryCard = unstable_withBackground(SummaryCardComponent);
 
 export default {
   title: getTitle(CardAreaModule.name),
