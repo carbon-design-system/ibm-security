@@ -1,7 +1,7 @@
 ////
 /// Deprecated methods.
 /// @group deprecate
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 ///
@@ -11,6 +11,6 @@
 /// @param {string} $url The URL to assist with migrating.
 /// @return {string} The message generated as a deprecation warning.
 ///
-@function deprecate($actual, $expected, $url: null) {
-  @return '`#{$actual}` has been deprecated in favour of `#{$expected}` — This will be removed in the next major version. #{$url}';
+@function deprecate($actual, $expected, $url) {
+  @return '`#{$actual}` has been deprecated in favor of `#{$expected}` and will be removed in an upcoming major release - #{$url}';
 }
