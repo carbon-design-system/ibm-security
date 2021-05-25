@@ -22,8 +22,8 @@ $body__color__text: $text-01;
 
 @mixin body {
   @include carbon--grid;
-  @include carbon--type-classes;
   @include carbon--type-reset;
+  @include carbon--type-classes;
 
   @include export-namespace($name: '#{$platform__name}--deprecated') {
     @warn deprecate($actual: 'Grid style classes and utilities', $expected: "@carbon/grid/scss/grid", $url: 'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x/grid.md#imports');
