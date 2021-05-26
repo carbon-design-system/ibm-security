@@ -21,14 +21,16 @@
   /// Spacing.
   /// @type Length
   $list-item-module__spacing: $carbon--spacing-02;
+  $list-item-module__border: $border__sizing__width solid $ui-03;
 
   display: flex;
   padding: $carbon--spacing-05;
   background-color: $ui-01;
-  border-bottom: $border__sizing__width solid $ui-03;
+  border: none;
+  border-top: $list-item-module__border;
 
   &:last-of-type {
-    border-width: 0;
+    border-bottom: $list-item-module__border;
   }
 
   &--a,

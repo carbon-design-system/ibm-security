@@ -11467,11 +11467,12 @@ li.bx--accordion__item--disabled:last-of-type {
   display: flex;
   padding: 1rem;
   background-color: var(--cds-ui-01, #262626);
-  border-bottom: 0.0625rem solid var(--cds-ui-03, #393939);
+  border: none;
+  border-top: 0.0625rem solid var(--cds-ui-03, #393939);
 }
 
 .security--layout-module--list-item:last-of-type {
-  border-width: 0;
+  border-bottom: 0.0625rem solid var(--cds-ui-03, #393939);
 }
 
 .security--layout-module--list-item--a, .security--layout-module--list-item--button {

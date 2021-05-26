@@ -23,7 +23,7 @@ import getTitle from '../stories';
 import page from './index.mdx';
 
 export default {
-  title: getTitle('ListItemModule (Canary)'),
+  title: getTitle(ListItemModule.name),
   component: ListItemModule,
   parameters: {
     docs: { page },
