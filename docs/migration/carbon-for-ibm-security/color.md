@@ -6,10 +6,10 @@ Also refer to [migration in Carbon](https://github.com/carbon-design-system/carb
 
 ### Imports
 
-| `carbon-addons-security`                  | `@carbon/ibm-security`                                     |
-| ----------------------------------------- | ---------------------------------------------------------- |
-| `import { white } from '@ibmduo/colors';` | `import { white } from '@carbon/colors';`                  |
-| `@import '@ibmduo/colors/**/*';`          | `@import '@carbon/ibm-security/scss/globals/color/index';` |
+| `carbon-addons-security`                  | `@carbon/ibm-security`                            |
+| ----------------------------------------- | ------------------------------------------------- |
+| `import { white } from '@ibmduo/colors';` | `import { white } from '@carbon/colors';`         |
+| `@use '@ibmduo/colors/**/*';`             | `@use '@carbon/ibm-security/scss/globals/color';` |
 
 ### Variables
 
