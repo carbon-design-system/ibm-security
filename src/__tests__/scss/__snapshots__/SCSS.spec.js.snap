@@ -76,6 +76,8 @@ exports[`SCSS Bundle 1`] = `
   --cds-background: #f2f4f8;
   --cds-layer: #ffffff;
   --cds-layer-accent: #dde1e6;
+  --cds-layer-accent-hover: #d1d1d1;
+  --cds-layer-accent-active: #a2a9b0;
   --cds-field: #ffffff;
   --cds-background-inverse: #343a3f;
   --cds-background-brand: #0f62fe;
@@ -318,6 +320,12 @@ exports[`SCSS Bundle 1`] = `
   --cds-container-03: 2.5rem;
   --cds-container-04: 3rem;
   --cds-container-05: 4rem;
+  --cds-size-xsmall: 1.5rem;
+  --cds-size-small: 2rem;
+  --cds-size-medium: 2.5rem;
+  --cds-size-large: 3rem;
+  --cds-size-xlarge: 4rem;
+  --cds-size-2XLarge: 5rem;
   --cds-icon-size-01: 1rem;
   --cds-icon-size-02: 1.25rem;
   --interactive-01: var(--cds-interactive-01, #0f62fe);
@@ -389,6 +397,8 @@ exports[`SCSS Bundle 1`] = `
   --background: var(--cds-background, #f2f4f8);
   --layer: var(--cds-layer, #ffffff);
   --layer-accent: var(--cds-layer-accent, #dde1e6);
+  --layer-accent-active: var(--cds-layer-accent-active, #a2a9b0);
+  --layer-accent-hover: var(--cds-layer-accent-hover, #d1d1d1);
   --field: var(--cds-field, #ffffff);
   --background-inverse: var(--cds-background-inverse, #343a3f);
   --background-brand: var(--cds-background-brand, #0f62fe);
@@ -538,6 +548,8 @@ exports[`SCSS Bundle 1`] = `
   --cds-background: #161616;
   --cds-layer: #262626;
   --cds-layer-accent: #393939;
+  --cds-layer-accent-hover: #474747;
+  --cds-layer-accent-active: #6f6f6f;
   --cds-field: #262626;
   --cds-background-inverse: #f4f4f4;
   --cds-background-brand: #0f62fe;
@@ -780,6 +792,12 @@ exports[`SCSS Bundle 1`] = `
   --cds-container-03: 2.5rem;
   --cds-container-04: 3rem;
   --cds-container-05: 4rem;
+  --cds-size-xsmall: 1.5rem;
+  --cds-size-small: 2rem;
+  --cds-size-medium: 2.5rem;
+  --cds-size-large: 3rem;
+  --cds-size-xlarge: 4rem;
+  --cds-size-2XLarge: 5rem;
   --cds-icon-size-01: 1rem;
   --cds-icon-size-02: 1.25rem;
   --interactive-01: var(--cds-interactive-01, #0f62fe);
@@ -851,6 +869,8 @@ exports[`SCSS Bundle 1`] = `
   --background: var(--cds-background, #161616);
   --layer: var(--cds-layer, #262626);
   --layer-accent: var(--cds-layer-accent, #393939);
+  --layer-accent-active: var(--cds-layer-accent-active, #6f6f6f);
+  --layer-accent-hover: var(--cds-layer-accent-hover, #474747);
   --field: var(--cds-field, #262626);
   --background-inverse: var(--cds-background-inverse, #f4f4f4);
   --background-brand: var(--cds-background-brand, #0f62fe);
@@ -5550,6 +5570,10 @@ body {
   height: 1.25rem;
 }
 
+.bx--btn-set .bx--btn.bx--btn--expressive {
+  max-width: 20rem;
+}
+
 .bx--btn.bx--skeleton {
   position: relative;
   padding: 0;
@@ -5592,6 +5616,7 @@ body {
 
 .bx--btn-set .bx--btn {
   width: 100%;
+  max-width: 12.25rem;
 }
 
 .bx--btn-set .bx--btn:not(:focus) {
@@ -5600,10 +5625,6 @@ body {
 
 .bx--btn-set .bx--btn:first-of-type:not(:focus) {
   box-shadow: inherit;
-}
-
-.bx--btn-set .bx--btn:not(.bx--btn--expressive) {
-  max-width: 12.25rem;
 }
 
 .bx--btn-set .bx--btn:focus + .bx--btn {
@@ -6780,10 +6801,6 @@ button.bx--dropdown-text:focus {
   border-bottom-color: var(--cds-hover-ui, #353535);
 }
 
-.bx--dropdown--selected {
-  display: none;
-}
-
 .bx--dropdown--open .bx--dropdown__arrow {
   transform: rotate(-180deg);
 }
@@ -7774,6 +7791,8 @@ a.bx--overflow-menu-options__btn::before {
   --cds-background: #121619;
   --cds-layer: #21272a;
   --cds-layer-accent: #343a3f;
+  --cds-layer-accent-hover: #474747;
+  --cds-layer-accent-active: #697077;
   --cds-field: #21272a;
   --cds-background-inverse: #f2f4f8;
   --cds-background-brand: #0f62fe;
@@ -8016,6 +8035,12 @@ a.bx--overflow-menu-options__btn::before {
   --cds-container-03: 2.5rem;
   --cds-container-04: 3rem;
   --cds-container-05: 4rem;
+  --cds-size-xsmall: 1.5rem;
+  --cds-size-small: 2rem;
+  --cds-size-medium: 2.5rem;
+  --cds-size-large: 3rem;
+  --cds-size-xlarge: 4rem;
+  --cds-size-2XLarge: 5rem;
   --cds-icon-size-01: 1rem;
   --cds-icon-size-02: 1.25rem;
   --interactive-01: var(--cds-interactive-01, #0f62fe);
@@ -8087,6 +8112,8 @@ a.bx--overflow-menu-options__btn::before {
   --background: var(--cds-background, #121619);
   --layer: var(--cds-layer, #21272a);
   --layer-accent: var(--cds-layer-accent, #343a3f);
+  --layer-accent-active: var(--cds-layer-accent-active, #697077);
+  --layer-accent-hover: var(--cds-layer-accent-hover, #474747);
   --field: var(--cds-field, #21272a);
   --background-inverse: var(--cds-background-inverse, #f2f4f8);
   --background-brand: var(--cds-background-brand, #0f62fe);
@@ -16246,6 +16273,8 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-background: #121619;
   --cds-layer: #21272a;
   --cds-layer-accent: #343a3f;
+  --cds-layer-accent-hover: #474747;
+  --cds-layer-accent-active: #697077;
   --cds-field: #21272a;
   --cds-background-inverse: #f2f4f8;
   --cds-background-brand: #0f62fe;
@@ -16488,6 +16517,12 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-container-03: 2.5rem;
   --cds-container-04: 3rem;
   --cds-container-05: 4rem;
+  --cds-size-xsmall: 1.5rem;
+  --cds-size-small: 2rem;
+  --cds-size-medium: 2.5rem;
+  --cds-size-large: 3rem;
+  --cds-size-xlarge: 4rem;
+  --cds-size-2XLarge: 5rem;
   --cds-icon-size-01: 1rem;
   --cds-icon-size-02: 1.25rem;
   --interactive-01: var(--cds-interactive-01, #0f62fe);
@@ -16559,6 +16594,8 @@ li.bx--accordion__item--disabled:last-of-type {
   --background: var(--cds-background, #121619);
   --layer: var(--cds-layer, #21272a);
   --layer-accent: var(--cds-layer-accent, #343a3f);
+  --layer-accent-active: var(--cds-layer-accent-active, #697077);
+  --layer-accent-hover: var(--cds-layer-accent-hover, #474747);
   --field: var(--cds-field, #21272a);
   --background-inverse: var(--cds-background-inverse, #f2f4f8);
   --background-brand: var(--cds-background-brand, #0f62fe);
@@ -20422,6 +20459,14 @@ li.bx--accordion__item--disabled:last-of-type {
   padding-right: 2.5rem;
 }
 
+.bx--text-input--sm.bx--password-input {
+  padding-right: 2rem;
+}
+
+.bx--text-input--lg.bx--password-input {
+  padding-right: 3rem;
+}
+
 .bx--text-input::placeholder {
   color: var(--cds-text-03, #6f6f6f);
   opacity: 1;
@@ -20671,7 +20716,7 @@ li.bx--accordion__item--disabled:last-of-type {
   right: 0;
   display: flex;
   width: 2.5rem;
-  height: 2.5rem;
+  height: 100%;
   min-height: auto;
   align-items: center;
   justify-content: center;
@@ -20680,6 +20725,14 @@ li.bx--accordion__item--disabled:last-of-type {
   background: none;
   cursor: pointer;
   transition: outline 70ms cubic-bezier(0.2, 0, 0.38, 0.9);
+}
+
+.bx--text-input--sm + .bx--btn.bx--text-input--password__visibility__toggle.bx--tooltip__trigger {
+  width: 2rem;
+}
+
+.bx--text-input--lg + .bx--btn.bx--text-input--password__visibility__toggle.bx--tooltip__trigger {
+  width: 3rem;
 }
 
 .bx--btn.bx--text-input--password__visibility__toggle.bx--tooltip__trigger svg {
@@ -20693,13 +20746,13 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
-.bx--text-input--password__visibility__toggle.bx--tooltip__trigger:focus {
+.bx--btn.bx--text-input--password__visibility__toggle.bx--tooltip__trigger:focus {
   outline: 2px solid var(--cds-focus, #ffffff);
   outline-offset: -2px;
 }
 
 @media screen and (prefers-contrast) {
-  .bx--text-input--password__visibility__toggle.bx--tooltip__trigger:focus {
+  .bx--btn.bx--text-input--password__visibility__toggle.bx--tooltip__trigger:focus {
     outline-style: dotted;
   }
 }
@@ -21624,6 +21677,8 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-background: #121619;
   --cds-layer: #21272a;
   --cds-layer-accent: #343a3f;
+  --cds-layer-accent-hover: #474747;
+  --cds-layer-accent-active: #697077;
   --cds-field: #21272a;
   --cds-background-inverse: #f2f4f8;
   --cds-background-brand: #0f62fe;
@@ -21866,6 +21921,12 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-container-03: 2.5rem;
   --cds-container-04: 3rem;
   --cds-container-05: 4rem;
+  --cds-size-xsmall: 1.5rem;
+  --cds-size-small: 2rem;
+  --cds-size-medium: 2.5rem;
+  --cds-size-large: 3rem;
+  --cds-size-xlarge: 4rem;
+  --cds-size-2XLarge: 5rem;
   --cds-icon-size-01: 1rem;
   --cds-icon-size-02: 1.25rem;
   --interactive-01: var(--cds-interactive-01, #0f62fe);
@@ -21937,6 +21998,8 @@ li.bx--accordion__item--disabled:last-of-type {
   --background: var(--cds-background, #121619);
   --layer: var(--cds-layer, #21272a);
   --layer-accent: var(--cds-layer-accent, #343a3f);
+  --layer-accent-active: var(--cds-layer-accent-active, #697077);
+  --layer-accent-hover: var(--cds-layer-accent-hover, #474747);
   --field: var(--cds-field, #21272a);
   --background-inverse: var(--cds-background-inverse, #f2f4f8);
   --background-brand: var(--cds-background-brand, #0f62fe);
@@ -22110,6 +22173,8 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-background: #f2f4f8;
   --cds-layer: #ffffff;
   --cds-layer-accent: #dde1e6;
+  --cds-layer-accent-hover: #d1d1d1;
+  --cds-layer-accent-active: #a2a9b0;
   --cds-field: #ffffff;
   --cds-background-inverse: #343a3f;
   --cds-background-brand: #0f62fe;
@@ -22352,6 +22417,12 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-container-03: 2.5rem;
   --cds-container-04: 3rem;
   --cds-container-05: 4rem;
+  --cds-size-xsmall: 1.5rem;
+  --cds-size-small: 2rem;
+  --cds-size-medium: 2.5rem;
+  --cds-size-large: 3rem;
+  --cds-size-xlarge: 4rem;
+  --cds-size-2XLarge: 5rem;
   --cds-icon-size-01: 1rem;
   --cds-icon-size-02: 1.25rem;
   --interactive-01: var(--cds-interactive-01, #0f62fe);
@@ -22423,6 +22494,8 @@ li.bx--accordion__item--disabled:last-of-type {
   --background: var(--cds-background, #f2f4f8);
   --layer: var(--cds-layer, #ffffff);
   --layer-accent: var(--cds-layer-accent, #dde1e6);
+  --layer-accent-active: var(--cds-layer-accent-active, #a2a9b0);
+  --layer-accent-hover: var(--cds-layer-accent-hover, #d1d1d1);
   --field: var(--cds-field, #ffffff);
   --background-inverse: var(--cds-background-inverse, #343a3f);
   --background-brand: var(--cds-background-brand, #0f62fe);
@@ -22749,6 +22822,18 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--structured-list.bx--structured-list--condensed .bx--structured-list-td,
 .bx--structured-list.bx--structured-list--condensed .bx--structured-list-th {
   padding: 0.5rem;
+}
+
+.bx--structured-list .bx--structured-list-row .bx--structured-list-td:first-of-type,
+.bx--structured-list .bx--structured-list-row .bx--structured-list-th:first-of-type {
+  padding-left: 1rem;
+}
+
+.bx--structured-list.bx--structured-list--flush .bx--structured-list-row .bx--structured-list-td,
+.bx--structured-list.bx--structured-list--flush .bx--structured-list-row .bx--structured-list-th,
+.bx--structured-list.bx--structured-list--flush .bx--structured-list-row .bx--structured-list-td:first-of-type,
+.bx--structured-list.bx--structured-list--flush .bx--structured-list-row .bx--structured-list-th:first-of-type {
+  padding-right: 1rem;
   padding-left: 0;
 }
 
@@ -22806,7 +22891,7 @@ li.bx--accordion__item--disabled:last-of-type {
   font-family: inherit;
   font-size: 100%;
   vertical-align: baseline;
-  padding: 1rem 1rem 0.5rem 1rem;
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
   font-size: var(--cds-productive-heading-01-font-size, 0.875rem);
   font-weight: var(--cds-productive-heading-01-font-weight, 600);
   line-height: var(--cds-productive-heading-01-line-height, 1.29);
@@ -22843,7 +22928,7 @@ li.bx--accordion__item--disabled:last-of-type {
   font-weight: var(--cds-body-long-01-font-weight, 400);
   line-height: var(--cds-body-long-01-line-height, 1.43);
   letter-spacing: var(--cds-body-long-01-letter-spacing, 0.16px);
-  padding: 1rem 1rem 1.5rem 1rem;
+  padding: 1rem 0.5rem 1.5rem 0.5rem;
   position: relative;
   display: table-cell;
   max-width: 36rem;
@@ -22866,10 +22951,6 @@ li.bx--accordion__item--disabled:last-of-type {
   fill: transparent;
   transition: all 110ms cubic-bezier(0.2, 0, 0.38, 0.9);
   vertical-align: middle;
-}
-
-.bx--structured-list-row:hover .bx--structured-list-svg {
-  fill: #a8a8a8;
 }
 
 .bx--structured-list-input:checked + .bx--structured-list-row .bx--structured-list-svg,
@@ -24259,6 +24340,8 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-background: #121619;
   --cds-layer: #21272a;
   --cds-layer-accent: #343a3f;
+  --cds-layer-accent-hover: #474747;
+  --cds-layer-accent-active: #697077;
   --cds-field: #21272a;
   --cds-background-inverse: #f2f4f8;
   --cds-background-brand: #0f62fe;
@@ -24501,6 +24584,12 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-container-03: 2.5rem;
   --cds-container-04: 3rem;
   --cds-container-05: 4rem;
+  --cds-size-xsmall: 1.5rem;
+  --cds-size-small: 2rem;
+  --cds-size-medium: 2.5rem;
+  --cds-size-large: 3rem;
+  --cds-size-xlarge: 4rem;
+  --cds-size-2XLarge: 5rem;
   --cds-icon-size-01: 1rem;
   --cds-icon-size-02: 1.25rem;
   --interactive-01: var(--cds-interactive-01, #0f62fe);
@@ -24572,6 +24661,8 @@ li.bx--accordion__item--disabled:last-of-type {
   --background: var(--cds-background, #121619);
   --layer: var(--cds-layer, #21272a);
   --layer-accent: var(--cds-layer-accent, #343a3f);
+  --layer-accent-active: var(--cds-layer-accent-active, #697077);
+  --layer-accent-hover: var(--cds-layer-accent-hover, #474747);
   --field: var(--cds-field, #21272a);
   --background-inverse: var(--cds-background-inverse, #f2f4f8);
   --background-brand: var(--cds-background-brand, #0f62fe);
@@ -27717,7 +27808,8 @@ li.bx--accordion__item--disabled:last-of-type {
   overflow: hidden;
 }
 
-.bx--body--with-modal-open .bx--tooltip {
+.bx--body--with-modal-open .bx--tooltip,
+.bx--body--with-modal-open .bx--overflow-menu-options {
   z-index: 9000;
 }
 

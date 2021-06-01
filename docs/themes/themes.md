@@ -71,6 +71,8 @@
 | `background`                | `cool-gray-10`    | `gray-100`        |
 | `layer`                     | `white-0`         | `gray-90`         |
 | `layer-accent`              | `cool-gray-20`    | `gray-80`         |
+| `layer-accent-active`       | `cool-gray-40`    | `gray-60`         |
+| `layer-accent-hover`        | `#d1d1d1`         | `#474747`         |
 | `field`                     | `white-0`         | `gray-90`         |
 | `background-inverse`        | `cool-gray-80`    | `gray-10`         |
 | `background-brand`          | `blue-60`         | `blue-60`         |
