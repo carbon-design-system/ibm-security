@@ -3,9 +3,9 @@
  * @copyright IBM Security 2018 - 2021
  */
 
-const {
-  settings: { prefix: carbonPrefix },
-} = require('carbon-components');
+import { settings } from 'carbon-components';
+
+const { prefix: carbonPrefix } = settings;
 
 const namespace = 'security--';
 

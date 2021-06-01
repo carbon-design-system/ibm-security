@@ -11,10 +11,7 @@ import { getComponentNamespace } from '../../globals/namespace';
 export default WrappedComponent => {
   const WithBackground = ({ className, ...other }) => (
     <WrappedComponent
-      className={classnames(
-        getComponentNamespace('unstable--background'),
-        className
-      )}
+      className={classnames(getComponentNamespace('background'), className)}
       {...other}
     />
   );
