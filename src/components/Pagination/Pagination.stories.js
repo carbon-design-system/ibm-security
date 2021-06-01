@@ -1,6 +1,6 @@
 /**
- * @file Pagination v2 stories.
- * @copyright IBM Security 2019
+ * @file Pagination stories.
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
@@ -10,7 +10,7 @@ import { array, boolean, number, text } from '@storybook/addon-knobs';
 
 import { Pagination } from '../..';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 const props = () => ({
   disabled: boolean('Disable backward/forward buttons (disabled)', false),
@@ -35,7 +35,7 @@ const props = () => ({
   onChange: action('onChange'),
 });
 
-storiesOf(components('Pagination'), module)
+storiesOf(carbon('Pagination'), module)
   .addDecorator(story => <div style={{ width: '800px' }}>{story()}</div>)
   .add('Pagination', () => <Pagination {...props()} />, {
     info: {

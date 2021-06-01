@@ -1,12 +1,12 @@
 /**
  * @file Data table stories.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { boolean, select } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import { DataTable } from '../..';
 
@@ -23,7 +23,7 @@ const props = () => ({
 const readmeURL = 'https://bit.ly/2Z9PGsC';
 
 /* eslint-disable global-require */
-storiesOf(components('DataTable'), module)
+storiesOf(carbon('DataTable'), module)
   .add('default', () => require('./stories/default').default(props()), {
     info: {
       /* eslint-disable no-useless-escape */

@@ -1,6 +1,6 @@
 /**
  * @file Tabs stories.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { breakpoints } from '@carbon/layout';
@@ -10,7 +10,7 @@ import { boolean, number, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import { Tabs, Tab, TabsSkeleton } from '../..';
 
@@ -54,7 +54,7 @@ const TabContentRenderedOnlyWhenSelected = ({ selected, children, ...other }) =>
     </div>
   );
 
-storiesOf(components('Tabs'), module)
+storiesOf(carbon('Tabs'), module)
   .addDecorator(story => (
     <div style={{ minWidth: breakpoints.md.width }}>{story()}</div>
   ))

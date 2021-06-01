@@ -6,10 +6,10 @@ Also refer to [migration in Carbon](https://github.com/carbon-design-system/carb
 
 ### Imports
 
-| `carbon-addons-security`                                                           | `@carbon/ibm-security`                                      |
-| ---------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| `import { spacing } from '@ibm-security/carbon-addons-security/lib/scss-exports';` | `import { spacing } from '@carbon/layout';`                 |
-| `@import '@ibmduo/grid/**/*';`                                                     | `@import '@carbon/ibm-security/scss/globals/layout/index';` |
+| `carbon-addons-security`                                                           | `@carbon/ibm-security`                             |
+| ---------------------------------------------------------------------------------- | -------------------------------------------------- |
+| `import { spacing } from '@ibm-security/carbon-addons-security/lib/scss-exports';` | `import { spacing } from '@carbon/layout';`        |
+| `@use '@ibmduo/grid/**/*';`                                                        | `@use '@carbon/ibm-security/scss/globals/layout';` |
 
 ### Functions
 

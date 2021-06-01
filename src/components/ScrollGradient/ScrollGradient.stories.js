@@ -1,13 +1,13 @@
 /**
  * @file Scroll gradient stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { color, boolean } from '@storybook/addon-knobs';
 
-import { components } from '../../../.storybook';
+import { security } from '../../../.storybook';
 
 import { ScrollGradient, theme } from '../..';
 import { className, children } from './_mocks_';
@@ -19,7 +19,7 @@ const style = {
   height: '300px',
 };
 
-storiesOf(components('ScrollGradient'), module)
+storiesOf(security('ScrollGradient'), module)
   .add(
     'vertical scrolling',
     () => (

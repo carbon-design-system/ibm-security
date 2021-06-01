@@ -6,7 +6,7 @@ Also refer to [usage in Carbon](https://github.com/carbon-design-system/carbon/t
 
 ## Imports
 
-| `1.x`                                                     | `2.x`                                                             |
-| --------------------------------------------------------- | ----------------------------------------------------------------- |
-| `@import '@carbon/ibm-security/scss/globals/type/index';` | - `@import '@carbon/type/scss/type';`                             |
-|                                                           | - `@import 'carbon-components/scss/globals/scss/css--font-face';` |
+| `1.x`                                            | `2.x`                                                          |
+| ------------------------------------------------ | -------------------------------------------------------------- |
+| `@use '@carbon/ibm-security/scss/globals/type';` | - `@use '@carbon/type/scss/type';`                             |
+|                                                  | - `@use 'carbon-components/scss/globals/scss/css--font-face';` |

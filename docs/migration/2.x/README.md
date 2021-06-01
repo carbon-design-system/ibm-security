@@ -10,10 +10,10 @@ To align with [Carbon's documentation and package ecosystem](https://github.com/
 
 ### Imports
 
-| `1.x`                                                | `2.x`                                                            |
-| ---------------------------------------------------- | ---------------------------------------------------------------- |
-| `@import '@carbon/ibm-security/scss/globals/index';` | - `@import '@carbon/ibm-security/scss/index';`                   |
-|                                                      | - `@import 'carbon-components/scss/globals/scss/helper-mixins';` |
+| `1.x`                                       | `2.x`                                                         |
+| ------------------------------------------- | ------------------------------------------------------------- |
+| `@use '@carbon/ibm-security/scss/globals';` | - `@use '@carbon/ibm-security/scss';`                         |
+|                                             | - `@use 'carbon-components/scss/globals/scss/helper-mixins';` |
 
 ## Elements
 

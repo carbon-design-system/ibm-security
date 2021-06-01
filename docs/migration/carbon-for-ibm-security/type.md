@@ -8,9 +8,9 @@ Also refer to [migration in Carbon](https://github.com/carbon-design-system/carb
 
 ### Imports
 
-| `carbon-addons-security`       | `@carbon/ibm-security`                                    |
-| ------------------------------ | --------------------------------------------------------- |
-| `@import '@ibmduo/type/**/*';` | `@import '@carbon/ibm-security/scss/globals/type/index';` |
+| `carbon-addons-security`    | `@carbon/ibm-security`                           |
+| --------------------------- | ------------------------------------------------ |
+| `@use '@ibmduo/type/**/*';` | `@use '@carbon/ibm-security/scss/globals/type';` |
 
 ### Classes
 

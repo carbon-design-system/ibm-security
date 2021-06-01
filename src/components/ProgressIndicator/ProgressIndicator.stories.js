@@ -1,6 +1,6 @@
 /**
  * @file Progress indicator stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
@@ -17,11 +17,11 @@ import {
   Tooltip,
 } from '../..';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 const { prefix } = settings;
 
-storiesOf(components('ProgressIndicator'), module)
+storiesOf(carbon('ProgressIndicator'), module)
   .add(
     'Default',
     () => (

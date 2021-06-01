@@ -1,6 +1,6 @@
 /**
  * @file File uploader stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
@@ -10,7 +10,7 @@ import { array, boolean, number, select, text } from '@storybook/addon-knobs';
 
 import { settings } from 'carbon-components';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import {
   Button,
@@ -73,7 +73,7 @@ const props = {
   }),
 };
 
-storiesOf(components('FileUploader'), module)
+storiesOf(carbon('FileUploader'), module)
   .add(
     'FileUploaderButton',
     () => <FileUploaderButton {...props.fileUploaderButton()} />,

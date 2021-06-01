@@ -6,6 +6,6 @@ Also refer to [usage in Carbon](https://github.com/carbon-design-system/carbon/t
 
 ## Imports
 
-| `1.x`                                                       | `2.x`                                   |
-| ----------------------------------------------------------- | --------------------------------------- |
-| `@import '@carbon/ibm-security/scss/globals/layout/index';` | `@import '@carbon/layout/scss/layout';` |
+| `1.x`                                              | `2.x`                                |
+| -------------------------------------------------- | ------------------------------------ |
+| `@use '@carbon/ibm-security/scss/globals/layout';` | `@use '@carbon/layout/scss/layout';` |
