@@ -131,7 +131,7 @@ $type-style-deprecation-map: (
 
 @include export-namespace($name: type) {
   $deprecate: deprecate(
-    $actual: '@carbon/ibm-security/scss/globals/type/index',
+    $actual: '@carbon/ibm-security/scss/globals/type',
     $expected:
       "'@carbon/type/scss/type' and 'carbon-components/scss/globals/scss/css--font-face'",
     $url:

@@ -145,7 +145,7 @@
 
 @include export-namespace($name: grid) {
   $deprecate: deprecate(
-    $actual: '@carbon/ibm-security/scss/globals/grid/index',
+    $actual: '@carbon/ibm-security/scss/globals/grid',
     $expected: '@carbon/grid/scss/grid',
     $url:
       'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x/grid.md#imports',

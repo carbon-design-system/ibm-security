@@ -30,7 +30,7 @@
 
 @include export-namespace($name: layout) {
   $deprecate: deprecate(
-    $actual: '@carbon/ibm-security/scss/globals/layout/index',
+    $actual: '@carbon/ibm-security/scss/globals',
     $expected: '@carbon/layout/scss/layout',
     $url:
       'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x/layout.md#imports',

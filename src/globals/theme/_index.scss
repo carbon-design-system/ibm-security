@@ -60,7 +60,7 @@ $theme: dark;
 
 @include export-namespace($name: theme) {
   $deprecate: deprecate(
-    $actual: '@carbon/ibm-security/scss/globals/theme/index',
+    $actual: '@carbon/ibm-security/scss/globals/theme',
     $expected: '@carbon/themes/scss/themes',
     $url:
       'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x/themes.md#imports',
