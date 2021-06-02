@@ -8,7 +8,12 @@
 
 @import '../deprecate/index';
 
-@warn deprecate($actual: 'spacing.module.scss', $expected: '@carbon/layout', $url: 'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/carbon-for-ibm-security/layout.md#imports');
+$deprecate: deprecate(
+  $actual: 'spacing.module.scss',
+  $expected: '@carbon/layout',
+  $url:
+    'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/carbon-for-ibm-security/layout.md#imports',
+);
 
 /// Baseline spacing.
 /// @type Length

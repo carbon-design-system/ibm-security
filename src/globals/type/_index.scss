@@ -7,14 +7,6 @@
 @import '@carbon/type/scss/classes';
 @import '@carbon/type/scss/type';
 
-/// `@font-face` declarations.
-/// @type boolean
-$css--font-face: true !default;
-
-/// IBM Plex.
-/// @type boolean
-$css--plex: true;
-
 @import 'carbon-components/scss/globals/scss/css--font-face';
 
 @import '../deprecate/index';
@@ -93,8 +85,12 @@ $type-style-deprecation-map: (
     $key: $scale-item,
   );
 
-  @warn deprecate($actual: 'type-scale-item($scale-item: #{$scale-item})', $expected: 'carbon--type-style($name: #{$name})', $url:
-  'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/carbon-for-ibm-security/type.md#functions');
+  $deprecate: deprecate(
+    $actual: 'type-scale-item($scale-item: #{$scale-item})',
+    $expected: 'carbon--type-style($name: #{$name})',
+    $url:
+      'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/carbon-for-ibm-security/type.md#functions',
+  );
 
   @include carbon--type-style($name: $name);
 }
