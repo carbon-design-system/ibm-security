@@ -10,6 +10,7 @@
 
 @import '../../components/IconButton/variables';
 
+@import '../deprecate/index';
 @import '../feature-flags/index';
 @import '../namespace/index';
 
@@ -87,6 +88,20 @@
     $theme: $theme,
     $emit-custom-properties: feature-flag-enabled($feature: $theme__name)
   );
+
+  @if (feature-flag-enabled($feature: $theme__name--security)) {
+    @each $token, $value in $theme {
+      @if (type-of($value: $value) == 'color') {
+        --#{$token}: var(--#{$custom-property-prefix}-#{$token}, #{$value});
+      }
+    }
+
+    @include export-namespace($name: $theme__name--security) {
+      @warn deprecate($actual: $theme__name--security, $expected: $theme__name, $url: 'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x/themes.md#feature-flags');
+
+      @warn deprecate($actual: "'var(--token)', for example 'var(--interactive-01)'", $expected: "'$token', for example '$interactive-01'", $url: 'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x/themes.md#variables');
+    }
+  }
 }
 
 /// Mixin to generate CSS custom properties for the 'cool gray 10' theme.

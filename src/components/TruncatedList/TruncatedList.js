@@ -1,16 +1,16 @@
 /**
  * @file Truncated list component.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
-import React, { Children } from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { settings } from 'carbon-components';
+import PropTypes from 'prop-types';
+import React, { Children } from 'react';
 
 import Button from '../Button';
 import ScrollGradient from '../ScrollGradient';
-import { getComponentNamespace } from '../../globals/namespace';
+
+import { carbonPrefix, getComponentNamespace } from '../../globals/namespace';
 import theme from '../../globals/theme';
 
 const namespace = getComponentNamespace('truncated-list');
@@ -108,7 +108,7 @@ const TruncatedList = ({
         <Button
           className={classnames(
             expandButtonClassName,
-            `${settings.prefix}--link`,
+            `${carbonPrefix}--link`,
             `${namespace}__expand-button`
           )}
           iconDescription=""

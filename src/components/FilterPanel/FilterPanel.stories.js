@@ -1,6 +1,6 @@
 /**
  * @file Filter panel stories.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import { storiesOf } from '@storybook/react';
@@ -74,16 +74,16 @@ storiesOf(patterns('FilterPanel'), module)
   .add('default', () => (
     <FilterPanel title={text('FilterPanel title (title)', title)}>
       <FilterPanelSearch
+        id="filter-search"
         labelText={text(
           'FilterPanelSearch label text (labelText)',
           filterSearchLabel
         )}
-        placeHolderText={text(
-          'FilterPanelSearch placeholder text (placeHolderText)',
+        onChange={action('FilterPanelSearch onChange')}
+        placeholder={text(
+          'FilterPanelSearch placeholder text (placeholder)',
           filterSearchLabel
         )}
-        onChange={action('FilterPanelSearch onChange')}
-        id="filter-search"
       >
         <FilterPanelGroup title="Filter accordion item">
           <FilterPanelCheckbox

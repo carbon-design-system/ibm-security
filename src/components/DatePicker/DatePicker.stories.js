@@ -1,6 +1,6 @@
 /**
  * @file Date picker stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { action, decorateAction } from '@storybook/addon-actions';
@@ -11,7 +11,7 @@ import React from 'react';
 
 import { DatePicker, DatePickerInput, DatePickerSkeleton } from '.';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 // Datepickers last argument contains an instance of flatpickr
 // and will cause action logger to enter an infinite loop. Just don't log that argument
@@ -64,7 +64,7 @@ const props = {
   }),
 };
 
-storiesOf(components('DatePicker'), module)
+storiesOf(carbon('DatePicker'), module)
   .add(
     'simple',
     () => (

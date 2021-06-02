@@ -22,21 +22,12 @@ Currently, only 2 themes are supported: **Gray 100**, activated by default, and 
 | Gray 100 (default) | `security--theme--g100` |
 | Cool gray 10       | `security--theme--cg10` |
 
-#### Tokens
-
-All of the components' processed and minified styles automatically includes and initializes all tokens as CSS custom properties for use with CSS. For example:
-
-```css
-var(--cds-interactive-01);
-var(--cds-interactive-02);
-```
-
 ### Sass
 
 If your project is using Sass, you can include the following in your Sass file:
 
 ```scss
-@import '@carbon/ibm-security/scss/globals/theme/index';
+@use '@carbon/ibm-security/scss/globals/theme';
 ```
 
 This will include theming styles and tokens for the **Gray 100 theme _by default_**.

@@ -119,7 +119,7 @@ $type-style-deprecation-map: (
 
     @each $type-class, $type-style-name in $type-style-deprecation-map {
       .#{$type__name}-#{$type-class} {
-        @include carbon--type-style($name: $type-style-name);
+        @include carbon--type-style($fluid: true, $name: $type-style-name);
       }
     }
   }

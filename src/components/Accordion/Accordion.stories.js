@@ -1,6 +1,6 @@
 /**
  * @file Accordion stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { action } from '@storybook/addon-actions';
@@ -9,7 +9,7 @@ import { storiesOf } from '@storybook/react';
 
 import React from 'react';
 
-import { components, info } from '../../../.storybook';
+import { carbon, info } from '../../../.storybook';
 
 import { Accordion, AccordionItem, AccordionSkeleton, Button } from '../..';
 
@@ -24,11 +24,14 @@ const align = {
   End: 'end',
 };
 
-const story = 'accordion';
-const description =
-  'Accordions allow users to expand and collapse sections of content.';
+const documentation = info(
+  'Accordions allow users to expand and collapse sections of content.',
+  {
+    story: 'accordion',
+  }
+);
 
-storiesOf(components('Accordion'), module)
+storiesOf(carbon('Accordion'), module)
   .add(
     'Default',
     () => (
@@ -75,11 +78,7 @@ storiesOf(components('Accordion'), module)
         </AccordionItem>
       </Accordion>
     ),
-    info(description, {
-      story,
-      library: 'react',
-      id: 'default',
-    })
+    documentation
   )
   .add(
     'with skeleton',
@@ -92,9 +91,5 @@ storiesOf(components('Accordion'), module)
         />
       </div>
     ),
-    info(description, {
-      story,
-      library: 'react',
-      id: 'skeleton',
-    })
+    documentation
   );

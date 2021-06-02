@@ -1,6 +1,6 @@
 /**
  * @file Radio button group stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { action } from '@storybook/addon-actions';
@@ -12,7 +12,7 @@ import React from 'react';
 
 import FormGroup from 'carbon-components-react/lib/components/FormGroup';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import { RadioButton, RadioButtonGroup } from '../../';
 
@@ -45,7 +45,7 @@ const props = {
   }),
 };
 
-storiesOf(components('RadioButtonGroup'), module).add(
+storiesOf(carbon('RadioButtonGroup'), module).add(
   'Default',
   () => {
     const radioProps = props.radio();
