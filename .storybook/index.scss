@@ -6,6 +6,7 @@
 
 @import '@carbon/grid/scss/mixins';
 @import '@carbon/layout/scss/spacing';
+@import '@carbon/themes/scss/theme-maps';
 @import '@carbon/type/scss/classes';
 @import '@carbon/type/scss/reset';
 
@@ -22,6 +23,15 @@
 
 @import 'decorators/index';
 @import 'docs/index';
+
+.page-layouts__banner {
+  @include security--generate-css-custom-properties(
+    $theme: $carbon--theme--g10
+  );
+
+  max-width: 100%;
+  margin-top: 0;
+}
 
 .wizard__form {
   width: 50%;
