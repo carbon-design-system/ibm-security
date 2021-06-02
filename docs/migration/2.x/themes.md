@@ -4,6 +4,8 @@ To align with [Carbon's support for inline theming with CSS custom properties](h
 
 Also refer to [usage in Carbon](https://github.com/carbon-design-system/carbon/tree/main/packages/themes#usage).
 
+## Migrating
+
 ### Feature flags
 
 | `1.x`                                   | `2.x`                          |

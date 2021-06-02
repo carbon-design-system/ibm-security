@@ -4,9 +4,11 @@ To align with [Carbon's documentation and package ecosystem](https://github.com/
 
 Also refer to [usage in Carbon](https://github.com/carbon-design-system/carbon/tree/main/packages/type#usage).
 
-## Imports
+## Migrating
 
-| `1.x`                                            | `2.x`                                                          |
-| ------------------------------------------------ | -------------------------------------------------------------- |
-| `@use '@carbon/ibm-security/scss/globals/type';` | - `@use '@carbon/type/scss/type';`                             |
-|                                                  | - `@use 'carbon-components/scss/globals/scss/css--font-face';` |
+### Imports
+
+| `1.x`                                            | `2.x`                                                        |
+| ------------------------------------------------ | ------------------------------------------------------------ |
+| `@use '@carbon/ibm-security/scss/globals/type';` | `@use '@carbon/type/scss/type';`                             |
+|                                                  | `@use 'carbon-components/scss/globals/scss/css--font-face';` |
