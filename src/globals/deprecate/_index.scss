@@ -1,7 +1,7 @@
 ////
 /// Deprecated methods.
 /// @group deprecate
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 ///
@@ -9,8 +9,16 @@
 /// @param {string} $actual The value provided.
 /// @param {string} $expected The expected value.
 /// @param {string} $url The URL to assist with migrating.
-/// @return {string} The message generated as a deprecation warning.
+/// @return {null}
 ///
 @function deprecate($actual, $expected, $url: null) {
-  @return '`#{$actual}` has been deprecated in favour of `#{$expected}` — This will be removed in the next major version. #{$url}';
+  @if (
+    not
+      variable-exists(security--deprecations-message-suppress) or not
+      $security--deprecations-message-suppress
+  ) {
+    @warn '`#{$actual}` has been deprecated in favour of `#{$expected}` — This will be removed in the next major version. #{$url}';
+  }
+
+  @return null;
 }

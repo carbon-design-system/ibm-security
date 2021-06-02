@@ -36,7 +36,10 @@ $theme: dark;
 /// @access private
 /// @deprecated
 @function theme($light, $dark) {
-  @warn deprecate($actual: 'theme', $expected: '@carbon/themes');
+  $deprecate: deprecate(
+    $actual: 'theme',
+    $expected: '@carbon/themes',
+  );
 
   @return if($theme == dark, $dark, $light);
 }

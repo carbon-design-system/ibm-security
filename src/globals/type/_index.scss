@@ -85,7 +85,11 @@ $type-style-deprecation-map: (
     $key: $scale-item,
   );
 
-  @warn deprecate($actual: 'type-scale-item($scale-item: #{$scale-item})', $expected: 'carbon--type-style($name: #{$name})');
+  $deprecate: deprecate(
+    $actual: 'type-scale-item($scale-item: #{$scale-item})',
+    $expected: 'carbon--type-style($name: #{$name})',
+  );
+
   @include carbon--type-style($name: $name);
 }
 
