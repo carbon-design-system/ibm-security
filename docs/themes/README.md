@@ -45,11 +45,11 @@ $interactive-02;
 
 #### Feature flags
 
-You can disable theme output using a feature flag by writing the following Sass code before importing:
+You can disable Carbon for IBM Security custom theme output using a feature flag by writing the following Sass code before importing:
 
 ```scss
 $security--feature-flags: (
-  enable-css-custom-properties: false,
+  security--css-custom-property-theming: false,
 );
 ```
 
