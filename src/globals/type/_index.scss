@@ -6,6 +6,14 @@
 
 @import '@carbon/type/scss/type';
 
+/// `@font-face` declarations.
+/// @type boolean
+$css--font-face: true !default;
+
+/// IBM Plex.
+/// @type boolean
+$css--plex: true;
+
 @import '../deprecate/index';
 @import '../feature-flags/index';
 @import '../namespace/index';

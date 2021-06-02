@@ -27964,5 +27964,28 @@ a.bx--navigation-link:focus {
   background-color: var(--cds-ui-01, #f4f4f4);
   outline: 0.0625rem solid var(--cds-ui-background, #ffffff);
 }
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  border: 0;
+  font-size: var(--cds-body-short-01-font-size, 0.875rem);
+  font-weight: var(--cds-body-short-01-font-weight, 400);
+  line-height: var(--cds-body-short-01-line-height, 1.29);
+  letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
+  color: var(--cds-text-01, #161616);
+  line-height: 1;
+  background-color: var(--cds-ui-background, #ffffff);
+}
+
+body *,
+body *::before,
+body *::after {
+  box-sizing: inherit;
+}
 "
 `;
