@@ -1,14 +1,14 @@
 ////
 /// Spacing exports. Allows importing the spacing values into JavaScript.
 /// @group scss-exports
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/spacing';
 
 @import '../deprecate/index';
 
-@warn deprecate($actual: 'spacing.module.scss', $expected: '@carbon/layout');
+@warn deprecate($actual: 'spacing.module.scss', $expected: '@carbon/layout', $url: 'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/carbon-for-ibm-security/layout.md#imports');
 
 /// Baseline spacing.
 /// @type Length
