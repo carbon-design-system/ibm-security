@@ -105,6 +105,7 @@ export {
   DescriptionListModule,
   DescriptionModule,
   ICAModule,
+  ListItemModule,
   TitleBarModule,
 } from './components/LayoutModules';
 
