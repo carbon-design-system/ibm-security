@@ -1,5 +1,9 @@
 # `2.x` migration
 
+## Process
+
+Address any of the changes relevant to you from the tables below.
+
 ## Elements
 
 | Name   | `2.x`                |
