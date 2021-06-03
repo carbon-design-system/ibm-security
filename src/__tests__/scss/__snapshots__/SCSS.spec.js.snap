@@ -10683,6 +10683,10 @@ li.bx--accordion__item--disabled:last-of-type {
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
+.security--ica__warning {
+  color: var(--cds-support-01, #fa4d56);
+}
+
 .security--ica--lg .security--ica__value, .security--ica--lg .security--ica__percentage {
   font-size: var(--cds-productive-heading-06-font-size, 2.625rem);
   font-weight: var(--cds-productive-heading-06-font-weight, 300);

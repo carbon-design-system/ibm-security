@@ -47,6 +47,10 @@
     @include carbon--type-style($name: body-short-01);
   }
 
+  &__warning {
+    color: $support-01;
+  }
+
   // Lg Styling
   &--lg & {
     &__value,

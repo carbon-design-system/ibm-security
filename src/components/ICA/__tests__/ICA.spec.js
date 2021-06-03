@@ -9,7 +9,10 @@ import React from 'react';
 import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { ICA } from '../../..';
-import { Locales } from '../ICA';
+import { Locales, namespace } from '../ICA';
+
+const sizes = ['lg', 'xl'];
+const testValues = [10, 11];
 
 describe('ICA', () => {
   test('should have no Axe or DAP violations', async () => {
@@ -78,6 +81,31 @@ describe('ICA', () => {
     );
     expect(queryByText('%')).toBeVisible();
   });
+
+  test('should render trending arrow', () => {
+    const { container } = render(<ICA trending />);
+    expect(container.querySelector('svg')).toBeVisible();
+  });
+
+  sizes.forEach(size =>
+    test(`should apply correct class when \`size\` is set to '${size}'`, () => {
+      const { container } = render(<ICA size={size} />);
+      expect(container.firstElementChild).toHaveClass(`${namespace}--${size}`);
+    })
+  );
+
+  testValues.forEach(value =>
+    test('should apply warning class when value is equal to or larger than total', () => {
+      // 	const { container } = render(<ICA value={value} total={10} />);
+      // 	expect(container.getByText(`${value}`)).toHaveClass(
+      //   `${namespace}__warning`
+      expect(
+        render(<ICA label="ICA" value={value} total={10} />).getByText(
+          `${value}`
+        )
+      ).toHaveClass(`${namespace}__warning`);
+    })
+  );
 
   Locales.forEach(locale =>
     test(`should accept '${locale}' locale`, () => {
