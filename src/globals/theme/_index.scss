@@ -36,7 +36,12 @@ $theme: dark;
 /// @access private
 /// @deprecated
 @function theme($light, $dark) {
-  @warn deprecate($actual: 'theme', $expected: '@carbon/themes');
+  $deprecate: deprecate(
+    $actual: 'theme',
+    $expected: '@carbon/themes',
+    $url:
+      'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x/themes.md#functions',
+  );
 
   @return if($theme == dark, $dark, $light);
 }

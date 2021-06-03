@@ -4,7 +4,7 @@
 /// @copyright IBM Security 2021
 ////
 
-@import '../settings/index';
+@import './settings';
 
 // Global flags - https://github.com/carbon-design-system/carbon/blob/main/docs/guides/sass.md#global-flags
 
@@ -28,4 +28,4 @@ $css--helpers: false;
 /// @type boolean
 $css--reset: false;
 
-@import '../../index';
+@import '../index';
