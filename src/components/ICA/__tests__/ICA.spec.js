@@ -96,9 +96,6 @@ describe('ICA', () => {
 
   testValues.forEach(value =>
     test('should apply warning class when value is equal to or larger than total', () => {
-      // 	const { container } = render(<ICA value={value} total={10} />);
-      // 	expect(container.getByText(`${value}`)).toHaveClass(
-      //   `${namespace}__warning`
       expect(
         render(<ICA label="ICA" value={value} total={10} />).getByText(
           `${value}`
