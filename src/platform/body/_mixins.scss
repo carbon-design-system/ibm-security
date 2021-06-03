@@ -26,8 +26,25 @@ $body__color__text: $text-01;
   @include carbon--type-classes;
 
   @include export-namespace($name: '#{$platform__name}--deprecated') {
-    @warn deprecate($actual: 'Grid style classes and utilities', $expected: "@carbon/grid/scss/grid", $url: 'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x/grid.md#imports');
-    @warn deprecate($actual: 'Type style classes', $expected: "@carbon/type/scss/classes", $url: 'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x/type.md#classes');
-    @warn deprecate($actual: 'Type style reset', $expected: "@carbon/type/scss/reset", $url: 'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x/type.md#reset');
+    $deprecate: deprecate(
+      $actual: 'Grid style classes and utilities',
+      $expected: '@carbon/grid/scss/grid',
+      $url:
+        'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x/grid.md#imports',
+    );
+
+    $deprecate: deprecate(
+      $actual: 'Type style classes',
+      $expected: '@carbon/type/scss/classes',
+      $url:
+        'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x/type.md#classes',
+    );
+
+    $deprecate: deprecate(
+      $actual: 'Type style reset',
+      $expected: '@carbon/type/scss/reset',
+      $url:
+        'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x/type.md#reset',
+    );
   }
 }
