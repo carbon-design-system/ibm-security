@@ -23,6 +23,16 @@ Also refer to [optimizing Sass builds in Carbon](https://github.com/carbon-desig
 | -------------------------------------------- | ------------------------------------------------------- |
 | `@use '@carbon/ibm-security/scss/platform';` | `@use 'carbon-components/scss/globals/scss/css--body';` |
 
+### Feature flags
+
+If using `@carbon/grid` style classes and utilities, you can disable the library output using a feature flag by writing the following Sass code before importing:
+
+```scss
+$security--feature-flags: (
+  platform: false,
+);
+```
+
 ## Components
 
 | Name            | `2.x`                                                             |
