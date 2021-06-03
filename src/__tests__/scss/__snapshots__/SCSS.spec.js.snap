@@ -28044,22 +28044,6 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
   fill: var(--cds-disabled-02, #525252);
 }
 
-.bx--tile-group {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  font-family: inherit;
-  vertical-align: baseline;
-  border: 0;
-}
-
-.bx--tile-group *,
-.bx--tile-group *::before,
-.bx--tile-group *::after {
-  box-sizing: inherit;
-}
-
 .bx--time-picker {
   display: flex;
   align-items: flex-end;
