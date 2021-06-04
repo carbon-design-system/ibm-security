@@ -58,6 +58,8 @@ function compile(from, to) {
 
 if (process.env.NODE_ENV !== 'test') {
   compile(resolve(src, 'index.scss'), 'index');
+
+  excludeExternals();
   compile(resolve(root, tmp, 'globals/build.scss'), 'index.next');
 }
 
