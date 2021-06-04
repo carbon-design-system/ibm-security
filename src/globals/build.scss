@@ -1,0 +1,50 @@
+////
+/// Build.
+/// @group build
+/// @copyright IBM Security 2021
+////
+
+@import '@carbon/themes/scss/theme-maps';
+
+/// Feature flags - https://github.com/carbon-design-system/carbon/blob/main/docs/guides/sass.md#feature-flags
+/// @type Map<String, boolean>
+$feature-flags: (
+  enable-css-custom-properties: true,
+);
+
+/// Security feature flags - https://github.com/carbon-design-system/ibm-security/tree/master#feature-flags
+/// @type Map<String, boolean>
+$security--feature-flags: (
+  css-gridish: false,
+  ibm-type: false,
+  platform: false,
+  security--css-custom-property-theming: false,
+);
+
+/// Default theme - https://github.com/carbon-design-system/carbon/tree/main/packages/themes#sass
+/// @type Map<String, Color>
+$carbon--theme: $carbon--theme--g100;
+
+// Global flags - https://github.com/carbon-design-system/carbon/blob/main/docs/guides/sass.md#global-flags
+
+/// Body.
+/// @type boolean
+$css--body: false;
+
+/// Default type.
+/// @type boolean
+$css--default-type: false;
+
+/// Font face.
+/// @type boolean
+$css--font-face: false;
+
+/// CSS helpers.
+/// @type boolean
+$css--helpers: false;
+
+/// CSS reset - https://cssreset.com/
+/// @type boolean
+$css--reset: false;
+
+@import '../index';
