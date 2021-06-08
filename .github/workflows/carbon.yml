@@ -1,0 +1,35 @@
+name: Upgrade Carbon
+
+on:
+  schedule:
+    - cron: '0 3 * * WED'
+
+jobs:
+  Upgrade:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2 # https://github.com/actions/checkout
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2 # https://github.com/actions/setup-node
+        with:
+          node-version: 12
+
+      - name: Install
+        run: yarn --offline
+
+      - name: Upgrade Carbon dependencies
+        run: yarn upgrade -L --caret --pattern 'carbon'
+
+      - name: Update snapshot artifacts
+        run: yarn test -u
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v3 # https://github.com/marketplace/actions/create-pull-request
+        with:
+          commit-message: &commit-message 'feat: upgrade Carbon dependencies'
+          title: *commit-message
+          body: *commit-message
+          branch: upgrade-carbon
