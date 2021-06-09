@@ -25,8 +25,8 @@ jobs:
       - name: Upgrade Carbon dependencies
         run: yarn upgrade -L --caret --pattern 'carbon'
 
-      - name: Update snapshot artifacts
-        run: yarn test -u
+      # - name: Update snapshot artifacts
+      #   run: yarn test -u
 
       - name: Create pull request
         id: cpr
