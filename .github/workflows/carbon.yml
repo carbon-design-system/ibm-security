@@ -1,8 +1,10 @@
 name: Upgrade Carbon
 
 on:
-  schedule:
-    - cron: '0 3 * * WED'
+  push:
+    branches: [create-carbon-pr]
+  # schedule:
+  #   - cron: '0 3 * * WED'
 
 jobs:
   Upgrade:
@@ -27,9 +29,10 @@ jobs:
         run: yarn test -u
 
       - name: Create pull request
+        id: cpr
         uses: peter-evans/create-pull-request@v3 # https://github.com/marketplace/actions/create-pull-request
         with:
           commit-message: &commit-message 'feat: upgrade Carbon dependencies'
           title: *commit-message
-          body: *commit-message
-          branch: upgrade-carbon
+          body: https://github.com/carbon-design-system/carbon/releases
+          branch: ${{ steps.cpr.outputs.pull-request-number }}/upgrade-carbon
