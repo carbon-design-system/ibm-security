@@ -32,7 +32,6 @@ jobs:
         id: cpr
         uses: peter-evans/create-pull-request@v3 # https://github.com/marketplace/actions/create-pull-request
         with:
-          commit-message: &commit-message 'feat: upgrade Carbon dependencies'
-          title: *commit-message
+          title: 'feat: upgrade Carbon dependencies'
           body: https://github.com/carbon-design-system/carbon/releases
           branch: ${{ steps.cpr.outputs.pull-request-number }}/upgrade-carbon
