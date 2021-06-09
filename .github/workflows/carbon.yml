@@ -29,9 +29,9 @@ jobs:
       #   run: yarn test -u
 
       - name: Create pull request
-        id: cpr
         uses: peter-evans/create-pull-request@v3 # https://github.com/marketplace/actions/create-pull-request
         with:
           title: 'feat: upgrade Carbon dependencies'
           body: https://github.com/carbon-design-system/carbon/releases
-          branch: ${{ steps.cpr.outputs.pull-request-number }}/upgrade-carbon
+          branch: upgrade-carbon
+          branch-suffix: short-commit-hash
