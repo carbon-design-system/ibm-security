@@ -1,17 +1,19 @@
 /**
  * @file Filter panel search tests.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
+import { act, render, wait } from '@testing-library/react';
 import React from 'react';
-import { render, wait, act } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+
 import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
-import FilterPanelSearch from '../FilterPanelSearch';
 import Checkbox from '../../../Checkbox';
+import FilterPanelSearch from '../FilterPanelSearch';
 
-describe('FilterPanelSearch', () => {
+const { name } = FilterPanelSearch;
+
+describe(name, () => {
   test('should have no Axe or DAP violations', async () => {
     const { container } = renderWithinLandmark(
       <FilterPanelSearch labelText="search label" />
@@ -31,7 +33,7 @@ describe('FilterPanelSearch', () => {
     const { getByTestId, getByPlaceholderText } = render(
       <FilterPanelSearch
         labelText="search label"
-        placeHolderText="search placeholder"
+        placeholder="search placeholder"
       >
         <div data-testid="result-content" />
       </FilterPanelSearch>
@@ -45,7 +47,7 @@ describe('FilterPanelSearch', () => {
     const { queryByTestId, getByPlaceholderText } = render(
       <FilterPanelSearch
         labelText="search label"
-        placeHolderText="search placeholder"
+        placeholder="search placeholder"
       >
         <div data-testid="result-content" />
       </FilterPanelSearch>
@@ -65,7 +67,7 @@ describe('FilterPanelSearch', () => {
     const { getByTestId, getByPlaceholderText, container } = render(
       <FilterPanelSearch
         labelText="search label"
-        placeHolderText="search placeholder"
+        placeholder="search placeholder"
       >
         <div data-testid="result-content">
           <Checkbox labelText="checkbox" id="checkbox" />
@@ -84,16 +86,13 @@ describe('FilterPanelSearch', () => {
     expect(getByTestId('result-content')).toBeVisible();
   });
 
-  test('invokes onChange when the user types a value into the search', () => {
-    const onChangeMock = jest.fn();
-    const { getByPlaceholderText } = render(
-      <FilterPanelSearch
-        labelText="search label"
-        placeHolderText="search placeholder"
-        onChange={onChangeMock}
-      />
-    );
-    userEvent.type(getByPlaceholderText(/search placeholder/i), 'search term');
-    expect(onChangeMock).toHaveBeenCalledTimes('search term'.length);
+  test('adds additional props to the search', () => {
+    const dataTestId = 'dataTestId';
+
+    expect(
+      render(
+        <FilterPanelSearch data-testid={dataTestId} labelText={name} />
+      ).getByTestId(dataTestId)
+    ).toBeInTheDocument();
   });
 });

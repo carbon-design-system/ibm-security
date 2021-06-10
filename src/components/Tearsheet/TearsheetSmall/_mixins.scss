@@ -1,7 +1,7 @@
 ////
 /// Small tearsheet mixins.
 /// @group tearsheet--small
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/breakpoint';
@@ -81,9 +81,8 @@
     display: flex;
     min-height: 0;
     width: 100%;
-    margin-bottom: $carbon--layout-06;
+    margin-bottom: $carbon--spacing-11;
     flex-grow: 1;
-    overflow: auto;
   }
 
   &__scroll-gradient__content {

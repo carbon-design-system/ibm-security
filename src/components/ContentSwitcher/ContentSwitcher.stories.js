@@ -1,6 +1,6 @@
 /**
  * @file Content switcher stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { storiesOf } from '@storybook/react';
@@ -9,7 +9,7 @@ import { boolean } from '@storybook/addon-knobs';
 
 import React from 'react';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import { ContentSwitcher, Switch } from '../..';
 
@@ -23,7 +23,7 @@ const props = {
   }),
 };
 
-storiesOf(components('ContentSwitcher'), module)
+storiesOf(carbon('ContentSwitcher'), module)
   .add(
     'Default',
     () => {

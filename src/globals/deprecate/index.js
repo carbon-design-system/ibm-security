@@ -1,6 +1,6 @@
 /**
  * @file Deprecation warning.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import isDevelopment from '../env';
@@ -58,7 +58,7 @@ function deprecationWarning(warning) {
   if (isDevelopment()) {
     try {
       throw new Error(
-        `Warning: ${warning} — This will be removed in the next major version`
+        `Warning: ${warning} and will be removed in an upcoming major release`
       );
     } catch (error) {
       console.warn(error);
@@ -74,7 +74,7 @@ function deprecationWarning(warning) {
  */
 const deprecate = (actual, expected) =>
   deprecationWarning(
-    `'${actual}' has been deprecated in favour of '${expected}'`
+    `'${actual}' has been deprecated in favor of '${expected}'`
   );
 
 /**

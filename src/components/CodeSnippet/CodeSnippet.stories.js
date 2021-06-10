@@ -1,6 +1,6 @@
 /**
  * @file Code snippet stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { action } from '@storybook/addon-actions';
@@ -8,7 +8,7 @@ import { boolean, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
 import React from 'react';
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import { CodeSnippet, CodeSnippetSkeleton } from '../..';
 
@@ -45,7 +45,7 @@ const props = {
   }),
 };
 
-storiesOf(components('CodeSnippet'), module)
+storiesOf(carbon('CodeSnippet'), module)
   .add(
     'inline',
     () => (

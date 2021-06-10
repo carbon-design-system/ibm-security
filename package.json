@@ -1,6 +1,6 @@
 {
   "name": "@carbon/ibm-security",
-  "version": "1.36.1-prerelease.2",
+  "version": "1.42.0-prerelease.3",
   "description": "Carbon for IBM Security",
   "license": "Apache-2.0",
   "main": "lib/index.js",
@@ -36,6 +36,7 @@
     "lint:scss": "yarn lint:scss:precommit '**/*.scss'",
     "lint:scss:precommit": "stylelint --fix --ignore-path .gitignore",
     "lint-staged": "lint-staged",
+    "postinstall": "carbon-telemetry collect --install",
     "semantic-release": "semantic-release",
     "start": "start-storybook -p 3000 -s public",
     "test": "yarn jest spec --ci -i",
@@ -44,18 +45,24 @@
     "test:scss": "node scripts/scss",
     "test:ssr": "node scripts/ssr"
   },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "sass": "^1.32.8"
+  },
   "dependencies": {
     "@babel/runtime": "^7.4.3",
-    "@carbon/colors": "10.15.0",
-    "@carbon/grid": "10.16.0",
-    "@carbon/icons-react": "10.20.0",
-    "@carbon/import-once": "10.3.0",
-    "@carbon/layout": "10.14.0",
-    "@carbon/motion": "10.9.0",
-    "@carbon/themes": "10.22.1",
-    "@carbon/type": "10.17.0",
-    "carbon-components": "10.23.2",
-    "carbon-components-react": "7.23.2",
+    "@carbon/colors": "10.22.0",
+    "@carbon/grid": "10.24.0",
+    "@carbon/icons-react": "10.29.0",
+    "@carbon/import-once": "10.5.0",
+    "@carbon/layout": "10.22.0",
+    "@carbon/motion": "10.15.0",
+    "@carbon/telemetry": "^0.0.0-alpha.6",
+    "@carbon/themes": "10.31.0",
+    "@carbon/type": "10.25.0",
+    "carbon-components": "10.32.0",
+    "carbon-components-react": "7.32.0",
     "carbon-icons": "7.0.7",
     "classnames": "^2.2.5",
     "downshift": "^1.31.14",
@@ -91,6 +98,7 @@
     "@babel/register": "^7.4.0",
     "@commitlint/cli": "^8.0.0",
     "@commitlint/config-conventional": "^8.0.0",
+    "@csstools/postcss-sass": "^4.0.0",
     "@semantic-release/git": "^7.1.0-beta.3",
     "@storybook/addon-a11y": "^6.0.22",
     "@storybook/addon-actions": "^6.0.22",
@@ -134,7 +142,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-security": "^1.4.0",
     "faker": "^4.1.0",
-    "fast-sass-loader": "^1.5.0",
+    "fast-sass-loader": "^2.0.0",
     "fs-extra": "^7.0.1",
     "git-branch": "^2.0.1",
     "glob": "^7.1.6",
@@ -143,12 +151,10 @@
     "handlebars": "^4.4.3",
     "husky": "^3.0.9",
     "jest": "^24.7.1",
-    "jest-canvas-mock": "^2.1.0",
     "lint-staged": "^9.4.2",
     "node-sass": "^4.7.2",
     "npm-run-all": "^4.1.5",
-    "postcss": "^7.0.13",
-    "postcss-node-sass": "^2.1.7",
+    "postcss": "^8.2.10",
     "postcss-scss": "^2.0.0",
     "prettier": "^1.16.4",
     "prismjs": "^1.15.0",
@@ -159,6 +165,7 @@
     "rollup-plugin-babel": "^4.3.1",
     "rollup-plugin-node-resolve": "^4.2.4",
     "rollup-plugin-postcss": "^1.6.2",
+    "sass": "^1.32.8",
     "sass-extract": "^2.1.0",
     "semantic-release": "^17.2.3",
     "shelljs": "^0.8.4",
@@ -169,10 +176,6 @@
     "stylelint-scss": "^3.5.2",
     "webpack-merge": "^5.1.4",
     "yarn": "^1.16.0"
-  },
-  "peerDependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
   },
   "browserslist": [
     "> 1%",
@@ -187,20 +190,6 @@
     "scss",
     "macros"
   ],
-  "jest": {
-    "collectCoverage": true,
-    "coverageDirectory": "<rootDir>/../coverage",
-    "rootDir": "src",
-    "watchman": false,
-    "setupFilesAfterEnv": [
-      "<rootDir>/../config/jest",
-      "jest-canvas-mock"
-    ],
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ],
-    "testURL": "http://localhost/"
-  },
   "publishConfig": {
     "access": "public"
   },

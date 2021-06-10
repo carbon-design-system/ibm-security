@@ -54,6 +54,7 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
           className="security--tearsheet__sidebar__footer"
         >
           <Button
+            dangerDescription="danger"
             disabled={false}
             iconDescription="Delete - prop"
             kind="ghost-danger"
@@ -109,7 +110,7 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
         >
           <ScrollGradient
             className="security--tearsheet__main__scroll-gradient"
-            color="var(--ui-01, #262626)"
+            color="var(--cds-ui-01, #262626)"
             direction="Y"
             getScrollElementRef={[Function]}
             hideStartGradient={false}
@@ -142,12 +143,13 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
           >
             <Button
               className="security--tearsheet__button security--tearsheet__button--secondary"
+              dangerDescription="danger"
               disabled={false}
               kind="secondary"
               largeText={null}
               loading={false}
               onClick={[MockFunction]}
-              size="large"
+              size="xl"
               tabIndex={0}
               tooltipAlignment="center"
               tooltipPosition="top"
@@ -157,12 +159,13 @@ exports[`Tearsheet should override \`labels\` if button label property provided 
             </Button>
             <Button
               className="security--tearsheet__button"
+              dangerDescription="danger"
               disabled={false}
               kind="primary"
               largeText={null}
               loading={false}
               onClick={[MockFunction]}
-              size="large"
+              size="xl"
               tabIndex={0}
               tooltipAlignment="center"
               tooltipPosition="top"
@@ -232,6 +235,7 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
           className="security--tearsheet__sidebar__footer"
         >
           <Button
+            dangerDescription="danger"
             disabled={false}
             iconDescription="Delete"
             kind="ghost-danger"
@@ -287,7 +291,7 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
         >
           <ScrollGradient
             className="security--tearsheet__main__scroll-gradient"
-            color="var(--ui-01, #262626)"
+            color="var(--cds-ui-01, #262626)"
             direction="Y"
             getScrollElementRef={[Function]}
             hideStartGradient={false}
@@ -320,12 +324,13 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
           >
             <Button
               className="security--tearsheet__button security--tearsheet__button--secondary"
+              dangerDescription="danger"
               disabled={false}
               kind="secondary"
               largeText={null}
               loading={false}
               onClick={[MockFunction]}
-              size="large"
+              size="xl"
               tabIndex={0}
               tooltipAlignment="center"
               tooltipPosition="top"
@@ -335,12 +340,13 @@ exports[`Tearsheet should render the Tearsheet 1`] = `
             </Button>
             <Button
               className="security--tearsheet__button"
+              dangerDescription="danger"
               disabled={false}
               kind="primary"
               largeText={null}
               loading={false}
               onClick={[MockFunction]}
-              size="large"
+              size="xl"
               tabIndex={0}
               tooltipAlignment="center"
               tooltipPosition="top"

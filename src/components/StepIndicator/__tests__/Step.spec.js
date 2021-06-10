@@ -1,6 +1,6 @@
 /**
  * @file Step indicator tests.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import React from 'react';
@@ -34,24 +34,24 @@ describe('Step', () => {
     // "disabled" steps are marked with an "incomplete" class on the `li`
     // and `unclickable` class on the inner `button`:
     expect(getByText(/test label/i).closest('li')).toHaveClass(
-      `${carbonPrefix}progress-step--disabled`
+      `${carbonPrefix}--progress-step--disabled`
     );
     expect(getByText(/test label/i).closest('button')).toHaveClass(
-      `${carbonPrefix}progress-step-button--unclickable`
+      `${carbonPrefix}--progress-step-button--unclickable`
     );
   });
 
   test('should apply correct class when `current` is `true`', () => {
     const { getByText } = render(<Step label="test label" current />);
     expect(getByText(/test label/i).closest('li')).toHaveClass(
-      `${carbonPrefix}progress-step--current`
+      `${carbonPrefix}--progress-step--current`
     );
   });
 
   test('should apply correct class when `complete` is `true`', () => {
     const { getByText } = render(<Step label="test label" complete />);
     expect(getByText(/test label/i).closest('li')).toHaveClass(
-      `${carbonPrefix}progress-step--complete`
+      `${carbonPrefix}--progress-step--complete`
     );
   });
 
@@ -60,10 +60,10 @@ describe('Step', () => {
     // "invalid" steps are marked with an "incomplete" class on the `li`
     // and `unclickable` class on the inner `button`:
     expect(getByText(/test label/i).closest('li')).toHaveClass(
-      `${carbonPrefix}progress-step--incomplete`
+      `${carbonPrefix}--progress-step--incomplete`
     );
     expect(getByText(/test label/i).closest('button')).toHaveClass(
-      `${carbonPrefix}progress-step-button--unclickable`
+      `${carbonPrefix}--progress-step-button--unclickable`
     );
   });
 });

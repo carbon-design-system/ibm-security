@@ -1,11 +1,11 @@
 /**
  * @file Type layout stories.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
 
-import { components, getDocsParameters } from '../../../.storybook';
+import { getDocsParameters, security } from '../../../.storybook';
 
 import {
   TypeLayout,
@@ -15,7 +15,7 @@ import {
 } from '../..';
 
 export default {
-  title: components(TypeLayout.name),
+  title: security(TypeLayout.name),
   component: TypeLayout,
   subcomponents: { TypeLayoutBody, TypeLayoutCell, TypeLayoutRow },
   argTypes: {

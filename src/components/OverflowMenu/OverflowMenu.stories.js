@@ -1,6 +1,6 @@
 /**
  * @file Overflow menu stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { action } from '@storybook/addon-actions';
@@ -10,7 +10,7 @@ import { storiesOf } from '@storybook/react';
 
 import React from 'react';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import { OverflowMenu, OverflowMenuItem } from '../../';
 
@@ -70,7 +70,7 @@ const OverflowMenuExample = ({ overflowMenuProps, overflowMenuItemProps }) => (
   </>
 );
 
-storiesOf(components('OverflowMenu'), module)
+storiesOf(carbon('OverflowMenu'), module)
   .add(
     'basic',
     () => (

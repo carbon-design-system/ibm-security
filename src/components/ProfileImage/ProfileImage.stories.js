@@ -1,6 +1,6 @@
 /**
  * @file Profile image stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { boolean, object } from '@storybook/addon-knobs';
@@ -8,7 +8,7 @@ import { storiesOf } from '@storybook/react';
 
 import React from 'react';
 
-import { components } from '../../../.storybook';
+import { security } from '../../../.storybook';
 
 import { ProfileImage } from '../..';
 
@@ -19,7 +19,7 @@ const profileImageProps = () => ({
   large: boolean('Large (large)', large),
 });
 
-storiesOf(components('ProfileImage'), module).add('default', () => (
+storiesOf(security('ProfileImage'), module).add('default', () => (
   <ProfileImage
     {...profileImageProps()}
     profile={object('Profile (profile)', profile)}

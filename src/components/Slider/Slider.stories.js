@@ -1,6 +1,6 @@
 /**
  * @file Slider stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { action } from '@storybook/addon-actions';
@@ -10,7 +10,7 @@ import { storiesOf } from '@storybook/react';
 
 import React from 'react';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import { Slider, SliderSkeleton } from '../../';
 
@@ -36,7 +36,7 @@ const props = () => ({
   onRelease: action('onRelease'),
 });
 
-storiesOf(components('Slider'), module)
+storiesOf(carbon('Slider'), module)
   .add('default', () => <Slider id="slider" {...props()} />, {
     info: {
       text: `

@@ -1,6 +1,6 @@
 /**
  * @file Structured list stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import CheckmarkFilled16 from '@carbon/icons-react/lib/checkmark--filled/16';
@@ -9,7 +9,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { settings } from 'carbon-components';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import {
   StructuredListBody,
@@ -25,7 +25,7 @@ const { prefix } = settings;
 
 /* eslint-disable react/jsx-key, react/no-array-index-key */
 
-storiesOf(components('StructuredList'), module)
+storiesOf(carbon('StructuredList'), module)
   .add(
     'Simple',
     () => (

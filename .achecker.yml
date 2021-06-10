@@ -3,7 +3,7 @@
 # optional - Specify the rule archive
 # Default: latest
 # Run `npx achecker archives` for a list of valid ruleArchive ids and policy ids
-ruleArchive: latest
+ruleArchive: 10Feb2021
 
 # optional - Specify one or many policies to scan.
 # i.e. For one policy use policies: IBM_Accessibility

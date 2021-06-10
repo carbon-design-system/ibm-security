@@ -1,6 +1,6 @@
 /**
  * @file Delimited list stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { breakpoints } from '@carbon/layout';
@@ -10,7 +10,7 @@ import { storiesOf } from '@storybook/react';
 
 import React from 'react';
 
-import { components, info } from '../../../.storybook';
+import { info, security } from '../../../.storybook';
 
 import { DelimitedList } from '../..';
 
@@ -25,7 +25,7 @@ const props = () => ({
   style: { width: breakpoints.sm.width },
 });
 
-storiesOf(components('DelimitedList'), module).add(
+storiesOf(security('DelimitedList'), module).add(
   'Default',
   () => <DelimitedList {...props()} />,
 

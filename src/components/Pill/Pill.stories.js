@@ -1,6 +1,6 @@
 /**
  * @file Pill stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
@@ -8,16 +8,20 @@ import { storiesOf } from '@storybook/react';
 
 import { text } from '@storybook/addon-knobs';
 
-import { components } from '../../../.storybook';
+import { security } from '../../../.storybook';
+import { carbonPrefix } from '../../globals/namespace';
 
 import Pill from './Pill';
 
-storiesOf(components('Pill'), module).add(`default`, () => (
+storiesOf(security('Pill'), module).add(`default`, () => (
   <div style={{ padding: '64px' }}>
     <Pill value={text('value', '127.0.0.1')} type={text('type', 'IP')} />
     <br />
     <br />
-    <p style={{ width: '400px' }} className="bx--type-body-long-01">
+    <p
+      style={{ width: '400px' }}
+      className={`${carbonPrefix}--type-body-long-01`}
+    >
       This is an inline decorator that appears inside a paragraph, alongside
       text.
       <Pill

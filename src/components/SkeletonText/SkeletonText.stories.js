@@ -1,13 +1,13 @@
 /**
  * @file Skeleton text stories.
- * @copyright IBM Security 2018
+ * @copyright IBM Security 2018 - 2021
  */
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { boolean, number, select } from '@storybook/addon-knobs';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import { SkeletonText } from '../..';
 
@@ -27,7 +27,7 @@ const props = () => ({
   ),
 });
 
-storiesOf(components('SkeletonText'), module).add(
+storiesOf(carbon('SkeletonText'), module).add(
   'Default',
   () => (
     <div style={{ width: '300px' }}>

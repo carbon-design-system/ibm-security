@@ -1,6 +1,6 @@
 /**
  * @file Text input stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
@@ -9,7 +9,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { boolean, number, select, text } from '@storybook/addon-knobs';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import { TextInput, TextInputSkeleton } from '../..';
 
@@ -90,7 +90,7 @@ class ControlledPasswordInputApp extends React.Component {
   }
 }
 
-storiesOf(components('TextInput'), module)
+storiesOf(carbon('TextInput'), module)
   .addDecorator(story => <div style={{ width: '300px' }}>{story()}</div>)
   .add(
     'Default',

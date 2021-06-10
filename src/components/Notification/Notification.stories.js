@@ -1,6 +1,6 @@
 /**
  * @file Notification stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
@@ -8,7 +8,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { boolean, select, text } from '@storybook/addon-knobs';
 
-import { components } from '../../../.storybook';
+import { carbon } from '../../../.storybook';
 
 import {
   InlineNotification,
@@ -35,7 +35,7 @@ const notificationProps = () => ({
   onCloseButtonClick: action('onCloseButtonClick'),
 });
 
-storiesOf(components('Notifications'), module)
+storiesOf(carbon('Notifications'), module)
   .add('Toast', () => (
     <ToastNotification
       {...notificationProps()}

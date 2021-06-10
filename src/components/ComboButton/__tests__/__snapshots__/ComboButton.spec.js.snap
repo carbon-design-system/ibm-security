@@ -12,7 +12,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
       class="security--combo-button__group"
     >
       <button
-        class="security--button security--combo-button--primary bx--btn bx--btn--primary"
+        class="security--combo-button--primary bx--btn bx--btn--primary"
         id="test-primary-item"
         tabindex="0"
         type="button"
@@ -43,7 +43,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
       <button
         aria-expanded="false"
         aria-haspopup="true"
-        aria-label="Menu"
+        aria-label="open and close list of options"
         class="security--button bx--btn bx--btn--primary security--combo-button__button security--combo-button__overflow-menu bx--overflow-menu"
         type="button"
       >
@@ -80,7 +80,7 @@ exports[`ComboButton renders a combo button without an overflow menu 1`] = `
       class="security--combo-button__group"
     >
       <button
-        class="security--button security--combo-button--primary bx--btn bx--btn--primary"
+        class="security--combo-button--primary bx--btn bx--btn--primary"
         id="test-primary-item"
         tabindex="0"
         type="button"
