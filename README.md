@@ -36,7 +36,7 @@ To install Carbon for IBM Security in your project, you'll need to run one of th
 
 ```bash
 # npm - https://www.npmjs.com
-npm i -S @carbon/ibm-security
+npm i @carbon/ibm-security
 
 # Yarn - https://yarnpkg.com
 yarn add @carbon/ibm-security
@@ -44,7 +44,7 @@ yarn add @carbon/ibm-security
 
 ### Distribution tags
 
-Please use [distribution tags](https://docs.npmjs.com/cli/dist-tag) to install the most relevant version of this framework. e.g. `npm i -S @carbon/ibm-security@latest`:
+Please use [distribution tags](https://docs.npmjs.com/cli/dist-tag) to install the most relevant version of this library. e.g. `npm i @carbon/ibm-security@latest`:
 
 - `@latest` - Stable
 - `@canary` - Unstable prerelease
@@ -69,10 +69,10 @@ const { ComponentName } = require('@carbon/ibm-security');
 
 To add a component style to your build, import the component directly. Importing a component this way will bring in any dependencies that component has as well. The import system removes duplicate dependencies, so shared dependencies between components will not create extra CSS.
 
-In addition, to resolve your `@import` declarations, you will need to setup `sass` so that `node_modules` is included in the [`includePaths`](https://github.com/sass/node-sass#includepaths) option.
+In addition, to resolve your import declarations, you will need to setup `sass` so that `node_modules` is included in the [`includePaths`](https://github.com/sass/node-sass#includepaths) option.
 
 ```scss
-@import '@carbon/ibm-security/scss/components/ComponentName/index';
+@use '@carbon/ibm-security/scss/components/ComponentName';
 ```
 
 #### Feature flags
@@ -86,7 +86,7 @@ $security--feature-flags: (
   security--css-custom-property-theming: false,
 );
 
-@import '@carbon/ibm-security/scss/components/ComponentName/index';
+@use '@carbon/ibm-security/scss/components/ComponentName';
 ```
 
 Also refer to [feature flags in Carbon](https://github.com/carbon-design-system/carbon/blob/main/packages/components/src/globals/scss/_feature-flags.scss).

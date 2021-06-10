@@ -27,7 +27,7 @@ Currently, only 2 themes are supported: **Gray 100**, activated by default, and 
 If your project is using Sass, you can include the following in your Sass file:
 
 ```scss
-@import '@carbon/ibm-security/scss/globals/theme/index';
+@use '@carbon/ibm-security/scss/globals/theme';
 ```
 
 This will include theming styles and tokens for the **Gray 100 theme _by default_**.

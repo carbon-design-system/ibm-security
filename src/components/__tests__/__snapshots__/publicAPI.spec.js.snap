@@ -5646,6 +5646,28 @@ Map {
       },
     },
   },
+  "ListItemModule" => Object {
+    "defaultProps": Object {
+      "as": "div",
+      "href": null,
+      "onClick": null,
+    },
+    "propTypes": Object {
+      "as": Object {
+        "type": "elementType",
+      },
+      "children": Object {
+        "isRequired": true,
+        "type": "func",
+      },
+      "href": Object {
+        "type": "string",
+      },
+      "onClick": Object {
+        "type": "func",
+      },
+    },
+  },
   "Loading" => Object {
     "defaultProps": Object {
       "active": true,
