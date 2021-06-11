@@ -465,7 +465,7 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
         class="bx--pagination__control-buttons"
       >
         <button
-          class="bx--pagination__button bx--pagination__button--backward bx--pagination__button--no-index bx--btn bx--btn--ghost bx--btn--disabled bx--btn--icon-only bx--tooltip__trigger bx--tooltip--a11y bx--btn--icon-only--top bx--tooltip--align-center"
+          class="bx--pagination__button bx--pagination__button--backward bx--pagination__button--no-index bx--btn bx--btn--ghost bx--btn--disabled bx--tooltip--hidden bx--btn--icon-only bx--tooltip__trigger bx--tooltip--a11y bx--btn--icon-only--top bx--tooltip--align-center"
           disabled=""
           tabindex="0"
           type="button"
@@ -494,7 +494,7 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
           </svg>
         </button>
         <button
-          class="bx--pagination__button bx--pagination__button--forward bx--btn bx--btn--ghost bx--btn--icon-only bx--tooltip__trigger bx--tooltip--a11y bx--btn--icon-only--top bx--tooltip--align-end"
+          class="bx--pagination__button bx--pagination__button--forward bx--btn bx--btn--ghost bx--tooltip--hidden bx--btn--icon-only bx--tooltip__trigger bx--tooltip--a11y bx--btn--icon-only--top bx--tooltip--align-end"
           tabindex="0"
           type="button"
         >
