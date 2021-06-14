@@ -1,9 +1,9 @@
 /**
  * @file Data decorator
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
-import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
+import deprecate from 'carbon-components-react/es/prop-types/deprecate';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 

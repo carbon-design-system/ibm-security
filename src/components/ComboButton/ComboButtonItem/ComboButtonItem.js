@@ -1,12 +1,12 @@
 /**
  * @file Combo button item.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
+import deprecate from 'carbon-components-react/es/prop-types/deprecate';
 
 import { namespace } from '../ComboButton';
 
