@@ -2,14 +2,17 @@
  * @file Combo button tests.
  * @copyright IBM Security 2019 - 2021
  */
+
+import ArrowRight20 from '@carbon/icons-react/lib/arrow--right/20';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import ArrowRight20 from '@carbon/icons-react/lib/arrow--right/20';
 
-import ComboButton, { ComboButtonItem } from '../';
+import ComboButton, { ComboButtonItem } from '..';
 
 const COMBO_BUTTON_TESTID = 'combo-button';
+
+const { name } = ComboButton;
 
 const renderComboButton = (overflowMenuItemCount = 0) => {
   const primaryItem = (
@@ -48,7 +51,7 @@ const clickComboBox = overflowMenuButton => {
   userEvent.click(overflowMenuButton);
 };
 
-describe('ComboButton', () => {
+describe(name, () => {
   it('renders a combo button without an overflow menu', () => {
     renderComboButton(0);
     const comboButton = getComboBox();
@@ -84,9 +87,10 @@ describe('ComboButton', () => {
     renderComboButton(4);
 
     const comboButton = getComboBox();
-    const assertHasNoViolations = async () => {
+
+    const assertHasNoViolations = async (label = name) => {
       await expect(comboButton).toHaveNoAxeViolations();
-      await expect(comboButton).toHaveNoDAPViolations('ComboButton');
+      await expect(comboButton).toHaveNoDAPViolations(label);
     };
 
     await assertHasNoViolations();
@@ -95,6 +99,6 @@ describe('ComboButton', () => {
     const overflowMenuButton = getOverflowMenuButton();
     clickComboBox(overflowMenuButton);
 
-    await assertHasNoViolations();
+    await assertHasNoViolations(`${name}--open`);
   });
 });
