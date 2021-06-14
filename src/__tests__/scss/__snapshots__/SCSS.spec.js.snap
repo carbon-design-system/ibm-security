@@ -3155,29 +3155,6 @@ body {
   }
 }
 
-.bx--breadcrumb {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.bx--breadcrumb,
-.bx--breadcrumb .bx--breadcrumb-item > .bx--link {
-  font-size: var(--cds-caption-01-font-size, 0.75rem);
-  font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
-  letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
-}
-
-.bx--breadcrumb .bx--breadcrumb-item > .bx--link {
-  max-width: 40ex;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.bx--breadcrumb .bx--breadcrumb-item > .bx--link:visited {
-  color: var(--cds-link-01, #78a9ff);
-}
-
 .bx--skeleton__text {
   position: relative;
   padding: 0;
@@ -3214,14 +3191,6 @@ body {
 
 .bx--skeleton__heading {
   height: 1.5rem;
-}
-
-.bx--skeleton__text {
-  height: 0.5rem;
-}
-
-.bx--skeleton__heading {
-  height: 1rem;
 }
 
 .security--card--skeleton__wrapper {
@@ -7875,10 +7844,6 @@ fieldset[disabled] .bx--form__helper-text {
   color: transparent;
 }
 
-.bx--search-button, .bx--search-close {
-  color: var(--cds-icon-01, #f4f4f4);
-}
-
 .bx--table-toolbar {
   position: relative;
   display: flex;
@@ -10133,22 +10098,6 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 .bx--accordion__title.bx--skeleton__text {
-  margin-bottom: 0;
-}
-
-.bx--accordion.bx--accordion--start .bx--accordion__heading {
-  align-items: center;
-}
-
-.bx--accordion__item--active .bx--accordion__title {
-  font-weight: 600;
-}
-
-.bx--accordion__content > *:first-child {
-  margin-top: 0;
-}
-
-.bx--accordion__content > *:last-child {
   margin-bottom: 0;
 }
 
@@ -15416,18 +15365,6 @@ li.bx--accordion__item--disabled:last-of-type {
   border-bottom: 0;
 }
 
-.bx--multi-select .bx--list-box__menu-item__option .bx--checkbox-wrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.bx--multi-select .bx--list-box__menu-item__option > .bx--form-item {
-  margin: 0;
-  flex-direction: row;
-}
-
 .security--search-bar {
   display: flex;
 }
@@ -18367,10 +18304,6 @@ li.bx--accordion__item--disabled:last-of-type {
 
 .bx--select.bx--skeleton .bx--select-input {
   display: none;
-}
-
-.bx--select-input {
-  text-rendering: auto;
 }
 
 .security--summary-card {
@@ -23414,10 +23347,6 @@ li.bx--accordion__item--disabled:last-of-type {
   padding: 0;
 }
 
-.bx--list-box__menu-item__option {
-  box-sizing: border-box;
-}
-
 .bx--content-switcher {
   display: flex;
   justify-content: space-evenly;
@@ -24436,88 +24365,6 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
-.bx--date-picker__day.inRange,
-.flatpickr-day.inRange {
-  background: var(--cds-selected-ui, #393939);
-}
-
-.bx--date-picker__day.inRange:hover,
-.flatpickr-day.inRange:hover {
-  background: var(--cds-hover-selected-ui, #4c4c4c);
-}
-
-.bx--date-picker__day.selected,
-.flatpickr-day.selected {
-  background: var(--cds-link-01, #78a9ff);
-  color: var(--cds-inverse-01, #161616);
-}
-
-.bx--date-picker__day.selected,
-.flatpickr-day.endRange.inRange.selected {
-  background: var(--cds-link-01, #78a9ff);
-  color: var(--cds-inverse-01, #161616);
-}
-
-.flatpickr-current-month input.cur-year:disabled {
-  color: var(--cds-disabled-03, #8d8d8d);
-}
-
-.bx--date-picker__month .numInputWrapper .numInput:focus,
-.flatpickr-month .numInputWrapper .numInput:focus,
-.bx--date-picker__day:focus,
-.flatpickr-day:focus {
-  outline: 1px solid var(--cds-interactive-04, #4589ff);
-}
-
-.bx--date-picker__day.today,
-.flatpickr-day.today {
-  color: var(--cds-text-01, #f4f4f4);
-}
-
-.bx--date-picker__day.today:after,
-.flatpickr-day.today:after {
-  background-color: var(--cds-interactive-04, #4589ff);
-}
-
-.bx--date-picker__day.today.selected,
-.flatpickr-day.today.selected {
-  color: var(--cds-inverse-01, #161616);
-  border: none;
-}
-
-.bx--date-picker__day.today.selected:after,
-.flatpickr-day.today.selected:after {
-  background-color: var(--cds-inverse-01, #161616);
-}
-
-.flatpickr-prev-month svg,
-.flatpickr-next-month svg {
-  fill: var(--cds-icon-01, #f4f4f4);
-}
-
-.flatpickr-prev-month svg:hover, .flatpickr-prev-month svg:focus, .flatpickr-prev-month svg:active,
-.flatpickr-next-month svg:hover,
-.flatpickr-next-month svg:focus,
-.flatpickr-next-month svg:active {
-  fill: var(--cds-interactive-04, #4589ff);
-}
-
-.bx--date-picker__month .numInputWrapper span.arrowUp::after,
-.bx--date-picker__month .numInputWrapper span.arrowDown::after,
-.flatpickr-month .numInputWrapper span.arrowUp::after,
-.flatpickr-month .numInputWrapper span.arrowDown::after {
-  border-bottom-color: var(--cds-icon-01, #f4f4f4);
-  border-top-color: var(--cds-icon-01, #f4f4f4);
-}
-
-.bx--date-picker__month .numInputWrapper span.arrowUp:hover::after,
-.bx--date-picker__month .numInputWrapper span.arrowDown:hover::after,
-.flatpickr-month .numInputWrapper span.arrowUp:hover::after,
-.flatpickr-month .numInputWrapper span.arrowDown:hover::after {
-  border-bottom-color: var(--cds-interactive-04, #4589ff);
-  border-top-color: var(--cds-interactive-04, #4589ff);
-}
-
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -24919,15 +24766,6 @@ li.bx--accordion__item--disabled:last-of-type {
   background: none;
   outline: 2px solid var(--cds-interactive-03, #ffffff);
   outline-offset: -2px;
-}
-
-.bx--file__state-container .bx--file-close {
-  fill: #f4f4f4;
-}
-
-.bx--file__container .bx--btn--primary:hover,
-.bx--file__container .bx--btn--secondary:hover {
-  outline: none;
 }
 
 .bx--list--nested,
