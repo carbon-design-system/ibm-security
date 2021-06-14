@@ -1,9 +1,9 @@
 /**
  * @file Panel v2 tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-import Add16 from '@carbon/icons-react/lib/add/16';
+import { Add16 } from '@carbon/icons-react';
 import { render, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
