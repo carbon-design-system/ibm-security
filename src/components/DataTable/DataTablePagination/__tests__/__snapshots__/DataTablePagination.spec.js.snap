@@ -97,7 +97,6 @@ exports[`DataTablePagination Rendering renders correctly 1`] = `
     itemsPerPageText="Items per page"
     onChange={[Function]}
     page={1}
-    pageInputDisabled={false}
     pageNumberText="Page Number"
     pageRangeText={[Function]}
     pageSize={5}

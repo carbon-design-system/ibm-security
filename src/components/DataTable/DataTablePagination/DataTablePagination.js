@@ -1,11 +1,11 @@
 /**
  * @file Data table pagination.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
+import classnames from 'classnames';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
 
 import {
   DataTable,
@@ -214,7 +214,7 @@ class DataTablePagination extends Component {
         />
         <Pagination
           backwardText={backwardText}
-          disabled={disabled}
+          disabled={pageInputDisabled || disabled}
           forwardText={forwardText}
           id={id}
           isLastPage={isLastPage}
@@ -223,7 +223,6 @@ class DataTablePagination extends Component {
           itemText={itemText}
           onChange={this.paginationChange}
           page={page}
-          pageInputDisabled={pageInputDisabled}
           pageNumberText={pageNumberText}
           pageRangeText={pageRangeText}
           pageSize={pageSize}
