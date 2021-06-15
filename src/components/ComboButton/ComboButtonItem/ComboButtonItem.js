@@ -3,10 +3,10 @@
  * @copyright IBM Security 2019 - 2021
  */
 
+import deprecate from 'carbon-components-react/es/prop-types/deprecate';
+
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import deprecate from 'carbon-components-react/es/prop-types/deprecate';
 
 import { namespace } from '../ComboButton';
 

@@ -3,12 +3,11 @@
  * @copyright IBM Security 2019 - 2021
  */
 
-import OverflowMenuVertical16 from '@carbon/icons-react/lib/overflow-menu--vertical/16';
+import { OverflowMenuVertical16 } from '@carbon/icons-react';
 import { select, text, number } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
 import { settings } from 'carbon-components';
-
 import React from 'react';
 
 import { carbon } from '../../../.storybook';

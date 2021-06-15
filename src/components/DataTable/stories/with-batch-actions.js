@@ -1,13 +1,13 @@
 /**
  * @file Data table with batch actions story.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
-import React from 'react';
+import { Delete16, Download16, Save16 } from '@carbon/icons-react';
+
 import { action } from '@storybook/addon-actions';
-import Delete from '@carbon/icons-react/lib/delete/16';
-import Save from '@carbon/icons-react/lib/save/16';
-import Download from '@carbon/icons-react/lib/download/16';
+import React from 'react';
+
 import {
   Button,
   DataTable,
@@ -28,6 +28,7 @@ import {
   TableToolbarSearch,
   TableToolbarMenu,
 } from '../../..';
+
 import { headers, missingDataCharacter, rows } from '../_mocks_';
 
 const batchActionsStory = props => (
@@ -50,7 +51,7 @@ const batchActionsStory = props => (
         <TableToolbar>
           <TableBatchActions {...getBatchActionProps()}>
             <TableBatchAction
-              renderIcon={Delete}
+              renderIcon={Delete16}
               iconDescription="Delete the selected rows"
               onClick={selectedRows => () =>
                 action('Delete batch action click')(selectedRows)}
@@ -58,7 +59,7 @@ const batchActionsStory = props => (
               Delete
             </TableBatchAction>
             <TableBatchAction
-              renderIcon={Save}
+              renderIcon={Save16}
               iconDescription="Save the selected rows"
               onClick={selectedRows => () =>
                 action('Save batch action click')(selectedRows)}
@@ -66,7 +67,7 @@ const batchActionsStory = props => (
               Save
             </TableBatchAction>
             <TableBatchAction
-              renderIcon={Download}
+              renderIcon={Download16}
               iconDescription="Download the selected rows"
               onClick={selectedRows => () =>
                 action('Download batch action click')(selectedRows)}

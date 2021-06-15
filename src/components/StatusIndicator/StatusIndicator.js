@@ -1,11 +1,13 @@
 /**
  * @file Status indicator.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-import Restart20 from '@carbon/icons-react/lib/restart/20';
-import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
+import { Restart20 } from '@carbon/icons-react';
+
+import deprecate from 'carbon-components-react/es/prop-types/deprecate';
 import classnames from 'classnames';
+
 import {
   array,
   element,

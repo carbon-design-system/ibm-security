@@ -1,7 +1,9 @@
 /**
  * @file Radio button entry point.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-export default from 'carbon-components-react/lib/components/RadioButton';
-export RadioButtonSkeleton from 'carbon-components-react/lib/components/RadioButton/RadioButton.Skeleton';
+export {
+  RadioButton as default,
+  RadioButtonSkeleton,
+} from 'carbon-components-react';

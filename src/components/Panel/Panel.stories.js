@@ -3,10 +3,9 @@
  * @copyright IBM Security 2019 - 2021
  */
 
-import Add16 from '@carbon/icons-react/lib/add/16';
+import { Add16 } from '@carbon/icons-react';
 
 import { action } from '@storybook/addon-actions';
-
 import { boolean, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
