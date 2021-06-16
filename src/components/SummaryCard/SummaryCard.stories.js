@@ -3,8 +3,8 @@
  * @copyright IBM Security 2019 - 2021
  */
 
-import Delete16 from '@carbon/icons-react/lib/delete/16';
-import Folder20 from '@carbon/icons-react/lib/folder/20';
+import { Delete16, Folder20 } from '@carbon/icons-react';
+
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 

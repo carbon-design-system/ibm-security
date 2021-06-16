@@ -2,10 +2,12 @@
  * @file Combo button tests.
  * @copyright IBM Security 2019 - 2021
  */
+
+import { ArrowRight20 } from '@carbon/icons-react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+
 import React from 'react';
-import ArrowRight20 from '@carbon/icons-react/lib/arrow--right/20';
 
 import ComboButton, { ComboButtonItem } from '../';
 

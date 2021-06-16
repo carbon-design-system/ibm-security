@@ -1,11 +1,11 @@
 /**
  * @file File uploader entry point.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-export FileUploaderSkeleton from 'carbon-components-react/lib/components/FileUploader/FileUploader.Skeleton';
 export {
   Filename,
+  FileUploader as default,
   FileUploaderButton,
-} from 'carbon-components-react/lib/components/FileUploader';
-export default from 'carbon-components-react/lib/components/FileUploader';
+  FileUploaderSkeleton,
+} from 'carbon-components-react';

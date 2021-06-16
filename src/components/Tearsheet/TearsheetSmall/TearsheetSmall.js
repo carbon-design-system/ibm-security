@@ -3,12 +3,12 @@
  * @copyright IBM Security 2019 - 2021
  */
 
-import Close20 from '@carbon/icons-react/lib/close/20';
+import { Close20 } from '@carbon/icons-react';
 
+import deprecate from 'carbon-components-react/es/prop-types/deprecate';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
 
 import { getComponentNamespace } from '../../../globals/namespace';
 import * as defaultLabels from '../../../globals/nls';

@@ -1,6 +1,6 @@
 /**
  * @file Link entry point.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-export default from 'carbon-components-react/lib/components/Link';
+export { Link as default } from 'carbon-components-react';
