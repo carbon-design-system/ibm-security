@@ -5,11 +5,11 @@
 
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+
 import React from 'react';
 import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { Button, DataDecorator } from '../../..';
-
 import { namespace as panelNamespace } from '../../PanelV2/PanelV2';
 
 describe('DataDecorator', () => {
@@ -150,6 +150,7 @@ describe('DataDecorator', () => {
 
     userEvent.tab();
 
+    // https://github.com/testing-library/user-event/issues/365
     expect(document.body).toHaveFocus();
 
     // Simulate a click to open the connected panel.
@@ -166,8 +167,6 @@ describe('DataDecorator', () => {
 
     // The panel's close button:
     expect(getByLabelText(/test close/i)).toHaveFocus();
-
-    console.log(document.activeElement);
 
     // Maintain focus trap in open panel:
     userEvent.tab({ focusTrap: panel });

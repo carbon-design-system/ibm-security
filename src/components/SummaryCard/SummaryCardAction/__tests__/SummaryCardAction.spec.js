@@ -5,6 +5,7 @@
 
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+
 import React from 'react';
 
 import { SummaryCardAction } from '../../../..';
@@ -35,6 +36,7 @@ describe('SummaryCardAction', () => {
     // Expect the example button, listed second, to be focussed:
     expect(getByText(/test example button/i)).toHaveFocus();
 
+    userEvent.tab();
     userEvent.tab();
 
     // Expect the example button to still be focussed:

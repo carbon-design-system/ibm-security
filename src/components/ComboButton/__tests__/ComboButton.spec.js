@@ -2,14 +2,18 @@
  * @file Combo button tests.
  * @copyright IBM Security 2019 - 2021
  */
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-import React from 'react';
+
 import ArrowRight20 from '@carbon/icons-react/lib/arrow--right/20';
 
-import ComboButton, { ComboButtonItem } from '../';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+
+import React from 'react';
+
+import ComboButton, { ComboButtonItem } from '..';
 
 const COMBO_BUTTON_TESTID = 'combo-button';
+const COMBO_BUTTON_ITEM_TESTID = `${COMBO_BUTTON_TESTID}__item`;
 
 const renderComboButton = (overflowMenuItemCount = 0) => {
   const primaryItem = (
@@ -26,7 +30,11 @@ const renderComboButton = (overflowMenuItemCount = 0) => {
     .map((_, index) => {
       const key = `test-menu-item-${index}`;
       return (
-        <ComboButtonItem key={key} id={key}>
+        <ComboButtonItem
+          key={key}
+          id={key}
+          data-testid={COMBO_BUTTON_ITEM_TESTID}
+        >
           Other task
         </ComboButtonItem>
       );
@@ -44,6 +52,7 @@ const renderComboButton = (overflowMenuItemCount = 0) => {
 const getComboBox = () => screen.getByTestId(COMBO_BUTTON_TESTID);
 const getOverflowMenuButton = () =>
   screen.getByLabelText('open and close list of options');
+
 const clickComboBox = overflowMenuButton => {
   userEvent.click(overflowMenuButton);
 };
@@ -65,7 +74,9 @@ describe('ComboButton', () => {
 
   it('renders overflow menu items when overflow menu is clicked (opened) and removes overflow menu items when clicked again (closed)', () => {
     const MENU_ITEM_COUNT = 2;
-    const getMenuItemsLength = () => screen.queryAllByRole('menuitem').length;
+
+    const getMenuItemsLength = () =>
+      screen.queryAllByTestId(COMBO_BUTTON_ITEM_TESTID).length;
 
     renderComboButton(MENU_ITEM_COUNT);
     const overflowMenuButton = getOverflowMenuButton();

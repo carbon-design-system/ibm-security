@@ -26,5 +26,5 @@ Enzyme.configure({ adapter: new Adapter() });
 expect.extend({ toHaveNoAxeViolations, toHaveNoDAPViolations });
 
 // https://github.com/nickcolley/jest-axe/issues/147
-const { getComputedStyle } = global;
-global.getComputedStyle = jest.fn(element => getComputedStyle(element));
+const { getComputedStyle } = window;
+window.getComputedStyle = jest.fn(element => getComputedStyle(element));
