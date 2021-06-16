@@ -13,7 +13,7 @@ import React from 'react';
 import ComboButton, { ComboButtonItem } from '..';
 
 const COMBO_BUTTON_TESTID = 'combo-button';
-const COMBO_BUTTON_ITEM_TESTID = `${COMBO_BUTTON_TESTID}__item`;
+const COMBO_BUTTON_ITEM_LABEL = `${COMBO_BUTTON_TESTID}__item`;
 
 const renderComboButton = (overflowMenuItemCount = 0) => {
   const primaryItem = (
@@ -30,12 +30,8 @@ const renderComboButton = (overflowMenuItemCount = 0) => {
     .map((_, index) => {
       const key = `test-menu-item-${index}`;
       return (
-        <ComboButtonItem
-          key={key}
-          id={key}
-          data-testid={COMBO_BUTTON_ITEM_TESTID}
-        >
-          Other task
+        <ComboButtonItem key={key} id={key}>
+          {COMBO_BUTTON_ITEM_LABEL}
         </ComboButtonItem>
       );
     });
@@ -76,7 +72,7 @@ describe('ComboButton', () => {
     const MENU_ITEM_COUNT = 2;
 
     const getMenuItemsLength = () =>
-      screen.queryAllByTestId(COMBO_BUTTON_ITEM_TESTID).length;
+      screen.queryAllByText(COMBO_BUTTON_ITEM_LABEL).length;
 
     renderComboButton(MENU_ITEM_COUNT);
     const overflowMenuButton = getOverflowMenuButton();
