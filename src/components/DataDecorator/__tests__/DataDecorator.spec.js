@@ -1,6 +1,6 @@
 /**
  * @file Data decorator tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { render } from '@testing-library/react';
@@ -126,7 +126,7 @@ describe('DataDecorator', () => {
     expect(onCloseMock).toHaveBeenCalledTimes(1);
   });
 
-  test('should traverse between data decorator and open panel in tab order', async () => {
+  test('should traverse between data decorator and open panel in tab order', () => {
     const onCloseMock = jest.fn();
     const { getByLabelText, getByText } = render(
       <DataDecorator
@@ -150,9 +150,7 @@ describe('DataDecorator', () => {
 
     userEvent.tab();
 
-    // Expect the data decorator to still have focus
-    // because it is currently the only interactive element:
-    expect(getByText(/10.0.0.0/i).closest('button')).toHaveFocus();
+    expect(document.body).toHaveFocus();
 
     // Simulate a click to open the connected panel.
     userEvent.click(getByText(/10.0.0.0/i).closest('button'));
@@ -168,6 +166,8 @@ describe('DataDecorator', () => {
 
     // The panel's close button:
     expect(getByLabelText(/test close/i)).toHaveFocus();
+
+    console.log(document.activeElement);
 
     // Maintain focus trap in open panel:
     userEvent.tab({ focusTrap: panel });
