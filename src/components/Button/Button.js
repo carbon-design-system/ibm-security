@@ -3,12 +3,12 @@
  * @copyright IBM Security 2019 - 2021
  */
 
+import { Button as CarbonButton } from 'carbon-components-react';
+import { ButtonKinds } from 'carbon-components-react/es/prop-types/types';
+
 import classnames from 'classnames';
 import { bool, func, object, oneOf, oneOfType } from 'prop-types';
 import React from 'react';
-
-import CarbonButton from 'carbon-components-react/lib/components/Button';
-import { ButtonKinds } from 'carbon-components-react/lib/prop-types/types';
 
 import { getComponentNamespace } from '../../globals/namespace';
 import deprecatedProp from '../../globals/prop-types';

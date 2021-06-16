@@ -1,10 +1,6 @@
 /**
  * @file Tabs entry point.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-import Tabs from 'carbon-components-react/lib/components/Tabs';
-import Tab from 'carbon-components-react/lib/components/Tab';
-import TabsSkeleton from 'carbon-components-react/lib/components/Tabs/Tabs.Skeleton';
-
-export { Tabs, Tab, TabsSkeleton };
+export { Tab, Tabs, TabsSkeleton } from 'carbon-components-react';

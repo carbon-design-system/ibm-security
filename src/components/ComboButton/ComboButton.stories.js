@@ -1,15 +1,15 @@
 /**
  * @file Combo button stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
+
+import { ArrowRight20, Filter20 } from '@carbon/icons-react';
 
 import React from 'react';
 
-import { storiesOf } from '@storybook/react';
-import { radios } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
-import ArrowRight20 from '@carbon/icons-react/lib/arrow--right/20';
-import Filter20 from '@carbon/icons-react/lib/filter/20';
+import { radios } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
 
 import { patterns } from '../../../.storybook';
 

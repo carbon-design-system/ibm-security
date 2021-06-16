@@ -1,9 +1,10 @@
 /**
  * @file Data table.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
-import CarbonDataTable from 'carbon-components-react/lib/components/DataTable';
+import { DataTable as CarbonDataTable } from 'carbon-components-react';
+
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';

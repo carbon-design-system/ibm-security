@@ -7,7 +7,7 @@ import { action } from '@storybook/addon-actions';
 import { boolean, select, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
-import { types as typesList } from 'carbon-components-react/lib/components/Tag';
+import { types as typesList } from 'carbon-components-react/es/components/Tag';
 
 import React from 'react';
 
