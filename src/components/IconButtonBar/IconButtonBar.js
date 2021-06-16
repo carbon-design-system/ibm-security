@@ -1,15 +1,19 @@
 /**
  * @file Icon button bar.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
+import {
+  OverflowMenuVertical16,
+  OverflowMenuVertical20,
+  OverflowMenuVertical24,
+  OverflowMenuVertical32,
+} from '@carbon/icons-react';
+
 import classnames from 'classnames';
-import OverflowMenuVertical16 from '@carbon/icons-react/lib/overflow-menu--vertical/16';
-import OverflowMenuVertical20 from '@carbon/icons-react/lib/overflow-menu--vertical/20';
-import OverflowMenuVertical24 from '@carbon/icons-react/lib/overflow-menu--vertical/24';
-import OverflowMenuVertical32 from '@carbon/icons-react/lib/overflow-menu--vertical/32';
+import PropTypes from 'prop-types';
+import React, { Fragment } from 'react';
+
 import { OverflowMenu, OverflowMenuItem } from '../..';
 import IconButton from '../IconButton';
 import { getComponentNamespace } from '../../globals/namespace';

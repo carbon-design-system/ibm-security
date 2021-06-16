@@ -3,9 +3,10 @@
  * @copyright IBM Security 2020 - 2021
  */
 
-import Add16 from '@carbon/icons-react/lib/add/16';
-import { ButtonKinds } from 'carbon-components-react/lib/prop-types/types';
+import { Add16 } from '@carbon/icons-react';
 import { render } from '@testing-library/react';
+
+import { ButtonKinds } from 'carbon-components-react/es/prop-types/types';
 import React from 'react';
 import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 

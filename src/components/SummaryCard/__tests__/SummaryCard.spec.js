@@ -3,8 +3,7 @@
  * @copyright IBM Security 2020 - 2021
  */
 
-import Folder20 from '@carbon/icons-react/lib/folder/20';
-
+import { Folder20 } from '@carbon/icons-react';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
