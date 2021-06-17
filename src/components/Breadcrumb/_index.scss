@@ -27,8 +27,8 @@
     }
 
     #{$carbon--breadcrumb__item__link} {
-      max-width: 40ex;
       overflow: hidden;
+      max-width: 40ex;
       text-overflow: ellipsis;
 
       &:visited {
