@@ -187,7 +187,6 @@ export default class Toolbar extends Component {
                           handleItemSelect={() => this.toggleContent(content)}
                           {...props}
                         >
-                          {navigationListItemTitle}
                           {icon !== undefined && (
                             <img
                               alt={navigationListItemTitle}
@@ -195,6 +194,7 @@ export default class Toolbar extends Component {
                               src={icon}
                             />
                           )}
+                          {navigationListItemTitle}
                         </NavItem>
                       )
                     )}
@@ -209,7 +209,6 @@ export default class Toolbar extends Component {
                     handleItemSelect={() => this.toggleContent(content)}
                     {...props}
                   >
-                    {navigationItemTitle}
                     {icon !== undefined && (
                       <img
                         alt={navigationItemTitle}
@@ -217,6 +216,9 @@ export default class Toolbar extends Component {
                         src={icon}
                       />
                     )}
+                    <div className={`${namespace}__nav__item__title`}>
+                      {navigationItemTitle}
+                    </div>
                   </NavItem>
                 )
             )}

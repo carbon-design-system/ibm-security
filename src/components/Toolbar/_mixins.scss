@@ -201,6 +201,10 @@ $toolbar__panel__transition__timing-function: $timing-function;
     height: carbon--mini-units($count: 2);
   }
 
+  &__nav__item__title {
+    margin-right: 105px;
+  }
+
   &__panel {
     @include toolbar--base;
     top: 0;
