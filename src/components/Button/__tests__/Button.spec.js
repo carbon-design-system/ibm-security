@@ -3,9 +3,10 @@
  * @copyright IBM Security 2020 - 2021
  */
 
-import Add16 from '@carbon/icons-react/lib/add/16';
-import { ButtonKinds } from 'carbon-components-react/lib/prop-types/types';
+import { Add16 } from '@carbon/icons-react';
 import { render } from '@testing-library/react';
+
+import { ButtonKinds } from 'carbon-components-react/es/prop-types/types';
 import React from 'react';
 import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
@@ -94,13 +95,6 @@ describe('Button', () => {
   test('should apply correct class when `size` is `small`', () => {
     const { getByText } = render(<Button size="small">test button</Button>);
     expect(getByText(/test button/i)).toHaveClass(`${carbonPrefix}--btn--sm`);
-  });
-
-  test('should apply correct class when `size` is `field`', () => {
-    const { getByText } = render(<Button size="field">test button</Button>);
-    expect(getByText(/test button/i)).toHaveClass(
-      `${carbonPrefix}--btn--field`
-    );
   });
 
   test('should apply correct class when `size` is `large`', () => {

@@ -1,14 +1,14 @@
 /**
  * @file Panel v2 tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-import Add16 from '@carbon/icons-react/lib/add/16';
 import { render, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import React from 'react';
-import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
+import React from 'react';
+
+import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 import { Button, PanelV2, PanelContent } from '../../..';
 
 describe('PanelV2', () => {
@@ -70,32 +70,6 @@ describe('PanelV2', () => {
     await expect(container).toHaveNoAxeViolations();
     await expect(container).toHaveNoDAPViolations(
       'PanelV2 with hasScrollingContent'
-    );
-  });
-
-  test('should have no Axe or DAP violations with deprecated `primaryButton` & `secondaryButton`', async () => {
-    const { container } = renderWithinLandmark(
-      <PanelV2
-        title="test title"
-        subtitle="test subtitle"
-        closeButton={{
-          label: 'test close',
-        }}
-        primaryButton={{
-          icon: Add16,
-          iconDescription: 'test icon description add',
-          label: 'test primary button label',
-        }}
-        secondaryButton={{
-          label: 'test secondary button label',
-        }}
-      >
-        <PanelContent>test content</PanelContent>
-      </PanelV2>
-    );
-    await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations(
-      'PanelV2 with deprecated props'
     );
   });
 

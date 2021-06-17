@@ -1,13 +1,11 @@
 /**
  * @file Panel stories.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
-import Add16 from '@carbon/icons-react/lib/add/16';
-import ArrowRight20 from '@carbon/icons-react/lib/arrow--right/20';
-import Filter20 from '@carbon/icons-react/lib/filter/20';
-import { spacing04, spacing05 } from '@carbon/layout/lib';
-import { styles } from '@carbon/type/lib';
+import { Add16, ArrowRight20, Filter20 } from '@carbon/icons-react';
+import { spacing04, spacing05 } from '@carbon/layout';
+import { styles } from '@carbon/type';
 
 import { action } from '@storybook/addon-actions';
 import { boolean, radios, text } from '@storybook/addon-knobs';

@@ -5,7 +5,8 @@
 
 import { Add20, Search20 } from '@carbon/icons-react';
 
-import { defaultFilterItems } from 'carbon-components-react/lib/components/ComboBox/tools/filter';
+import { defaultFilterItems } from 'carbon-components-react/es/components/ComboBox/tools/filter';
+
 import classnames from 'classnames';
 import Downshift from 'downshift';
 import PropTypes from 'prop-types';

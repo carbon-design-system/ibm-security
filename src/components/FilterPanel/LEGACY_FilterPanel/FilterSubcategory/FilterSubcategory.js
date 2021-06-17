@@ -1,10 +1,9 @@
 /**
  * @file Filter Subcategory.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-import Add16 from '@carbon/icons-react/lib/add/16';
-import Subtract16 from '@carbon/icons-react/lib/subtract/16';
+import { Add16, Subtract16 } from '@carbon/icons-react';
 
 import PropTypes from 'prop-types';
 import React from 'react';

@@ -1,6 +1,6 @@
 /**
  * @file Switch entry point.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-export default from 'carbon-components-react/lib/components/Switch';
+export { Switch as default } from 'carbon-components-react';

@@ -3,11 +3,12 @@
  * @copyright IBM Security 2018 - 2021
  */
 
-import Camera20 from '@carbon/icons-react/lib/camera/20';
+import { Camera20 } from '@carbon/icons-react';
+
+import { action } from '@storybook/addon-actions';
+import { storiesOf } from '@storybook/react';
 
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 
 import { disableCenteredStories, patterns } from '../../../.storybook';
 

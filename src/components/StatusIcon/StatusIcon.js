@@ -1,9 +1,9 @@
 /**
  * @file Status icon.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-import Checkmark20 from '@carbon/icons-react/lib/checkmark/20';
+import { Checkmark20 } from '@carbon/icons-react';
 
 import classnames from 'classnames';
 import { oneOf, string } from 'prop-types';

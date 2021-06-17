@@ -1,9 +1,9 @@
 /**
  * @file Navigation list class.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
-import ChevronDown16 from '@carbon/icons-react/lib/chevron--down/16';
+import { ChevronDown16 } from '@carbon/icons-react';
 
 import classnames from 'classnames';
 import { bool, func, node, number, string } from 'prop-types';
