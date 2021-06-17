@@ -3,7 +3,7 @@
  * @copyright IBM Security 2020 - 2021
  */
 
-import { act, render, wait } from '@testing-library/react';
+import { act, render, waitFor } from '@testing-library/react';
 import React from 'react';
 
 import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
@@ -57,7 +57,7 @@ describe(name, () => {
     searchInput.focus();
     searchInput.blur();
 
-    await wait(() =>
+    await waitFor(() =>
       expect(queryByTestId('result-content')).not.toBeInTheDocument()
     );
   });
