@@ -541,11 +541,15 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                       class="security--tearsheet--small__scroll-gradient__content"
                     >
                       <div
+                        aria-expanded="true"
+                        aria-haspopup="listbox"
+                        aria-labelledby="downshift-0-label"
+                        aria-owns="downshift-0-menu"
                         class="security--filter bx--list-box"
                         id="test-id"
+                        role="combobox"
                       >
                         <div
-                          aria-expanded="true"
                           aria-haspopup="true"
                           aria-label="close menu"
                           class="bx--list-box__field"
@@ -557,12 +561,12 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                         >
                           <input
                             aria-autocomplete="list"
-                            aria-expanded="true"
+                            aria-controls="downshift-0-menu"
+                            aria-labelledby="downshift-0-label"
                             autocomplete="off"
                             class="security--filter__input-field bx--text-input"
                             id="test-id"
                             placeholder="placeholder"
-                            role="combobox"
                             value=""
                           />
                           <span
@@ -592,9 +596,10 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                           role="listbox"
                         >
                           <div
+                            aria-selected="false"
                             class="bx--list-box__menu-item"
                             id="downshift-0-item-0"
-                            role="button"
+                            role="option"
                             tabindex="0"
                           >
                             <div
@@ -843,11 +848,15 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                   class="security--tearsheet--small__scroll-gradient__content"
                                 >
                                   <div
+                                    aria-expanded="true"
+                                    aria-haspopup="listbox"
+                                    aria-labelledby="downshift-0-label"
+                                    aria-owns="downshift-0-menu"
                                     class="security--filter bx--list-box"
                                     id="test-id"
+                                    role="combobox"
                                   >
                                     <div
-                                      aria-expanded="true"
                                       aria-haspopup="true"
                                       aria-label="close menu"
                                       class="bx--list-box__field"
@@ -859,12 +868,12 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                     >
                                       <input
                                         aria-autocomplete="list"
-                                        aria-expanded="true"
+                                        aria-controls="downshift-0-menu"
+                                        aria-labelledby="downshift-0-label"
                                         autocomplete="off"
                                         class="security--filter__input-field bx--text-input"
                                         id="test-id"
                                         placeholder="placeholder"
-                                        role="combobox"
                                         value=""
                                       />
                                       <span
@@ -894,9 +903,10 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                       role="listbox"
                                     >
                                       <div
+                                        aria-selected="false"
                                         class="bx--list-box__menu-item"
                                         id="downshift-0-item-0"
-                                        role="button"
+                                        role="option"
                                         tabindex="0"
                                       >
                                         <div
@@ -1079,11 +1089,15 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                     class="security--tearsheet--small__scroll-gradient__content"
                                   >
                                     <div
+                                      aria-expanded="true"
+                                      aria-haspopup="listbox"
+                                      aria-labelledby="downshift-0-label"
+                                      aria-owns="downshift-0-menu"
                                       class="security--filter bx--list-box"
                                       id="test-id"
+                                      role="combobox"
                                     >
                                       <div
-                                        aria-expanded="true"
                                         aria-haspopup="true"
                                         aria-label="close menu"
                                         class="bx--list-box__field"
@@ -1095,12 +1109,12 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                       >
                                         <input
                                           aria-autocomplete="list"
-                                          aria-expanded="true"
+                                          aria-controls="downshift-0-menu"
+                                          aria-labelledby="downshift-0-label"
                                           autocomplete="off"
                                           class="security--filter__input-field bx--text-input"
                                           id="test-id"
                                           placeholder="placeholder"
-                                          role="combobox"
                                           value=""
                                         />
                                         <span
@@ -1130,9 +1144,10 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                         role="listbox"
                                       >
                                         <div
+                                          aria-selected="false"
                                           class="bx--list-box__menu-item"
                                           id="downshift-0-item-0"
-                                          role="button"
+                                          role="option"
                                           tabindex="0"
                                         >
                                           <div
@@ -1317,11 +1332,15 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                         class="security--tearsheet--small__scroll-gradient__content"
                                       >
                                         <div
+                                          aria-expanded="true"
+                                          aria-haspopup="listbox"
+                                          aria-labelledby="downshift-0-label"
+                                          aria-owns="downshift-0-menu"
                                           class="security--filter bx--list-box"
                                           id="test-id"
+                                          role="combobox"
                                         >
                                           <div
-                                            aria-expanded="true"
                                             aria-haspopup="true"
                                             aria-label="close menu"
                                             class="bx--list-box__field"
@@ -1333,12 +1352,12 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                           >
                                             <input
                                               aria-autocomplete="list"
-                                              aria-expanded="true"
+                                              aria-controls="downshift-0-menu"
+                                              aria-labelledby="downshift-0-label"
                                               autocomplete="off"
                                               class="security--filter__input-field bx--text-input"
                                               id="test-id"
                                               placeholder="placeholder"
-                                              role="combobox"
                                               value=""
                                             />
                                             <span
@@ -1368,9 +1387,10 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                             role="listbox"
                                           >
                                             <div
+                                              aria-selected="false"
                                               class="bx--list-box__menu-item"
                                               id="downshift-0-item-0"
-                                              role="button"
+                                              role="option"
                                               tabindex="0"
                                             >
                                               <div
@@ -1638,12 +1658,9 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                       sortItems={[Function]}
                                     >
                                       <Downshift
-                                        breakingChanges={Object {}}
                                         clearSelection={[Function]}
                                         defaultHighlightedIndex={null}
-                                        defaultInputValue=""
                                         defaultIsOpen={false}
-                                        defaultSelectedItem={null}
                                         environment={[Window]}
                                         getA11yStatusMessage={[Function]}
                                         highlightedIndex={null}
@@ -1656,26 +1673,34 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                         onSelect={[Function]}
                                         onStateChange={[Function]}
                                         onUserAction={[Function]}
-                                        render={[Function]}
+                                        scrollIntoView={[Function]}
                                         selectedItemChanged={[Function]}
                                         stateReducer={[Function]}
+                                        suppressRefError={false}
                                       >
                                         <ListBox
+                                          aria-expanded={true}
+                                          aria-haspopup="listbox"
+                                          aria-labelledby="downshift-0-label"
+                                          aria-owns="downshift-0-menu"
                                           className="security--filter"
                                           disabled={false}
                                           id="test-id"
-                                          innerRef={[Function]}
+                                          role="combobox"
                                           type="default"
                                         >
                                           <div
+                                            aria-expanded={true}
+                                            aria-haspopup="listbox"
+                                            aria-labelledby="downshift-0-label"
+                                            aria-owns="downshift-0-menu"
                                             className="security--filter bx--list-box"
                                             id="test-id"
-                                            innerRef={[Function]}
                                             onClick={[Function]}
                                             onKeyDown={[Function]}
+                                            role="combobox"
                                           >
                                             <ListBoxField
-                                              aria-expanded={true}
                                               aria-haspopup={true}
                                               aria-label="close menu"
                                               data-toggle={true}
@@ -1684,12 +1709,12 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                               onBlur={[Function]}
                                               onClick={[Function]}
                                               onKeyDown={[Function]}
+                                              onKeyUp={[Function]}
                                               role="button"
                                               tabIndex={-1}
                                               type="button"
                                             >
                                               <div
-                                                aria-expanded={true}
                                                 aria-haspopup={true}
                                                 aria-label="close menu"
                                                 className="bx--list-box__field"
@@ -1698,6 +1723,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                 onBlur={[Function]}
                                                 onClick={[Function]}
                                                 onKeyDown={[Function]}
+                                                onKeyUp={[Function]}
                                                 role="button"
                                                 tabIndex={-1}
                                                 type="button"
@@ -1705,7 +1731,8 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                 <input
                                                   aria-activedescendant={null}
                                                   aria-autocomplete="list"
-                                                  aria-expanded={true}
+                                                  aria-controls="downshift-0-menu"
+                                                  aria-labelledby="downshift-0-label"
                                                   autoComplete="off"
                                                   className="security--filter__input-field bx--text-input"
                                                   disabled={false}
@@ -1714,7 +1741,6 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                   onChange={[Function]}
                                                   onKeyDown={[Function]}
                                                   placeholder="placeholder"
-                                                  role="combobox"
                                                   value=""
                                                 />
                                                 <span
@@ -1799,6 +1825,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                 role="listbox"
                                               >
                                                 <ForwardRef(ListBoxMenuItem)
+                                                  aria-selected={false}
                                                   className="security--filter__list-item"
                                                   id="downshift-0-item-0"
                                                   isActive={false}
@@ -1808,17 +1835,18 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                                   onKeyDown={[Function]}
                                                   onMouseDown={[Function]}
                                                   onMouseMove={[Function]}
-                                                  role="button"
+                                                  role="option"
                                                   tabIndex="0"
                                                 >
                                                   <div
+                                                    aria-selected={false}
                                                     className="bx--list-box__menu-item"
                                                     id="downshift-0-item-0"
                                                     onClick={[Function]}
                                                     onKeyDown={[Function]}
                                                     onMouseDown={[Function]}
                                                     onMouseMove={[Function]}
-                                                    role="button"
+                                                    role="option"
                                                     tabIndex="0"
                                                   >
                                                     <div
@@ -2532,11 +2560,15 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                         class="security--tearsheet--small__scroll-gradient__content"
                       >
                         <div
+                          aria-expanded="true"
+                          aria-haspopup="listbox"
+                          aria-labelledby="downshift-0-label"
+                          aria-owns="downshift-0-menu"
                           class="security--filter bx--list-box"
                           id="test-id"
+                          role="combobox"
                         >
                           <div
-                            aria-expanded="true"
                             aria-haspopup="true"
                             aria-label="close menu"
                             class="bx--list-box__field"
@@ -2548,12 +2580,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                           >
                             <input
                               aria-autocomplete="list"
-                              aria-expanded="true"
+                              aria-controls="downshift-0-menu"
+                              aria-labelledby="downshift-0-label"
                               autocomplete="off"
                               class="security--filter__input-field bx--text-input"
                               id="test-id"
                               placeholder="placeholder"
-                              role="combobox"
                               value=""
                             />
                             <span
@@ -2583,9 +2615,10 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                             role="listbox"
                           >
                             <div
+                              aria-selected="false"
                               class="bx--list-box__menu-item"
                               id="downshift-0-item-0"
-                              role="button"
+                              role="option"
                               tabindex="0"
                             >
                               <div
@@ -2759,11 +2792,15 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                         class=""
                       >
                         <div
+                          aria-expanded="true"
+                          aria-haspopup="listbox"
+                          aria-labelledby="downshift-1-label"
+                          aria-owns="downshift-1-menu"
                           class="security--filter bx--list-box"
                           id="test-id"
+                          role="combobox"
                         >
                           <div
-                            aria-expanded="true"
                             aria-haspopup="true"
                             aria-label="close menu"
                             class="bx--list-box__field"
@@ -2775,12 +2812,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                           >
                             <input
                               aria-autocomplete="list"
-                              aria-expanded="true"
+                              aria-controls="downshift-1-menu"
+                              aria-labelledby="downshift-1-label"
                               autocomplete="off"
                               class="security--filter__input-field bx--text-input"
                               id="test-id"
                               placeholder=""
-                              role="combobox"
                               value=""
                             />
                             <span
@@ -2810,9 +2847,10 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                             role="listbox"
                           >
                             <div
+                              aria-selected="false"
                               class="bx--list-box__menu-item"
                               id="downshift-1-item-0"
-                              role="button"
+                              role="option"
                               tabindex="0"
                             >
                               <div
@@ -3061,11 +3099,15 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     class="security--tearsheet--small__scroll-gradient__content"
                                   >
                                     <div
+                                      aria-expanded="true"
+                                      aria-haspopup="listbox"
+                                      aria-labelledby="downshift-0-label"
+                                      aria-owns="downshift-0-menu"
                                       class="security--filter bx--list-box"
                                       id="test-id"
+                                      role="combobox"
                                     >
                                       <div
-                                        aria-expanded="true"
                                         aria-haspopup="true"
                                         aria-label="close menu"
                                         class="bx--list-box__field"
@@ -3077,12 +3119,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       >
                                         <input
                                           aria-autocomplete="list"
-                                          aria-expanded="true"
+                                          aria-controls="downshift-0-menu"
+                                          aria-labelledby="downshift-0-label"
                                           autocomplete="off"
                                           class="security--filter__input-field bx--text-input"
                                           id="test-id"
                                           placeholder="placeholder"
-                                          role="combobox"
                                           value=""
                                         />
                                         <span
@@ -3112,9 +3154,10 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         role="listbox"
                                       >
                                         <div
+                                          aria-selected="false"
                                           class="bx--list-box__menu-item"
                                           id="downshift-0-item-0"
-                                          role="button"
+                                          role="option"
                                           tabindex="0"
                                         >
                                           <div
@@ -3288,11 +3331,15 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                     class=""
                                   >
                                     <div
+                                      aria-expanded="true"
+                                      aria-haspopup="listbox"
+                                      aria-labelledby="downshift-1-label"
+                                      aria-owns="downshift-1-menu"
                                       class="security--filter bx--list-box"
                                       id="test-id"
+                                      role="combobox"
                                     >
                                       <div
-                                        aria-expanded="true"
                                         aria-haspopup="true"
                                         aria-label="close menu"
                                         class="bx--list-box__field"
@@ -3304,12 +3351,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       >
                                         <input
                                           aria-autocomplete="list"
-                                          aria-expanded="true"
+                                          aria-controls="downshift-1-menu"
+                                          aria-labelledby="downshift-1-label"
                                           autocomplete="off"
                                           class="security--filter__input-field bx--text-input"
                                           id="test-id"
                                           placeholder=""
-                                          role="combobox"
                                           value=""
                                         />
                                         <span
@@ -3339,9 +3386,10 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         role="listbox"
                                       >
                                         <div
+                                          aria-selected="false"
                                           class="bx--list-box__menu-item"
                                           id="downshift-1-item-0"
-                                          role="button"
+                                          role="option"
                                           tabindex="0"
                                         >
                                           <div
@@ -3524,11 +3572,15 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       class="security--tearsheet--small__scroll-gradient__content"
                                     >
                                       <div
+                                        aria-expanded="true"
+                                        aria-haspopup="listbox"
+                                        aria-labelledby="downshift-0-label"
+                                        aria-owns="downshift-0-menu"
                                         class="security--filter bx--list-box"
                                         id="test-id"
+                                        role="combobox"
                                       >
                                         <div
-                                          aria-expanded="true"
                                           aria-haspopup="true"
                                           aria-label="close menu"
                                           class="bx--list-box__field"
@@ -3540,12 +3592,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         >
                                           <input
                                             aria-autocomplete="list"
-                                            aria-expanded="true"
+                                            aria-controls="downshift-0-menu"
+                                            aria-labelledby="downshift-0-label"
                                             autocomplete="off"
                                             class="security--filter__input-field bx--text-input"
                                             id="test-id"
                                             placeholder="placeholder"
-                                            role="combobox"
                                             value=""
                                           />
                                           <span
@@ -3575,9 +3627,10 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           role="listbox"
                                         >
                                           <div
+                                            aria-selected="false"
                                             class="bx--list-box__menu-item"
                                             id="downshift-0-item-0"
-                                            role="button"
+                                            role="option"
                                             tabindex="0"
                                           >
                                             <div
@@ -3751,11 +3804,15 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                       class=""
                                     >
                                       <div
+                                        aria-expanded="true"
+                                        aria-haspopup="listbox"
+                                        aria-labelledby="downshift-1-label"
+                                        aria-owns="downshift-1-menu"
                                         class="security--filter bx--list-box"
                                         id="test-id"
+                                        role="combobox"
                                       >
                                         <div
-                                          aria-expanded="true"
                                           aria-haspopup="true"
                                           aria-label="close menu"
                                           class="bx--list-box__field"
@@ -3767,12 +3824,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         >
                                           <input
                                             aria-autocomplete="list"
-                                            aria-expanded="true"
+                                            aria-controls="downshift-1-menu"
+                                            aria-labelledby="downshift-1-label"
                                             autocomplete="off"
                                             class="security--filter__input-field bx--text-input"
                                             id="test-id"
                                             placeholder=""
-                                            role="combobox"
                                             value=""
                                           />
                                           <span
@@ -3802,9 +3859,10 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           role="listbox"
                                         >
                                           <div
+                                            aria-selected="false"
                                             class="bx--list-box__menu-item"
                                             id="downshift-1-item-0"
-                                            role="button"
+                                            role="option"
                                             tabindex="0"
                                           >
                                             <div
@@ -3989,11 +4047,15 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           class="security--tearsheet--small__scroll-gradient__content"
                                         >
                                           <div
+                                            aria-expanded="true"
+                                            aria-haspopup="listbox"
+                                            aria-labelledby="downshift-0-label"
+                                            aria-owns="downshift-0-menu"
                                             class="security--filter bx--list-box"
                                             id="test-id"
+                                            role="combobox"
                                           >
                                             <div
-                                              aria-expanded="true"
                                               aria-haspopup="true"
                                               aria-label="close menu"
                                               class="bx--list-box__field"
@@ -4005,12 +4067,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                             >
                                               <input
                                                 aria-autocomplete="list"
-                                                aria-expanded="true"
+                                                aria-controls="downshift-0-menu"
+                                                aria-labelledby="downshift-0-label"
                                                 autocomplete="off"
                                                 class="security--filter__input-field bx--text-input"
                                                 id="test-id"
                                                 placeholder="placeholder"
-                                                role="combobox"
                                                 value=""
                                               />
                                               <span
@@ -4040,9 +4102,10 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                               role="listbox"
                                             >
                                               <div
+                                                aria-selected="false"
                                                 class="bx--list-box__menu-item"
                                                 id="downshift-0-item-0"
-                                                role="button"
+                                                role="option"
                                                 tabindex="0"
                                               >
                                                 <div
@@ -4216,11 +4279,15 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           class=""
                                         >
                                           <div
+                                            aria-expanded="true"
+                                            aria-haspopup="listbox"
+                                            aria-labelledby="downshift-1-label"
+                                            aria-owns="downshift-1-menu"
                                             class="security--filter bx--list-box"
                                             id="test-id"
+                                            role="combobox"
                                           >
                                             <div
-                                              aria-expanded="true"
                                               aria-haspopup="true"
                                               aria-label="close menu"
                                               class="bx--list-box__field"
@@ -4232,12 +4299,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                             >
                                               <input
                                                 aria-autocomplete="list"
-                                                aria-expanded="true"
+                                                aria-controls="downshift-1-menu"
+                                                aria-labelledby="downshift-1-label"
                                                 autocomplete="off"
                                                 class="security--filter__input-field bx--text-input"
                                                 id="test-id"
                                                 placeholder=""
-                                                role="combobox"
                                                 value=""
                                               />
                                               <span
@@ -4267,9 +4334,10 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                               role="listbox"
                                             >
                                               <div
+                                                aria-selected="false"
                                                 class="bx--list-box__menu-item"
                                                 id="downshift-1-item-0"
-                                                role="button"
+                                                role="option"
                                                 tabindex="0"
                                               >
                                                 <div
@@ -4537,12 +4605,9 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                         sortItems={[Function]}
                                       >
                                         <Downshift
-                                          breakingChanges={Object {}}
                                           clearSelection={[Function]}
                                           defaultHighlightedIndex={null}
-                                          defaultInputValue=""
                                           defaultIsOpen={false}
-                                          defaultSelectedItem={null}
                                           environment={[Window]}
                                           getA11yStatusMessage={[Function]}
                                           highlightedIndex={null}
@@ -4555,26 +4620,34 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                           onSelect={[Function]}
                                           onStateChange={[Function]}
                                           onUserAction={[Function]}
-                                          render={[Function]}
+                                          scrollIntoView={[Function]}
                                           selectedItemChanged={[Function]}
                                           stateReducer={[Function]}
+                                          suppressRefError={false}
                                         >
                                           <ListBox
+                                            aria-expanded={true}
+                                            aria-haspopup="listbox"
+                                            aria-labelledby="downshift-1-label"
+                                            aria-owns="downshift-1-menu"
                                             className="security--filter"
                                             disabled={false}
                                             id="test-id"
-                                            innerRef={[Function]}
+                                            role="combobox"
                                             type="default"
                                           >
                                             <div
+                                              aria-expanded={true}
+                                              aria-haspopup="listbox"
+                                              aria-labelledby="downshift-1-label"
+                                              aria-owns="downshift-1-menu"
                                               className="security--filter bx--list-box"
                                               id="test-id"
-                                              innerRef={[Function]}
                                               onClick={[Function]}
                                               onKeyDown={[Function]}
+                                              role="combobox"
                                             >
                                               <ListBoxField
-                                                aria-expanded={true}
                                                 aria-haspopup={true}
                                                 aria-label="close menu"
                                                 data-toggle={true}
@@ -4583,12 +4656,12 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                 onBlur={[Function]}
                                                 onClick={[Function]}
                                                 onKeyDown={[Function]}
+                                                onKeyUp={[Function]}
                                                 role="button"
                                                 tabIndex={-1}
                                                 type="button"
                                               >
                                                 <div
-                                                  aria-expanded={true}
                                                   aria-haspopup={true}
                                                   aria-label="close menu"
                                                   className="bx--list-box__field"
@@ -4597,6 +4670,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                   onBlur={[Function]}
                                                   onClick={[Function]}
                                                   onKeyDown={[Function]}
+                                                  onKeyUp={[Function]}
                                                   role="button"
                                                   tabIndex={-1}
                                                   type="button"
@@ -4604,7 +4678,8 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                   <input
                                                     aria-activedescendant={null}
                                                     aria-autocomplete="list"
-                                                    aria-expanded={true}
+                                                    aria-controls="downshift-1-menu"
+                                                    aria-labelledby="downshift-1-label"
                                                     autoComplete="off"
                                                     className="security--filter__input-field bx--text-input"
                                                     disabled={false}
@@ -4613,7 +4688,6 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                     onChange={[Function]}
                                                     onKeyDown={[Function]}
                                                     placeholder=""
-                                                    role="combobox"
                                                     value=""
                                                   />
                                                   <span
@@ -4698,6 +4772,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                   role="listbox"
                                                 >
                                                   <ForwardRef(ListBoxMenuItem)
+                                                    aria-selected={false}
                                                     className="security--filter__list-item"
                                                     id="downshift-1-item-0"
                                                     isActive={false}
@@ -4707,17 +4782,18 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                                     onKeyDown={[Function]}
                                                     onMouseDown={[Function]}
                                                     onMouseMove={[Function]}
-                                                    role="button"
+                                                    role="option"
                                                     tabIndex="0"
                                                   >
                                                     <div
+                                                      aria-selected={false}
                                                       className="bx--list-box__menu-item"
                                                       id="downshift-1-item-0"
                                                       onClick={[Function]}
                                                       onKeyDown={[Function]}
                                                       onMouseDown={[Function]}
                                                       onMouseMove={[Function]}
-                                                      role="button"
+                                                      role="option"
                                                       tabIndex="0"
                                                     >
                                                       <div
