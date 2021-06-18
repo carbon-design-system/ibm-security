@@ -11,15 +11,15 @@
 
 @mixin portal {
   &__overlay {
-    display: flex;
     position: fixed;
+    z-index: z($layer: overlay);
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: $overlay-01;
+    display: flex;
     justify-content: center;
-    z-index: z($layer: overlay);
+    background-color: $overlay-01;
 
     &:focus {
       outline: unset;

@@ -1,7 +1,7 @@
 ////
 /// Filter panel accordion item mixins.
 /// @group filter-panel
-/// @copyright IBM Security 2020
+/// @copyright IBM Security 2020 - 2021
 ////
 
 @import '@carbon/layout/scss/spacing';
@@ -19,9 +19,10 @@
   /// @type Length
   $filter-panel-accordion-item__heading__spacing__padding: $carbon--spacing-02;
 
+  min-height: carbon--mini-units($count: 4);
+
   padding-top: $filter-panel-accordion-item__heading__spacing__padding;
   padding-bottom: $filter-panel-accordion-item__heading__spacing__padding;
-  min-height: carbon--mini-units($count: 4);
   color: $text-02;
 }
 
@@ -41,9 +42,9 @@
   }
 
   &__list {
-    list-style: none;
     padding-left: 0;
     margin: 0;
+    list-style: none;
   }
 
   /// Carbon accordion selector.
@@ -53,6 +54,7 @@
   > #{$carbon--accordion} {
     &__heading {
       @include filter-panel-accordion-item__heading;
+
       border: 2px solid transparent;
 
       // Increase outline spacing horizontally so that it does not overlap with the count on the
@@ -65,6 +67,7 @@
       &:focus::before {
         // Override Carbon `Accordion` defaults:
         @include focus-outline($type: outline);
+
         border: none;
       }
     }
