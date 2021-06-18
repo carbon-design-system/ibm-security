@@ -124,7 +124,7 @@
       // Content including text and sometimes a product icon.
       &__content {
         display: flex;
-        margin-left: 26px;
+        margin-left: 1.625rem;
       }
 
       &::before {
@@ -186,7 +186,7 @@
 
         position: relative;
         display: flex;
-        padding: 5px;
+        padding: $carbon--spacing-02;
         color: $text-01;
         text-decoration: none;
         cursor: pointer;
@@ -227,7 +227,7 @@
         margin-bottom: $carbon--spacing-03;
 
         > #{$nav__list}--nested {
-          margin-left: 26px;
+          margin-left: 1.625rem;
           max-height: carbon--mini-units($count: 40);
           margin-top: carbon--mini-units($count: 1.25);
           opacity: 1;
