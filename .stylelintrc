@@ -7,7 +7,14 @@
   ],
   "rules": {
     "carbon/motion-token-use": [true, { "severity": "warning" }],
-    "carbon/type-token-use": [true, { "severity": "warning" }],
+    "carbon/type-token-use": [
+      true,
+      {
+        "acceptCarbonFontWeightFunction": true,
+        "acceptCarbonTypeScaleFunction": true,
+        "severity": "warning"
+      }
+    ],
     "declaration-property-value-disallowed-list": null,
     "plugin/no-unsupported-browser-features": [
       true,

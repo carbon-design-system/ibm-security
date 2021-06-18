@@ -5,6 +5,7 @@
 
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+
 import React, { Fragment } from 'react';
 import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
@@ -178,6 +179,7 @@ describe('SummaryCardContainer', () => {
     userEvent.click(getByText(/test select 1/i));
 
     userEvent.tab();
+    userEvent.tab();
 
     // The batch action button:
     expect(getByText(/test batch action/i)).toHaveFocus();
@@ -197,6 +199,7 @@ describe('SummaryCardContainer', () => {
     // The first summary card select:
     expect(getByLabelText(/test select 1/i)).toHaveFocus();
 
+    userEvent.tab();
     userEvent.tab();
 
     // Loop complete.
