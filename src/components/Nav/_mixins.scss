@@ -113,6 +113,7 @@
         right: $carbon--spacing-02;
         transform: $nav__icon__position rotate(90deg);
       }
+      margin-left: auto;
     }
 
     // Navigation items.
@@ -189,7 +190,6 @@
         color: $text-01;
         text-decoration: none;
         cursor: pointer;
-        justify-content: space-between;
 
         &:hover,
         &:focus {
