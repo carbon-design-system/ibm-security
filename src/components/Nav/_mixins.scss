@@ -1,7 +1,7 @@
 ////
 /// Navigation mixins.
 /// @group nav
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -16,6 +16,14 @@
 @import '../../globals/motion/index';
 @import '../../globals/rtl/index';
 
+/// Spacing.
+/// @type Length
+$nav__spacing: $carbon--spacing-04;
+
+/// Icon spacing.
+/// @type Length
+$nav__icon__spacing: $carbon--spacing-05 + $nav__spacing;
+
 @mixin nav {
   $nav__heading: '#{&}__heading';
   $nav__list: '#{&}__list';
@@ -24,10 +32,6 @@
   /// Icon position.
   /// @type Length
   $nav__icon__position: translate3d(-50%, 0, 0);
-
-  /// Link padding.
-  /// @type Length
-  $nav__link__spacing__padding: $carbon--spacing-07;
 
   position: relative;
 
@@ -102,7 +106,6 @@
 
       > #{$list}__item__link {
         @include focus-outline('outline');
-        padding: none !important;
       }
     }
 
@@ -124,7 +127,7 @@
       // Content including text and sometimes a product icon.
       &__content {
         display: flex;
-        margin-left: 1.625rem;
+        margin-left: $nav__icon__spacing;
       }
 
       &::before {
@@ -227,7 +230,6 @@
         margin-bottom: $carbon--spacing-03;
 
         > #{$nav__list}--nested {
-          margin-left: 1.625rem;
           max-height: carbon--mini-units($count: 40);
           margin-top: carbon--mini-units($count: 1.25);
           opacity: 1;
@@ -254,6 +256,7 @@
 
       max-height: 0;
       margin-bottom: 0;
+      margin-left: $nav__icon__spacing;
       padding-left: 0;
       opacity: 0;
       overflow: hidden;

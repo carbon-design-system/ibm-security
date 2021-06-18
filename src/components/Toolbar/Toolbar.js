@@ -1,6 +1,6 @@
 /**
  * @file Toolbar.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import {
@@ -164,8 +164,10 @@ export default class Toolbar extends Component {
                 id: navigationItemId,
                 title: navigationItemTitle,
                 ...props
-              }) =>
-                children ? (
+              }) => {
+                const hasIcon = icon !== undefined;
+
+                return children ? (
                   <NavList key={navigationItemId} title={navigationItemTitle}>
                     {children.map(
                       ({
@@ -187,7 +189,7 @@ export default class Toolbar extends Component {
                           handleItemSelect={() => this.toggleContent(content)}
                           {...props}
                         >
-                          {icon !== undefined && (
+                          {hasIcon && (
                             <img
                               alt={navigationListItemTitle}
                               className={`${namespace}__nav__item__icon`}
@@ -209,20 +211,24 @@ export default class Toolbar extends Component {
                     handleItemSelect={() => this.toggleContent(content)}
                     {...props}
                   >
-                    {icon !== undefined ? (
+                    {hasIcon && (
                       <img
                         alt={navigationItemTitle}
                         className={`${namespace}__nav__item__icon`}
                         src={icon}
                       />
-                    ) : (
-                      <div style={{ width: '1rem' }} />
                     )}
-                    <div className={`${namespace}__nav__item__title`}>
+
+                    <div
+                      className={classnames(`${namespace}__nav__item__title`, {
+                        [`${namespace}__nav__item__title--icon`]: hasIcon,
+                      })}
+                    >
                       {navigationItemTitle}
                     </div>
                   </NavItem>
-                )
+                );
+              }
             )}
         </Nav>
       ))
