@@ -3,18 +3,19 @@
  * @copyright IBM Security 2020 - 2021
  */
 
-import Folder20 from '@carbon/icons-react/lib/folder/20';
+import { Folder20 } from '@carbon/icons-react';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+
 import React from 'react';
 import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import {
   SummaryCard,
-  SummaryCardHeader,
-  SummaryCardBody,
   SummaryCardAction,
+  SummaryCardBody,
   SummaryCardFooter,
+  SummaryCardHeader,
   Tooltip,
 } from '../../..';
 
@@ -145,6 +146,7 @@ describe('SummaryCard', () => {
       getByLabelText(/test action icon description/i).closest('button')
     ).toHaveFocus();
 
+    userEvent.tab();
     userEvent.tab();
 
     // Loop complete.

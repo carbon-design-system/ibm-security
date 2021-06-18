@@ -1,12 +1,14 @@
 /**
  * @file Table toolbar button for downloading table data as CSV
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import Download16 from '@carbon/icons-react/lib/download/16';
+import { Download16 } from '@carbon/icons-react';
+
 import { ExportToCsv } from 'export-to-csv';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import IconButton from '../IconButton';
 
 const options = {

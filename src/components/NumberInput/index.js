@@ -1,7 +1,9 @@
 /**
  * @file Number input entry point.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-export default from 'carbon-components-react/lib/components/NumberInput';
-export NumberInputSkeleton from 'carbon-components-react/lib/components/NumberInput/NumberInput.Skeleton';
+export {
+  NumberInput as default,
+  NumberInputSkeleton,
+} from 'carbon-components-react';

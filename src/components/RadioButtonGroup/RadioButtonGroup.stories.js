@@ -10,11 +10,9 @@ import { storiesOf } from '@storybook/react';
 
 import React from 'react';
 
-import FormGroup from 'carbon-components-react/lib/components/FormGroup';
-
 import { carbon } from '../../../.storybook';
 
-import { RadioButton, RadioButtonGroup } from '../../';
+import { FormGroup, RadioButton, RadioButtonGroup } from '../..';
 
 const values = {
   standard: 'standard',
