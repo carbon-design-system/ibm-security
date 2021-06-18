@@ -19,6 +19,7 @@
 
   &__title {
     @include carbon--type-style($name: productive-heading-03);
+
     margin-top: $title-bar__spacing;
     margin-bottom: $title-bar__spacing;
   }

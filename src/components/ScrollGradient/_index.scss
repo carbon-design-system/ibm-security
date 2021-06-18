@@ -1,7 +1,7 @@
 ////
 /// Scroll gradient component.
 /// @group scroll-gradient
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/spacing';
@@ -17,29 +17,30 @@
   $scroll-gradient__gradient__sizing: $carbon--layout-04;
 
   $block: &;
-  width: inherit;
-  height: inherit;
+
   position: relative;
   display: flex;
-  justify-content: stretch;
+  width: inherit;
+  height: inherit;
   align-items: stretch;
+  justify-content: stretch;
 
   &__content {
     overflow: auto;
-    height: inherit;
     width: 100%;
+    height: inherit;
   }
 
   &__before,
   &__after {
-    display: block;
     position: absolute;
+    z-index: 1;
+    display: block;
     opacity: 0;
     pointer-events: none;
     transition-duration: $transition-duration;
     transition-property: opacity;
     transition-timing-function: carbon--motion($name: standard);
-    z-index: 1;
   }
 
   &--x > {
@@ -63,8 +64,8 @@
     #{$block}__before,
     #{$block}__after {
       left: 0;
-      height: $scroll-gradient__gradient__sizing;
       width: 100%;
+      height: $scroll-gradient__gradient__sizing;
     }
 
     #{$block}__before {
