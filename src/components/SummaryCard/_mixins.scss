@@ -151,7 +151,7 @@
   &__action-overlay {
     position: absolute;
     z-index: $overlay--z-index;
-    top: -($body--height - $carbon--spacing-05);
+    top: calc(#{$body--height - $carbon--spacing-05} * -1);
     right: 0;
     bottom: $footer--height;
     left: 0;
@@ -236,7 +236,7 @@
 
     // Ensure that this transparent div is always beneath the overlay and actions:
     z-index: $overlay--z-index - 1;
-    top: -($body--height + $header--height);
+    top: calc(#{$body--height + $header--height} * -1);
     right: 0;
     bottom: $footer--height;
     left: 0;

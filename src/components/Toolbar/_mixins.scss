@@ -94,12 +94,10 @@ $toolbar__panel__transition__timing-function: $timing-function;
 
   /// Panel box shadow.
   /// @type List<Length|Length|Length|Length|Color>
-  $toolbar__panel__box-shadow: (
-    carbon--mini-units(
-        $count: 0.25,
-      )
-      0 0 0 $overlay-01
-  );
+  $toolbar__panel__box-shadow: carbon--mini-units(
+      $count: 0.25,
+    )
+    0 0 0 $overlay-01;
 
   /// Panel content width.
   /// @type Length
