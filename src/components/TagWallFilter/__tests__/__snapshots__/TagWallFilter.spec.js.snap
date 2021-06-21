@@ -437,7 +437,32 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
       }
     >
       <TearsheetSmall
-        body=""
+        body={
+          <Filter
+            className=""
+            compareItems={[Function]}
+            disabled={false}
+            filterFieldClearAllTooltip="Clear all selected items"
+            filterFieldClearSelectionTooltip="Clear selected item"
+            filterItems={[Function]}
+            id="test-id"
+            initialSelectedItems={Array []}
+            itemToString={[Function]}
+            items={
+              Array [
+                Object {
+                  "id": "x",
+                  "label": "X",
+                },
+              ]
+            }
+            locale="en"
+            onChange={[Function]}
+            placeholder="placeholder"
+            selectedItems={Array []}
+            sortItems={[Function]}
+          />
+        }
         className=""
         closeButton={
           Object {
@@ -2426,7 +2451,32 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
         }
       >
         <TearsheetSmall
-          body=""
+          body={
+            <Filter
+              className=""
+              compareItems={[Function]}
+              disabled={false}
+              filterFieldClearAllTooltip="Clear all selected items"
+              filterFieldClearSelectionTooltip="Clear selected item"
+              filterItems={[Function]}
+              id="test-id"
+              initialSelectedItems={Array []}
+              itemToString={[Function]}
+              items={
+                Array [
+                  Object {
+                    "id": "y",
+                    "label": "Y",
+                  },
+                ]
+              }
+              locale="en"
+              onChange={[Function]}
+              placeholder=""
+              selectedItems={Array []}
+              sortItems={[Function]}
+            />
+          }
           className="security--tag-wall-filter"
           closeButton={
             Object {

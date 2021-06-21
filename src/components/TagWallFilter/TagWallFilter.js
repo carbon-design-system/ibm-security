@@ -1,6 +1,6 @@
 /**
  * @file TagWallFilter
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import PropTypes from 'prop-types';
@@ -101,41 +101,46 @@ export const withMappedItemReducer = compose(
 );
 
 export const FilterTagFragmentRender = ({
-  selectedItems,
   availableItems,
   dispatchItemChange,
+  selectedItems,
   id,
   itemToString,
   onChange,
   tagWallLabel,
   tearsheetProps,
   ...otherProps
-}) => (
-  <TearsheetSmall
-    {...tearsheetProps}
-    description={() => (
-      <div className={`${namespace}__description`}>
-        {tearsheetProps.description}
-        <TagWall
-          className={`${namespace}__tag-wall`}
-          items={selectedItems}
+}) => {
+  const { description, ...other } = tearsheetProps;
+
+  return (
+    <TearsheetSmall
+      body={
+        <FilterRaw
+          id={id}
+          items={availableItems}
           itemToString={itemToString}
-          label={tagWallLabel}
           onChange={change => dispatchItemChange(change, onChange)}
-          addButtonDisabled
+          {...otherProps}
         />
-      </div>
-    )}
-  >
-    <FilterRaw
-      id={id}
-      items={availableItems}
-      itemToString={itemToString}
-      onChange={change => dispatchItemChange(change, onChange)}
-      {...otherProps}
+      }
+      description={() => (
+        <div className={`${namespace}__description`}>
+          {description}
+          <TagWall
+            className={`${namespace}__tag-wall`}
+            items={selectedItems}
+            itemToString={itemToString}
+            label={tagWallLabel}
+            onChange={change => dispatchItemChange(change, onChange)}
+            addButtonDisabled
+          />
+        </div>
+      )}
+      {...other}
     />
-  </TearsheetSmall>
-);
+  );
+};
 
 FilterTagFragmentRender.propTypes = {
   /** @type {arrayOf} initially selected items */
