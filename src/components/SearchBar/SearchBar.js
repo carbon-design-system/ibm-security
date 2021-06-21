@@ -73,7 +73,7 @@ export default class SearchBar extends React.Component {
       PropTypes.oneOfType([PropTypes.string, PropTypes.object])
     ),
 
-    /** @type {function} Function to get the text for each sscope to display in dropdown. */
+    /** @type {Function} Function to get the text for each sscope to display in dropdown. */
     scopeToString: PropTypes.func,
 
     /** @type {string} The name text for the search scope type. */

@@ -10,7 +10,7 @@ import { defaultProps, namespace, propTypes } from './constants';
 
 /**
  * Header list item component.
- * @param {Object.<string, *>} props Header list item props.
+ * @param {object.<string, *>} props Header list item props.
  * @returns {HeaderListItem} Header list item instance.
  */
 const HeaderListItem = ({ children, className, hasPopup, isExpanded }) => (

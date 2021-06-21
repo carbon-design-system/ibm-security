@@ -250,7 +250,7 @@ Portal.propTypes = {
   /** @type {boolean} Stop event propagation for events that can bubble. */
   stopPropagation: PropTypes.bool,
 
-  /** @type {array} Array of event types to stop propagation. */
+  /** @type {Array} Array of event types to stop propagation. */
   stopPropagationEvents: PropTypes.arrayOf(PropTypes.oneOf(PORTAL_EVENTS)),
 };
 

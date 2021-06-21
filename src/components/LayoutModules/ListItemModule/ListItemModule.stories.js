@@ -169,21 +169,19 @@ export const WithComponent = () => (
       const { component, description, icon, title } = getLayoutProps();
 
       return (
-        <>
-          <Column>
-            <Bee16 {...icon} />
+        <Column>
+          <Bee16 {...icon} />
 
-            <h2 {...title}>List title</h2>
+          <h2 {...title}>List title</h2>
 
-            <p {...description}>
-              Description here. It can go up to three lines before truncating.
-            </p>
+          <p {...description}>
+            Description here. It can go up to three lines before truncating.
+          </p>
 
-            <section {...component}>
-              <ICA label="Label" value={100} />
-            </section>
-          </Column>
-        </>
+          <section {...component}>
+            <ICA label="Label" value={100} />
+          </section>
+        </Column>
       );
     }}
   </ListItemModule>

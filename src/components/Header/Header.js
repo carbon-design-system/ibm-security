@@ -100,7 +100,7 @@ export default class Header extends Component {
 
   /**
    * Returns whether a user is active or not.
-   * @param {Object.<Object, *>} profile An object list of profile information.
+   * @param {object.<object, *>} profile An object list of profile information.
    * @returns {boolean} Whether the user is active or not.
    * @static
    */
@@ -110,7 +110,7 @@ export default class Header extends Component {
 
   /**
    * Returns a list of valid user accounts not including their current one.
-   * @param {Object.<Array, *>} userAccounts An object list of account information.
+   * @param {object.<Array, *>} userAccounts An object list of account information.
    * @returns {Array} A list of valid accounts.
    * @static
    */

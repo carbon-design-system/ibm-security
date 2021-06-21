@@ -214,13 +214,13 @@ TearsheetSmall.propTypes = {
     `\nThe prop \`children\` for TearsheetSmall has been deprecated in favor of \`body\`.`
   ),
 
-  /** @type {Object<Object>} An object list of primary button props. */
+  /** @type {object<object>} An object list of primary button props. */
   primaryButton: buttonType.isRequired,
 
-  /** @type {Object<Object>} An object list of secondary button props. */
+  /** @type {object<object>} An object list of secondary button props. */
   secondaryButton: buttonType.isRequired,
 
-  /** @type {Object<Object>} An object list of close button props. */
+  /** @type {object<object>} An object list of close button props. */
   closeButton: buttonType.isRequired,
 
   /** @type {bool} The toggle to determine whether or not to show the loading. */
@@ -241,7 +241,7 @@ TearsheetSmall.propTypes = {
   /** @type {boolean} Stop event propagation for events that can bubble. */
   stopPropagation: PropTypes.bool,
 
-  /** @type {array} Array of event types to stop propagation. */
+  /** @type {Array} Array of event types to stop propagation. */
   stopPropagationEvents: PropTypes.arrayOf(PropTypes.oneOf(PORTAL_EVENTS)),
 };
 
