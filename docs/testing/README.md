@@ -26,14 +26,6 @@ test('should have no Axe or DAP violations with component variation', async () =
   await expect(container).toHaveNoAxeViolations();
   await expect(container).toHaveNoDAPViolations('ComponentName with variation');
 });
-
-test('should have no Axe or DAP violations with component variation that should be wrapped in a landmark node', async () => {
-  // `renderWithinLandmark` can be used to wrap a component in a `main` node:
-  const { container } = renderWithinLandmark(<Component />);
-
-  await expect(container).toHaveNoAxeViolations();
-  await expect(container).toHaveNoDAPViolations('ComponentName');
-});
 ```
 
 #### Test structure
@@ -43,8 +35,7 @@ test('should have no Axe or DAP violations with component variation that should 
 
 #### DAP requirements
 
-- DAP requires that components be rendered inside a valid landmark element. Use the `renderWithinLandmark` helper to wrap a component in a landmark `main` node.
-- DAP requires a unique id per test within a given component. (Hence, "ComponentName" and "ComponentName with variation")
+DAP requires a unique id per test within a given component. (Hence, "ComponentName" and "ComponentName with variation")
 
 ## User events
 
@@ -174,10 +165,8 @@ And in another example for the `StatusIcon`'s `status` prop, it makes sense to r
 STATUS.forEach(status =>
   test(`should have no Axe or DAP violations when \`status\` is  '${status}'`, async () => {
     const main = document.createElement('main');
-    render(<StatusIcon status={status} message="test message" />, {
-      // DAP requires a landmark '<main>' in the DOM:
-      container: document.body.appendChild(main),
-    });
+    render(<StatusIcon status={status} message="test message" />);
+
     await expect(document.body).toHaveNoAxeViolations();
     await expect(document.body).toHaveNoDAPViolations(
       `StatusIcon with ${status} status`
