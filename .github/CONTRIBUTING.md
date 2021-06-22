@@ -25,8 +25,6 @@ Once it's done building, you can edit source code or create new components. The 
 
 If you're contributing to our JavaScript code, test your changes by running our test command, `yarn test`.
 
-For more extensive testing information, see our [testing handbook](../docs/testing).
-
 ## 5. Make a pull request
 
 **Note:** Before you make a pull request, [search the issues](https://github.com/carbon-design-system/ibm-security/issues) to see if a similar issue has already been submitted. If a similar issue has been submitted, assign yourself or ask to be assigned to the issue by posting a comment. If the issue does not exist, please make a new issue.
