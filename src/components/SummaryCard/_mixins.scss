@@ -152,7 +152,7 @@
     position: absolute;
     z-index: $overlay--z-index;
 
-    // stylelint-disable-next-line
+    // stylelint-disable-next-line carbon/layout-token-use
     top: -($body--height - $carbon--spacing-05);
     right: 0;
     bottom: $footer--height;
