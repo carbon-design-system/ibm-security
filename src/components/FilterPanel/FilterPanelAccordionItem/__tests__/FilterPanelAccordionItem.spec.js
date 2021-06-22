@@ -3,9 +3,8 @@
  * @copyright IBM Security 2020 - 2021
  */
 
-import React from 'react';
 import { render } from '@testing-library/react';
-import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
+import React from 'react';
 
 import FilterPanelAccordionItem from '../FilterPanelAccordiontItem';
 
@@ -24,7 +23,7 @@ const createChildChildren = length =>
 
 describe('FilterPanelAccordionItem', () => {
   test('has no accessibility violations', async () => {
-    const { container } = renderWithinLandmark(
+    const { container } = render(
       // `FilterPanelAccordionItem` would be
       // wrapped by `FilterPanelAccordion`, which
       // renders as an unordered list:

@@ -8,13 +8,12 @@ import userEvent from '@testing-library/user-event';
 
 import React from 'react';
 
-import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 import OverflowMenuItem from '../../../OverflowMenuItem';
 import FilterPanelCheckboxWithOverflowMenu from '../FilterPanelCheckboxWithOverflowMenu';
 
 describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
   test('has no accessibility violations', async () => {
-    const { container } = renderWithinLandmark(
+    const { container } = render(
       <FilterPanelCheckboxWithOverflowMenu
         labelText="test checkbox"
         id="test-checkbox-id"

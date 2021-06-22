@@ -5,15 +5,12 @@
 
 import { render } from '@testing-library/react';
 import React from 'react';
-import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { TimeIndicator } from '../../..';
 
 describe('TimeIndicator', () => {
   test('has no accessibility violations', async () => {
-    const { container } = renderWithinLandmark(
-      <TimeIndicator>test content</TimeIndicator>
-    );
+    const { container } = render(<TimeIndicator>test content</TimeIndicator>);
 
     await expect(container).toBeAccessible('TimeIndicator');
     await expect(container).toHaveNoAxeViolations();

@@ -6,16 +6,12 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 
-import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
-
 import { ICA } from '../../..';
 import { Locales } from '../ICA';
 
 describe('ICA', () => {
   test('has no accessibility violations', async () => {
-    const { container } = renderWithinLandmark(
-      <ICA label="test ICA" total={10} value={5} />
-    );
+    const { container } = render(<ICA label="test ICA" total={10} value={5} />);
 
     await expect(container).toBeAccessible('ICA');
     await expect(container).toHaveNoAxeViolations();

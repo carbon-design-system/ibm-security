@@ -7,8 +7,6 @@ import userEvent from '@testing-library/user-event';
 import { render } from '@testing-library/react';
 import React from 'react';
 
-import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
-
 import { InteractiveTag } from '../../..';
 import { namespace } from '../InteractiveTag';
 
@@ -16,7 +14,7 @@ describe('InteractiveTag', () => {
   const dataTestId = 'dataTestId';
 
   test('has no accessibility violations', async () => {
-    const { container } = renderWithinLandmark(
+    const { container } = render(
       <InteractiveTag removable>test tag</InteractiveTag>
     );
 

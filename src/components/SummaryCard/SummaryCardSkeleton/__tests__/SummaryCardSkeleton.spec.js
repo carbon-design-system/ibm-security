@@ -5,13 +5,12 @@
 
 import { render } from '@testing-library/react';
 import React from 'react';
-import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
 import { SummaryCardSkeleton } from '../../../..';
 
 describe('SummaryCardSkeleton', () => {
   test('has no accessibility violations', async () => {
-    const { container } = renderWithinLandmark(<SummaryCardSkeleton />);
+    const { container } = render(<SummaryCardSkeleton />);
 
     await expect(container).toBeAccessible('SummaryCardSkeleton');
     await expect(container).toHaveNoAxeViolations();

@@ -8,14 +8,13 @@ import { render } from '@testing-library/react';
 
 import React from 'react';
 
-import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 import { Decorator } from '../../../..';
 
 import { namespace, icons } from '../constants';
 
 describe('Decorator', () => {
   test('has no accessibility violations when rendered as a button', async () => {
-    const { container } = renderWithinLandmark(
+    const { container } = render(
       <Decorator type="IP" value="10.0.0.0" score={0} />
     );
 
@@ -24,7 +23,7 @@ describe('Decorator', () => {
   });
 
   test('has no accessibility violations when rendered as a link', async () => {
-    const { container } = renderWithinLandmark(
+    const { container } = render(
       <Decorator type="IP" value="10.0.0.0" score={0} href="#" />
     );
 
@@ -33,7 +32,7 @@ describe('Decorator', () => {
   });
 
   test('has no accessibility violations when inert', async () => {
-    const { container } = renderWithinLandmark(
+    const { container } = render(
       <Decorator type="IP" value="10.0.0.0" score={0} invert />
     );
 
@@ -155,7 +154,7 @@ Object.keys(icons).forEach(icon => {
 
   describe(`Decorator.${formattedName}`, () => {
     test('has no accessibility violations', async () => {
-      const { container } = renderWithinLandmark(
+      const { container } = render(
         <Component description={`${formattedName} severity`} />
       );
 

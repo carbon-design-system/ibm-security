@@ -5,13 +5,12 @@
 
 import { render } from '@testing-library/react';
 import React from 'react';
-import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
-import { TrendingCard } from '../../../';
+import { TrendingCard } from '../../..';
 
 describe('TrendingCard', () => {
   test('has no accessibility violations', async () => {
-    const { container } = renderWithinLandmark(
+    const { container } = render(
       <TrendingCard
         // Use an empty `href` to avoid misdirected Axe "skip-link" violation:
         href="#"

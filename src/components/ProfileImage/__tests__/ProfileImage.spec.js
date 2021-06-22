@@ -5,7 +5,6 @@
 
 import { render } from '@testing-library/react';
 import React from 'react';
-import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { ProfileImage } from '../../..';
 
@@ -13,7 +12,7 @@ import { namespace } from '../ProfileImage';
 
 describe('ProfileImage', () => {
   test('has no accessibility violations when image is NOT provided', async () => {
-    const { container } = renderWithinLandmark(
+    const { container } = render(
       <ProfileImage
         profile={{
           image_url: null,
@@ -30,7 +29,7 @@ describe('ProfileImage', () => {
   });
 
   test('has no accessibility violations when image is provided', async () => {
-    const { container } = renderWithinLandmark(
+    const { container } = render(
       <ProfileImage
         profile={{
           image_url: 'example.svg',

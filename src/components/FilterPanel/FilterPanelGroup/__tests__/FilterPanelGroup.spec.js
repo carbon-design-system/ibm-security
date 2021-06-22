@@ -3,15 +3,14 @@
  * @copyright IBM Security 2020 - 2021
  */
 
-import React from 'react';
 import { render } from '@testing-library/react';
-import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
+import React from 'react';
 
 import FilterPanelGroup from '../FilterPanelGroup';
 
 describe('FilterPanelGroup', () => {
   test('has no accessibility violations', async () => {
-    const { container } = renderWithinLandmark(
+    const { container } = render(
       <FilterPanelGroup heading="test filter group" title="test title" />
     );
 

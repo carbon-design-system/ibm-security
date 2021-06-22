@@ -6,14 +6,13 @@
 import { fireEvent, render } from '@testing-library/react';
 import React from 'react';
 
-import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 import { Portal } from '../../..';
 
 const { name } = Portal;
 
 describe(name, () => {
   test('has no accessibility violations with overlay', async () => {
-    const { container } = renderWithinLandmark(
+    const { container } = render(
       <div>
         <section>
           <button>test button outside portal</button>
@@ -31,7 +30,7 @@ describe(name, () => {
   });
 
   test('has no accessibility violations without overlay', async () => {
-    const { container } = renderWithinLandmark(
+    const { container } = render(
       <div>
         <section>
           <button>test button outside portal</button>

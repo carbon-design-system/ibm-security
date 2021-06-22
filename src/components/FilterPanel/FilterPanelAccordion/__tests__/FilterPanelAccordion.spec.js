@@ -3,15 +3,14 @@
  * @copyright IBM Security 2020 - 2021
  */
 
-import React from 'react';
 import { render } from '@testing-library/react';
-import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
+import React from 'react';
 
 import FilterPanelAccordion from '../FilterPanelAccordion';
 
 describe('FilterPanelAccordion', () => {
   test('has no accessibility violations', async () => {
-    const { container } = renderWithinLandmark(
+    const { container } = render(
       <FilterPanelAccordion heading="test accordion title" title="test title" />
     );
 

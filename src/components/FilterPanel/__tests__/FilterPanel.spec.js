@@ -3,18 +3,15 @@
  * @copyright IBM Security 2020 - 2021
  */
 
-import React from 'react';
 import { render } from '@testing-library/react';
-import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
+import React from 'react';
 
 import FilterPanel from '..';
 import * as mockProps from '../_mocks_';
 
 describe('FilterPanel', () => {
   test('has no accessibility violations', async () => {
-    const { container } = renderWithinLandmark(
-      <FilterPanel title="test title" />
-    );
+    const { container } = render(<FilterPanel title="test title" />);
 
     await expect(container).toBeAccessible('FilterPanel');
     await expect(container).toHaveNoAxeViolations();

@@ -5,14 +5,13 @@
 
 import { render } from '@testing-library/react';
 import React from 'react';
-import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { StringFormatter } from '../../..';
 import { namespace } from '../StringFormatter';
 
 describe('StringFormatter', () => {
   test('has no accessibility violations', async () => {
-    const { container } = renderWithinLandmark(
+    const { container } = render(
       <StringFormatter
         value="This is a long test string that would normally be truncated."
         truncate

@@ -3,14 +3,14 @@
  * @copyright IBM Security 2020 - 2021
  */
 
+import { render } from '@testing-library/react';
 import React from 'react';
-import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
 import { CardSkeleton } from '../../../..';
 
 describe('CardSkeleton', () => {
   test('has no accessibility violations', async () => {
-    const { container } = renderWithinLandmark(<CardSkeleton />);
+    const { container } = render(<CardSkeleton />);
 
     await expect(container).toBeAccessible('CardSkeleton');
     await expect(container).toHaveNoAxeViolations();

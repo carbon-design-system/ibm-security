@@ -5,7 +5,6 @@
 
 import { render } from '@testing-library/react';
 import React from 'react';
-import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
 import { StatusStep } from '../../../..';
 
@@ -14,7 +13,7 @@ import { STATUS } from '../StatusStep';
 describe('StatusStep', () => {
   Object.values(STATUS).forEach(status =>
     test(`has no accessibility violations when \`status\` is  '${status}'`, async () => {
-      const { container } = renderWithinLandmark(
+      const { container } = render(
         <ul>
           <StatusStep
             label="test-label"

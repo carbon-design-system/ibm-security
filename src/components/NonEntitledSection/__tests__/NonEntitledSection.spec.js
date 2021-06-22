@@ -5,14 +5,13 @@
 
 import { render } from '@testing-library/react';
 import React from 'react';
-import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { icon } from '../../_mocks_';
 import { NonEntitledSection } from '../../..';
 
 describe('NonEntitledSection', () => {
   test('has no accessibility violations', async () => {
-    const { container } = renderWithinLandmark(
+    const { container } = render(
       <NonEntitledSection
         title="test title"
         subTitle="test subtitle"
