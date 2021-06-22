@@ -18470,7 +18470,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--summary-card__action-overlay {
   position: absolute;
   z-index: 6000;
-  top: calc(18rem * -1);
+  top: 18rem;
   right: 0;
   bottom: 3rem;
   left: 0;
@@ -18547,7 +18547,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--summary-card__action-overlay--transparent {
   position: absolute;
   z-index: 5999;
-  top: calc(21rem * -1);
+  top: 21rem;
   right: 0;
   bottom: 3rem;
   left: 0;
