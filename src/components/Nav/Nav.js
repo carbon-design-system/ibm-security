@@ -78,7 +78,7 @@ export default class Nav extends Component {
         key={key}
         onListClick={this.handleListClick}
         onItemClick={this.handleItemClick}
-        ref={navigationList => {
+        ref={(navigationList) => {
           this.navigationLists.push(navigationList);
         }}
       />
@@ -127,14 +127,8 @@ export default class Nav extends Component {
   }
 
   render() {
-    const {
-      activeHref,
-      className,
-      children,
-      heading,
-      label,
-      ...other
-    } = this.props;
+    const { activeHref, className, children, heading, label, ...other } =
+      this.props;
 
     return (
       <nav

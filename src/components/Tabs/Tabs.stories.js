@@ -55,7 +55,7 @@ const TabContentRenderedOnlyWhenSelected = ({ selected, children, ...other }) =>
   );
 
 storiesOf(carbon('Tabs'), module)
-  .addDecorator(story => (
+  .addDecorator((story) => (
     <div style={{ minWidth: breakpoints.md.width }}>{story()}</div>
   ))
   .add(

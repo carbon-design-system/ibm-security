@@ -93,7 +93,7 @@ storiesOf(carbon('FileUploader'), module)
         <div className={`${prefix}--file__container`}>
           <FileUploader
             {...props.fileUploader()}
-            ref={node => (fileUploader = node)} // eslint-disable-line no-return-assign
+            ref={(node) => (fileUploader = node)} // eslint-disable-line no-return-assign
           />
           <Button
             kind="secondary"

@@ -74,7 +74,7 @@ function PanelV2({
     });
   };
 
-  const handleKeyDown = event => {
+  const handleKeyDown = (event) => {
     if (isOpen && event.which === 27) {
       onClose();
     }

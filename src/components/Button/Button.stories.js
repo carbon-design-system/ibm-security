@@ -46,7 +46,7 @@ const props = {
       (() => {
         const icons = {};
 
-        Object.keys(iconsToUse).forEach(icon => {
+        Object.keys(iconsToUse).forEach((icon) => {
           icons[`${icon} (${icon} from '@carbon/icons-react')`] = `${icon}`;
         });
 

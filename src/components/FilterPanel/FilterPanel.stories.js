@@ -45,14 +45,16 @@ const LegacyFilterPanelWithState = compose(
 
   // When value changes update state and call passed in onChange method.
   withHandlers({
-    onChange: ({ onChange, onFilterToggle, filterData }) => filter => {
-      onChange(filter);
+    onChange:
+      ({ onChange, onFilterToggle, filterData }) =>
+      (filter) => {
+        onChange(filter);
 
-      // eslint-disable-next-line no-param-reassign
-      filterData.filters[filter.id].enabled = !filterData.filters[filter.id]
-        .enabled;
-      onFilterToggle(filterData);
-    },
+        // eslint-disable-next-line no-param-reassign
+        filterData.filters[filter.id].enabled =
+          !filterData.filters[filter.id].enabled;
+        onFilterToggle(filterData);
+      },
   })
 )(FilterPanel);
 
@@ -66,7 +68,7 @@ LegacyFilterPanelWithState.displayName = getDisplayName(FilterPanel);
 LegacyFilterPanelWithState.__docgenInfo = FilterPanel.__docgenInfo;
 
 storiesOf(patterns('FilterPanel'), module)
-  .addDecorator(story => (
+  .addDecorator((story) => (
     <div style={{ padding: '1rem', width: '16rem', margin: '0 auto' }}>
       {story()}
     </div>

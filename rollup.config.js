@@ -37,9 +37,9 @@ const createFromDefault = ({
   },
 
   // Mark all dependencies and peer dependencies as external, except imported JSON files.
-  external: id =>
+  external: (id) =>
     externals.some(
-      extensionId =>
+      (extensionId) =>
         (id === extensionId || id.startsWith(`${extensionId}/`)) &&
         !id.endsWith('.json')
     ),
@@ -48,7 +48,7 @@ const createFromDefault = ({
       extract: false,
       inject: false,
       minimize: !(process.env.NODE_ENV === 'development'),
-      namedExports: name => name.replace(/-/, '_'),
+      namedExports: (name) => name.replace(/-/, '_'),
       plugins: [autoprefixer],
       use: [
         [

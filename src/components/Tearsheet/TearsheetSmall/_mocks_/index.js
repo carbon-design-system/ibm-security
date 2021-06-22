@@ -40,7 +40,7 @@ const buttons = {
 
 const disabledButtons = {};
 
-Object.keys(buttons).forEach(button => {
+Object.keys(buttons).forEach((button) => {
   disabledButtons[button] = {
     isDisabled: !isDisabled,
     onClick,

@@ -56,7 +56,7 @@ class SummaryCardAction extends Component {
           kind="ghost"
           onClick={
             expandedContent
-              ? event => {
+              ? (event) => {
                   onClick(event);
                   this.toggleOpen();
                 }
@@ -116,7 +116,7 @@ SummaryCardAction.propTypes = {
   className: PropTypes.string,
 
   /** @type {string} Provide the close button with an icon description for assistive tech. */
-  closeButtonIconDescription: props => {
+  closeButtonIconDescription: (props) => {
     if (props.expandedContent && !props.closeButtonIconDescription) {
       return new Error(
         'A `closeButtonIconDescription` should be provided if using `expandedContent`.'

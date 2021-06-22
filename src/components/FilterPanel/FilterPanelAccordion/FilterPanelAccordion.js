@@ -69,7 +69,7 @@ FilterPanelAccordion.propTypes = {
 FilterPanelAccordion.defaultProps = {
   title: undefined,
   count: undefined,
-  countLabel: count => `${count} items`,
+  countLabel: (count) => `${count} items`,
   className: undefined,
   children: undefined,
   heading: undefined,

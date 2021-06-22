@@ -49,7 +49,7 @@ class Wizard extends Component {
     return nextState;
   }
 
-  setNextState = async cb => {
+  setNextState = async (cb) => {
     this.setState({ loading: true });
     try {
       const changes = await this.currentStep.next(this.state.componentState);
@@ -114,7 +114,7 @@ class Wizard extends Component {
       return Children.map(
         this.props.children,
         WizardStep.getPropsFromElement
-      ).filter(props => props != null);
+      ).filter((props) => props != null);
     } else if (Array.isArray(this.props.steps)) {
       return this.props.steps;
     }
@@ -196,7 +196,7 @@ class Wizard extends Component {
     }
   };
 
-  handleItemSelect = event => {
+  handleItemSelect = (event) => {
     const { id } = event.target;
 
     this.setState(({ componentState, steps }) => ({

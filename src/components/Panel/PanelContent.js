@@ -16,7 +16,7 @@ const namespace = getComponentNamespace('panel');
  * @param {Object.<string, *>} props Panel content props.
  * @returns {PanelContent} Panel content instance.
  */
-const PanelContent = props => {
+const PanelContent = (props) => {
   const classes = classnames(`${namespace}__body--content`, props.className);
   return <div className={classes}>{props.children}</div>;
 };

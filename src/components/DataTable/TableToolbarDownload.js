@@ -21,7 +21,7 @@ const options = {
 };
 
 const TableToolbarDownload = ({ headers, rows, title, filename, label }) => {
-  const csvRows = rows.map(row => {
+  const csvRows = rows.map((row) => {
     const newRow = {};
     headers.forEach(({ key }) => {
       newRow[key] = row[key] ? row[key] : '';

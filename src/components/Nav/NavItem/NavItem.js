@@ -141,8 +141,8 @@ export default class NavItem extends Component {
       <li
         className={classNames}
         label={label}
-        onClick={event => handleDisabled(onClick(event, href))}
-        onKeyPress={event => handleDisabled(onClick(event, href))}
+        onClick={(event) => handleDisabled(onClick(event, href))}
+        onKeyPress={(event) => handleDisabled(onClick(event, href))}
         role="menuitem"
       >
         {link ? (

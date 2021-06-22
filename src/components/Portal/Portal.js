@@ -158,7 +158,7 @@ class Portal extends Component {
     const events = stopPropagationEvents || PORTAL_EVENTS;
 
     /* eslint-disable security/detect-object-injection */
-    events.forEach(event => {
+    events.forEach((event) => {
       if (child.props[event]) {
         childProps[event] = composeEventHandlers([
           this.handleBubble,
@@ -173,7 +173,7 @@ class Portal extends Component {
     return React.cloneElement(child, { ...childProps });
   };
 
-  handleBubble = event => {
+  handleBubble = (event) => {
     event.stopPropagation();
   };
 

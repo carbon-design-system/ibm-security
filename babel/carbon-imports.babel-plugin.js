@@ -1,7 +1,9 @@
-const genReplaceRule = (cjsPath, esPath) => (moduleType = 'lib') => ({
-  from: moduleType === 'es' ? cjsPath : esPath,
-  to: moduleType === 'es' ? esPath : cjsPath,
-});
+const genReplaceRule =
+  (cjsPath, esPath) =>
+  (moduleType = 'lib') => ({
+    from: moduleType === 'es' ? cjsPath : esPath,
+    to: moduleType === 'es' ? esPath : cjsPath,
+  });
 
 const replaceRules = [
   genReplaceRule('@carbon/icons-react/lib/', '@carbon/icons-react/es/'),
@@ -14,7 +16,7 @@ function plugin(babel) {
   function replacePath(path, state) {
     if (!path.get('source').node) return;
 
-    replaceRules.forEach(replaceRuleFromType => {
+    replaceRules.forEach((replaceRuleFromType) => {
       const replaceRule = replaceRuleFromType(state.opts.moduleType);
       if (path.get('source').node.value.includes(replaceRule.from)) {
         const replacement = t.stringLiteral(

@@ -31,7 +31,7 @@ import {
 
 import { headers, missingDataCharacter, rows } from '../_mocks_';
 
-const batchActionsStory = props => (
+const batchActionsStory = (props) => (
   <DataTable
     rows={rows}
     headers={headers}
@@ -53,7 +53,7 @@ const batchActionsStory = props => (
             <TableBatchAction
               renderIcon={Delete16}
               iconDescription="Delete the selected rows"
-              onClick={selectedRows => () =>
+              onClick={(selectedRows) => () =>
                 action('Delete batch action click')(selectedRows)}
             >
               Delete
@@ -61,7 +61,7 @@ const batchActionsStory = props => (
             <TableBatchAction
               renderIcon={Save16}
               iconDescription="Save the selected rows"
-              onClick={selectedRows => () =>
+              onClick={(selectedRows) => () =>
                 action('Save batch action click')(selectedRows)}
             >
               Save
@@ -69,7 +69,7 @@ const batchActionsStory = props => (
             <TableBatchAction
               renderIcon={Download16}
               iconDescription="Download the selected rows"
-              onClick={selectedRows => () =>
+              onClick={(selectedRows) => () =>
                 action('Download batch action click')(selectedRows)}
             >
               Download
@@ -97,7 +97,7 @@ const batchActionsStory = props => (
           <TableHead>
             <TableRow>
               <TableSelectAll {...getSelectionProps()} />
-              {headers.map(header => (
+              {headers.map((header) => (
                 <TableHeader {...getHeaderProps({ header })} key={header.key}>
                   {header.header}
                 </TableHeader>
@@ -105,10 +105,10 @@ const batchActionsStory = props => (
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map(row => (
+            {rows.map((row) => (
               <TableRow {...getRowProps({ row })} key={row.id}>
                 <TableSelectRow {...getSelectionProps({ row })} />
-                {row.cells.map(cell => (
+                {row.cells.map((cell) => (
                   <TableCell key={cell.id}>
                     {cell.value ? cell.value : missingDataCharacter}
                   </TableCell>

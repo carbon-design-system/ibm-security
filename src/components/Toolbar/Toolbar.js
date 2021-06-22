@@ -59,7 +59,7 @@ export default class Toolbar extends Component {
    * Handle a click outside of the Toolbar wrapper.
    * @param {Event} event A click event.
    */
-  handleClickOutside = event => {
+  handleClickOutside = (event) => {
     const activeElement =
       event.target.getRootNode().activeElement || document.activeElement;
 
@@ -119,7 +119,7 @@ export default class Toolbar extends Component {
    * @param {string} type The type of panel to toggle.
    */
   togglePanel(type) {
-    toggle.call(this, type, state => {
+    toggle.call(this, type, (state) => {
       const { [type]: isToggled } = state;
 
       this.props.onToggle(isToggled);
@@ -154,7 +154,7 @@ export default class Toolbar extends Component {
       navigationType.map(({ id, navigation, title }) => (
         <Nav key={id} heading={title} label={title}>
           {navigation
-            .filter(item => item !== null && item !== undefined)
+            .filter((item) => item !== null && item !== undefined)
             .map(
               ({
                 children,
@@ -311,7 +311,7 @@ export default class Toolbar extends Component {
                 id={`${namespace}--toolbar--${currentType}`}
                 className={`${namespace}__panel`}
               >
-                {Object.keys(isActive).map(type => (
+                {Object.keys(isActive).map((type) => (
                   <Transition
                     key={type}
                     className={`${namespace}__content`}
@@ -434,7 +434,7 @@ Toolbar.propTypes = {
 Toolbar.defaultProps = {
   renderAddons: [],
   className: null,
-  onToggle: isToggled => isToggled,
+  onToggle: (isToggled) => isToggled,
   menu: [],
   settings: [],
   support: [],

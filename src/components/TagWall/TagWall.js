@@ -64,7 +64,7 @@ const TagWall = ({
             id={item.id}
             key={key}
             isSelected={item.isSelected}
-            onRemove={event => {
+            onRemove={(event) => {
               event.stopPropagation();
 
               onChange({ item, type });

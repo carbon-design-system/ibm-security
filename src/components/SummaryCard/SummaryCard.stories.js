@@ -33,7 +33,7 @@ import props from './SummaryCardContainer/_mocks_';
 import summaryCardSelectProps from './SummaryCardSelect/_mocks_';
 
 storiesOf(patterns('SummaryCard'), module)
-  .addDecorator(story => (
+  .addDecorator((story) => (
     <div className={`${carbonPrefix}--grid ${carbonPrefix}--grid--full-width`}>
       <div className={`${carbonPrefix}--row`}>{story()}</div>
     </div>

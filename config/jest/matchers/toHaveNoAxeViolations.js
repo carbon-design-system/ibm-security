@@ -10,7 +10,7 @@ import axe from 'axe-core';
 function formatOutput(violations) {
   const firstViolation = violations[0];
   const { description, id, impact, help, helpUrl } = firstViolation;
-  const nodes = firstViolation.nodes.map(node => {
+  const nodes = firstViolation.nodes.map((node) => {
     return ['Node:', node.html, '\n', ...node.failureSummary.split('\n')].join(
       '\n'
     );
@@ -47,7 +47,7 @@ const defaultOptions = {
 
 function toHaveNoAxeViolations(node, options = {}) {
   // eslint-disable-next-line compat/compat
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     axe.run(
       node,
       {

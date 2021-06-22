@@ -15,10 +15,8 @@ import Table from './Table';
 import TableOverflowCell from './TableOverflowCell';
 import TableToolbarDownload from './TableToolbarDownload';
 
-const {
-  defaultProps: carbonDefaultProps,
-  propTypes: carbonPropTypes,
-} = CarbonDataTable;
+const { defaultProps: carbonDefaultProps, propTypes: carbonPropTypes } =
+  CarbonDataTable;
 
 const {
   TableActionList,
@@ -88,7 +86,7 @@ const DataTable = ({
               <TableHead>
                 <TableRow>
                   {isSelectable && <TableSelectAll {...getSelectionProps()} />}
-                  {headers.map(header => (
+                  {headers.map((header) => (
                     <TableHeader
                       {...getHeaderProps({ header, isSortable })}
                       key={header.key}
@@ -99,7 +97,7 @@ const DataTable = ({
                 </TableRow>
               </TableHead>
               <TableBody>
-                {rows.map(row => (
+                {rows.map((row) => (
                   <TableRow
                     {...getRowProps({ row })}
                     className={classnames({
@@ -110,7 +108,7 @@ const DataTable = ({
                     {isSelectable && (
                       <TableSelectRow {...getSelectionProps({ row })} />
                     )}
-                    {row.cells.map(cell => (
+                    {row.cells.map((cell) => (
                       <TableCell key={cell.id}>
                         {cell.value ? cell.value : missingDataCharacter}
                       </TableCell>

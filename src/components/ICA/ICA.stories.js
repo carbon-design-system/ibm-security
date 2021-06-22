@@ -60,7 +60,7 @@ storiesOf(security('ICA'), module)
         <div className={`${carbonPrefix}--row`}>
           {Array(4)
             .fill(0)
-            .map(item => (
+            .map((item) => (
               <div
                 key={item.id}
                 className={`${carbonPrefix}--col-sm-4 ${carbonPrefix}--col-md-2 ${carbonPrefix}--col-lg-4`}
@@ -77,7 +77,7 @@ storiesOf(security('ICA'), module)
         <div className={`${carbonPrefix}--row`}>
           {Array(8)
             .fill(0)
-            .map(item => (
+            .map((item) => (
               <div
                 key={item.id}
                 className={`${carbonPrefix}--col-sm-2 ${carbonPrefix}--col-md-2 ${carbonPrefix}--col-lg-2`}

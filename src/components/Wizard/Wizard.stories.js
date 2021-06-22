@@ -32,8 +32,8 @@ const { prefix } = settings;
 
 const focusTrap = boolean('focusTrap', false);
 
-const sleep = async ms => {
-  return new Promise(resolve => setTimeout(resolve, ms));
+const sleep = async (ms) => {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 };
 
 const labels = {
@@ -68,7 +68,7 @@ const steps = [
         </section>
       </div>
     ),
-    next: async state => sleep(1000).then(() => action('next')(state)),
+    next: async (state) => sleep(1000).then(() => action('next')(state)),
     validate: ({ input1Value = '' }) => input1Value.trim().length >= 3,
   },
   {
@@ -85,12 +85,12 @@ const steps = [
             id="name-checkbox"
             labelText="My name is correct."
             checked={checkboxValue}
-            onChange={checked => setState({ checkboxValue: checked })}
+            onChange={(checked) => setState({ checkboxValue: checked })}
           />
         </section>
       </div>
     ),
-    next: async state => sleep(1000).then(() => action('next_done')(state)),
+    next: async (state) => sleep(1000).then(() => action('next_done')(state)),
     validate: ({ checkboxValue = false }) => checkboxValue,
   },
 ];
@@ -111,7 +111,7 @@ const editableSteps = [
         </section>
       </div>
     ),
-    next: async state => sleep(1000).then(() => action('Save')(state)),
+    next: async (state) => sleep(1000).then(() => action('Save')(state)),
     validate: ({ input1Value = '' }) => input1Value.trim().length >= 3,
   },
   {
@@ -128,18 +128,18 @@ const editableSteps = [
             id="name-checkbox"
             labelText="My name is correct."
             checked={checkboxValue}
-            onChange={checked => setState({ checkboxValue: checked })}
+            onChange={(checked) => setState({ checkboxValue: checked })}
           />
         </section>
       </div>
     ),
     validate: ({ checkboxValue = false }) => checkboxValue,
-    next: async state => sleep(10000).then(() => action('Save')(state)),
+    next: async (state) => sleep(10000).then(() => action('Save')(state)),
   },
 ];
 
 const reducers = {
-  TOGGLE_OPEN: state => ({ ...state, isOpen: !state.isOpen }),
+  TOGGLE_OPEN: (state) => ({ ...state, isOpen: !state.isOpen }),
   UPDATE_INIT_STATE: (state, { initState = {} } = {}) => ({
     ...state,
     initState,
@@ -147,10 +147,10 @@ const reducers = {
   DEFAULT: (state = {}) => state,
 };
 
-const reduceState = (reducers = { DEFAULT: (state = {}) => state }) => (
-  state = {},
-  { type, ...otherState } = {}
-) => (reducers[type] || reducers.DEFAULT)(state, { type, ...otherState });
+const reduceState =
+  (reducers = { DEFAULT: (state = {}) => state }) =>
+  (state = {}, { type, ...otherState } = {}) =>
+    (reducers[type] || reducers.DEFAULT)(state, { type, ...otherState });
 
 const enhanceWithState = (initState = {}) =>
   withReducer('state', 'dispatch', reduceState(reducers), {
@@ -176,7 +176,7 @@ function WizardWrapper({ state, dispatch, ...otherProps }) {
         focusTrap={focusTrap}
         initState={state.initState}
         isOpen={state.isOpen}
-        onClose={componentState => {
+        onClose={(componentState) => {
           dispatch(
             { type: 'UPDATE_INIT_STATE', initState: componentState },
             ({ initState }) => action('onClose')(initState)
@@ -278,8 +278,8 @@ storiesOf(patterns('Wizard'), module)
             onClose={action('onClose')}
             onDelete={
               boolean('editMode', false)
-                ? componentState =>
-                    new Promise(resolve => {
+                ? (componentState) =>
+                    new Promise((resolve) => {
                       action('onDelete')(componentState);
                       setTimeout(() => {
                         resolve();
@@ -352,7 +352,7 @@ storiesOf(patterns('Wizard'), module)
               renderMain={(state, setState) => (
                 <FormGroup legendText="Select type of meal">
                   <RadioButtonGroup
-                    onChange={value => {
+                    onChange={(value) => {
                       setState({ mealType: value });
                     }}
                     defaultSelected={state.mealType}
@@ -378,7 +378,7 @@ storiesOf(patterns('Wizard'), module)
                   </RadioButtonGroup>
                 </FormGroup>
               )}
-              next={async state =>
+              next={async (state) =>
                 sleep(1000).then(() => action('next')(state))
               }
               validate={({ mealType }) => mealType !== undefined}
@@ -396,13 +396,13 @@ storiesOf(patterns('Wizard'), module)
                         id="checkbox-eggs"
                         labelText="Eggs"
                         checked={state.eggs}
-                        onChange={eggs => setState({ eggs })}
+                        onChange={(eggs) => setState({ eggs })}
                       />
                       <Checkbox
                         id="checkbox-oats"
                         labelText="Oats"
                         checked={state.oats}
-                        onChange={oats => setState({ oats })}
+                        onChange={(oats) => setState({ oats })}
                       />
                     </fieldset>
                   ),
@@ -415,13 +415,13 @@ storiesOf(patterns('Wizard'), module)
                         id="checkbox-soup"
                         labelText="Soup"
                         checked={state.soup}
-                        onChange={soup => setState({ soup })}
+                        onChange={(soup) => setState({ soup })}
                       />
                       <Checkbox
                         id="checkbox-salad"
                         labelText="Salad"
                         checked={state.salad}
-                        onChange={salad => setState({ salad })}
+                        onChange={(salad) => setState({ salad })}
                       />
                     </fieldset>
                   ),
@@ -429,7 +429,7 @@ storiesOf(patterns('Wizard'), module)
 
                 return MEAL_MENU[state.mealType];
               }}
-              next={async state =>
+              next={async (state) =>
                 sleep(1000).then(() => action('next_done')(state))
               }
             />
@@ -463,7 +463,7 @@ storiesOf(patterns('Wizard'), module)
       Wizard.defaultProps = WizardComponent.defaultProps;
       return (
         <Wizard title="Title of setup" subTitle="5 mins setup" labels={labels}>
-          {steps.map(step => (
+          {steps.map((step) => (
             <WizardStep key={step.title} {...step} />
           ))}
         </Wizard>
@@ -497,7 +497,7 @@ storiesOf(patterns('Wizard'), module)
       };
       Wizard.defaultProps = WizardComponent.defaultProps;
 
-      const selectFn = value => {
+      const selectFn = (value) => {
         switch (value) {
           case 'true': {
             return true;
@@ -525,8 +525,8 @@ storiesOf(patterns('Wizard'), module)
             )}
             onDelete={
               boolean('deleteMode', true)
-                ? componentState =>
-                    new Promise(resolve => {
+                ? (componentState) =>
+                    new Promise((resolve) => {
                       action('onDelete')(componentState);
                       setTimeout(() => {
                         resolve();
@@ -536,7 +536,7 @@ storiesOf(patterns('Wizard'), module)
             }
             labels={labels}
           >
-            {editableSteps.map(step => (
+            {editableSteps.map((step) => (
               <WizardStep key={step.title} {...step} />
             ))}
           </Wizard>

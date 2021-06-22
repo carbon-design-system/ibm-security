@@ -62,7 +62,7 @@ FilterPanelCheckbox.propTypes = {
 FilterPanelCheckbox.defaultProps = {
   ...Checkbox.defaultProps,
   count: undefined,
-  countLabel: count => `${count} items`,
+  countLabel: (count) => `${count} items`,
   title: undefined,
 };
 

@@ -140,7 +140,6 @@ storiesOf(patterns('Panel'), module).add(
   ),
 
   {
-    info:
-      "View the 'Story' addon panel for guidance on using the `renderFooter` prop",
+    info: "View the 'Story' addon panel for guidance on using the `renderFooter` prop",
   }
 );

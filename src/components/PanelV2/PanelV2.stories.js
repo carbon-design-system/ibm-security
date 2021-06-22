@@ -189,8 +189,9 @@ disableCenteredStories(storiesOf(patterns('PanelV2'), module))
                           onClick={action(`onClick (${text})`)}
                           renderIcon={Filter20}
                         >
-                          {`Item ${index +
-                            2} - text may be long and will be truncated`}
+                          {`Item ${
+                            index + 2
+                          } - text may be long and will be truncated`}
                         </ComboButtonItem>
                       );
                     })}

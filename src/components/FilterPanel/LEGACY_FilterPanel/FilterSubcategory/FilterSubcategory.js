@@ -36,8 +36,8 @@ const FilterSubcategory = ({
   const visibleChildren = React.useRef(null);
 
   const filters = subcategory.filters
-    .map(filterId => filterData.filters[filterId])
-    .filter(filter => filter.count > 0);
+    .map((filterId) => filterData.filters[filterId])
+    .filter((filter) => filter.count > 0);
 
   const shouldTruncate = filters.length > 10;
 
@@ -93,7 +93,7 @@ const FilterSubcategory = ({
             className={`${namespace}__filters ${namespace}__filters--visible`}
             ref={visibleChildren}
           >
-            {filters.slice(0, displayCount).map(filter => (
+            {filters.slice(0, displayCount).map((filter) => (
               <li className={`${namespace}__filter`} key={filter.id}>
                 <FilterSelector filter={filter} onChange={onChange} />
               </li>
@@ -104,7 +104,7 @@ const FilterSubcategory = ({
               role="presentation"
               className={`${namespace}__filters ${namespace}__filters--hidden`}
             >
-              {filters.slice(displayCount).map(filter => (
+              {filters.slice(displayCount).map((filter) => (
                 <li className={`${namespace}__filter`} key={filter.id}>
                   <FilterSelector filter={filter} onChange={onChange} />
                 </li>

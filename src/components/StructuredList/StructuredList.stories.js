@@ -72,7 +72,7 @@ storiesOf(carbon('StructuredList'), module)
   .add(
     'Selection',
     () => {
-      const structuredListBodyRowGenerator = numRows => {
+      const structuredListBodyRowGenerator = (numRows) => {
         return Array(...Array(numRows)).map((n, i) => (
           <StructuredListRow label key={`row-${i}`} htmlFor={`row-${i}`}>
             <StructuredListCell>Row {i}</StructuredListCell>

@@ -22,7 +22,7 @@ export default {
     ...disableCentered(),
   },
   decorators: [
-    story => (
+    (story) => (
       <>
         <div style={{ height: layout04 }}>
           <CarbonHeader aria-label="IBM Security">
@@ -54,9 +54,12 @@ export default {
 };
 
 // TODO: Remove workaround for https://github.ibm.com/security/design-core-experience/issues/241
-export const withContainer = WrappedComponent => ({ className, ...other }) => (
-  <WrappedComponent
-    className={classnames('container--narrow', className)}
-    {...other}
-  />
-);
+export const withContainer =
+  (WrappedComponent) =>
+  ({ className, ...other }) =>
+    (
+      <WrappedComponent
+        className={classnames('container--narrow', className)}
+        {...other}
+      />
+    );

@@ -223,11 +223,11 @@ There are currently no available Prop Getters for the `Panel` component.
 
 These are functions you can call to change the state of the `Panel` component.
 
-| property       | type                                                   | description                                   |
-| -------------- | ------------------------------------------------------ | --------------------------------------------- |
-| `handleClose`  | `(...args) => this.props.onClose(...args)`             | Set the state of the Panel to closed          |
-| `handleOpen`   | `(...args) => this.props.onOpen(...args)`              | Set the state of the Panel to open            |
-| `toggleActive` | `handleOpen || handleClose` depending on current state | Toggle the state of the Panel, open or closed |
+| property       | type                                       | description                          |
+| -------------- | ------------------------------------------ | ------------------------------------ | --------------------------------------- | --------------------------------------------- |
+| `handleClose`  | `(...args) => this.props.onClose(...args)` | Set the state of the Panel to closed |
+| `handleOpen`   | `(...args) => this.props.onOpen(...args)`  | Set the state of the Panel to open   |
+| `toggleActive` | `handleOpen                                |                                      | handleClose` depending on current state | Toggle the state of the Panel, open or closed |
 
 ### State
 

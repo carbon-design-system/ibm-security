@@ -27,7 +27,7 @@ const Transition = ({
 }) => (
   <TransitionGroup className={namespace} component={component}>
     {children &&
-      map(children, child => (
+      map(children, (child) => (
         <CSSTransition
           classNames={{
             appear: `${className}__transition--appear`,

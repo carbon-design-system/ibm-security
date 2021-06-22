@@ -7,13 +7,13 @@ const { sync } = require('glob');
 const { renderSync } = require('node-sass');
 
 module.exports = {
-  compile: file =>
+  compile: (file) =>
     renderSync({
       file,
       includePaths: ['node_modules'],
       outputStyle: 'expanded',
     }),
-  forEachImport: callback =>
+  forEachImport: (callback) =>
     sync('src/**/*.scss', {
       ignore: ['src/globals/grid/css-gridish/**/*'],
     }).forEach(callback),

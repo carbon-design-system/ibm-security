@@ -16,7 +16,7 @@ import { carbon } from '../../../.storybook';
 // Datepickers last argument contains an instance of flatpickr
 // and will cause action logger to enter an infinite loop. Just don't log that argument
 const datePickerOnChangeActions = decorateAction([
-  args => args.slice(0, args.length - 2),
+  (args) => args.slice(0, args.length - 2),
 ]);
 
 const patterns = {
@@ -144,8 +144,7 @@ storiesOf(carbon('DatePicker'), module)
       );
     },
     {
-      info:
-        'A range Date Picker consists of two input fields and a calendar, and optionally, the minDate and maxDate fields.',
+      info: 'A range Date Picker consists of two input fields and a calendar, and optionally, the minDate and maxDate fields.',
     }
   )
   .add('skeleton', () => <DatePickerSkeleton range />, {

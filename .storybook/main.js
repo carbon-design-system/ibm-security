@@ -23,7 +23,7 @@ module.exports = {
     './addons/addon-theme/register',
   ],
   stories: ['../src/**/*.stories.*'],
-  webpackFinal: async configuration =>
+  webpackFinal: async (configuration) =>
     require('webpack-merge').merge(configuration, {
       devServer: {
         stats: 'errors-only',

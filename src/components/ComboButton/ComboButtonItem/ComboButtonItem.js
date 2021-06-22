@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 
 import { namespace } from '../ComboButton';
 
-const ComboButtonItem = props => {
+const ComboButtonItem = (props) => {
   const { ...rest } = props;
   return <span {...rest} className={`${namespace}-item`} />;
 };

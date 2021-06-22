@@ -9,7 +9,7 @@ import { getComponentNamespace } from '../../globals/namespace';
 
 const defaultProps = {
   className: null,
-  onNotificationClear: notificationId => notificationId,
+  onNotificationClear: (notificationId) => notificationId,
   notifications: [],
   profile: null,
   showEditProfile: true,

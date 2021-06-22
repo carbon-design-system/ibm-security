@@ -115,7 +115,7 @@ describe('Panel', () => {
     it('renders the correct body margin', () => {
       panel = mount(panelElement);
 
-      const getElement = element => panel.find(`.${namespace}__${element}`);
+      const getElement = (element) => panel.find(`.${namespace}__${element}`);
 
       selectToggleButton();
       expect(getElement('body').prop('style').marginTop).toBe(

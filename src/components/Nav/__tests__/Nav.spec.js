@@ -16,8 +16,8 @@ describe('Nav', () => {
   const activeHref = url();
   const navigationLabel = label;
 
-  const navItem = key => <NavItem href={url(key)}>{navigationLabel}</NavItem>;
-  const navList = key => <NavList>{navItem(key)}</NavList>;
+  const navItem = (key) => <NavItem href={url(key)}>{navigationLabel}</NavItem>;
+  const navList = (key) => <NavList>{navItem(key)}</NavList>;
 
   const nav = () =>
     mount(
@@ -120,10 +120,7 @@ describe('Nav', () => {
 
       expect(isNavigationListOpen()).toEqual(true);
 
-      navigation
-        .find(NavList)
-        .last()
-        .simulate('click');
+      navigation.find(NavList).last().simulate('click');
 
       expect(isNavigationListOpen()).toEqual(false);
     });

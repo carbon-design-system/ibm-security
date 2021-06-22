@@ -7,7 +7,7 @@ const { bgGreen, bgRed, red } = require('colors');
 
 const { compile, forEachImport } = require('./compile');
 
-forEachImport(file => {
+forEachImport((file) => {
   let status;
 
   try {

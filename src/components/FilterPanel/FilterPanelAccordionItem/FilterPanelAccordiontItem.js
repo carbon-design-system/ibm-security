@@ -51,7 +51,7 @@ const FilterPanelAccordionItem = ({
         }
         scrollGradientColor={scrollGradientColor}
       >
-        {Children.map(children, child => (
+        {Children.map(children, (child) => (
           <li className={`${namespace}__filter`} key={child.key}>
             {child}
           </li>
@@ -117,7 +117,7 @@ FilterPanelAccordionItem.defaultProps = {
   children: undefined,
   scrollGradientColor: theme.uiBackground,
   count: undefined,
-  countLabel: count => `${count} items`,
+  countLabel: (count) => `${count} items`,
   className: undefined,
 };
 

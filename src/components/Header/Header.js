@@ -36,7 +36,7 @@ import { defaultProps, namespace, propTypes } from './constants';
 
 const headerButtonNamespace = `${namespace}__button`;
 
-const getPopoverLabelId = string => `${namespace}__popover__label--${string}`;
+const getPopoverLabelId = (string) => `${namespace}__popover__label--${string}`;
 
 /**
  * Renders the popover.
@@ -119,7 +119,7 @@ export default class Header extends Component {
       return (
         (userAccounts.accounts &&
           userAccounts.accounts.filter(
-            account => account.id !== userAccounts.profile.account.id
+            (account) => account.id !== userAccounts.profile.account.id
           )) ||
         []
       );
@@ -142,12 +142,12 @@ export default class Header extends Component {
    */
   clearAllNotifications() {
     if (!this.props.clearAllNotifications) {
-      this.props.notifications.forEach(notification =>
+      this.props.notifications.forEach((notification) =>
         this.props.onNotificationClear(notification.id)
       );
     } else {
       this.props.clearAllNotifications(
-        this.props.notifications.map(notification => notification.id)
+        this.props.notifications.map((notification) => notification.id)
       );
     }
   }
@@ -204,7 +204,7 @@ export default class Header extends Component {
 
     return renderPopover(
       <div
-        ref={userProfile => {
+        ref={(userProfile) => {
           this.userProfile = userProfile;
         }}
         className={`${namespace}__popover--focus`}
@@ -244,7 +244,8 @@ export default class Header extends Component {
         {hasAccount && (
           <section
             className={classnames(`${namespace}__popover__profile__body`, {
-              [`${namespace}__popover__profile__body--account`]: !hasAccountList,
+              [`${namespace}__popover__profile__body--account`]:
+                !hasAccountList,
             })}
           >
             {!hasAccountList ? (
@@ -317,7 +318,7 @@ export default class Header extends Component {
 
     return renderPopover(
       <div
-        ref={notifications => {
+        ref={(notifications) => {
           this.notifications = notifications;
         }}
         className={`${namespace}__popover--focus`}
@@ -425,7 +426,7 @@ export default class Header extends Component {
     const notificationsButtonClasses = classnames(headerButtonNamespace, {
       [buttonActiveClass]: notifications,
       [`${headerButtonNamespace}--notifications`]:
-        this.props.notifications.filter(n => !n.acknowledged).length > 0,
+        this.props.notifications.filter((n) => !n.acknowledged).length > 0,
     });
 
     const profileButtonClasses = classnames(
@@ -494,7 +495,7 @@ export default class Header extends Component {
     const { isUserActive } = this.state;
     const classes = classnames(`${namespace}__container`, className);
 
-    const domainElement = title => (
+    const domainElement = (title) => (
       <span className={`${namespace}__link__title--domain`}>{title}</span>
     );
 
@@ -515,8 +516,9 @@ export default class Header extends Component {
             )}
           </Link>
           <ul
-            className={`${namespace}__group  ${isUserActive &&
-              `${namespace}__group--active`}`}
+            className={`${namespace}__group  ${
+              isUserActive && `${namespace}__group--active`
+            }`}
           >
             {this.renderIsUserActive()}
           </ul>

@@ -70,7 +70,7 @@ FilterPanelLabel.propTypes = {
 FilterPanelLabel.defaultProps = {
   children: undefined,
   count: undefined,
-  countLabel: count => `${count} items`,
+  countLabel: (count) => `${count} items`,
   className: undefined,
   countClassName: undefined,
   title: undefined,

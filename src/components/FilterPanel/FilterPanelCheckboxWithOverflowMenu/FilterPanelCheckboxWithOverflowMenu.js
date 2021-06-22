@@ -29,7 +29,7 @@ const FilterPanelCheckboxWithOverflowMenu = ({
   const [showOverflowButton, setShowOverflowButton] = useState(false);
   const [overflowIsOpen, setOverflowIsOpen] = useState(false);
 
-  const hideOverflowButton = activeElement =>
+  const hideOverflowButton = (activeElement) =>
     !overflowIsOpen &&
     !containerRef.current.contains(activeElement) &&
     setShowOverflowButton(false);

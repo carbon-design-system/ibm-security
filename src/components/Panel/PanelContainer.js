@@ -129,7 +129,7 @@ export default class PanelContainer extends Component {
    * Handles the key press focus trap.
    * @param {SyntheticEvent} event The event fired when a key has been pressed while the panel container is in focus.
    */
-  handleKeyPress = event => {
+  handleKeyPress = (event) => {
     if (event.key === 'Tab') {
       trapTabFocus(this.element, event);
     } else if (!this.props.disableEscape && event.key === 'Escape') {
