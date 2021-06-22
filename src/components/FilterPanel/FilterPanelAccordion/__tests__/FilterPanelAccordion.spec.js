@@ -1,6 +1,6 @@
 /**
  * @file Filter panel accordion tests.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import React from 'react';
@@ -10,12 +10,13 @@ import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithi
 import FilterPanelAccordion from '../FilterPanelAccordion';
 
 describe('FilterPanelAccordion', () => {
-  test('should have no Axe or DAP violations', async () => {
+  test('has no accessibility violations', async () => {
     const { container } = renderWithinLandmark(
       <FilterPanelAccordion heading="test accordion title" title="test title" />
     );
+
+    await expect(container).toBeAccessible('FilterPanelAccordion');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations('FilterPanelAccordion');
   });
 
   test('renders with a title attribute', () => {

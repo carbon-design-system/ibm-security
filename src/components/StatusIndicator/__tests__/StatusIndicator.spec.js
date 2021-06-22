@@ -1,6 +1,6 @@
 /**
  * @file Status step tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { render } from '@testing-library/react';
@@ -13,7 +13,7 @@ import { StatusIndicator, StatusStep } from '../../..';
 import { STATUS } from '../StatusStep/StatusStep';
 
 describe('StatusIndicator', () => {
-  test('should have no Axe or DAP violations', async () => {
+  test('has no accessibility violations', async () => {
     const { container } = renderWithinLandmark(
       <StatusIndicator
         title="test title"
@@ -41,8 +41,9 @@ describe('StatusIndicator', () => {
         />
       </StatusIndicator>
     );
+
+    await expect(container).toBeAccessible(`StatusIndicator`);
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations(`StatusIndicator`);
   });
 
   test('should add a custom class', () => {

@@ -1,6 +1,6 @@
 /**
  * @file External link tests.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import { render } from '@testing-library/react';
@@ -10,12 +10,13 @@ import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLa
 import { ExternalLink } from '../../..';
 
 describe('ExternalLink', () => {
-  test('should have no Axe or DAP violations', async () => {
+  test('has no accessibility violations', async () => {
     const { container } = renderWithinLandmark(
       <ExternalLink href="https://www.ibm.com/security">test link</ExternalLink>
     );
+
+    await expect(container).toBeAccessible('ExternalLink');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations('ExternalLink');
   });
 
   test('should add children as link text', () => {

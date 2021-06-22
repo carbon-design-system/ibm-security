@@ -1,6 +1,6 @@
 /**
  * @file Filter panel checkbox tests.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import React from 'react';
@@ -11,12 +11,13 @@ import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithi
 import FilterPanelCheckbox from '../FilterPanelCheckbox';
 
 describe('FilterPanelCheckbox', () => {
-  test('should have no Axe or DAP violations', async () => {
+  test('has no accessibility violations', async () => {
     const { container } = renderWithinLandmark(
       <FilterPanelCheckbox labelText="test checkbox" id="test-checkbox-id" />
     );
+
+    await expect(container).toBeAccessible('FilterPanelCheckbox');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations('FilterPanelCheckbox');
   });
 
   test('adds custom class name', () => {

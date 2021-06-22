@@ -7,8 +7,8 @@ import '@testing-library/jest-dom';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
+import toBeAccessible from './matchers/toBeAccessible';
 import toHaveNoAxeViolations from './matchers/toHaveNoAxeViolations';
-import toHaveNoDAPViolations from './matchers/toHaveNoDAPViolations';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -23,7 +23,7 @@ Enzyme.configure({ adapter: new Adapter() });
 //
 // For more information, check out the docs here:
 // https://jestjs.io/docs/en/configuration.html#setupfilesafterenv-array
-expect.extend({ toHaveNoAxeViolations, toHaveNoDAPViolations });
+expect.extend({ toBeAccessible, toHaveNoAxeViolations });
 
 // https://github.com/nickcolley/jest-axe/issues/147
 const { getComputedStyle } = window;

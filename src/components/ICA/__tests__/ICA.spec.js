@@ -1,6 +1,6 @@
 /**
  * @file Important content area tests.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { render } from '@testing-library/react';
@@ -12,12 +12,13 @@ import { ICA } from '../../..';
 import { Locales } from '../ICA';
 
 describe('ICA', () => {
-  test('should have no Axe or DAP violations', async () => {
+  test('has no accessibility violations', async () => {
     const { container } = renderWithinLandmark(
       <ICA label="test ICA" total={10} value={5} />
     );
+
+    await expect(container).toBeAccessible('ICA');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations('ICA');
   });
 
   test('should render en dash when `value` is `null`', () => {

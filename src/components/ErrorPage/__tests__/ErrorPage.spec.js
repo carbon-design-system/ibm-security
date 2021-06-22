@@ -1,6 +1,6 @@
 /**
  * @file ErrorPage Section tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { render } from '@testing-library/react';
@@ -10,7 +10,7 @@ import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLa
 import { ErrorPage } from '../../..';
 
 describe('ErrorPage', () => {
-  test('should have no Axe or DAP violations', async () => {
+  test('has no accessibility violations', async () => {
     const { container } = renderWithinLandmark(
       <ErrorPage
         statusCode={404}
@@ -32,8 +32,8 @@ describe('ErrorPage', () => {
       />
     );
 
+    await expect(container).toBeAccessible('ErrorPage');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations('ErrorPage');
   });
 
   test('should apply a title via `title`', () => {

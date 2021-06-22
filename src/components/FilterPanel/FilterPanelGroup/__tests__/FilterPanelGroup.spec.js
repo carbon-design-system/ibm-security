@@ -1,6 +1,6 @@
 /**
  * @file Filter panel group tests.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import React from 'react';
@@ -10,12 +10,13 @@ import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithi
 import FilterPanelGroup from '../FilterPanelGroup';
 
 describe('FilterPanelGroup', () => {
-  test('should have no Axe or DAP violations', async () => {
+  test('has no accessibility violations', async () => {
     const { container } = renderWithinLandmark(
       <FilterPanelGroup heading="test filter group" title="test title" />
     );
+
+    await expect(container).toBeAccessible('FilterPanelGroup');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations('FilterPanelGroup');
   });
 
   test('renders with a title attribute', () => {

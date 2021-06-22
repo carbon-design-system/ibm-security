@@ -1,6 +1,6 @@
 /**
  * @file Truncated list tests.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import React from 'react';
@@ -16,15 +16,16 @@ const getExpandButtonLabel = (expanded, shown, hidden) =>
   expanded ? 'View less' : `View more (${hidden})`;
 
 describe(TruncatedList.name, () => {
-  test('should have no Axe or DAP violations', async () => {
+  test('has no accessibility violations', async () => {
     const { container } = renderWithinLandmark(
       <>
         <TruncatedList>{createChildrenArray(6)}</TruncatedList>
         <TruncatedList>{createChildrenArray(11)}</TruncatedList>
       </>
     );
+
+    await expect(container).toBeAccessible(TruncatedList.name);
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations(TruncatedList.name);
   });
 
   test('adds custom class name', () => {

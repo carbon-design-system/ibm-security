@@ -8,31 +8,31 @@ Follow the [Guiding Principles of React Testing Library](https://github.com/test
 
 ### Accessibility
 
-Automated accessibility tests are required for significant component variations and should use existing `toHaveNoAxeViolations()` and `toHaveNoDAPViolations()` Jest matchers.
+Automated accessibility tests are required for significant component variations and should use existing `toHaveNoAxeViolations()` and `toBeAccessible()` Jest matchers.
 
 Use this structure for automated accessibility tests:
 
 ```jsx
-test('should have no Axe or DAP violations', async () => {
+test('has no accessibility violations', async () => {
   const { container } = render(<Component />);
 
+  await expect(container).toBeAccessible('ComponentName');
   await expect(container).toHaveNoAxeViolations();
-  await expect(container).toHaveNoDAPViolations('ComponentName');
 });
 
-test('should have no Axe or DAP violations with component variation', async () => {
+test('has no accessibility violations with component variation', async () => {
   const { container } = render(<Component variationProp={value} />);
 
+  await expect(container).toBeAccessible('ComponentName with variation');
   await expect(container).toHaveNoAxeViolations();
-  await expect(container).toHaveNoDAPViolations('ComponentName with variation');
 });
 
-test('should have no Axe or DAP violations with component variation that should be wrapped in a landmark node', async () => {
+test('has no accessibility violations with component variation that should be wrapped in a landmark node', async () => {
   // `renderWithinLandmark` can be used to wrap a component in a `main` node:
   const { container } = renderWithinLandmark(<Component />);
 
+  await expect(container).toBeAccessible('ComponentName');
   await expect(container).toHaveNoAxeViolations();
-  await expect(container).toHaveNoDAPViolations('ComponentName');
 });
 ```
 
@@ -41,10 +41,10 @@ test('should have no Axe or DAP violations with component variation that should 
 - Each significant variation of a component should have its own test block.
 - Use an **asynchronous** test block, and **await** each accessibility rule matcher.
 
-#### DAP requirements
+#### `accessibility-checker` requirements
 
-- DAP requires that components be rendered inside a valid landmark element. Use the `renderWithinLandmark` helper to wrap a component in a landmark `main` node.
-- DAP requires a unique id per test within a given component. (Hence, "ComponentName" and "ComponentName with variation")
+- `accessibility-checker` requires that components be rendered inside a valid landmark element. Use the `renderWithinLandmark` helper to wrap a component in a landmark `main` node.
+- `accessibility-checker` requires a unique ID per test within a given component. (Hence, "ComponentName" and "ComponentName with variation")
 
 ## User events
 
@@ -172,16 +172,18 @@ And in another example for the `StatusIcon`'s `status` prop, it makes sense to r
 ```jsx
 // Note: STATUS is an array of values.
 STATUS.forEach(status =>
-  test(`should have no Axe or DAP violations when \`status\` is  '${status}'`, async () => {
+  test(`has no accessibility violations when \`status\` is  '${status}'`, async () => {
     const main = document.createElement('main');
     render(<StatusIcon status={status} message="test message" />, {
       // DAP requires a landmark '<main>' in the DOM:
       container: document.body.appendChild(main),
     });
-    await expect(document.body).toHaveNoAxeViolations();
-    await expect(document.body).toHaveNoDAPViolations(
+
+    await expect(document.body).toBeAccessible(
       `StatusIcon with ${status} status`
     );
+
+    await expect(document.body).toHaveNoAxeViolations();
   })
 );
 ```
