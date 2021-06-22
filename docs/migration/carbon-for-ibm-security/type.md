@@ -1,8 +1,11 @@
 # Type
 
-The existing type specification will be deprecated in the next major version in favor of [Carbon's type](https://github.com/carbon-design-system/carbon/tree/main/packages/type#usage).
+The existing type specification will be deprecated in the next major version in
+favor of
+[Carbon's type](https://github.com/carbon-design-system/carbon/tree/main/packages/type#usage).
 
-Also refer to [migration in Carbon](https://github.com/carbon-design-system/carbon/blob/main/docs/migration/10.x-type.md).
+Also refer to
+[migration in Carbon](https://github.com/carbon-design-system/carbon/blob/main/docs/migration/10.x-type.md).
 
 ## Migrating
 
@@ -50,7 +53,8 @@ Also refer to [migration in Carbon](https://github.com/carbon-design-system/carb
 
 ### Feature flags
 
-If using `@carbon/type`, you can disable the legacy type output using a feature flag by writing the following Sass code before importing:
+If using `@carbon/type`, you can disable the legacy type output using a feature
+flag by writing the following Sass code before importing:
 
 ```scss
 $security--feature-flags: (

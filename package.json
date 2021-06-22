@@ -157,6 +157,7 @@
     "postcss": "^8.2.10",
     "postcss-scss": "^2.0.0",
     "prettier": "^1.16.4",
+    "prettier-config-carbon": "^0.4.0",
     "prismjs": "^1.15.0",
     "ramda": "^0.26.1",
     "react": "^16.8.6",

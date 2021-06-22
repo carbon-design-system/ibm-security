@@ -84,7 +84,10 @@ storiesOf(carbon('DatePicker'), module)
     <DatePicker
       {...props.datePicker()}
       datePickerType="single"
-      dateFormat={text('The date format (dateFormat in <DatePicker>)', 'm/d/Y')}
+      dateFormat={text(
+        'The date format (dateFormat in <DatePicker>)',
+        'm/d/Y'
+      )}
     >
       <DatePickerInput {...props.datePickerInput()} />
     </DatePicker>

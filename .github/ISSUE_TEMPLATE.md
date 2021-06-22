@@ -18,7 +18,8 @@ labels: 'status: triage'
 
 #### Accessibility
 
-- [ ] Semantic HTML is used by default where relevant, with ARIA attributes used as required
+- [ ] Semantic HTML is used by default where relevant, with ARIA attributes used
+      as required
 - [ ] No violations produced as a result of automated accessibility tests
 
 #### Breakpoints
@@ -31,7 +32,8 @@ labels: 'status: triage'
 
 #### Documentation
 
-- [ ] `defaultProps` and `propTypes` are included as part of component definitions, and documented in a human-readable format
+- [ ] `defaultProps` and `propTypes` are included as part of component
+      definitions, and documented in a human-readable format
 
 #### Internationalization
 
@@ -39,7 +41,8 @@ labels: 'status: triage'
 
 #### Sass
 
-- [ ] Follows the directory structure and naming convention, or provides a good justification for changing it
+- [ ] Follows the directory structure and naming convention, or provides a good
+      justification for changing it
 
 #### Storybook
 
@@ -48,5 +51,6 @@ labels: 'status: triage'
 
 #### Tests
 
-- [ ] Tests are behaviour-driven and written similarly to how a user would interact with the component
+- [ ] Tests are behaviour-driven and written similarly to how a user would
+      interact with the component
 - [ ] Automated accessibility tests
