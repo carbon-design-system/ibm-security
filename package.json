@@ -39,8 +39,7 @@
     "postinstall": "carbon-telemetry collect --install",
     "semantic-release": "semantic-release",
     "start": "start-storybook -p 3000 -s public",
-    "test": "yarn jest spec --ci -i",
-    "test:precommit": "yarn jest -b --passWithNoTests --testMatch src/**/*.spec.js --findRelatedTests",
+    "test": "yarn jest --ci -i",
     "test:imports": "scripts/checkImports.sh",
     "test:scss": "node scripts/scss",
     "test:ssr": "node scripts/ssr"
