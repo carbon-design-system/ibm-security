@@ -151,8 +151,6 @@
   &__action-overlay {
     position: absolute;
     z-index: $overlay--z-index;
-
-    // stylelint-disable-next-line carbon/layout-token-use
     top: -($body--height - $carbon--spacing-05);
     right: 0;
     bottom: $footer--height;
@@ -238,8 +236,6 @@
 
     // Ensure that this transparent div is always beneath the overlay and actions:
     z-index: $overlay--z-index - 1;
-
-    // stylelint-disable-next-line carbon/layout-token-use
     top: -($body--height + $header--height);
     right: 0;
     bottom: $footer--height;
