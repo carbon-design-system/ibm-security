@@ -7,10 +7,6 @@ import compile from '../../../scripts/scss/compile';
 
 describe('Styles', () => {
   test('Bundle', () => {
-    expect(
-      compile('src/index.scss').css.toString()
-
-      // .replace(/'/g, '"')
-    ).toMatchSnapshot();
+    expect(compile('src/index.scss').css.toString()).toMatchSnapshot();
   });
 });
