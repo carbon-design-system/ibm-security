@@ -5,7 +5,6 @@
 
 import { render } from '@testing-library/react';
 import React from 'react';
-import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import StatusIcon, { namespace, STATUS, SIZE } from '../StatusIcon';
 
@@ -13,25 +12,27 @@ import { carbonPrefix } from '../../../globals/namespace';
 
 describe('StatusIcon', () => {
   STATUS.forEach(status =>
-    test(`should have no Axe or DAP violations when \`status\` is  '${status}'`, async () => {
+    test(`has no accessibility violations when \`status\` is  '${status}'`, async () => {
       const { container } = render(
         <StatusIcon status={status} message="test message" />
       );
-      await expect(container).toHaveNoAxeViolations();
-      await expect(container).toHaveNoDAPViolations(
+
+      await expect(container).toBeAccessible(
         `StatusIcon with ${status} status`
       );
+
+      await expect(container).toHaveNoAxeViolations();
     })
   );
 
-  test('should have no Axe or DAP violations when `status` is  `undefined`', async () => {
-    const { container } = renderWithinLandmark(
-      <StatusIcon message="test message" />
-    );
-    await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations(
+  test('has no accessibility violations when `status` is  `undefined`', async () => {
+    const { container } = render(<StatusIcon message="test message" />);
+
+    await expect(container).toBeAccessible(
       'StatusIcon with `undefined` status'
     );
+
+    await expect(container).toHaveNoAxeViolations();
   });
 
   SIZE.forEach(size =>

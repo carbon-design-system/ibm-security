@@ -1,12 +1,10 @@
 /**
  * @file Important content area tests.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { render } from '@testing-library/react';
 import React from 'react';
-
-import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { ICA } from '../../..';
 import { Locales, namespace } from '../ICA';
@@ -15,12 +13,11 @@ const sizes = ['lg', 'xl'];
 const testValues = [10, 11];
 
 describe('ICA', () => {
-  test('should have no Axe or DAP violations', async () => {
-    const { container } = renderWithinLandmark(
-      <ICA label="test ICA" total={10} value={5} />
-    );
+  test('has no accessibility violations', async () => {
+    const { container } = render(<ICA label="test ICA" total={10} value={5} />);
+
+    await expect(container).toBeAccessible('ICA');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations('ICA');
   });
 
   test('should render en dash when `value` is `null`', () => {

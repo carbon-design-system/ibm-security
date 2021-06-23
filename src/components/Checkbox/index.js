@@ -1,7 +1,6 @@
 /**
  * @file Checkbox entry point.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-export default from 'carbon-components-react/lib/components/Checkbox';
-export CheckboxSkeleton from 'carbon-components-react/lib/components/Checkbox/Checkbox.Skeleton';
+export { Checkbox as default, CheckboxSkeleton } from 'carbon-components-react';

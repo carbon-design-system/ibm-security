@@ -50,10 +50,12 @@ $tearsheet__layer: z(
 
   @include input__background-color;
 
-  display: flex;
   position: fixed;
-  left: $tearsheet__position__base;
+  z-index: $tearsheet__layer;
   bottom: 0;
+  left: $tearsheet__position__base;
+
+  display: flex;
   width: calc(100% - #{$tearsheet__sizing__margin * 2});
   height: calc(100vh - #{$tearsheet__sizing__dimensions});
   min-height: carbon--mini-units($count: 40);
@@ -61,7 +63,6 @@ $tearsheet__layer: z(
   margin-left: $tearsheet__sizing__margin;
   background-color: $tearsheet__color__background;
   transform: translate3d(#{$tearsheet__position}, 0, 0);
-  z-index: $tearsheet__layer;
 
   &__transition {
     &--enter,
@@ -106,8 +107,8 @@ $tearsheet__layer: z(
 
 @mixin tearsheet__button {
   width: 100%;
-  align-items: start;
   flex-direction: column;
+  align-items: start;
 }
 
 @mixin tearsheet {
@@ -127,6 +128,7 @@ $tearsheet__layer: z(
 
   &__button {
     @include tearsheet__button;
+
     max-width: carbon--mini-units($count: 33);
 
     &--tertiary {
@@ -136,6 +138,7 @@ $tearsheet__layer: z(
 
       &__text {
         @include carbon--type-style($name: label-01);
+
         color: $tearsheet__color__text;
       }
     }
@@ -150,23 +153,25 @@ $tearsheet__layer: z(
 
     &__title {
       @include carbon--type-style($name: productive-heading-03);
+
       margin-top: 0;
       margin-bottom: $carbon--spacing-02;
     }
 
     &__subtitle {
       @include carbon--type-style($name: caption-01);
+
       margin-top: 0;
       margin-bottom: $tearsheet__spacing__padding;
       color: $text-02;
     }
 
     &__footer {
-      display: flex;
       position: absolute;
       right: 0;
       bottom: 0;
       left: 0;
+      display: flex;
       padding-bottom: $tearsheet__footer__spacing__padding;
       padding-left: $tearsheet__footer__spacing__padding;
     }
@@ -175,10 +180,10 @@ $tearsheet__layer: z(
   &__main {
     position: relative;
     display: flex;
-    padding-top: $tearsheet__spacing__padding;
     flex: 1;
     flex-direction: column;
     justify-content: space-between;
+    padding-top: $tearsheet__spacing__padding;
 
     &__title,
     &__content {
@@ -195,14 +200,15 @@ $tearsheet__layer: z(
 
     &__title {
       @include carbon--type-style($name: productive-heading-04);
+
       padding-right: $tearsheet__spacing__padding;
       margin-top: 0;
       margin-bottom: $tearsheet__spacing__padding;
     }
 
     &__content {
-      display: flex;
       position: relative;
+      display: flex;
       width: 100%;
       min-height: 0;
       box-sizing: border-box;

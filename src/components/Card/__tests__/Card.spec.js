@@ -1,20 +1,19 @@
 /**
  * @file Card tests.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
+import userEvent from '@testing-library/user-event';
 import { render } from '@testing-library/react';
 import React from 'react';
-import userEvent from '@testing-library/user-event';
-import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { Card } from '../../..';
 
 import { icon } from '../../_mocks_';
 
 describe('Card2', () => {
-  test('should have no Axe or DAP violations', async () => {
-    const { container } = renderWithinLandmark(
+  test('has no accessibility violations', async () => {
+    const { container } = render(
       <Card
         header={{
           image: icon,
@@ -30,12 +29,13 @@ describe('Card2', () => {
         }}
       />
     );
+
+    await expect(container).toBeAccessible('Card');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations('Card');
   });
 
-  test('should have no Axe or DAP violations when rendered as a link', async () => {
-    const { container } = renderWithinLandmark(
+  test('has no accessibility violations when rendered as a link', async () => {
+    const { container } = render(
       <Card
         header={{
           title: 'test title',
@@ -43,8 +43,9 @@ describe('Card2', () => {
         link="#"
       />
     );
+
+    await expect(container).toBeAccessible('Card as a link');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations('Card as a link');
   });
 
   test('should invoke click mock when card is clicked', () => {

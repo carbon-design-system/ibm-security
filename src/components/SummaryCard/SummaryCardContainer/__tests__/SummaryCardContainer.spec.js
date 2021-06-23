@@ -5,8 +5,8 @@
 
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+
 import React, { Fragment } from 'react';
-import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
 import {
   SummaryCard,
@@ -27,8 +27,8 @@ const summaryCards = [
 ];
 
 describe('SummaryCardContainer', () => {
-  test('should have no Axe or DAP violations', async () => {
-    const { container } = renderWithinLandmark(
+  test('has no accessibility violations', async () => {
+    const { container } = render(
       <SummaryCardContainer
         render={({ getBatchActionProps, getSelectionProps, summaryCards }) => (
           <Fragment>
@@ -56,11 +56,11 @@ describe('SummaryCardContainer', () => {
       />
     );
 
+    await expect(container).toBeAccessible('SummaryCardContainer');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations('SummaryCardContainer');
   });
 
-  test('should have no Axe or DAP violations when cards are selected', async () => {
+  test('has no accessibility violations when cards are selected', async () => {
     const { container, getByText } = render(
       <SummaryCardContainer
         render={({ getBatchActionProps, getSelectionProps, summaryCards }) => (
@@ -95,10 +95,10 @@ describe('SummaryCardContainer', () => {
     userEvent.click(getByText(/test select 0/i));
     userEvent.click(getByText(/test select 1/i));
 
-    await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations(
+    await expect(container).toBeAccessible(
       'SummaryCardContainer with selected cards'
     );
+    await expect(container).toHaveNoAxeViolations();
   });
 
   test('should cycle elements in tab order', () => {
@@ -178,6 +178,7 @@ describe('SummaryCardContainer', () => {
     userEvent.click(getByText(/test select 1/i));
 
     userEvent.tab();
+    userEvent.tab();
 
     // The batch action button:
     expect(getByText(/test batch action/i)).toHaveFocus();
@@ -197,6 +198,7 @@ describe('SummaryCardContainer', () => {
     // The first summary card select:
     expect(getByLabelText(/test select 1/i)).toHaveFocus();
 
+    userEvent.tab();
     userEvent.tab();
 
     // Loop complete.

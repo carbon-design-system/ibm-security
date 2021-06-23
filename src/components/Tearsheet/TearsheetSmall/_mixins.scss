@@ -79,10 +79,10 @@
 
   &__body {
     display: flex;
-    min-height: 0;
     width: 100%;
-    margin-bottom: $carbon--spacing-11;
+    min-height: 0;
     flex-grow: 1;
+    margin-bottom: $carbon--spacing-11;
   }
 
   &__scroll-gradient__content {
@@ -104,16 +104,17 @@
   }
 
   &__footer {
-    display: flex;
     position: fixed;
     bottom: 0;
+    display: flex;
     width: 100%;
 
     &__button {
       @include tearsheet__button;
+
       max-width: 50%;
-      margin-left: auto;
       flex: 1;
+      margin-left: auto;
 
       &--secondary {
         margin-left: 0;

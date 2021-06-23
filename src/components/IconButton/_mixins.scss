@@ -1,7 +1,7 @@
 ////
 /// Icon button mixins.
 /// @group button--icon
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -60,17 +60,18 @@ $button--icon__transition__timing-function: $timing-function;
   @include button-reset;
   @include button--icon__size($count: $button--icon__sizing__dimensions);
 
-  display: flex;
   position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-top: 0;
   padding-right: 0;
   padding-left: 0;
-  color: $icon-01;
-  background-color: inherit;
-  align-items: center;
   border: 0;
+  background-color: inherit;
+  color: $icon-01;
   fill: currentColor;
-  justify-content: center;
   transition: $transition-duration $button--icon__transition__timing-function
     background-color;
 
@@ -81,12 +82,13 @@ $button--icon__transition__timing-function: $timing-function;
 
   &:focus {
     @include focus-outline('outline');
+
     border-width: 0;
   }
 
   &:disabled {
-    fill: $disabled-03;
     cursor: not-allowed;
+    fill: $disabled-03;
 
     &,
     &:hover,
@@ -119,11 +121,13 @@ $button--icon__transition__timing-function: $timing-function;
 
     &::before {
       @include tooltip;
+
       content: attr(aria-label);
     }
 
     &::after {
       @include tooltip__arrow;
+
       opacity: 0;
     }
 

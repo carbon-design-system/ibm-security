@@ -1,7 +1,7 @@
 ////
 /// Tooltip mixins.
 /// @group tooltip
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -27,25 +27,26 @@ $tooltip__arrow__sizing__border: carbon--mini-units(
 @mixin tooltip__arrow {
   position: absolute;
   display: inline-block;
-  border-color: transparent;
-  border-style: solid;
   border-width: $tooltip__arrow__sizing__border;
+  border-style: solid;
+  border-color: transparent;
+  content: '';
+  opacity: 1;
   transition-duration: $transition-duration--fast;
   transition-property: opacity;
-  opacity: 1;
-  content: '';
 }
 
 @mixin tooltip {
   @include carbon--type-style($name: body-short-01);
 
-  display: flex;
   position: absolute;
-  padding: $carbon--spacing-01 $carbon--spacing-05;
-  color: $inverse-01;
-  background-color: $tooltip__color__background;
+
+  display: flex;
   align-items: center;
+  padding: $carbon--spacing-01 $carbon--spacing-05;
+  background-color: $tooltip__color__background;
   border-radius: carbon--mini-units($count: 0.25);
+  color: $inverse-01;
   opacity: 0;
   pointer-events: none;
   transition-duration: $transition-duration--fast;

@@ -9,8 +9,8 @@
 @import '../deprecate/index';
 
 $deprecate: deprecate(
-  $actual: 'spacing.module.scss',
-  $expected: '@carbon/layout',
+  $actual: '@carbon/ibm-security/scss/globals/scss-exports/spacing.module',
+  $expected: '@carbon/layout/scss/layout',
   $url:
     'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/carbon-for-ibm-security/layout.md#imports',
 );
@@ -20,17 +20,17 @@ $deprecate: deprecate(
 $spacing--baseline: $carbon--spacing-05;
 
 :export {
-  spacing-baseline: $spacing--baseline;
+  spacing-2xl: $carbon--spacing-08;
+  spacing-2xs: $carbon--spacing-02;
+  spacing-3xl: $carbon--spacing-09;
 
   spacing-3xs: $carbon--spacing-01;
-  spacing-2xs: $carbon--spacing-02;
-  spacing-xs: $carbon--spacing-03;
+  spacing-baseline: $spacing--baseline;
+  spacing-lg: $carbon--spacing-06;
+  spacing-md: $spacing--baseline;
 
   spacing-sm: $carbon--spacing-04;
-  spacing-md: $spacing--baseline;
-  spacing-lg: $carbon--spacing-06;
 
   spacing-xl: $carbon--spacing-07;
-  spacing-2xl: $carbon--spacing-08;
-  spacing-3xl: $carbon--spacing-09;
+  spacing-xs: $carbon--spacing-03;
 }
