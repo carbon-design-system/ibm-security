@@ -1,20 +1,19 @@
 /**
  * @file Status step tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { render } from '@testing-library/react';
-import React from 'react';
 import userEvent from '@testing-library/user-event';
-import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
+import React from 'react';
 
 import { StatusIndicator, StatusStep } from '../../..';
 
 import { STATUS } from '../StatusStep/StatusStep';
 
 describe('StatusIndicator', () => {
-  test('should have no Axe or DAP violations', async () => {
-    const { container } = renderWithinLandmark(
+  test('has no accessibility violations', async () => {
+    const { container } = render(
       <StatusIndicator
         title="test title"
         retry={{
@@ -41,8 +40,9 @@ describe('StatusIndicator', () => {
         />
       </StatusIndicator>
     );
+
+    await expect(container).toBeAccessible(`StatusIndicator`);
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations(`StatusIndicator`);
   });
 
   test('should add a custom class', () => {

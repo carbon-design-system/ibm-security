@@ -1,20 +1,19 @@
 /**
  * @file Summary card skeleton tests.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import { render } from '@testing-library/react';
 import React from 'react';
-import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
 import { SummaryCardSkeleton } from '../../../..';
 
 describe('SummaryCardSkeleton', () => {
-  test('should have no Axe or DAP violations', async () => {
-    const { container } = renderWithinLandmark(<SummaryCardSkeleton />);
+  test('has no accessibility violations', async () => {
+    const { container } = render(<SummaryCardSkeleton />);
 
+    await expect(container).toBeAccessible('SummaryCardSkeleton');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations('SummaryCardSkeleton');
   });
 
   test('adds a class to the containing node', () => {

@@ -1,6 +1,6 @@
 {
   "name": "@carbon/ibm-security",
-  "version": "1.43.0-prerelease.1",
+  "version": "1.43.0-prerelease.2",
   "description": "Carbon for IBM Security",
   "license": "Apache-2.0",
   "main": "lib/index.js",
@@ -172,10 +172,7 @@
     "style-loader": "^0.23.1",
     "stylelint": "^13.13.1",
     "stylelint-config-carbon": "^1.6.0",
-    "stylelint-config-recommended-scss": "^4.2.0",
-    "stylelint-no-unsupported-browser-features": "^5.0.1",
     "stylelint-plugin-carbon-tokens": "^0.11.0",
-    "stylelint-scss": "^3.19.0",
     "webpack-merge": "^5.1.4",
     "yarn": "^1.16.0"
   },

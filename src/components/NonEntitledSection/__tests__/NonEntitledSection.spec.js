@@ -1,18 +1,17 @@
 /**
  * @file Non Entitled Section tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { render } from '@testing-library/react';
 import React from 'react';
-import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { icon } from '../../_mocks_';
 import { NonEntitledSection } from '../../..';
 
 describe('NonEntitledSection', () => {
-  test('should have no Axe or DAP violations', async () => {
-    const { container } = renderWithinLandmark(
+  test('has no accessibility violations', async () => {
+    const { container } = render(
       <NonEntitledSection
         title="test title"
         subTitle="test subtitle"
@@ -33,8 +32,8 @@ describe('NonEntitledSection', () => {
       />
     );
 
+    await expect(container).toBeAccessible('NonEntitledSection');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations('NonEntitledSection');
   });
 
   test('should apply a title via `title`', () => {

@@ -8,21 +8,21 @@ import { render } from '@testing-library/react';
 
 import { ButtonKinds } from 'carbon-components-react/es/prop-types/types';
 import React from 'react';
-import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { Button } from '../../..';
 import { carbonPrefix } from '../../../globals/namespace';
 import { namespace } from '../Button';
 
 describe('Button', () => {
-  test('should have no Axe or DAP violations when `loading`', async () => {
-    const { container } = renderWithinLandmark(
+  test('has no accessibility violations when `loading`', async () => {
+    const { container } = render(
       <Button loading iconDescription="test button icon description">
         test loading button
       </Button>
     );
+
+    await expect(container).toBeAccessible('Button that is loading');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations('Button that is loading');
   });
 
   test('should add custom class', () => {

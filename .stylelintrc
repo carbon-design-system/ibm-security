@@ -1,10 +1,6 @@
 {
-  "extends": ["stylelint-config-carbon", "stylelint-config-recommended-scss"],
-  "plugins": [
-    "stylelint-no-unsupported-browser-features",
-    "stylelint-plugin-carbon-tokens",
-    "stylelint-scss"
-  ],
+  "extends": ["stylelint-config-carbon"],
+  "plugins": ["stylelint-plugin-carbon-tokens"],
   "rules": {
     "carbon/layout-token-use": [true, { "severity": "warning" }],
     "carbon/motion-token-use": [true, { "severity": "warning" }],
@@ -18,12 +14,6 @@
       }
     ],
     "declaration-property-value-disallowed-list": null,
-    "plugin/no-unsupported-browser-features": [
-      true,
-      {
-        "severity": "warning"
-      }
-    ],
     "property-no-unknown": [
       true,
       {
