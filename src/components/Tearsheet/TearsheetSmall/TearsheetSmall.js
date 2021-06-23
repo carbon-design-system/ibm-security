@@ -35,18 +35,20 @@ class TearsheetSmall extends PureComponent {
   };
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    if (prevState.isOpen !== nextProps.isOpen)
+    if (prevState.isOpen !== nextProps.isOpen) {
       return {
         isOpen: nextProps.isOpen,
       };
+    }
     if (
       prevState.loading !== nextProps.loading ||
       prevState.loadingMessage !== nextProps.loadingMessage
-    )
+    ) {
       return {
         loading: nextProps.loading,
         loadingMessage: nextProps.loadingMessage,
       };
+    }
     return null;
   }
 

@@ -308,10 +308,11 @@ export default class Header extends Component {
     const { isActive } = this.state;
     const { length } = notifications;
 
-    if (isActive.notifications)
+    if (isActive.notifications) {
       setTimeout(() => {
         this.notifications.focus();
       }, 0);
+    }
 
     const popoverLabelId = getPopoverLabelId('notifications');
 

@@ -1,13 +1,3 @@
 {
-  "extends": [
-    "carbon",
-    "plugin:compat/recommended",
-    "plugin:security/recommended",
-    "prettier"
-  ],
-  "plugins": ["compat", "jsx-a11y", "security"],
-  "rules": {
-    "react/display-name": "warn",
-    "react/prop-types": "warn"
-  }
+  "extends": ["carbon"]
 }

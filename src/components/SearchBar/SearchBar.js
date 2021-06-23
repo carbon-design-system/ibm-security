@@ -169,7 +169,9 @@ export default class SearchBar extends React.Component {
       titleText,
     } = this.props;
 
-    if (scopes.length === 0) return null;
+    if (scopes.length === 0) {
+      return null;
+    }
 
     return (
       <MultiSelect

@@ -3,8 +3,6 @@
  * @copyright IBM Security 2019 - 2021
  */
 
-/* eslint-disable compat/compat */
-
 import { action } from '@storybook/addon-actions';
 import { object, boolean, select } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';

@@ -45,8 +45,9 @@ const TableToolbarDownload = ({ headers, rows, title, filename, label }) => {
       renderIcon={Download16}
       label={label}
       onClick={() => {
-        if (rows.length > 0 && headers.length > 0)
+        if (rows.length > 0 && headers.length > 0) {
           csvExporter.generateCsv(csvRows);
+        }
       }}
     />
   );

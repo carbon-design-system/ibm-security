@@ -1,9 +1,7 @@
 /**
  * @file Wizard.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
-
-/* eslint-disable compat/compat,no-nested-ternary */
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
@@ -179,7 +177,9 @@ class Wizard extends Component {
 
   closeAction = () => {
     this.props.onClose(this.state.componentState);
-    if (!this.state.controlledOpen) this.setState({ isOpen: false });
+    if (!this.state.controlledOpen) {
+      this.setState({ isOpen: false });
+    }
   };
 
   deleteAction = async () => {

@@ -69,10 +69,11 @@ class StatusIndicator extends Component {
   };
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    if (prevState.retry !== nextProps.retry)
+    if (prevState.retry !== nextProps.retry) {
       return {
         retry: nextProps.retry,
       };
+    }
     return null;
   }
 
