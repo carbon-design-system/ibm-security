@@ -3,10 +3,7 @@
  * @copyright IBM Security 2019 - 2021
  */
 
-import Add16 from '@carbon/icons-react/lib/add/16';
-import Add24 from '@carbon/icons-react/lib/add/24';
-import Search16 from '@carbon/icons-react/lib/search/16';
-import Search24 from '@carbon/icons-react/lib/search/24';
+import { Add16, Add24, Search16, Search24 } from '@carbon/icons-react';
 
 import { action } from '@storybook/addon-actions';
 import { boolean, select, text } from '@storybook/addon-knobs';

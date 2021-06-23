@@ -3,14 +3,14 @@
  * @copyright IBM Security 2019 - 2021
  */
 
-import React from 'react';
-import AddFilled16 from '@carbon/icons-react/lib/add--filled/16';
-import Search16 from '@carbon/icons-react/lib/search/16';
-import { storiesOf } from '@storybook/react';
+import { AddFilled16, Search16 } from '@carbon/icons-react';
+
 import { action } from '@storybook/addon-actions';
 import { boolean, text, select } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
 
 import { settings } from 'carbon-components';
+import React from 'react';
 
 import { carbon } from '../../../.storybook';
 

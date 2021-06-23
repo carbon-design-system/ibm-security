@@ -1,15 +1,15 @@
 /**
  * @file Panel v2.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 /* eslint-disable no-useless-computed-key, react/require-default-props */
 
-import Close20 from '@carbon/icons-react/lib/close/20';
+import { Close20 } from '@carbon/icons-react';
 
-import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
-import requiredIfGivenPropIsTruthy from 'carbon-components-react/lib/prop-types/requiredIfGivenPropIsTruthy';
-import setupGetInstanceId from 'carbon-components-react/lib/tools/setupGetInstanceId';
+import deprecate from 'carbon-components-react/es/prop-types/deprecate';
+import requiredIfGivenPropIsTruthy from 'carbon-components-react/es/prop-types/requiredIfGivenPropIsTruthy';
+import setupGetInstanceId from 'carbon-components-react/es/tools/setupGetInstanceId';
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';

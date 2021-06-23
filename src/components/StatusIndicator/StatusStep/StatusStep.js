@@ -1,14 +1,13 @@
 /**
  * @file Status step.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-import Error20 from '@carbon/icons-react/lib/error/20';
-import RadioButton20 from '@carbon/icons-react/lib/radio-button/20';
+import { Error20, RadioButton20 } from '@carbon/icons-react';
 
-import React, { Component } from 'react';
 import classnames from 'classnames';
 import { string, oneOf } from 'prop-types';
+import React, { Component } from 'react';
 
 import { appendComponentNamespace } from '../../../globals/namespace';
 import { namespace as indicatorNamespace } from '../StatusIndicator';

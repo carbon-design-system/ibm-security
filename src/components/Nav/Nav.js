@@ -1,6 +1,6 @@
 /**
  * @file Navigation class.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import classnames from 'classnames';
@@ -15,7 +15,7 @@ import { getComponentNamespace } from '../../globals/namespace';
 
 export const navNamespace = getComponentNamespace('nav');
 
-const NavListName = <NavList />.type.name;
+const { name } = NavList;
 
 /**
  * Navigation class.
@@ -38,12 +38,6 @@ export default class Nav extends Component {
     this.handleListClick = this.handleListClick.bind(this);
 
     this.navigationLists = [];
-  }
-
-  componentWillReceiveProps({ activeHref }) {
-    if (activeHref) {
-      this.setState({ activeHref });
-    }
   }
 
   /**
@@ -120,7 +114,7 @@ export default class Nav extends Component {
    */
   handleListClick(id) {
     Children.forEach(this.props.children, ({ props, type }, index) => {
-      if (type.name === NavListName) {
+      if (type.name === name) {
         const childId = `${navNamespace}__list--${index}`;
 
         if (childId !== id && !props.isExpandedOnPageload) {
@@ -152,7 +146,7 @@ export default class Nav extends Component {
 
         <ul className={`${navNamespace}__wrapper`} role="menubar">
           {Children.map(children, (child, index) =>
-            child.type.name === NavListName
+            child.type.name === name
               ? this.buildNewListChild(child, index)
               : this.buildNewItemChild(child, index)
           )}

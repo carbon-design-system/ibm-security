@@ -1,7 +1,7 @@
 ////
 /// Motion.
 /// @group motion
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 /// Timing function.
@@ -44,8 +44,8 @@ $transition-duration--fast: 0.1s;
   &--enter,
   &--leave {
     &--active {
-      transition-timing-function: $timing-function;
       opacity: 1;
+      transition-timing-function: $timing-function;
     }
   }
   &--enter {

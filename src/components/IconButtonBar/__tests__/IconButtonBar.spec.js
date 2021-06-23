@@ -1,17 +1,16 @@
 /**
  * @file IconButtonBar tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
+
+import { Add16, Edit16, Locked16, Notification16 } from '@carbon/icons-react';
 
 import { render } from '@testing-library/react';
 import { shallow } from 'enzyme';
 import React from 'react';
-import Add16 from '@carbon/icons-react/lib/add/16';
-import Edit16 from '@carbon/icons-react/lib/edit/16';
-import Locked16 from '@carbon/icons-react/lib/locked/16';
-import Notification16 from '@carbon/icons-react/lib/notification/16';
 
 import { IconButtonBar } from '../../..';
+
 import {
   className,
   iconClassName,

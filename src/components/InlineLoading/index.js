@@ -1,6 +1,6 @@
 /**
  * @file Inline loading entry point.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-export default from 'carbon-components-react/lib/components/InlineLoading';
+export { InlineLoading as default } from 'carbon-components-react';

@@ -1,9 +1,9 @@
 /**
  * @file Time indicator.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-import Time16 from '@carbon/icons-react/lib/time/16';
+import { Time16 } from '@carbon/icons-react';
 
 import classnames from 'classnames';
 import { node, string } from 'prop-types';

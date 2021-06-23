@@ -1,39 +1,36 @@
 /**
  * @file Data decorator tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+
 import React from 'react';
-import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { Button, DataDecorator } from '../../..';
-
 import { namespace as panelNamespace } from '../../PanelV2/PanelV2';
 
 describe('DataDecorator', () => {
-  test('should have no Axe or DAP violations', async () => {
-    const { container } = renderWithinLandmark(
+  test('has no accessibility violations', async () => {
+    const { container } = render(
       <DataDecorator type="IP" value="10.0.0.0" score={0} href="#" />
     );
 
+    await expect(container).toBeAccessible('DataDecorator');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations('DataDecorator');
   });
 
-  test('should have no Axe or DAP violations with an open panel', async () => {
-    const { container, getByText } = renderWithinLandmark(
+  test('has no accessibility violations with an open panel', async () => {
+    const { container, getByText } = render(
       <DataDecorator type="IP" value="10.0.0.0" score={0} href="#" />
     );
 
     // Click on the data decorator to open the connected panel:
     userEvent.click(getByText(/10.0.0.0/i).closest('button'));
 
+    await expect(container).toBeAccessible('DataDecorator with open panel');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations(
-      'DataDecorator with open panel'
-    );
   });
 
   test('should use the value of the data decorator to the panel title when no mid-line truncation is required due to within maxLength', () => {
@@ -126,7 +123,7 @@ describe('DataDecorator', () => {
     expect(onCloseMock).toHaveBeenCalledTimes(1);
   });
 
-  test('should traverse between data decorator and open panel in tab order', async () => {
+  test('should traverse between data decorator and open panel in tab order', () => {
     const onCloseMock = jest.fn();
     const { getByLabelText, getByText } = render(
       <DataDecorator
@@ -150,9 +147,8 @@ describe('DataDecorator', () => {
 
     userEvent.tab();
 
-    // Expect the data decorator to still have focus
-    // because it is currently the only interactive element:
-    expect(getByText(/10.0.0.0/i).closest('button')).toHaveFocus();
+    // https://github.com/testing-library/user-event/issues/365
+    expect(document.body).toHaveFocus();
 
     // Simulate a click to open the connected panel.
     userEvent.click(getByText(/10.0.0.0/i).closest('button'));

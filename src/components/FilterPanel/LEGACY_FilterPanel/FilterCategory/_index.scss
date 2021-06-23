@@ -28,13 +28,14 @@
     @include carbon--font-weight($weight: semibold);
 
     display: flex;
+    justify-content: space-between;
     margin-top: $carbon--spacing-03;
     margin-bottom: $carbon--spacing-05;
-    justify-content: space-between;
   }
 
   &__count {
     @include carbon--font-weight($weight: regular);
+
     color: $text-02;
   }
 }

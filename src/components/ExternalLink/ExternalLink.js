@@ -1,13 +1,13 @@
 /**
  * @file External link.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-import Launch16 from '@carbon/icons-react/lib/launch/16';
+import { Launch16 } from '@carbon/icons-react';
 
-import React from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 import Icon from '../Icon';
 import Link from '../Link';

@@ -1,10 +1,12 @@
 /**
  * @file Table overflow cell that holds an Overflow Menu inside a Data Table.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
-import React from 'react';
+
+import { TableCell as CarbonTableCell } from 'carbon-components-react';
 import classnames from 'classnames';
-import { TableCell as CarbonTableCell } from 'carbon-components-react/lib/components/DataTable';
+import React from 'react';
+
 import { overflowCellNamespace } from './constants';
 
 /**
