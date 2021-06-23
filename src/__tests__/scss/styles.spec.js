@@ -3,10 +3,19 @@
  * @copyright IBM Security 2020 - 2021
  */
 
-import compile from '../../../scripts/scss/compile';
+import { renderSync } from 'node-sass';
+import { resolve } from 'path';
+
+import { root } from '../../../config';
 
 describe('Styles', () => {
   test('Bundle', () => {
-    expect(compile('src/index.scss').css.toString()).toMatchSnapshot();
+    expect(
+      renderSync({
+        file: resolve(root, 'src/index.scss'),
+        includePaths: [resolve(root, 'node_modules')],
+        outputStyle: 'expanded',
+      }).css.toString()
+    ).toMatchSnapshot();
   });
 });
