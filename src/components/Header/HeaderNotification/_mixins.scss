@@ -1,7 +1,7 @@
 ////
 /// Header notification mixins.
 /// @group header__notification
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -31,17 +31,18 @@
   justify-content: space-between;
 
   &__content {
+    flex-grow: 1;
     padding-top: $header__notification__spacing__padding;
     padding-bottom: $header__notification__spacing__padding;
     padding-left: $carbon--spacing-03;
-    flex-grow: 1;
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
 
     &:focus {
       @include header__popover__item--focus;
-      transform: translate3d(0, 0, 0);
+
       opacity: 1;
+      transform: translate3d(0, 0, 0);
     }
 
     /// Tooltip selector.
@@ -75,6 +76,7 @@
 
   &__details {
     @include carbon--type-style($name: caption-01);
+
     display: block;
     margin-bottom: $carbon--spacing-03;
   }
@@ -86,8 +88,9 @@
   &__button {
     @include header__popover__button--icon;
 
-    cursor: inherit;
     flex-shrink: 0;
+
+    cursor: inherit;
     opacity: 0;
     transform: translate3d(carbon--mini-units($count: 1), 0, 0);
     transition-duration: $header__notification__transition-duration;
@@ -96,15 +99,16 @@
 
     &:focus {
       @include header__popover__item--focus;
-      transform: translate3d(0, 0, 0);
+
       opacity: 1;
+      transform: translate3d(0, 0, 0);
     }
 
     &:active,
     &:focus,
     &:hover {
-      cursor: pointer;
       background-color: $active-tertiary;
+      cursor: pointer;
     }
   }
 

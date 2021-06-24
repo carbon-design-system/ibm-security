@@ -7,20 +7,19 @@ import userEvent from '@testing-library/user-event';
 import { render } from '@testing-library/react';
 import React from 'react';
 
-import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
-
 import { InteractiveTag } from '../../..';
 import { namespace } from '../InteractiveTag';
 
 describe('InteractiveTag', () => {
   const dataTestId = 'dataTestId';
 
-  test('should have no Axe or DAP violations', async () => {
-    const { container } = renderWithinLandmark(
+  test('has no accessibility violations', async () => {
+    const { container } = render(
       <InteractiveTag removable>test tag</InteractiveTag>
     );
+
+    await expect(container).toBeAccessible('InteractiveTag');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations('InteractiveTag');
   });
 
   test('should add close button with `aria-label` when `removable` is `true`', () => {

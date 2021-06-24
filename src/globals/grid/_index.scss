@@ -33,12 +33,12 @@
     }
 
     .#{$prefix}-container {
-      box-sizing: border-box;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: #{map-get($last, breakpoint)}rem;
-      overflow-x: hidden;
       width: 100vw;
+      max-width: #{map-get($last, breakpoint)}rem;
+      box-sizing: border-box;
+      margin-right: auto;
+      margin-left: auto;
+      overflow-x: hidden;
     }
 
     .#{$prefix}-container--left {
@@ -50,14 +50,14 @@
     }
 
     .#{$prefix}-grid {
-      align-items: flex-start;
+      position: relative;
+      display: grid;
       box-sizing: border-box;
+      flex-wrap: wrap;
+      align-items: flex-start;
       @if $includeFlexFallback {
         display: flex;
       }
-      display: grid;
-      flex-wrap: wrap;
-      position: relative;
 
       > * {
         box-sizing: border-box;
@@ -121,9 +121,9 @@
     @supports (display: grid) {
       .#{$prefix}-grid > *,
       .#{$prefix}-grid > [class*='#{$prefix}-grid__col--'] {
+        width: initial;
         min-width: initial;
         max-width: initial;
-        width: initial;
 
         &.#{$prefix}-grid {
           display: grid;
@@ -132,8 +132,8 @@
 
       .#{$prefix}-grid > [class*='#{$prefix}-grid__height--'] {
         height: unset;
-        max-height: unset;
         min-height: initial;
+        max-height: unset;
       }
     }
 

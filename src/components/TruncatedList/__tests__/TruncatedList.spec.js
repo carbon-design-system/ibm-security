@@ -1,12 +1,11 @@
 /**
  * @file Truncated list tests.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
-import React from 'react';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
+import React from 'react';
 
 import TruncatedList from '..';
 import OrderedList from '../../OrderedList';
@@ -16,15 +15,16 @@ const getExpandButtonLabel = (expanded, shown, hidden) =>
   expanded ? 'View less' : `View more (${hidden})`;
 
 describe(TruncatedList.name, () => {
-  test('should have no Axe or DAP violations', async () => {
-    const { container } = renderWithinLandmark(
+  test('has no accessibility violations', async () => {
+    const { container } = render(
       <>
         <TruncatedList>{createChildrenArray(6)}</TruncatedList>
         <TruncatedList>{createChildrenArray(11)}</TruncatedList>
       </>
     );
+
+    await expect(container).toBeAccessible(TruncatedList.name);
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations(TruncatedList.name);
   });
 
   test('adds custom class name', () => {

@@ -1,9 +1,9 @@
 /**
  * @file Toolbar tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-import Camera20 from '@carbon/icons-react/lib/camera/20';
+import { Camera20 } from '@carbon/icons-react';
 
 import { shallow, mount } from 'enzyme';
 import React from 'react';

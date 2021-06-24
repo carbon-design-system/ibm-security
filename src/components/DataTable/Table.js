@@ -3,9 +3,10 @@
  * @copyright IBM Security 2019 - 2021
  */
 
+import { Table as CarbonTable } from 'carbon-components-react';
 import React, { Component } from 'react';
 import { debounce } from 'throttle-debounce';
-import { Table as CarbonTable } from 'carbon-components-react/lib/components/DataTable';
+
 import { tableWrapperNamespace, overflowCellNamespace } from './constants';
 import { carbonPrefix } from '../../globals/namespace';
 import theme from '../../globals/theme';

@@ -3,11 +3,10 @@
  * @copyright IBM Security 2019 - 2021
  */
 
-import Close20 from '@carbon/icons-react/lib/close/20';
-import TrashCan20 from '@carbon/icons-react/lib/trash-can/20';
+import { Close20, TrashCan20 } from '@carbon/icons-react';
 
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
 import Button from '../Button';
