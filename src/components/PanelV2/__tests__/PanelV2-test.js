@@ -8,12 +8,11 @@ import userEvent from '@testing-library/user-event';
 
 import React from 'react';
 
-import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 import { Button, PanelV2, PanelContent } from '../../..';
 
 describe('PanelV2', () => {
-  test('should have no Axe or DAP violations with custom footer via `renderFooter`', async () => {
-    const { container } = renderWithinLandmark(
+  test('has no accessibility violations with custom footer via `renderFooter`', async () => {
+    const { container } = render(
       <PanelV2
         title="test title"
         subtitle="test subtitle"
@@ -25,12 +24,13 @@ describe('PanelV2', () => {
         <PanelContent>test content</PanelContent>
       </PanelV2>
     );
+
+    await expect(container).toBeAccessible('PanelV2 with renderFooter');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations('PanelV2 with renderFooter');
   });
 
-  test('should have no Axe or DAP violations with `title` or `subtitle` as a `node`', async () => {
-    const { container } = renderWithinLandmark(
+  test('has no accessibility violations with `title` or `subtitle` as a `node`', async () => {
+    const { container } = render(
       <PanelV2
         title={<span>test title</span>}
         subtitle={<span>test subtitle</span>}
@@ -41,14 +41,16 @@ describe('PanelV2', () => {
         <PanelContent>test content</PanelContent>
       </PanelV2>
     );
-    await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations(
+
+    await expect(container).toBeAccessible(
       'PanelV2 with title or subtitle as node'
     );
+
+    await expect(container).toHaveNoAxeViolations();
   });
 
-  test('should have no Axe or DAP violations when there is scrolling content', async () => {
-    const { container } = renderWithinLandmark(
+  test('has no accessibility violations when there is scrolling content', async () => {
+    const { container } = render(
       <PanelV2
         // Note that title (or subtitle) should be provided here
         // to generate a valid `aria-labelledBy` for tabbable scrolling content:
@@ -67,10 +69,9 @@ describe('PanelV2', () => {
         </PanelContent>
       </PanelV2>
     );
+
+    await expect(container).toBeAccessible('PanelV2 with hasScrollingContent');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations(
-      'PanelV2 with hasScrollingContent'
-    );
   });
 
   test('should invoke close mock when close button is clicked', () => {

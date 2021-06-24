@@ -116,11 +116,11 @@ export default class NavList extends Component {
         role="menuitem"
       >
         <div className={`${navItemNamespace}__link`}>
+          <div className={`${navItemNamespace}__content`}>{title}</div>
           <Icon
             className={`${navListNamespace}__icon`}
             renderIcon={ChevronDown16}
           />
-          <div className={`${navItemNamespace}__content`}>{title}</div>
         </div>
         <ul
           aria-label={title}

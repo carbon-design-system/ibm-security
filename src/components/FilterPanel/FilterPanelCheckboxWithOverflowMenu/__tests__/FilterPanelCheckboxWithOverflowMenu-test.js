@@ -1,6 +1,6 @@
 /**
  * @file Filter panel checkbox with overflow menu tests.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import { fireEvent, render, screen } from '@testing-library/react';
@@ -8,26 +8,27 @@ import userEvent from '@testing-library/user-event';
 
 import React from 'react';
 
-import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 import OverflowMenuItem from '../../../OverflowMenuItem';
 import FilterPanelCheckboxWithOverflowMenu from '../FilterPanelCheckboxWithOverflowMenu';
 
 describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
-  test('should have no Axe or DAP violations', async () => {
-    const { container } = renderWithinLandmark(
+  test('has no accessibility violations', async () => {
+    const { container } = render(
       <FilterPanelCheckboxWithOverflowMenu
         labelText="test checkbox"
         id="test-checkbox-id"
         overflowMenuAriaLabel="overflowMenuAriaLabel"
       />
     );
-    await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations(
+
+    await expect(container).toBeAccessible(
       `${FilterPanelCheckboxWithOverflowMenu.name}-default`
     );
+
+    await expect(container).toHaveNoAxeViolations();
   });
 
-  test('should have no Axe or DAP violations', async () => {
+  test('has no accessibility violations', async () => {
     const main = document.createElement('main');
     main.setAttribute('data-floating-menu-container', 'true');
 
@@ -46,10 +47,11 @@ describe(FilterPanelCheckboxWithOverflowMenu.name, () => {
     // Open overflow menu and waitFor for options to appear on the DOM.
     fireEvent.mouseEnter(screen.getByLabelText(/checkbox label/i));
 
-    await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations(
+    await expect(container).toBeAccessible(
       `${FilterPanelCheckboxWithOverflowMenu.name}-open`
     );
+
+    await expect(container).toHaveNoAxeViolations();
   });
 
   test('adds custom class name', () => {

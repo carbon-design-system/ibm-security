@@ -1,19 +1,18 @@
 /**
  * @file Profile image tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { render } from '@testing-library/react';
 import React from 'react';
-import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import { ProfileImage } from '../../..';
 
 import { namespace } from '../ProfileImage';
 
 describe('ProfileImage', () => {
-  test('should have no Axe or DAP violations when image is NOT provided', async () => {
-    const { container } = renderWithinLandmark(
+  test('has no accessibility violations when image is NOT provided', async () => {
+    const { container } = render(
       <ProfileImage
         profile={{
           image_url: null,
@@ -24,12 +23,13 @@ describe('ProfileImage', () => {
         }}
       />
     );
+
+    await expect(container).toBeAccessible('ProfileImage without image');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations('ProfileImage without image');
   });
 
-  test('should have no Axe or DAP violations when image is provided', async () => {
-    const { container } = renderWithinLandmark(
+  test('has no accessibility violations when image is provided', async () => {
+    const { container } = render(
       <ProfileImage
         profile={{
           image_url: 'example.svg',
@@ -40,8 +40,9 @@ describe('ProfileImage', () => {
         }}
       />
     );
+
+    await expect(container).toBeAccessible('ProfileImage with image');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations('ProfileImage with image');
   });
 
   test("should apply an image via the `profile` object's `image_url`", () => {

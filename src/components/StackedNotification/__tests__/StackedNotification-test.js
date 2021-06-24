@@ -1,18 +1,17 @@
 /**
  * @file Stacked notification tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-import React from 'react';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
+import React from 'react';
 
 import { StackedNotification } from '../../..';
 
 describe('StackedNotification', () => {
-  test('should have no Axe or DAP violations', async () => {
-    const { container } = renderWithinLandmark(
+  test('has no accessibility violations', async () => {
+    const { container } = render(
       <StackedNotification
         title="test title"
         subtitle="test subtitle"
@@ -21,8 +20,9 @@ describe('StackedNotification', () => {
         statusIconDescription="test status icon"
       />
     );
+
+    await expect(container).toBeAccessible('StackedNotification');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations('StackedNotification');
   });
 
   test('should add a custom class', () => {
