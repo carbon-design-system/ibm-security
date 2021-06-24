@@ -1,232 +1,292 @@
 /**
- * @file TagWallFilter
+ * @file Tag wall filter
  * @copyright IBM Security 2019 - 2021
  */
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import { withReducer, mapProps, compose } from 'recompose';
-import { createReducer, combineReducers } from 'reduced-utils';
 
 import { getComponentNamespace } from '../../globals/namespace/index';
 
-import FilterRaw from './Filter';
+import Filter from './Filter';
 import TagWall from '../TagWall';
-import { TearsheetSmall } from '../Tearsheet';
-import { buttonType } from '../Tearsheet/TearsheetSmall/TearsheetSmall';
 
-import { defaultSortItems } from './tools/sorting';
-
-const namespace = getComponentNamespace('tag-wall-filter');
+import TearsheetSmall, {
+  buttonType,
+} from '../Tearsheet/TearsheetSmall/TearsheetSmall';
 
 const defaultTo = (value, defaultVal) => (value == null ? defaultVal : value);
 
-export const noop = () => {};
 export const itemToString = item =>
   defaultTo(item, { text: '', label: '' }).label ||
   defaultTo(item, { text: '', label: '' }).text;
 
-export const selectedItemsReducer = createReducer({
-  SELECT_ITEM: (state = { items: [] }, { item }) => ({
-    ...state,
-    items: defaultSortItems([{ ...item, isSelected: true }, ...state.items], {
-      itemToString,
-    }),
-  }),
-  UNSELECT_ITEM: (state = { items: [] }, { item: { id } = {} }) => ({
-    ...state,
-    items: state.items.filter(item => item.id !== id),
-  }),
-  CLEAR_SELECTED_ITEMS: (state = { items: [] }) => ({ ...state, items: [] }),
-});
+const namespace = getComponentNamespace('tag-wall-filter');
 
-export const availableItemsReducer = createReducer({
-  SELECT_ITEM: (
-    state = { items: [], allItems: [] },
-    { item: { id } = {} }
-  ) => ({
-    ...state,
-    items: state.items.filter(item => item.id !== id),
-  }),
-  UNSELECT_ITEM: (
-    state = { items: [], allItems: [] },
-    { item: { id, label } }
-  ) => ({
-    ...state,
-    items: [{ id, label }, ...state.items],
-  }),
-  CLEAR_SELECTED_ITEMS: (state = { items: [], allItems: [] }) => ({
-    ...state,
-    items: state.allItems,
-  }),
-});
+// import { defaultSortItems } from './tools/sorting';
 
-export const itemReducer = combineReducers({
-  selected: selectedItemsReducer,
-  available: availableItemsReducer,
-});
+// import { withReducer, mapProps, compose } from 'recompose';
+// import { createReducer, combineReducers } from 'reduced-utils';
 
-export const withItemReducer = withReducer(
-  'itemState',
-  'dispatchItemChange',
-  itemReducer,
-  ({ selectedItems = [], availableItems = [], allItems }) => {
-    const values = [...selectedItems, ...availableItems].reduce(
-      (itemMap, item) => {
-        itemMap[item.id] = item;
-        return itemMap;
-      },
-      {}
-    );
+// export const selectedItemsReducer = createReducer({
+//   SELECT_ITEM: (state = { items: [] }, { item }) => ({
+//     ...state,
+//     items: defaultSortItems([{ ...item, isSelected: true }, ...state.items], {
+//       itemToString,
+//     }),
+//   }),
+//   UNSELECT_ITEM: (state = { items: [] }, { item: { id } = {} }) => ({
+//     ...state,
+//     items: state.items.filter(item => item.id !== id),
+//   }),
+//   CLEAR_SELECTED_ITEMS: (state = { items: [] }) => ({ ...state, items: [] }),
+// });
 
-    return {
-      selected: { items: selectedItems },
-      available: {
-        items: availableItems,
-        allItems: allItems || Object.keys(values).map(value => values[value]),
-      },
-    };
-  }
-);
+// export const availableItemsReducer = createReducer({
+//   SELECT_ITEM: (
+//     state = { items: [], allItems: [] },
+//     { item: { id } = {} }
+//   ) => ({
+//     ...state,
+//     items: state.items.filter(item => item.id !== id),
+//   }),
+//   UNSELECT_ITEM: (
+//     state = { items: [], allItems: [] },
+//     { item: { id, label } }
+//   ) => ({
+//     ...state,
+//     items: [{ id, label }, ...state.items],
+//   }),
+//   CLEAR_SELECTED_ITEMS: (state = { items: [], allItems: [] }) => ({
+//     ...state,
+//     items: state.allItems,
+//   }),
+// });
 
-export const withMappedProps = mapProps(({ itemState, ...otherProps }) => ({
-  ...otherProps,
-  selectedItems: itemState.selected.items || [],
-  availableItems: itemState.available.items || [],
-}));
+// export const itemReducer = combineReducers({
+//   selected: selectedItemsReducer,
+//   available: availableItemsReducer,
+// });
 
-export const withMappedItemReducer = compose(
-  withItemReducer,
-  withMappedProps
-);
+// export const withItemReducer = withReducer(
+//   'itemState',
+//   'dispatchItemChange',
+//   itemReducer,
+//   ({ selectedItems = [], availableItems = [], allItems }) => {
+//     const values = [...selectedItems, ...availableItems].reduce(
+//       (itemMap, item) => {
+//         itemMap[item.id] = item;
+//         return itemMap;
+//       },
+//       {}
+//     );
 
-export const FilterTagFragmentRender = ({
+//     return {
+//       selected: { items: selectedItems },
+//       available: {
+//         items: availableItems,
+//         allItems: allItems || Object.keys(values).map(value => values[value]),
+//       },
+//     };
+//   }
+// );
+
+// export const withMappedProps = mapProps(({ itemState, ...otherProps }) => ({
+//   ...otherProps,
+//   selectedItems: itemState.selected.items || [],
+//   availableItems: itemState.available.items || [],
+// }));
+
+// export const withMappedItemReducer = compose(
+//   withItemReducer,
+//   withMappedProps
+// );
+
+// export const FilterTagFragmentRender = ({
+//   availableItems,
+//   dispatchItemChange,
+//   selectedItems,
+//   id,
+//   itemToString,
+//   onChange,
+//   tagWallLabel,
+//   tearsheetProps,
+//   ...otherProps
+// }) => {
+//   const { description, ...other } = tearsheetProps;
+
+//   return (
+//     <TearsheetSmall
+//       body={
+//         <FilterRaw
+//           id={id}
+//           items={availableItems}
+//           itemToString={itemToString}
+//           onChange={change => dispatchItemChange(change, onChange)}
+//           {...otherProps}
+//         />
+//       }
+//       description={() => (
+//         <div className={`${namespace}__description`}>
+//           {description}
+//           <TagWall
+//             className={`${namespace}__tag-wall`}
+//             items={selectedItems}
+//             itemToString={itemToString}
+//             label={tagWallLabel}
+//             onChange={change => dispatchItemChange(change, onChange)}
+//             addButtonDisabled
+//           />
+//         </div>
+//       )}
+//       {...other}
+//     />
+//   );
+// };
+
+// FilterTagFragmentRender.propTypes = {
+//   /** @type {arrayOf} initially selected items */
+//   selectedItems: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       id: PropTypes.string.isRequired,
+//       label: PropTypes.string.isRequired,
+//     })
+//   ),
+//   /** @type {arrayOf} availableItems in the list to select from */
+//   availableItems: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       id: PropTypes.string.isRequired,
+//       label: PropTypes.string.isRequired,
+//     })
+//   ).isRequired,
+//   dispatchItemChange: PropTypes.func.isRequired,
+//   itemToString: PropTypes.func.isRequired,
+//   onChange: PropTypes.func,
+
+//   /** @type {string} Tag wall label. */
+//   tagWallLabel: PropTypes.string,
+
+//   /** @type {string} Specify a custom id. */
+//   id: PropTypes.string.isRequired,
+// };
+// FilterTagFragmentRender.defaultProps = {
+//   selectedItems: [],
+//   onChange: noop,
+//   tagWallLabel: null,
+// };
+
+// const FilterTagFragment = withMappedItemReducer(FilterTagFragmentRender);
+// FilterTagFragment.propTypes = { ...FilterTagFragmentRender.propTypes };
+// delete FilterTagFragment.propTypes.dispatchItemChange;
+// FilterTagFragment.defaultProps = FilterTagFragmentRender.defaultProps;
+// FilterTagFragment.displayName = 'FilterTagFragment';
+
+// export { FilterTagFragment };
+
+// export const TagWallFilter = ({
+//   focusTrap,
+//   heading,
+//   id,
+//   description,
+//   selectedItems,
+//   availableItems,
+//   onChange,
+//   inputFieldPlaceholder,
+//   primaryButton,
+//   secondaryButton,
+//   tagWallLabel,
+//   closeButton,
+//   allItems,
+//   filterFieldClearSelectionTooltip,
+//   filterFieldClearAllTooltip,
+// }) => {
+//   const tearsheetProps = {
+//     className: namespace,
+//     flush: true,
+//     focusTrap,
+//     heading,
+//     description,
+//     primaryButton,
+//     secondaryButton,
+//     closeButton,
+//     filterFieldClearSelectionTooltip,
+//     filterFieldClearAllTooltip,
+//   };
+
+//   return (
+//     <FilterTagFragment
+//       id={id}
+//       selectedItems={selectedItems}
+//       availableItems={availableItems}
+//       allItems={allItems}
+//       itemToString={itemToString}
+//       onChange={onChange}
+//       placeholder={inputFieldPlaceholder}
+//       tagWallLabel={tagWallLabel}
+//       tearsheetProps={tearsheetProps}
+//       filterFieldClearSelectionTooltip={filterFieldClearSelectionTooltip}
+//       filterFieldClearAllTooltip={filterFieldClearAllTooltip}
+//     />
+//   );
+// };
+
+function TagWallFilter({
   availableItems,
-  dispatchItemChange,
-  selectedItems,
+  closeButton,
+  description,
+  filterFieldClearAllTooltip,
+  filterFieldClearSelectionTooltip,
+  focusTrap,
+  heading,
   id,
-  itemToString,
+  inputFieldPlaceholder,
   onChange,
+  primaryButton,
+  secondaryButton,
+  selectedItems,
   tagWallLabel,
-  tearsheetProps,
-  ...otherProps
-}) => {
-  const { description, ...other } = tearsheetProps;
+}) {
+  function dispatchItemChange(change) {
+    onChange(change);
+  }
 
   return (
     <TearsheetSmall
+      className={namespace}
       body={
-        <FilterRaw
+        <Filter
           id={id}
           items={availableItems}
           itemToString={itemToString}
-          onChange={change => dispatchItemChange(change, onChange)}
-          {...otherProps}
+          onChange={dispatchItemChange}
+          placeholder={inputFieldPlaceholder}
+          filterFieldClearAllTooltip={filterFieldClearAllTooltip}
+          filterFieldClearSelectionTooltip={filterFieldClearSelectionTooltip}
         />
       }
-      description={() => (
+      closeButton={closeButton}
+      description={
         <div className={`${namespace}__description`}>
           {description}
+
           <TagWall
             className={`${namespace}__tag-wall`}
             items={selectedItems}
             itemToString={itemToString}
             label={tagWallLabel}
-            onChange={change => dispatchItemChange(change, onChange)}
+            onChange={dispatchItemChange}
             addButtonDisabled
           />
         </div>
-      )}
-      {...other}
+      }
+      focusTrap={focusTrap}
+      heading={heading}
+      primaryButton={primaryButton}
+      secondaryButton={secondaryButton}
+      flush
     />
   );
-};
-
-FilterTagFragmentRender.propTypes = {
-  /** @type {arrayOf} initially selected items */
-  selectedItems: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired,
-    })
-  ),
-  /** @type {arrayOf} availableItems in the list to select from */
-  availableItems: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-  dispatchItemChange: PropTypes.func.isRequired,
-  itemToString: PropTypes.func.isRequired,
-  onChange: PropTypes.func,
-
-  /** @type {string} Tag wall label. */
-  tagWallLabel: PropTypes.string,
-
-  /** @type {string} Specify a custom id. */
-  id: PropTypes.string.isRequired,
-};
-FilterTagFragmentRender.defaultProps = {
-  selectedItems: [],
-  onChange: noop,
-  tagWallLabel: null,
-};
-
-const FilterTagFragment = withMappedItemReducer(FilterTagFragmentRender);
-FilterTagFragment.propTypes = { ...FilterTagFragmentRender.propTypes };
-delete FilterTagFragment.propTypes.dispatchItemChange;
-FilterTagFragment.defaultProps = FilterTagFragmentRender.defaultProps;
-FilterTagFragment.displayName = 'FilterTagFragment';
-
-export { FilterTagFragment };
-
-export const TagWallFilter = ({
-  focusTrap,
-  heading,
-  id,
-  description,
-  selectedItems,
-  availableItems,
-  onChange,
-  inputFieldPlaceholder,
-  primaryButton,
-  secondaryButton,
-  tagWallLabel,
-  closeButton,
-  allItems,
-  filterFieldClearSelectionTooltip,
-  filterFieldClearAllTooltip,
-}) => {
-  const tearsheetProps = {
-    className: namespace,
-    flush: true,
-    focusTrap,
-    heading,
-    description,
-    primaryButton,
-    secondaryButton,
-    closeButton,
-    filterFieldClearSelectionTooltip,
-    filterFieldClearAllTooltip,
-  };
-
-  return (
-    <FilterTagFragment
-      id={id}
-      selectedItems={selectedItems}
-      availableItems={availableItems}
-      allItems={allItems}
-      itemToString={itemToString}
-      onChange={onChange}
-      placeholder={inputFieldPlaceholder}
-      tagWallLabel={tagWallLabel}
-      tearsheetProps={tearsheetProps}
-      filterFieldClearSelectionTooltip={filterFieldClearSelectionTooltip}
-      filterFieldClearAllTooltip={filterFieldClearAllTooltip}
-    />
-  );
-};
+}
 
 TagWallFilter.propTypes = {
   /** @type {Object<Object>} An object list of primary button props. */
@@ -291,18 +351,18 @@ TagWallFilter.propTypes = {
   /** @type {string} tooltip label for clearing all selected items */
   filterFieldClearAllTooltip: PropTypes.string,
 };
+
 TagWallFilter.defaultProps = {
   description: '',
   focusTrap: true,
   id: namespace,
   selectedItems: [],
   allItems: undefined,
-  onChange: noop,
+  onChange: () => {},
   inputFieldPlaceholder: '',
   tagWallLabel: null,
   filterFieldClearSelectionTooltip: 'Clear selected item',
   filterFieldClearAllTooltip: 'Clear all selected items',
 };
-TagWallFilter.displayName = 'TagWallFilter';
 
 export default TagWallFilter;

@@ -11342,7 +11342,6 @@ Map {
       "selectedItems": Array [],
       "tagWallLabel": null,
     },
-    "displayName": "TagWallFilter",
     "propTypes": Object {
       "allItems": Object {
         "args": Array [

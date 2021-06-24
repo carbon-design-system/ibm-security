@@ -1,16 +1,17 @@
-import React from 'react';
 import { shallow, mount } from 'enzyme';
-import {
-  selectedItemsReducer,
-  availableItemsReducer,
-  withItemReducer,
-  FilterTagFragment,
-  noop,
-  TagWallFilter,
-  itemToString,
-} from '../TagWallFilter';
-import TagWall from '../../TagWall';
+import React from 'react';
+
 import Filter from '../Filter';
+import TagWall from '../../TagWall';
+
+import {
+  availableItemsReducer,
+  itemToString,
+  FilterTagFragment,
+  selectedItemsReducer,
+  TagWallFilter,
+  withItemReducer,
+} from '../TagWallFilter';
 
 describe('TagWallFilter tests', () => {
   const tearsheetProps = {
@@ -28,9 +29,6 @@ describe('TagWallFilter tests', () => {
     },
   };
 
-  it('should do nothing on noop', () => {
-    expect(noop()).toBeUndefined();
-  });
   describe('selectedItemsReducer', () => {
     let initState;
     beforeEach(() => {
