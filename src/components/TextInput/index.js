@@ -1,7 +1,9 @@
 /**
  * @file Text input entry point.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-export default from 'carbon-components-react/lib/components/TextInput';
-export TextInputSkeleton from 'carbon-components-react/lib/components/TextInput/TextInput.Skeleton';
+export {
+  TextInput as default,
+  TextInputSkeleton,
+} from 'carbon-components-react';

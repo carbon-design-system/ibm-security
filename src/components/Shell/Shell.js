@@ -1,9 +1,9 @@
 /**
  * @file Shell.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-import ArrowLeft16 from '@carbon/icons-react/lib/arrow--left/16';
+import { ArrowLeft16 } from '@carbon/icons-react';
 
 import classnames from 'classnames';
 import dataUri from 'data-uri.macro';

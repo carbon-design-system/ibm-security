@@ -3,18 +3,18 @@
  * @copyright IBM Security 2020 - 2021
  */
 
-import Folder20 from '@carbon/icons-react/lib/folder/20';
+import { Folder20 } from '@carbon/icons-react';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+
 import React from 'react';
-import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
 
 import {
   SummaryCard,
-  SummaryCardHeader,
-  SummaryCardBody,
   SummaryCardAction,
+  SummaryCardBody,
   SummaryCardFooter,
+  SummaryCardHeader,
   Tooltip,
 } from '../../..';
 
@@ -22,8 +22,8 @@ import { carbonPrefix } from '../../../globals/namespace';
 import { namespace as headerNamespace } from '../SummaryCardHeader/SummaryCardHeader';
 
 describe('SummaryCard', () => {
-  test('should have no Axe or DAP violations`', async () => {
-    const { container } = renderWithinLandmark(
+  test('has no accessibility violations`', async () => {
+    const { container } = render(
       <SummaryCard>
         <SummaryCardHeader
           title="test summary card title"
@@ -52,12 +52,13 @@ describe('SummaryCard', () => {
         </SummaryCardFooter>
       </SummaryCard>
     );
+
+    await expect(container).toBeAccessible('SummaryCard');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations('SummaryCard');
   });
 
-  test('should have no Axe or DAP violations when the expandable content is shown`', async () => {
-    const { container, getByText } = renderWithinLandmark(
+  test('has no accessibility violations when the expandable content is shown`', async () => {
+    const { container, getByText } = render(
       <SummaryCard>
         <SummaryCardHeader title="test summary card title" />
         <SummaryCardBody>test card body content</SummaryCardBody>
@@ -75,10 +76,10 @@ describe('SummaryCard', () => {
     // Click on the action button to show expanded content.
     userEvent.click(getByText(/test button/i).closest('button'));
 
-    await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations(
+    await expect(container).toBeAccessible(
       'SummaryCard with expandable content'
     );
+    await expect(container).toHaveNoAxeViolations();
   });
 
   test('should cycle summary card elements in tab order', () => {
@@ -145,6 +146,7 @@ describe('SummaryCard', () => {
       getByLabelText(/test action icon description/i).closest('button')
     ).toHaveFocus();
 
+    userEvent.tab();
     userEvent.tab();
 
     // Loop complete.

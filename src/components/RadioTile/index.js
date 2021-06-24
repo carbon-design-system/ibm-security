@@ -1,6 +1,6 @@
 /**
  * @file Radio tile entry point.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-export default from 'carbon-components-react/lib/components/RadioTile';
+export { RadioTile as default } from 'carbon-components-react';

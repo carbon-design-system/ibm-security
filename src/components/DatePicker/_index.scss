@@ -1,7 +1,7 @@
 ////
 /// Date picker component.
 /// @group date-picker
-/// @copyright IBM Security 2018 - 2020
+/// @copyright IBM Security 2018 - 2021
 ////
 
 @import 'carbon-components/scss/components/date-picker/date-picker';
@@ -48,16 +48,16 @@
   .#{$prefix}--date-picker__day.today,
   .flatpickr-day.today {
     color: $text-01;
-    &:after {
+    &::after {
       background-color: $interactive-04;
     }
   }
 
   .#{$prefix}--date-picker__day.today.selected,
   .flatpickr-day.today.selected {
-    color: $inverse-01;
     border: none;
-    &:after {
+    color: $inverse-01;
+    &::after {
       background-color: $inverse-01;
     }
   }
@@ -77,15 +77,15 @@
   .#{$prefix}--date-picker__month .numInputWrapper span.arrowDown::after,
   .flatpickr-month .numInputWrapper span.arrowUp::after,
   .flatpickr-month .numInputWrapper span.arrowDown::after {
-    border-bottom-color: $icon-01;
     border-top-color: $icon-01;
+    border-bottom-color: $icon-01;
   }
 
   .#{$prefix}--date-picker__month .numInputWrapper span.arrowUp:hover::after,
   .#{$prefix}--date-picker__month .numInputWrapper span.arrowDown:hover::after,
   .flatpickr-month .numInputWrapper span.arrowUp:hover::after,
   .flatpickr-month .numInputWrapper span.arrowDown:hover::after {
-    border-bottom-color: $interactive-04;
     border-top-color: $interactive-04;
+    border-bottom-color: $interactive-04;
   }
 }

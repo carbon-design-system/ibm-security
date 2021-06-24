@@ -3,24 +3,24 @@
  * @copyright IBM Security 2019 - 2021
  */
 
-import React from 'react';
 import { render } from '@testing-library/react';
-import renderWithinLandmark from '../../../../config/jest/helpers/renderWithinLandmark';
+import React from 'react';
 
 import { Step, StepIndicator } from '../../..';
 
 import { carbonPrefix } from '../../../globals/namespace';
 
 describe('StepIndicator', () => {
-  test('should have no Axe or DAP violations', async () => {
-    const { container } = renderWithinLandmark(
+  test('has no accessibility violations', async () => {
+    const { container } = render(
       <StepIndicator currentIndex={1}>
         <Step label="test label 1" description="test description 1" />
         <Step label="test label 2" description="test description 2" />
       </StepIndicator>
     );
+
+    await expect(container).toBeAccessible('StepIndicator');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations('StepIndicator');
   });
 
   test('should add a custom class to the parent component', () => {

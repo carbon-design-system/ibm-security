@@ -1,11 +1,10 @@
 /**
  * @file Status step tests.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import { render } from '@testing-library/react';
 import React from 'react';
-import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
 import { StatusStep } from '../../../..';
 
@@ -13,8 +12,8 @@ import { STATUS } from '../StatusStep';
 
 describe('StatusStep', () => {
   Object.values(STATUS).forEach(status =>
-    test(`should have no Axe or DAP violations when \`status\` is  '${status}'`, async () => {
-      const { container } = renderWithinLandmark(
+    test(`has no accessibility violations when \`status\` is  '${status}'`, async () => {
+      const { container } = render(
         <ul>
           <StatusStep
             label="test-label"
@@ -24,10 +23,12 @@ describe('StatusStep', () => {
           />
         </ul>
       );
-      await expect(container).toHaveNoAxeViolations();
-      await expect(container).toHaveNoDAPViolations(
+
+      await expect(container).toBeAccessible(
         `StatusStep with ${status} status`
       );
+
+      await expect(container).toHaveNoAxeViolations();
     })
   );
 

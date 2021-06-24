@@ -1,12 +1,12 @@
 /**
  * @file Accordion.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import CarbonAccordion from 'carbon-components-react/lib/components/Accordion';
+import { Accordion as CarbonAccordion } from 'carbon-components-react';
 
 const { defaultProps, propTypes } = CarbonAccordion;
 

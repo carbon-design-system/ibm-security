@@ -1,7 +1,7 @@
 ////
 /// Important content area component.
 /// @group ica
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/type/scss/styles';
@@ -14,25 +14,28 @@
 @include security--component($name: ica) {
   &__label {
     @include carbon--type-style($name: label-01);
+
     display: block;
-    color: $text-02;
     margin: 0;
+    color: $text-02;
   }
 
   &__value {
     @include carbon--type-style($name: productive-heading-04);
+
     margin-bottom: 0;
   }
 
   &__total {
     @include carbon--type-style($name: body-short-01);
-    margin-bottom: 0;
+
     padding-top: $carbon--spacing-01 + $carbon--spacing-04;
+    margin-bottom: 0;
   }
 
   &__trend {
-    vertical-align: top;
     margin-top: $carbon--spacing-03;
+    vertical-align: top;
   }
 
   &__row {
@@ -57,6 +60,7 @@
     &__total,
     &__percentage-mark {
       @include carbon--type-style($name: productive-heading-03);
+
       padding-top: $carbon--spacing-03 + $carbon--spacing-04;
     }
   }
@@ -75,6 +79,7 @@
     &__total,
     &__percentage-mark {
       @include carbon--type-style($name: productive-heading-04);
+
       padding-top: $carbon--spacing-06;
     }
 

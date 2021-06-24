@@ -5,45 +5,41 @@
 
 import { render } from '@testing-library/react';
 import React from 'react';
-import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
 
 import { LoadingMessage } from '../../../..';
 
 import { carbonPrefix } from '../../../../globals/namespace';
 
 describe('LoadingMessage', () => {
-  test('should have no Axe or DAP violations with overlay', async () => {
-    const { container } = renderWithinLandmark(
+  test('has no accessibility violations with overlay', async () => {
+    const { container } = render(
       <LoadingMessage active withOverlay>
         test message
       </LoadingMessage>
     );
+
+    await expect(container).toBeAccessible('LoadingMessage with overlay');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations(
-      'LoadingMessage with overlay'
-    );
   });
 
-  test('should have no Axe or DAP violations without overlay', async () => {
-    const { container } = renderWithinLandmark(
+  test('has no accessibility violations without overlay', async () => {
+    const { container } = render(
       <LoadingMessage active withOverlay={false}>
         test message
       </LoadingMessage>
     );
+
+    await expect(container).toBeAccessible('LoadingMessage without overlay');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations(
-      'LoadingMessage without overlay'
-    );
   });
 
-  test('should have no Axe or DAP violations when inactive', async () => {
-    const { container } = renderWithinLandmark(
+  test('has no accessibility violations when inactive', async () => {
+    const { container } = render(
       <LoadingMessage active={false}>test message</LoadingMessage>
     );
+
+    await expect(container).toBeAccessible('LoadingMessage when inactive');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations(
-      'LoadingMessage when inactive'
-    );
   });
 
   test('should pass extra props through spread attribute', () => {
