@@ -43,7 +43,9 @@ class Filter extends Component {
   };
 
   handleOnInputValueChange = (inputValue, stateAndHelpers) => {
-    if (stateAndHelpers.type === '__autocomplete_mouseup__') return;
+    if (stateAndHelpers.type === '__autocomplete_mouseup__') {
+      return;
+    }
     this.setState(() => {
       if (Array.isArray(inputValue)) {
         return {
