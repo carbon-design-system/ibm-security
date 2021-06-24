@@ -96,8 +96,7 @@ const TruncatedList = ({
         className={`${namespace}__scroller-container`}
         scrollElementClassName={`${namespace}__scroller`}
         color={scrollGradientColor}
-        getScrollElementRef={setListContainer}
-      >
+        getScrollElementRef={setListContainer}>
         <List className={classnames(className, namespace)} {...other}>
           {childrenArray.slice(0, displayCount)}
           {shouldTruncate && isExpanded && childrenArray.slice(displayCount)}
@@ -113,8 +112,7 @@ const TruncatedList = ({
           )}
           iconDescription=""
           size="small"
-          onClick={handleExpand}
-        >
+          onClick={handleExpand}>
           {getExpandButtonLabel(
             isExpanded,
             isExpanded ? childrenLength : displayCount,

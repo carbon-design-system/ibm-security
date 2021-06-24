@@ -41,7 +41,7 @@ export const trapTabFocus = (element, event) => {
  * @param {number} [timeoutDelay=10] Millisecond delay for the blur effect to take place. This
  * should not be less than 10 to give the browser time to register the subsequent focus event first.
  *
- * @returns {{createFocusHandler: function, createBlurHandler: function }} Utility functions to
+ * @returns {{createFocusHandler: Function, createBlurHandler: Function}} Utility functions to
  * create the focus and blur handlers that apply the necessary effects or state changes.
  */
 export const useComponentFocus = (timeoutDelay = 10) => {

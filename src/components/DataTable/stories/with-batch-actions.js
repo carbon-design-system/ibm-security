@@ -54,24 +54,21 @@ const batchActionsStory = (props) => (
               renderIcon={Delete16}
               iconDescription="Delete the selected rows"
               onClick={(selectedRows) => () =>
-                action('Delete batch action click')(selectedRows)}
-            >
+                action('Delete batch action click')(selectedRows)}>
               Delete
             </TableBatchAction>
             <TableBatchAction
               renderIcon={Save16}
               iconDescription="Save the selected rows"
               onClick={(selectedRows) => () =>
-                action('Save batch action click')(selectedRows)}
-            >
+                action('Save batch action click')(selectedRows)}>
               Save
             </TableBatchAction>
             <TableBatchAction
               renderIcon={Download16}
               iconDescription="Download the selected rows"
               onClick={(selectedRows) => () =>
-                action('Download batch action click')(selectedRows)}
-            >
+                action('Download batch action click')(selectedRows)}>
               Download
             </TableBatchAction>
           </TableBatchActions>

@@ -57,8 +57,7 @@ const ListItemModule = ({ children, as, href, onClick, ...other }) => {
       as={component}
       href={href}
       onClick={onClick}
-      {...other}
-    >
+      {...other}>
       {content}
     </LayoutModule>
   );

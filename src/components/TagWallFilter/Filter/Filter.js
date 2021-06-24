@@ -43,7 +43,9 @@ class Filter extends Component {
   };
 
   handleOnInputValueChange = (inputValue, stateAndHelpers) => {
-    if (stateAndHelpers.type === '__autocomplete_mouseup__') return;
+    if (stateAndHelpers.type === '__autocomplete_mouseup__') {
+      return;
+    }
     this.setState(() => {
       if (Array.isArray(inputValue)) {
         return {
@@ -129,16 +131,13 @@ class Filter extends Component {
           onKeyDown={(e) => this.handleKeyDownChange(e, item)}
           role="button"
           tabIndex="0"
-          {...itemProps}
-        >
+          {...itemProps}>
           <div
             className={`${namespace}__list-item__entry`}
-            aria-labelledby={itemProps.id}
-          >
+            aria-labelledby={itemProps.id}>
             <span
               className={`${carbonPrefix}--text-truncate--end`}
-              title={itemText}
-            >
+              title={itemText}>
               {itemText}
             </span>
             <span className={`${namespace}__add`}>
@@ -192,8 +191,7 @@ class Filter extends Component {
             className={namespace}
             disabled={disabled}
             {...getRootProps({ refKey: 'innerRef' })}
-            id={id}
-          >
+            id={id}>
             <Field {...getButtonProps({ disabled, tabIndex: -1 })} id={id}>
               <input
                 className={`${namespace}__input-field ${carbonPrefix}--text-input`}

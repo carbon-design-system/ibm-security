@@ -1,14 +1,16 @@
 /**
  * @file WizardStep.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
-import React, { Component } from 'react';
+
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 
 class WizardStep extends Component {
   static getPropsFromElement = (stepElem) => {
-    if (!React.isValidElement(stepElem) && stepElem.type !== WizardStep)
+    if (!React.isValidElement(stepElem) && stepElem.type !== WizardStep) {
       return null;
+    }
     return stepElem.props;
   };
 

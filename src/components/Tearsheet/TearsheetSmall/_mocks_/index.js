@@ -19,7 +19,7 @@ const isDisabled = false;
 
 /**
  * Empty click handler.
- * @returns {Object} An empty object.
+ * @returns {object} An empty object.
  */
 const onClick = () => ({});
 

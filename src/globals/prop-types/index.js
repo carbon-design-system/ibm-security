@@ -1,6 +1,6 @@
 /**
  * @file Custom `prop-types` validation.
- * @copyright IBM Security 2018
+ * @copyright IBM Security 2018 - 2021
  */
 
 import { checkPropTypes } from 'prop-types';
@@ -17,7 +17,7 @@ const deprecatedProp =
     /**
      * Creates a prop object to validate against.
      * @param {string|PropTypes.<*>} propValue The prop value to add to the object.
-     * @returns {Object.<string,*>} The prop object to validate against.
+     * @returns {object.<string, *>} The prop object to validate against.
      */
     const createPropObject = (propValue) => ({
       [`${deprecatedPropName}`]: propValue,

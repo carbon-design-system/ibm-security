@@ -16,7 +16,9 @@ const distDir = path.resolve(__dirname, '../css');
 const distIndex = (dir) => path.resolve(dir, 'index.css');
 
 readFile(srcIndex, async (err, css) => {
-  if (err) throw err;
+  if (err) {
+    throw err;
+  }
   try {
     const result = await postcss([
       postcssSass({ includePaths: ['node_modules'] }),

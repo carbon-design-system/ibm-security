@@ -125,8 +125,8 @@ export const labels = {
 
 /**
  * filters out falsy entries
- * @param {Object} obj object to be filtered
- * @returns {Object} object without falsey entries
+ * @param {object} obj object to be filtered
+ * @returns {object} object without falsey entries
  */
 export const filterFalsey = (obj) =>
   Object.entries(obj)

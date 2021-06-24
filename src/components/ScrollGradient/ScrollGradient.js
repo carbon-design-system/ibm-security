@@ -68,22 +68,29 @@ class ScrollGradient extends Component {
   static getScrollState = (element, scrollDirection) => {
     switch (scrollDirection) {
       case ScrollGradient.ScrollDirection.X: {
-        if (element.scrollWidth === element.clientWidth)
+        if (element.scrollWidth === element.clientWidth) {
           return ScrollGradient.ScrollStates.NONE;
-        if (element.scrollLeft === 0)
+        }
+        if (element.scrollLeft === 0) {
           return ScrollGradient.ScrollStates.INITIAL;
-        if (element.scrollLeft + element.clientWidth === element.scrollWidth)
+        }
+        if (element.scrollLeft + element.clientWidth === element.scrollWidth) {
           return ScrollGradient.ScrollStates.END;
+        }
         return ScrollGradient.ScrollStates.STARTED;
       }
 
       case ScrollGradient.ScrollDirection.Y:
       default: {
-        if (element.scrollHeight === element.clientHeight)
+        if (element.scrollHeight === element.clientHeight) {
           return ScrollGradient.ScrollStates.NONE;
-        if (element.scrollTop === 0) return ScrollGradient.ScrollStates.INITIAL;
-        if (element.scrollTop + element.clientHeight === element.scrollHeight)
+        }
+        if (element.scrollTop === 0) {
+          return ScrollGradient.ScrollStates.INITIAL;
+        }
+        if (element.scrollTop + element.clientHeight === element.scrollHeight) {
           return ScrollGradient.ScrollStates.END;
+        }
         return ScrollGradient.ScrollStates.STARTED;
       }
     }
@@ -199,8 +206,7 @@ class ScrollGradient extends Component {
           className
         )}
         role="presentation"
-        {...other}
-      >
+        {...other}>
         {!hideStartGradient && (
           <div
             className={`${namespace}__before`}
@@ -217,8 +223,7 @@ class ScrollGradient extends Component {
           className={classnames(
             `${namespace}__content`,
             scrollElementClassName
-          )}
-        >
+          )}>
           {children}
         </div>
         <div

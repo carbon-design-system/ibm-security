@@ -133,8 +133,7 @@ class Decorator extends Component {
         <button
           className={decoratorClasses}
           onClick={this.handleClick}
-          onContextMenu={this.handleContextMenuClick}
-        >
+          onContextMenu={this.handleContextMenuClick}>
           {decorator}
         </button>
       );
@@ -236,7 +235,7 @@ Decorator.defaultProps = {
 
 /**
  * Generate exports for individual severity icon types.
- * @param {array} iconNames array of icon names
+ * @param {Array} iconNames array of icon names
  */
 function generateIconExports(...iconNames) {
   const namedExports = {};

@@ -14,7 +14,9 @@ function plugin(babel) {
   const { types: t } = babel;
 
   function replacePath(path, state) {
-    if (!path.get('source').node) return;
+    if (!path.get('source').node) {
+      return;
+    }
 
     replaceRules.forEach((replaceRuleFromType) => {
       const replaceRule = replaceRuleFromType(state.opts.moduleType);

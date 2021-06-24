@@ -10,7 +10,7 @@ import isDevelopment from '../env';
  * @param {string} description The description to use when logging.
  * @param {string} type The property type to log.
  * @param {Array.<string>} componentKeys The component keys to filter.
- * @param {function} condition The condition to filter the component keys.
+ * @param {Function} condition The condition to filter the component keys.
  * @returns {string} The description and appropriate properties.
  */
 const logDeviations = (description, type, componentKeys, filterCondition) =>
@@ -79,7 +79,7 @@ const deprecate = (actual, expected) =>
 
 /**
  * Returns a standardized component deprecation warning.
- * @param {Object.<string, string>} deprecationWarning - An object containing properties that construct the deprecation warning.
+ * @param {object.<string, string>} deprecationWarning - An object containing properties that construct the deprecation warning.
  * @param {string} deprecationWarning.actual - The actual value supplied.
  * @param {string} deprecationWarning.componentName - The component name it was supplied to.
  * @param {string} deprecationWarning.description - The description of the deprecation warning.
