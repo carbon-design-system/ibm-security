@@ -31,6 +31,7 @@ const storyProps = ({ value = icaValue, total } = {}) => ({
   percentage: boolean('Percentage (percentage)', false),
   size: select('ICA size (size)', sizes, 'default'),
   forceShowTotal: boolean('Show total (forceShowTotal)', false),
+  showValueWarning: boolean('Show warning color (showValueWarning)', false),
   trending: boolean('Show trending arrow (trending)', false),
   truncate: boolean('Truncate (truncate)', ICA.defaultProps.truncate),
   locale: select('Locale (locale)', Locales, Locales[0]),
@@ -94,7 +95,7 @@ storiesOf(security('ICA'), module)
         Multiple \`ICA\` components (i.e., an "ICA Wall") should be presented in a grid using the correct class names.
 
         These two row examples show different combinations of breakpoints and spans set per column with specific class names.
-        
+
         For more information the 16 column IBM grid, please review the [\`@carbon/grid\` package documentation](https://github.com/carbon-design-system/carbon/tree/main/packages/grid).
       `,
       },

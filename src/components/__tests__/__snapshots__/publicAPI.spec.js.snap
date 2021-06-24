@@ -4761,6 +4761,7 @@ Map {
       "forceShowTotal": false,
       "locale": "en",
       "percentage": false,
+      "showValueWarning": false,
       "size": "default",
       "total": 0,
       "trending": false,
@@ -4821,6 +4822,9 @@ Map {
         "type": "oneOf",
       },
       "percentage": Object {
+        "type": "bool",
+      },
+      "showValueWarning": Object {
         "type": "bool",
       },
       "size": Object {

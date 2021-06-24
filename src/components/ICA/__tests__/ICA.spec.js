@@ -95,11 +95,11 @@ describe('ICA', () => {
   );
 
   testValues.forEach(value =>
-    test('should apply warning class when value is equal to or larger than total', () => {
+    test('should apply warning class when value is equal to or larger than total and showValueWarning is active', () => {
       expect(
-        render(<ICA label="ICA" value={value} total={10} />).getByText(
-          `${value}`
-        )
+        render(
+          <ICA label="ICA" value={value} total={10} showValueWarning />
+        ).getByText(`${value}`)
       ).toHaveClass(`${namespace}__warning`);
     })
   );

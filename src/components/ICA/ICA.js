@@ -74,6 +74,7 @@ const ICA = ({
   truncate,
   total,
   value,
+  showValueWarning,
   ...other
 }) => {
   const isSize = sizeValue => size === sizeValue;
@@ -104,7 +105,7 @@ const ICA = ({
   }
 
   let isValueBiggerThanTotal = false;
-  if (value >= total) {
+  if (showValueWarning && value >= total) {
     isValueBiggerThanTotal = true;
   }
 
@@ -193,6 +194,9 @@ ICA.propTypes = {
 
   /** Display trending icon. */
   trending: PropTypes.bool,
+
+  /** Show warning color when out of value is equal to or above total */
+  showValueWarning: PropTypes.bool,
 };
 
 ICA.defaultProps = {
@@ -205,6 +209,7 @@ ICA.defaultProps = {
   forceShowTotal: false,
   trending: false,
   truncate: true,
+  showValueWarning: false,
 };
 
 export default ICA;
