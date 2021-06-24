@@ -40,6 +40,9 @@ exports[`Nav Rendering renders correctly 1`] = `
           <div
             className="security--nav__list__item__link"
           >
+            <div
+              className="security--nav__list__item__content"
+            />
             <Icon
               className="security--nav__list__icon"
               height={null}
@@ -104,9 +107,6 @@ exports[`Nav Rendering renders correctly 1`] = `
                 </Icon>
               </ForwardRef(ChevronDown16)>
             </Icon>
-            <div
-              className="security--nav__list__item__content"
-            />
           </div>
           <ul
             aria-hidden={true}
@@ -179,6 +179,9 @@ exports[`Nav Rendering renders correctly 1`] = `
           <div
             className="security--nav__list__item__link"
           >
+            <div
+              className="security--nav__list__item__content"
+            />
             <Icon
               className="security--nav__list__icon"
               height={null}
@@ -243,9 +246,6 @@ exports[`Nav Rendering renders correctly 1`] = `
                 </Icon>
               </ForwardRef(ChevronDown16)>
             </Icon>
-            <div
-              className="security--nav__list__item__content"
-            />
           </div>
           <ul
             aria-hidden={true}
@@ -365,6 +365,9 @@ exports[`Nav Rendering renders the HTML of the node's subtree 1`] = `
       <div
         class="security--nav__list__item__link"
       >
+        <div
+          class="security--nav__list__item__content"
+        />
         <svg
           aria-hidden="true"
           class="security--icon security--nav__list__icon"
@@ -381,9 +384,6 @@ exports[`Nav Rendering renders the HTML of the node's subtree 1`] = `
             d="M8 11L3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z"
           />
         </svg>
-        <div
-          class="security--nav__list__item__content"
-        />
       </div>
       <ul
         aria-hidden="true"
@@ -415,6 +415,9 @@ exports[`Nav Rendering renders the HTML of the node's subtree 1`] = `
       <div
         class="security--nav__list__item__link"
       >
+        <div
+          class="security--nav__list__item__content"
+        />
         <svg
           aria-hidden="true"
           class="security--icon security--nav__list__icon"
@@ -431,9 +434,6 @@ exports[`Nav Rendering renders the HTML of the node's subtree 1`] = `
             d="M8 11L3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z"
           />
         </svg>
-        <div
-          class="security--nav__list__item__content"
-        />
       </div>
       <ul
         aria-hidden="true"

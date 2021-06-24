@@ -1,24 +1,27 @@
 /**
  * @file Wizard stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
+
 /* eslint-disable compat/compat */
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { object, boolean, select } from '@storybook/addon-knobs';
+
 import { action } from '@storybook/addon-actions';
-import FormGroup from 'carbon-components-react/lib/components/FormGroup';
-import 'prismjs';
-import 'prismjs/components/prism-jsx';
-import { withReducer } from 'recompose';
+import { object, boolean, select } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
 
 import { settings } from 'carbon-components';
+import React from 'react';
+
+import 'prismjs';
+import 'prismjs/components/prism-jsx';
+
+import { withReducer } from 'recompose';
 
 import { patterns } from '../../../.storybook';
 
 import Button from '../Button';
 import Checkbox from '../Checkbox';
-
+import FormGroup from '../FormGroup';
 import RadioButton from '../RadioButton';
 import RadioButtonGroup from '../RadioButtonGroup';
 import TextInput from '../TextInput';

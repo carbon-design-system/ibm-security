@@ -1,30 +1,27 @@
 {
-  "extends": "stylelint-config-recommended-scss",
-  "plugins": [
-    "stylelint-no-unsupported-browser-features",
-    "stylelint-scss"
-  ],
+  "extends": ["stylelint-config-carbon"],
+  "plugins": ["stylelint-plugin-carbon-tokens"],
   "rules": {
-    "plugin/no-unsupported-browser-features": [
+    "carbon/motion-token-use": [true, { "severity": "warning" }],
+    "carbon/type-token-use": [
       true,
       {
+        "acceptCarbonFontWeightFunction": true,
+        "acceptCarbonTypeScaleFunction": true,
         "severity": "warning"
+      }
+    ],
+    "declaration-property-value-disallowed-list": null,
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": ["/^spacing-/"]
       }
     ],
     "selector-pseudo-class-no-unknown": [
       true,
       {
-        "ignorePseudoClasses": [
-          "export"
-        ]
-      }
-    ],
-    "property-no-unknown": [
-      true,
-      {
-        "ignoreProperties": [
-          "/^spacing-/"
-        ]
+        "ignorePseudoClasses": ["export"]
       }
     ]
   }

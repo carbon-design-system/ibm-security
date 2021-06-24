@@ -1,7 +1,7 @@
 ////
 /// Search bar component.
 /// @group search-bar
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/spacing';
@@ -36,14 +36,14 @@
 
   &--hide-scopes-label .#{$prefix}--label {
     position: absolute;
+    overflow: hidden;
     width: 1px;
     height: 1px;
-    margin: -1px;
     padding: 0;
-    overflow: hidden;
-    white-space: nowrap;
     border: 0;
-    visibility: inherit;
+    margin: -1px;
     clip: rect(0, 0, 0, 0);
+    visibility: inherit;
+    white-space: nowrap;
   }
 }

@@ -1,10 +1,10 @@
 /**
  * @file Progress indicator entry point.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-export ProgressIndicatorSkeleton from 'carbon-components-react/lib/components/ProgressIndicator/ProgressIndicator.Skeleton';
 export {
   ProgressIndicator,
+  ProgressIndicatorSkeleton,
   ProgressStep,
-} from 'carbon-components-react/lib/components/ProgressIndicator';
+} from 'carbon-components-react';

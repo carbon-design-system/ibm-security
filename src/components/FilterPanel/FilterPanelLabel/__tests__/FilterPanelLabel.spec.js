@@ -1,21 +1,21 @@
 /**
  * @file Filter panel label tests.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
-import React from 'react';
 import { render } from '@testing-library/react';
-import renderWithinLandmark from '../../../../../config/jest/helpers/renderWithinLandmark';
+import React from 'react';
 
 import FilterPanelLabel from '../FilterPanelLabel';
 
 describe('FilterPanelLabel', () => {
-  test('should have no Axe or DAP violations', async () => {
-    const { container } = renderWithinLandmark(
+  test('has no accessibility violations', async () => {
+    const { container } = render(
       <FilterPanelLabel count={100}>custom label</FilterPanelLabel>
     );
+
+    await expect(container).toBeAccessible('FilterPanelGroup');
     await expect(container).toHaveNoAxeViolations();
-    await expect(container).toHaveNoDAPViolations('FilterPanelGroup');
   });
 
   test('renders with children', () => {

@@ -1,7 +1,7 @@
 ////
 /// Filter search styles.
 /// @group filter-panel
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -39,6 +39,7 @@
 
     &__title {
       @include carbon--type-style($name: caption-01);
+
       margin-top: 0;
       margin-bottom: $filter-search__spacing__padding;
     }
@@ -46,14 +47,14 @@
 
   &__results {
     position: absolute;
+    z-index: z($layer: dropdown);
     top: 100%;
     left: 0;
     width: 100%;
     max-height: 0;
+    box-sizing: border-box;
     padding: $filter-search__spacing__padding;
     background-color: $ui-01;
-    box-sizing: border-box;
-    z-index: z($layer: dropdown);
 
     &--none {
       @include carbon--type-style($name: caption-01);

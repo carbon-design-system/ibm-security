@@ -1,29 +1,32 @@
 /**
  * @file Icon button bar stories.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
+import {
+  Add16,
+  Add20,
+  Add24,
+  Add32,
+  Edit16,
+  Edit20,
+  Edit24,
+  Edit32,
+  Locked16,
+  Locked20,
+  Locked24,
+  Locked32,
+  Notification16,
+  Notification20,
+  Notification24,
+  Notification32,
+} from '@carbon/icons-react';
+
 import { action } from '@storybook/addon-actions';
-import { storiesOf } from '@storybook/react';
 import { select, number, boolean } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
 
 import React from 'react';
-import Add16 from '@carbon/icons-react/lib/add/16';
-import Add20 from '@carbon/icons-react/lib/add/20';
-import Add24 from '@carbon/icons-react/lib/add/24';
-import Add32 from '@carbon/icons-react/lib/add/32';
-import Edit16 from '@carbon/icons-react/lib/edit/16';
-import Edit20 from '@carbon/icons-react/lib/edit/20';
-import Edit24 from '@carbon/icons-react/lib/edit/24';
-import Edit32 from '@carbon/icons-react/lib/edit/32';
-import Locked16 from '@carbon/icons-react/lib/locked/16';
-import Locked20 from '@carbon/icons-react/lib/locked/20';
-import Locked24 from '@carbon/icons-react/lib/locked/24';
-import Locked32 from '@carbon/icons-react/lib/locked/32';
-import Notification16 from '@carbon/icons-react/lib/notification/16';
-import Notification20 from '@carbon/icons-react/lib/notification/20';
-import Notification24 from '@carbon/icons-react/lib/notification/24';
-import Notification32 from '@carbon/icons-react/lib/notification/32';
 
 import { patterns } from '../../../.storybook';
 

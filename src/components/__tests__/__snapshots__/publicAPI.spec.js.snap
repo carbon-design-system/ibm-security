@@ -1503,10 +1503,30 @@ Map {
         "args": Array [
           Object {
             "allowOutsideClick": Object {
-              "type": "func",
+              "args": Array [
+                Array [
+                  Object {
+                    "type": "bool",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
             },
             "clickOutsideDeactivates": Object {
-              "type": "bool",
+              "args": Array [
+                Array [
+                  Object {
+                    "type": "bool",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
             },
             "escapeDeactivates": Object {
               "type": "bool",
@@ -7332,10 +7352,30 @@ Map {
         "args": Array [
           Object {
             "allowOutsideClick": Object {
-              "type": "func",
+              "args": Array [
+                Array [
+                  Object {
+                    "type": "bool",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
             },
             "clickOutsideDeactivates": Object {
-              "type": "bool",
+              "args": Array [
+                Array [
+                  Object {
+                    "type": "bool",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
             },
             "escapeDeactivates": Object {
               "type": "bool",
@@ -7577,10 +7617,30 @@ Map {
         "args": Array [
           Object {
             "allowOutsideClick": Object {
-              "type": "func",
+              "args": Array [
+                Array [
+                  Object {
+                    "type": "bool",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
             },
             "clickOutsideDeactivates": Object {
-              "type": "bool",
+              "args": Array [
+                Array [
+                  Object {
+                    "type": "bool",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
             },
             "escapeDeactivates": Object {
               "type": "bool",
