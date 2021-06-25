@@ -628,6 +628,7 @@ exports[`TagWall Rendering renders 1`] = `
     <Button
       dangerDescription="danger"
       disabled={false}
+      isExpressive={false}
       kind="ghost"
       largeText={null}
       loading={false}
@@ -642,6 +643,7 @@ exports[`TagWall Rendering renders 1`] = `
         className=""
         dangerDescription="danger"
         disabled={false}
+        isExpressive={false}
         kind="ghost"
         onClick={[Function]}
         size="small"
@@ -1073,6 +1075,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
       >
         <div
           className="bx--tag security--tag--interactive security--tag--interactive--selected bx--tag--gray"
+          disabled={null}
           example-attribute="example-value"
           id="0"
         >
@@ -1105,6 +1108,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
       >
         <div
           className="bx--tag security--tag--interactive security--tag--interactive--selected bx--tag--gray"
+          disabled={null}
           example-attribute="example-value"
           id="1"
         >
@@ -1137,6 +1141,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
       >
         <div
           className="bx--tag security--tag--interactive security--tag--interactive--selected bx--tag--gray"
+          disabled={null}
           example-attribute="example-value"
           id="2"
         >
@@ -1169,6 +1174,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
       >
         <div
           className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--gray"
+          disabled={null}
           example-attribute="example-value"
           id="3"
         >
@@ -1201,6 +1207,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
       >
         <div
           className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--gray"
+          disabled={null}
           example-attribute="example-value"
           id="4"
         >
@@ -1233,6 +1240,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
       >
         <div
           className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--gray"
+          disabled={null}
           example-attribute="example-value"
           id="5"
         >
@@ -1265,6 +1273,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
       >
         <div
           className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--gray"
+          disabled={null}
           example-attribute="example-value"
           id="6"
         >
@@ -1297,6 +1306,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
       >
         <div
           className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--gray"
+          disabled={null}
           example-attribute="example-value"
           id="7"
         >
@@ -1311,6 +1321,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
     <Button
       dangerDescription="danger"
       disabled={true}
+      isExpressive={false}
       kind="ghost"
       largeText={null}
       loading={false}
@@ -1325,6 +1336,7 @@ exports[`TagWall Rendering renders the disabled variation 1`] = `
         className=""
         dangerDescription="danger"
         disabled={true}
+        isExpressive={false}
         kind="ghost"
         onClick={[Function]}
         size="small"

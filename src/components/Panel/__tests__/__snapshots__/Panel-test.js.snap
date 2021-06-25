@@ -5,6 +5,7 @@ exports[`Panel Rendering does not render the open panel if \`shouldPanelOpen\` i
   <Button
     dangerDescription="danger"
     disabled={false}
+    isExpressive={false}
     kind="primary"
     largeText={null}
     loading={false}
@@ -50,6 +51,7 @@ exports[`Panel Rendering renders correctly 1`] = `
   <Button
     dangerDescription="danger"
     disabled={false}
+    isExpressive={false}
     kind="primary"
     largeText={null}
     loading={false}
@@ -105,6 +107,7 @@ exports[`Panel Rendering renders the open panel 1`] = `
   <Button
     dangerDescription="danger"
     disabled={false}
+    isExpressive={false}
     kind="primary"
     largeText={null}
     loading={false}
@@ -150,6 +153,7 @@ exports[`Panel Rendering renders the primary button variation 1`] = `
   <Button
     dangerDescription="danger"
     disabled={false}
+    isExpressive={false}
     kind="primary"
     largeText={null}
     loading={false}
@@ -195,6 +199,7 @@ exports[`Panel Rendering renders the secondary button variation 1`] = `
   <Button
     dangerDescription="danger"
     disabled={false}
+    isExpressive={false}
     kind="primary"
     largeText={null}
     loading={false}
@@ -240,6 +245,7 @@ exports[`Panel Rendering renders the secondary button variation 2`] = `
   <Button
     dangerDescription="danger"
     disabled={false}
+    isExpressive={false}
     kind="primary"
     largeText={null}
     loading={false}
