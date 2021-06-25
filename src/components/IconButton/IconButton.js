@@ -105,7 +105,7 @@ IconButton.propTypes = {
   /** @type {string} Path for icon. */
   path: string,
 
-  /** @type {function|object} Icon to render. */
+  /** @type {Function|object} Icon to render. */
   renderIcon: renderIconPropType,
 
   /** @type {string} Icon button size. */

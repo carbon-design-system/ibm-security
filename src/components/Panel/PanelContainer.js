@@ -29,7 +29,7 @@ const getInstanceId = setupGetInstanceId();
 
 /**
  * Panel container component.
- * @param {Object.<string, *>} props Panel container props.
+ * @param {object.<string, *>} props Panel container props.
  * @returns {PanelContainer} Panel container instance.
  */
 export default class PanelContainer extends Component {
@@ -294,16 +294,16 @@ PanelContainer.propTypes = {
   /** @type {string} Class name. */
   className: PropTypes.string,
 
-  /** @type {Object<Object>} An object list of close button props. */
+  /** @type {object<object>} An object list of close button props. */
   closeButton: buttonType.isRequired,
 
   /** @type {boolean} Set to true to disable the 'Escape' key from closing the panel. */
   disableEscape: PropTypes.bool,
 
-  /** @type {Object<Object>} An object list of primary button props. */
+  /** @type {object<object>} An object list of primary button props. */
   primaryButton: buttonType,
 
-  /** @type {Object<Object>} An object list of secondary button props. */
+  /** @type {object<object>} An object list of secondary button props. */
   secondaryButton: buttonType,
 
   /** @type {string} Child elements. */
@@ -312,7 +312,7 @@ PanelContainer.propTypes = {
   /** @type {string} Child elements. */
   title: PropTypes.node,
 
-  /** @type {function} Footer render prop. */
+  /** @type {Function} Footer render prop. */
   renderFooter: func,
 
   /** @type {string} Root node to attach the panel to. */
