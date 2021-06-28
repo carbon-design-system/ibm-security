@@ -1,15 +1,17 @@
 /**
  * @file Configuration.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
-const { sync } = require('git-branch');
-const { merge } = require('webpack-merge');
+const { resolve } = require('path');
 
 const { BRANCH, CIRCLE_BRANCH } = process.env;
 
 // Pass the branch name from Netlify, CircleCI, or the local branch.
-process.env.STORYBOOK_BRANCH = BRANCH || CIRCLE_BRANCH || sync();
+process.env.STORYBOOK_BRANCH =
+  BRANCH || CIRCLE_BRANCH || require('git-branch').sync();
+
+const glob = path => resolve(__dirname, '../src/**', path);
 
 module.exports = {
   addons: [
@@ -24,9 +26,12 @@ module.exports = {
     '@storybook/addon-a11y',
     './addons/addon-theme/register',
   ],
-  stories: ['../src/**/*.stories.*'],
+  stories: [glob('*.stories.*'), glob('*-story.*')],
   webpackFinal: async configuration =>
-    merge(configuration, {
+    require('webpack-merge').merge(configuration, {
+      devServer: {
+        stats: 'errors-only',
+      },
       module: {
         rules: [
           {

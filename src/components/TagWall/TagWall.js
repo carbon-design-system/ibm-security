@@ -1,16 +1,13 @@
 /**
  * @file Tag wall.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import classnames from 'classnames';
 import { arrayOf, bool, func, shape, string, object } from 'prop-types';
 import React from 'react';
 
-import {
-  carbonPrefix,
-  getComponentNamespace,
-} from '../../globals/namespace/index';
+import { getComponentNamespace } from '../../globals/namespace/index';
 
 import * as defaultLabels from '../../globals/nls';
 
@@ -77,12 +74,7 @@ const TagWall = ({
             type="gray"
             {...item.props}
           >
-            <span
-              className={`${carbonPrefix}text-truncate--end`}
-              title={itemToString(item)}
-            >
-              {itemToString(item)}
-            </span>
+            {itemToString(item)}
           </InteractiveTag>
         );
       })}
@@ -113,7 +105,7 @@ TagWall.propTypes = {
   /** @type {boolean} Determines whether or not tag management is enabled. */
   disable: bool,
 
-  /** @type {Array.<Object.<string,boolean>>} List of tags to be consumed. */
+  /** @type {Array.<object.<string, boolean>>} List of tags to be consumed. */
   items: arrayOf(
     shape({
       id: string.isRequired,
@@ -123,19 +115,19 @@ TagWall.propTypes = {
     })
   ).isRequired,
 
-  /** @type {function} Function that converts object to string. */
+  /** @type {Function} Function that converts object to string. */
   itemToString: func,
 
   /** @type {string} Description label. */
   label: string,
 
-  /** @type {Object.<string, *>} Default translation labels object. */
+  /** @type {object.<string, *>} Default translation labels object. */
   labels: defaultLabels.propType,
 
-  /** @type {function} Handles `onClick` for the 'add' button. */
+  /** @type {Function} Handles `onClick` for the 'add' button. */
   onAddButton: func,
 
-  /** @type {function} Communicates to the consuming component any changes to the tags. */
+  /** @type {Function} Communicates to the consuming component any changes to the tags. */
   onChange: func,
 };
 

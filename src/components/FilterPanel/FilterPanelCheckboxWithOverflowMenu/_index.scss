@@ -1,7 +1,7 @@
 ////
 /// Filter panel checkbox with overflow menu styles.
 /// @group filter-panel
-/// @copyright IBM Security 2020
+/// @copyright IBM Security 2020 - 2021
 ////
 
 @import 'carbon-components/scss/globals/scss/vars';
@@ -15,9 +15,10 @@
 @include security--component($name: filter-panel-checkbox-with-overflow-menu) {
   $block: &;
 
+  position: relative;
+
   display: flex;
   align-items: center;
-  position: relative;
 
   &--open,
   &:hover,
@@ -29,13 +30,13 @@
     position: absolute;
     top: 0;
     right: 0;
-    background-color: $field-01;
-    height: $carbon--layout-02;
     width: $carbon--layout-02;
+    height: $carbon--layout-02;
+    background-color: $field-01;
   }
 
   &__overflow-options {
-    width: auto;
+    width: 100%;
 
     .#{$prefix}--overflow-menu-options__option {
       height: $carbon--layout-02;

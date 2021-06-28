@@ -1,7 +1,7 @@
 ////
 /// Type layout component.
 /// @group type-layout
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -9,22 +9,19 @@
 @import '@carbon/themes/scss/tokens';
 @import '@carbon/type/scss/styles';
 
-@import '../StructuredList/index';
+@import 'carbon-components/scss/globals/scss/css--reset';
 
-@import '../../globals/rtl/index';
-
+@import '../../globals/border/index';
 @import '../Component/mixins';
+
+@import '../StructuredList/index';
 
 @import 'variables';
 
 @include security--component($name: $type-layout__name) {
   $root: &;
 
-  @include carbon--type-style($name: body-short-01);
-
-  max-width: unset;
-  min-width: unset;
-  margin-bottom: $carbon--spacing-07;
+  margin-bottom: $carbon--layout-03;
 
   &__row {
     border-width: 0;
@@ -39,22 +36,20 @@
   }
 
   &__cell {
-    @include rtl {
-      &:first-of-type {
-        padding-right: 0;
-        padding-left: unset;
-      }
+    @include carbon--type-style($name: body-long-01);
 
-      &:last-of-type {
-        padding-right: unset;
-        padding-left: 0;
-      }
-    }
-
-    display: table-cell;
     padding: $carbon--spacing-03 $carbon--spacing-06 $carbon--spacing-03
       $carbon--spacing-03;
-    color: $text-01;
+
+    ul {
+      @include reset;
+
+      list-style: none;
+
+      > li {
+        margin-bottom: $carbon--spacing-03;
+      }
+    }
   }
 
   &--lg &__cell {
@@ -62,45 +57,35 @@
       $carbon--spacing-05;
   }
 
+  &--sm,
+  &--xs {
+    &__cell {
+      @include carbon--type-style($name: caption-01);
+    }
+  }
+
   &--sm &__cell {
-    @include carbon--type-style($name: caption-01);
     padding: $carbon--spacing-02 $carbon--spacing-06 $carbon--spacing-02
       $carbon--spacing-02;
   }
 
   &--xs &__cell {
-    @include carbon--type-style($name: caption-01);
     padding: $carbon--spacing-02;
   }
 
-  // xs size should always have a little left padding:
-  &:not(&--xs) #{$root}__cell:first-of-type {
-    padding-left: 0;
-  }
-
   &__cell:first-of-type {
-    color: $text-02;
     width: 1%;
+    padding-left: 0;
     white-space: nowrap;
   }
 
   &__cell:last-of-type {
     padding-right: 0;
-  }
-
-  &__cell ul {
-    padding-left: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    list-style: none;
-
-    li {
-      margin-bottom: carbon--mini-units($count: 1);
-    }
+    color: $text-01;
   }
 
   &--bordered &__row {
-    border-bottom: 1px solid $ui-03;
+    border-width: $border__sizing__width;
 
     &:last-child {
       border-width: 0;

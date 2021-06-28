@@ -1,9 +1,7 @@
 /**
  * @file Interactive tag.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
-
-import Close16 from '@carbon/icons-react/lib/close/16';
 
 import classnames from 'classnames';
 import { bool, func, string } from 'prop-types';
@@ -11,7 +9,6 @@ import React from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace/index';
 
-import Icon from '../Icon';
 import Tag from '../Tag';
 
 export const namespace = getComponentNamespace('tag--interactive');
@@ -31,22 +28,14 @@ const InteractiveTag = ({
   <Tag
     className={classnames(namespace, className, {
       [`${namespace}--default`]: !isSelected,
-      [`${namespace}--removable`]: removable,
       [`${namespace}--selected`]: isSelected,
     })}
-    filter={false}
+    filter={removable}
+    onClose={onRemove}
+    title={removeBtnLabel}
     {...other}
   >
     {children}
-    {removable && (
-      <button
-        aria-label={removeBtnLabel}
-        className={`${namespace}__button`}
-        onClick={onRemove}
-      >
-        <Icon className={`${namespace}__button__icon`} renderIcon={Close16} />
-      </button>
-    )}
   </Tag>
 );
 
@@ -67,7 +56,7 @@ InteractiveTag.propTypes = {
   /** @type {boolean} Determines if the tag is selected. */
   isSelected: bool,
 
-  /** @type {function} Callback function to remove the tag. */
+  /** @type {Function} Callback function to remove the tag. */
   onRemove: func,
 
   /** @type {boolean} Set whether the tag is removable or not. */

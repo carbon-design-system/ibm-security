@@ -3,11 +3,15 @@
  * @copyright IBM Security 2019 - 2020
  */
 
+import classnames from 'classnames';
 import numeral from 'numeral';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import 'numeral/locales';
+
+import { ArrowUp16, ArrowUp20, ArrowUp24 } from '@carbon/icons-react';
+import Icon from '../Icon/Icon';
 
 import isDevelopment from '../../globals/env';
 import { getComponentNamespace } from '../../globals/namespace';
@@ -48,13 +52,14 @@ const formatValue = (value, truncate) => {
  * @returns {string} Formatted string.
  */
 const truncateValue = (percentage, value, truncate) => {
-  if (percentage)
+  if (percentage) {
     return (
       <div className={`${namespace}__percentage`}>
         {value}
-        <sup className={`${namespace}__percentage-mark`}>%</sup>
+        <span className={`${namespace}__percentage-mark`}>%</span>
       </div>
     );
+  }
 
   return value === null ? '–' : formatValue(value, truncate);
 };
@@ -65,11 +70,29 @@ const ICA = ({
   label,
   locale,
   percentage,
+  size,
+  trending,
   truncate,
   total,
   value,
   ...other
 }) => {
+  const isSize = sizeValue => size === sizeValue;
+  const isLarge = isSize('lg');
+  const isXLarge = isSize('xl');
+
+  let renderIcon = ArrowUp16;
+  if (isLarge) {
+    renderIcon = ArrowUp20;
+  } else if (isXLarge) {
+    renderIcon = ArrowUp24;
+  }
+
+  const ICAClasses = classnames(className, {
+    [`${namespace}--lg`]: isLarge,
+    [`${namespace}--xl`]: isXLarge,
+  });
+
   if (Locales.includes(locale)) {
     numeral.locale(locale);
   } else {
@@ -89,12 +112,20 @@ const ICA = ({
     (forceShowTotal && truncatedTotal > 0);
 
   return (
-    <div className={`${namespace} ${className}`} {...other}>
+    <div className={`${ICAClasses}`} {...other}>
       <h4 className={`${namespace}__label`}>{label} </h4>
-      <span className={`${namespace}__value`}>{truncatedValue}</span>
-      {shouldDisplayof ? (
-        <span className={`${namespace}__total`}> / {truncatedTotal}</span>
-      ) : null}
+      <span className={`${namespace}__row`}>
+        {trending && (
+          <Icon className={`${namespace}__trend`} renderIcon={renderIcon} />
+        )}
+        <span className={`${namespace}__value`}>{truncatedValue}</span>
+        {shouldDisplayof ? (
+          <span className={`${namespace}__total`}>
+            {' '}
+            <span>/{truncatedTotal}</span>
+          </span>
+        ) : null}
+      </span>
     </div>
   );
 };
@@ -146,6 +177,12 @@ ICA.propTypes = {
 
   /** Specify whether or not the values should be truncated. */
   truncate: PropTypes.bool,
+
+  /** The size of the ICA. */
+  size: PropTypes.oneOf(['default', 'lg', 'xl']),
+
+  /** Display trending icon. */
+  trending: PropTypes.bool,
 };
 
 ICA.defaultProps = {
@@ -153,8 +190,10 @@ ICA.defaultProps = {
   className: '',
   locale: 'en',
   percentage: false,
+  size: 'default',
   value: null,
   forceShowTotal: false,
+  trending: false,
   truncate: true,
 };
 

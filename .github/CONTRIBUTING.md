@@ -1,6 +1,6 @@
 # Contributing
 
-Also refer to [contributing in Carbon](https://github.com/carbon-design-system/carbon/blob/master/.github/CONTRIBUTING.md).
+Also refer to [contributing in Carbon](https://github.com/carbon-design-system/carbon/blob/main/.github/CONTRIBUTING.md).
 
 ## 1. Fork the repo
 
@@ -24,8 +24,6 @@ Once it's done building, you can edit source code or create new components. The 
 ## 4. Test your JavaScript code
 
 If you're contributing to our JavaScript code, test your changes by running our test command, `yarn test`.
-
-For more extensive testing information, see our [testing handbook](../docs/testing).
 
 ## 5. Make a pull request
 

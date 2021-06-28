@@ -1,6 +1,6 @@
 /**
  * @file Filter search.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import classnames from 'classnames';
@@ -111,7 +111,7 @@ class FilterSearch extends Component {
           closeButtonLabelText={SEARCH_CLOSE_BUTTON}
           labelText={SEARCH_LABEL}
           onChange={this.onFilterSearch}
-          placeHolderText={SEARCH_PLACEHOLDER_LABEL}
+          placeholder={SEARCH_PLACEHOLDER_LABEL}
           value={searchValue}
           size="sm"
         />

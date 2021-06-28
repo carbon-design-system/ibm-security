@@ -1,11 +1,13 @@
 /**
  * @file Status indicator.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-import Restart20 from '@carbon/icons-react/lib/restart/20';
-import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
+import { Restart20 } from '@carbon/icons-react';
+
+import deprecate from 'carbon-components-react/es/prop-types/deprecate';
 import classnames from 'classnames';
+
 import {
   array,
   element,
@@ -35,10 +37,10 @@ class StatusIndicator extends Component {
     /** @type {number} The index of the current step. */
     currentIndex: number,
 
-    /** @type {array} The array of child elements of the application. */
+    /** @type {Array} The array of child elements of the application. */
     children: oneOfType([array, element]),
 
-    /** @type {Object.<Object, *>} An object list of retry button props. */
+    /** @type {object.<object, *>} An object list of retry button props. */
     retry: shape({
       /** @type {func} An action to be re-run in the event of failure. */
       action: func,
@@ -67,10 +69,11 @@ class StatusIndicator extends Component {
   };
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    if (prevState.retry !== nextProps.retry)
+    if (prevState.retry !== nextProps.retry) {
       return {
         retry: nextProps.retry,
       };
+    }
     return null;
   }
 

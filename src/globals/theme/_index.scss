@@ -1,7 +1,7 @@
 ////
 /// Theme helpers.
 /// @group theme
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/themes/scss/mixins';
@@ -11,27 +11,6 @@
 @import '../feature-flags/index';
 
 @import 'variables';
-
-@if feature-flag-enabled($feature: $theme__name) {
-  @each $token, $value in $-theme {
-    // Map the theme tokens as CSS custom properties.
-    $-theme: map-merge(
-      $map1: $-theme,
-      $map2: (
-        $token:
-          if(
-            $condition:
-              index(
-                $list: $security--theme__ignore-list,
-                $value: $token,
-              ),
-            $if_true: $value,
-            $if_false: var(--#{$token}, $value),
-          ),
-      ),
-    );
-  }
-}
 
 /// Carbon theme.
 /// @type Map<String, Color>
@@ -57,7 +36,12 @@ $theme: dark;
 /// @access private
 /// @deprecated
 @function theme($light, $dark) {
-  @warn deprecate($actual: 'theme', $expected: '@carbon/themes');
+  $deprecate: deprecate(
+    $actual: 'theme',
+    $expected: '@carbon/themes/scss/themes',
+    $url:
+      'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x/themes.md#functions',
+  );
 
   @return if($theme == dark, $dark, $light);
 }

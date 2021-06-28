@@ -1,14 +1,13 @@
 ////
 /// Breadcrumb component.
 /// @group breadcrumb
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/themes/scss/tokens';
 @import '@carbon/type/scss/styles';
 @import 'carbon-components/scss/components/breadcrumb/breadcrumb';
 
-@import 'carbon-components/scss/globals/scss/css--reset';
 @import 'carbon-components/scss/globals/scss/vars';
 
 @import '../../globals/namespace/index';
@@ -28,8 +27,8 @@
     }
 
     #{$carbon--breadcrumb__item__link} {
-      max-width: 40ex;
       overflow: hidden;
+      max-width: 40ex;
       text-overflow: ellipsis;
 
       &:visited {

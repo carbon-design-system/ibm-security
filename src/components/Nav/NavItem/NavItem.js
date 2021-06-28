@@ -1,10 +1,10 @@
 /**
  * @file Navigation item class.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { Launch16 } from '@carbon/icons-react';
-import setupGetInstanceId from 'carbon-components-react/lib/tools/setupGetInstanceId';
+import setupGetInstanceId from 'carbon-components-react/es/tools/setupGetInstanceId';
 import classnames from 'classnames';
 import { bool, elementType, func, node, number, string } from 'prop-types';
 import React, { Component } from 'react';

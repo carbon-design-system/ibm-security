@@ -1,7 +1,7 @@
 ////
 /// Error page component.
 /// @group error-page
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -14,13 +14,14 @@
 
   display: flex;
   min-height: carbon--mini-units($count: 25);
-  margin-bottom: $carbon--spacing-09;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: $carbon--spacing-09;
   background-repeat: no-repeat;
 
   &__title {
     @include carbon--type-style($name: productive-heading-05);
+
     margin-top: $carbon--spacing-04;
     margin-bottom: $carbon--spacing-09;
   }
@@ -32,19 +33,21 @@
 
   &__sub-title {
     @include carbon--type-style($name: productive-heading-03);
+
     margin-bottom: $carbon--spacing-05;
   }
 
   &__description {
     @include carbon--type-style($name: heading-02);
+
     margin-bottom: $carbon--spacing-07;
   }
 
   &__content-wrapper {
     display: flex;
-    padding: carbon--mini-units($count: 12) $spacing-07;
     flex-direction: column;
     justify-content: space-between;
+    padding: carbon--mini-units($count: 12) $spacing-07;
   }
 
   &__content {

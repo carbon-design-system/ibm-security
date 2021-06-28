@@ -1,11 +1,12 @@
 /**
  * @file Data table table subcomponent.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
+import { Table as CarbonTable } from 'carbon-components-react';
 import React, { Component } from 'react';
 import { debounce } from 'throttle-debounce';
-import { Table as CarbonTable } from 'carbon-components-react/lib/components/DataTable';
+
 import { tableWrapperNamespace, overflowCellNamespace } from './constants';
 import { carbonPrefix } from '../../globals/namespace';
 import theme from '../../globals/theme';
@@ -38,7 +39,7 @@ class Table extends Component {
       const { scrollLeft, clientWidth, scrollWidth } = tableWrapper;
       [
         ...tableWrapper.querySelectorAll(
-          `.${overflowCellNamespace} .${carbonPrefix}overflow-menu`
+          `.${overflowCellNamespace} .${carbonPrefix}--overflow-menu`
         ),
       ].forEach(overflow => {
         // eslint-disable-next-line no-param-reassign
