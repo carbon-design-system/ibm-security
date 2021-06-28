@@ -318,7 +318,7 @@ exports[`DataTable Rendering renders 1`] = `
                       className="bx--data-table-content"
                     >
                       <table
-                        className="bx--data-table bx--data-table--no-border"
+                        className="bx--data-table bx--data-table--normal bx--data-table--no-border"
                       >
                         <TableHead>
                           <thead>
@@ -1976,7 +1976,7 @@ exports[`DataTable Rendering renders a custom table 1`] = `
                       className="bx--data-table-content"
                     >
                       <table
-                        className="bx--data-table bx--data-table--no-border"
+                        className="bx--data-table bx--data-table--normal bx--data-table--no-border"
                       >
                         <TableHead>
                           <thead>
@@ -3634,7 +3634,7 @@ exports[`DataTable Rendering renders a selectable table 1`] = `
                       className="bx--data-table-content"
                     >
                       <table
-                        className="bx--data-table bx--data-table--no-border"
+                        className="bx--data-table bx--data-table--normal bx--data-table--no-border"
                       >
                         <TableHead>
                           <thead>
@@ -5292,7 +5292,7 @@ exports[`DataTable Rendering renders a sortable table 1`] = `
                       className="bx--data-table-content"
                     >
                       <table
-                        className="bx--data-table bx--data-table--sort bx--data-table--no-border"
+                        className="bx--data-table bx--data-table--normal bx--data-table--sort bx--data-table--no-border"
                       >
                         <TableHead>
                           <thead>
