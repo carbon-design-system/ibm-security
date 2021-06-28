@@ -1,7 +1,7 @@
 ////
 /// Card mixins.
 /// @group card
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -33,10 +33,10 @@ $card__name: card;
   width: auto;
   min-width: carbon--mini-units($count: 24);
   min-height: $carbon--layout-06;
-  padding: $carbon--spacing-05;
-  color: $body__color__text;
-  background-color: $ui-01;
   flex-direction: column;
+  padding: $carbon--spacing-05;
+  background-color: $ui-01;
+  color: $body__color__text;
   word-break: break-word;
 
   &__link {
@@ -65,12 +65,18 @@ $card__name: card;
 
     &__title {
       @include carbon--type-style($name: heading-01);
+
       margin-top: 0;
       margin-bottom: $carbon--spacing-05;
     }
 
     &__tag {
+      $card__tag__spacing: $carbon--spacing-04;
+
       @include carbon--type-style($name: caption-01);
+
+      margin-top: $card__tag__spacing;
+      margin-bottom: $card__tag__spacing;
     }
   }
 
@@ -79,6 +85,7 @@ $card__name: card;
 
     &__text {
       @include carbon--type-style($name: caption-01);
+
       margin-bottom: $carbon--spacing-05;
     }
   }

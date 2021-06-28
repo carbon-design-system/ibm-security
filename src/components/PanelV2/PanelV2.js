@@ -1,15 +1,15 @@
 /**
  * @file Panel v2.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 /* eslint-disable no-useless-computed-key, react/require-default-props */
 
-import Close20 from '@carbon/icons-react/lib/close/20';
+import { Close20 } from '@carbon/icons-react';
 
-import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
-import requiredIfGivenPropIsTruthy from 'carbon-components-react/lib/prop-types/requiredIfGivenPropIsTruthy';
-import setupGetInstanceId from 'carbon-components-react/lib/tools/setupGetInstanceId';
+import deprecate from 'carbon-components-react/es/prop-types/deprecate';
+import requiredIfGivenPropIsTruthy from 'carbon-components-react/es/prop-types/requiredIfGivenPropIsTruthy';
+import setupGetInstanceId from 'carbon-components-react/es/tools/setupGetInstanceId';
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
@@ -29,7 +29,7 @@ const getInstanceId = setupGetInstanceId();
 
 /**
  * Panel v2 container component.
- * @param {Object.<string, *>} props Panel v2 container props.
+ * @param {object.<string, *>} props Panel v2 container props.
  * @returns {PanelV2} Panel v2 container instance.
  */
 function PanelV2({
@@ -254,7 +254,7 @@ PanelV2.propTypes = {
   /** @type {string} Class name. */
   className: PropTypes.string,
 
-  /** @type {Object<Object>} An object list of close button props. */
+  /** @type {object<object>} An object list of close button props. */
   closeButton: PropTypes.shape({
     id: PropTypes.string,
     onClick: PropTypes.func,
@@ -276,7 +276,7 @@ PanelV2.propTypes = {
   /** @type {object} Labels for Panel and children */
   labels: defaultLabels.propType,
 
-  /** @type {Object<Object>} An object list of primary button props. */
+  /** @type {object<object>} An object list of primary button props. */
   primaryButton: deprecate(
     buttonType,
     `\nThe prop \`primaryButton\` for PanelV2 has been deprecated in favor of \`renderFooter\`.`
@@ -288,7 +288,7 @@ PanelV2.propTypes = {
   /** @type {ReactNode|any} The root node for rendering the panel */
   rootNode: isNode() ? PropTypes.instanceOf(Node) : PropTypes.any,
 
-  /** @type {Object<Object>} An object list of secondary button props. */
+  /** @type {object<object>} An object list of secondary button props. */
   secondaryButton: deprecate(
     buttonType,
     `\nThe prop \`secondaryButton\` for PanelV2 has been deprecated in favor of \`renderFooter\`.`
@@ -297,7 +297,7 @@ PanelV2.propTypes = {
   /** @type {boolean} Stop event propagation for events that can bubble. */
   stopPropagation: PropTypes.bool,
 
-  /** @type {array} Array of event types to stop propagation. */
+  /** @type {Array} Array of event types to stop propagation. */
   stopPropagationEvents: PropTypes.arrayOf(PropTypes.oneOf(PORTAL_EVENTS)),
 
   /** @type {ReactNode} Subtitle child elements. */

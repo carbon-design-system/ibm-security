@@ -1,7 +1,7 @@
 ////
 /// Status icon component.
 /// @group status-icon
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -26,12 +26,13 @@
       /// @type Length
       $status-icon--success__transform: 0.55;
 
+      box-sizing: border-box;
+
       padding: $carbon--spacing-03;
-      fill: $icon-01;
       border: carbon--mini-units($count: 0.25) solid
         $status-icon--success__color;
       border-radius: 100%;
-      box-sizing: border-box;
+      fill: $icon-01;
       transform: scale3d(
         $status-icon--success__transform,
         $status-icon--success__transform,

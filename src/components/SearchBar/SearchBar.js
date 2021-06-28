@@ -1,6 +1,6 @@
 /**
  * @file SearchBar.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import React from 'react';
@@ -73,7 +73,7 @@ export default class SearchBar extends React.Component {
       PropTypes.oneOfType([PropTypes.string, PropTypes.object])
     ),
 
-    /** @type {function} Function to get the text for each sscope to display in dropdown. */
+    /** @type {Function} Function to get the text for each sscope to display in dropdown. */
     scopeToString: PropTypes.func,
 
     /** @type {string} The name text for the search scope type. */
@@ -169,7 +169,9 @@ export default class SearchBar extends React.Component {
       titleText,
     } = this.props;
 
-    if (scopes.length === 0) return null;
+    if (scopes.length === 0) {
+      return null;
+    }
 
     return (
       <MultiSelect
@@ -210,13 +212,13 @@ export default class SearchBar extends React.Component {
       >
         {this.renderScopeSelector()}
         <Search
-          name="search-input"
           className={`${namespace}__input`}
-          placeHolderText={placeHolderText}
-          labelText={labelText}
-          value={value}
-          onChange={this.handleInputChange}
           closeButtonLabelText={clearButtonLabelText}
+          labelText={labelText}
+          name="search-input"
+          onChange={this.handleInputChange}
+          placeholder={placeHolderText}
+          value={value}
         />
         <Button
           name="search-submit"

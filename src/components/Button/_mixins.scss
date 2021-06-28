@@ -1,49 +1,26 @@
 ////
 /// Button mixins.
 /// @group button
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/spacing';
 @import '@carbon/themes/scss/tokens';
-@import '@carbon/type/scss/styles';
 
 @import 'carbon-components/scss/globals/scss/vars';
 
 @mixin button {
-  /// Padding.
-  /// @type Length
-  $button__spacing__padding: $carbon--spacing-05;
-
   &--ghost-danger {
     color: $text-01;
 
     &:focus,
     &:hover {
-      color: $text-04;
       background-color: $hover-danger;
+      color: $text-04;
     }
 
     &:hover > .#{$prefix}--btn__icon > path {
       fill: currentColor;
-    }
-  }
-
-  &--large {
-    @include carbon--type-style($name: body-short-02);
-
-    width: 100%;
-    height: $carbon--layout-06;
-    padding: $button__spacing__padding;
-    align-items: start;
-    flex-direction: column;
-
-    > .#{$prefix}--btn__icon {
-      position: absolute;
-      bottom: $button__spacing__padding;
-      width: unset;
-      height: unset;
-      margin-left: unset;
     }
   }
 

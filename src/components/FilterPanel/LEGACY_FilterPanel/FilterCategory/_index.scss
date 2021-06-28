@@ -1,7 +1,7 @@
 ////
 /// Filter category styles.
 /// @group filter-panel
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -28,12 +28,14 @@
     @include carbon--font-weight($weight: semibold);
 
     display: flex;
-    margin-bottom: $carbon--spacing-05;
     justify-content: space-between;
+    margin-top: $carbon--spacing-03;
+    margin-bottom: $carbon--spacing-05;
   }
 
   &__count {
     @include carbon--font-weight($weight: regular);
+
     color: $text-02;
   }
 }

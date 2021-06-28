@@ -1,19 +1,11 @@
 ////
 /// Type.
 /// @group type
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/type/scss/classes';
 @import '@carbon/type/scss/type';
-
-/// `@font-face` declarations.
-/// @type boolean
-$css--font-face: true !default;
-
-/// IBM Plex.
-/// @type boolean
-$css--plex: true;
 
 @import 'carbon-components/scss/globals/scss/css--font-face';
 
@@ -93,7 +85,13 @@ $type-style-deprecation-map: (
     $key: $scale-item,
   );
 
-  @warn deprecate($actual: 'type-scale-item($scale-item: #{$scale-item})', $expected: 'carbon--type-style($name: #{$name})');
+  $deprecate: deprecate(
+    $actual: 'type-scale-item($scale-item: #{$scale-item})',
+    $expected: 'carbon--type-style($name: #{$name})',
+    $url:
+      'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/carbon-for-ibm-security/type.md#functions',
+  );
+
   @include carbon--type-style($name: $name);
 }
 
@@ -130,7 +128,7 @@ $type-style-deprecation-map: (
 
     @each $type-class, $type-style-name in $type-style-deprecation-map {
       .#{$type__name}-#{$type-class} {
-        @include carbon--type-style($name: $type-style-name);
+        @include carbon--type-style($fluid: true, $name: $type-style-name);
       }
     }
   }

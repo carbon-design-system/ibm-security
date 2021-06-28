@@ -1,7 +1,7 @@
 ////
 /// Profile image mixins.
 /// @group profile-image
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -10,19 +10,21 @@
 
 @mixin profile-image {
   @include carbon--type-style($name: body-short-01);
+
   display: inline-flex;
   width: carbon--mini-units($count: 3.5);
   height: carbon--mini-units($count: 3.5);
-  color: $inverse-01;
   align-items: center;
+  justify-content: center;
   background-color: $icon-02;
   border-radius: 50%;
-  justify-content: center;
+  color: $inverse-01;
   object-fit: cover;
   text-transform: uppercase;
 
   &--large {
     @include carbon--type-style($name: productive-heading-03);
+
     width: carbon--mini-units($count: 7);
     height: carbon--mini-units($count: 7);
   }

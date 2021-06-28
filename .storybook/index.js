@@ -1,19 +1,40 @@
 /**
  * @file Storybook helpers.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
+
+import { LIBRARY } from '../src/components/LayoutModules/stories';
 
 // Category labels.
 const CATEGORIES = {
+  CARBON: 'Carbon',
   COMPONENTS: 'Components',
+  DEPRECATED: 'Deprecated',
+  LAYOUT_MODULES: 'Layout modules',
+  PAGE_LAYOUTS: 'Page layouts (Canary)',
   PATTERNS: 'Patterns',
+  SECURITY: 'Security',
 };
 
-const { COMPONENTS, PATTERNS } = CATEGORIES;
+const {
+  CARBON,
+  COMPONENTS,
+  DEPRECATED,
+  LAYOUT_MODULES,
+  PAGE_LAYOUTS,
+  PATTERNS,
+  SECURITY,
+} = CATEGORIES;
 
-const HIERARCHY_ROOT_SEPARATOR = '/';
-
-const ORDER = [PATTERNS, COMPONENTS];
+const ORDER = [
+  LAYOUT_MODULES,
+  [LIBRARY],
+  PAGE_LAYOUTS,
+  PATTERNS,
+  COMPONENTS,
+  [SECURITY, CARBON],
+  DEPRECATED,
+];
 
 /**
  * Returns a formatted string for the Storybook category.
@@ -21,14 +42,20 @@ const ORDER = [PATTERNS, COMPONENTS];
  * @param {string} storyName The story name to format.
  * @returns {string} The formatted category and story name.
  */
-const getCategory = (categoryName, storyName) =>
-  `${categoryName}${HIERARCHY_ROOT_SEPARATOR}${storyName}`;
+const getCategory = (categoryName, storyName) => `${categoryName}/${storyName}`;
 
 /**
  * Binds Storybook category to the `getCategory` method.
  * @param {string} categoryName The category name to bind.
  */
 const bindCategory = categoryName => getCategory.bind(this, categoryName);
+
+/**
+ * Returns a formatted string for the Carbon components category.
+ * @param {string} storyName The story name to format.
+ * @returns {string} The formatted Carbon component category and story name.
+ */
+const getCarbonCategory = bindCategory(getCategory(COMPONENTS, CARBON));
 
 /**
  * Returns a formatted string for the components category.
@@ -38,6 +65,27 @@ const bindCategory = categoryName => getCategory.bind(this, categoryName);
 const getComponentsCategory = bindCategory(COMPONENTS);
 
 /**
+ * Returns a formatted string for the deprecated category.
+ * @param {string} storyName The story name to format.
+ * @returns {string} The formatted deprecated category and story name.
+ */
+const getDeprecatedCategory = bindCategory(DEPRECATED);
+
+/**
+ * Returns a formatted string for the layout modules category.
+ * @param {string} storyName The story name to format.
+ * @returns {string} The formatted layout module category and story name.
+ */
+const getLayoutModulesCategory = bindCategory(LAYOUT_MODULES);
+
+/**
+ * Returns a formatted string for the page layouts category.
+ * @param {string} storyName The story name to format.
+ * @returns {string} The formatted page layout category and story name.
+ */
+const getPageLayoutsCategory = bindCategory(PAGE_LAYOUTS);
+
+/**
  * Returns a formatted string for the patterns category.
  * @param {string} storyName The story name to format.
  * @returns {string} The formatted pattern category and story name.
@@ -45,11 +93,11 @@ const getComponentsCategory = bindCategory(COMPONENTS);
 const getPatternsCategory = bindCategory(PATTERNS);
 
 /**
- * Returns a formatted string for deprecated components.
- * @param {string} name The name to deprecated.
- * @returns {string} The formatted deprecated string.
+ * Returns a formatted string for the Security components category.
+ * @param {string} storyName The story name to format.
+ * @returns {string} The formatted Security component category and story name.
  */
-const deprecate = name => `${name} [Deprecated]`;
+const getSecurityCategory = bindCategory(getCategory(COMPONENTS, SECURITY));
 
 /**
  * Configuration for disabling the centering addon.
@@ -91,23 +139,29 @@ const getDocsParameters = () => ({
  * @param {{library: string, story: string, id: string}} [component={}] An object containing component information to redirect to.
  * @returns {Object<string, string>} The configuration containing information to apply.
  */
-const info = (description, component = {}) => ({
-  info:
-    component.library && component.story && component.id
-      ? `${description}
 
-Also refer to http://${component.library}.carbondesignsystem.com/?path=/story/${component.story}--${component.id}`
-      : description,
+const info = (
+  description,
+  { group = 'components', library = 'react', story } = {}
+) => ({
+  info: story
+    ? `${description}
+
+Also refer to http://${library}.carbondesignsystem.com/?path=/docs/${group}-${story}`
+    : description,
 });
 
 export {
-  deprecate,
   disableCentered,
   disableCenteredStories,
+  getCarbonCategory as carbon,
   getComponentsCategory as components,
+  getDeprecatedCategory as deprecated,
   getDocsParameters,
+  getLayoutModulesCategory as layoutModules,
+  getPageLayoutsCategory as pageLayouts,
   getPatternsCategory as patterns,
-  HIERARCHY_ROOT_SEPARATOR,
+  getSecurityCategory as security,
   info,
   ORDER,
 };

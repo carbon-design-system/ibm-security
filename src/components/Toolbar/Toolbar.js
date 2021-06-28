@@ -1,6 +1,6 @@
 /**
  * @file Toolbar.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import {
@@ -31,7 +31,7 @@ export const namespace = getComponentNamespace('toolbar');
 
 /**
  * Toolbar component.
- * @param {Object.<string, *>} props Toolbar props.
+ * @param {object.<string, *>} props Toolbar props.
  * @returns {Toolbar} Toolbar instance.
  */
 export default class Toolbar extends Component {
@@ -79,7 +79,7 @@ export default class Toolbar extends Component {
   /**
    * Toggles the appropriate icon button based on whether the relevant panel is open.
    * @param {string} label The icon label.
-   * @param {function} renderIcon The icon to use.
+   * @param {Function} renderIcon The icon to use.
    * @param {string} type The panel to check.
    * @returns {IconButton} The icon button to return.
    */
@@ -164,8 +164,10 @@ export default class Toolbar extends Component {
                 id: navigationItemId,
                 title: navigationItemTitle,
                 ...props
-              }) =>
-                children ? (
+              }) => {
+                const hasIcon = icon !== undefined;
+
+                return children ? (
                   <NavList key={navigationItemId} title={navigationItemTitle}>
                     {children.map(
                       ({
@@ -187,14 +189,14 @@ export default class Toolbar extends Component {
                           handleItemSelect={() => this.toggleContent(content)}
                           {...props}
                         >
-                          {navigationListItemTitle}
-                          {icon !== undefined && (
+                          {hasIcon && (
                             <img
                               alt={navigationListItemTitle}
                               className={`${namespace}__nav__item__icon`}
                               src={icon}
                             />
                           )}
+                          {navigationListItemTitle}
                         </NavItem>
                       )
                     )}
@@ -209,16 +211,24 @@ export default class Toolbar extends Component {
                     handleItemSelect={() => this.toggleContent(content)}
                     {...props}
                   >
-                    {navigationItemTitle}
-                    {icon !== undefined && (
+                    {hasIcon && (
                       <img
                         alt={navigationItemTitle}
                         className={`${namespace}__nav__item__icon`}
                         src={icon}
                       />
                     )}
+
+                    <div
+                      className={classnames(`${namespace}__nav__item__title`, {
+                        [`${namespace}__nav__item__title--icon`]: hasIcon,
+                      })}
+                    >
+                      {navigationItemTitle}
+                    </div>
                   </NavItem>
-                )
+                );
+              }
             )}
         </Nav>
       ))
@@ -236,8 +246,11 @@ export default class Toolbar extends Component {
       },
       renderAddons = [],
     } = this.props;
-
-    const classes = classnames(namespace, className);
+    const renderSupport = this.props.support.length > 0;
+    const renderSettings = this.props.settings.length > 0;
+    const classes = classnames(namespace, className, {
+      [`${namespace}__minimized`]: !renderSupport && !renderSettings,
+    });
     const { isActive } = this.state;
     const activeItems = Object.entries(isActive)
       // eslint-disable-next-line no-unused-vars
@@ -253,8 +266,14 @@ export default class Toolbar extends Component {
         <nav aria-label={ariaLabel} className={classes}>
           <ul className={`${namespace}__group`}>
             <li>{this.toggleIcon(menu.button, Menu20, 'menu')}</li>
-            <li>{this.toggleIcon(settings.button, Settings20, 'settings')}</li>
-            <li>{this.toggleIcon(support.button, Help20, 'support')}</li>
+            {renderSettings && (
+              <li>
+                {this.toggleIcon(settings.button, Settings20, 'settings')}
+              </li>
+            )}
+            {renderSupport && (
+              <li>{this.toggleIcon(support.button, Help20, 'support')}</li>
+            )}
 
             {renderAddons.map(({ id, render }) => (
               <li key={id}>
@@ -317,7 +336,7 @@ const navigation = {
   id: PropTypes.string.isRequired,
 
   /** @type {string} The title of the navigation. */
-  title: PropTypes.string.isRequired,
+  title: PropTypes.node.isRequired,
 
   /** @type {node} Content. */
   content: PropTypes.node,
@@ -329,18 +348,18 @@ const navigation = {
 const panel = () =>
   /** @type {Array<Object.*>} An array list of navigation lists and sub-navigation. */
   PropTypes.arrayOf(
-    /** @type {Object<Object.Object>} An object list of navigation. */
+    /** @type {object<object.Object>} An object list of navigation. */
     PropTypes.shape({
       ...navigation,
 
       /** @type {Array<Object.*>} An array list of navigation items. */
       navigation: PropTypes.arrayOf(
-        /** @type {Object<Object.Object>} An object list of navigation. */
+        /** @type {object<object.Object>} An object list of navigation. */
         PropTypes.shape(
           Object.assign({}, navigation, {
             /** @type {Array<Object.*>} An array list of sub-navigation items. */
             children: PropTypes.arrayOf(
-              /** @type {Object<Object.Object>} An object list of sub-navigation. */
+              /** @type {object<object.Object>} An object list of sub-navigation. */
               PropTypes.shape(Object.assign({}, navigation, href))
             ),
             href,
@@ -354,15 +373,15 @@ Toolbar.propTypes = {
   /** @type {string} Extra classes to add. */
   className: PropTypes.string,
 
-  /** @type {Object<Object.Object>} An object list of labels. */
+  /** @type {object<object.Object>} An object list of labels. */
   labels: PropTypes.shape({
-    /** @type {Object.<string, string>} An object list of navigation labels for the top level navigation item. */
+    /** @type {object.<string, string>} An object list of navigation labels for the top level navigation item. */
     mainNavigation: PropTypes.shape({
       /** Specify the `aria-label` for the primary navigation */
       ariaLabel: PropTypes.string.isRequired,
     }).isRequired,
 
-    /** @type {Object.<string, string>} An object list of menu labels. */
+    /** @type {object.<string, string>} An object list of menu labels. */
     menu: PropTypes.shape({
       /** @type {string} The button label. */
       button: PropTypes.string.isRequired,
@@ -371,23 +390,23 @@ Toolbar.propTypes = {
       tooltip: PropTypes.string,
     }).isRequired,
 
-    /** @type {Object.<string, string>} An object list of settings labels. */
+    /** @type {object.<string, string>} An object list of settings labels. */
     settings: PropTypes.shape({
       /** @type {string} The button label. */
       button: PropTypes.string.isRequired,
 
       /** @type {string} The tooltip label. */
       tooltip: PropTypes.string,
-    }).isRequired,
+    }),
 
-    /** @type {Object.<string, string>} An object list of support labels. */
+    /** @type {object.<string, string>} An object list of support labels. */
     support: PropTypes.shape({
       /** @type {string} The button label. */
       button: PropTypes.string.isRequired,
 
       /** @type {string} The tooltip label. */
       tooltip: PropTypes.string,
-    }).isRequired,
+    }),
   }).isRequired,
 
   /** @type {Function} Toggle handler. */

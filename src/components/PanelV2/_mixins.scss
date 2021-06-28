@@ -1,7 +1,7 @@
 ////
 /// Panel mixins.
 /// @group panel
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -50,18 +50,19 @@
 
   @include security--theme--cg10__cg100;
 
-  display: flex;
   position: fixed;
+  z-index: z($layer: modal);
   top: 0;
   right: 0;
-  height: 100%;
+
+  display: flex;
   width: $panel__sizing__width;
-  color: $body__color__text;
-  background-color: $ui-01;
+  height: 100%;
   flex-direction: column;
   justify-content: space-between;
+  background-color: $ui-01;
+  color: $body__color__text;
   outline: none;
-  z-index: z($layer: modal);
 
   @include rtl {
     right: unset;
@@ -88,19 +89,19 @@
   }
 
   &__header {
-    display: flex;
     position: fixed;
     top: 0;
+    display: flex;
     width: $panel__header__sizing__width;
-    padding-top: $panel__spacing__padding;
-    padding-bottom: $panel__spacing__padding;
-    margin-right: $panel__spacing__padding;
-    margin-left: $panel__spacing__padding;
     box-sizing: border-box;
     flex-direction: row-reverse;
     justify-content: space-between;
+    padding-top: $panel__spacing__padding;
+    padding-bottom: $panel__spacing__padding;
     border-bottom: $panel__content__sizing__border solid
       $panel__content__color__border;
+    margin-right: $panel__spacing__padding;
+    margin-left: $panel__spacing__padding;
 
     &__container--title {
       width: $panel__header__sizing__width -
@@ -118,6 +119,7 @@
       @include carbon--type-style($name: productive-heading-03);
 
       display: block;
+      margin-top: $carbon--spacing-05;
       margin-bottom: $carbon--spacing-04;
     }
 
@@ -127,8 +129,8 @@
   }
 
   &__body {
-    margin-top: carbon--mini-units($count: 11);
     flex-grow: 1;
+    margin-top: carbon--mini-units($count: 11);
     overflow-y: auto;
 
     &--content {
@@ -150,9 +152,9 @@
   }
 
   &__footer {
-    display: flex;
-    position: fixed;
+    position: absolute;
     bottom: 0;
+    display: flex;
     width: $panel__sizing__width;
 
     &__button {
@@ -167,32 +169,32 @@
   &__transition {
     &--appear,
     &--enter {
-      transform: translate3d($panel__sizing__width, 0, 0);
       opacity: 0;
+      transform: translate3d($panel__sizing__width, 0, 0);
 
       &--active {
+        opacity: 1;
         transform: translate3d(0, 0, 0);
         transition: all $duration--moderate-02;
         transition-timing-function: carbon--motion(
           $name: entrance,
           $mode: expressive
         );
-        opacity: 1;
       }
     }
 
     &--leave {
-      transform: translate3d(0, 0, 0);
       opacity: 1;
+      transform: translate3d(0, 0, 0);
 
       &--active {
+        opacity: 0;
         transform: translate3d($panel__sizing__width, 0, 0);
         transition: all $duration--moderate-02;
         transition-timing-function: carbon--motion(
           $name: exit,
           $mode: expressive
         );
-        opacity: 0;
       }
     }
   }

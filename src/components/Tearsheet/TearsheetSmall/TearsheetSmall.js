@@ -1,14 +1,14 @@
 /**
  * @file Small tearsheet.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-import Close20 from '@carbon/icons-react/lib/close/20';
+import { Close20 } from '@carbon/icons-react';
 
+import deprecate from 'carbon-components-react/es/prop-types/deprecate';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
 
 import { getComponentNamespace } from '../../../globals/namespace';
 import * as defaultLabels from '../../../globals/nls';
@@ -35,18 +35,20 @@ class TearsheetSmall extends PureComponent {
   };
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    if (prevState.isOpen !== nextProps.isOpen)
+    if (prevState.isOpen !== nextProps.isOpen) {
       return {
         isOpen: nextProps.isOpen,
       };
+    }
     if (
       prevState.loading !== nextProps.loading ||
       prevState.loadingMessage !== nextProps.loadingMessage
-    )
+    ) {
       return {
         loading: nextProps.loading,
         loadingMessage: nextProps.loadingMessage,
       };
+    }
     return null;
   }
 
@@ -135,7 +137,7 @@ class TearsheetSmall extends PureComponent {
                     disabled={secondaryButton.isDisabled || this.state.loading}
                     kind="secondary"
                     onClick={secondaryButton.onClick}
-                    size="large"
+                    size="xl"
                   >
                     {componentLabels.TEARSHEET_SMALL_SECONDARY_BUTTON}
                   </Button>
@@ -145,7 +147,7 @@ class TearsheetSmall extends PureComponent {
                     className={`${namespace}__footer__button`}
                     disabled={primaryButton.isDisabled || this.state.loading}
                     onClick={primaryButton.onClick}
-                    size="large"
+                    size="xl"
                   >
                     {componentLabels.TEARSHEET_SMALL_PRIMARY_BUTTON}
                   </Button>
@@ -214,13 +216,13 @@ TearsheetSmall.propTypes = {
     `\nThe prop \`children\` for TearsheetSmall has been deprecated in favor of \`body\`.`
   ),
 
-  /** @type {Object<Object>} An object list of primary button props. */
+  /** @type {object<object>} An object list of primary button props. */
   primaryButton: buttonType.isRequired,
 
-  /** @type {Object<Object>} An object list of secondary button props. */
+  /** @type {object<object>} An object list of secondary button props. */
   secondaryButton: buttonType.isRequired,
 
-  /** @type {Object<Object>} An object list of close button props. */
+  /** @type {object<object>} An object list of close button props. */
   closeButton: buttonType.isRequired,
 
   /** @type {bool} The toggle to determine whether or not to show the loading. */
@@ -241,7 +243,7 @@ TearsheetSmall.propTypes = {
   /** @type {boolean} Stop event propagation for events that can bubble. */
   stopPropagation: PropTypes.bool,
 
-  /** @type {array} Array of event types to stop propagation. */
+  /** @type {Array} Array of event types to stop propagation. */
   stopPropagationEvents: PropTypes.arrayOf(PropTypes.oneOf(PORTAL_EVENTS)),
 };
 

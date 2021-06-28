@@ -1,6 +1,6 @@
 /**
  * @file Loading message.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import classnames from 'classnames';
@@ -14,7 +14,8 @@ import {
   getComponentNamespace,
 } from '../../../globals/namespace';
 
-const overlayNamespace = `${carbonPrefix}loading-overlay`;
+const namespace = getComponentNamespace('loading-message');
+const overlayNamespace = `${carbonPrefix}--loading-overlay`;
 
 const LoadingMessage = ({
   active,
@@ -25,12 +26,18 @@ const LoadingMessage = ({
   ...other
 }) => (
   <div
-    className={classnames(getComponentNamespace('loading-message'), className, {
+    className={classnames(namespace, className, {
       [overlayNamespace]: withOverlay,
       [`${overlayNamespace}--stop`]: withOverlay && !active,
     })}
   >
-    <Loading active={active} small={small} withOverlay={false} {...other} />
+    <Loading
+      className={`${namespace}__loading`}
+      active={active}
+      small={small}
+      withOverlay={false}
+      {...other}
+    />
     {children}
   </div>
 );

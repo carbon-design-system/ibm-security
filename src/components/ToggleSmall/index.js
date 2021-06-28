@@ -1,7 +1,9 @@
 /**
  * @file Toggle small entry point.
- * @copyright IBM Security 2018
+ * @copyright IBM Security 2018 - 2021
  */
 
-export default from 'carbon-components-react/lib/components/ToggleSmall';
-export ToggleSmallSkeleton from 'carbon-components-react/lib/components/ToggleSmall/ToggleSmall.Skeleton';
+export {
+  ToggleSmall as default,
+  ToggleSmallSkeleton,
+} from 'carbon-components-react';

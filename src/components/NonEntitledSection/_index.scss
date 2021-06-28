@@ -1,7 +1,7 @@
 ////
 /// Non etitled section component.
 /// @group ne-section
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/grid/scss/mixins';
@@ -40,27 +40,30 @@
 
   &__title {
     @include carbon--type-scale($step: 6);
+
     margin: 0 0 carbon--mini-units($count: 6.5) 0;
   }
 
   &__sub-title {
     @include carbon--type-scale($step: 1);
+
     margin: 0 0 $carbon--spacing-03 0;
   }
 
   &__description {
     @include carbon--type-scale($step: 4);
+
     margin: 0 0 $carbon--spacing-07 0;
   }
 
   &__link {
     display: inline-flex;
-    margin: 0 0 $carbon--spacing-02 0;
     padding: 0;
+    margin: 0 0 $carbon--spacing-02 0;
 
     &__icon {
-      height: carbon--mini-units($count: 2.5);
       width: auto;
+      height: carbon--mini-units($count: 2.5);
       align-self: center;
       padding: 0 $carbon--spacing-03 0 0;
     }
