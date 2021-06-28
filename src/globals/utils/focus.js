@@ -1,6 +1,6 @@
 /**
  * @file Helper methods for element focusing.
- * @copyright IBM Security 2018 - 2020
+ * @copyright IBM Security 2018 - 2021
  */
 
 import React from 'react';
