@@ -1,6 +1,6 @@
 /**
- * @file Delimited List.
- * @copyright IBM Security 2019 - 2020
+ * @file Delimited list.
+ * @copyright IBM Security 2019 - 2021
  */
 
 import classnames from 'classnames';
