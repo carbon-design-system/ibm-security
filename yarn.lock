@@ -20604,10 +20604,10 @@ stylelint-order@^4.1.0:
     postcss "^7.0.31"
     postcss-sorting "^5.0.1"
 
-stylelint-plugin-carbon-tokens@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/stylelint-plugin-carbon-tokens/-/stylelint-plugin-carbon-tokens-0.11.0.tgz#d24347e76782bb3fb88c0146ae2d9cf806265cef"
-  integrity sha512-NVxKOYSq/AB0NYXjfvJ7DV6O0s/PTrqZadZb+m5QnPAehBPzvvu2eD7rm0WWF96JE7rFDVZmadezUt9BnQ74Dg==
+stylelint-plugin-carbon-tokens@^0.11.1:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/stylelint-plugin-carbon-tokens/-/stylelint-plugin-carbon-tokens-0.11.1.tgz#8357e819a8bc377354300a235d916455c30b1921"
+  integrity sha512-LrrsJXVbR1o3KgGhqKIGjvtoIJBA1TBrZ6YBwsuSXAyosDHiUjCyzYE206oZ3PI5sbHk8PXr0dJQZNInxFy4Zw==
   dependencies:
     "@carbon/colors" "^10.26.0"
     "@carbon/layout" "^10.25.0"
