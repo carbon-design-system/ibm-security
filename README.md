@@ -1,5 +1,9 @@
 <h1 align="center">Carbon for IBM Security</h1>
 
+This project has been moved to the [Carbon for Cloud & Cognitive monorepo](https://github.com/carbon-design-system/ibm-cloud-cognitive). The specific package is available [here](https://github.com/carbon-design-system/ibm-cloud-cognitive/tree/main/packages/security).
+
+All issues and pull requests for this package should be made on that repo instead.
+
 > Carbon for IBM Security is an open-source React component library built by IBM Security. With the Carbon Design System and IBM Design Language as its foundation, the library consists of working code and resources, maintained by a vibrant community of contributors.
 
 <span align="center">
@@ -13,7 +17,7 @@
 
 ## Getting started
 
-If you're just getting started and looking for React components, take a look at [our Storybook](https://ibm-security.carbondesignsystem.com).
+If you're just getting started and looking for React components, take a look at [our Storybook](https://ibm-cloud-cognitive.netlify.app).
 
 If you only want to try out Carbon for IBM Security, you can also use
 [CodeSandbox](https://codesandbox.io/s/github/carbon-design-system/ibm-security/tree/dev/examples/codesandbox).
