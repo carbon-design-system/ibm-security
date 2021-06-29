@@ -34,18 +34,20 @@ class Tearsheet extends Component {
   };
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    if (prevState.isOpen !== nextProps.isOpen)
+    if (prevState.isOpen !== nextProps.isOpen) {
       return {
         isOpen: nextProps.isOpen,
       };
+    }
     if (
       prevState.loading !== nextProps.loading ||
       prevState.loadingMessage !== nextProps.loadingMessage
-    )
+    ) {
       return {
         loading: nextProps.loading,
         loadingMessage: nextProps.loadingMessage,
       };
+    }
     return null;
   }
 
@@ -278,22 +280,22 @@ Tearsheet.propTypes = {
   rootNode:
     typeof Node !== 'undefined' ? PropTypes.instanceOf(Node) : PropTypes.any,
 
-  /** @type {Object<Object>} An object list of primary button props. */
+  /** @type {object<object>} An object list of primary button props. */
   primaryButton: PropTypes.shape(buttonPropTypeMap).isRequired,
 
-  /** @type {Object<Object>} An object list of secondary button props. */
+  /** @type {object<object>} An object list of secondary button props. */
   secondaryButton: PropTypes.shape(buttonPropTypeMap).isRequired,
 
-  /** @type {Object<Object>} An object list of tertiary ghost button props. */
+  /** @type {object<object>} An object list of tertiary ghost button props. */
   tertiaryButton: PropTypes.shape({
     ...buttonPropTypeMap,
     secondaryText: PropTypes.string,
   }),
 
-  /** @type {Object<Object>} An object list of close button props. */
+  /** @type {object<object>} An object list of close button props. */
   closeButton: PropTypes.shape(buttonPropTypeMap).isRequired,
 
-  /** @type {Object<Object>} An object list of delete button props. */
+  /** @type {object<object>} An object list of delete button props. */
   deleteButton: PropTypes.shape({
     ...buttonPropTypeMap,
     icon: PropTypes.string,
@@ -314,7 +316,7 @@ Tearsheet.propTypes = {
   /** @type {boolean} Stop event propagation for events that can bubble. */
   stopPropagation: PropTypes.bool,
 
-  /** @type {array} Array of event types to stop propagation. */
+  /** @type {Array} Array of event types to stop propagation. */
   stopPropagationEvents: PropTypes.arrayOf(PropTypes.oneOf(PORTAL_EVENTS)),
 
   /** Optional class name for the tearsheet wrapper node. */

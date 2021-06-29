@@ -1,6 +1,6 @@
 /**
  * @file Helper methods for element focusing.
- * @copyright IBM Security 2018
+ * @copyright IBM Security 2018 - 2021
  */
 
 import React from 'react';
@@ -41,14 +41,14 @@ export const trapTabFocus = (element, event) => {
  * @param {number} [timeoutDelay=10] Millisecond delay for the blur effect to take place. This
  * should not be less than 10 to give the browser time to register the subsequent focus event first.
  *
- * @returns {{createFocusHandler: function, createBlurHandler: function }} Utility functions to
+ * @returns {{createFocusHandler: Function, createBlurHandler: Function}} Utility functions to
  * create the focus and blur handlers that apply the necessary effects or state changes.
  */
 export const useComponentFocus = (timeoutDelay = 10) => {
   const [blurTimer, setBlurTimer] = React.useState(undefined);
 
   // Clear any timeouts before unmounting.
-  React.useEffect(() => () => clearTimeout(blurTimer), []);
+  React.useEffect(() => () => clearTimeout(blurTimer), [blurTimer]);
 
   // Clears out the current timeout and sets the new one.
   const setNewBlurTimer = newTimeout => {

@@ -7,8 +7,9 @@ import PropTypes from 'prop-types';
 
 class WizardStep extends Component {
   static getPropsFromElement = stepElem => {
-    if (!React.isValidElement(stepElem) && stepElem.type !== WizardStep)
+    if (!React.isValidElement(stepElem) && stepElem.type !== WizardStep) {
       return null;
+    }
     return stepElem.props;
   };
 

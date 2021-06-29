@@ -105,7 +105,7 @@ TagWall.propTypes = {
   /** @type {boolean} Determines whether or not tag management is enabled. */
   disable: bool,
 
-  /** @type {Array.<Object.<string,boolean>>} List of tags to be consumed. */
+  /** @type {Array.<object.<string, boolean>>} List of tags to be consumed. */
   items: arrayOf(
     shape({
       id: string.isRequired,
@@ -115,19 +115,19 @@ TagWall.propTypes = {
     })
   ).isRequired,
 
-  /** @type {function} Function that converts object to string. */
+  /** @type {Function} Function that converts object to string. */
   itemToString: func,
 
   /** @type {string} Description label. */
   label: string,
 
-  /** @type {Object.<string, *>} Default translation labels object. */
+  /** @type {object.<string, *>} Default translation labels object. */
   labels: defaultLabels.propType,
 
-  /** @type {function} Handles `onClick` for the 'add' button. */
+  /** @type {Function} Handles `onClick` for the 'add' button. */
   onAddButton: func,
 
-  /** @type {function} Communicates to the consuming component any changes to the tags. */
+  /** @type {Function} Communicates to the consuming component any changes to the tags. */
   onChange: func,
 };
 

@@ -236,7 +236,7 @@ Decorator.defaultProps = {
 
 /**
  * Generate exports for individual severity icon types.
- * @param {array} iconNames array of icon names
+ * @param {Array} iconNames array of icon names
  */
 function generateIconExports(...iconNames) {
   const namedExports = {};
