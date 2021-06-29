@@ -1,53 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Panel Rendering does not render the open panel if \`shouldPanelOpen\` is false 1`] = `
-<Fragment>
-  <Button
-    dangerDescription="danger"
-    disabled={false}
-    isExpressive={false}
-    kind="primary"
-    largeText={null}
-    loading={false}
-    onClick={[Function]}
-    size="default"
-    tabIndex={0}
-    tooltipAlignment="center"
-    tooltipPosition="top"
+<DocumentFragment>
+  <button
+    class="bx--btn bx--btn--primary"
+    tabindex="0"
     type="button"
   >
-    Label
-  </Button>
-  <PanelController
-    active={false}
-  >
-    <PanelContainer
-      className={null}
-      closeButton={
-        Object {
-          "label": "Label",
-          "onClick": [Function],
-        }
-      }
-      disableEscape={false}
-      hasScrollingContent={false}
-      labels={Object {}}
-      primaryButton={null}
-      renderFooter={null}
-      rootNode={<body />}
-      subtitle="Label"
-      title="Label"
-    >
-      <PanelContent>
-        Label
-      </PanelContent>
-    </PanelContainer>
-  </PanelController>
-</Fragment>
+    toggle panel
+  </button>
+</DocumentFragment>
 `;
 
 exports[`Panel Rendering renders correctly 1`] = `
-<Fragment>
+<DocumentFragment>
+  <button
+    class="bx--btn bx--btn--primary"
+    tabindex="0"
+    type="button"
+  >
+    toggle panel
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Panel Rendering renders the HTML of the node's subtree 1`] = `
+<React.Fragment>
   <Button
     dangerDescription="danger"
     disabled={false}
@@ -62,7 +40,7 @@ exports[`Panel Rendering renders correctly 1`] = `
     tooltipPosition="top"
     type="button"
   >
-    Label
+    toggle panel
   </Button>
   <PanelController
     active={false}
@@ -80,208 +58,38 @@ exports[`Panel Rendering renders correctly 1`] = `
       labels={Object {}}
       primaryButton={null}
       renderFooter={null}
-      rootNode={<body />}
+      rootNode={
+        <body>
+          <div>
+            <button
+              class="bx--btn bx--btn--primary"
+              tabindex="0"
+              type="button"
+            >
+              toggle panel
+            </button>
+          </div>
+        </body>
+      }
       subtitle="Label"
       title="Label"
     >
       <PanelContent>
-        Label
+        Panel content
       </PanelContent>
     </PanelContainer>
   </PanelController>
-</Fragment>
-`;
-
-exports[`Panel Rendering renders the HTML of the node's subtree 1`] = `
-<button
-  class="bx--btn bx--btn--primary"
-  tabindex="0"
-  type="button"
->
-  Label
-</button>
+</React.Fragment>
 `;
 
 exports[`Panel Rendering renders the open panel 1`] = `
-<Fragment>
-  <Button
-    dangerDescription="danger"
-    disabled={false}
-    isExpressive={false}
-    kind="primary"
-    largeText={null}
-    loading={false}
-    onClick={[Function]}
-    size="default"
-    tabIndex={0}
-    tooltipAlignment="center"
-    tooltipPosition="top"
+<DocumentFragment>
+  <button
+    class="bx--btn bx--btn--primary"
+    tabindex="0"
     type="button"
   >
-    Label
-  </Button>
-  <PanelController
-    active={true}
-  >
-    <PanelContainer
-      className={null}
-      closeButton={
-        Object {
-          "label": "Label",
-          "onClick": [Function],
-        }
-      }
-      disableEscape={false}
-      hasScrollingContent={false}
-      labels={Object {}}
-      primaryButton={null}
-      renderFooter={null}
-      rootNode={<body />}
-      subtitle="Label"
-      title="Label"
-    >
-      <PanelContent>
-        Label
-      </PanelContent>
-    </PanelContainer>
-  </PanelController>
-</Fragment>
-`;
-
-exports[`Panel Rendering renders the primary button variation 1`] = `
-<Fragment>
-  <Button
-    dangerDescription="danger"
-    disabled={false}
-    isExpressive={false}
-    kind="primary"
-    largeText={null}
-    loading={false}
-    onClick={[Function]}
-    size="default"
-    tabIndex={0}
-    tooltipAlignment="center"
-    tooltipPosition="top"
-    type="button"
-  >
-    Label
-  </Button>
-  <PanelController
-    active={true}
-  >
-    <PanelContainer
-      className={null}
-      closeButton={
-        Object {
-          "label": "Label",
-          "onClick": [Function],
-        }
-      }
-      disableEscape={false}
-      hasScrollingContent={false}
-      labels={Object {}}
-      primaryButton={null}
-      renderFooter={null}
-      rootNode={<body />}
-      subtitle="Label"
-      title="Label"
-    >
-      <PanelContent>
-        Label
-      </PanelContent>
-    </PanelContainer>
-  </PanelController>
-</Fragment>
-`;
-
-exports[`Panel Rendering renders the secondary button variation 1`] = `
-<Fragment>
-  <Button
-    dangerDescription="danger"
-    disabled={false}
-    isExpressive={false}
-    kind="primary"
-    largeText={null}
-    loading={false}
-    onClick={[Function]}
-    size="default"
-    tabIndex={0}
-    tooltipAlignment="center"
-    tooltipPosition="top"
-    type="button"
-  >
-    Label
-  </Button>
-  <PanelController
-    active={true}
-  >
-    <PanelContainer
-      className={null}
-      closeButton={
-        Object {
-          "label": "Label",
-          "onClick": [Function],
-        }
-      }
-      disableEscape={false}
-      hasScrollingContent={false}
-      labels={Object {}}
-      primaryButton={null}
-      renderFooter={null}
-      rootNode={<body />}
-      subtitle="Label"
-      title="Label"
-    >
-      <PanelContent>
-        Label
-      </PanelContent>
-    </PanelContainer>
-  </PanelController>
-</Fragment>
-`;
-
-exports[`Panel Rendering renders the secondary button variation 2`] = `
-<Fragment>
-  <Button
-    dangerDescription="danger"
-    disabled={false}
-    isExpressive={false}
-    kind="primary"
-    largeText={null}
-    loading={false}
-    onClick={[Function]}
-    size="default"
-    tabIndex={0}
-    tooltipAlignment="center"
-    tooltipPosition="top"
-    type="button"
-  >
-    Label
-  </Button>
-  <PanelController
-    active={true}
-  >
-    <PanelContainer
-      className={null}
-      closeButton={
-        Object {
-          "label": "Label",
-          "onClick": [Function],
-        }
-      }
-      disableEscape={false}
-      hasScrollingContent={false}
-      labels={Object {}}
-      primaryButton={null}
-      renderFooter={null}
-      rootNode={<body />}
-      subtitle="Label"
-      title="Label"
-    >
-      <PanelContent>
-        Label
-      </PanelContent>
-    </PanelContainer>
-  </PanelController>
-</Fragment>
+    toggle panel
+  </button>
+</DocumentFragment>
 `;
