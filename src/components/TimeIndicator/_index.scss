@@ -1,7 +1,7 @@
 ////
 /// Time indicator.
 /// @group time-indicator
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/spacing';
@@ -14,8 +14,8 @@
   @include carbon--type-style($name: label-01);
 
   display: flex;
-  color: $text-02;
   align-items: center;
+  color: $text-02;
 
   &__icon {
     margin-right: $carbon--spacing-03;

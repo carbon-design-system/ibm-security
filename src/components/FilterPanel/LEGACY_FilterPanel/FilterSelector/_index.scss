@@ -1,7 +1,7 @@
 ////
 /// Filter selector styles.
 /// @group filter-panel
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/spacing';
@@ -13,6 +13,7 @@
 
 @include security--component($name: filter-selector) {
   @include carbon--type-style($name: body-short-01);
+
   display: flex;
 
   &__checkbox-wrapper {
@@ -33,13 +34,14 @@
 
   &__count {
     @include carbon--type-style($name: caption-01);
+
     margin-left: $carbon--spacing-04;
     color: $text-02;
   }
 
   &__label {
-    flex: 1;
     overflow: hidden;
+    flex: 1;
     text-overflow: ellipsis;
     white-space: nowrap;
   }

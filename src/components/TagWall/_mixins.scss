@@ -11,6 +11,7 @@
     $tag-wall__spacing: $carbon--spacing-03;
 
     @include carbon--type-style($name: caption-01);
+
     margin-top: $tag-wall__spacing;
     margin-bottom: $tag-wall__spacing;
   }
