@@ -36,15 +36,15 @@ To install Carbon for IBM Security in your project, you'll need to run one of th
 
 ```bash
 # npm - https://www.npmjs.com
-npm i @carbon/ibm-security
+npm i @carbon/ibm-cloud-cognitive-security
 
 # Yarn - https://yarnpkg.com
-yarn add @carbon/ibm-security
+yarn add @carbon/ibm-cloud-cognitive-security
 ```
 
 ### Distribution tags
 
-Please use [distribution tags](https://docs.npmjs.com/cli/dist-tag) to install the most relevant version of this library. e.g. `npm i @carbon/ibm-security@latest`:
+Please use [distribution tags](https://docs.npmjs.com/cli/dist-tag) to install the most relevant version of this library. e.g. `npm i @carbon/ibm-cloud-cognitive-security@latest`:
 
 - `@latest` - Stable
 - `@canary` - Unstable prerelease
@@ -57,10 +57,10 @@ All components come with any installation of Carbon for IBM Security. You can us
 
 ```js
 // ES Modules - https://tc39.es/ecma262/#sec-modules
-import { ComponentName } from '@carbon/ibm-security';
+import { ComponentName } from '@carbon/ibm-cloud-cognitive-security';
 
 // CommonJS - http://www.commonjs.org
-const { ComponentName } = require('@carbon/ibm-security');
+const { ComponentName } = require('@carbon/ibm-cloud-cognitive-security');
 ```
 
 [Babel](https://babeljs.io) builds both of these variants and imports `carbon-components-react` using a [plugin](https://github.com/carbon-design-system/ibm-security/blob/master/babel/carbon-imports.babel-plugin.js), so that no further transpilation is required.
@@ -72,7 +72,7 @@ To add a component style to your build, import the component directly. Importing
 In addition, to resolve your import declarations, you will need to setup `sass` so that `node_modules` is included in the [`includePaths`](https://github.com/sass/node-sass#includepaths) option.
 
 ```scss
-@use '@carbon/ibm-security/scss/components/ComponentName';
+@use '@carbon/ibm-cloud-cognitive-security/scss/components/ComponentName';
 ```
 
 #### Feature flags
@@ -86,14 +86,14 @@ $security--feature-flags: (
   security--css-custom-property-theming: false,
 );
 
-@use '@carbon/ibm-security/scss/components/ComponentName';
+@use '@carbon/ibm-cloud-cognitive-security/scss/components/ComponentName';
 ```
 
 Also refer to [feature flags in Carbon](https://github.com/carbon-design-system/carbon/blob/main/packages/components/src/globals/scss/_feature-flags.scss).
 
 ### CSS
 
-To add all of the components' processed and minified styles, reference `@carbon/ibm-security/css/index.min.css`.
+To add all of the components' processed and minified styles, reference `@carbon/ibm-cloud-cognitive-security/css/index.min.css`.
 
 ## Documentation
 

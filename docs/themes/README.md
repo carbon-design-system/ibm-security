@@ -27,7 +27,7 @@ Currently, only 2 themes are supported: **Gray 100**, activated by default, and 
 If your project is using Sass, you can include the following in your Sass file:
 
 ```scss
-@use '@carbon/ibm-security/scss/globals/theme';
+@use '@carbon/ibm-cloud-cognitive-security/scss/globals/theme';
 ```
 
 This will include theming styles and tokens for the **Gray 100 theme _by default_**.
@@ -59,7 +59,7 @@ If you're looking to use themes in JavaScript, we export a binding for you to us
 
 ```js
 // An object of theme values.
-import { theme } from '@carbon/ibm-security';
+import { theme } from '@carbon/ibm-cloud-cognitive-security';
 
 // Specific token values.
 const { interactive01, interactive02 } = theme;

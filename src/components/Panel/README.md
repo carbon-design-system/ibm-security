@@ -20,13 +20,14 @@
 You can include `Panel` and its components by doing the following in your project:
 
 ```js
-import { Panel } from '@carbon/ibm-security';
+import { Panel } from '@carbon/ibm-cloud-cognitive-security';
 ```
 
 The default export for `Panel` also includes properties for all the `Panel*` components that you will also want to use in your application. You can access them by doing either of the following:
 
 ```js
-import { Panel } from '@carbon/ibm-security';
+import { Panel } from '@carbon/ibm-cloud-cognitive-security';
+
 // De-structure `Panel` directly to get local references
 const { Panel, PanelContainer, PanelContent, PanelController } = Panel;
 
@@ -39,7 +40,8 @@ const { Panel, PanelContainer, PanelContent, PanelController } = Panel;
 The `Panel` component itself follows the `render` prop pattern, meaning that in order to render something to the screen you'll have to provide a `render` function to the `Panel` component. In practice, this looks like the following:
 
 ```jsx
-import { Panel } from '@carbon/ibm-security';
+import { Panel } from '@carbon/ibm-cloud-cognitive-security';
+
 const {
   Panel,
   PanelContainer,
