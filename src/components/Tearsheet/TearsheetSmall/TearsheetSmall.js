@@ -5,7 +5,6 @@
 
 import { Close20 } from '@carbon/icons-react';
 
-import deprecate from 'carbon-components-react/es/prop-types/deprecate';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
@@ -35,18 +34,20 @@ class TearsheetSmall extends PureComponent {
   };
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    if (prevState.isOpen !== nextProps.isOpen)
+    if (prevState.isOpen !== nextProps.isOpen) {
       return {
         isOpen: nextProps.isOpen,
       };
+    }
     if (
       prevState.loading !== nextProps.loading ||
       prevState.loadingMessage !== nextProps.loadingMessage
-    )
+    ) {
       return {
         loading: nextProps.loading,
         loadingMessage: nextProps.loadingMessage,
       };
+    }
     return null;
   }
 
@@ -208,19 +209,16 @@ TearsheetSmall.propTypes = {
     PropTypes.element,
   ]),
 
-  /** @deprecated Deprecated. Please use `body` prop. */
-  children: deprecate(
-    PropTypes.element,
-    `\nThe prop \`children\` for TearsheetSmall has been deprecated in favor of \`body\`.`
-  ),
+  /** Provide the content for the `TearsheetSmall` */
+  children: PropTypes.element,
 
-  /** @type {Object<Object>} An object list of primary button props. */
+  /** @type {object<object>} An object list of primary button props. */
   primaryButton: buttonType.isRequired,
 
-  /** @type {Object<Object>} An object list of secondary button props. */
+  /** @type {object<object>} An object list of secondary button props. */
   secondaryButton: buttonType.isRequired,
 
-  /** @type {Object<Object>} An object list of close button props. */
+  /** @type {object<object>} An object list of close button props. */
   closeButton: buttonType.isRequired,
 
   /** @type {bool} The toggle to determine whether or not to show the loading. */
@@ -241,7 +239,7 @@ TearsheetSmall.propTypes = {
   /** @type {boolean} Stop event propagation for events that can bubble. */
   stopPropagation: PropTypes.bool,
 
-  /** @type {array} Array of event types to stop propagation. */
+  /** @type {Array} Array of event types to stop propagation. */
   stopPropagationEvents: PropTypes.arrayOf(PropTypes.oneOf(PORTAL_EVENTS)),
 };
 

@@ -52,13 +52,14 @@ const formatValue = (value, truncate) => {
  * @returns {string} Formatted string.
  */
 const truncateValue = (percentage, value, truncate) => {
-  if (percentage)
+  if (percentage) {
     return (
       <div className={`${namespace}__percentage`}>
         {value}
         <span className={`${namespace}__percentage-mark`}>%</span>
       </div>
     );
+  }
 
   return value === null ? '–' : formatValue(value, truncate);
 };
