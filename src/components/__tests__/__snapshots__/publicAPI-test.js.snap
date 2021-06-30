@@ -4384,6 +4384,10 @@ Map {
       "className": Object {
         "type": "string",
       },
+      "labelText": Object {
+        "isRequired": true,
+        "type": "node",
+      },
     },
   },
   "FluidForm" => Object {
