@@ -2,12 +2,9 @@
 
 exports[`Filter render renders correctly 1`] = `
 <Downshift
-  breakingChanges={Object {}}
   clearSelection={[Function]}
   defaultHighlightedIndex={null}
-  defaultInputValue=""
   defaultIsOpen={false}
-  defaultSelectedItem={null}
   environment={[Window]}
   getA11yStatusMessage={[Function]}
   highlightedIndex={null}
@@ -20,19 +17,26 @@ exports[`Filter render renders correctly 1`] = `
   onSelect={[Function]}
   onStateChange={[Function]}
   onUserAction={[Function]}
-  render={[Function]}
+  scrollIntoView={[Function]}
   selectedItemChanged={[Function]}
   stateReducer={[Function]}
-/>
+  suppressRefError={false}
+>
+  <Component />
+</Downshift>
 `;
 
 exports[`Filter render renders the HTML of the node's subtree 1`] = `
 <div
+  aria-expanded="true"
+  aria-haspopup="listbox"
+  aria-labelledby="downshift-0-label"
+  aria-owns="downshift-0-menu"
   class="security--filter bx--list-box"
   id="test-id"
+  role="combobox"
 >
   <div
-    aria-expanded="true"
     aria-haspopup="true"
     aria-label="close menu"
     class="bx--list-box__field"
@@ -44,12 +48,12 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
   >
     <input
       aria-autocomplete="list"
-      aria-expanded="true"
+      aria-controls="downshift-0-menu"
+      aria-labelledby="downshift-0-label"
       autocomplete="off"
       class="security--filter__input-field bx--text-input"
       id="test-id"
       placeholder="Label"
-      role="combobox"
       value=""
     />
     <span
@@ -79,9 +83,10 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
     role="listbox"
   >
     <div
+      aria-selected="false"
       class="bx--list-box__menu-item"
       id="downshift-0-item-0"
-      role="button"
+      role="option"
       tabindex="0"
     >
       <div
@@ -121,9 +126,10 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
       </div>
     </div>
     <div
+      aria-selected="false"
       class="bx--list-box__menu-item"
       id="downshift-0-item-1"
-      role="button"
+      role="option"
       tabindex="0"
     >
       <div
@@ -163,9 +169,10 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
       </div>
     </div>
     <div
+      aria-selected="false"
       class="bx--list-box__menu-item"
       id="downshift-0-item-2"
-      role="button"
+      role="option"
       tabindex="0"
     >
       <div
@@ -205,9 +212,10 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
       </div>
     </div>
     <div
+      aria-selected="false"
       class="bx--list-box__menu-item"
       id="downshift-0-item-3"
-      role="button"
+      role="option"
       tabindex="0"
     >
       <div
@@ -247,9 +255,10 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
       </div>
     </div>
     <div
+      aria-selected="false"
       class="bx--list-box__menu-item"
       id="downshift-0-item-4"
-      role="button"
+      role="option"
       tabindex="0"
     >
       <div
@@ -289,9 +298,10 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
       </div>
     </div>
     <div
+      aria-selected="false"
       class="bx--list-box__menu-item"
       id="downshift-0-item-5"
-      role="button"
+      role="option"
       tabindex="0"
     >
       <div
@@ -331,9 +341,10 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
       </div>
     </div>
     <div
+      aria-selected="false"
       class="bx--list-box__menu-item"
       id="downshift-0-item-6"
-      role="button"
+      role="option"
       tabindex="0"
     >
       <div
@@ -373,9 +384,10 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
       </div>
     </div>
     <div
+      aria-selected="false"
       class="bx--list-box__menu-item"
       id="downshift-0-item-7"
-      role="button"
+      role="option"
       tabindex="0"
     >
       <div
@@ -415,9 +427,10 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
       </div>
     </div>
     <div
+      aria-selected="false"
       class="bx--list-box__menu-item"
       id="downshift-0-item-8"
-      role="button"
+      role="option"
       tabindex="0"
     >
       <div
@@ -457,9 +470,10 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
       </div>
     </div>
     <div
+      aria-selected="false"
       class="bx--list-box__menu-item"
       id="downshift-0-item-9"
-      role="button"
+      role="option"
       tabindex="0"
     >
       <div
@@ -499,9 +513,10 @@ exports[`Filter render renders the HTML of the node's subtree 1`] = `
       </div>
     </div>
     <div
+      aria-selected="false"
       class="bx--list-box__menu-item"
       id="downshift-0-item-10"
-      role="button"
+      role="option"
       tabindex="0"
     >
       <div

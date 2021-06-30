@@ -1,6 +1,6 @@
 /**
  * @file Path configuration.
- * @copyright IBM Security 2018
+ * @copyright IBM Security 2018 - 2021
  */
 
 // Imports
@@ -32,6 +32,7 @@ export const paths = {
 paths.src.files.scss = path.join(paths.src.dir, '**/*.scss');
 
 export const buildBlacklist = ['Component', 'Portal', 'Tooltip'];
+export const root = __dirname;
 
 export default {
   paths,
