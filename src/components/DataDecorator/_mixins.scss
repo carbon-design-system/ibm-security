@@ -7,7 +7,6 @@
 @import '@carbon/layout/scss/mini-unit';
 @import '@carbon/layout/scss/spacing';
 @import '@carbon/themes/scss/tokens';
-@import '@carbon/type/scss/font-family';
 @import '@carbon/type/scss/styles';
 
 @import 'carbon-components/scss/globals/scss/helper-mixins';
@@ -48,9 +47,7 @@
   border: unset;
   background-color: $hover-ui;
   color: $text-02;
-  font-family: carbon--font-family($name: sans);
-  font-stretch: normal;
-  font-style: normal;
+  font-family: inherit;
   text-align: left;
   text-decoration: none;
   text-transform: none;
