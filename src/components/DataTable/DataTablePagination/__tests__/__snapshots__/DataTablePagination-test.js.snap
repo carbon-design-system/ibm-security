@@ -2,121 +2,6 @@
 
 exports[`DataTablePagination Rendering renders correctly 1`] = `
 <div
-  className="security--data-table-pagination"
->
-  <DataTable
-    filterRows={[Function]}
-    headers={
-      Array [
-        Object {
-          "header": "Last sighted",
-          "key": "lastSighted",
-        },
-        Object {
-          "header": "Name",
-          "key": "name",
-        },
-        Object {
-          "header": "Type",
-          "key": "type",
-        },
-        Object {
-          "header": "Attack phase",
-          "key": "attackPhase",
-        },
-        Object {
-          "header": "Method",
-          "key": "method",
-        },
-        Object {
-          "header": "Missing",
-          "key": "missing",
-        },
-      ]
-    }
-    isSelectable={false}
-    isSortable={false}
-    locale="en"
-    missingDataCharacter="–"
-    overflowMenuOnHover={true}
-    rows={
-      Array [
-        Object {
-          "attackPhase": "Initial Compromise",
-          "id": "7c34f4507156b35",
-          "lastSighted": "11/28/2018",
-          "method": "Phishing",
-          "name": "IBM X-Force",
-          "type": "IPv6",
-        },
-        Object {
-          "attackPhase": "Establish Foothold",
-          "id": "38347816a51b0c5a8",
-          "lastSighted": "06/28/2017",
-          "method": "Deploy backdoor",
-          "name": "AppX",
-          "type": "Hash",
-        },
-        Object {
-          "attackPhase": "Escalate Privileges",
-          "id": "1d6116a2d1d03b4",
-          "lastSighted": "05/30/2018",
-          "method": "Credential dumping",
-          "name": "Bigfix",
-          "type": "URL",
-        },
-        Object {
-          "attackPhase": "Cross-Site Scripting",
-          "id": "c52b0419981221765",
-          "lastSighted": "12/12/2018",
-          "method": "Malicious Code",
-          "name": "Am I Affected",
-          "type": "Hash",
-        },
-        Object {
-          "attackPhase": "SQL Injection Attack",
-          "id": "697626e6f703131d",
-          "lastSighted": "11/11/2018",
-          "method": "SQL Vulnerabilities",
-          "name": "QRadar",
-          "type": "Hash",
-        },
-      ]
-    }
-    size="normal"
-    sortRow={[Function]}
-    translateWithId={[Function]}
-  />
-  <Pagination
-    backwardText="Backward"
-    disabled={false}
-    forwardText="Forward"
-    isLastPage={false}
-    itemRangeText={[Function]}
-    itemText={[Function]}
-    itemsPerPageText="Items per page"
-    onChange={[Function]}
-    page={1}
-    pageInputDisabled={false}
-    pageNumberText="Page Number"
-    pageRangeText={[Function]}
-    pageSize={5}
-    pageSizes={
-      Array [
-        5,
-        10,
-        20,
-      ]
-    }
-    pageText={[Function]}
-    pagesUnknown={false}
-    totalItems={11}
-  />
-</div>
-`;
-
-exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`] = `
-<div
   class="security--data-table-pagination"
 >
   <div
@@ -133,7 +18,6 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
           aria-hidden="true"
           class="security--scroll-gradient__before"
           role="presentation"
-          style="background-image:linear-gradient(-90deg, rgba(0,0,0,0), var(--cds-ui-01, #262626) 90%)"
         />
         <div
           class="security--scroll-gradient__content"
@@ -313,7 +197,6 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
           aria-hidden="true"
           class="security--scroll-gradient__after"
           role="presentation"
-          style="background-image:linear-gradient(-90deg, var(--cds-ui-01, #262626) 10%, rgba(0,0,0,0))"
         />
       </div>
     </div>
@@ -349,7 +232,6 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
               >
                 <option
                   class="bx--select-option"
-                  selected=""
                   value="5"
                 >
                   5
@@ -419,7 +301,6 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
               >
                 <option
                   class="bx--select-option"
-                  selected=""
                   value="1"
                 >
                   1
@@ -524,5 +405,120 @@ exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`
       </div>
     </div>
   </div>
+</div>
+`;
+
+exports[`DataTablePagination Rendering renders the HTML of the node's subtree 1`] = `
+<div
+  className="security--data-table-pagination"
+>
+  <DataTable
+    filterRows={[Function]}
+    headers={
+      Array [
+        Object {
+          "header": "Last sighted",
+          "key": "lastSighted",
+        },
+        Object {
+          "header": "Name",
+          "key": "name",
+        },
+        Object {
+          "header": "Type",
+          "key": "type",
+        },
+        Object {
+          "header": "Attack phase",
+          "key": "attackPhase",
+        },
+        Object {
+          "header": "Method",
+          "key": "method",
+        },
+        Object {
+          "header": "Missing",
+          "key": "missing",
+        },
+      ]
+    }
+    isSelectable={false}
+    isSortable={false}
+    locale="en"
+    missingDataCharacter="–"
+    overflowMenuOnHover={true}
+    rows={
+      Array [
+        Object {
+          "attackPhase": "Initial Compromise",
+          "id": "7c34f4507156b35",
+          "lastSighted": "11/28/2018",
+          "method": "Phishing",
+          "name": "IBM X-Force",
+          "type": "IPv6",
+        },
+        Object {
+          "attackPhase": "Establish Foothold",
+          "id": "38347816a51b0c5a8",
+          "lastSighted": "06/28/2017",
+          "method": "Deploy backdoor",
+          "name": "AppX",
+          "type": "Hash",
+        },
+        Object {
+          "attackPhase": "Escalate Privileges",
+          "id": "1d6116a2d1d03b4",
+          "lastSighted": "05/30/2018",
+          "method": "Credential dumping",
+          "name": "Bigfix",
+          "type": "URL",
+        },
+        Object {
+          "attackPhase": "Cross-Site Scripting",
+          "id": "c52b0419981221765",
+          "lastSighted": "12/12/2018",
+          "method": "Malicious Code",
+          "name": "Am I Affected",
+          "type": "Hash",
+        },
+        Object {
+          "attackPhase": "SQL Injection Attack",
+          "id": "697626e6f703131d",
+          "lastSighted": "11/11/2018",
+          "method": "SQL Vulnerabilities",
+          "name": "QRadar",
+          "type": "Hash",
+        },
+      ]
+    }
+    size="normal"
+    sortRow={[Function]}
+    translateWithId={[Function]}
+  />
+  <Pagination
+    backwardText="Backward"
+    disabled={false}
+    forwardText="Forward"
+    isLastPage={false}
+    itemRangeText={[Function]}
+    itemText={[Function]}
+    itemsPerPageText="Items per page"
+    onChange={[Function]}
+    page={1}
+    pageInputDisabled={false}
+    pageNumberText="Page Number"
+    pageRangeText={[Function]}
+    pageSize={5}
+    pageSizes={
+      Array [
+        5,
+        10,
+        20,
+      ]
+    }
+    pageText={[Function]}
+    pagesUnknown={false}
+    totalItems={11}
+  />
 </div>
 `;
