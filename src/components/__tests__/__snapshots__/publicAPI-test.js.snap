@@ -11303,20 +11303,15 @@ Map {
       "selectedItems": Array [],
       "tagWallLabel": null,
     },
+    "displayName": "TagWallFilter",
     "propTypes": Object {
       "allItems": Object {
         "args": Array [
           Object {
             "args": Array [
               Object {
-                "id": Object {
-                  "isRequired": true,
-                  "type": "string",
-                },
-                "label": Object {
-                  "isRequired": true,
-                  "type": "string",
-                },
+                "id": undefined,
+                "label": undefined,
               },
             ],
             "type": "shape",
@@ -11329,14 +11324,8 @@ Map {
           Object {
             "args": Array [
               Object {
-                "id": Object {
-                  "isRequired": true,
-                  "type": "string",
-                },
-                "label": Object {
-                  "isRequired": true,
-                  "type": "string",
-                },
+                "id": undefined,
+                "label": undefined,
               },
             ],
             "type": "shape",
@@ -11451,14 +11440,8 @@ Map {
           Object {
             "args": Array [
               Object {
-                "id": Object {
-                  "isRequired": true,
-                  "type": "string",
-                },
-                "label": Object {
-                  "isRequired": true,
-                  "type": "string",
-                },
+                "id": undefined,
+                "label": undefined,
               },
             ],
             "type": "shape",

@@ -5,10 +5,8 @@ import Filter from '../Filter';
 import TagWall from '../../TagWall';
 
 import {
-  availableItemsReducer,
   itemToString,
-  FilterTagFragment,
-  selectedItemsReducer,
+  noop,
   TagWallFilter,
   withItemReducer,
 } from '../TagWallFilter';
@@ -28,6 +26,10 @@ describe('TagWallFilter tests', () => {
       onClick: jest.fn(),
     },
   };
+
+  it('should do nothing on noop', () => {
+    expect(noop()).toBeUndefined();
+  });
 
   describe('selectedItemsReducer', () => {
     let initState;

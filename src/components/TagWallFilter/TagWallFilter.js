@@ -3,21 +3,12 @@
  * @copyright IBM Security 2019 - 2021
  */
 
-import {
-  arrayOf,
-  bool,
-  element,
-  func,
-  oneOfType,
-  shape,
-  string,
-} from 'prop-types';
-
+import PropTypes from 'prop-types';
 import React, { useReducer } from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace/index';
 
-import Filter from './Filter';
+import FilterRaw from './Filter';
 import TagWall from '../TagWall';
 
 import TearsheetSmall, {
@@ -28,11 +19,13 @@ import { defaultSortItems } from './tools/sorting';
 
 const defaultTo = (value, defaultVal) => (value == null ? defaultVal : value);
 
-export const itemToString = item =>
+const itemToString = item =>
   defaultTo(item, { text: '', label: '' }).label ||
   defaultTo(item, { text: '', label: '' }).text;
 
 const namespace = getComponentNamespace('tag-wall-filter');
+
+const noop = () => {};
 
 function TagWallFilter({
   availableItems,
@@ -50,7 +43,7 @@ function TagWallFilter({
   selectedItems,
   tagWallLabel,
 }) {
-  function reducer(state, action) {
+  function itemReducer(state, action) {
     onChange(action);
 
     const { item, type } = action;
@@ -77,25 +70,17 @@ function TagWallFilter({
     }
   }
 
-  const [{ available, selected }, dispatch] = useReducer(reducer, {
-    available: availableItems,
-    selected: selectedItems,
-  });
+  const [{ available, selected }, dispatchItemChange] = useReducer(
+    itemReducer,
+    {
+      available: availableItems,
+      selected: selectedItems,
+    }
+  );
 
   return (
     <TearsheetSmall
       className={namespace}
-      body={
-        <Filter
-          id={id}
-          items={available}
-          itemToString={itemToString}
-          onChange={dispatch}
-          placeholder={inputFieldPlaceholder}
-          filterFieldClearAllTooltip={filterFieldClearAllTooltip}
-          filterFieldClearSelectionTooltip={filterFieldClearSelectionTooltip}
-        />
-      }
       closeButton={closeButton}
       description={
         <div className={`${namespace}__description`}>
@@ -106,7 +91,7 @@ function TagWallFilter({
             items={selected}
             itemToString={itemToString}
             label={tagWallLabel}
-            onChange={dispatch}
+            onChange={dispatchItemChange}
             addButtonDisabled
           />
         </div>
@@ -116,83 +101,101 @@ function TagWallFilter({
       primaryButton={primaryButton}
       secondaryButton={secondaryButton}
       flush
-    />
+    >
+      <FilterRaw
+        id={id}
+        items={available}
+        itemToString={itemToString}
+        onChange={dispatchItemChange}
+        placeholder={inputFieldPlaceholder}
+        filterFieldClearAllTooltip={filterFieldClearAllTooltip}
+        filterFieldClearSelectionTooltip={filterFieldClearSelectionTooltip}
+      />
+    </TearsheetSmall>
   );
 }
 
 TagWallFilter.propTypes = {
-  /** All possible items to select from */
-  allItems: arrayOf(
-    shape({
-      id: string.isRequired,
-      label: string.isRequired,
+  /** All possible items. If not set, it is derived from the joint set of `selectedItems` and `availableItems` */
+  allItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.isRequired,
+      label: PropTypes.isRequired,
     })
   ),
 
-  /** Available items to select from the `Filter` */
-  availableItems: arrayOf(
-    shape({
-      id: string.isRequired,
-      label: string.isRequired,
+  /** Available items in the list to select from */
+  availableItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.isRequired,
+      label: PropTypes.isRequired,
     })
   ).isRequired,
 
-  /** An object list of close button props. */
+  /** An object list of close button props */
   closeButton: buttonType.isRequired,
 
-  /** The element, function, or string for the description. */
-  description: oneOfType([element, func, string]),
+  /** The element, function, or string for the description */
+  description: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.func,
+    PropTypes.string,
+  ]),
 
-  /** tooltip label for clearing all selected items */
-  filterFieldClearAllTooltip: string,
+  /** Tooltip label for clearing all selected items */
+  filterFieldClearAllTooltip: PropTypes.string,
 
-  /** tooltip label for clearing a selected item */
-  filterFieldClearSelectionTooltip: string,
+  /** Tooltip label for clearing a selected item */
+  filterFieldClearSelectionTooltip: PropTypes.string,
 
-  /** Focus trap. */
-  focusTrap: bool,
+  /** Focus trap */
+  focusTrap: PropTypes.bool,
 
-  /** The view title. */
-  heading: string.isRequired,
+  /** The view title */
+  heading: PropTypes.string.isRequired,
 
-  /** Specify a custom id for the filter. */
-  id: string,
+  /** Specify a custom ID for the `Filter` */
+  id: PropTypes.string,
 
-  /** Set a placeholder for the filter input field via this prop */
-  inputFieldPlaceholder: string,
+  /** Set a placeholder for the `Filter` input field */
+  inputFieldPlaceholder: PropTypes.string,
 
-  /** Called whenever a something changed. Is called with the latest state */
-  onChange: func,
+  /** Called whenever something changed, with the latest state */
+  onChange: PropTypes.func,
 
-  /** An object list of primary button props. */
+  /** An object list of primary button props */
   primaryButton: buttonType.isRequired,
 
-  /** An object list of secondary button props. */
+  /** An object list of secondary button props */
   secondaryButton: buttonType.isRequired,
 
   /** Initially selected items */
-  selectedItems: arrayOf(
-    shape({
-      id: string.isRequired,
-      label: string.isRequired,
+  selectedItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.isRequired,
+      label: PropTypes.isRequired,
     })
   ),
 
-  /** Tag wall label. */
-  tagWallLabel: string,
+  /** Tag wall label */
+  tagWallLabel: PropTypes.string,
 };
 
 TagWallFilter.defaultProps = {
-  allItems: undefined,
   description: '',
-  filterFieldClearAllTooltip: 'Clear all selected items',
-  filterFieldClearSelectionTooltip: 'Clear selected item',
   focusTrap: true,
   id: namespace,
-  inputFieldPlaceholder: '',
-  onChange: () => {},
   selectedItems: [],
+  allItems: undefined,
+  onChange: noop,
+  inputFieldPlaceholder: '',
   tagWallLabel: null,
+  filterFieldClearAllTooltip: 'Clear all selected items',
+  filterFieldClearSelectionTooltip: 'Clear selected item',
 };
 
+TagWallFilter.displayName = 'TagWallFilter';
+
 export default TagWallFilter;
+
+export { itemToString, noop };
