@@ -184,19 +184,15 @@ class Filter extends Component {
         onStateChange={this.handleOnStateChange}
         clearSelection={this.handleClearSelection}
         isOpen
-        render={({
-          getButtonProps,
+      >
+        {({
           getInputProps,
           getItemProps,
           getRootProps,
+          getToggleButtonProps,
         }) => (
-          <ListBox
-            className={namespace}
-            disabled={disabled}
-            {...getRootProps({ refKey: 'innerRef' })}
-            id={id}
-          >
-            <Field {...getButtonProps({ disabled, tabIndex: -1 })} id={id}>
+          <ListBox {...getRootProps({ id, className: namespace, disabled })}>
+            <Field {...getToggleButtonProps({ disabled, id, tabIndex: -1 })}>
               <input
                 className={`${namespace}__input-field ${carbonPrefix}--text-input`}
                 {...getInputProps({
@@ -224,7 +220,7 @@ class Filter extends Component {
             </Menu>
           </ListBox>
         )}
-      />
+      </Downshift>
     );
   }
 }
