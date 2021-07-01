@@ -27,6 +27,42 @@ const namespace = getComponentNamespace('tag-wall-filter');
 
 const noop = () => {};
 
+function withItemReducer(state, action) {
+  const { item, type } = action;
+  const { available, selected } = state;
+
+  const filter = ({ id }) => id !== item.id;
+
+  switch (type) {
+    case 'CLEAR_SELECTED_ITEMS':
+      return {
+        available: [
+          ...available,
+          ...selected.map(({ isSelected, ...props }) => ({ ...props })),
+        ],
+        selected: [],
+      };
+
+    case 'SELECT_ITEM':
+      return {
+        available: available.filter(filter),
+        selected: defaultSortItems(
+          [...selected, { ...item, isSelected: true }],
+          { itemToString }
+        ),
+      };
+
+    case 'UNSELECT_ITEM':
+      return {
+        available: [...available, item],
+        selected: selected.filter(filter),
+      };
+
+    default:
+      return state;
+  }
+}
+
 function TagWallFilter({
   availableItems,
   closeButton,
@@ -46,28 +82,7 @@ function TagWallFilter({
   function itemReducer(state, action) {
     onChange(action);
 
-    const { item, type } = action;
-    const { available, selected } = state;
-
-    switch (type) {
-      case 'SELECT_ITEM':
-        return {
-          available: available.filter(({ id }) => id !== item.id),
-          selected: defaultSortItems(
-            [...selected, { ...item, isSelected: true }],
-            { itemToString }
-          ),
-        };
-
-      case 'UNSELECT_ITEM':
-        return {
-          available: [...available, item],
-          selected: selected.filter(({ id }) => id !== item.id),
-        };
-
-      default:
-        return state;
-    }
+    return withItemReducer(state, action);
   }
 
   const [{ available, selected }, dispatchItemChange] = useReducer(
@@ -198,4 +213,4 @@ TagWallFilter.displayName = 'TagWallFilter';
 
 export default TagWallFilter;
 
-export { itemToString, noop };
+export { itemToString, noop, withItemReducer };

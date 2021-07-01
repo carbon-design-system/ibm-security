@@ -1,76 +1,95 @@
-import { shallow, mount } from 'enzyme';
+/**
+ * @file Tag wall filter test.
+ * @copyright IBM Security 2019 - 2021
+ */
+
+import { mount, shallow } from 'enzyme';
 import React from 'react';
 
 import Filter from '../Filter';
 import TagWall from '../../TagWall';
 
-import {
+import TagWallFilter, {
   itemToString,
   noop,
-  TagWallFilter,
   withItemReducer,
 } from '../TagWallFilter';
+import { LetterAa32 } from '@carbon/icons-react';
 
-describe('TagWallFilter tests', () => {
+const { fn } = jest;
+
+const { name } = TagWallFilter;
+
+describe(name, () => {
   const tearsheetProps = {
-    heading: 'TagWallFilter Heading',
-    description:
-      'What’s the secret to minced and ground doughnut? Always use small garlic.',
+    heading: name,
+    description: name,
+
     closeButton: {
-      onClick: jest.fn(),
+      onClick: fn(),
     },
     secondaryButton: {
-      onClick: jest.fn(),
+      onClick: fn(),
     },
     primaryButton: {
-      onClick: jest.fn(),
+      onClick: fn(),
     },
   };
 
-  it('should do nothing on noop', () => {
+  test('`noop` is undefined', () => {
     expect(noop()).toBeUndefined();
   });
 
-  describe('selectedItemsReducer', () => {
-    let initState;
+  describe('withItemReducer', () => {
+    let state;
+
+    const getItem = (id = '0') => ({ id, label: 'Label' });
+
     beforeEach(() => {
-      initState = { items: [] };
+      state = { available: [], selected: [] };
     });
-    it('should handle SELECT_ITEM', () => {
-      const state1 = selectedItemsReducer(initState, {
+
+    test('SELECT_ITEM', () => {
+      expect(state.selected.length).toEqual(0);
+
+      state = withItemReducer(state, {
+        item: getItem(),
         type: 'SELECT_ITEM',
-        item: { id: 'x', label: 'hallo' },
       });
-      const state2 = selectedItemsReducer(state1, {
+
+      expect(state.selected.length).toEqual(1);
+
+      state = withItemReducer(state, {
+        item: getItem(1),
         type: 'SELECT_ITEM',
-        item: { id: 'y', label: '!!!' },
       });
-      expect(state1.items.length).toEqual(1);
-      expect(state2.items.length).toEqual(2);
-      expect(state1).toMatchSnapshot();
-      expect(state2).toMatchSnapshot();
+
+      expect(state.selected.length).toEqual(2);
+
+      expect(state).toMatchSnapshot();
     });
-    it('should handle UNSELECT_ITEM', () => {
-      initState = selectedItemsReducer(initState, {
+
+    test('UNSELECT_ITEM', () => {
+      state = withItemReducer(state, {
+        item: getItem(),
         type: 'SELECT_ITEM',
-        item: { id: 'x', label: 'hallo' },
       });
-      initState = selectedItemsReducer(initState, {
-        type: 'SELECT_ITEM',
-        item: { id: 'y', label: '!!!' },
-      });
-      initState = selectedItemsReducer(initState, {
-        type: 'SELECT_ITEM',
-        item: { id: 'z', label: '???' },
-      });
-      const finalState = selectedItemsReducer(initState, {
+
+      console.log(state);
+
+      state = withItemReducer(state, {
+        item: getItem(0),
         type: 'UNSELECT_ITEM',
-        item: { id: 'y' },
       });
-      expect(finalState.items.length).toEqual(2);
-      expect(initState.items.length).toEqual(3);
-      expect(finalState).toMatchSnapshot();
+
+      console.log(state);
+
+      expect(state.available.length).toEqual(1);
+      expect(state.selected.length).toEqual(0);
+
+      expect(state).toMatchSnapshot();
     });
+
     it('should handle CLEAR_SELECTED_ITEMS', () => {
       initState = selectedItemsReducer(initState, {
         type: 'SELECT_ITEM',
