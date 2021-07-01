@@ -6,8 +6,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-// JSDOM hasn't implemented `ResizeObserver` yet, so the mock needs to be moved into a separate file and included before the tested file - https://jestjs.io/docs/en/manual-mocks#mocking-methods-which-are-not-implemented-in-jsdom
-import { disconnectMock, observeMock, ResizeObserver } from '../__mocks__';
 import ScrollGradient, { namespace } from '../ScrollGradient';
 
 import { className, children } from '../_mocks_';
@@ -62,13 +60,27 @@ describe('ScrollGradient', () => {
     });
 
     describe('`ResizeObserver`', () => {
+      const { fn } = jest;
+
+      const disconnectMock = fn();
+      const observeMock = fn();
+
+      const { ResizeObserver } = window;
+
+      beforeAll(() => {
+        window.ResizeObserver = ResizeObserver.mockImplementation(() => ({
+          disconnect: disconnectMock,
+          observe: observeMock,
+        }));
+      });
+
       beforeEach(() => {
         disconnectMock.mockClear();
         observeMock.mockClear();
       });
 
       afterAll(() => {
-        ResizeObserver.mockReset();
+        window.ResizeObserver = ResizeObserver;
       });
 
       it('adds `ResizeObserver` when mounted', () => {

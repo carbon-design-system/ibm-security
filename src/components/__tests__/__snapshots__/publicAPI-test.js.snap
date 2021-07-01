@@ -8174,15 +8174,15 @@ Map {
         "args": Array [
           Array [
             Object {
-              "type": "node",
-            },
-            Object {
               "args": Array [
                 Object {
                   "type": "node",
                 },
               ],
               "type": "arrayOf",
+            },
+            Object {
+              "type": "node",
             },
           ],
         ],
