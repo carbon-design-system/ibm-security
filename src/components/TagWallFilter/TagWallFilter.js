@@ -34,15 +34,6 @@ function withItemReducer(state, action) {
   const filter = ({ id }) => id !== item.id;
 
   switch (type) {
-    case 'CLEAR_SELECTED_ITEMS':
-      return {
-        available: [
-          ...available,
-          ...selected.map(({ isSelected, ...props }) => ({ ...props })),
-        ],
-        selected: [],
-      };
-
     case 'SELECT_ITEM':
       return {
         available: available.filter(filter),
@@ -213,4 +204,4 @@ TagWallFilter.displayName = 'TagWallFilter';
 
 export default TagWallFilter;
 
-export { itemToString, noop, withItemReducer };
+export { noop, withItemReducer };

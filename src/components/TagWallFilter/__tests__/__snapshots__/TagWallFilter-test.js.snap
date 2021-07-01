@@ -1,618 +1,295 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TagWallFilter TagWallFilter should mount the TagWallFilter component 1`] = `
-<TagWallFilter
-  availableItems={
+exports[`TagWallFilter \`onChange\` 1`] = `
+[MockFunction] {
+  "calls": Array [
     Array [
       Object {
-        "id": "y",
-        "label": "Y",
+        "item": Object {
+          "id": "0",
+          "label": "TagWallFilter 0",
+        },
+        "type": "SELECT_ITEM",
       },
-    ]
-  }
-  closeButton={
-    Object {
-      "onClick": [MockFunction],
-    }
-  }
-  description="TagWallFilter"
-  filterFieldClearAllTooltip="Clear all selected items"
-  filterFieldClearSelectionTooltip="Clear selected item"
-  focusTrap={true}
-  heading="TagWallFilter"
-  id="test-id"
-  inputFieldPlaceholder=""
-  onChange={[Function]}
-  primaryButton={
-    Object {
-      "onClick": [MockFunction],
-    }
-  }
-  secondaryButton={
-    Object {
-      "onClick": [MockFunction],
-    }
-  }
-  selectedItems={
+    ],
     Array [
       Object {
-        "id": "x",
-        "label": "X",
+        "item": Object {
+          "id": "0",
+          "label": "TagWallFilter 0",
+        },
+        "type": "SELECT_ITEM",
       },
-    ]
-  }
-  tagWallLabel={null}
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`TagWallFilter \`onChange\` 2`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      Object {
+        "item": Object {
+          "id": "0",
+          "label": "TagWallFilter 0",
+        },
+        "type": "SELECT_ITEM",
+      },
+    ],
+    Array [
+      Object {
+        "item": Object {
+          "id": "0",
+          "label": "TagWallFilter 0",
+        },
+        "type": "SELECT_ITEM",
+      },
+    ],
+    Array [
+      Object {
+        "item": Object {
+          "id": "1",
+          "label": "TagWallFilter 1",
+        },
+        "type": "UNSELECT_ITEM",
+      },
+    ],
+    Array [
+      Object {
+        "item": Object {
+          "id": "1",
+          "label": "TagWallFilter 1",
+        },
+        "type": "UNSELECT_ITEM",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`TagWallFilter \`withItemReducer\` \`SELECT_ITEM\` 1`] = `
+Object {
+  "available": Array [],
+  "selected": Array [
+    Object {
+      "id": "0",
+      "isSelected": true,
+      "label": "TagWallFilter 0",
+    },
+  ],
+}
+`;
+
+exports[`TagWallFilter \`withItemReducer\` \`UNSELECT_ITEM\` 1`] = `
+Object {
+  "available": Array [
+    Object {
+      "id": "0",
+      "label": "TagWallFilter 0",
+    },
+  ],
+  "selected": Array [],
+}
+`;
+
+exports[`TagWallFilter Renders 1`] = `
+<body
+  class="security--portal__container"
 >
-  <TearsheetSmall
-    body=""
-    className="security--tag-wall-filter"
-    closeButton={
-      Object {
-        "onClick": [MockFunction],
-      }
-    }
-    description={
-      <div
-        className="security--tag-wall-filter__description"
+  <div>
+    <span
+      class="security--transition"
+    />
+  </div>
+  <section
+    aria-hidden="false"
+    class="security--tearsheet--small security--tag-wall-filter"
+  >
+    <header
+      class="security--tearsheet--small__header"
+    >
+      <h1
+        class="security--tearsheet--small__title"
       >
         TagWallFilter
-        <TagWall
-          addButtonDisabled={true}
-          addLabel=""
-          className="security--tag-wall-filter__tag-wall"
-          disable={false}
-          itemToString={[Function]}
-          items={
-            Array [
-              Object {
-                "id": "x",
-                "label": "X",
-              },
-            ]
-          }
-          label={null}
-          labels={Object {}}
-          onAddButton={[Function]}
-          onChange={[Function]}
-        />
-      </div>
-    }
-    flush={true}
-    focusTrap={true}
-    heading="TagWallFilter"
-    isOpen={true}
-    labels={Object {}}
-    loading={false}
-    loadingMessage=""
-    primaryButton={
-      Object {
-        "onClick": [MockFunction],
-      }
-    }
-    rootNode={
-      <body
-        class="security--portal__container"
+      </h1>
+      <div
+        class="security--tearsheet--small__description"
       >
-        <section
-          aria-hidden="false"
-          class="security--tearsheet--small security--tag-wall-filter"
+        <div
+          class="security--tag-wall-filter__description"
         >
-          <header
-            class="security--tearsheet--small__header"
-          >
-            <h1
-              class="security--tearsheet--small__title"
-            >
-              TagWallFilter
-            </h1>
-            <div
-              class="security--tearsheet--small__description"
-            >
-              <div
-                class="security--tag-wall-filter__description"
-              >
-                TagWallFilter
-                <section
-                  aria-label=""
-                  class="security--tag-wall security--tag-wall-filter__tag-wall"
-                >
-                  
-                  <div
-                    aria-label=" X"
-                    class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
-                    id="x"
-                  >
-                    <span
-                      class="bx--tag__label"
-                      title="X"
-                    >
-                      X
-                    </span>
-                    <button
-                      aria-labelledby="x"
-                      class="bx--tag__close-icon"
-                      title=""
-                      type="button"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        fill="currentColor"
-                        focusable="false"
-                        height="16"
-                        preserveAspectRatio="xMidYMid meet"
-                        viewBox="0 0 32 32"
-                        width="16"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </section>
-              </div>
-            </div>
-          </header>
+          
           <section
-            class="security--tearsheet--small__body"
+            aria-label=""
+            class="security--tag-wall security--tag-wall-filter__tag-wall"
           >
+            
             <div
-              class="security--scroll-gradient security--scroll-gradient--none security--scroll-gradient--y security--tearsheet--small__content"
-              role="presentation"
+              aria-label=" TagWallFilter 1"
+              class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
+              id="1"
             >
-              <div
-                aria-hidden="true"
-                class="security--scroll-gradient__before"
-                role="presentation"
-              />
-              <div
-                class="security--scroll-gradient__content"
+              <span
+                class="bx--tag__label"
+                title="TagWallFilter 1"
               >
-                <div
-                  class=""
+                TagWallFilter 1
+              </span>
+              <button
+                aria-labelledby="1"
+                class="bx--tag__close-icon"
+                title=""
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  fill="currentColor"
+                  focusable="false"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  viewBox="0 0 32 32"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <div
-                    aria-expanded="true"
-                    aria-haspopup="listbox"
-                    aria-labelledby="downshift-0-label"
-                    aria-owns="downshift-0-menu"
-                    class="security--filter bx--list-box"
-                    id="test-id"
-                    role="combobox"
-                  >
-                    <div
-                      aria-haspopup="true"
-                      aria-label="close menu"
-                      class="bx--list-box__field"
-                      data-toggle="true"
-                      id="test-id"
-                      role="button"
-                      tabindex="-1"
-                      type="button"
-                    >
-                      <input
-                        aria-autocomplete="list"
-                        aria-controls="downshift-0-menu"
-                        aria-labelledby="downshift-0-label"
-                        autocomplete="off"
-                        class="security--filter__input-field bx--text-input"
-                        id="test-id"
-                        placeholder=""
-                        value=""
-                      />
-                      <span
-                        class="security--filter__search"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class="security--icon security--filter__search__icon"
-                          fill="var(--cds-icon-01, #f4f4f4)"
-                          focusable="false"
-                          height="20"
-                          preserveAspectRatio="xMidYMid meet"
-                          style="will-change: transform;"
-                          viewBox="0 0 32 32"
-                          width="20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"
-                          />
-                        </svg>
-                      </span>
-                    </div>
-                    <div
-                      class="security--filter__list-container"
-                      id="test-id"
-                      role="listbox"
-                    >
-                      <div
-                        aria-selected="false"
-                        class="bx--list-box__menu-item"
-                        id="downshift-0-item-0"
-                        role="option"
-                        tabindex="0"
-                      >
-                        <div
-                          class="bx--list-box__menu-item__option"
-                        >
-                          <div
-                            aria-labelledby="downshift-0-item-0"
-                            class="security--filter__list-item__entry"
-                          >
-                            <span
-                              class="bx--text-truncate--end"
-                              title="Y"
-                            >
-                              Y
-                            </span>
-                            <span
-                              class="security--filter__add"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="security--icon security--filter__add__icon"
-                                fill="currentColor"
-                                focusable="false"
-                                height="20"
-                                preserveAspectRatio="xMidYMid meet"
-                                style="will-change: transform;"
-                                viewBox="0 0 32 32"
-                                width="20"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
-                                />
-                              </svg>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                aria-hidden="true"
-                class="security--scroll-gradient__after"
-                role="presentation"
-              />
+                  <path
+                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                  />
+                </svg>
+              </button>
             </div>
           </section>
-          <footer
-            class="security--tearsheet--small__footer"
-          >
-            <button
-              class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
-              tabindex="0"
-              type="button"
-            >
-              Cancel
-            </button>
-            <button
-              class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
-              tabindex="0"
-              type="button"
-            >
-              Save
-            </button>
-          </footer>
-          <button
-            aria-label="Close"
-            class="security--button--icon security--tearsheet--small__button--close security--button--icon--lg"
-          >
-            <svg
-              aria-hidden="true"
-              class="security--icon"
-              fill="currentColor"
-              focusable="false"
-              height="20"
-              preserveAspectRatio="xMidYMid meet"
-              style="will-change: transform;"
-              viewBox="0 0 32 32"
-              width="20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-              />
-            </svg>
-          </button>
-        </section>
-        <div
-          class="security--portal__overlay"
-          tabindex="-1"
-        />
-      </body>
-    }
-    secondaryButton={
-      Object {
-        "onClick": [MockFunction],
-      }
-    }
-    stopPropagation={false}
-  >
-    <Transition
-      className="security--tearsheet--small"
-      component="span"
-      timeout={300}
+        </div>
+      </div>
+    </header>
+    <section
+      class="security--tearsheet--small__body"
     >
-      <TransitionGroup
-        childFactory={[Function]}
-        className="security--transition"
-        component="span"
+      <div
+        class="security--scroll-gradient security--scroll-gradient--none security--scroll-gradient--y security--tearsheet--small__content"
+        role="presentation"
       >
-        <span
-          className="security--transition"
+        <div
+          aria-hidden="true"
+          class="security--scroll-gradient__before"
+          role="presentation"
+        />
+        <div
+          class="security--scroll-gradient__content"
         >
-          <CSSTransition
-            classNames={
-              Object {
-                "appear": "security--tearsheet--small__transition--appear",
-                "appearActive": "security--tearsheet--small__transition--appear--active",
-                "enter": "security--tearsheet--small__transition--enter",
-                "enterActive": "security--tearsheet--small__transition--enter--active",
-                "exit": "security--tearsheet--small__transition--leave",
-                "exitActive": "security--tearsheet--small__transition--leave--active",
-              }
-            }
-            in={true}
-            key=".$.0"
-            onExited={[Function]}
-            timeout={
-              Object {
-                "appear": 300,
-                "enter": 300,
-                "exit": 300,
-              }
-            }
+          <div
+            class=""
           >
-            <Transition
-              appear={false}
-              enter={true}
-              exit={true}
-              in={true}
-              mountOnEnter={false}
-              onEnter={[Function]}
-              onEntered={[Function]}
-              onEntering={[Function]}
-              onExit={[Function]}
-              onExited={[Function]}
-              onExiting={[Function]}
-              timeout={
-                Object {
-                  "appear": 300,
-                  "enter": 300,
-                  "exit": 300,
-                }
-              }
-              unmountOnExit={false}
+            <div
+              aria-expanded="true"
+              aria-haspopup="listbox"
+              aria-labelledby="downshift-0-label"
+              aria-owns="downshift-0-menu"
+              class="security--filter bx--list-box"
+              id="security--tag-wall-filter"
+              role="combobox"
             >
-              <Portal
-                focusTrap={true}
-                focusTrapOptions={Object {}}
-                hasOverlay={true}
-                initialFocus={null}
-                overlayOptions={Object {}}
-                rootNode={
-                  <body
-                    class="security--portal__container"
+              <div
+                aria-haspopup="true"
+                aria-label="close menu"
+                class="bx--list-box__field"
+                data-toggle="true"
+                id="security--tag-wall-filter"
+                role="button"
+                tabindex="-1"
+                type="button"
+              >
+                <input
+                  aria-autocomplete="list"
+                  aria-controls="downshift-0-menu"
+                  aria-labelledby="downshift-0-label"
+                  autocomplete="off"
+                  class="security--filter__input-field bx--text-input"
+                  id="security--tag-wall-filter"
+                  placeholder=""
+                  value=""
+                />
+                <span
+                  class="security--filter__search"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="security--icon security--filter__search__icon"
+                    fill="var(--cds-icon-01, #f4f4f4)"
+                    focusable="false"
+                    height="20"
+                    preserveAspectRatio="xMidYMid meet"
+                    style="will-change: transform;"
+                    viewBox="0 0 32 32"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <section
-                      aria-hidden="false"
-                      class="security--tearsheet--small security--tag-wall-filter"
+                    <path
+                      d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div
+                class="security--filter__list-container"
+                id="security--tag-wall-filter"
+                role="listbox"
+              >
+                <div
+                  aria-selected="false"
+                  class="bx--list-box__menu-item"
+                  id="downshift-0-item-0"
+                  role="option"
+                  tabindex="0"
+                >
+                  <div
+                    class="bx--list-box__menu-item__option"
+                  >
+                    <div
+                      aria-labelledby="downshift-0-item-0"
+                      class="security--filter__list-item__entry"
                     >
-                      <header
-                        class="security--tearsheet--small__header"
+                      <span
+                        class="bx--text-truncate--end"
+                        title="TagWallFilter 0"
                       >
-                        <h1
-                          class="security--tearsheet--small__title"
-                        >
-                          TagWallFilter
-                        </h1>
-                        <div
-                          class="security--tearsheet--small__description"
-                        >
-                          <div
-                            class="security--tag-wall-filter__description"
-                          >
-                            TagWallFilter
-                            <section
-                              aria-label=""
-                              class="security--tag-wall security--tag-wall-filter__tag-wall"
-                            >
-                              
-                              <div
-                                aria-label=" X"
-                                class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
-                                id="x"
-                              >
-                                <span
-                                  class="bx--tag__label"
-                                  title="X"
-                                >
-                                  X
-                                </span>
-                                <button
-                                  aria-labelledby="x"
-                                  class="bx--tag__close-icon"
-                                  title=""
-                                  type="button"
-                                >
-                                  <svg
-                                    aria-hidden="true"
-                                    fill="currentColor"
-                                    focusable="false"
-                                    height="16"
-                                    preserveAspectRatio="xMidYMid meet"
-                                    viewBox="0 0 32 32"
-                                    width="16"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                  >
-                                    <path
-                                      d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                                    />
-                                  </svg>
-                                </button>
-                              </div>
-                            </section>
-                          </div>
-                        </div>
-                      </header>
-                      <section
-                        class="security--tearsheet--small__body"
-                      >
-                        <div
-                          class="security--scroll-gradient security--scroll-gradient--none security--scroll-gradient--y security--tearsheet--small__content"
-                          role="presentation"
-                        >
-                          <div
-                            aria-hidden="true"
-                            class="security--scroll-gradient__before"
-                            role="presentation"
-                          />
-                          <div
-                            class="security--scroll-gradient__content"
-                          >
-                            <div
-                              class=""
-                            >
-                              <div
-                                aria-expanded="true"
-                                aria-haspopup="listbox"
-                                aria-labelledby="downshift-0-label"
-                                aria-owns="downshift-0-menu"
-                                class="security--filter bx--list-box"
-                                id="test-id"
-                                role="combobox"
-                              >
-                                <div
-                                  aria-haspopup="true"
-                                  aria-label="close menu"
-                                  class="bx--list-box__field"
-                                  data-toggle="true"
-                                  id="test-id"
-                                  role="button"
-                                  tabindex="-1"
-                                  type="button"
-                                >
-                                  <input
-                                    aria-autocomplete="list"
-                                    aria-controls="downshift-0-menu"
-                                    aria-labelledby="downshift-0-label"
-                                    autocomplete="off"
-                                    class="security--filter__input-field bx--text-input"
-                                    id="test-id"
-                                    placeholder=""
-                                    value=""
-                                  />
-                                  <span
-                                    class="security--filter__search"
-                                  >
-                                    <svg
-                                      aria-hidden="true"
-                                      class="security--icon security--filter__search__icon"
-                                      fill="var(--cds-icon-01, #f4f4f4)"
-                                      focusable="false"
-                                      height="20"
-                                      preserveAspectRatio="xMidYMid meet"
-                                      style="will-change: transform;"
-                                      viewBox="0 0 32 32"
-                                      width="20"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                        d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"
-                                      />
-                                    </svg>
-                                  </span>
-                                </div>
-                                <div
-                                  class="security--filter__list-container"
-                                  id="test-id"
-                                  role="listbox"
-                                >
-                                  <div
-                                    aria-selected="false"
-                                    class="bx--list-box__menu-item"
-                                    id="downshift-0-item-0"
-                                    role="option"
-                                    tabindex="0"
-                                  >
-                                    <div
-                                      class="bx--list-box__menu-item__option"
-                                    >
-                                      <div
-                                        aria-labelledby="downshift-0-item-0"
-                                        class="security--filter__list-item__entry"
-                                      >
-                                        <span
-                                          class="bx--text-truncate--end"
-                                          title="Y"
-                                        >
-                                          Y
-                                        </span>
-                                        <span
-                                          class="security--filter__add"
-                                        >
-                                          <svg
-                                            aria-hidden="true"
-                                            class="security--icon security--filter__add__icon"
-                                            fill="currentColor"
-                                            focusable="false"
-                                            height="20"
-                                            preserveAspectRatio="xMidYMid meet"
-                                            style="will-change: transform;"
-                                            viewBox="0 0 32 32"
-                                            width="20"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                          >
-                                            <path
-                                              d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
-                                            />
-                                          </svg>
-                                        </span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            aria-hidden="true"
-                            class="security--scroll-gradient__after"
-                            role="presentation"
-                          />
-                        </div>
-                      </section>
-                      <footer
-                        class="security--tearsheet--small__footer"
-                      >
-                        <button
-                          class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
-                          tabindex="0"
-                          type="button"
-                        >
-                          Cancel
-                        </button>
-                        <button
-                          class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
-                          tabindex="0"
-                          type="button"
-                        >
-                          Save
-                        </button>
-                      </footer>
-                      <button
-                        aria-label="Close"
-                        class="security--button--icon security--tearsheet--small__button--close security--button--icon--lg"
+                        TagWallFilter 0
+                      </span>
+                      <span
+                        class="security--filter__add"
                       >
                         <svg
                           aria-hidden="true"
-                          class="security--icon"
+                          class="security--icon security--filter__add__icon"
                           fill="currentColor"
                           focusable="false"
                           height="20"
@@ -623,1194 +300,67 @@ exports[`TagWallFilter TagWallFilter should mount the TagWallFilter component 1`
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
-                            d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+                            d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
                           />
                         </svg>
-                      </button>
-                    </section>
-                    <div
-                      class="security--portal__overlay"
-                      tabindex="-1"
-                    />
-                  </body>
-                }
-                stopPropagation={false}
-              >
-                <Portal
-                  containerInfo={
-                    <body
-                      class="security--portal__container"
-                    >
-                      <section
-                        aria-hidden="false"
-                        class="security--tearsheet--small security--tag-wall-filter"
-                      >
-                        <header
-                          class="security--tearsheet--small__header"
-                        >
-                          <h1
-                            class="security--tearsheet--small__title"
-                          >
-                            TagWallFilter
-                          </h1>
-                          <div
-                            class="security--tearsheet--small__description"
-                          >
-                            <div
-                              class="security--tag-wall-filter__description"
-                            >
-                              TagWallFilter
-                              <section
-                                aria-label=""
-                                class="security--tag-wall security--tag-wall-filter__tag-wall"
-                              >
-                                
-                                <div
-                                  aria-label=" X"
-                                  class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
-                                  id="x"
-                                >
-                                  <span
-                                    class="bx--tag__label"
-                                    title="X"
-                                  >
-                                    X
-                                  </span>
-                                  <button
-                                    aria-labelledby="x"
-                                    class="bx--tag__close-icon"
-                                    title=""
-                                    type="button"
-                                  >
-                                    <svg
-                                      aria-hidden="true"
-                                      fill="currentColor"
-                                      focusable="false"
-                                      height="16"
-                                      preserveAspectRatio="xMidYMid meet"
-                                      viewBox="0 0 32 32"
-                                      width="16"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                        d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                                      />
-                                    </svg>
-                                  </button>
-                                </div>
-                              </section>
-                            </div>
-                          </div>
-                        </header>
-                        <section
-                          class="security--tearsheet--small__body"
-                        >
-                          <div
-                            class="security--scroll-gradient security--scroll-gradient--none security--scroll-gradient--y security--tearsheet--small__content"
-                            role="presentation"
-                          >
-                            <div
-                              aria-hidden="true"
-                              class="security--scroll-gradient__before"
-                              role="presentation"
-                            />
-                            <div
-                              class="security--scroll-gradient__content"
-                            >
-                              <div
-                                class=""
-                              >
-                                <div
-                                  aria-expanded="true"
-                                  aria-haspopup="listbox"
-                                  aria-labelledby="downshift-0-label"
-                                  aria-owns="downshift-0-menu"
-                                  class="security--filter bx--list-box"
-                                  id="test-id"
-                                  role="combobox"
-                                >
-                                  <div
-                                    aria-haspopup="true"
-                                    aria-label="close menu"
-                                    class="bx--list-box__field"
-                                    data-toggle="true"
-                                    id="test-id"
-                                    role="button"
-                                    tabindex="-1"
-                                    type="button"
-                                  >
-                                    <input
-                                      aria-autocomplete="list"
-                                      aria-controls="downshift-0-menu"
-                                      aria-labelledby="downshift-0-label"
-                                      autocomplete="off"
-                                      class="security--filter__input-field bx--text-input"
-                                      id="test-id"
-                                      placeholder=""
-                                      value=""
-                                    />
-                                    <span
-                                      class="security--filter__search"
-                                    >
-                                      <svg
-                                        aria-hidden="true"
-                                        class="security--icon security--filter__search__icon"
-                                        fill="var(--cds-icon-01, #f4f4f4)"
-                                        focusable="false"
-                                        height="20"
-                                        preserveAspectRatio="xMidYMid meet"
-                                        style="will-change: transform;"
-                                        viewBox="0 0 32 32"
-                                        width="20"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                      >
-                                        <path
-                                          d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"
-                                        />
-                                      </svg>
-                                    </span>
-                                  </div>
-                                  <div
-                                    class="security--filter__list-container"
-                                    id="test-id"
-                                    role="listbox"
-                                  >
-                                    <div
-                                      aria-selected="false"
-                                      class="bx--list-box__menu-item"
-                                      id="downshift-0-item-0"
-                                      role="option"
-                                      tabindex="0"
-                                    >
-                                      <div
-                                        class="bx--list-box__menu-item__option"
-                                      >
-                                        <div
-                                          aria-labelledby="downshift-0-item-0"
-                                          class="security--filter__list-item__entry"
-                                        >
-                                          <span
-                                            class="bx--text-truncate--end"
-                                            title="Y"
-                                          >
-                                            Y
-                                          </span>
-                                          <span
-                                            class="security--filter__add"
-                                          >
-                                            <svg
-                                              aria-hidden="true"
-                                              class="security--icon security--filter__add__icon"
-                                              fill="currentColor"
-                                              focusable="false"
-                                              height="20"
-                                              preserveAspectRatio="xMidYMid meet"
-                                              style="will-change: transform;"
-                                              viewBox="0 0 32 32"
-                                              width="20"
-                                              xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                              <path
-                                                d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
-                                              />
-                                            </svg>
-                                          </span>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              aria-hidden="true"
-                              class="security--scroll-gradient__after"
-                              role="presentation"
-                            />
-                          </div>
-                        </section>
-                        <footer
-                          class="security--tearsheet--small__footer"
-                        >
-                          <button
-                            class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
-                            tabindex="0"
-                            type="button"
-                          >
-                            Cancel
-                          </button>
-                          <button
-                            class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
-                            tabindex="0"
-                            type="button"
-                          >
-                            Save
-                          </button>
-                        </footer>
-                        <button
-                          aria-label="Close"
-                          class="security--button--icon security--tearsheet--small__button--close security--button--icon--lg"
-                        >
-                          <svg
-                            aria-hidden="true"
-                            class="security--icon"
-                            fill="currentColor"
-                            focusable="false"
-                            height="20"
-                            preserveAspectRatio="xMidYMid meet"
-                            style="will-change: transform;"
-                            viewBox="0 0 32 32"
-                            width="20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                            />
-                          </svg>
-                        </button>
-                      </section>
-                      <div
-                        class="security--portal__overlay"
-                        tabindex="-1"
-                      />
-                    </body>
-                  }
-                >
-                  <FocusTrap
-                    _createFocusTrap={[Function]}
-                    active={true}
-                    focusTrapOptions={
-                      Object {
-                        "fallbackFocus": <body
-                          class="security--portal__container"
-                        >
-                          <section
-                            aria-hidden="false"
-                            class="security--tearsheet--small security--tag-wall-filter"
-                          >
-                            <header
-                              class="security--tearsheet--small__header"
-                            >
-                              <h1
-                                class="security--tearsheet--small__title"
-                              >
-                                TagWallFilter
-                              </h1>
-                              <div
-                                class="security--tearsheet--small__description"
-                              >
-                                <div
-                                  class="security--tag-wall-filter__description"
-                                >
-                                  TagWallFilter
-                                  <section
-                                    aria-label=""
-                                    class="security--tag-wall security--tag-wall-filter__tag-wall"
-                                  >
-                                    
-                                    <div
-                                      aria-label=" X"
-                                      class="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
-                                      id="x"
-                                    >
-                                      <span
-                                        class="bx--tag__label"
-                                        title="X"
-                                      >
-                                        X
-                                      </span>
-                                      <button
-                                        aria-labelledby="x"
-                                        class="bx--tag__close-icon"
-                                        title=""
-                                        type="button"
-                                      >
-                                        <svg
-                                          aria-hidden="true"
-                                          fill="currentColor"
-                                          focusable="false"
-                                          height="16"
-                                          preserveAspectRatio="xMidYMid meet"
-                                          viewBox="0 0 32 32"
-                                          width="16"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                          <path
-                                            d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                                          />
-                                        </svg>
-                                      </button>
-                                    </div>
-                                  </section>
-                                </div>
-                              </div>
-                            </header>
-                            <section
-                              class="security--tearsheet--small__body"
-                            >
-                              <div
-                                class="security--scroll-gradient security--scroll-gradient--none security--scroll-gradient--y security--tearsheet--small__content"
-                                role="presentation"
-                              >
-                                <div
-                                  aria-hidden="true"
-                                  class="security--scroll-gradient__before"
-                                  role="presentation"
-                                />
-                                <div
-                                  class="security--scroll-gradient__content"
-                                >
-                                  <div
-                                    class=""
-                                  >
-                                    <div
-                                      aria-expanded="true"
-                                      aria-haspopup="listbox"
-                                      aria-labelledby="downshift-0-label"
-                                      aria-owns="downshift-0-menu"
-                                      class="security--filter bx--list-box"
-                                      id="test-id"
-                                      role="combobox"
-                                    >
-                                      <div
-                                        aria-haspopup="true"
-                                        aria-label="close menu"
-                                        class="bx--list-box__field"
-                                        data-toggle="true"
-                                        id="test-id"
-                                        role="button"
-                                        tabindex="-1"
-                                        type="button"
-                                      >
-                                        <input
-                                          aria-autocomplete="list"
-                                          aria-controls="downshift-0-menu"
-                                          aria-labelledby="downshift-0-label"
-                                          autocomplete="off"
-                                          class="security--filter__input-field bx--text-input"
-                                          id="test-id"
-                                          placeholder=""
-                                          value=""
-                                        />
-                                        <span
-                                          class="security--filter__search"
-                                        >
-                                          <svg
-                                            aria-hidden="true"
-                                            class="security--icon security--filter__search__icon"
-                                            fill="var(--cds-icon-01, #f4f4f4)"
-                                            focusable="false"
-                                            height="20"
-                                            preserveAspectRatio="xMidYMid meet"
-                                            style="will-change: transform;"
-                                            viewBox="0 0 32 32"
-                                            width="20"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                          >
-                                            <path
-                                              d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"
-                                            />
-                                          </svg>
-                                        </span>
-                                      </div>
-                                      <div
-                                        class="security--filter__list-container"
-                                        id="test-id"
-                                        role="listbox"
-                                      >
-                                        <div
-                                          aria-selected="false"
-                                          class="bx--list-box__menu-item"
-                                          id="downshift-0-item-0"
-                                          role="option"
-                                          tabindex="0"
-                                        >
-                                          <div
-                                            class="bx--list-box__menu-item__option"
-                                          >
-                                            <div
-                                              aria-labelledby="downshift-0-item-0"
-                                              class="security--filter__list-item__entry"
-                                            >
-                                              <span
-                                                class="bx--text-truncate--end"
-                                                title="Y"
-                                              >
-                                                Y
-                                              </span>
-                                              <span
-                                                class="security--filter__add"
-                                              >
-                                                <svg
-                                                  aria-hidden="true"
-                                                  class="security--icon security--filter__add__icon"
-                                                  fill="currentColor"
-                                                  focusable="false"
-                                                  height="20"
-                                                  preserveAspectRatio="xMidYMid meet"
-                                                  style="will-change: transform;"
-                                                  viewBox="0 0 32 32"
-                                                  width="20"
-                                                  xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                  <path
-                                                    d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
-                                                  />
-                                                </svg>
-                                              </span>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  aria-hidden="true"
-                                  class="security--scroll-gradient__after"
-                                  role="presentation"
-                                />
-                              </div>
-                            </section>
-                            <footer
-                              class="security--tearsheet--small__footer"
-                            >
-                              <button
-                                class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
-                                tabindex="0"
-                                type="button"
-                              >
-                                Cancel
-                              </button>
-                              <button
-                                class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
-                                tabindex="0"
-                                type="button"
-                              >
-                                Save
-                              </button>
-                            </footer>
-                            <button
-                              aria-label="Close"
-                              class="security--button--icon security--tearsheet--small__button--close security--button--icon--lg"
-                            >
-                              <svg
-                                aria-hidden="true"
-                                class="security--icon"
-                                fill="currentColor"
-                                focusable="false"
-                                height="20"
-                                preserveAspectRatio="xMidYMid meet"
-                                style="will-change: transform;"
-                                viewBox="0 0 32 32"
-                                width="20"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                                />
-                              </svg>
-                            </button>
-                          </section>
-                          <div
-                            class="security--portal__overlay"
-                            tabindex="-1"
-                          />
-                        </body>,
-                        "initialFocus": null,
-                      }
-                    }
-                    paused={false}
-                  >
-                    <section
-                      aria-hidden={false}
-                      className="security--tearsheet--small security--tag-wall-filter"
-                    >
-                      <header
-                        className="security--tearsheet--small__header"
-                      >
-                        <h1
-                          className="security--tearsheet--small__title"
-                        >
-                          TagWallFilter
-                        </h1>
-                        <div
-                          className="security--tearsheet--small__description"
-                        >
-                          <div
-                            className="security--tag-wall-filter__description"
-                          >
-                            TagWallFilter
-                            <TagWall
-                              addButtonDisabled={true}
-                              addLabel=""
-                              className="security--tag-wall-filter__tag-wall"
-                              disable={false}
-                              itemToString={[Function]}
-                              items={
-                                Array [
-                                  Object {
-                                    "id": "x",
-                                    "label": "X",
-                                  },
-                                ]
-                              }
-                              label={null}
-                              labels={Object {}}
-                              onAddButton={[Function]}
-                              onChange={[Function]}
-                            >
-                              <section
-                                aria-label=""
-                                className="security--tag-wall security--tag-wall-filter__tag-wall"
-                              >
-                                <InteractiveTag
-                                  id="x"
-                                  isSelected={false}
-                                  key="tag__0"
-                                  onRemove={[Function]}
-                                  removable={true}
-                                  removeBtnLabel=""
-                                  type="gray"
-                                >
-                                  <Tag
-                                    className="security--tag--interactive security--tag--interactive--default"
-                                    filter={true}
-                                    id="x"
-                                    onClose={[Function]}
-                                    title=""
-                                    type="gray"
-                                  >
-                                    <div
-                                      aria-label=" X"
-                                      className="bx--tag security--tag--interactive security--tag--interactive--default bx--tag--filter bx--tag--gray"
-                                      id="x"
-                                    >
-                                      <span
-                                        className="bx--tag__label"
-                                        title="X"
-                                      >
-                                        X
-                                      </span>
-                                      <button
-                                        aria-labelledby="x"
-                                        className="bx--tag__close-icon"
-                                        onClick={[Function]}
-                                        title=""
-                                        type="button"
-                                      >
-                                        <ForwardRef(Close16)>
-                                          <Icon
-                                            fill="currentColor"
-                                            height={16}
-                                            preserveAspectRatio="xMidYMid meet"
-                                            viewBox="0 0 32 32"
-                                            width={16}
-                                            xmlns="http://www.w3.org/2000/svg"
-                                          >
-                                            <svg
-                                              aria-hidden={true}
-                                              fill="currentColor"
-                                              focusable="false"
-                                              height={16}
-                                              preserveAspectRatio="xMidYMid meet"
-                                              viewBox="0 0 32 32"
-                                              width={16}
-                                              xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                              <path
-                                                d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                                              />
-                                            </svg>
-                                          </Icon>
-                                        </ForwardRef(Close16)>
-                                      </button>
-                                    </div>
-                                  </Tag>
-                                </InteractiveTag>
-                              </section>
-                            </TagWall>
-                          </div>
-                        </div>
-                      </header>
-                      <section
-                        className="security--tearsheet--small__body"
-                      >
-                        <ScrollGradient
-                          className="security--tearsheet--small__content"
-                          color="var(--cds-ui-01, #262626)"
-                          direction="Y"
-                          getScrollElementRef={[Function]}
-                          hideStartGradient={false}
-                          onScroll={[Function]}
-                        >
-                          <div
-                            className="security--scroll-gradient security--scroll-gradient--none security--scroll-gradient--y security--tearsheet--small__content"
-                            role="presentation"
-                          >
-                            <div
-                              aria-hidden={true}
-                              className="security--scroll-gradient__before"
-                              role="presentation"
-                              style={
-                                Object {
-                                  "backgroundImage": "linear-gradient(0deg, rgba(0,0,0,0), var(--cds-ui-01, #262626) 90%)",
-                                }
-                              }
-                            />
-                            <div
-                              className="security--scroll-gradient__content"
-                              onScroll={[Function]}
-                            >
-                              <div
-                                className=""
-                              >
-                                <Filter
-                                  className=""
-                                  compareItems={[Function]}
-                                  disabled={false}
-                                  filterFieldClearAllTooltip="Clear all selected items"
-                                  filterFieldClearSelectionTooltip="Clear selected item"
-                                  filterItems={[Function]}
-                                  id="test-id"
-                                  initialSelectedItems={Array []}
-                                  itemToString={[Function]}
-                                  items={
-                                    Array [
-                                      Object {
-                                        "id": "y",
-                                        "label": "Y",
-                                      },
-                                    ]
-                                  }
-                                  locale="en"
-                                  onChange={[Function]}
-                                  placeholder=""
-                                  selectedItems={Array []}
-                                  sortItems={[Function]}
-                                >
-                                  <Downshift
-                                    clearSelection={[Function]}
-                                    defaultHighlightedIndex={null}
-                                    defaultIsOpen={false}
-                                    environment={[Window]}
-                                    getA11yStatusMessage={[Function]}
-                                    highlightedIndex={null}
-                                    inputValue=""
-                                    isOpen={true}
-                                    itemToString={[Function]}
-                                    onChange={[Function]}
-                                    onInputValueChange={[Function]}
-                                    onOuterClick={[Function]}
-                                    onSelect={[Function]}
-                                    onStateChange={[Function]}
-                                    onUserAction={[Function]}
-                                    scrollIntoView={[Function]}
-                                    selectedItemChanged={[Function]}
-                                    stateReducer={[Function]}
-                                    suppressRefError={false}
-                                  >
-                                    <ListBox
-                                      aria-expanded={true}
-                                      aria-haspopup="listbox"
-                                      aria-labelledby="downshift-0-label"
-                                      aria-owns="downshift-0-menu"
-                                      className="security--filter"
-                                      disabled={false}
-                                      id="test-id"
-                                      role="combobox"
-                                      type="default"
-                                    >
-                                      <div
-                                        aria-expanded={true}
-                                        aria-haspopup="listbox"
-                                        aria-labelledby="downshift-0-label"
-                                        aria-owns="downshift-0-menu"
-                                        className="security--filter bx--list-box"
-                                        id="test-id"
-                                        onClick={[Function]}
-                                        onKeyDown={[Function]}
-                                        role="combobox"
-                                      >
-                                        <ListBoxField
-                                          aria-haspopup={true}
-                                          aria-label="close menu"
-                                          data-toggle={true}
-                                          disabled={false}
-                                          id="test-id"
-                                          onBlur={[Function]}
-                                          onClick={[Function]}
-                                          onKeyDown={[Function]}
-                                          onKeyUp={[Function]}
-                                          role="button"
-                                          tabIndex={-1}
-                                          type="button"
-                                        >
-                                          <div
-                                            aria-haspopup={true}
-                                            aria-label="close menu"
-                                            className="bx--list-box__field"
-                                            data-toggle={true}
-                                            id="test-id"
-                                            onBlur={[Function]}
-                                            onClick={[Function]}
-                                            onKeyDown={[Function]}
-                                            onKeyUp={[Function]}
-                                            role="button"
-                                            tabIndex={-1}
-                                            type="button"
-                                          >
-                                            <input
-                                              aria-activedescendant={null}
-                                              aria-autocomplete="list"
-                                              aria-controls="downshift-0-menu"
-                                              aria-labelledby="downshift-0-label"
-                                              autoComplete="off"
-                                              className="security--filter__input-field bx--text-input"
-                                              disabled={false}
-                                              id="test-id"
-                                              onBlur={[Function]}
-                                              onChange={[Function]}
-                                              onKeyDown={[Function]}
-                                              placeholder=""
-                                              value=""
-                                            />
-                                            <span
-                                              className="security--filter__search"
-                                            >
-                                              <Icon
-                                                className="security--filter__search__icon"
-                                                fill="var(--cds-icon-01, #f4f4f4)"
-                                                height={null}
-                                                path={null}
-                                                renderIcon={
-                                                  Object {
-                                                    "$$typeof": Symbol(react.forward_ref),
-                                                    "render": [Function],
-                                                  }
-                                                }
-                                                size={20}
-                                                viewBox="0 0 32 32"
-                                                width={null}
-                                              >
-                                                <ForwardRef(Search20)
-                                                  aria-hidden="true"
-                                                  className="security--icon security--filter__search__icon"
-                                                  fill="var(--cds-icon-01, #f4f4f4)"
-                                                  focusable={false}
-                                                  preserveAspectRatio="xMidYMid meet"
-                                                  style={
-                                                    Object {
-                                                      "willChange": "transform",
-                                                    }
-                                                  }
-                                                >
-                                                  <Icon
-                                                    aria-hidden="true"
-                                                    className="security--icon security--filter__search__icon"
-                                                    fill="var(--cds-icon-01, #f4f4f4)"
-                                                    focusable={false}
-                                                    height={20}
-                                                    preserveAspectRatio="xMidYMid meet"
-                                                    style={
-                                                      Object {
-                                                        "willChange": "transform",
-                                                      }
-                                                    }
-                                                    viewBox="0 0 32 32"
-                                                    width={20}
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                  >
-                                                    <svg
-                                                      aria-hidden={true}
-                                                      className="security--icon security--filter__search__icon"
-                                                      fill="var(--cds-icon-01, #f4f4f4)"
-                                                      focusable={false}
-                                                      height={20}
-                                                      preserveAspectRatio="xMidYMid meet"
-                                                      style={
-                                                        Object {
-                                                          "willChange": "transform",
-                                                        }
-                                                      }
-                                                      viewBox="0 0 32 32"
-                                                      width={20}
-                                                      xmlns="http://www.w3.org/2000/svg"
-                                                    >
-                                                      <path
-                                                        d="M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z"
-                                                      />
-                                                    </svg>
-                                                  </Icon>
-                                                </ForwardRef(Search20)>
-                                              </Icon>
-                                            </span>
-                                          </div>
-                                        </ListBoxField>
-                                        <ListBoxMenu
-                                          className="security--filter__list-container"
-                                          id="test-id"
-                                        >
-                                          <div
-                                            className="security--filter__list-container"
-                                            id="test-id"
-                                            role="listbox"
-                                          >
-                                            <ForwardRef(ListBoxMenuItem)
-                                              aria-selected={false}
-                                              className="security--filter__list-item"
-                                              id="downshift-0-item-0"
-                                              isActive={false}
-                                              isHighlighted={false}
-                                              key="downshift-0-item-0"
-                                              onClick={[Function]}
-                                              onKeyDown={[Function]}
-                                              onMouseDown={[Function]}
-                                              onMouseMove={[Function]}
-                                              role="option"
-                                              tabIndex="0"
-                                            >
-                                              <div
-                                                aria-selected={false}
-                                                className="bx--list-box__menu-item"
-                                                id="downshift-0-item-0"
-                                                onClick={[Function]}
-                                                onKeyDown={[Function]}
-                                                onMouseDown={[Function]}
-                                                onMouseMove={[Function]}
-                                                role="option"
-                                                tabIndex="0"
-                                              >
-                                                <div
-                                                  className="bx--list-box__menu-item__option"
-                                                >
-                                                  <div
-                                                    aria-labelledby="downshift-0-item-0"
-                                                    className="security--filter__list-item__entry"
-                                                  >
-                                                    <span
-                                                      className="bx--text-truncate--end"
-                                                      title="Y"
-                                                    >
-                                                      Y
-                                                    </span>
-                                                    <span
-                                                      className="security--filter__add"
-                                                    >
-                                                      <Icon
-                                                        className="security--filter__add__icon"
-                                                        height={null}
-                                                        path={null}
-                                                        renderIcon={
-                                                          Object {
-                                                            "$$typeof": Symbol(react.forward_ref),
-                                                            "render": [Function],
-                                                          }
-                                                        }
-                                                        size={20}
-                                                        viewBox="0 0 32 32"
-                                                        width={null}
-                                                      >
-                                                        <ForwardRef(Add20)
-                                                          aria-hidden="true"
-                                                          className="security--icon security--filter__add__icon"
-                                                          focusable={false}
-                                                          preserveAspectRatio="xMidYMid meet"
-                                                          style={
-                                                            Object {
-                                                              "willChange": "transform",
-                                                            }
-                                                          }
-                                                        >
-                                                          <Icon
-                                                            aria-hidden="true"
-                                                            className="security--icon security--filter__add__icon"
-                                                            fill="currentColor"
-                                                            focusable={false}
-                                                            height={20}
-                                                            preserveAspectRatio="xMidYMid meet"
-                                                            style={
-                                                              Object {
-                                                                "willChange": "transform",
-                                                              }
-                                                            }
-                                                            viewBox="0 0 32 32"
-                                                            width={20}
-                                                            xmlns="http://www.w3.org/2000/svg"
-                                                          >
-                                                            <svg
-                                                              aria-hidden={true}
-                                                              className="security--icon security--filter__add__icon"
-                                                              fill="currentColor"
-                                                              focusable={false}
-                                                              height={20}
-                                                              preserveAspectRatio="xMidYMid meet"
-                                                              style={
-                                                                Object {
-                                                                  "willChange": "transform",
-                                                                }
-                                                              }
-                                                              viewBox="0 0 32 32"
-                                                              width={20}
-                                                              xmlns="http://www.w3.org/2000/svg"
-                                                            >
-                                                              <path
-                                                                d="M17 15L17 8 15 8 15 15 8 15 8 17 15 17 15 24 17 24 17 17 24 17 24 15z"
-                                                              />
-                                                            </svg>
-                                                          </Icon>
-                                                        </ForwardRef(Add20)>
-                                                      </Icon>
-                                                    </span>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </ForwardRef(ListBoxMenuItem)>
-                                          </div>
-                                        </ListBoxMenu>
-                                      </div>
-                                    </ListBox>
-                                  </Downshift>
-                                </Filter>
-                              </div>
-                            </div>
-                            <div
-                              aria-hidden={true}
-                              className="security--scroll-gradient__after"
-                              role="presentation"
-                              style={
-                                Object {
-                                  "backgroundImage": "linear-gradient(0deg, var(--cds-ui-01, #262626) 10%, rgba(0,0,0,0))",
-                                }
-                              }
-                            />
-                          </div>
-                        </ScrollGradient>
-                      </section>
-                      <footer
-                        className="security--tearsheet--small__footer"
-                      >
-                        <Button
-                          className="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary"
-                          dangerDescription="danger"
-                          disabled={false}
-                          isExpressive={false}
-                          kind="secondary"
-                          largeText={null}
-                          loading={false}
-                          onClick={[MockFunction]}
-                          size="xl"
-                          tabIndex={0}
-                          tooltipAlignment="center"
-                          tooltipPosition="top"
-                          type="button"
-                        >
-                          <Button
-                            className="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary"
-                            dangerDescription="danger"
-                            disabled={false}
-                            isExpressive={false}
-                            kind="secondary"
-                            onClick={[MockFunction]}
-                            size="xl"
-                            tabIndex={0}
-                            tooltipAlignment="center"
-                            tooltipPosition="top"
-                            type="button"
-                          >
-                            <button
-                              aria-describedby={null}
-                              aria-pressed={null}
-                              className="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
-                              disabled={false}
-                              onBlur={[Function]}
-                              onClick={[Function]}
-                              onFocus={[Function]}
-                              onMouseEnter={[Function]}
-                              onMouseLeave={[Function]}
-                              tabIndex={0}
-                              type="button"
-                            >
-                              Cancel
-                            </button>
-                          </Button>
-                        </Button>
-                        <Button
-                          className="security--tearsheet--small__footer__button"
-                          dangerDescription="danger"
-                          disabled={false}
-                          isExpressive={false}
-                          kind="primary"
-                          largeText={null}
-                          loading={false}
-                          onClick={[MockFunction]}
-                          size="xl"
-                          tabIndex={0}
-                          tooltipAlignment="center"
-                          tooltipPosition="top"
-                          type="button"
-                        >
-                          <Button
-                            className="security--tearsheet--small__footer__button"
-                            dangerDescription="danger"
-                            disabled={false}
-                            isExpressive={false}
-                            kind="primary"
-                            onClick={[MockFunction]}
-                            size="xl"
-                            tabIndex={0}
-                            tooltipAlignment="center"
-                            tooltipPosition="top"
-                            type="button"
-                          >
-                            <button
-                              aria-describedby={null}
-                              aria-pressed={null}
-                              className="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
-                              disabled={false}
-                              onBlur={[Function]}
-                              onClick={[Function]}
-                              onFocus={[Function]}
-                              onMouseEnter={[Function]}
-                              onMouseLeave={[Function]}
-                              tabIndex={0}
-                              type="button"
-                            >
-                              Save
-                            </button>
-                          </Button>
-                        </Button>
-                      </footer>
-                      <IconButton
-                        className="security--tearsheet--small__button--close"
-                        disabled={false}
-                        iconClassName=""
-                        iconSize={20}
-                        label="Close"
-                        onClick={[MockFunction]}
-                        path={null}
-                        renderIcon={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "render": [Function],
-                          }
-                        }
-                        size="lg"
-                        state={false}
-                        tooltip={false}
-                        tooltipDirection="bottom"
-                      >
-                        <button
-                          aria-label="Close"
-                          className="security--button--icon security--tearsheet--small__button--close security--button--icon--lg"
-                          disabled={false}
-                          onClick={[MockFunction]}
-                        >
-                          <Icon
-                            className=""
-                            height={null}
-                            path={null}
-                            renderIcon={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "render": [Function],
-                              }
-                            }
-                            size={20}
-                            viewBox="0 0 32 32"
-                            width={null}
-                          >
-                            <ForwardRef(Close20)
-                              aria-hidden="true"
-                              className="security--icon"
-                              focusable={false}
-                              preserveAspectRatio="xMidYMid meet"
-                              style={
-                                Object {
-                                  "willChange": "transform",
-                                }
-                              }
-                            >
-                              <Icon
-                                aria-hidden="true"
-                                className="security--icon"
-                                fill="currentColor"
-                                focusable={false}
-                                height={20}
-                                preserveAspectRatio="xMidYMid meet"
-                                style={
-                                  Object {
-                                    "willChange": "transform",
-                                  }
-                                }
-                                viewBox="0 0 32 32"
-                                width={20}
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <svg
-                                  aria-hidden={true}
-                                  className="security--icon"
-                                  fill="currentColor"
-                                  focusable={false}
-                                  height={20}
-                                  preserveAspectRatio="xMidYMid meet"
-                                  style={
-                                    Object {
-                                      "willChange": "transform",
-                                    }
-                                  }
-                                  viewBox="0 0 32 32"
-                                  width={20}
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
-                                  />
-                                </svg>
-                              </Icon>
-                            </ForwardRef(Close20)>
-                          </Icon>
-                        </button>
-                      </IconButton>
-                    </section>
-                  </FocusTrap>
-                </Portal>
-              </Portal>
-            </Transition>
-          </CSSTransition>
-        </span>
-      </TransitionGroup>
-    </Transition>
-  </TearsheetSmall>
-</TagWallFilter>
-`;
-
-exports[`TagWallFilter withItemReducer SELECT_ITEM 1`] = `
-Object {
-  "available": Array [],
-  "selected": Array [
-    Object {
-      "id": "0",
-      "isSelected": true,
-      "label": "Label",
-    },
-    Object {
-      "id": 1,
-      "isSelected": true,
-      "label": "Label",
-    },
-  ],
-}
-`;
-
-exports[`TagWallFilter withItemReducer UNSELECT_ITEM 1`] = `
-Object {
-  "available": Array [
-    Object {
-      "id": "0",
-      "label": "Label",
-    },
-  ],
-  "selected": Array [],
-}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="security--scroll-gradient__after"
+          role="presentation"
+        />
+      </div>
+    </section>
+    <footer
+      class="security--tearsheet--small__footer"
+    >
+      <button
+        class="security--tearsheet--small__footer__button security--tearsheet--small__footer__button--secondary bx--btn bx--btn--xl bx--btn--secondary"
+        tabindex="0"
+        type="button"
+      >
+        Cancel
+      </button>
+      <button
+        class="security--tearsheet--small__footer__button bx--btn bx--btn--xl bx--btn--primary"
+        tabindex="0"
+        type="button"
+      >
+        Save
+      </button>
+    </footer>
+    <button
+      aria-label="Close"
+      class="security--button--icon security--tearsheet--small__button--close security--button--icon--lg"
+    >
+      <svg
+        aria-hidden="true"
+        class="security--icon"
+        fill="currentColor"
+        focusable="false"
+        height="20"
+        preserveAspectRatio="xMidYMid meet"
+        style="will-change: transform;"
+        viewBox="0 0 32 32"
+        width="20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M24 9.4L22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4z"
+        />
+      </svg>
+    </button>
+  </section>
+  <div
+    class="security--portal__overlay"
+    tabindex="-1"
+  />
+</body>
 `;
