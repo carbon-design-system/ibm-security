@@ -4,7 +4,7 @@
  */
 
 import PropTypes from 'prop-types';
-import React, { useReducer } from 'react';
+import React, { useEffect, useReducer } from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace/index';
 
@@ -27,34 +27,43 @@ const namespace = getComponentNamespace('tag-wall-filter');
 
 const noop = () => {};
 
-function withItemReducer(state, action) {
-  const { item, type } = action;
-  const { available, selected } = state;
-
-  const filter = ({ id }) => id !== item.id;
+function withItemReducer(
+  {
+    available: { allItems: a, items: available },
+    selected: { items: selected },
+  },
+  { item, type }
+) {
+  const allItems = a || [...available, ...selected, item];
+  const filterItems = items => items.filter(({ id }) => id !== item.id);
 
   switch (type) {
     case 'SELECT_ITEM':
       return {
-        available: available.filter(filter),
-        selected: defaultSortItems(
-          [...selected, { ...item, isSelected: true }],
-          { itemToString }
-        ),
+        available: { allItems, items: filterItems(available) },
+        selected: {
+          items: defaultSortItems(
+            [...selected, { ...item, isSelected: true }],
+            {
+              itemToString,
+            }
+          ),
+        },
       };
 
     case 'UNSELECT_ITEM':
       return {
-        available: [...available, item],
-        selected: selected.filter(filter),
+        available: { allItems, items: [...available, item] },
+        selected: { items: filterItems(selected) },
       };
 
     default:
-      return state;
+      break;
   }
 }
 
 function TagWallFilter({
+  allItems,
   availableItems,
   closeButton,
   description,
@@ -70,23 +79,35 @@ function TagWallFilter({
   selectedItems,
   tagWallLabel,
 }) {
-  function itemReducer(state, action) {
-    onChange(action);
+  const [state, dispatchItemChange] = useReducer(withItemReducer, {
+    available: {
+      allItems,
+      items: availableItems,
+    },
+    selected: { items: selectedItems },
+  });
 
-    return withItemReducer(state, action);
-  }
+  useEffect(() => onChange(state), [onChange, state]);
 
-  const [{ available, selected }, dispatchItemChange] = useReducer(
-    itemReducer,
-    {
-      available: availableItems,
-      selected: selectedItems,
-    }
-  );
+  const {
+    available: { items: available },
+    selected: { items: selected },
+  } = state;
 
   return (
     <TearsheetSmall
       className={namespace}
+      body={
+        <FilterRaw
+          id={id}
+          items={available}
+          itemToString={itemToString}
+          onChange={dispatchItemChange}
+          placeholder={inputFieldPlaceholder}
+          filterFieldClearAllTooltip={filterFieldClearAllTooltip}
+          filterFieldClearSelectionTooltip={filterFieldClearSelectionTooltip}
+        />
+      }
       closeButton={closeButton}
       description={
         <div className={`${namespace}__description`}>
@@ -107,17 +128,7 @@ function TagWallFilter({
       primaryButton={primaryButton}
       secondaryButton={secondaryButton}
       flush
-    >
-      <FilterRaw
-        id={id}
-        items={available}
-        itemToString={itemToString}
-        onChange={dispatchItemChange}
-        placeholder={inputFieldPlaceholder}
-        filterFieldClearAllTooltip={filterFieldClearAllTooltip}
-        filterFieldClearSelectionTooltip={filterFieldClearSelectionTooltip}
-      />
-    </TearsheetSmall>
+    />
   );
 }
 

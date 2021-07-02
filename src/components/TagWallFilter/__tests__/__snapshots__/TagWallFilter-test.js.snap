@@ -1,24 +1,96 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TagWallFilter \`onChange\` 1`] = `
+exports[`TagWallFilter \`withItemReducer\` \`SELECT_ITEM\` selects an item 1`] = `
+Object {
+  "available": Object {
+    "allItems": Array [],
+    "items": Array [],
+  },
+  "selected": Object {
+    "items": Array [
+      Object {
+        "id": "0",
+        "isSelected": true,
+        "label": "TagWallFilter 0",
+      },
+    ],
+  },
+}
+`;
+
+exports[`TagWallFilter \`withItemReducer\` \`UNSELECT_ITEM\` unselects an item 1`] = `
+Object {
+  "available": Object {
+    "allItems": Array [],
+    "items": Array [
+      Object {
+        "id": "0",
+        "label": "TagWallFilter 0",
+      },
+    ],
+  },
+  "selected": Object {
+    "items": Array [],
+  },
+}
+`;
+
+exports[`TagWallFilter calls \`onChange\` when items are selected and unselected 1`] = `
 [MockFunction] {
   "calls": Array [
     Array [
       Object {
-        "item": Object {
-          "id": "0",
-          "label": "TagWallFilter 0",
+        "available": Object {
+          "allItems": undefined,
+          "items": Array [
+            Object {
+              "id": "0",
+              "label": "TagWallFilter 0",
+            },
+          ],
         },
-        "type": "SELECT_ITEM",
+        "selected": Object {
+          "items": Array [
+            Object {
+              "id": "1",
+              "label": "TagWallFilter 1",
+            },
+          ],
+        },
       },
     ],
     Array [
       Object {
-        "item": Object {
-          "id": "0",
-          "label": "TagWallFilter 0",
+        "available": Object {
+          "allItems": Array [
+            Object {
+              "id": "0",
+              "label": "TagWallFilter 0",
+            },
+            Object {
+              "id": "1",
+              "label": "TagWallFilter 1",
+            },
+            Object {
+              "id": "0",
+              "label": "TagWallFilter 0",
+            },
+          ],
+          "items": Array [],
         },
-        "type": "SELECT_ITEM",
+        "selected": Object {
+          "items": Array [
+            Object {
+              "id": "0",
+              "isSelected": true,
+              "label": "TagWallFilter 0",
+            },
+            Object {
+              "id": "1",
+              "label": "TagWallFilter 1",
+            },
+          ],
+        },
       },
     ],
   ],
@@ -35,43 +107,42 @@ exports[`TagWallFilter \`onChange\` 1`] = `
 }
 `;
 
-exports[`TagWallFilter \`onChange\` 2`] = `
+exports[`TagWallFilter calls \`onChange\` when items are selected and unselected 2`] = `
 [MockFunction] {
   "calls": Array [
     Array [
       Object {
-        "item": Object {
-          "id": "0",
-          "label": "TagWallFilter 0",
+        "available": Object {
+          "allItems": Array [
+            Object {
+              "id": "0",
+              "label": "TagWallFilter 0",
+            },
+            Object {
+              "id": "1",
+              "label": "TagWallFilter 1",
+            },
+            Object {
+              "id": "0",
+              "label": "TagWallFilter 0",
+            },
+          ],
+          "items": Array [
+            Object {
+              "id": "1",
+              "label": "TagWallFilter 1",
+            },
+          ],
         },
-        "type": "SELECT_ITEM",
-      },
-    ],
-    Array [
-      Object {
-        "item": Object {
-          "id": "0",
-          "label": "TagWallFilter 0",
+        "selected": Object {
+          "items": Array [
+            Object {
+              "id": "0",
+              "isSelected": true,
+              "label": "TagWallFilter 0",
+            },
+          ],
         },
-        "type": "SELECT_ITEM",
-      },
-    ],
-    Array [
-      Object {
-        "item": Object {
-          "id": "1",
-          "label": "TagWallFilter 1",
-        },
-        "type": "UNSELECT_ITEM",
-      },
-    ],
-    Array [
-      Object {
-        "item": Object {
-          "id": "1",
-          "label": "TagWallFilter 1",
-        },
-        "type": "UNSELECT_ITEM",
       },
     ],
   ],
@@ -80,48 +151,11 @@ exports[`TagWallFilter \`onChange\` 2`] = `
       "type": "return",
       "value": undefined,
     },
-    Object {
-      "type": "return",
-      "value": undefined,
-    },
-    Object {
-      "type": "return",
-      "value": undefined,
-    },
-    Object {
-      "type": "return",
-      "value": undefined,
-    },
   ],
 }
 `;
 
-exports[`TagWallFilter \`withItemReducer\` \`SELECT_ITEM\` 1`] = `
-Object {
-  "available": Array [],
-  "selected": Array [
-    Object {
-      "id": "0",
-      "isSelected": true,
-      "label": "TagWallFilter 0",
-    },
-  ],
-}
-`;
-
-exports[`TagWallFilter \`withItemReducer\` \`UNSELECT_ITEM\` 1`] = `
-Object {
-  "available": Array [
-    Object {
-      "id": "0",
-      "label": "TagWallFilter 0",
-    },
-  ],
-  "selected": Array [],
-}
-`;
-
-exports[`TagWallFilter Renders 1`] = `
+exports[`TagWallFilter renders 1`] = `
 <body
   class="security--portal__container"
 >

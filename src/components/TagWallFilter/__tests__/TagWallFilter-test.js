@@ -19,7 +19,7 @@ describe(name, () => {
     label: `${name} ${id}`,
   });
 
-  test('`noop` is undefined', () => {
+  test('`noop` does nothing', () => {
     expect(noop()).toBeUndefined();
   });
 
@@ -27,36 +27,59 @@ describe(name, () => {
     let state;
 
     beforeEach(() => {
-      state = { available: [], selected: [] };
+      state = {
+        available: { allItems: [], items: [] },
+        selected: { items: [] },
+      };
     });
 
-    function reduce(type) {
+    function dispatch(type) {
       state = withItemReducer(state, {
         item: getItem(),
         type,
       });
     }
 
-    test('`SELECT_ITEM`', () => {
-      reduce('SELECT_ITEM');
+    test('`SELECT_ITEM` selects an item', () => {
+      dispatch('SELECT_ITEM');
 
-      expect(state.selected.length).toEqual(1);
+      expect(state.selected.items.length).toEqual(1);
       expect(state).toMatchSnapshot();
     });
 
-    test('`UNSELECT_ITEM`', () => {
-      reduce('SELECT_ITEM');
-      reduce('UNSELECT_ITEM');
+    test('`UNSELECT_ITEM` unselects an item', () => {
+      dispatch('SELECT_ITEM');
+      dispatch('UNSELECT_ITEM');
 
       const {
-        available: { length: available },
-        selected: { length: selected },
+        available: {
+          items: { length: available },
+        },
+        selected: {
+          items: { length: selected },
+        },
       } = state;
 
       expect(available).toEqual(1);
       expect(selected).toEqual(0);
 
       expect(state).toMatchSnapshot();
+    });
+
+    test('infers all items', () => {
+      dispatch('SELECT_ITEM');
+
+      const {
+        available: {
+          allItems: { length: allItems },
+          items: { length: available },
+        },
+        selected: {
+          items: { length: selected },
+        },
+      } = state;
+
+      expect(allItems).toEqual(available + selected);
     });
   });
 
@@ -76,13 +99,13 @@ describe(name, () => {
     );
   }
 
-  test('Renders', () => {
+  test('renders', () => {
     render(<Component />);
 
     expect(document.body).toMatchSnapshot();
   });
 
-  test('`onChange`', () => {
+  test('calls `onChange` when items are selected and unselected', () => {
     const availableItem = getItem();
     const selectedItem = getItem('1');
 
@@ -103,6 +126,8 @@ describe(name, () => {
 
     expect(onChangeMock).toHaveBeenCalled();
     expect(onChangeMock).toMatchSnapshot();
+
+    onChangeMock.mockReset();
 
     click(getByText(selectedItem.label).parentNode.querySelector('button'));
 
