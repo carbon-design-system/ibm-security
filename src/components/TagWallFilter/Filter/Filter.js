@@ -5,7 +5,8 @@
 
 import { Add20, Search20 } from '@carbon/icons-react';
 
-import { defaultFilterItems } from 'carbon-components-react/lib/components/ComboBox/tools/filter';
+import { defaultFilterItems } from 'carbon-components-react/es/components/ComboBox/tools/filter';
+
 import classnames from 'classnames';
 import Downshift from 'downshift';
 import PropTypes from 'prop-types';
@@ -42,7 +43,9 @@ class Filter extends Component {
   };
 
   handleOnInputValueChange = (inputValue, stateAndHelpers) => {
-    if (stateAndHelpers.type === '__autocomplete_mouseup__') return;
+    if (stateAndHelpers.type === '__autocomplete_mouseup__') {
+      return;
+    }
     this.setState(() => {
       if (Array.isArray(inputValue)) {
         return {
@@ -181,19 +184,15 @@ class Filter extends Component {
         onStateChange={this.handleOnStateChange}
         clearSelection={this.handleClearSelection}
         isOpen
-        render={({
-          getButtonProps,
+      >
+        {({
           getInputProps,
           getItemProps,
           getRootProps,
+          getToggleButtonProps,
         }) => (
-          <ListBox
-            className={namespace}
-            disabled={disabled}
-            {...getRootProps({ refKey: 'innerRef' })}
-            id={id}
-          >
-            <Field {...getButtonProps({ disabled, tabIndex: -1 })} id={id}>
+          <ListBox {...getRootProps({ id, className: namespace, disabled })}>
+            <Field {...getToggleButtonProps({ disabled, id, tabIndex: -1 })}>
               <input
                 className={`${namespace}__input-field ${carbonPrefix}--text-input`}
                 {...getInputProps({
@@ -221,7 +220,7 @@ class Filter extends Component {
             </Menu>
           </ListBox>
         )}
-      />
+      </Downshift>
     );
   }
 }

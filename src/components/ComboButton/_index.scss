@@ -1,7 +1,7 @@
 ////
 /// Combo button component.
 /// @group combo-button
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -21,19 +21,21 @@
 @include security--component($name: $combo-button__name) {
   $root: &;
 
-  display: inline-flex;
   position: relative;
+
+  display: inline-flex;
 
   & &--primary {
     @include text-overflow;
+
     display: flex;
     flex: 1;
   }
 
   &__group {
     display: flex;
-    justify-content: flex-end;
     width: 100%;
+    justify-content: flex-end;
   }
 
   &__icon {
@@ -43,8 +45,8 @@
 
   & &__overflow-menu {
     width: 3rem;
-    background-color: $interactive-01;
     margin-left: 1px;
+    background-color: $interactive-01;
 
     &:hover,
     &.#{$prefix}--overflow-menu--open {
@@ -80,38 +82,40 @@
   }
 
   &-item {
-    width: 100%;
     display: flex;
+    width: 100%;
     justify-content: space-between;
   }
 
   & &-item__wrapper {
     @include text-overflow();
-    outline: unset;
-    padding: 0;
-    margin: 0 1rem;
-    border-top: 1px solid $active-ui;
-    border-bottom: 1px solid transparent;
+
     display: flex;
     width: unset;
     max-width: unset;
     justify-content: space-between;
+    padding: 0;
+    border-top: 1px solid $active-ui;
+    border-bottom: 1px solid transparent;
+    margin: 0 1rem;
+    outline: unset;
 
     &:focus {
       @include focus-outline('outline');
-      margin: 0;
+
       padding: 0 1rem;
       border-color: transparent;
+      margin: 0;
     }
 
     &:hover {
-      color: $text-01;
       background-color: unset;
+      color: $text-01;
     }
 
-    & > span + svg {
-      margin-left: $carbon--spacing-03;
+    > span + svg {
       flex-shrink: 0;
+      margin-left: $carbon--spacing-03;
     }
 
     &:disabled,

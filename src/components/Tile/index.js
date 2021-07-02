@@ -1,13 +1,13 @@
 /**
  * @file Tile entry point.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 export {
-  Tile,
   ClickableTile,
-  SelectableTile,
   ExpandableTile,
+  SelectableTile,
+  Tile,
   TileAboveTheFoldContent,
   TileBelowTheFoldContent,
-} from 'carbon-components-react/lib/components/Tile';
+} from 'carbon-components-react';

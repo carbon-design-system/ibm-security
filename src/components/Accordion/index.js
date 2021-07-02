@@ -1,10 +1,8 @@
 /**
  * @file Accordion entry point.
- * @copyright IBM Security 2018
+ * @copyright IBM Security 2018 - 2021
  */
 
-import AccordionItem from 'carbon-components-react/lib/components/AccordionItem';
-import AccordionSkeleton from 'carbon-components-react/lib/components/Accordion/Accordion.Skeleton';
-import Accordion from './Accordion';
+export { AccordionItem, AccordionSkeleton } from 'carbon-components-react';
 
-export { Accordion, AccordionItem, AccordionSkeleton };
+export Accordion from './Accordion';

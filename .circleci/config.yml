@@ -6,6 +6,6 @@ jobs:
       - checkout
       - run: yarn install --offline --frozen-lockfile
       - run: yarn run audit
-      - run: scripts/ci/build.sh
+      - run: yarn build
       - run: yarn test
       - run: yarn semantic-release

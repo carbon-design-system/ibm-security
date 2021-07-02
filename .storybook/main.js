@@ -22,7 +22,9 @@ module.exports = {
     '@storybook/addon-a11y',
     './addons/addon-theme/register',
   ],
-  stories: ['../src/**/*.stories.*'],
+  stories: [
+    require('path').resolve(__dirname, '../src/**/*+(-story|.stories).*'),
+  ],
   webpackFinal: async configuration =>
     require('webpack-merge').merge(configuration, {
       devServer: {
