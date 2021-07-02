@@ -74,22 +74,11 @@ describe('ScrollGradient', () => {
         }));
       });
 
-      beforeEach(() => {
-        disconnectMock.mockClear();
-        observeMock.mockClear();
-      });
-
       afterAll(() => {
         window.ResizeObserver = ResizeObserver;
       });
 
       it('adds `ResizeObserver` when mounted', () => {
-        scrollGradient = mount(
-          <ScrollGradient className={className} color="blue">
-            {children}
-          </ScrollGradient>
-        );
-
         expect(observeMock).toBeCalledTimes(1);
       });
 
