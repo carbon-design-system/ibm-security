@@ -184,8 +184,9 @@
 
         position: relative;
         display: flex;
-        height: 32px;
-        padding: 0.3125rem $carbon--spacing-02 $carbon--spacing-02 2.3rem;
+        height: $carbon--spacing-07;
+        padding: $carbon--spacing-02 $carbon--spacing-02 $carbon--spacing-02
+          $carbon--spacing-08;
         color: $text-01;
         cursor: pointer;
         text-decoration: none;
