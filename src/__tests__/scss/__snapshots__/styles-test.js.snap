@@ -13407,7 +13407,7 @@ li.bx--accordion__item--disabled:last-of-type {
   font-weight: var(--cds-caption-01-font-weight, 400);
   line-height: var(--cds-caption-01-line-height, 1.34);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 2.5rem;
   margin-top: unset;
   margin-bottom: unset;
   color: var(--cds-text-02, #c6c6c6);
@@ -13520,7 +13520,7 @@ li.bx--accordion__item--disabled:last-of-type {
   position: relative;
   display: flex;
   height: 2rem;
-  padding: 0.25rem 0.25rem 0.25rem 2rem;
+  padding: 0.25rem 0.25rem 0.25rem 2.5rem;
   color: var(--cds-text-01, #f4f4f4);
   cursor: pointer;
   text-decoration: none;
