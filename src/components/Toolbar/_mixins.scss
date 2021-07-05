@@ -199,13 +199,12 @@ $toolbar__panel__transition__timing-function: $timing-function;
   }
 
   &__nav__item__icon {
-    width: carbon--mini-units($count: 2);
-    height: carbon--mini-units($count: 2);
+    width: carbon--mini-units($count: 2.5);
+    height: carbon--mini-units($count: 2.5);
+    margin-left: -35px;
   }
 
   &__nav__item__title {
-    margin-left: $nav__icon__spacing;
-
     &--icon {
       margin-left: $nav__spacing;
     }
