@@ -13520,7 +13520,7 @@ li.bx--accordion__item--disabled:last-of-type {
   position: relative;
   display: flex;
   height: 2rem;
-  padding: 0.25rem 0.25rem 0.25rem 2.5rem;
+  padding: 0.25rem 0.25rem 0.25rem 2rem;
   color: var(--cds-text-01, #f4f4f4);
   cursor: pointer;
   text-decoration: none;
