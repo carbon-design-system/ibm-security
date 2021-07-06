@@ -116,6 +116,15 @@ export default class NavList extends Component {
         role="menuitem"
       >
         <div className={`${navItemNamespace}__link`}>
+          <div>
+            {this.props.hasIcon && (
+              <img
+                alt={'section1'}
+                className={`${navItemNamespace}__img`}
+                src={this.props.icon}
+              />
+            )}
+          </div>
           <div className={`${navItemNamespace}__content`}>{title}</div>
           <Icon
             className={`${navListNamespace}__icon`}
@@ -145,17 +154,25 @@ NavList.defaultProps = {
   onListClick: () => {},
   tabIndex: 0,
   title: '',
+  hasIcon: false,
+  icon: '',
 };
 
 NavList.propTypes = {
   /** @type {string} Hypertext reference for active page. */
   activeHref: string,
 
+  /** @type {Node} Child elements. */
+  children: node,
+
   /** @type {string} Extra classes to add. */
   className: string,
 
-  /** @type {Node} Child elements. */
-  children: node,
+  /** @type {boolean} Check for icon. */
+  hasIcon: bool,
+
+  /** @type {string} Icon of a list. */
+  icon: string,
 
   /** @type {string} ID of a list. */
   id: string,
