@@ -202,12 +202,6 @@
         }
       }
 
-      &__img {
-        height: carbon--mini-units($count: 2.5);
-        margin-right: $carbon--spacing-04;
-        margin-left: -$carbon--spacing-07;
-      }
-
       &__link--external {
         /// External link icon selector.
         /// @type String

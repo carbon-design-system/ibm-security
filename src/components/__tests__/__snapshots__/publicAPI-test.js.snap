@@ -6764,10 +6764,8 @@ Map {
       "activeHref": "#",
       "children": null,
       "className": "",
-      "icon": "",
       "id": "",
       "isExpandedOnPageload": false,
-      "navigationItemTitle": "",
       "onItemClick": [Function],
       "onListClick": [Function],
       "tabIndex": 0,
@@ -6783,17 +6781,11 @@ Map {
       "className": Object {
         "type": "string",
       },
-      "icon": Object {
-        "type": "string",
-      },
       "id": Object {
         "type": "string",
       },
       "isExpandedOnPageload": Object {
         "type": "bool",
-      },
-      "navigationItemTitle": Object {
-        "type": "string",
       },
       "onItemClick": Object {
         "type": "func",
