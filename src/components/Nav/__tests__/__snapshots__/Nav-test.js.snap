@@ -22,11 +22,9 @@ exports[`Nav Rendering renders correctly 1`] = `
       <NavList
         activeHref="/"
         className=""
-        icon=""
         id="security--nav__list--0"
         isExpandedOnPageload={false}
         key="security--nav__list--0/.0"
-        navigationItemTitle=""
         onItemClick={[Function]}
         onListClick={[Function]}
         tabIndex={0}
@@ -163,11 +161,9 @@ exports[`Nav Rendering renders correctly 1`] = `
       <NavList
         activeHref="/"
         className=""
-        icon=""
         id="security--nav__list--1"
         isExpandedOnPageload={false}
         key="security--nav__list--1/.1"
-        navigationItemTitle=""
         onItemClick={[Function]}
         onListClick={[Function]}
         tabIndex={0}
