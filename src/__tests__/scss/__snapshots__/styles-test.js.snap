@@ -13542,12 +13542,6 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
-.security--nav__list__item__img {
-  height: 1.25rem;
-  margin-right: 0.75rem;
-  margin-left: -2rem;
-}
-
 .security--nav__list__item__link--external .security--nav__list__item__link--external__icon {
   flex-shrink: 0;
   align-self: center;
