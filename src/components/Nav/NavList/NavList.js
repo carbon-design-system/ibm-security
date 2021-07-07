@@ -119,7 +119,7 @@ export default class NavList extends Component {
           <div>
             {this.props.hasIcon && (
               <img
-                alt={'section1'}
+                alt={this.props.navigationItemTitle}
                 className={`${navItemNamespace}__img`}
                 src={this.props.icon}
               />
@@ -156,6 +156,7 @@ NavList.defaultProps = {
   title: '',
   hasIcon: false,
   icon: '',
+  navigationItemTitle: '',
 };
 
 NavList.propTypes = {
@@ -179,6 +180,9 @@ NavList.propTypes = {
 
   /** @type {boolean} State of a list. */
   isExpandedOnPageload: bool,
+
+  /** @type {boolean} Title of nav. */
+  navigationItemTitle: string,
 
   /** @type {Function} Click handler for an item. */
   onItemClick: func,

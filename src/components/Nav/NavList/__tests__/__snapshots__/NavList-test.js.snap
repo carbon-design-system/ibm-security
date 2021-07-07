@@ -8,6 +8,7 @@ exports[`Nav Rendering renders correctly 1`] = `
   icon=""
   id=""
   isExpandedOnPageload={true}
+  navigationItemTitle=""
   onItemClick={[Function]}
   onListClick={[Function]}
   tabIndex={0}

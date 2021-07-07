@@ -6768,6 +6768,7 @@ Map {
       "icon": "",
       "id": "",
       "isExpandedOnPageload": false,
+      "navigationItemTitle": "",
       "onItemClick": [Function],
       "onListClick": [Function],
       "tabIndex": 0,
@@ -6794,6 +6795,9 @@ Map {
       },
       "isExpandedOnPageload": Object {
         "type": "bool",
+      },
+      "navigationItemTitle": Object {
+        "type": "string",
       },
       "onItemClick": Object {
         "type": "func",

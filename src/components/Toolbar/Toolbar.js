@@ -172,6 +172,7 @@ export default class Toolbar extends Component {
                     hasIcon={hasIcon}
                     icon={icon}
                     key={navigationItemId}
+                    navigationItemTitle={navigationItemTitle}
                     title={navigationItemTitle}
                   >
                     {children.map(
