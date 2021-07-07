@@ -6764,6 +6764,8 @@ Map {
       "activeHref": "#",
       "children": null,
       "className": "",
+      "hasIcon": false,
+      "icon": "",
       "id": "",
       "isExpandedOnPageload": false,
       "onItemClick": [Function],
@@ -6779,6 +6781,12 @@ Map {
         "type": "node",
       },
       "className": Object {
+        "type": "string",
+      },
+      "hasIcon": Object {
+        "type": "bool",
+      },
+      "icon": Object {
         "type": "string",
       },
       "id": Object {

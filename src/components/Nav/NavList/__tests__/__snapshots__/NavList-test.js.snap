@@ -4,6 +4,8 @@ exports[`Nav Rendering renders correctly 1`] = `
 <NavList
   activeHref="#"
   className="class"
+  hasIcon={false}
+  icon=""
   id=""
   isExpandedOnPageload={true}
   onItemClick={[Function]}
@@ -21,6 +23,7 @@ exports[`Nav Rendering renders correctly 1`] = `
     <div
       className="security--nav__list__item__link"
     >
+      <div />
       <div
         className="security--nav__list__item__content"
       />
@@ -150,6 +153,7 @@ exports[`Nav Rendering renders the HTML of the node's subtree 1`] = `
   <div
     class="security--nav__list__item__link"
   >
+    <div />
     <div
       class="security--nav__list__item__content"
     />
