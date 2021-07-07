@@ -12361,7 +12361,7 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 .security--ica-skeleton .security--ica-skeleton__value {
-  height: 2rem;
+  height: 4rem;
   margin: 0;
 }
 
