@@ -13545,7 +13545,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--nav__list__item__img {
   height: 1.25rem;
   margin-left: -2rem;
-  margin-right: 1rem;
+  margin-right: 0.75rem;
 }
 
 .security--nav__list__item__link--external .security--nav__list__item__link--external__icon {
