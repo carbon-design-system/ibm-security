@@ -96,7 +96,7 @@ export default class NavList extends Component {
   }
 
   render() {
-    const { className, children, tabIndex, title } = this.props;
+    const { className, children, icon, tabIndex, title } = this.props;
     const { open } = this.state;
 
     const classNames = classnames(navListNamespace, className, {
@@ -117,11 +117,11 @@ export default class NavList extends Component {
       >
         <div className={`${navItemNamespace}__link`}>
           <div>
-            {this.props.hasIcon && (
+            {icon && (
               <img
                 alt={this.props.navigationItemTitle}
                 className={`${navItemNamespace}__img`}
-                src={this.props.icon}
+                src={icon}
               />
             )}
           </div>
@@ -154,7 +154,6 @@ NavList.defaultProps = {
   onListClick: () => {},
   tabIndex: 0,
   title: '',
-  hasIcon: false,
   icon: '',
   navigationItemTitle: '',
 };
@@ -168,9 +167,6 @@ NavList.propTypes = {
 
   /** @type {string} Extra classes to add. */
   className: string,
-
-  /** @type {boolean} Check for icon. */
-  hasIcon: bool,
 
   /** @type {string} Icon of a list. */
   icon: string,

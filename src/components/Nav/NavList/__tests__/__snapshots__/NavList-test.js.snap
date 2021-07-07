@@ -4,7 +4,6 @@ exports[`Nav Rendering renders correctly 1`] = `
 <NavList
   activeHref="#"
   className="class"
-  hasIcon={false}
   icon=""
   id=""
   isExpandedOnPageload={true}

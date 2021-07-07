@@ -22,7 +22,6 @@ exports[`Nav Rendering renders correctly 1`] = `
       <NavList
         activeHref="/"
         className=""
-        hasIcon={false}
         icon=""
         id="security--nav__list--0"
         isExpandedOnPageload={false}
@@ -165,7 +164,6 @@ exports[`Nav Rendering renders correctly 1`] = `
       <NavList
         activeHref="/"
         className=""
-        hasIcon={false}
         icon=""
         id="security--nav__list--1"
         isExpandedOnPageload={false}
