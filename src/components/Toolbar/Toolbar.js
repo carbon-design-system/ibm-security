@@ -169,6 +169,7 @@ export default class Toolbar extends Component {
 
                 return children ? (
                   <NavList
+                    renderIcon={hasIcon}
                     icon={icon}
                     key={navigationItemId}
                     navigationItemTitle={navigationItemTitle}

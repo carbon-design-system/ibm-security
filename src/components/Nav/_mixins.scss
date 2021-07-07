@@ -205,6 +205,7 @@
       &__img {
         height: carbon--mini-units($count: 2.5);
         margin-left: -$carbon--spacing-07;
+        margin-right: $carbon--spacing-05;
       }
 
       &__link--external {

@@ -116,15 +116,13 @@ export default class NavList extends Component {
         role="menuitem"
       >
         <div className={`${navItemNamespace}__link`}>
-          <div>
-            {icon && (
-              <img
-                alt={this.props.navigationItemTitle}
-                className={`${navItemNamespace}__img`}
-                src={icon}
-              />
-            )}
-          </div>
+          {icon && (
+            <img
+              alt={this.props.navigationItemTitle}
+              className={`${navItemNamespace}__img`}
+              src={icon}
+            />
+          )}
           <div className={`${navItemNamespace}__content`}>{title}</div>
           <Icon
             className={`${navListNamespace}__icon`}
