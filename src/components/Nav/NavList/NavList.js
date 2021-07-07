@@ -96,7 +96,14 @@ export default class NavList extends Component {
   }
 
   render() {
-    const { className, children, icon, tabIndex, title } = this.props;
+    const {
+      className,
+      children,
+      icon,
+      tabIndex,
+      title,
+      navigationItemTitle,
+    } = this.props;
     const { open } = this.state;
 
     const classNames = classnames(navListNamespace, className, {
@@ -118,7 +125,7 @@ export default class NavList extends Component {
         <div className={`${navItemNamespace}__link`}>
           {icon && (
             <img
-              alt={this.props.navigationItemTitle}
+              alt={navigationItemTitle}
               className={`${navItemNamespace}__img`}
               src={icon}
             />
