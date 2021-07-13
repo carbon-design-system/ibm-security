@@ -75,6 +75,12 @@ export const VariantLabel = args => (
     />
   </TitleBarModule>
 );
+
+/** Hides the control for labelDirection - we only want a static top */
+VariantLabel.argTypes = {
+  labelDirection: { table: { disable: true } },
+};
+
 Variant.parameters = {
   viewMode: 'canvas',
 };
