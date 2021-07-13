@@ -30,8 +30,10 @@ export default {
 
 export const Default = args => <TitleBarModule {...args} />;
 
-export const Variant = () => (
-  <TitleBarModule title="Sub-section title" subsection>
+export const Label = args => <TitleBarModule label="Label" {...args} />;
+
+export const Variant = args => (
+  <TitleBarModule title="Sub-section title" subsection {...args}>
     <IconButtonBar
       actions={[
         {
@@ -52,6 +54,35 @@ export const Variant = () => (
   </TitleBarModule>
 );
 
+export const VariantLabel = args => (
+  <TitleBarModule title="Sub-section title" subsection label="Label" {...args}>
+    <IconButtonBar
+      actions={[
+        {
+          label: 'Action 1',
+          renderIcon: Add16,
+        },
+        {
+          label: 'Action 2',
+          renderIcon: Edit16,
+        },
+        {
+          label: 'Action 3',
+          renderIcon: Filter16,
+        },
+      ]}
+      size="lg"
+    />
+  </TitleBarModule>
+);
 Variant.parameters = {
+  viewMode: 'canvas',
+};
+
+VariantLabel.parameters = {
+  viewMode: 'canvas',
+};
+
+Label.parameters = {
   viewMode: 'canvas',
 };
