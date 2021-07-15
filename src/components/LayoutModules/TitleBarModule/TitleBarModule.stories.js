@@ -30,9 +30,9 @@ export default {
 
 export const Default = args => <TitleBarModule {...args} />;
 
-export const Label = args => <TitleBarModule label="Label" {...args} />;
+export const WithLabel = args => <TitleBarModule label="Label" {...args} />;
 
-export const Variant = args => (
+export const WithActions = args => (
   <TitleBarModule title="Sub-section title" subsection {...args}>
     <IconButtonBar
       actions={[
@@ -54,7 +54,12 @@ export const Variant = args => (
   </TitleBarModule>
 );
 
-export const VariantLabel = args => (
+WithActions.argTypes = {
+  label: { table: { disable: true } },
+  labelDirection: { table: { disable: true } },
+};
+
+export const WithActionsAndLabel = args => (
   <TitleBarModule title="Sub-section title" subsection label="Label" {...args}>
     <IconButtonBar
       actions={[
@@ -76,19 +81,14 @@ export const VariantLabel = args => (
   </TitleBarModule>
 );
 
-/** Hides the control for labelDirection - we only want a static top */
-VariantLabel.argTypes = {
-  labelDirection: { table: { disable: true } },
-};
-
-Variant.parameters = {
+WithActions.parameters = {
   viewMode: 'canvas',
 };
 
-VariantLabel.parameters = {
+WithActionsAndLabel.parameters = {
   viewMode: 'canvas',
 };
 
-Label.parameters = {
+WithLabel.parameters = {
   viewMode: 'canvas',
 };
