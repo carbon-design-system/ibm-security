@@ -12645,6 +12645,8 @@ Map {
     "defaultProps": Object {
       "children": null,
       "element": "h2",
+      "label": null,
+      "labelDirection": "top",
       "subsection": false,
     },
     "propTypes": Object {
@@ -12653,6 +12655,18 @@ Map {
       },
       "element": Object {
         "type": "elementType",
+      },
+      "label": Object {
+        "type": "string",
+      },
+      "labelDirection": Object {
+        "args": Array [
+          Array [
+            "top",
+            "bottom",
+          ],
+        ],
+        "type": "oneOf",
       },
       "subsection": Object {
         "type": "bool",
