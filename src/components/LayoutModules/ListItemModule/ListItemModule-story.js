@@ -36,14 +36,8 @@ export default {
 export const Default = () => (
   <ListItemModule href="#">
     {({ Column, getLayoutProps }) => {
-      const {
-        avatar,
-        component,
-        description,
-        icon,
-        label,
-        title,
-      } = getLayoutProps();
+      const { avatar, component, description, icon, label, title } =
+        getLayoutProps();
 
       return (
         <>

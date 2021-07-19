@@ -13,16 +13,8 @@ import lockup from './lockup.svg';
 
 const { mono, sans } = fontFamilies;
 
-const {
-  activeUI,
-  field02,
-  inverse01,
-  link01,
-  text01,
-  text04,
-  ui01,
-  ui03,
-} = g100;
+const { activeUI, field02, inverse01, link01, text01, text04, ui01, ui03 } =
+  g100;
 
 // https://storybook.js.org/docs/react/configure/theming#create-a-theme-quickstart
 export default create({
