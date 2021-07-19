@@ -96,14 +96,8 @@ export default class NavList extends Component {
   }
 
   render() {
-    const {
-      className,
-      children,
-      icon,
-      tabIndex,
-      title,
-      navigationItemTitle,
-    } = this.props;
+    const { className, children, icon, tabIndex, title, navigationItemTitle } =
+      this.props;
     const { open } = this.state;
 
     const classNames = classnames(navListNamespace, className, {
@@ -120,8 +114,7 @@ export default class NavList extends Component {
         tabIndex={tabIndex}
         onClick={this.toggle}
         onKeyPress={this.toggle}
-        role="menuitem"
-      >
+        role="menuitem">
         <div className={`${navItemNamespace}__link`}>
           {icon && (
             <img
@@ -140,8 +133,7 @@ export default class NavList extends Component {
           aria-label={title}
           aria-hidden={!open}
           className={`${navListNamespace} ${navListNamespace}--nested`}
-          role="menu"
-        >
+          role="menu">
           {newChildren}
         </ul>
       </li>
