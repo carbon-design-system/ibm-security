@@ -128,7 +128,7 @@ export const labels = {
  * @param {object} obj object to be filtered
  * @returns {object} object without falsey entries
  */
-export const filterFalsey = obj =>
+export const filterFalsey = (obj) =>
   Object.entries(obj)
     .filter(([key, value]) => Boolean(value)) // eslint-disable-line no-unused-vars
     .reduce((result, [key, value]) => {

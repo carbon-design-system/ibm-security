@@ -6,4 +6,4 @@
 import { Canvas } from '@storybook/addon-docs/blocks';
 import React from 'react';
 
-export default props => <Canvas withSource="open" {...props} />;
+export default (props) => <Canvas withSource="open" {...props} />;
