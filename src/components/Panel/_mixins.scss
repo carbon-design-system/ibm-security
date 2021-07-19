@@ -49,17 +49,18 @@
 
   @include security--theme--cg10__cg100;
 
-  display: flex;
   position: fixed;
+  z-index: z($layer: modal);
   top: 0;
   right: 0;
-  height: 100%;
+
+  display: flex;
   width: $panel__sizing__width;
-  color: $body__color__text;
-  background-color: $ui-01;
+  height: 100%;
   flex-direction: column;
   justify-content: space-between;
-  z-index: z($layer: modal);
+  background-color: $ui-01;
+  color: $body__color__text;
 
   @include rtl {
     right: unset;
@@ -86,18 +87,18 @@
   }
 
   &__header {
-    display: flex;
     position: fixed;
     top: 0;
+    display: flex;
     width: $panel__header__sizing__width;
-    padding-top: $panel__spacing__padding;
-    padding-bottom: $panel__spacing__padding;
-    margin-right: $panel__spacing__padding;
-    margin-left: $panel__spacing__padding;
     box-sizing: border-box;
     justify-content: space-between;
+    padding-top: $panel__spacing__padding;
+    padding-bottom: $panel__spacing__padding;
     border-bottom: $panel__content__sizing__border solid
       $panel__content__color__border;
+    margin-right: $panel__spacing__padding;
+    margin-left: $panel__spacing__padding;
 
     &__container--title {
       width: $panel__header__sizing__width -
@@ -124,8 +125,8 @@
   }
 
   &__body {
-    margin-top: carbon--mini-units($count: 11);
     flex-grow: 1;
+    margin-top: carbon--mini-units($count: 11);
     overflow-y: auto;
 
     &--content {
@@ -146,9 +147,9 @@
   }
 
   &__footer {
-    display: flex;
     position: fixed;
     bottom: 0;
+    display: flex;
     width: $panel__sizing__width;
 
     > .#{$prefix}--btn,

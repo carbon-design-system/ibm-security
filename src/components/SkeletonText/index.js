@@ -1,8 +1,6 @@
 /**
  * @file Skeleton text entry point.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-import SkeletonText from 'carbon-components-react/lib/components/SkeletonText';
-
-export default SkeletonText;
+export { SkeletonText as default } from 'carbon-components-react';

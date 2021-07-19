@@ -1,9 +1,9 @@
 /**
  * @file Navigation list class.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
-import ChevronDown16 from '@carbon/icons-react/lib/chevron--down/16';
+import { ChevronDown16 } from '@carbon/icons-react';
 
 import classnames from 'classnames';
 import { bool, func, node, number, string } from 'prop-types';
@@ -96,7 +96,14 @@ export default class NavList extends Component {
   }
 
   render() {
-    const { className, children, tabIndex, title } = this.props;
+    const {
+      className,
+      children,
+      icon,
+      tabIndex,
+      title,
+      navigationItemTitle,
+    } = this.props;
     const { open } = this.state;
 
     const classNames = classnames(navListNamespace, className, {
@@ -116,11 +123,18 @@ export default class NavList extends Component {
         role="menuitem"
       >
         <div className={`${navItemNamespace}__link`}>
+          {icon && (
+            <img
+              alt={navigationItemTitle}
+              className={`${navItemNamespace}__img`}
+              src={icon}
+            />
+          )}
+          <div className={`${navItemNamespace}__content`}>{title}</div>
           <Icon
             className={`${navListNamespace}__icon`}
             renderIcon={ChevronDown16}
           />
-          <div className={`${navItemNamespace}__content`}>{title}</div>
         </div>
         <ul
           aria-label={title}
@@ -145,23 +159,31 @@ NavList.defaultProps = {
   onListClick: () => {},
   tabIndex: 0,
   title: '',
+  icon: '',
+  navigationItemTitle: '',
 };
 
 NavList.propTypes = {
   /** @type {string} Hypertext reference for active page. */
   activeHref: string,
 
+  /** @type {Node} Child elements. */
+  children: node,
+
   /** @type {string} Extra classes to add. */
   className: string,
 
-  /** @type {Node} Child elements. */
-  children: node,
+  /** @type {string} Icon of a list. */
+  icon: string,
 
   /** @type {string} ID of a list. */
   id: string,
 
   /** @type {boolean} State of a list. */
   isExpandedOnPageload: bool,
+
+  /** @type {boolean} Title of nav. */
+  navigationItemTitle: string,
 
   /** @type {Function} Click handler for an item. */
   onItemClick: func,

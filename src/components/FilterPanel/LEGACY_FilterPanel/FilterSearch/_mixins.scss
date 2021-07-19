@@ -1,7 +1,7 @@
 ////
 /// Legacy filter search mixins.
 /// @group filter-panel
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -31,6 +31,7 @@
 
     &__title {
       @include carbon--type-style($name: caption-01);
+
       margin-top: 0;
       margin-bottom: $filter-search__spacing__padding;
     }

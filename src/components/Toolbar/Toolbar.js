@@ -1,6 +1,6 @@
 /**
  * @file Toolbar.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import {
@@ -31,7 +31,7 @@ export const namespace = getComponentNamespace('toolbar');
 
 /**
  * Toolbar component.
- * @param {Object.<string, *>} props Toolbar props.
+ * @param {object.<string, *>} htmlContent Toolbar props.
  * @returns {Toolbar} Toolbar instance.
  */
 export default class Toolbar extends Component {
@@ -79,7 +79,7 @@ export default class Toolbar extends Component {
   /**
    * Toggles the appropriate icon button based on whether the relevant panel is open.
    * @param {string} label The icon label.
-   * @param {function} renderIcon The icon to use.
+   * @param {Function} renderIcon The icon to use.
    * @param {string} type The panel to check.
    * @returns {IconButton} The icon button to return.
    */
@@ -164,15 +164,22 @@ export default class Toolbar extends Component {
                 id: navigationItemId,
                 title: navigationItemTitle,
                 ...props
-              }) =>
-                children ? (
-                  <NavList key={navigationItemId} title={navigationItemTitle}>
+              }) => {
+                const hasIcon = icon !== undefined;
+
+                return children ? (
+                  <NavList
+                    renderIcon={hasIcon}
+                    icon={icon}
+                    key={navigationItemId}
+                    navigationItemTitle={navigationItemTitle}
+                    title={navigationItemTitle}
+                  >
                     {children.map(
                       ({
                         href: navigationListItemHref,
                         element: navigationListItemElement,
                         content,
-                        icon,
                         id: navigationListItemId,
                         title: navigationListItemTitle,
                         ...props
@@ -188,13 +195,6 @@ export default class Toolbar extends Component {
                           {...props}
                         >
                           {navigationListItemTitle}
-                          {icon !== undefined && (
-                            <img
-                              alt={navigationListItemTitle}
-                              className={`${namespace}__nav__item__icon`}
-                              src={icon}
-                            />
-                          )}
                         </NavItem>
                       )
                     )}
@@ -209,16 +209,24 @@ export default class Toolbar extends Component {
                     handleItemSelect={() => this.toggleContent(content)}
                     {...props}
                   >
-                    {navigationItemTitle}
-                    {icon !== undefined && (
+                    {hasIcon && (
                       <img
                         alt={navigationItemTitle}
                         className={`${namespace}__nav__item__icon`}
                         src={icon}
                       />
                     )}
+
+                    <div
+                      className={classnames(`${namespace}__nav__item__title`, {
+                        [`${namespace}__nav__item__title--icon`]: hasIcon,
+                      })}
+                    >
+                      {navigationItemTitle}
+                    </div>
                   </NavItem>
-                )
+                );
+              }
             )}
         </Nav>
       ))
@@ -338,18 +346,18 @@ const navigation = {
 const panel = () =>
   /** @type {Array<Object.*>} An array list of navigation lists and sub-navigation. */
   PropTypes.arrayOf(
-    /** @type {Object<Object.Object>} An object list of navigation. */
+    /** @type {object<object.Object>} An object list of navigation. */
     PropTypes.shape({
       ...navigation,
 
       /** @type {Array<Object.*>} An array list of navigation items. */
       navigation: PropTypes.arrayOf(
-        /** @type {Object<Object.Object>} An object list of navigation. */
+        /** @type {object<object.Object>} An object list of navigation. */
         PropTypes.shape(
           Object.assign({}, navigation, {
             /** @type {Array<Object.*>} An array list of sub-navigation items. */
             children: PropTypes.arrayOf(
-              /** @type {Object<Object.Object>} An object list of sub-navigation. */
+              /** @type {object<object.Object>} An object list of sub-navigation. */
               PropTypes.shape(Object.assign({}, navigation, href))
             ),
             href,
@@ -363,15 +371,15 @@ Toolbar.propTypes = {
   /** @type {string} Extra classes to add. */
   className: PropTypes.string,
 
-  /** @type {Object<Object.Object>} An object list of labels. */
+  /** @type {object<object.Object>} An object list of labels. */
   labels: PropTypes.shape({
-    /** @type {Object.<string, string>} An object list of navigation labels for the top level navigation item. */
+    /** @type {object.<string, string>} An object list of navigation labels for the top level navigation item. */
     mainNavigation: PropTypes.shape({
       /** Specify the `aria-label` for the primary navigation */
       ariaLabel: PropTypes.string.isRequired,
     }).isRequired,
 
-    /** @type {Object.<string, string>} An object list of menu labels. */
+    /** @type {object.<string, string>} An object list of menu labels. */
     menu: PropTypes.shape({
       /** @type {string} The button label. */
       button: PropTypes.string.isRequired,
@@ -380,7 +388,7 @@ Toolbar.propTypes = {
       tooltip: PropTypes.string,
     }).isRequired,
 
-    /** @type {Object.<string, string>} An object list of settings labels. */
+    /** @type {object.<string, string>} An object list of settings labels. */
     settings: PropTypes.shape({
       /** @type {string} The button label. */
       button: PropTypes.string.isRequired,
@@ -389,7 +397,7 @@ Toolbar.propTypes = {
       tooltip: PropTypes.string,
     }),
 
-    /** @type {Object.<string, string>} An object list of support labels. */
+    /** @type {object.<string, string>} An object list of support labels. */
     support: PropTypes.shape({
       /** @type {string} The button label. */
       button: PropTypes.string.isRequired,
@@ -398,6 +406,9 @@ Toolbar.propTypes = {
       tooltip: PropTypes.string,
     }),
   }).isRequired,
+
+  // eslint-disable-next-line react/no-unused-prop-types
+  menu: panel(),
 
   /** @type {Function} Toggle handler. */
   onToggle: PropTypes.func,
@@ -412,9 +423,6 @@ Toolbar.propTypes = {
   ),
 
   // eslint-disable-next-line react/no-unused-prop-types
-  menu: panel(),
-
-  // eslint-disable-next-line react/no-unused-prop-types
   settings: panel(),
 
   // eslint-disable-next-line react/no-unused-prop-types
@@ -422,10 +430,10 @@ Toolbar.propTypes = {
 };
 
 Toolbar.defaultProps = {
-  renderAddons: [],
   className: null,
-  onToggle: isToggled => isToggled,
   menu: [],
+  onToggle: isToggled => isToggled,
+  renderAddons: [],
   settings: [],
   support: [],
 };

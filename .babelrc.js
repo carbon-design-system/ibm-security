@@ -14,7 +14,6 @@ const plugins = [
   '@babel/plugin-syntax-dynamic-import',
   '@babel/plugin-syntax-import-meta',
   'babel-plugin-macros',
-  'babel-plugin-ramda',
 ];
 
 const presets = ['@babel/preset-env', '@babel/preset-react'];

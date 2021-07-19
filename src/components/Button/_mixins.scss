@@ -15,8 +15,8 @@
 
     &:focus,
     &:hover {
-      color: $text-04;
       background-color: $hover-danger;
+      color: $text-04;
     }
 
     &:hover > .#{$prefix}--btn__icon > path {
