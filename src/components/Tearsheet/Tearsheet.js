@@ -244,42 +244,8 @@ const buttonPropTypeMap = {
 };
 
 Tearsheet.propTypes = {
-  /** @type {boolean} Focus trap. */
-  focusTrap: PropTypes.bool,
-
-  /** @type {string|func} The html element to have the inital focus in the tearsheet. */
-  selectorPrimaryFocus: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-
-  /** @type {string} The sidebar title. */
-  sidebarTitle: PropTypes.string,
-
-  /** @type {string} The sidebar subtitle. */
-  sidebarSubtitle: PropTypes.string,
-
-  /** @type {func} The function to render the sidebar content. */
-  renderSidebar: PropTypes.func,
-
-  /** @type {string} The main view title. */
-  mainTitle: PropTypes.string,
-
-  /** @type {func} The function to render the main content. */
-  renderMain: PropTypes.func,
-
-  /** @type {Node} The root node for rendering the modal */
-  rootNode:
-    typeof Node !== 'undefined' ? PropTypes.instanceOf(Node) : PropTypes.any,
-
-  /** @type {object<object>} An object list of primary button props. */
-  primaryButton: PropTypes.shape(buttonPropTypeMap).isRequired,
-
-  /** @type {object<object>} An object list of secondary button props. */
-  secondaryButton: PropTypes.shape(buttonPropTypeMap).isRequired,
-
-  /** @type {object<object>} An object list of tertiary ghost button props. */
-  tertiaryButton: PropTypes.shape({
-    ...buttonPropTypeMap,
-    secondaryText: PropTypes.string,
-  }),
+  /** Optional class name for the tearsheet wrapper node. */
+  className: PropTypes.string,
 
   /** @type {object<object>} An object list of close button props. */
   closeButton: PropTypes.shape(buttonPropTypeMap).isRequired,
@@ -290,11 +256,8 @@ Tearsheet.propTypes = {
     icon: PropTypes.string,
   }),
 
-  /** @type {bool} The toggle to determine whether or not to show the loading overlay. */
-  loading: PropTypes.bool,
-
-  /** @type {string} The message to be displayed during loading. */
-  loadingMessage: PropTypes.string,
+  /** @type {boolean} Focus trap. */
+  focusTrap: PropTypes.bool,
 
   /** @type {boolean} The open state. */
   isOpen: PropTypes.bool,
@@ -302,14 +265,51 @@ Tearsheet.propTypes = {
   /** @type {object} Labels for the Tearsheet buttons */
   labels: defaultLabels.propType,
 
+  /** @type {bool} The toggle to determine whether or not to show the loading overlay. */
+  loading: PropTypes.bool,
+
+  /** @type {string} The message to be displayed during loading. */
+  loadingMessage: PropTypes.string,
+
+  /** @type {string} The main view title. */
+  mainTitle: PropTypes.string,
+
+  /** @type {object<object>} An object list of primary button props. */
+  primaryButton: PropTypes.shape(buttonPropTypeMap).isRequired,
+
+  /** @type {func} The function to render the main content. */
+  renderMain: PropTypes.func,
+
+  /** @type {func} The function to render the sidebar content. */
+  renderSidebar: PropTypes.func,
+
+  /** @type {Node} The root node for rendering the modal */
+  rootNode:
+    typeof Node !== 'undefined' ? PropTypes.instanceOf(Node) : PropTypes.any,
+
+  /** @type {object<object>} An object list of secondary button props. */
+  secondaryButton: PropTypes.shape(buttonPropTypeMap).isRequired,
+
+  /** @type {string|func} The html element to have the inital focus in the tearsheet. */
+  selectorPrimaryFocus: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+
+  /** @type {string} The sidebar subtitle. */
+  sidebarSubtitle: PropTypes.string,
+
+  /** @type {string} The sidebar title. */
+  sidebarTitle: PropTypes.string,
+
   /** @type {boolean} Stop event propagation for events that can bubble. */
   stopPropagation: PropTypes.bool,
 
   /** @type {Array} Array of event types to stop propagation. */
   stopPropagationEvents: PropTypes.arrayOf(PropTypes.oneOf(PORTAL_EVENTS)),
 
-  /** Optional class name for the tearsheet wrapper node. */
-  className: PropTypes.string,
+  /** @type {object<object>} An object list of tertiary ghost button props. */
+  tertiaryButton: PropTypes.shape({
+    ...buttonPropTypeMap,
+    secondaryText: PropTypes.string,
+  }),
 };
 
 Tearsheet.defaultProps = {
