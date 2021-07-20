@@ -25,7 +25,7 @@ module.exports = {
   stories: [
     require('path').resolve(__dirname, '../src/**/*+(-story|.stories).*'),
   ],
-  webpackFinal: async configuration =>
+  webpackFinal: async (configuration) =>
     require('webpack-merge').merge(configuration, {
       devServer: {
         stats: 'errors-only',

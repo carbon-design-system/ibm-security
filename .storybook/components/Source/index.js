@@ -6,4 +6,4 @@
 import { Source } from '@storybook/addon-docs/blocks';
 import React from 'react';
 
-export default props => <Source dark {...props} />;
+export default (props) => <Source dark {...props} />;

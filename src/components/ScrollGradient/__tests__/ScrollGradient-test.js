@@ -18,8 +18,7 @@ describe('ScrollGradient', () => {
       <ScrollGradient
         className={className}
         color="blue"
-        scrollElementClassName={className}
-      >
+        scrollElementClassName={className}>
         {children}
       </ScrollGradient>
     );
@@ -42,8 +41,7 @@ describe('ScrollGradient', () => {
         <ScrollGradient
           className={className}
           color="blue"
-          getScrollElementRef={getScrollElementRef}
-        >
+          getScrollElementRef={getScrollElementRef}>
           {children}
         </ScrollGradient>
       );
@@ -68,7 +66,7 @@ describe('ScrollGradient', () => {
       const { ResizeObserver } = window;
 
       beforeAll(() => {
-        window.ResizeObserver = ResizeObserver.mockImplementation(() => ({
+        window.ResizeObserver = fn().mockImplementation(() => ({
           disconnect: disconnectMock,
           observe: observeMock,
         }));

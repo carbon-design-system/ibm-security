@@ -17,8 +17,7 @@ const HeaderListItem = ({ children, className, hasPopup, isExpanded }) => (
   <li
     className={classnames(namespace, className)}
     aria-expanded={isExpanded}
-    aria-haspopup={hasPopup}
-  >
+    aria-haspopup={hasPopup}>
     {children}
   </li>
 );

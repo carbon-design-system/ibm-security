@@ -38,7 +38,7 @@ class Filter extends Component {
     };
   }
 
-  handleOnInputKeyDown = event => {
+  handleOnInputKeyDown = (event) => {
     event.stopPropagation();
   };
 
@@ -59,12 +59,12 @@ class Filter extends Component {
     });
   };
 
-  clearInputValue = event => {
+  clearInputValue = (event) => {
     event.stopPropagation();
     this.setState({ inputValue: '' });
   };
 
-  handleOnStateChange = changes => {
+  handleOnStateChange = (changes) => {
     const { type } = changes;
     switch (type) {
       case Downshift.stateChangeTypes.changeInput:
@@ -85,7 +85,7 @@ class Filter extends Component {
     this.props.onChange({ selectedItems: [], type: 'CLEAR_SELECTED_ITEMS' });
   };
 
-  handleItemChange = selectedItem => {
+  handleItemChange = (selectedItem) => {
     this.setState(
       { inputValue: '' },
       this.props.onChange({ item: selectedItem, type: 'SELECT_ITEM' })
@@ -98,7 +98,7 @@ class Filter extends Component {
     }
   };
 
-  buildMenuItems = getItemProps => {
+  buildMenuItems = (getItemProps) => {
     const {
       items,
       itemToString,
@@ -119,7 +119,7 @@ class Filter extends Component {
         compareItems,
         locale,
       }
-    ).map(item => {
+    ).map((item) => {
       const itemProps = getItemProps({ item });
       const itemText = itemToString(item);
 
@@ -128,19 +128,16 @@ class Filter extends Component {
           className={`${namespace}__list-item`}
           key={itemProps.id}
           isActive={selectedItems.indexOf(item) !== -1}
-          onKeyDown={e => this.handleKeyDownChange(e, item)}
+          onKeyDown={(e) => this.handleKeyDownChange(e, item)}
           role="button"
           tabIndex="0"
-          {...itemProps}
-        >
+          {...itemProps}>
           <div
             className={`${namespace}__list-item__entry`}
-            aria-labelledby={itemProps.id}
-          >
+            aria-labelledby={itemProps.id}>
             <span
               className={`${carbonPrefix}--text-truncate--end`}
-              title={itemText}
-            >
+              title={itemText}>
               {itemText}
             </span>
             <span className={`${namespace}__add`}>
@@ -161,7 +158,7 @@ class Filter extends Component {
     const clearButton = inputValue ? (
       <Selection
         clearSelection={this.clearInputValue}
-        translateWithId={id => {
+        translateWithId={(id) => {
           switch (id) {
             case 'clear.all':
               return this.props.filterFieldClearAllTooltip;
@@ -183,8 +180,7 @@ class Filter extends Component {
         itemToString={itemToString}
         onStateChange={this.handleOnStateChange}
         clearSelection={this.handleClearSelection}
-        isOpen
-      >
+        isOpen>
         {({
           getInputProps,
           getItemProps,
@@ -199,7 +195,7 @@ class Filter extends Component {
                   disabled,
                   id,
                   placeholder,
-                  onBlur: event => event.preventDefault(),
+                  onBlur: (event) => event.preventDefault(),
                   onKeyDown: this.handleOnInputKeyDown,
                 })}
               />
