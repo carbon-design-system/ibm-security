@@ -28,3 +28,8 @@ expect.extend({ toBeAccessible, toHaveNoAxeViolations });
 // https://github.com/nickcolley/jest-axe/issues/147
 const { getComputedStyle } = window;
 window.getComputedStyle = jest.fn((element) => getComputedStyle(element));
+
+window.ResizeObserver = jest.fn().mockImplementation(() => ({
+  disconnect: jest.fn(),
+  observe: jest.fn(),
+}));
