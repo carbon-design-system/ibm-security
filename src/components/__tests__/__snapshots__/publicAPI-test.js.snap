@@ -13667,6 +13667,9 @@ Map {
         ],
         "type": "objectOf",
       },
+      "loadingMessage": Object {
+        "type": "string",
+      },
       "navLabel": Object {
         "type": "string",
       },

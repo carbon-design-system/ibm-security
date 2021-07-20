@@ -134,13 +134,6 @@ export const FilterTagFragmentRender = ({
 );
 
 FilterTagFragmentRender.propTypes = {
-  /** @type {arrayOf} initially selected items */
-  selectedItems: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired,
-    })
-  ),
   /** @type {arrayOf} availableItems in the list to select from */
   availableItems: PropTypes.arrayOf(
     PropTypes.shape({
@@ -148,15 +141,26 @@ FilterTagFragmentRender.propTypes = {
       label: PropTypes.string.isRequired,
     })
   ).isRequired,
-  dispatchItemChange: PropTypes.func.isRequired,
-  itemToString: PropTypes.func.isRequired,
-  onChange: PropTypes.func,
 
-  /** @type {string} Tag wall label. */
-  tagWallLabel: PropTypes.string,
+  dispatchItemChange: PropTypes.func.isRequired,
 
   /** @type {string} Specify a custom id. */
   id: PropTypes.string.isRequired,
+
+  itemToString: PropTypes.func.isRequired,
+
+  onChange: PropTypes.func,
+
+  /** @type {arrayOf} initially selected items */
+  selectedItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+    })
+  ),
+
+  /** @type {string} Tag wall label. */
+  tagWallLabel: PropTypes.string,
 };
 FilterTagFragmentRender.defaultProps = {
   selectedItems: [],
@@ -220,17 +224,24 @@ export const TagWallFilter = ({
 };
 
 TagWallFilter.propTypes = {
-  /** @type {object<object>} An object list of primary button props. */
-  primaryButton: buttonType.isRequired,
+  /** @type {arrayOf} all possible items. If not set, it is derived from the joint set of selectedItems and availableItems */
+  allItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+    })
+  ),
 
-  /** @type {object<object>} An object list of secondary button props. */
-  secondaryButton: buttonType.isRequired,
+  /** @type {arrayOf} availableItems in the list to select from */
+  availableItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 
   /** @type {object<object>} An object list of close button props. */
   closeButton: buttonType.isRequired,
-
-  /** @type {string} The view title. */
-  heading: PropTypes.string.isRequired,
 
   /** @type {element|Function|string} The element, function, or string for the description. */
   description: PropTypes.oneOfType([
@@ -239,11 +250,32 @@ TagWallFilter.propTypes = {
     PropTypes.string,
   ]),
 
+  /** @type {string} tooltip label for clearing all selected items */
+  filterFieldClearAllTooltip: PropTypes.string,
+
+  /** @type {string} tooltip label for clearing a selected item */
+  filterFieldClearSelectionTooltip: PropTypes.string,
+
   /** @type {boolean} Focus trap. */
   focusTrap: PropTypes.bool,
 
+  /** @type {string} The view title. */
+  heading: PropTypes.string.isRequired,
+
   /** @type {string} Specify a custom id for the filter. */
   id: PropTypes.string,
+
+  /** @type {string} Set a placeholder for the filter input field via this prop */
+  inputFieldPlaceholder: PropTypes.string,
+
+  /** @type {func} Called whenever a something changed. Is called with the latest state */
+  onChange: PropTypes.func,
+
+  /** @type {object<object>} An object list of primary button props. */
+  primaryButton: buttonType.isRequired,
+
+  /** @type {object<object>} An object list of secondary button props. */
+  secondaryButton: buttonType.isRequired,
 
   /** @type {arrayOf} initially selected items */
   selectedItems: PropTypes.arrayOf(
@@ -255,32 +287,6 @@ TagWallFilter.propTypes = {
 
   /** @type {string} Tag wall label. */
   tagWallLabel: PropTypes.string,
-
-  /** @type {arrayOf} availableItems in the list to select from */
-  availableItems: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-
-  /** @type {arrayOf} all possible items. If not set, it is derived from the joint set of selectedItems and availableItems */
-  allItems: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired,
-    })
-  ),
-
-  /** @type {func} Called whenever a something changed. Is called with the latest state */
-  onChange: PropTypes.func,
-
-  /** @type {string} Set a placeholder for the filter input field via this prop */
-  inputFieldPlaceholder: PropTypes.string,
-  /** @type {string} tooltip label for clearing a selected item */
-  filterFieldClearSelectionTooltip: PropTypes.string,
-  /** @type {string} tooltip label for clearing all selected items */
-  filterFieldClearAllTooltip: PropTypes.string,
 };
 TagWallFilter.defaultProps = {
   description: '',
