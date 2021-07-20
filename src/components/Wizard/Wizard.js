@@ -378,6 +378,9 @@ Wizard.propTypes = {
    */
   labels: defaultLabels.propType,
 
+  /** @type {string} The message to be displayed during loading. */
+  loadingMessage: PropTypes.string,
+
   /** Provide an accessible label that describes the Wizard sidebar navigation. */
   navLabel: PropTypes.string,
 
