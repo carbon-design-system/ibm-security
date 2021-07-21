@@ -1,6 +1,6 @@
 /**
  * @file Card.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019, 2021
  */
 
 import classnames from 'classnames';
@@ -70,23 +70,19 @@ const Card = ({
     [`${namespace}__link`]: link,
   });
 
-  return (
-    <Fragment>
-      {link ? (
-        <a
-          className={classNames}
-          href={link}
-          aria-label={label}
-          onClick={onClick}
-          {...other}>
-          {content}
-        </a>
-      ) : (
-        <div className={classNames} {...other}>
-          {content}
-        </div>
-      )}
-    </Fragment>
+  return link ? (
+    <a
+      className={classNames}
+      href={link}
+      aria-label={label}
+      onClick={onClick}
+      {...other}>
+      {content}
+    </a>
+  ) : (
+    <div className={classNames} {...other}>
+      {content}
+    </div>
   );
 };
 
@@ -113,9 +109,10 @@ Card.propTypes = {
     text: string,
   }),
 
+  children,
+
   /** @type {string} The class. */
   className: string,
-  children,
 
   /** @type {object.<object, *>} An object list of footer props. */
   footer: shape({

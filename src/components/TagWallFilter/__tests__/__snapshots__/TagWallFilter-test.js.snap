@@ -670,6 +670,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
               <button
                 aria-label="Close"
                 class="security--button--icon security--tearsheet--small__button--close security--button--icon--lg"
+                type="button"
               >
                 <svg
                   aria-hidden="true"
@@ -977,6 +978,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                           <button
                             aria-label="Close"
                             class="security--button--icon security--tearsheet--small__button--close security--button--icon--lg"
+                            type="button"
                           >
                             <svg
                               aria-hidden="true"
@@ -1218,6 +1220,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                             <button
                               aria-label="Close"
                               class="security--button--icon security--tearsheet--small__button--close security--button--icon--lg"
+                              type="button"
                             >
                               <svg
                                 aria-hidden="true"
@@ -1461,6 +1464,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                                 <button
                                   aria-label="Close"
                                   class="security--button--icon security--tearsheet--small__button--close security--button--icon--lg"
+                                  type="button"
                                 >
                                   <svg
                                     aria-hidden="true"
@@ -2073,6 +2077,7 @@ exports[`TagWallFilter tests FilterTagFragment should render the fragment 1`] = 
                               className="security--button--icon security--tearsheet--small__button--close security--button--icon--lg"
                               disabled={false}
                               onClick={[MockFunction]}
+                              type="button"
                             >
                               <Icon
                                 className=""
@@ -2693,6 +2698,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                 <button
                   aria-label="Close"
                   class="security--button--icon security--tearsheet--small__button--close security--button--icon--lg"
+                  type="button"
                 >
                   <svg
                     aria-hidden="true"
@@ -2925,6 +2931,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                 <button
                   aria-label="Close"
                   class="security--button--icon security--tearsheet--small__button--close security--button--icon--lg"
+                  type="button"
                 >
                   <svg
                     aria-hidden="true"
@@ -3232,6 +3239,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                             <button
                               aria-label="Close"
                               class="security--button--icon security--tearsheet--small__button--close security--button--icon--lg"
+                              type="button"
                             >
                               <svg
                                 aria-hidden="true"
@@ -3464,6 +3472,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                             <button
                               aria-label="Close"
                               class="security--button--icon security--tearsheet--small__button--close security--button--icon--lg"
+                              type="button"
                             >
                               <svg
                                 aria-hidden="true"
@@ -3705,6 +3714,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               <button
                                 aria-label="Close"
                                 class="security--button--icon security--tearsheet--small__button--close security--button--icon--lg"
+                                type="button"
                               >
                                 <svg
                                   aria-hidden="true"
@@ -3937,6 +3947,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                               <button
                                 aria-label="Close"
                                 class="security--button--icon security--tearsheet--small__button--close security--button--icon--lg"
+                                type="button"
                               >
                                 <svg
                                   aria-hidden="true"
@@ -4180,6 +4191,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   <button
                                     aria-label="Close"
                                     class="security--button--icon security--tearsheet--small__button--close security--button--icon--lg"
+                                    type="button"
                                   >
                                     <svg
                                       aria-hidden="true"
@@ -4412,6 +4424,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                   <button
                                     aria-label="Close"
                                     class="security--button--icon security--tearsheet--small__button--close security--button--icon--lg"
+                                    type="button"
                                   >
                                     <svg
                                       aria-hidden="true"
@@ -5024,6 +5037,7 @@ exports[`TagWallFilter tests TagWallFilter should mount the TagWallFilter compon
                                 className="security--button--icon security--tearsheet--small__button--close security--button--icon--lg"
                                 disabled={false}
                                 onClick={[MockFunction]}
+                                type="button"
                               >
                                 <Icon
                                   className=""
