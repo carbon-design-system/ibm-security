@@ -19,7 +19,7 @@ import { defaultSortItems } from './tools/sorting';
 
 const defaultTo = (value, defaultVal) => (value == null ? defaultVal : value);
 
-const itemToString = item =>
+const itemToString = (item) =>
   defaultTo(item, { text: '', label: '' }).label ||
   defaultTo(item, { text: '', label: '' }).text;
 
@@ -35,7 +35,7 @@ function withItemReducer(
   { item, type }
 ) {
   const allItems = a || [...available, ...selected, item];
-  const filterItems = items => items.filter(({ id }) => id !== item.id);
+  const filterItems = (items) => items.filter(({ id }) => id !== item.id);
 
   switch (type) {
     case 'SELECT_ITEM':

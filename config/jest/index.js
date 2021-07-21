@@ -10,6 +10,8 @@ import Adapter from 'enzyme-adapter-react-16';
 import toBeAccessible from './matchers/toBeAccessible';
 import toHaveNoAxeViolations from './matchers/toHaveNoAxeViolations';
 
+const { fn } = jest;
+
 Enzyme.configure({ adapter: new Adapter() });
 
 // We can extend `expect` using custom matchers as defined by:
@@ -27,4 +29,9 @@ expect.extend({ toBeAccessible, toHaveNoAxeViolations });
 
 // https://github.com/nickcolley/jest-axe/issues/147
 const { getComputedStyle } = window;
-window.getComputedStyle = jest.fn(element => getComputedStyle(element));
+window.getComputedStyle = fn((element) => getComputedStyle(element));
+
+window.ResizeObserver = fn().mockImplementation(() => ({
+  disconnect: fn(),
+  observe: fn(),
+}));
