@@ -26,20 +26,20 @@ const filterColor = ({ type }) => type === 'SassColor';
 // Generates the data for themes and tokens to template with Handlebars.
 const tokens = Object.keys(themeMap[themes[0]].value)
   // TODO - currently only handling color tokens.
-  .filter(token => filterColor(themeMap[themes[0]].value[token]))
-  .map(token => ({
+  .filter((token) => filterColor(themeMap[themes[0]].value[token]))
+  .map((token) => ({
     themes: [],
     token,
   }));
 
 // Loops through each of the supported themes, finding and formatting the correct color hex values and names.
-themes.forEach(theme => {
+themes.forEach((theme) => {
   const { value: tokenObject } = themeMap[theme];
 
   Object.keys(tokenObject)
     // TODO - currently only handling color tokens.
-    .filter(tokenValue => filterColor(tokenObject[tokenValue]))
-    .map(tokenValue => tokenObject[tokenValue])
+    .filter((tokenValue) => filterColor(tokenObject[tokenValue]))
+    .map((tokenValue) => tokenObject[tokenValue])
     .forEach(({ value }, index) => {
       let { hex: color } = value;
 

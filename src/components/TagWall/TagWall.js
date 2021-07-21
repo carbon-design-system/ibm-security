@@ -50,8 +50,7 @@ const TagWall = ({
     <section
       className={classnames(namespace, className)}
       aria-label={TAG_WALL_LABEL}
-      {...other}
-    >
+      {...other}>
       {TAG_WALL_LABEL && (
         <h2 className={`${namespace}__label`}>{TAG_WALL_LABEL}</h2>
       )}
@@ -64,7 +63,7 @@ const TagWall = ({
             id={item.id}
             key={key}
             isSelected={item.isSelected}
-            onRemove={event => {
+            onRemove={(event) => {
               event.stopPropagation();
 
               onChange({ item, type });
@@ -72,8 +71,7 @@ const TagWall = ({
             removable={!disable}
             removeBtnLabel={TAG_WALL_REMOVE_BUTTON}
             type="gray"
-            {...item.props}
-          >
+            {...item.props}>
             {itemToString(item)}
           </InteractiveTag>
         );
@@ -83,8 +81,7 @@ const TagWall = ({
           disabled={disable}
           kind="ghost"
           onClick={onAddButton}
-          size="small"
-        >
+          size="small">
           {TAG_WALL_ADD_BUTTON}
         </Button>
       )}
@@ -105,6 +102,9 @@ TagWall.propTypes = {
   /** @type {boolean} Determines whether or not tag management is enabled. */
   disable: bool,
 
+  /** @type {Function} Function that converts object to string. */
+  itemToString: func,
+
   /** @type {Array.<object.<string, boolean>>} List of tags to be consumed. */
   items: arrayOf(
     shape({
@@ -114,9 +114,6 @@ TagWall.propTypes = {
       props: object,
     })
   ).isRequired,
-
-  /** @type {Function} Function that converts object to string. */
-  itemToString: func,
 
   /** @type {string} Description label. */
   label: string,

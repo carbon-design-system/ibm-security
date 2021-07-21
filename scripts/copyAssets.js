@@ -16,7 +16,7 @@ const esPath = path.resolve(__dirname, '../es');
 /**
  * create globs for all file extensions given in ./assetExtensions.json
  */
-const globs = assetExtensions.map(ext =>
+const globs = assetExtensions.map((ext) =>
   path.resolve(sourcePath, '**', `*.${ext}`)
 );
 
@@ -25,7 +25,7 @@ const globs = assetExtensions.map(ext =>
  * @param {string[]} globs - the globs that should be copied over to their build destination
  * @returns {Promise<[any, any, any, any, any, any, any, any, any, any]>} resolves after copying the file - can be ignored
  */
-const copyAssets = async globs => {
+const copyAssets = async (globs) => {
   const paths = await globby(globs);
   const copyJobs = paths.reduce((copyJobs, nextPath) => {
     const relativePath = path.relative(sourcePath, nextPath);

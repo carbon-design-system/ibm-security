@@ -14,15 +14,17 @@
  * @param {Array<Function>} fns array of functions to apply to the event
  * @returns {Function}
  */
-const composeEventHandlers = fns => (event, ...args) => {
-  for (let i = 0; i < fns.length; i += 1) {
-    if (event.defaultPrevented) {
-      break;
+const composeEventHandlers =
+  (fns) =>
+  (event, ...args) => {
+    for (let i = 0; i < fns.length; i += 1) {
+      if (event.defaultPrevented) {
+        break;
+      }
+      if (typeof fns[i] === 'function') {
+        fns[i](event, ...args);
+      }
     }
-    if (typeof fns[i] === 'function') {
-      fns[i](event, ...args);
-    }
-  }
-};
+  };
 
 export default composeEventHandlers;

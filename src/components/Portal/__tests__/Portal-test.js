@@ -125,8 +125,7 @@ describe(name, () => {
             <button
               data-testid="in-portal"
               onMouseDown={onMouseDownMock}
-              onMouseUp={onMouseUpMock}
-            >
+              onMouseUp={onMouseUpMock}>
               I should call mouseDownHandler, but I should NOT call
               mouseUpHandler.
             </button>
