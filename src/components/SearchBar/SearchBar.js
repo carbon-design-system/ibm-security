@@ -117,7 +117,7 @@ export default class SearchBar extends React.Component {
    * Handler for search input changes that calls onChange prop.
    * @param {KeyboardEvent} event Event object from input change.
    */
-  handleInputChange = event => {
+  handleInputChange = (event) => {
     const { value } = event.target;
     const eventObject = { value };
 
@@ -132,7 +132,7 @@ export default class SearchBar extends React.Component {
    * Handler for form submit that calls onSubmit prop.
    * @param {Event} event Submit event generated.
    */
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     event.preventDefault();
     const eventObject = { value: this.props.value };
 
@@ -208,8 +208,7 @@ export default class SearchBar extends React.Component {
         className={classnames(namespace, className, {
           [`${namespace}--hide-scopes-label`]: hideScopesLabel,
         })}
-        onSubmit={this.handleSubmit}
-      >
+        onSubmit={this.handleSubmit}>
         {this.renderScopeSelector()}
         <Search
           className={`${namespace}__input`}
@@ -229,8 +228,7 @@ export default class SearchBar extends React.Component {
             !value ||
             value.length === 0 ||
             (scopes.length !== 0 && selectedScopes.length === 0)
-          }
-        >
+          }>
           {submitLabel}
         </Button>
       </form>

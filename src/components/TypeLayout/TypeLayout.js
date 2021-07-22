@@ -41,8 +41,7 @@ const TypeLayout = ({
       },
       className
     )}
-    {...other}
-  >
+    {...other}>
     {children}
   </StructuredListWrapper>
 );
@@ -50,8 +49,7 @@ const TypeLayout = ({
 const TypeLayoutBody = ({ children, className, ...other }) => (
   <StructuredListBody
     className={classnames(`${namespace}__body`, className)}
-    {...other}
-  >
+    {...other}>
     {children}
   </StructuredListBody>
 );
@@ -60,8 +58,7 @@ const TypeLayoutCell = ({ children, className, ...other }) => (
   <StructuredListCell
     className={classnames(`${namespace}__cell`, className)}
     tabIndex="-1"
-    {...other}
-  >
+    {...other}>
     {children}
   </StructuredListCell>
 );
@@ -70,8 +67,7 @@ const TypeLayoutRow = ({ children, className, ...other }) => (
   <StructuredListRow
     className={classnames(`${namespace}__row`, className)}
     role="row"
-    {...other}
-  >
+    {...other}>
     {children}
   </StructuredListRow>
 );
@@ -87,14 +83,14 @@ const propTypes = {
 TypeLayout.propTypes = {
   ...propTypes,
 
-  /** Specify the size of the type layout, from a list of available sizes */
-  size: oneOf(['xs', 'sm', 'md', 'lg']),
-
   /** Specify if the type layout has a border */
   border: bool,
 
   /** Deprecated in favor of `border` */
   bordered: deprecatedProp('border', bool),
+
+  /** Specify the size of the type layout, from a list of available sizes */
+  size: oneOf(['xs', 'sm', 'md', 'lg']),
 };
 
 const defaultProps = {
@@ -105,9 +101,9 @@ const defaultProps = {
 TypeLayout.defaultProps = {
   ...defaultProps,
 
-  size: 'md',
   border: false,
   bordered: null,
+  size: 'md',
 };
 
 TypeLayoutBody.propTypes = propTypes;
