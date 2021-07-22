@@ -38,8 +38,10 @@
   }
 
   &--label & {
+    // this offsets the icon-button-bar by 6px for better visual alignment when the label is present
     &__items {
-      margin-top: $carbon--spacing-02 + $carbon--spacing-05;
+      align-items: flex-end;
+      margin-bottom: $carbon--spacing-01 + $carbon--spacing-02;
     }
   }
 
