@@ -64,7 +64,7 @@ class DataDecorator extends Component {
     } = this.props;
 
     const onContextMenu = propOnContextMenu
-      ? event => {
+      ? (event) => {
           event.preventDefault();
           propOnContextMenu(event);
         }
@@ -101,7 +101,7 @@ class DataDecorator extends Component {
         <Decorator
           {...decoratorProps}
           active={this.state.isOpen}
-          onClick={event => {
+          onClick={(event) => {
             event.stopPropagation();
             this.toggleOpen();
           }}
@@ -109,7 +109,7 @@ class DataDecorator extends Component {
 
         <PanelV2
           closeButton={{
-            onClick: event => {
+            onClick: (event) => {
               this.close(event, type, value);
               if (closeButton && closeButton.onClick) {
                 closeButton.onClick(event, type, value);
@@ -134,7 +134,7 @@ class DataDecorator extends Component {
           primaryButton={
             primaryButton && {
               ...primaryButton,
-              onClick: event => {
+              onClick: (event) => {
                 if (
                   primaryButton.closePanel === undefined ||
                   primaryButton.closePanel
@@ -152,7 +152,7 @@ class DataDecorator extends Component {
           secondaryButton={
             secondaryButton && {
               ...secondaryButton,
-              onClick: event => {
+              onClick: (event) => {
                 if (
                   secondaryButton.closePanel === undefined ||
                   secondaryButton.closePanel
@@ -168,8 +168,7 @@ class DataDecorator extends Component {
           stopPropagation={stopPropagation}
           stopPropagationEvents={stopPropagationEvents}
           subtitle={subtitle}
-          title={value}
-        >
+          title={value}>
           {children}
         </PanelV2>
       </>
@@ -239,7 +238,7 @@ DataDecorator.propTypes = {
     if (
       !Array.isArray(props.scoreThresholds) ||
       props.scoreThresholds.length !== 4 ||
-      !props.scoreThresholds.every(number => typeof number === 'number')
+      !props.scoreThresholds.every((number) => typeof number === 'number')
     ) {
       return new Error(
         `${propName} is required to be an array of four numbers.`
