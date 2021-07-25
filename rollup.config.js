@@ -1,6 +1,6 @@
 /**
  * @file Rollup configuration.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import autoprefixer from 'autoprefixer';
