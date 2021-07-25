@@ -4384,6 +4384,10 @@ Map {
       "className": Object {
         "type": "string",
       },
+      "labelText": Object {
+        "isRequired": true,
+        "type": "node",
+      },
     },
   },
   "FluidForm" => Object {
@@ -6764,8 +6768,10 @@ Map {
       "activeHref": "#",
       "children": null,
       "className": "",
+      "icon": "",
       "id": "",
       "isExpandedOnPageload": false,
+      "navigationItemTitle": "",
       "onItemClick": [Function],
       "onListClick": [Function],
       "tabIndex": 0,
@@ -6781,11 +6787,17 @@ Map {
       "className": Object {
         "type": "string",
       },
+      "icon": Object {
+        "type": "string",
+      },
       "id": Object {
         "type": "string",
       },
       "isExpandedOnPageload": Object {
         "type": "bool",
+      },
+      "navigationItemTitle": Object {
+        "type": "string",
       },
       "onItemClick": Object {
         "type": "func",
@@ -8174,15 +8186,15 @@ Map {
         "args": Array [
           Array [
             Object {
-              "type": "node",
-            },
-            Object {
               "args": Array [
                 Object {
                   "type": "node",
                 },
               ],
               "type": "arrayOf",
+            },
+            Object {
+              "type": "node",
             },
           ],
         ],
@@ -13654,6 +13666,9 @@ Map {
           },
         ],
         "type": "objectOf",
+      },
+      "loadingMessage": Object {
+        "type": "string",
       },
       "navLabel": Object {
         "type": "string",

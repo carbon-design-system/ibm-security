@@ -60,8 +60,7 @@ const IconButton = ({
       })}
       aria-label={label}
       onClick={onClick}
-      {...other}
-    >
+      {...other}>
       <Icon
         className={iconClassName}
         path={path}

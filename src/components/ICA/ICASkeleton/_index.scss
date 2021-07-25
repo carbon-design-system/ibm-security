@@ -27,7 +27,7 @@
   }
 
   & &__value {
-    height: carbon--mini-units($count: 4);
+    height: $carbon--spacing-10;
     margin: 0;
   }
 }

@@ -34,7 +34,7 @@ const { interactive01, text04 } = theme;
 const decorators = [
   withInfo,
   withTheme,
-  Story => (
+  (Story) => (
     <Container>
       <Story />
     </Container>
@@ -49,7 +49,7 @@ const parameters = {
       Canvas,
       Column,
       Detail,
-      LinkTo: props => <LinkTo className="storybook__link" {...props} />,
+      LinkTo: (props) => <LinkTo className="storybook__link" {...props} />,
       Overview,
       Row,
       Source,

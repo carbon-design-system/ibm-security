@@ -81,9 +81,9 @@ export const filterDataDefaultProps = {
  * @param {FilterData} filterData Filter data object containing categories to extract.
  * @returns {FilterCategory[]} Array of categories objects.
  */
-export const getFilterCategoriesArray = filterData =>
+export const getFilterCategoriesArray = (filterData) =>
   Object.keys(filterData.categories).map(
-    category => filterData.categories[category]
+    (category) => filterData.categories[category]
   );
 
 /**
@@ -91,9 +91,9 @@ export const getFilterCategoriesArray = filterData =>
  * @param {FilterData} filterData Filter data object containing subcategories to extract.
  * @returns {FilterSubcategory[]} Array of subcategories objects.
  */
-export const getFilterSubcategoriesArray = filterData =>
+export const getFilterSubcategoriesArray = (filterData) =>
   Object.keys(filterData.subcategories).map(
-    subcategory => filterData.subcategories[subcategory]
+    (subcategory) => filterData.subcategories[subcategory]
   );
 
 /**
@@ -101,13 +101,13 @@ export const getFilterSubcategoriesArray = filterData =>
  * @param {FilterData} filterData Filter data object containing filters to extract.
  * @returns {Filter[]} Array of filters objects.
  */
-export const getFiltersArray = filterData =>
-  Object.keys(filterData.filters).map(filter => filterData.filters[filter]);
+export const getFiltersArray = (filterData) =>
+  Object.keys(filterData.filters).map((filter) => filterData.filters[filter]);
 
 /**
  * Gets array of selected filters from filter data.
  * @param {FilterData} filterData Filter data object containing selected filters to extract.
  * @returns {(Filter[]|null)} Array of selected filters objects.
  */
-export const getSelectedFiltersArray = filterData =>
-  getFiltersArray(filterData).filter(filter => filter.enabled);
+export const getSelectedFiltersArray = (filterData) =>
+  getFiltersArray(filterData).filter((filter) => filter.enabled);

@@ -48,7 +48,7 @@ const getCategory = (categoryName, storyName) => `${categoryName}/${storyName}`;
  * Binds Storybook category to the `getCategory` method.
  * @param {string} categoryName The category name to bind.
  */
-const bindCategory = categoryName => getCategory.bind(this, categoryName);
+const bindCategory = (categoryName) => getCategory.bind(this, categoryName);
 
 /**
  * Returns a formatted string for the Carbon components category.
@@ -112,7 +112,7 @@ const disableCentered = () => ({
  * @param {Object<string, Object>} stories The collection of stories to disable the addon for.
  * @returns {Object<string, Object>} The collection of stories.
  */
-const disableCenteredStories = stories =>
+const disableCenteredStories = (stories) =>
   stories.addParameters(disableCentered());
 
 /**
