@@ -4,6 +4,7 @@
  */
 
 import classnames from 'classnames';
+
 import {
   array,
   element,
@@ -13,6 +14,7 @@ import {
   shape,
   string,
 } from 'prop-types';
+
 import React, { Fragment } from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
@@ -76,8 +78,7 @@ const Card = ({
       href={link}
       aria-label={label}
       onClick={onClick}
-      {...other}
-    >
+      {...other}>
       {content}
     </a>
   ) : (

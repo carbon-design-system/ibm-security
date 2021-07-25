@@ -106,14 +106,12 @@ class Tearsheet extends Component {
             initialFocus={selectorPrimaryFocus}
             stopPropagation={stopPropagation}
             stopPropagationEvents={stopPropagationEvents}
-            rootNode={rootNode}
-          >
+            rootNode={rootNode}>
             <section
               ref={this.containerSection}
               className={classnames(namespace, className)}
               aria-hidden={false}
-              {...other}
-            >
+              {...other}>
               {this.state.loading && (
                 <LoadingMessage className={`${namespace}__loading`}>
                   <div className={`${namespace}__loading__message`}>
@@ -125,8 +123,7 @@ class Tearsheet extends Component {
               {renderSidebar && (
                 <section
                   aria-hidden={this.state.loading}
-                  className={`${namespace}__sidebar`}
-                >
+                  className={`${namespace}__sidebar`}>
                   {sidebarTitle && (
                     <h1 className={`${namespace}__sidebar__title`}>
                       {sidebarTitle}
@@ -150,8 +147,7 @@ class Tearsheet extends Component {
                         }
                         kind="ghost-danger"
                         onClick={onDeleteButtonClick}
-                        renderIcon={icon}
-                      >
+                        renderIcon={icon}>
                         {componentLabels.TEARSHEET_DELETE_BUTTON}
                       </Button>
                     )}
@@ -161,8 +157,7 @@ class Tearsheet extends Component {
 
               <section
                 aria-hidden={this.state.loading}
-                className={`${namespace}__main`}
-              >
+                className={`${namespace}__main`}>
                 {!closeButton.isDisabled && (
                   <IconButton
                     className={`${namespace}__button--close`}
@@ -180,11 +175,9 @@ class Tearsheet extends Component {
                 <section className={`${namespace}__main__content`}>
                   <ScrollGradient
                     className={`${namespace}__main__scroll-gradient`}
-                    color={theme.ui01}
-                  >
+                    color={theme.ui01}>
                     <div
-                      className={`${namespace}__main__scroll-gradient__content`}
-                    >
+                      className={`${namespace}__main__scroll-gradient__content`}>
                       {renderMain({ isLoading: loading })}
                     </div>
                   </ScrollGradient>
@@ -197,13 +190,11 @@ class Tearsheet extends Component {
                         disabled={isDisabled || this.state.loading}
                         kind="ghost"
                         onClick={tertiaryButton.onClick}
-                        size="xl"
-                      >
+                        size="xl">
                         {componentLabels.TEARSHEET_TERTIARY_BUTTON}
                         {tertiaryButton.secondaryText.length > 0 && (
                           <span
-                            className={`${namespace}__button--tertiary__text`}
-                          >
+                            className={`${namespace}__button--tertiary__text`}>
                             {componentLabels.TEARSHEET_TERTIARY_SECONDARY_TEXT}
                           </span>
                         )}
@@ -219,8 +210,7 @@ class Tearsheet extends Component {
                         }
                         kind="secondary"
                         onClick={secondaryButton.onClick}
-                        size="xl"
-                      >
+                        size="xl">
                         {componentLabels.TEARSHEET_SECONDARY_BUTTON}
                       </Button>
                     )}
@@ -228,8 +218,7 @@ class Tearsheet extends Component {
                       className={`${namespace}__button`}
                       disabled={primaryButton.isDisabled || this.state.loading}
                       onClick={primaryButton.onClick}
-                      size="xl"
-                    >
+                      size="xl">
                       {componentLabels.TEARSHEET_PRIMARY_BUTTON}
                     </Button>
                   </div>
@@ -244,68 +233,32 @@ class Tearsheet extends Component {
 }
 
 const buttonPropTypeMap = {
-  /** @type {func} onClick callback */
-  onClick: PropTypes.func,
+  onClick: Button.propTypes.onClick,
 
   /** @type {string} The button label. */
   label: PropTypes.string,
 
-  /** @type {bool} Whether the button is disabled. */
-  isDisabled: PropTypes.bool,
+  isDisabled: Button.propTypes.disabled,
 };
 
 Tearsheet.propTypes = {
-  /** @type {boolean} Focus trap. */
-  focusTrap: PropTypes.bool,
+  /** Optional class name for the tearsheet wrapper node. */
+  className: PropTypes.string,
 
-  /** @type {string|func} The html element to have the inital focus in the tearsheet. */
-  selectorPrimaryFocus: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-
-  /** @type {string} The sidebar title. */
-  sidebarTitle: PropTypes.string,
-
-  /** @type {string} The sidebar subtitle. */
-  sidebarSubtitle: PropTypes.string,
-
-  /** @type {func} The function to render the sidebar content. */
-  renderSidebar: PropTypes.func,
-
-  /** @type {string} The main view title. */
-  mainTitle: PropTypes.string,
-
-  /** @type {func} The function to render the main content. */
-  renderMain: PropTypes.func,
-
-  /** @type {Node} The root node for rendering the modal */
-  rootNode:
-    typeof Node !== 'undefined' ? PropTypes.instanceOf(Node) : PropTypes.any,
-
-  /** @type {object<object>} An object list of primary button props. */
-  primaryButton: PropTypes.shape(buttonPropTypeMap).isRequired,
-
-  /** @type {object<object>} An object list of secondary button props. */
-  secondaryButton: PropTypes.shape(buttonPropTypeMap).isRequired,
-
-  /** @type {object<object>} An object list of tertiary ghost button props. */
-  tertiaryButton: PropTypes.shape({
-    ...buttonPropTypeMap,
-    secondaryText: PropTypes.string,
-  }),
-
-  /** @type {object<object>} An object list of close button props. */
+  /** @type {object} An object list of close button props. */
   closeButton: PropTypes.shape(buttonPropTypeMap).isRequired,
 
-  /** @type {object<object>} An object list of delete button props. */
+  /** @type {object} An object list of delete button props. */
   deleteButton: PropTypes.shape({
-    ...buttonPropTypeMap,
-    icon: PropTypes.string,
+    hide: PropTypes.bool,
+    icon: Button.propTypes.renderIcon,
+    isDisabled: buttonPropTypeMap.isDisabled,
+    label: buttonPropTypeMap.label,
+    onClick: buttonPropTypeMap.onClick,
   }),
 
-  /** @type {bool} The toggle to determine whether or not to show the loading overlay. */
-  loading: PropTypes.bool,
-
-  /** @type {string} The message to be displayed during loading. */
-  loadingMessage: PropTypes.string,
+  /** @type {boolean} Focus trap. */
+  focusTrap: PropTypes.bool,
 
   /** @type {boolean} The open state. */
   isOpen: PropTypes.bool,
@@ -313,14 +266,52 @@ Tearsheet.propTypes = {
   /** @type {object} Labels for the Tearsheet buttons */
   labels: defaultLabels.propType,
 
+  /** @type {bool} The toggle to determine whether or not to show the loading overlay. */
+  loading: PropTypes.bool,
+
+  /** @type {string} The message to be displayed during loading. */
+  loadingMessage: PropTypes.string,
+
+  /** @type {string} The main view title. */
+  mainTitle: PropTypes.string,
+
+  /** @type {object<object>} An object list of primary button props. */
+  primaryButton: PropTypes.shape(buttonPropTypeMap).isRequired,
+
+  /** @type {func} The function to render the main content. */
+  renderMain: PropTypes.func,
+
+  /** @type {func} The function to render the sidebar content. */
+  renderSidebar: PropTypes.func,
+
+  /** @type {Node} The root node for rendering the modal */
+  rootNode:
+    typeof Node !== 'undefined' ? PropTypes.instanceOf(Node) : PropTypes.any,
+
+  /** @type {object<object>} An object list of secondary button props. */
+  secondaryButton: PropTypes.shape(buttonPropTypeMap).isRequired,
+
+  /** @type {string|func} The html element to have the inital focus in the tearsheet. */
+  selectorPrimaryFocus: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+
+  /** @type {string} The sidebar subtitle. */
+  sidebarSubtitle: PropTypes.string,
+
+  /** @type {string} The sidebar title. */
+  sidebarTitle: PropTypes.string,
+
   /** @type {boolean} Stop event propagation for events that can bubble. */
   stopPropagation: PropTypes.bool,
 
   /** @type {Array} Array of event types to stop propagation. */
   stopPropagationEvents: PropTypes.arrayOf(PropTypes.oneOf(PORTAL_EVENTS)),
 
-  /** Optional class name for the tearsheet wrapper node. */
-  className: PropTypes.string,
+  /** @type {object<object>} An object list of tertiary ghost button props. */
+  tertiaryButton: PropTypes.shape({
+    isDisabled: buttonPropTypeMap.isDisabled,
+    onClick: buttonPropTypeMap.onClick,
+    secondaryText: PropTypes.string,
+  }),
 };
 
 Tearsheet.defaultProps = {

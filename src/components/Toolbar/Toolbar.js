@@ -31,7 +31,7 @@ export const namespace = getComponentNamespace('toolbar');
 
 /**
  * Toolbar component.
- * @param {object.<string, *>} props Toolbar props.
+ * @param {object.<string, *>} htmlContent Toolbar props.
  * @returns {Toolbar} Toolbar instance.
  */
 export default class Toolbar extends Component {
@@ -59,7 +59,7 @@ export default class Toolbar extends Component {
    * Handle a click outside of the Toolbar wrapper.
    * @param {Event} event A click event.
    */
-  handleClickOutside = event => {
+  handleClickOutside = (event) => {
     const activeElement =
       event.target.getRootNode().activeElement || document.activeElement;
 
@@ -119,7 +119,7 @@ export default class Toolbar extends Component {
    * @param {string} type The type of panel to toggle.
    */
   togglePanel(type) {
-    toggle.call(this, type, state => {
+    toggle.call(this, type, (state) => {
       const { [type]: isToggled } = state;
 
       this.props.onToggle(isToggled);
@@ -154,7 +154,7 @@ export default class Toolbar extends Component {
       navigationType.map(({ id, navigation, title }) => (
         <Nav key={id} heading={title} label={title}>
           {navigation
-            .filter(item => item !== null && item !== undefined)
+            .filter((item) => item !== null && item !== undefined)
             .map(
               ({
                 children,
@@ -168,13 +168,17 @@ export default class Toolbar extends Component {
                 const hasIcon = icon !== undefined;
 
                 return children ? (
-                  <NavList key={navigationItemId} title={navigationItemTitle}>
+                  <NavList
+                    renderIcon={hasIcon}
+                    icon={icon}
+                    key={navigationItemId}
+                    navigationItemTitle={navigationItemTitle}
+                    title={navigationItemTitle}>
                     {children.map(
                       ({
                         href: navigationListItemHref,
                         element: navigationListItemElement,
                         content,
-                        icon,
                         id: navigationListItemId,
                         title: navigationListItemTitle,
                         ...props
@@ -187,15 +191,7 @@ export default class Toolbar extends Component {
                           element={navigationListItemElement}
                           link={content === undefined}
                           handleItemSelect={() => this.toggleContent(content)}
-                          {...props}
-                        >
-                          {hasIcon && (
-                            <img
-                              alt={navigationListItemTitle}
-                              className={`${namespace}__nav__item__icon`}
-                              src={icon}
-                            />
-                          )}
+                          {...props}>
                           {navigationListItemTitle}
                         </NavItem>
                       )
@@ -209,8 +205,7 @@ export default class Toolbar extends Component {
                     href={href}
                     link={content === undefined}
                     handleItemSelect={() => this.toggleContent(content)}
-                    {...props}
-                  >
+                    {...props}>
                     {hasIcon && (
                       <img
                         alt={navigationItemTitle}
@@ -222,8 +217,7 @@ export default class Toolbar extends Component {
                     <div
                       className={classnames(`${namespace}__nav__item__title`, {
                         [`${namespace}__nav__item__title--icon`]: hasIcon,
-                      })}
-                    >
+                      })}>
                       {navigationItemTitle}
                     </div>
                   </NavItem>
@@ -292,8 +286,7 @@ export default class Toolbar extends Component {
               role="navigation"
               aria-label={currentType}
               id={`${namespace}--toolbar--${currentType}`}
-              className={`${namespace}__panel`}
-            >
+              className={`${namespace}__panel`}>
               <IconButton
                 onClick={this.toggleContent}
                 renderIcon={ArrowLeft20}
@@ -309,14 +302,12 @@ export default class Toolbar extends Component {
                 role="navigation"
                 aria-label={currentType}
                 id={`${namespace}--toolbar--${currentType}`}
-                className={`${namespace}__panel`}
-              >
-                {Object.keys(isActive).map(type => (
+                className={`${namespace}__panel`}>
+                {Object.keys(isActive).map((type) => (
                   <Transition
                     key={type}
                     className={`${namespace}__content`}
-                    component="span"
-                  >
+                    component="span">
                     {this.renderContent(type)}
                   </Transition>
                 ))}
@@ -409,6 +400,9 @@ Toolbar.propTypes = {
     }),
   }).isRequired,
 
+  // eslint-disable-next-line react/no-unused-prop-types
+  menu: panel(),
+
   /** @type {Function} Toggle handler. */
   onToggle: PropTypes.func,
 
@@ -422,9 +416,6 @@ Toolbar.propTypes = {
   ),
 
   // eslint-disable-next-line react/no-unused-prop-types
-  menu: panel(),
-
-  // eslint-disable-next-line react/no-unused-prop-types
   settings: panel(),
 
   // eslint-disable-next-line react/no-unused-prop-types
@@ -432,10 +423,10 @@ Toolbar.propTypes = {
 };
 
 Toolbar.defaultProps = {
-  renderAddons: [],
   className: null,
-  onToggle: isToggled => isToggled,
   menu: [],
+  onToggle: (isToggled) => isToggled,
+  renderAddons: [],
   settings: [],
   support: [],
 };

@@ -1,11 +1,10 @@
 /**
  * @file Rollup configuration.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import autoprefixer from 'autoprefixer';
 import { resolve } from 'path';
-import { union } from 'ramda';
 import babel from 'rollup-plugin-babel';
 import postcss from 'rollup-plugin-postcss';
 import nodeResolve from 'rollup-plugin-node-resolve';
@@ -21,7 +20,12 @@ const { cjs, es } = dist;
 
 const createFromDefault = ({
   experimentalCodeSplitting = true,
-  externals = union(Object.keys(dependencies), Object.keys(peerDependencies)),
+  externals = [
+    ...new Set([
+      ...Object.keys(dependencies),
+      ...Object.keys(peerDependencies),
+    ]),
+  ],
   format = 'cjs',
   input = {
     'scss-exports': resolve(src.path, 'globals/scss-exports/index.js'),
@@ -37,9 +41,9 @@ const createFromDefault = ({
   },
 
   // Mark all dependencies and peer dependencies as external, except imported JSON files.
-  external: id =>
+  external: (id) =>
     externals.some(
-      extensionId =>
+      (extensionId) =>
         (id === extensionId || id.startsWith(`${extensionId}/`)) &&
         !id.endsWith('.json')
     ),
@@ -48,7 +52,7 @@ const createFromDefault = ({
       extract: false,
       inject: false,
       minimize: !(process.env.NODE_ENV === 'development'),
-      namedExports: name => name.replace(/-/, '_'),
+      namedExports: (name) => name.replace(/-/, '_'),
       plugins: [autoprefixer],
       use: [
         [

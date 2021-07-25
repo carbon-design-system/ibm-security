@@ -74,7 +74,7 @@ function PanelV2({
     });
   };
 
-  const handleKeyDown = event => {
+  const handleKeyDown = (event) => {
     if (isOpen && event.which === 27) {
       onClose();
     }
@@ -121,8 +121,7 @@ function PanelV2({
             overlayOptions={{ onClick: onClose }}
             rootNode={rootNode}
             stopPropagation={stopPropagation}
-            stopPropagationEvents={stopPropagationEvents}
-          >
+            stopPropagationEvents={stopPropagationEvents}>
             {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
             <section
               className={classnames(namespace, className)}
@@ -130,8 +129,7 @@ function PanelV2({
               aria-label={ariaLabel}
               aria-modal="true"
               onKeyDown={handleKeyDown}
-              tabIndex={-1}
-            >
+              tabIndex={-1}>
               <header ref={headerRef} className={`${namespace}__header`}>
                 <IconButton
                   id={closeButton.id}
@@ -146,23 +144,20 @@ function PanelV2({
                     {typeof title === 'string' ? (
                       <h2
                         id={panelTitleId}
-                        className={`${namespace}__header--title`}
-                      >
+                        className={`${namespace}__header--title`}>
                         {title}
                       </h2>
                     ) : (
                       <div
                         id={panelTitleId}
-                        className={`${namespace}__header--title`}
-                      >
+                        className={`${namespace}__header--title`}>
                         {title}
                       </div>
                     )}
                     {subtitle && (
                       <div
                         id={panelSubtitleId}
-                        className={`${namespace}__header--subtitle`}
-                      >
+                        className={`${namespace}__header--subtitle`}>
                         {subtitle}
                       </div>
                     )}
@@ -178,8 +173,7 @@ function PanelV2({
                   marginBottom: `${bodyMargin.bottom}px`,
                 }}
                 {...hasScrollingContentProps}
-                {...getAriaLabelledBy}
-              >
+                {...getAriaLabelledBy}>
                 {children}
               </section>
 
@@ -197,8 +191,7 @@ function PanelV2({
                           iconDescription={secondaryButton.iconDescription}
                           kind="secondary"
                           onClick={secondaryButton.onClick}
-                          renderIcon={secondaryButton.icon}
-                        >
+                          renderIcon={secondaryButton.icon}>
                           {PANEL_CONTAINER_SECONDARY_BUTTON}
                         </Button>
                       )}
@@ -208,8 +201,7 @@ function PanelV2({
                         disabled={primaryButton.isDisabled}
                         iconDescription={primaryButton.iconDescription}
                         onClick={primaryButton.onClick}
-                        renderIcon={primaryButton.icon}
-                      >
+                        renderIcon={primaryButton.icon}>
                         {PANEL_CONTAINER_PRIMARY_BUTTON}
                       </Button>
                     </>
@@ -248,6 +240,14 @@ const buttonType = PropTypes.shape({
 });
 
 PanelV2.propTypes = {
+  /**
+   * Required props for the accessibility label of the header
+   */
+  ['aria-label']: requiredIfGivenPropIsTruthy(
+    'hasScrollingContent',
+    PropTypes.string
+  ),
+
   /** @type {ReactNode} The children of the panel container. */
   children: PropTypes.node,
 
@@ -270,11 +270,22 @@ PanelV2.propTypes = {
   /** Pass any of the options available in https://github.com/focus-trap/focus-trap#createfocustrapelement-createoptions */
   focusTrapOptions: Portal.propTypes.focusTrapOptions,
 
+  /**
+   * Specify whether the panel contains scrolling content
+   */
+  hasScrollingContent: PropTypes.bool,
+
   /** @type {boolean} The open state. */
   isOpen: PropTypes.bool,
 
   /** @type {object} Labels for Panel and children */
   labels: defaultLabels.propType,
+
+  /**
+   * Handler for all close actions such as clicking on the close button,
+   * pressing the "Escape" key, or clicking outside of the panel area.
+   */
+  onClose: PropTypes.func,
 
   /** @type {object<object>} An object list of primary button props. */
   primaryButton: deprecate(
@@ -305,25 +316,6 @@ PanelV2.propTypes = {
 
   /** @type {ReactNode} Title child elements. */
   title: PropTypes.node,
-
-  /**
-   * Specify whether the panel contains scrolling content
-   */
-  hasScrollingContent: PropTypes.bool,
-
-  /**
-   * Required props for the accessibility label of the header
-   */
-  ['aria-label']: requiredIfGivenPropIsTruthy(
-    'hasScrollingContent',
-    PropTypes.string
-  ),
-
-  /**
-   * Handler for all close actions such as clicking on the close button,
-   * pressing the "Escape" key, or clicking outside of the panel area.
-   */
-  onClose: PropTypes.func,
 };
 
 PanelV2.defaultProps = {

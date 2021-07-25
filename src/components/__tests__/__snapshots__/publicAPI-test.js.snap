@@ -4384,6 +4384,10 @@ Map {
       "className": Object {
         "type": "string",
       },
+      "labelText": Object {
+        "isRequired": true,
+        "type": "node",
+      },
     },
   },
   "FluidForm" => Object {
@@ -6764,8 +6768,10 @@ Map {
       "activeHref": "#",
       "children": null,
       "className": "",
+      "icon": "",
       "id": "",
       "isExpandedOnPageload": false,
+      "navigationItemTitle": "",
       "onItemClick": [Function],
       "onListClick": [Function],
       "tabIndex": 0,
@@ -6781,11 +6787,17 @@ Map {
       "className": Object {
         "type": "string",
       },
+      "icon": Object {
+        "type": "string",
+      },
       "id": Object {
         "type": "string",
       },
       "isExpandedOnPageload": Object {
         "type": "bool",
+      },
+      "navigationItemTitle": Object {
+        "type": "string",
       },
       "onItemClick": Object {
         "type": "func",
@@ -8174,15 +8186,15 @@ Map {
         "args": Array [
           Array [
             Object {
-              "type": "node",
-            },
-            Object {
               "args": Array [
                 Object {
                   "type": "node",
                 },
               ],
               "type": "arrayOf",
+            },
+            Object {
+              "type": "node",
             },
           ],
         ],
@@ -10211,6 +10223,10 @@ Map {
   },
   "SummaryCardContainer" => Object {
     "propTypes": Object {
+      "render": Object {
+        "isRequired": true,
+        "type": "func",
+      },
       "summaryCards": Object {
         "args": Array [
           Object {
@@ -11523,8 +11539,21 @@ Map {
       "deleteButton": Object {
         "args": Array [
           Object {
+            "hide": Object {
+              "type": "bool",
+            },
             "icon": Object {
-              "type": "string",
+              "args": Array [
+                Array [
+                  Object {
+                    "type": "func",
+                  },
+                  Object {
+                    "type": "object",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
             },
             "isDisabled": Object {
               "type": "bool",
@@ -11714,9 +11743,6 @@ Map {
           Object {
             "isDisabled": Object {
               "type": "bool",
-            },
-            "label": Object {
-              "type": "string",
             },
             "onClick": Object {
               "type": "func",
@@ -13654,6 +13680,9 @@ Map {
           },
         ],
         "type": "objectOf",
+      },
+      "loadingMessage": Object {
+        "type": "string",
       },
       "navLabel": Object {
         "type": "string",

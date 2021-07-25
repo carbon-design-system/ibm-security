@@ -1,6 +1,6 @@
 /**
  * @file Important content area (ICA).
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019, 2021
  */
 
 import classnames from 'classnames';
@@ -29,7 +29,7 @@ export const Locales = Object.keys(numeral.locales);
  * @param {number} value The value to evaluate.
  * @returns {string} Format string for numeral.
  */
-const getFormat = value => (Math.round(value) > 999 ? '0.0a' : '0a');
+const getFormat = (value) => (Math.round(value) > 999 ? '0.0a' : '0a');
 
 /**
  * Ensure that the value is formatted correctly based on whether it should be truncated or not.
@@ -77,7 +77,7 @@ const ICA = ({
   value,
   ...other
 }) => {
-  const isSize = sizeValue => size === sizeValue;
+  const isSize = (sizeValue) => size === sizeValue;
   const isLarge = isSize('lg');
   const isXLarge = isSize('xl');
 
@@ -132,28 +132,24 @@ const ICA = ({
 
 ICA.propTypes = {
   /**
-   * Text label for ICA.
-   * @type string
-   */
-  label: PropTypes.string.isRequired,
-
-  /**
-   * The main ICA value to display
-   * @type number
-   */
-  value: PropTypes.number,
-
-  /**
-   * Total value that the main ICA value is a subset of.
-   * @type number
-   */
-  total: PropTypes.number,
-
-  /**
    * Optional class name.
    * @type number
    */
   className: PropTypes.string,
+
+  /**
+   * Display the `total` even when the `value` is equal to
+   * the `total` when `forceShowTotal` prop is true on the
+   * condition that the `total` is greater than 0.
+   * @type bool
+   */
+  forceShowTotal: PropTypes.bool,
+
+  /**
+   * Text label for ICA.
+   * @type string
+   */
+  label: PropTypes.string.isRequired,
 
   /**
    * Locale value to determine approach to formatting numbers.
@@ -167,22 +163,26 @@ ICA.propTypes = {
    */
   percentage: PropTypes.bool,
 
+  /** The size of the ICA. */
+  size: PropTypes.oneOf(['default', 'lg', 'xl']),
+
   /**
-   * Display the `total` even when the `value` is equal to
-   * the `total` when `forceShowTotal` prop is true on the
-   * condition that the `total` is greater than 0.
-   * @type bool
+   * Total value that the main ICA value is a subset of.
+   * @type number
    */
-  forceShowTotal: PropTypes.bool,
+  total: PropTypes.number,
+
+  /** Display trending icon. */
+  trending: PropTypes.bool,
 
   /** Specify whether or not the values should be truncated. */
   truncate: PropTypes.bool,
 
-  /** The size of the ICA. */
-  size: PropTypes.oneOf(['default', 'lg', 'xl']),
-
-  /** Display trending icon. */
-  trending: PropTypes.bool,
+  /**
+   * The main ICA value to display
+   * @type number
+   */
+  value: PropTypes.number,
 };
 
 ICA.defaultProps = {

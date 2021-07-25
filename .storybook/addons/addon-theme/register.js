@@ -39,7 +39,7 @@ class Theme extends Component {
       <Form>
         <Field label={title}>
           <Select onChange={this.onChange} value={this.state.value}>
-            {Object.keys(themes).map(theme => (
+            {Object.keys(themes).map((theme) => (
               <option key={theme} value={themes[theme]}>
                 {theme}
               </option>
@@ -52,7 +52,7 @@ class Theme extends Component {
 
 const panel = `${namespace}/panel`;
 
-register(namespace, api =>
+register(namespace, (api) =>
   addPanel(panel, {
     title,
     render: ({ active }) => (

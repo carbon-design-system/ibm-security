@@ -37,12 +37,10 @@ const NonEntitledSection = ({
           ...style,
         }
       }
-      {...other}
-    >
+      {...other}>
       <div className={`${namespace}__content-wrapper ${carbonPrefix}--row`}>
         <div
-          className={`${namespace}__content ${carbonPrefix}--col-lg-5 ${carbonPrefix}--col-md-4`}
-        >
+          className={`${namespace}__content ${carbonPrefix}--col-lg-5 ${carbonPrefix}--col-md-4`}>
           <h2 className={`${namespace}__title`}>{title}</h2>
           <h3 className={`${namespace}__sub-title`}>{subTitle}</h3>
           {description && (
@@ -85,12 +83,6 @@ NonEntitledSection.propTypes = {
   /** @type {string} The class name of the section. */
   className: PropTypes.string,
 
-  /** @type {string} Section heading. */
-  title: PropTypes.string.isRequired,
-
-  /** @type {string} Section description heading. */
-  subTitle: PropTypes.string.isRequired,
-
   /** @type {string} Section description. */
   description: PropTypes.string,
 
@@ -110,6 +102,12 @@ NonEntitledSection.propTypes = {
       icon: PropTypes.string,
     })
   ),
+
+  /** @type {string} Section description heading. */
+  subTitle: PropTypes.string.isRequired,
+
+  /** @type {string} Section heading. */
+  title: PropTypes.string.isRequired,
 };
 
 export default NonEntitledSection;

@@ -67,8 +67,7 @@ disableCenteredStories(
               <SideNav
                 aria-label="Side navigation"
                 expanded={isSideNavExpanded}
-                isPersistent={false}
-              >
+                isPersistent={false}>
                 <SideNavItems>
                   <HeaderSideNavItems>
                     <HeaderMenuItem href="#">Link 1</HeaderMenuItem>

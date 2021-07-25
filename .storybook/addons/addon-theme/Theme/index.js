@@ -14,7 +14,7 @@ export default ({ children, theme }) => {
     const { classList } = document.querySelector('html');
 
     classList.remove(
-      [...classList].find(className => className.includes(namespace))
+      [...classList].find((className) => className.includes(namespace))
     );
 
     classList.add(`${namespace}--${theme}`);
