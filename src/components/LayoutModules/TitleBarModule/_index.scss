@@ -75,5 +75,9 @@
 
       order: 1;
     }
+    &__items {
+      align-items: flex-end;
+      margin-bottom: $carbon--spacing-01 + $carbon--spacing-02;
+    }
   }
 }

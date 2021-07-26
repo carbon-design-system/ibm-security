@@ -11642,6 +11642,11 @@ li.bx--accordion__item--disabled:last-of-type {
   order: 1;
 }
 
+.security--layout-module--title-bar--subsection .security--layout-module--title-bar__items {
+  align-items: flex-end;
+  margin-bottom: 0.375rem;
+}
+
 .security--nav {
   position: relative;
 }
