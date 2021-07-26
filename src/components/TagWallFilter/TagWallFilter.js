@@ -1,6 +1,6 @@
 /**
  * @file Tag wall filter.
- * @copyright IBM Security 2019 - 2021
+ * @copyright IBM Security 2019, 2021
  */
 
 import PropTypes from 'prop-types';
@@ -32,33 +32,38 @@ function withItemReducer(
     available: { allItems: a, items: available },
     selected: { items: selected },
   },
-  { item, type }
+  { item, type } = {}
 ) {
-  const allItems = a || [...available, ...selected, item];
+  const allItems = a || [...available, ...selected];
   const filterItems = (items) => items.filter(({ id }) => id !== item.id);
+
+  function setState({ available, selected }) {
+    return {
+      available: { allItems, items: available },
+      selected: { items: selected },
+    };
+  }
 
   switch (type) {
     case 'SELECT_ITEM':
-      return {
-        available: { allItems, items: filterItems(available) },
-        selected: {
-          items: defaultSortItems(
-            [...selected, { ...item, isSelected: true }],
-            {
-              itemToString,
-            }
-          ),
-        },
-      };
+      return setState({
+        available: filterItems(available),
+        selected: defaultSortItems(
+          [...selected, { ...item, isSelected: true }],
+          {
+            itemToString,
+          }
+        ),
+      });
 
     case 'UNSELECT_ITEM':
-      return {
-        available: { allItems, items: [...available, item] },
-        selected: { items: filterItems(selected) },
-      };
+      return setState({
+        available: [...available, item],
+        selected: filterItems(selected),
+      });
 
     default:
-      break;
+      return setState({ available, selected });
   }
 }
 

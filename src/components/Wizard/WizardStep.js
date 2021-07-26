@@ -1,6 +1,6 @@
 /**
  * @file WizardStep.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019, 2021
  */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
@@ -43,7 +43,7 @@ WizardStep.propTypes = {
 };
 
 WizardStep.defaultProps = {
-  // eslint-disable-next-line no-unused-vars
+  // eslint-disable-next-line no-unused-vars, react/display-name
   renderMain: (state, setState) => <div />,
   // eslint-disable-next-line no-unused-vars
   validate: (state) => true,

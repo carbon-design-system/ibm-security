@@ -71,10 +71,6 @@ exports[`TagWallFilter calls \`onChange\` when items are selected and unselected
               "id": "1",
               "label": "TagWallFilter 1",
             },
-            Object {
-              "id": "0",
-              "label": "TagWallFilter 0",
-            },
           ],
           "items": Array [],
         },
@@ -121,10 +117,6 @@ exports[`TagWallFilter calls \`onChange\` when items are selected and unselected
             Object {
               "id": "1",
               "label": "TagWallFilter 1",
-            },
-            Object {
-              "id": "0",
-              "label": "TagWallFilter 0",
             },
           ],
           "items": Array [
@@ -373,6 +365,7 @@ exports[`TagWallFilter renders 1`] = `
     <button
       aria-label="Close"
       class="security--button--icon security--tearsheet--small__button--close security--button--icon--lg"
+      type="button"
     >
       <svg
         aria-hidden="true"

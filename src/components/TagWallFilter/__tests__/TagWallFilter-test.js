@@ -1,6 +1,6 @@
 /**
  * @file Tag wall filter test.
- * @copyright IBM Security 2019 - 2021
+ * @copyright IBM Security 2019, 2021
  */
 
 import { render, screen } from '@testing-library/react';
@@ -28,7 +28,7 @@ describe(name, () => {
 
     beforeEach(() => {
       state = {
-        available: { allItems: [], items: [] },
+        available: { items: [] },
         selected: { items: [] },
       };
     });
@@ -67,19 +67,26 @@ describe(name, () => {
     });
 
     test('infers all items', () => {
-      dispatch('SELECT_ITEM');
+      const available = getItem();
+      const selected = getItem('1');
 
       const {
         available: {
-          allItems: { length: allItems },
-          items: { length: available },
+          allItems,
+          items: { length: availableItems },
         },
         selected: {
-          items: { length: selected },
+          items: { length: selectedItems },
         },
-      } = state;
+      } = withItemReducer({
+        available: { items: [available] },
+        selected: { items: [selected] },
+      });
 
-      expect(allItems).toEqual(available + selected);
+      expect(allItems.length).toEqual(availableItems + selectedItems);
+
+      expect(allItems).toContainEqual(available);
+      expect(allItems).toContainEqual(selected);
     });
   });
 
