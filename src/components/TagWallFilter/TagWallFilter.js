@@ -141,16 +141,16 @@ TagWallFilter.propTypes = {
   /** All possible items. If not set, it is derived from the joint set of `selectedItems` and `availableItems` */
   allItems: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.isRequired,
-      label: PropTypes.isRequired,
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
     })
   ),
 
   /** Available items in the list to select from */
   availableItems: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.isRequired,
-      label: PropTypes.isRequired,
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
     })
   ).isRequired,
 

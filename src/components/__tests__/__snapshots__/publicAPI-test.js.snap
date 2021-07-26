@@ -11326,8 +11326,14 @@ Map {
           Object {
             "args": Array [
               Object {
-                "id": undefined,
-                "label": undefined,
+                "id": Object {
+                  "isRequired": true,
+                  "type": "string",
+                },
+                "label": Object {
+                  "isRequired": true,
+                  "type": "string",
+                },
               },
             ],
             "type": "shape",
@@ -11340,8 +11346,14 @@ Map {
           Object {
             "args": Array [
               Object {
-                "id": undefined,
-                "label": undefined,
+                "id": Object {
+                  "isRequired": true,
+                  "type": "string",
+                },
+                "label": Object {
+                  "isRequired": true,
+                  "type": "string",
+                },
               },
             ],
             "type": "shape",
