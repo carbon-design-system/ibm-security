@@ -159,7 +159,7 @@
     "shelljs": "^0.8.4",
     "style-loader": "^0.23.1",
     "stylelint": "^13.13.1",
-    "stylelint-config-carbon": "^1.6.0",
+    "stylelint-config-carbon": "^1.7.0",
     "stylelint-plugin-carbon-tokens": "^0.11.1",
     "webpack-merge": "^5.1.4",
     "yarn": "^1.16.0"
