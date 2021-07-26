@@ -129,7 +129,7 @@
     "enzyme-adapter-react-16": "^1.15.6",
     "enzyme-to-json": "^3.6.2",
     "eslint": "^7.29.0",
-    "eslint-config-carbon": "^2.5.0",
+    "eslint-config-carbon": "^2.7.0",
     "faker": "^4.1.0",
     "fast-sass-loader": "^2.0.0",
     "fs-extra": "^7.0.1",
