@@ -37,6 +37,7 @@ exports[`HeaderNotification Rendering renders correctly 1`] = `
       aria-label="Clear"
       className="security--header__notification__button"
       onClick={[MockFunction]}
+      type="button"
     >
       <Icon
         className=""
