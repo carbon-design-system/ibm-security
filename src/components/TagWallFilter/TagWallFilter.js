@@ -194,8 +194,8 @@ TagWallFilter.propTypes = {
   /** Initially selected items */
   selectedItems: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.isRequired,
-      label: PropTypes.isRequired,
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
     })
   ),
 
