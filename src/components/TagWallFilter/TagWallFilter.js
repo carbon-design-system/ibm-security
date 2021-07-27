@@ -1,5 +1,5 @@
 /**
- * @file Tag wall filter.
+ * @file `TagWallFilter`
  * @copyright IBM Security 2019, 2021
  */
 
@@ -11,23 +11,22 @@ import { getComponentNamespace } from '../../globals/namespace/index';
 import FilterRaw from './Filter';
 import TagWall from '../TagWall';
 
-import TearsheetSmall, {
-  buttonType,
-} from '../Tearsheet/TearsheetSmall/TearsheetSmall';
+import { TearsheetSmall } from '../Tearsheet';
+import { buttonType } from '../Tearsheet/TearsheetSmall/TearsheetSmall';
 
 import { defaultSortItems } from './tools/sorting';
 
+const namespace = getComponentNamespace('tag-wall-filter');
+
 const defaultTo = (value, defaultVal) => (value == null ? defaultVal : value);
+
+export const noop = () => {};
 
 const itemToString = (item) =>
   defaultTo(item, { text: '', label: '' }).label ||
   defaultTo(item, { text: '', label: '' }).text;
 
-const namespace = getComponentNamespace('tag-wall-filter');
-
-const noop = () => {};
-
-function withItemReducer(
+export function withItemReducer(
   {
     available: { allItems: a, items: available },
     selected: { items: selected },
@@ -45,6 +44,12 @@ function withItemReducer(
   }
 
   switch (type) {
+    case 'CLEAR_SELECTED_ITEMS':
+      return setState({
+        available: allItems,
+        selected: [],
+      });
+
     case 'SELECT_ITEM':
       return setState({
         available: filterItems(available),
@@ -212,12 +217,10 @@ TagWallFilter.defaultProps = {
   onChange: noop,
   inputFieldPlaceholder: '',
   tagWallLabel: null,
-  filterFieldClearAllTooltip: 'Clear all selected items',
   filterFieldClearSelectionTooltip: 'Clear selected item',
+  filterFieldClearAllTooltip: 'Clear all selected items',
 };
 
 TagWallFilter.displayName = 'TagWallFilter';
 
 export default TagWallFilter;
-
-export { noop, withItemReducer };

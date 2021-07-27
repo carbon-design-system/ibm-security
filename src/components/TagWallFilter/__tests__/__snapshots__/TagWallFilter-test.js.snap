@@ -1,5 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`TagWallFilter \`withItemReducer\` \`CLEAR_SELECTED_ITEMS\` clears selected items 1`] = `
+Object {
+  "available": Object {
+    "allItems": Array [],
+    "items": Array [],
+  },
+  "selected": Object {
+    "items": Array [],
+  },
+}
+`;
+
 exports[`TagWallFilter \`withItemReducer\` \`SELECT_ITEM\` selects an item 1`] = `
 Object {
   "available": Object {

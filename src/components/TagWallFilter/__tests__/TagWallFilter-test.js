@@ -14,7 +14,7 @@ const { fn } = jest;
 const { name } = TagWallFilter;
 
 describe(name, () => {
-  const getItem = (id = '0') => ({
+  const getItem = (id) => ({
     id,
     label: `${name} ${id}`,
   });
@@ -35,7 +35,7 @@ describe(name, () => {
 
     function dispatch(type) {
       state = withItemReducer(state, {
-        item: getItem(),
+        item: getItem('0'),
         type,
       });
     }
@@ -43,7 +43,7 @@ describe(name, () => {
     test('`SELECT_ITEM` selects an item', () => {
       dispatch('SELECT_ITEM');
 
-      expect(state.selected.items.length).toEqual(1);
+      expect(state.selected.items.length).toBe(1);
       expect(state).toMatchSnapshot();
     });
 
@@ -60,14 +60,31 @@ describe(name, () => {
         },
       } = state;
 
-      expect(available).toEqual(1);
-      expect(selected).toEqual(0);
+      expect(available).toBe(1);
+      expect(selected).toBe(0);
+
+      expect(state).toMatchSnapshot();
+    });
+
+    test('`CLEAR_SELECTED_ITEMS` clears selected items', () => {
+      function length() {
+        return state.selected.items.length;
+      }
+
+      dispatch('SELECT_ITEM');
+      dispatch('SELECT_ITEM');
+
+      expect(length()).toBe(2);
+
+      dispatch('CLEAR_SELECTED_ITEMS');
+
+      expect(length()).toBe(0);
 
       expect(state).toMatchSnapshot();
     });
 
     test('infers all items', () => {
-      const available = getItem();
+      const available = getItem('0');
       const selected = getItem('1');
 
       const {
@@ -83,7 +100,7 @@ describe(name, () => {
         selected: { items: [selected] },
       });
 
-      expect(allItems.length).toEqual(availableItems + selectedItems);
+      expect(allItems.length).toBe(availableItems + selectedItems);
 
       expect(allItems).toContainEqual(available);
       expect(allItems).toContainEqual(selected);
@@ -95,7 +112,7 @@ describe(name, () => {
 
     return (
       <TagWallFilter
-        availableItems={[getItem()]}
+        availableItems={[getItem('0')]}
         closeButton={button()}
         heading={name}
         primaryButton={button()}
@@ -113,7 +130,7 @@ describe(name, () => {
   });
 
   test('calls `onChange` when items are selected and unselected', () => {
-    const availableItem = getItem();
+    const availableItem = getItem('0');
     const selectedItem = getItem('1');
 
     const onChangeMock = fn();
