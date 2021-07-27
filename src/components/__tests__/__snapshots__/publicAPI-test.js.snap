@@ -6882,6 +6882,9 @@ Map {
         ],
         "type": "arrayOf",
       },
+      "style": Object {
+        "type": "object",
+      },
       "subTitle": Object {
         "isRequired": true,
         "type": "string",
@@ -10298,6 +10301,10 @@ Map {
   },
   "SummaryCardContainer" => Object {
     "propTypes": Object {
+      "render": Object {
+        "isRequired": true,
+        "type": "func",
+      },
       "summaryCards": Object {
         "args": Array [
           Object {
@@ -11610,8 +11617,21 @@ Map {
       "deleteButton": Object {
         "args": Array [
           Object {
+            "hide": Object {
+              "type": "bool",
+            },
             "icon": Object {
-              "type": "string",
+              "args": Array [
+                Array [
+                  Object {
+                    "type": "func",
+                  },
+                  Object {
+                    "type": "object",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
             },
             "isDisabled": Object {
               "type": "bool",
@@ -11801,9 +11821,6 @@ Map {
           Object {
             "isDisabled": Object {
               "type": "bool",
-            },
-            "label": Object {
-              "type": "string",
             },
             "onClick": Object {
               "type": "func",
