@@ -13176,6 +13176,10 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-bottom: 0;
 }
 
+.bx--structured-list-th:first-of-type {
+  padding-left: 0 !important;
+}
+
 .security--layout-module--description {
   padding-bottom: 2rem;
 }
