@@ -14,6 +14,7 @@ exports[`Toolbar Rendering renders correctly 1`] = `
           aria-expanded="false"
           aria-label="Toggle menu"
           class="security--button--icon security--toolbar__button security--button--icon--tooltip security--button--icon--tooltip--right"
+          type="button"
         >
           <svg
             aria-hidden="true"
@@ -55,6 +56,7 @@ exports[`Toolbar Rendering renders the HTML of the node's subtree 1`] = `
           aria-expanded="false"
           aria-label="Toggle menu"
           class="security--button--icon security--toolbar__button security--button--icon--tooltip security--button--icon--tooltip--right"
+          type="button"
         >
           <svg
             aria-hidden="true"
@@ -290,6 +292,7 @@ exports[`Toolbar With renderAddons should render the toolbar with addon icon 2`]
           aria-expanded="false"
           aria-label="Toggle menu"
           class="security--button--icon security--toolbar__button security--button--icon--tooltip security--button--icon--tooltip--right"
+          type="button"
         >
           <svg
             aria-hidden="true"
@@ -313,6 +316,7 @@ exports[`Toolbar With renderAddons should render the toolbar with addon icon 2`]
         <button
           aria-label="Example addon"
           class="security--button--icon security--toolbar__button"
+          type="button"
         >
           <svg
             aria-hidden="true"
@@ -347,6 +351,7 @@ exports[`Toolbar With renderAddons should render the toolbar with addon icon 3`]
 <button
   aria-label="Example addon"
   class="security--button--icon security--toolbar__button"
+  type="button"
 >
   <svg
     aria-hidden="true"
