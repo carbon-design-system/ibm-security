@@ -19,11 +19,13 @@ describe(name, () => {
     label: `${name} ${id}`,
   });
 
-  test('`noop` does nothing', () => {
-    expect(noop()).toBeUndefined();
+  describe('noop', () => {
+    test('does nothing', () => {
+      expect(noop()).toBeUndefined();
+    });
   });
 
-  describe('`withItemReducer`', () => {
+  describe('withItemReducer', () => {
     let state;
 
     beforeEach(() => {
@@ -40,47 +42,53 @@ describe(name, () => {
       });
     }
 
-    test('`SELECT_ITEM` selects an item', () => {
-      dispatch('SELECT_ITEM');
+    describe('SELECT_ITEM', () => {
+      test('selects an item', () => {
+        dispatch('SELECT_ITEM');
 
-      expect(state.selected.items.length).toBe(1);
-      expect(state).toMatchSnapshot();
+        expect(state.selected.items.length).toBe(1);
+        expect(state).toMatchSnapshot();
+      });
     });
 
-    test('`UNSELECT_ITEM` unselects an item', () => {
-      dispatch('SELECT_ITEM');
-      dispatch('UNSELECT_ITEM');
+    describe('UNSELECT_ITEM', () => {
+      test('unselects an item', () => {
+        dispatch('SELECT_ITEM');
+        dispatch('UNSELECT_ITEM');
 
-      const {
-        available: {
-          items: { length: available },
-        },
-        selected: {
-          items: { length: selected },
-        },
-      } = state;
+        const {
+          available: {
+            items: { length: available },
+          },
+          selected: {
+            items: { length: selected },
+          },
+        } = state;
 
-      expect(available).toBe(1);
-      expect(selected).toBe(0);
+        expect(available).toBe(1);
+        expect(selected).toBe(0);
 
-      expect(state).toMatchSnapshot();
+        expect(state).toMatchSnapshot();
+      });
     });
 
-    test('`CLEAR_SELECTED_ITEMS` clears selected items', () => {
-      function length() {
-        return state.selected.items.length;
-      }
+    describe('CLEAR_SELECTED_ITEMS', () => {
+      test('clears selected items', () => {
+        function length() {
+          return state.selected.items.length;
+        }
 
-      dispatch('SELECT_ITEM');
-      dispatch('SELECT_ITEM');
+        dispatch('SELECT_ITEM');
+        dispatch('SELECT_ITEM');
 
-      expect(length()).toBe(2);
+        expect(length()).toBe(2);
 
-      dispatch('CLEAR_SELECTED_ITEMS');
+        dispatch('CLEAR_SELECTED_ITEMS');
 
-      expect(length()).toBe(0);
+        expect(length()).toBe(0);
 
-      expect(state).toMatchSnapshot();
+        expect(state).toMatchSnapshot();
+      });
     });
 
     test('infers all items', () => {

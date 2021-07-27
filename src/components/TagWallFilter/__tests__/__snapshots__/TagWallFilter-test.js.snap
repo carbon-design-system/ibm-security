@@ -1,52 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TagWallFilter \`withItemReducer\` \`CLEAR_SELECTED_ITEMS\` clears selected items 1`] = `
-Object {
-  "available": Object {
-    "allItems": Array [],
-    "items": Array [],
-  },
-  "selected": Object {
-    "items": Array [],
-  },
-}
-`;
-
-exports[`TagWallFilter \`withItemReducer\` \`SELECT_ITEM\` selects an item 1`] = `
-Object {
-  "available": Object {
-    "allItems": Array [],
-    "items": Array [],
-  },
-  "selected": Object {
-    "items": Array [
-      Object {
-        "id": "0",
-        "isSelected": true,
-        "label": "TagWallFilter 0",
-      },
-    ],
-  },
-}
-`;
-
-exports[`TagWallFilter \`withItemReducer\` \`UNSELECT_ITEM\` unselects an item 1`] = `
-Object {
-  "available": Object {
-    "allItems": Array [],
-    "items": Array [
-      Object {
-        "id": "0",
-        "label": "TagWallFilter 0",
-      },
-    ],
-  },
-  "selected": Object {
-    "items": Array [],
-  },
-}
-`;
-
 exports[`TagWallFilter calls \`onChange\` when items are selected and unselected 1`] = `
 [MockFunction] {
   "calls": Array [
@@ -402,4 +355,51 @@ exports[`TagWallFilter renders 1`] = `
     tabindex="-1"
   />
 </body>
+`;
+
+exports[`TagWallFilter withItemReducer CLEAR_SELECTED_ITEMS clears selected items 1`] = `
+Object {
+  "available": Object {
+    "allItems": Array [],
+    "items": Array [],
+  },
+  "selected": Object {
+    "items": Array [],
+  },
+}
+`;
+
+exports[`TagWallFilter withItemReducer SELECT_ITEM selects an item 1`] = `
+Object {
+  "available": Object {
+    "allItems": Array [],
+    "items": Array [],
+  },
+  "selected": Object {
+    "items": Array [
+      Object {
+        "id": "0",
+        "isSelected": true,
+        "label": "TagWallFilter 0",
+      },
+    ],
+  },
+}
+`;
+
+exports[`TagWallFilter withItemReducer UNSELECT_ITEM unselects an item 1`] = `
+Object {
+  "available": Object {
+    "allItems": Array [],
+    "items": Array [
+      Object {
+        "id": "0",
+        "label": "TagWallFilter 0",
+      },
+    ],
+  },
+  "selected": Object {
+    "items": Array [],
+  },
+}
 `;
