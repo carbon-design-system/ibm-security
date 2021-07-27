@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
  * @param {object.<string, *>} props Panel controller props.
  * @returns {PanelController} Panel controller instance.
  */
-const PanelController = props => (props.active ? props.children : null);
+const PanelController = (props) => (props.active ? props.children : null);
 
 PanelController.defaultProps = {
   active: false,

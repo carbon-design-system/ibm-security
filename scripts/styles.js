@@ -13,7 +13,7 @@ const postcssScss = require('postcss-scss');
 
 const srcIndex = path.resolve(__dirname, '../src', 'index.scss');
 const distDir = path.resolve(__dirname, '../css');
-const distIndex = dir => path.resolve(dir, 'index.css');
+const distIndex = (dir) => path.resolve(dir, 'index.css');
 
 readFile(srcIndex, async (err, css) => {
   if (err) {

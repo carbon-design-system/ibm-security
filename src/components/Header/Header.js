@@ -1,6 +1,6 @@
 /**
  * @file Header.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019, 2021
  */
 
 import { Close20, Notification20, Settings20 } from '@carbon/icons-react';
@@ -36,7 +36,7 @@ import { defaultProps, namespace, propTypes } from './constants';
 
 const headerButtonNamespace = `${namespace}__button`;
 
-const getPopoverLabelId = string => `${namespace}__popover__label--${string}`;
+const getPopoverLabelId = (string) => `${namespace}__popover__label--${string}`;
 
 /**
  * Renders the popover.
@@ -50,10 +50,6 @@ const renderPopover = (children, state) => (
   </Transition>
 );
 
-/**
- * Header class.
- * @className
- */
 export default class Header extends Component {
   static propTypes = {
     ...propTypes,
@@ -119,7 +115,7 @@ export default class Header extends Component {
       return (
         (userAccounts.accounts &&
           userAccounts.accounts.filter(
-            account => account.id !== userAccounts.profile.account.id
+            (account) => account.id !== userAccounts.profile.account.id
           )) ||
         []
       );
@@ -142,12 +138,12 @@ export default class Header extends Component {
    */
   clearAllNotifications() {
     if (!this.props.clearAllNotifications) {
-      this.props.notifications.forEach(notification =>
+      this.props.notifications.forEach((notification) =>
         this.props.onNotificationClear(notification.id)
       );
     } else {
       this.props.clearAllNotifications(
-        this.props.notifications.map(notification => notification.id)
+        this.props.notifications.map((notification) => notification.id)
       );
     }
   }
@@ -204,7 +200,7 @@ export default class Header extends Component {
 
     return renderPopover(
       <div
-        ref={userProfile => {
+        ref={(userProfile) => {
           this.userProfile = userProfile;
         }}
         className={`${namespace}__popover--focus`}
@@ -212,11 +208,9 @@ export default class Header extends Component {
         onBlur={() => this.closePopover(this.userProfile)}
         role="tabpanel"
         tabIndex="0"
-        value="profile"
-      >
+        value="profile">
         <HeaderPopoverHeader
-          className={`${namespace}__popover__profile__header`}
-        >
+          className={`${namespace}__popover__profile__header`}>
           <Fragment>
             <ProfileImage
               className={`${namespace}__popover__profile__header__icon`}
@@ -226,8 +220,7 @@ export default class Header extends Component {
             <div>
               <span
                 id={popoverLabelId}
-                className={`${namespace}__popover__profile__header__title`}
-              >
+                className={`${namespace}__popover__profile__header__title`}>
                 {profile.name.first_name} {profile.name.surname}
               </span>
               <span className={`${namespace}__popover__profile__header__email`}>
@@ -244,30 +237,27 @@ export default class Header extends Component {
         {hasAccount && (
           <section
             className={classnames(`${namespace}__popover__profile__body`, {
-              [`${namespace}__popover__profile__body--account`]: !hasAccountList,
-            })}
-          >
+              [`${namespace}__popover__profile__body--account`]:
+                !hasAccountList,
+            })}>
             {!hasAccountList ? (
               accountElement
             ) : (
               <Accordion
-                className={`${namespace}__popover__profile__body__accordion`}
-              >
+                className={`${namespace}__popover__profile__body__accordion`}>
                 <AccordionItem
                   className={`${namespace}__popover__profile__body__accordion__item`}
-                  title={accountElement}
-                >
+                  title={accountElement}>
                   <ul className={`${namespace}__popover__profile__body__list`}>
                     {accountList.map(({ id, name }) => (
                       <li
                         key={id}
-                        className={`${namespace}__popover__profile__body__account`}
-                      >
+                        className={`${namespace}__popover__profile__body__account`}>
                         <button
                           value={id}
                           onClick={onAccountClick}
                           className={`${namespace}__popover__profile__body__account__button`}
-                        >
+                          type="button">
                           {name}
                         </button>
                       </li>
@@ -282,15 +272,13 @@ export default class Header extends Component {
           {this.props.showEditProfile && (
             <HeaderPopoverLinkSecondary
               className={`${namespace}__popover__profile__footer__edit`}
-              href={links.edit_profile}
-            >
+              href={links.edit_profile}>
               {labels.profile.edit_profile}
             </HeaderPopoverLinkSecondary>
           )}
           <HeaderPopoverLinkSecondary
             className={`${namespace}__popover__profile__footer__logout`}
-            href={links.sign_out}
-          >
+            href={links.sign_out}>
             {labels.profile.sign_out}
           </HeaderPopoverLinkSecondary>
         </section>
@@ -318,7 +306,7 @@ export default class Header extends Component {
 
     return renderPopover(
       <div
-        ref={notifications => {
+        ref={(notifications) => {
           this.notifications = notifications;
         }}
         className={`${namespace}__popover--focus`}
@@ -326,8 +314,7 @@ export default class Header extends Component {
         onBlur={() => this.closePopover(this.notifications)}
         role="tabpanel"
         tabIndex="0"
-        value="notifications"
-      >
+        value="notifications">
         <HeaderPopoverHeader
           id={popoverLabelId}
           title={labels.notifications.title}
@@ -341,7 +328,7 @@ export default class Header extends Component {
               className={`${namespace}__popover__button`}
               aria-label={labels.notifications.clear_all}
               onClick={() => this.clearAllNotifications()}
-            >
+              type="button">
               <Icon renderIcon={Close20} />
             </button>
           </div>
@@ -350,8 +337,7 @@ export default class Header extends Component {
           <ul className={`${namespace}__popover__list`}>
             <Transition
               className={`${namespace}__notification`}
-              component="span"
-            >
+              component="span">
               {notifications
                 .sort(
                   (a, b) =>
@@ -426,7 +412,7 @@ export default class Header extends Component {
     const notificationsButtonClasses = classnames(headerButtonNamespace, {
       [buttonActiveClass]: notifications,
       [`${headerButtonNamespace}--notifications`]:
-        this.props.notifications.filter(n => !n.acknowledged).length > 0,
+        this.props.notifications.filter((n) => !n.acknowledged).length > 0,
     });
 
     const profileButtonClasses = classnames(
@@ -444,8 +430,7 @@ export default class Header extends Component {
           <HeaderListItem
             className={headerListItemClass}
             hasPopup={isUserActive}
-            isExpanded={isActive.notifications}
-          >
+            isExpanded={isActive.notifications}>
             <Fragment>
               <IconButton
                 aria-label={labels.notifications.button}
@@ -453,8 +438,7 @@ export default class Header extends Component {
                 onClick={() => this.toggle('notifications')}
                 renderIcon={Notification20}
                 state={notifications}
-                tooltip={false}
-              >
+                tooltip={false}>
                 <Icon name="notification" />
               </IconButton>
               {this.renderNotifications()}
@@ -465,14 +449,13 @@ export default class Header extends Component {
         <HeaderListItem
           className={headerListItemClass}
           hasPopup={isUserActive}
-          isExpanded={isActive.profile}
-        >
+          isExpanded={isActive.profile}>
           <Fragment>
             <button
               aria-label={labels.profile.button}
               className={profileButtonClasses}
               onClick={() => this.toggle('profile')}
-            >
+              type="button">
               <ProfileImage profile={profile} />
             </button>
 
@@ -495,7 +478,7 @@ export default class Header extends Component {
     const { isUserActive } = this.state;
     const classes = classnames(`${namespace}__container`, className);
 
-    const domainElement = title => (
+    const domainElement = (title) => (
       <span className={`${namespace}__link__title--domain`}>{title}</span>
     );
 
@@ -516,9 +499,9 @@ export default class Header extends Component {
             )}
           </Link>
           <ul
-            className={`${namespace}__group  ${isUserActive &&
-              `${namespace}__group--active`}`}
-          >
+            className={`${namespace}__group  ${
+              isUserActive && `${namespace}__group--active`
+            }`}>
             {this.renderIsUserActive()}
           </ul>
         </header>

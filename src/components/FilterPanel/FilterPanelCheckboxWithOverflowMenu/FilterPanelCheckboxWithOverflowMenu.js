@@ -1,6 +1,6 @@
 /**
  * @file Filter panel checkbox with overflow menu component.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020, 2021
  */
 
 import classnames from 'classnames';
@@ -29,7 +29,7 @@ const FilterPanelCheckboxWithOverflowMenu = ({
   const [showOverflowButton, setShowOverflowButton] = useState(false);
   const [overflowIsOpen, setOverflowIsOpen] = useState(false);
 
-  const hideOverflowButton = activeElement =>
+  const hideOverflowButton = (activeElement) =>
     !overflowIsOpen &&
     !containerRef.current.contains(activeElement) &&
     setShowOverflowButton(false);
@@ -46,8 +46,7 @@ const FilterPanelCheckboxWithOverflowMenu = ({
       onMouseOver={() => setShowOverflowButton(true)}
       onMouseLeave={() => hideOverflowButton(document.activeElement)}
       ref={containerRef}
-      data-floating-menu-container
-    >
+      data-floating-menu-container>
       <FilterPanelCheckbox
         wrapperClassName={`${namespace}__wrapper`}
         {...other}
@@ -63,8 +62,7 @@ const FilterPanelCheckboxWithOverflowMenu = ({
           onOpen={() => setOverflowIsOpen(true)}
           onClose={() => setOverflowIsOpen(false)}
           flipped
-          selectorPrimaryFocus={selectorPrimaryFocus}
-        >
+          selectorPrimaryFocus={selectorPrimaryFocus}>
           {children}
         </OverflowMenu>
       )}
@@ -75,17 +73,17 @@ const FilterPanelCheckboxWithOverflowMenu = ({
 FilterPanelCheckboxWithOverflowMenu.propTypes = {
   ...FilterPanelCheckbox.propTypes,
 
-  /** Optional class name. */
-  className: PropTypes.string,
-
-  /** Overflow aria-label to describe the purpose of the overflow button. */
-  overflowMenuAriaLabel: PropTypes.string,
-
   /** Children containing overflow menu items. */
   children: PropTypes.node,
 
+  /** Optional class name. */
+  className: PropTypes.string,
+
   /** Whether or not the overflow menu should render as open. */
   open: PropTypes.bool,
+
+  /** Overflow aria-label to describe the purpose of the overflow button. */
+  overflowMenuAriaLabel: PropTypes.string,
 
   /**
    * Specify a CSS selector that matches the DOM element that should
