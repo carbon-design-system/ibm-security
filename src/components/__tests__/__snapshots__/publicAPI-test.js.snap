@@ -1535,6 +1535,12 @@ Map {
               ],
               "type": "oneOfType",
             },
+            "checkCanFocusTrap": Object {
+              "type": "func",
+            },
+            "checkCanReturnFocus": Object {
+              "type": "func",
+            },
             "clickOutsideDeactivates": Object {
               "args": Array [
                 Array [
@@ -1549,7 +1555,17 @@ Map {
               "type": "oneOfType",
             },
             "escapeDeactivates": Object {
-              "type": "bool",
+              "args": Array [
+                Array [
+                  Object {
+                    "type": "bool",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
             },
             "fallbackFocus": Object {
               "args": Array [
@@ -1585,6 +1601,9 @@ Map {
                   Object {
                     "type": "func",
                   },
+                  Object {
+                    "type": "bool",
+                  },
                 ],
               ],
               "type": "oneOfType",
@@ -1593,6 +1612,12 @@ Map {
               "type": "func",
             },
             "onDeactivate": Object {
+              "type": "func",
+            },
+            "onPostActivate": Object {
+              "type": "func",
+            },
+            "onPostDeactivate": Object {
               "type": "func",
             },
             "preventScroll": Object {
@@ -7411,6 +7436,12 @@ Map {
               ],
               "type": "oneOfType",
             },
+            "checkCanFocusTrap": Object {
+              "type": "func",
+            },
+            "checkCanReturnFocus": Object {
+              "type": "func",
+            },
             "clickOutsideDeactivates": Object {
               "args": Array [
                 Array [
@@ -7425,7 +7456,17 @@ Map {
               "type": "oneOfType",
             },
             "escapeDeactivates": Object {
-              "type": "bool",
+              "args": Array [
+                Array [
+                  Object {
+                    "type": "bool",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
             },
             "fallbackFocus": Object {
               "args": Array [
@@ -7461,6 +7502,9 @@ Map {
                   Object {
                     "type": "func",
                   },
+                  Object {
+                    "type": "bool",
+                  },
                 ],
               ],
               "type": "oneOfType",
@@ -7469,6 +7513,12 @@ Map {
               "type": "func",
             },
             "onDeactivate": Object {
+              "type": "func",
+            },
+            "onPostActivate": Object {
+              "type": "func",
+            },
+            "onPostDeactivate": Object {
               "type": "func",
             },
             "preventScroll": Object {
@@ -7676,6 +7726,12 @@ Map {
               ],
               "type": "oneOfType",
             },
+            "checkCanFocusTrap": Object {
+              "type": "func",
+            },
+            "checkCanReturnFocus": Object {
+              "type": "func",
+            },
             "clickOutsideDeactivates": Object {
               "args": Array [
                 Array [
@@ -7690,7 +7746,17 @@ Map {
               "type": "oneOfType",
             },
             "escapeDeactivates": Object {
-              "type": "bool",
+              "args": Array [
+                Array [
+                  Object {
+                    "type": "bool",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
             },
             "fallbackFocus": Object {
               "args": Array [
@@ -7726,6 +7792,9 @@ Map {
                   Object {
                     "type": "func",
                   },
+                  Object {
+                    "type": "bool",
+                  },
                 ],
               ],
               "type": "oneOfType",
@@ -7734,6 +7803,12 @@ Map {
               "type": "func",
             },
             "onDeactivate": Object {
+              "type": "func",
+            },
+            "onPostActivate": Object {
+              "type": "func",
+            },
+            "onPostDeactivate": Object {
               "type": "func",
             },
             "preventScroll": Object {
