@@ -21,4 +21,13 @@
   > #{get-component-namespace($component-name: $type-layout__name)} {
     margin-bottom: 0;
   }
+
+  #{get-component-namespace($component-name: $type-layout__name)} {
+    &__cell {
+      &.short {
+        padding: $carbon--spacing-02 $carbon--spacing-06 $carbon--spacing-02
+          $carbon--spacing-03;
+      }
+    }
+  }
 }

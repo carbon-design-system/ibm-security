@@ -66,7 +66,7 @@ export const Default = () => (
   </DescriptionListModule>
 );
 
-export const Variant = () => (
+export const WithTitle = () => (
   <DescriptionListModule>
     <TitleBarModule title="Section title" />
 
@@ -105,6 +105,49 @@ export const Variant = () => (
   </DescriptionListModule>
 );
 
-Variant.parameters = {
+export const ShortWithTitle = () => (
+  <DescriptionListModule>
+    <TitleBarModule title="Section title" />
+
+    <TypeLayout>
+      <TypeLayoutBody>
+        <TypeLayoutRow>
+          <TypeLayoutCell className="short">Term 1</TypeLayoutCell>
+
+          <TypeLayoutCell className="short">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </TypeLayoutCell>
+        </TypeLayoutRow>
+
+        <TypeLayoutRow>
+          <TypeLayoutCell className="short">Term 2</TypeLayoutCell>
+
+          <TypeLayoutCell className="short">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            accumsan, dui ut pulvinar mattis, diam est imperdiet ex, a varius
+            lacus ex at libero. Aenean euismod viverra odio, id volutpat turpis
+            commodo.
+          </TypeLayoutCell>
+        </TypeLayoutRow>
+
+        <TypeLayoutRow>
+          <TypeLayoutCell className="short">Term 3</TypeLayoutCell>
+
+          <TypeLayoutCell className="short">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            accumsan, dui ut pulvinar mattis, diam est imperdiet ex, a varius
+            lacus ex at libero.
+          </TypeLayoutCell>
+        </TypeLayoutRow>
+      </TypeLayoutBody>
+    </TypeLayout>
+  </DescriptionListModule>
+);
+
+WithTitle.parameters = {
+  viewMode: 'canvas',
+};
+
+ShortWithTitle.parameters = {
   viewMode: 'canvas',
 };
