@@ -13176,6 +13176,10 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-bottom: 0;
 }
 
+.security--layout-module--description-list .security--type-layout__container__cell.short {
+  padding: 0.25rem 1.5rem 0.25rem 0.5rem;
+}
+
 .security--layout-module--description {
   padding-bottom: 2rem;
 }
