@@ -20528,7 +20528,7 @@ rechoir@^0.6.2:
   dependencies:
     resolve "^1.1.6"
 
-recompose@0.30.0:
+recompose@^0.30.0:
   version "0.30.0"
   resolved "https://registry.yarnpkg.com/recompose/-/recompose-0.30.0.tgz#82773641b3927e8c7d24a0d87d65aeeba18aabd0"
   integrity sha512-ZTrzzUDa9AqUIhRk4KmVFihH0rapdCSMFXjhHbNrjAWxBuUD/guYlyysMnuHjlZC/KRiOKRtB4jf96yYSkKE8w==
@@ -20593,11 +20593,6 @@ reduce-function-call@^1.0.1:
   integrity sha512-Hl/tuV2VDgWgCSEeWMLwxLZqX7OK59eU1guxXsRKTAyeYimivsKdtcV4fu3r710tpG5GmDKDhQ0HSZLExnNmyQ==
   dependencies:
     balanced-match "^1.0.0"
-
-reduced-utils@0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/reduced-utils/-/reduced-utils-0.1.2.tgz#49ff4eedd1d0700e0aac7851c5845df385eb3d46"
-  integrity sha512-pwzl66UIRoogOJlAKo+vnbFn+YnTv32/e1wWCfEAvry5JrbKC8ZSCIsVhDbS0EE53zl40GLEnGaS4WqKE2AZ4A==
 
 reflect.ownkeys@^0.2.0:
   version "0.2.0"
