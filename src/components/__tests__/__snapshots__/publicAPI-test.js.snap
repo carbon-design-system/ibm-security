@@ -1552,6 +1552,12 @@ Map {
               ],
               "type": "oneOfType",
             },
+            "checkCanFocusTrap": Object {
+              "type": "func",
+            },
+            "checkCanReturnFocus": Object {
+              "type": "func",
+            },
             "clickOutsideDeactivates": Object {
               "args": Array [
                 Array [
@@ -1566,7 +1572,17 @@ Map {
               "type": "oneOfType",
             },
             "escapeDeactivates": Object {
-              "type": "bool",
+              "args": Array [
+                Array [
+                  Object {
+                    "type": "bool",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
             },
             "fallbackFocus": Object {
               "args": Array [
@@ -1602,6 +1618,9 @@ Map {
                   Object {
                     "type": "func",
                   },
+                  Object {
+                    "type": "bool",
+                  },
                 ],
               ],
               "type": "oneOfType",
@@ -1610,6 +1629,12 @@ Map {
               "type": "func",
             },
             "onDeactivate": Object {
+              "type": "func",
+            },
+            "onPostActivate": Object {
+              "type": "func",
+            },
+            "onPostDeactivate": Object {
               "type": "func",
             },
             "preventScroll": Object {
@@ -2960,6 +2985,9 @@ Map {
       },
       "disabled": Object {
         "type": "bool",
+      },
+      "helperText": Object {
+        "type": "node",
       },
       "hideLabel": Object {
         "type": "bool",
@@ -5403,6 +5431,7 @@ Map {
   },
   "InlineNotification" => Object {
     "$$typeof": Symbol(react.forward_ref),
+    "displayName": "FeatureToggle(InlineNotification)",
     "render": [Function],
   },
   "InteractiveTag" => Object {
@@ -6888,6 +6917,9 @@ Map {
         ],
         "type": "arrayOf",
       },
+      "style": Object {
+        "type": "object",
+      },
       "subTitle": Object {
         "isRequired": true,
         "type": "string",
@@ -6900,14 +6932,17 @@ Map {
   },
   "NotificationActionButton" => Object {
     "$$typeof": Symbol(react.forward_ref),
+    "displayName": "FeatureToggle(NotificationActionButton)",
     "render": [Function],
   },
   "NotificationButton" => Object {
     "$$typeof": Symbol(react.forward_ref),
+    "displayName": "FeatureToggle(NotificationButton)",
     "render": [Function],
   },
   "NotificationTextDetails" => Object {
     "$$typeof": Symbol(react.forward_ref),
+    "displayName": "FeatureToggle(NotificationTextDetails)",
     "render": [Function],
   },
   "NumberInput" => Object {
@@ -6950,6 +6985,7 @@ Map {
   },
   "OverflowMenu" => Object {
     "$$typeof": Symbol(react.forward_ref),
+    "displayName": "FeatureToggle(OverflowMenu)",
     "render": [Function],
   },
   "OverflowMenuItem" => Object {
@@ -7448,6 +7484,12 @@ Map {
               ],
               "type": "oneOfType",
             },
+            "checkCanFocusTrap": Object {
+              "type": "func",
+            },
+            "checkCanReturnFocus": Object {
+              "type": "func",
+            },
             "clickOutsideDeactivates": Object {
               "args": Array [
                 Array [
@@ -7462,7 +7504,17 @@ Map {
               "type": "oneOfType",
             },
             "escapeDeactivates": Object {
-              "type": "bool",
+              "args": Array [
+                Array [
+                  Object {
+                    "type": "bool",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
             },
             "fallbackFocus": Object {
               "args": Array [
@@ -7498,6 +7550,9 @@ Map {
                   Object {
                     "type": "func",
                   },
+                  Object {
+                    "type": "bool",
+                  },
                 ],
               ],
               "type": "oneOfType",
@@ -7506,6 +7561,12 @@ Map {
               "type": "func",
             },
             "onDeactivate": Object {
+              "type": "func",
+            },
+            "onPostActivate": Object {
+              "type": "func",
+            },
+            "onPostDeactivate": Object {
               "type": "func",
             },
             "preventScroll": Object {
@@ -7713,6 +7774,12 @@ Map {
               ],
               "type": "oneOfType",
             },
+            "checkCanFocusTrap": Object {
+              "type": "func",
+            },
+            "checkCanReturnFocus": Object {
+              "type": "func",
+            },
             "clickOutsideDeactivates": Object {
               "args": Array [
                 Array [
@@ -7727,7 +7794,17 @@ Map {
               "type": "oneOfType",
             },
             "escapeDeactivates": Object {
-              "type": "bool",
+              "args": Array [
+                Array [
+                  Object {
+                    "type": "bool",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
             },
             "fallbackFocus": Object {
               "args": Array [
@@ -7763,6 +7840,9 @@ Map {
                   Object {
                     "type": "func",
                   },
+                  Object {
+                    "type": "bool",
+                  },
                 ],
               ],
               "type": "oneOfType",
@@ -7771,6 +7851,12 @@ Map {
               "type": "func",
             },
             "onDeactivate": Object {
+              "type": "func",
+            },
+            "onPostActivate": Object {
+              "type": "func",
+            },
+            "onPostDeactivate": Object {
               "type": "func",
             },
             "preventScroll": Object {
@@ -10120,22 +10206,27 @@ Map {
   },
   "StructuredListBody" => Object {
     "$$typeof": Symbol(react.forward_ref),
+    "displayName": "FeatureToggle(StructuredListBody)",
     "render": [Function],
   },
   "StructuredListCell" => Object {
     "$$typeof": Symbol(react.forward_ref),
+    "displayName": "FeatureToggle(StructuredListCell)",
     "render": [Function],
   },
   "StructuredListHead" => Object {
     "$$typeof": Symbol(react.forward_ref),
+    "displayName": "FeatureToggle(StructuredListHead)",
     "render": [Function],
   },
   "StructuredListInput" => Object {
     "$$typeof": Symbol(react.forward_ref),
+    "displayName": "FeatureToggle(StructuredListInput)",
     "render": [Function],
   },
   "StructuredListRow" => Object {
     "$$typeof": Symbol(react.forward_ref),
+    "displayName": "FeatureToggle(StructuredListRow)",
     "render": [Function],
   },
   "StructuredListSkeleton" => Object {
@@ -10157,6 +10248,7 @@ Map {
   },
   "StructuredListWrapper" => Object {
     "$$typeof": Symbol(react.forward_ref),
+    "displayName": "FeatureToggle(StructuredListWrapper)",
     "render": [Function],
   },
   "SummaryCard" => Object {
@@ -10281,6 +10373,10 @@ Map {
   },
   "SummaryCardContainer" => Object {
     "propTypes": Object {
+      "render": Object {
+        "isRequired": true,
+        "type": "func",
+      },
       "summaryCards": Object {
         "args": Array [
           Object {
@@ -11591,8 +11687,21 @@ Map {
       "deleteButton": Object {
         "args": Array [
           Object {
+            "hide": Object {
+              "type": "bool",
+            },
             "icon": Object {
-              "type": "string",
+              "args": Array [
+                Array [
+                  Object {
+                    "type": "func",
+                  },
+                  Object {
+                    "type": "object",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
             },
             "isDisabled": Object {
               "type": "bool",
@@ -11782,9 +11891,6 @@ Map {
           Object {
             "isDisabled": Object {
               "type": "bool",
-            },
-            "label": Object {
-              "type": "string",
             },
             "onClick": Object {
               "type": "func",
@@ -12730,10 +12836,12 @@ Map {
   },
   "ToastNotification" => Object {
     "$$typeof": Symbol(react.forward_ref),
+    "displayName": "FeatureToggle(ToastNotification)",
     "render": [Function],
   },
   "Toggle" => Object {
     "$$typeof": Symbol(react.forward_ref),
+    "displayName": "FeatureToggle(Toggle)",
     "render": [Function],
   },
   "ToggleSkeleton" => Object {
@@ -14136,6 +14244,9 @@ Map {
       "children": Object {
         "type": "node",
       },
+      "id": Object {
+        "type": "string",
+      },
       "level": Object {
         "type": "number",
       },
@@ -14144,6 +14255,16 @@ Map {
       },
       "open": Object {
         "type": "bool",
+      },
+      "size": Object {
+        "args": Array [
+          Array [
+            "sm",
+            "md",
+            "lg",
+          ],
+        ],
+        "type": "oneOf",
       },
       "x": Object {
         "args": Array [
