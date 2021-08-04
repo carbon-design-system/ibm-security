@@ -6740,7 +6740,6 @@ Map {
       "label": "",
       "link": true,
       "onClick": [Function],
-      "onKeyPress": [Function],
       "tabIndex": 0,
     },
     "propTypes": Object {
@@ -6778,9 +6777,6 @@ Map {
         "type": "bool",
       },
       "onClick": Object {
-        "type": "func",
-      },
-      "onKeyPress": Object {
         "type": "func",
       },
       "tabIndex": Object {
