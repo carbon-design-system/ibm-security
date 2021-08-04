@@ -6740,7 +6740,6 @@ Map {
       "label": "",
       "link": true,
       "onClick": [Function],
-      "onKeyPress": [Function],
       "tabIndex": 0,
     },
     "propTypes": Object {
@@ -6778,9 +6777,6 @@ Map {
         "type": "bool",
       },
       "onClick": Object {
-        "type": "func",
-      },
-      "onKeyPress": Object {
         "type": "func",
       },
       "tabIndex": Object {
@@ -12743,14 +12739,25 @@ Map {
     "defaultProps": Object {
       "children": null,
       "element": "h2",
+      "label": null,
+      "labelDirection": "top",
       "subsection": false,
     },
     "propTypes": Object {
       "children": Object {
         "type": "node",
       },
-      "element": Object {
-        "type": "elementType",
+      "label": Object {
+        "type": "string",
+      },
+      "labelDirection": Object {
+        "args": Array [
+          Array [
+            "top",
+            "bottom",
+          ],
+        ],
+        "type": "oneOf",
       },
       "subsection": Object {
         "type": "bool",
