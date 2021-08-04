@@ -34,12 +34,12 @@ const generateNavigationListModel = (title, navigation) => ({
 /**
  * Generates data for the navigation.
  */
-const generateNavigation = array => array.map(generateNavigationModel);
+const generateNavigation = (array) => array.map(generateNavigationModel);
 
 /**
  * Generates application data for the navigation.
  */
-const generateApplications = array =>
+const generateApplications = (array) =>
   array.map(({ children, ...props }) => ({
     ...generateNavigationModel(props),
     children,
@@ -48,6 +48,7 @@ const generateApplications = array =>
 const applicationsToGenerate = [
   {
     title: 'Section 1',
+    icon,
     children: generateApplications([
       { title: 'Applications' },
       { title: 'Plugins' },

@@ -59,9 +59,6 @@ export default class NavItem extends Component {
     /** @type {Function} Click handler of an item. */
     onClick: func,
 
-    /** @type {Function} Handler for keypresses on an item. */
-    onKeyPress: func,
-
     /** @type {number} `tabindex` of an item. */
     tabIndex: number,
   };
@@ -79,7 +76,6 @@ export default class NavItem extends Component {
     label: '',
     link: true,
     onClick: () => {},
-    onKeyPress: () => {},
     tabIndex: 0,
   };
 
@@ -102,10 +98,9 @@ export default class NavItem extends Component {
       disabled,
       label,
       onClick,
-      onKeyPress,
       href,
       activeHref,
-      current,
+      current: _, // throw away
       handleItemSelect,
       link,
       id,
@@ -141,10 +136,9 @@ export default class NavItem extends Component {
       <li
         className={classNames}
         label={label}
-        onClick={event => handleDisabled(onClick(event, href))}
-        onKeyPress={event => handleDisabled(onClick(event, href))}
-        role="menuitem"
-      >
+        onClick={(event) => handleDisabled(onClick(event, href))}
+        onKeyPress={(event) => handleDisabled(onClick(event, href))}
+        role="menuitem">
         {link ? (
           <NavItemLink
             id={navItemId}
@@ -155,8 +149,7 @@ export default class NavItem extends Component {
             href={href}
             tabIndex={navItemTabIndex}
             {...other}
-            {...externalLinkProps}
-          >
+            {...externalLinkProps}>
             {children}
             {externalLink && (
               <Icon
@@ -172,8 +165,7 @@ export default class NavItem extends Component {
             onClick={handleDisabled(handleItemSelect)}
             onKeyPress={handleDisabled(handleItemSelect)}
             role="menuitem"
-            tabIndex={navItemTabIndex}
-          >
+            tabIndex={navItemTabIndex}>
             {children}
           </div>
         )}

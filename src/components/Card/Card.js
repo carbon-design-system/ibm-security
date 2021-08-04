@@ -1,9 +1,10 @@
 /**
  * @file Card.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019, 2021
  */
 
 import classnames from 'classnames';
+
 import {
   array,
   element,
@@ -13,6 +14,7 @@ import {
   shape,
   string,
 } from 'prop-types';
+
 import React, { Fragment } from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
@@ -70,24 +72,19 @@ const Card = ({
     [`${namespace}__link`]: link,
   });
 
-  return (
-    <Fragment>
-      {link ? (
-        <a
-          className={classNames}
-          href={link}
-          aria-label={label}
-          onClick={onClick}
-          {...other}
-        >
-          {content}
-        </a>
-      ) : (
-        <div className={classNames} {...other}>
-          {content}
-        </div>
-      )}
-    </Fragment>
+  return link ? (
+    <a
+      className={classNames}
+      href={link}
+      aria-label={label}
+      onClick={onClick}
+      {...other}>
+      {content}
+    </a>
+  ) : (
+    <div className={classNames} {...other}>
+      {content}
+    </div>
   );
 };
 
@@ -106,7 +103,7 @@ Card.defaultProps = {
 };
 
 Card.propTypes = {
-  /** @type {Object.<Object, *>} An object list of body props. */
+  /** @type {object.<object, *>} An object list of body props. */
   body: shape({
     children,
 
@@ -114,16 +111,17 @@ Card.propTypes = {
     text: string,
   }),
 
-  /** @type {string} The class. */
-  className: string,
   children,
 
-  /** @type {Object.<Object, *>} An object list of footer props. */
+  /** @type {string} The class. */
+  className: string,
+
+  /** @type {object.<object, *>} An object list of footer props. */
   footer: shape({
     children,
   }),
 
-  /** @type {Object.<Object, *>} An object list of header props. */
+  /** @type {object.<object, *>} An object list of header props. */
   header: shape({
     /** @type {string} The image of the header. */
     image: string,

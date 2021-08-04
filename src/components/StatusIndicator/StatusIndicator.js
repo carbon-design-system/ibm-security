@@ -28,8 +28,8 @@ export const namespace = getComponentNamespace('status-indicator');
 
 class StatusIndicator extends Component {
   static propTypes = {
-    /** @type {string} A title for the component. */
-    title: string,
+    /** @type {Array} The array of child elements of the application. */
+    children: oneOfType([array, element]),
 
     /** @type {string} Extra classes to add. */
     className: string,
@@ -37,10 +37,7 @@ class StatusIndicator extends Component {
     /** @type {number} The index of the current step. */
     currentIndex: number,
 
-    /** @type {array} The array of child elements of the application. */
-    children: oneOfType([array, element]),
-
-    /** @type {Object.<Object, *>} An object list of retry button props. */
+    /** @type {object.<object, *>} An object list of retry button props. */
     retry: shape({
       /** @type {func} An action to be re-run in the event of failure. */
       action: func,
@@ -54,6 +51,9 @@ class StatusIndicator extends Component {
         `\nThe prop \`retry.description\` for StatusIndicator has been deprecated. Please provide a valid \`retry.label\` instead.`
       ),
     }),
+
+    /** @type {string} A title for the component. */
+    title: string,
   };
 
   static defaultProps = {
@@ -69,10 +69,11 @@ class StatusIndicator extends Component {
   };
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    if (prevState.retry !== nextProps.retry)
+    if (prevState.retry !== nextProps.retry) {
       return {
         retry: nextProps.retry,
       };
+    }
     return null;
   }
 
@@ -91,8 +92,7 @@ class StatusIndicator extends Component {
                 kind="ghost"
                 onClick={this.state.retry.action}
                 onKeyPress={this.state.retry.action}
-                renderIcon={Restart20}
-              >
+                renderIcon={Restart20}>
                 {this.state.retry.label}
               </Button>
             </li>

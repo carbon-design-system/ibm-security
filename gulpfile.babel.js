@@ -15,7 +15,7 @@ import { paths } from './config';
 
 // Clean the distribution directory.
 gulp.task('clean', () =>
-  del(Object.keys(paths.dist).map(path => paths.dist[path]))
+  del(Object.keys(paths.dist).map((path) => paths.dist[path]))
 );
 
 //--------------

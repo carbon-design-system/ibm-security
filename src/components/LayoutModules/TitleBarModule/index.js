@@ -32,13 +32,11 @@ const TitleBarModule = ({
       [`${layoutModuleNamespace}--${namespace}--label`]: label,
     })}
     namespace={namespace}
-    {...other}
-  >
+    {...other}>
     <div className={`${layoutModuleNamespace}--${namespace}__label-wrapper`}>
       {label && (
         <LayoutModule
-          namespace={`${namespace}__label order--${labelDirection}`}
-        >
+          namespace={`${namespace}__label order--${labelDirection}`}>
           {label}
         </LayoutModule>
       )}
@@ -60,9 +58,6 @@ const TitleBarModule = ({
 );
 
 TitleBarModule.propTypes = {
-  /** Provide the title of the `TitleBarModule` */
-  title: node.isRequired,
-
   /** Provide the items for the `TitleBarModule` */
   children: node,
 
@@ -75,8 +70,8 @@ TitleBarModule.propTypes = {
   /** Specify whether a subsection should be used */
   subsection: bool,
 
-  /** Specify the base element to use to build the title */
-  element: elementType,
+  /** Provide the title of the `TitleBarModule` */
+  title: node.isRequired,
 };
 
 TitleBarModule.defaultProps = {
