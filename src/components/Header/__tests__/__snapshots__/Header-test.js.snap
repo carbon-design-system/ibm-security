@@ -204,12 +204,8 @@ exports[`Header Rendering renders correctly 1`] = `
       >
         <HeaderListItem
           className=""
-          hasPopup={false}
-          isExpanded={false}
         >
           <li
-            aria-expanded={false}
-            aria-haspopup={false}
             className="security--header__list__item"
           >
             <Button
@@ -257,12 +253,8 @@ exports[`Header Rendering renders correctly 1`] = `
         </HeaderListItem>
         <HeaderListItem
           className=""
-          hasPopup={false}
-          isExpanded={false}
         >
           <li
-            aria-expanded={false}
-            aria-haspopup={false}
             className="security--header__list__item"
           >
             <Button
