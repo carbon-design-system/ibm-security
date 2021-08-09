@@ -17,10 +17,6 @@ export const navNamespace = getComponentNamespace('nav');
 
 const { name } = NavList;
 
-/**
- * Navigation class.
- * @className
- */
 export default class Nav extends Component {
   constructor(props) {
     super(props);
@@ -78,7 +74,7 @@ export default class Nav extends Component {
         key={key}
         onListClick={this.handleListClick}
         onItemClick={this.handleItemClick}
-        ref={navigationList => {
+        ref={(navigationList) => {
           this.navigationLists.push(navigationList);
         }}
       />
@@ -128,7 +124,7 @@ export default class Nav extends Component {
 
   render() {
     const {
-      activeHref,
+      activeHref: _, // throw away
       className,
       children,
       heading,
@@ -140,8 +136,7 @@ export default class Nav extends Component {
       <nav
         className={classnames(navNamespace, className)}
         aria-label={label}
-        {...other}
-      >
+        {...other}>
         {heading && <h1 className={`${navNamespace}__heading`}>{heading}</h1>}
 
         <ul className={`${navNamespace}__wrapper`} role="menubar">

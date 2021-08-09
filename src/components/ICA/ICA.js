@@ -1,6 +1,6 @@
 /**
  * @file Important content area (ICA).
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019, 2021
  */
 
 import classnames from 'classnames';
@@ -29,7 +29,7 @@ export const Locales = Object.keys(numeral.locales);
  * @param {number} value The value to evaluate.
  * @returns {string} Format string for numeral.
  */
-const getFormat = value => (Math.round(value) > 999 ? '0.0a' : '0a');
+const getFormat = (value) => (Math.round(value) > 999 ? '0.0a' : '0a');
 
 /**
  * Ensure that the value is formatted correctly based on whether it should be truncated or not.
@@ -52,13 +52,14 @@ const formatValue = (value, truncate) => {
  * @returns {string} Formatted string.
  */
 const truncateValue = (percentage, value, truncate) => {
-  if (percentage)
+  if (percentage) {
     return (
       <div className={`${namespace}__percentage`}>
         {value}
         <span className={`${namespace}__percentage-mark`}>%</span>
       </div>
     );
+  }
 
   return value === null ? '–' : formatValue(value, truncate);
 };
@@ -77,7 +78,7 @@ const ICA = ({
   showValueWarning,
   ...other
 }) => {
-  const isSize = sizeValue => size === sizeValue;
+  const isSize = (sizeValue) => size === sizeValue;
   const isLarge = isSize('lg');
   const isXLarge = isSize('xl');
 
@@ -126,8 +127,7 @@ const ICA = ({
         <span
           className={`${namespace}__value ${
             isValueBiggerThanTotal ? `${namespace}__warning` : ''
-          }`}
-        >
+          }`}>
           {truncatedValue}
         </span>
         {shouldDisplayof ? (
@@ -143,28 +143,24 @@ const ICA = ({
 
 ICA.propTypes = {
   /**
-   * Text label for ICA.
-   * @type string
-   */
-  label: PropTypes.string.isRequired,
-
-  /**
-   * The main ICA value to display
-   * @type number
-   */
-  value: PropTypes.number,
-
-  /**
-   * Total value that the main ICA value is a subset of.
-   * @type number
-   */
-  total: PropTypes.number,
-
-  /**
    * Optional class name.
    * @type number
    */
   className: PropTypes.string,
+
+  /**
+   * Display the `total` even when the `value` is equal to
+   * the `total` when `forceShowTotal` prop is true on the
+   * condition that the `total` is greater than 0.
+   * @type bool
+   */
+  forceShowTotal: PropTypes.bool,
+
+  /**
+   * Text label for ICA.
+   * @type string
+   */
+  label: PropTypes.string.isRequired,
 
   /**
    * Locale value to determine approach to formatting numbers.
@@ -178,25 +174,29 @@ ICA.propTypes = {
    */
   percentage: PropTypes.bool,
 
-  /**
-   * Display the `total` even when the `value` is equal to
-   * the `total` when `forceShowTotal` prop is true on the
-   * condition that the `total` is greater than 0.
-   * @type bool
-   */
-  forceShowTotal: PropTypes.bool,
-
-  /** Specify whether or not the values should be truncated. */
-  truncate: PropTypes.bool,
+  /** Show warning color when out of value is equal to or above total */
+  showValueWarning: PropTypes.bool,
 
   /** The size of the ICA. */
   size: PropTypes.oneOf(['default', 'lg', 'xl']),
 
+  /**
+   * Total value that the main ICA value is a subset of.
+   * @type number
+   */
+  total: PropTypes.number,
+
   /** Display trending icon. */
   trending: PropTypes.bool,
 
-  /** Show warning color when out of value is equal to or above total */
-  showValueWarning: PropTypes.bool,
+  /** Specify whether or not the values should be truncated. */
+  truncate: PropTypes.bool,
+
+  /**
+   * The main ICA value to display
+   * @type number
+   */
+  value: PropTypes.number,
 };
 
 ICA.defaultProps = {

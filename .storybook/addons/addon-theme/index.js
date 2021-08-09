@@ -23,12 +23,12 @@ const getStoredTheme = () => localStorage.getItem(namespace);
  * Alias for setting the theme in `localStorage`.
  * @param {string} theme The theme string to set.
  */
-const setStoredTheme = theme => localStorage.setItem(namespace, theme);
+const setStoredTheme = (theme) => localStorage.setItem(namespace, theme);
 
 let themes = {};
 
 // Map the themes object from the exports.
-Object.keys(Themes).map(theme => {
+Object.keys(Themes).map((theme) => {
   themes[theme] = Themes[theme];
 });
 
@@ -56,7 +56,7 @@ class Wrapper extends Component {
    * Sets the state and the stored theme for the addon.
    * @param {string} newTheme The new theme to toggle.
    */
-  onAction = theme => {
+  onAction = (theme) => {
     setStoredTheme(theme);
     this.setState({ theme });
   };
@@ -71,7 +71,7 @@ class Wrapper extends Component {
 export default makeDecorator({
   name: `with${title}`,
   parameterName: title,
-  wrapper: Story => (
+  wrapper: (Story) => (
     <Wrapper>
       <Story />
     </Wrapper>

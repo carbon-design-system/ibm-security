@@ -1,6 +1,6 @@
 /**
  * @file Icon button.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019, 2021
  */
 
 import classnames from 'classnames';
@@ -60,8 +60,8 @@ const IconButton = ({
       })}
       aria-label={label}
       onClick={onClick}
-      {...other}
-    >
+      type="button"
+      {...other}>
       <Icon
         className={iconClassName}
         path={path}
@@ -105,7 +105,7 @@ IconButton.propTypes = {
   /** @type {string} Path for icon. */
   path: string,
 
-  /** @type {function|object} Icon to render. */
+  /** @type {Function|object} Icon to render. */
   renderIcon: renderIconPropType,
 
   /** @type {string} Icon button size. */

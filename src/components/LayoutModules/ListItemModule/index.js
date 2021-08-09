@@ -11,17 +11,19 @@ import LayoutModule, { layoutModuleNamespace } from '../LayoutModule';
 
 const namespace = 'list-item';
 
+function Column(props) {
+  return <LayoutModule namespace={`${namespace}__column`} {...props} />;
+}
+
 /**
  * The ListItem is a module designed for flexibility. It consists of optional pieces that can be used to design & build variants with universal consistency.
  */
 const ListItemModule = ({ children, as, href, onClick, ...other }) => {
   const content = children({
-    Column: props => (
-      <LayoutModule namespace={`${namespace}__column`} {...props} />
-    ),
+    Column,
 
     getLayoutProps: ({ className, ...rest } = {}) => {
-      const assignClassName = type => ({
+      const assignClassName = (type) => ({
         className: classnames(className, {
           [`${layoutModuleNamespace}--${namespace}__${type}`]: type,
         }),
@@ -57,19 +59,18 @@ const ListItemModule = ({ children, as, href, onClick, ...other }) => {
       as={component}
       href={href}
       onClick={onClick}
-      {...other}
-    >
+      {...other}>
       {content}
     </LayoutModule>
   );
 };
 
 ListItemModule.propTypes = {
-  /** Provide the content for the `ListItemModule` */
-  children: func.isRequired,
-
   /** Provide a custom element to be rendered instead of the default */
   as: elementType,
+
+  /** Provide the content for the `ListItemModule` */
+  children: func.isRequired,
 
   /**
    * Optionally specify an href for the ListItemModule to become an `<a>` element

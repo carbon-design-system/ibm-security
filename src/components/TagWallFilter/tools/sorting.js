@@ -15,10 +15,11 @@ export const defaultCompareItems = (locale, itemA, itemB) =>
 /**
  * Default sorting algorithm for options in a selection control
  *
- * @param {array} items
- * @param {function} itemToString
- * @param {function} compareItems
- * @returns {array}
+ * @param {Array} items
+ * @param {object} options
+ * @param {Function} options.itemToString
+ * @param {Function} options.compareItems
+ * @returns {Array}
  */
 export const defaultSortItems = (items, { itemToString, compareItems }) =>
   items.sort((itemA, itemB) => {

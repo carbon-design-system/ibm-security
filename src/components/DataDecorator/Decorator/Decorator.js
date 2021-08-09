@@ -13,12 +13,6 @@ import { getDecoratorProps, namespace, icons } from './constants';
 
 import Icon from '../../Icon';
 
-/**
- * Decorator component.
- * @param {boolean} noIcon don't display icon.
- * @param {string} path svg path.
- * @returns {Decorator} Decorator instance.
- */
 class Decorator extends Component {
   constructor(props) {
     super(props);
@@ -29,11 +23,11 @@ class Decorator extends Component {
    * Handles when the Decorator has been clicked.
    * @param {SyntheticEvent} event The event fired when the Decorator has been clicked.
    */
-  handleClick = event => {
+  handleClick = (event) => {
     this.props.onClick(event, this.props.type, this.props.value);
   };
 
-  handleContextMenuClick = event => {
+  handleContextMenuClick = (event) => {
     this.props.onContextMenu(event, this.props.type, this.props.value);
   };
 
@@ -134,7 +128,7 @@ class Decorator extends Component {
           className={decoratorClasses}
           onClick={this.handleClick}
           onContextMenu={this.handleContextMenuClick}
-        >
+          type="button">
           {decorator}
         </button>
       );
@@ -164,24 +158,35 @@ Decorator.propTypes = {
   /** @type {boolean} Whether the Decorator should be treated and styled as an inline element. */
   inline: PropTypes.bool,
 
+  /** @type {object} Mid-line truncation options applied to value of decorator if applicable. */
+  midLineTruncation: PropTypes.shape({
+    enabled: PropTypes.bool,
+    maxLength: PropTypes.number,
+    front: PropTypes.number,
+    back: PropTypes.number,
+  }),
+
+  /** @type {boolean} Whether the Decorator includes an icon */
+  noIcon: PropTypes.bool,
+
   /** @type {Function} Click handler of the Decorator. */
   onClick: PropTypes.func,
 
   /** @type {Function} Secondary click handler of the Decorator. */
   onContextMenu: PropTypes.func,
 
-  /** @type {boolean} Whether the Decorator includes an icon */
-  noIcon: PropTypes.bool,
-
   /** @type {number} The score of the data. */
   score: PropTypes.number,
+
+  /** @type {func} Descriptive text for screen readers that details the severity of a score. */
+  scoreDescription: PropTypes.func,
 
   /** @type {Array<number>} An array of four numbers indicating score thresholds for severity. */
   scoreThresholds: (props, propName) => {
     if (
       !Array.isArray(props.scoreThresholds) ||
       props.scoreThresholds.length !== 4 ||
-      !props.scoreThresholds.every(number => typeof number === 'number')
+      !props.scoreThresholds.every((number) => typeof number === 'number')
     ) {
       return new Error(
         `${propName} is required to be an array of four numbers.`
@@ -198,17 +203,6 @@ Decorator.propTypes = {
 
   /** @type {string} The value of the data. */
   value: PropTypes.string.isRequired,
-
-  /** @type {func} Descriptive text for screen readers that details the severity of a score. */
-  scoreDescription: PropTypes.func,
-
-  /** @type {object} Mid-line truncation options applied to value of decorator if applicable. */
-  midLineTruncation: PropTypes.shape({
-    enabled: PropTypes.bool,
-    maxLength: PropTypes.number,
-    front: PropTypes.number,
-    back: PropTypes.number,
-  }),
 };
 
 Decorator.defaultProps = {
@@ -236,11 +230,11 @@ Decorator.defaultProps = {
 
 /**
  * Generate exports for individual severity icon types.
- * @param {array} iconNames array of icon names
+ * @param {Array} iconNames array of icon names
  */
 function generateIconExports(...iconNames) {
   const namedExports = {};
-  iconNames.forEach(iconName => {
+  iconNames.forEach((iconName) => {
     const IconComponent = ({ className, description, size, ...other }) => (
       <Icon
         className={classnames(
@@ -259,11 +253,11 @@ function generateIconExports(...iconNames) {
       /** Optional class name. */
       className: PropTypes.string,
 
-      /** Icon size. */
-      size: PropTypes.oneOf([12, 16]),
-
       /** The icon description. */
       description: PropTypes.string.isRequired,
+
+      /** Icon size. */
+      size: PropTypes.oneOf([12, 16]),
     };
 
     IconComponent.defaultProps = {
