@@ -193,7 +193,7 @@ class DataTablePagination extends Component {
       itemsPerPageText,
       itemRangeText,
       itemText,
-      onChange: _, // throw away
+      onChange: _, // Throw away.
       page,
       pageInputDisabled,
       pageNumberText,

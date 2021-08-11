@@ -246,7 +246,7 @@ class Wizard extends Component {
       title,
       subTitle,
       className,
-      navLabel: _, // throw away
+      navLabel: _, // Throw away.
       ...other
     } = this.props;
     const componentLabels = {
