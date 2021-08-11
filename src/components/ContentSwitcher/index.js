@@ -1,6 +1,6 @@
 /**
  * @file Content switcher entry point.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-export default from 'carbon-components-react/lib/components/ContentSwitcher';
+export { ContentSwitcher as default } from 'carbon-components-react';

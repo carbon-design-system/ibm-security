@@ -1,23 +1,23 @@
 /**
  * @file Panel v2.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 /* eslint-disable no-useless-computed-key, react/require-default-props */
 
-import Close20 from '@carbon/icons-react/lib/close/20';
+import { Close20 } from '@carbon/icons-react';
 
-import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
-import requiredIfGivenPropIsTruthy from 'carbon-components-react/lib/prop-types/requiredIfGivenPropIsTruthy';
-import setupGetInstanceId from 'carbon-components-react/lib/tools/setupGetInstanceId';
+import deprecate from 'carbon-components-react/es/prop-types/deprecate';
+import requiredIfGivenPropIsTruthy from 'carbon-components-react/es/prop-types/requiredIfGivenPropIsTruthy';
+import setupGetInstanceId from 'carbon-components-react/es/tools/setupGetInstanceId';
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { createRef, useEffect, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 
 import { getComponentNamespace } from '../../globals/namespace';
 import * as defaultLabels from '../../globals/nls';
-import { isClient, isNode } from '../../globals/utils/capabilities';
+import { isNode } from '../../globals/utils/capabilities';
 
 import Button from '../Button';
 import IconButton from '../IconButton';
@@ -29,7 +29,7 @@ const getInstanceId = setupGetInstanceId();
 
 /**
  * Panel v2 container component.
- * @param {Object.<string, *>} props Panel v2 container props.
+ * @param {object.<string, *>} props Panel v2 container props.
  * @returns {PanelV2} Panel v2 container instance.
  */
 function PanelV2({
@@ -52,39 +52,28 @@ function PanelV2({
   title,
   ...other
 }) {
-  const [bodyMargin, setBodyMargin] = useState(0);
+  const [bodyMarginTop, setBodyMarginTop] = useState(0);
+  const [bodyMarginBottom, setBodyMarginBottom] = useState(0);
 
   const panelInstanceId = `panel-${getInstanceId()}`;
   const panelTitleId = `${namespace}__title--${panelInstanceId}`;
   const panelSubtitleId = `${namespace}__subtitle--${panelInstanceId}`;
 
-  const footerRef = createRef();
-  const headerRef = createRef();
+  const footerRef = useCallback((node) => {
+    // Sets the body margin to match the height of the footer for fixed scrolling.
+    setBodyMarginBottom(node ? node.clientHeight : 0);
+  }, []);
 
-  /**
-   * Sets the body margin to match the height of the header for fixed scrolling.
-   */
-  const handleBodyMargin = () => {
-    const footerElement = footerRef.current;
-    const headerElement = headerRef.current;
+  const headerRef = useCallback((node) => {
+    // Sets the body margin to match the height of the header for fixed scrolling.
+    setBodyMarginTop(node ? node.clientHeight : 0);
+  }, []);
 
-    setBodyMargin({
-      top: headerElement.clientHeight,
-      bottom: footerElement && footerElement.clientHeight,
-    });
-  };
-
-  const handleKeyDown = event => {
+  const handleKeyDown = (event) => {
     if (isOpen && event.which === 27) {
       onClose();
     }
   };
-
-  useEffect(() => {
-    if (isClient() && isOpen) {
-      handleBodyMargin();
-    }
-  }, [isOpen]);
 
   const renderPanel = ({
     labels: {
@@ -121,8 +110,7 @@ function PanelV2({
             overlayOptions={{ onClick: onClose }}
             rootNode={rootNode}
             stopPropagation={stopPropagation}
-            stopPropagationEvents={stopPropagationEvents}
-          >
+            stopPropagationEvents={stopPropagationEvents}>
             {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
             <section
               className={classnames(namespace, className)}
@@ -130,8 +118,7 @@ function PanelV2({
               aria-label={ariaLabel}
               aria-modal="true"
               onKeyDown={handleKeyDown}
-              tabIndex={-1}
-            >
+              tabIndex={-1}>
               <header ref={headerRef} className={`${namespace}__header`}>
                 <IconButton
                   id={closeButton.id}
@@ -146,23 +133,20 @@ function PanelV2({
                     {typeof title === 'string' ? (
                       <h2
                         id={panelTitleId}
-                        className={`${namespace}__header--title`}
-                      >
+                        className={`${namespace}__header--title`}>
                         {title}
                       </h2>
                     ) : (
                       <div
                         id={panelTitleId}
-                        className={`${namespace}__header--title`}
-                      >
+                        className={`${namespace}__header--title`}>
                         {title}
                       </div>
                     )}
                     {subtitle && (
                       <div
                         id={panelSubtitleId}
-                        className={`${namespace}__header--subtitle`}
-                      >
+                        className={`${namespace}__header--subtitle`}>
                         {subtitle}
                       </div>
                     )}
@@ -174,12 +158,11 @@ function PanelV2({
                   [`${namespace}__body--footer`]: renderFooter,
                 })}
                 style={{
-                  marginTop: `${bodyMargin.top}px`,
-                  marginBottom: `${bodyMargin.bottom}px`,
+                  marginTop: `${bodyMarginTop}px`,
+                  marginBottom: `${bodyMarginBottom}px`,
                 }}
                 {...hasScrollingContentProps}
-                {...getAriaLabelledBy}
-              >
+                {...getAriaLabelledBy}>
                 {children}
               </section>
 
@@ -197,8 +180,7 @@ function PanelV2({
                           iconDescription={secondaryButton.iconDescription}
                           kind="secondary"
                           onClick={secondaryButton.onClick}
-                          renderIcon={secondaryButton.icon}
-                        >
+                          renderIcon={secondaryButton.icon}>
                           {PANEL_CONTAINER_SECONDARY_BUTTON}
                         </Button>
                       )}
@@ -208,8 +190,7 @@ function PanelV2({
                         disabled={primaryButton.isDisabled}
                         iconDescription={primaryButton.iconDescription}
                         onClick={primaryButton.onClick}
-                        renderIcon={primaryButton.icon}
-                      >
+                        renderIcon={primaryButton.icon}>
                         {PANEL_CONTAINER_PRIMARY_BUTTON}
                       </Button>
                     </>
@@ -248,13 +229,21 @@ const buttonType = PropTypes.shape({
 });
 
 PanelV2.propTypes = {
+  /**
+   * Required props for the accessibility label of the header
+   */
+  ['aria-label']: requiredIfGivenPropIsTruthy(
+    'hasScrollingContent',
+    PropTypes.string
+  ),
+
   /** @type {ReactNode} The children of the panel container. */
   children: PropTypes.node,
 
   /** @type {string} Class name. */
   className: PropTypes.string,
 
-  /** @type {Object<Object>} An object list of close button props. */
+  /** @type {object<object>} An object list of close button props. */
   closeButton: PropTypes.shape({
     id: PropTypes.string,
     onClick: PropTypes.func,
@@ -270,13 +259,24 @@ PanelV2.propTypes = {
   /** Pass any of the options available in https://github.com/focus-trap/focus-trap#createfocustrapelement-createoptions */
   focusTrapOptions: Portal.propTypes.focusTrapOptions,
 
+  /**
+   * Specify whether the panel contains scrolling content
+   */
+  hasScrollingContent: PropTypes.bool,
+
   /** @type {boolean} The open state. */
   isOpen: PropTypes.bool,
 
   /** @type {object} Labels for Panel and children */
   labels: defaultLabels.propType,
 
-  /** @type {Object<Object>} An object list of primary button props. */
+  /**
+   * Handler for all close actions such as clicking on the close button,
+   * pressing the "Escape" key, or clicking outside of the panel area.
+   */
+  onClose: PropTypes.func,
+
+  /** @type {object<object>} An object list of primary button props. */
   primaryButton: deprecate(
     buttonType,
     `\nThe prop \`primaryButton\` for PanelV2 has been deprecated in favor of \`renderFooter\`.`
@@ -288,7 +288,7 @@ PanelV2.propTypes = {
   /** @type {ReactNode|any} The root node for rendering the panel */
   rootNode: isNode() ? PropTypes.instanceOf(Node) : PropTypes.any,
 
-  /** @type {Object<Object>} An object list of secondary button props. */
+  /** @type {object<object>} An object list of secondary button props. */
   secondaryButton: deprecate(
     buttonType,
     `\nThe prop \`secondaryButton\` for PanelV2 has been deprecated in favor of \`renderFooter\`.`
@@ -297,7 +297,7 @@ PanelV2.propTypes = {
   /** @type {boolean} Stop event propagation for events that can bubble. */
   stopPropagation: PropTypes.bool,
 
-  /** @type {array} Array of event types to stop propagation. */
+  /** @type {Array} Array of event types to stop propagation. */
   stopPropagationEvents: PropTypes.arrayOf(PropTypes.oneOf(PORTAL_EVENTS)),
 
   /** @type {ReactNode} Subtitle child elements. */
@@ -305,25 +305,6 @@ PanelV2.propTypes = {
 
   /** @type {ReactNode} Title child elements. */
   title: PropTypes.node,
-
-  /**
-   * Specify whether the panel contains scrolling content
-   */
-  hasScrollingContent: PropTypes.bool,
-
-  /**
-   * Required props for the accessibility label of the header
-   */
-  ['aria-label']: requiredIfGivenPropIsTruthy(
-    'hasScrollingContent',
-    PropTypes.string
-  ),
-
-  /**
-   * Handler for all close actions such as clicking on the close button,
-   * pressing the "Escape" key, or clicking outside of the panel area.
-   */
-  onClose: PropTypes.func,
 };
 
 PanelV2.defaultProps = {

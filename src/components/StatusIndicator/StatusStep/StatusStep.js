@@ -1,14 +1,13 @@
 /**
  * @file Status step.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-import Error20 from '@carbon/icons-react/lib/error/20';
-import RadioButton20 from '@carbon/icons-react/lib/radio-button/20';
+import { Error20, RadioButton20 } from '@carbon/icons-react';
 
-import React, { Component } from 'react';
 import classnames from 'classnames';
 import { string, oneOf } from 'prop-types';
+import React, { Component } from 'react';
 
 import { appendComponentNamespace } from '../../../globals/namespace';
 import { namespace as indicatorNamespace } from '../StatusIndicator';
@@ -82,14 +81,17 @@ const getStatusIcon = (status, description) => {
  */
 class StatusStep extends Component {
   static propTypes = {
-    /** @type {string} Used to create a custom key for a step. */
-    label: string.isRequired,
+    /** @type {string} Extra classes to add. */
+    className: string,
 
     /** @type {string} A description for a step. */
     description: string.isRequired,
 
-    /** @type {string} Extra classes to add. */
-    className: string,
+    /** @type {string} An error message to explain why the step failed. */
+    errorMsg: string,
+
+    /** @type {string} Used to create a custom key for a step. */
+    label: string.isRequired,
 
     /** @type {enum} A status for a step. */
     status: oneOf([
@@ -98,9 +100,6 @@ class StatusStep extends Component {
       STATUS.DEFAULT,
       STATUS.FAILED,
     ]),
-
-    /** @type {string} An error message to explain why the step failed. */
-    errorMsg: string,
   };
 
   static defaultProps = {
@@ -114,10 +113,11 @@ class StatusStep extends Component {
   };
 
   static getDerivedStateFromProps(nextProps, prevProps) {
-    if (nextProps.status && prevProps.status !== nextProps.status)
+    if (nextProps.status && prevProps.status !== nextProps.status) {
       return {
         status: nextProps.status,
       };
+    }
     return null;
   }
 

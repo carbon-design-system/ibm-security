@@ -1,7 +1,7 @@
 ////
 /// Toolbar mixins.
 /// @group toolbar
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -16,6 +16,7 @@
 
 @import '../../platform/body/mixins';
 @import '../Header/variables';
+@import '../Nav/mixins';
 
 /// Name.
 /// @type String
@@ -131,15 +132,16 @@ $toolbar__panel__transition__timing-function: $timing-function;
   $toolbar__layer: ($header__layer + 2);
 
   @include toolbar--base;
+
+  z-index: $toolbar__layer;
   top: 0;
   bottom: 0;
   left: 0;
   width: $toolbar__sizing__width;
+  box-sizing: border-box;
   padding: $toolbar__spacing__position__vertical
     $toolbar__spacing__position__horizontal;
   background-color: $ui-background;
-  box-sizing: border-box;
-  z-index: $toolbar__layer;
 
   &__minimized {
     bottom: unset;
@@ -197,24 +199,32 @@ $toolbar__panel__transition__timing-function: $timing-function;
   }
 
   &__nav__item__icon {
-    width: carbon--mini-units($count: 2);
-    height: carbon--mini-units($count: 2);
+    width: carbon--mini-units($count: 2.5);
+    height: carbon--mini-units($count: 2.5);
+    margin-left: -$carbon--spacing-07;
+  }
+
+  &__nav__item__title {
+    &--icon {
+      margin-left: $carbon--spacing-04;
+    }
   }
 
   &__panel {
     @include toolbar--base;
+
+    z-index: $toolbar__layer - 1;
     top: 0;
-    left: $toolbar__sizing__width;
     bottom: 0;
+    left: $toolbar__sizing__width;
     width: $toolbar__panel__sizing__width;
+    box-sizing: border-box;
     padding-top: $toolbar__spacing__position__vertical;
     padding-bottom: $toolbar__spacing__position__vertical;
     background-color: $ui-01;
     box-shadow: $toolbar__panel__box-shadow;
-    box-sizing: border-box;
     overflow-x: hidden;
     overflow-y: auto;
-    z-index: $toolbar__layer - 1;
 
     @include rtl {
       right: $toolbar__sizing__width;
@@ -225,19 +235,20 @@ $toolbar__panel__transition__timing-function: $timing-function;
 
   &__content {
     @include carbon--type-style($name: body-short-01);
-    height: 95%;
-    width: $toolbar__panel__content__sizing__width;
+
     overflow: hidden;
+    width: $toolbar__panel__content__sizing__width;
+    height: 95%;
     margin: 0 $carbon--spacing-06 0 $carbon--spacing-06;
 
     > div:first-child {
-      height: 100%;
-      width: 100%;
       overflow: auto;
-      margin-right: -$carbon--spacing-05;
+      width: 100%;
+      height: 100%;
       padding-right: $carbon--spacing-05;
-      margin-bottom: -$carbon--spacing-06;
       padding-bottom: $carbon--spacing-06;
+      margin-right: -$carbon--spacing-05;
+      margin-bottom: -$carbon--spacing-06;
     }
 
     a {

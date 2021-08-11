@@ -54,8 +54,8 @@
 
   position: relative;
   display: flex;
-  height: $header--height + $body--height + $footer--height;
   min-width: carbon--mini-units($count: 36);
+  height: $header--height + $body--height + $footer--height;
   flex-direction: column;
 
   &__container {
@@ -69,38 +69,39 @@
   &__body {
     @include carbon--type-style($name: body-long-01);
 
+    display: flex;
+
     // `hidden` because the ScrollGradient will handle overflow:
     overflow: hidden;
-
-    display: flex;
+    width: 100%;
+    height: 100%;
     flex-direction: column;
     flex-grow: 1;
-    height: 100%;
-    width: 100%;
     padding: $carbon--spacing-05;
     margin: 0;
   }
 
   &__header {
-    height: $header--height;
     display: flex;
+    height: $header--height;
     padding: $carbon--spacing-05 $carbon--spacing-05 0 $carbon--spacing-05;
 
     &__title {
       @include carbon--type-style($name: caption-01);
-      color: $text-02;
+
       flex-grow: 1;
-      margin: 0;
       padding: 0;
+      margin: 0;
+      color: $text-02;
     }
   }
 
   &__footer {
     position: relative;
-    display: flex;
-    background-color: $ui-01;
-    border-top: 1px solid $ui-02;
     z-index: 0;
+    display: flex;
+    border-top: 1px solid $ui-02;
+    background-color: $ui-01;
   }
 
   &__select {
@@ -109,9 +110,9 @@
     $summary-card__select__spacing__padding: $carbon--spacing-03;
 
     display: flex;
+    align-items: center;
     padding-right: $summary-card__select__spacing__padding;
     padding-left: $summary-card__select__spacing__padding;
-    align-items: center;
 
     &__checkbox {
       @include text-overflow;
@@ -121,18 +122,18 @@
   }
 
   &__action {
-    flex: 1;
-    max-width: unset;
-    overflow: hidden;
-
     // Ensure that actions are always on top of the overlay:
     z-index: $overlay--z-index + 1;
+    overflow: hidden;
+    max-width: unset;
+    flex: 1;
 
     // Ensure that animating overlay doesn't show through due to transparent background:
     background-color: inherit;
 
     &__text {
       @include text-overflow;
+
       overflow-y: hidden;
     }
 
@@ -148,16 +149,16 @@
   }
 
   &__action-overlay {
-    cursor: default;
     position: absolute;
+    z-index: $overlay--z-index;
+    top: -($body--height - $carbon--spacing-05);
+    right: 0;
+    bottom: $footer--height;
+    left: 0;
     display: flex;
     flex-direction: column;
     background-color: $ui-01;
-    z-index: $overlay--z-index;
-    top: -($body--height - $carbon--spacing-05);
-    bottom: $footer--height;
-    right: 0;
-    left: 0;
+    cursor: default;
 
     &__header {
       display: flex;
@@ -167,6 +168,7 @@
     &__title,
     &__content {
       @include carbon--type-style($name: body-long-01);
+
       margin: 0;
     }
 
@@ -195,35 +197,35 @@
       }
 
       .#{$prefix}--btn__icon {
-        margin-left: 0;
-        height: carbon--mini-units($count: 2.5);
         width: carbon--mini-units($count: 2.5);
+        height: carbon--mini-units($count: 2.5);
+        margin-left: 0;
       }
     }
 
     &__transition {
       &--appear,
       &--enter {
-        transform: translate3d(0, $body--height, 0);
         opacity: 0;
+        transform: translate3d(0, $body--height, 0);
 
         &--active {
+          opacity: 1;
           transform: translate3d(0, 0, 0);
           transition: all $duration--moderate-02;
           transition-timing-function: motion(entrance, expressive);
-          opacity: 1;
         }
       }
 
       &--leave {
-        transform: translate3d(0, 0, 0);
         opacity: 1;
+        transform: translate3d(0, 0, 0);
 
         &--active {
+          opacity: 0;
           transform: translate3d(0, $body--height, 0);
           transition: all $duration--moderate-02;
           transition-timing-function: motion(exit, expressive);
-          opacity: 0;
         }
       }
     }
@@ -231,13 +233,13 @@
 
   &__action-overlay--transparent {
     position: absolute;
-    background-color: $overlay-01;
-    top: -($body--height + $header--height);
-    bottom: $footer--height;
-    right: 0;
-    left: 0;
 
     // Ensure that this transparent div is always beneath the overlay and actions:
     z-index: $overlay--z-index - 1;
+    top: -($body--height + $header--height);
+    right: 0;
+    bottom: $footer--height;
+    left: 0;
+    background-color: $overlay-01;
   }
 }

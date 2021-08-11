@@ -1,0 +1,477 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav Rendering renders correctly 1`] = `
+<Nav
+  className="class"
+  heading="Label"
+  label="Label"
+>
+  <nav
+    aria-label="Label"
+    className="security--nav class"
+  >
+    <h1
+      className="security--nav__heading"
+    >
+      Label
+    </h1>
+    <ul
+      className="security--nav__wrapper"
+      role="menubar"
+    >
+      <NavList
+        activeHref="/"
+        className=""
+        icon=""
+        id="security--nav__list--0"
+        isExpandedOnPageload={false}
+        key="security--nav__list--0/.0"
+        navigationItemTitle=""
+        onItemClick={[Function]}
+        onListClick={[Function]}
+        tabIndex={0}
+        title=""
+      >
+        <li
+          className="security--nav__list"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="menuitem"
+          tabIndex={0}
+        >
+          <div
+            className="security--nav__list__item__link"
+          >
+            <div
+              className="security--nav__list__item__content"
+            />
+            <Icon
+              className="security--nav__list__icon"
+              height={null}
+              path={null}
+              renderIcon={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "render": [Function],
+                }
+              }
+              size={20}
+              viewBox="0 0 32 32"
+              width={null}
+            >
+              <ForwardRef(ChevronDown16)
+                aria-hidden="true"
+                className="security--icon security--nav__list__icon"
+                focusable={false}
+                preserveAspectRatio="xMidYMid meet"
+                style={
+                  Object {
+                    "willChange": "transform",
+                  }
+                }
+              >
+                <Icon
+                  aria-hidden="true"
+                  className="security--icon security--nav__list__icon"
+                  fill="currentColor"
+                  focusable={false}
+                  height={16}
+                  preserveAspectRatio="xMidYMid meet"
+                  style={
+                    Object {
+                      "willChange": "transform",
+                    }
+                  }
+                  viewBox="0 0 16 16"
+                  width={16}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="security--icon security--nav__list__icon"
+                    fill="currentColor"
+                    focusable={false}
+                    height={16}
+                    preserveAspectRatio="xMidYMid meet"
+                    style={
+                      Object {
+                        "willChange": "transform",
+                      }
+                    }
+                    viewBox="0 0 16 16"
+                    width={16}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 11L3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z"
+                    />
+                  </svg>
+                </Icon>
+              </ForwardRef(ChevronDown16)>
+            </Icon>
+          </div>
+          <ul
+            aria-hidden={true}
+            aria-label=""
+            className="security--nav__list security--nav__list--nested"
+            role="menu"
+          >
+            <NavItem
+              activeHref="/"
+              className=""
+              current={null}
+              disabled={false}
+              element="a"
+              handleItemSelect={null}
+              href="#0"
+              id={null}
+              key="security--nav__list__item--0/.0"
+              label=""
+              link={true}
+              onClick={[Function]}
+              tabIndex={-1}
+            >
+              <li
+                className="security--nav__list__item"
+                label=""
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="menuitem"
+              >
+                <NavItemLink
+                  className="security--nav__list__item__link"
+                  element="a"
+                  href="#0"
+                  id="security--nav__list__item__1"
+                  tabIndex={-1}
+                >
+                  <a
+                    className="security--nav__list__item__link"
+                    href="#0"
+                    id="security--nav__list__item__1"
+                    tabIndex={-1}
+                  >
+                    Label
+                  </a>
+                </NavItemLink>
+              </li>
+            </NavItem>
+          </ul>
+        </li>
+      </NavList>
+      <NavList
+        activeHref="/"
+        className=""
+        icon=""
+        id="security--nav__list--1"
+        isExpandedOnPageload={false}
+        key="security--nav__list--1/.1"
+        navigationItemTitle=""
+        onItemClick={[Function]}
+        onListClick={[Function]}
+        tabIndex={0}
+        title=""
+      >
+        <li
+          className="security--nav__list"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="menuitem"
+          tabIndex={0}
+        >
+          <div
+            className="security--nav__list__item__link"
+          >
+            <div
+              className="security--nav__list__item__content"
+            />
+            <Icon
+              className="security--nav__list__icon"
+              height={null}
+              path={null}
+              renderIcon={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "render": [Function],
+                }
+              }
+              size={20}
+              viewBox="0 0 32 32"
+              width={null}
+            >
+              <ForwardRef(ChevronDown16)
+                aria-hidden="true"
+                className="security--icon security--nav__list__icon"
+                focusable={false}
+                preserveAspectRatio="xMidYMid meet"
+                style={
+                  Object {
+                    "willChange": "transform",
+                  }
+                }
+              >
+                <Icon
+                  aria-hidden="true"
+                  className="security--icon security--nav__list__icon"
+                  fill="currentColor"
+                  focusable={false}
+                  height={16}
+                  preserveAspectRatio="xMidYMid meet"
+                  style={
+                    Object {
+                      "willChange": "transform",
+                    }
+                  }
+                  viewBox="0 0 16 16"
+                  width={16}
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <svg
+                    aria-hidden={true}
+                    className="security--icon security--nav__list__icon"
+                    fill="currentColor"
+                    focusable={false}
+                    height={16}
+                    preserveAspectRatio="xMidYMid meet"
+                    style={
+                      Object {
+                        "willChange": "transform",
+                      }
+                    }
+                    viewBox="0 0 16 16"
+                    width={16}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 11L3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z"
+                    />
+                  </svg>
+                </Icon>
+              </ForwardRef(ChevronDown16)>
+            </Icon>
+          </div>
+          <ul
+            aria-hidden={true}
+            aria-label=""
+            className="security--nav__list security--nav__list--nested"
+            role="menu"
+          >
+            <NavItem
+              activeHref="/"
+              className=""
+              current={null}
+              disabled={false}
+              element="a"
+              handleItemSelect={null}
+              href="#1"
+              id={null}
+              key="security--nav__list__item--0/.0"
+              label=""
+              link={true}
+              onClick={[Function]}
+              tabIndex={-1}
+            >
+              <li
+                className="security--nav__list__item"
+                label=""
+                onClick={[Function]}
+                onKeyPress={[Function]}
+                role="menuitem"
+              >
+                <NavItemLink
+                  className="security--nav__list__item__link"
+                  element="a"
+                  href="#1"
+                  id="security--nav__list__item__2"
+                  tabIndex={-1}
+                >
+                  <a
+                    className="security--nav__list__item__link"
+                    href="#1"
+                    id="security--nav__list__item__2"
+                    tabIndex={-1}
+                  >
+                    Label
+                  </a>
+                </NavItemLink>
+              </li>
+            </NavItem>
+          </ul>
+        </li>
+      </NavList>
+      <NavItem
+        activeHref="/"
+        className=""
+        current={null}
+        disabled={false}
+        element="a"
+        handleItemSelect={null}
+        href="#2"
+        id={null}
+        key="security--nav__list__item--2/.2"
+        label=""
+        link={true}
+        onClick={[Function]}
+        tabIndex={0}
+      >
+        <li
+          className="security--nav__list__item"
+          label=""
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="menuitem"
+        >
+          <NavItemLink
+            className="security--nav__list__item__link"
+            element="a"
+            href="#2"
+            id="security--nav__list__item__3"
+            tabIndex={0}
+          >
+            <a
+              className="security--nav__list__item__link"
+              href="#2"
+              id="security--nav__list__item__3"
+              tabIndex={0}
+            >
+              Label
+            </a>
+          </NavItemLink>
+        </li>
+      </NavItem>
+    </ul>
+  </nav>
+</Nav>
+`;
+
+exports[`Nav Rendering renders the HTML of the node's subtree 1`] = `
+<nav
+  aria-label="Label"
+  class="security--nav class"
+>
+  <h1
+    class="security--nav__heading"
+  >
+    Label
+  </h1>
+  <ul
+    class="security--nav__wrapper"
+    role="menubar"
+  >
+    <li
+      class="security--nav__list"
+      role="menuitem"
+      tabindex="0"
+    >
+      <div
+        class="security--nav__list__item__link"
+      >
+        <div
+          class="security--nav__list__item__content"
+        />
+        <svg
+          aria-hidden="true"
+          class="security--icon security--nav__list__icon"
+          fill="currentColor"
+          focusable="false"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          style="will-change: transform;"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8 11L3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z"
+          />
+        </svg>
+      </div>
+      <ul
+        aria-hidden="true"
+        aria-label=""
+        class="security--nav__list security--nav__list--nested"
+        role="menu"
+      >
+        <li
+          class="security--nav__list__item"
+          label=""
+          role="menuitem"
+        >
+          <a
+            class="security--nav__list__item__link"
+            href="#0"
+            id="security--nav__list__item__1"
+            tabindex="-1"
+          >
+            Label
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li
+      class="security--nav__list"
+      role="menuitem"
+      tabindex="0"
+    >
+      <div
+        class="security--nav__list__item__link"
+      >
+        <div
+          class="security--nav__list__item__content"
+        />
+        <svg
+          aria-hidden="true"
+          class="security--icon security--nav__list__icon"
+          fill="currentColor"
+          focusable="false"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          style="will-change: transform;"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8 11L3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z"
+          />
+        </svg>
+      </div>
+      <ul
+        aria-hidden="true"
+        aria-label=""
+        class="security--nav__list security--nav__list--nested"
+        role="menu"
+      >
+        <li
+          class="security--nav__list__item"
+          label=""
+          role="menuitem"
+        >
+          <a
+            class="security--nav__list__item__link"
+            href="#1"
+            id="security--nav__list__item__2"
+            tabindex="-1"
+          >
+            Label
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li
+      class="security--nav__list__item"
+      label=""
+      role="menuitem"
+    >
+      <a
+        class="security--nav__list__item__link"
+        href="#2"
+        id="security--nav__list__item__3"
+        tabindex="0"
+      >
+        Label
+      </a>
+    </li>
+  </ul>
+</nav>
+`;

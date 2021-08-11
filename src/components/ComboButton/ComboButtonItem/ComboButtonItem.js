@@ -1,16 +1,16 @@
 /**
  * @file Combo button item.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
+
+import deprecate from 'carbon-components-react/es/prop-types/deprecate';
 
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
-
 import { namespace } from '../ComboButton';
 
-const ComboButtonItem = props => {
+const ComboButtonItem = (props) => {
   const { ...rest } = props;
   return <span {...rest} className={`${namespace}-item`} />;
 };
@@ -44,7 +44,7 @@ ComboButtonItem.propTypes = {
     `\nThe prop \`primaryFocus\` for ComboButtonItem has been deprecated. Please use the \`selectorPrimaryFocus\` in ComboButton instead.`
   ),
 
-  /** @type {function|object} Icon to render. */
+  /** @type {Function|object} Icon to render. */
   renderIcon: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
 };
 

@@ -1,14 +1,16 @@
 /**
  * @file Jest configuration.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
-import '@testing-library/jest-dom/extend-expect';
+import '@testing-library/jest-dom';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
+import toBeAccessible from './matchers/toBeAccessible';
 import toHaveNoAxeViolations from './matchers/toHaveNoAxeViolations';
-import toHaveNoDAPViolations from './matchers/toHaveNoDAPViolations';
+
+const { fn } = jest;
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -23,4 +25,13 @@ Enzyme.configure({ adapter: new Adapter() });
 //
 // For more information, check out the docs here:
 // https://jestjs.io/docs/en/configuration.html#setupfilesafterenv-array
-expect.extend({ toHaveNoAxeViolations, toHaveNoDAPViolations });
+expect.extend({ toBeAccessible, toHaveNoAxeViolations });
+
+// https://github.com/nickcolley/jest-axe/issues/147
+const { getComputedStyle } = window;
+window.getComputedStyle = fn((element) => getComputedStyle(element));
+
+window.ResizeObserver = fn().mockImplementation(() => ({
+  disconnect: fn(),
+  observe: fn(),
+}));

@@ -1,9 +1,9 @@
 /**
  * @file Documentation container.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
-import { Anchor, DocsContainer } from '@storybook/addon-docs/blocks';
+import { Anchor, DocsContainer } from '@storybook/addon-docs';
 import React from 'react';
 
 // https://github.com/storybookjs/storybook/issues/10983

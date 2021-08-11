@@ -8,5 +8,6 @@ module.exports = {
   rootDir: 'src',
   setupFilesAfterEnv: ['<rootDir>/../config/jest'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
-  testTimeout: 10000,
+  testEnvironment: 'jsdom',
+  testTimeout: 20000,
 };

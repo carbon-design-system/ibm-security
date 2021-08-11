@@ -1,9 +1,9 @@
 /**
  * @file Summary card container.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019, 2021
  */
 
-import { arrayOf, shape, string } from 'prop-types';
+import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
 import { appendComponentNamespace } from '../../../globals/namespace';
@@ -14,17 +14,15 @@ import { namespace as summaryCardSelectNamespace } from '../SummaryCardSelect/Su
 const getSummaryCard = (summaryCards, selectedId) =>
   summaryCards.filter(({ id }) => id === selectedId);
 
-const resetSelectedSummaryCards = state => state([]);
+const resetSelectedSummaryCards = (state) => state([]);
 
 function SummaryCardContainer({ render, summaryCards, ...other }) {
-  const [
-    selectedSummaryCards,
-    setSelectedSummaryCards,
-  ] = resetSelectedSummaryCards(useState);
+  const [selectedSummaryCards, setSelectedSummaryCards] =
+    resetSelectedSummaryCards(useState);
 
   const { length: totalSelected } = selectedSummaryCards;
 
-  function getBatchActionProps({ ...props }) {
+  function getBatchActionProps(props) {
     return {
       ...props,
       onCancel: () => resetSelectedSummaryCards(setSelectedSummaryCards),
@@ -64,18 +62,20 @@ function SummaryCardContainer({ render, summaryCards, ...other }) {
   return (
     <div
       className={appendComponentNamespace(summaryCardNamespace, 'container')}
-      {...other}
-    >
+      {...other}>
       {render(renderProps)}
     </div>
   );
 }
 
 SummaryCardContainer.propTypes = {
+  /** Render function */
+  render: PropTypes.func.isRequired,
+
   /** Provide a list of all the summary cards to render in the container */
-  summaryCards: arrayOf(
-    shape({
-      id: string.isRequired,
+  summaryCards: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
     })
   ).isRequired,
 };

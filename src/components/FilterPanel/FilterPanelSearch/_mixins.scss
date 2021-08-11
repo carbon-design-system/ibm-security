@@ -1,7 +1,7 @@
 ////
 /// Filter panel search mixins.
 /// @group filter-panel
-/// @copyright IBM Security 2020
+/// @copyright IBM Security 2020 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -16,14 +16,14 @@
 
   &__results {
     position: absolute;
+    z-index: z($layer: dropdown);
     top: 100%;
     left: 0;
     width: 100%;
     max-height: carbon--mini-units($count: 38);
+    box-sizing: border-box;
     padding: $carbon--spacing-03;
     background-color: $ui-01;
-    box-sizing: border-box;
     overflow-y: auto;
-    z-index: z($layer: dropdown);
   }
 }

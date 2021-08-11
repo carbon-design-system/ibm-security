@@ -1,11 +1,12 @@
 ////
 /// Decorator mixins.
 /// @group decorator
-/// @copyright IBM Security 2019-2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
 @import '@carbon/layout/scss/spacing';
+@import '@carbon/motion/scss/motion';
 @import '@carbon/themes/scss/tokens';
 @import '@carbon/type/scss/font-family';
 @import '@carbon/type/scss/styles';
@@ -29,32 +30,26 @@
 @mixin decorator {
   $root: &;
 
-  /// Height.
-  /// @type Length
-  $data-decorator__sizing__height: carbon--mini-units(
-    $count: 3.25,
-  );
-
   @include carbon--type-style($name: body-short-01);
   @include security--decorator__padding(
     $decorator__spacing__padding: $carbon--spacing-03
   );
 
   display: inline-flex;
-  box-sizing: border-box;
-  font-family: carbon--font-family($name: sans);
-  height: $data-decorator__sizing__height;
-  background-color: $hover-ui;
-  font-style: normal;
-  font-stretch: normal;
-  text-align: left;
-  text-transform: none;
   max-width: 100%;
+  height: carbon--mini-units($count: 3.25);
+  box-sizing: border-box;
+  align-items: center;
   padding: unset;
   border: unset;
-  vertical-align: middle;
+  background-color: $hover-ui;
   color: $text-02;
+  font-family: carbon--font-family($name: sans);
+  font-stretch: normal;
+  font-style: normal;
+  text-align: left;
   text-decoration: none;
+  text-transform: none;
 
   #{$root}--interactive:not(&--active) {
     #{$root}__type {
@@ -72,8 +67,8 @@
 
   &#{$root}--interactive {
     &:hover {
-      cursor: pointer;
       background-color: $active-ui;
+      cursor: pointer;
     }
 
     &:focus {
@@ -84,8 +79,8 @@
     &:focus,
     &:hover,
     &:focus:active {
-      text-decoration: none;
       box-shadow: none;
+      text-decoration: none;
 
       #{$root}__value {
         text-decoration: underline;
@@ -102,41 +97,32 @@
 
   &#{$root}--active:focus {
     @include focus-outline('outline');
+
     outline-color: $inverse-focus-ui;
   }
 
   &__icon,
   &__type,
   &__value {
+    @include carbon--motion($mode: productive, $name: standard);
+
     display: inherit;
     height: inherit;
     align-items: center;
-    transition-duration: 0.2s;
+    transition-duration: $moderate-02;
     transition-property: background-color;
-    transition-timing-function: $timing-function;
   }
 
   &#{$root}--inline {
-    /// Inline height.
-    /// @type Length
-    $data-decorator--inline__sizing__height: carbon--mini-units(
-      $count: 2.5,
-    );
-
     @include carbon--type-style($name: caption-01);
 
-    height: $data-decorator--inline__sizing__height;
+    height: carbon--mini-units($count: 2.5);
     vertical-align: middle;
 
     > #{$root} {
       @include security--decorator__padding(
         $decorator__spacing__padding: $carbon--spacing-02
       );
-
-      &__type,
-      &__value {
-        line-height: $data-decorator--inline__sizing__height;
-      }
     }
   }
 
@@ -185,7 +171,8 @@
 
   &__value {
     @include text-overflow;
+
     max-width: 30ch;
-    line-height: $data-decorator__sizing__height;
+    height: auto;
   }
 }

@@ -1,7 +1,7 @@
 ////
 /// Filter panel label mixins.
 /// @group filter-panel
-/// @copyright IBM Security 2020
+/// @copyright IBM Security 2020 - 2021
 ////
 
 @import '@carbon/layout/scss/spacing';
@@ -9,12 +9,12 @@
 
 @mixin filter-panel-label {
   display: flex;
-  align-items: center;
   width: 100%;
+  align-items: center;
 
   &__text {
-    flex: 1 1;
     overflow: hidden;
+    flex: 1 1;
     text-overflow: ellipsis;
     white-space: nowrap;
   }

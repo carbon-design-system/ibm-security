@@ -1,7 +1,7 @@
 ////
 /// Pill component.
 /// @group pill
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/colors/scss/colors';
@@ -15,12 +15,12 @@
 @import '../Component/mixins';
 
 @include security--component($name: pill) {
-  border-radius: carbon--mini-units($count: 12.5);
   padding: 0 $carbon--spacing-03;
+  border-radius: carbon--mini-units($count: 12.5);
 
   &--inline {
-    border-radius: carbon--mini-units($count: 6.25);
     display: inline-flex;
     padding: 0 $carbon--spacing-02;
+    border-radius: carbon--mini-units($count: 6.25);
   }
 }

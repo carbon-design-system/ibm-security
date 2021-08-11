@@ -1,15 +1,19 @@
 /**
  * @file Icon button bar.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
+import {
+  OverflowMenuVertical16,
+  OverflowMenuVertical20,
+  OverflowMenuVertical24,
+  OverflowMenuVertical32,
+} from '@carbon/icons-react';
+
 import classnames from 'classnames';
-import OverflowMenuVertical16 from '@carbon/icons-react/lib/overflow-menu--vertical/16';
-import OverflowMenuVertical20 from '@carbon/icons-react/lib/overflow-menu--vertical/20';
-import OverflowMenuVertical24 from '@carbon/icons-react/lib/overflow-menu--vertical/24';
-import OverflowMenuVertical32 from '@carbon/icons-react/lib/overflow-menu--vertical/32';
+import PropTypes from 'prop-types';
+import React, { Fragment } from 'react';
+
 import { OverflowMenu, OverflowMenuItem } from '../..';
 import IconButton from '../IconButton';
 import { getComponentNamespace } from '../../globals/namespace';
@@ -68,7 +72,7 @@ const IconButtonBar = ({
     if (overflowMenuDirection === IconButton.TooltipDirection.TOP) {
       items.reverse();
     }
-    return items.map(action => (
+    return items.map((action) => (
       <OverflowMenuItem
         itemText={action.label}
         key={action.label}
@@ -97,18 +101,19 @@ const IconButtonBar = ({
 
   return (
     <div className={iconButtonBarClasses}>
-      {!isMaxLength && actions.map(action => renderIconButton(action))}
+      {!isMaxLength && actions.map((action) => renderIconButton(action))}
       {isMaxLength && (
         <Fragment>
-          {actions.slice(0, length - 1).map(action => renderIconButton(action))}
+          {actions
+            .slice(0, length - 1)
+            .map((action) => renderIconButton(action))}
           <OverflowMenu
             className={`${namespace}__overflow-menu`}
             direction={overflowMenuDirection}
             flipped
             menuOptionsClass={iconButtonBarMenuOptionsClasses}
             renderIcon={getOverflowMenuIcon()}
-            selectorPrimaryFocus={`.${iconButtonPrimaryFocus}`}
-          >
+            selectorPrimaryFocus={`.${iconButtonPrimaryFocus}`}>
             {renderMenuItems()}
           </OverflowMenu>
         </Fragment>

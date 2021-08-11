@@ -1,9 +1,10 @@
 /**
  * @file Header notification.
- * @copyright IBM Security 2018
+ * @copyright IBM Security 2018 - 2021
  */
 
-import Close20 from '@carbon/icons-react/lib/close/20';
+import { Close20 } from '@carbon/icons-react';
+
 import React from 'react';
 
 import Icon from '../../Icon';
@@ -42,7 +43,7 @@ const HeaderNotification = ({
         className={`${namespace}__button`}
         aria-label={clearButtonLabel}
         onClick={onClearButtonClick}
-      >
+        type="button">
         <Icon renderIcon={Close20} />
       </button>
     </div>
