@@ -165,7 +165,7 @@ describe('SummaryCard', () => {
 
   test('should pass through extra props via spread attribute', () => {
     const { queryByTestId } = render(
-      <SummaryCard data-testid="test-id">test content</SummaryCard>
+      <SummaryCard data-test-id="test-id">test content</SummaryCard>
     );
     expect(queryByTestId('test-id')).toBeVisible();
   });

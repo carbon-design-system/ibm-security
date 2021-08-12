@@ -30,7 +30,7 @@ describe('FilterPanelGroup', () => {
 
   test('renders with a heading node', () => {
     const { getByTestId } = render(
-      <FilterPanelGroup heading={<span data-testid="node-title" />} />
+      <FilterPanelGroup heading={<span data-test-id="node-title" />} />
     );
     expect(getByTestId('node-title')).toBeVisible();
   });
@@ -38,7 +38,7 @@ describe('FilterPanelGroup', () => {
   test('renders with content', () => {
     const { getByTestId } = render(
       <FilterPanelGroup>
-        <div data-testid="content" />
+        <div data-test-id="content" />
       </FilterPanelGroup>
     );
     expect(getByTestId('content')).toBeVisible();

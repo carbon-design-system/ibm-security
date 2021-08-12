@@ -3,7 +3,7 @@
 exports[`FilterPanel renders with no title 1`] = `
 <aside
   className="security--filter-panel"
-  data-testid="legacy-filter-panel"
+  data-test-id="legacy-filter-panel"
 >
   <div
     className="security--filter-panel__search"
@@ -1803,7 +1803,7 @@ exports[`FilterPanel renders with no title 1`] = `
 exports[`FilterPanel renders with title 1`] = `
 <aside
   className="security--filter-panel"
-  data-testid="legacy-filter-panel"
+  data-test-id="legacy-filter-panel"
 >
   <h1
     className="security--filter-panel__title"
@@ -3608,7 +3608,7 @@ exports[`FilterPanel renders with title 1`] = `
 exports[`FilterPanel should overwrite \`labels\` when unique props defined 1`] = `
 <aside
   className="security--filter-panel"
-  data-testid="legacy-filter-panel"
+  data-test-id="legacy-filter-panel"
 >
   <div
     className="security--filter-panel__search"

@@ -33,7 +33,7 @@ describe(name, () => {
       <FilterPanelSearch
         labelText="search label"
         placeholder="search placeholder">
-        <div data-testid="result-content" />
+        <div data-test-id="result-content" />
       </FilterPanelSearch>
     );
 
@@ -46,7 +46,7 @@ describe(name, () => {
       <FilterPanelSearch
         labelText="search label"
         placeholder="search placeholder">
-        <div data-testid="result-content" />
+        <div data-test-id="result-content" />
       </FilterPanelSearch>
     );
 
@@ -65,7 +65,7 @@ describe(name, () => {
       <FilterPanelSearch
         labelText="search label"
         placeholder="search placeholder">
-        <div data-testid="result-content">
+        <div data-test-id="result-content">
           <Checkbox labelText="checkbox" id="checkbox" />
         </div>
       </FilterPanelSearch>
@@ -87,7 +87,7 @@ describe(name, () => {
 
     expect(
       render(
-        <FilterPanelSearch data-testid={dataTestId} labelText={name} />
+        <FilterPanelSearch data-test-id={dataTestId} labelText={name} />
       ).getByTestId(dataTestId)
     ).toBeInTheDocument();
   });

@@ -16,7 +16,7 @@ import FilterPanelAccordionItem from '../FilterPanelAccordiontItem';
 const createChildChildren = (length) =>
   new Array(length).fill(null).map((value, index) => (
     // eslint-disable-next-line react/no-array-index-key
-    <div key={index} data-testid={`child-${index + 1}`}>
+    <div key={index} data-test-id={`child-${index + 1}`}>
       child {index + 1}
     </div>
   ));
@@ -50,7 +50,7 @@ describe('FilterPanelAccordionItem', () => {
 
   test('renders with a heading node', () => {
     const { getByTestId } = render(
-      <FilterPanelAccordionItem heading={<span data-testid="node-title" />} />
+      <FilterPanelAccordionItem heading={<span data-test-id="node-title" />} />
     );
     expect(getByTestId('node-title')).toBeVisible();
   });
@@ -58,7 +58,7 @@ describe('FilterPanelAccordionItem', () => {
   test('renders with content', () => {
     const { getByTestId } = render(
       <FilterPanelAccordionItem>
-        <div data-testid="content" />
+        <div data-test-id="content" />
       </FilterPanelAccordionItem>
     );
     expect(getByTestId('content')).toBeVisible();

@@ -1,6 +1,6 @@
 /**
  * @file Summary card select tests.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import { render } from '@testing-library/react';
@@ -25,7 +25,7 @@ describe('SummaryCardSelect', () => {
       <SummaryCardSelect
         id="test-summary-select"
         labelText="test select"
-        data-testid="test-id"
+        data-test-id="test-id"
       />
     );
     expect(queryByTestId('test-id')).toBeVisible();

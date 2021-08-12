@@ -57,7 +57,7 @@ describe('TrendingCard', () => {
 
   test('should add extra props via spread attribute', () => {
     const { queryByTestId } = render(
-      <TrendingCard title="test title" data-testid="test-id" />
+      <TrendingCard title="test title" data-test-id="test-id" />
     );
     expect(queryByTestId('test-id')).toBeVisible();
   });

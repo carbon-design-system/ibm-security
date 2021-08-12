@@ -39,7 +39,7 @@ const renderComboButton = (overflowMenuItemCount = 0) => {
   const items = [primaryItem, ...overflowMenuItems];
 
   return render(
-    <div data-testid={COMBO_BUTTON_TESTID}>
+    <div data-test-id={COMBO_BUTTON_TESTID}>
       <ComboButton>{items}</ComboButton>
     </div>
   );

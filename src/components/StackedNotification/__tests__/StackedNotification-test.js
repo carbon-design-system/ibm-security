@@ -60,7 +60,7 @@ describe('StackedNotification', () => {
         subtitle="test subtitle"
         iconDescription="test close button icon"
         statusIconDescription="test status icon"
-        data-testid="test-id"
+        data-test-id="test-id"
       />
     );
     expect(queryByTestId('test-id')).toBeVisible();

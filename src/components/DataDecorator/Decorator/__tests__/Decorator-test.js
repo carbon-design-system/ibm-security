@@ -184,7 +184,7 @@ Object.keys(icons).forEach((icon) => {
     test('should pass through extra props via spread attribute', () => {
       const { queryByTestId } = render(
         <Component
-          data-testid="test-id"
+          data-test-id="test-id"
           description={`${formattedName} severity`}
         />
       );

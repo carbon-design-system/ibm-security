@@ -111,7 +111,7 @@ describe('ProfileImage', () => {
   test('should pass through extra props via spread attribute', () => {
     const { queryByTestId } = render(
       <ProfileImage
-        data-testid="test-id"
+        data-test-id="test-id"
         profile={{
           image_url: null,
           name: {

@@ -48,7 +48,7 @@ describe('ExternalLink', () => {
 
   test('should pass through extra props via spread attribute', () => {
     const { queryByTestId } = render(
-      <ExternalLink href="https://www.ibm.com/security" data-testid="test-id">
+      <ExternalLink href="https://www.ibm.com/security" data-test-id="test-id">
         test link
       </ExternalLink>
     );

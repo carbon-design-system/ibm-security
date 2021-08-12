@@ -28,7 +28,7 @@ describe('FilterPanelLabel', () => {
   test('renders with a heading node', () => {
     const { getByTestId } = render(
       <FilterPanelLabel>
-        <span data-testid="node-label" />
+        <span data-test-id="node-label" />
       </FilterPanelLabel>
     );
     expect(getByTestId('node-label')).toBeVisible();

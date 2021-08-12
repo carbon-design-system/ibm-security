@@ -1,6 +1,6 @@
 /**
  * @file Truncated list mock data utilities used in tests and Storybook stories.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import React from 'react';
@@ -14,7 +14,7 @@ import ListItem from '../../ListItem';
 export const createChildrenArray = (length) =>
   new Array(length).fill(null).map((value, index) => (
     // eslint-disable-next-line react/no-array-index-key
-    <ListItem key={index} data-testid={`child-${index + 1}`}>
+    <ListItem key={index} data-test-id={`child-${index + 1}`}>
       child {index + 1}
     </ListItem>
   ));

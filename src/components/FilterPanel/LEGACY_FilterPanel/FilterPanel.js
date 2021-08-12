@@ -1,10 +1,11 @@
 /**
- * @file Filter Panel.
+ * @file Filter panel.
  * @copyright IBM Security 2019, 2021
  */
 
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import FilterSearch from './FilterSearch';
 import FilterCategory from './FilterCategory';
 import {
@@ -12,6 +13,7 @@ import {
   filterDataDefaultProps,
   getFilterCategoriesArray,
 } from './FilterPanelUtilities';
+
 import { getComponentNamespace } from '../../../globals/namespace';
 import * as defaultLabels from '../../../globals/nls';
 
@@ -40,7 +42,7 @@ const FilterPanel = (props) => {
   };
 
   return (
-    <aside className={namespace} data-testid="legacy-filter-panel">
+    <aside className={namespace} data-test-id="legacy-filter-panel">
       {title && <h1 className={`${namespace}__title`}>{title}</h1>}
       <div className={`${namespace}__search`}>
         <FilterSearch

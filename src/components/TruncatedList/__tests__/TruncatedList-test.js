@@ -42,7 +42,7 @@ describe(TruncatedList.name, () => {
   });
 
   test('passes additional props down to the list', () => {
-    const { getByTestId } = render(<TruncatedList data-testid="test-list" />);
+    const { getByTestId } = render(<TruncatedList data-test-id="test-list" />);
     expect(getByTestId('test-list')).toBeInTheDocument();
   });
 

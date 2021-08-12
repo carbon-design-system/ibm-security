@@ -1,6 +1,6 @@
 /**
  * @file Summary card header tests.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import { render } from '@testing-library/react';
@@ -37,7 +37,7 @@ describe('SummaryCardHeader', () => {
 
   test('should pass through extra props via spread attribute', () => {
     const { queryByTestId } = render(
-      <SummaryCardHeader data-testid="test-id" title="test title" />
+      <SummaryCardHeader data-test-id="test-id" title="test title" />
     );
     expect(queryByTestId('test-id')).toBeVisible();
   });

@@ -48,7 +48,7 @@ describe('SummaryCardAction', () => {
       <SummaryCardAction
         closeButtonIconDescription="test close button"
         expandedContent="test expanded action content"
-        data-testid="test-button-id">
+        data-test-id="test-button-id">
         test button
       </SummaryCardAction>
     );
@@ -108,7 +108,7 @@ describe('SummaryCardAction', () => {
 
   test('should pass through extra props via spread attribute', () => {
     const { queryByTestId } = render(
-      <SummaryCardAction data-testid="test-id" />
+      <SummaryCardAction data-test-id="test-id" />
     );
     expect(queryByTestId('test-id')).toBeVisible();
   });

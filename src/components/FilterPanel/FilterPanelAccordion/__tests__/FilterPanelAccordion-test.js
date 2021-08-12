@@ -27,7 +27,7 @@ describe('FilterPanelAccordion', () => {
 
   test('renders with a heading node', () => {
     const { getByTestId } = render(
-      <FilterPanelAccordion heading={<span data-testid="node-title" />} />
+      <FilterPanelAccordion heading={<span data-test-id="node-title" />} />
     );
     expect(getByTestId('node-title')).toBeVisible();
   });
@@ -35,7 +35,7 @@ describe('FilterPanelAccordion', () => {
   test('renders with content', () => {
     const { getByTestId } = render(
       <FilterPanelAccordion>
-        <div data-testid="content" />
+        <div data-test-id="content" />
       </FilterPanelAccordion>
     );
     expect(getByTestId('content')).toBeVisible();

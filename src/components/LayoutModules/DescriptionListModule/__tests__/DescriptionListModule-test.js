@@ -33,7 +33,7 @@ describe(name, () => {
 
     expect(
       render(
-        <DescriptionListModule data-testid={dataTestId}>
+        <DescriptionListModule data-test-id={dataTestId}>
           {name}
         </DescriptionListModule>
       ).getByTestId(dataTestId)

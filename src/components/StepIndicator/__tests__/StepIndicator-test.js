@@ -29,7 +29,7 @@ describe('StepIndicator', () => {
   });
 
   test('should pass through extra prop to parent component via spread attriute', () => {
-    const { queryByTestId } = render(<StepIndicator data-testid="test-id" />);
+    const { queryByTestId } = render(<StepIndicator data-test-id="test-id" />);
     expect(queryByTestId('test-id')).toBeVisible();
   });
 

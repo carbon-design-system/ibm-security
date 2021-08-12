@@ -38,7 +38,7 @@ describe('InteractiveTag', () => {
 
   test('should add a custom class', () => {
     const { queryByTestId } = render(
-      <InteractiveTag className="custom-class" data-testid={dataTestId}>
+      <InteractiveTag className="custom-class" data-test-id={dataTestId}>
         test tag
       </InteractiveTag>
     );
@@ -48,7 +48,7 @@ describe('InteractiveTag', () => {
 
   test('should add selected class when `isSelected` is `true`', () => {
     const { queryByTestId } = render(
-      <InteractiveTag data-testid={dataTestId} isSelected>
+      <InteractiveTag data-test-id={dataTestId} isSelected>
         test tag
       </InteractiveTag>
     );
@@ -58,7 +58,7 @@ describe('InteractiveTag', () => {
 
   test('should pass through extra props via spread attribute', () => {
     const { queryByTestId } = render(
-      <InteractiveTag data-testid={dataTestId}>test tag</InteractiveTag>
+      <InteractiveTag data-test-id={dataTestId}>test tag</InteractiveTag>
     );
 
     expect(queryByTestId(dataTestId)).toBeInTheDocument();

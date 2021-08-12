@@ -30,7 +30,7 @@ describe('SummaryCardSkeleton', () => {
     const dataTestId = 'dataTestId';
 
     expect(
-      render(<SummaryCardSkeleton data-testid={dataTestId} />).getByTestId(
+      render(<SummaryCardSkeleton data-test-id={dataTestId} />).getByTestId(
         dataTestId
       )
     ).toBeInTheDocument();

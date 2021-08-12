@@ -108,7 +108,7 @@ describe('NonEntitledSection', () => {
       <NonEntitledSection
         title="test title"
         subTitle="test subtitle"
-        data-testid="test-id"
+        data-test-id="test-id"
       />
     );
     expect(queryByTestId('test-id')).toBeVisible();

@@ -1,6 +1,6 @@
 /**
  * @file Summary card body tests.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import { render } from '@testing-library/react';
@@ -25,7 +25,7 @@ describe('SummaryCardBody', () => {
 
   test('should pass through extra props via spread attribute', () => {
     const { queryByTestId } = render(
-      <SummaryCardBody data-testid="test-id">test content</SummaryCardBody>
+      <SummaryCardBody data-test-id="test-id">test content</SummaryCardBody>
     );
     expect(queryByTestId('test-id')).toBeVisible();
   });

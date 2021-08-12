@@ -1,6 +1,6 @@
 /**
  * @file Summary card batch actions tests.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
 import { render } from '@testing-library/react';
@@ -12,7 +12,7 @@ describe('SummaryCardBatchActions', () => {
   test('should pass through extra props via spread attribute', () => {
     const { queryByTestId } = render(
       <SummaryCardBatchActions
-        data-testid="test-id"
+        data-test-id="test-id"
         onCancel={() => {}}
         totalSelected={0}
       />

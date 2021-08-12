@@ -86,7 +86,7 @@ describe('ErrorPage', () => {
   });
 
   test('should accept extra props via spread attribute', () => {
-    const { queryByTestId } = render(<ErrorPage data-testid="test-id" />);
+    const { queryByTestId } = render(<ErrorPage data-test-id="test-id" />);
     expect(queryByTestId('test-id')).toBeVisible();
   });
 });

@@ -4,15 +4,16 @@
  */
 
 import '@testing-library/jest-dom';
-import Enzyme from 'enzyme';
+import { configure } from '@testing-library/dom';
+
+import { configure as enzyme } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 import toBeAccessible from './matchers/toBeAccessible';
 import toHaveNoAxeViolations from './matchers/toHaveNoAxeViolations';
 
-const { fn } = jest;
-
-Enzyme.configure({ adapter: new Adapter() });
+configure({ testIdAttribute: 'data-test-id' });
+enzyme({ adapter: new Adapter() });
 
 // We can extend `expect` using custom matchers as defined by:
 // https://jest-bot.github.io/jest/docs/expect.html#expectextendmatchers
@@ -26,6 +27,8 @@ Enzyme.configure({ adapter: new Adapter() });
 // For more information, check out the docs here:
 // https://jestjs.io/docs/en/configuration.html#setupfilesafterenv-array
 expect.extend({ toBeAccessible, toHaveNoAxeViolations });
+
+const { fn } = jest;
 
 // https://github.com/nickcolley/jest-axe/issues/147
 const { getComputedStyle } = window;

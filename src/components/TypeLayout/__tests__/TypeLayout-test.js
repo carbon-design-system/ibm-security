@@ -64,10 +64,10 @@ describe('TypeLayout', () => {
 
   test('should pass through extra props via spread attribute', () => {
     const { queryByTestId } = render(
-      <TypeLayout data-testid="layout-test-id">
-        <TypeLayoutBody data-testid="body-test-id">
-          <TypeLayoutRow data-testid="row-test-id">
-            <TypeLayoutCell data-testid="cell-test-id">
+      <TypeLayout data-test-id="layout-test-id">
+        <TypeLayoutBody data-test-id="body-test-id">
+          <TypeLayoutRow data-test-id="row-test-id">
+            <TypeLayoutCell data-test-id="cell-test-id">
               test cell
             </TypeLayoutCell>
           </TypeLayoutRow>
@@ -82,10 +82,10 @@ describe('TypeLayout', () => {
 
   test('should apply `children` for each component', () => {
     const { queryByTestId } = render(
-      <TypeLayout data-testid="layout-test-id">
-        <TypeLayoutBody data-testid="body-test-id">
-          <TypeLayoutRow data-testid="row-test-id">
-            <TypeLayoutCell data-testid="cell-test-id">
+      <TypeLayout data-test-id="layout-test-id">
+        <TypeLayoutBody data-test-id="body-test-id">
+          <TypeLayoutRow data-test-id="row-test-id">
+            <TypeLayoutCell data-test-id="cell-test-id">
               test cell
             </TypeLayoutCell>
           </TypeLayoutRow>
@@ -99,7 +99,7 @@ describe('TypeLayout', () => {
   });
 
   test('should apply correct class when `border` is `true`', () => {
-    const { container } = render(<TypeLayout data-testid="test-id" border />);
+    const { container } = render(<TypeLayout data-test-id="test-id" border />);
     expect(container.firstElementChild).toHaveClass(`${namespace}--bordered`);
   });
 

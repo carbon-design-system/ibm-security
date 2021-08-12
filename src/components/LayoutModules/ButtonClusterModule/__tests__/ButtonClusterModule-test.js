@@ -31,7 +31,7 @@ describe(name, () => {
 
     expect(
       render(
-        <ButtonClusterModule data-testid={dataTestId}>
+        <ButtonClusterModule data-test-id={dataTestId}>
           {name}
         </ButtonClusterModule>
       ).getByTestId(dataTestId)

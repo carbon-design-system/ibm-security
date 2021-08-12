@@ -68,7 +68,10 @@ describe(name, () => {
       <div onCopy={copyHandler}>
         <Portal>
           <section>
-            <button data-testid="in-portal" onCopy={inPortalCopy} type="button">
+            <button
+              data-test-id="in-portal"
+              onCopy={inPortalCopy}
+              type="button">
               I should call copyHandler
             </button>
           </section>
@@ -89,7 +92,7 @@ describe(name, () => {
       /* eslint-disable jsx-a11y/mouse-events-have-key-events */
       <div onMouseOver={mouseOverHandler}>
         <button
-          data-testid="out-portal"
+          data-test-id="out-portal"
           onMouseOver={outPortalMouseOver}
           type="button">
           I should call mouseOverHandler
@@ -97,7 +100,7 @@ describe(name, () => {
         <Portal stopPropagation>
           <section>
             <button
-              data-testid="in-portal"
+              data-test-id="in-portal"
               onMouseOver={inPortalMouseOver}
               type="button">
               I should NOT call mouseOverHandler
@@ -129,7 +132,7 @@ describe(name, () => {
         <Portal stopPropagationEvents={['onMouseUp']}>
           <section>
             <button
-              data-testid="in-portal"
+              data-test-id="in-portal"
               onMouseDown={onMouseDownMock}
               onMouseUp={onMouseUpMock}
               type="button">

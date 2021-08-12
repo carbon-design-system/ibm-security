@@ -2,7 +2,7 @@
 
 exports[`ComboButton renders a combo button with children and an overflow menu 1`] = `
 <div
-  data-testid="combo-button"
+  data-test-id="combo-button"
 >
   <div
     class="security--combo-button"
@@ -70,7 +70,7 @@ exports[`ComboButton renders a combo button with children and an overflow menu 1
 
 exports[`ComboButton renders a combo button without an overflow menu 1`] = `
 <div
-  data-testid="combo-button"
+  data-test-id="combo-button"
 >
   <div
     class="security--combo-button"

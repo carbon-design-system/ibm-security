@@ -80,7 +80,7 @@ describe('Button', () => {
 
   test('should pass through extra props via spread attribute', () => {
     const { queryByTestId } = render(
-      <Button data-testid="test-id">test button</Button>
+      <Button data-test-id="test-id">test button</Button>
     );
     expect(queryByTestId('test-id')).toBeVisible();
   });

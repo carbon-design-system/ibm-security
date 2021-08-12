@@ -25,7 +25,7 @@ describe('TimeIndicator', () => {
 
   test('should pass extra props through spread attribute', () => {
     const { queryByTestId } = render(
-      <TimeIndicator data-testid="test-id">test content</TimeIndicator>
+      <TimeIndicator data-test-id="test-id">test content</TimeIndicator>
     );
     expect(queryByTestId('test-id')).toBeInTheDocument();
   });
