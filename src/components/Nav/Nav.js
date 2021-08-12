@@ -17,10 +17,6 @@ export const navNamespace = getComponentNamespace('nav');
 
 const { name } = NavList;
 
-/**
- * Navigation class.
- * @className
- */
 export default class Nav extends Component {
   constructor(props) {
     super(props);
@@ -127,8 +123,14 @@ export default class Nav extends Component {
   }
 
   render() {
-    const { activeHref, className, children, heading, label, ...other } =
-      this.props;
+    const {
+      activeHref: _, // Throw away.
+      className,
+      children,
+      heading,
+      label,
+      ...other
+    } = this.props;
 
     return (
       <nav

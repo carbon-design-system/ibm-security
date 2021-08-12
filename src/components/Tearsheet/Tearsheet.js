@@ -70,7 +70,6 @@ class Tearsheet extends Component {
       rootNode,
       stopPropagation,
       stopPropagationEvents,
-
       deleteButton: {
         icon = TrashCan20,
         label = '',
@@ -80,8 +79,8 @@ class Tearsheet extends Component {
       },
       labels,
       loading,
-      loadingMessage,
-      isOpen,
+      loadingMessage: _, // Throw away.
+      isOpen: __, // Throw away.
       ...other
     } = this.props;
 
@@ -233,27 +232,28 @@ class Tearsheet extends Component {
 }
 
 const buttonPropTypeMap = {
-  /** @type {func} onClick callback */
-  onClick: PropTypes.func,
+  onClick: Button.propTypes.onClick,
 
   /** @type {string} The button label. */
   label: PropTypes.string,
 
-  /** @type {bool} Whether the button is disabled. */
-  isDisabled: PropTypes.bool,
+  isDisabled: Button.propTypes.disabled,
 };
 
 Tearsheet.propTypes = {
   /** Optional class name for the tearsheet wrapper node. */
   className: PropTypes.string,
 
-  /** @type {object<object>} An object list of close button props. */
+  /** @type {object} An object list of close button props. */
   closeButton: PropTypes.shape(buttonPropTypeMap).isRequired,
 
-  /** @type {object<object>} An object list of delete button props. */
+  /** @type {object} An object list of delete button props. */
   deleteButton: PropTypes.shape({
-    ...buttonPropTypeMap,
-    icon: PropTypes.string,
+    hide: PropTypes.bool,
+    icon: Button.propTypes.renderIcon,
+    isDisabled: buttonPropTypeMap.isDisabled,
+    label: buttonPropTypeMap.label,
+    onClick: buttonPropTypeMap.onClick,
   }),
 
   /** @type {boolean} Focus trap. */
@@ -307,7 +307,8 @@ Tearsheet.propTypes = {
 
   /** @type {object<object>} An object list of tertiary ghost button props. */
   tertiaryButton: PropTypes.shape({
-    ...buttonPropTypeMap,
+    isDisabled: buttonPropTypeMap.isDisabled,
+    onClick: buttonPropTypeMap.onClick,
     secondaryText: PropTypes.string,
   }),
 };

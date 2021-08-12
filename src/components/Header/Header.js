@@ -1,6 +1,6 @@
 /**
  * @file Header.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019, 2021
  */
 
 import { Close20, Notification20, Settings20 } from '@carbon/icons-react';
@@ -50,10 +50,6 @@ const renderPopover = (children, state) => (
   </Transition>
 );
 
-/**
- * Header class.
- * @className
- */
 export default class Header extends Component {
   static propTypes = {
     ...propTypes,
@@ -260,7 +256,8 @@ export default class Header extends Component {
                         <button
                           value={id}
                           onClick={onAccountClick}
-                          className={`${namespace}__popover__profile__body__account__button`}>
+                          className={`${namespace}__popover__profile__body__account__button`}
+                          type="button">
                           {name}
                         </button>
                       </li>
@@ -330,7 +327,8 @@ export default class Header extends Component {
             <button
               className={`${namespace}__popover__button`}
               aria-label={labels.notifications.clear_all}
-              onClick={() => this.clearAllNotifications()}>
+              onClick={() => this.clearAllNotifications()}
+              type="button">
               <Icon renderIcon={Close20} />
             </button>
           </div>
@@ -429,39 +427,33 @@ export default class Header extends Component {
     return isUserActive ? (
       <Fragment>
         {this.props.showNotifications && (
-          <HeaderListItem
-            className={headerListItemClass}
-            hasPopup={isUserActive}
-            isExpanded={isActive.notifications}>
-            <Fragment>
-              <IconButton
-                aria-label={labels.notifications.button}
-                className={notificationsButtonClasses}
-                onClick={() => this.toggle('notifications')}
-                renderIcon={Notification20}
-                state={notifications}
-                tooltip={false}>
-                <Icon name="notification" />
-              </IconButton>
-              {this.renderNotifications()}
-            </Fragment>
+          <HeaderListItem className={headerListItemClass}>
+            <IconButton
+              aria-expanded={isActive.notifications}
+              aria-haspopup={isUserActive}
+              aria-label={labels.notifications.button}
+              className={notificationsButtonClasses}
+              onClick={() => this.toggle('notifications')}
+              renderIcon={Notification20}
+              state={notifications}
+              tooltip={false}>
+              <Icon name="notification" />
+            </IconButton>
+            {this.renderNotifications()}
           </HeaderListItem>
         )}
 
-        <HeaderListItem
-          className={headerListItemClass}
-          hasPopup={isUserActive}
-          isExpanded={isActive.profile}>
-          <Fragment>
-            <button
-              aria-label={labels.profile.button}
-              className={profileButtonClasses}
-              onClick={() => this.toggle('profile')}>
-              <ProfileImage profile={profile} />
-            </button>
-
-            {this.renderProfile()}
-          </Fragment>
+        <HeaderListItem className={headerListItemClass}>
+          <button
+            aria-expanded={isActive.profile}
+            aria-haspopup={isUserActive}
+            aria-label={labels.profile.button}
+            className={profileButtonClasses}
+            onClick={() => this.toggle('profile')}
+            type="button">
+            <ProfileImage profile={profile} />
+          </button>
+          {this.renderProfile()}
         </HeaderListItem>
       </Fragment>
     ) : (

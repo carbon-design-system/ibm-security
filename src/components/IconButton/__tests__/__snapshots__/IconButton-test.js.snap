@@ -5,6 +5,7 @@ exports[`IconButton does not render the tooltip 1`] = `
   aria-label="Label"
   className="security--button--icon class"
   onClick={[MockFunction]}
+  type="button"
 >
   <Icon
     className="class"
@@ -28,6 +29,7 @@ exports[`IconButton renders 1`] = `
   aria-label="Label"
   className="security--button--icon class security--button--icon--tooltip security--button--icon--tooltip--bottom"
   onClick={[MockFunction]}
+  type="button"
 >
   <Icon
     className="class"
@@ -51,6 +53,7 @@ exports[`IconButton renders the 'bottom' tooltip 1`] = `
   aria-label="Label"
   className="security--button--icon class security--button--icon--tooltip security--button--icon--tooltip--bottom"
   onClick={[MockFunction]}
+  type="button"
 >
   <Icon
     className="class"
@@ -74,6 +77,7 @@ exports[`IconButton renders the 'left' tooltip 1`] = `
   aria-label="Label"
   className="security--button--icon class security--button--icon--tooltip security--button--icon--tooltip--left"
   onClick={[MockFunction]}
+  type="button"
 >
   <Icon
     className="class"
@@ -97,6 +101,7 @@ exports[`IconButton renders the 'lg' variation 1`] = `
   aria-label="Label"
   className="security--button--icon class security--button--icon--lg security--button--icon--tooltip security--button--icon--tooltip--bottom"
   onClick={[MockFunction]}
+  type="button"
 >
   <Icon
     className="class"
@@ -120,6 +125,7 @@ exports[`IconButton renders the 'md' variation 1`] = `
   aria-label="Label"
   className="security--button--icon class security--button--icon--md security--button--icon--tooltip security--button--icon--tooltip--bottom"
   onClick={[MockFunction]}
+  type="button"
 >
   <Icon
     className="class"
@@ -143,6 +149,7 @@ exports[`IconButton renders the 'right' tooltip 1`] = `
   aria-label="Label"
   className="security--button--icon class security--button--icon--tooltip security--button--icon--tooltip--right"
   onClick={[MockFunction]}
+  type="button"
 >
   <Icon
     className="class"
@@ -166,6 +173,7 @@ exports[`IconButton renders the 'sm' variation 1`] = `
   aria-label="Label"
   className="security--button--icon class security--button--icon--sm security--button--icon--tooltip security--button--icon--tooltip--bottom"
   onClick={[MockFunction]}
+  type="button"
 >
   <Icon
     className="class"
@@ -189,6 +197,7 @@ exports[`IconButton renders the 'top' tooltip 1`] = `
   aria-label="Label"
   className="security--button--icon class security--button--icon--tooltip security--button--icon--tooltip--top"
   onClick={[MockFunction]}
+  type="button"
 >
   <Icon
     className="class"
@@ -212,6 +221,7 @@ exports[`IconButton renders the 'xl' variation 1`] = `
   aria-label="Label"
   className="security--button--icon class security--button--icon--xl security--button--icon--tooltip security--button--icon--tooltip--bottom"
   onClick={[MockFunction]}
+  type="button"
 >
   <Icon
     className="class"
@@ -236,6 +246,7 @@ exports[`IconButton renders the disabled variation 1`] = `
   className="security--button--icon class security--button--icon--tooltip security--button--icon--tooltip--bottom"
   disabled={true}
   onClick={[MockFunction]}
+  type="button"
 >
   <Icon
     className="class"
@@ -259,6 +270,7 @@ exports[`IconButton renders the path variation 1`] = `
   aria-label="Label"
   className="security--button--icon class security--button--icon--tooltip security--button--icon--tooltip--bottom"
   onClick={[MockFunction]}
+  type="button"
 >
   <Icon
     className="class"
