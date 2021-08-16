@@ -103,6 +103,9 @@ NonEntitledSection.propTypes = {
     })
   ),
 
+  /** Optional styles */
+  style: PropTypes.object,
+
   /** @type {string} Section description heading. */
   subTitle: PropTypes.string.isRequired,
 
