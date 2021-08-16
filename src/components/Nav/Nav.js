@@ -124,7 +124,7 @@ export default class Nav extends Component {
 
   render() {
     const {
-      activeHref: _, // throw away
+      activeHref: _, // Throw away.
       className,
       children,
       heading,
