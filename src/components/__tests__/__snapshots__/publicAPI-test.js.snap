@@ -3499,7 +3499,6 @@ Map {
       "className": "",
       "errorMessage": "",
       "errorName": "",
-      "labels": Object {},
       "links": Array [],
       "statusCode": null,
       "title": "",
@@ -3526,27 +3525,6 @@ Map {
       },
       "errorName": Object {
         "type": "string",
-      },
-      "labels": Object {
-        "args": Array [
-          Object {
-            "args": Array [
-              Array [
-                Object {
-                  "type": "string",
-                },
-                Object {
-                  "type": "func",
-                },
-                Object {
-                  "type": "object",
-                },
-              ],
-            ],
-            "type": "oneOfType",
-          },
-        ],
-        "type": "objectOf",
       },
       "links": Object {
         "args": Array [
