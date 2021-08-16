@@ -8335,9 +8335,7 @@ a.bx--overflow-menu-options__btn::before {
   border: unset;
   background-color: var(--cds-hover-ui, #353535);
   color: var(--cds-text-02, #c6c6c6);
-  font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
-  font-stretch: normal;
-  font-style: normal;
+  font-family: inherit;
   text-align: left;
   text-decoration: none;
   text-transform: none;
