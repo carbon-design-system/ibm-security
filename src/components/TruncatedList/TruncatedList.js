@@ -52,7 +52,9 @@ class TruncatedList extends Component {
    * display amount can be viewed at a time.
    */
   updateListContainerHeight() {
-    if (!this.listContainer) {return;}
+    if (!this.listContainer) {
+      return;
+    }
 
     const items = this.listContainer.firstElementChild.children;
 
