@@ -80,7 +80,7 @@ describe('ICA', () => {
   });
 
   test('should render trending arrow', () => {
-    const { container } = render(<ICA trending />);
+    const { container } = render(<ICA label="ICA" trending />);
     expect(container.querySelector('svg')).toBeVisible();
   });
 

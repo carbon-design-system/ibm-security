@@ -105,11 +105,6 @@ const ICA = ({
     numeral.locale(ICA.defaultProps.locale);
   }
 
-  let isValueBiggerThanTotal = false;
-  if (showValueWarning && value >= total) {
-    isValueBiggerThanTotal = true;
-  }
-
   const truncatedValue = truncateValue(percentage, value, truncate);
   const truncatedTotal = formatValue(total, truncate);
 
@@ -125,9 +120,9 @@ const ICA = ({
           <Icon className={`${namespace}__trend`} renderIcon={renderIcon} />
         )}
         <span
-          className={`${namespace}__value ${
-            isValueBiggerThanTotal ? `${namespace}__warning` : ''
-          }`}>
+          className={classnames(`${namespace}__value`, {
+            [`${namespace}__warning`]: showValueWarning && value >= total,
+          })}>
           {truncatedValue}
         </span>
         {shouldDisplayof ? (
