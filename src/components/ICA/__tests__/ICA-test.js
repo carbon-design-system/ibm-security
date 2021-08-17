@@ -86,7 +86,7 @@ describe('ICA', () => {
 
   sizes.forEach((size) =>
     test(`should apply correct class when \`size\` is set to '${size}'`, () => {
-      const { container } = render(<ICA size={size} />);
+      const { container } = render(<ICA label="ICA" size={size} />);
       expect(container.firstElementChild).toHaveClass(`${namespace}--${size}`);
     })
   );
