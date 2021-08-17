@@ -79,8 +79,8 @@ class Tearsheet extends Component {
       },
       labels,
       loading,
-      loadingMessage: _, // throw away
-      isOpen: __, // throw away
+      loadingMessage: _, // Throw away.
+      isOpen: __, // Throw away.
       ...other
     } = this.props;
 

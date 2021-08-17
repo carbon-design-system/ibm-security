@@ -100,7 +100,7 @@ export default class NavItem extends Component {
       onClick,
       href,
       activeHref,
-      current: _, // throw away
+      current: _, // Throw away.
       handleItemSelect,
       link,
       id,
