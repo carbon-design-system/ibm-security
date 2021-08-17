@@ -16,8 +16,6 @@ import {
   PanelController,
 } from '../../..';
 
-import { namespace } from '../PanelContainer';
-
 describe('Panel', () => {
   let panelActive;
 
@@ -36,7 +34,7 @@ describe('Panel', () => {
   });
 
   const panelRef = React.createRef();
-  const panelElement = props => (
+  const panelElement = (props) => (
     <Panel
       ref={panelRef}
       onClose={onClose}
@@ -49,8 +47,7 @@ describe('Panel', () => {
             <PanelContainer
               title={label}
               subtitle={label}
-              closeButton={{ label, onClick: toggleActive }}
-            >
+              closeButton={{ label, onClick: toggleActive }}>
               <PanelContent>Panel content</PanelContent>
             </PanelContainer>
           </PanelController>

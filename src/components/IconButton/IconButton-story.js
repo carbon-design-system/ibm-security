@@ -11,7 +11,7 @@ import { storiesOf } from '@storybook/react';
 
 import React from 'react';
 
-import { security } from '../../../.storybook';
+import { components } from '../../../.storybook';
 
 import { className, iconClassName, label, sizes } from './_mocks_';
 
@@ -29,12 +29,14 @@ const iconButtonProps = () => ({
   tooltip: boolean('tooltip', IconButton.defaultProps.tooltip),
   tooltipDirection: select(
     'tooltipDirection',
-    Object.keys(TooltipDirection).map(direction => TooltipDirection[direction]),
+    Object.keys(TooltipDirection).map(
+      (direction) => TooltipDirection[direction]
+    ),
     IconButton.defaultProps.tooltipDirection
   ),
 });
 
-storiesOf(security('IconButton'), module).add(
+storiesOf(components('IconButton'), module).add(
   'Default',
   () => <IconButton {...iconButtonProps()} />,
   {

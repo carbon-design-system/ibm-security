@@ -19,8 +19,7 @@ describe('HeaderListItem', () => {
       <HeaderListItem
         className={className}
         hasPopup={hasPopup}
-        isExpanded={isExpanded}
-      >
+        isExpanded={isExpanded}>
         {children}
       </HeaderListItem>
     );
@@ -31,18 +30,6 @@ describe('HeaderListItem', () => {
 
     it('renders extra classes', () => {
       expect(headerListItem.hasClass(className)).toEqual(true);
-    });
-
-    it('renders the `aria-expanded` attribute', () => {
-      expect(headerListItem.prop('aria-expanded')).toEqual(isExpanded);
-      headerListItem.setProps({ isExpanded: !isExpanded });
-      expect(headerListItem.prop('aria-expanded')).toEqual(!isExpanded);
-    });
-
-    it('renders the `aria-haspopup` attribute', () => {
-      expect(headerListItem.prop('aria-haspopup')).toEqual(hasPopup);
-      headerListItem.setProps({ hasPopup: !hasPopup });
-      expect(headerListItem.prop('aria-haspopup')).toEqual(!hasPopup);
     });
   });
 });

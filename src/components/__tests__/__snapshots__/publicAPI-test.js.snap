@@ -1535,6 +1535,12 @@ Map {
               ],
               "type": "oneOfType",
             },
+            "checkCanFocusTrap": Object {
+              "type": "func",
+            },
+            "checkCanReturnFocus": Object {
+              "type": "func",
+            },
             "clickOutsideDeactivates": Object {
               "args": Array [
                 Array [
@@ -1549,7 +1555,17 @@ Map {
               "type": "oneOfType",
             },
             "escapeDeactivates": Object {
-              "type": "bool",
+              "args": Array [
+                Array [
+                  Object {
+                    "type": "bool",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
             },
             "fallbackFocus": Object {
               "args": Array [
@@ -1585,6 +1601,9 @@ Map {
                   Object {
                     "type": "func",
                   },
+                  Object {
+                    "type": "bool",
+                  },
                 ],
               ],
               "type": "oneOfType",
@@ -1593,6 +1612,12 @@ Map {
               "type": "func",
             },
             "onDeactivate": Object {
+              "type": "func",
+            },
+            "onPostActivate": Object {
+              "type": "func",
+            },
+            "onPostDeactivate": Object {
               "type": "func",
             },
             "preventScroll": Object {
@@ -3474,7 +3499,6 @@ Map {
       "className": "",
       "errorMessage": "",
       "errorName": "",
-      "labels": Object {},
       "links": Array [],
       "statusCode": null,
       "title": "",
@@ -3501,27 +3525,6 @@ Map {
       },
       "errorName": Object {
         "type": "string",
-      },
-      "labels": Object {
-        "args": Array [
-          Object {
-            "args": Array [
-              Array [
-                Object {
-                  "type": "string",
-                },
-                Object {
-                  "type": "func",
-                },
-                Object {
-                  "type": "object",
-                },
-              ],
-            ],
-            "type": "oneOfType",
-          },
-        ],
-        "type": "objectOf",
       },
       "links": Object {
         "args": Array [
@@ -6715,7 +6718,6 @@ Map {
       "label": "",
       "link": true,
       "onClick": [Function],
-      "onKeyPress": [Function],
       "tabIndex": 0,
     },
     "propTypes": Object {
@@ -6753,9 +6755,6 @@ Map {
         "type": "bool",
       },
       "onClick": Object {
-        "type": "func",
-      },
-      "onKeyPress": Object {
         "type": "func",
       },
       "tabIndex": Object {
@@ -6856,6 +6855,9 @@ Map {
           },
         ],
         "type": "arrayOf",
+      },
+      "style": Object {
+        "type": "object",
       },
       "subTitle": Object {
         "isRequired": true,
@@ -7408,6 +7410,12 @@ Map {
               ],
               "type": "oneOfType",
             },
+            "checkCanFocusTrap": Object {
+              "type": "func",
+            },
+            "checkCanReturnFocus": Object {
+              "type": "func",
+            },
             "clickOutsideDeactivates": Object {
               "args": Array [
                 Array [
@@ -7422,7 +7430,17 @@ Map {
               "type": "oneOfType",
             },
             "escapeDeactivates": Object {
-              "type": "bool",
+              "args": Array [
+                Array [
+                  Object {
+                    "type": "bool",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
             },
             "fallbackFocus": Object {
               "args": Array [
@@ -7458,6 +7476,9 @@ Map {
                   Object {
                     "type": "func",
                   },
+                  Object {
+                    "type": "bool",
+                  },
                 ],
               ],
               "type": "oneOfType",
@@ -7466,6 +7487,12 @@ Map {
               "type": "func",
             },
             "onDeactivate": Object {
+              "type": "func",
+            },
+            "onPostActivate": Object {
+              "type": "func",
+            },
+            "onPostDeactivate": Object {
               "type": "func",
             },
             "preventScroll": Object {
@@ -7673,6 +7700,12 @@ Map {
               ],
               "type": "oneOfType",
             },
+            "checkCanFocusTrap": Object {
+              "type": "func",
+            },
+            "checkCanReturnFocus": Object {
+              "type": "func",
+            },
             "clickOutsideDeactivates": Object {
               "args": Array [
                 Array [
@@ -7687,7 +7720,17 @@ Map {
               "type": "oneOfType",
             },
             "escapeDeactivates": Object {
-              "type": "bool",
+              "args": Array [
+                Array [
+                  Object {
+                    "type": "bool",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
             },
             "fallbackFocus": Object {
               "args": Array [
@@ -7723,6 +7766,9 @@ Map {
                   Object {
                     "type": "func",
                   },
+                  Object {
+                    "type": "bool",
+                  },
                 ],
               ],
               "type": "oneOfType",
@@ -7731,6 +7777,12 @@ Map {
               "type": "func",
             },
             "onDeactivate": Object {
+              "type": "func",
+            },
+            "onPostActivate": Object {
+              "type": "func",
+            },
+            "onPostDeactivate": Object {
               "type": "func",
             },
             "preventScroll": Object {
@@ -8186,15 +8238,15 @@ Map {
         "args": Array [
           Array [
             Object {
-              "type": "node",
-            },
-            Object {
               "args": Array [
                 Object {
                   "type": "node",
                 },
               ],
               "type": "arrayOf",
+            },
+            Object {
+              "type": "node",
             },
           ],
         ],
@@ -10223,6 +10275,10 @@ Map {
   },
   "SummaryCardContainer" => Object {
     "propTypes": Object {
+      "render": Object {
+        "isRequired": true,
+        "type": "func",
+      },
       "summaryCards": Object {
         "args": Array [
           Object {
@@ -11535,8 +11591,21 @@ Map {
       "deleteButton": Object {
         "args": Array [
           Object {
+            "hide": Object {
+              "type": "bool",
+            },
             "icon": Object {
-              "type": "string",
+              "args": Array [
+                Array [
+                  Object {
+                    "type": "func",
+                  },
+                  Object {
+                    "type": "object",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
             },
             "isDisabled": Object {
               "type": "bool",
@@ -11726,9 +11795,6 @@ Map {
           Object {
             "isDisabled": Object {
               "type": "bool",
-            },
-            "label": Object {
-              "type": "string",
             },
             "onClick": Object {
               "type": "func",
@@ -12651,6 +12717,8 @@ Map {
     "defaultProps": Object {
       "children": null,
       "element": "h2",
+      "label": null,
+      "labelDirection": "top",
       "subsection": false,
     },
     "propTypes": Object {
@@ -12658,7 +12726,29 @@ Map {
         "type": "node",
       },
       "element": Object {
-        "type": "elementType",
+        "args": Array [
+          Array [
+            "h1",
+            "h2",
+            "h3",
+            "h4",
+            "h5",
+            "h6",
+          ],
+        ],
+        "type": "oneOf",
+      },
+      "label": Object {
+        "type": "string",
+      },
+      "labelDirection": Object {
+        "args": Array [
+          Array [
+            "top",
+            "bottom",
+          ],
+        ],
+        "type": "oneOf",
       },
       "subsection": Object {
         "type": "bool",
@@ -13666,6 +13756,9 @@ Map {
           },
         ],
         "type": "objectOf",
+      },
+      "loadingMessage": Object {
+        "type": "string",
       },
       "navLabel": Object {
         "type": "string",

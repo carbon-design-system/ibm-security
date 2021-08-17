@@ -1,6 +1,6 @@
 /**
  * @file Filter panel accordion item component.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020, 2021
  */
 
 import React, { Children } from 'react';
@@ -35,23 +35,20 @@ const FilterPanelAccordionItem = ({
           countLabel={countLabel}
           className={`${namespace}__label`}
           countClassName={`${namespace}__count`}
-          title={title}
-        >
+          title={title}>
           {heading || title}
         </FilterPanelLabel>
       }
       className={classnames(namespace, className)}
-      {...other}
-    >
+      {...other}>
       <TruncatedList
         className={`${namespace}__list`}
         expandButtonClassName={`${namespace}__list-expand-button`}
         getExpandButtonLabel={(expanded, shown, hidden) =>
           expanded ? collapseLabel : `${expandLabel} (${hidden})`
         }
-        scrollGradientColor={scrollGradientColor}
-      >
-        {Children.map(children, child => (
+        scrollGradientColor={scrollGradientColor}>
+        {Children.map(children, (child) => (
           <li className={`${namespace}__filter`} key={child.key}>
             {child}
           </li>
@@ -63,35 +60,19 @@ const FilterPanelAccordionItem = ({
 
 FilterPanelAccordionItem.propTypes = {
   /**
-   * Accordion item `title` attribute.
-   */
-  title: PropTypes.string,
-
-  /**
-   * Accordion item heading node.
-   * If no `heading` is provided, then the `title` prop will be used instead.
-   */
-  heading: PropTypes.node,
-
-  /**
-   * View more label for truncated content.
-   */
-  expandLabel: PropTypes.string,
-
-  /**
-   * View less label for expanded content.
-   */
-  collapseLabel: PropTypes.string,
-
-  /**
    * Accordion item content.
    */
   children: PropTypes.node,
 
   /**
-   * Optional color for the scroll gradient.
+   * Optional class name.
    */
-  scrollGradientColor: PropTypes.string,
+  className: PropTypes.string,
+
+  /**
+   * View less label for expanded content.
+   */
+  collapseLabel: PropTypes.string,
 
   /**
    * Optional count of unique values.
@@ -104,9 +85,25 @@ FilterPanelAccordionItem.propTypes = {
   countLabel: PropTypes.func,
 
   /**
-   * Optional class name.
+   * View more label for truncated content.
    */
-  className: PropTypes.string,
+  expandLabel: PropTypes.string,
+
+  /**
+   * Accordion item heading node.
+   * If no `heading` is provided, then the `title` prop will be used instead.
+   */
+  heading: PropTypes.node,
+
+  /**
+   * Optional color for the scroll gradient.
+   */
+  scrollGradientColor: PropTypes.string,
+
+  /**
+   * Accordion item `title` attribute.
+   */
+  title: PropTypes.string,
 };
 
 FilterPanelAccordionItem.defaultProps = {
@@ -117,7 +114,7 @@ FilterPanelAccordionItem.defaultProps = {
   children: undefined,
   scrollGradientColor: theme.uiBackground,
   count: undefined,
-  countLabel: count => `${count} items`,
+  countLabel: (count) => `${count} items`,
   className: undefined,
 };
 
