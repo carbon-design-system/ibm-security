@@ -6,6 +6,7 @@ jobs:
       - checkout
       - run: yarn install --offline --frozen-lockfile
       - run: yarn run audit
+      - run: yarn lint:js
       - run: yarn build
       - run: yarn test
       - run: yarn semantic-release

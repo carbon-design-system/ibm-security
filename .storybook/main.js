@@ -14,6 +14,7 @@ module.exports = {
     '@storybook/addon-docs',
     '@storybook/addon-google-analytics',
     '@storybook/addon-links',
+    '@storybook/addon-postcss',
     '@storybook/addon-viewport',
     '@storybook/addon-storysource',
     '@storybook/addon-knobs',
@@ -22,6 +23,9 @@ module.exports = {
     '@storybook/addon-a11y',
     './addons/addon-theme/register',
   ],
+  core: {
+    builder: 'webpack5',
+  },
   stories: [
     require('path').resolve(__dirname, '../src/**/*+(-story|.stories).*'),
   ],
