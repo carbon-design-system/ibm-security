@@ -7,7 +7,6 @@ import { LIBRARY } from '../src/components/LayoutModules/stories';
 
 // Category labels.
 const CATEGORIES = {
-  CARBON: 'Carbon',
   COMPONENTS: 'Components',
   DEPRECATED: 'Deprecated',
   LAYOUT_MODULES: 'Layout modules',
@@ -17,7 +16,6 @@ const CATEGORIES = {
 };
 
 const {
-  CARBON,
   COMPONENTS,
   DEPRECATED,
   LAYOUT_MODULES,
@@ -32,7 +30,6 @@ const ORDER = [
   PAGE_LAYOUTS,
   PATTERNS,
   COMPONENTS,
-  [SECURITY, CARBON],
   DEPRECATED,
 ];
 
@@ -49,13 +46,6 @@ const getCategory = (categoryName, storyName) => `${categoryName}/${storyName}`;
  * @param {string} categoryName The category name to bind.
  */
 const bindCategory = (categoryName) => getCategory.bind(this, categoryName);
-
-/**
- * Returns a formatted string for the Carbon components category.
- * @param {string} storyName The story name to format.
- * @returns {string} The formatted Carbon component category and story name.
- */
-const getCarbonCategory = bindCategory(getCategory(COMPONENTS, CARBON));
 
 /**
  * Returns a formatted string for the components category.
@@ -91,13 +81,6 @@ const getPageLayoutsCategory = bindCategory(PAGE_LAYOUTS);
  * @returns {string} The formatted pattern category and story name.
  */
 const getPatternsCategory = bindCategory(PATTERNS);
-
-/**
- * Returns a formatted string for the Security components category.
- * @param {string} storyName The story name to format.
- * @returns {string} The formatted Security component category and story name.
- */
-const getSecurityCategory = bindCategory(getCategory(COMPONENTS, SECURITY));
 
 /**
  * Configuration for disabling the centering addon.
@@ -154,14 +137,12 @@ Also refer to http://${library}.carbondesignsystem.com/?path=/docs/${group}-${st
 export {
   disableCentered,
   disableCenteredStories,
-  getCarbonCategory as carbon,
   getComponentsCategory as components,
   getDeprecatedCategory as deprecated,
   getDocsParameters,
   getLayoutModulesCategory as layoutModules,
   getPageLayoutsCategory as pageLayouts,
   getPatternsCategory as patterns,
-  getSecurityCategory as security,
   info,
   ORDER,
 };
