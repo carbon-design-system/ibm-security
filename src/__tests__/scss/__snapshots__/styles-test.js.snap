@@ -12149,12 +12149,12 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 .security--truncated-list__expand-button {
+  z-index: 2;
   width: 100%;
   max-width: none;
   min-height: auto;
   padding: 0;
   border: none;
-  margin-top: 1px;
   background: transparent;
   color: var(--cds-link-01, #78a9ff);
 }
@@ -21258,7 +21258,6 @@ li.bx--accordion__item--disabled:last-of-type {
   height: 1px;
   background: var(--cds-ui-02, #393939);
   content: '';
-  transform: translateY(1px);
 }
 
 .security--filter__list-item:first-of-type > .bx--list-box__menu-item__option {
