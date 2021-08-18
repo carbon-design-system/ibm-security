@@ -8354,9 +8354,7 @@ a.bx--overflow-menu-options__btn::before {
   border: unset;
   background-color: var(--cds-hover-ui, #353535);
   color: var(--cds-text-02, #c6c6c6);
-  font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
-  font-stretch: normal;
-  font-style: normal;
+  font-family: inherit;
   text-align: left;
   text-decoration: none;
   text-transform: none;
@@ -12405,8 +12403,11 @@ li.bx--accordion__item--disabled:last-of-type {
   font-weight: var(--cds-body-short-01-font-weight, 400);
   line-height: var(--cds-body-short-01-line-height, 1.29);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
-  padding-top: 0.875rem;
-  margin-bottom: 0;
+}
+
+.security--ica__total, .security--ica__percentage-mark {
+  margin-top: auto;
+  margin-bottom: 0.25rem;
 }
 
 .security--ica__trend {
@@ -12444,7 +12445,6 @@ li.bx--accordion__item--disabled:last-of-type {
   font-weight: var(--cds-productive-heading-03-font-weight, 400);
   line-height: var(--cds-productive-heading-03-line-height, 1.4);
   letter-spacing: var(--cds-productive-heading-03-letter-spacing, 0);
-  padding-top: 1.25rem;
 }
 
 .security--ica--xl .security--ica__label {
@@ -12466,7 +12466,6 @@ li.bx--accordion__item--disabled:last-of-type {
   font-weight: var(--cds-productive-heading-04-font-weight, 400);
   line-height: var(--cds-productive-heading-04-line-height, 1.29);
   letter-spacing: var(--cds-productive-heading-04-letter-spacing, 0);
-  padding-top: 1.5rem;
 }
 
 .security--ica--xl .security--ica__trend {
