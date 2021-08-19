@@ -8279,7 +8279,6 @@ a.bx--overflow-menu-options__btn::before {
 
 .security--panel--v2__body {
   flex-grow: 1;
-  margin-top: 5.5rem;
   overflow-y: auto;
 }
 
@@ -13459,7 +13458,6 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-top: unset;
   margin-bottom: unset;
   color: var(--cds-text-02, #c6c6c6);
-  font-weight: 400;
 }
 
 .security--nav__list {
@@ -13613,7 +13611,6 @@ li.bx--accordion__item--disabled:last-of-type {
 
 .security--nav__list__item--expanded > .security--nav__list--nested {
   max-height: 20rem;
-  margin-top: 0.625rem;
   opacity: 1;
   transition-timing-function: cubic-bezier(0, 0, 0.38, 0.9);
 }
@@ -16919,7 +16916,6 @@ li.bx--accordion__item--disabled:last-of-type {
 
 .security--panel__body {
   flex-grow: 1;
-  margin-top: 5.5rem;
   overflow-y: auto;
 }
 
@@ -21429,7 +21425,7 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 .security--tearsheet--small__content .security--filter__search-field {
-  background-color: #525252;
+  background-color: var(--cds-decorative-01, #525252);
 }
 
 .security--tearsheet--small__footer {
@@ -24466,7 +24462,9 @@ li.bx--accordion__item--disabled:last-of-type {
   background-position: left;
   background-repeat: no-repeat;
   background-size: 10rem 1.5rem;
-  transition: 240ms background-size cubic-bezier(0.2, 0, 0.38, 0.9);
+  transition-duration: 240ms;
+  transition-property: background-size;
+  transition-timing-function: cubic-bezier(0.2, 0, 0.38, 0.9);
 }
 
 .security--theme--cg10 .security--shell__banner {
