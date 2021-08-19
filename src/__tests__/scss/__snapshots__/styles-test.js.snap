@@ -13567,9 +13567,8 @@ li.bx--accordion__item--disabled:last-of-type {
   transition-timing-function: cubic-bezier(0.2, 0, 0.38, 0.9);
   position: relative;
   display: flex;
-  height: 2rem;
   align-items: center;
-  padding: 0.25rem 0.25rem 0.25rem 2.5rem;
+  padding: 0.5rem 0.25rem 0.5rem 2.5rem;
   color: var(--cds-text-01, #f4f4f4);
   cursor: pointer;
   text-decoration: none;
