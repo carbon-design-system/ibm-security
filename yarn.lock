@@ -19147,7 +19147,7 @@ stylelint-order@^4.1.0:
     postcss "^7.0.31"
     postcss-sorting "^5.0.1"
 
-stylelint-plugin-carbon-tokens@^0.11.1:
+stylelint-plugin-carbon-tokens@^0.11.2:
   version "0.11.2"
   resolved "https://registry.yarnpkg.com/stylelint-plugin-carbon-tokens/-/stylelint-plugin-carbon-tokens-0.11.2.tgz#60c586e4a95cf0f15fad0d8d35fcd65fb0da621f"
   integrity sha512-6wPZruwHHx01ckPBsDivkhuZrvoYY++mUoWgHN0A/wcI9K72f1bNoUtyCcj968P+csUI4bPJWRZPOH+tUMN+Nw==
