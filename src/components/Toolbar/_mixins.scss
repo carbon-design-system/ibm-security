@@ -206,7 +206,16 @@ $toolbar__panel__transition__timing-function: $timing-function;
 
   &__nav__item__title {
     &--icon {
+      padding-top: 1px;
       margin-left: $carbon--spacing-04;
+    }
+  }
+
+  &__nav__list__title {
+    &--icon {
+      div.security--nav__list__item__content {
+        padding-top: 1px;
+      }
     }
   }
 
