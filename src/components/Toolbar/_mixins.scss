@@ -213,7 +213,7 @@ $toolbar__panel__transition__timing-function: $timing-function;
 
   &__nav__list__title {
     &--icon {
-      div.security--nav__list__item__content {
+      #{get-component-namespace($component-name: nav)}__list__item__content {
         padding-top: 1px;
       }
     }
