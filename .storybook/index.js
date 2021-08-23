@@ -91,6 +91,7 @@ const disableCentered = () => ({
 const disableCenteredStories = (stories) =>
   stories.addParameters(disableCentered());
 
+// Returns the formatted ID to embed a story in Docs — https://storybook.js.org/docs/rax/api/mdx#embedding-stories
 function getDocsId(id) {
   return id;
 }
