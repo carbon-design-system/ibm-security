@@ -1,3 +1,4 @@
+import { getDocsId } from '../../../../.storybook';
 import { parameters } from '../../../../.storybook/preview';
 import { Default } from './TitleBarModule-story';
 
@@ -13,7 +14,8 @@ import withActionsAndLabel from './images/with-actions-and-label.png';
 
 # TitleBarModule
 
-Title bar modules provide interchangeable and reliable headings for establishing consistent hierarchies.
+Title bar modules provide interchangeable and reliable headings for establishing
+consistent hierarchies.
 
 [↳ Overview](#overview)  
 [↳ Component API](#component-api)  
@@ -29,7 +31,10 @@ Title bar modules provide interchangeable and reliable headings for establishing
 Everything passed in as a child of the title bar module will be rendered.
 
 <Canvas>
-  <Story id="layout-modules-titlebarmodule--default" parameters={parameters} />
+  <Story
+    id={getDocsId('layout-modules-titlebarmodule--default')}
+    parameters={parameters}
+  />
 </Canvas>
 
 ### Component API
@@ -38,7 +43,8 @@ Everything passed in as a child of the title bar module will be rendered.
 
 _**\***Required property_
 
-Additional props passed into `TitleBarModule` will be forwarded along to the underlying title bar module containers.
+Additional props passed into `TitleBarModule` will be forwarded along to the
+underlying title bar module containers.
 
 #### `label`
 
@@ -101,9 +107,12 @@ This prop specifies a different element to be rendered as a title.
 
 ### Anatomy
 
-1. **Title:** This the title itself, learn more about potential [variants](#variants) above.
-2. **Top spacer:** There is 16px spacer `$spacing-05`, included at the top of the TitleBarModule.
-3. **Bottom spacer:** The 16px spacer `$spacing-05`, included inside the bar, means that the module can be placed flush to edge of the components below.
+1. **Title:** This the title itself, learn more about potential
+   [variants](#variants) above.
+2. **Top spacer:** There is 16px spacer `$spacing-05`, included at the top of
+   the TitleBarModule.
+3. **Bottom spacer:** The 16px spacer `$spacing-05`, included inside the bar,
+   means that the module can be placed flush to edge of the components below.
 
 <img alt="`TitleBarModule` anatomy" src={anatomy} />
 
@@ -129,7 +138,8 @@ A label can be positioned above or below the title using `labelDirection`.
 
 Actions can be placed inline with the title.
 
-The title bar can accept two type variants, sub-section title and section title, so you shouldn't supplement your own type style.
+The title bar can accept two type variants, sub-section title and section title,
+so you shouldn't supplement your own type style.
 
 <img alt="`TitleBarModule` withActions" src={withActions} />
 
@@ -139,7 +149,8 @@ The title bar can accept two type variants, sub-section title and section title,
 
 ### With Actions and Label
 
-The label can be applied to both the section title and `subsection` title, and can be positioned above or below the title with actions.
+The label can be applied to both the section title and `subsection` title, and
+can be positioned above or below the title with actions.
 
 <img alt="`TitleBarModule` withActionsAndLabel" src={withActionsAndLabel} />
 
@@ -149,7 +160,9 @@ The label can be applied to both the section title and `subsection` title, and c
 
 ### Grid placement
 
-Title bar modules span a minimum of 4 columns, following the [narrow grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow) implementation.
+Title bar modules span a minimum of 4 columns, following the
+[narrow grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
+implementation.
 
 <Row>
   <Column>
