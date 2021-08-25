@@ -12,17 +12,10 @@ const CATEGORIES = {
   LAYOUT_MODULES: 'Layout modules',
   PAGE_LAYOUTS: 'Page layouts (Canary)',
   PATTERNS: 'Patterns',
-  SECURITY: 'Security',
 };
 
-const {
-  COMPONENTS,
-  DEPRECATED,
-  LAYOUT_MODULES,
-  PAGE_LAYOUTS,
-  PATTERNS,
-  SECURITY,
-} = CATEGORIES;
+const { COMPONENTS, DEPRECATED, LAYOUT_MODULES, PAGE_LAYOUTS, PATTERNS } =
+  CATEGORIES;
 
 const ORDER = [
   LAYOUT_MODULES,
@@ -98,6 +91,11 @@ const disableCentered = () => ({
 const disableCenteredStories = (stories) =>
   stories.addParameters(disableCentered());
 
+// Returns the formatted ID to embed a story in Docs — https://storybook.js.org/docs/rax/api/mdx#embedding-stories
+function getDocsId(id) {
+  return id;
+}
+
 /**
  * Helper configuration for aligning stories supporting Storybook Docs with the same addon and tab configuration.
  * @returns {Object<string, Object>} The helper configuration.
@@ -139,6 +137,7 @@ export {
   disableCenteredStories,
   getComponentsCategory as components,
   getDeprecatedCategory as deprecated,
+  getDocsId,
   getDocsParameters,
   getLayoutModulesCategory as layoutModules,
   getPageLayoutsCategory as pageLayouts,
