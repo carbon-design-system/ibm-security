@@ -60,7 +60,7 @@ exports[`IconButtonBar renders the 'lg' variation 1`] = `
       className="security--icon-button-bar__divider__inner"
     />
   </span>
-  <FeatureToggle(OverflowMenu)
+  <ForwardRef(OverflowMenu)
     className="security--icon-button-bar__overflow-menu"
     direction="top"
     flipped={true}
@@ -93,7 +93,7 @@ exports[`IconButtonBar renders the 'lg' variation 1`] = `
       onClick={[Function]}
       onKeyDown={[Function]}
     />
-  </FeatureToggle(OverflowMenu)>
+  </ForwardRef(OverflowMenu)>
 </div>
 `;
 
@@ -157,7 +157,7 @@ exports[`IconButtonBar renders the 'md' variation 1`] = `
       className="security--icon-button-bar__divider__inner"
     />
   </span>
-  <FeatureToggle(OverflowMenu)
+  <ForwardRef(OverflowMenu)
     className="security--icon-button-bar__overflow-menu"
     direction="top"
     flipped={true}
@@ -190,7 +190,7 @@ exports[`IconButtonBar renders the 'md' variation 1`] = `
       onClick={[Function]}
       onKeyDown={[Function]}
     />
-  </FeatureToggle(OverflowMenu)>
+  </ForwardRef(OverflowMenu)>
 </div>
 `;
 
@@ -254,7 +254,7 @@ exports[`IconButtonBar renders the 'sm' variation 1`] = `
       className="security--icon-button-bar__divider__inner"
     />
   </span>
-  <FeatureToggle(OverflowMenu)
+  <ForwardRef(OverflowMenu)
     className="security--icon-button-bar__overflow-menu"
     direction="top"
     flipped={true}
@@ -287,7 +287,7 @@ exports[`IconButtonBar renders the 'sm' variation 1`] = `
       onClick={[Function]}
       onKeyDown={[Function]}
     />
-  </FeatureToggle(OverflowMenu)>
+  </ForwardRef(OverflowMenu)>
 </div>
 `;
 
@@ -351,7 +351,7 @@ exports[`IconButtonBar renders the 'xl' variation 1`] = `
       className="security--icon-button-bar__divider__inner"
     />
   </span>
-  <FeatureToggle(OverflowMenu)
+  <ForwardRef(OverflowMenu)
     className="security--icon-button-bar__overflow-menu"
     direction="top"
     flipped={true}
@@ -384,7 +384,7 @@ exports[`IconButtonBar renders the 'xl' variation 1`] = `
       onClick={[Function]}
       onKeyDown={[Function]}
     />
-  </FeatureToggle(OverflowMenu)>
+  </ForwardRef(OverflowMenu)>
 </div>
 `;
 
@@ -392,7 +392,7 @@ exports[`IconButtonBar renders the length of '1' variation 1`] = `
 <div
   className="security--icon-button-bar security--icon-button-bar--lg"
 >
-  <FeatureToggle(OverflowMenu)
+  <ForwardRef(OverflowMenu)
     className="security--icon-button-bar__overflow-menu"
     direction="top"
     flipped={true}
@@ -445,7 +445,7 @@ exports[`IconButtonBar renders the length of '1' variation 1`] = `
       onClick={[Function]}
       onKeyDown={[Function]}
     />
-  </FeatureToggle(OverflowMenu)>
+  </ForwardRef(OverflowMenu)>
 </div>
 `;
 
@@ -481,7 +481,7 @@ exports[`IconButtonBar renders the length of '2' variation 1`] = `
     tooltip={true}
     tooltipDirection="top"
   />
-  <FeatureToggle(OverflowMenu)
+  <ForwardRef(OverflowMenu)
     className="security--icon-button-bar__overflow-menu"
     direction="top"
     flipped={true}
@@ -524,7 +524,7 @@ exports[`IconButtonBar renders the length of '2' variation 1`] = `
       onClick={[Function]}
       onKeyDown={[Function]}
     />
-  </FeatureToggle(OverflowMenu)>
+  </ForwardRef(OverflowMenu)>
 </div>
 `;
 
@@ -588,7 +588,7 @@ exports[`IconButtonBar renders the length of '3' variation 1`] = `
       className="security--icon-button-bar__divider__inner"
     />
   </span>
-  <FeatureToggle(OverflowMenu)
+  <ForwardRef(OverflowMenu)
     className="security--icon-button-bar__overflow-menu"
     direction="top"
     flipped={true}
@@ -621,7 +621,7 @@ exports[`IconButtonBar renders the length of '3' variation 1`] = `
       onClick={[Function]}
       onKeyDown={[Function]}
     />
-  </FeatureToggle(OverflowMenu)>
+  </ForwardRef(OverflowMenu)>
 </div>
 `;
 
