@@ -22681,7 +22681,6 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 .security--toolbar__nav__item__title--icon {
-  padding-top: 1px;
   margin-left: 0.75rem;
 }
 
