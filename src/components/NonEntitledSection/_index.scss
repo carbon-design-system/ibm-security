@@ -42,13 +42,15 @@
   &__title {
     @include carbon--type-scale($step: 6);
 
-    margin: 0 0 $carbon--spacing-12;
+    margin-top: 0;
+    margin-bottom: $carbon--spacing-09;
   }
 
   &__sub-title {
     @include carbon--type-scale($step: 1);
 
-    margin: $carbon--spacing-03 0;
+    margin-top: $carbon--spacing-02;
+    margin-bottom: $carbon--spacing-03;
   }
 
   &__description {
