@@ -13141,11 +13141,15 @@ li.bx--accordion__item--disabled:last-of-type {
   font-weight: var(--cds-body-long-01-font-weight, 400);
   line-height: var(--cds-body-long-01-line-height, 1.43);
   letter-spacing: var(--cds-body-long-01-letter-spacing, 0.16px);
-  margin-top: 0;
-  margin-bottom: 1.25125rem;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
 }
 
-.security--layout-module--description__content:last-child {
+.security--layout-module--description__content:first-of-type {
+  margin-top: 0;
+}
+
+.security--layout-module--description__content:last-of-type {
   margin-bottom: 0;
 }
 
@@ -13478,12 +13482,6 @@ li.bx--accordion__item--disabled:last-of-type {
   background-color: transparent;
   content: '';
   transform: translate3d(-100%, 0, 0);
-}
-
-.security--nav__list__item[dir=\\"rtl\\"]::before,
-[dir=\\"rtl\\"] .security--nav__list__item::before {
-  right: 0;
-  transform: translate3d(100%, 0, 0);
 }
 
 .security--nav__list__item--disabled {
@@ -15643,23 +15641,23 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 .security--ne-section__content-wrapper {
-  padding: 6rem 2rem 3rem 2rem;
+  padding: 6rem 2rem 3rem;
 }
 
 .security--ne-section__title, .security--ne-section__sub-title, .security--ne-section__description {
+  font-weight: 400;
   color: var(--cds-ui-05, #f4f4f4);
-  font-weight: normal;
   line-height: initial;
 }
 
 .security--ne-section__title {
   font-size: 1.5rem;
-  margin: 0 0 3.25rem 0;
+  margin: 0 0 6rem;
 }
 
 .security--ne-section__sub-title {
   font-size: 0.75rem;
-  margin: 0 0 0.5rem 0;
+  margin: 0.5rem 0;
 }
 
 .security--ne-section__description {
@@ -22728,13 +22726,6 @@ li.bx--accordion__item--disabled:last-of-type {
   overflow-y: auto;
 }
 
-.security--toolbar__panel[dir=\\"rtl\\"],
-[dir=\\"rtl\\"] .security--toolbar__panel {
-  right: 3rem;
-  left: unset;
-  box-shadow: -0.125rem 0 0 0 var(--cds-overlay-01, rgba(22, 22, 22, 0.7));
-}
-
 .security--toolbar__content {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
@@ -22775,22 +22766,12 @@ li.bx--accordion__item--disabled:last-of-type {
   transform: translate3d(-16rem, 0, 0);
 }
 
-.security--toolbar__transition--enter[dir=\\"rtl\\"],
-[dir=\\"rtl\\"] .security--toolbar__transition--enter {
-  transform: translate3d(16rem, 0, 0);
-}
-
 .security--toolbar__transition--enter--active {
   transform: translate3d(0, 0, 0);
 }
 
 .security--toolbar__transition--leave--active {
   transform: translate3d(-16rem, 0, 0);
-}
-
-.security--toolbar__transition--leave--active[dir=\\"rtl\\"],
-[dir=\\"rtl\\"] .security--toolbar__transition--leave--active {
-  transform: translate3d(16rem, 0, 0);
 }
 
 .security--toolbar__content__transition--enter--active, .security--toolbar__content__transition--leave--active {
@@ -22801,22 +22782,12 @@ li.bx--accordion__item--disabled:last-of-type {
   transform: translate3d(-0.5rem, 0, 0);
 }
 
-.security--toolbar__content__transition--enter[dir=\\"rtl\\"],
-[dir=\\"rtl\\"] .security--toolbar__content__transition--enter {
-  transform: translate3d(0.5rem, 0, 0);
-}
-
 .security--toolbar__content__transition--enter--active {
   transform: translate3d(0, 0, 0);
 }
 
 .security--toolbar__content__transition--leave--active {
   transform: translate3d(-0.5rem, 0, 0);
-}
-
-.security--toolbar__content__transition--leave--active[dir=\\"rtl\\"],
-[dir=\\"rtl\\"] .security--toolbar__content__transition--leave--active {
-  transform: translate3d(0.5rem, 0, 0);
 }
 
 .security--toolbar__content__transition--enter--active, .security--toolbar__content__transition--leave--active {

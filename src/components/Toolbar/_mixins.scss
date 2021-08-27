@@ -57,10 +57,6 @@ $toolbar__panel__transition__timing-function: $timing-function;
 }
 
 @mixin toolbar__transition--transform($translation) {
-  $translation--reverse: reverse-transform(
-    $transform: $translation,
-  );
-
   &--enter,
   &--leave {
     &--active {
@@ -71,10 +67,6 @@ $toolbar__panel__transition__timing-function: $timing-function;
   &--enter {
     transform: translate3d($translation);
 
-    @include rtl {
-      transform: translate3d($translation--reverse);
-    }
-
     &--active {
       transform: translate3d(0, 0, 0);
     }
@@ -82,24 +74,11 @@ $toolbar__panel__transition__timing-function: $timing-function;
 
   &--leave--active {
     transform: translate3d($translation);
-
-    @include rtl {
-      transform: translate3d($translation--reverse);
-    }
   }
 }
 
 @mixin toolbar {
   $toolbar: &;
-
-  /// Panel box shadow.
-  /// @type List<Length|Length|Length|Length|Color>
-  $toolbar__panel__box-shadow: (
-    carbon--mini-units(
-        $count: 0.25,
-      )
-      0 0 0 $overlay-01
-  );
 
   /// Panel content width.
   /// @type Length
@@ -222,15 +201,9 @@ $toolbar__panel__transition__timing-function: $timing-function;
     padding-top: $toolbar__spacing__position__vertical;
     padding-bottom: $toolbar__spacing__position__vertical;
     background-color: $ui-01;
-    box-shadow: $toolbar__panel__box-shadow;
+    box-shadow: carbon--mini-units($count: 0.25) 0 0 0 $overlay-01;
     overflow-x: hidden;
     overflow-y: auto;
-
-    @include rtl {
-      right: $toolbar__sizing__width;
-      left: unset;
-      box-shadow: reverse-box-shadow($box-shadow: $toolbar__panel__box-shadow);
-    }
   }
 
   &__content {
