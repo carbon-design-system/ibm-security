@@ -8418,24 +8418,24 @@ a.bx--overflow-menu-options__btn::before {
   padding-left: 0.25rem;
 }
 
-.security--decorator--unknown .security--decorator__icon, .security--decorator__icon--unknown {
-  fill: var(--cds-icon-02, #c6c6c6);
+.security--decorator--critical .security--decorator__icon {
+  fill: var(--cds-support-01, #fa4d56);
 }
 
-.security--decorator--low .security--decorator__icon, .security--decorator__icon--low {
+.security--decorator--high .security--decorator__icon {
+  fill: var(--cds-support-01, #fa4d56);
+}
+
+.security--decorator--low .security--decorator__icon {
   fill: var(--cds-support-03, #f1c21b);
 }
 
-.security--decorator--medium .security--decorator__icon, .security--decorator__icon--medium {
+.security--decorator--medium .security--decorator__icon {
   fill: #ff832b;
 }
 
-.security--decorator__icon--high, .security--decorator__icon--critical {
-  fill: var(--cds-support-01, #fa4d56);
-}
-
-.security--decorator--high .security--decorator__icon, .security--decorator--critical .security--decorator__icon {
-  fill: var(--cds-support-01, #fa4d56);
+.security--decorator--unknown .security--decorator__icon {
+  fill: var(--cds-icon-02, #c6c6c6);
 }
 
 .security--decorator--high--active .security--decorator__icon, .security--decorator--high:focus:active .security--decorator__icon, .security--decorator--critical--active .security--decorator__icon, .security--decorator--critical:focus:active .security--decorator__icon {
@@ -20413,14 +20413,11 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--summary-card__action-overlay {
   position: absolute;
   z-index: 6000;
-  top: -18rem;
-  right: 0;
-  bottom: 3rem;
-  left: 0;
   display: flex;
   flex-direction: column;
   background-color: var(--cds-ui-01, #262626);
   cursor: default;
+  transform: translate3d(0, -100%, 0);
 }
 
 .security--summary-card__action-overlay__header {
@@ -20465,24 +20462,24 @@ li.bx--accordion__item--disabled:last-of-type {
 
 .security--summary-card__action-overlay__transition--appear, .security--summary-card__action-overlay__transition--enter {
   opacity: 0;
-  transform: translate3d(0, 19rem, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .security--summary-card__action-overlay__transition--appear--active, .security--summary-card__action-overlay__transition--enter--active {
   opacity: 1;
-  transform: translate3d(0, 0, 0);
+  transform: translate3d(0, -100%, 0);
   transition: all 240ms;
   transition-timing-function: cubic-bezier(0, 0, 0.3, 1);
 }
 
 .security--summary-card__action-overlay__transition--leave {
   opacity: 1;
-  transform: translate3d(0, 0, 0);
+  transform: translate3d(0, -100%, 0);
 }
 
 .security--summary-card__action-overlay__transition--leave--active {
   opacity: 0;
-  transform: translate3d(0, 19rem, 0);
+  transform: translate3d(0, 0, 0);
   transition: all 240ms;
   transition-timing-function: cubic-bezier(0.4, 0.14, 1, 1);
 }
@@ -20490,10 +20487,10 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--summary-card__action-overlay--transparent {
   position: absolute;
   z-index: 5999;
-  top: -21rem;
   right: 0;
-  bottom: 3rem;
+  bottom: 0;
   left: 0;
+  height: 24rem;
   background-color: var(--cds-overlay-01, rgba(22, 22, 22, 0.7));
 }
 
@@ -23406,7 +23403,9 @@ li.bx--accordion__item--disabled:last-of-type {
   transition: 240ms cubic-bezier(0.2, 0, 0.38, 0.9) background-color;
   margin-left: auto;
   color: var(--cds-inverse-01, #161616);
-  transition: 110ms background-color cubic-bezier(0.2, 0, 0.38, 0.9);
+  transition-duration: 110ms;
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.2, 0, 0.38, 0.9);
   flex-shrink: 0;
   cursor: inherit;
   opacity: 0;
@@ -23732,7 +23731,9 @@ li.bx--accordion__item--disabled:last-of-type {
   width: 100%;
   height: 0.25rem;
   background-color: var(--cds-interactive-01, #0f62fe);
-  transition: 240ms height cubic-bezier(0.2, 0, 0.38, 0.9);
+  transition-duration: 240ms;
+  transition-property: height;
+  transition-timing-function: cubic-bezier(0.2, 0, 0.38, 0.9);
 }
 
 .security--header__button--notifications::before {
@@ -23824,7 +23825,9 @@ li.bx--accordion__item--disabled:last-of-type {
   transition: 240ms cubic-bezier(0.2, 0, 0.38, 0.9) background-color;
   margin-left: auto;
   color: var(--cds-inverse-01, #161616);
-  transition: 110ms background-color cubic-bezier(0.2, 0, 0.38, 0.9);
+  transition-duration: 110ms;
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.2, 0, 0.38, 0.9);
 }
 
 .security--header__popover__button *,
@@ -24023,7 +24026,9 @@ li.bx--accordion__item--disabled:last-of-type {
   padding-left: 1rem;
   color: unset;
   text-decoration: initial;
-  transition: 110ms background-color cubic-bezier(0.2, 0, 0.38, 0.9);
+  transition-duration: 110ms;
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.2, 0, 0.38, 0.9);
 }
 
 .security--header__popover__list-item .security--header__notification {
