@@ -1,0 +1,57 @@
+////
+/// Getting Started module.
+/// @group getting-started-module
+/// @copyright IBM Security 2021
+////
+
+@import '@carbon/layout/scss/spacing';
+@import '@carbon/themes/scss/tokens';
+@import '@carbon/type/scss/styles';
+
+@import '../../../globals/border/index';
+
+@import 'carbon-components/scss/globals/scss/helper-mixins';
+
+@import '../../Component/mixins';
+@import '../variables';
+
+@import '../../../globals/motion/index';
+
+@include security--component($name: #{$layout-modules__name}--getting-started) {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-width: 42rem;
+  height: 100%;
+  flex-wrap: wrap;
+  padding: $spacing-03 0 $spacing-07;
+  background: url('../../../images/aurora_full_width.png') no-repeat 100% 100%;
+  background-size: 100%;
+
+  &__primary-button,
+  &__secondary-button {
+    width: 50%;
+    margin-bottom: $spacing-07;
+  }
+
+  &__secondary-button {
+    margin-right: calc(-1 * #{$spacing-05});
+    margin-left: $spacing-05;
+  }
+
+  &__additional-info {
+    margin-top: auto;
+    @include carbon--type-style($name: body-long-01);
+  }
+
+  &__tertiary-button {
+    left: calc(-1 * #{$spacing-05});
+    width: fit-content;
+  }
+
+  &__illustration {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto auto;
+  }
+}
