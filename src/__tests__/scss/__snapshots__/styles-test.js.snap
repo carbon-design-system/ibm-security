@@ -21302,12 +21302,7 @@ li.bx--accordion__item--disabled:last-of-type {
 
 @media (min-width: 123rem) {
   .security--tearsheet--small {
-    top: 50%;
-    bottom: unset;
     width: 64rem;
-    height: 50%;
-    min-height: 32rem;
-    transform: translate3d(calc( -50% - 1rem), -50%, 0);
   }
 }
 
