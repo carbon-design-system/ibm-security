@@ -8,9 +8,9 @@ Also refer to [migration in Carbon](https://github.com/carbon-design-system/carb
 
 ### Imports
 
-| `carbon-addons-security`       | `@carbon/ibm-security`                                    |
-| ------------------------------ | --------------------------------------------------------- |
-| `@import '@ibmduo/grid/**/*';` | `@import '@carbon/ibm-security/scss/globals/grid/index';` |
+| `carbon-addons-security`    | `@carbon/ibm-security`                           |
+| --------------------------- | ------------------------------------------------ |
+| `@use '@ibmduo/grid/**/*';` | `@use '@carbon/ibm-security/scss/globals/grid';` |
 
 ### Feature flags
 

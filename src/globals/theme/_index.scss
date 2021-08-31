@@ -4,20 +4,11 @@
 /// @copyright IBM Security 2019 - 2021
 ////
 
-@import '@carbon/themes/scss/mixins';
-
 @import '../../components/Component/mixins';
 @import '../deprecate/index';
 @import '../feature-flags/index';
 
-@import 'variables';
-
-/// Carbon theme.
-/// @type Map<String, Color>
-$carbon--theme: $-theme;
-
-@include carbon--theme;
-
+@import 'theme';
 @import 'carbon-components/scss/globals/scss/theme-tokens';
 @import 'mixins';
 
@@ -36,7 +27,12 @@ $theme: dark;
 /// @access private
 /// @deprecated
 @function theme($light, $dark) {
-  @warn deprecate($actual: 'theme', $expected: '@carbon/themes');
+  $deprecate: deprecate(
+    $actual: 'theme',
+    $expected: '@carbon/themes/scss/themes',
+    $url:
+      'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/2.x/themes.md#functions',
+  );
 
   @return if($theme == dark, $dark, $light);
 }

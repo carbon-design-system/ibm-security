@@ -10,16 +10,23 @@
 @import '../feature-flags/index';
 @import '../namespace/index';
 
-@import 'css-gridish/scss/functions';
-@import 'css-gridish/scss/mixins';
-@import 'css-gridish/scss/utilities';
-@import 'css-gridish/scss/variables';
+@import 'vendor/css-gridish/scss/functions';
+@import 'vendor/css-gridish/scss/mixins';
+@import 'vendor/css-gridish/scss/utilities';
+@import 'vendor/css-gridish/scss/variables';
 
 @if feature-flag-enabled($feature: $grid__name) {
   @include export-namespace($name: $grid__name) {
-    @warn deprecate($actual: '@ibmduo/grid', $expected: '@carbon/grid', $url: 'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/carbon-for-ibm-security/grid.md#feature-flags');
+    $deprecate: deprecate(
+      $actual: '@ibmduo/grid',
+      $expected: '@carbon/grid',
+      $url:
+        'https://github.com/carbon-design-system/ibm-security/blob/master/docs/migration/carbon-for-ibm-security/grid.md#feature-flags',
+    );
 
+    // https://github.com/IBM/css-gridish/blob/master/src/scss/_core.scss
     html {
+      // stylelint-disable-next-line carbon/type-token-use
       font-size: map-get($grid-values, 'rem') * 1px;
     }
 
@@ -28,12 +35,12 @@
     }
 
     .#{$prefix}-container {
-      box-sizing: border-box;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: #{map-get($last, breakpoint)}rem;
-      overflow-x: hidden;
       width: 100vw;
+      max-width: #{map-get($last, breakpoint)}rem;
+      box-sizing: border-box;
+      margin-right: auto;
+      margin-left: auto;
+      overflow-x: hidden;
     }
 
     .#{$prefix}-container--left {
@@ -45,14 +52,14 @@
     }
 
     .#{$prefix}-grid {
-      align-items: flex-start;
+      position: relative;
+      display: grid;
       box-sizing: border-box;
+      flex-wrap: wrap;
+      align-items: flex-start;
       @if $includeFlexFallback {
         display: flex;
       }
-      display: grid;
-      flex-wrap: wrap;
-      position: relative;
 
       > * {
         box-sizing: border-box;
@@ -116,9 +123,9 @@
     @supports (display: grid) {
       .#{$prefix}-grid > *,
       .#{$prefix}-grid > [class*='#{$prefix}-grid__col--'] {
+        width: initial;
         min-width: initial;
         max-width: initial;
-        width: initial;
 
         &.#{$prefix}-grid {
           display: grid;
@@ -127,8 +134,8 @@
 
       .#{$prefix}-grid > [class*='#{$prefix}-grid__height--'] {
         height: unset;
-        max-height: unset;
         min-height: initial;
+        max-height: unset;
       }
     }
 

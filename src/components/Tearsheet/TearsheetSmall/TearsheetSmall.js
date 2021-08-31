@@ -3,12 +3,11 @@
  * @copyright IBM Security 2019 - 2021
  */
 
-import Close20 from '@carbon/icons-react/lib/close/20';
+import { Close20 } from '@carbon/icons-react';
 
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import deprecate from 'carbon-components-react/lib/prop-types/deprecate';
 
 import { getComponentNamespace } from '../../../globals/namespace';
 import * as defaultLabels from '../../../globals/nls';
@@ -35,18 +34,20 @@ class TearsheetSmall extends PureComponent {
   };
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    if (prevState.isOpen !== nextProps.isOpen)
+    if (prevState.isOpen !== nextProps.isOpen) {
       return {
         isOpen: nextProps.isOpen,
       };
+    }
     if (
       prevState.loading !== nextProps.loading ||
       prevState.loadingMessage !== nextProps.loadingMessage
-    )
+    ) {
       return {
         loading: nextProps.loading,
         loadingMessage: nextProps.loadingMessage,
       };
+    }
     return null;
   }
 
@@ -97,12 +98,10 @@ class TearsheetSmall extends PureComponent {
             focusTrap={focusTrap}
             rootNode={rootNode}
             stopPropagation={stopPropagation}
-            stopPropagationEvents={stopPropagationEvents}
-          >
+            stopPropagationEvents={stopPropagationEvents}>
             <section
               className={classnames(namespace, className)}
-              aria-hidden={false}
-            >
+              aria-hidden={false}>
               {this.state.loading && (
                 <LoadingMessage className={`${namespace}__loading`}>
                   {this.state.loadingMessage}
@@ -117,13 +116,11 @@ class TearsheetSmall extends PureComponent {
               <section className={`${namespace}__body`}>
                 <ScrollGradient
                   className={`${namespace}__content`}
-                  color={theme.ui01}
-                >
+                  color={theme.ui01}>
                   <div
                     className={classnames({
                       [`${namespace}__scroll-gradient__content`]: !flush,
-                    })}
-                  >
+                    })}>
                     {this.renderBody()}
                   </div>
                 </ScrollGradient>
@@ -135,8 +132,7 @@ class TearsheetSmall extends PureComponent {
                     disabled={secondaryButton.isDisabled || this.state.loading}
                     kind="secondary"
                     onClick={secondaryButton.onClick}
-                    size="xl"
-                  >
+                    size="xl">
                     {componentLabels.TEARSHEET_SMALL_SECONDARY_BUTTON}
                   </Button>
                 )}
@@ -145,8 +141,7 @@ class TearsheetSmall extends PureComponent {
                     className={`${namespace}__footer__button`}
                     disabled={primaryButton.isDisabled || this.state.loading}
                     onClick={primaryButton.onClick}
-                    size="xl"
-                  >
+                    size="xl">
                     {componentLabels.TEARSHEET_SMALL_PRIMARY_BUTTON}
                   </Button>
                 )}
@@ -182,8 +177,28 @@ export const buttonType = PropTypes.shape({
 });
 
 TearsheetSmall.propTypes = {
-  /** @type {Node} The root node for rendering the modal */
-  rootNode: isNode() ? PropTypes.instanceOf(Node) : PropTypes.any,
+  /** @type {func|string|element} The function|string|element to render your content. */
+  body: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.func,
+    PropTypes.element,
+  ]),
+
+  /** Provide the content for the `TearsheetSmall` */
+  children: PropTypes.element,
+
+  /** @type {string} Extra classes to add. */
+  className: PropTypes.string,
+
+  /** @type {object<object>} An object list of close button props. */
+  closeButton: buttonType.isRequired,
+
+  /** @type {element|Function|string} The element, function, or string for the description. */
+  description: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.func,
+    PropTypes.string,
+  ]),
 
   /** Specify whether the content's padding is flush */
   flush: PropTypes.bool,
@@ -194,34 +209,11 @@ TearsheetSmall.propTypes = {
   /** @type {string} The view title. */
   heading: PropTypes.string,
 
-  /** @type {element|Function|string} The element, function, or string for the description. */
-  description: PropTypes.oneOfType([
-    PropTypes.element,
-    PropTypes.func,
-    PropTypes.string,
-  ]),
+  /** @type {boolean} The open state. */
+  isOpen: PropTypes.bool,
 
-  /** @type {func|string|element} The function|string|element to render your content. */
-  body: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.func,
-    PropTypes.element,
-  ]),
-
-  /** @deprecated Deprecated. Please use `body` prop. */
-  children: deprecate(
-    PropTypes.element,
-    `\nThe prop \`children\` for TearsheetSmall has been deprecated in favor of \`body\`.`
-  ),
-
-  /** @type {Object<Object>} An object list of primary button props. */
-  primaryButton: buttonType.isRequired,
-
-  /** @type {Object<Object>} An object list of secondary button props. */
-  secondaryButton: buttonType.isRequired,
-
-  /** @type {Object<Object>} An object list of close button props. */
-  closeButton: buttonType.isRequired,
+  /** @type {object} Labels for the TearsheetSmall buttons */
+  labels: defaultLabels.propType,
 
   /** @type {bool} The toggle to determine whether or not to show the loading. */
   loading: PropTypes.bool,
@@ -229,19 +221,19 @@ TearsheetSmall.propTypes = {
   /** @type {string} The message to be displayed during loading. */
   loadingMessage: PropTypes.string,
 
-  /** @type {string} Extra classes to add. */
-  className: PropTypes.string,
+  /** @type {object<object>} An object list of primary button props. */
+  primaryButton: buttonType.isRequired,
 
-  /** @type {boolean} The open state. */
-  isOpen: PropTypes.bool,
+  /** @type {Node} The root node for rendering the modal */
+  rootNode: isNode() ? PropTypes.instanceOf(Node) : PropTypes.any,
 
-  /** @type {object} Labels for the TearsheetSmall buttons */
-  labels: defaultLabels.propType,
+  /** @type {object<object>} An object list of secondary button props. */
+  secondaryButton: buttonType.isRequired,
 
   /** @type {boolean} Stop event propagation for events that can bubble. */
   stopPropagation: PropTypes.bool,
 
-  /** @type {array} Array of event types to stop propagation. */
+  /** @type {Array} Array of event types to stop propagation. */
   stopPropagationEvents: PropTypes.arrayOf(PropTypes.oneOf(PORTAL_EVENTS)),
 };
 

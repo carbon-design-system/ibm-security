@@ -1,7 +1,7 @@
 ////
 /// Trending card.
 /// @group trending-card
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -17,14 +17,14 @@
 @import '../Component/mixins';
 
 @include security--component($name: trending-card) {
-  @include carbon--motion($name: standard, $mode: productive);
+  @include carbon--motion($mode: productive, $name: standard);
 
   display: block;
   min-width: carbon--mini-units($count: 24);
   padding: $carbon--spacing-05;
   background-color: $ui-01;
-  transition-duration: $transition-duration--fast;
   text-decoration: unset;
+  transition-duration: $transition-duration--fast;
 
   &:focus,
   &:hover {
@@ -50,6 +50,7 @@
 
   &__subtitle {
     @include carbon--type-style($name: caption-01);
+
     color: $text-02;
   }
 }

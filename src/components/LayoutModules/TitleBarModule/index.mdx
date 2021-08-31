@@ -1,16 +1,21 @@
+import { getDocsId } from '../../../../.storybook';
 import { parameters } from '../../../../.storybook/preview';
-import { Default } from './TitleBarModule.stories';
+import { Default } from './TitleBarModule-story';
 
 import anatomy from './images/anatomy.png';
-
-import variants from './images/variants.png';
 
 import doImage from './images/do.png';
 import dont from './images/dont.png';
 
+import withLabel from './images/with-label.png';
+import withLabelPositions from './images/with-label-positions.png';
+import withActions from './images/with-actions.png';
+import withActionsAndLabel from './images/with-actions-and-label.png';
+
 # TitleBarModule
 
-Title bar modules provide interchangeable and reliable headings for establishing consistent hierarchies.
+Title bar modules provide interchangeable and reliable headings for establishing
+consistent hierarchies.
 
 [↳ Overview](#overview)  
 [↳ Component API](#component-api)  
@@ -26,7 +31,10 @@ Title bar modules provide interchangeable and reliable headings for establishing
 Everything passed in as a child of the title bar module will be rendered.
 
 <Canvas>
-  <Story id="layout-modules-titlebarmodule--default" parameters={parameters} />
+  <Story
+    id={getDocsId('layout-modules-titlebarmodule--default')}
+    parameters={parameters}
+  />
 </Canvas>
 
 ### Component API
@@ -35,7 +43,43 @@ Everything passed in as a child of the title bar module will be rendered.
 
 _**\***Required property_
 
-Additional props passed into `TitleBarModule` will be forwarded along to the underlying title bar module containers.
+Additional props passed into `TitleBarModule` will be forwarded along to the
+underlying title bar module containers.
+
+#### `label`
+
+Use the `label` prop to specify whether a label should be used.
+
+<Canvas withSource="none">
+  <Default
+    label="Label"
+    element="h2"
+    title="Section title"
+    parameters={parameters}
+  />
+</Canvas>
+
+```jsx
+<TitleBarModule title="Section title" label="Label" />
+```
+
+#### `labelDirection`
+
+Use the `labelDirection` prop to position the label above or below the title.
+
+<Canvas withSource="none">
+  <Default
+    label="Label"
+    labelDirection="bottom"
+    element="h2"
+    title="Section title"
+    parameters={parameters}
+  />
+</Canvas>
+
+```jsx
+<TitleBarModule title="Section title" label="Label" labelDirection="top" />
+```
 
 #### `subsection`
 
@@ -63,25 +107,62 @@ This prop specifies a different element to be rendered as a title.
 
 ### Anatomy
 
-1. **Title:** This the title itself, learn more about potential [variants](#variants) above.
-2. **Top spacer:** There is 16px spacer `$spacing-05`, included at the top of the TitleBarModule.
-3. **Bottom spacer:** The 16px spacer `$spacing-05`, included inside the bar, means that the module can be placed flush to edge of the components below.
+1. **Title:** This the title itself, learn more about potential
+   [variants](#variants) above.
+2. **Top spacer:** There is 16px spacer `$spacing-05`, included at the top of
+   the TitleBarModule.
+3. **Bottom spacer:** The 16px spacer `$spacing-05`, included inside the bar,
+   means that the module can be placed flush to edge of the components below.
 
 <img alt="`TitleBarModule` anatomy" src={anatomy} />
 
-### Variants
+### With Label
 
-Actions can be placed inline with the title and a label can also be included below.
+A label can be positioned above or below the title using `labelDirection`.
 
-The title bar can accept two type variants, sub-section title and section title, so you shouldn't supplement your own type style.
+<img alt="`TitleBarModule` withLabel" src={withLabel} />
 
-<img alt="`TitleBarModule` variants" src={variants} />
+```jsx
+<TitleBarModule title="Section title" label="Label" labelDirection="top" />
+```
 
-<Source id="layout-modules-titlebarmodule--variant" />
+### Examples
+
+<Row>
+  <Column>
+    <img alt="`TitleBarModule` withLabel" src={withLabelPositions} />
+  </Column>
+</Row>
+
+### With Actions
+
+Actions can be placed inline with the title.
+
+The title bar can accept two type variants, sub-section title and section title,
+so you shouldn't supplement your own type style.
+
+<img alt="`TitleBarModule` withActions" src={withActions} />
+
+```jsx
+<TitleBarModule title="Sub-section title" subsection />
+```
+
+### With Actions and Label
+
+The label can be applied to both the section title and `subsection` title, and
+can be positioned above or below the title with actions.
+
+<img alt="`TitleBarModule` withActionsAndLabel" src={withActionsAndLabel} />
+
+```jsx
+<TitleBarModule title="Section title" label="Label" subsection />
+```
 
 ### Grid placement
 
-Title bar modules span a minimum of 4 columns, following the [narrow grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow) implementation.
+Title bar modules span a minimum of 4 columns, following the
+[narrow grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow)
+implementation.
 
 <Row>
   <Column>

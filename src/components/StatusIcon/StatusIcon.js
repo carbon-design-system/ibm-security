@@ -1,9 +1,9 @@
 /**
  * @file Status icon.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-import Checkmark20 from '@carbon/icons-react/lib/checkmark/20';
+import { Checkmark20 } from '@carbon/icons-react';
 
 import classnames from 'classnames';
 import { oneOf, string } from 'prop-types';
@@ -29,6 +29,9 @@ export default class StatusIcon extends Component {
     /** @type {string} Class name. */
     className: string,
 
+    /** @type {string} icon aria label. */
+    iconDescription: string,
+
     /** @type {string} Message. */
     message: string,
 
@@ -37,9 +40,6 @@ export default class StatusIcon extends Component {
 
     /** @type {string} Status. */
     status: oneOf(STATUS),
-
-    /** @type {string} icon aria label. */
-    iconDescription: string,
   };
 
   static defaultProps = {
@@ -108,8 +108,7 @@ export default class StatusIcon extends Component {
       <div
         className={classnames(namespace, className, {
           [`${namespace}--${size}`]: size,
-        })}
-      >
+        })}>
         {statusIcon}
         {message && <span className={` ${namespace}__message`}>{message}</span>}
       </div>

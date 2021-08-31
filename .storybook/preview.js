@@ -5,7 +5,7 @@
 
 import { spacing04, spacing05 } from '@carbon/layout';
 import { styles } from '@carbon/type';
-import { ArgsTable, Story } from '@storybook/addon-docs/blocks';
+import { ArgsTable, Story } from '@storybook/addon-docs';
 import { withInfo } from '@storybook/addon-info';
 import LinkTo from '@storybook/addon-links/react';
 
@@ -34,7 +34,7 @@ const { interactive01, text04 } = theme;
 const decorators = [
   withInfo,
   withTheme,
-  Story => (
+  (Story) => (
     <Container>
       <Story />
     </Container>
@@ -49,7 +49,7 @@ const parameters = {
       Canvas,
       Column,
       Detail,
-      LinkTo: props => <LinkTo className="storybook__link" {...props} />,
+      LinkTo: (props) => <LinkTo className="storybook__link" {...props} />,
       Overview,
       Row,
       Source,

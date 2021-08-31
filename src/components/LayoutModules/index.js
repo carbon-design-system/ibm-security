@@ -13,4 +13,5 @@ export { default as CardAreaModule } from './CardAreaModule';
 export { default as DescriptionListModule } from './DescriptionListModule';
 export { default as DescriptionModule } from './DescriptionModule';
 export { default as ICAModule } from './ICAModule';
+export { default as ListItemModule } from './ListItemModule';
 export { default as TitleBarModule } from './TitleBarModule';

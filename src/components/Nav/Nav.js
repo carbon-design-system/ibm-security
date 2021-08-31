@@ -1,6 +1,6 @@
 /**
  * @file Navigation class.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
 import classnames from 'classnames';
@@ -15,12 +15,8 @@ import { getComponentNamespace } from '../../globals/namespace';
 
 export const navNamespace = getComponentNamespace('nav');
 
-const NavListName = <NavList />.type.name;
+const { name } = NavList;
 
-/**
- * Navigation class.
- * @className
- */
 export default class Nav extends Component {
   constructor(props) {
     super(props);
@@ -38,12 +34,6 @@ export default class Nav extends Component {
     this.handleListClick = this.handleListClick.bind(this);
 
     this.navigationLists = [];
-  }
-
-  componentWillReceiveProps({ activeHref }) {
-    if (activeHref) {
-      this.setState({ activeHref });
-    }
   }
 
   /**
@@ -84,7 +74,7 @@ export default class Nav extends Component {
         key={key}
         onListClick={this.handleListClick}
         onItemClick={this.handleItemClick}
-        ref={navigationList => {
+        ref={(navigationList) => {
           this.navigationLists.push(navigationList);
         }}
       />
@@ -120,7 +110,7 @@ export default class Nav extends Component {
    */
   handleListClick(id) {
     Children.forEach(this.props.children, ({ props, type }, index) => {
-      if (type.name === NavListName) {
+      if (type.name === name) {
         const childId = `${navNamespace}__list--${index}`;
 
         if (childId !== id && !props.isExpandedOnPageload) {
@@ -134,7 +124,7 @@ export default class Nav extends Component {
 
   render() {
     const {
-      activeHref,
+      activeHref: _, // Throw away.
       className,
       children,
       heading,
@@ -146,13 +136,12 @@ export default class Nav extends Component {
       <nav
         className={classnames(navNamespace, className)}
         aria-label={label}
-        {...other}
-      >
+        {...other}>
         {heading && <h1 className={`${navNamespace}__heading`}>{heading}</h1>}
 
         <ul className={`${navNamespace}__wrapper`} role="menubar">
           {Children.map(children, (child, index) =>
-            child.type.name === NavListName
+            child.type.name === name
               ? this.buildNewListChild(child, index)
               : this.buildNewItemChild(child, index)
           )}

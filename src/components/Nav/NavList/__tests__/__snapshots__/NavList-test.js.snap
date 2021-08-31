@@ -1,0 +1,196 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav Rendering renders correctly 1`] = `
+<NavList
+  activeHref="#"
+  className="class"
+  icon=""
+  id=""
+  isExpandedOnPageload={true}
+  navigationItemTitle=""
+  onItemClick={[Function]}
+  onListClick={[Function]}
+  tabIndex={0}
+  title=""
+>
+  <li
+    className="security--nav__list class security--nav__list__item--expanded"
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    role="menuitem"
+    tabIndex={0}
+  >
+    <div
+      className="security--nav__list__item__link"
+    >
+      <div
+        className="security--nav__list__item__content"
+      />
+      <Icon
+        className="security--nav__list__icon"
+        height={null}
+        path={null}
+        renderIcon={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+          }
+        }
+        size={20}
+        viewBox="0 0 32 32"
+        width={null}
+      >
+        <ForwardRef(ChevronDown16)
+          aria-hidden="true"
+          className="security--icon security--nav__list__icon"
+          focusable={false}
+          preserveAspectRatio="xMidYMid meet"
+          style={
+            Object {
+              "willChange": "transform",
+            }
+          }
+        >
+          <Icon
+            aria-hidden="true"
+            className="security--icon security--nav__list__icon"
+            fill="currentColor"
+            focusable={false}
+            height={16}
+            preserveAspectRatio="xMidYMid meet"
+            style={
+              Object {
+                "willChange": "transform",
+              }
+            }
+            viewBox="0 0 16 16"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <svg
+              aria-hidden={true}
+              className="security--icon security--nav__list__icon"
+              fill="currentColor"
+              focusable={false}
+              height={16}
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "willChange": "transform",
+                }
+              }
+              viewBox="0 0 16 16"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 11L3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z"
+              />
+            </svg>
+          </Icon>
+        </ForwardRef(ChevronDown16)>
+      </Icon>
+    </div>
+    <ul
+      aria-hidden={false}
+      aria-label=""
+      className="security--nav__list security--nav__list--nested"
+      role="menu"
+    >
+      <NavItem
+        activeHref="#"
+        className=""
+        current={null}
+        disabled={false}
+        element="a"
+        handleItemSelect={null}
+        href="#"
+        id={null}
+        key="security--nav__list__item--0/.0"
+        label=""
+        link={true}
+        onClick={[Function]}
+        tabIndex={0}
+      >
+        <li
+          className="security--nav__list__item security--nav__list__item--active"
+          label=""
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="menuitem"
+        >
+          <NavItemLink
+            className="security--nav__list__item__link"
+            element="a"
+            href="#"
+            id="security--nav__list__item__1"
+            tabIndex={0}
+          >
+            <a
+              className="security--nav__list__item__link"
+              href="#"
+              id="security--nav__list__item__1"
+              tabIndex={0}
+            >
+              Label
+            </a>
+          </NavItemLink>
+        </li>
+      </NavItem>
+    </ul>
+  </li>
+</NavList>
+`;
+
+exports[`Nav Rendering renders the HTML of the node's subtree 1`] = `
+<li
+  class="security--nav__list class security--nav__list__item--expanded"
+  role="menuitem"
+  tabindex="0"
+>
+  <div
+    class="security--nav__list__item__link"
+  >
+    <div
+      class="security--nav__list__item__content"
+    />
+    <svg
+      aria-hidden="true"
+      class="security--icon security--nav__list__icon"
+      fill="currentColor"
+      focusable="false"
+      height="16"
+      preserveAspectRatio="xMidYMid meet"
+      style="will-change: transform;"
+      viewBox="0 0 16 16"
+      width="16"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M8 11L3 6 3.7 5.3 8 9.6 12.3 5.3 13 6z"
+      />
+    </svg>
+  </div>
+  <ul
+    aria-hidden="false"
+    aria-label=""
+    class="security--nav__list security--nav__list--nested"
+    role="menu"
+  >
+    <li
+      class="security--nav__list__item security--nav__list__item--active"
+      label=""
+      role="menuitem"
+    >
+      <a
+        class="security--nav__list__item__link"
+        href="#"
+        id="security--nav__list__item__2"
+        tabindex="0"
+      >
+        Label
+      </a>
+    </li>
+  </ul>
+</li>
+`;

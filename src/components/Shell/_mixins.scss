@@ -1,17 +1,17 @@
 ////
 /// Shell mixins.
 /// @group shell
-/// @copyright IBM Security 2019 - 2020
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
 @import '@carbon/layout/scss/spacing';
+@import '@carbon/motion/scss/motion';
 @import '@carbon/themes/scss/tokens';
 @import '@carbon/type/scss/styles';
 @import 'carbon-components/scss/globals/scss/helper-mixins';
 @import 'carbon-components/scss/globals/scss/layout';
 
-@import '../../globals/motion/index';
 @import '../../globals/theme/mixins';
 
 @import '../Header/mixins';
@@ -54,21 +54,24 @@
 
     @include security--theme--cg10__cg100;
 
-    display: flex;
     position: fixed;
+    z-index: $header__layer;
     top: 0;
     right: 0;
     left: 0;
+
+    display: flex;
     height: inherit;
+    align-items: center;
     padding-left: $carbon--spacing-05;
     background-color: $ui-01;
     background-position: left;
     background-repeat: no-repeat;
     background-size: $shell__banner__background__sizing__width
       $shell__banner__background__sizing__height;
-    align-items: center;
-    transition: $transition-duration background-size $timing-function;
-    z-index: $header__layer;
+    transition-duration: $moderate-02;
+    transition-property: background-size;
+    transition-timing-function: carbon--motion($name: standard);
 
     &,
     &:hover,
@@ -86,9 +89,10 @@
 
     &__text {
       @include carbon--type-style($name: caption-01);
-      padding-left: $carbon--spacing-04;
-      max-width: carbon--mini-units($count: 53);
+
       overflow: hidden;
+      max-width: carbon--mini-units($count: 53);
+      padding-left: $carbon--spacing-04;
       text-overflow: ellipsis;
       white-space: nowrap;
     }
@@ -112,8 +116,8 @@
     &__link.#{$prefix}--skip-to-content:focus {
       left: auto;
       border-color: $focus;
-      background-color: $interactive-01;
       margin-top: $header__spacing__padding;
+      background-color: $interactive-01;
       color: $text-04;
     }
   }

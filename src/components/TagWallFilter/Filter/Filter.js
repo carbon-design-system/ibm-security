@@ -5,7 +5,8 @@
 
 import { Add20, Search20 } from '@carbon/icons-react';
 
-import { defaultFilterItems } from 'carbon-components-react/lib/components/ComboBox/tools/filter';
+import { defaultFilterItems } from 'carbon-components-react/es/components/ComboBox/tools/filter';
+
 import classnames from 'classnames';
 import Downshift from 'downshift';
 import PropTypes from 'prop-types';
@@ -37,12 +38,14 @@ class Filter extends Component {
     };
   }
 
-  handleOnInputKeyDown = event => {
+  handleOnInputKeyDown = (event) => {
     event.stopPropagation();
   };
 
   handleOnInputValueChange = (inputValue, stateAndHelpers) => {
-    if (stateAndHelpers.type === '__autocomplete_mouseup__') return;
+    if (stateAndHelpers.type === '__autocomplete_mouseup__') {
+      return;
+    }
     this.setState(() => {
       if (Array.isArray(inputValue)) {
         return {
@@ -56,12 +59,12 @@ class Filter extends Component {
     });
   };
 
-  clearInputValue = event => {
+  clearInputValue = (event) => {
     event.stopPropagation();
     this.setState({ inputValue: '' });
   };
 
-  handleOnStateChange = changes => {
+  handleOnStateChange = (changes) => {
     const { type } = changes;
     switch (type) {
       case Downshift.stateChangeTypes.changeInput:
@@ -82,7 +85,7 @@ class Filter extends Component {
     this.props.onChange({ selectedItems: [], type: 'CLEAR_SELECTED_ITEMS' });
   };
 
-  handleItemChange = selectedItem => {
+  handleItemChange = (selectedItem) => {
     this.setState(
       { inputValue: '' },
       this.props.onChange({ item: selectedItem, type: 'SELECT_ITEM' })
@@ -95,7 +98,7 @@ class Filter extends Component {
     }
   };
 
-  buildMenuItems = getItemProps => {
+  buildMenuItems = (getItemProps) => {
     const {
       items,
       itemToString,
@@ -116,7 +119,7 @@ class Filter extends Component {
         compareItems,
         locale,
       }
-    ).map(item => {
+    ).map((item) => {
       const itemProps = getItemProps({ item });
       const itemText = itemToString(item);
 
@@ -125,19 +128,16 @@ class Filter extends Component {
           className={`${namespace}__list-item`}
           key={itemProps.id}
           isActive={selectedItems.indexOf(item) !== -1}
-          onKeyDown={e => this.handleKeyDownChange(e, item)}
+          onKeyDown={(e) => this.handleKeyDownChange(e, item)}
           role="button"
           tabIndex="0"
-          {...itemProps}
-        >
+          {...itemProps}>
           <div
             className={`${namespace}__list-item__entry`}
-            aria-labelledby={itemProps.id}
-          >
+            aria-labelledby={itemProps.id}>
             <span
               className={`${carbonPrefix}--text-truncate--end`}
-              title={itemText}
-            >
+              title={itemText}>
               {itemText}
             </span>
             <span className={`${namespace}__add`}>
@@ -158,7 +158,7 @@ class Filter extends Component {
     const clearButton = inputValue ? (
       <Selection
         clearSelection={this.clearInputValue}
-        translateWithId={id => {
+        translateWithId={(id) => {
           switch (id) {
             case 'clear.all':
               return this.props.filterFieldClearAllTooltip;
@@ -180,27 +180,22 @@ class Filter extends Component {
         itemToString={itemToString}
         onStateChange={this.handleOnStateChange}
         clearSelection={this.handleClearSelection}
-        isOpen
-        render={({
-          getButtonProps,
+        isOpen>
+        {({
           getInputProps,
           getItemProps,
           getRootProps,
+          getToggleButtonProps,
         }) => (
-          <ListBox
-            className={namespace}
-            disabled={disabled}
-            {...getRootProps({ refKey: 'innerRef' })}
-            id={id}
-          >
-            <Field {...getButtonProps({ disabled, tabIndex: -1 })} id={id}>
+          <ListBox {...getRootProps({ id, className: namespace, disabled })}>
+            <Field {...getToggleButtonProps({ disabled, id, tabIndex: -1 })}>
               <input
                 className={`${namespace}__input-field ${carbonPrefix}--text-input`}
                 {...getInputProps({
                   disabled,
                   id,
                   placeholder,
-                  onBlur: event => event.preventDefault(),
+                  onBlur: (event) => event.preventDefault(),
                   onKeyDown: this.handleOnInputKeyDown,
                 })}
               />
@@ -221,7 +216,7 @@ class Filter extends Component {
             </Menu>
           </ListBox>
         )}
-      />
+      </Downshift>
     );
   }
 }
@@ -245,12 +240,23 @@ Filter.propTypes = {
   /** @type {string} Extra classes to add. */
   className: PropTypes.string,
 
-  /** @type {arrayOf} Collection of data structure. */
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-    })
-  ).isRequired,
+  /** @type {Function} Provide a compare function that is used to determine the ordering of options. */
+  compareItems: PropTypes.func,
+
+  /** @type {bool} Handle the disabled of selected items. */
+  disabled: PropTypes.bool,
+
+  /** @type {string} tooltip label for clearing all selected items */
+  filterFieldClearAllTooltip: PropTypes.string,
+
+  /** @type {string} tooltip label for clearing a selected item */
+  filterFieldClearSelectionTooltip: PropTypes.string,
+
+  /** @type {func} Handle the filter of items. */
+  filterItems: PropTypes.func,
+
+  /** @type {string} Specify a custom id. */
+  id: PropTypes.string.isRequired,
 
   /** @type {arrayOf} Arbitrary items from their collection */
   initialSelectedItems: PropTypes.arrayOf(
@@ -258,14 +264,16 @@ Filter.propTypes = {
       id: PropTypes.string.isRequired,
     })
   ),
-  selectedItems: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-    })
-  ),
 
   /** @type {func} Render a given item to a string label */
   itemToString: PropTypes.func,
+
+  /** @type {arrayOf} Collection of data structure. */
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 
   /** @type {string} Used for sorting the list of items */
   locale: PropTypes.string,
@@ -276,26 +284,14 @@ Filter.propTypes = {
   /** @type {string} Used as the textual representation */
   placeholder: PropTypes.string.isRequired,
 
-  /** @type {Function} Provide a compare function that is used to determine the ordering of options. */
-  compareItems: PropTypes.func,
+  selectedItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    })
+  ),
 
   /** @type {func} Handle the sort logic for selected versus un-selected items. */
   sortItems: PropTypes.func,
-
-  /** @type {string} Specify a custom id. */
-  id: PropTypes.string.isRequired,
-
-  /** @type {func} Handle the filter of items. */
-  filterItems: PropTypes.func,
-
-  /** @type {bool} Handle the disabled of selected items. */
-  disabled: PropTypes.bool,
-
-  /** @type {string} tooltip label for clearing a selected item */
-  filterFieldClearSelectionTooltip: PropTypes.string,
-
-  /** @type {string} tooltip label for clearing all selected items */
-  filterFieldClearAllTooltip: PropTypes.string,
 };
 
 export default Filter;

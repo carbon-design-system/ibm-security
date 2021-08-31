@@ -3,9 +3,9 @@
  * @copyright IBM Security 2018 - 2021
  */
 
-const {
-  settings: { prefix: carbonPrefix },
-} = require('carbon-components');
+import { settings } from 'carbon-components';
+
+const { prefix: carbonPrefix } = settings;
 
 const namespace = 'security--';
 
@@ -23,6 +23,6 @@ const appendComponentNamespace = (componentNamespace, componentName) =>
  * @param {string} componentName The component namespace to create.
  * @returns {string} The component namespace to return.
  */
-const getComponentNamespace = componentName => `${namespace}${componentName}`;
+const getComponentNamespace = (componentName) => `${namespace}${componentName}`;
 
 export { appendComponentNamespace, carbonPrefix, getComponentNamespace };

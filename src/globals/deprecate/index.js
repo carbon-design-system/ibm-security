@@ -1,6 +1,6 @@
 /**
  * @file Deprecation warning.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
 import isDevelopment from '../env';
@@ -10,7 +10,7 @@ import isDevelopment from '../env';
  * @param {string} description The description to use when logging.
  * @param {string} type The property type to log.
  * @param {Array.<string>} componentKeys The component keys to filter.
- * @param {function} condition The condition to filter the component keys.
+ * @param {Function} filterCondition The condition to filter the component keys.
  * @returns {string} The description and appropriate properties.
  */
 const logDeviations = (description, type, componentKeys, filterCondition) =>
@@ -22,7 +22,7 @@ const logDeviations = (description, type, componentKeys, filterCondition) =>
  * @param {string} securityComponent The Security-specific component to compare.
  */
 const compareDeviations = (carbonComponent, securityComponent) => {
-  ['defaultProps', 'propTypes'].forEach(type => {
+  ['defaultProps', 'propTypes'].forEach((type) => {
     const carbonComponentKeys = Object.keys(carbonComponent[type]);
     const securityComponentKeys = Object.keys(securityComponent[type]);
 
@@ -30,21 +30,21 @@ const compareDeviations = (carbonComponent, securityComponent) => {
       'Common',
       type,
       carbonComponentKeys,
-      key => securityComponentKeys.indexOf(key) !== -1
+      (key) => securityComponentKeys.indexOf(key) !== -1
     );
 
     logDeviations(
       'Carbon',
       type,
       carbonComponentKeys,
-      key => securityComponentKeys.indexOf(key) === -1
+      (key) => securityComponentKeys.indexOf(key) === -1
     );
 
     logDeviations(
       'Security',
       type,
       securityComponentKeys,
-      key => carbonComponentKeys.indexOf(key) === -1
+      (key) => carbonComponentKeys.indexOf(key) === -1
     );
   });
 };
@@ -58,7 +58,7 @@ function deprecationWarning(warning) {
   if (isDevelopment()) {
     try {
       throw new Error(
-        `Warning: ${warning} — This will be removed in the next major version`
+        `Warning: ${warning} and will be removed in an upcoming major release`
       );
     } catch (error) {
       console.warn(error);
@@ -74,12 +74,12 @@ function deprecationWarning(warning) {
  */
 const deprecate = (actual, expected) =>
   deprecationWarning(
-    `'${actual}' has been deprecated in favour of '${expected}'`
+    `'${actual}' has been deprecated in favor of '${expected}'`
   );
 
 /**
  * Returns a standardized component deprecation warning.
- * @param {Object.<string, string>} deprecationWarning - An object containing properties that construct the deprecation warning.
+ * @param {object.<string, string>} deprecationWarning - An object containing properties that construct the deprecation warning.
  * @param {string} deprecationWarning.actual - The actual value supplied.
  * @param {string} deprecationWarning.componentName - The component name it was supplied to.
  * @param {string} deprecationWarning.description - The description of the deprecation warning.

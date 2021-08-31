@@ -1,6 +1,6 @@
 /**
  * @file Multi select entry point.
- * @copyright IBM Security 2018
+ * @copyright IBM Security 2018 - 2021
  */
 
-export default from 'carbon-components-react/lib/components/MultiSelect';
+export { MultiSelect as default } from 'carbon-components-react';

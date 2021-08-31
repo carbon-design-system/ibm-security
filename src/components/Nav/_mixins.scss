@@ -1,12 +1,13 @@
 ////
 /// Navigation mixins.
 /// @group nav
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
 @import '@carbon/layout/scss/spacing';
 @import '@carbon/themes/scss/tokens';
+@import '@carbon/type/scss/font-family';
 @import '@carbon/type/scss/styles';
 
 @import 'carbon-components/scss/globals/scss/helper-mixins';
@@ -24,10 +25,6 @@
   /// Icon position.
   /// @type Length
   $nav__icon__position: translate3d(-50%, 0, 0);
-
-  /// Link padding.
-  /// @type Length
-  $nav__link__spacing__padding: $carbon--spacing-07;
 
   position: relative;
 
@@ -48,11 +45,11 @@
   }
 
   &::before {
-    display: inline-block;
     position: absolute;
-    left: $carbon--spacing-07;
     right: $carbon--spacing-07;
     bottom: 0;
+    left: $carbon--spacing-07;
+    display: inline-block;
     width: auto;
     border-bottom: carbon--mini-units($count: 0.125) solid $ui-02;
     content: '';
@@ -75,11 +72,11 @@
 
   &__heading {
     @include carbon--type-style($name: caption-01);
-    padding: $carbon--spacing-04 $carbon--spacing-07;
+
+    padding: $carbon--spacing-04 $carbon--spacing-08;
     margin-top: unset;
     margin-bottom: unset;
     color: $text-02;
-    font-weight: 400;
   }
 
   // Navigation lists.
@@ -87,6 +84,7 @@
     $list: &;
 
     @include carbon--type-style($name: body-short-01);
+
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -97,7 +95,6 @@
     }
 
     &:focus {
-      background-color: $ui-02;
       outline-width: 0;
 
       > #{$list}__item__link {
@@ -108,21 +105,18 @@
     &__icon {
       @include transition($transition-property: transform);
 
-      position: absolute;
-      top: 25%;
-      left: ($nav__link__spacing__padding / 2);
-      fill: $text-01;
-      transform: $nav__icon__position rotate(270deg);
-
+      margin-left: auto;
+      transform: $nav__icon__position rotate(0deg);
       @include rtl {
         right: $carbon--spacing-02;
-        transform: $nav__icon__position rotate(90deg);
+        transform: $nav__icon__position rotate(180deg);
       }
     }
 
     // Navigation items.
     &__item {
       @include carbon--type-style($name: body-short-01);
+
       position: relative;
 
       // Content including text and sometimes a product icon.
@@ -133,16 +127,17 @@
       &::before {
         @include transition($transition-property: transform);
 
-        display: inline-block;
         position: absolute;
+        z-index: z($layer: floating);
         top: 0;
         left: 0;
+
+        display: inline-block;
         width: carbon--mini-units($count: 0.5);
         height: 100%;
         background-color: transparent;
         content: '';
         transform: translate3d((-100%, 0, 0));
-        z-index: z($layer: floating);
       }
 
       @include rtl {
@@ -169,7 +164,7 @@
       }
 
       &--active {
-        font-weight: 600;
+        font-weight: carbon--font-weight($weight: semibold);
 
         @include rtl {
           &::before {
@@ -189,11 +184,12 @@
 
         position: relative;
         display: flex;
-        padding: carbon--mini-units(0.75) $nav__link__spacing__padding;
+        align-items: center;
+        padding: $carbon--spacing-03 $carbon--spacing-02 $carbon--spacing-03
+          $carbon--spacing-08;
         color: $text-01;
-        text-decoration: none;
         cursor: pointer;
-        justify-content: space-between;
+        text-decoration: none;
 
         &:hover,
         &:focus {
@@ -205,17 +201,23 @@
         }
       }
 
+      &__img {
+        height: carbon--mini-units($count: 2.5);
+        margin-right: $carbon--spacing-04;
+        margin-left: -$carbon--spacing-07;
+      }
+
       &__link--external {
         /// External link icon selector.
         /// @type String
         $nav__item__link--external__icon: '#{&}__icon';
 
         #{$nav__item__link--external__icon} {
-          margin-left: $carbon--spacing-02;
+          flex-shrink: 0;
           align-self: center;
+          margin-left: $carbon--spacing-02;
           fill: $text-01;
           opacity: 0;
-          flex-shrink: 0;
         }
 
         &:hover,
@@ -232,13 +234,12 @@
 
         > #{$nav__list}--nested {
           max-height: carbon--mini-units($count: 40);
-          margin-top: carbon--mini-units($count: 1.25);
           opacity: 1;
           transition-timing-function: $carbon--ease-in;
         }
 
         > #{$nav__item}__link > #{$nav__list}__icon {
-          transform: $nav__icon__position rotate(360deg);
+          transform: $nav__icon__position rotate(180deg);
 
           @include rtl {
             transform: $nav__icon__position rotate(0);
@@ -255,11 +256,12 @@
         )
       );
 
-      max-height: 0;
-      margin-bottom: 0;
-      padding-left: 0;
-      opacity: 0;
       overflow: hidden;
+
+      max-height: 0;
+      padding-left: 0;
+      margin-bottom: 0;
+      opacity: 0;
 
       @include rtl {
         padding-right: 0;

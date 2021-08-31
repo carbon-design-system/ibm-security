@@ -1,6 +1,6 @@
 /**
  * @file Copy button entry point.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-export default from 'carbon-components-react/lib/components/CopyButton';
+export { CopyButton as default } from 'carbon-components-react';

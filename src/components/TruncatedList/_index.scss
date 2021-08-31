@@ -1,7 +1,7 @@
 ////
 /// Truncated list styles.
 /// @group list-truncator
-/// @copyright IBM Security 2020
+/// @copyright IBM Security 2020 - 2021
 ////
 
 @import '@carbon/themes/scss/tokens';
@@ -26,6 +26,7 @@
 
   // Transform button to appear more like a link so it aligns better with the list text
   &__expand-button {
+    z-index: $scroll-gradient__layer + 1;
     width: 100%;
     max-width: none;
     min-height: auto;
@@ -33,10 +34,6 @@
     border: none;
     background: transparent;
     color: $link-01;
-
-    // Add one pixel so the scroll gradient does not overlap with the toggle button's focus box
-    // shadow
-    margin-top: 1px;
 
     &:hover {
       background: transparent;

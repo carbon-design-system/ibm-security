@@ -1,6 +1,6 @@
 /**
  * @file List box entry point.
- * @copyright IBM Security 2020
+ * @copyright IBM Security 2020 - 2021
  */
 
-export default from 'carbon-components-react/lib/components/ListBox';
+export default from 'carbon-components-react/es/components/ListBox';

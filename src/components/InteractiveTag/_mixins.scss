@@ -19,8 +19,8 @@ $tag--interactive__namespace: get-component-namespace(
 
 @mixin tag--interactive {
   &--default {
-    color: $text-01;
     background-color: $active-ui;
+    color: $text-01;
   }
 
   > .#{$prefix}--tag__close-icon:hover {

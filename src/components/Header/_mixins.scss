@@ -1,7 +1,7 @@
 ////
 /// Header mixins.
 /// @group header
-/// @copyright IBM Security 2019
+/// @copyright IBM Security 2019 - 2021
 ////
 
 @import '@carbon/layout/scss/mini-unit';
@@ -63,6 +63,7 @@ $header__transition__timing-function: $timing-function;
 
 @mixin header__popover__item--focus {
   @include focus-outline($type: outline);
+
   outline-color: $inverse-focus-ui;
 }
 
@@ -93,16 +94,17 @@ $header__transition__timing-function: $timing-function;
 
   $root: &;
 
-  display: flex;
   position: fixed;
+  z-index: $header__layer;
   top: 0;
+
+  display: flex;
   width: inherit;
   height: inherit;
-  padding-top: inherit;
   align-items: center;
+  padding-top: inherit;
   background-color: inherit;
   color: inherit;
-  z-index: $header__layer;
 
   &__container {
     width: $header__sizing__width;
@@ -113,6 +115,8 @@ $header__transition__timing-function: $timing-function;
 
   &__link {
     @include carbon--type-style($name: body-short-01);
+
+    display: inline;
     margin-left: $header__group__spacing__margin;
 
     &,
@@ -145,8 +149,8 @@ $header__transition__timing-function: $timing-function;
 
   &__button {
     &::after {
-      content: '';
       height: 100%;
+      content: '';
     }
 
     &--active::after {
@@ -166,16 +170,17 @@ $header__transition__timing-function: $timing-function;
         $count: 1,
       );
 
-      display: inline-block;
       position: absolute;
+      z-index: z($layer: floating);
       top: carbon--mini-units($count: 1.5);
       right: carbon--mini-units($count: 1);
+
+      display: inline-block;
       width: $header__button__marker__sizing__dimensions;
       height: $header__button__marker__sizing__dimensions;
       background-color: $support-01;
       border-radius: 50%;
       content: '';
-      z-index: z($layer: floating);
     }
   }
 
@@ -189,12 +194,13 @@ $header__transition__timing-function: $timing-function;
     $header__popover__color__background--active: $inverse-hover-ui;
 
     @include carbon--type-style($name: body-short-01);
+
     position: absolute;
     right: 0;
     width: 100%;
     max-width: 100%;
-    color: $inverse-01;
     background-color: $inverse-02;
+    color: $inverse-01;
 
     @include carbon--breakpoint($name: md) {
       right: carbon--mini-units($count: 1);
@@ -207,9 +213,9 @@ $header__transition__timing-function: $timing-function;
 
     &__container {
       display: flex;
-      padding: $header__popover__spacing__padding;
-      align-items: center;
       flex-wrap: wrap;
+      align-items: center;
+      padding: $header__popover__spacing__padding;
     }
 
     &__title {
@@ -218,9 +224,9 @@ $header__transition__timing-function: $timing-function;
 
     &__content {
       display: flex;
+      align-items: center;
       padding-right: $carbon--spacing-02;
       padding-left: $header__popover__spacing__padding;
-      align-items: center;
     }
 
     &__button {
@@ -242,8 +248,9 @@ $header__transition__timing-function: $timing-function;
       /// @type Length
       $header__notification__spacing__padding: $carbon--spacing-06;
 
-      display: block;
       position: relative;
+
+      display: block;
       padding-right: $header__notification__spacing__padding;
       padding-left: $carbon--spacing-05;
       color: unset;
@@ -273,8 +280,8 @@ $header__transition__timing-function: $timing-function;
         background-color: $header__popover__color__background--active;
 
         #{$root}__notification__button {
-          transform: translate3d(0, 0, 0);
           opacity: 1;
+          transform: translate3d(0, 0, 0);
         }
       }
 
@@ -298,9 +305,9 @@ $header__transition__timing-function: $timing-function;
 
       &__header {
         &__icon {
+          flex: none;
           margin-right: $header__profile__spacing__margin;
           margin-bottom: auto;
-          flex: none;
         }
 
         &__title,
@@ -311,12 +318,14 @@ $header__transition__timing-function: $timing-function;
 
         &__title {
           @include carbon--type-style($name: productive-heading-03);
+
           hyphens: auto;
           word-break: break-word;
         }
 
         &__email {
           @include carbon--type-style($name: caption-01);
+
           word-break: break-all;
         }
       }
@@ -340,11 +349,12 @@ $header__transition__timing-function: $timing-function;
 
         &__name {
           @include carbon--type-style($name: body-short-02);
-          text-align: left;
-          width: carbon--mini-units($count: 26);
+
           overflow: hidden;
-          white-space: nowrap;
+          width: carbon--mini-units($count: 26);
+          text-align: left;
           text-overflow: ellipsis;
+          white-space: nowrap;
         }
 
         &__accordion {
@@ -428,13 +438,13 @@ $header__transition__timing-function: $timing-function;
             }
 
             &::before {
-              display: inline-block;
               position: absolute;
               right: $header__popover__spacing__padding;
               bottom: 0;
               left: $header__popover__spacing__padding;
-              background-color: $header__popover__color__border;
+              display: inline-block;
               height: $header__popover__sizing__border;
+              background-color: $header__popover__color__border;
               content: '';
               transform: translate3d(0, -#{$carbon--spacing-01}, 0);
             }
@@ -453,12 +463,13 @@ $header__transition__timing-function: $timing-function;
 
     &__footer {
       @include carbon--type-style($name: body-short-01);
+
       display: flex;
-      padding: $carbon--spacing-04 $header__popover__spacing__padding;
       align-items: center;
+      justify-content: space-between;
+      padding: $carbon--spacing-04 $header__popover__spacing__padding;
       border-top: $header__popover__sizing__border solid
         $header__popover__color__border;
-      justify-content: space-between;
     }
   }
 

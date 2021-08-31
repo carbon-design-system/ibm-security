@@ -1,10 +1,9 @@
 /**
  * @file Data table entry point.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019 - 2021
  */
 
-export DataTablePagination from './DataTablePagination';
-export DataTableSkeleton from 'carbon-components-react/lib/components/DataTableSkeleton';
+export { DataTableSkeleton } from 'carbon-components-react';
 
 export {
   DataTable,
@@ -30,3 +29,5 @@ export {
   TableToolbarMenu,
   TableToolbarDownload,
 } from './DataTable';
+
+export DataTablePagination from './DataTablePagination';

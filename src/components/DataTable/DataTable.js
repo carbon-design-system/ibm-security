@@ -1,9 +1,10 @@
 /**
  * @file Data table.
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019 - 2021
  */
 
-import CarbonDataTable from 'carbon-components-react/lib/components/DataTable';
+import { DataTable as CarbonDataTable } from 'carbon-components-react';
+
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -14,10 +15,8 @@ import Table from './Table';
 import TableOverflowCell from './TableOverflowCell';
 import TableToolbarDownload from './TableToolbarDownload';
 
-const {
-  defaultProps: carbonDefaultProps,
-  propTypes: carbonPropTypes,
-} = CarbonDataTable;
+const { defaultProps: carbonDefaultProps, propTypes: carbonPropTypes } =
+  CarbonDataTable;
 
 const {
   TableActionList,
@@ -87,29 +86,27 @@ const DataTable = ({
               <TableHead>
                 <TableRow>
                   {isSelectable && <TableSelectAll {...getSelectionProps()} />}
-                  {headers.map(header => (
+                  {headers.map((header) => (
                     <TableHeader
                       {...getHeaderProps({ header, isSortable })}
-                      key={header.key}
-                    >
+                      key={header.key}>
                       {header.header}
                     </TableHeader>
                   ))}
                 </TableRow>
               </TableHead>
               <TableBody>
-                {rows.map(row => (
+                {rows.map((row) => (
                   <TableRow
                     {...getRowProps({ row })}
                     className={classnames({
                       [`${namespace}__row--selectable`]: isSelectable,
                     })}
-                    key={row.id}
-                  >
+                    key={row.id}>
                     {isSelectable && (
                       <TableSelectRow {...getSelectionProps({ row })} />
                     )}
-                    {row.cells.map(cell => (
+                    {row.cells.map((cell) => (
                       <TableCell key={cell.id}>
                         {cell.value ? cell.value : missingDataCharacter}
                       </TableCell>
