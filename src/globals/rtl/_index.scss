@@ -30,11 +30,3 @@
     @content;
   }
 }
-
-/// Flip opposite shorthand values.
-/// @param {List<*>} $shorthand The list of values to flip.
-/// @returns {List<*>} The flipped list of values.
-@function reverse-shorthand($shorthand) {
-  @return nth($list: $shorthand, $n: 1) nth($list: $shorthand, $n: 4)
-    nth($list: $shorthand, $n: 3) nth($list: $shorthand, $n: 2);
-}

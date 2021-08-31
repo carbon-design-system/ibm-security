@@ -44,10 +44,6 @@ $toolbar__panel__sizing__width: carbon--mini-units(
   $count: 32,
 );
 
-/// Panel transition duration.
-/// @type Length
-$toolbar__panel__transition__duration: $transition-duration--fast;
-
 /// Panel transition timing function.
 /// @type Length
 $toolbar__panel__transition__timing-function: $timing-function;
@@ -57,15 +53,19 @@ $toolbar__panel__transition__timing-function: $timing-function;
 }
 
 @mixin toolbar__transition--transform($translation) {
+  /// Transform.
+  /// @type Length
+  $transform: translate3d(-$translation, 0, 0);
+
   &--enter,
   &--leave {
     &--active {
-      transition-duration: $toolbar__panel__transition__duration;
+      transition-duration: $transition-duration--fast;
     }
   }
 
   &--enter {
-    transform: translate3d($translation);
+    transform: $transform;
 
     &--active {
       transform: translate3d(0, 0, 0);
@@ -73,34 +73,12 @@ $toolbar__panel__transition__timing-function: $timing-function;
   }
 
   &--leave--active {
-    transform: translate3d($translation);
+    transform: $transform;
   }
 }
 
 @mixin toolbar {
   $toolbar: &;
-
-  /// Panel content width.
-  /// @type Length
-  $toolbar__panel__content__sizing__width: carbon--mini-units(
-    $count: 26,
-  );
-
-  // Panel content translation distance.
-  /// @type Length
-  $toolbar__panel__content__translation__distance: $carbon--spacing-03;
-
-  /// Panel content translation.
-  /// @type List<Length>
-  $toolbar__panel__content__translation: (
-    -$toolbar__panel__content__translation__distance,
-    0,
-    0
-  );
-
-  /// Panel translation.
-  /// @type List<Length>
-  $toolbar__panel__translation: (-$toolbar__panel__sizing__width, 0, 0);
 
   /// Vertical position.
   /// @type Length
@@ -210,7 +188,7 @@ $toolbar__panel__transition__timing-function: $timing-function;
     @include carbon--type-style($name: body-short-01);
 
     overflow: hidden;
-    width: $toolbar__panel__content__sizing__width;
+    width: carbon--mini-units($count: 26);
     height: 95%;
     margin: 0 $carbon--spacing-06 0 $carbon--spacing-06;
 
@@ -235,14 +213,12 @@ $toolbar__panel__transition__timing-function: $timing-function;
 
   &__transition {
     @include toolbar__transition--transform(
-      $translation: $toolbar__panel__translation
+      $translation: $toolbar__panel__sizing__width
     );
   }
 
   &__content__transition {
-    @include toolbar__transition--transform(
-      $translation: $toolbar__panel__content__translation
-    );
+    @include toolbar__transition--transform($translation: $carbon--spacing-03);
     @include transition--opacity;
 
     &--enter,

@@ -148,6 +148,10 @@
     }
   }
 
+  /// Active transform.
+  /// @type Length
+  $summary-card__transform--active: translate3d(0, -100%, 0);
+
   &__action-overlay {
     position: absolute;
     z-index: $overlay--z-index;
@@ -155,7 +159,7 @@
     flex-direction: column;
     background-color: $ui-01;
     cursor: default;
-    transform: translate3d(0, -100%, 0);
+    transform: $summary-card__transform--active;
 
     &__header {
       display: flex;
@@ -201,16 +205,18 @@
     }
 
     &__transition {
-      $summary-card__transition__position: 100%;
+      /// Transform.
+      /// @type Length
+      $summary-card__transform: translate3d(0, 0, 0);
 
       &--appear,
       &--enter {
         opacity: 0;
-        transform: translate3d(0, 0, 0);
+        transform: $summary-card__transform;
 
         &--active {
           opacity: 1;
-          transform: translate3d(0, -#{$summary-card__transition__position}, 0);
+          transform: $summary-card__transform--active;
           transition: all $duration--moderate-02;
           transition-timing-function: motion(entrance, expressive);
         }
@@ -218,11 +224,11 @@
 
       &--leave {
         opacity: 1;
-        transform: translate3d(0, -#{$summary-card__transition__position}, 0);
+        transform: $summary-card__transform--active;
 
         &--active {
           opacity: 0;
-          transform: translate3d(0, 0, 0);
+          transform: $summary-card__transform;
           transition: all $duration--moderate-02;
           transition-timing-function: motion(exit, expressive);
         }
@@ -235,7 +241,6 @@
     z-index: $overlay--z-index - 1;
     right: 0;
     bottom: 0;
-
     left: 0;
     height: $body--height + $footer--height + $header--height;
     background-color: $overlay-01;
