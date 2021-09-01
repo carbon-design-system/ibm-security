@@ -5,5 +5,3 @@ failLevels:
 
 policies:
   - WCAG_2_1
-
-ruleArchive: preview
