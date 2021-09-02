@@ -18,6 +18,7 @@ import theme from '../src/globals/theme';
 
 import Detail from '../src/components/LayoutModules/docs/examples/Detail/index.mdx';
 import Overview from '../src/components/LayoutModules/docs/examples/Overview/index.mdx';
+import GettingStarted from '../src/components/LayoutModules/docs/examples/Getting Started/index.mdx';
 import Troubleshooting from '../src/components/LayoutModules/docs/Troubleshooting/index.mdx';
 
 import { ORDER } from '.';
@@ -49,6 +50,7 @@ const parameters = {
       Canvas,
       Column,
       Detail,
+      GettingStarted,
       LinkTo: (props) => <LinkTo className="storybook__link" {...props} />,
       Overview,
       Row,

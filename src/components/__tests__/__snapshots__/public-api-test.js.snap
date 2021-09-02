@@ -543,6 +543,21 @@ Map {
       "href": Object {
         "type": "string",
       },
+      "size": Object {
+        "args": Array [
+          Array [
+            "default",
+            "field",
+            "small",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+            "2xl",
+          ],
+        ],
+        "type": "oneOf",
+      },
       "small": Object {
         "type": "bool",
       },
@@ -810,6 +825,7 @@ Map {
     },
   },
   "ComboBox" => Object {
+    "$$typeof": Symbol(react.forward_ref),
     "defaultProps": Object {
       "ariaLabel": "Choose an item",
       "direction": "bottom",
@@ -1064,6 +1080,7 @@ Map {
         "type": "node",
       },
     },
+    "render": [Function],
   },
   "ComboButton" => Object {
     "defaultProps": Object {
@@ -1381,6 +1398,12 @@ Map {
               ],
               "type": "oneOfType",
             },
+            "checkCanFocusTrap": Object {
+              "type": "func",
+            },
+            "checkCanReturnFocus": Object {
+              "type": "func",
+            },
             "clickOutsideDeactivates": Object {
               "args": Array [
                 Array [
@@ -1395,7 +1418,17 @@ Map {
               "type": "oneOfType",
             },
             "escapeDeactivates": Object {
-              "type": "bool",
+              "args": Array [
+                Array [
+                  Object {
+                    "type": "bool",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
             },
             "fallbackFocus": Object {
               "args": Array [
@@ -1431,6 +1464,9 @@ Map {
                   Object {
                     "type": "func",
                   },
+                  Object {
+                    "type": "bool",
+                  },
                 ],
               ],
               "type": "oneOfType",
@@ -1439,6 +1475,12 @@ Map {
               "type": "func",
             },
             "onDeactivate": Object {
+              "type": "func",
+            },
+            "onPostActivate": Object {
+              "type": "func",
+            },
+            "onPostDeactivate": Object {
               "type": "func",
             },
             "preventScroll": Object {
@@ -1859,9 +1901,7 @@ Map {
         "overflowMenuOnHover": Object {
           "type": "bool",
         },
-        "shouldShowBorder": Object {
-          "type": "bool",
-        },
+        "shouldShowBorder": [Function],
         "size": Object {
           "args": Array [
             Array [
@@ -2822,9 +2862,7 @@ Map {
       "overflowMenuOnHover": Object {
         "type": "bool",
       },
-      "shouldShowBorder": Object {
-        "type": "bool",
-      },
+      "shouldShowBorder": [Function],
       "size": Object {
         "args": Array [
           Array [
@@ -3581,6 +3619,9 @@ Map {
       },
       "disabled": Object {
         "type": "bool",
+      },
+      "helperText": Object {
+        "type": "node",
       },
       "hideLabel": Object {
         "type": "bool",
@@ -4512,6 +4553,9 @@ Map {
       },
       "invalid": Object {
         "type": "bool",
+      },
+      "legendId": Object {
+        "type": "node",
       },
       "legendText": Object {
         "isRequired": true,
@@ -5824,6 +5868,7 @@ Map {
       "defaultProps": Object {
         "ariaLabel": "Choose an item",
         "compareItems": [Function],
+        "direction": "bottom",
         "disabled": false,
         "filterItems": [Function],
         "initialSelectedItems": Array [],
@@ -5842,6 +5887,15 @@ Map {
         "compareItems": Object {
           "isRequired": true,
           "type": "func",
+        },
+        "direction": Object {
+          "args": Array [
+            Array [
+              "top",
+              "bottom",
+            ],
+          ],
+          "type": "oneOf",
         },
         "disabled": Object {
           "type": "bool",
@@ -6706,9 +6760,21 @@ Map {
       },
     },
   },
-  "InlineNotification" => Object {},
-  "NotificationActionButton" => Object {},
-  "ToastNotification" => Object {},
+  "InlineNotification" => Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "displayName": "FeatureToggle(InlineNotification)",
+    "render": [Function],
+  },
+  "NotificationActionButton" => Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "displayName": "FeatureToggle(NotificationActionButton)",
+    "render": [Function],
+  },
+  "ToastNotification" => Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "displayName": "FeatureToggle(ToastNotification)",
+    "render": [Function],
+  },
   "NumberInput" => Object {
     "$$typeof": Symbol(react.forward_ref),
     "render": [Function],
@@ -6749,6 +6815,7 @@ Map {
   },
   "OverflowMenu" => Object {
     "$$typeof": Symbol(react.forward_ref),
+    "displayName": "FeatureToggle(OverflowMenu)",
     "render": [Function],
   },
   "OverflowMenuItem" => Object {
@@ -6939,6 +7006,16 @@ Map {
       },
       "pagesUnknown": Object {
         "type": "bool",
+      },
+      "size": Object {
+        "args": Array [
+          Array [
+            "sm",
+            "md",
+            "lg",
+          ],
+        ],
+        "type": "oneOf",
       },
       "totalItems": Object {
         "type": "number",
@@ -7213,6 +7290,12 @@ Map {
               ],
               "type": "oneOfType",
             },
+            "checkCanFocusTrap": Object {
+              "type": "func",
+            },
+            "checkCanReturnFocus": Object {
+              "type": "func",
+            },
             "clickOutsideDeactivates": Object {
               "args": Array [
                 Array [
@@ -7227,7 +7310,17 @@ Map {
               "type": "oneOfType",
             },
             "escapeDeactivates": Object {
-              "type": "bool",
+              "args": Array [
+                Array [
+                  Object {
+                    "type": "bool",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
             },
             "fallbackFocus": Object {
               "args": Array [
@@ -7263,6 +7356,9 @@ Map {
                   Object {
                     "type": "func",
                   },
+                  Object {
+                    "type": "bool",
+                  },
                 ],
               ],
               "type": "oneOfType",
@@ -7271,6 +7367,12 @@ Map {
               "type": "func",
             },
             "onDeactivate": Object {
+              "type": "func",
+            },
+            "onPostActivate": Object {
+              "type": "func",
+            },
+            "onPostDeactivate": Object {
               "type": "func",
             },
             "preventScroll": Object {
@@ -7478,6 +7580,12 @@ Map {
               ],
               "type": "oneOfType",
             },
+            "checkCanFocusTrap": Object {
+              "type": "func",
+            },
+            "checkCanReturnFocus": Object {
+              "type": "func",
+            },
             "clickOutsideDeactivates": Object {
               "args": Array [
                 Array [
@@ -7492,7 +7600,17 @@ Map {
               "type": "oneOfType",
             },
             "escapeDeactivates": Object {
-              "type": "bool",
+              "args": Array [
+                Array [
+                  Object {
+                    "type": "bool",
+                  },
+                  Object {
+                    "type": "func",
+                  },
+                ],
+              ],
+              "type": "oneOfType",
             },
             "fallbackFocus": Object {
               "args": Array [
@@ -7528,6 +7646,9 @@ Map {
                   Object {
                     "type": "func",
                   },
+                  Object {
+                    "type": "bool",
+                  },
                 ],
               ],
               "type": "oneOfType",
@@ -7536,6 +7657,12 @@ Map {
               "type": "func",
             },
             "onDeactivate": Object {
+              "type": "func",
+            },
+            "onPostActivate": Object {
+              "type": "func",
+            },
+            "onPostDeactivate": Object {
               "type": "func",
             },
             "preventScroll": Object {
@@ -9492,11 +9619,31 @@ Map {
       },
     },
   },
-  "StructuredListBody" => Object {},
-  "StructuredListCell" => Object {},
-  "StructuredListHead" => Object {},
-  "StructuredListInput" => Object {},
-  "StructuredListRow" => Object {},
+  "StructuredListBody" => Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "displayName": "FeatureToggle(StructuredListBody)",
+    "render": [Function],
+  },
+  "StructuredListCell" => Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "displayName": "FeatureToggle(StructuredListCell)",
+    "render": [Function],
+  },
+  "StructuredListHead" => Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "displayName": "FeatureToggle(StructuredListHead)",
+    "render": [Function],
+  },
+  "StructuredListInput" => Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "displayName": "FeatureToggle(StructuredListInput)",
+    "render": [Function],
+  },
+  "StructuredListRow" => Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "displayName": "FeatureToggle(StructuredListRow)",
+    "render": [Function],
+  },
   "StructuredListSkeleton" => Object {
     "defaultProps": Object {
       "border": false,
@@ -9514,7 +9661,11 @@ Map {
       },
     },
   },
-  "StructuredListWrapper" => Object {},
+  "StructuredListWrapper" => Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "displayName": "FeatureToggle(StructuredListWrapper)",
+    "render": [Function],
+  },
   "Switch" => Object {
     "$$typeof": Symbol(react.forward_ref),
     "defaultProps": Object {
@@ -11177,6 +11328,9 @@ Map {
       "placeholder": Object {
         "type": "string",
       },
+      "readOnly": Object {
+        "type": "bool",
+      },
       "size": Object {
         "args": Array [
           Array [
@@ -11588,7 +11742,11 @@ Map {
       },
     },
   },
-  "Toggle" => Object {},
+  "Toggle" => Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "displayName": "FeatureToggle(Toggle)",
+    "render": [Function],
+  },
   "ToggleSkeleton" => Object {
     "defaultProps": Object {
       "aria-label": "Toggle is loading",
@@ -13616,8 +13774,16 @@ Map {
       },
     },
   },
-  "NotificationButton" => Object {},
-  "NotificationTextDetails" => Object {},
+  "NotificationButton" => Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "displayName": "FeatureToggle(NotificationButton)",
+    "render": [Function],
+  },
+  "NotificationTextDetails" => Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "displayName": "FeatureToggle(NotificationTextDetails)",
+    "render": [Function],
+  },
   "PaginationNav" => Object {
     "$$typeof": Symbol(react.forward_ref),
     "propTypes": Object {
@@ -13641,6 +13807,249 @@ Map {
       },
       "translateWithId": Object {
         "type": "func",
+      },
+    },
+    "render": [Function],
+  },
+  "ControlledPasswordInput" => Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "defaultProps": Object {
+      "className": "\${prefix}--text__input",
+      "disabled": false,
+      "helperText": "",
+      "invalid": false,
+      "invalidText": "",
+      "light": false,
+      "onChange": [Function],
+      "onClick": [Function],
+      "size": "",
+    },
+    "propTypes": Object {
+      "className": Object {
+        "type": "string",
+      },
+      "defaultValue": Object {
+        "args": Array [
+          Array [
+            Object {
+              "type": "string",
+            },
+            Object {
+              "type": "number",
+            },
+          ],
+        ],
+        "type": "oneOfType",
+      },
+      "disabled": Object {
+        "type": "bool",
+      },
+      "helperText": Object {
+        "type": "node",
+      },
+      "hideLabel": Object {
+        "type": "bool",
+      },
+      "hidePasswordLabel": Object {
+        "type": "string",
+      },
+      "id": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+      "invalid": Object {
+        "type": "bool",
+      },
+      "invalidText": Object {
+        "type": "node",
+      },
+      "labelText": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+      "light": Object {
+        "type": "bool",
+      },
+      "onChange": Object {
+        "type": "func",
+      },
+      "onClick": Object {
+        "type": "func",
+      },
+      "placeholder": Object {
+        "type": "string",
+      },
+      "showPasswordLabel": Object {
+        "type": "string",
+      },
+      "size": Object {
+        "type": "string",
+      },
+      "tooltipAlignment": Object {
+        "args": Array [
+          Array [
+            "start",
+            "center",
+            "end",
+          ],
+        ],
+        "type": "oneOf",
+      },
+      "tooltipPosition": Object {
+        "args": Array [
+          Array [
+            "top",
+            "right",
+            "bottom",
+            "left",
+          ],
+        ],
+        "type": "oneOf",
+      },
+      "value": Object {
+        "args": Array [
+          Array [
+            Object {
+              "type": "string",
+            },
+            Object {
+              "type": "number",
+            },
+          ],
+        ],
+        "type": "oneOfType",
+      },
+    },
+    "render": [Function],
+  },
+  "PasswordInput" => Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "defaultProps": Object {
+      "className": "\${prefix}--text__input",
+      "disabled": false,
+      "helperText": "",
+      "invalid": false,
+      "invalidText": "",
+      "light": false,
+      "onChange": [Function],
+      "onClick": [Function],
+      "size": "",
+    },
+    "propTypes": Object {
+      "className": Object {
+        "type": "string",
+      },
+      "defaultValue": Object {
+        "args": Array [
+          Array [
+            Object {
+              "type": "string",
+            },
+            Object {
+              "type": "number",
+            },
+          ],
+        ],
+        "type": "oneOfType",
+      },
+      "disabled": Object {
+        "type": "bool",
+      },
+      "helperText": Object {
+        "type": "node",
+      },
+      "hideLabel": Object {
+        "type": "bool",
+      },
+      "hidePasswordLabel": Object {
+        "type": "string",
+      },
+      "id": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+      "inline": Object {
+        "type": "bool",
+      },
+      "invalid": Object {
+        "type": "bool",
+      },
+      "invalidText": Object {
+        "type": "node",
+      },
+      "labelText": Object {
+        "isRequired": true,
+        "type": "node",
+      },
+      "light": Object {
+        "type": "bool",
+      },
+      "onChange": Object {
+        "type": "func",
+      },
+      "onClick": Object {
+        "type": "func",
+      },
+      "onTogglePasswordVisibility": Object {
+        "type": "func",
+      },
+      "placeholder": Object {
+        "type": "string",
+      },
+      "showPasswordLabel": Object {
+        "type": "string",
+      },
+      "size": Object {
+        "type": "string",
+      },
+      "tooltipAlignment": Object {
+        "args": Array [
+          Array [
+            "start",
+            "center",
+            "end",
+          ],
+        ],
+        "type": "oneOf",
+      },
+      "tooltipPosition": Object {
+        "args": Array [
+          Array [
+            "top",
+            "right",
+            "bottom",
+            "left",
+          ],
+        ],
+        "type": "oneOf",
+      },
+      "type": Object {
+        "args": Array [
+          Array [
+            "password",
+            "text",
+          ],
+        ],
+        "type": "oneOf",
+      },
+      "value": Object {
+        "args": Array [
+          Array [
+            Object {
+              "type": "string",
+            },
+            Object {
+              "type": "number",
+            },
+          ],
+        ],
+        "type": "oneOfType",
+      },
+      "warn": Object {
+        "type": "bool",
+      },
+      "warnText": Object {
+        "type": "node",
       },
     },
     "render": [Function],
@@ -14110,6 +14519,9 @@ Map {
       "itemsPerPageText": Object {
         "type": "string",
       },
+      "onChange": Object {
+        "type": "func",
+      },
       "pageRangeText": Object {
         "type": "func",
       },
@@ -14443,6 +14855,9 @@ Map {
       "children": Object {
         "type": "node",
       },
+      "id": Object {
+        "type": "string",
+      },
       "level": Object {
         "type": "number",
       },
@@ -14451,6 +14866,16 @@ Map {
       },
       "open": Object {
         "type": "bool",
+      },
+      "size": Object {
+        "args": Array [
+          Array [
+            "sm",
+            "md",
+            "lg",
+          ],
+        ],
+        "type": "oneOf",
       },
       "x": Object {
         "args": Array [
