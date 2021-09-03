@@ -4282,10 +4282,10 @@ accepts@~1.3.5, accepts@~1.3.7:
     mime-types "~2.1.24"
     negotiator "0.6.2"
 
-accessibility-checker@^3.1.7:
-  version "3.1.9"
-  resolved "https://registry.yarnpkg.com/accessibility-checker/-/accessibility-checker-3.1.9.tgz#95883a1231d2b1ed927ceb8333633b2745fada4a"
-  integrity sha512-bGzhgVpU1S8kAd6sqJHuS9eZfalCZgA+DuriPAMXOVC1yqp9xeceLzC+50Nk14dLDpdsmcfi+XMdddKqKTZFvQ==
+accessibility-checker@^3.1.10:
+  version "3.1.10"
+  resolved "https://registry.yarnpkg.com/accessibility-checker/-/accessibility-checker-3.1.10.tgz#14316b8eb0a5be31cd9447b46347cf50fa47b986"
+  integrity sha512-+kDnUpxNHtUaRfdYRpHIqmBI+GnR+UWUAZih4MD3AdsBLOAMzcqkFJPYmJw1pYdkfFQgKL5UWApoOT9rpEfeOw==
   dependencies:
     chromedriver "*"
     deep-diff "^0.3.4"
