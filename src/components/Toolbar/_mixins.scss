@@ -163,6 +163,7 @@ $toolbar__panel__transition__timing-function: $timing-function;
 
   &__nav__item__title {
     &--icon {
+      padding-top: 1px;
       margin-left: $carbon--spacing-04;
     }
   }
@@ -171,7 +172,7 @@ $toolbar__panel__transition__timing-function: $timing-function;
     #{$carbon--spacing-01 / 2}
     &--icon {
       #{get-component-namespace($component-name: nav)}__list__item__content {
-        #{$carbon--spacing-01 / 2}
+        padding-top: 1px;
       }
     }
   }
