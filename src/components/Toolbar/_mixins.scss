@@ -168,10 +168,10 @@ $toolbar__panel__transition__timing-function: $timing-function;
   }
 
   &__nav__list__title {
-    $carbon--spacing-01 / 2;
+    #{$carbon--spacing-01 / 2}
     &--icon {
       #{get-component-namespace($component-name: nav)}__list__item__content {
-        $carbon--spacing-01 / 2;
+        #{$carbon--spacing-01 / 2}
       }
     }
   }
