@@ -5,13 +5,7 @@
     "carbon/layout-token-use": [true],
     "carbon/motion-token-use": [true],
     "carbon/theme-token-use": [true],
-    "carbon/type-token-use": [
-      true,
-      {
-        "acceptCarbonFontWeightFunction": true,
-        "acceptCarbonTypeScaleFunction": true
-      }
-    ],
+    "carbon/type-token-use": [true],
     "declaration-property-value-disallowed-list": null,
     "property-no-unknown": [
       true,
