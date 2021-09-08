@@ -163,7 +163,7 @@ $toolbar__panel__transition__timing-function: $timing-function;
 
   &__nav__item__title {
     &--icon {
-      padding-top: 1px;
+      padding-top: carbon--mini-units($count: 0.0625);
       margin-left: $carbon--spacing-04;
     }
   }
@@ -171,7 +171,7 @@ $toolbar__panel__transition__timing-function: $timing-function;
   &__nav__list__title {
     &--icon {
       #{get-component-namespace($component-name: nav)}__list__item__content {
-        padding-top: 1px;
+        padding-top: carbon--mini-units($count: 0.0625);
       }
     }
   }
