@@ -128,13 +128,21 @@ class Decorator extends Component {
           className={decoratorClasses}
           onClick={this.handleClick}
           onContextMenu={this.handleContextMenuClick}
-          type="button">
+          type="button"
+        >
           {decorator}
         </button>
       );
     }
 
-    return <span className={decoratorClasses}>{decorator}</span>;
+    return (
+      <span
+        className={decoratorClasses}
+        onContextMenu={this.handleContextMenuClick}
+      >
+        {decorator}
+      </span>
+    );
   }
 }
 
