@@ -1217,18 +1217,23 @@
   resolved "https://registry.yarnpkg.com/@carbon/colors/-/colors-10.30.0.tgz#942db7c4ed14df8a989861b931548f732c8463e3"
   integrity sha512-jwLZcUSq7qdR68r6sGQyY4qTgTnSbaWjGqPUsh1spxXED2E3xMbBwvnHHVjEmHknBZnFp9wSfl/xjOmyzDhEDQ==
 
+"@carbon/colors@^10.31.0":
+  version "10.31.0"
+  resolved "https://registry.yarnpkg.com/@carbon/colors/-/colors-10.31.0.tgz#b5f48cd42daa6cd30c15f295e7a663ab3916b673"
+  integrity sha512-YoQtyfgOetxyx+Z8Rhyyx0Zc8OulbJzlv+TGE6LgRoklf6wVjAwrivWduaPsBbJs5fjpcweY5kNqTaGWTlJNXA==
+
 "@carbon/feature-flags@^0.6.0":
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/@carbon/feature-flags/-/feature-flags-0.6.0.tgz#9452194af71b56dab0f2b9c75db3ddf6196453f1"
   integrity sha512-Y1jQC30PBEzfVLoZF6Fj4sTez2XqPCY+kVsaXjYWDysTc64+GFVkfGqvcBS+vZB9QTCSlGouaMKppfakdNwUqw==
 
-"@carbon/grid@10.33.0":
-  version "10.33.0"
-  resolved "https://registry.yarnpkg.com/@carbon/grid/-/grid-10.33.0.tgz#8e71580b8611f327b2fdcb64d4c782a3904abdbe"
-  integrity sha512-YUlr5zJowqZcHY4dxziy5hpzpDSKoqEf5ELkV5bDybFTdfB3o6xbvlMTgh2BQc5i42m2WxTmNmI/Q78HqU7dkg==
+"@carbon/grid@10.35.0":
+  version "10.35.0"
+  resolved "https://registry.yarnpkg.com/@carbon/grid/-/grid-10.35.0.tgz#12eb86ec5ffd5e5f30ff70800f636c91c11e9158"
+  integrity sha512-KADM7LyIojpebjKlOOS5S0L//AxV3j2632rWre/KST7SBJSkk4SMvqpY2IPu7WtISvLc0k1iMvl9s+xZqXgUHQ==
   dependencies:
     "@carbon/import-once" "^10.6.0"
-    "@carbon/layout" "^10.29.0"
+    "@carbon/layout" "^10.31.0"
 
 "@carbon/icon-helpers@^10.21.0":
   version "10.21.0"
@@ -1254,7 +1259,12 @@
   resolved "https://registry.yarnpkg.com/@carbon/import-once/-/import-once-10.6.0.tgz#a8fb846d9dc3eea9d45d9131a235e898d0f8db1e"
   integrity sha512-vi0lnmZot9J5uW2p9chtyLBwe3nCTY4HrDWuglLOZVOHu7dbLQiRjD/r3uOjB4lr5qduRwk2hblBXKBhpVDBpg==
 
-"@carbon/layout@10.29.0", "@carbon/layout@^10.25.0", "@carbon/layout@^10.29.0":
+"@carbon/layout@10.31.0", "@carbon/layout@^10.31.0":
+  version "10.31.0"
+  resolved "https://registry.yarnpkg.com/@carbon/layout/-/layout-10.31.0.tgz#117ca71411629939fc66c8685234a9abb800ea3e"
+  integrity sha512-KLRuFF4k5z4U5kfiuNnnXLPkA96eDYeijyZJBJaeOIWNx11XFp1Xp8jO9QBErX3z5lWklnSZ2u9c3NYiXjYD7A==
+
+"@carbon/layout@^10.25.0", "@carbon/layout@^10.29.0":
   version "10.29.0"
   resolved "https://registry.yarnpkg.com/@carbon/layout/-/layout-10.29.0.tgz#ae140bb535fbbf293f6197ff51bf8f698d05cfa2"
   integrity sha512-+Gc7i6ys8ySuyCFvj2Fke23paU1NaOirRQLQ63zDzKLLu2XwAVaBKq9msdUdolfOTmrQwAs9dQ83QBB9AGqS8g==
@@ -1280,7 +1290,17 @@
     winston "^3.3.3"
     yargs "^16.1.1"
 
-"@carbon/themes@10.40.0", "@carbon/themes@^10.36.0":
+"@carbon/themes@10.42.0":
+  version "10.42.0"
+  resolved "https://registry.yarnpkg.com/@carbon/themes/-/themes-10.42.0.tgz#b32fab4d34b68969e1bdd9a703df3df18eadb74c"
+  integrity sha512-dRyFDTlJIQti1brTGQl6LbkqQau2tEKx4AT4M0dcgfhI8XcZ45BW5Q+Ub5w+Y2vQlwZbkKDIDmkDjd3AMIoAdw==
+  dependencies:
+    "@carbon/colors" "^10.31.0"
+    "@carbon/layout" "^10.31.0"
+    "@carbon/type" "^10.35.0"
+    color "^3.1.2"
+
+"@carbon/themes@^10.36.0":
   version "10.40.0"
   resolved "https://registry.yarnpkg.com/@carbon/themes/-/themes-10.40.0.tgz#27821aa89d16af4f3f931943ba820669cd201d98"
   integrity sha512-aDveeWHibs6VO2pvb9xz3WIPk93TEXG/dyPGtZH9dLP16lBIdlqeMcyw6OUKhmTS4hchtlr47SceTrR0Rr2Bww==
@@ -1290,7 +1310,15 @@
     "@carbon/type" "^10.33.0"
     color "^3.1.2"
 
-"@carbon/type@10.33.0", "@carbon/type@^10.33.0":
+"@carbon/type@10.35.0", "@carbon/type@^10.35.0":
+  version "10.35.0"
+  resolved "https://registry.yarnpkg.com/@carbon/type/-/type-10.35.0.tgz#f9ea8a7077e5a5fc97711be1cbe158319ad0c3e7"
+  integrity sha512-8eQWUa+box1hv6UJ0W+9cXgtxTVdMKvLOoXEsjt9vWARKgwtFL+t+jYA0ttPXDOc+X/V35hEp0VD/aHf46Jhsw==
+  dependencies:
+    "@carbon/import-once" "^10.6.0"
+    "@carbon/layout" "^10.31.0"
+
+"@carbon/type@^10.33.0":
   version "10.33.0"
   resolved "https://registry.yarnpkg.com/@carbon/type/-/type-10.33.0.tgz#ae16432e154b053f4d15a36445cda19c3c0dbeff"
   integrity sha512-VdJJUy795iBid1evtZTX7a1iGX0z2mIa17q/mcUx8GJJKnJn54mjnLk/t+5/YuIBDQ/uRjBW6qORN7gQClziTg==
