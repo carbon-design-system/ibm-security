@@ -22699,11 +22699,12 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 .security--toolbar__nav__item__title--icon {
+  padding-top: 0.03125rem;
   margin-left: 0.75rem;
 }
 
 .security--toolbar__nav__list__title--icon .security--nav__list__item__content {
-  padding-top: 1px;
+  padding-top: 0.03125rem;
 }
 
 .security--toolbar__panel {
