@@ -293,6 +293,104 @@ exports[`Styles Bundle 1`] = `
   --cds-display-04-font-weight: 600;
   --cds-display-04-line-height: 1.19;
   --cds-display-04-letter-spacing: 0;
+  --cds-legal-01-font-size: 0.75rem;
+  --cds-legal-01-font-weight: 400;
+  --cds-legal-01-line-height: 1.33333;
+  --cds-legal-01-letter-spacing: 0.32px;
+  --cds-legal-02-font-size: 0.875rem;
+  --cds-legal-02-font-weight: 400;
+  --cds-legal-02-line-height: 1.28572;
+  --cds-legal-02-letter-spacing: 0.16px;
+  --cds-body-compact-01-font-size: 0.875rem;
+  --cds-body-compact-01-font-weight: 400;
+  --cds-body-compact-01-line-height: 1.28572;
+  --cds-body-compact-01-letter-spacing: 0.16px;
+  --cds-body-compact-02-font-size: 1rem;
+  --cds-body-compact-02-font-weight: 400;
+  --cds-body-compact-02-line-height: 1.375;
+  --cds-body-compact-02-letter-spacing: 0;
+  --cds-body-01-font-size: 0.875rem;
+  --cds-body-01-font-weight: 400;
+  --cds-body-01-line-height: 1.42857;
+  --cds-body-01-letter-spacing: 0.16px;
+  --cds-body-02-font-size: 1rem;
+  --cds-body-02-font-weight: 400;
+  --cds-body-02-line-height: 1.5;
+  --cds-body-02-letter-spacing: 0;
+  --cds-heading-compact-01-font-size: 0.875rem;
+  --cds-heading-compact-01-font-weight: 600;
+  --cds-heading-compact-01-line-height: 1.28572;
+  --cds-heading-compact-01-letter-spacing: 0.16px;
+  --cds-heading-compact-02-font-size: 1rem;
+  --cds-heading-compact-02-font-weight: 600;
+  --cds-heading-compact-02-line-height: 1.375;
+  --cds-heading-compact-02-letter-spacing: 0;
+  --cds-heading-03-font-size: 1.25rem;
+  --cds-heading-03-font-weight: 400;
+  --cds-heading-03-line-height: 1.4;
+  --cds-heading-03-letter-spacing: 0;
+  --cds-heading-04-font-size: 1.75rem;
+  --cds-heading-04-font-weight: 400;
+  --cds-heading-04-line-height: 1.28572;
+  --cds-heading-04-letter-spacing: 0;
+  --cds-heading-05-font-size: 2rem;
+  --cds-heading-05-font-weight: 400;
+  --cds-heading-05-line-height: 1.25;
+  --cds-heading-05-letter-spacing: 0;
+  --cds-heading-06-font-size: 2.625rem;
+  --cds-heading-06-font-weight: 300;
+  --cds-heading-06-line-height: 1.199;
+  --cds-heading-06-letter-spacing: 0;
+  --cds-heading-07-font-size: 3.375rem;
+  --cds-heading-07-font-weight: 300;
+  --cds-heading-07-line-height: 1.199;
+  --cds-heading-07-letter-spacing: 0;
+  --cds-fluid-heading-03-font-size: 1.25rem;
+  --cds-fluid-heading-03-font-weight: 400;
+  --cds-fluid-heading-03-line-height: 1.4;
+  --cds-fluid-heading-03-letter-spacing: 0;
+  --cds-fluid-heading-04-font-size: 1.75rem;
+  --cds-fluid-heading-04-font-weight: 400;
+  --cds-fluid-heading-04-line-height: 1.28572;
+  --cds-fluid-heading-04-letter-spacing: 0;
+  --cds-fluid-heading-05-font-size: 2rem;
+  --cds-fluid-heading-05-font-weight: 400;
+  --cds-fluid-heading-05-line-height: 1.25;
+  --cds-fluid-heading-05-letter-spacing: 0;
+  --cds-fluid-heading-06-font-size: 2rem;
+  --cds-fluid-heading-06-font-weight: 600;
+  --cds-fluid-heading-06-line-height: 1.25;
+  --cds-fluid-heading-06-letter-spacing: 0;
+  --cds-fluid-paragraph-01-font-size: 1.5rem;
+  --cds-fluid-paragraph-01-font-weight: 300;
+  --cds-fluid-paragraph-01-line-height: 1.334;
+  --cds-fluid-paragraph-01-letter-spacing: 0;
+  --cds-fluid-quotation-01-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+  --cds-fluid-quotation-01-font-size: 1.25rem;
+  --cds-fluid-quotation-01-font-weight: 400;
+  --cds-fluid-quotation-01-line-height: 1.3;
+  --cds-fluid-quotation-01-letter-spacing: 0;
+  --cds-fluid-quotation-02-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+  --cds-fluid-quotation-02-font-size: 2rem;
+  --cds-fluid-quotation-02-font-weight: 300;
+  --cds-fluid-quotation-02-line-height: 1.25;
+  --cds-fluid-quotation-02-letter-spacing: 0;
+  --cds-fluid-display-01-font-size: 2.625rem;
+  --cds-fluid-display-01-font-weight: 300;
+  --cds-fluid-display-01-line-height: 1.19;
+  --cds-fluid-display-01-letter-spacing: 0;
+  --cds-fluid-display-02-font-size: 2.625rem;
+  --cds-fluid-display-02-font-weight: 600;
+  --cds-fluid-display-02-line-height: 1.19;
+  --cds-fluid-display-02-letter-spacing: 0;
+  --cds-fluid-display-03-font-size: 2.625rem;
+  --cds-fluid-display-03-font-weight: 300;
+  --cds-fluid-display-03-line-height: 1.19;
+  --cds-fluid-display-03-letter-spacing: 0;
+  --cds-fluid-display-04-font-size: 2.625rem;
+  --cds-fluid-display-04-font-weight: 600;
+  --cds-fluid-display-04-line-height: 1.19;
+  --cds-fluid-display-04-letter-spacing: 0;
   --cds-spacing-01: 0.125rem;
   --cds-spacing-02: 0.25rem;
   --cds-spacing-03: 0.5rem;
@@ -767,6 +865,104 @@ exports[`Styles Bundle 1`] = `
   --cds-display-04-font-weight: 600;
   --cds-display-04-line-height: 1.19;
   --cds-display-04-letter-spacing: 0;
+  --cds-legal-01-font-size: 0.75rem;
+  --cds-legal-01-font-weight: 400;
+  --cds-legal-01-line-height: 1.33333;
+  --cds-legal-01-letter-spacing: 0.32px;
+  --cds-legal-02-font-size: 0.875rem;
+  --cds-legal-02-font-weight: 400;
+  --cds-legal-02-line-height: 1.28572;
+  --cds-legal-02-letter-spacing: 0.16px;
+  --cds-body-compact-01-font-size: 0.875rem;
+  --cds-body-compact-01-font-weight: 400;
+  --cds-body-compact-01-line-height: 1.28572;
+  --cds-body-compact-01-letter-spacing: 0.16px;
+  --cds-body-compact-02-font-size: 1rem;
+  --cds-body-compact-02-font-weight: 400;
+  --cds-body-compact-02-line-height: 1.375;
+  --cds-body-compact-02-letter-spacing: 0;
+  --cds-body-01-font-size: 0.875rem;
+  --cds-body-01-font-weight: 400;
+  --cds-body-01-line-height: 1.42857;
+  --cds-body-01-letter-spacing: 0.16px;
+  --cds-body-02-font-size: 1rem;
+  --cds-body-02-font-weight: 400;
+  --cds-body-02-line-height: 1.5;
+  --cds-body-02-letter-spacing: 0;
+  --cds-heading-compact-01-font-size: 0.875rem;
+  --cds-heading-compact-01-font-weight: 600;
+  --cds-heading-compact-01-line-height: 1.28572;
+  --cds-heading-compact-01-letter-spacing: 0.16px;
+  --cds-heading-compact-02-font-size: 1rem;
+  --cds-heading-compact-02-font-weight: 600;
+  --cds-heading-compact-02-line-height: 1.375;
+  --cds-heading-compact-02-letter-spacing: 0;
+  --cds-heading-03-font-size: 1.25rem;
+  --cds-heading-03-font-weight: 400;
+  --cds-heading-03-line-height: 1.4;
+  --cds-heading-03-letter-spacing: 0;
+  --cds-heading-04-font-size: 1.75rem;
+  --cds-heading-04-font-weight: 400;
+  --cds-heading-04-line-height: 1.28572;
+  --cds-heading-04-letter-spacing: 0;
+  --cds-heading-05-font-size: 2rem;
+  --cds-heading-05-font-weight: 400;
+  --cds-heading-05-line-height: 1.25;
+  --cds-heading-05-letter-spacing: 0;
+  --cds-heading-06-font-size: 2.625rem;
+  --cds-heading-06-font-weight: 300;
+  --cds-heading-06-line-height: 1.199;
+  --cds-heading-06-letter-spacing: 0;
+  --cds-heading-07-font-size: 3.375rem;
+  --cds-heading-07-font-weight: 300;
+  --cds-heading-07-line-height: 1.199;
+  --cds-heading-07-letter-spacing: 0;
+  --cds-fluid-heading-03-font-size: 1.25rem;
+  --cds-fluid-heading-03-font-weight: 400;
+  --cds-fluid-heading-03-line-height: 1.4;
+  --cds-fluid-heading-03-letter-spacing: 0;
+  --cds-fluid-heading-04-font-size: 1.75rem;
+  --cds-fluid-heading-04-font-weight: 400;
+  --cds-fluid-heading-04-line-height: 1.28572;
+  --cds-fluid-heading-04-letter-spacing: 0;
+  --cds-fluid-heading-05-font-size: 2rem;
+  --cds-fluid-heading-05-font-weight: 400;
+  --cds-fluid-heading-05-line-height: 1.25;
+  --cds-fluid-heading-05-letter-spacing: 0;
+  --cds-fluid-heading-06-font-size: 2rem;
+  --cds-fluid-heading-06-font-weight: 600;
+  --cds-fluid-heading-06-line-height: 1.25;
+  --cds-fluid-heading-06-letter-spacing: 0;
+  --cds-fluid-paragraph-01-font-size: 1.5rem;
+  --cds-fluid-paragraph-01-font-weight: 300;
+  --cds-fluid-paragraph-01-line-height: 1.334;
+  --cds-fluid-paragraph-01-letter-spacing: 0;
+  --cds-fluid-quotation-01-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+  --cds-fluid-quotation-01-font-size: 1.25rem;
+  --cds-fluid-quotation-01-font-weight: 400;
+  --cds-fluid-quotation-01-line-height: 1.3;
+  --cds-fluid-quotation-01-letter-spacing: 0;
+  --cds-fluid-quotation-02-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+  --cds-fluid-quotation-02-font-size: 2rem;
+  --cds-fluid-quotation-02-font-weight: 300;
+  --cds-fluid-quotation-02-line-height: 1.25;
+  --cds-fluid-quotation-02-letter-spacing: 0;
+  --cds-fluid-display-01-font-size: 2.625rem;
+  --cds-fluid-display-01-font-weight: 300;
+  --cds-fluid-display-01-line-height: 1.19;
+  --cds-fluid-display-01-letter-spacing: 0;
+  --cds-fluid-display-02-font-size: 2.625rem;
+  --cds-fluid-display-02-font-weight: 600;
+  --cds-fluid-display-02-line-height: 1.19;
+  --cds-fluid-display-02-letter-spacing: 0;
+  --cds-fluid-display-03-font-size: 2.625rem;
+  --cds-fluid-display-03-font-weight: 300;
+  --cds-fluid-display-03-line-height: 1.19;
+  --cds-fluid-display-03-letter-spacing: 0;
+  --cds-fluid-display-04-font-size: 2.625rem;
+  --cds-fluid-display-04-font-weight: 600;
+  --cds-fluid-display-04-line-height: 1.19;
+  --cds-fluid-display-04-letter-spacing: 0;
   --cds-spacing-01: 0.125rem;
   --cds-spacing-02: 0.25rem;
   --cds-spacing-03: 0.5rem;
@@ -954,6 +1150,7 @@ exports[`Styles Bundle 1`] = `
   --danger: var(--cds-danger, #da1e28);
 }
 
+/* stylelint-disable number-max-precision */
 h1 {
   font-size: var(--cds-productive-heading-06-font-size, 2.625rem);
   font-weight: var(--cds-productive-heading-06-font-weight, 300);
@@ -1011,6 +1208,7 @@ em {
   font-style: italic;
 }
 
+/* stylelint-disable number-max-precision */
 @keyframes skeleton {
   0% {
     opacity: 0.3;
@@ -3219,6 +3417,15 @@ body {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--link {
   box-sizing: border-box;
   padding: 0;
@@ -3505,6 +3712,8 @@ body {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--skeleton__text {
   position: relative;
   padding: 0;
@@ -3544,6 +3753,8 @@ body {
 }
 
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--card--skeleton__wrapper {
   display: flex;
 }
@@ -3552,6 +3763,8 @@ body {
   margin-right: 0.5rem;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 .security--card {
   display: flex;
@@ -3638,6 +3851,13 @@ body {
   margin-top: auto;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--assistive-text,
 .bx--visually-hidden {
   position: absolute;
@@ -3675,6 +3895,13 @@ body {
   box-sizing: inherit;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--btn {
   box-sizing: border-box;
   padding: 0;
@@ -5658,6 +5885,14 @@ body {
   margin-bottom: -0.5rem;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--list-box__wrapper--inline {
   display: inline-grid;
   align-items: center;
@@ -6967,6 +7202,17 @@ button.bx--dropdown-text:focus {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--overflow-menu,
 .bx--overflow-menu__trigger {
   box-sizing: border-box;
@@ -7502,6 +7748,28 @@ a.bx--overflow-menu-options__btn::before {
 
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--button--icon {
   box-sizing: border-box;
   padding: 0;
@@ -7704,6 +7972,18 @@ a.bx--overflow-menu-options__btn::before {
   transform: translate(0.25rem, -50%);
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
@@ -8013,6 +8293,104 @@ a.bx--overflow-menu-options__btn::before {
   --cds-display-04-font-weight: 600;
   --cds-display-04-line-height: 1.19;
   --cds-display-04-letter-spacing: 0;
+  --cds-legal-01-font-size: 0.75rem;
+  --cds-legal-01-font-weight: 400;
+  --cds-legal-01-line-height: 1.33333;
+  --cds-legal-01-letter-spacing: 0.32px;
+  --cds-legal-02-font-size: 0.875rem;
+  --cds-legal-02-font-weight: 400;
+  --cds-legal-02-line-height: 1.28572;
+  --cds-legal-02-letter-spacing: 0.16px;
+  --cds-body-compact-01-font-size: 0.875rem;
+  --cds-body-compact-01-font-weight: 400;
+  --cds-body-compact-01-line-height: 1.28572;
+  --cds-body-compact-01-letter-spacing: 0.16px;
+  --cds-body-compact-02-font-size: 1rem;
+  --cds-body-compact-02-font-weight: 400;
+  --cds-body-compact-02-line-height: 1.375;
+  --cds-body-compact-02-letter-spacing: 0;
+  --cds-body-01-font-size: 0.875rem;
+  --cds-body-01-font-weight: 400;
+  --cds-body-01-line-height: 1.42857;
+  --cds-body-01-letter-spacing: 0.16px;
+  --cds-body-02-font-size: 1rem;
+  --cds-body-02-font-weight: 400;
+  --cds-body-02-line-height: 1.5;
+  --cds-body-02-letter-spacing: 0;
+  --cds-heading-compact-01-font-size: 0.875rem;
+  --cds-heading-compact-01-font-weight: 600;
+  --cds-heading-compact-01-line-height: 1.28572;
+  --cds-heading-compact-01-letter-spacing: 0.16px;
+  --cds-heading-compact-02-font-size: 1rem;
+  --cds-heading-compact-02-font-weight: 600;
+  --cds-heading-compact-02-line-height: 1.375;
+  --cds-heading-compact-02-letter-spacing: 0;
+  --cds-heading-03-font-size: 1.25rem;
+  --cds-heading-03-font-weight: 400;
+  --cds-heading-03-line-height: 1.4;
+  --cds-heading-03-letter-spacing: 0;
+  --cds-heading-04-font-size: 1.75rem;
+  --cds-heading-04-font-weight: 400;
+  --cds-heading-04-line-height: 1.28572;
+  --cds-heading-04-letter-spacing: 0;
+  --cds-heading-05-font-size: 2rem;
+  --cds-heading-05-font-weight: 400;
+  --cds-heading-05-line-height: 1.25;
+  --cds-heading-05-letter-spacing: 0;
+  --cds-heading-06-font-size: 2.625rem;
+  --cds-heading-06-font-weight: 300;
+  --cds-heading-06-line-height: 1.199;
+  --cds-heading-06-letter-spacing: 0;
+  --cds-heading-07-font-size: 3.375rem;
+  --cds-heading-07-font-weight: 300;
+  --cds-heading-07-line-height: 1.199;
+  --cds-heading-07-letter-spacing: 0;
+  --cds-fluid-heading-03-font-size: 1.25rem;
+  --cds-fluid-heading-03-font-weight: 400;
+  --cds-fluid-heading-03-line-height: 1.4;
+  --cds-fluid-heading-03-letter-spacing: 0;
+  --cds-fluid-heading-04-font-size: 1.75rem;
+  --cds-fluid-heading-04-font-weight: 400;
+  --cds-fluid-heading-04-line-height: 1.28572;
+  --cds-fluid-heading-04-letter-spacing: 0;
+  --cds-fluid-heading-05-font-size: 2rem;
+  --cds-fluid-heading-05-font-weight: 400;
+  --cds-fluid-heading-05-line-height: 1.25;
+  --cds-fluid-heading-05-letter-spacing: 0;
+  --cds-fluid-heading-06-font-size: 2rem;
+  --cds-fluid-heading-06-font-weight: 600;
+  --cds-fluid-heading-06-line-height: 1.25;
+  --cds-fluid-heading-06-letter-spacing: 0;
+  --cds-fluid-paragraph-01-font-size: 1.5rem;
+  --cds-fluid-paragraph-01-font-weight: 300;
+  --cds-fluid-paragraph-01-line-height: 1.334;
+  --cds-fluid-paragraph-01-letter-spacing: 0;
+  --cds-fluid-quotation-01-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+  --cds-fluid-quotation-01-font-size: 1.25rem;
+  --cds-fluid-quotation-01-font-weight: 400;
+  --cds-fluid-quotation-01-line-height: 1.3;
+  --cds-fluid-quotation-01-letter-spacing: 0;
+  --cds-fluid-quotation-02-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+  --cds-fluid-quotation-02-font-size: 2rem;
+  --cds-fluid-quotation-02-font-weight: 300;
+  --cds-fluid-quotation-02-line-height: 1.25;
+  --cds-fluid-quotation-02-letter-spacing: 0;
+  --cds-fluid-display-01-font-size: 2.625rem;
+  --cds-fluid-display-01-font-weight: 300;
+  --cds-fluid-display-01-line-height: 1.19;
+  --cds-fluid-display-01-letter-spacing: 0;
+  --cds-fluid-display-02-font-size: 2.625rem;
+  --cds-fluid-display-02-font-weight: 600;
+  --cds-fluid-display-02-line-height: 1.19;
+  --cds-fluid-display-02-letter-spacing: 0;
+  --cds-fluid-display-03-font-size: 2.625rem;
+  --cds-fluid-display-03-font-weight: 300;
+  --cds-fluid-display-03-line-height: 1.19;
+  --cds-fluid-display-03-letter-spacing: 0;
+  --cds-fluid-display-04-font-size: 2.625rem;
+  --cds-fluid-display-04-font-weight: 600;
+  --cds-fluid-display-04-line-height: 1.19;
+  --cds-fluid-display-04-letter-spacing: 0;
   --cds-spacing-01: 0.125rem;
   --cds-spacing-02: 0.25rem;
   --cds-spacing-03: 0.5rem;
@@ -8328,6 +8706,8 @@ a.bx--overflow-menu-options__btn::before {
 }
 
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--decorator {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
@@ -8480,6 +8860,13 @@ a.bx--overflow-menu-options__btn::before {
   height: auto;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--fieldset {
   box-sizing: border-box;
   padding: 0;
@@ -8711,6 +9098,7 @@ fieldset[disabled] .bx--form__helper-text {
   color: var(--cds-disabled-02, #525252);
 }
 
+/* stylelint-disable number-max-precision */
 .bx--form-item.bx--checkbox-wrapper {
   margin-bottom: 0.25rem;
 }
@@ -8891,6 +9279,10 @@ fieldset[disabled] .bx--form__helper-text {
 
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--scroll-gradient {
   position: relative;
   display: flex;
@@ -8963,6 +9355,10 @@ fieldset[disabled] .bx--form__helper-text {
   transition-duration: 110ms;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--search {
   position: relative;
   display: flex;
@@ -9047,6 +9443,10 @@ fieldset[disabled] .bx--form__helper-text {
 }
 
 .bx--search--light .bx--search-input {
+  background: var(--cds-field-02, #393939);
+}
+
+.bx--search--light .bx--search-close::before {
   background: var(--cds-field-02, #393939);
 }
 
@@ -9389,6 +9789,8 @@ fieldset[disabled] .bx--form__helper-text {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--table-toolbar {
   position: relative;
   display: flex;
@@ -9957,7 +10359,10 @@ fieldset[disabled] .bx--form__helper-text {
   height: 2rem;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--data-table-container {
+  position: relative;
   padding-top: var(--cds-spacing-01, 0.125rem);
 }
 
@@ -10757,6 +11162,8 @@ tr.bx--data-table--selected:last-of-type td {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--data-table tr.bx--parent-row:first-of-type td {
   border-top: 1px solid var(--cds-border-subtle, #393939);
 }
@@ -11064,6 +11471,8 @@ tr.bx--parent-row.bx--data-table--selected.bx--expandable-row--hover + tr[data-c
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--data-table--sort th,
 .bx--data-table th[aria-sort] {
   height: var(--cds-spacing-09, 3rem);
@@ -11259,6 +11668,8 @@ th .bx--table-sort__flex {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--inline-edit-label {
   display: flex;
   align-items: center;
@@ -11337,6 +11748,8 @@ th .bx--table-sort__flex {
   padding-left: var(--cds-spacing-04, 0.75rem);
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--data-table.bx--skeleton th {
   padding-left: 1rem;
   vertical-align: middle;
@@ -11501,6 +11914,12 @@ th .bx--table-sort__flex {
 }
 
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--error-page {
   display: flex;
   min-height: 12.5rem;
@@ -11560,6 +11979,12 @@ th .bx--table-sort__flex {
 }
 
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--link--external {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
@@ -11586,6 +12011,9 @@ th .bx--table-sort__flex {
   vertical-align: middle;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 @keyframes collapse-accordion {
@@ -11734,11 +12162,11 @@ th .bx--table-sort__flex {
 
 .bx--accordion__item--disabled,
 .bx--accordion__item--disabled + .bx--accordion__item {
-  border-top: 1px solid var(--cds-disabled-02, #525252);
+  border-top: 1px solid var(--cds-disabled-01, #262626);
 }
 
 li.bx--accordion__item--disabled:last-of-type {
-  border-bottom: 1px solid var(--cds-disabled-02, #525252);
+  border-bottom: 1px solid var(--cds-disabled-01, #262626);
 }
 
 .bx--accordion__arrow {
@@ -11897,6 +12325,10 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--filter-search {
   position: relative;
   margin-bottom: 1rem;
@@ -11949,6 +12381,14 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--filter-selector {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
@@ -11987,6 +12427,20 @@ li.bx--accordion__item--disabled:last-of-type {
   white-space: nowrap;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 .security--filter-subcategory {
   border-top-width: 0;
@@ -12081,6 +12535,9 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-bottom: 1rem;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 @keyframes collapse-accordion {
   0% {
     height: 100%;
@@ -12112,6 +12569,18 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-bottom: 1rem;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--truncated-list {
   margin: 0;
 }
@@ -12147,6 +12616,8 @@ li.bx--accordion__item--disabled:last-of-type {
   color: var(--cds-text-01, #f4f4f4);
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 .security--filter-panel-accordion-item {
   border-top-width: 0;
@@ -12207,6 +12678,14 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--filter-panel-checkbox__wrapper {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
@@ -12246,6 +12725,20 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--filter-panel-checkbox-with-overflow-menu {
   position: relative;
   display: flex;
@@ -12278,6 +12771,10 @@ li.bx--accordion__item--disabled:last-of-type {
   justify-content: flex-end;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--filter-panel-search {
   position: relative;
   margin-bottom: 1rem;
@@ -12309,6 +12806,10 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-bottom: 1rem;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 .security--ica-skeleton {
   width: 4rem;
@@ -12456,6 +12957,16 @@ li.bx--accordion__item--disabled:last-of-type {
 
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--icon-button-bar {
   display: flex;
   overflow: none;
@@ -12524,6 +13035,13 @@ li.bx--accordion__item--disabled:last-of-type {
   background-color: var(--cds-ui-03, #393939);
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 @keyframes rotate {
@@ -12753,6 +13271,11 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--tag {
   box-sizing: border-box;
   padding: 0;
@@ -13212,6 +13735,8 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--layout-module--list-item {
   display: flex;
   padding: 1rem;
@@ -13395,6 +13920,13 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-top: 0.25rem;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 .security--nav {
   position: relative;
@@ -13633,6 +14165,16 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-bottom: 0.5rem;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 .security--ne-section {
@@ -15723,6 +16265,11 @@ li.bx--accordion__item--disabled:last-of-type {
   padding: 0 0.5rem 0 0;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--inline-notification {
   box-sizing: border-box;
   padding: 0;
@@ -16082,6 +16629,11 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 /* stylelint-enable */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--toast-notification {
   box-sizing: border-box;
   padding: 0;
@@ -16357,6 +16909,34 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 /* stylelint-enable */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
@@ -16667,6 +17247,104 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-display-04-font-weight: 600;
   --cds-display-04-line-height: 1.19;
   --cds-display-04-letter-spacing: 0;
+  --cds-legal-01-font-size: 0.75rem;
+  --cds-legal-01-font-weight: 400;
+  --cds-legal-01-line-height: 1.33333;
+  --cds-legal-01-letter-spacing: 0.32px;
+  --cds-legal-02-font-size: 0.875rem;
+  --cds-legal-02-font-weight: 400;
+  --cds-legal-02-line-height: 1.28572;
+  --cds-legal-02-letter-spacing: 0.16px;
+  --cds-body-compact-01-font-size: 0.875rem;
+  --cds-body-compact-01-font-weight: 400;
+  --cds-body-compact-01-line-height: 1.28572;
+  --cds-body-compact-01-letter-spacing: 0.16px;
+  --cds-body-compact-02-font-size: 1rem;
+  --cds-body-compact-02-font-weight: 400;
+  --cds-body-compact-02-line-height: 1.375;
+  --cds-body-compact-02-letter-spacing: 0;
+  --cds-body-01-font-size: 0.875rem;
+  --cds-body-01-font-weight: 400;
+  --cds-body-01-line-height: 1.42857;
+  --cds-body-01-letter-spacing: 0.16px;
+  --cds-body-02-font-size: 1rem;
+  --cds-body-02-font-weight: 400;
+  --cds-body-02-line-height: 1.5;
+  --cds-body-02-letter-spacing: 0;
+  --cds-heading-compact-01-font-size: 0.875rem;
+  --cds-heading-compact-01-font-weight: 600;
+  --cds-heading-compact-01-line-height: 1.28572;
+  --cds-heading-compact-01-letter-spacing: 0.16px;
+  --cds-heading-compact-02-font-size: 1rem;
+  --cds-heading-compact-02-font-weight: 600;
+  --cds-heading-compact-02-line-height: 1.375;
+  --cds-heading-compact-02-letter-spacing: 0;
+  --cds-heading-03-font-size: 1.25rem;
+  --cds-heading-03-font-weight: 400;
+  --cds-heading-03-line-height: 1.4;
+  --cds-heading-03-letter-spacing: 0;
+  --cds-heading-04-font-size: 1.75rem;
+  --cds-heading-04-font-weight: 400;
+  --cds-heading-04-line-height: 1.28572;
+  --cds-heading-04-letter-spacing: 0;
+  --cds-heading-05-font-size: 2rem;
+  --cds-heading-05-font-weight: 400;
+  --cds-heading-05-line-height: 1.25;
+  --cds-heading-05-letter-spacing: 0;
+  --cds-heading-06-font-size: 2.625rem;
+  --cds-heading-06-font-weight: 300;
+  --cds-heading-06-line-height: 1.199;
+  --cds-heading-06-letter-spacing: 0;
+  --cds-heading-07-font-size: 3.375rem;
+  --cds-heading-07-font-weight: 300;
+  --cds-heading-07-line-height: 1.199;
+  --cds-heading-07-letter-spacing: 0;
+  --cds-fluid-heading-03-font-size: 1.25rem;
+  --cds-fluid-heading-03-font-weight: 400;
+  --cds-fluid-heading-03-line-height: 1.4;
+  --cds-fluid-heading-03-letter-spacing: 0;
+  --cds-fluid-heading-04-font-size: 1.75rem;
+  --cds-fluid-heading-04-font-weight: 400;
+  --cds-fluid-heading-04-line-height: 1.28572;
+  --cds-fluid-heading-04-letter-spacing: 0;
+  --cds-fluid-heading-05-font-size: 2rem;
+  --cds-fluid-heading-05-font-weight: 400;
+  --cds-fluid-heading-05-line-height: 1.25;
+  --cds-fluid-heading-05-letter-spacing: 0;
+  --cds-fluid-heading-06-font-size: 2rem;
+  --cds-fluid-heading-06-font-weight: 600;
+  --cds-fluid-heading-06-line-height: 1.25;
+  --cds-fluid-heading-06-letter-spacing: 0;
+  --cds-fluid-paragraph-01-font-size: 1.5rem;
+  --cds-fluid-paragraph-01-font-weight: 300;
+  --cds-fluid-paragraph-01-line-height: 1.334;
+  --cds-fluid-paragraph-01-letter-spacing: 0;
+  --cds-fluid-quotation-01-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+  --cds-fluid-quotation-01-font-size: 1.25rem;
+  --cds-fluid-quotation-01-font-weight: 400;
+  --cds-fluid-quotation-01-line-height: 1.3;
+  --cds-fluid-quotation-01-letter-spacing: 0;
+  --cds-fluid-quotation-02-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+  --cds-fluid-quotation-02-font-size: 2rem;
+  --cds-fluid-quotation-02-font-weight: 300;
+  --cds-fluid-quotation-02-line-height: 1.25;
+  --cds-fluid-quotation-02-letter-spacing: 0;
+  --cds-fluid-display-01-font-size: 2.625rem;
+  --cds-fluid-display-01-font-weight: 300;
+  --cds-fluid-display-01-line-height: 1.19;
+  --cds-fluid-display-01-letter-spacing: 0;
+  --cds-fluid-display-02-font-size: 2.625rem;
+  --cds-fluid-display-02-font-weight: 600;
+  --cds-fluid-display-02-line-height: 1.19;
+  --cds-fluid-display-02-letter-spacing: 0;
+  --cds-fluid-display-03-font-size: 2.625rem;
+  --cds-fluid-display-03-font-weight: 300;
+  --cds-fluid-display-03-line-height: 1.19;
+  --cds-fluid-display-03-letter-spacing: 0;
+  --cds-fluid-display-04-font-size: 2.625rem;
+  --cds-fluid-display-04-font-weight: 600;
+  --cds-fluid-display-04-line-height: 1.19;
+  --cds-fluid-display-04-letter-spacing: 0;
   --cds-spacing-01: 0.125rem;
   --cds-spacing-02: 0.25rem;
   --cds-spacing-03: 0.5rem;
@@ -16970,6 +17648,70 @@ li.bx--accordion__item--disabled:last-of-type {
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--pill {
   padding: 0 0.5rem;
   border-radius: 6.25rem;
@@ -17008,6 +17750,30 @@ li.bx--accordion__item--disabled:last-of-type {
   height: 3.5rem;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--tooltip__label {
   font-size: var(--cds-label-01-font-size, 0.75rem);
   font-weight: var(--cds-label-01-font-weight, 400);
@@ -19803,6 +20569,37 @@ li.bx--accordion__item--disabled:last-of-type {
   height: 100%;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--multi-select .bx--tag {
   min-width: auto;
   margin: 0 0.5rem 0 0;
@@ -19880,6 +20677,10 @@ li.bx--accordion__item--disabled:last-of-type {
   background-color: transparent;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--search-bar {
   display: flex;
 }
@@ -19912,11 +20713,17 @@ li.bx--accordion__item--disabled:last-of-type {
   white-space: nowrap;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--stacked-notification {
   border-width: 0;
   box-shadow: 0.25rem 0.25rem var(--cds-ui-04, #6f6f6f), 0.5rem 0.5rem 0 var(--cds-ui-03, #393939);
 }
 
+/* stylelint-disable number-max-precision */
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -20023,6 +20830,18 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--status-indicator {
   display: flex;
   flex-direction: column;
@@ -20101,6 +20920,38 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-top: 0.25rem;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--string-formatter {
   display: inline-block;
   text-align: left;
@@ -20122,6 +20973,28 @@ li.bx--accordion__item--disabled:last-of-type {
   line-height: inherit;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--select {
   box-sizing: border-box;
   padding: 0;
@@ -20390,6 +21263,18 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--summary-card {
   position: relative;
   display: flex;
@@ -20571,6 +21456,28 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--tag-wall__label {
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
@@ -20588,6 +21495,32 @@ li.bx--accordion__item--disabled:last-of-type {
   flex-shrink: 0;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--text-input {
   box-sizing: border-box;
   padding: 0;
@@ -21195,6 +22128,20 @@ li.bx--accordion__item--disabled:last-of-type {
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--filter .bx--list-box__field {
   position: fixed;
   height: 2.5rem;
@@ -21283,6 +22230,23 @@ li.bx--accordion__item--disabled:last-of-type {
 
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -21323,6 +22287,44 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
@@ -21501,6 +22503,32 @@ li.bx--accordion__item--disabled:last-of-type {
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--tag-wall-filter__tag-wall {
   min-height: 1.5rem;
   margin-top: 0.75rem;
@@ -21537,6 +22565,30 @@ li.bx--accordion__item--disabled:last-of-type {
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--portal__overlay {
   position: fixed;
   z-index: 6000;
@@ -21561,6 +22613,23 @@ li.bx--accordion__item--disabled:last-of-type {
   z-index: 9000;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 @keyframes rotate {
@@ -21603,6 +22672,56 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
@@ -21815,6 +22934,23 @@ li.bx--accordion__item--disabled:last-of-type {
 
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -21881,6 +23017,44 @@ li.bx--accordion__item--disabled:last-of-type {
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--time-indicator {
   font-size: var(--cds-label-01-font-size, 0.75rem);
   font-weight: var(--cds-label-01-font-weight, 400);
@@ -21896,6 +23070,14 @@ li.bx--accordion__item--disabled:last-of-type {
   fill: var(--cds-icon-01, #f4f4f4);
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
@@ -22211,6 +23393,104 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-display-04-font-weight: 600;
   --cds-display-04-line-height: 1.19;
   --cds-display-04-letter-spacing: 0;
+  --cds-legal-01-font-size: 0.75rem;
+  --cds-legal-01-font-weight: 400;
+  --cds-legal-01-line-height: 1.33333;
+  --cds-legal-01-letter-spacing: 0.32px;
+  --cds-legal-02-font-size: 0.875rem;
+  --cds-legal-02-font-weight: 400;
+  --cds-legal-02-line-height: 1.28572;
+  --cds-legal-02-letter-spacing: 0.16px;
+  --cds-body-compact-01-font-size: 0.875rem;
+  --cds-body-compact-01-font-weight: 400;
+  --cds-body-compact-01-line-height: 1.28572;
+  --cds-body-compact-01-letter-spacing: 0.16px;
+  --cds-body-compact-02-font-size: 1rem;
+  --cds-body-compact-02-font-weight: 400;
+  --cds-body-compact-02-line-height: 1.375;
+  --cds-body-compact-02-letter-spacing: 0;
+  --cds-body-01-font-size: 0.875rem;
+  --cds-body-01-font-weight: 400;
+  --cds-body-01-line-height: 1.42857;
+  --cds-body-01-letter-spacing: 0.16px;
+  --cds-body-02-font-size: 1rem;
+  --cds-body-02-font-weight: 400;
+  --cds-body-02-line-height: 1.5;
+  --cds-body-02-letter-spacing: 0;
+  --cds-heading-compact-01-font-size: 0.875rem;
+  --cds-heading-compact-01-font-weight: 600;
+  --cds-heading-compact-01-line-height: 1.28572;
+  --cds-heading-compact-01-letter-spacing: 0.16px;
+  --cds-heading-compact-02-font-size: 1rem;
+  --cds-heading-compact-02-font-weight: 600;
+  --cds-heading-compact-02-line-height: 1.375;
+  --cds-heading-compact-02-letter-spacing: 0;
+  --cds-heading-03-font-size: 1.25rem;
+  --cds-heading-03-font-weight: 400;
+  --cds-heading-03-line-height: 1.4;
+  --cds-heading-03-letter-spacing: 0;
+  --cds-heading-04-font-size: 1.75rem;
+  --cds-heading-04-font-weight: 400;
+  --cds-heading-04-line-height: 1.28572;
+  --cds-heading-04-letter-spacing: 0;
+  --cds-heading-05-font-size: 2rem;
+  --cds-heading-05-font-weight: 400;
+  --cds-heading-05-line-height: 1.25;
+  --cds-heading-05-letter-spacing: 0;
+  --cds-heading-06-font-size: 2.625rem;
+  --cds-heading-06-font-weight: 300;
+  --cds-heading-06-line-height: 1.199;
+  --cds-heading-06-letter-spacing: 0;
+  --cds-heading-07-font-size: 3.375rem;
+  --cds-heading-07-font-weight: 300;
+  --cds-heading-07-line-height: 1.199;
+  --cds-heading-07-letter-spacing: 0;
+  --cds-fluid-heading-03-font-size: 1.25rem;
+  --cds-fluid-heading-03-font-weight: 400;
+  --cds-fluid-heading-03-line-height: 1.4;
+  --cds-fluid-heading-03-letter-spacing: 0;
+  --cds-fluid-heading-04-font-size: 1.75rem;
+  --cds-fluid-heading-04-font-weight: 400;
+  --cds-fluid-heading-04-line-height: 1.28572;
+  --cds-fluid-heading-04-letter-spacing: 0;
+  --cds-fluid-heading-05-font-size: 2rem;
+  --cds-fluid-heading-05-font-weight: 400;
+  --cds-fluid-heading-05-line-height: 1.25;
+  --cds-fluid-heading-05-letter-spacing: 0;
+  --cds-fluid-heading-06-font-size: 2rem;
+  --cds-fluid-heading-06-font-weight: 600;
+  --cds-fluid-heading-06-line-height: 1.25;
+  --cds-fluid-heading-06-letter-spacing: 0;
+  --cds-fluid-paragraph-01-font-size: 1.5rem;
+  --cds-fluid-paragraph-01-font-weight: 300;
+  --cds-fluid-paragraph-01-line-height: 1.334;
+  --cds-fluid-paragraph-01-letter-spacing: 0;
+  --cds-fluid-quotation-01-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+  --cds-fluid-quotation-01-font-size: 1.25rem;
+  --cds-fluid-quotation-01-font-weight: 400;
+  --cds-fluid-quotation-01-line-height: 1.3;
+  --cds-fluid-quotation-01-letter-spacing: 0;
+  --cds-fluid-quotation-02-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+  --cds-fluid-quotation-02-font-size: 2rem;
+  --cds-fluid-quotation-02-font-weight: 300;
+  --cds-fluid-quotation-02-line-height: 1.25;
+  --cds-fluid-quotation-02-letter-spacing: 0;
+  --cds-fluid-display-01-font-size: 2.625rem;
+  --cds-fluid-display-01-font-weight: 300;
+  --cds-fluid-display-01-line-height: 1.19;
+  --cds-fluid-display-01-letter-spacing: 0;
+  --cds-fluid-display-02-font-size: 2.625rem;
+  --cds-fluid-display-02-font-weight: 600;
+  --cds-fluid-display-02-line-height: 1.19;
+  --cds-fluid-display-02-letter-spacing: 0;
+  --cds-fluid-display-03-font-size: 2.625rem;
+  --cds-fluid-display-03-font-weight: 300;
+  --cds-fluid-display-03-line-height: 1.19;
+  --cds-fluid-display-03-letter-spacing: 0;
+  --cds-fluid-display-04-font-size: 2.625rem;
+  --cds-fluid-display-04-font-weight: 600;
+  --cds-fluid-display-04-line-height: 1.19;
+  --cds-fluid-display-04-letter-spacing: 0;
   --cds-spacing-01: 0.125rem;
   --cds-spacing-02: 0.25rem;
   --cds-spacing-03: 0.5rem;
@@ -22709,6 +23989,104 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-display-04-font-weight: 600;
   --cds-display-04-line-height: 1.19;
   --cds-display-04-letter-spacing: 0;
+  --cds-legal-01-font-size: 0.75rem;
+  --cds-legal-01-font-weight: 400;
+  --cds-legal-01-line-height: 1.33333;
+  --cds-legal-01-letter-spacing: 0.32px;
+  --cds-legal-02-font-size: 0.875rem;
+  --cds-legal-02-font-weight: 400;
+  --cds-legal-02-line-height: 1.28572;
+  --cds-legal-02-letter-spacing: 0.16px;
+  --cds-body-compact-01-font-size: 0.875rem;
+  --cds-body-compact-01-font-weight: 400;
+  --cds-body-compact-01-line-height: 1.28572;
+  --cds-body-compact-01-letter-spacing: 0.16px;
+  --cds-body-compact-02-font-size: 1rem;
+  --cds-body-compact-02-font-weight: 400;
+  --cds-body-compact-02-line-height: 1.375;
+  --cds-body-compact-02-letter-spacing: 0;
+  --cds-body-01-font-size: 0.875rem;
+  --cds-body-01-font-weight: 400;
+  --cds-body-01-line-height: 1.42857;
+  --cds-body-01-letter-spacing: 0.16px;
+  --cds-body-02-font-size: 1rem;
+  --cds-body-02-font-weight: 400;
+  --cds-body-02-line-height: 1.5;
+  --cds-body-02-letter-spacing: 0;
+  --cds-heading-compact-01-font-size: 0.875rem;
+  --cds-heading-compact-01-font-weight: 600;
+  --cds-heading-compact-01-line-height: 1.28572;
+  --cds-heading-compact-01-letter-spacing: 0.16px;
+  --cds-heading-compact-02-font-size: 1rem;
+  --cds-heading-compact-02-font-weight: 600;
+  --cds-heading-compact-02-line-height: 1.375;
+  --cds-heading-compact-02-letter-spacing: 0;
+  --cds-heading-03-font-size: 1.25rem;
+  --cds-heading-03-font-weight: 400;
+  --cds-heading-03-line-height: 1.4;
+  --cds-heading-03-letter-spacing: 0;
+  --cds-heading-04-font-size: 1.75rem;
+  --cds-heading-04-font-weight: 400;
+  --cds-heading-04-line-height: 1.28572;
+  --cds-heading-04-letter-spacing: 0;
+  --cds-heading-05-font-size: 2rem;
+  --cds-heading-05-font-weight: 400;
+  --cds-heading-05-line-height: 1.25;
+  --cds-heading-05-letter-spacing: 0;
+  --cds-heading-06-font-size: 2.625rem;
+  --cds-heading-06-font-weight: 300;
+  --cds-heading-06-line-height: 1.199;
+  --cds-heading-06-letter-spacing: 0;
+  --cds-heading-07-font-size: 3.375rem;
+  --cds-heading-07-font-weight: 300;
+  --cds-heading-07-line-height: 1.199;
+  --cds-heading-07-letter-spacing: 0;
+  --cds-fluid-heading-03-font-size: 1.25rem;
+  --cds-fluid-heading-03-font-weight: 400;
+  --cds-fluid-heading-03-line-height: 1.4;
+  --cds-fluid-heading-03-letter-spacing: 0;
+  --cds-fluid-heading-04-font-size: 1.75rem;
+  --cds-fluid-heading-04-font-weight: 400;
+  --cds-fluid-heading-04-line-height: 1.28572;
+  --cds-fluid-heading-04-letter-spacing: 0;
+  --cds-fluid-heading-05-font-size: 2rem;
+  --cds-fluid-heading-05-font-weight: 400;
+  --cds-fluid-heading-05-line-height: 1.25;
+  --cds-fluid-heading-05-letter-spacing: 0;
+  --cds-fluid-heading-06-font-size: 2rem;
+  --cds-fluid-heading-06-font-weight: 600;
+  --cds-fluid-heading-06-line-height: 1.25;
+  --cds-fluid-heading-06-letter-spacing: 0;
+  --cds-fluid-paragraph-01-font-size: 1.5rem;
+  --cds-fluid-paragraph-01-font-weight: 300;
+  --cds-fluid-paragraph-01-line-height: 1.334;
+  --cds-fluid-paragraph-01-letter-spacing: 0;
+  --cds-fluid-quotation-01-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+  --cds-fluid-quotation-01-font-size: 1.25rem;
+  --cds-fluid-quotation-01-font-weight: 400;
+  --cds-fluid-quotation-01-line-height: 1.3;
+  --cds-fluid-quotation-01-letter-spacing: 0;
+  --cds-fluid-quotation-02-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+  --cds-fluid-quotation-02-font-size: 2rem;
+  --cds-fluid-quotation-02-font-weight: 300;
+  --cds-fluid-quotation-02-line-height: 1.25;
+  --cds-fluid-quotation-02-letter-spacing: 0;
+  --cds-fluid-display-01-font-size: 2.625rem;
+  --cds-fluid-display-01-font-weight: 300;
+  --cds-fluid-display-01-line-height: 1.19;
+  --cds-fluid-display-01-letter-spacing: 0;
+  --cds-fluid-display-02-font-size: 2.625rem;
+  --cds-fluid-display-02-font-weight: 600;
+  --cds-fluid-display-02-line-height: 1.19;
+  --cds-fluid-display-02-letter-spacing: 0;
+  --cds-fluid-display-03-font-size: 2.625rem;
+  --cds-fluid-display-03-font-weight: 300;
+  --cds-fluid-display-03-line-height: 1.19;
+  --cds-fluid-display-03-letter-spacing: 0;
+  --cds-fluid-display-04-font-size: 2.625rem;
+  --cds-fluid-display-04-font-weight: 600;
+  --cds-fluid-display-04-line-height: 1.19;
+  --cds-fluid-display-04-letter-spacing: 0;
   --cds-spacing-01: 0.125rem;
   --cds-spacing-02: 0.25rem;
   --cds-spacing-03: 0.5rem;
@@ -23029,6 +24407,8 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--trending-card {
   transition-timing-function: cubic-bezier(0.2, 0, 0.38, 0.9);
   display: block;
@@ -23079,6 +24459,23 @@ li.bx--accordion__item--disabled:last-of-type {
   color: var(--cds-text-02, #c6c6c6);
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 .bx--structured-list--selection .bx--structured-list-td,
 .bx--structured-list--selection .bx--structured-list-th {
@@ -23413,6 +24810,73 @@ li.bx--accordion__item--disabled:last-of-type {
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -23486,6 +24950,56 @@ li.bx--accordion__item--disabled:last-of-type {
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--wizard__navItem {
   margin-left: -1.5rem;
 }
@@ -23513,6 +25027,9 @@ li.bx--accordion__item--disabled:last-of-type {
   display: none;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 @keyframes collapse-accordion {
   0% {
     height: 100%;
@@ -23545,6 +25062,34 @@ li.bx--accordion__item--disabled:last-of-type {
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--header__list__item {
   height: inherit;
 }
@@ -23562,6 +25107,26 @@ li.bx--accordion__item--disabled:last-of-type {
   min-height: inherit;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
@@ -23906,6 +25471,12 @@ li.bx--accordion__item--disabled:last-of-type {
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--header__popover__header {
   display: flex;
   flex-wrap: nowrap;
@@ -23923,6 +25494,12 @@ li.bx--accordion__item--disabled:last-of-type {
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--header__popover__link--secondary, .security--header__popover__link--secondary:focus, .security--header__popover__link--secondary:hover, .security--header__popover__link--secondary:visited {
   color: var(--cds-inverse-link, #0f62fe);
 }
@@ -23931,6 +25508,12 @@ li.bx--accordion__item--disabled:last-of-type {
   outline-color: var(--cds-inverse-link, #0f62fe);
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
@@ -24590,6 +26173,30 @@ li.bx--accordion__item--disabled:last-of-type {
   user-select: text;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 @keyframes collapse-accordion {
   0% {
     height: 100%;
@@ -24616,6 +26223,96 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
@@ -24968,6 +26665,104 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-display-04-font-weight: 600;
   --cds-display-04-line-height: 1.19;
   --cds-display-04-letter-spacing: 0;
+  --cds-legal-01-font-size: 0.75rem;
+  --cds-legal-01-font-weight: 400;
+  --cds-legal-01-line-height: 1.33333;
+  --cds-legal-01-letter-spacing: 0.32px;
+  --cds-legal-02-font-size: 0.875rem;
+  --cds-legal-02-font-weight: 400;
+  --cds-legal-02-line-height: 1.28572;
+  --cds-legal-02-letter-spacing: 0.16px;
+  --cds-body-compact-01-font-size: 0.875rem;
+  --cds-body-compact-01-font-weight: 400;
+  --cds-body-compact-01-line-height: 1.28572;
+  --cds-body-compact-01-letter-spacing: 0.16px;
+  --cds-body-compact-02-font-size: 1rem;
+  --cds-body-compact-02-font-weight: 400;
+  --cds-body-compact-02-line-height: 1.375;
+  --cds-body-compact-02-letter-spacing: 0;
+  --cds-body-01-font-size: 0.875rem;
+  --cds-body-01-font-weight: 400;
+  --cds-body-01-line-height: 1.42857;
+  --cds-body-01-letter-spacing: 0.16px;
+  --cds-body-02-font-size: 1rem;
+  --cds-body-02-font-weight: 400;
+  --cds-body-02-line-height: 1.5;
+  --cds-body-02-letter-spacing: 0;
+  --cds-heading-compact-01-font-size: 0.875rem;
+  --cds-heading-compact-01-font-weight: 600;
+  --cds-heading-compact-01-line-height: 1.28572;
+  --cds-heading-compact-01-letter-spacing: 0.16px;
+  --cds-heading-compact-02-font-size: 1rem;
+  --cds-heading-compact-02-font-weight: 600;
+  --cds-heading-compact-02-line-height: 1.375;
+  --cds-heading-compact-02-letter-spacing: 0;
+  --cds-heading-03-font-size: 1.25rem;
+  --cds-heading-03-font-weight: 400;
+  --cds-heading-03-line-height: 1.4;
+  --cds-heading-03-letter-spacing: 0;
+  --cds-heading-04-font-size: 1.75rem;
+  --cds-heading-04-font-weight: 400;
+  --cds-heading-04-line-height: 1.28572;
+  --cds-heading-04-letter-spacing: 0;
+  --cds-heading-05-font-size: 2rem;
+  --cds-heading-05-font-weight: 400;
+  --cds-heading-05-line-height: 1.25;
+  --cds-heading-05-letter-spacing: 0;
+  --cds-heading-06-font-size: 2.625rem;
+  --cds-heading-06-font-weight: 300;
+  --cds-heading-06-line-height: 1.199;
+  --cds-heading-06-letter-spacing: 0;
+  --cds-heading-07-font-size: 3.375rem;
+  --cds-heading-07-font-weight: 300;
+  --cds-heading-07-line-height: 1.199;
+  --cds-heading-07-letter-spacing: 0;
+  --cds-fluid-heading-03-font-size: 1.25rem;
+  --cds-fluid-heading-03-font-weight: 400;
+  --cds-fluid-heading-03-line-height: 1.4;
+  --cds-fluid-heading-03-letter-spacing: 0;
+  --cds-fluid-heading-04-font-size: 1.75rem;
+  --cds-fluid-heading-04-font-weight: 400;
+  --cds-fluid-heading-04-line-height: 1.28572;
+  --cds-fluid-heading-04-letter-spacing: 0;
+  --cds-fluid-heading-05-font-size: 2rem;
+  --cds-fluid-heading-05-font-weight: 400;
+  --cds-fluid-heading-05-line-height: 1.25;
+  --cds-fluid-heading-05-letter-spacing: 0;
+  --cds-fluid-heading-06-font-size: 2rem;
+  --cds-fluid-heading-06-font-weight: 600;
+  --cds-fluid-heading-06-line-height: 1.25;
+  --cds-fluid-heading-06-letter-spacing: 0;
+  --cds-fluid-paragraph-01-font-size: 1.5rem;
+  --cds-fluid-paragraph-01-font-weight: 300;
+  --cds-fluid-paragraph-01-line-height: 1.334;
+  --cds-fluid-paragraph-01-letter-spacing: 0;
+  --cds-fluid-quotation-01-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+  --cds-fluid-quotation-01-font-size: 1.25rem;
+  --cds-fluid-quotation-01-font-weight: 400;
+  --cds-fluid-quotation-01-line-height: 1.3;
+  --cds-fluid-quotation-01-letter-spacing: 0;
+  --cds-fluid-quotation-02-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+  --cds-fluid-quotation-02-font-size: 2rem;
+  --cds-fluid-quotation-02-font-weight: 300;
+  --cds-fluid-quotation-02-line-height: 1.25;
+  --cds-fluid-quotation-02-letter-spacing: 0;
+  --cds-fluid-display-01-font-size: 2.625rem;
+  --cds-fluid-display-01-font-weight: 300;
+  --cds-fluid-display-01-line-height: 1.19;
+  --cds-fluid-display-01-letter-spacing: 0;
+  --cds-fluid-display-02-font-size: 2.625rem;
+  --cds-fluid-display-02-font-weight: 600;
+  --cds-fluid-display-02-line-height: 1.19;
+  --cds-fluid-display-02-letter-spacing: 0;
+  --cds-fluid-display-03-font-size: 2.625rem;
+  --cds-fluid-display-03-font-weight: 300;
+  --cds-fluid-display-03-line-height: 1.19;
+  --cds-fluid-display-03-letter-spacing: 0;
+  --cds-fluid-display-04-font-size: 2.625rem;
+  --cds-fluid-display-04-font-weight: 600;
+  --cds-fluid-display-04-line-height: 1.19;
+  --cds-fluid-display-04-letter-spacing: 0;
   --cds-spacing-01: 0.125rem;
   --cds-spacing-02: 0.25rem;
   --cds-spacing-03: 0.5rem;
@@ -25208,6 +27003,9 @@ li.bx--accordion__item--disabled:last-of-type {
   color: var(--cds-text-04, #ffffff);
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 @keyframes collapse-accordion {
   0% {
     height: 100%;
@@ -25234,6 +27032,35 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 @keyframes hide-feedback {
   0% {
     opacity: 1;
@@ -25256,6 +27083,7 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* stylelint-disable number-max-precision */
 .bx--snippet {
   box-sizing: border-box;
   padding: 0;
@@ -25935,6 +27763,27 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 /* stylelint-enable */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 @keyframes hide-feedback {
   0% {
     opacity: 1;
@@ -26169,6 +28018,12 @@ li.bx--accordion__item--disabled:last-of-type {
   font-size: 0;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--combo-box:hover {
   background-color: var(--cds-field-01, #262626);
 }
@@ -26193,6 +28048,10 @@ li.bx--accordion__item--disabled:last-of-type {
   padding: 0;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--content-switcher {
   display: flex;
   width: 100%;
@@ -26373,6 +28232,27 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 @keyframes hide-feedback {
   0% {
     opacity: 1;
@@ -26395,6 +28275,17 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 @keyframes fpFadeInDown {
   from {
     transform: translate3d(0, -20px, 0);
@@ -27222,6 +29113,39 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -27262,6 +29186,7 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* stylelint-disable number-max-precision */
 .bx--file {
   width: 100%;
 }
@@ -27630,6 +29555,18 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 /* stylelint-enable */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--list--nested,
 .bx--list--unordered,
 .bx--list--ordered,
@@ -27722,6 +29659,7 @@ li.bx--accordion__item--disabled:last-of-type {
   content: '\\\\0025AA';
 }
 
+/* stylelint-disable number-max-precision */
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -27762,6 +29700,21 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--modal {
   position: fixed;
   z-index: 9000;
@@ -28148,6 +30101,27 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 /* stylelint-enable */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--number {
   box-sizing: border-box;
   padding: 0;
@@ -28638,6 +30612,50 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 /* stylelint-enable */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--data-table-container + .bx--pagination {
   border-top: 0;
 }
@@ -28886,6 +30904,19 @@ span.bx--pagination__text {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--unstable-pagination {
   box-sizing: border-box;
   padding: 0;
@@ -29076,6 +31107,14 @@ span.bx--pagination__text {
   border-right: 1px solid var(--cds-ui-03, #393939);
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--radio-button-group {
   box-sizing: border-box;
   padding: 0;
@@ -29284,6 +31323,36 @@ span.bx--pagination__text {
   margin-left: 0.5rem;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--slider-container {
   display: flex;
   align-items: center;
@@ -29510,6 +31579,12 @@ span.bx--pagination__text {
 }
 
 /* stylelint-enable */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--tabs {
   box-sizing: border-box;
   padding: 0;
@@ -30467,6 +32542,14 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--text-area {
   box-sizing: border-box;
   padding: 0;
@@ -30595,6 +32678,22 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
   color: transparent;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--tile-group {
   box-sizing: border-box;
   padding: 0;
@@ -30849,18 +32948,6 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
   }
 }
 
-.bx--tile-input--checked + .bx--tile--is-selected {
-  border-top: 1px solid var(--cds-ui-01, #262626);
-}
-
-.bx--tile:not(.bx--tile--is-selected) + .bx--tile-input--checked + .bx--tile--is-selected {
-  border-top: 1px solid var(--cds-ui-05, #f4f4f4);
-}
-
-.bx--tile-input--checked:first-of-type + .bx--tile--is-selected {
-  border-top: 1px solid var(--cds-ui-05, #f4f4f4);
-}
-
 .bx--tile-content {
   width: 100%;
   height: 100%;
@@ -30908,6 +32995,10 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
   fill: var(--cds-disabled-02, #525252);
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--time-picker {
   display: flex;
   align-items: flex-end;
@@ -30983,6 +33074,13 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
   max-height: 3rem;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--toggle {
   position: absolute;
   overflow: hidden;
@@ -31356,6 +33454,17 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--header {
   position: fixed;
   z-index: 8000;
@@ -31684,6 +33793,11 @@ a.bx--header__menu-item.bx--header__menu-item--current:focus {
   outline: none;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--header-panel {
   transition-timing-function: cubic-bezier(0.2, 0, 1, 0.9);
   position: fixed;
@@ -31706,6 +33820,7 @@ a.bx--header__menu-item.bx--header__menu-item--current:focus {
   border-left: 1px solid #393939;
 }
 
+/* stylelint-disable number-max-precision */
 .bx--panel--overlay {
   position: fixed;
   z-index: 1000;
@@ -31868,6 +33983,11 @@ a.bx--header__menu-item.bx--header__menu-item--current:focus {
   display: flex;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--switcher {
   display: flex;
   flex-direction: column;
@@ -31927,6 +34047,11 @@ a.bx--header__menu-item.bx--header__menu-item--current:focus {
   color: #f4f4f4;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--side-nav {
   position: fixed;
   z-index: 8000;
@@ -32540,6 +34665,10 @@ a.bx--side-nav__link--current::before {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .bx--navigation {
   position: fixed;
   z-index: 9100;
@@ -32758,6 +34887,8 @@ a.bx--navigation-link:focus {
   outline: 0.0625rem solid var(--cds-ui-background, #161616);
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 body {
@@ -35030,7 +37161,7 @@ strong {
 .bx--type-expressive-paragraph-01 {
   font-size: 1.5rem;
   font-weight: 300;
-  line-height: 1.334;
+  line-height: 1.33333;
   letter-spacing: 0;
   font-size: calc(1.5rem + 0.25 * ((100vw - 20rem) / 46));
 }
@@ -35038,7 +37169,7 @@ strong {
 @media (min-width: 66rem) {
   .bx--type-expressive-paragraph-01 {
     font-size: 1.75rem;
-    line-height: 1.29;
+    line-height: 1.28572;
     font-size: calc(1.75rem + 0.25 * ((100vw - 66rem) / 33));
   }
 }
@@ -35448,6 +37579,511 @@ strong {
 
 @media (min-width: 99rem) {
   .bx--type-display-04 {
+    font-size: 9.75rem;
+    line-height: 1.05;
+    letter-spacing: -0.96px;
+    font-size: 9.75rem;
+  }
+}
+
+.bx--type-legal-01 {
+  font-size: var(--cds-legal-01-font-size, 0.75rem);
+  font-weight: var(--cds-legal-01-font-weight, 400);
+  line-height: var(--cds-legal-01-line-height, 1.33333);
+  letter-spacing: var(--cds-legal-01-letter-spacing, 0.32px);
+}
+
+.bx--type-legal-02 {
+  font-size: var(--cds-legal-02-font-size, 0.875rem);
+  font-weight: var(--cds-legal-02-font-weight, 400);
+  line-height: var(--cds-legal-02-line-height, 1.28572);
+  letter-spacing: var(--cds-legal-02-letter-spacing, 0.16px);
+}
+
+.bx--type-body-compact-01 {
+  font-size: var(--cds-body-compact-01-font-size, 0.875rem);
+  font-weight: var(--cds-body-compact-01-font-weight, 400);
+  line-height: var(--cds-body-compact-01-line-height, 1.28572);
+  letter-spacing: var(--cds-body-compact-01-letter-spacing, 0.16px);
+}
+
+.bx--type-body-compact-02 {
+  font-size: var(--cds-body-compact-02-font-size, 1rem);
+  font-weight: var(--cds-body-compact-02-font-weight, 400);
+  line-height: var(--cds-body-compact-02-line-height, 1.375);
+  letter-spacing: var(--cds-body-compact-02-letter-spacing, 0);
+}
+
+.bx--type-heading-compact-01 {
+  font-size: var(--cds-heading-compact-01-font-size, 0.875rem);
+  font-weight: var(--cds-heading-compact-01-font-weight, 600);
+  line-height: var(--cds-heading-compact-01-line-height, 1.28572);
+  letter-spacing: var(--cds-heading-compact-01-letter-spacing, 0.16px);
+}
+
+.bx--type-heading-compact-02 {
+  font-size: var(--cds-heading-compact-02-font-size, 1rem);
+  font-weight: var(--cds-heading-compact-02-font-weight, 600);
+  line-height: var(--cds-heading-compact-02-line-height, 1.375);
+  letter-spacing: var(--cds-heading-compact-02-letter-spacing, 0);
+}
+
+.bx--type-body-01 {
+  font-size: var(--cds-body-01-font-size, 0.875rem);
+  font-weight: var(--cds-body-01-font-weight, 400);
+  line-height: var(--cds-body-01-line-height, 1.42857);
+  letter-spacing: var(--cds-body-01-letter-spacing, 0.16px);
+}
+
+.bx--type-body-02 {
+  font-size: var(--cds-body-02-font-size, 1rem);
+  font-weight: var(--cds-body-02-font-weight, 400);
+  line-height: var(--cds-body-02-line-height, 1.5);
+  letter-spacing: var(--cds-body-02-letter-spacing, 0);
+}
+
+.bx--type-heading-03 {
+  font-size: var(--cds-heading-03-font-size, 1.25rem);
+  font-weight: var(--cds-heading-03-font-weight, 400);
+  line-height: var(--cds-heading-03-line-height, 1.4);
+  letter-spacing: var(--cds-heading-03-letter-spacing, 0);
+}
+
+.bx--type-heading-04 {
+  font-size: var(--cds-heading-04-font-size, 1.75rem);
+  font-weight: var(--cds-heading-04-font-weight, 400);
+  line-height: var(--cds-heading-04-line-height, 1.28572);
+  letter-spacing: var(--cds-heading-04-letter-spacing, 0);
+}
+
+.bx--type-heading-05 {
+  font-size: var(--cds-heading-05-font-size, 2rem);
+  font-weight: var(--cds-heading-05-font-weight, 400);
+  line-height: var(--cds-heading-05-line-height, 1.25);
+  letter-spacing: var(--cds-heading-05-letter-spacing, 0);
+}
+
+.bx--type-heading-06 {
+  font-size: var(--cds-heading-06-font-size, 2.625rem);
+  font-weight: var(--cds-heading-06-font-weight, 300);
+  line-height: var(--cds-heading-06-line-height, 1.199);
+  letter-spacing: var(--cds-heading-06-letter-spacing, 0);
+}
+
+.bx--type-heading-07 {
+  font-size: var(--cds-heading-07-font-size, 3.375rem);
+  font-weight: var(--cds-heading-07-font-weight, 300);
+  line-height: var(--cds-heading-07-line-height, 1.199);
+  letter-spacing: var(--cds-heading-07-letter-spacing, 0);
+}
+
+.bx--type-fluid-heading-03 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0;
+  font-size: calc(1.25rem + 0 * ((100vw - 20rem) / 62));
+}
+
+@media (min-width: 82rem) {
+  .bx--type-fluid-heading-03 {
+    font-size: 1.25rem;
+    line-height: 1.25;
+    font-size: calc(1.25rem + 0.25 * ((100vw - 82rem) / 17));
+  }
+}
+
+@media (min-width: 99rem) {
+  .bx--type-fluid-heading-03 {
+    font-size: 1.5rem;
+    line-height: 1.334;
+    font-size: 1.5rem;
+  }
+}
+
+.bx--type-fluid-heading-04 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.28572;
+  letter-spacing: 0;
+  font-size: calc(1.75rem + 0 * ((100vw - 20rem) / 62));
+}
+
+@media (min-width: 82rem) {
+  .bx--type-fluid-heading-04 {
+    font-size: 1.75rem;
+    line-height: 1.25;
+    font-size: calc(1.75rem + 0.25 * ((100vw - 82rem) / 17));
+  }
+}
+
+@media (min-width: 99rem) {
+  .bx--type-fluid-heading-04 {
+    font-size: 2rem;
+    font-size: 2rem;
+  }
+}
+
+.bx--type-fluid-heading-05 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 0;
+  font-size: calc(2rem + 0.25 * ((100vw - 20rem) / 22));
+}
+
+@media (min-width: 42rem) {
+  .bx--type-fluid-heading-05 {
+    font-size: 2.25rem;
+    font-weight: 300;
+    line-height: 1.22;
+    letter-spacing: 0;
+    font-size: calc(2.25rem + 0.375 * ((100vw - 42rem) / 24));
+  }
+}
+
+@media (min-width: 66rem) {
+  .bx--type-fluid-heading-05 {
+    font-size: 2.625rem;
+    font-weight: 300;
+    line-height: 1.19;
+    letter-spacing: 0;
+    font-size: calc(2.625rem + 0.375 * ((100vw - 66rem) / 16));
+  }
+}
+
+@media (min-width: 82rem) {
+  .bx--type-fluid-heading-05 {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.17;
+    letter-spacing: 0;
+    font-size: calc(3rem + 0.75 * ((100vw - 82rem) / 17));
+  }
+}
+
+@media (min-width: 99rem) {
+  .bx--type-fluid-heading-05 {
+    font-size: 3.75rem;
+    font-weight: 300;
+    letter-spacing: 0;
+    font-size: 3.75rem;
+  }
+}
+
+.bx--type-fluid-heading-06 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0;
+  font-size: calc(2rem + 0.25 * ((100vw - 20rem) / 22));
+}
+
+@media (min-width: 42rem) {
+  .bx--type-fluid-heading-06 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1.22;
+    letter-spacing: 0;
+    font-size: calc(2.25rem + 0.375 * ((100vw - 42rem) / 24));
+  }
+}
+
+@media (min-width: 66rem) {
+  .bx--type-fluid-heading-06 {
+    font-size: 2.625rem;
+    font-weight: 600;
+    line-height: 1.19;
+    letter-spacing: 0;
+    font-size: calc(2.625rem + 0.375 * ((100vw - 66rem) / 16));
+  }
+}
+
+@media (min-width: 82rem) {
+  .bx--type-fluid-heading-06 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.17;
+    letter-spacing: 0;
+    font-size: calc(3rem + 0.75 * ((100vw - 82rem) / 17));
+  }
+}
+
+@media (min-width: 99rem) {
+  .bx--type-fluid-heading-06 {
+    font-size: 3.75rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    font-size: 3.75rem;
+  }
+}
+
+.bx--type-fluid-paragraph-01 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.334;
+  letter-spacing: 0;
+  font-size: calc(1.5rem + 0.25 * ((100vw - 20rem) / 46));
+}
+
+@media (min-width: 66rem) {
+  .bx--type-fluid-paragraph-01 {
+    font-size: 1.75rem;
+    line-height: 1.28572;
+    font-size: calc(1.75rem + 0.25 * ((100vw - 66rem) / 33));
+  }
+}
+
+@media (min-width: 99rem) {
+  .bx--type-fluid-paragraph-01 {
+    font-size: 2rem;
+    line-height: 1.25;
+    font-size: 2rem;
+  }
+}
+
+.bx--type-fluid-quotation-01 {
+  font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0;
+  font-size: calc(1.25rem + 0 * ((100vw - 20rem) / 22));
+}
+
+@media (min-width: 42rem) {
+  .bx--type-fluid-quotation-01 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    font-size: calc(1.25rem + 0.25 * ((100vw - 42rem) / 24));
+  }
+}
+
+@media (min-width: 66rem) {
+  .bx--type-fluid-quotation-01 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.334;
+    letter-spacing: 0;
+    font-size: calc(1.5rem + 0.25 * ((100vw - 66rem) / 16));
+  }
+}
+
+@media (min-width: 82rem) {
+  .bx--type-fluid-quotation-01 {
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 1.28572;
+    letter-spacing: 0;
+    font-size: calc(1.75rem + 0.25 * ((100vw - 82rem) / 17));
+  }
+}
+
+@media (min-width: 99rem) {
+  .bx--type-fluid-quotation-01 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: 0;
+    font-size: 2rem;
+  }
+}
+
+.bx--type-fluid-quotation-02 {
+  font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.25;
+  letter-spacing: 0;
+  font-size: calc(2rem + 0.25 * ((100vw - 20rem) / 22));
+}
+
+@media (min-width: 42rem) {
+  .bx--type-fluid-quotation-02 {
+    font-size: 2.25rem;
+    line-height: 1.22;
+    font-size: calc(2.25rem + 0.375 * ((100vw - 42rem) / 24));
+  }
+}
+
+@media (min-width: 66rem) {
+  .bx--type-fluid-quotation-02 {
+    font-size: 2.625rem;
+    line-height: 1.19;
+    font-size: calc(2.625rem + 0.375 * ((100vw - 66rem) / 16));
+  }
+}
+
+@media (min-width: 82rem) {
+  .bx--type-fluid-quotation-02 {
+    font-size: 3rem;
+    line-height: 1.17;
+    font-size: calc(3rem + 0.75 * ((100vw - 82rem) / 17));
+  }
+}
+
+@media (min-width: 99rem) {
+  .bx--type-fluid-quotation-02 {
+    font-size: 3.75rem;
+    font-size: 3.75rem;
+  }
+}
+
+.bx--type-fluid-display-01 {
+  font-size: 2.625rem;
+  font-weight: 300;
+  line-height: 1.19;
+  letter-spacing: 0;
+  font-size: calc(2.625rem + 0 * ((100vw - 20rem) / 22));
+}
+
+@media (min-width: 42rem) {
+  .bx--type-fluid-display-01 {
+    font-size: 2.625rem;
+    font-size: calc(2.625rem + 0.75 * ((100vw - 42rem) / 24));
+  }
+}
+
+@media (min-width: 66rem) {
+  .bx--type-fluid-display-01 {
+    font-size: 3.375rem;
+    font-size: calc(3.375rem + 0.375 * ((100vw - 66rem) / 16));
+  }
+}
+
+@media (min-width: 82rem) {
+  .bx--type-fluid-display-01 {
+    font-size: 3.75rem;
+    line-height: 1.17;
+    font-size: calc(3.75rem + 1 * ((100vw - 82rem) / 17));
+  }
+}
+
+@media (min-width: 99rem) {
+  .bx--type-fluid-display-01 {
+    font-size: 4.75rem;
+    line-height: 1.13;
+    font-size: 4.75rem;
+  }
+}
+
+.bx--type-fluid-display-02 {
+  font-size: 2.625rem;
+  font-weight: 600;
+  line-height: 1.19;
+  letter-spacing: 0;
+  font-size: calc(2.625rem + 0 * ((100vw - 20rem) / 22));
+}
+
+@media (min-width: 42rem) {
+  .bx--type-fluid-display-02 {
+    font-size: 2.625rem;
+    font-size: calc(2.625rem + 0.75 * ((100vw - 42rem) / 24));
+  }
+}
+
+@media (min-width: 66rem) {
+  .bx--type-fluid-display-02 {
+    font-size: 3.375rem;
+    font-size: calc(3.375rem + 0.375 * ((100vw - 66rem) / 16));
+  }
+}
+
+@media (min-width: 82rem) {
+  .bx--type-fluid-display-02 {
+    font-size: 3.75rem;
+    line-height: 1.16;
+    font-size: calc(3.75rem + 1 * ((100vw - 82rem) / 17));
+  }
+}
+
+@media (min-width: 99rem) {
+  .bx--type-fluid-display-02 {
+    font-size: 4.75rem;
+    line-height: 1.13;
+    font-size: 4.75rem;
+  }
+}
+
+.bx--type-fluid-display-03 {
+  font-size: 2.625rem;
+  font-weight: 300;
+  line-height: 1.19;
+  letter-spacing: 0;
+  font-size: calc(2.625rem + 1.625 * ((100vw - 20rem) / 22));
+}
+
+@media (min-width: 42rem) {
+  .bx--type-fluid-display-03 {
+    font-size: 4.25rem;
+    line-height: 1.15;
+    font-size: calc(4.25rem + 1.5 * ((100vw - 42rem) / 24));
+  }
+}
+
+@media (min-width: 66rem) {
+  .bx--type-fluid-display-03 {
+    font-size: 5.75rem;
+    line-height: 1.11;
+    letter-spacing: -0.64px;
+    font-size: calc(5.75rem + 1.875 * ((100vw - 66rem) / 16));
+  }
+}
+
+@media (min-width: 82rem) {
+  .bx--type-fluid-display-03 {
+    font-size: 7.625rem;
+    line-height: 1.07;
+    font-size: calc(7.625rem + 2.125 * ((100vw - 82rem) / 17));
+  }
+}
+
+@media (min-width: 99rem) {
+  .bx--type-fluid-display-03 {
+    font-size: 9.75rem;
+    line-height: 1.05;
+    letter-spacing: -0.96px;
+    font-size: 9.75rem;
+  }
+}
+
+.bx--type-fluid-display-04 {
+  font-size: 2.625rem;
+  font-weight: 600;
+  line-height: 1.19;
+  letter-spacing: 0;
+  font-size: calc(2.625rem + 1.625 * ((100vw - 20rem) / 22));
+}
+
+@media (min-width: 42rem) {
+  .bx--type-fluid-display-04 {
+    font-size: 4.25rem;
+    line-height: 1.15;
+    font-size: calc(4.25rem + 1.5 * ((100vw - 42rem) / 24));
+  }
+}
+
+@media (min-width: 66rem) {
+  .bx--type-fluid-display-04 {
+    font-size: 5.75rem;
+    line-height: 1.11;
+    letter-spacing: -0.64px;
+    font-size: calc(5.75rem + 1.875 * ((100vw - 66rem) / 16));
+  }
+}
+
+@media (min-width: 82rem) {
+  .bx--type-fluid-display-04 {
+    font-size: 7.625rem;
+    line-height: 1.07;
+    letter-spacing: -0.64px;
+    font-size: calc(7.625rem + 2.125 * ((100vw - 82rem) / 17));
+  }
+}
+
+@media (min-width: 99rem) {
+  .bx--type-fluid-display-04 {
     font-size: 9.75rem;
     line-height: 1.05;
     letter-spacing: -0.96px;
