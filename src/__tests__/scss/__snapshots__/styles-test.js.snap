@@ -157,33 +157,33 @@ exports[`Styles Bundle 1`] = `
   --cds-danger: #da1e28;
   --cds-caption-01-font-size: 0.75rem;
   --cds-caption-01-font-weight: 400;
-  --cds-caption-01-line-height: 1.34;
+  --cds-caption-01-line-height: 1.33333;
   --cds-caption-01-letter-spacing: 0.32px;
   --cds-caption-02-font-size: 0.875rem;
   --cds-caption-02-font-weight: 400;
-  --cds-caption-02-line-height: 1.29;
+  --cds-caption-02-line-height: 1.28572;
   --cds-caption-02-letter-spacing: 0.32px;
   --cds-label-01-font-size: 0.75rem;
   --cds-label-01-font-weight: 400;
-  --cds-label-01-line-height: 1.34;
+  --cds-label-01-line-height: 1.33333;
   --cds-label-01-letter-spacing: 0.32px;
   --cds-label-02-font-size: 0.875rem;
   --cds-label-02-font-weight: 400;
-  --cds-label-02-line-height: 1.29;
-  --cds-label-02-letter-spacing: 0.32px;
+  --cds-label-02-line-height: 1.28572;
+  --cds-label-02-letter-spacing: 0.16px;
   --cds-helper-text-01-font-size: 0.75rem;
-  --cds-helper-text-01-line-height: 1.34;
+  --cds-helper-text-01-line-height: 1.33333;
   --cds-helper-text-01-letter-spacing: 0.32px;
   --cds-helper-text-02-font-size: 0.875rem;
-  --cds-helper-text-02-line-height: 1.29;
-  --cds-helper-text-02-letter-spacing: 0.32px;
+  --cds-helper-text-02-line-height: 1.28572;
+  --cds-helper-text-02-letter-spacing: 0.16px;
   --cds-body-short-01-font-size: 0.875rem;
   --cds-body-short-01-font-weight: 400;
-  --cds-body-short-01-line-height: 1.29;
+  --cds-body-short-01-line-height: 1.28572;
   --cds-body-short-01-letter-spacing: 0.16px;
   --cds-body-long-01-font-size: 0.875rem;
   --cds-body-long-01-font-weight: 400;
-  --cds-body-long-01-line-height: 1.43;
+  --cds-body-long-01-line-height: 1.42857;
   --cds-body-long-01-letter-spacing: 0.16px;
   --cds-body-short-02-font-size: 1rem;
   --cds-body-short-02-font-weight: 400;
@@ -196,24 +196,24 @@ exports[`Styles Bundle 1`] = `
   --cds-code-01-font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
   --cds-code-01-font-size: 0.75rem;
   --cds-code-01-font-weight: 400;
-  --cds-code-01-line-height: 1.34;
+  --cds-code-01-line-height: 1.33333;
   --cds-code-01-letter-spacing: 0.32px;
   --cds-code-02-font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
   --cds-code-02-font-size: 0.875rem;
   --cds-code-02-font-weight: 400;
-  --cds-code-02-line-height: 1.43;
+  --cds-code-02-line-height: 1.42857;
   --cds-code-02-letter-spacing: 0.32px;
   --cds-heading-01-font-size: 0.875rem;
   --cds-heading-01-font-weight: 600;
-  --cds-heading-01-line-height: 1.29;
+  --cds-heading-01-line-height: 1.42857;
   --cds-heading-01-letter-spacing: 0.16px;
   --cds-productive-heading-01-font-size: 0.875rem;
   --cds-productive-heading-01-font-weight: 600;
-  --cds-productive-heading-01-line-height: 1.29;
+  --cds-productive-heading-01-line-height: 1.28572;
   --cds-productive-heading-01-letter-spacing: 0.16px;
   --cds-heading-02-font-size: 1rem;
   --cds-heading-02-font-weight: 600;
-  --cds-heading-02-line-height: 1.375;
+  --cds-heading-02-line-height: 1.5;
   --cds-heading-02-letter-spacing: 0;
   --cds-productive-heading-02-font-size: 1rem;
   --cds-productive-heading-02-font-weight: 600;
@@ -225,7 +225,7 @@ exports[`Styles Bundle 1`] = `
   --cds-productive-heading-03-letter-spacing: 0;
   --cds-productive-heading-04-font-size: 1.75rem;
   --cds-productive-heading-04-font-weight: 400;
-  --cds-productive-heading-04-line-height: 1.29;
+  --cds-productive-heading-04-line-height: 1.28572;
   --cds-productive-heading-04-letter-spacing: 0;
   --cds-productive-heading-05-font-size: 2rem;
   --cds-productive-heading-05-font-weight: 400;
@@ -237,7 +237,7 @@ exports[`Styles Bundle 1`] = `
   --cds-productive-heading-06-letter-spacing: 0;
   --cds-productive-heading-07-font-size: 3.375rem;
   --cds-productive-heading-07-font-weight: 300;
-  --cds-productive-heading-07-line-height: 1.19;
+  --cds-productive-heading-07-line-height: 1.199;
   --cds-productive-heading-07-letter-spacing: 0;
   --cds-expressive-heading-01-font-size: 0.875rem;
   --cds-expressive-heading-01-font-weight: 600;
@@ -253,7 +253,7 @@ exports[`Styles Bundle 1`] = `
   --cds-expressive-heading-03-letter-spacing: 0;
   --cds-expressive-heading-04-font-size: 1.75rem;
   --cds-expressive-heading-04-font-weight: 400;
-  --cds-expressive-heading-04-line-height: 1.29;
+  --cds-expressive-heading-04-line-height: 1.28572;
   --cds-expressive-heading-04-letter-spacing: 0;
   --cds-expressive-heading-05-font-size: 2rem;
   --cds-expressive-heading-05-font-weight: 400;
@@ -267,10 +267,12 @@ exports[`Styles Bundle 1`] = `
   --cds-expressive-paragraph-01-font-weight: 300;
   --cds-expressive-paragraph-01-line-height: 1.334;
   --cds-expressive-paragraph-01-letter-spacing: 0;
+  --cds-quotation-01-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
   --cds-quotation-01-font-size: 1.25rem;
   --cds-quotation-01-font-weight: 400;
   --cds-quotation-01-line-height: 1.3;
   --cds-quotation-01-letter-spacing: 0;
+  --cds-quotation-02-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
   --cds-quotation-02-font-size: 2rem;
   --cds-quotation-02-font-weight: 300;
   --cds-quotation-02-line-height: 1.25;
@@ -629,33 +631,33 @@ exports[`Styles Bundle 1`] = `
   --cds-danger: #da1e28;
   --cds-caption-01-font-size: 0.75rem;
   --cds-caption-01-font-weight: 400;
-  --cds-caption-01-line-height: 1.34;
+  --cds-caption-01-line-height: 1.33333;
   --cds-caption-01-letter-spacing: 0.32px;
   --cds-caption-02-font-size: 0.875rem;
   --cds-caption-02-font-weight: 400;
-  --cds-caption-02-line-height: 1.29;
+  --cds-caption-02-line-height: 1.28572;
   --cds-caption-02-letter-spacing: 0.32px;
   --cds-label-01-font-size: 0.75rem;
   --cds-label-01-font-weight: 400;
-  --cds-label-01-line-height: 1.34;
+  --cds-label-01-line-height: 1.33333;
   --cds-label-01-letter-spacing: 0.32px;
   --cds-label-02-font-size: 0.875rem;
   --cds-label-02-font-weight: 400;
-  --cds-label-02-line-height: 1.29;
-  --cds-label-02-letter-spacing: 0.32px;
+  --cds-label-02-line-height: 1.28572;
+  --cds-label-02-letter-spacing: 0.16px;
   --cds-helper-text-01-font-size: 0.75rem;
-  --cds-helper-text-01-line-height: 1.34;
+  --cds-helper-text-01-line-height: 1.33333;
   --cds-helper-text-01-letter-spacing: 0.32px;
   --cds-helper-text-02-font-size: 0.875rem;
-  --cds-helper-text-02-line-height: 1.29;
-  --cds-helper-text-02-letter-spacing: 0.32px;
+  --cds-helper-text-02-line-height: 1.28572;
+  --cds-helper-text-02-letter-spacing: 0.16px;
   --cds-body-short-01-font-size: 0.875rem;
   --cds-body-short-01-font-weight: 400;
-  --cds-body-short-01-line-height: 1.29;
+  --cds-body-short-01-line-height: 1.28572;
   --cds-body-short-01-letter-spacing: 0.16px;
   --cds-body-long-01-font-size: 0.875rem;
   --cds-body-long-01-font-weight: 400;
-  --cds-body-long-01-line-height: 1.43;
+  --cds-body-long-01-line-height: 1.42857;
   --cds-body-long-01-letter-spacing: 0.16px;
   --cds-body-short-02-font-size: 1rem;
   --cds-body-short-02-font-weight: 400;
@@ -668,24 +670,24 @@ exports[`Styles Bundle 1`] = `
   --cds-code-01-font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
   --cds-code-01-font-size: 0.75rem;
   --cds-code-01-font-weight: 400;
-  --cds-code-01-line-height: 1.34;
+  --cds-code-01-line-height: 1.33333;
   --cds-code-01-letter-spacing: 0.32px;
   --cds-code-02-font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
   --cds-code-02-font-size: 0.875rem;
   --cds-code-02-font-weight: 400;
-  --cds-code-02-line-height: 1.43;
+  --cds-code-02-line-height: 1.42857;
   --cds-code-02-letter-spacing: 0.32px;
   --cds-heading-01-font-size: 0.875rem;
   --cds-heading-01-font-weight: 600;
-  --cds-heading-01-line-height: 1.29;
+  --cds-heading-01-line-height: 1.42857;
   --cds-heading-01-letter-spacing: 0.16px;
   --cds-productive-heading-01-font-size: 0.875rem;
   --cds-productive-heading-01-font-weight: 600;
-  --cds-productive-heading-01-line-height: 1.29;
+  --cds-productive-heading-01-line-height: 1.28572;
   --cds-productive-heading-01-letter-spacing: 0.16px;
   --cds-heading-02-font-size: 1rem;
   --cds-heading-02-font-weight: 600;
-  --cds-heading-02-line-height: 1.375;
+  --cds-heading-02-line-height: 1.5;
   --cds-heading-02-letter-spacing: 0;
   --cds-productive-heading-02-font-size: 1rem;
   --cds-productive-heading-02-font-weight: 600;
@@ -697,7 +699,7 @@ exports[`Styles Bundle 1`] = `
   --cds-productive-heading-03-letter-spacing: 0;
   --cds-productive-heading-04-font-size: 1.75rem;
   --cds-productive-heading-04-font-weight: 400;
-  --cds-productive-heading-04-line-height: 1.29;
+  --cds-productive-heading-04-line-height: 1.28572;
   --cds-productive-heading-04-letter-spacing: 0;
   --cds-productive-heading-05-font-size: 2rem;
   --cds-productive-heading-05-font-weight: 400;
@@ -709,7 +711,7 @@ exports[`Styles Bundle 1`] = `
   --cds-productive-heading-06-letter-spacing: 0;
   --cds-productive-heading-07-font-size: 3.375rem;
   --cds-productive-heading-07-font-weight: 300;
-  --cds-productive-heading-07-line-height: 1.19;
+  --cds-productive-heading-07-line-height: 1.199;
   --cds-productive-heading-07-letter-spacing: 0;
   --cds-expressive-heading-01-font-size: 0.875rem;
   --cds-expressive-heading-01-font-weight: 600;
@@ -725,7 +727,7 @@ exports[`Styles Bundle 1`] = `
   --cds-expressive-heading-03-letter-spacing: 0;
   --cds-expressive-heading-04-font-size: 1.75rem;
   --cds-expressive-heading-04-font-weight: 400;
-  --cds-expressive-heading-04-line-height: 1.29;
+  --cds-expressive-heading-04-line-height: 1.28572;
   --cds-expressive-heading-04-letter-spacing: 0;
   --cds-expressive-heading-05-font-size: 2rem;
   --cds-expressive-heading-05-font-weight: 400;
@@ -739,10 +741,12 @@ exports[`Styles Bundle 1`] = `
   --cds-expressive-paragraph-01-font-weight: 300;
   --cds-expressive-paragraph-01-line-height: 1.334;
   --cds-expressive-paragraph-01-letter-spacing: 0;
+  --cds-quotation-01-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
   --cds-quotation-01-font-size: 1.25rem;
   --cds-quotation-01-font-weight: 400;
   --cds-quotation-01-line-height: 1.3;
   --cds-quotation-01-letter-spacing: 0;
+  --cds-quotation-02-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
   --cds-quotation-02-font-size: 2rem;
   --cds-quotation-02-font-weight: 300;
   --cds-quotation-02-line-height: 1.25;
@@ -967,7 +971,7 @@ h2 {
 h3 {
   font-size: var(--cds-productive-heading-04-font-size, 1.75rem);
   font-weight: var(--cds-productive-heading-04-font-weight, 400);
-  line-height: var(--cds-productive-heading-04-line-height, 1.29);
+  line-height: var(--cds-productive-heading-04-line-height, 1.28572);
   letter-spacing: var(--cds-productive-heading-04-letter-spacing, 0);
 }
 
@@ -988,7 +992,7 @@ h5 {
 h6 {
   font-size: var(--cds-productive-heading-01-font-size, 0.875rem);
   font-weight: var(--cds-productive-heading-01-font-weight, 600);
-  line-height: var(--cds-productive-heading-01-line-height, 1.29);
+  line-height: var(--cds-productive-heading-01-line-height, 1.28572);
   letter-spacing: var(--cds-productive-heading-01-letter-spacing, 0.16px);
 }
 
@@ -2234,6 +2238,8 @@ body {
   white-space: nowrap;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 @font-face {
   font-display: auto;
   font-family: 'IBM Plex Mono';
@@ -3021,14 +3027,14 @@ body {
 .ibm-type-a {
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
+  line-height: var(--cds-caption-01-line-height, 1.33333);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
 }
 
 .ibm-type-b {
   font-size: var(--cds-body-long-01-font-size, 0.875rem);
   font-weight: var(--cds-body-long-01-font-weight, 400);
-  line-height: var(--cds-body-long-01-line-height, 1.43);
+  line-height: var(--cds-body-long-01-line-height, 1.42857);
   letter-spacing: var(--cds-body-long-01-letter-spacing, 0.16px);
 }
 
@@ -3042,7 +3048,7 @@ body {
 .ibm-type-d {
   font-size: var(--cds-heading-02-font-size, 1rem);
   font-weight: var(--cds-heading-02-font-weight, 600);
-  line-height: var(--cds-heading-02-line-height, 1.375);
+  line-height: var(--cds-heading-02-line-height, 1.5);
   letter-spacing: var(--cds-heading-02-letter-spacing, 0);
 }
 
@@ -3056,7 +3062,7 @@ body {
 .ibm-type-f {
   font-size: 1.75rem;
   font-weight: 400;
-  line-height: 1.29;
+  line-height: 1.28572;
   letter-spacing: 0;
   font-size: calc(1.75rem + 0 * ((100vw - 20rem) / 62));
 }
@@ -3079,7 +3085,7 @@ body {
 .ibm-type-g {
   font-size: var(--cds-productive-heading-04-font-size, 1.75rem);
   font-weight: var(--cds-productive-heading-04-font-weight, 400);
-  line-height: var(--cds-productive-heading-04-line-height, 1.29);
+  line-height: var(--cds-productive-heading-04-line-height, 1.28572);
   letter-spacing: var(--cds-productive-heading-04-letter-spacing, 0);
 }
 
@@ -3223,7 +3229,7 @@ body {
   vertical-align: baseline;
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   display: inline-flex;
   color: var(--cds-link-01, #78a9ff);
@@ -3277,7 +3283,7 @@ body {
   vertical-align: baseline;
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   color: var(--cds-disabled-02, #525252);
   cursor: not-allowed;
@@ -3316,7 +3322,7 @@ body {
 
 .bx--link--sm {
   font-size: var(--cds-helper-text-01-font-size, 0.75rem);
-  line-height: var(--cds-helper-text-01-line-height, 1.34);
+  line-height: var(--cds-helper-text-01-line-height, 1.33333);
   letter-spacing: var(--cds-helper-text-01-letter-spacing, 0.32px);
 }
 
@@ -3343,7 +3349,7 @@ body {
   vertical-align: baseline;
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   display: inline;
 }
@@ -3537,6 +3543,7 @@ body {
   height: 1.5rem;
 }
 
+/* stylelint-disable number-max-precision */
 .security--card--skeleton__wrapper {
   display: flex;
 }
@@ -3545,6 +3552,7 @@ body {
   margin-right: 0.5rem;
 }
 
+/* stylelint-disable number-max-precision */
 .security--card {
   display: flex;
   width: auto;
@@ -3595,7 +3603,7 @@ body {
 .security--card__header__title {
   font-size: var(--cds-heading-01-font-size, 0.875rem);
   font-weight: var(--cds-heading-01-font-weight, 600);
-  line-height: var(--cds-heading-01-line-height, 1.29);
+  line-height: var(--cds-heading-01-line-height, 1.42857);
   letter-spacing: var(--cds-heading-01-letter-spacing, 0.16px);
   margin-top: 0;
   margin-bottom: 1rem;
@@ -3604,7 +3612,7 @@ body {
 .security--card__header__tag {
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
+  line-height: var(--cds-caption-01-line-height, 1.33333);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
@@ -3617,7 +3625,7 @@ body {
 .security--card__body__text {
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
+  line-height: var(--cds-caption-01-line-height, 1.33333);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
   margin-bottom: 1rem;
 }
@@ -3625,7 +3633,7 @@ body {
 .security--card__footer {
   font-size: var(--cds-label-01-font-size, 0.75rem);
   font-weight: var(--cds-label-01-font-weight, 400);
-  line-height: var(--cds-label-01-line-height, 1.34);
+  line-height: var(--cds-label-01-line-height, 1.33333);
   letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
   margin-top: auto;
 }
@@ -3654,7 +3662,7 @@ body {
   vertical-align: baseline;
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   background-color: var(--cds-ui-background, #161616);
   color: var(--cds-text-01, #f4f4f4);
@@ -3677,7 +3685,7 @@ body {
   vertical-align: baseline;
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   position: relative;
   display: inline-flex;
@@ -3979,7 +3987,7 @@ body {
   transform: translateX(-50%);
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
@@ -4194,7 +4202,7 @@ body {
   transform: translateX(-50%);
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
@@ -4501,7 +4509,7 @@ body {
   transform: translateX(-50%);
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
@@ -4803,7 +4811,7 @@ body {
   transform: translateX(-50%);
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
@@ -5108,7 +5116,7 @@ body {
   transform: translateX(-50%);
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
@@ -5660,7 +5668,7 @@ body {
 .bx--list-box__wrapper--inline .bx--label {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
@@ -5972,7 +5980,7 @@ body {
 .bx--list-box__label {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   overflow: hidden;
   color: var(--cds-text-01, #f4f4f4);
@@ -6099,7 +6107,7 @@ body {
 .bx--list-box__selection--multi {
   font-size: var(--cds-label-01-font-size, 0.75rem);
   font-weight: var(--cds-label-01-font-weight, 400);
-  line-height: var(--cds-label-01-line-height, 1.34);
+  line-height: var(--cds-label-01-line-height, 1.33333);
   letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
   position: static;
   top: auto;
@@ -6195,7 +6203,7 @@ body {
 .bx--list-box__menu-item {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   position: relative;
   height: 2.5rem;
@@ -6448,7 +6456,7 @@ body {
 .bx--dropdown__wrapper--inline .bx--label {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
@@ -6611,7 +6619,7 @@ button.bx--dropdown-text:focus {
 .bx--dropdown-text {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   display: block;
   overflow: hidden;
@@ -6635,7 +6643,7 @@ button.bx--dropdown-text:focus {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   position: absolute;
   z-index: 9100;
@@ -7255,7 +7263,7 @@ a.bx--overflow-menu-options__btn::before {
   vertical-align: baseline;
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   outline: 2px solid transparent;
   outline-offset: -2px;
@@ -7492,6 +7500,8 @@ a.bx--overflow-menu-options__btn::before {
   fill: var(--cds-text-03, #6f6f6f);
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--button--icon {
   box-sizing: border-box;
   padding: 0;
@@ -7600,7 +7610,7 @@ a.bx--overflow-menu-options__btn::before {
 .security--button--icon--tooltip::before {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   position: absolute;
   display: flex;
@@ -7694,6 +7704,13 @@ a.bx--overflow-menu-options__btn::before {
   transform: translate(0.25rem, -50%);
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--panel--v2 {
   position: fixed;
   z-index: 9000;
@@ -7860,33 +7877,33 @@ a.bx--overflow-menu-options__btn::before {
   --cds-danger: #da1e28;
   --cds-caption-01-font-size: 0.75rem;
   --cds-caption-01-font-weight: 400;
-  --cds-caption-01-line-height: 1.34;
+  --cds-caption-01-line-height: 1.33333;
   --cds-caption-01-letter-spacing: 0.32px;
   --cds-caption-02-font-size: 0.875rem;
   --cds-caption-02-font-weight: 400;
-  --cds-caption-02-line-height: 1.29;
+  --cds-caption-02-line-height: 1.28572;
   --cds-caption-02-letter-spacing: 0.32px;
   --cds-label-01-font-size: 0.75rem;
   --cds-label-01-font-weight: 400;
-  --cds-label-01-line-height: 1.34;
+  --cds-label-01-line-height: 1.33333;
   --cds-label-01-letter-spacing: 0.32px;
   --cds-label-02-font-size: 0.875rem;
   --cds-label-02-font-weight: 400;
-  --cds-label-02-line-height: 1.29;
-  --cds-label-02-letter-spacing: 0.32px;
+  --cds-label-02-line-height: 1.28572;
+  --cds-label-02-letter-spacing: 0.16px;
   --cds-helper-text-01-font-size: 0.75rem;
-  --cds-helper-text-01-line-height: 1.34;
+  --cds-helper-text-01-line-height: 1.33333;
   --cds-helper-text-01-letter-spacing: 0.32px;
   --cds-helper-text-02-font-size: 0.875rem;
-  --cds-helper-text-02-line-height: 1.29;
-  --cds-helper-text-02-letter-spacing: 0.32px;
+  --cds-helper-text-02-line-height: 1.28572;
+  --cds-helper-text-02-letter-spacing: 0.16px;
   --cds-body-short-01-font-size: 0.875rem;
   --cds-body-short-01-font-weight: 400;
-  --cds-body-short-01-line-height: 1.29;
+  --cds-body-short-01-line-height: 1.28572;
   --cds-body-short-01-letter-spacing: 0.16px;
   --cds-body-long-01-font-size: 0.875rem;
   --cds-body-long-01-font-weight: 400;
-  --cds-body-long-01-line-height: 1.43;
+  --cds-body-long-01-line-height: 1.42857;
   --cds-body-long-01-letter-spacing: 0.16px;
   --cds-body-short-02-font-size: 1rem;
   --cds-body-short-02-font-weight: 400;
@@ -7899,24 +7916,24 @@ a.bx--overflow-menu-options__btn::before {
   --cds-code-01-font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
   --cds-code-01-font-size: 0.75rem;
   --cds-code-01-font-weight: 400;
-  --cds-code-01-line-height: 1.34;
+  --cds-code-01-line-height: 1.33333;
   --cds-code-01-letter-spacing: 0.32px;
   --cds-code-02-font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
   --cds-code-02-font-size: 0.875rem;
   --cds-code-02-font-weight: 400;
-  --cds-code-02-line-height: 1.43;
+  --cds-code-02-line-height: 1.42857;
   --cds-code-02-letter-spacing: 0.32px;
   --cds-heading-01-font-size: 0.875rem;
   --cds-heading-01-font-weight: 600;
-  --cds-heading-01-line-height: 1.29;
+  --cds-heading-01-line-height: 1.42857;
   --cds-heading-01-letter-spacing: 0.16px;
   --cds-productive-heading-01-font-size: 0.875rem;
   --cds-productive-heading-01-font-weight: 600;
-  --cds-productive-heading-01-line-height: 1.29;
+  --cds-productive-heading-01-line-height: 1.28572;
   --cds-productive-heading-01-letter-spacing: 0.16px;
   --cds-heading-02-font-size: 1rem;
   --cds-heading-02-font-weight: 600;
-  --cds-heading-02-line-height: 1.375;
+  --cds-heading-02-line-height: 1.5;
   --cds-heading-02-letter-spacing: 0;
   --cds-productive-heading-02-font-size: 1rem;
   --cds-productive-heading-02-font-weight: 600;
@@ -7928,7 +7945,7 @@ a.bx--overflow-menu-options__btn::before {
   --cds-productive-heading-03-letter-spacing: 0;
   --cds-productive-heading-04-font-size: 1.75rem;
   --cds-productive-heading-04-font-weight: 400;
-  --cds-productive-heading-04-line-height: 1.29;
+  --cds-productive-heading-04-line-height: 1.28572;
   --cds-productive-heading-04-letter-spacing: 0;
   --cds-productive-heading-05-font-size: 2rem;
   --cds-productive-heading-05-font-weight: 400;
@@ -7940,7 +7957,7 @@ a.bx--overflow-menu-options__btn::before {
   --cds-productive-heading-06-letter-spacing: 0;
   --cds-productive-heading-07-font-size: 3.375rem;
   --cds-productive-heading-07-font-weight: 300;
-  --cds-productive-heading-07-line-height: 1.19;
+  --cds-productive-heading-07-line-height: 1.199;
   --cds-productive-heading-07-letter-spacing: 0;
   --cds-expressive-heading-01-font-size: 0.875rem;
   --cds-expressive-heading-01-font-weight: 600;
@@ -7956,7 +7973,7 @@ a.bx--overflow-menu-options__btn::before {
   --cds-expressive-heading-03-letter-spacing: 0;
   --cds-expressive-heading-04-font-size: 1.75rem;
   --cds-expressive-heading-04-font-weight: 400;
-  --cds-expressive-heading-04-line-height: 1.29;
+  --cds-expressive-heading-04-line-height: 1.28572;
   --cds-expressive-heading-04-letter-spacing: 0;
   --cds-expressive-heading-05-font-size: 2rem;
   --cds-expressive-heading-05-font-weight: 400;
@@ -7970,10 +7987,12 @@ a.bx--overflow-menu-options__btn::before {
   --cds-expressive-paragraph-01-font-weight: 300;
   --cds-expressive-paragraph-01-line-height: 1.334;
   --cds-expressive-paragraph-01-letter-spacing: 0;
+  --cds-quotation-01-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
   --cds-quotation-01-font-size: 1.25rem;
   --cds-quotation-01-font-weight: 400;
   --cds-quotation-01-line-height: 1.3;
   --cds-quotation-01-letter-spacing: 0;
+  --cds-quotation-02-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
   --cds-quotation-02-font-size: 2rem;
   --cds-quotation-02-font-weight: 300;
   --cds-quotation-02-line-height: 1.25;
@@ -8242,7 +8261,7 @@ a.bx--overflow-menu-options__btn::before {
 .security--panel--v2__header--subtitle {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
@@ -8254,7 +8273,7 @@ a.bx--overflow-menu-options__btn::before {
 .security--panel--v2__body--content {
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
+  line-height: var(--cds-caption-01-line-height, 1.33333);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -8308,10 +8327,11 @@ a.bx--overflow-menu-options__btn::before {
   transition-timing-function: cubic-bezier(0.4, 0.14, 1, 1);
 }
 
+/* stylelint-disable number-max-precision */
 .security--decorator {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   display: inline-flex;
   max-width: 100%;
@@ -8403,7 +8423,7 @@ a.bx--overflow-menu-options__btn::before {
 .security--decorator.security--decorator--inline {
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
+  line-height: var(--cds-caption-01-line-height, 1.33333);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
   height: 1.25rem;
   vertical-align: middle;
@@ -8484,7 +8504,7 @@ a.bx--overflow-menu-options__btn::before {
 .bx--form-item {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   display: flex;
   flex: 1 1 auto;
@@ -8502,7 +8522,7 @@ a.bx--overflow-menu-options__btn::before {
   vertical-align: baseline;
   font-size: var(--cds-label-01-font-size, 0.75rem);
   font-weight: var(--cds-label-01-font-weight, 400);
-  line-height: var(--cds-label-01-line-height, 1.34);
+  line-height: var(--cds-label-01-line-height, 1.33333);
   letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
   display: inline-block;
   margin-bottom: 0.5rem;
@@ -8521,7 +8541,7 @@ a.bx--overflow-menu-options__btn::before {
 .bx--label .bx--tooltip__trigger {
   font-size: var(--cds-label-01-font-size, 0.75rem);
   font-weight: var(--cds-label-01-font-weight, 400);
-  line-height: var(--cds-label-01-line-height, 1.34);
+  line-height: var(--cds-label-01-line-height, 1.33333);
   letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
 }
 
@@ -8652,7 +8672,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
   vertical-align: baseline;
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
+  line-height: var(--cds-caption-01-line-height, 1.33333);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
   display: none;
   overflow: hidden;
@@ -8672,7 +8692,7 @@ input:not(output):not([data-invalid]):-moz-ui-invalid {
 
 .bx--form__helper-text {
   font-size: var(--cds-helper-text-01-font-size, 0.75rem);
-  line-height: var(--cds-helper-text-01-line-height, 1.34);
+  line-height: var(--cds-helper-text-01-line-height, 1.33333);
   letter-spacing: var(--cds-helper-text-01-letter-spacing, 0.32px);
   z-index: 0;
   width: 100%;
@@ -8730,7 +8750,7 @@ fieldset[disabled] .bx--form__helper-text {
   vertical-align: baseline;
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   position: relative;
   display: flex;
@@ -8869,6 +8889,8 @@ fieldset[disabled] .bx--form__helper-text {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--scroll-gradient {
   position: relative;
   display: flex;
@@ -8971,7 +8993,7 @@ fieldset[disabled] .bx--form__helper-text {
   vertical-align: baseline;
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   outline: 2px solid transparent;
   outline-offset: -2px;
@@ -9795,7 +9817,7 @@ fieldset[disabled] .bx--form__helper-text {
 .bx--batch-summary__para {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
@@ -9959,7 +9981,7 @@ fieldset[disabled] .bx--form__helper-text {
 .bx--data-table-header__description {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   color: var(--cds-text-secondary, #c6c6c6);
 }
@@ -9973,7 +9995,7 @@ fieldset[disabled] .bx--form__helper-text {
 .bx--data-table thead {
   font-size: var(--cds-productive-heading-01-font-size, 0.875rem);
   font-weight: var(--cds-productive-heading-01-font-weight, 600);
-  line-height: var(--cds-productive-heading-01-line-height, 1.29);
+  line-height: var(--cds-productive-heading-01-line-height, 1.28572);
   letter-spacing: var(--cds-productive-heading-01-letter-spacing, 0.16px);
   background-color: var(--cds-layer-accent, #393939);
 }
@@ -9981,7 +10003,7 @@ fieldset[disabled] .bx--form__helper-text {
 .bx--data-table tbody {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   width: 100%;
   background-color: var(--cds-layer, #262626);
@@ -10472,7 +10494,7 @@ tr.bx--data-table--selected:last-of-type td {
 .bx--data-table--tall .bx--data-table--cell-secondary-text {
   font-size: var(--cds-label-01-font-size, 0.75rem);
   font-weight: var(--cds-label-01-font-weight, 400);
-  line-height: var(--cds-label-01-line-height, 1.34);
+  line-height: var(--cds-label-01-line-height, 1.33333);
   letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
 }
 
@@ -10500,7 +10522,7 @@ tr.bx--data-table--selected:last-of-type td {
 .bx--data-table--xl .bx--data-table--cell-secondary-text {
   font-size: var(--cds-label-01-font-size, 0.75rem);
   font-weight: var(--cds-label-01-font-weight, 400);
-  line-height: var(--cds-label-01-line-height, 1.34);
+  line-height: var(--cds-label-01-line-height, 1.33333);
   letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
 }
 
@@ -11478,6 +11500,7 @@ th .bx--table-sort__flex {
   white-space: nowrap;
 }
 
+/* stylelint-disable number-max-precision */
 .security--error-page {
   display: flex;
   min-height: 12.5rem;
@@ -11511,7 +11534,7 @@ th .bx--table-sort__flex {
 .security--error-page__description {
   font-size: var(--cds-heading-02-font-size, 1rem);
   font-weight: var(--cds-heading-02-font-weight, 600);
-  line-height: var(--cds-heading-02-line-height, 1.375);
+  line-height: var(--cds-heading-02-line-height, 1.5);
   letter-spacing: var(--cds-heading-02-letter-spacing, 0);
   margin-bottom: 2rem;
 }
@@ -11536,10 +11559,11 @@ th .bx--table-sort__flex {
   padding-right: 0.5rem;
 }
 
+/* stylelint-disable number-max-precision */
 .security--link--external {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   position: relative;
   box-shadow: none;
@@ -11562,6 +11586,8 @@ th .bx--table-sort__flex {
   vertical-align: middle;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 @keyframes collapse-accordion {
   0% {
     height: 100%;
@@ -11730,7 +11756,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--accordion__title {
   font-size: var(--cds-body-long-01-font-size, 0.875rem);
   font-weight: var(--cds-body-long-01-font-weight, 400);
-  line-height: var(--cds-body-long-01-line-height, 1.43);
+  line-height: var(--cds-body-long-01-line-height, 1.42857);
   letter-spacing: var(--cds-body-long-01-letter-spacing, 0.16px);
   z-index: 1;
   width: 100%;
@@ -11760,7 +11786,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--accordion__content > p {
   font-size: var(--cds-body-long-01-font-size, 0.875rem);
   font-weight: var(--cds-body-long-01-font-weight, 400);
-  line-height: var(--cds-body-long-01-line-height, 1.43);
+  line-height: var(--cds-body-long-01-line-height, 1.42857);
   letter-spacing: var(--cds-body-long-01-letter-spacing, 0.16px);
 }
 
@@ -11856,7 +11882,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--filter-category__title {
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
+  line-height: var(--cds-caption-01-line-height, 1.33333);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
   font-weight: 600;
   display: flex;
@@ -11870,6 +11896,7 @@ li.bx--accordion__item--disabled:last-of-type {
   color: var(--cds-text-02, #c6c6c6);
 }
 
+/* stylelint-disable number-max-precision */
 .security--filter-search {
   position: relative;
   margin-bottom: 1rem;
@@ -11903,7 +11930,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--filter-search__subcategory__title {
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
+  line-height: var(--cds-caption-01-line-height, 1.33333);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -11912,7 +11939,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--filter-search__results--none {
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
+  line-height: var(--cds-caption-01-line-height, 1.33333);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
 }
 
@@ -11921,10 +11948,11 @@ li.bx--accordion__item--disabled:last-of-type {
   overflow-y: auto;
 }
 
+/* stylelint-disable number-max-precision */
 .security--filter-selector {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   display: flex;
 }
@@ -11946,7 +11974,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--filter-selector__count {
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
+  line-height: var(--cds-caption-01-line-height, 1.33333);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
   margin-left: 0.75rem;
   color: var(--cds-text-02, #c6c6c6);
@@ -11959,6 +11987,7 @@ li.bx--accordion__item--disabled:last-of-type {
   white-space: nowrap;
 }
 
+/* stylelint-disable number-max-precision */
 .security--filter-subcategory {
   border-top-width: 0;
 }
@@ -12035,6 +12064,7 @@ li.bx--accordion__item--disabled:last-of-type {
   color: var(--cds-text-02, #c6c6c6);
 }
 
+/* stylelint-disable number-max-precision */
 .security--filter-panel-group {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -12044,7 +12074,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--filter-panel-group__title {
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
+  line-height: var(--cds-caption-01-line-height, 1.33333);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
   font-weight: 600;
   margin-top: 0;
@@ -12117,6 +12147,7 @@ li.bx--accordion__item--disabled:last-of-type {
   color: var(--cds-text-01, #f4f4f4);
 }
 
+/* stylelint-disable number-max-precision */
 .security--filter-panel-accordion-item {
   border-top-width: 0;
 }
@@ -12128,7 +12159,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--filter-panel-accordion-item__count {
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
+  line-height: var(--cds-caption-01-line-height, 1.33333);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
 }
 
@@ -12175,10 +12206,11 @@ li.bx--accordion__item--disabled:last-of-type {
   color: var(--cds-text-01, #f4f4f4);
 }
 
+/* stylelint-disable number-max-precision */
 .security--filter-panel-checkbox__wrapper {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   display: flex;
   max-width: 100%;
@@ -12191,7 +12223,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--filter-panel-checkbox__count {
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
+  line-height: var(--cds-caption-01-line-height, 1.33333);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
 }
 
@@ -12213,6 +12245,7 @@ li.bx--accordion__item--disabled:last-of-type {
   align-items: center;
 }
 
+/* stylelint-disable number-max-precision */
 .security--filter-panel-checkbox-with-overflow-menu {
   position: relative;
   display: flex;
@@ -12266,7 +12299,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--filter-panel__title {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
@@ -12276,6 +12309,7 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-bottom: 1rem;
 }
 
+/* stylelint-disable number-max-precision */
 .security--ica-skeleton {
   width: 4rem;
 }
@@ -12331,7 +12365,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--ica__label {
   font-size: var(--cds-label-01-font-size, 0.75rem);
   font-weight: var(--cds-label-01-font-weight, 400);
-  line-height: var(--cds-label-01-line-height, 1.34);
+  line-height: var(--cds-label-01-line-height, 1.33333);
   letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
   display: block;
   margin: 0;
@@ -12341,7 +12375,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--ica__value {
   font-size: var(--cds-productive-heading-04-font-size, 1.75rem);
   font-weight: var(--cds-productive-heading-04-font-weight, 400);
-  line-height: var(--cds-productive-heading-04-line-height, 1.29);
+  line-height: var(--cds-productive-heading-04-line-height, 1.28572);
   letter-spacing: var(--cds-productive-heading-04-letter-spacing, 0);
   margin-bottom: 0;
 }
@@ -12349,7 +12383,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--ica__total {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
@@ -12370,14 +12404,14 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--ica__percentage {
   font-size: var(--cds-productive-heading-04-font-size, 1.75rem);
   font-weight: var(--cds-productive-heading-04-font-weight, 400);
-  line-height: var(--cds-productive-heading-04-line-height, 1.29);
+  line-height: var(--cds-productive-heading-04-line-height, 1.28572);
   letter-spacing: var(--cds-productive-heading-04-letter-spacing, 0);
 }
 
 .security--ica__percentage-mark {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
@@ -12398,21 +12432,21 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--ica--xl .security--ica__label {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
 .security--ica--xl .security--ica__value, .security--ica--xl .security--ica__percentage {
   font-size: var(--cds-productive-heading-07-font-size, 3.375rem);
   font-weight: var(--cds-productive-heading-07-font-weight, 300);
-  line-height: var(--cds-productive-heading-07-line-height, 1.19);
+  line-height: var(--cds-productive-heading-07-line-height, 1.199);
   letter-spacing: var(--cds-productive-heading-07-letter-spacing, 0);
 }
 
 .security--ica--xl .security--ica__total, .security--ica--xl .security--ica__percentage-mark {
   font-size: var(--cds-productive-heading-04-font-size, 1.75rem);
   font-weight: var(--cds-productive-heading-04-font-weight, 400);
-  line-height: var(--cds-productive-heading-04-line-height, 1.29);
+  line-height: var(--cds-productive-heading-04-line-height, 1.28572);
   letter-spacing: var(--cds-productive-heading-04-letter-spacing, 0);
 }
 
@@ -12420,6 +12454,8 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-top: 0.75rem;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--icon-button-bar {
   display: flex;
   overflow: none;
@@ -12488,6 +12524,8 @@ li.bx--accordion__item--disabled:last-of-type {
   background-color: var(--cds-ui-03, #393939);
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -12649,7 +12687,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--inline-loading__text {
   font-size: var(--cds-label-01-font-size, 0.75rem);
   font-weight: var(--cds-label-01-font-weight, 400);
-  line-height: var(--cds-label-01-line-height, 1.34);
+  line-height: var(--cds-label-01-line-height, 1.33333);
   letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
   color: var(--cds-text-02, #c6c6c6);
 }
@@ -12731,7 +12769,7 @@ li.bx--accordion__item--disabled:last-of-type {
   cursor: pointer;
   font-size: var(--cds-label-01-font-size, 0.75rem);
   font-weight: var(--cds-label-01-font-weight, 400);
-  line-height: var(--cds-label-01-line-height, 1.34);
+  line-height: var(--cds-label-01-line-height, 1.33333);
   letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
   background-color: var(--cds-tag-background-gray, #393939);
   color: var(--cds-tag-color-gray, #c6c6c6);
@@ -13084,10 +13122,11 @@ li.bx--accordion__item--disabled:last-of-type {
   background-color: inherit;
 }
 
+/* stylelint-disable number-max-precision */
 .security--layout-module--action-bar {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   display: flex;
   align-items: center;
@@ -13132,6 +13171,7 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-bottom: 0;
 }
 
+/* stylelint-disable number-max-precision */
 .security--layout-module--description {
   padding-bottom: 2rem;
 }
@@ -13139,7 +13179,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--layout-module--description__content {
   font-size: var(--cds-body-long-01-font-size, 0.875rem);
   font-weight: var(--cds-body-long-01-font-weight, 400);
-  line-height: var(--cds-body-long-01-line-height, 1.43);
+  line-height: var(--cds-body-long-01-line-height, 1.42857);
   letter-spacing: var(--cds-body-long-01-letter-spacing, 0.16px);
   margin-top: 0.25rem;
   margin-bottom: 1rem;
@@ -13171,6 +13211,7 @@ li.bx--accordion__item--disabled:last-of-type {
   background-color: var(--cds-hover-ui, #353535);
 }
 
+/* stylelint-disable number-max-precision */
 .security--layout-module--list-item {
   display: flex;
   padding: 1rem;
@@ -13244,7 +13285,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--layout-module--list-item__title {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
@@ -13255,14 +13296,14 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--layout-module--list-item__description {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
 .security--layout-module--list-item__label {
   font-size: var(--cds-label-01-font-size, 0.75rem);
   font-weight: var(--cds-label-01-font-weight, 400);
-  line-height: var(--cds-label-01-line-height, 1.34);
+  line-height: var(--cds-label-01-line-height, 1.33333);
   letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
   display: block;
   padding-top: 0.25rem;
@@ -13286,6 +13327,7 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-bottom: 0;
 }
 
+/* stylelint-disable number-max-precision */
 .security--layout-module--title-bar {
   display: flex;
 }
@@ -13337,7 +13379,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--layout-module--title-bar__label {
   font-size: var(--cds-label-01-font-size, 0.75rem);
   font-weight: var(--cds-label-01-font-weight, 400);
-  line-height: var(--cds-label-01-line-height, 1.34);
+  line-height: var(--cds-label-01-line-height, 1.33333);
   letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
   width: 100%;
   color: var(--cds-text-02, #c6c6c6);
@@ -13353,6 +13395,7 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-top: 0.25rem;
 }
 
+/* stylelint-disable number-max-precision */
 .security--nav {
   position: relative;
 }
@@ -13403,7 +13446,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--nav__heading {
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
+  line-height: var(--cds-caption-01-line-height, 1.33333);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
   padding: 0.75rem 2.5rem;
   margin-top: unset;
@@ -13414,7 +13457,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--nav__list {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   display: flex;
   flex-direction: column;
@@ -13458,7 +13501,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--nav__list__item {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   position: relative;
 }
@@ -13590,6 +13633,8 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-bottom: 0.5rem;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--ne-section {
   min-height: 12.5rem;
   background-position: center right;
@@ -15910,7 +15955,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--inline-notification__title {
   font-size: var(--cds-productive-heading-01-font-size, 0.875rem);
   font-weight: var(--cds-productive-heading-01-font-weight, 600);
-  line-height: var(--cds-productive-heading-01-line-height, 1.29);
+  line-height: var(--cds-productive-heading-01-line-height, 1.28572);
   letter-spacing: var(--cds-productive-heading-01-letter-spacing, 0.16px);
   margin: 0 0.25rem 0 0;
 }
@@ -15918,7 +15963,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--inline-notification__subtitle {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   word-break: break-word;
 }
@@ -16255,7 +16300,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--toast-notification__title {
   font-size: var(--cds-productive-heading-01-font-size, 0.875rem);
   font-weight: var(--cds-productive-heading-01-font-weight, 600);
-  line-height: var(--cds-productive-heading-01-line-height, 1.29);
+  line-height: var(--cds-productive-heading-01-line-height, 1.28572);
   letter-spacing: var(--cds-productive-heading-01-letter-spacing, 0.16px);
   margin-top: 1rem;
   font-weight: 600;
@@ -16265,7 +16310,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--toast-notification__subtitle {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   margin-top: 0;
   margin-bottom: 1rem;
@@ -16280,7 +16325,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--toast-notification__caption {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   padding-top: 0.5rem;
   margin-bottom: 1rem;
@@ -16312,6 +16357,15 @@ li.bx--accordion__item--disabled:last-of-type {
 }
 
 /* stylelint-enable */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--panel {
   position: fixed;
   z-index: 9000;
@@ -16477,33 +16531,33 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-danger: #da1e28;
   --cds-caption-01-font-size: 0.75rem;
   --cds-caption-01-font-weight: 400;
-  --cds-caption-01-line-height: 1.34;
+  --cds-caption-01-line-height: 1.33333;
   --cds-caption-01-letter-spacing: 0.32px;
   --cds-caption-02-font-size: 0.875rem;
   --cds-caption-02-font-weight: 400;
-  --cds-caption-02-line-height: 1.29;
+  --cds-caption-02-line-height: 1.28572;
   --cds-caption-02-letter-spacing: 0.32px;
   --cds-label-01-font-size: 0.75rem;
   --cds-label-01-font-weight: 400;
-  --cds-label-01-line-height: 1.34;
+  --cds-label-01-line-height: 1.33333;
   --cds-label-01-letter-spacing: 0.32px;
   --cds-label-02-font-size: 0.875rem;
   --cds-label-02-font-weight: 400;
-  --cds-label-02-line-height: 1.29;
-  --cds-label-02-letter-spacing: 0.32px;
+  --cds-label-02-line-height: 1.28572;
+  --cds-label-02-letter-spacing: 0.16px;
   --cds-helper-text-01-font-size: 0.75rem;
-  --cds-helper-text-01-line-height: 1.34;
+  --cds-helper-text-01-line-height: 1.33333;
   --cds-helper-text-01-letter-spacing: 0.32px;
   --cds-helper-text-02-font-size: 0.875rem;
-  --cds-helper-text-02-line-height: 1.29;
-  --cds-helper-text-02-letter-spacing: 0.32px;
+  --cds-helper-text-02-line-height: 1.28572;
+  --cds-helper-text-02-letter-spacing: 0.16px;
   --cds-body-short-01-font-size: 0.875rem;
   --cds-body-short-01-font-weight: 400;
-  --cds-body-short-01-line-height: 1.29;
+  --cds-body-short-01-line-height: 1.28572;
   --cds-body-short-01-letter-spacing: 0.16px;
   --cds-body-long-01-font-size: 0.875rem;
   --cds-body-long-01-font-weight: 400;
-  --cds-body-long-01-line-height: 1.43;
+  --cds-body-long-01-line-height: 1.42857;
   --cds-body-long-01-letter-spacing: 0.16px;
   --cds-body-short-02-font-size: 1rem;
   --cds-body-short-02-font-weight: 400;
@@ -16516,24 +16570,24 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-code-01-font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
   --cds-code-01-font-size: 0.75rem;
   --cds-code-01-font-weight: 400;
-  --cds-code-01-line-height: 1.34;
+  --cds-code-01-line-height: 1.33333;
   --cds-code-01-letter-spacing: 0.32px;
   --cds-code-02-font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
   --cds-code-02-font-size: 0.875rem;
   --cds-code-02-font-weight: 400;
-  --cds-code-02-line-height: 1.43;
+  --cds-code-02-line-height: 1.42857;
   --cds-code-02-letter-spacing: 0.32px;
   --cds-heading-01-font-size: 0.875rem;
   --cds-heading-01-font-weight: 600;
-  --cds-heading-01-line-height: 1.29;
+  --cds-heading-01-line-height: 1.42857;
   --cds-heading-01-letter-spacing: 0.16px;
   --cds-productive-heading-01-font-size: 0.875rem;
   --cds-productive-heading-01-font-weight: 600;
-  --cds-productive-heading-01-line-height: 1.29;
+  --cds-productive-heading-01-line-height: 1.28572;
   --cds-productive-heading-01-letter-spacing: 0.16px;
   --cds-heading-02-font-size: 1rem;
   --cds-heading-02-font-weight: 600;
-  --cds-heading-02-line-height: 1.375;
+  --cds-heading-02-line-height: 1.5;
   --cds-heading-02-letter-spacing: 0;
   --cds-productive-heading-02-font-size: 1rem;
   --cds-productive-heading-02-font-weight: 600;
@@ -16545,7 +16599,7 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-productive-heading-03-letter-spacing: 0;
   --cds-productive-heading-04-font-size: 1.75rem;
   --cds-productive-heading-04-font-weight: 400;
-  --cds-productive-heading-04-line-height: 1.29;
+  --cds-productive-heading-04-line-height: 1.28572;
   --cds-productive-heading-04-letter-spacing: 0;
   --cds-productive-heading-05-font-size: 2rem;
   --cds-productive-heading-05-font-weight: 400;
@@ -16557,7 +16611,7 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-productive-heading-06-letter-spacing: 0;
   --cds-productive-heading-07-font-size: 3.375rem;
   --cds-productive-heading-07-font-weight: 300;
-  --cds-productive-heading-07-line-height: 1.19;
+  --cds-productive-heading-07-line-height: 1.199;
   --cds-productive-heading-07-letter-spacing: 0;
   --cds-expressive-heading-01-font-size: 0.875rem;
   --cds-expressive-heading-01-font-weight: 600;
@@ -16573,7 +16627,7 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-expressive-heading-03-letter-spacing: 0;
   --cds-expressive-heading-04-font-size: 1.75rem;
   --cds-expressive-heading-04-font-weight: 400;
-  --cds-expressive-heading-04-line-height: 1.29;
+  --cds-expressive-heading-04-line-height: 1.28572;
   --cds-expressive-heading-04-letter-spacing: 0;
   --cds-expressive-heading-05-font-size: 2rem;
   --cds-expressive-heading-05-font-weight: 400;
@@ -16587,10 +16641,12 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-expressive-paragraph-01-font-weight: 300;
   --cds-expressive-paragraph-01-line-height: 1.334;
   --cds-expressive-paragraph-01-letter-spacing: 0;
+  --cds-quotation-01-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
   --cds-quotation-01-font-size: 1.25rem;
   --cds-quotation-01-font-weight: 400;
   --cds-quotation-01-line-height: 1.3;
   --cds-quotation-01-letter-spacing: 0;
+  --cds-quotation-02-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
   --cds-quotation-02-font-size: 2rem;
   --cds-quotation-02-font-weight: 300;
   --cds-quotation-02-line-height: 1.25;
@@ -16857,7 +16913,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--panel__header--subtitle {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
@@ -16869,7 +16925,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--panel__body--content {
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
+  line-height: var(--cds-caption-01-line-height, 1.33333);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
   padding: 1rem;
   border-bottom: 0.0625rem solid var(--cds-ui-04, #6f6f6f);
@@ -16895,6 +16951,25 @@ li.bx--accordion__item--disabled:last-of-type {
   flex-grow: 1;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--pill {
   padding: 0 0.5rem;
   border-radius: 6.25rem;
@@ -16906,10 +16981,11 @@ li.bx--accordion__item--disabled:last-of-type {
   border-radius: 3.125rem;
 }
 
+/* stylelint-disable number-max-precision */
 .security--profile-image {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   display: inline-flex;
   width: 1.75rem;
@@ -16935,7 +17011,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--tooltip__label {
   font-size: var(--cds-label-01-font-size, 0.75rem);
   font-weight: var(--cds-label-01-font-weight, 400);
-  line-height: var(--cds-label-01-line-height, 1.34);
+  line-height: var(--cds-label-01-line-height, 1.33333);
   letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
   display: inline-flex;
   align-items: center;
@@ -17094,7 +17170,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--tooltip p {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
@@ -17189,7 +17265,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--tooltip__heading {
   font-size: var(--cds-productive-heading-01-font-size, 0.875rem);
   font-weight: var(--cds-productive-heading-01-font-weight, 600);
-  line-height: var(--cds-productive-heading-01-line-height, 1.29);
+  line-height: var(--cds-productive-heading-01-line-height, 1.28572);
   letter-spacing: var(--cds-productive-heading-01-letter-spacing, 0.16px);
   margin-bottom: var(--cds-spacing-03, 0.5rem);
 }
@@ -17220,7 +17296,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--tooltip--definition .bx--tooltip__trigger {
   font-size: var(--cds-label-01-font-size, 0.75rem);
   font-weight: var(--cds-label-01-font-weight, 400);
-  line-height: var(--cds-label-01-line-height, 1.34);
+  line-height: var(--cds-label-01-line-height, 1.33333);
   letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
   position: relative;
   display: inline-flex;
@@ -17266,7 +17342,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--tooltip--definition__top p {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   color: var(--cds-inverse-01, #161616);
 }
@@ -17335,7 +17411,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--tooltip__trigger.bx--tooltip__trigger--definition {
   font-size: var(--cds-label-01-font-size, 0.75rem);
   font-weight: var(--cds-label-01-font-weight, 400);
-  line-height: var(--cds-label-01-line-height, 1.34);
+  line-height: var(--cds-label-01-line-height, 1.33333);
   letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
   border-bottom: 0.0625rem dotted var(--cds-text-02, #c6c6c6);
   transition: border-color 110ms;
@@ -17425,7 +17501,7 @@ li.bx--accordion__item--disabled:last-of-type {
   transform: translateX(-50%);
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
@@ -17718,7 +17794,7 @@ li.bx--accordion__item--disabled:last-of-type {
   transform: translateX(-50%);
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
@@ -17987,7 +18063,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--tooltip--icon__bottom::after {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   position: absolute;
   display: flex;
@@ -18237,7 +18313,7 @@ li.bx--accordion__item--disabled:last-of-type {
   transform: translateX(-50%);
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
@@ -18544,7 +18620,7 @@ li.bx--accordion__item--disabled:last-of-type {
   transform: translateX(-50%);
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
@@ -18846,7 +18922,7 @@ li.bx--accordion__item--disabled:last-of-type {
   transform: translateX(-50%);
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
@@ -19151,7 +19227,7 @@ li.bx--accordion__item--disabled:last-of-type {
   transform: translateX(-50%);
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
@@ -19455,7 +19531,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--progress-label {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   overflow: hidden;
   max-width: 5.5rem;
@@ -19512,7 +19588,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--progress-step .bx--tooltip {
   font-size: var(--cds-body-long-01-font-size, 0.875rem);
   font-weight: var(--cds-body-long-01-font-weight, 400);
-  line-height: var(--cds-body-long-01-line-height, 1.43);
+  line-height: var(--cds-body-long-01-line-height, 1.42857);
   letter-spacing: var(--cds-body-long-01-letter-spacing, 0.16px);
   display: block;
   width: 7.8125rem;
@@ -19528,7 +19604,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--progress-step .bx--tooltip_multi {
   font-size: var(--cds-body-long-01-font-size, 0.875rem);
   font-weight: var(--cds-body-long-01-font-weight, 400);
-  line-height: var(--cds-body-long-01-line-height, 1.43);
+  line-height: var(--cds-body-long-01-line-height, 1.42857);
   letter-spacing: var(--cds-body-long-01-letter-spacing, 0.16px);
   width: 9.375rem;
   height: auto;
@@ -19538,7 +19614,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--progress-optional {
   font-size: var(--cds-label-01-font-size, 0.75rem);
   font-weight: var(--cds-label-01-font-weight, 400);
-  line-height: var(--cds-label-01-line-height, 1.34);
+  line-height: var(--cds-label-01-line-height, 1.33333);
   letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
   position: absolute;
   left: 0;
@@ -19946,6 +20022,7 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-left: 0.5rem;
 }
 
+/* stylelint-disable number-max-precision */
 .security--status-indicator {
   display: flex;
   flex-direction: column;
@@ -19954,7 +20031,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--status-indicator__title {
   font-size: var(--cds-heading-02-font-size, 1rem);
   font-weight: var(--cds-heading-02-font-weight, 600);
-  line-height: var(--cds-heading-02-line-height, 1.375);
+  line-height: var(--cds-heading-02-line-height, 1.5);
   letter-spacing: var(--cds-heading-02-letter-spacing, 0);
   margin-top: 0;
   margin-bottom: 0.25rem;
@@ -19990,7 +20067,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--status-indicator__step__label {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   margin-top: 0;
   margin-bottom: 0;
@@ -20011,7 +20088,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--status-indicator__step__error-message {
   font-size: var(--cds-label-01-font-size, 0.75rem);
   font-weight: var(--cds-label-01-font-weight, 400);
-  line-height: var(--cds-label-01-line-height, 1.34);
+  line-height: var(--cds-label-01-line-height, 1.33333);
   letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
   display: inline-block;
   margin-top: 0;
@@ -20076,7 +20153,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--select-input {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   outline: 2px solid transparent;
   outline-offset: -2px;
@@ -20312,6 +20389,7 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* stylelint-disable number-max-precision */
 .security--summary-card {
   position: relative;
   display: flex;
@@ -20331,7 +20409,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--summary-card__body {
   font-size: var(--cds-body-long-01-font-size, 0.875rem);
   font-weight: var(--cds-body-long-01-font-weight, 400);
-  line-height: var(--cds-body-long-01-line-height, 1.43);
+  line-height: var(--cds-body-long-01-line-height, 1.42857);
   letter-spacing: var(--cds-body-long-01-letter-spacing, 0.16px);
   display: flex;
   overflow: hidden;
@@ -20352,7 +20430,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--summary-card__header__title {
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
+  line-height: var(--cds-caption-01-line-height, 1.33333);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
   flex-grow: 1;
   padding: 0;
@@ -20426,7 +20504,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--summary-card__action-overlay__title, .security--summary-card__action-overlay__content {
   font-size: var(--cds-body-long-01-font-size, 0.875rem);
   font-weight: var(--cds-body-long-01-font-weight, 400);
-  line-height: var(--cds-body-long-01-line-height, 1.43);
+  line-height: var(--cds-body-long-01-line-height, 1.42857);
   letter-spacing: var(--cds-body-long-01-letter-spacing, 0.16px);
   margin: 0;
 }
@@ -20492,10 +20570,11 @@ li.bx--accordion__item--disabled:last-of-type {
   background-color: var(--cds-overlay-01, rgba(22, 22, 22, 0.7));
 }
 
+/* stylelint-disable number-max-precision */
 .security--tag-wall__label {
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
+  line-height: var(--cds-caption-01-line-height, 1.33333);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -20519,7 +20598,7 @@ li.bx--accordion__item--disabled:last-of-type {
   vertical-align: baseline;
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   outline: 2px solid transparent;
   outline-offset: -2px;
@@ -20704,7 +20783,7 @@ li.bx--accordion__item--disabled:last-of-type {
   transform: translateX(-50%);
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
@@ -21108,6 +21187,14 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--filter .bx--list-box__field {
   position: fixed;
   height: 2.5rem;
@@ -21194,6 +21281,8 @@ li.bx--accordion__item--disabled:last-of-type {
   justify-content: space-between;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -21234,6 +21323,31 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--tearsheet--small {
   position: fixed;
   z-index: 9000;
@@ -21338,7 +21452,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--tearsheet--small__description {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
@@ -21371,6 +21485,22 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-left: 0;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--tag-wall-filter__tag-wall {
   min-height: 1.5rem;
   margin-top: 0.75rem;
@@ -21399,6 +21529,14 @@ li.bx--accordion__item--disabled:last-of-type {
   margin-top: 2.5rem;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--portal__overlay {
   position: fixed;
   z-index: 6000;
@@ -21423,6 +21561,8 @@ li.bx--accordion__item--disabled:last-of-type {
   z-index: 9000;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -21463,6 +21603,39 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--tearsheet {
   position: fixed;
   z-index: 9000;
@@ -21536,7 +21709,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--tearsheet__button--tertiary__text {
   font-size: var(--cds-label-01-font-size, 0.75rem);
   font-weight: var(--cds-label-01-font-weight, 400);
-  line-height: var(--cds-label-01-line-height, 1.34);
+  line-height: var(--cds-label-01-line-height, 1.33333);
   letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
   color: var(--cds-text-01, #f4f4f4);
 }
@@ -21561,7 +21734,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--tearsheet__sidebar__subtitle {
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
+  line-height: var(--cds-caption-01-line-height, 1.33333);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
   margin-top: 0;
   margin-bottom: 1.5rem;
@@ -21602,7 +21775,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--tearsheet__main__title {
   font-size: var(--cds-productive-heading-04-font-size, 1.75rem);
   font-weight: var(--cds-productive-heading-04-font-weight, 400);
-  line-height: var(--cds-productive-heading-04-line-height, 1.29);
+  line-height: var(--cds-productive-heading-04-line-height, 1.28572);
   letter-spacing: var(--cds-productive-heading-04-letter-spacing, 0);
   padding-right: 1.5rem;
   margin-top: 0;
@@ -21640,6 +21813,8 @@ li.bx--accordion__item--disabled:last-of-type {
   flex-wrap: wrap;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -21680,10 +21855,36 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--time-indicator {
   font-size: var(--cds-label-01-font-size, 0.75rem);
   font-weight: var(--cds-label-01-font-weight, 400);
-  line-height: var(--cds-label-01-line-height, 1.34);
+  line-height: var(--cds-label-01-line-height, 1.33333);
   letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
   display: flex;
   align-items: center;
@@ -21695,6 +21896,10 @@ li.bx--accordion__item--disabled:last-of-type {
   fill: var(--cds-icon-01, #f4f4f4);
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--toolbar {
   position: fixed;
   z-index: 8002;
@@ -21870,33 +22075,33 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-danger: #da1e28;
   --cds-caption-01-font-size: 0.75rem;
   --cds-caption-01-font-weight: 400;
-  --cds-caption-01-line-height: 1.34;
+  --cds-caption-01-line-height: 1.33333;
   --cds-caption-01-letter-spacing: 0.32px;
   --cds-caption-02-font-size: 0.875rem;
   --cds-caption-02-font-weight: 400;
-  --cds-caption-02-line-height: 1.29;
+  --cds-caption-02-line-height: 1.28572;
   --cds-caption-02-letter-spacing: 0.32px;
   --cds-label-01-font-size: 0.75rem;
   --cds-label-01-font-weight: 400;
-  --cds-label-01-line-height: 1.34;
+  --cds-label-01-line-height: 1.33333;
   --cds-label-01-letter-spacing: 0.32px;
   --cds-label-02-font-size: 0.875rem;
   --cds-label-02-font-weight: 400;
-  --cds-label-02-line-height: 1.29;
-  --cds-label-02-letter-spacing: 0.32px;
+  --cds-label-02-line-height: 1.28572;
+  --cds-label-02-letter-spacing: 0.16px;
   --cds-helper-text-01-font-size: 0.75rem;
-  --cds-helper-text-01-line-height: 1.34;
+  --cds-helper-text-01-line-height: 1.33333;
   --cds-helper-text-01-letter-spacing: 0.32px;
   --cds-helper-text-02-font-size: 0.875rem;
-  --cds-helper-text-02-line-height: 1.29;
-  --cds-helper-text-02-letter-spacing: 0.32px;
+  --cds-helper-text-02-line-height: 1.28572;
+  --cds-helper-text-02-letter-spacing: 0.16px;
   --cds-body-short-01-font-size: 0.875rem;
   --cds-body-short-01-font-weight: 400;
-  --cds-body-short-01-line-height: 1.29;
+  --cds-body-short-01-line-height: 1.28572;
   --cds-body-short-01-letter-spacing: 0.16px;
   --cds-body-long-01-font-size: 0.875rem;
   --cds-body-long-01-font-weight: 400;
-  --cds-body-long-01-line-height: 1.43;
+  --cds-body-long-01-line-height: 1.42857;
   --cds-body-long-01-letter-spacing: 0.16px;
   --cds-body-short-02-font-size: 1rem;
   --cds-body-short-02-font-weight: 400;
@@ -21909,24 +22114,24 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-code-01-font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
   --cds-code-01-font-size: 0.75rem;
   --cds-code-01-font-weight: 400;
-  --cds-code-01-line-height: 1.34;
+  --cds-code-01-line-height: 1.33333;
   --cds-code-01-letter-spacing: 0.32px;
   --cds-code-02-font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
   --cds-code-02-font-size: 0.875rem;
   --cds-code-02-font-weight: 400;
-  --cds-code-02-line-height: 1.43;
+  --cds-code-02-line-height: 1.42857;
   --cds-code-02-letter-spacing: 0.32px;
   --cds-heading-01-font-size: 0.875rem;
   --cds-heading-01-font-weight: 600;
-  --cds-heading-01-line-height: 1.29;
+  --cds-heading-01-line-height: 1.42857;
   --cds-heading-01-letter-spacing: 0.16px;
   --cds-productive-heading-01-font-size: 0.875rem;
   --cds-productive-heading-01-font-weight: 600;
-  --cds-productive-heading-01-line-height: 1.29;
+  --cds-productive-heading-01-line-height: 1.28572;
   --cds-productive-heading-01-letter-spacing: 0.16px;
   --cds-heading-02-font-size: 1rem;
   --cds-heading-02-font-weight: 600;
-  --cds-heading-02-line-height: 1.375;
+  --cds-heading-02-line-height: 1.5;
   --cds-heading-02-letter-spacing: 0;
   --cds-productive-heading-02-font-size: 1rem;
   --cds-productive-heading-02-font-weight: 600;
@@ -21938,7 +22143,7 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-productive-heading-03-letter-spacing: 0;
   --cds-productive-heading-04-font-size: 1.75rem;
   --cds-productive-heading-04-font-weight: 400;
-  --cds-productive-heading-04-line-height: 1.29;
+  --cds-productive-heading-04-line-height: 1.28572;
   --cds-productive-heading-04-letter-spacing: 0;
   --cds-productive-heading-05-font-size: 2rem;
   --cds-productive-heading-05-font-weight: 400;
@@ -21950,7 +22155,7 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-productive-heading-06-letter-spacing: 0;
   --cds-productive-heading-07-font-size: 3.375rem;
   --cds-productive-heading-07-font-weight: 300;
-  --cds-productive-heading-07-line-height: 1.19;
+  --cds-productive-heading-07-line-height: 1.199;
   --cds-productive-heading-07-letter-spacing: 0;
   --cds-expressive-heading-01-font-size: 0.875rem;
   --cds-expressive-heading-01-font-weight: 600;
@@ -21966,7 +22171,7 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-expressive-heading-03-letter-spacing: 0;
   --cds-expressive-heading-04-font-size: 1.75rem;
   --cds-expressive-heading-04-font-weight: 400;
-  --cds-expressive-heading-04-line-height: 1.29;
+  --cds-expressive-heading-04-line-height: 1.28572;
   --cds-expressive-heading-04-letter-spacing: 0;
   --cds-expressive-heading-05-font-size: 2rem;
   --cds-expressive-heading-05-font-weight: 400;
@@ -21980,10 +22185,12 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-expressive-paragraph-01-font-weight: 300;
   --cds-expressive-paragraph-01-line-height: 1.334;
   --cds-expressive-paragraph-01-letter-spacing: 0;
+  --cds-quotation-01-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
   --cds-quotation-01-font-size: 1.25rem;
   --cds-quotation-01-font-weight: 400;
   --cds-quotation-01-line-height: 1.3;
   --cds-quotation-01-letter-spacing: 0;
+  --cds-quotation-02-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
   --cds-quotation-02-font-size: 2rem;
   --cds-quotation-02-font-weight: 300;
   --cds-quotation-02-line-height: 1.25;
@@ -22366,33 +22573,33 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-danger: #da1e28;
   --cds-caption-01-font-size: 0.75rem;
   --cds-caption-01-font-weight: 400;
-  --cds-caption-01-line-height: 1.34;
+  --cds-caption-01-line-height: 1.33333;
   --cds-caption-01-letter-spacing: 0.32px;
   --cds-caption-02-font-size: 0.875rem;
   --cds-caption-02-font-weight: 400;
-  --cds-caption-02-line-height: 1.29;
+  --cds-caption-02-line-height: 1.28572;
   --cds-caption-02-letter-spacing: 0.32px;
   --cds-label-01-font-size: 0.75rem;
   --cds-label-01-font-weight: 400;
-  --cds-label-01-line-height: 1.34;
+  --cds-label-01-line-height: 1.33333;
   --cds-label-01-letter-spacing: 0.32px;
   --cds-label-02-font-size: 0.875rem;
   --cds-label-02-font-weight: 400;
-  --cds-label-02-line-height: 1.29;
-  --cds-label-02-letter-spacing: 0.32px;
+  --cds-label-02-line-height: 1.28572;
+  --cds-label-02-letter-spacing: 0.16px;
   --cds-helper-text-01-font-size: 0.75rem;
-  --cds-helper-text-01-line-height: 1.34;
+  --cds-helper-text-01-line-height: 1.33333;
   --cds-helper-text-01-letter-spacing: 0.32px;
   --cds-helper-text-02-font-size: 0.875rem;
-  --cds-helper-text-02-line-height: 1.29;
-  --cds-helper-text-02-letter-spacing: 0.32px;
+  --cds-helper-text-02-line-height: 1.28572;
+  --cds-helper-text-02-letter-spacing: 0.16px;
   --cds-body-short-01-font-size: 0.875rem;
   --cds-body-short-01-font-weight: 400;
-  --cds-body-short-01-line-height: 1.29;
+  --cds-body-short-01-line-height: 1.28572;
   --cds-body-short-01-letter-spacing: 0.16px;
   --cds-body-long-01-font-size: 0.875rem;
   --cds-body-long-01-font-weight: 400;
-  --cds-body-long-01-line-height: 1.43;
+  --cds-body-long-01-line-height: 1.42857;
   --cds-body-long-01-letter-spacing: 0.16px;
   --cds-body-short-02-font-size: 1rem;
   --cds-body-short-02-font-weight: 400;
@@ -22405,24 +22612,24 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-code-01-font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
   --cds-code-01-font-size: 0.75rem;
   --cds-code-01-font-weight: 400;
-  --cds-code-01-line-height: 1.34;
+  --cds-code-01-line-height: 1.33333;
   --cds-code-01-letter-spacing: 0.32px;
   --cds-code-02-font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
   --cds-code-02-font-size: 0.875rem;
   --cds-code-02-font-weight: 400;
-  --cds-code-02-line-height: 1.43;
+  --cds-code-02-line-height: 1.42857;
   --cds-code-02-letter-spacing: 0.32px;
   --cds-heading-01-font-size: 0.875rem;
   --cds-heading-01-font-weight: 600;
-  --cds-heading-01-line-height: 1.29;
+  --cds-heading-01-line-height: 1.42857;
   --cds-heading-01-letter-spacing: 0.16px;
   --cds-productive-heading-01-font-size: 0.875rem;
   --cds-productive-heading-01-font-weight: 600;
-  --cds-productive-heading-01-line-height: 1.29;
+  --cds-productive-heading-01-line-height: 1.28572;
   --cds-productive-heading-01-letter-spacing: 0.16px;
   --cds-heading-02-font-size: 1rem;
   --cds-heading-02-font-weight: 600;
-  --cds-heading-02-line-height: 1.375;
+  --cds-heading-02-line-height: 1.5;
   --cds-heading-02-letter-spacing: 0;
   --cds-productive-heading-02-font-size: 1rem;
   --cds-productive-heading-02-font-weight: 600;
@@ -22434,7 +22641,7 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-productive-heading-03-letter-spacing: 0;
   --cds-productive-heading-04-font-size: 1.75rem;
   --cds-productive-heading-04-font-weight: 400;
-  --cds-productive-heading-04-line-height: 1.29;
+  --cds-productive-heading-04-line-height: 1.28572;
   --cds-productive-heading-04-letter-spacing: 0;
   --cds-productive-heading-05-font-size: 2rem;
   --cds-productive-heading-05-font-weight: 400;
@@ -22446,7 +22653,7 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-productive-heading-06-letter-spacing: 0;
   --cds-productive-heading-07-font-size: 3.375rem;
   --cds-productive-heading-07-font-weight: 300;
-  --cds-productive-heading-07-line-height: 1.19;
+  --cds-productive-heading-07-line-height: 1.199;
   --cds-productive-heading-07-letter-spacing: 0;
   --cds-expressive-heading-01-font-size: 0.875rem;
   --cds-expressive-heading-01-font-weight: 600;
@@ -22462,7 +22669,7 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-expressive-heading-03-letter-spacing: 0;
   --cds-expressive-heading-04-font-size: 1.75rem;
   --cds-expressive-heading-04-font-weight: 400;
-  --cds-expressive-heading-04-line-height: 1.29;
+  --cds-expressive-heading-04-line-height: 1.28572;
   --cds-expressive-heading-04-letter-spacing: 0;
   --cds-expressive-heading-05-font-size: 2rem;
   --cds-expressive-heading-05-font-weight: 400;
@@ -22476,10 +22683,12 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-expressive-paragraph-01-font-weight: 300;
   --cds-expressive-paragraph-01-line-height: 1.334;
   --cds-expressive-paragraph-01-letter-spacing: 0;
+  --cds-quotation-01-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
   --cds-quotation-01-font-size: 1.25rem;
   --cds-quotation-01-font-weight: 400;
   --cds-quotation-01-line-height: 1.3;
   --cds-quotation-01-letter-spacing: 0;
+  --cds-quotation-02-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
   --cds-quotation-02-font-size: 2rem;
   --cds-quotation-02-font-weight: 300;
   --cds-quotation-02-line-height: 1.25;
@@ -22726,7 +22935,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--toolbar__content {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   overflow: hidden;
   width: 13rem;
@@ -22824,6 +23033,7 @@ li.bx--accordion__item--disabled:last-of-type {
   transition-delay: 240ms;
 }
 
+/* stylelint-disable number-max-precision */
 .security--trending-card {
   transition-timing-function: cubic-bezier(0.2, 0, 0.38, 0.9);
   display: block;
@@ -22859,7 +23069,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--trending-card__title {
   font-size: var(--cds-body-long-01-font-size, 0.875rem);
   font-weight: var(--cds-body-long-01-font-weight, 400);
-  line-height: var(--cds-body-long-01-line-height, 1.43);
+  line-height: var(--cds-body-long-01-line-height, 1.42857);
   letter-spacing: var(--cds-body-long-01-letter-spacing, 0.16px);
   margin-top: 0;
   margin-bottom: 0.25rem;
@@ -22869,11 +23079,12 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--trending-card__subtitle {
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
+  line-height: var(--cds-caption-01-line-height, 1.33333);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
   color: var(--cds-text-02, #c6c6c6);
 }
 
+/* stylelint-disable number-max-precision */
 .bx--structured-list--selection .bx--structured-list-td,
 .bx--structured-list--selection .bx--structured-list-th {
   padding-right: 1rem;
@@ -22989,7 +23200,7 @@ li.bx--accordion__item--disabled:last-of-type {
   padding: 1rem 0.5rem 0.5rem 0.5rem;
   font-size: var(--cds-productive-heading-01-font-size, 0.875rem);
   font-weight: var(--cds-productive-heading-01-font-weight, 600);
-  line-height: var(--cds-productive-heading-01-line-height, 1.29);
+  line-height: var(--cds-productive-heading-01-line-height, 1.28572);
   letter-spacing: var(--cds-productive-heading-01-letter-spacing, 0.16px);
   display: table-cell;
   height: 2.5rem;
@@ -23021,7 +23232,7 @@ li.bx--accordion__item--disabled:last-of-type {
   vertical-align: baseline;
   font-size: var(--cds-body-long-01-font-size, 0.875rem);
   font-weight: var(--cds-body-long-01-font-weight, 400);
-  line-height: var(--cds-body-long-01-line-height, 1.43);
+  line-height: var(--cds-body-long-01-line-height, 1.42857);
   letter-spacing: var(--cds-body-long-01-letter-spacing, 0.16px);
   padding: 1rem 0.5rem 1.5rem 0.5rem;
   position: relative;
@@ -23132,7 +23343,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--type-layout__container__cell {
   font-size: var(--cds-body-long-01-font-size, 0.875rem);
   font-weight: var(--cds-body-long-01-font-weight, 400);
-  line-height: var(--cds-body-long-01-line-height, 1.43);
+  line-height: var(--cds-body-long-01-line-height, 1.42857);
   letter-spacing: var(--cds-body-long-01-letter-spacing, 0.16px);
   padding: 0.5rem 1.5rem 0.5rem 0.5rem;
 }
@@ -23165,7 +23376,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--type-layout__container--sm__cell, .security--type-layout__container--xs__cell {
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
+  line-height: var(--cds-caption-01-line-height, 1.33333);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
 }
 
@@ -23196,6 +23407,17 @@ li.bx--accordion__item--disabled:last-of-type {
   border-width: 0;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -23236,6 +23458,39 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--wizard__navItem {
   margin-left: -1.5rem;
 }
@@ -23289,6 +23544,12 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--header__list__item {
   height: inherit;
 }
@@ -23306,6 +23567,13 @@ li.bx--accordion__item--disabled:last-of-type {
   min-height: inherit;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--header__notification {
   display: flex;
   width: 100%;
@@ -23360,7 +23628,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--header__notification__details {
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
+  line-height: var(--cds-caption-01-line-height, 1.33333);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
   display: block;
   margin-bottom: 0.5rem;
@@ -23490,7 +23758,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--header__notification__button--tooltip::before {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   position: absolute;
   display: flex;
@@ -23639,6 +23907,10 @@ li.bx--accordion__item--disabled:last-of-type {
   max-height: 0;
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--header__popover__header {
   display: flex;
   flex-wrap: nowrap;
@@ -23649,10 +23921,13 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--header__popover__header__title {
   font-size: var(--cds-heading-02-font-size, 1rem);
   font-weight: var(--cds-heading-02-font-weight, 600);
-  line-height: var(--cds-heading-02-line-height, 1.375);
+  line-height: var(--cds-heading-02-line-height, 1.5);
   letter-spacing: var(--cds-heading-02-letter-spacing, 0);
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--header__popover__link--secondary, .security--header__popover__link--secondary:focus, .security--header__popover__link--secondary:hover, .security--header__popover__link--secondary:visited {
   color: var(--cds-inverse-link, #0f62fe);
 }
@@ -23661,6 +23936,9 @@ li.bx--accordion__item--disabled:last-of-type {
   outline-color: var(--cds-inverse-link, #0f62fe);
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--header {
   position: fixed;
   z-index: 8000;
@@ -23684,7 +23962,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--header__link {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   display: inline;
   margin-left: 2rem;
@@ -23701,7 +23979,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--header__link__title--domain {
   font-size: var(--cds-heading-01-font-size, 0.875rem);
   font-weight: var(--cds-heading-01-font-weight, 600);
-  line-height: var(--cds-heading-01-line-height, 1.29);
+  line-height: var(--cds-heading-01-line-height, 1.42857);
   letter-spacing: var(--cds-heading-01-letter-spacing, 0.16px);
 }
 
@@ -23750,7 +24028,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--header__popover {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   position: absolute;
   right: 0;
@@ -23905,7 +24183,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--header__popover__button--tooltip::before {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   position: absolute;
   display: flex;
@@ -24007,7 +24285,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--header__popover__label {
   font-size: var(--cds-heading-01-font-size, 0.875rem);
   font-weight: var(--cds-heading-01-font-weight, 600);
-  line-height: var(--cds-heading-01-line-height, 1.29);
+  line-height: var(--cds-heading-01-line-height, 1.42857);
   letter-spacing: var(--cds-heading-01-letter-spacing, 0.16px);
 }
 
@@ -24100,7 +24378,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--header__popover__profile__header__email {
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
+  line-height: var(--cds-caption-01-line-height, 1.33333);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
   word-break: break-all;
 }
@@ -24120,7 +24398,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--header__popover__profile__body__label {
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
+  line-height: var(--cds-caption-01-line-height, 1.33333);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
 }
 
@@ -24210,7 +24488,7 @@ li.bx--accordion__item--disabled:last-of-type {
   width: 100%;
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   padding: 1rem 1.5rem;
   color: inherit;
@@ -24266,7 +24544,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--header__popover__footer {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   display: flex;
   align-items: center;
@@ -24343,6 +24621,38 @@ li.bx--accordion__item--disabled:last-of-type {
   }
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 .security--shell--active {
   margin-left: 3rem;
 }
@@ -24527,33 +24837,33 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-danger: #da1e28;
   --cds-caption-01-font-size: 0.75rem;
   --cds-caption-01-font-weight: 400;
-  --cds-caption-01-line-height: 1.34;
+  --cds-caption-01-line-height: 1.33333;
   --cds-caption-01-letter-spacing: 0.32px;
   --cds-caption-02-font-size: 0.875rem;
   --cds-caption-02-font-weight: 400;
-  --cds-caption-02-line-height: 1.29;
+  --cds-caption-02-line-height: 1.28572;
   --cds-caption-02-letter-spacing: 0.32px;
   --cds-label-01-font-size: 0.75rem;
   --cds-label-01-font-weight: 400;
-  --cds-label-01-line-height: 1.34;
+  --cds-label-01-line-height: 1.33333;
   --cds-label-01-letter-spacing: 0.32px;
   --cds-label-02-font-size: 0.875rem;
   --cds-label-02-font-weight: 400;
-  --cds-label-02-line-height: 1.29;
-  --cds-label-02-letter-spacing: 0.32px;
+  --cds-label-02-line-height: 1.28572;
+  --cds-label-02-letter-spacing: 0.16px;
   --cds-helper-text-01-font-size: 0.75rem;
-  --cds-helper-text-01-line-height: 1.34;
+  --cds-helper-text-01-line-height: 1.33333;
   --cds-helper-text-01-letter-spacing: 0.32px;
   --cds-helper-text-02-font-size: 0.875rem;
-  --cds-helper-text-02-line-height: 1.29;
-  --cds-helper-text-02-letter-spacing: 0.32px;
+  --cds-helper-text-02-line-height: 1.28572;
+  --cds-helper-text-02-letter-spacing: 0.16px;
   --cds-body-short-01-font-size: 0.875rem;
   --cds-body-short-01-font-weight: 400;
-  --cds-body-short-01-line-height: 1.29;
+  --cds-body-short-01-line-height: 1.28572;
   --cds-body-short-01-letter-spacing: 0.16px;
   --cds-body-long-01-font-size: 0.875rem;
   --cds-body-long-01-font-weight: 400;
-  --cds-body-long-01-line-height: 1.43;
+  --cds-body-long-01-line-height: 1.42857;
   --cds-body-long-01-letter-spacing: 0.16px;
   --cds-body-short-02-font-size: 1rem;
   --cds-body-short-02-font-weight: 400;
@@ -24566,24 +24876,24 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-code-01-font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
   --cds-code-01-font-size: 0.75rem;
   --cds-code-01-font-weight: 400;
-  --cds-code-01-line-height: 1.34;
+  --cds-code-01-line-height: 1.33333;
   --cds-code-01-letter-spacing: 0.32px;
   --cds-code-02-font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
   --cds-code-02-font-size: 0.875rem;
   --cds-code-02-font-weight: 400;
-  --cds-code-02-line-height: 1.43;
+  --cds-code-02-line-height: 1.42857;
   --cds-code-02-letter-spacing: 0.32px;
   --cds-heading-01-font-size: 0.875rem;
   --cds-heading-01-font-weight: 600;
-  --cds-heading-01-line-height: 1.29;
+  --cds-heading-01-line-height: 1.42857;
   --cds-heading-01-letter-spacing: 0.16px;
   --cds-productive-heading-01-font-size: 0.875rem;
   --cds-productive-heading-01-font-weight: 600;
-  --cds-productive-heading-01-line-height: 1.29;
+  --cds-productive-heading-01-line-height: 1.28572;
   --cds-productive-heading-01-letter-spacing: 0.16px;
   --cds-heading-02-font-size: 1rem;
   --cds-heading-02-font-weight: 600;
-  --cds-heading-02-line-height: 1.375;
+  --cds-heading-02-line-height: 1.5;
   --cds-heading-02-letter-spacing: 0;
   --cds-productive-heading-02-font-size: 1rem;
   --cds-productive-heading-02-font-weight: 600;
@@ -24595,7 +24905,7 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-productive-heading-03-letter-spacing: 0;
   --cds-productive-heading-04-font-size: 1.75rem;
   --cds-productive-heading-04-font-weight: 400;
-  --cds-productive-heading-04-line-height: 1.29;
+  --cds-productive-heading-04-line-height: 1.28572;
   --cds-productive-heading-04-letter-spacing: 0;
   --cds-productive-heading-05-font-size: 2rem;
   --cds-productive-heading-05-font-weight: 400;
@@ -24607,7 +24917,7 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-productive-heading-06-letter-spacing: 0;
   --cds-productive-heading-07-font-size: 3.375rem;
   --cds-productive-heading-07-font-weight: 300;
-  --cds-productive-heading-07-line-height: 1.19;
+  --cds-productive-heading-07-line-height: 1.199;
   --cds-productive-heading-07-letter-spacing: 0;
   --cds-expressive-heading-01-font-size: 0.875rem;
   --cds-expressive-heading-01-font-weight: 600;
@@ -24623,7 +24933,7 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-expressive-heading-03-letter-spacing: 0;
   --cds-expressive-heading-04-font-size: 1.75rem;
   --cds-expressive-heading-04-font-weight: 400;
-  --cds-expressive-heading-04-line-height: 1.29;
+  --cds-expressive-heading-04-line-height: 1.28572;
   --cds-expressive-heading-04-letter-spacing: 0;
   --cds-expressive-heading-05-font-size: 2rem;
   --cds-expressive-heading-05-font-weight: 400;
@@ -24637,10 +24947,12 @@ li.bx--accordion__item--disabled:last-of-type {
   --cds-expressive-paragraph-01-font-weight: 300;
   --cds-expressive-paragraph-01-line-height: 1.334;
   --cds-expressive-paragraph-01-letter-spacing: 0;
+  --cds-quotation-01-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
   --cds-quotation-01-font-size: 1.25rem;
   --cds-quotation-01-font-weight: 400;
   --cds-quotation-01-line-height: 1.3;
   --cds-quotation-01-letter-spacing: 0;
+  --cds-quotation-02-font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
   --cds-quotation-02-font-size: 2rem;
   --cds-quotation-02-font-weight: 300;
   --cds-quotation-02-line-height: 1.25;
@@ -24863,7 +25175,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .security--shell__banner__text {
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
+  line-height: var(--cds-caption-01-line-height, 1.33333);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
   overflow: hidden;
   max-width: 26.5rem;
@@ -24987,7 +25299,7 @@ li.bx--accordion__item--disabled:last-of-type {
   font-family: var(--cds-code-01-font-family, 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace);
   font-size: var(--cds-code-01-font-size, 0.75rem);
   font-weight: var(--cds-code-01-font-weight, 400);
-  line-height: var(--cds-code-01-line-height, 1.34);
+  line-height: var(--cds-code-01-line-height, 1.33333);
   letter-spacing: var(--cds-code-01-letter-spacing, 0.32px);
 }
 
@@ -25054,7 +25366,7 @@ li.bx--accordion__item--disabled:last-of-type {
   transform: translateX(-50%);
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   display: none;
   overflow: visible;
@@ -25155,7 +25467,7 @@ li.bx--accordion__item--disabled:last-of-type {
   font-family: var(--cds-code-01-font-family, 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace);
   font-size: var(--cds-code-01-font-size, 0.75rem);
   font-weight: var(--cds-code-01-font-weight, 400);
-  line-height: var(--cds-code-01-line-height, 1.34);
+  line-height: var(--cds-code-01-line-height, 1.33333);
   letter-spacing: var(--cds-code-01-letter-spacing, 0.32px);
   position: relative;
   width: 100%;
@@ -25199,7 +25511,7 @@ li.bx--accordion__item--disabled:last-of-type {
   font-family: var(--cds-code-01-font-family, 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace);
   font-size: var(--cds-code-01-font-size, 0.75rem);
   font-weight: var(--cds-code-01-font-weight, 400);
-  line-height: var(--cds-code-01-line-height, 1.34);
+  line-height: var(--cds-code-01-line-height, 1.33333);
   letter-spacing: var(--cds-code-01-letter-spacing, 0.32px);
   padding-right: var(--cds-spacing-03, 0.5rem);
 }
@@ -25213,7 +25525,7 @@ li.bx--accordion__item--disabled:last-of-type {
   font-family: var(--cds-code-01-font-family, 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace);
   font-size: var(--cds-code-01-font-size, 0.75rem);
   font-weight: var(--cds-code-01-font-weight, 400);
-  line-height: var(--cds-code-01-line-height, 1.34);
+  line-height: var(--cds-code-01-line-height, 1.33333);
   letter-spacing: var(--cds-code-01-letter-spacing, 0.32px);
   position: relative;
   width: 100%;
@@ -25337,7 +25649,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--btn--copy__feedback {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
   z-index: 6000;
@@ -25366,7 +25678,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--snippet-btn--expand {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
   position: absolute;
@@ -25670,7 +25982,7 @@ li.bx--accordion__item--disabled:last-of-type {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   z-index: 2;
   top: 1.1rem;
@@ -25767,7 +26079,7 @@ li.bx--accordion__item--disabled:last-of-type {
   transform: translateX(-50%);
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   display: none;
   overflow: visible;
@@ -25912,7 +26224,7 @@ li.bx--accordion__item--disabled:last-of-type {
   vertical-align: baseline;
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   outline: 2px solid transparent;
   outline-offset: -2px;
@@ -26270,7 +26582,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .flatpickr-month {
   font-size: var(--cds-productive-heading-01-font-size, 0.875rem);
   font-weight: var(--cds-productive-heading-01-font-weight, 600);
-  line-height: var(--cds-productive-heading-01-line-height, 1.29);
+  line-height: var(--cds-productive-heading-01-line-height, 1.28572);
   letter-spacing: var(--cds-productive-heading-01-letter-spacing, 0.16px);
   display: flex;
   align-items: center;
@@ -26317,7 +26629,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .flatpickr-current-month {
   font-size: var(--cds-productive-heading-01-font-size, 0.875rem);
   font-weight: var(--cds-productive-heading-01-font-weight, 600);
-  line-height: var(--cds-productive-heading-01-line-height, 1.29);
+  line-height: var(--cds-productive-heading-01-line-height, 1.28572);
   letter-spacing: var(--cds-productive-heading-01-letter-spacing, 0.16px);
   display: flex;
   align-items: center;
@@ -26466,7 +26778,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .flatpickr-weekday {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   flex: 1;
   color: var(--cds-text-01, #f4f4f4);
@@ -26502,7 +26814,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .flatpickr-day {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   display: flex;
   align-items: center;
@@ -26726,7 +27038,7 @@ li.bx--accordion__item--disabled:last-of-type {
   font-family: var(--cds-code-02-font-family, 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace);
   font-size: var(--cds-code-02-font-size, 0.875rem);
   font-weight: var(--cds-code-02-font-weight, 400);
-  line-height: var(--cds-code-02-line-height, 1.43);
+  line-height: var(--cds-code-02-line-height, 1.42857);
   letter-spacing: var(--cds-code-02-letter-spacing, 0.32px);
   outline: 2px solid transparent;
   outline-offset: -2px;
@@ -26974,7 +27286,7 @@ li.bx--accordion__item--disabled:last-of-type {
   vertical-align: baseline;
   font-size: var(--cds-productive-heading-01-font-size, 0.875rem);
   font-weight: var(--cds-productive-heading-01-font-weight, 600);
-  line-height: var(--cds-productive-heading-01-line-height, 1.29);
+  line-height: var(--cds-productive-heading-01-line-height, 1.28572);
   letter-spacing: var(--cds-productive-heading-01-letter-spacing, 0.16px);
   margin-bottom: 0.5rem;
   color: var(--cds-text-01, #f4f4f4);
@@ -27059,7 +27371,7 @@ li.bx--accordion__item--disabled:last-of-type {
   vertical-align: baseline;
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   margin-bottom: 1rem;
   color: var(--cds-text-02, #c6c6c6);
@@ -27119,7 +27431,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--file__selected-file .bx--file-filename {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   overflow: hidden;
   margin-left: 1rem;
@@ -27192,7 +27504,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--file__selected-file--invalid .bx--form-requirement__supplement {
   font-size: var(--cds-label-01-font-size, 0.75rem);
   font-weight: var(--cds-label-01-font-weight, 400);
-  line-height: var(--cds-label-01-line-height, 1.34);
+  line-height: var(--cds-label-01-line-height, 1.33333);
   letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
   padding: 0 1rem;
 }
@@ -27208,7 +27520,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--file__selected-file--invalid + .bx--form-requirement {
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
+  line-height: var(--cds-caption-01-line-height, 1.33333);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
   display: block;
   overflow: visible;
@@ -27336,7 +27648,7 @@ li.bx--accordion__item--disabled:last-of-type {
   vertical-align: baseline;
   font-size: var(--cds-body-long-01-font-size, 0.875rem);
   font-weight: var(--cds-body-long-01-font-weight, 400);
-  line-height: var(--cds-body-long-01-line-height, 1.43);
+  line-height: var(--cds-body-long-01-line-height, 1.42857);
   letter-spacing: var(--cds-body-long-01-letter-spacing, 0.16px);
   list-style: none;
 }
@@ -27674,7 +27986,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--modal-header__label {
   font-size: var(--cds-label-01-font-size, 0.75rem);
   font-weight: var(--cds-label-01-font-weight, 400);
-  line-height: var(--cds-label-01-line-height, 1.34);
+  line-height: var(--cds-label-01-line-height, 1.33333);
   letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
   margin-bottom: var(--cds-spacing-02, 0.25rem);
   color: var(--cds-text-02, #c6c6c6);
@@ -27691,7 +28003,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--modal-content {
   font-size: var(--cds-body-long-01-font-size, 0.875rem);
   font-weight: var(--cds-body-long-01-font-weight, 400);
-  line-height: var(--cds-body-long-01-line-height, 1.43);
+  line-height: var(--cds-body-long-01-line-height, 1.42857);
   letter-spacing: var(--cds-body-long-01-letter-spacing, 0.16px);
   position: relative;
   padding-top: var(--cds-spacing-03, 0.5rem);
@@ -27717,7 +28029,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--modal-content > p {
   font-size: var(--cds-body-long-01-font-size, 0.875rem);
   font-weight: var(--cds-body-long-01-font-weight, 400);
-  line-height: var(--cds-body-long-01-line-height, 1.43);
+  line-height: var(--cds-body-long-01-line-height, 1.42857);
   letter-spacing: var(--cds-body-long-01-letter-spacing, 0.16px);
 }
 
@@ -27864,7 +28176,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--number input[type='number'] {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   outline: 2px solid transparent;
   outline-offset: -2px;
@@ -28345,7 +28657,7 @@ li.bx--accordion__item--disabled:last-of-type {
   vertical-align: baseline;
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   display: flex;
   width: calc(100% - 1px);
@@ -28406,7 +28718,7 @@ li.bx--accordion__item--disabled:last-of-type {
 .bx--pagination .bx--select-input {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   width: auto;
   min-width: auto;
@@ -28589,7 +28901,7 @@ span.bx--pagination__text {
   vertical-align: baseline;
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   display: flex;
   width: 100%;
@@ -28726,7 +29038,7 @@ span.bx--pagination__text {
 .bx--unstable-pagination__page-sizer .bx--select-input {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   width: auto;
   min-width: auto;
@@ -28827,7 +29139,7 @@ span.bx--pagination__text {
 .bx--radio-button__label {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   display: flex;
   align-items: center;
@@ -28995,7 +29307,7 @@ span.bx--pagination__text {
   font-family: var(--cds-code-02-font-family, 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace);
   font-size: var(--cds-code-02-font-size, 0.875rem);
   font-weight: var(--cds-code-02-font-weight, 400);
-  line-height: var(--cds-code-02-line-height, 1.43);
+  line-height: var(--cds-code-02-line-height, 1.42857);
   letter-spacing: var(--cds-code-02-letter-spacing, 0.32px);
   color: var(--cds-text-01, #f4f4f4);
   white-space: nowrap;
@@ -29213,7 +29525,7 @@ span.bx--pagination__text {
   vertical-align: baseline;
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   position: relative;
   width: 100%;
@@ -29472,7 +29784,7 @@ span.bx--pagination__text {
   .bx--tabs__nav-item--selected:not(.bx--tabs__nav-item--disabled) .bx--tabs__nav-link:active {
     font-size: var(--cds-productive-heading-01-font-size, 0.875rem);
     font-weight: var(--cds-productive-heading-01-font-weight, 600);
-    line-height: var(--cds-productive-heading-01-line-height, 1.29);
+    line-height: var(--cds-productive-heading-01-line-height, 1.28572);
     letter-spacing: var(--cds-productive-heading-01-letter-spacing, 0.16px);
     border-bottom: 2px solid var(--cds-interactive-04, #4589ff);
     color: var(--cds-text-01, #f4f4f4);
@@ -29715,7 +30027,7 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
   vertical-align: baseline;
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   display: flex;
   width: 100%;
@@ -29926,7 +30238,7 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
 .bx--tabs--scrollable .bx--tabs--scrollable__nav-item--selected .bx--tabs--scrollable__nav-link:active {
   font-size: var(--cds-productive-heading-01-font-size, 0.875rem);
   font-weight: var(--cds-productive-heading-01-font-weight, 600);
-  line-height: var(--cds-productive-heading-01-line-height, 1.29);
+  line-height: var(--cds-productive-heading-01-line-height, 1.28572);
   letter-spacing: var(--cds-productive-heading-01-letter-spacing, 0.16px);
   border-bottom: 2px solid var(--cds-interactive-04, #4589ff);
   color: var(--cds-text-01, #f4f4f4);
@@ -29972,7 +30284,7 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
   outline-offset: -2px;
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   overflow: hidden;
   width: 10rem;
@@ -30170,7 +30482,7 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
   vertical-align: baseline;
   font-size: var(--cds-body-long-01-font-size, 0.875rem);
   font-weight: var(--cds-body-long-01-font-weight, 400);
-  line-height: var(--cds-body-long-01-line-height, 1.43);
+  line-height: var(--cds-body-long-01-line-height, 1.42857);
   letter-spacing: var(--cds-body-long-01-letter-spacing, 0.16px);
   outline: 2px solid transparent;
   outline-offset: -2px;
@@ -30211,7 +30523,7 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
   opacity: 1;
   font-size: var(--cds-body-long-01-font-size, 0.875rem);
   font-weight: var(--cds-body-long-01-font-weight, 400);
-  line-height: var(--cds-body-long-01-line-height, 1.43);
+  line-height: var(--cds-body-long-01-line-height, 1.42857);
   letter-spacing: var(--cds-body-long-01-letter-spacing, 0.16px);
 }
 
@@ -30380,7 +30692,7 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
   vertical-align: baseline;
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   color: var(--cds-text-01, #f4f4f4);
   text-decoration: none;
@@ -30633,7 +30945,7 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
   font-family: var(--cds-code-02-font-family, 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace);
   font-size: var(--cds-code-02-font-size, 0.875rem);
   font-weight: var(--cds-code-02-font-weight, 400);
-  line-height: var(--cds-code-02-line-height, 1.43);
+  line-height: var(--cds-code-02-line-height, 1.42857);
   letter-spacing: var(--cds-code-02-letter-spacing, 0.32px);
   display: flex;
   width: 4.875rem;
@@ -30696,7 +31008,7 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
 .bx--toggle__label {
   font-size: var(--cds-label-01-font-size, 0.75rem);
   font-weight: var(--cds-label-01-font-weight, 400);
-  line-height: var(--cds-label-01-line-height, 1.34);
+  line-height: var(--cds-label-01-line-height, 1.33333);
   letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
   position: relative;
   display: flex;
@@ -30758,7 +31070,7 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
 .bx--toggle__text--right {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   position: relative;
   margin-left: 0.5rem;
@@ -30881,7 +31193,7 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
 .bx--toggle-input__label {
   font-size: var(--cds-label-01-font-size, 0.75rem);
   font-weight: var(--cds-label-01-font-weight, 400);
-  line-height: var(--cds-label-01-line-height, 1.34);
+  line-height: var(--cds-label-01-line-height, 1.33333);
   letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
   display: flex;
   flex-direction: column;
@@ -30936,7 +31248,7 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
 .bx--toggle__text--on {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   position: absolute;
   top: 50%;
@@ -31152,7 +31464,7 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
 a.bx--header__name {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   display: flex;
   height: 100%;
@@ -31434,7 +31746,7 @@ a.bx--header__menu-item.bx--header__menu-item--current:focus {
 .bx--product-switcher__all-btn {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   padding: 0.5rem;
   color: #c6c6c6;
@@ -31473,7 +31785,7 @@ a.bx--header__menu-item.bx--header__menu-item--current:focus {
 .bx--product-switcher__back-btn {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   display: flex;
   align-items: center;
@@ -31517,7 +31829,7 @@ a.bx--header__menu-item.bx--header__menu-item--current:focus {
 .bx--product-link__name {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   margin-left: 0.25rem;
   color: #c6c6c6;
@@ -31590,7 +31902,7 @@ a.bx--header__menu-item.bx--header__menu-item--current:focus {
 .bx--switcher__item-link {
   font-size: var(--cds-productive-heading-01-font-size, 0.875rem);
   font-weight: var(--cds-productive-heading-01-font-weight, 600);
-  line-height: var(--cds-productive-heading-01-line-height, 1.29);
+  line-height: var(--cds-productive-heading-01-line-height, 1.28572);
   letter-spacing: var(--cds-productive-heading-01-letter-spacing, 0.16px);
   display: block;
   height: var(--cds-spacing-07, 2rem);
@@ -31919,7 +32231,7 @@ a.bx--header__menu-item.bx--header__menu-item--current:focus {
   width: 100%;
   font-size: var(--cds-productive-heading-01-font-size, 0.875rem);
   font-weight: var(--cds-productive-heading-01-font-weight, 600);
-  line-height: var(--cds-productive-heading-01-line-height, 1.29);
+  line-height: var(--cds-productive-heading-01-line-height, 1.28572);
   letter-spacing: var(--cds-productive-heading-01-letter-spacing, 0.16px);
   outline: 2px solid transparent;
   outline-offset: -2px;
@@ -32053,7 +32365,7 @@ a.bx--side-nav__link,
   outline-offset: -2px;
   font-size: var(--cds-productive-heading-01-font-size, 0.875rem);
   font-weight: var(--cds-productive-heading-01-font-weight, 600);
-  line-height: var(--cds-productive-heading-01-line-height, 1.29);
+  line-height: var(--cds-productive-heading-01-line-height, 1.28572);
   letter-spacing: var(--cds-productive-heading-01-letter-spacing, 0.16px);
   position: relative;
   display: flex;
@@ -32451,6 +32763,8 @@ a.bx--navigation-link:focus {
   outline: 0.0625rem solid var(--cds-ui-background, #161616);
 }
 
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
 body {
   box-sizing: border-box;
   padding: 0;
@@ -32461,7 +32775,7 @@ body {
   vertical-align: baseline;
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
   background-color: var(--cds-ui-background, #161616);
   color: var(--cds-text-01, #f4f4f4);
@@ -34574,47 +34888,47 @@ strong {
 .bx--type-caption-01 {
   font-size: var(--cds-caption-01-font-size, 0.75rem);
   font-weight: var(--cds-caption-01-font-weight, 400);
-  line-height: var(--cds-caption-01-line-height, 1.34);
+  line-height: var(--cds-caption-01-line-height, 1.33333);
   letter-spacing: var(--cds-caption-01-letter-spacing, 0.32px);
 }
 
 .bx--type-caption-02 {
   font-size: var(--cds-caption-02-font-size, 0.875rem);
   font-weight: var(--cds-caption-02-font-weight, 400);
-  line-height: var(--cds-caption-02-line-height, 1.29);
+  line-height: var(--cds-caption-02-line-height, 1.28572);
   letter-spacing: var(--cds-caption-02-letter-spacing, 0.32px);
 }
 
 .bx--type-label-01 {
   font-size: var(--cds-label-01-font-size, 0.75rem);
   font-weight: var(--cds-label-01-font-weight, 400);
-  line-height: var(--cds-label-01-line-height, 1.34);
+  line-height: var(--cds-label-01-line-height, 1.33333);
   letter-spacing: var(--cds-label-01-letter-spacing, 0.32px);
 }
 
 .bx--type-label-02 {
   font-size: var(--cds-label-02-font-size, 0.875rem);
   font-weight: var(--cds-label-02-font-weight, 400);
-  line-height: var(--cds-label-02-line-height, 1.29);
-  letter-spacing: var(--cds-label-02-letter-spacing, 0.32px);
+  line-height: var(--cds-label-02-line-height, 1.28572);
+  letter-spacing: var(--cds-label-02-letter-spacing, 0.16px);
 }
 
 .bx--type-helper-text-01 {
   font-size: var(--cds-helper-text-01-font-size, 0.75rem);
-  line-height: var(--cds-helper-text-01-line-height, 1.34);
+  line-height: var(--cds-helper-text-01-line-height, 1.33333);
   letter-spacing: var(--cds-helper-text-01-letter-spacing, 0.32px);
 }
 
 .bx--type-helper-text-02 {
   font-size: var(--cds-helper-text-02-font-size, 0.875rem);
-  line-height: var(--cds-helper-text-02-line-height, 1.29);
-  letter-spacing: var(--cds-helper-text-02-letter-spacing, 0.32px);
+  line-height: var(--cds-helper-text-02-line-height, 1.28572);
+  letter-spacing: var(--cds-helper-text-02-letter-spacing, 0.16px);
 }
 
 .bx--type-body-short-01 {
   font-size: var(--cds-body-short-01-font-size, 0.875rem);
   font-weight: var(--cds-body-short-01-font-weight, 400);
-  line-height: var(--cds-body-short-01-line-height, 1.29);
+  line-height: var(--cds-body-short-01-line-height, 1.28572);
   letter-spacing: var(--cds-body-short-01-letter-spacing, 0.16px);
 }
 
@@ -34628,7 +34942,7 @@ strong {
 .bx--type-body-long-01 {
   font-size: var(--cds-body-long-01-font-size, 0.875rem);
   font-weight: var(--cds-body-long-01-font-weight, 400);
-  line-height: var(--cds-body-long-01-line-height, 1.43);
+  line-height: var(--cds-body-long-01-line-height, 1.42857);
   letter-spacing: var(--cds-body-long-01-letter-spacing, 0.16px);
 }
 
@@ -34643,7 +34957,7 @@ strong {
   font-family: var(--cds-code-01-font-family, 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace);
   font-size: var(--cds-code-01-font-size, 0.75rem);
   font-weight: var(--cds-code-01-font-weight, 400);
-  line-height: var(--cds-code-01-line-height, 1.34);
+  line-height: var(--cds-code-01-line-height, 1.33333);
   letter-spacing: var(--cds-code-01-letter-spacing, 0.32px);
 }
 
@@ -34651,28 +34965,28 @@ strong {
   font-family: var(--cds-code-02-font-family, 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace);
   font-size: var(--cds-code-02-font-size, 0.875rem);
   font-weight: var(--cds-code-02-font-weight, 400);
-  line-height: var(--cds-code-02-line-height, 1.43);
+  line-height: var(--cds-code-02-line-height, 1.42857);
   letter-spacing: var(--cds-code-02-letter-spacing, 0.32px);
 }
 
 .bx--type-heading-01 {
   font-size: var(--cds-heading-01-font-size, 0.875rem);
   font-weight: var(--cds-heading-01-font-weight, 600);
-  line-height: var(--cds-heading-01-line-height, 1.29);
+  line-height: var(--cds-heading-01-line-height, 1.42857);
   letter-spacing: var(--cds-heading-01-letter-spacing, 0.16px);
 }
 
 .bx--type-heading-02 {
   font-size: var(--cds-heading-02-font-size, 1rem);
   font-weight: var(--cds-heading-02-font-weight, 600);
-  line-height: var(--cds-heading-02-line-height, 1.375);
+  line-height: var(--cds-heading-02-line-height, 1.5);
   letter-spacing: var(--cds-heading-02-letter-spacing, 0);
 }
 
 .bx--type-productive-heading-01 {
   font-size: var(--cds-productive-heading-01-font-size, 0.875rem);
   font-weight: var(--cds-productive-heading-01-font-weight, 600);
-  line-height: var(--cds-productive-heading-01-line-height, 1.29);
+  line-height: var(--cds-productive-heading-01-line-height, 1.28572);
   letter-spacing: var(--cds-productive-heading-01-letter-spacing, 0.16px);
 }
 
@@ -34693,7 +35007,7 @@ strong {
 .bx--type-productive-heading-04 {
   font-size: var(--cds-productive-heading-04-font-size, 1.75rem);
   font-weight: var(--cds-productive-heading-04-font-weight, 400);
-  line-height: var(--cds-productive-heading-04-line-height, 1.29);
+  line-height: var(--cds-productive-heading-04-line-height, 1.28572);
   letter-spacing: var(--cds-productive-heading-04-letter-spacing, 0);
 }
 
@@ -34714,7 +35028,7 @@ strong {
 .bx--type-productive-heading-07 {
   font-size: var(--cds-productive-heading-07-font-size, 3.375rem);
   font-weight: var(--cds-productive-heading-07-font-weight, 300);
-  line-height: var(--cds-productive-heading-07-line-height, 1.19);
+  line-height: var(--cds-productive-heading-07-line-height, 1.199);
   letter-spacing: var(--cds-productive-heading-07-letter-spacing, 0);
 }
 
@@ -34783,7 +35097,7 @@ strong {
 .bx--type-expressive-heading-04 {
   font-size: 1.75rem;
   font-weight: 400;
-  line-height: 1.29;
+  line-height: 1.28572;
   letter-spacing: 0;
   font-size: calc(1.75rem + 0 * ((100vw - 20rem) / 62));
 }
@@ -34898,6 +35212,7 @@ strong {
 }
 
 .bx--type-quotation-01 {
+  font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.3;
@@ -34928,7 +35243,7 @@ strong {
   .bx--type-quotation-01 {
     font-size: 1.75rem;
     font-weight: 400;
-    line-height: 1.29;
+    line-height: 1.28572;
     letter-spacing: 0;
     font-size: calc(1.75rem + 0.25 * ((100vw - 82rem) / 17));
   }
@@ -34945,6 +35260,7 @@ strong {
 }
 
 .bx--type-quotation-02 {
+  font-family: 'IBM Plex Serif', 'Georgia', Times, serif;
   font-size: 2rem;
   font-weight: 300;
   line-height: 1.25;
