@@ -15,6 +15,7 @@
   /// Spacing.
   /// @type Length
   $title-bar__spacing: $carbon--spacing-05;
+  $icon-button-bar-spacer: 6px;
 
   display: flex;
 
@@ -38,12 +39,15 @@
   }
 
   &--label &__items {
-    margin-top: $carbon--spacing-06;
+    align-items: flex-end;
+    // this offsets the icon-button-bar by 6px for visual alignment when the label is present
+    margin-bottom: $icon-button-bar-spacer;
   }
 
   &--subsection & {
     &__items {
-      margin-top: $carbon--spacing-04;
+      align-items: flex-end;
+      margin-bottom: $icon-button-bar-spacer;
     }
 
     &__title {
