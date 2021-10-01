@@ -16,7 +16,14 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-postcss',
     '@storybook/addon-viewport',
-    '@storybook/addon-storysource',
+    {
+      name: '@storybook/addon-storysource',
+      options: {
+        rule: {
+          test: [/(-story)|(\.stories)\.jsx?$/],
+        },
+      },
+    },
     '@storybook/addon-knobs',
     '@storybook/addon-controls',
     '@storybook/addon-actions',
