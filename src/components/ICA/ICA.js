@@ -149,7 +149,7 @@ ICA.propTypes = {
    * Text label for ICA.
    * @type string
    */
-  label: PropTypes.string.isRequired,
+  label: PropTypes.node.isRequired,
 
   /**
    * Locale value to determine approach to formatting numbers.
@@ -182,7 +182,7 @@ ICA.propTypes = {
    * The main ICA value to display
    * @type number
    */
-  value: PropTypes.number,
+  value: PropTypes.node,
 };
 
 ICA.defaultProps = {
