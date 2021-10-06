@@ -20,7 +20,7 @@ module.exports = {
       name: '@storybook/addon-storysource',
       options: {
         rule: {
-          test: [/(-story)|(\.stories)\.jsx?$/],
+          test: /(-story|\.stories)\.js$/,
         },
       },
     },
