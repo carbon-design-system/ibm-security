@@ -15,7 +15,14 @@ module.exports = {
     '@storybook/addon-google-analytics',
     '@storybook/addon-links',
     '@storybook/addon-viewport',
-    '@storybook/addon-storysource',
+    {
+      name: '@storybook/addon-storysource',
+      options: {
+        rule: {
+          test: /(-story|\.stories)\.js$/,
+        },
+      },
+    },
     '@storybook/addon-knobs',
     '@storybook/addon-controls',
     '@storybook/addon-actions',
