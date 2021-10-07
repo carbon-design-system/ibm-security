@@ -4849,7 +4849,6 @@ Map {
       "className": "",
       "forceShowTotal": false,
       "locale": "en",
-      "onEdit": undefined,
       "percentage": false,
       "size": "default",
       "total": 0,

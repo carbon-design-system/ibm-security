@@ -201,7 +201,6 @@ ICA.defaultProps = {
   total: 0,
   className: '',
   locale: 'en',
-  onEdit: undefined,
   percentage: false,
   size: 'default',
   value: null,
