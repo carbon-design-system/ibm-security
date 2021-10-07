@@ -4,20 +4,23 @@
  */
 
 import { boolean, select, number, text } from '@storybook/addon-knobs';
-import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 
 import React from 'react';
 
+import { Edit16 } from '@carbon/icons-react';
+
 import { components } from '../../../.storybook';
 import { carbonPrefix } from '../../globals/namespace';
+
+import IconButton from '../IconButton/IconButton';
 
 import { ICA } from '../..';
 import { Locales } from './ICA';
 
 import props from './_mocks_';
 
-const { editTooltip, information, label, total, value: icaValue } = props;
+const { label, total, value: icaValue } = props;
 
 const sizes = {
   Default: 'default',
@@ -26,10 +29,7 @@ const sizes = {
 };
 
 const storyProps = ({ value = icaValue, total } = {}) => ({
-  onEdit: action('onEdit'),
   label: text('Label (label)', label),
-  editTooltip: text('EditTooltip (editTooltip)', editTooltip),
-  information: text('Information (information)', information),
   value: number('Value (value)', value),
   total: number('Total (total)', total),
   percentage: boolean('Percentage (percentage)', false),
@@ -50,6 +50,19 @@ storiesOf(components('ICA'), module)
     <ICA {...storyProps({ value: icaValue * 100000 })} />
   ))
   .add('with total', () => <ICA {...storyProps({ total })} />)
+  .add('with edit button', () => (
+    <div className={`${carbonPrefix}--row`}>
+      <ICA {...storyProps({ value: 250, total: 350 })} />
+      <IconButton
+        onClick={console.log('click event')}
+        style={{ marginTop: '20px' }}
+        renderIcon={Edit16}
+        tooltip={true}
+        label={'Edit label'}
+        tooltipDirection="bottom"
+      />
+    </div>
+  ))
   .add(
     'in an ICA wall',
     () => (

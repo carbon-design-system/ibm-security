@@ -4849,6 +4849,7 @@ Map {
       "className": "",
       "forceShowTotal": false,
       "locale": "en",
+      "onEdit": undefined,
       "percentage": false,
       "size": "default",
       "total": 0,
@@ -4863,9 +4864,15 @@ Map {
       "forceShowTotal": Object {
         "type": "bool",
       },
+      "iconButton": Object {
+        "type": "node",
+      },
+      "information": Object {
+        "type": "node",
+      },
       "label": Object {
         "isRequired": true,
-        "type": "node",
+        "type": "string",
       },
       "locale": Object {
         "args": Array [
@@ -4932,7 +4939,7 @@ Map {
         "type": "bool",
       },
       "value": Object {
-        "type": "node",
+        "type": "number",
       },
     },
   },
@@ -7542,7 +7549,6 @@ Map {
       "focusTrap": true,
       "focusTrapOptions": Object {},
       "hasOverlay": true,
-      "initialFocus": null,
       "onOverlayClick": undefined,
       "overlayOptions": Object {},
       "rootNode": <body />,

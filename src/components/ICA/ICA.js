@@ -10,9 +10,8 @@ import React from 'react';
 
 import 'numeral/locales';
 
-import { ArrowUp16, ArrowUp20, ArrowUp24, Edit16 } from '@carbon/icons-react';
+import { ArrowUp16, ArrowUp20, ArrowUp24 } from '@carbon/icons-react';
 import Icon from '../Icon/Icon';
-import IconButton from '../IconButton/IconButton';
 
 import isDevelopment from '../../globals/env';
 import { getComponentNamespace } from '../../globals/namespace';
@@ -71,12 +70,11 @@ const ICA = ({
   label,
   locale,
   percentage,
-  onEdit,
   information,
+  iconButton,
   size,
   trending,
   truncate,
-  editTooltip,
   total,
   value,
   ...other
@@ -86,7 +84,6 @@ const ICA = ({
   const isXLarge = isSize('xl');
 
   let renderIcon = ArrowUp16;
-  let renderEditIcon = Edit16;
   if (isLarge) {
     renderIcon = ArrowUp20;
   } else if (isXLarge) {
@@ -133,13 +130,7 @@ const ICA = ({
             <span>/{truncatedTotal}</span>
           </span>
         ) : null}
-        <IconButton
-          onClick={onEdit}
-          renderIcon={renderEditIcon}
-          tooltip={true}
-          label={editTooltip}
-          tooltipDirection="bottom"
-        />
+        {iconButton}
       </span>
     </div>
   );
@@ -152,9 +143,6 @@ ICA.propTypes = {
    */
   className: PropTypes.string,
 
-  /** Display tooltip on edit icon. */
-  editTooltip: PropTypes.string,
-
   /**
    * Display the `total` even when the `value` is equal to
    * the `total` when `forceShowTotal` prop is true on the
@@ -162,6 +150,9 @@ ICA.propTypes = {
    * @type bool
    */
   forceShowTotal: PropTypes.bool,
+
+  /** Display information icon. */
+  iconButton: PropTypes.node,
 
   /** Display information icon. */
   information: PropTypes.node,
@@ -177,9 +168,6 @@ ICA.propTypes = {
    * @type string
    */
   locale: PropTypes.oneOf(Locales),
-
-  /** Display edit icon and invoke function function supplied when selected. */
-  onEdit: PropTypes.func,
 
   /**
    * Format number to percentage when `percentage` prop is true.
