@@ -4,6 +4,7 @@
  */
 
 import { boolean, select, number, text } from '@storybook/addon-knobs';
+import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 
 import React from 'react';
@@ -16,7 +17,7 @@ import { Locales } from './ICA';
 
 import props from './_mocks_';
 
-const { label, total, value: icaValue } = props;
+const { editTooltip, information, label, total, value: icaValue } = props;
 
 const sizes = {
   Default: 'default',
@@ -25,7 +26,10 @@ const sizes = {
 };
 
 const storyProps = ({ value = icaValue, total } = {}) => ({
+  onEdit: action('onEdit'),
   label: text('Label (label)', label),
+  editTooltip: text('EditTooltip (editTooltip)', editTooltip),
+  information: text('Information (information)', information),
   value: number('Value (value)', value),
   total: number('Total (total)', total),
   percentage: boolean('Percentage (percentage)', false),
@@ -91,7 +95,7 @@ storiesOf(components('ICA'), module)
         Multiple \`ICA\` components (i.e., an "ICA Wall") should be presented in a grid using the correct class names.
 
         These two row examples show different combinations of breakpoints and spans set per column with specific class names.
-        
+
         For more information the 16 column IBM grid, please review the [\`@carbon/grid\` package documentation](https://github.com/carbon-design-system/carbon/tree/main/packages/grid).
       `,
       },
