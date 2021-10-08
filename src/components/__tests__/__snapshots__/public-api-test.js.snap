@@ -1447,6 +1447,9 @@ Map {
               ],
               "type": "oneOfType",
             },
+            "document": Object {
+              "type": "object",
+            },
             "escapeDeactivates": Object {
               "args": Array [
                 Array [
@@ -7349,6 +7352,9 @@ Map {
               ],
               "type": "oneOfType",
             },
+            "document": Object {
+              "type": "object",
+            },
             "escapeDeactivates": Object {
               "args": Array [
                 Array [
@@ -7590,7 +7596,6 @@ Map {
       "focusTrap": true,
       "focusTrapOptions": Object {},
       "hasOverlay": true,
-      "initialFocus": null,
       "onOverlayClick": undefined,
       "overlayOptions": Object {},
       "rootNode": <body />,
@@ -7638,6 +7643,9 @@ Map {
                 ],
               ],
               "type": "oneOfType",
+            },
+            "document": Object {
+              "type": "object",
             },
             "escapeDeactivates": Object {
               "args": Array [
