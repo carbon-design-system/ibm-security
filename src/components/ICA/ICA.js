@@ -13,6 +13,8 @@ import 'numeral/locales';
 import { ArrowUp16, ArrowUp20, ArrowUp24 } from '@carbon/icons-react';
 import Icon from '../Icon/Icon';
 
+import Tooltip from '../Tooltip';
+
 import isDevelopment from '../../globals/env';
 import { getComponentNamespace } from '../../globals/namespace';
 
@@ -117,7 +119,11 @@ const ICA = ({
     <div className={`${ICAClasses}`} {...other}>
       <span className={`${namespace}__row`}>
         <h4 className={`${namespace}__label`}>{label} </h4>
-        {information}
+        {information && (
+          <Tooltip showIcon={true} direction={'right'}>
+            {information}
+          </Tooltip>
+        )}
       </span>
       <span className={`${namespace}__row`}>
         {trending && (

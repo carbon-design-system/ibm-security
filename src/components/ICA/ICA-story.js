@@ -51,17 +51,24 @@ storiesOf(components('ICA'), module)
   ))
   .add('with total', () => <ICA {...storyProps({ total })} />)
   .add('with edit button', () => (
-    <div className={`${carbonPrefix}--row`}>
-      <ICA {...storyProps({ value: 250, total: 350 })} />
-      <IconButton
-        onClick={console.log('click event')}
-        style={{ marginTop: '20px' }}
-        renderIcon={Edit16}
-        tooltip={true}
-        label={'Edit label'}
-        tooltipDirection="bottom"
-      />
-    </div>
+    <ICA
+      {...storyProps({ value: 350, total: 450 })}
+      iconButton={
+        <IconButton
+          onClick={console.log('click event')}
+          renderIcon={Edit16}
+          tooltip={true}
+          label={'Edit label'}
+          tooltipDirection="bottom"
+        />
+      }
+    />
+  ))
+  .add('with information icon', () => (
+    <ICA
+      {...storyProps({ value: 350, total: 450 })}
+      information={'Information label'}
+    />
   ))
   .add(
     'in an ICA wall',
