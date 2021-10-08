@@ -157,10 +157,10 @@ ICA.propTypes = {
    */
   forceShowTotal: PropTypes.bool,
 
-  /** Display information icon. */
+  /** Displays an iconButton next to the ICA value */
   iconButton: PropTypes.node,
 
-  /** Display information icon. */
+  /** Pass in content to the body of the information tooltip. */
   information: PropTypes.node,
 
   /**
