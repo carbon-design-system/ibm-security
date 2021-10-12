@@ -13,8 +13,6 @@ import 'numeral/locales';
 import { ArrowUp16, ArrowUp20, ArrowUp24 } from '@carbon/icons-react';
 import Icon from '../Icon/Icon';
 
-import Tooltip from '../Tooltip';
-
 import isDevelopment from '../../globals/env';
 import { getComponentNamespace } from '../../globals/namespace';
 
@@ -72,8 +70,6 @@ const ICA = ({
   label,
   locale,
   percentage,
-  information,
-  iconButton,
   size,
   trending,
   truncate,
@@ -117,14 +113,7 @@ const ICA = ({
 
   return (
     <div className={`${ICAClasses}`} {...other}>
-      <span className={`${namespace}__row`}>
-        <h4 className={`${namespace}__label`}>{label} </h4>
-        {information && (
-          <Tooltip showIcon={true} direction={'right'}>
-            {information}
-          </Tooltip>
-        )}
-      </span>
+      <h4 className={`${namespace}__label`}>{label} </h4>
       <span className={`${namespace}__row`}>
         {trending && (
           <Icon className={`${namespace}__trend`} renderIcon={renderIcon} />
@@ -136,7 +125,6 @@ const ICA = ({
             <span>/{truncatedTotal}</span>
           </span>
         ) : null}
-        {iconButton}
       </span>
     </div>
   );
@@ -156,12 +144,6 @@ ICA.propTypes = {
    * @type bool
    */
   forceShowTotal: PropTypes.bool,
-
-  /** Displays an iconButton next to the ICA value */
-  iconButton: PropTypes.node,
-
-  /** Pass in content to the body of the information tooltip. */
-  information: PropTypes.node,
 
   /**
    * Text label for ICA.
