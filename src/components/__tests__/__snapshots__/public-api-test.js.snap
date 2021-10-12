@@ -4902,12 +4902,6 @@ Map {
       "forceShowTotal": Object {
         "type": "bool",
       },
-      "iconButton": Object {
-        "type": "node",
-      },
-      "information": Object {
-        "type": "node",
-      },
       "label": Object {
         "isRequired": true,
         "type": "string",
