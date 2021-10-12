@@ -132,6 +132,8 @@ Also refer to http://${library}.carbondesignsystem.com/?path=/docs/${group}-${st
     : description,
 });
 
+const parameters = {};
+
 export {
   disableCentered,
   disableCenteredStories,
@@ -144,4 +146,5 @@ export {
   getPatternsCategory as patterns,
   info,
   ORDER,
+  parameters,
 };

@@ -256,7 +256,6 @@ Portal.defaultProps = {
   focusTrap: true,
   focusTrapOptions: FocusTrap.defaultProps.focusTrapOptions,
   hasOverlay: true,
-  initialFocus: null,
   onOverlayClick: undefined,
   overlayOptions: {},
   rootNode: isClient() && document.body,
