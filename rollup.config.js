@@ -32,7 +32,6 @@ const createFromDefault = ({
   },
   out = cjs,
 } = {}) => ({
-  experimentalCodeSplitting,
   input,
   output: {
     chunkFileNames: 'chunks/[hash].js',

@@ -18,6 +18,10 @@ Map {
     "backgroundInverseHover": "var(--cds-background-inverse-hover, #e5e5e5)",
     "backgroundSelected": "var(--cds-background-selected, #393939)",
     "backgroundSelectedHover": "var(--cds-background-selected-hover, #4c4c4c)",
+    "body01": "var(--cds-body-01, [object Object])",
+    "body02": "var(--cds-body-02, [object Object])",
+    "bodyCompact01": "var(--cds-body-compact-01, [object Object])",
+    "bodyCompact02": "var(--cds-body-compact-02, [object Object])",
     "bodyLong01": "var(--cds-body-long-01, [object Object])",
     "bodyLong02": "var(--cds-body-long-02, [object Object])",
     "bodyShort01": "var(--cds-body-short-01, [object Object])",
@@ -78,6 +82,17 @@ Map {
     "field02": "var(--cds-field-02, #393939)",
     "fieldDisabled": "var(--cds-field-disabled, #262626)",
     "fieldHover": "var(--cds-field-hover, #353535)",
+    "fluidDisplay01": "var(--cds-fluid-display-01, [object Object])",
+    "fluidDisplay02": "var(--cds-fluid-display-02, [object Object])",
+    "fluidDisplay03": "var(--cds-fluid-display-03, [object Object])",
+    "fluidDisplay04": "var(--cds-fluid-display-04, [object Object])",
+    "fluidHeading03": "var(--cds-fluid-heading-03, [object Object])",
+    "fluidHeading04": "var(--cds-fluid-heading-04, [object Object])",
+    "fluidHeading05": "var(--cds-fluid-heading-05, [object Object])",
+    "fluidHeading06": "var(--cds-fluid-heading-06, [object Object])",
+    "fluidParagraph01": "var(--cds-fluid-paragraph-01, [object Object])",
+    "fluidQuotation01": "var(--cds-fluid-quotation-01, [object Object])",
+    "fluidQuotation02": "var(--cds-fluid-quotation-02, [object Object])",
     "fluidSpacing01": "var(--cds-fluid-spacing-01, 0)",
     "fluidSpacing02": "var(--cds-fluid-spacing-02, 2vw)",
     "fluidSpacing03": "var(--cds-fluid-spacing-03, 5vw)",
@@ -87,6 +102,13 @@ Map {
     "focusInverse": "var(--cds-focus-inverse, #0f62fe)",
     "heading01": "var(--cds-heading-01, [object Object])",
     "heading02": "var(--cds-heading-02, [object Object])",
+    "heading03": "var(--cds-heading-03, [object Object])",
+    "heading04": "var(--cds-heading-04, [object Object])",
+    "heading05": "var(--cds-heading-05, [object Object])",
+    "heading06": "var(--cds-heading-06, [object Object])",
+    "heading07": "var(--cds-heading-07, [object Object])",
+    "headingCompact01": "var(--cds-heading-compact-01, [object Object])",
+    "headingCompact02": "var(--cds-heading-compact-02, [object Object])",
     "helperText01": "var(--cds-helper-text-01, [object Object])",
     "helperText02": "var(--cds-helper-text-02, [object Object])",
     "highlight": "var(--cds-highlight, #002d9c)",
@@ -145,6 +167,8 @@ Map {
     "layout05": "var(--cds-layout-05, 4rem)",
     "layout06": "var(--cds-layout-06, 6rem)",
     "layout07": "var(--cds-layout-07, 10rem)",
+    "legal01": "var(--cds-legal-01, [object Object])",
+    "legal02": "var(--cds-legal-02, [object Object])",
     "link01": "var(--cds-link-01, #78a9ff)",
     "link02": "var(--cds-link-02, #a6c8ff)",
     "linkInverse": "var(--cds-link-inverse, #0f62fe)",
@@ -994,6 +1018,9 @@ Map {
             Object {
               "type": "string",
             },
+            Object {
+              "type": "number",
+            },
           ],
         ],
         "type": "oneOfType",
@@ -1039,6 +1066,9 @@ Map {
             },
             Object {
               "type": "string",
+            },
+            Object {
+              "type": "number",
             },
           ],
         ],
@@ -1416,6 +1446,9 @@ Map {
                 ],
               ],
               "type": "oneOfType",
+            },
+            "document": Object {
+              "type": "object",
             },
             "escapeDeactivates": Object {
               "args": Array [
@@ -3782,6 +3815,9 @@ Map {
             Object {
               "type": "string",
             },
+            Object {
+              "type": "number",
+            },
           ],
         ],
         "type": "oneOfType",
@@ -3821,6 +3857,9 @@ Map {
             },
             Object {
               "type": "string",
+            },
+            Object {
+              "type": "number",
             },
           ],
         ],
@@ -4862,6 +4901,12 @@ Map {
       },
       "forceShowTotal": Object {
         "type": "bool",
+      },
+      "iconButton": Object {
+        "type": "node",
+      },
+      "information": Object {
+        "type": "node",
       },
       "label": Object {
         "isRequired": true,
@@ -6028,6 +6073,9 @@ Map {
         "invalidText": Object {
           "type": "node",
         },
+        "itemToElement": Object {
+          "type": "func",
+        },
         "itemToString": Object {
           "type": "func",
         },
@@ -6268,6 +6316,9 @@ Map {
       },
       "invalidText": Object {
         "type": "node",
+      },
+      "itemToElement": Object {
+        "type": "func",
       },
       "itemToString": Object {
         "type": "func",
@@ -7301,6 +7352,9 @@ Map {
               ],
               "type": "oneOfType",
             },
+            "document": Object {
+              "type": "object",
+            },
             "escapeDeactivates": Object {
               "args": Array [
                 Array [
@@ -7542,7 +7596,6 @@ Map {
       "focusTrap": true,
       "focusTrapOptions": Object {},
       "hasOverlay": true,
-      "initialFocus": null,
       "onOverlayClick": undefined,
       "overlayOptions": Object {},
       "rootNode": <body />,
@@ -7590,6 +7643,9 @@ Map {
                 ],
               ],
               "type": "oneOfType",
+            },
+            "document": Object {
+              "type": "object",
             },
             "escapeDeactivates": Object {
               "args": Array [
@@ -11265,6 +11321,7 @@ Map {
       "warn": false,
       "warnText": "",
     },
+    "displayName": "TextInput",
     "propTypes": Object {
       "className": Object {
         "type": "string",
@@ -13516,6 +13573,246 @@ Map {
       },
     },
   },
+  "FilterableMultiSelect" => Object {
+    "defaultProps": Object {
+      "ariaLabel": "Choose an item",
+      "compareItems": [Function],
+      "direction": "bottom",
+      "disabled": false,
+      "filterItems": [Function],
+      "initialSelectedItems": Array [],
+      "itemToString": [Function],
+      "light": false,
+      "locale": "en",
+      "open": false,
+      "selectionFeedback": "top-after-reopen",
+      "sortItems": [Function],
+    },
+    "displayName": "MultiSelect.Filterable",
+    "propTypes": Object {
+      "ariaLabel": Object {
+        "type": "string",
+      },
+      "compareItems": Object {
+        "isRequired": true,
+        "type": "func",
+      },
+      "direction": Object {
+        "args": Array [
+          Array [
+            "top",
+            "bottom",
+          ],
+        ],
+        "type": "oneOf",
+      },
+      "disabled": Object {
+        "type": "bool",
+      },
+      "downshiftProps": Object {
+        "args": Array [
+          Object {
+            "children": Object {
+              "type": "func",
+            },
+            "defaultHighlightedIndex": Object {
+              "type": "number",
+            },
+            "defaultIsOpen": Object {
+              "type": "bool",
+            },
+            "environment": Object {
+              "args": Array [
+                Object {
+                  "addEventListener": Object {
+                    "type": "func",
+                  },
+                  "document": Object {
+                    "args": Array [
+                      Object {
+                        "activeElement": Object {
+                          "type": "any",
+                        },
+                        "body": Object {
+                          "type": "any",
+                        },
+                        "getElementById": Object {
+                          "type": "func",
+                        },
+                      },
+                    ],
+                    "type": "shape",
+                  },
+                  "removeEventListener": Object {
+                    "type": "func",
+                  },
+                },
+              ],
+              "type": "shape",
+            },
+            "getA11yStatusMessage": Object {
+              "type": "func",
+            },
+            "getItemId": Object {
+              "type": "func",
+            },
+            "highlightedIndex": Object {
+              "type": "number",
+            },
+            "id": Object {
+              "type": "string",
+            },
+            "initialHighlightedIndex": Object {
+              "type": "number",
+            },
+            "initialInputValue": Object {
+              "type": "string",
+            },
+            "initialIsOpen": Object {
+              "type": "bool",
+            },
+            "initialSelectedItem": Object {
+              "type": "any",
+            },
+            "inputId": Object {
+              "type": "string",
+            },
+            "inputValue": Object {
+              "type": "string",
+            },
+            "isOpen": Object {
+              "type": "bool",
+            },
+            "itemCount": Object {
+              "type": "number",
+            },
+            "itemToString": Object {
+              "type": "func",
+            },
+            "labelId": Object {
+              "type": "string",
+            },
+            "menuId": Object {
+              "type": "string",
+            },
+            "onChange": Object {
+              "type": "func",
+            },
+            "onInputValueChange": Object {
+              "type": "func",
+            },
+            "onOuterClick": Object {
+              "type": "func",
+            },
+            "onSelect": Object {
+              "type": "func",
+            },
+            "onStateChange": Object {
+              "type": "func",
+            },
+            "onUserAction": Object {
+              "type": "func",
+            },
+            "scrollIntoView": Object {
+              "type": "func",
+            },
+            "selectedItem": Object {
+              "type": "any",
+            },
+            "selectedItemChanged": Object {
+              "type": "func",
+            },
+            "stateReducer": Object {
+              "type": "func",
+            },
+            "suppressRefError": Object {
+              "type": "bool",
+            },
+          },
+        ],
+        "type": "shape",
+      },
+      "id": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+      "initialSelectedItems": Object {
+        "type": "array",
+      },
+      "invalid": Object {
+        "type": "bool",
+      },
+      "invalidText": Object {
+        "type": "node",
+      },
+      "itemToElement": Object {
+        "type": "func",
+      },
+      "itemToString": Object {
+        "type": "func",
+      },
+      "items": Object {
+        "isRequired": true,
+        "type": "array",
+      },
+      "light": Object {
+        "type": "bool",
+      },
+      "locale": Object {
+        "type": "string",
+      },
+      "onChange": Object {
+        "type": "func",
+      },
+      "onMenuChange": Object {
+        "type": "func",
+      },
+      "open": Object {
+        "type": "bool",
+      },
+      "placeholder": Object {
+        "isRequired": true,
+        "type": "string",
+      },
+      "selectionFeedback": Object {
+        "args": Array [
+          Array [
+            "top",
+            "fixed",
+            "top-after-reopen",
+          ],
+        ],
+        "type": "oneOf",
+      },
+      "size": Object {
+        "args": Array [
+          Array [
+            "sm",
+            "md",
+            "lg",
+            "xl",
+          ],
+        ],
+        "type": "oneOf",
+      },
+      "sortItems": Object {
+        "isRequired": true,
+        "type": "func",
+      },
+      "translateWithId": Object {
+        "type": "func",
+      },
+      "useTitleInItem": Object {
+        "type": "bool",
+      },
+      "warn": Object {
+        "type": "bool",
+      },
+      "warnText": Object {
+        "type": "node",
+      },
+    },
+  },
   "FluidForm" => Object {
     "propTypes": Object {
       "children": Object {
@@ -14841,9 +15138,6 @@ Map {
       },
     },
     "propTypes": Object {
-      "autoclose": Object {
-        "type": "bool",
-      },
       "children": Object {
         "type": "node",
       },
