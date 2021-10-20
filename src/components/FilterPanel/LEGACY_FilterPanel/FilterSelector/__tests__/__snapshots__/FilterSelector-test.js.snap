@@ -9,6 +9,7 @@ exports[`FilterSelector Rendering renders checked filter 1`] = `
   indeterminate={false}
   labelText="Selected filter"
   onChange={[Function]}
+  onClick={[Function]}
 />
 `;
 
@@ -21,5 +22,6 @@ exports[`FilterSelector Rendering renders unchecked filter 1`] = `
   indeterminate={false}
   labelText="Filter"
   onChange={[Function]}
+  onClick={[Function]}
 />
 `;
