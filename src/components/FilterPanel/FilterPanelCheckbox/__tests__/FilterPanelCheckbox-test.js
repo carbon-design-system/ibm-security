@@ -9,6 +9,19 @@ import React from 'react';
 
 import FilterPanelCheckbox from '../FilterPanelCheckbox';
 
+function expectWarning(message, test) {
+  const { fn, spyOn } = jest;
+
+  const warn = spyOn(console, 'warn').mockImplementation(fn());
+
+  test();
+
+  expect(warn).toBeCalledTimes(1);
+  expect(warn).toBeCalledWith(`Warning: ${message}`);
+
+  warn.mockRestore();
+}
+
 describe('FilterPanelCheckbox', () => {
   test('has no accessibility violations', async () => {
     const { container } = render(
