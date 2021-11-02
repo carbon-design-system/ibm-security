@@ -2,6 +2,9 @@ import { getDocsId } from '../../../../.storybook';
 import { parameters } from '../../../../.storybook/preview';
 import { Interaction } from './ICAModule-story';
 
+import Detail from '../docs/examples/Detail/index.mdx';
+import Overview from '../docs/examples/Overview/index.mdx';
+
 import anatomy from './images/anatomy.png';
 
 import interactions from './images/interactions.png';
@@ -29,7 +32,10 @@ The ICA module provides a means to orderly layout at-a-glance statistics.
 
 The ICA module can be built using a combination of the `ICAModule`,
 [grid](https://react.carbondesignsystem.com/?path=/docs/grid--narrow), and
-<LinkTo kind={getDocsId("components-ica")} story="default">`ICA`</LinkTo>
+
+<LinkTo kind={getDocsId('components-ica')} story="default">
+  `ICA`
+</LinkTo>
 components.
 
 Everything passed in as a
