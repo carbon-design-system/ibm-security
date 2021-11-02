@@ -4287,9 +4287,6 @@ Map {
       "labelText": Object {
         "type": "node",
       },
-      "listFiles": Object {
-        "type": "bool",
-      },
       "multiple": Object {
         "type": "bool",
       },
@@ -6569,7 +6566,6 @@ Map {
   "Modal" => Object {
     "defaultProps": Object {
       "hasScrollingContent": false,
-      "iconDescription": "Close",
       "modalHeading": "",
       "modalLabel": "",
       "onKeyDown": [Function],
@@ -6591,6 +6587,9 @@ Map {
       "className": Object {
         "type": "string",
       },
+      "closeButtonLabel": Object {
+        "type": "string",
+      },
       "danger": Object {
         "type": "bool",
       },
@@ -6599,9 +6598,7 @@ Map {
       "hasScrollingContent": Object {
         "type": "bool",
       },
-      "iconDescription": Object {
-        "type": "string",
-      },
+      "iconDescription": [Function],
       "id": Object {
         "type": "string",
       },
@@ -9976,6 +9973,9 @@ Map {
     },
     "displayName": "Switch",
     "propTypes": Object {
+      "children": Object {
+        "type": "node",
+      },
       "className": Object {
         "type": "string",
       },
@@ -10008,7 +10008,6 @@ Map {
         "type": "bool",
       },
       "text": Object {
-        "isRequired": true,
         "type": "string",
       },
     },
@@ -10230,7 +10229,6 @@ Map {
       "label": "provide a label",
       "onClick": [Function],
       "onKeyDown": [Function],
-      "role": "presentation",
       "selected": false,
     },
     "propTypes": Object {
@@ -10271,10 +10269,7 @@ Map {
       "renderContent": Object {
         "type": "func",
       },
-      "role": Object {
-        "isRequired": true,
-        "type": "string",
-      },
+      "role": [Function],
       "selected": Object {
         "isRequired": true,
         "type": "bool",
@@ -12155,10 +12150,11 @@ Map {
   "TimePickerSelect" => Object {
     "defaultProps": Object {
       "disabled": false,
-      "iconDescription": "open list of options",
-      "inline": true,
     },
     "propTypes": Object {
+      "aria-label": Object {
+        "type": "string",
+      },
       "children": Object {
         "type": "node",
       },
@@ -12172,16 +12168,10 @@ Map {
         "type": "bool",
       },
       "hideLabel": [Function],
-      "iconDescription": Object {
-        "isRequired": true,
-        "type": "string",
-      },
+      "iconDescription": [Function],
       "id": Object {
         "isRequired": true,
         "type": "string",
-      },
-      "inline": Object {
-        "type": "bool",
       },
       "labelText": Object {
         "isRequired": true,
@@ -12197,6 +12187,7 @@ Map {
   "ToggleSkeleton" => Object {
     "defaultProps": Object {
       "aria-label": "Toggle is loading",
+      "size": "md",
     },
     "propTypes": Object {
       "aria-label": Object {
@@ -12211,6 +12202,15 @@ Map {
       },
       "labelText": Object {
         "type": "string",
+      },
+      "size": Object {
+        "args": Array [
+          Array [
+            "sm",
+            "md",
+          ],
+        ],
+        "type": "oneOf",
       },
     },
   },
@@ -15850,5 +15850,66 @@ Map {
     },
   },
   "unstable_usePrefix" => Object {},
+  "unstable_HStack" => Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "render": [Function],
+  },
+  "unstable_Stack" => Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "propTypes": Object {
+      "as": Object {
+        "type": "elementType",
+      },
+      "children": Object {
+        "type": "node",
+      },
+      "className": Object {
+        "type": "string",
+      },
+      "gap": Object {
+        "args": Array [
+          Array [
+            Object {
+              "type": "string",
+            },
+            Object {
+              "args": Array [
+                Array [
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                ],
+              ],
+              "type": "oneOf",
+            },
+          ],
+        ],
+        "type": "oneOfType",
+      },
+      "orientation": Object {
+        "args": Array [
+          Array [
+            "horizontal",
+            "vertical",
+          ],
+        ],
+        "type": "oneOf",
+      },
+    },
+    "render": [Function],
+  },
+  "unstable_VStack" => Object {
+    "$$typeof": Symbol(react.forward_ref),
+    "render": [Function],
+  },
 }
 `;
