@@ -3,32 +3,38 @@
  * @copyright IBM Security 2020 - 2021
  */
 
-import { sync } from 'glob';
+import { execFileSync as _exec } from 'child_process';
+import { sync as glob } from 'glob';
 import { resolve } from 'path';
-import { exec } from 'shelljs';
 
 import { root } from '../../../config';
 
-function compile(input, options = []) {
-  return exec(
-    `sass -I ${resolve(root, 'node_modules')} -q ${options.join(' ')} ${input}`
-  );
-}
+const dependencies = resolve(root, 'node_modules');
 
 const dirname = resolve(__dirname, '../..');
+const src = resolve(dirname, 'index.scss');
+
+function compile({ exec, input, sass = [] }) {
+  return _exec('sass', ['-I', dependencies, ...sass, input], exec);
+}
+
+const files = glob(resolve(dirname, '**/*.scss'), {
+  ignore: [src, '**/css-gridish/**'],
+});
 
 describe('Styles', () => {
   test('Bundle', () => {
     expect(
-      compile(resolve(dirname, 'index.scss')).toString()
+      compile({
+        input: src,
+        exec: { maxBuffer: 1024 * 1024 * 1.5 },
+      }).toString()
     ).toMatchSnapshot();
   });
 
-  test.concurrent.each(
-    sync(resolve(dirname, '**/*.scss'), {
-      ignore: '**/css-gridish/**',
-    })
-  )("Compile '%s'", async (input) => {
-    expect(compile(input, ['-s', 'compressed']).code).toBe(0);
+  test.concurrent.each(files)("Compile '%s'", (input) => {
+    expect(() =>
+      compile({ input, sass: ['-s', 'compressed'], exec: { stdio: 'ignore' } })
+    ).not.toThrow();
   });
 });
