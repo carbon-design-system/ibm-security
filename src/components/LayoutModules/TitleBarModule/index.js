@@ -52,7 +52,14 @@ const TitleBarModule = ({
     </div>
 
     {children && (
-      <LayoutModule namespace={`${namespace}__items`}>{children}</LayoutModule>
+      <LayoutModule
+        className={classnames({
+          [`${layoutModuleNamespace}--${namespace}__items--subsection`]:
+            subsection,
+        })}
+        namespace={`${namespace}__items`}>
+        {children}
+      </LayoutModule>
     )}
   </LayoutModule>
 );
