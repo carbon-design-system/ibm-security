@@ -10,7 +10,7 @@ const CATEGORIES = {
   COMPONENTS: 'Components',
   DEPRECATED: 'Deprecated',
   LAYOUT_MODULES: 'Layout modules',
-  PAGE_LAYOUTS: 'Page layouts',
+  PAGE_LAYOUTS: 'Layouts',
   PATTERNS: 'Patterns',
 };
 
