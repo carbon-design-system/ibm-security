@@ -1,6 +1,6 @@
 /**
  * @file Important content area (ICA).
- * @copyright IBM Security 2019 - 2020
+ * @copyright IBM Security 2019, 2021
  */
 
 import classnames from 'classnames';
@@ -12,6 +12,8 @@ import 'numeral/locales';
 
 import { ArrowUp16, ArrowUp20, ArrowUp24 } from '@carbon/icons-react';
 import Icon from '../Icon/Icon';
+
+import Tooltip from '../Tooltip';
 
 import isDevelopment from '../../globals/env';
 import { getComponentNamespace } from '../../globals/namespace';
@@ -29,7 +31,7 @@ export const Locales = Object.keys(numeral.locales);
  * @param {number} value The value to evaluate.
  * @returns {string} Format string for numeral.
  */
-const getFormat = value => (Math.round(value) > 999 ? '0.0a' : '0a');
+const getFormat = (value) => (Math.round(value) > 999 ? '0.0a' : '0a');
 
 /**
  * Ensure that the value is formatted correctly based on whether it should be truncated or not.
@@ -70,6 +72,8 @@ const ICA = ({
   label,
   locale,
   percentage,
+  information,
+  iconButton,
   size,
   trending,
   truncate,
@@ -77,7 +81,7 @@ const ICA = ({
   value,
   ...other
 }) => {
-  const isSize = sizeValue => size === sizeValue;
+  const isSize = (sizeValue) => size === sizeValue;
   const isLarge = isSize('lg');
   const isXLarge = isSize('xl');
 
@@ -113,7 +117,14 @@ const ICA = ({
 
   return (
     <div className={`${ICAClasses}`} {...other}>
-      <h4 className={`${namespace}__label`}>{label} </h4>
+      <span className={`${namespace}__row`}>
+        <h4 className={`${namespace}__label`}>{label} </h4>
+        {information && (
+          <Tooltip showIcon={true} direction={'right'}>
+            {information}
+          </Tooltip>
+        )}
+      </span>
       <span className={`${namespace}__row`}>
         {trending && (
           <Icon className={`${namespace}__trend`} renderIcon={renderIcon} />
@@ -125,6 +136,7 @@ const ICA = ({
             <span>/{truncatedTotal}</span>
           </span>
         ) : null}
+        {iconButton}
       </span>
     </div>
   );
@@ -132,28 +144,30 @@ const ICA = ({
 
 ICA.propTypes = {
   /**
-   * Text label for ICA.
-   * @type string
-   */
-  label: PropTypes.string.isRequired,
-
-  /**
-   * The main ICA value to display
-   * @type number
-   */
-  value: PropTypes.number,
-
-  /**
-   * Total value that the main ICA value is a subset of.
-   * @type number
-   */
-  total: PropTypes.number,
-
-  /**
    * Optional class name.
    * @type number
    */
   className: PropTypes.string,
+
+  /**
+   * Display the `total` even when the `value` is equal to
+   * the `total` when `forceShowTotal` prop is true on the
+   * condition that the `total` is greater than 0.
+   * @type bool
+   */
+  forceShowTotal: PropTypes.bool,
+
+  /** Displays an iconButton next to the ICA value */
+  iconButton: PropTypes.node,
+
+  /** Pass in content to the body of the information tooltip. */
+  information: PropTypes.node,
+
+  /**
+   * Text label for ICA.
+   * @type string
+   */
+  label: PropTypes.string.isRequired,
 
   /**
    * Locale value to determine approach to formatting numbers.
@@ -167,22 +181,26 @@ ICA.propTypes = {
    */
   percentage: PropTypes.bool,
 
+  /** The size of the ICA. */
+  size: PropTypes.oneOf(['default', 'lg', 'xl']),
+
   /**
-   * Display the `total` even when the `value` is equal to
-   * the `total` when `forceShowTotal` prop is true on the
-   * condition that the `total` is greater than 0.
-   * @type bool
+   * Total value that the main ICA value is a subset of.
+   * @type number
    */
-  forceShowTotal: PropTypes.bool,
+  total: PropTypes.number,
+
+  /** Display trending icon. */
+  trending: PropTypes.bool,
 
   /** Specify whether or not the values should be truncated. */
   truncate: PropTypes.bool,
 
-  /** The size of the ICA. */
-  size: PropTypes.oneOf(['default', 'lg', 'xl']),
-
-  /** Display trending icon. */
-  trending: PropTypes.bool,
+  /**
+   * The main ICA value to display
+   * @type number
+   */
+  value: PropTypes.number,
 };
 
 ICA.defaultProps = {

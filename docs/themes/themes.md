@@ -36,7 +36,7 @@
 | `inverse-support-02` |  `green-40` |  `green-50` | 
 | `inverse-support-03` |  `yellow-30` |  `yellow-30` | 
 | `inverse-support-04` |  `blue-50` |  `blue-60` | 
-| `overlay-01` |  `gray-100` |  `gray-100` | 
+| `overlay-01` |  `gray-100` |  `black-100` | 
 | `danger-01` |  `red-60` |  `red-60` | 
 | `danger-02` |  `red-60` |  `red-50` | 
 | `focus` |  `blue-60` |  `white-0` | 
@@ -103,8 +103,9 @@
 | `support-success-inverse` |  `green-40` |  `green-50` | 
 | `support-warning-inverse` |  `yellow-30` |  `yellow-30` | 
 | `support-info-inverse` |  `blue-50` |  `blue-60` | 
-| `overlay` |  `gray-100` |  `gray-100` | 
+| `overlay` |  `gray-100` |  `black-100` | 
 | `toggle-off` |  `cool-gray-50` |  `gray-60` | 
+| `shadow` |  `black-100` |  `black-100` | 
 | `button-primary` |  `blue-60` |  `blue-60` | 
 | `button-secondary` |  `cool-gray-80` |  `gray-60` | 
 | `button-tertiary` |  `blue-60` |  `white-0` | 

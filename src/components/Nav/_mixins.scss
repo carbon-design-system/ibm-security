@@ -7,6 +7,7 @@
 @import '@carbon/layout/scss/mini-unit';
 @import '@carbon/layout/scss/spacing';
 @import '@carbon/themes/scss/tokens';
+@import '@carbon/type/scss/font-family';
 @import '@carbon/type/scss/styles';
 
 @import 'carbon-components/scss/globals/scss/helper-mixins';
@@ -15,14 +16,6 @@
 
 @import '../../globals/motion/index';
 @import '../../globals/rtl/index';
-
-/// Spacing.
-/// @type Length
-$nav__spacing: $carbon--spacing-04;
-
-/// Icon spacing.
-/// @type Length
-$nav__icon__spacing: $carbon--spacing-05 + $nav__spacing;
 
 @mixin nav {
   $nav__heading: '#{&}__heading';
@@ -80,11 +73,10 @@ $nav__icon__spacing: $carbon--spacing-05 + $nav__spacing;
   &__heading {
     @include carbon--type-style($name: caption-01);
 
-    padding: $carbon--spacing-04 $carbon--spacing-07;
+    padding: $carbon--spacing-04 $carbon--spacing-08;
     margin-top: unset;
     margin-bottom: unset;
     color: $text-02;
-    font-weight: 400;
   }
 
   // Navigation lists.
@@ -103,7 +95,7 @@ $nav__icon__spacing: $carbon--spacing-05 + $nav__spacing;
     }
 
     &:focus {
-      background-color: $ui-02;
+      outline: 0;
       outline-width: 0;
 
       > #{$list}__item__link {
@@ -114,11 +106,12 @@ $nav__icon__spacing: $carbon--spacing-05 + $nav__spacing;
     &__icon {
       @include transition($transition-property: transform);
 
+      margin-top: $carbon--spacing-01;
       margin-left: auto;
-      transform: $nav__icon__position rotate(270deg);
+      transform: $nav__icon__position rotate(0deg);
       @include rtl {
         right: $carbon--spacing-02;
-        transform: $nav__icon__position rotate(90deg);
+        transform: $nav__icon__position rotate(180deg);
       }
     }
 
@@ -131,7 +124,6 @@ $nav__icon__spacing: $carbon--spacing-05 + $nav__spacing;
       // Content including text and sometimes a product icon.
       &__content {
         display: flex;
-        margin-left: $nav__icon__spacing;
       }
 
       &::before {
@@ -147,22 +139,7 @@ $nav__icon__spacing: $carbon--spacing-05 + $nav__spacing;
         height: 100%;
         background-color: transparent;
         content: '';
-        transform: translate3d((-100%, 0, 0));
-      }
-
-      @include rtl {
-        &::before {
-          right: 0;
-          transform: translate3d(
-            reverse-transform(
-              $transform: (
-                -100%,
-                0,
-                0,
-              )
-            )
-          );
-        }
+        transform: translate3d(-100%, 0, 0);
       }
 
       &--disabled {
@@ -174,7 +151,7 @@ $nav__icon__spacing: $carbon--spacing-05 + $nav__spacing;
       }
 
       &--active {
-        font-weight: 600;
+        @include carbon--font-weight($weight: semibold);
 
         @include rtl {
           &::before {
@@ -194,7 +171,8 @@ $nav__icon__spacing: $carbon--spacing-05 + $nav__spacing;
 
         position: relative;
         display: flex;
-        padding: $carbon--spacing-02;
+        padding: $carbon--spacing-03 $carbon--spacing-02 $carbon--spacing-03
+          $carbon--spacing-08;
         color: $text-01;
         cursor: pointer;
         text-decoration: none;
@@ -207,6 +185,12 @@ $nav__icon__spacing: $carbon--spacing-05 + $nav__spacing;
         &:focus {
           @include focus-outline('outline');
         }
+      }
+
+      &__img {
+        height: carbon--mini-units($count: 2.5);
+        margin-right: $carbon--spacing-04;
+        margin-left: -$carbon--spacing-07;
       }
 
       &__link--external {
@@ -236,13 +220,12 @@ $nav__icon__spacing: $carbon--spacing-05 + $nav__spacing;
 
         > #{$nav__list}--nested {
           max-height: carbon--mini-units($count: 40);
-          margin-top: carbon--mini-units($count: 1.25);
           opacity: 1;
           transition-timing-function: $carbon--ease-in;
         }
 
         > #{$nav__item}__link > #{$nav__list}__icon {
-          transform: $nav__icon__position rotate(360deg);
+          transform: $nav__icon__position rotate(180deg);
 
           @include rtl {
             transform: $nav__icon__position rotate(0);
@@ -264,7 +247,6 @@ $nav__icon__spacing: $carbon--spacing-05 + $nav__spacing;
       max-height: 0;
       padding-left: 0;
       margin-bottom: 0;
-      margin-left: $nav__icon__spacing;
       opacity: 0;
 
       @include rtl {

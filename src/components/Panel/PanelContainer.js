@@ -129,7 +129,7 @@ export default class PanelContainer extends Component {
    * Handles the key press focus trap.
    * @param {SyntheticEvent} event The event fired when a key has been pressed while the panel container is in focus.
    */
-  handleKeyPress = event => {
+  handleKeyPress = (event) => {
     if (event.key === 'Tab') {
       trapTabFocus(this.element, event);
     } else if (!this.props.disableEscape && event.key === 'Escape') {
@@ -181,15 +181,13 @@ export default class PanelContainer extends Component {
             <div className={`${namespace}__header__container--title`}>
               <div
                 id={this.panelTitleId}
-                className={`${namespace}__header--title`}
-              >
+                className={`${namespace}__header--title`}>
                 {title}
               </div>
               {subtitle && (
                 <div
                   id={this.panelSubtitleId}
-                  className={`${namespace}__header--subtitle`}
-                >
+                  className={`${namespace}__header--subtitle`}>
                   {subtitle}
                 </div>
               )}
@@ -213,8 +211,7 @@ export default class PanelContainer extends Component {
             marginBottom: `${this.state.bodyMargin.bottom}px`,
           }}
           {...hasScrollingContentProps}
-          {...getAriaLabelledBy}
-        >
+          {...getAriaLabelledBy}>
           {children}
         </section>
         {hasFooter && (
@@ -231,8 +228,7 @@ export default class PanelContainer extends Component {
                     iconDescription={secondaryButton.iconDescription}
                     kind="secondary"
                     onClick={secondaryButton.onClick}
-                    renderIcon={secondaryButton.icon}
-                  >
+                    renderIcon={secondaryButton.icon}>
                     {PANEL_CONTAINER_SECONDARY_BUTTON}
                   </Button>
                 )}
@@ -242,8 +238,7 @@ export default class PanelContainer extends Component {
                   disabled={primaryButton.isDisabled}
                   iconDescription={primaryButton.iconDescription}
                   onClick={primaryButton.onClick}
-                  renderIcon={primaryButton.icon}
-                >
+                  renderIcon={primaryButton.icon}>
                   {PANEL_CONTAINER_PRIMARY_BUTTON}
                 </Button>
               </Fragment>
@@ -288,6 +283,14 @@ const buttonType = PropTypes.shape({
 });
 
 PanelContainer.propTypes = {
+  /**
+   * Required props for the accessibility label of the header
+   */
+  ['aria-label']: requiredIfGivenPropIsTruthy(
+    'hasScrollingContent',
+    PropTypes.string
+  ),
+
   /** @type {ReactNode} The children of the panel container. */
   children: PropTypes.node,
 
@@ -300,8 +303,21 @@ PanelContainer.propTypes = {
   /** @type {boolean} Set to true to disable the 'Escape' key from closing the panel. */
   disableEscape: PropTypes.bool,
 
+  /**
+   * Specify whether the panel contains scrolling content
+   */
+  hasScrollingContent: PropTypes.bool,
+
+  labels: defaultLabels.propType,
+
   /** @type {object<object>} An object list of primary button props. */
   primaryButton: buttonType,
+
+  /** @type {Function} Footer render prop. */
+  renderFooter: func,
+
+  /** @type {string} Root node to attach the panel to. */
+  rootNode: isNode() ? PropTypes.instanceOf(Node) : PropTypes.any,
 
   /** @type {object<object>} An object list of secondary button props. */
   secondaryButton: buttonType,
@@ -311,27 +327,6 @@ PanelContainer.propTypes = {
 
   /** @type {string} Child elements. */
   title: PropTypes.node,
-
-  /** @type {Function} Footer render prop. */
-  renderFooter: func,
-
-  /** @type {string} Root node to attach the panel to. */
-  rootNode: isNode() ? PropTypes.instanceOf(Node) : PropTypes.any,
-
-  labels: defaultLabels.propType,
-
-  /**
-   * Specify whether the panel contains scrolling content
-   */
-  hasScrollingContent: PropTypes.bool,
-
-  /**
-   * Required props for the accessibility label of the header
-   */
-  ['aria-label']: requiredIfGivenPropIsTruthy(
-    'hasScrollingContent',
-    PropTypes.string
-  ),
 };
 
 PanelContainer.defaultProps = {

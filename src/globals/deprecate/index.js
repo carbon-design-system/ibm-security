@@ -10,7 +10,7 @@ import isDevelopment from '../env';
  * @param {string} description The description to use when logging.
  * @param {string} type The property type to log.
  * @param {Array.<string>} componentKeys The component keys to filter.
- * @param {Function} condition The condition to filter the component keys.
+ * @param {Function} filterCondition The condition to filter the component keys.
  * @returns {string} The description and appropriate properties.
  */
 const logDeviations = (description, type, componentKeys, filterCondition) =>
@@ -22,7 +22,7 @@ const logDeviations = (description, type, componentKeys, filterCondition) =>
  * @param {string} securityComponent The Security-specific component to compare.
  */
 const compareDeviations = (carbonComponent, securityComponent) => {
-  ['defaultProps', 'propTypes'].forEach(type => {
+  ['defaultProps', 'propTypes'].forEach((type) => {
     const carbonComponentKeys = Object.keys(carbonComponent[type]);
     const securityComponentKeys = Object.keys(securityComponent[type]);
 
@@ -30,21 +30,21 @@ const compareDeviations = (carbonComponent, securityComponent) => {
       'Common',
       type,
       carbonComponentKeys,
-      key => securityComponentKeys.indexOf(key) !== -1
+      (key) => securityComponentKeys.indexOf(key) !== -1
     );
 
     logDeviations(
       'Carbon',
       type,
       carbonComponentKeys,
-      key => securityComponentKeys.indexOf(key) === -1
+      (key) => securityComponentKeys.indexOf(key) === -1
     );
 
     logDeviations(
       'Security',
       type,
       securityComponentKeys,
-      key => carbonComponentKeys.indexOf(key) === -1
+      (key) => carbonComponentKeys.indexOf(key) === -1
     );
   });
 };

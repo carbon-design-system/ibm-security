@@ -29,8 +29,7 @@ const LoadingMessage = ({
     className={classnames(namespace, className, {
       [overlayNamespace]: withOverlay,
       [`${overlayNamespace}--stop`]: withOverlay && !active,
-    })}
-  >
+    })}>
     <Loading
       className={`${namespace}__loading`}
       active={active}
@@ -51,20 +50,20 @@ LoadingMessage.defaultProps = {
 };
 
 LoadingMessage.propTypes = {
-  /** Provide the contents of the `LoadingMessage` */
-  children: node,
-
   /** Specify whether the `Loading` is active */
   active: bool,
 
-  /** Specify whether to use an overlay */
-  withOverlay: bool,
+  /** Provide the contents of the `LoadingMessage` */
+  children: node,
+
+  /** Provide an optional class to be applied to the containing node */
+  className: string,
 
   /** Specify whether to use the small variation  */
   small: bool,
 
-  /** Provide an optional class to be applied to the containing node */
-  className: string,
+  /** Specify whether to use an overlay */
+  withOverlay: bool,
 };
 
 export default LoadingMessage;

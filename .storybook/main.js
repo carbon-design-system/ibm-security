@@ -15,17 +15,27 @@ module.exports = {
     '@storybook/addon-google-analytics',
     '@storybook/addon-links',
     '@storybook/addon-viewport',
-    '@storybook/addon-storysource',
+    {
+      name: '@storybook/addon-storysource',
+      options: {
+        rule: {
+          test: /(-story|\.stories)\.js$/,
+        },
+      },
+    },
     '@storybook/addon-knobs',
     '@storybook/addon-controls',
     '@storybook/addon-actions',
     '@storybook/addon-a11y',
     './addons/addon-theme/register',
   ],
+  core: {
+    builder: 'webpack5',
+  },
   stories: [
     require('path').resolve(__dirname, '../src/**/*+(-story|.stories).*'),
   ],
-  webpackFinal: async configuration =>
+  webpackFinal: async (configuration) =>
     require('webpack-merge').merge(configuration, {
       devServer: {
         stats: 'errors-only',

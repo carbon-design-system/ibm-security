@@ -1,6 +1,6 @@
 /**
  * @file Error view component.
- * @copyright IBM Security 2019
+ * @copyright IBM Security 2019, 2021
  */
 
 import classnames from 'classnames';
@@ -11,7 +11,7 @@ import React from 'react';
 import Link from '../Link';
 
 import { getComponentNamespace } from '../../globals/namespace';
-import * as defaultLabels from '../../globals/nls';
+import { labels } from '../../globals/nls';
 
 const namespace = getComponentNamespace('error-page');
 
@@ -48,16 +48,13 @@ const ErrorPage = ({
   errorName,
   errorMessage,
   links,
-  labels,
   ...other
 }) => {
   const classes = classnames(className, namespace);
 
-  const errorLabels = defaultLabels.labels.ERRORS[statusCode];
+  const errorLabels = labels.ERRORS[statusCode];
   if (!title) {
-    title = errorLabels
-      ? errorLabels.TITLE
-      : defaultLabels.labels.ERRORS.default.TITLE;
+    title = errorLabels ? errorLabels.TITLE : labels.ERRORS.default.TITLE;
   }
   errorName = !errorName && errorLabels ? errorLabels.ERRORNAME : errorName;
   errorMessage =
@@ -90,8 +87,7 @@ const ErrorPage = ({
                 href={href}
                 target={external ? '_blank' : '_parent'}
                 rel="noopener noreferrer"
-                className={`${namespace}__link`}
-              >
+                className={`${namespace}__link`}>
                 {icon !== undefined && (
                   <img
                     alt={text}
@@ -129,7 +125,6 @@ ErrorPage.defaultProps = {
   errorName: '',
   errorMessage: '',
   links: [],
-  labels: {},
   title: '',
 };
 
@@ -140,23 +135,20 @@ ErrorPage.propTypes = {
   /** @type {string} The class name of the section. */
   className: PropTypes.string,
 
-  /** @type {string} The title of the section. */
-  title: PropTypes.string,
-
-  /** @type {string} statusCode for the ErrorPage section. */
-  statusCode: PropTypes.number,
+  /** @type {string} errorMessage for the ErrorPage section. */
+  errorMessage: PropTypes.string,
 
   /** @type {string} errorName for the ErrorPage section. */
   errorName: PropTypes.string,
 
-  /** @type {string} errorMessage for the ErrorPage section. */
-  errorMessage: PropTypes.string,
-
   /** @type {Array<Object.*>} An array list of links. */
   links: PropTypes.arrayOf(PropTypes.shape(link)),
 
-  /** @type {object} the labels used by ErrorPage */
-  labels: defaultLabels.propType,
+  /** @type {string} statusCode for the ErrorPage section. */
+  statusCode: PropTypes.number,
+
+  /** @type {string} The title of the section. */
+  title: PropTypes.string,
 };
 
 export default ErrorPage;

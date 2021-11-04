@@ -25,7 +25,7 @@ import {
   TableToolbarContent,
 } from '../../..';
 
-import { security } from '../../../../.storybook';
+import { components } from '../../../../.storybook';
 import Button from '../../Button';
 import IconButton from '../../IconButton';
 import Search from '../../Search';
@@ -78,7 +78,7 @@ const render = ({
         <TableHead>
           <TableRow>
             <TableSelectAll {...getSelectionProps()} />
-            {headers.map(header => (
+            {headers.map((header) => (
               <TableHeader key={header.id} {...getHeaderProps({ header })}>
                 {header.header}
               </TableHeader>
@@ -88,10 +88,10 @@ const render = ({
       )}
 
       <TableBody>
-        {rows.map(row => (
+        {rows.map((row) => (
           <TableRow key={row.id}>
             <TableSelectRow {...getSelectionProps({ row })} />
-            {row.cells.map(cell => (
+            {row.cells.map((cell) => (
               <TableCell key={cell.id}>
                 {cell.value ? cell.value : missingDataCharacter}
               </TableCell>
@@ -103,7 +103,7 @@ const render = ({
   </TableContainer>
 );
 
-const renderWithoutHeaders = props => render({ ...props, headers: null });
+const renderWithoutHeaders = (props) => render({ ...props, headers: null });
 
 const dataTableProps = {
   headers,
@@ -121,7 +121,7 @@ const dataTablePaginationProps = {
   totalItems: rows.length,
 };
 
-storiesOf(security('DataTablePagination'), module)
+storiesOf(components('DataTablePagination'), module)
   .add('pagination data table', () => {
     DataTablePagination.__docgenInfo = {
       ...DataTablePagination.__docgenInfo,

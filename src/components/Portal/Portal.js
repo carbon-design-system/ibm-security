@@ -157,7 +157,7 @@ class Portal extends Component {
     const child = React.Children.only(children);
     const events = stopPropagationEvents || PORTAL_EVENTS;
 
-    events.forEach(event => {
+    events.forEach((event) => {
       if (child.props[event]) {
         childProps[event] = composeEventHandlers([
           this.handleBubble,
@@ -171,7 +171,7 @@ class Portal extends Component {
     return React.cloneElement(child, { ...childProps });
   };
 
-  handleBubble = event => {
+  handleBubble = (event) => {
     event.stopPropagation();
   };
 
@@ -200,8 +200,7 @@ class Portal extends Component {
               (isClient() ? rootNode : Children.toArray(children)[0].type),
             initialFocus,
             ...focusTrapOptions,
-          }}
-        >
+          }}>
           {stopPropagation || stopPropagationEvents
             ? this.createPropagationTrap()
             : children}
@@ -257,7 +256,6 @@ Portal.defaultProps = {
   focusTrap: true,
   focusTrapOptions: FocusTrap.defaultProps.focusTrapOptions,
   hasOverlay: true,
-  initialFocus: null,
   onOverlayClick: undefined,
   overlayOptions: {},
   rootNode: isClient() && document.body,

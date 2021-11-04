@@ -8,8 +8,12 @@ import { storiesOf } from '@storybook/react';
 
 import React from 'react';
 
-import { security } from '../../../.storybook';
+import { Edit16 } from '@carbon/icons-react';
+
+import { components } from '../../../.storybook';
 import { carbonPrefix } from '../../globals/namespace';
+
+import IconButton from '../IconButton/IconButton';
 
 import { ICA } from '../..';
 import { Locales } from './ICA';
@@ -36,7 +40,7 @@ const storyProps = ({ value = icaValue, total } = {}) => ({
   locale: select('Locale (locale)', Locales, Locales[0]),
 });
 
-storiesOf(security('ICA'), module)
+storiesOf(components('ICA'), module)
   .add('default', () => <ICA {...storyProps()} />)
   .add('with null value', () => <ICA {...storyProps({ value: null })} />)
   .add('with 1000 value', () => (
@@ -46,12 +50,31 @@ storiesOf(security('ICA'), module)
     <ICA {...storyProps({ value: icaValue * 100000 })} />
   ))
   .add('with total', () => <ICA {...storyProps({ total })} />)
+  .add('with edit button', () => (
+    <ICA
+      {...storyProps({ value: 350, total: 450 })}
+      iconButton={
+        <IconButton
+          onClick={console.log('click event')}
+          renderIcon={Edit16}
+          tooltip={true}
+          label={'Edit label'}
+          tooltipDirection="bottom"
+        />
+      }
+    />
+  ))
+  .add('with information icon', () => (
+    <ICA
+      {...storyProps({ value: 350, total: 450 })}
+      information={'Information label'}
+    />
+  ))
   .add(
     'in an ICA wall',
     () => (
       <div
-        className={`${carbonPrefix}--grid ${carbonPrefix}--grid--full-width`}
-      >
+        className={`${carbonPrefix}--grid ${carbonPrefix}--grid--full-width`}>
         <div className={`${carbonPrefix}--row`}>
           <div className={`${carbonPrefix}--col`}>
             <h4>4 spaced</h4>
@@ -60,11 +83,10 @@ storiesOf(security('ICA'), module)
         <div className={`${carbonPrefix}--row`}>
           {Array(4)
             .fill(0)
-            .map(item => (
+            .map((item) => (
               <div
                 key={item.id}
-                className={`${carbonPrefix}--col-sm-4 ${carbonPrefix}--col-md-2 ${carbonPrefix}--col-lg-4`}
-              >
+                className={`${carbonPrefix}--col-sm-4 ${carbonPrefix}--col-md-2 ${carbonPrefix}--col-lg-4`}>
                 <ICA {...storyProps({ total })} />
               </div>
             ))}
@@ -77,11 +99,10 @@ storiesOf(security('ICA'), module)
         <div className={`${carbonPrefix}--row`}>
           {Array(8)
             .fill(0)
-            .map(item => (
+            .map((item) => (
               <div
                 key={item.id}
-                className={`${carbonPrefix}--col-sm-2 ${carbonPrefix}--col-md-2 ${carbonPrefix}--col-lg-2`}
-              >
+                className={`${carbonPrefix}--col-sm-2 ${carbonPrefix}--col-md-2 ${carbonPrefix}--col-lg-2`}>
                 <ICA {...storyProps({ total })} />
               </div>
             ))}
@@ -94,7 +115,7 @@ storiesOf(security('ICA'), module)
         Multiple \`ICA\` components (i.e., an "ICA Wall") should be presented in a grid using the correct class names.
 
         These two row examples show different combinations of breakpoints and spans set per column with specific class names.
-        
+
         For more information the 16 column IBM grid, please review the [\`@carbon/grid\` package documentation](https://github.com/carbon-design-system/carbon/tree/main/packages/grid).
       `,
       },

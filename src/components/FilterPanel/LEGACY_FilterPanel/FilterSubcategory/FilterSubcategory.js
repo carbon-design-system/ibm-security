@@ -6,7 +6,7 @@
 import { Add16, Subtract16 } from '@carbon/icons-react';
 
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 
 import * as defaultLabels from '../../../../globals/nls';
 import { getComponentNamespace } from '../../../../globals/namespace';
@@ -23,6 +23,8 @@ import ScrollGradient from '../../../ScrollGradient';
 
 export const namespace = getComponentNamespace('filter-subcategory');
 
+const truncateThreshold = 10;
+
 const FilterSubcategory = ({
   filterData,
   subcategory,
@@ -31,34 +33,44 @@ const FilterSubcategory = ({
   filtersExpandLabel,
   filtersCollapseLabel,
 }) => {
-  const [isExpanded, setIsExpanded] = React.useState(false);
-  const [listContainer, setListContainer] = React.useState(null);
-  const visibleChildren = React.useRef(null);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const listContainer = useRef();
+  const setListContainer = useCallback(
+    (value) => (listContainer.current = value),
+    []
+  );
+  const visibleChildren = useRef(null);
 
   const filters = subcategory.filters
-    .map(filterId => filterData.filters[filterId])
-    .filter(filter => filter.count > 0);
+    .map((filterId) => filterData.filters[filterId])
+    .filter((filter) => filter.count > 0);
 
-  const shouldTruncate = filters.length > 10;
+  const shouldTruncate = filters.length > truncateThreshold;
 
-  let displayCount = shouldTruncate ? 5 : filters.length;
-  if (shouldTruncate && isExpanded) {
-    displayCount = 10;
-  }
+  const displayCount = shouldTruncate
+    ? isExpanded
+      ? truncateThreshold
+      : 5
+    : filters.length;
 
   // After the component's expanded state has changed update the height of the list container to be
   // the same as its visible children set.
   React.useEffect(() => {
-    if (shouldTruncate && listContainer && visibleChildren.current) {
-      listContainer.style.height = `${visibleChildren.current.clientHeight}px`;
+    if (
+      shouldTruncate &&
+      listContainer.current &&
+      visibleChildren.current &&
+      visibleChildren.current.clientHeight
+    ) {
+      listContainer.current.style.height = `${visibleChildren.current.clientHeight}px`;
     }
-  }, [isExpanded]);
+  }, [isExpanded, shouldTruncate]);
 
   const handleExpand = () => {
     // Pre-set the height of the list container to its own current height so we can smoothly
     // transition into its new height in the React Effect hook.
-    if (listContainer && visibleChildren.current) {
-      listContainer.style.height = `${listContainer.clientHeight}px`;
+    if (listContainer.current && visibleChildren.current) {
+      listContainer.current.style.height = `${listContainer.current.clientHeight}px`;
     }
     setIsExpanded(!isExpanded);
   };
@@ -80,20 +92,17 @@ const FilterSubcategory = ({
     <AccordionItem
       title={subcategory.name}
       className={namespace}
-      open={subcategory.open}
-    >
+      open={subcategory.open}>
       <ul className={`${namespace}__filter-list`}>
         <ScrollGradient
           scrollElementClassName={`${namespace}__scroller`}
           color={theme.uiBackground}
-          getScrollElementRef={setListContainer}
-        >
+          getScrollElementRef={setListContainer}>
           <div
             role="presentation"
             className={`${namespace}__filters ${namespace}__filters--visible`}
-            ref={visibleChildren}
-          >
-            {filters.slice(0, displayCount).map(filter => (
+            ref={visibleChildren}>
+            {filters.slice(0, displayCount).map((filter) => (
               <li className={`${namespace}__filter`} key={filter.id}>
                 <FilterSelector filter={filter} onChange={onChange} />
               </li>
@@ -102,9 +111,8 @@ const FilterSubcategory = ({
           {shouldTruncate && isExpanded && (
             <div
               role="presentation"
-              className={`${namespace}__filters ${namespace}__filters--hidden`}
-            >
-              {filters.slice(displayCount).map(filter => (
+              className={`${namespace}__filters ${namespace}__filters--hidden`}>
+              {filters.slice(displayCount).map((filter) => (
                 <li className={`${namespace}__filter`} key={filter.id}>
                   <FilterSelector filter={filter} onChange={onChange} />
                 </li>
@@ -119,8 +127,7 @@ const FilterSubcategory = ({
           iconDescription={buttonLabel}
           kind="ghost"
           onClick={handleExpand}
-          renderIcon={isExpanded ? Subtract16 : Add16}
-        >
+          renderIcon={isExpanded ? Subtract16 : Add16}>
           {isExpanded
             ? buttonLabel
             : `${buttonLabel} (${filters.length - displayCount})`}
@@ -131,23 +138,23 @@ const FilterSubcategory = ({
 };
 
 FilterSubcategory.propTypes = {
-  /** @type {string} Label for truncated filters list to expand */
-  filtersExpandLabel: PropTypes.string,
+  /** @type {FilterData}  Filter data to used to render panel */
+  filterData: filterDataPropTypes.isRequired,
 
   /** @type {string} Label for expanded filters list to collapse */
   filtersCollapseLabel: PropTypes.string,
+
+  /** @type {string} Label for truncated filters list to expand */
+  filtersExpandLabel: PropTypes.string,
+
+  /** @type {object} Labels for filter panel and search */
+  labels: defaultLabels.propType,
 
   /** @type {(filter: Filter) => {}} Callback function when any filter is toggled */
   onChange: PropTypes.func,
 
   /** @type {FilterSubcategory} Subcategory to render */
   subcategory: filterSubcategoryPropTypes.isRequired,
-
-  /** @type {FilterData}  Filter data to used to render panel */
-  filterData: filterDataPropTypes.isRequired,
-
-  /** @type {object} Labels for filter panel and search */
-  labels: defaultLabels.propType,
 };
 
 FilterSubcategory.defaultProps = {

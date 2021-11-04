@@ -29,6 +29,9 @@ export default class StatusIcon extends Component {
     /** @type {string} Class name. */
     className: string,
 
+    /** @type {string} icon aria label. */
+    iconDescription: string,
+
     /** @type {string} Message. */
     message: string,
 
@@ -37,9 +40,6 @@ export default class StatusIcon extends Component {
 
     /** @type {string} Status. */
     status: oneOf(STATUS),
-
-    /** @type {string} icon aria label. */
-    iconDescription: string,
   };
 
   static defaultProps = {
@@ -108,8 +108,7 @@ export default class StatusIcon extends Component {
       <div
         className={classnames(namespace, className, {
           [`${namespace}--${size}`]: size,
-        })}
-      >
+        })}>
         {statusIcon}
         {message && <span className={` ${namespace}__message`}>{message}</span>}
       </div>

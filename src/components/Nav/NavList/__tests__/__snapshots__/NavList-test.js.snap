@@ -4,8 +4,10 @@ exports[`Nav Rendering renders correctly 1`] = `
 <NavList
   activeHref="#"
   className="class"
+  icon=""
   id=""
   isExpandedOnPageload={true}
+  navigationItemTitle=""
   onItemClick={[Function]}
   onListClick={[Function]}
   tabIndex={0}
@@ -108,7 +110,6 @@ exports[`Nav Rendering renders correctly 1`] = `
         label=""
         link={true}
         onClick={[Function]}
-        onKeyPress={[Function]}
         tabIndex={0}
       >
         <li
