@@ -1,6 +1,7 @@
 # Colors
 
-Also refer to [migration in Carbon](https://github.com/carbon-design-system/carbon/blob/main/docs/migration/10.x-color.md).
+Also refer to
+[migration in Carbon](https://github.com/carbon-design-system/carbon/blob/main/docs/migration/10.x-color.md).
 
 ## Migrating
 

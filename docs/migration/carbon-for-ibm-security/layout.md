@@ -1,6 +1,7 @@
 # Layout
 
-Also refer to [migration in Carbon](https://github.com/carbon-design-system/carbon/blob/main/docs/migration/10.x-layout.md).
+Also refer to
+[migration in Carbon](https://github.com/carbon-design-system/carbon/blob/main/docs/migration/10.x-layout.md).
 
 ## Migrating
 

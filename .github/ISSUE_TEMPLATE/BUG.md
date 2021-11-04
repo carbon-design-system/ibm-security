@@ -28,7 +28,8 @@ labels: 'status: triage, type: bug'
 
 ### Affected browsers
 
-[What's my browser?](http://www.whatsmyua.com) and [browserl.ist supported browsers](https://github.com/carbon-design-system/ibm-security/blob/master/package.json#L174-L178)
+[What's my browser?](http://www.whatsmyua.com) and
+[browserl.ist supported browsers](https://github.com/carbon-design-system/ibm-security/blob/master/package.json#L174-L178)
 
 - [ ] <!-- Chrome 50 on Mac OSX 10 --> / <!-- Development, production -->
 - [ ] <!-- Chrome 50 on Windows 10 --> / <!-- Development, production -->
