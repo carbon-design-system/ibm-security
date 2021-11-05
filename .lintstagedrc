@@ -1,5 +1,5 @@
 {
-  '*.{js,json,html,md,mdx,scss}': ['yarn precommit:format', 'git add'],
+  '*.{js, json, html, md, mdx, scss}': ['yarn precommit:format', 'git add'],
   '*.js': ['yarn precommit:lint:js', 'git add'],
   '*.scss': ['yarn precommit:lint:scss', 'git add'],
 }

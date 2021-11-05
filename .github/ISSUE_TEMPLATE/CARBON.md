@@ -8,7 +8,6 @@ labels: 'type: task'
 
 ### Description
 
-Upgrade to the latest version of Carbon and manually verify that no issues were
-introduced:
+Upgrade to the latest version of Carbon and manually verify that no issues were introduced:
 
 - [ ] <!-- https://github.com/carbon-design-system/carbon/releases/tag/vx.x.x -->

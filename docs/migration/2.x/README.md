@@ -11,16 +11,11 @@
 
 ## Globals
 
-To align with
-[Carbon's documentation and package ecosystem](https://github.com/carbon-design-system/carbon#getting-started),
-global-related code now directly references underlying Carbon modules to provide
-consistency in accessing common functions, mixins, variables, and more.
+To align with [Carbon's documentation and package ecosystem](https://github.com/carbon-design-system/carbon#getting-started), global-related code now directly references underlying Carbon modules to provide consistency in accessing common functions, mixins, variables, and more.
 
-Library output of body style and reset is deprecated and will be removed in an
-upcoming major release.
+Library output of body style and reset is deprecated and will be removed in an upcoming major release.
 
-Also refer to
-[optimizing Sass builds in Carbon](https://github.com/carbon-design-system/carbon/blob/main/docs/guides/sass.md#optimizing-your-sass-builds).
+Also refer to [optimizing Sass builds in Carbon](https://github.com/carbon-design-system/carbon/blob/main/docs/guides/sass.md#optimizing-your-sass-builds).
 
 ### Imports
 
@@ -30,8 +25,7 @@ Also refer to
 
 ### Feature flags
 
-If using body style and reset, you can disable the library output using a
-feature flag by writing the following Sass code before importing:
+If using body style and reset, you can disable the library output using a feature flag by writing the following Sass code before importing:
 
 ```scss
 $security--feature-flags: (

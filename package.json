@@ -28,7 +28,7 @@
     "build:post:css:clean": "cleancss -O2 -o css/index.min.css css/index.css",
     "build:post:storybook": "build-storybook -s public",
     "docs": "node scripts/themes && git add docs/themes/themes.md",
-    "format": "yarn precommit:format '**/*.{js,json,html,md,mdx,scss}'",
+    "format": "yarn precommit:format '**/*.{js, json, html, md, mdx, scss}'",
     "lint": "run-p -c lint:*",
     "lint:js": "yarn precommit:lint:js .",
     "lint:scss": "yarn precommit:lint:scss '**/*.scss'",

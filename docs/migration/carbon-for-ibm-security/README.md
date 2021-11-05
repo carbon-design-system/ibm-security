@@ -4,9 +4,7 @@
 
 1. Remove the `registry=` entry from your `.npmrc`
 2. Remove the `@ibmduo:registry=` entry from your `.npmrc`
-3. Run `yarn cache clean` and `npm cache verify` to clear old Artifactory
-   references from your global Yarn cache and verify the integrity of the npm
-   cache
+3. Run `yarn cache clean` and `npm cache verify` to clear old Artifactory references from your global Yarn cache and verify the integrity of the npm cache
 4. Address any of the changes relevant to you from the tables below
 
 ### Optional
