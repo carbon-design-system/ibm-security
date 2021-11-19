@@ -8,8 +8,12 @@ import { storiesOf } from '@storybook/react';
 
 import React from 'react';
 
+import { Edit16 } from '@carbon/icons-react';
+
 import { components } from '../../../.storybook';
 import { carbonPrefix } from '../../globals/namespace';
+
+import IconButton from '../IconButton/IconButton';
 
 import { ICA } from '../..';
 import { Locales } from './ICA';
@@ -46,6 +50,26 @@ storiesOf(components('ICA'), module)
     <ICA {...storyProps({ value: icaValue * 100000 })} />
   ))
   .add('with total', () => <ICA {...storyProps({ total })} />)
+  .add('with edit button', () => (
+    <ICA
+      {...storyProps({ value: 350, total: 450 })}
+      iconButton={
+        <IconButton
+          onClick={console.log('click event')}
+          renderIcon={Edit16}
+          tooltip={true}
+          label={'Edit label'}
+          tooltipDirection="bottom"
+        />
+      }
+    />
+  ))
+  .add('with information icon', () => (
+    <ICA
+      {...storyProps({ value: 350, total: 450 })}
+      information={'Information label'}
+    />
+  ))
   .add(
     'in an ICA wall',
     () => (
@@ -91,7 +115,7 @@ storiesOf(components('ICA'), module)
         Multiple \`ICA\` components (i.e., an "ICA Wall") should be presented in a grid using the correct class names.
 
         These two row examples show different combinations of breakpoints and spans set per column with specific class names.
-        
+
         For more information the 16 column IBM grid, please review the [\`@carbon/grid\` package documentation](https://github.com/carbon-design-system/carbon/tree/main/packages/grid).
       `,
       },

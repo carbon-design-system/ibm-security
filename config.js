@@ -32,7 +32,7 @@ export const paths = {
 paths.src.files.scss = path.join(paths.src.dir, '**/*.scss');
 
 export const buildBlacklist = ['Component', 'Portal', 'Tooltip'];
-export const root = __dirname;
+export const roots = [__dirname];
 
 export default {
   paths,

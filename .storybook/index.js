@@ -10,7 +10,7 @@ const CATEGORIES = {
   COMPONENTS: 'Components',
   DEPRECATED: 'Deprecated',
   LAYOUT_MODULES: 'Layout modules',
-  PAGE_LAYOUTS: 'Page layouts (Canary)',
+  PAGE_LAYOUTS: 'Layouts',
   PATTERNS: 'Patterns',
 };
 
@@ -132,6 +132,8 @@ Also refer to http://${library}.carbondesignsystem.com/?path=/docs/${group}-${st
     : description,
 });
 
+const parameters = {};
+
 export {
   disableCentered,
   disableCenteredStories,
@@ -144,4 +146,5 @@ export {
   getPatternsCategory as patterns,
   info,
   ORDER,
+  parameters,
 };

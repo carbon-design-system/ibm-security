@@ -33,16 +33,26 @@
 
   &__items {
     display: flex;
-    align-items: center;
+    margin-top: $carbon--spacing-02;
     margin-left: auto;
+
+    &--subsection {
+      margin-top: $carbon--spacing-01;
+    }
   }
 
-  &--label & {
-    // this offsets the icon-button-bar by 6px for better visual alignment when the label is present
-    &__items {
-      align-items: flex-end;
-      margin-bottom: $carbon--spacing-01 + $carbon--spacing-02;
+  &--label &__items {
+    margin-top: $carbon--spacing-06;
+
+    &--subsection {
+      margin-top: $carbon--spacing-05;
     }
+  }
+
+  &--subsection &__title {
+    @include carbon--type-style($name: productive-heading-02);
+
+    order: 1;
   }
 
   &__label-wrapper {
@@ -66,18 +76,6 @@
     &.order--bottom {
       order: 2;
       margin-top: $carbon--spacing-02;
-    }
-  }
-
-  &--subsection & {
-    &__title {
-      @include carbon--type-style($name: productive-heading-02);
-
-      order: 1;
-    }
-    &__items {
-      align-items: flex-end;
-      margin-bottom: $carbon--spacing-01 + $carbon--spacing-02;
     }
   }
 }
