@@ -7,12 +7,9 @@
 @import '@carbon/layout/scss/spacing';
 @import '@carbon/themes/scss/theme-maps';
 
-@import '../src/globals/index';
-
 @import 'carbon-components/scss/globals/scss/vars';
 
-@import '../src/components/index';
-@import '../src/platform/index';
+@import '../src/index';
 
 // TODO: Remove workaround for https://github.ibm.com/security/design-core-experience/issues/241
 @import 'components/Background/index';
