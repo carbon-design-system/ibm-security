@@ -7,15 +7,17 @@ import { execFileSync as _exec } from 'child_process';
 import { sync as glob } from 'glob';
 import { resolve } from 'path';
 
-import { root } from '../../../config';
+import { roots } from '../../../config';
 
-const dependencies = resolve(root, 'node_modules');
+const dependencies = roots
+  .map((root) => ['-I', resolve(root, 'node_modules')])
+  .flat();
 
 const dirname = resolve(__dirname, '../..');
 const src = resolve(dirname, 'index.scss');
 
 function compile({ exec, input, sass = [] }) {
-  return _exec('sass', ['-I', dependencies, ...sass, input], exec);
+  return _exec('sass', [...dependencies, ...sass, input], exec);
 }
 
 const files = glob(resolve(dirname, '**/*.scss'), {
