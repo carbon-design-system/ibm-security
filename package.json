@@ -153,7 +153,7 @@
     "rollup-plugin-postcss": "^4.0.1",
     "sass": "^1.43.4",
     "sass-extract": "^2.1.0",
-    "semantic-release": "^17.2.3",
+    "semantic-release": "^19.0.3",
     "shelljs": "^0.8.4",
     "style-loader": "^0.23.1",
     "stylelint": "^13.13.1",
