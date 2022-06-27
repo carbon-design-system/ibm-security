@@ -7,17 +7,25 @@ import { LIBRARY } from '../src/components/LayoutModules/stories';
 
 // Category labels.
 const CATEGORIES = {
+  OVERVIEW: 'Overview',
   COMPONENTS: 'Components',
   DEPRECATED: 'Deprecated',
   LAYOUT_MODULES: 'Layout modules',
-  PAGE_LAYOUTS: 'Page layouts (Canary)',
+  PAGE_LAYOUTS: 'Layouts',
   PATTERNS: 'Patterns',
 };
 
-const { COMPONENTS, DEPRECATED, LAYOUT_MODULES, PAGE_LAYOUTS, PATTERNS } =
-  CATEGORIES;
+const {
+  OVERVIEW,
+  COMPONENTS,
+  DEPRECATED,
+  LAYOUT_MODULES,
+  PAGE_LAYOUTS,
+  PATTERNS,
+} = CATEGORIES;
 
 const ORDER = [
+  OVERVIEW,
   LAYOUT_MODULES,
   [LIBRARY],
   PAGE_LAYOUTS,
@@ -60,6 +68,13 @@ const getDeprecatedCategory = bindCategory(DEPRECATED);
  * @returns {string} The formatted layout module category and story name.
  */
 const getLayoutModulesCategory = bindCategory(LAYOUT_MODULES);
+
+/**
+ * Returns a formatted string for the layout modules category.
+ * @param {string} storyName The story name to format.
+ * @returns {string} The formatted layout module category and story name.
+ */
+const getOverviewModulesCategory = bindCategory(OVERVIEW);
 
 /**
  * Returns a formatted string for the page layouts category.
@@ -141,6 +156,7 @@ export {
   getDeprecatedCategory as deprecated,
   getDocsId,
   getDocsParameters,
+  getOverviewModulesCategory as overviewModules,
   getLayoutModulesCategory as layoutModules,
   getPageLayoutsCategory as pageLayouts,
   getPatternsCategory as patterns,
