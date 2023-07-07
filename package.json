@@ -156,7 +156,7 @@
     "semantic-release": "^17.2.3",
     "shelljs": "^0.8.4",
     "style-loader": "^0.23.1",
-    "stylelint": "^13.13.1",
+    "stylelint": "^15.10.1",
     "stylelint-config-carbon": "^1.7.0",
     "stylelint-plugin-carbon-tokens": "^0.11.2",
     "webpack-merge": "^5.1.4",
